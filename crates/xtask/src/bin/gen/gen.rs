@@ -5,7 +5,6 @@ use crate::scan;
 pub fn codes(codes: &scan::Codes) {
     let types = "ErrorCodeMicrosoft SuccessCodeMicrosoft HRESULT NTSTATUS";
 
-    let _ = std::fs::remove_dir_all("crates/winerr/src/gen/codes");
     let _ = std::fs::create_dir_all("crates/winerr/src/gen/codes/ERROR");
 
     for (rs_mod, codes) in codes.mods.iter() {
