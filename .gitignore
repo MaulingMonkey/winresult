@@ -1,0 +1,6 @@
+# build output
+/target
+/Cargo.lock
+
+# build output
+/crates/*/target

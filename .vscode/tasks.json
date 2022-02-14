@@ -1,0 +1,43 @@
+{
+    "version":          "2.0.0",
+    "problemMatcher":   "$rustc",
+    "type":             "shell",
+    "presentation":     { "clear": true, "panel": "shared", "reveal": "always" },
+    "tasks": [
+        // build
+        {
+            "label":            "build",
+            "command":          "${workspaceFolder}\\scripts\\build.cmd <NUL",
+            "group":            { "kind": "build", "isDefault": true }
+        },
+
+        // help
+        {
+            "label":            "help",
+            "command":          "${workspaceFolder}\\scripts\\help.cmd <NUL",
+        },
+
+        // gen
+        {
+            "label":            "gen",
+            "command":          "${workspaceFolder}\\scripts\\gen.cmd <NUL",
+        },
+
+        // winerr
+        {
+            "label":            "cargo build --package winerr --example example",
+            "command":          "cargo build --package winerr --example example",
+            "dependsOn":        ["gen"],
+        },
+        {
+            "label":            "cargo build --package winerr --example example --release",
+            "command":          "cargo build --package winerr --example example --release",
+            "dependsOn":        ["gen"],
+        },
+
+
+        { "label": "open repository",   "command": "start \"\" https://github.com/MaulingMonkey/winerr" },
+        { "label": "open issues",       "command": "start \"\" https://github.com/MaulingMonkey/winerr/issues" },
+        { "label": "open wiki",         "command": "start \"\" https://github.com/MaulingMonkey/winerr/wiki" },
+    ]
+}

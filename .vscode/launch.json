@@ -1,0 +1,58 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        // winerr
+        {
+            "name":                     "winerr • example • example • debug",
+            "type":                     "cppdbg",
+            "request":                  "launch",
+            "internalConsoleOptions":   "openOnSessionStart",
+            "preLaunchTask":            "cargo build --package winerr --example example",
+            "program":                  "${workspaceFolder}/target/debug/examples/example",
+            "cwd":                      "${workspaceFolder}",
+            "environment":              [ { "name": "RUST_BACKTRACE", "value": "1" } ],
+            "windows": {
+                "type":                     "cppvsdbg",
+                "program":                  "${workspaceFolder}/target/debug/examples/example.exe",
+                "enableDebugHeap":          true,
+                "visualizerFile":           "${workspaceFolder}/crates/winerr/src/errors.natvis",
+            }
+        },
+        {
+            "name":                     "winerr • example • example • release",
+            "type":                     "cppdbg",
+            "request":                  "launch",
+            "internalConsoleOptions":   "openOnSessionStart",
+            "preLaunchTask":            "cargo build --package winerr --example example --release",
+            "program":                  "${workspaceFolder}/target/release/examples/example",
+            "cwd":                      "${workspaceFolder}",
+            "environment":              [ { "name": "RUST_BACKTRACE", "value": "1" } ],
+            "windows": {
+                "type":                     "cppvsdbg",
+                "program":                  "${workspaceFolder}/target/release/examples/example.exe",
+                "enableDebugHeap":          false,
+                "visualizerFile":           "${workspaceFolder}/crates/winerr/src/errors.natvis",
+            }
+        },
+
+
+
+        // xtask gen
+        {
+            "name":                     "xtask • bin • gen • debug",
+            "type":                     "cppdbg",
+            "request":                  "launch",
+            "internalConsoleOptions":   "openOnSessionStart",
+            "preLaunchTask":            "gen",
+            "program":                  "${workspaceFolder}/crates/xtask/target/debug/gen",
+            "cwd":                      "${workspaceFolder}",
+            "environment":              [ { "name": "RUST_BACKTRACE", "value": "1" } ],
+            "windows": {
+                "type":                     "cppvsdbg",
+                "program":                  "${workspaceFolder}/crates/xtask/target/debug/gen.exe",
+                "enableDebugHeap":          true,
+                "visualizerFile":           "${workspaceFolder}/crates/winerr/src/errors.natvis",
+            }
+        },
+    ]
+}

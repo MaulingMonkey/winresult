@@ -1,0 +1,16 @@
+# https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[package]
+name                                    = "winerr-core"
+description                             = "windows error codes"
+version                                 = "0.0.0-git-core"
+authors                                 = ["MaulingMonkey <git@maulingmonkey.com>"]
+edition                                 = "2021"
+license                                 = "Apache-2.0 OR MIT"
+
+[lib]
+path                                    = "src/_core.rs"
+
+[dependencies]
+bytemuck.version                        = "1"
+bytemuck.features                       = ["derive"]
