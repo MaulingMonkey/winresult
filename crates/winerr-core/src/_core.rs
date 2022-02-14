@@ -57,9 +57,9 @@ impl SuccessCodeMicrosoft {
     pub const fn to_u32(self) -> u32 { self.0 as _ }
 }
 
-impl From<u16> for SuccessCodeMicrosoft { fn from(f: u16) -> Self { Self(f) } }
-impl From<SuccessCodeMicrosoft> for u16 { fn from(f: SuccessCodeMicrosoft) -> Self { f.0 } }
-impl From<SuccessCodeMicrosoft> for u32 { fn from(f: SuccessCodeMicrosoft) -> Self { f.0.into() } }
+impl From<u16> for SuccessCodeMicrosoft { fn from(c: u16) -> Self { Self(c) } }
+impl From<SuccessCodeMicrosoft> for u16 { fn from(c: SuccessCodeMicrosoft) -> Self { c.0 } }
+impl From<SuccessCodeMicrosoft> for u32 { fn from(c: SuccessCodeMicrosoft) -> Self { c.0.into() } }
 
 
 
@@ -74,9 +74,9 @@ impl ErrorCodeMicrosoft {
     pub const fn to_u32(self) -> u32 { self.0 as _ }
 }
 
-impl From<u16> for ErrorCodeMicrosoft { fn from(f: u16) -> Self { Self(f) } }
-impl From<ErrorCodeMicrosoft> for u16 { fn from(f: ErrorCodeMicrosoft) -> Self { f.0 } }
-impl From<ErrorCodeMicrosoft> for u32 { fn from(f: ErrorCodeMicrosoft) -> Self { f.0.into() } }
+impl From<u16> for ErrorCodeMicrosoft { fn from(c: u16) -> Self { Self(c) } }
+impl From<ErrorCodeMicrosoft> for u16 { fn from(c: ErrorCodeMicrosoft) -> Self { c.0 } }
+impl From<ErrorCodeMicrosoft> for u32 { fn from(c: ErrorCodeMicrosoft) -> Self { c.0.into() } }
 
 
 
