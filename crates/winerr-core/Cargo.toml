@@ -8,6 +8,10 @@ authors                                 = ["MaulingMonkey <git@maulingmonkey.com
 edition                                 = "2021"
 license                                 = "Apache-2.0 OR MIT"
 
+[package.metadata.docs.rs]
+all-features                            = true
+default-target                          = "x86_64-pc-windows-msvc"
+
 [lib]
 path                                    = "src/_core.rs"
 
