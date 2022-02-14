@@ -1,4 +1,16 @@
-pub use winerr_core::*;
+extern crate winerr_core as core;
+
+pub use core::{
+    FacilityHrMicrosoft,
+    FacilityNtStatusMicrosoft,
+    SuccessCodeMicrosoft,
+    ErrorCodeMicrosoft,
+    HRESULT,
+    NTSTATUS,
+    NtStatusSeverity,
+};
+
+pub use gen::codes::{*, STATUS};
 
 
 
@@ -37,25 +49,26 @@ pub mod FACILITY {
     #[doc(inline)] pub use NTSTATUS::*;
 }
 
-/// [NTSTATUS] Errors and Codes (for use in e.g. Kernel / Driver)
-#[allow(non_snake_case)]
-pub mod STATUS {
-    pub use crate::gen::codes::STATUS::*;
-    pub use winerr_core::STATUS::*;
-}
 
 
-
-pub use gen::codes::*;
 mod gen {
     pub mod codes {
         #![allow(non_snake_case)]
         #![allow(non_upper_case_globals)]
-        use crate::{ErrorCodeMicrosoft, SuccessCodeMicrosoft, HRESULT, NTSTATUS};
+        use core::{ErrorCodeMicrosoft, SuccessCodeMicrosoft, HRESULT};
 
 
 
-        pub(crate) mod STATUS;
+        /// [NTSTATUS](core::NTSTATUS) Errors and Codes (for use in e.g. Kernel / Driver)
+        pub mod STATUS {
+            use core::NTSTATUS;
+            pub use core::STATUS::*;
+
+            // TODO: SUCCESS = 0 ?
+
+            #[path = "../STATUS.rs"] mod _SELF;
+            pub use _SELF::*;
+        }
 
         /// **Success codes**
         pub mod S;
@@ -190,7 +203,7 @@ mod gen {
         /// Note that `ERROR::SUBCATEGORY::CODE` is also generally exported as `ERROR::SUBCATEGORY_CODE`, although the latter is hidden from the docs to reduce clutter.
         /// <br><br>
         pub mod ERROR {
-            use crate::{ErrorCodeMicrosoft, SuccessCodeMicrosoft, HRESULT};
+            use core::{ErrorCodeMicrosoft, SuccessCodeMicrosoft, HRESULT};
 
             // TODO: SUCCESS = 0 ?
 
@@ -241,7 +254,7 @@ mod gen {
 
             /// [Side-by-side assembly](https://en.wikipedia.org/wiki/Side-by-side_assembly)
             pub mod SXS {
-                use crate::ErrorCodeMicrosoft;
+                use core::ErrorCodeMicrosoft;
 
                 #[path = "../SXS.rs"] mod _SELF;
                 pub use _SELF::*;
