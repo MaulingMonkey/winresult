@@ -12,5 +12,6 @@ fn main() {
     let _era = dbg!(HRESULT::from_constant(0xA0010000));
     let _erb = dbg!(HRESULT::from_constant(0xB0010000));
     let _nts = dbg!(NTSTATUS::from_constant(0xC0010000));
+    let _sf  = dbg!(S::FALSE);
     let _i = 42;
 }
