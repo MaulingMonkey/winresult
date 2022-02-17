@@ -89,7 +89,6 @@ impl From<ErrorCodeMicrosoft> for u32 { fn from(c: ErrorCodeMicrosoft) -> Self {
 impl SuccessHResult {
     #[doc(hidden)] pub const fn from_constant(value: u32) -> Self { assert!(value & 0x8000_0000 == 0, "SuccessHResult::from_constant: HRESULT is an error (high bit set)"); Self(value) }
 
-    pub const fn is_error   (self) -> bool { false }
     //  const fn is_reserved(self) -> bool { self.0 & 0x40000000 != 0 }
     pub const fn is_customer(self) -> bool { self.0 & 0x20000000 != 0 }
     pub const fn is_ntstatus(self) -> bool { self.0 & 0x10000000 != 0 }
@@ -115,7 +114,6 @@ impl From<u32> for SuccessHResult { fn from(hr: u32) -> Self { Self(hr) } }
 impl ErrorHResult {
     #[doc(hidden)] pub const fn from_constant(value: u32) -> Self { assert!(value & 0x8000_0000 != 0, "ErrorHResult::from_constant: HRESULT is a success (high bit not set)"); Self(value) }
 
-    pub const fn is_error   (self) -> bool { true }
     //  const fn is_reserved(self) -> bool { self.0 & 0x40000000 != 0 }
     pub const fn is_customer(self) -> bool { self.0 & 0x20000000 != 0 }
     pub const fn is_ntstatus(self) -> bool { self.0 & 0x10000000 != 0 }
