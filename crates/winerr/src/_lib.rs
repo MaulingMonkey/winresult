@@ -5,6 +5,8 @@ pub use core::{
     FacilityNtStatusMicrosoft,
     SuccessCodeMicrosoft,
     ErrorCodeMicrosoft,
+    SuccessHResult,
+    ErrorHResult,
     HRESULT,
     NTSTATUS,
     NtStatusSeverity,
