@@ -4,7 +4,7 @@ use super::*;
 
 
 /// The maximum number of items for the access list has been reached. An item must be removed before another item is added.
-pub const E_MAX_PERSISTED_ITEMS_REACHED : HRESULT = HRESULT::from_constant(0x80270220); // FA_E_MAX_PERSISTED_ITEMS_REACHED
+pub const E_MAX_PERSISTED_ITEMS_REACHED : ErrorHResult = ErrorHResult::from_constant(0x80270220); // FA_E_MAX_PERSISTED_ITEMS_REACHED
 
 /// Cannot access Homegroup. Homegroup may not be set up or may have encountered an error.
-pub const E_HOMEGROUP_NOT_AVAILABLE : HRESULT = HRESULT::from_constant(0x80270222); // FA_E_HOMEGROUP_NOT_AVAILABLE
+pub const E_HOMEGROUP_NOT_AVAILABLE : ErrorHResult = ErrorHResult::from_constant(0x80270222); // FA_E_HOMEGROUP_NOT_AVAILABLE

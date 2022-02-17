@@ -4,142 +4,142 @@ use super::*;
 
 
 /// The action was cancelled by an SCardCancel request.
-pub const E_CANCELLED : HRESULT = HRESULT::from_constant(0x80100002); // SCARD_E_CANCELLED
+pub const E_CANCELLED : ErrorHResult = ErrorHResult::from_constant(0x80100002); // SCARD_E_CANCELLED
 
 /// The supplied handle was invalid.
-pub const E_INVALID_HANDLE : HRESULT = HRESULT::from_constant(0x80100003); // SCARD_E_INVALID_HANDLE
+pub const E_INVALID_HANDLE : ErrorHResult = ErrorHResult::from_constant(0x80100003); // SCARD_E_INVALID_HANDLE
 
 /// One or more of the supplied parameters could not be properly interpreted.
-pub const E_INVALID_PARAMETER : HRESULT = HRESULT::from_constant(0x80100004); // SCARD_E_INVALID_PARAMETER
+pub const E_INVALID_PARAMETER : ErrorHResult = ErrorHResult::from_constant(0x80100004); // SCARD_E_INVALID_PARAMETER
 
 /// Registry startup information is missing or invalid.
-pub const E_INVALID_TARGET : HRESULT = HRESULT::from_constant(0x80100005); // SCARD_E_INVALID_TARGET
+pub const E_INVALID_TARGET : ErrorHResult = ErrorHResult::from_constant(0x80100005); // SCARD_E_INVALID_TARGET
 
 /// Not enough memory available to complete this command.
-pub const E_NO_MEMORY : HRESULT = HRESULT::from_constant(0x80100006); // SCARD_E_NO_MEMORY
+pub const E_NO_MEMORY : ErrorHResult = ErrorHResult::from_constant(0x80100006); // SCARD_E_NO_MEMORY
 
 /// The data buffer to receive returned data is too small for the returned data.
-pub const E_INSUFFICIENT_BUFFER : HRESULT = HRESULT::from_constant(0x80100008); // SCARD_E_INSUFFICIENT_BUFFER
+pub const E_INSUFFICIENT_BUFFER : ErrorHResult = ErrorHResult::from_constant(0x80100008); // SCARD_E_INSUFFICIENT_BUFFER
 
 /// The specified reader name is not recognized.
-pub const E_UNKNOWN_READER : HRESULT = HRESULT::from_constant(0x80100009); // SCARD_E_UNKNOWN_READER
+pub const E_UNKNOWN_READER : ErrorHResult = ErrorHResult::from_constant(0x80100009); // SCARD_E_UNKNOWN_READER
 
 /// The user-specified timeout value has expired.
-pub const E_TIMEOUT : HRESULT = HRESULT::from_constant(0x8010000A); // SCARD_E_TIMEOUT
+pub const E_TIMEOUT : ErrorHResult = ErrorHResult::from_constant(0x8010000A); // SCARD_E_TIMEOUT
 
 /// The smart card cannot be accessed because of other connections outstanding.
-pub const E_SHARING_VIOLATION : HRESULT = HRESULT::from_constant(0x8010000B); // SCARD_E_SHARING_VIOLATION
+pub const E_SHARING_VIOLATION : ErrorHResult = ErrorHResult::from_constant(0x8010000B); // SCARD_E_SHARING_VIOLATION
 
 /// The operation requires a smart card, but no smart card is currently in the device.
-pub const E_NO_SMARTCARD : HRESULT = HRESULT::from_constant(0x8010000C); // SCARD_E_NO_SMARTCARD
+pub const E_NO_SMARTCARD : ErrorHResult = ErrorHResult::from_constant(0x8010000C); // SCARD_E_NO_SMARTCARD
 
 /// The specified smart card name is not recognized.
-pub const E_UNKNOWN_CARD : HRESULT = HRESULT::from_constant(0x8010000D); // SCARD_E_UNKNOWN_CARD
+pub const E_UNKNOWN_CARD : ErrorHResult = ErrorHResult::from_constant(0x8010000D); // SCARD_E_UNKNOWN_CARD
 
 /// The system could not dispose of the media in the requested manner.
-pub const E_CANT_DISPOSE : HRESULT = HRESULT::from_constant(0x8010000E); // SCARD_E_CANT_DISPOSE
+pub const E_CANT_DISPOSE : ErrorHResult = ErrorHResult::from_constant(0x8010000E); // SCARD_E_CANT_DISPOSE
 
 /// The requested protocols are incompatible with the protocol currently in use with the smart card.
-pub const E_PROTO_MISMATCH : HRESULT = HRESULT::from_constant(0x8010000F); // SCARD_E_PROTO_MISMATCH
+pub const E_PROTO_MISMATCH : ErrorHResult = ErrorHResult::from_constant(0x8010000F); // SCARD_E_PROTO_MISMATCH
 
 /// The reader or smart card is not ready to accept commands.
-pub const E_NOT_READY : HRESULT = HRESULT::from_constant(0x80100010); // SCARD_E_NOT_READY
+pub const E_NOT_READY : ErrorHResult = ErrorHResult::from_constant(0x80100010); // SCARD_E_NOT_READY
 
 /// One or more of the supplied parameters values could not be properly interpreted.
-pub const E_INVALID_VALUE : HRESULT = HRESULT::from_constant(0x80100011); // SCARD_E_INVALID_VALUE
+pub const E_INVALID_VALUE : ErrorHResult = ErrorHResult::from_constant(0x80100011); // SCARD_E_INVALID_VALUE
 
 /// The action was cancelled by the system, presumably to log off or shut down.
-pub const E_SYSTEM_CANCELLED : HRESULT = HRESULT::from_constant(0x80100012); // SCARD_E_SYSTEM_CANCELLED
+pub const E_SYSTEM_CANCELLED : ErrorHResult = ErrorHResult::from_constant(0x80100012); // SCARD_E_SYSTEM_CANCELLED
 
 /// An ATR obtained from the registry is not a valid ATR string.
-pub const E_INVALID_ATR : HRESULT = HRESULT::from_constant(0x80100015); // SCARD_E_INVALID_ATR
+pub const E_INVALID_ATR : ErrorHResult = ErrorHResult::from_constant(0x80100015); // SCARD_E_INVALID_ATR
 
 /// An attempt was made to end a non-existent transaction.
-pub const E_NOT_TRANSACTED : HRESULT = HRESULT::from_constant(0x80100016); // SCARD_E_NOT_TRANSACTED
+pub const E_NOT_TRANSACTED : ErrorHResult = ErrorHResult::from_constant(0x80100016); // SCARD_E_NOT_TRANSACTED
 
 /// The specified reader is not currently available for use.
-pub const E_READER_UNAVAILABLE : HRESULT = HRESULT::from_constant(0x80100017); // SCARD_E_READER_UNAVAILABLE
+pub const E_READER_UNAVAILABLE : ErrorHResult = ErrorHResult::from_constant(0x80100017); // SCARD_E_READER_UNAVAILABLE
 
 /// The PCI Receive buffer was too small.
-pub const E_PCI_TOO_SMALL : HRESULT = HRESULT::from_constant(0x80100019); // SCARD_E_PCI_TOO_SMALL
+pub const E_PCI_TOO_SMALL : ErrorHResult = ErrorHResult::from_constant(0x80100019); // SCARD_E_PCI_TOO_SMALL
 
 /// The reader driver does not meet minimal requirements for support.
-pub const E_READER_UNSUPPORTED : HRESULT = HRESULT::from_constant(0x8010001A); // SCARD_E_READER_UNSUPPORTED
+pub const E_READER_UNSUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x8010001A); // SCARD_E_READER_UNSUPPORTED
 
 /// The reader driver did not produce a unique reader name.
-pub const E_DUPLICATE_READER : HRESULT = HRESULT::from_constant(0x8010001B); // SCARD_E_DUPLICATE_READER
+pub const E_DUPLICATE_READER : ErrorHResult = ErrorHResult::from_constant(0x8010001B); // SCARD_E_DUPLICATE_READER
 
 /// The smart card does not meet minimal requirements for support.
-pub const E_CARD_UNSUPPORTED : HRESULT = HRESULT::from_constant(0x8010001C); // SCARD_E_CARD_UNSUPPORTED
+pub const E_CARD_UNSUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x8010001C); // SCARD_E_CARD_UNSUPPORTED
 
 /// The Smart Card Resource Manager is not running.
-pub const E_NO_SERVICE : HRESULT = HRESULT::from_constant(0x8010001D); // SCARD_E_NO_SERVICE
+pub const E_NO_SERVICE : ErrorHResult = ErrorHResult::from_constant(0x8010001D); // SCARD_E_NO_SERVICE
 
 /// The Smart Card Resource Manager has shut down.
-pub const E_SERVICE_STOPPED : HRESULT = HRESULT::from_constant(0x8010001E); // SCARD_E_SERVICE_STOPPED
+pub const E_SERVICE_STOPPED : ErrorHResult = ErrorHResult::from_constant(0x8010001E); // SCARD_E_SERVICE_STOPPED
 
 /// An unexpected card error has occurred.
-pub const E_UNEXPECTED : HRESULT = HRESULT::from_constant(0x8010001F); // SCARD_E_UNEXPECTED
+pub const E_UNEXPECTED : ErrorHResult = ErrorHResult::from_constant(0x8010001F); // SCARD_E_UNEXPECTED
 
 /// No Primary Provider can be found for the smart card.
-pub const E_ICC_INSTALLATION : HRESULT = HRESULT::from_constant(0x80100020); // SCARD_E_ICC_INSTALLATION
+pub const E_ICC_INSTALLATION : ErrorHResult = ErrorHResult::from_constant(0x80100020); // SCARD_E_ICC_INSTALLATION
 
 /// The requested order of object creation is not supported.
-pub const E_ICC_CREATEORDER : HRESULT = HRESULT::from_constant(0x80100021); // SCARD_E_ICC_CREATEORDER
+pub const E_ICC_CREATEORDER : ErrorHResult = ErrorHResult::from_constant(0x80100021); // SCARD_E_ICC_CREATEORDER
 
 /// This smart card does not support the requested feature.
-pub const E_UNSUPPORTED_FEATURE : HRESULT = HRESULT::from_constant(0x80100022); // SCARD_E_UNSUPPORTED_FEATURE
+pub const E_UNSUPPORTED_FEATURE : ErrorHResult = ErrorHResult::from_constant(0x80100022); // SCARD_E_UNSUPPORTED_FEATURE
 
 /// The identified directory does not exist in the smart card.
-pub const E_DIR_NOT_FOUND : HRESULT = HRESULT::from_constant(0x80100023); // SCARD_E_DIR_NOT_FOUND
+pub const E_DIR_NOT_FOUND : ErrorHResult = ErrorHResult::from_constant(0x80100023); // SCARD_E_DIR_NOT_FOUND
 
 /// The identified file does not exist in the smart card.
-pub const E_FILE_NOT_FOUND : HRESULT = HRESULT::from_constant(0x80100024); // SCARD_E_FILE_NOT_FOUND
+pub const E_FILE_NOT_FOUND : ErrorHResult = ErrorHResult::from_constant(0x80100024); // SCARD_E_FILE_NOT_FOUND
 
 /// The supplied path does not represent a smart card directory.
-pub const E_NO_DIR : HRESULT = HRESULT::from_constant(0x80100025); // SCARD_E_NO_DIR
+pub const E_NO_DIR : ErrorHResult = ErrorHResult::from_constant(0x80100025); // SCARD_E_NO_DIR
 
 /// The supplied path does not represent a smart card file.
-pub const E_NO_FILE : HRESULT = HRESULT::from_constant(0x80100026); // SCARD_E_NO_FILE
+pub const E_NO_FILE : ErrorHResult = ErrorHResult::from_constant(0x80100026); // SCARD_E_NO_FILE
 
 /// Access is denied to this file.
-pub const E_NO_ACCESS : HRESULT = HRESULT::from_constant(0x80100027); // SCARD_E_NO_ACCESS
+pub const E_NO_ACCESS : ErrorHResult = ErrorHResult::from_constant(0x80100027); // SCARD_E_NO_ACCESS
 
 /// The smart card does not have enough memory to store the information.
-pub const E_WRITE_TOO_MANY : HRESULT = HRESULT::from_constant(0x80100028); // SCARD_E_WRITE_TOO_MANY
+pub const E_WRITE_TOO_MANY : ErrorHResult = ErrorHResult::from_constant(0x80100028); // SCARD_E_WRITE_TOO_MANY
 
 /// There was an error trying to set the smart card file object pointer.
-pub const E_BAD_SEEK : HRESULT = HRESULT::from_constant(0x80100029); // SCARD_E_BAD_SEEK
+pub const E_BAD_SEEK : ErrorHResult = ErrorHResult::from_constant(0x80100029); // SCARD_E_BAD_SEEK
 
 /// The supplied PIN is incorrect.
-pub const E_INVALID_CHV : HRESULT = HRESULT::from_constant(0x8010002A); // SCARD_E_INVALID_CHV
+pub const E_INVALID_CHV : ErrorHResult = ErrorHResult::from_constant(0x8010002A); // SCARD_E_INVALID_CHV
 
 /// An unrecognized error code was returned from a layered component.
-pub const E_UNKNOWN_RES_MNG : HRESULT = HRESULT::from_constant(0x8010002B); // SCARD_E_UNKNOWN_RES_MNG
+pub const E_UNKNOWN_RES_MNG : ErrorHResult = ErrorHResult::from_constant(0x8010002B); // SCARD_E_UNKNOWN_RES_MNG
 
 /// The requested certificate does not exist.
-pub const E_NO_SUCH_CERTIFICATE : HRESULT = HRESULT::from_constant(0x8010002C); // SCARD_E_NO_SUCH_CERTIFICATE
+pub const E_NO_SUCH_CERTIFICATE : ErrorHResult = ErrorHResult::from_constant(0x8010002C); // SCARD_E_NO_SUCH_CERTIFICATE
 
 /// The requested certificate could not be obtained.
-pub const E_CERTIFICATE_UNAVAILABLE : HRESULT = HRESULT::from_constant(0x8010002D); // SCARD_E_CERTIFICATE_UNAVAILABLE
+pub const E_CERTIFICATE_UNAVAILABLE : ErrorHResult = ErrorHResult::from_constant(0x8010002D); // SCARD_E_CERTIFICATE_UNAVAILABLE
 
 /// Cannot find a smart card reader.
-pub const E_NO_READERS_AVAILABLE : HRESULT = HRESULT::from_constant(0x8010002E); // SCARD_E_NO_READERS_AVAILABLE
+pub const E_NO_READERS_AVAILABLE : ErrorHResult = ErrorHResult::from_constant(0x8010002E); // SCARD_E_NO_READERS_AVAILABLE
 
 /// A communications error with the smart card has been detected. Retry the operation.
-pub const E_COMM_DATA_LOST : HRESULT = HRESULT::from_constant(0x8010002F); // SCARD_E_COMM_DATA_LOST
+pub const E_COMM_DATA_LOST : ErrorHResult = ErrorHResult::from_constant(0x8010002F); // SCARD_E_COMM_DATA_LOST
 
 /// The requested key container does not exist on the smart card.
-pub const E_NO_KEY_CONTAINER : HRESULT = HRESULT::from_constant(0x80100030); // SCARD_E_NO_KEY_CONTAINER
+pub const E_NO_KEY_CONTAINER : ErrorHResult = ErrorHResult::from_constant(0x80100030); // SCARD_E_NO_KEY_CONTAINER
 
 /// The Smart Card Resource Manager is too busy to complete this operation.
-pub const E_SERVER_TOO_BUSY : HRESULT = HRESULT::from_constant(0x80100031); // SCARD_E_SERVER_TOO_BUSY
+pub const E_SERVER_TOO_BUSY : ErrorHResult = ErrorHResult::from_constant(0x80100031); // SCARD_E_SERVER_TOO_BUSY
 
 /// The smart card PIN cache has expired.
-pub const E_PIN_CACHE_EXPIRED : HRESULT = HRESULT::from_constant(0x80100032); // SCARD_E_PIN_CACHE_EXPIRED
+pub const E_PIN_CACHE_EXPIRED : ErrorHResult = ErrorHResult::from_constant(0x80100032); // SCARD_E_PIN_CACHE_EXPIRED
 
 /// The smart card PIN cannot be cached.
-pub const E_NO_PIN_CACHE : HRESULT = HRESULT::from_constant(0x80100033); // SCARD_E_NO_PIN_CACHE
+pub const E_NO_PIN_CACHE : ErrorHResult = ErrorHResult::from_constant(0x80100033); // SCARD_E_NO_PIN_CACHE
 
 /// The smart card is read only and cannot be written to.
-pub const E_READ_ONLY_CARD : HRESULT = HRESULT::from_constant(0x80100034); // SCARD_E_READ_ONLY_CARD
+pub const E_READ_ONLY_CARD : ErrorHResult = ErrorHResult::from_constant(0x80100034); // SCARD_E_READ_ONLY_CARD

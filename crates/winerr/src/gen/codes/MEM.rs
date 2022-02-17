@@ -4,10 +4,10 @@ use super::*;
 
 
 /// An invalid root block pointer was specified
-pub const E_INVALID_ROOT : HRESULT = HRESULT::from_constant(0x80080009); // MEM_E_INVALID_ROOT
+pub const E_INVALID_ROOT : ErrorHResult = ErrorHResult::from_constant(0x80080009); // MEM_E_INVALID_ROOT
 
 /// An allocation chain contained an invalid link pointer
-pub const E_INVALID_LINK : HRESULT = HRESULT::from_constant(0x80080010); // MEM_E_INVALID_LINK
+pub const E_INVALID_LINK : ErrorHResult = ErrorHResult::from_constant(0x80080010); // MEM_E_INVALID_LINK
 
 /// The requested allocation size was too large
-pub const E_INVALID_SIZE : HRESULT = HRESULT::from_constant(0x80080011); // MEM_E_INVALID_SIZE
+pub const E_INVALID_SIZE : ErrorHResult = ErrorHResult::from_constant(0x80080011); // MEM_E_INVALID_SIZE

@@ -4,4 +4,4 @@ use super::*;
 
 
 /// Cannot create a duplicate resource of type Distributed Transaction Coordinator
-pub const E_DUPLICATE_RESOURCE : HRESULT = HRESULT::from_constant(0x80110701); // MSDTC_E_DUPLICATE_RESOURCE
+pub const E_DUPLICATE_RESOURCE : ErrorHResult = ErrorHResult::from_constant(0x80110701); // MSDTC_E_DUPLICATE_RESOURCE

@@ -4,7 +4,7 @@ use super::*;
 
 
 /// Error drawing view
-pub const E_DRAW : HRESULT = HRESULT::from_constant(0x80040140); // VIEW_E_DRAW
+pub const E_DRAW : ErrorHResult = ErrorHResult::from_constant(0x80040140); // VIEW_E_DRAW
 
 /// View is already frozen
-pub const S_ALREADY_FROZEN : HRESULT = HRESULT::from_constant(0x00040140); // VIEW_S_ALREADY_FROZEN
+pub const S_ALREADY_FROZEN : SuccessHResult = SuccessHResult::from_constant(0x00040140); // VIEW_S_ALREADY_FROZEN

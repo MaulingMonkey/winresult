@@ -4,22 +4,22 @@ use super::*;
 
 
 /// Only COM+ Applications marked "queued" can be invoked using the "queue" moniker
-pub const E_APPLICATION_NOT_QUEUED : HRESULT = HRESULT::from_constant(0x80110600); // COMQC_E_APPLICATION_NOT_QUEUED
+pub const E_APPLICATION_NOT_QUEUED : ErrorHResult = ErrorHResult::from_constant(0x80110600); // COMQC_E_APPLICATION_NOT_QUEUED
 
 /// At least one interface must be marked "queued" in order to create a queued component instance with the "queue" moniker
-pub const E_NO_QUEUEABLE_INTERFACES : HRESULT = HRESULT::from_constant(0x80110601); // COMQC_E_NO_QUEUEABLE_INTERFACES
+pub const E_NO_QUEUEABLE_INTERFACES : ErrorHResult = ErrorHResult::from_constant(0x80110601); // COMQC_E_NO_QUEUEABLE_INTERFACES
 
 /// MSMQ is required for the requested operation and is not installed
-pub const E_QUEUING_SERVICE_NOT_AVAILABLE : HRESULT = HRESULT::from_constant(0x80110602); // COMQC_E_QUEUING_SERVICE_NOT_AVAILABLE
+pub const E_QUEUING_SERVICE_NOT_AVAILABLE : ErrorHResult = ErrorHResult::from_constant(0x80110602); // COMQC_E_QUEUING_SERVICE_NOT_AVAILABLE
 
 /// Unable to marshal an interface that does not support IPersistStream
-pub const E_NO_IPERSISTSTREAM : HRESULT = HRESULT::from_constant(0x80110603); // COMQC_E_NO_IPERSISTSTREAM
+pub const E_NO_IPERSISTSTREAM : ErrorHResult = ErrorHResult::from_constant(0x80110603); // COMQC_E_NO_IPERSISTSTREAM
 
 /// The message is improperly formatted or was damaged in transit
-pub const E_BAD_MESSAGE : HRESULT = HRESULT::from_constant(0x80110604); // COMQC_E_BAD_MESSAGE
+pub const E_BAD_MESSAGE : ErrorHResult = ErrorHResult::from_constant(0x80110604); // COMQC_E_BAD_MESSAGE
 
 /// An unauthenticated message was received by an application that accepts only authenticated messages
-pub const E_UNAUTHENTICATED : HRESULT = HRESULT::from_constant(0x80110605); // COMQC_E_UNAUTHENTICATED
+pub const E_UNAUTHENTICATED : ErrorHResult = ErrorHResult::from_constant(0x80110605); // COMQC_E_UNAUTHENTICATED
 
 /// The message was requeued or moved by a user not in the "QC Trusted User" role
-pub const E_UNTRUSTED_ENQUEUER : HRESULT = HRESULT::from_constant(0x80110606); // COMQC_E_UNTRUSTED_ENQUEUER
+pub const E_UNTRUSTED_ENQUEUER : ErrorHResult = ErrorHResult::from_constant(0x80110606); // COMQC_E_UNTRUSTED_ENQUEUER

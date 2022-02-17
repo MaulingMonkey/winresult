@@ -4,13 +4,13 @@ use super::*;
 
 
 /// Cache not updated
-pub const E_NOCACHE_UPDATED : HRESULT = HRESULT::from_constant(0x80040170); // CACHE_E_NOCACHE_UPDATED
+pub const E_NOCACHE_UPDATED : ErrorHResult = ErrorHResult::from_constant(0x80040170); // CACHE_E_NOCACHE_UPDATED
 
 /// FORMATETC not supported
-pub const S_FORMATETC_NOTSUPPORTED : HRESULT = HRESULT::from_constant(0x00040170); // CACHE_S_FORMATETC_NOTSUPPORTED
+pub const S_FORMATETC_NOTSUPPORTED : SuccessHResult = SuccessHResult::from_constant(0x00040170); // CACHE_S_FORMATETC_NOTSUPPORTED
 
 /// Same cache
-pub const S_SAMECACHE : HRESULT = HRESULT::from_constant(0x00040171); // CACHE_S_SAMECACHE
+pub const S_SAMECACHE : SuccessHResult = SuccessHResult::from_constant(0x00040171); // CACHE_S_SAMECACHE
 
 /// Some cache(s) not updated
-pub const S_SOMECACHES_NOTUPDATED : HRESULT = HRESULT::from_constant(0x00040172); // CACHE_S_SOMECACHES_NOTUPDATED
+pub const S_SOMECACHES_NOTUPDATED : SuccessHResult = SuccessHResult::from_constant(0x00040172); // CACHE_S_SOMECACHES_NOTUPDATED

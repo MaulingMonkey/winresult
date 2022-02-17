@@ -4,40 +4,40 @@ use super::*;
 
 
 /// Windows cannot evaluate this EAS policy since this is not managed by the operating system.
-pub const E_POLICY_NOT_MANAGED_BY_OS : HRESULT = HRESULT::from_constant(0x80550001); // EAS_E_POLICY_NOT_MANAGED_BY_OS
+pub const E_POLICY_NOT_MANAGED_BY_OS : ErrorHResult = ErrorHResult::from_constant(0x80550001); // EAS_E_POLICY_NOT_MANAGED_BY_OS
 
 /// The system can be made compliant to this EAS policy if certain actions are performed by the user.
-pub const E_POLICY_COMPLIANT_WITH_ACTIONS : HRESULT = HRESULT::from_constant(0x80550002); // EAS_E_POLICY_COMPLIANT_WITH_ACTIONS
+pub const E_POLICY_COMPLIANT_WITH_ACTIONS : ErrorHResult = ErrorHResult::from_constant(0x80550002); // EAS_E_POLICY_COMPLIANT_WITH_ACTIONS
 
 /// The EAS policy being evaluated cannot be enforced by the system.
-pub const E_REQUESTED_POLICY_NOT_ENFORCEABLE : HRESULT = HRESULT::from_constant(0x80550003); // EAS_E_REQUESTED_POLICY_NOT_ENFORCEABLE
+pub const E_REQUESTED_POLICY_NOT_ENFORCEABLE : ErrorHResult = ErrorHResult::from_constant(0x80550003); // EAS_E_REQUESTED_POLICY_NOT_ENFORCEABLE
 
 /// EAS password policies for the user cannot be evaluated as the user has a blank password.
-pub const E_CURRENT_USER_HAS_BLANK_PASSWORD : HRESULT = HRESULT::from_constant(0x80550004); // EAS_E_CURRENT_USER_HAS_BLANK_PASSWORD
+pub const E_CURRENT_USER_HAS_BLANK_PASSWORD : ErrorHResult = ErrorHResult::from_constant(0x80550004); // EAS_E_CURRENT_USER_HAS_BLANK_PASSWORD
 
 /// EAS password expiration policy cannot be satisfied as the password expiration interval is less than the minimum password interval of the system.
-pub const E_REQUESTED_POLICY_PASSWORD_EXPIRATION_INCOMPATIBLE : HRESULT = HRESULT::from_constant(0x80550005); // EAS_E_REQUESTED_POLICY_PASSWORD_EXPIRATION_INCOMPATIBLE
+pub const E_REQUESTED_POLICY_PASSWORD_EXPIRATION_INCOMPATIBLE : ErrorHResult = ErrorHResult::from_constant(0x80550005); // EAS_E_REQUESTED_POLICY_PASSWORD_EXPIRATION_INCOMPATIBLE
 
 /// The user is not allowed to change her password.
-pub const E_USER_CANNOT_CHANGE_PASSWORD : HRESULT = HRESULT::from_constant(0x80550006); // EAS_E_USER_CANNOT_CHANGE_PASSWORD
+pub const E_USER_CANNOT_CHANGE_PASSWORD : ErrorHResult = ErrorHResult::from_constant(0x80550006); // EAS_E_USER_CANNOT_CHANGE_PASSWORD
 
 /// EAS password policies cannot be evaluated as one or more admins have blank passwords.
-pub const E_ADMINS_HAVE_BLANK_PASSWORD : HRESULT = HRESULT::from_constant(0x80550007); // EAS_E_ADMINS_HAVE_BLANK_PASSWORD
+pub const E_ADMINS_HAVE_BLANK_PASSWORD : ErrorHResult = ErrorHResult::from_constant(0x80550007); // EAS_E_ADMINS_HAVE_BLANK_PASSWORD
 
 /// One or more admins are not allowed to change their password.
-pub const E_ADMINS_CANNOT_CHANGE_PASSWORD : HRESULT = HRESULT::from_constant(0x80550008); // EAS_E_ADMINS_CANNOT_CHANGE_PASSWORD
+pub const E_ADMINS_CANNOT_CHANGE_PASSWORD : ErrorHResult = ErrorHResult::from_constant(0x80550008); // EAS_E_ADMINS_CANNOT_CHANGE_PASSWORD
 
 /// There are other standard users present who are not allowed to change their password.
-pub const E_LOCAL_CONTROLLED_USERS_CANNOT_CHANGE_PASSWORD : HRESULT = HRESULT::from_constant(0x80550009); // EAS_E_LOCAL_CONTROLLED_USERS_CANNOT_CHANGE_PASSWORD
+pub const E_LOCAL_CONTROLLED_USERS_CANNOT_CHANGE_PASSWORD : ErrorHResult = ErrorHResult::from_constant(0x80550009); // EAS_E_LOCAL_CONTROLLED_USERS_CANNOT_CHANGE_PASSWORD
 
 /// The EAS password policy cannot be enforced by the connected account provider of at least one administrator.
-pub const E_PASSWORD_POLICY_NOT_ENFORCEABLE_FOR_CONNECTED_ADMINS : HRESULT = HRESULT::from_constant(0x8055000A); // EAS_E_PASSWORD_POLICY_NOT_ENFORCEABLE_FOR_CONNECTED_ADMINS
+pub const E_PASSWORD_POLICY_NOT_ENFORCEABLE_FOR_CONNECTED_ADMINS : ErrorHResult = ErrorHResult::from_constant(0x8055000A); // EAS_E_PASSWORD_POLICY_NOT_ENFORCEABLE_FOR_CONNECTED_ADMINS
 
 /// There is at least one administrator whose connected account password needs to be changed for EAS password policy compliance.
-pub const E_CONNECTED_ADMINS_NEED_TO_CHANGE_PASSWORD : HRESULT = HRESULT::from_constant(0x8055000B); // EAS_E_CONNECTED_ADMINS_NEED_TO_CHANGE_PASSWORD
+pub const E_CONNECTED_ADMINS_NEED_TO_CHANGE_PASSWORD : ErrorHResult = ErrorHResult::from_constant(0x8055000B); // EAS_E_CONNECTED_ADMINS_NEED_TO_CHANGE_PASSWORD
 
 /// The EAS password policy cannot be enforced by the connected account provider of the current user.
-pub const E_PASSWORD_POLICY_NOT_ENFORCEABLE_FOR_CURRENT_CONNECTED_USER : HRESULT = HRESULT::from_constant(0x8055000C); // EAS_E_PASSWORD_POLICY_NOT_ENFORCEABLE_FOR_CURRENT_CONNECTED_USER
+pub const E_PASSWORD_POLICY_NOT_ENFORCEABLE_FOR_CURRENT_CONNECTED_USER : ErrorHResult = ErrorHResult::from_constant(0x8055000C); // EAS_E_PASSWORD_POLICY_NOT_ENFORCEABLE_FOR_CURRENT_CONNECTED_USER
 
 /// The connected account password of the current user needs to be changed for EAS password policy compliance.
-pub const E_CURRENT_CONNECTED_USER_NEED_TO_CHANGE_PASSWORD : HRESULT = HRESULT::from_constant(0x8055000D); // EAS_E_CURRENT_CONNECTED_USER_NEED_TO_CHANGE_PASSWORD
+pub const E_CURRENT_CONNECTED_USER_NEED_TO_CHANGE_PASSWORD : ErrorHResult = ErrorHResult::from_constant(0x8055000D); // EAS_E_CURRENT_CONNECTED_USER_NEED_TO_CHANGE_PASSWORD

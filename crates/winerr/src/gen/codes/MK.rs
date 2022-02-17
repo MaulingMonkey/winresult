@@ -4,67 +4,67 @@ use super::*;
 
 
 /// Moniker needs to be connected manually
-pub const E_CONNECTMANUALLY : HRESULT = HRESULT::from_constant(0x800401E0); // MK_E_CONNECTMANUALLY
+pub const E_CONNECTMANUALLY : ErrorHResult = ErrorHResult::from_constant(0x800401E0); // MK_E_CONNECTMANUALLY
 
 /// Operation exceeded deadline
-pub const E_EXCEEDEDDEADLINE : HRESULT = HRESULT::from_constant(0x800401E1); // MK_E_EXCEEDEDDEADLINE
+pub const E_EXCEEDEDDEADLINE : ErrorHResult = ErrorHResult::from_constant(0x800401E1); // MK_E_EXCEEDEDDEADLINE
 
 /// Moniker needs to be generic
-pub const E_NEEDGENERIC : HRESULT = HRESULT::from_constant(0x800401E2); // MK_E_NEEDGENERIC
+pub const E_NEEDGENERIC : ErrorHResult = ErrorHResult::from_constant(0x800401E2); // MK_E_NEEDGENERIC
 
 /// Operation unavailable
-pub const E_UNAVAILABLE : HRESULT = HRESULT::from_constant(0x800401E3); // MK_E_UNAVAILABLE
+pub const E_UNAVAILABLE : ErrorHResult = ErrorHResult::from_constant(0x800401E3); // MK_E_UNAVAILABLE
 
 /// Invalid syntax
-pub const E_SYNTAX : HRESULT = HRESULT::from_constant(0x800401E4); // MK_E_SYNTAX
+pub const E_SYNTAX : ErrorHResult = ErrorHResult::from_constant(0x800401E4); // MK_E_SYNTAX
 
 /// No object for moniker
-pub const E_NOOBJECT : HRESULT = HRESULT::from_constant(0x800401E5); // MK_E_NOOBJECT
+pub const E_NOOBJECT : ErrorHResult = ErrorHResult::from_constant(0x800401E5); // MK_E_NOOBJECT
 
 /// Bad extension for file
-pub const E_INVALIDEXTENSION : HRESULT = HRESULT::from_constant(0x800401E6); // MK_E_INVALIDEXTENSION
+pub const E_INVALIDEXTENSION : ErrorHResult = ErrorHResult::from_constant(0x800401E6); // MK_E_INVALIDEXTENSION
 
 /// Intermediate operation failed
-pub const E_INTERMEDIATEINTERFACENOTSUPPORTED : HRESULT = HRESULT::from_constant(0x800401E7); // MK_E_INTERMEDIATEINTERFACENOTSUPPORTED
+pub const E_INTERMEDIATEINTERFACENOTSUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x800401E7); // MK_E_INTERMEDIATEINTERFACENOTSUPPORTED
 
 /// Moniker is not bindable
-pub const E_NOTBINDABLE : HRESULT = HRESULT::from_constant(0x800401E8); // MK_E_NOTBINDABLE
+pub const E_NOTBINDABLE : ErrorHResult = ErrorHResult::from_constant(0x800401E8); // MK_E_NOTBINDABLE
 
 /// Moniker is not bound
-pub const E_NOTBOUND : HRESULT = HRESULT::from_constant(0x800401E9); // MK_E_NOTBOUND
+pub const E_NOTBOUND : ErrorHResult = ErrorHResult::from_constant(0x800401E9); // MK_E_NOTBOUND
 
 /// Moniker cannot open file
-pub const E_CANTOPENFILE : HRESULT = HRESULT::from_constant(0x800401EA); // MK_E_CANTOPENFILE
+pub const E_CANTOPENFILE : ErrorHResult = ErrorHResult::from_constant(0x800401EA); // MK_E_CANTOPENFILE
 
 /// User input required for operation to succeed
-pub const E_MUSTBOTHERUSER : HRESULT = HRESULT::from_constant(0x800401EB); // MK_E_MUSTBOTHERUSER
+pub const E_MUSTBOTHERUSER : ErrorHResult = ErrorHResult::from_constant(0x800401EB); // MK_E_MUSTBOTHERUSER
 
 /// Moniker class has no inverse
-pub const E_NOINVERSE : HRESULT = HRESULT::from_constant(0x800401EC); // MK_E_NOINVERSE
+pub const E_NOINVERSE : ErrorHResult = ErrorHResult::from_constant(0x800401EC); // MK_E_NOINVERSE
 
 /// Moniker does not refer to storage
-pub const E_NOSTORAGE : HRESULT = HRESULT::from_constant(0x800401ED); // MK_E_NOSTORAGE
+pub const E_NOSTORAGE : ErrorHResult = ErrorHResult::from_constant(0x800401ED); // MK_E_NOSTORAGE
 
 /// No common prefix
-pub const E_NOPREFIX : HRESULT = HRESULT::from_constant(0x800401EE); // MK_E_NOPREFIX
+pub const E_NOPREFIX : ErrorHResult = ErrorHResult::from_constant(0x800401EE); // MK_E_NOPREFIX
 
 /// Moniker could not be enumerated
-pub const E_ENUMERATION_FAILED : HRESULT = HRESULT::from_constant(0x800401EF); // MK_E_ENUMERATION_FAILED
+pub const E_ENUMERATION_FAILED : ErrorHResult = ErrorHResult::from_constant(0x800401EF); // MK_E_ENUMERATION_FAILED
 
 /// Moniker reduced to itself
-pub const S_REDUCED_TO_SELF : HRESULT = HRESULT::from_constant(0x000401E2); // MK_S_REDUCED_TO_SELF
+pub const S_REDUCED_TO_SELF : SuccessHResult = SuccessHResult::from_constant(0x000401E2); // MK_S_REDUCED_TO_SELF
 
 /// Common prefix is this moniker
-pub const S_ME : HRESULT = HRESULT::from_constant(0x000401E4); // MK_S_ME
+pub const S_ME : SuccessHResult = SuccessHResult::from_constant(0x000401E4); // MK_S_ME
 
 /// Common prefix is input moniker
-pub const S_HIM : HRESULT = HRESULT::from_constant(0x000401E5); // MK_S_HIM
+pub const S_HIM : SuccessHResult = SuccessHResult::from_constant(0x000401E5); // MK_S_HIM
 
 /// Common prefix is both monikers
-pub const S_US : HRESULT = HRESULT::from_constant(0x000401E6); // MK_S_US
+pub const S_US : SuccessHResult = SuccessHResult::from_constant(0x000401E6); // MK_S_US
 
 /// Moniker is already registered in running object table
-pub const S_MONIKERALREADYREGISTERED : HRESULT = HRESULT::from_constant(0x000401E7); // MK_S_MONIKERALREADYREGISTERED
+pub const S_MONIKERALREADYREGISTERED : SuccessHResult = SuccessHResult::from_constant(0x000401E7); // MK_S_MONIKERALREADYREGISTERED
 
 /// Moniker path could not be normalized
-pub const E_NO_NORMALIZED : HRESULT = HRESULT::from_constant(0x80080007); // MK_E_NO_NORMALIZED
+pub const E_NO_NORMALIZED : ErrorHResult = ErrorHResult::from_constant(0x80080007); // MK_E_NO_NORMALIZED

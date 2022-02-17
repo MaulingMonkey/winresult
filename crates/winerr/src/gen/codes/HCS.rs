@@ -4,91 +4,91 @@ use super::*;
 
 
 /// The virtual machine or container exited unexpectedly while starting.
-pub const E_TERMINATED_DURING_START : HRESULT = HRESULT::from_constant(0x80370100); // HCS_E_TERMINATED_DURING_START
+pub const E_TERMINATED_DURING_START : ErrorHResult = ErrorHResult::from_constant(0x80370100); // HCS_E_TERMINATED_DURING_START
 
 /// The container operating system does not match the host operating system.
-pub const E_IMAGE_MISMATCH : HRESULT = HRESULT::from_constant(0x80370101); // HCS_E_IMAGE_MISMATCH
+pub const E_IMAGE_MISMATCH : ErrorHResult = ErrorHResult::from_constant(0x80370101); // HCS_E_IMAGE_MISMATCH
 
 /// The virtual machine could not be started because a required feature is not installed.
-pub const E_HYPERV_NOT_INSTALLED : HRESULT = HRESULT::from_constant(0x80370102); // HCS_E_HYPERV_NOT_INSTALLED
+pub const E_HYPERV_NOT_INSTALLED : ErrorHResult = ErrorHResult::from_constant(0x80370102); // HCS_E_HYPERV_NOT_INSTALLED
 
 /// The requested virtual machine or container operation is not valid in the current state.
-pub const E_INVALID_STATE : HRESULT = HRESULT::from_constant(0x80370105); // HCS_E_INVALID_STATE
+pub const E_INVALID_STATE : ErrorHResult = ErrorHResult::from_constant(0x80370105); // HCS_E_INVALID_STATE
 
 /// The virtual machine or container exited unexpectedly.
-pub const E_UNEXPECTED_EXIT : HRESULT = HRESULT::from_constant(0x80370106); // HCS_E_UNEXPECTED_EXIT
+pub const E_UNEXPECTED_EXIT : ErrorHResult = ErrorHResult::from_constant(0x80370106); // HCS_E_UNEXPECTED_EXIT
 
 /// The virtual machine or container was forcefully exited.
-pub const E_TERMINATED : HRESULT = HRESULT::from_constant(0x80370107); // HCS_E_TERMINATED
+pub const E_TERMINATED : ErrorHResult = ErrorHResult::from_constant(0x80370107); // HCS_E_TERMINATED
 
 /// A connection could not be established with the container or virtual machine.
-pub const E_CONNECT_FAILED : HRESULT = HRESULT::from_constant(0x80370108); // HCS_E_CONNECT_FAILED
+pub const E_CONNECT_FAILED : ErrorHResult = ErrorHResult::from_constant(0x80370108); // HCS_E_CONNECT_FAILED
 
 /// The operation timed out because a response was not received from the virtual machine or container.
-pub const E_CONNECTION_TIMEOUT : HRESULT = HRESULT::from_constant(0x80370109); // HCS_E_CONNECTION_TIMEOUT
+pub const E_CONNECTION_TIMEOUT : ErrorHResult = ErrorHResult::from_constant(0x80370109); // HCS_E_CONNECTION_TIMEOUT
 
 /// The connection with the virtual machine or container was closed.
-pub const E_CONNECTION_CLOSED : HRESULT = HRESULT::from_constant(0x8037010A); // HCS_E_CONNECTION_CLOSED
+pub const E_CONNECTION_CLOSED : ErrorHResult = ErrorHResult::from_constant(0x8037010A); // HCS_E_CONNECTION_CLOSED
 
 /// An unknown internal message was received by the virtual machine or container.
-pub const E_UNKNOWN_MESSAGE : HRESULT = HRESULT::from_constant(0x8037010B); // HCS_E_UNKNOWN_MESSAGE
+pub const E_UNKNOWN_MESSAGE : ErrorHResult = ErrorHResult::from_constant(0x8037010B); // HCS_E_UNKNOWN_MESSAGE
 
 /// The virtual machine or container does not support an available version of the communication protocol with the host.
-pub const E_UNSUPPORTED_PROTOCOL_VERSION : HRESULT = HRESULT::from_constant(0x8037010C); // HCS_E_UNSUPPORTED_PROTOCOL_VERSION
+pub const E_UNSUPPORTED_PROTOCOL_VERSION : ErrorHResult = ErrorHResult::from_constant(0x8037010C); // HCS_E_UNSUPPORTED_PROTOCOL_VERSION
 
 /// The virtual machine or container JSON document is invalid.
-pub const E_INVALID_JSON : HRESULT = HRESULT::from_constant(0x8037010D); // HCS_E_INVALID_JSON
+pub const E_INVALID_JSON : ErrorHResult = ErrorHResult::from_constant(0x8037010D); // HCS_E_INVALID_JSON
 
 /// A virtual machine or container with the specified identifier does not exist.
-pub const E_SYSTEM_NOT_FOUND : HRESULT = HRESULT::from_constant(0x8037010E); // HCS_E_SYSTEM_NOT_FOUND
+pub const E_SYSTEM_NOT_FOUND : ErrorHResult = ErrorHResult::from_constant(0x8037010E); // HCS_E_SYSTEM_NOT_FOUND
 
 /// A virtual machine or container with the specified identifier already exists.
-pub const E_SYSTEM_ALREADY_EXISTS : HRESULT = HRESULT::from_constant(0x8037010F); // HCS_E_SYSTEM_ALREADY_EXISTS
+pub const E_SYSTEM_ALREADY_EXISTS : ErrorHResult = ErrorHResult::from_constant(0x8037010F); // HCS_E_SYSTEM_ALREADY_EXISTS
 
 /// The virtual machine or container with the specified identifier is not running.
-pub const E_SYSTEM_ALREADY_STOPPED : HRESULT = HRESULT::from_constant(0x80370110); // HCS_E_SYSTEM_ALREADY_STOPPED
+pub const E_SYSTEM_ALREADY_STOPPED : ErrorHResult = ErrorHResult::from_constant(0x80370110); // HCS_E_SYSTEM_ALREADY_STOPPED
 
 /// A communication protocol error has occurred between the virtual machine or container and the host.
-pub const E_PROTOCOL_ERROR : HRESULT = HRESULT::from_constant(0x80370111); // HCS_E_PROTOCOL_ERROR
+pub const E_PROTOCOL_ERROR : ErrorHResult = ErrorHResult::from_constant(0x80370111); // HCS_E_PROTOCOL_ERROR
 
 /// The container image contains a layer with an unrecognized format.
-pub const E_INVALID_LAYER : HRESULT = HRESULT::from_constant(0x80370112); // HCS_E_INVALID_LAYER
+pub const E_INVALID_LAYER : ErrorHResult = ErrorHResult::from_constant(0x80370112); // HCS_E_INVALID_LAYER
 
 /// To use this container image, you must join the Windows Insider Program. Please see <https://go.microsoft.com/fwlink/?linkid=850659> for more information.
-pub const E_WINDOWS_INSIDER_REQUIRED : HRESULT = HRESULT::from_constant(0x80370113); // HCS_E_WINDOWS_INSIDER_REQUIRED
+pub const E_WINDOWS_INSIDER_REQUIRED : ErrorHResult = ErrorHResult::from_constant(0x80370113); // HCS_E_WINDOWS_INSIDER_REQUIRED
 
 /// The operation could not be started because a required feature is not installed.
-pub const E_SERVICE_NOT_AVAILABLE : HRESULT = HRESULT::from_constant(0x80370114); // HCS_E_SERVICE_NOT_AVAILABLE
+pub const E_SERVICE_NOT_AVAILABLE : ErrorHResult = ErrorHResult::from_constant(0x80370114); // HCS_E_SERVICE_NOT_AVAILABLE
 
 /// The operation has not started.
-pub const E_OPERATION_NOT_STARTED : HRESULT = HRESULT::from_constant(0x80370115); // HCS_E_OPERATION_NOT_STARTED
+pub const E_OPERATION_NOT_STARTED : ErrorHResult = ErrorHResult::from_constant(0x80370115); // HCS_E_OPERATION_NOT_STARTED
 
 /// The operation is already running.
-pub const E_OPERATION_ALREADY_STARTED : HRESULT = HRESULT::from_constant(0x80370116); // HCS_E_OPERATION_ALREADY_STARTED
+pub const E_OPERATION_ALREADY_STARTED : ErrorHResult = ErrorHResult::from_constant(0x80370116); // HCS_E_OPERATION_ALREADY_STARTED
 
 /// The operation is still running.
-pub const E_OPERATION_PENDING : HRESULT = HRESULT::from_constant(0x80370117); // HCS_E_OPERATION_PENDING
+pub const E_OPERATION_PENDING : ErrorHResult = ErrorHResult::from_constant(0x80370117); // HCS_E_OPERATION_PENDING
 
 /// The operation did not complete in time.
-pub const E_OPERATION_TIMEOUT : HRESULT = HRESULT::from_constant(0x80370118); // HCS_E_OPERATION_TIMEOUT
+pub const E_OPERATION_TIMEOUT : ErrorHResult = ErrorHResult::from_constant(0x80370118); // HCS_E_OPERATION_TIMEOUT
 
 /// An event callback has already been registered on this handle.
-pub const E_OPERATION_SYSTEM_CALLBACK_ALREADY_SET : HRESULT = HRESULT::from_constant(0x80370119); // HCS_E_OPERATION_SYSTEM_CALLBACK_ALREADY_SET
+pub const E_OPERATION_SYSTEM_CALLBACK_ALREADY_SET : ErrorHResult = ErrorHResult::from_constant(0x80370119); // HCS_E_OPERATION_SYSTEM_CALLBACK_ALREADY_SET
 
 /// Not enough memory available to return the result of the operation.
-pub const E_OPERATION_RESULT_ALLOCATION_FAILED : HRESULT = HRESULT::from_constant(0x8037011A); // HCS_E_OPERATION_RESULT_ALLOCATION_FAILED
+pub const E_OPERATION_RESULT_ALLOCATION_FAILED : ErrorHResult = ErrorHResult::from_constant(0x8037011A); // HCS_E_OPERATION_RESULT_ALLOCATION_FAILED
 
 /// Insufficient privileges. Only administrators or users that are members of the Hyper-V Administrators user group are permitted to access virtual machines or containers. To add yourself to the Hyper-V Administrators user group, please see <https://aka.ms/hcsadmin> for more information.
-pub const E_ACCESS_DENIED : HRESULT = HRESULT::from_constant(0x8037011B); // HCS_E_ACCESS_DENIED
+pub const E_ACCESS_DENIED : ErrorHResult = ErrorHResult::from_constant(0x8037011B); // HCS_E_ACCESS_DENIED
 
 /// The virtual machine or container reported a critical error and was stopped or restarted.
-pub const E_GUEST_CRITICAL_ERROR : HRESULT = HRESULT::from_constant(0x8037011C); // HCS_E_GUEST_CRITICAL_ERROR
+pub const E_GUEST_CRITICAL_ERROR : ErrorHResult = ErrorHResult::from_constant(0x8037011C); // HCS_E_GUEST_CRITICAL_ERROR
 
 /// The process information is not available.
-pub const E_PROCESS_INFO_NOT_AVAILABLE : HRESULT = HRESULT::from_constant(0x8037011D); // HCS_E_PROCESS_INFO_NOT_AVAILABLE
+pub const E_PROCESS_INFO_NOT_AVAILABLE : ErrorHResult = ErrorHResult::from_constant(0x8037011D); // HCS_E_PROCESS_INFO_NOT_AVAILABLE
 
 /// The host compute system service has disconnected unexpectedly.
-pub const E_SERVICE_DISCONNECT : HRESULT = HRESULT::from_constant(0x8037011E); // HCS_E_SERVICE_DISCONNECT
+pub const E_SERVICE_DISCONNECT : ErrorHResult = ErrorHResult::from_constant(0x8037011E); // HCS_E_SERVICE_DISCONNECT
 
 /// The process has already exited.
-pub const E_PROCESS_ALREADY_STOPPED : HRESULT = HRESULT::from_constant(0x8037011F); // HCS_E_PROCESS_ALREADY_STOPPED
+pub const E_PROCESS_ALREADY_STOPPED : ErrorHResult = ErrorHResult::from_constant(0x8037011F); // HCS_E_PROCESS_ALREADY_STOPPED

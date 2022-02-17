@@ -4,28 +4,28 @@ use super::*;
 
 
 /// Operation cannot be performed while service module not found.
-pub const E_MODULE_NOT_FOUND : HRESULT = HRESULT::from_constant(0x803B0021); // GCN_E_MODULE_NOT_FOUND
+pub const E_MODULE_NOT_FOUND : ErrorHResult = ErrorHResult::from_constant(0x803B0021); // GCN_E_MODULE_NOT_FOUND
 
 /// Request Handlers not present to handle the JSON request.
-pub const E_NO_REQUEST_HANDLERS : HRESULT = HRESULT::from_constant(0x803B0022); // GCN_E_NO_REQUEST_HANDLERS
+pub const E_NO_REQUEST_HANDLERS : ErrorHResult = ErrorHResult::from_constant(0x803B0022); // GCN_E_NO_REQUEST_HANDLERS
 
 /// The specified request is unsupported.
-pub const E_REQUEST_UNSUPPORTED : HRESULT = HRESULT::from_constant(0x803B0023); // GCN_E_REQUEST_UNSUPPORTED
+pub const E_REQUEST_UNSUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x803B0023); // GCN_E_REQUEST_UNSUPPORTED
 
 /// Add runtime keys to container failed.
-pub const E_RUNTIMEKEYS_FAILED : HRESULT = HRESULT::from_constant(0x803B0024); // GCN_E_RUNTIMEKEYS_FAILED
+pub const E_RUNTIMEKEYS_FAILED : ErrorHResult = ErrorHResult::from_constant(0x803B0024); // GCN_E_RUNTIMEKEYS_FAILED
 
 /// Timeout while waiting for network adapter with the given instance id
-pub const E_NETADAPTER_TIMEOUT : HRESULT = HRESULT::from_constant(0x803B0025); // GCN_E_NETADAPTER_TIMEOUT
+pub const E_NETADAPTER_TIMEOUT : ErrorHResult = ErrorHResult::from_constant(0x803B0025); // GCN_E_NETADAPTER_TIMEOUT
 
 /// Network adapter not found for the given instance id
-pub const E_NETADAPTER_NOT_FOUND : HRESULT = HRESULT::from_constant(0x803B0026); // GCN_E_NETADAPTER_NOT_FOUND
+pub const E_NETADAPTER_NOT_FOUND : ErrorHResult = ErrorHResult::from_constant(0x803B0026); // GCN_E_NETADAPTER_NOT_FOUND
 
 /// Network compartment not found for the given  id
-pub const E_NETCOMPARTMENT_NOT_FOUND : HRESULT = HRESULT::from_constant(0x803B0027); // GCN_E_NETCOMPARTMENT_NOT_FOUND
+pub const E_NETCOMPARTMENT_NOT_FOUND : ErrorHResult = ErrorHResult::from_constant(0x803B0027); // GCN_E_NETCOMPARTMENT_NOT_FOUND
 
 /// Network interface not found for the given  id
-pub const E_NETINTERFACE_NOT_FOUND : HRESULT = HRESULT::from_constant(0x803B0028); // GCN_E_NETINTERFACE_NOT_FOUND
+pub const E_NETINTERFACE_NOT_FOUND : ErrorHResult = ErrorHResult::from_constant(0x803B0028); // GCN_E_NETINTERFACE_NOT_FOUND
 
 /// Default Namespace already exists
-pub const E_DEFAULTNAMESPACE_EXISTS : HRESULT = HRESULT::from_constant(0x803B0029); // GCN_E_DEFAULTNAMESPACE_EXISTS
+pub const E_DEFAULTNAMESPACE_EXISTS : ErrorHResult = ErrorHResult::from_constant(0x803B0029); // GCN_E_DEFAULTNAMESPACE_EXISTS

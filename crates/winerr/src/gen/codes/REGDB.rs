@@ -4,25 +4,25 @@ use super::*;
 
 
 /// Could not read key from registry
-pub const E_READREGDB : HRESULT = HRESULT::from_constant(0x80040150); // REGDB_E_READREGDB
+pub const E_READREGDB : ErrorHResult = ErrorHResult::from_constant(0x80040150); // REGDB_E_READREGDB
 
 /// Could not write key to registry
-pub const E_WRITEREGDB : HRESULT = HRESULT::from_constant(0x80040151); // REGDB_E_WRITEREGDB
+pub const E_WRITEREGDB : ErrorHResult = ErrorHResult::from_constant(0x80040151); // REGDB_E_WRITEREGDB
 
 /// Could not find the key in the registry
-pub const E_KEYMISSING : HRESULT = HRESULT::from_constant(0x80040152); // REGDB_E_KEYMISSING
+pub const E_KEYMISSING : ErrorHResult = ErrorHResult::from_constant(0x80040152); // REGDB_E_KEYMISSING
 
 /// Invalid value for registry
-pub const E_INVALIDVALUE : HRESULT = HRESULT::from_constant(0x80040153); // REGDB_E_INVALIDVALUE
+pub const E_INVALIDVALUE : ErrorHResult = ErrorHResult::from_constant(0x80040153); // REGDB_E_INVALIDVALUE
 
 /// Class not registered
-pub const E_CLASSNOTREG : HRESULT = HRESULT::from_constant(0x80040154); // REGDB_E_CLASSNOTREG
+pub const E_CLASSNOTREG : ErrorHResult = ErrorHResult::from_constant(0x80040154); // REGDB_E_CLASSNOTREG
 
 /// Interface not registered
-pub const E_IIDNOTREG : HRESULT = HRESULT::from_constant(0x80040155); // REGDB_E_IIDNOTREG
+pub const E_IIDNOTREG : ErrorHResult = ErrorHResult::from_constant(0x80040155); // REGDB_E_IIDNOTREG
 
 /// Threading model entry is not valid
-pub const E_BADTHREADINGMODEL : HRESULT = HRESULT::from_constant(0x80040156); // REGDB_E_BADTHREADINGMODEL
+pub const E_BADTHREADINGMODEL : ErrorHResult = ErrorHResult::from_constant(0x80040156); // REGDB_E_BADTHREADINGMODEL
 
 /// A registration in a package violates package-specific policies
-pub const E_PACKAGEPOLICYVIOLATION : HRESULT = HRESULT::from_constant(0x80040157); // REGDB_E_PACKAGEPOLICYVIOLATION
+pub const E_PACKAGEPOLICYVIOLATION : ErrorHResult = ErrorHResult::from_constant(0x80040157); // REGDB_E_PACKAGEPOLICYVIOLATION

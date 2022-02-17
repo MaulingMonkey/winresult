@@ -4,79 +4,79 @@ use super::*;
 
 
 /// Buffer too small.
-pub const E_BUFFERTOOSMALL : HRESULT = HRESULT::from_constant(0x80028016); // TYPE_E_BUFFERTOOSMALL
+pub const E_BUFFERTOOSMALL : ErrorHResult = ErrorHResult::from_constant(0x80028016); // TYPE_E_BUFFERTOOSMALL
 
 /// Field name not defined in the record.
-pub const E_FIELDNOTFOUND : HRESULT = HRESULT::from_constant(0x80028017); // TYPE_E_FIELDNOTFOUND
+pub const E_FIELDNOTFOUND : ErrorHResult = ErrorHResult::from_constant(0x80028017); // TYPE_E_FIELDNOTFOUND
 
 /// Old format or invalid type library.
-pub const E_INVDATAREAD : HRESULT = HRESULT::from_constant(0x80028018); // TYPE_E_INVDATAREAD
+pub const E_INVDATAREAD : ErrorHResult = ErrorHResult::from_constant(0x80028018); // TYPE_E_INVDATAREAD
 
 /// Old format or invalid type library.
-pub const E_UNSUPFORMAT : HRESULT = HRESULT::from_constant(0x80028019); // TYPE_E_UNSUPFORMAT
+pub const E_UNSUPFORMAT : ErrorHResult = ErrorHResult::from_constant(0x80028019); // TYPE_E_UNSUPFORMAT
 
 /// Error accessing the OLE registry.
-pub const E_REGISTRYACCESS : HRESULT = HRESULT::from_constant(0x8002801C); // TYPE_E_REGISTRYACCESS
+pub const E_REGISTRYACCESS : ErrorHResult = ErrorHResult::from_constant(0x8002801C); // TYPE_E_REGISTRYACCESS
 
 /// Library not registered.
-pub const E_LIBNOTREGISTERED : HRESULT = HRESULT::from_constant(0x8002801D); // TYPE_E_LIBNOTREGISTERED
+pub const E_LIBNOTREGISTERED : ErrorHResult = ErrorHResult::from_constant(0x8002801D); // TYPE_E_LIBNOTREGISTERED
 
 /// Bound to unknown type.
-pub const E_UNDEFINEDTYPE : HRESULT = HRESULT::from_constant(0x80028027); // TYPE_E_UNDEFINEDTYPE
+pub const E_UNDEFINEDTYPE : ErrorHResult = ErrorHResult::from_constant(0x80028027); // TYPE_E_UNDEFINEDTYPE
 
 /// Qualified name disallowed.
-pub const E_QUALIFIEDNAMEDISALLOWED : HRESULT = HRESULT::from_constant(0x80028028); // TYPE_E_QUALIFIEDNAMEDISALLOWED
+pub const E_QUALIFIEDNAMEDISALLOWED : ErrorHResult = ErrorHResult::from_constant(0x80028028); // TYPE_E_QUALIFIEDNAMEDISALLOWED
 
 /// Invalid forward reference, or reference to uncompiled type.
-pub const E_INVALIDSTATE : HRESULT = HRESULT::from_constant(0x80028029); // TYPE_E_INVALIDSTATE
+pub const E_INVALIDSTATE : ErrorHResult = ErrorHResult::from_constant(0x80028029); // TYPE_E_INVALIDSTATE
 
 /// Type mismatch.
-pub const E_WRONGTYPEKIND : HRESULT = HRESULT::from_constant(0x8002802A); // TYPE_E_WRONGTYPEKIND
+pub const E_WRONGTYPEKIND : ErrorHResult = ErrorHResult::from_constant(0x8002802A); // TYPE_E_WRONGTYPEKIND
 
 /// Element not found.
-pub const E_ELEMENTNOTFOUND : HRESULT = HRESULT::from_constant(0x8002802B); // TYPE_E_ELEMENTNOTFOUND
+pub const E_ELEMENTNOTFOUND : ErrorHResult = ErrorHResult::from_constant(0x8002802B); // TYPE_E_ELEMENTNOTFOUND
 
 /// Ambiguous name.
-pub const E_AMBIGUOUSNAME : HRESULT = HRESULT::from_constant(0x8002802C); // TYPE_E_AMBIGUOUSNAME
+pub const E_AMBIGUOUSNAME : ErrorHResult = ErrorHResult::from_constant(0x8002802C); // TYPE_E_AMBIGUOUSNAME
 
 /// Name already exists in the library.
-pub const E_NAMECONFLICT : HRESULT = HRESULT::from_constant(0x8002802D); // TYPE_E_NAMECONFLICT
+pub const E_NAMECONFLICT : ErrorHResult = ErrorHResult::from_constant(0x8002802D); // TYPE_E_NAMECONFLICT
 
 /// Unknown LCID.
-pub const E_UNKNOWNLCID : HRESULT = HRESULT::from_constant(0x8002802E); // TYPE_E_UNKNOWNLCID
+pub const E_UNKNOWNLCID : ErrorHResult = ErrorHResult::from_constant(0x8002802E); // TYPE_E_UNKNOWNLCID
 
 /// Function not defined in specified DLL.
-pub const E_DLLFUNCTIONNOTFOUND : HRESULT = HRESULT::from_constant(0x8002802F); // TYPE_E_DLLFUNCTIONNOTFOUND
+pub const E_DLLFUNCTIONNOTFOUND : ErrorHResult = ErrorHResult::from_constant(0x8002802F); // TYPE_E_DLLFUNCTIONNOTFOUND
 
 /// Wrong module kind for the operation.
-pub const E_BADMODULEKIND : HRESULT = HRESULT::from_constant(0x800288BD); // TYPE_E_BADMODULEKIND
+pub const E_BADMODULEKIND : ErrorHResult = ErrorHResult::from_constant(0x800288BD); // TYPE_E_BADMODULEKIND
 
 /// Size may not exceed 64K.
-pub const E_SIZETOOBIG : HRESULT = HRESULT::from_constant(0x800288C5); // TYPE_E_SIZETOOBIG
+pub const E_SIZETOOBIG : ErrorHResult = ErrorHResult::from_constant(0x800288C5); // TYPE_E_SIZETOOBIG
 
 /// Duplicate ID in inheritance hierarchy.
-pub const E_DUPLICATEID : HRESULT = HRESULT::from_constant(0x800288C6); // TYPE_E_DUPLICATEID
+pub const E_DUPLICATEID : ErrorHResult = ErrorHResult::from_constant(0x800288C6); // TYPE_E_DUPLICATEID
 
 /// Incorrect inheritance depth in standard OLE hmember.
-pub const E_INVALIDID : HRESULT = HRESULT::from_constant(0x800288CF); // TYPE_E_INVALIDID
+pub const E_INVALIDID : ErrorHResult = ErrorHResult::from_constant(0x800288CF); // TYPE_E_INVALIDID
 
 /// Type mismatch.
-pub const E_TYPEMISMATCH : HRESULT = HRESULT::from_constant(0x80028CA0); // TYPE_E_TYPEMISMATCH
+pub const E_TYPEMISMATCH : ErrorHResult = ErrorHResult::from_constant(0x80028CA0); // TYPE_E_TYPEMISMATCH
 
 /// Invalid number of arguments.
-pub const E_OUTOFBOUNDS : HRESULT = HRESULT::from_constant(0x80028CA1); // TYPE_E_OUTOFBOUNDS
+pub const E_OUTOFBOUNDS : ErrorHResult = ErrorHResult::from_constant(0x80028CA1); // TYPE_E_OUTOFBOUNDS
 
 /// I/O Error.
-pub const E_IOERROR : HRESULT = HRESULT::from_constant(0x80028CA2); // TYPE_E_IOERROR
+pub const E_IOERROR : ErrorHResult = ErrorHResult::from_constant(0x80028CA2); // TYPE_E_IOERROR
 
 /// Error creating unique tmp file.
-pub const E_CANTCREATETMPFILE : HRESULT = HRESULT::from_constant(0x80028CA3); // TYPE_E_CANTCREATETMPFILE
+pub const E_CANTCREATETMPFILE : ErrorHResult = ErrorHResult::from_constant(0x80028CA3); // TYPE_E_CANTCREATETMPFILE
 
 /// Error loading type library/DLL.
-pub const E_CANTLOADLIBRARY : HRESULT = HRESULT::from_constant(0x80029C4A); // TYPE_E_CANTLOADLIBRARY
+pub const E_CANTLOADLIBRARY : ErrorHResult = ErrorHResult::from_constant(0x80029C4A); // TYPE_E_CANTLOADLIBRARY
 
 /// Inconsistent property functions.
-pub const E_INCONSISTENTPROPFUNCS : HRESULT = HRESULT::from_constant(0x80029C83); // TYPE_E_INCONSISTENTPROPFUNCS
+pub const E_INCONSISTENTPROPFUNCS : ErrorHResult = ErrorHResult::from_constant(0x80029C83); // TYPE_E_INCONSISTENTPROPFUNCS
 
 /// Circular dependency between types/modules.
-pub const E_CIRCULARTYPE : HRESULT = HRESULT::from_constant(0x80029C84); // TYPE_E_CIRCULARTYPE
+pub const E_CIRCULARTYPE : ErrorHResult = ErrorHResult::from_constant(0x80029C84); // TYPE_E_CIRCULARTYPE

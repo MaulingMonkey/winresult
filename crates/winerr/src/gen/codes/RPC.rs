@@ -292,163 +292,163 @@ pub const S_GRP_ELT_NOT_ADDED : SuccessCodeMicrosoft = SuccessCodeMicrosoft::fro
 pub const S_GRP_ELT_NOT_REMOVED : SuccessCodeMicrosoft = SuccessCodeMicrosoft::from_constant(1929); // RPC_S_GRP_ELT_NOT_REMOVED
 
 /// Call was rejected by callee.
-pub const E_CALL_REJECTED : HRESULT = HRESULT::from_constant(0x80010001); // RPC_E_CALL_REJECTED
+pub const E_CALL_REJECTED : ErrorHResult = ErrorHResult::from_constant(0x80010001); // RPC_E_CALL_REJECTED
 
 /// Call was canceled by the message filter.
-pub const E_CALL_CANCELED : HRESULT = HRESULT::from_constant(0x80010002); // RPC_E_CALL_CANCELED
+pub const E_CALL_CANCELED : ErrorHResult = ErrorHResult::from_constant(0x80010002); // RPC_E_CALL_CANCELED
 
 /// The caller is dispatching an intertask SendMessage call and cannot call out via PostMessage.
-pub const E_CANTPOST_INSENDCALL : HRESULT = HRESULT::from_constant(0x80010003); // RPC_E_CANTPOST_INSENDCALL
+pub const E_CANTPOST_INSENDCALL : ErrorHResult = ErrorHResult::from_constant(0x80010003); // RPC_E_CANTPOST_INSENDCALL
 
 /// The caller is dispatching an asynchronous call and cannot make an outgoing call on behalf of this call.
-pub const E_CANTCALLOUT_INASYNCCALL : HRESULT = HRESULT::from_constant(0x80010004); // RPC_E_CANTCALLOUT_INASYNCCALL
+pub const E_CANTCALLOUT_INASYNCCALL : ErrorHResult = ErrorHResult::from_constant(0x80010004); // RPC_E_CANTCALLOUT_INASYNCCALL
 
 /// It is illegal to call out while inside message filter.
-pub const E_CANTCALLOUT_INEXTERNALCALL : HRESULT = HRESULT::from_constant(0x80010005); // RPC_E_CANTCALLOUT_INEXTERNALCALL
+pub const E_CANTCALLOUT_INEXTERNALCALL : ErrorHResult = ErrorHResult::from_constant(0x80010005); // RPC_E_CANTCALLOUT_INEXTERNALCALL
 
 /// The connection terminated or is in a bogus state and cannot be used any more. Other connections are still valid.
-pub const E_CONNECTION_TERMINATED : HRESULT = HRESULT::from_constant(0x80010006); // RPC_E_CONNECTION_TERMINATED
+pub const E_CONNECTION_TERMINATED : ErrorHResult = ErrorHResult::from_constant(0x80010006); // RPC_E_CONNECTION_TERMINATED
 
 /// The callee (server [not server application]) is not available and disappeared; all connections are invalid. The call may have executed.
-pub const E_SERVER_DIED : HRESULT = HRESULT::from_constant(0x80010007); // RPC_E_SERVER_DIED
+pub const E_SERVER_DIED : ErrorHResult = ErrorHResult::from_constant(0x80010007); // RPC_E_SERVER_DIED
 
 /// The caller (client) disappeared while the callee (server) was processing a call.
-pub const E_CLIENT_DIED : HRESULT = HRESULT::from_constant(0x80010008); // RPC_E_CLIENT_DIED
+pub const E_CLIENT_DIED : ErrorHResult = ErrorHResult::from_constant(0x80010008); // RPC_E_CLIENT_DIED
 
 /// The data packet with the marshalled parameter data is incorrect.
-pub const E_INVALID_DATAPACKET : HRESULT = HRESULT::from_constant(0x80010009); // RPC_E_INVALID_DATAPACKET
+pub const E_INVALID_DATAPACKET : ErrorHResult = ErrorHResult::from_constant(0x80010009); // RPC_E_INVALID_DATAPACKET
 
 /// The call was not transmitted properly; the message queue was full and was not emptied after yielding.
-pub const E_CANTTRANSMIT_CALL : HRESULT = HRESULT::from_constant(0x8001000A); // RPC_E_CANTTRANSMIT_CALL
+pub const E_CANTTRANSMIT_CALL : ErrorHResult = ErrorHResult::from_constant(0x8001000A); // RPC_E_CANTTRANSMIT_CALL
 
 /// The client (caller) cannot marshall the parameter data - low memory, etc.
-pub const E_CLIENT_CANTMARSHAL_DATA : HRESULT = HRESULT::from_constant(0x8001000B); // RPC_E_CLIENT_CANTMARSHAL_DATA
+pub const E_CLIENT_CANTMARSHAL_DATA : ErrorHResult = ErrorHResult::from_constant(0x8001000B); // RPC_E_CLIENT_CANTMARSHAL_DATA
 
 /// The client (caller) cannot unmarshall the return data - low memory, etc.
-pub const E_CLIENT_CANTUNMARSHAL_DATA : HRESULT = HRESULT::from_constant(0x8001000C); // RPC_E_CLIENT_CANTUNMARSHAL_DATA
+pub const E_CLIENT_CANTUNMARSHAL_DATA : ErrorHResult = ErrorHResult::from_constant(0x8001000C); // RPC_E_CLIENT_CANTUNMARSHAL_DATA
 
 /// The server (callee) cannot marshall the return data - low memory, etc.
-pub const E_SERVER_CANTMARSHAL_DATA : HRESULT = HRESULT::from_constant(0x8001000D); // RPC_E_SERVER_CANTMARSHAL_DATA
+pub const E_SERVER_CANTMARSHAL_DATA : ErrorHResult = ErrorHResult::from_constant(0x8001000D); // RPC_E_SERVER_CANTMARSHAL_DATA
 
 /// The server (callee) cannot unmarshall the parameter data - low memory, etc.
-pub const E_SERVER_CANTUNMARSHAL_DATA : HRESULT = HRESULT::from_constant(0x8001000E); // RPC_E_SERVER_CANTUNMARSHAL_DATA
+pub const E_SERVER_CANTUNMARSHAL_DATA : ErrorHResult = ErrorHResult::from_constant(0x8001000E); // RPC_E_SERVER_CANTUNMARSHAL_DATA
 
 /// Received data is invalid; could be server or client data.
-pub const E_INVALID_DATA : HRESULT = HRESULT::from_constant(0x8001000F); // RPC_E_INVALID_DATA
+pub const E_INVALID_DATA : ErrorHResult = ErrorHResult::from_constant(0x8001000F); // RPC_E_INVALID_DATA
 
 /// A particular parameter is invalid and cannot be (un)marshalled.
-pub const E_INVALID_PARAMETER : HRESULT = HRESULT::from_constant(0x80010010); // RPC_E_INVALID_PARAMETER
+pub const E_INVALID_PARAMETER : ErrorHResult = ErrorHResult::from_constant(0x80010010); // RPC_E_INVALID_PARAMETER
 
 /// There is no second outgoing call on same channel in DDE conversation.
-pub const E_CANTCALLOUT_AGAIN : HRESULT = HRESULT::from_constant(0x80010011); // RPC_E_CANTCALLOUT_AGAIN
+pub const E_CANTCALLOUT_AGAIN : ErrorHResult = ErrorHResult::from_constant(0x80010011); // RPC_E_CANTCALLOUT_AGAIN
 
 /// The callee (server [not server application]) is not available and disappeared; all connections are invalid. The call did not execute.
-pub const E_SERVER_DIED_DNE : HRESULT = HRESULT::from_constant(0x80010012); // RPC_E_SERVER_DIED_DNE
+pub const E_SERVER_DIED_DNE : ErrorHResult = ErrorHResult::from_constant(0x80010012); // RPC_E_SERVER_DIED_DNE
 
 /// System call failed.
-pub const E_SYS_CALL_FAILED : HRESULT = HRESULT::from_constant(0x80010100); // RPC_E_SYS_CALL_FAILED
+pub const E_SYS_CALL_FAILED : ErrorHResult = ErrorHResult::from_constant(0x80010100); // RPC_E_SYS_CALL_FAILED
 
 /// Could not allocate some required resource (memory, events, ...)
-pub const E_OUT_OF_RESOURCES : HRESULT = HRESULT::from_constant(0x80010101); // RPC_E_OUT_OF_RESOURCES
+pub const E_OUT_OF_RESOURCES : ErrorHResult = ErrorHResult::from_constant(0x80010101); // RPC_E_OUT_OF_RESOURCES
 
 /// Attempted to make calls on more than one thread in single threaded mode.
-pub const E_ATTEMPTED_MULTITHREAD : HRESULT = HRESULT::from_constant(0x80010102); // RPC_E_ATTEMPTED_MULTITHREAD
+pub const E_ATTEMPTED_MULTITHREAD : ErrorHResult = ErrorHResult::from_constant(0x80010102); // RPC_E_ATTEMPTED_MULTITHREAD
 
 /// The requested interface is not registered on the server object.
-pub const E_NOT_REGISTERED : HRESULT = HRESULT::from_constant(0x80010103); // RPC_E_NOT_REGISTERED
+pub const E_NOT_REGISTERED : ErrorHResult = ErrorHResult::from_constant(0x80010103); // RPC_E_NOT_REGISTERED
 
 /// RPC could not call the server or could not return the results of calling the server.
-pub const E_FAULT : HRESULT = HRESULT::from_constant(0x80010104); // RPC_E_FAULT
+pub const E_FAULT : ErrorHResult = ErrorHResult::from_constant(0x80010104); // RPC_E_FAULT
 
 /// The server threw an exception.
-pub const E_SERVERFAULT : HRESULT = HRESULT::from_constant(0x80010105); // RPC_E_SERVERFAULT
+pub const E_SERVERFAULT : ErrorHResult = ErrorHResult::from_constant(0x80010105); // RPC_E_SERVERFAULT
 
 /// Cannot change thread mode after it is set.
-pub const E_CHANGED_MODE : HRESULT = HRESULT::from_constant(0x80010106); // RPC_E_CHANGED_MODE
+pub const E_CHANGED_MODE : ErrorHResult = ErrorHResult::from_constant(0x80010106); // RPC_E_CHANGED_MODE
 
 /// The method called does not exist on the server.
-pub const E_INVALIDMETHOD : HRESULT = HRESULT::from_constant(0x80010107); // RPC_E_INVALIDMETHOD
+pub const E_INVALIDMETHOD : ErrorHResult = ErrorHResult::from_constant(0x80010107); // RPC_E_INVALIDMETHOD
 
 /// The object invoked has disconnected from its clients.
-pub const E_DISCONNECTED : HRESULT = HRESULT::from_constant(0x80010108); // RPC_E_DISCONNECTED
+pub const E_DISCONNECTED : ErrorHResult = ErrorHResult::from_constant(0x80010108); // RPC_E_DISCONNECTED
 
 /// The object invoked chose not to process the call now. Try again later.
-pub const E_RETRY : HRESULT = HRESULT::from_constant(0x80010109); // RPC_E_RETRY
+pub const E_RETRY : ErrorHResult = ErrorHResult::from_constant(0x80010109); // RPC_E_RETRY
 
 /// The message filter indicated that the application is busy.
-pub const E_SERVERCALL_RETRYLATER : HRESULT = HRESULT::from_constant(0x8001010A); // RPC_E_SERVERCALL_RETRYLATER
+pub const E_SERVERCALL_RETRYLATER : ErrorHResult = ErrorHResult::from_constant(0x8001010A); // RPC_E_SERVERCALL_RETRYLATER
 
 /// The message filter rejected the call.
-pub const E_SERVERCALL_REJECTED : HRESULT = HRESULT::from_constant(0x8001010B); // RPC_E_SERVERCALL_REJECTED
+pub const E_SERVERCALL_REJECTED : ErrorHResult = ErrorHResult::from_constant(0x8001010B); // RPC_E_SERVERCALL_REJECTED
 
 /// A call control interfaces was called with invalid data.
-pub const E_INVALID_CALLDATA : HRESULT = HRESULT::from_constant(0x8001010C); // RPC_E_INVALID_CALLDATA
+pub const E_INVALID_CALLDATA : ErrorHResult = ErrorHResult::from_constant(0x8001010C); // RPC_E_INVALID_CALLDATA
 
 /// An outgoing call cannot be made since the application is dispatching an input-synchronous call.
-pub const E_CANTCALLOUT_ININPUTSYNCCALL : HRESULT = HRESULT::from_constant(0x8001010D); // RPC_E_CANTCALLOUT_ININPUTSYNCCALL
+pub const E_CANTCALLOUT_ININPUTSYNCCALL : ErrorHResult = ErrorHResult::from_constant(0x8001010D); // RPC_E_CANTCALLOUT_ININPUTSYNCCALL
 
 /// The application called an interface that was marshalled for a different thread.
-pub const E_WRONG_THREAD : HRESULT = HRESULT::from_constant(0x8001010E); // RPC_E_WRONG_THREAD
+pub const E_WRONG_THREAD : ErrorHResult = ErrorHResult::from_constant(0x8001010E); // RPC_E_WRONG_THREAD
 
 /// CoInitialize has not been called on the current thread.
-pub const E_THREAD_NOT_INIT : HRESULT = HRESULT::from_constant(0x8001010F); // RPC_E_THREAD_NOT_INIT
+pub const E_THREAD_NOT_INIT : ErrorHResult = ErrorHResult::from_constant(0x8001010F); // RPC_E_THREAD_NOT_INIT
 
 /// The version of OLE on the client and server machines does not match.
-pub const E_VERSION_MISMATCH : HRESULT = HRESULT::from_constant(0x80010110); // RPC_E_VERSION_MISMATCH
+pub const E_VERSION_MISMATCH : ErrorHResult = ErrorHResult::from_constant(0x80010110); // RPC_E_VERSION_MISMATCH
 
 /// OLE received a packet with an invalid header.
-pub const E_INVALID_HEADER : HRESULT = HRESULT::from_constant(0x80010111); // RPC_E_INVALID_HEADER
+pub const E_INVALID_HEADER : ErrorHResult = ErrorHResult::from_constant(0x80010111); // RPC_E_INVALID_HEADER
 
 /// OLE received a packet with an invalid extension.
-pub const E_INVALID_EXTENSION : HRESULT = HRESULT::from_constant(0x80010112); // RPC_E_INVALID_EXTENSION
+pub const E_INVALID_EXTENSION : ErrorHResult = ErrorHResult::from_constant(0x80010112); // RPC_E_INVALID_EXTENSION
 
 /// The requested object or interface does not exist.
-pub const E_INVALID_IPID : HRESULT = HRESULT::from_constant(0x80010113); // RPC_E_INVALID_IPID
+pub const E_INVALID_IPID : ErrorHResult = ErrorHResult::from_constant(0x80010113); // RPC_E_INVALID_IPID
 
 /// The requested object does not exist.
-pub const E_INVALID_OBJECT : HRESULT = HRESULT::from_constant(0x80010114); // RPC_E_INVALID_OBJECT
+pub const E_INVALID_OBJECT : ErrorHResult = ErrorHResult::from_constant(0x80010114); // RPC_E_INVALID_OBJECT
 
 /// OLE has sent a request and is waiting for a reply.
-pub const S_CALLPENDING : HRESULT = HRESULT::from_constant(0x80010115); // RPC_S_CALLPENDING
+pub const S_CALLPENDING : ErrorHResult = ErrorHResult::from_constant(0x80010115); // RPC_S_CALLPENDING
 
 /// OLE is waiting before retrying a request.
-pub const S_WAITONTIMER : HRESULT = HRESULT::from_constant(0x80010116); // RPC_S_WAITONTIMER
+pub const S_WAITONTIMER : ErrorHResult = ErrorHResult::from_constant(0x80010116); // RPC_S_WAITONTIMER
 
 /// Call context cannot be accessed after call completed.
-pub const E_CALL_COMPLETE : HRESULT = HRESULT::from_constant(0x80010117); // RPC_E_CALL_COMPLETE
+pub const E_CALL_COMPLETE : ErrorHResult = ErrorHResult::from_constant(0x80010117); // RPC_E_CALL_COMPLETE
 
 /// Impersonate on unsecure calls is not supported.
-pub const E_UNSECURE_CALL : HRESULT = HRESULT::from_constant(0x80010118); // RPC_E_UNSECURE_CALL
+pub const E_UNSECURE_CALL : ErrorHResult = ErrorHResult::from_constant(0x80010118); // RPC_E_UNSECURE_CALL
 
 /// Security must be initialized before any interfaces are marshalled or unmarshalled. It cannot be changed once initialized.
-pub const E_TOO_LATE : HRESULT = HRESULT::from_constant(0x80010119); // RPC_E_TOO_LATE
+pub const E_TOO_LATE : ErrorHResult = ErrorHResult::from_constant(0x80010119); // RPC_E_TOO_LATE
 
 /// No security packages are installed on this machine or the user is not logged on or there are no compatible security packages between the client and server.
-pub const E_NO_GOOD_SECURITY_PACKAGES : HRESULT = HRESULT::from_constant(0x8001011A); // RPC_E_NO_GOOD_SECURITY_PACKAGES
+pub const E_NO_GOOD_SECURITY_PACKAGES : ErrorHResult = ErrorHResult::from_constant(0x8001011A); // RPC_E_NO_GOOD_SECURITY_PACKAGES
 
 /// Access is denied.
-pub const E_ACCESS_DENIED : HRESULT = HRESULT::from_constant(0x8001011B); // RPC_E_ACCESS_DENIED
+pub const E_ACCESS_DENIED : ErrorHResult = ErrorHResult::from_constant(0x8001011B); // RPC_E_ACCESS_DENIED
 
 /// Remote calls are not allowed for this process.
-pub const E_REMOTE_DISABLED : HRESULT = HRESULT::from_constant(0x8001011C); // RPC_E_REMOTE_DISABLED
+pub const E_REMOTE_DISABLED : ErrorHResult = ErrorHResult::from_constant(0x8001011C); // RPC_E_REMOTE_DISABLED
 
 /// The marshaled interface data packet (OBJREF) has an invalid or unknown format.
-pub const E_INVALID_OBJREF : HRESULT = HRESULT::from_constant(0x8001011D); // RPC_E_INVALID_OBJREF
+pub const E_INVALID_OBJREF : ErrorHResult = ErrorHResult::from_constant(0x8001011D); // RPC_E_INVALID_OBJREF
 
 /// No context is associated with this call. This happens for some custom marshalled calls and on the client side of the call.
-pub const E_NO_CONTEXT : HRESULT = HRESULT::from_constant(0x8001011E); // RPC_E_NO_CONTEXT
+pub const E_NO_CONTEXT : ErrorHResult = ErrorHResult::from_constant(0x8001011E); // RPC_E_NO_CONTEXT
 
 /// This operation returned because the timeout period expired.
-pub const E_TIMEOUT : HRESULT = HRESULT::from_constant(0x8001011F); // RPC_E_TIMEOUT
+pub const E_TIMEOUT : ErrorHResult = ErrorHResult::from_constant(0x8001011F); // RPC_E_TIMEOUT
 
 /// There are no synchronize objects to wait on.
-pub const E_NO_SYNC : HRESULT = HRESULT::from_constant(0x80010120); // RPC_E_NO_SYNC
+pub const E_NO_SYNC : ErrorHResult = ErrorHResult::from_constant(0x80010120); // RPC_E_NO_SYNC
 
 /// Full subject issuer chain SSL principal name expected from the server.
-pub const E_FULLSIC_REQUIRED : HRESULT = HRESULT::from_constant(0x80010121); // RPC_E_FULLSIC_REQUIRED
+pub const E_FULLSIC_REQUIRED : ErrorHResult = ErrorHResult::from_constant(0x80010121); // RPC_E_FULLSIC_REQUIRED
 
 /// Principal name is not a valid MSSTD name.
-pub const E_INVALID_STD_NAME : HRESULT = HRESULT::from_constant(0x80010122); // RPC_E_INVALID_STD_NAME
+pub const E_INVALID_STD_NAME : ErrorHResult = ErrorHResult::from_constant(0x80010122); // RPC_E_INVALID_STD_NAME
 
 /// An internal error occurred.
-pub const E_UNEXPECTED : HRESULT = HRESULT::from_constant(0x8001FFFF); // RPC_E_UNEXPECTED
+pub const E_UNEXPECTED : ErrorHResult = ErrorHResult::from_constant(0x8001FFFF); // RPC_E_UNEXPECTED

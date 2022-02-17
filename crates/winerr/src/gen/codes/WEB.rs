@@ -4,28 +4,28 @@ use super::*;
 
 
 /// Unsupported format.
-pub const E_UNSUPPORTED_FORMAT : HRESULT = HRESULT::from_constant(0x83750001); // WEB_E_UNSUPPORTED_FORMAT
+pub const E_UNSUPPORTED_FORMAT : ErrorHResult = ErrorHResult::from_constant(0x83750001); // WEB_E_UNSUPPORTED_FORMAT
 
 /// Invalid XML.
-pub const E_INVALID_XML : HRESULT = HRESULT::from_constant(0x83750002); // WEB_E_INVALID_XML
+pub const E_INVALID_XML : ErrorHResult = ErrorHResult::from_constant(0x83750002); // WEB_E_INVALID_XML
 
 /// Missing required element.
-pub const E_MISSING_REQUIRED_ELEMENT : HRESULT = HRESULT::from_constant(0x83750003); // WEB_E_MISSING_REQUIRED_ELEMENT
+pub const E_MISSING_REQUIRED_ELEMENT : ErrorHResult = ErrorHResult::from_constant(0x83750003); // WEB_E_MISSING_REQUIRED_ELEMENT
 
 /// Missing required attribute.
-pub const E_MISSING_REQUIRED_ATTRIBUTE : HRESULT = HRESULT::from_constant(0x83750004); // WEB_E_MISSING_REQUIRED_ATTRIBUTE
+pub const E_MISSING_REQUIRED_ATTRIBUTE : ErrorHResult = ErrorHResult::from_constant(0x83750004); // WEB_E_MISSING_REQUIRED_ATTRIBUTE
 
 /// Unexpected content.
-pub const E_UNEXPECTED_CONTENT : HRESULT = HRESULT::from_constant(0x83750005); // WEB_E_UNEXPECTED_CONTENT
+pub const E_UNEXPECTED_CONTENT : ErrorHResult = ErrorHResult::from_constant(0x83750005); // WEB_E_UNEXPECTED_CONTENT
 
 /// Resource too large.
-pub const E_RESOURCE_TOO_LARGE : HRESULT = HRESULT::from_constant(0x83750006); // WEB_E_RESOURCE_TOO_LARGE
+pub const E_RESOURCE_TOO_LARGE : ErrorHResult = ErrorHResult::from_constant(0x83750006); // WEB_E_RESOURCE_TOO_LARGE
 
 /// Invalid JSON string.
-pub const E_INVALID_JSON_STRING : HRESULT = HRESULT::from_constant(0x83750007); // WEB_E_INVALID_JSON_STRING
+pub const E_INVALID_JSON_STRING : ErrorHResult = ErrorHResult::from_constant(0x83750007); // WEB_E_INVALID_JSON_STRING
 
 /// Invalid JSON number.
-pub const E_INVALID_JSON_NUMBER : HRESULT = HRESULT::from_constant(0x83750008); // WEB_E_INVALID_JSON_NUMBER
+pub const E_INVALID_JSON_NUMBER : ErrorHResult = ErrorHResult::from_constant(0x83750008); // WEB_E_INVALID_JSON_NUMBER
 
 /// JSON value not found.
-pub const E_JSON_VALUE_NOT_FOUND : HRESULT = HRESULT::from_constant(0x83750009); // WEB_E_JSON_VALUE_NOT_FOUND
+pub const E_JSON_VALUE_NOT_FOUND : ErrorHResult = ErrorHResult::from_constant(0x83750009); // WEB_E_JSON_VALUE_NOT_FOUND

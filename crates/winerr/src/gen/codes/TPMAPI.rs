@@ -4,142 +4,142 @@ use super::*;
 
 
 /// The command buffer is not in the correct state.
-pub const E_INVALID_STATE : HRESULT = HRESULT::from_constant(0x80290100); // TPMAPI_E_INVALID_STATE
+pub const E_INVALID_STATE : ErrorHResult = ErrorHResult::from_constant(0x80290100); // TPMAPI_E_INVALID_STATE
 
 /// The command buffer does not contain enough data to satisfy the request.
-pub const E_NOT_ENOUGH_DATA : HRESULT = HRESULT::from_constant(0x80290101); // TPMAPI_E_NOT_ENOUGH_DATA
+pub const E_NOT_ENOUGH_DATA : ErrorHResult = ErrorHResult::from_constant(0x80290101); // TPMAPI_E_NOT_ENOUGH_DATA
 
 /// The command buffer cannot contain any more data.
-pub const E_TOO_MUCH_DATA : HRESULT = HRESULT::from_constant(0x80290102); // TPMAPI_E_TOO_MUCH_DATA
+pub const E_TOO_MUCH_DATA : ErrorHResult = ErrorHResult::from_constant(0x80290102); // TPMAPI_E_TOO_MUCH_DATA
 
 /// One or more output parameters was NULL or invalid.
-pub const E_INVALID_OUTPUT_POINTER : HRESULT = HRESULT::from_constant(0x80290103); // TPMAPI_E_INVALID_OUTPUT_POINTER
+pub const E_INVALID_OUTPUT_POINTER : ErrorHResult = ErrorHResult::from_constant(0x80290103); // TPMAPI_E_INVALID_OUTPUT_POINTER
 
 /// One or more input parameters is invalid.
-pub const E_INVALID_PARAMETER : HRESULT = HRESULT::from_constant(0x80290104); // TPMAPI_E_INVALID_PARAMETER
+pub const E_INVALID_PARAMETER : ErrorHResult = ErrorHResult::from_constant(0x80290104); // TPMAPI_E_INVALID_PARAMETER
 
 /// Not enough memory was available to satisfy the request.
-pub const E_OUT_OF_MEMORY : HRESULT = HRESULT::from_constant(0x80290105); // TPMAPI_E_OUT_OF_MEMORY
+pub const E_OUT_OF_MEMORY : ErrorHResult = ErrorHResult::from_constant(0x80290105); // TPMAPI_E_OUT_OF_MEMORY
 
 /// The specified buffer was too small.
-pub const E_BUFFER_TOO_SMALL : HRESULT = HRESULT::from_constant(0x80290106); // TPMAPI_E_BUFFER_TOO_SMALL
+pub const E_BUFFER_TOO_SMALL : ErrorHResult = ErrorHResult::from_constant(0x80290106); // TPMAPI_E_BUFFER_TOO_SMALL
 
 /// An internal error was detected.
-pub const E_INTERNAL_ERROR : HRESULT = HRESULT::from_constant(0x80290107); // TPMAPI_E_INTERNAL_ERROR
+pub const E_INTERNAL_ERROR : ErrorHResult = ErrorHResult::from_constant(0x80290107); // TPMAPI_E_INTERNAL_ERROR
 
 /// The caller does not have the appropriate rights to perform the requested operation.
-pub const E_ACCESS_DENIED : HRESULT = HRESULT::from_constant(0x80290108); // TPMAPI_E_ACCESS_DENIED
+pub const E_ACCESS_DENIED : ErrorHResult = ErrorHResult::from_constant(0x80290108); // TPMAPI_E_ACCESS_DENIED
 
 /// The specified authorization information was invalid.
-pub const E_AUTHORIZATION_FAILED : HRESULT = HRESULT::from_constant(0x80290109); // TPMAPI_E_AUTHORIZATION_FAILED
+pub const E_AUTHORIZATION_FAILED : ErrorHResult = ErrorHResult::from_constant(0x80290109); // TPMAPI_E_AUTHORIZATION_FAILED
 
 /// The specified context handle was not valid.
-pub const E_INVALID_CONTEXT_HANDLE : HRESULT = HRESULT::from_constant(0x8029010A); // TPMAPI_E_INVALID_CONTEXT_HANDLE
+pub const E_INVALID_CONTEXT_HANDLE : ErrorHResult = ErrorHResult::from_constant(0x8029010A); // TPMAPI_E_INVALID_CONTEXT_HANDLE
 
 /// An error occurred while communicating with the TBS.
-pub const E_TBS_COMMUNICATION_ERROR : HRESULT = HRESULT::from_constant(0x8029010B); // TPMAPI_E_TBS_COMMUNICATION_ERROR
+pub const E_TBS_COMMUNICATION_ERROR : ErrorHResult = ErrorHResult::from_constant(0x8029010B); // TPMAPI_E_TBS_COMMUNICATION_ERROR
 
 /// The TPM returned an unexpected result.
-pub const E_TPM_COMMAND_ERROR : HRESULT = HRESULT::from_constant(0x8029010C); // TPMAPI_E_TPM_COMMAND_ERROR
+pub const E_TPM_COMMAND_ERROR : ErrorHResult = ErrorHResult::from_constant(0x8029010C); // TPMAPI_E_TPM_COMMAND_ERROR
 
 /// The message was too large for the encoding scheme.
-pub const E_MESSAGE_TOO_LARGE : HRESULT = HRESULT::from_constant(0x8029010D); // TPMAPI_E_MESSAGE_TOO_LARGE
+pub const E_MESSAGE_TOO_LARGE : ErrorHResult = ErrorHResult::from_constant(0x8029010D); // TPMAPI_E_MESSAGE_TOO_LARGE
 
 /// The encoding in the blob was not recognized.
-pub const E_INVALID_ENCODING : HRESULT = HRESULT::from_constant(0x8029010E); // TPMAPI_E_INVALID_ENCODING
+pub const E_INVALID_ENCODING : ErrorHResult = ErrorHResult::from_constant(0x8029010E); // TPMAPI_E_INVALID_ENCODING
 
 /// The key size is not valid.
-pub const E_INVALID_KEY_SIZE : HRESULT = HRESULT::from_constant(0x8029010F); // TPMAPI_E_INVALID_KEY_SIZE
+pub const E_INVALID_KEY_SIZE : ErrorHResult = ErrorHResult::from_constant(0x8029010F); // TPMAPI_E_INVALID_KEY_SIZE
 
 /// The encryption operation failed.
-pub const E_ENCRYPTION_FAILED : HRESULT = HRESULT::from_constant(0x80290110); // TPMAPI_E_ENCRYPTION_FAILED
+pub const E_ENCRYPTION_FAILED : ErrorHResult = ErrorHResult::from_constant(0x80290110); // TPMAPI_E_ENCRYPTION_FAILED
 
 /// The key parameters structure was not valid
-pub const E_INVALID_KEY_PARAMS : HRESULT = HRESULT::from_constant(0x80290111); // TPMAPI_E_INVALID_KEY_PARAMS
+pub const E_INVALID_KEY_PARAMS : ErrorHResult = ErrorHResult::from_constant(0x80290111); // TPMAPI_E_INVALID_KEY_PARAMS
 
 /// The requested supplied data does not appear to be a valid migration authorization blob.
-pub const E_INVALID_MIGRATION_AUTHORIZATION_BLOB : HRESULT = HRESULT::from_constant(0x80290112); // TPMAPI_E_INVALID_MIGRATION_AUTHORIZATION_BLOB
+pub const E_INVALID_MIGRATION_AUTHORIZATION_BLOB : ErrorHResult = ErrorHResult::from_constant(0x80290112); // TPMAPI_E_INVALID_MIGRATION_AUTHORIZATION_BLOB
 
 /// The specified PCR index was invalid
-pub const E_INVALID_PCR_INDEX : HRESULT = HRESULT::from_constant(0x80290113); // TPMAPI_E_INVALID_PCR_INDEX
+pub const E_INVALID_PCR_INDEX : ErrorHResult = ErrorHResult::from_constant(0x80290113); // TPMAPI_E_INVALID_PCR_INDEX
 
 /// The data given does not appear to be a valid delegate blob.
-pub const E_INVALID_DELEGATE_BLOB : HRESULT = HRESULT::from_constant(0x80290114); // TPMAPI_E_INVALID_DELEGATE_BLOB
+pub const E_INVALID_DELEGATE_BLOB : ErrorHResult = ErrorHResult::from_constant(0x80290114); // TPMAPI_E_INVALID_DELEGATE_BLOB
 
 /// One or more of the specified context parameters was not valid.
-pub const E_INVALID_CONTEXT_PARAMS : HRESULT = HRESULT::from_constant(0x80290115); // TPMAPI_E_INVALID_CONTEXT_PARAMS
+pub const E_INVALID_CONTEXT_PARAMS : ErrorHResult = ErrorHResult::from_constant(0x80290115); // TPMAPI_E_INVALID_CONTEXT_PARAMS
 
 /// The data given does not appear to be a valid key blob
-pub const E_INVALID_KEY_BLOB : HRESULT = HRESULT::from_constant(0x80290116); // TPMAPI_E_INVALID_KEY_BLOB
+pub const E_INVALID_KEY_BLOB : ErrorHResult = ErrorHResult::from_constant(0x80290116); // TPMAPI_E_INVALID_KEY_BLOB
 
 /// The specified PCR data was invalid.
-pub const E_INVALID_PCR_DATA : HRESULT = HRESULT::from_constant(0x80290117); // TPMAPI_E_INVALID_PCR_DATA
+pub const E_INVALID_PCR_DATA : ErrorHResult = ErrorHResult::from_constant(0x80290117); // TPMAPI_E_INVALID_PCR_DATA
 
 /// The format of the owner auth data was invalid.
-pub const E_INVALID_OWNER_AUTH : HRESULT = HRESULT::from_constant(0x80290118); // TPMAPI_E_INVALID_OWNER_AUTH
+pub const E_INVALID_OWNER_AUTH : ErrorHResult = ErrorHResult::from_constant(0x80290118); // TPMAPI_E_INVALID_OWNER_AUTH
 
 /// The random number generated did not pass FIPS RNG check.
-pub const E_FIPS_RNG_CHECK_FAILED : HRESULT = HRESULT::from_constant(0x80290119); // TPMAPI_E_FIPS_RNG_CHECK_FAILED
+pub const E_FIPS_RNG_CHECK_FAILED : ErrorHResult = ErrorHResult::from_constant(0x80290119); // TPMAPI_E_FIPS_RNG_CHECK_FAILED
 
 /// The TCG Event Log does not contain any data.
-pub const E_EMPTY_TCG_LOG : HRESULT = HRESULT::from_constant(0x8029011A); // TPMAPI_E_EMPTY_TCG_LOG
+pub const E_EMPTY_TCG_LOG : ErrorHResult = ErrorHResult::from_constant(0x8029011A); // TPMAPI_E_EMPTY_TCG_LOG
 
 /// An entry in the TCG Event Log was invalid.
-pub const E_INVALID_TCG_LOG_ENTRY : HRESULT = HRESULT::from_constant(0x8029011B); // TPMAPI_E_INVALID_TCG_LOG_ENTRY
+pub const E_INVALID_TCG_LOG_ENTRY : ErrorHResult = ErrorHResult::from_constant(0x8029011B); // TPMAPI_E_INVALID_TCG_LOG_ENTRY
 
 /// A TCG Separator was not found.
-pub const E_TCG_SEPARATOR_ABSENT : HRESULT = HRESULT::from_constant(0x8029011C); // TPMAPI_E_TCG_SEPARATOR_ABSENT
+pub const E_TCG_SEPARATOR_ABSENT : ErrorHResult = ErrorHResult::from_constant(0x8029011C); // TPMAPI_E_TCG_SEPARATOR_ABSENT
 
 /// A digest value in a TCG Log entry did not match hashed data.
-pub const E_TCG_INVALID_DIGEST_ENTRY : HRESULT = HRESULT::from_constant(0x8029011D); // TPMAPI_E_TCG_INVALID_DIGEST_ENTRY
+pub const E_TCG_INVALID_DIGEST_ENTRY : ErrorHResult = ErrorHResult::from_constant(0x8029011D); // TPMAPI_E_TCG_INVALID_DIGEST_ENTRY
 
 /// The requested operation was blocked by current TPM policy. Please contact your system administrator for assistance.
-pub const E_POLICY_DENIES_OPERATION : HRESULT = HRESULT::from_constant(0x8029011E); // TPMAPI_E_POLICY_DENIES_OPERATION
+pub const E_POLICY_DENIES_OPERATION : ErrorHResult = ErrorHResult::from_constant(0x8029011E); // TPMAPI_E_POLICY_DENIES_OPERATION
 
 /// The Windows TPM NV Bits index is not defined.
-pub const E_NV_BITS_NOT_DEFINED : HRESULT = HRESULT::from_constant(0x8029011F); // TPMAPI_E_NV_BITS_NOT_DEFINED
+pub const E_NV_BITS_NOT_DEFINED : ErrorHResult = ErrorHResult::from_constant(0x8029011F); // TPMAPI_E_NV_BITS_NOT_DEFINED
 
 /// The Windows TPM NV Bits index is not ready for use.
-pub const E_NV_BITS_NOT_READY : HRESULT = HRESULT::from_constant(0x80290120); // TPMAPI_E_NV_BITS_NOT_READY
+pub const E_NV_BITS_NOT_READY : ErrorHResult = ErrorHResult::from_constant(0x80290120); // TPMAPI_E_NV_BITS_NOT_READY
 
 /// The TPM key that was used to seal the data is no longer available.
-pub const E_SEALING_KEY_NOT_AVAILABLE : HRESULT = HRESULT::from_constant(0x80290121); // TPMAPI_E_SEALING_KEY_NOT_AVAILABLE
+pub const E_SEALING_KEY_NOT_AVAILABLE : ErrorHResult = ErrorHResult::from_constant(0x80290121); // TPMAPI_E_SEALING_KEY_NOT_AVAILABLE
 
 /// An authorization chain could not be found that authorizes the PolicyAuthorize unseal.
-pub const E_NO_AUTHORIZATION_CHAIN_FOUND : HRESULT = HRESULT::from_constant(0x80290122); // TPMAPI_E_NO_AUTHORIZATION_CHAIN_FOUND
+pub const E_NO_AUTHORIZATION_CHAIN_FOUND : ErrorHResult = ErrorHResult::from_constant(0x80290122); // TPMAPI_E_NO_AUTHORIZATION_CHAIN_FOUND
 
 /// The SVN counter to which the authorization was bound is not available.
-pub const E_SVN_COUNTER_NOT_AVAILABLE : HRESULT = HRESULT::from_constant(0x80290123); // TPMAPI_E_SVN_COUNTER_NOT_AVAILABLE
+pub const E_SVN_COUNTER_NOT_AVAILABLE : ErrorHResult = ErrorHResult::from_constant(0x80290123); // TPMAPI_E_SVN_COUNTER_NOT_AVAILABLE
 
 /// The TPM Storage hierarchy (Owner) auth value is required to be NULL for this operation.
-pub const E_OWNER_AUTH_NOT_NULL : HRESULT = HRESULT::from_constant(0x80290124); // TPMAPI_E_OWNER_AUTH_NOT_NULL
+pub const E_OWNER_AUTH_NOT_NULL : ErrorHResult = ErrorHResult::from_constant(0x80290124); // TPMAPI_E_OWNER_AUTH_NOT_NULL
 
 /// The TPM Endorsement hierarchy auth value is required to be NULL for this operation.
-pub const E_ENDORSEMENT_AUTH_NOT_NULL : HRESULT = HRESULT::from_constant(0x80290125); // TPMAPI_E_ENDORSEMENT_AUTH_NOT_NULL
+pub const E_ENDORSEMENT_AUTH_NOT_NULL : ErrorHResult = ErrorHResult::from_constant(0x80290125); // TPMAPI_E_ENDORSEMENT_AUTH_NOT_NULL
 
 /// The authorization to perform this operation has been revoked.
-pub const E_AUTHORIZATION_REVOKED : HRESULT = HRESULT::from_constant(0x80290126); // TPMAPI_E_AUTHORIZATION_REVOKED
+pub const E_AUTHORIZATION_REVOKED : ErrorHResult = ErrorHResult::from_constant(0x80290126); // TPMAPI_E_AUTHORIZATION_REVOKED
 
 /// The authorization public key is malformed.
-pub const E_MALFORMED_AUTHORIZATION_KEY : HRESULT = HRESULT::from_constant(0x80290127); // TPMAPI_E_MALFORMED_AUTHORIZATION_KEY
+pub const E_MALFORMED_AUTHORIZATION_KEY : ErrorHResult = ErrorHResult::from_constant(0x80290127); // TPMAPI_E_MALFORMED_AUTHORIZATION_KEY
 
 /// The authorization public key is not supported.
-pub const E_AUTHORIZING_KEY_NOT_SUPPORTED : HRESULT = HRESULT::from_constant(0x80290128); // TPMAPI_E_AUTHORIZING_KEY_NOT_SUPPORTED
+pub const E_AUTHORIZING_KEY_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x80290128); // TPMAPI_E_AUTHORIZING_KEY_NOT_SUPPORTED
 
 /// The authorization signature is invalid.
-pub const E_INVALID_AUTHORIZATION_SIGNATURE : HRESULT = HRESULT::from_constant(0x80290129); // TPMAPI_E_INVALID_AUTHORIZATION_SIGNATURE
+pub const E_INVALID_AUTHORIZATION_SIGNATURE : ErrorHResult = ErrorHResult::from_constant(0x80290129); // TPMAPI_E_INVALID_AUTHORIZATION_SIGNATURE
 
 /// The authorization policy is malformed.
-pub const E_MALFORMED_AUTHORIZATION_POLICY : HRESULT = HRESULT::from_constant(0x8029012A); // TPMAPI_E_MALFORMED_AUTHORIZATION_POLICY
+pub const E_MALFORMED_AUTHORIZATION_POLICY : ErrorHResult = ErrorHResult::from_constant(0x8029012A); // TPMAPI_E_MALFORMED_AUTHORIZATION_POLICY
 
 /// The authorization data is malformed.
-pub const E_MALFORMED_AUTHORIZATION_OTHER : HRESULT = HRESULT::from_constant(0x8029012B); // TPMAPI_E_MALFORMED_AUTHORIZATION_OTHER
+pub const E_MALFORMED_AUTHORIZATION_OTHER : ErrorHResult = ErrorHResult::from_constant(0x8029012B); // TPMAPI_E_MALFORMED_AUTHORIZATION_OTHER
 
 /// The key used to unseal this data has changed since sealing the data. This may be the result of a TPM clear.
-pub const E_SEALING_KEY_CHANGED : HRESULT = HRESULT::from_constant(0x8029012C); // TPMAPI_E_SEALING_KEY_CHANGED
+pub const E_SEALING_KEY_CHANGED : ErrorHResult = ErrorHResult::from_constant(0x8029012C); // TPMAPI_E_SEALING_KEY_CHANGED
 
 /// The TPM version is invalid.
-pub const E_INVALID_TPM_VERSION : HRESULT = HRESULT::from_constant(0x8029012D); // TPMAPI_E_INVALID_TPM_VERSION
+pub const E_INVALID_TPM_VERSION : ErrorHResult = ErrorHResult::from_constant(0x8029012D); // TPMAPI_E_INVALID_TPM_VERSION
 
 /// The policy authorization blob type is invalid.
-pub const E_INVALID_POLICYAUTH_BLOB_TYPE : HRESULT = HRESULT::from_constant(0x8029012E); // TPMAPI_E_INVALID_POLICYAUTH_BLOB_TYPE
+pub const E_INVALID_POLICYAUTH_BLOB_TYPE : ErrorHResult = ErrorHResult::from_constant(0x8029012E); // TPMAPI_E_INVALID_POLICYAUTH_BLOB_TYPE

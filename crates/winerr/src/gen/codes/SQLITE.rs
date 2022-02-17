@@ -4,253 +4,253 @@ use super::*;
 
 
 /// SQL error or missing database
-pub const E_ERROR : HRESULT = HRESULT::from_constant(0x87AF0001); // SQLITE_E_ERROR
+pub const E_ERROR : ErrorHResult = ErrorHResult::from_constant(0x87AF0001); // SQLITE_E_ERROR
 
 /// Internal logic error in SQLite
-pub const E_INTERNAL : HRESULT = HRESULT::from_constant(0x87AF0002); // SQLITE_E_INTERNAL
+pub const E_INTERNAL : ErrorHResult = ErrorHResult::from_constant(0x87AF0002); // SQLITE_E_INTERNAL
 
 /// Access permission denied
-pub const E_PERM : HRESULT = HRESULT::from_constant(0x87AF0003); // SQLITE_E_PERM
+pub const E_PERM : ErrorHResult = ErrorHResult::from_constant(0x87AF0003); // SQLITE_E_PERM
 
 /// Callback routine requested an abort
-pub const E_ABORT : HRESULT = HRESULT::from_constant(0x87AF0004); // SQLITE_E_ABORT
+pub const E_ABORT : ErrorHResult = ErrorHResult::from_constant(0x87AF0004); // SQLITE_E_ABORT
 
 /// The database file is locked
-pub const E_BUSY : HRESULT = HRESULT::from_constant(0x87AF0005); // SQLITE_E_BUSY
+pub const E_BUSY : ErrorHResult = ErrorHResult::from_constant(0x87AF0005); // SQLITE_E_BUSY
 
 /// A table in the database is locked
-pub const E_LOCKED : HRESULT = HRESULT::from_constant(0x87AF0006); // SQLITE_E_LOCKED
+pub const E_LOCKED : ErrorHResult = ErrorHResult::from_constant(0x87AF0006); // SQLITE_E_LOCKED
 
 /// A malloc() failed
-pub const E_NOMEM : HRESULT = HRESULT::from_constant(0x87AF0007); // SQLITE_E_NOMEM
+pub const E_NOMEM : ErrorHResult = ErrorHResult::from_constant(0x87AF0007); // SQLITE_E_NOMEM
 
 /// Attempt to write a readonly database
-pub const E_READONLY : HRESULT = HRESULT::from_constant(0x87AF0008); // SQLITE_E_READONLY
+pub const E_READONLY : ErrorHResult = ErrorHResult::from_constant(0x87AF0008); // SQLITE_E_READONLY
 
 /// Operation terminated by sqlite3_interrupt()
-pub const E_INTERRUPT : HRESULT = HRESULT::from_constant(0x87AF0009); // SQLITE_E_INTERRUPT
+pub const E_INTERRUPT : ErrorHResult = ErrorHResult::from_constant(0x87AF0009); // SQLITE_E_INTERRUPT
 
 /// Some kind of disk I/O error occurred
-pub const E_IOERR : HRESULT = HRESULT::from_constant(0x87AF000A); // SQLITE_E_IOERR
+pub const E_IOERR : ErrorHResult = ErrorHResult::from_constant(0x87AF000A); // SQLITE_E_IOERR
 
 /// The database disk image is malformed
-pub const E_CORRUPT : HRESULT = HRESULT::from_constant(0x87AF000B); // SQLITE_E_CORRUPT
+pub const E_CORRUPT : ErrorHResult = ErrorHResult::from_constant(0x87AF000B); // SQLITE_E_CORRUPT
 
 /// Unknown opcode in sqlite3_file_control()
-pub const E_NOTFOUND : HRESULT = HRESULT::from_constant(0x87AF000C); // SQLITE_E_NOTFOUND
+pub const E_NOTFOUND : ErrorHResult = ErrorHResult::from_constant(0x87AF000C); // SQLITE_E_NOTFOUND
 
 /// Insertion failed because database is full
-pub const E_FULL : HRESULT = HRESULT::from_constant(0x87AF000D); // SQLITE_E_FULL
+pub const E_FULL : ErrorHResult = ErrorHResult::from_constant(0x87AF000D); // SQLITE_E_FULL
 
 /// Unable to open the database file
-pub const E_CANTOPEN : HRESULT = HRESULT::from_constant(0x87AF000E); // SQLITE_E_CANTOPEN
+pub const E_CANTOPEN : ErrorHResult = ErrorHResult::from_constant(0x87AF000E); // SQLITE_E_CANTOPEN
 
 /// Database lock protocol error
-pub const E_PROTOCOL : HRESULT = HRESULT::from_constant(0x87AF000F); // SQLITE_E_PROTOCOL
+pub const E_PROTOCOL : ErrorHResult = ErrorHResult::from_constant(0x87AF000F); // SQLITE_E_PROTOCOL
 
 /// Database is empty
-pub const E_EMPTY : HRESULT = HRESULT::from_constant(0x87AF0010); // SQLITE_E_EMPTY
+pub const E_EMPTY : ErrorHResult = ErrorHResult::from_constant(0x87AF0010); // SQLITE_E_EMPTY
 
 /// The database schema changed
-pub const E_SCHEMA : HRESULT = HRESULT::from_constant(0x87AF0011); // SQLITE_E_SCHEMA
+pub const E_SCHEMA : ErrorHResult = ErrorHResult::from_constant(0x87AF0011); // SQLITE_E_SCHEMA
 
 /// String or BLOB exceeds size limit
-pub const E_TOOBIG : HRESULT = HRESULT::from_constant(0x87AF0012); // SQLITE_E_TOOBIG
+pub const E_TOOBIG : ErrorHResult = ErrorHResult::from_constant(0x87AF0012); // SQLITE_E_TOOBIG
 
 /// Abort due to constraint violation
-pub const E_CONSTRAINT : HRESULT = HRESULT::from_constant(0x87AF0013); // SQLITE_E_CONSTRAINT
+pub const E_CONSTRAINT : ErrorHResult = ErrorHResult::from_constant(0x87AF0013); // SQLITE_E_CONSTRAINT
 
 /// Data type mismatch
-pub const E_MISMATCH : HRESULT = HRESULT::from_constant(0x87AF0014); // SQLITE_E_MISMATCH
+pub const E_MISMATCH : ErrorHResult = ErrorHResult::from_constant(0x87AF0014); // SQLITE_E_MISMATCH
 
 /// Library used incorrectly
-pub const E_MISUSE : HRESULT = HRESULT::from_constant(0x87AF0015); // SQLITE_E_MISUSE
+pub const E_MISUSE : ErrorHResult = ErrorHResult::from_constant(0x87AF0015); // SQLITE_E_MISUSE
 
 /// Uses OS features not supported on host
-pub const E_NOLFS : HRESULT = HRESULT::from_constant(0x87AF0016); // SQLITE_E_NOLFS
+pub const E_NOLFS : ErrorHResult = ErrorHResult::from_constant(0x87AF0016); // SQLITE_E_NOLFS
 
 /// Authorization denied
-pub const E_AUTH : HRESULT = HRESULT::from_constant(0x87AF0017); // SQLITE_E_AUTH
+pub const E_AUTH : ErrorHResult = ErrorHResult::from_constant(0x87AF0017); // SQLITE_E_AUTH
 
 /// Auxiliary database format error
-pub const E_FORMAT : HRESULT = HRESULT::from_constant(0x87AF0018); // SQLITE_E_FORMAT
+pub const E_FORMAT : ErrorHResult = ErrorHResult::from_constant(0x87AF0018); // SQLITE_E_FORMAT
 
 /// 2nd parameter to sqlite3_bind out of range
-pub const E_RANGE : HRESULT = HRESULT::from_constant(0x87AF0019); // SQLITE_E_RANGE
+pub const E_RANGE : ErrorHResult = ErrorHResult::from_constant(0x87AF0019); // SQLITE_E_RANGE
 
 /// File opened that is not a database file
-pub const E_NOTADB : HRESULT = HRESULT::from_constant(0x87AF001A); // SQLITE_E_NOTADB
+pub const E_NOTADB : ErrorHResult = ErrorHResult::from_constant(0x87AF001A); // SQLITE_E_NOTADB
 
 /// Notifications from sqlite3_log()
-pub const E_NOTICE : HRESULT = HRESULT::from_constant(0x87AF001B); // SQLITE_E_NOTICE
+pub const E_NOTICE : ErrorHResult = ErrorHResult::from_constant(0x87AF001B); // SQLITE_E_NOTICE
 
 /// Warnings from sqlite3_log()
-pub const E_WARNING : HRESULT = HRESULT::from_constant(0x87AF001C); // SQLITE_E_WARNING
+pub const E_WARNING : ErrorHResult = ErrorHResult::from_constant(0x87AF001C); // SQLITE_E_WARNING
 
 /// sqlite3_step() has another row ready
-pub const E_ROW : HRESULT = HRESULT::from_constant(0x87AF0064); // SQLITE_E_ROW
+pub const E_ROW : ErrorHResult = ErrorHResult::from_constant(0x87AF0064); // SQLITE_E_ROW
 
 /// sqlite3_step() has finished executing
-pub const E_DONE : HRESULT = HRESULT::from_constant(0x87AF0065); // SQLITE_E_DONE
+pub const E_DONE : ErrorHResult = ErrorHResult::from_constant(0x87AF0065); // SQLITE_E_DONE
 
 /// SQLITE_IOERR_READ
-pub const E_IOERR_READ : HRESULT = HRESULT::from_constant(0x87AF010A); // SQLITE_E_IOERR_READ
+pub const E_IOERR_READ : ErrorHResult = ErrorHResult::from_constant(0x87AF010A); // SQLITE_E_IOERR_READ
 
 /// SQLITE_IOERR_SHORT_READ
-pub const E_IOERR_SHORT_READ : HRESULT = HRESULT::from_constant(0x87AF020A); // SQLITE_E_IOERR_SHORT_READ
+pub const E_IOERR_SHORT_READ : ErrorHResult = ErrorHResult::from_constant(0x87AF020A); // SQLITE_E_IOERR_SHORT_READ
 
 /// SQLITE_IOERR_WRITE
-pub const E_IOERR_WRITE : HRESULT = HRESULT::from_constant(0x87AF030A); // SQLITE_E_IOERR_WRITE
+pub const E_IOERR_WRITE : ErrorHResult = ErrorHResult::from_constant(0x87AF030A); // SQLITE_E_IOERR_WRITE
 
 /// SQLITE_IOERR_FSYNC
-pub const E_IOERR_FSYNC : HRESULT = HRESULT::from_constant(0x87AF040A); // SQLITE_E_IOERR_FSYNC
+pub const E_IOERR_FSYNC : ErrorHResult = ErrorHResult::from_constant(0x87AF040A); // SQLITE_E_IOERR_FSYNC
 
 /// SQLITE_IOERR_DIR_FSYNC
-pub const E_IOERR_DIR_FSYNC : HRESULT = HRESULT::from_constant(0x87AF050A); // SQLITE_E_IOERR_DIR_FSYNC
+pub const E_IOERR_DIR_FSYNC : ErrorHResult = ErrorHResult::from_constant(0x87AF050A); // SQLITE_E_IOERR_DIR_FSYNC
 
 /// SQLITE_IOERR_TRUNCATE
-pub const E_IOERR_TRUNCATE : HRESULT = HRESULT::from_constant(0x87AF060A); // SQLITE_E_IOERR_TRUNCATE
+pub const E_IOERR_TRUNCATE : ErrorHResult = ErrorHResult::from_constant(0x87AF060A); // SQLITE_E_IOERR_TRUNCATE
 
 /// SQLITE_IOERR_FSTAT
-pub const E_IOERR_FSTAT : HRESULT = HRESULT::from_constant(0x87AF070A); // SQLITE_E_IOERR_FSTAT
+pub const E_IOERR_FSTAT : ErrorHResult = ErrorHResult::from_constant(0x87AF070A); // SQLITE_E_IOERR_FSTAT
 
 /// SQLITE_IOERR_UNLOCK
-pub const E_IOERR_UNLOCK : HRESULT = HRESULT::from_constant(0x87AF080A); // SQLITE_E_IOERR_UNLOCK
+pub const E_IOERR_UNLOCK : ErrorHResult = ErrorHResult::from_constant(0x87AF080A); // SQLITE_E_IOERR_UNLOCK
 
 /// SQLITE_IOERR_RDLOCK
-pub const E_IOERR_RDLOCK : HRESULT = HRESULT::from_constant(0x87AF090A); // SQLITE_E_IOERR_RDLOCK
+pub const E_IOERR_RDLOCK : ErrorHResult = ErrorHResult::from_constant(0x87AF090A); // SQLITE_E_IOERR_RDLOCK
 
 /// SQLITE_IOERR_DELETE
-pub const E_IOERR_DELETE : HRESULT = HRESULT::from_constant(0x87AF0A0A); // SQLITE_E_IOERR_DELETE
+pub const E_IOERR_DELETE : ErrorHResult = ErrorHResult::from_constant(0x87AF0A0A); // SQLITE_E_IOERR_DELETE
 
 /// SQLITE_IOERR_BLOCKED
-pub const E_IOERR_BLOCKED : HRESULT = HRESULT::from_constant(0x87AF0B0A); // SQLITE_E_IOERR_BLOCKED
+pub const E_IOERR_BLOCKED : ErrorHResult = ErrorHResult::from_constant(0x87AF0B0A); // SQLITE_E_IOERR_BLOCKED
 
 /// SQLITE_IOERR_NOMEM
-pub const E_IOERR_NOMEM : HRESULT = HRESULT::from_constant(0x87AF0C0A); // SQLITE_E_IOERR_NOMEM
+pub const E_IOERR_NOMEM : ErrorHResult = ErrorHResult::from_constant(0x87AF0C0A); // SQLITE_E_IOERR_NOMEM
 
 /// SQLITE_IOERR_ACCESS
-pub const E_IOERR_ACCESS : HRESULT = HRESULT::from_constant(0x87AF0D0A); // SQLITE_E_IOERR_ACCESS
+pub const E_IOERR_ACCESS : ErrorHResult = ErrorHResult::from_constant(0x87AF0D0A); // SQLITE_E_IOERR_ACCESS
 
 /// SQLITE_IOERR_CHECKRESERVEDLOCK
-pub const E_IOERR_CHECKRESERVEDLOCK : HRESULT = HRESULT::from_constant(0x87AF0E0A); // SQLITE_E_IOERR_CHECKRESERVEDLOCK
+pub const E_IOERR_CHECKRESERVEDLOCK : ErrorHResult = ErrorHResult::from_constant(0x87AF0E0A); // SQLITE_E_IOERR_CHECKRESERVEDLOCK
 
 /// SQLITE_IOERR_LOCK
-pub const E_IOERR_LOCK : HRESULT = HRESULT::from_constant(0x87AF0F0A); // SQLITE_E_IOERR_LOCK
+pub const E_IOERR_LOCK : ErrorHResult = ErrorHResult::from_constant(0x87AF0F0A); // SQLITE_E_IOERR_LOCK
 
 /// SQLITE_IOERR_CLOSE
-pub const E_IOERR_CLOSE : HRESULT = HRESULT::from_constant(0x87AF100A); // SQLITE_E_IOERR_CLOSE
+pub const E_IOERR_CLOSE : ErrorHResult = ErrorHResult::from_constant(0x87AF100A); // SQLITE_E_IOERR_CLOSE
 
 /// SQLITE_IOERR_DIR_CLOSE
-pub const E_IOERR_DIR_CLOSE : HRESULT = HRESULT::from_constant(0x87AF110A); // SQLITE_E_IOERR_DIR_CLOSE
+pub const E_IOERR_DIR_CLOSE : ErrorHResult = ErrorHResult::from_constant(0x87AF110A); // SQLITE_E_IOERR_DIR_CLOSE
 
 /// SQLITE_IOERR_SHMOPEN
-pub const E_IOERR_SHMOPEN : HRESULT = HRESULT::from_constant(0x87AF120A); // SQLITE_E_IOERR_SHMOPEN
+pub const E_IOERR_SHMOPEN : ErrorHResult = ErrorHResult::from_constant(0x87AF120A); // SQLITE_E_IOERR_SHMOPEN
 
 /// SQLITE_IOERR_SHMSIZE
-pub const E_IOERR_SHMSIZE : HRESULT = HRESULT::from_constant(0x87AF130A); // SQLITE_E_IOERR_SHMSIZE
+pub const E_IOERR_SHMSIZE : ErrorHResult = ErrorHResult::from_constant(0x87AF130A); // SQLITE_E_IOERR_SHMSIZE
 
 /// SQLITE_IOERR_SHMLOCK
-pub const E_IOERR_SHMLOCK : HRESULT = HRESULT::from_constant(0x87AF140A); // SQLITE_E_IOERR_SHMLOCK
+pub const E_IOERR_SHMLOCK : ErrorHResult = ErrorHResult::from_constant(0x87AF140A); // SQLITE_E_IOERR_SHMLOCK
 
 /// SQLITE_IOERR_SHMMAP
-pub const E_IOERR_SHMMAP : HRESULT = HRESULT::from_constant(0x87AF150A); // SQLITE_E_IOERR_SHMMAP
+pub const E_IOERR_SHMMAP : ErrorHResult = ErrorHResult::from_constant(0x87AF150A); // SQLITE_E_IOERR_SHMMAP
 
 /// SQLITE_IOERR_SEEK
-pub const E_IOERR_SEEK : HRESULT = HRESULT::from_constant(0x87AF160A); // SQLITE_E_IOERR_SEEK
+pub const E_IOERR_SEEK : ErrorHResult = ErrorHResult::from_constant(0x87AF160A); // SQLITE_E_IOERR_SEEK
 
 /// SQLITE_IOERR_DELETE_NOENT
-pub const E_IOERR_DELETE_NOENT : HRESULT = HRESULT::from_constant(0x87AF170A); // SQLITE_E_IOERR_DELETE_NOENT
+pub const E_IOERR_DELETE_NOENT : ErrorHResult = ErrorHResult::from_constant(0x87AF170A); // SQLITE_E_IOERR_DELETE_NOENT
 
 /// SQLITE_IOERR_MMAP
-pub const E_IOERR_MMAP : HRESULT = HRESULT::from_constant(0x87AF180A); // SQLITE_E_IOERR_MMAP
+pub const E_IOERR_MMAP : ErrorHResult = ErrorHResult::from_constant(0x87AF180A); // SQLITE_E_IOERR_MMAP
 
 /// SQLITE_IOERR_GETTEMPPATH
-pub const E_IOERR_GETTEMPPATH : HRESULT = HRESULT::from_constant(0x87AF190A); // SQLITE_E_IOERR_GETTEMPPATH
+pub const E_IOERR_GETTEMPPATH : ErrorHResult = ErrorHResult::from_constant(0x87AF190A); // SQLITE_E_IOERR_GETTEMPPATH
 
 /// SQLITE_IOERR_CONVPATH
-pub const E_IOERR_CONVPATH : HRESULT = HRESULT::from_constant(0x87AF1A0A); // SQLITE_E_IOERR_CONVPATH
+pub const E_IOERR_CONVPATH : ErrorHResult = ErrorHResult::from_constant(0x87AF1A0A); // SQLITE_E_IOERR_CONVPATH
 
 /// SQLITE_IOERR_VNODE
-pub const E_IOERR_VNODE : HRESULT = HRESULT::from_constant(0x87AF1A02); // SQLITE_E_IOERR_VNODE
+pub const E_IOERR_VNODE : ErrorHResult = ErrorHResult::from_constant(0x87AF1A02); // SQLITE_E_IOERR_VNODE
 
 /// SQLITE_IOERR_AUTH
-pub const E_IOERR_AUTH : HRESULT = HRESULT::from_constant(0x87AF1A03); // SQLITE_E_IOERR_AUTH
+pub const E_IOERR_AUTH : ErrorHResult = ErrorHResult::from_constant(0x87AF1A03); // SQLITE_E_IOERR_AUTH
 
 /// SQLITE_LOCKED_SHAREDCACHE
-pub const E_LOCKED_SHAREDCACHE : HRESULT = HRESULT::from_constant(0x87AF0106); // SQLITE_E_LOCKED_SHAREDCACHE
+pub const E_LOCKED_SHAREDCACHE : ErrorHResult = ErrorHResult::from_constant(0x87AF0106); // SQLITE_E_LOCKED_SHAREDCACHE
 
 /// SQLITE_BUSY_RECOVERY
-pub const E_BUSY_RECOVERY : HRESULT = HRESULT::from_constant(0x87AF0105); // SQLITE_E_BUSY_RECOVERY
+pub const E_BUSY_RECOVERY : ErrorHResult = ErrorHResult::from_constant(0x87AF0105); // SQLITE_E_BUSY_RECOVERY
 
 /// SQLITE_BUSY_SNAPSHOT
-pub const E_BUSY_SNAPSHOT : HRESULT = HRESULT::from_constant(0x87AF0205); // SQLITE_E_BUSY_SNAPSHOT
+pub const E_BUSY_SNAPSHOT : ErrorHResult = ErrorHResult::from_constant(0x87AF0205); // SQLITE_E_BUSY_SNAPSHOT
 
 /// SQLITE_CANTOPEN_NOTEMPDIR
-pub const E_CANTOPEN_NOTEMPDIR : HRESULT = HRESULT::from_constant(0x87AF010E); // SQLITE_E_CANTOPEN_NOTEMPDIR
+pub const E_CANTOPEN_NOTEMPDIR : ErrorHResult = ErrorHResult::from_constant(0x87AF010E); // SQLITE_E_CANTOPEN_NOTEMPDIR
 
 /// SQLITE_CANTOPEN_ISDIR
-pub const E_CANTOPEN_ISDIR : HRESULT = HRESULT::from_constant(0x87AF020E); // SQLITE_E_CANTOPEN_ISDIR
+pub const E_CANTOPEN_ISDIR : ErrorHResult = ErrorHResult::from_constant(0x87AF020E); // SQLITE_E_CANTOPEN_ISDIR
 
 /// SQLITE_CANTOPEN_FULLPATH
-pub const E_CANTOPEN_FULLPATH : HRESULT = HRESULT::from_constant(0x87AF030E); // SQLITE_E_CANTOPEN_FULLPATH
+pub const E_CANTOPEN_FULLPATH : ErrorHResult = ErrorHResult::from_constant(0x87AF030E); // SQLITE_E_CANTOPEN_FULLPATH
 
 /// SQLITE_CANTOPEN_CONVPATH
-pub const E_CANTOPEN_CONVPATH : HRESULT = HRESULT::from_constant(0x87AF040E); // SQLITE_E_CANTOPEN_CONVPATH
+pub const E_CANTOPEN_CONVPATH : ErrorHResult = ErrorHResult::from_constant(0x87AF040E); // SQLITE_E_CANTOPEN_CONVPATH
 
 /// SQLITE_CORRUPT_VTAB
-pub const E_CORRUPT_VTAB : HRESULT = HRESULT::from_constant(0x87AF010B); // SQLITE_E_CORRUPT_VTAB
+pub const E_CORRUPT_VTAB : ErrorHResult = ErrorHResult::from_constant(0x87AF010B); // SQLITE_E_CORRUPT_VTAB
 
 /// SQLITE_READONLY_RECOVERY
-pub const E_READONLY_RECOVERY : HRESULT = HRESULT::from_constant(0x87AF0108); // SQLITE_E_READONLY_RECOVERY
+pub const E_READONLY_RECOVERY : ErrorHResult = ErrorHResult::from_constant(0x87AF0108); // SQLITE_E_READONLY_RECOVERY
 
 /// SQLITE_READONLY_CANTLOCK
-pub const E_READONLY_CANTLOCK : HRESULT = HRESULT::from_constant(0x87AF0208); // SQLITE_E_READONLY_CANTLOCK
+pub const E_READONLY_CANTLOCK : ErrorHResult = ErrorHResult::from_constant(0x87AF0208); // SQLITE_E_READONLY_CANTLOCK
 
 /// SQLITE_READONLY_ROLLBACK
-pub const E_READONLY_ROLLBACK : HRESULT = HRESULT::from_constant(0x87AF0308); // SQLITE_E_READONLY_ROLLBACK
+pub const E_READONLY_ROLLBACK : ErrorHResult = ErrorHResult::from_constant(0x87AF0308); // SQLITE_E_READONLY_ROLLBACK
 
 /// SQLITE_READONLY_DBMOVED
-pub const E_READONLY_DBMOVED : HRESULT = HRESULT::from_constant(0x87AF0408); // SQLITE_E_READONLY_DBMOVED
+pub const E_READONLY_DBMOVED : ErrorHResult = ErrorHResult::from_constant(0x87AF0408); // SQLITE_E_READONLY_DBMOVED
 
 /// SQLITE_ABORT_ROLLBACK
-pub const E_ABORT_ROLLBACK : HRESULT = HRESULT::from_constant(0x87AF0204); // SQLITE_E_ABORT_ROLLBACK
+pub const E_ABORT_ROLLBACK : ErrorHResult = ErrorHResult::from_constant(0x87AF0204); // SQLITE_E_ABORT_ROLLBACK
 
 /// SQLITE_CONSTRAINT_CHECK
-pub const E_CONSTRAINT_CHECK : HRESULT = HRESULT::from_constant(0x87AF0113); // SQLITE_E_CONSTRAINT_CHECK
+pub const E_CONSTRAINT_CHECK : ErrorHResult = ErrorHResult::from_constant(0x87AF0113); // SQLITE_E_CONSTRAINT_CHECK
 
 /// SQLITE_CONSTRAINT_COMMITHOOK
-pub const E_CONSTRAINT_COMMITHOOK : HRESULT = HRESULT::from_constant(0x87AF0213); // SQLITE_E_CONSTRAINT_COMMITHOOK
+pub const E_CONSTRAINT_COMMITHOOK : ErrorHResult = ErrorHResult::from_constant(0x87AF0213); // SQLITE_E_CONSTRAINT_COMMITHOOK
 
 /// SQLITE_CONSTRAINT_FOREIGNKEY
-pub const E_CONSTRAINT_FOREIGNKEY : HRESULT = HRESULT::from_constant(0x87AF0313); // SQLITE_E_CONSTRAINT_FOREIGNKEY
+pub const E_CONSTRAINT_FOREIGNKEY : ErrorHResult = ErrorHResult::from_constant(0x87AF0313); // SQLITE_E_CONSTRAINT_FOREIGNKEY
 
 /// SQLITE_CONSTRAINT_FUNCTION
-pub const E_CONSTRAINT_FUNCTION : HRESULT = HRESULT::from_constant(0x87AF0413); // SQLITE_E_CONSTRAINT_FUNCTION
+pub const E_CONSTRAINT_FUNCTION : ErrorHResult = ErrorHResult::from_constant(0x87AF0413); // SQLITE_E_CONSTRAINT_FUNCTION
 
 /// SQLITE_CONSTRAINT_NOTNULL
-pub const E_CONSTRAINT_NOTNULL : HRESULT = HRESULT::from_constant(0x87AF0513); // SQLITE_E_CONSTRAINT_NOTNULL
+pub const E_CONSTRAINT_NOTNULL : ErrorHResult = ErrorHResult::from_constant(0x87AF0513); // SQLITE_E_CONSTRAINT_NOTNULL
 
 /// SQLITE_CONSTRAINT_PRIMARYKEY
-pub const E_CONSTRAINT_PRIMARYKEY : HRESULT = HRESULT::from_constant(0x87AF0613); // SQLITE_E_CONSTRAINT_PRIMARYKEY
+pub const E_CONSTRAINT_PRIMARYKEY : ErrorHResult = ErrorHResult::from_constant(0x87AF0613); // SQLITE_E_CONSTRAINT_PRIMARYKEY
 
 /// SQLITE_CONSTRAINT_TRIGGER
-pub const E_CONSTRAINT_TRIGGER : HRESULT = HRESULT::from_constant(0x87AF0713); // SQLITE_E_CONSTRAINT_TRIGGER
+pub const E_CONSTRAINT_TRIGGER : ErrorHResult = ErrorHResult::from_constant(0x87AF0713); // SQLITE_E_CONSTRAINT_TRIGGER
 
 /// SQLITE_CONSTRAINT_UNIQUE
-pub const E_CONSTRAINT_UNIQUE : HRESULT = HRESULT::from_constant(0x87AF0813); // SQLITE_E_CONSTRAINT_UNIQUE
+pub const E_CONSTRAINT_UNIQUE : ErrorHResult = ErrorHResult::from_constant(0x87AF0813); // SQLITE_E_CONSTRAINT_UNIQUE
 
 /// SQLITE_CONSTRAINT_VTAB
-pub const E_CONSTRAINT_VTAB : HRESULT = HRESULT::from_constant(0x87AF0913); // SQLITE_E_CONSTRAINT_VTAB
+pub const E_CONSTRAINT_VTAB : ErrorHResult = ErrorHResult::from_constant(0x87AF0913); // SQLITE_E_CONSTRAINT_VTAB
 
 /// SQLITE_CONSTRAINT_ROWID
-pub const E_CONSTRAINT_ROWID : HRESULT = HRESULT::from_constant(0x87AF0A13); // SQLITE_E_CONSTRAINT_ROWID
+pub const E_CONSTRAINT_ROWID : ErrorHResult = ErrorHResult::from_constant(0x87AF0A13); // SQLITE_E_CONSTRAINT_ROWID
 
 /// SQLITE_NOTICE_RECOVER_WAL
-pub const E_NOTICE_RECOVER_WAL : HRESULT = HRESULT::from_constant(0x87AF011B); // SQLITE_E_NOTICE_RECOVER_WAL
+pub const E_NOTICE_RECOVER_WAL : ErrorHResult = ErrorHResult::from_constant(0x87AF011B); // SQLITE_E_NOTICE_RECOVER_WAL
 
 /// SQLITE_NOTICE_RECOVER_ROLLBACK
-pub const E_NOTICE_RECOVER_ROLLBACK : HRESULT = HRESULT::from_constant(0x87AF021B); // SQLITE_E_NOTICE_RECOVER_ROLLBACK
+pub const E_NOTICE_RECOVER_ROLLBACK : ErrorHResult = ErrorHResult::from_constant(0x87AF021B); // SQLITE_E_NOTICE_RECOVER_ROLLBACK
 
 /// SQLITE_WARNING_AUTOINDEX
-pub const E_WARNING_AUTOINDEX : HRESULT = HRESULT::from_constant(0x87AF011C); // SQLITE_E_WARNING_AUTOINDEX
+pub const E_WARNING_AUTOINDEX : ErrorHResult = ErrorHResult::from_constant(0x87AF011C); // SQLITE_E_WARNING_AUTOINDEX

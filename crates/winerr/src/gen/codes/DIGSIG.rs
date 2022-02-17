@@ -4,13 +4,13 @@ use super::*;
 
 
 /// Error due to problem in ASN.1 encoding process.
-pub const E_ENCODE : HRESULT = HRESULT::from_constant(0x800B0005); // DIGSIG_E_ENCODE
+pub const E_ENCODE : ErrorHResult = ErrorHResult::from_constant(0x800B0005); // DIGSIG_E_ENCODE
 
 /// Error due to problem in ASN.1 decoding process.
-pub const E_DECODE : HRESULT = HRESULT::from_constant(0x800B0006); // DIGSIG_E_DECODE
+pub const E_DECODE : ErrorHResult = ErrorHResult::from_constant(0x800B0006); // DIGSIG_E_DECODE
 
 /// Reading / writing Extensions where Attributes are appropriate, and vice versa.
-pub const E_EXTENSIBILITY : HRESULT = HRESULT::from_constant(0x800B0007); // DIGSIG_E_EXTENSIBILITY
+pub const E_EXTENSIBILITY : ErrorHResult = ErrorHResult::from_constant(0x800B0007); // DIGSIG_E_EXTENSIBILITY
 
 /// Unspecified cryptographic failure.
-pub const E_CRYPTO : HRESULT = HRESULT::from_constant(0x800B0008); // DIGSIG_E_CRYPTO
+pub const E_CRYPTO : ErrorHResult = ErrorHResult::from_constant(0x800B0008); // DIGSIG_E_CRYPTO

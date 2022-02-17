@@ -4,85 +4,85 @@ use super::*;
 
 
 /// The specified buffer was too small.
-pub const E_BUFFER_TOO_SMALL : HRESULT = HRESULT::from_constant(0x80290200); // TBSIMP_E_BUFFER_TOO_SMALL
+pub const E_BUFFER_TOO_SMALL : ErrorHResult = ErrorHResult::from_constant(0x80290200); // TBSIMP_E_BUFFER_TOO_SMALL
 
 /// The context could not be cleaned up.
-pub const E_CLEANUP_FAILED : HRESULT = HRESULT::from_constant(0x80290201); // TBSIMP_E_CLEANUP_FAILED
+pub const E_CLEANUP_FAILED : ErrorHResult = ErrorHResult::from_constant(0x80290201); // TBSIMP_E_CLEANUP_FAILED
 
 /// The specified context handle is invalid.
-pub const E_INVALID_CONTEXT_HANDLE : HRESULT = HRESULT::from_constant(0x80290202); // TBSIMP_E_INVALID_CONTEXT_HANDLE
+pub const E_INVALID_CONTEXT_HANDLE : ErrorHResult = ErrorHResult::from_constant(0x80290202); // TBSIMP_E_INVALID_CONTEXT_HANDLE
 
 /// An invalid context parameter was specified.
-pub const E_INVALID_CONTEXT_PARAM : HRESULT = HRESULT::from_constant(0x80290203); // TBSIMP_E_INVALID_CONTEXT_PARAM
+pub const E_INVALID_CONTEXT_PARAM : ErrorHResult = ErrorHResult::from_constant(0x80290203); // TBSIMP_E_INVALID_CONTEXT_PARAM
 
 /// An error occurred while communicating with the TPM
-pub const E_TPM_ERROR : HRESULT = HRESULT::from_constant(0x80290204); // TBSIMP_E_TPM_ERROR
+pub const E_TPM_ERROR : ErrorHResult = ErrorHResult::from_constant(0x80290204); // TBSIMP_E_TPM_ERROR
 
 /// No entry with the specified key was found.
-pub const E_HASH_BAD_KEY : HRESULT = HRESULT::from_constant(0x80290205); // TBSIMP_E_HASH_BAD_KEY
+pub const E_HASH_BAD_KEY : ErrorHResult = ErrorHResult::from_constant(0x80290205); // TBSIMP_E_HASH_BAD_KEY
 
 /// The specified virtual handle matches a virtual handle already in use.
-pub const E_DUPLICATE_VHANDLE : HRESULT = HRESULT::from_constant(0x80290206); // TBSIMP_E_DUPLICATE_VHANDLE
+pub const E_DUPLICATE_VHANDLE : ErrorHResult = ErrorHResult::from_constant(0x80290206); // TBSIMP_E_DUPLICATE_VHANDLE
 
 /// The pointer to the returned handle location was NULL or invalid
-pub const E_INVALID_OUTPUT_POINTER : HRESULT = HRESULT::from_constant(0x80290207); // TBSIMP_E_INVALID_OUTPUT_POINTER
+pub const E_INVALID_OUTPUT_POINTER : ErrorHResult = ErrorHResult::from_constant(0x80290207); // TBSIMP_E_INVALID_OUTPUT_POINTER
 
 /// One or more parameters is invalid
-pub const E_INVALID_PARAMETER : HRESULT = HRESULT::from_constant(0x80290208); // TBSIMP_E_INVALID_PARAMETER
+pub const E_INVALID_PARAMETER : ErrorHResult = ErrorHResult::from_constant(0x80290208); // TBSIMP_E_INVALID_PARAMETER
 
 /// The RPC subsystem could not be initialized.
-pub const E_RPC_INIT_FAILED : HRESULT = HRESULT::from_constant(0x80290209); // TBSIMP_E_RPC_INIT_FAILED
+pub const E_RPC_INIT_FAILED : ErrorHResult = ErrorHResult::from_constant(0x80290209); // TBSIMP_E_RPC_INIT_FAILED
 
 /// The TBS scheduler is not running.
-pub const E_SCHEDULER_NOT_RUNNING : HRESULT = HRESULT::from_constant(0x8029020A); // TBSIMP_E_SCHEDULER_NOT_RUNNING
+pub const E_SCHEDULER_NOT_RUNNING : ErrorHResult = ErrorHResult::from_constant(0x8029020A); // TBSIMP_E_SCHEDULER_NOT_RUNNING
 
 /// The command was canceled.
-pub const E_COMMAND_CANCELED : HRESULT = HRESULT::from_constant(0x8029020B); // TBSIMP_E_COMMAND_CANCELED
+pub const E_COMMAND_CANCELED : ErrorHResult = ErrorHResult::from_constant(0x8029020B); // TBSIMP_E_COMMAND_CANCELED
 
 /// There was not enough memory to fulfill the request
-pub const E_OUT_OF_MEMORY : HRESULT = HRESULT::from_constant(0x8029020C); // TBSIMP_E_OUT_OF_MEMORY
+pub const E_OUT_OF_MEMORY : ErrorHResult = ErrorHResult::from_constant(0x8029020C); // TBSIMP_E_OUT_OF_MEMORY
 
 /// The specified list is empty, or the iteration has reached the end of the list.
-pub const E_LIST_NO_MORE_ITEMS : HRESULT = HRESULT::from_constant(0x8029020D); // TBSIMP_E_LIST_NO_MORE_ITEMS
+pub const E_LIST_NO_MORE_ITEMS : ErrorHResult = ErrorHResult::from_constant(0x8029020D); // TBSIMP_E_LIST_NO_MORE_ITEMS
 
 /// The specified item was not found in the list.
-pub const E_LIST_NOT_FOUND : HRESULT = HRESULT::from_constant(0x8029020E); // TBSIMP_E_LIST_NOT_FOUND
+pub const E_LIST_NOT_FOUND : ErrorHResult = ErrorHResult::from_constant(0x8029020E); // TBSIMP_E_LIST_NOT_FOUND
 
 /// The TPM does not have enough space to load the requested resource.
-pub const E_NOT_ENOUGH_SPACE : HRESULT = HRESULT::from_constant(0x8029020F); // TBSIMP_E_NOT_ENOUGH_SPACE
+pub const E_NOT_ENOUGH_SPACE : ErrorHResult = ErrorHResult::from_constant(0x8029020F); // TBSIMP_E_NOT_ENOUGH_SPACE
 
 /// There are too many TPM contexts in use.
-pub const E_NOT_ENOUGH_TPM_CONTEXTS : HRESULT = HRESULT::from_constant(0x80290210); // TBSIMP_E_NOT_ENOUGH_TPM_CONTEXTS
+pub const E_NOT_ENOUGH_TPM_CONTEXTS : ErrorHResult = ErrorHResult::from_constant(0x80290210); // TBSIMP_E_NOT_ENOUGH_TPM_CONTEXTS
 
 /// The TPM command failed.
-pub const E_COMMAND_FAILED : HRESULT = HRESULT::from_constant(0x80290211); // TBSIMP_E_COMMAND_FAILED
+pub const E_COMMAND_FAILED : ErrorHResult = ErrorHResult::from_constant(0x80290211); // TBSIMP_E_COMMAND_FAILED
 
 /// The TBS does not recognize the specified ordinal.
-pub const E_UNKNOWN_ORDINAL : HRESULT = HRESULT::from_constant(0x80290212); // TBSIMP_E_UNKNOWN_ORDINAL
+pub const E_UNKNOWN_ORDINAL : ErrorHResult = ErrorHResult::from_constant(0x80290212); // TBSIMP_E_UNKNOWN_ORDINAL
 
 /// The requested resource is no longer available.
-pub const E_RESOURCE_EXPIRED : HRESULT = HRESULT::from_constant(0x80290213); // TBSIMP_E_RESOURCE_EXPIRED
+pub const E_RESOURCE_EXPIRED : ErrorHResult = ErrorHResult::from_constant(0x80290213); // TBSIMP_E_RESOURCE_EXPIRED
 
 /// The resource type did not match.
-pub const E_INVALID_RESOURCE : HRESULT = HRESULT::from_constant(0x80290214); // TBSIMP_E_INVALID_RESOURCE
+pub const E_INVALID_RESOURCE : ErrorHResult = ErrorHResult::from_constant(0x80290214); // TBSIMP_E_INVALID_RESOURCE
 
 /// No resources can be unloaded.
-pub const E_NOTHING_TO_UNLOAD : HRESULT = HRESULT::from_constant(0x80290215); // TBSIMP_E_NOTHING_TO_UNLOAD
+pub const E_NOTHING_TO_UNLOAD : ErrorHResult = ErrorHResult::from_constant(0x80290215); // TBSIMP_E_NOTHING_TO_UNLOAD
 
 /// No new entries can be added to the hash table.
-pub const E_HASH_TABLE_FULL : HRESULT = HRESULT::from_constant(0x80290216); // TBSIMP_E_HASH_TABLE_FULL
+pub const E_HASH_TABLE_FULL : ErrorHResult = ErrorHResult::from_constant(0x80290216); // TBSIMP_E_HASH_TABLE_FULL
 
 /// A new TBS context could not be created because there are too many open contexts.
-pub const E_TOO_MANY_TBS_CONTEXTS : HRESULT = HRESULT::from_constant(0x80290217); // TBSIMP_E_TOO_MANY_TBS_CONTEXTS
+pub const E_TOO_MANY_TBS_CONTEXTS : ErrorHResult = ErrorHResult::from_constant(0x80290217); // TBSIMP_E_TOO_MANY_TBS_CONTEXTS
 
 /// A new virtual resource could not be created because there are too many open virtual resources.
-pub const E_TOO_MANY_RESOURCES : HRESULT = HRESULT::from_constant(0x80290218); // TBSIMP_E_TOO_MANY_RESOURCES
+pub const E_TOO_MANY_RESOURCES : ErrorHResult = ErrorHResult::from_constant(0x80290218); // TBSIMP_E_TOO_MANY_RESOURCES
 
 /// The physical presence interface is not supported.
-pub const E_PPI_NOT_SUPPORTED : HRESULT = HRESULT::from_constant(0x80290219); // TBSIMP_E_PPI_NOT_SUPPORTED
+pub const E_PPI_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x80290219); // TBSIMP_E_PPI_NOT_SUPPORTED
 
 /// TBS is not compatible with the version of TPM found on the system.
-pub const E_TPM_INCOMPATIBLE : HRESULT = HRESULT::from_constant(0x8029021A); // TBSIMP_E_TPM_INCOMPATIBLE
+pub const E_TPM_INCOMPATIBLE : ErrorHResult = ErrorHResult::from_constant(0x8029021A); // TBSIMP_E_TPM_INCOMPATIBLE
 
 /// No TCG event log is available.
-pub const E_NO_EVENT_LOG : HRESULT = HRESULT::from_constant(0x8029021B); // TBSIMP_E_NO_EVENT_LOG
+pub const E_NO_EVENT_LOG : ErrorHResult = ErrorHResult::from_constant(0x8029021B); // TBSIMP_E_NO_EVENT_LOG

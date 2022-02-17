@@ -4,28 +4,28 @@ use super::*;
 
 
 /// Partition state blob not found. Make sure the virtual machine is saved for this content to be included in the saved state file(s).
-pub const E_PARTITION_STATE_NOT_FOUND : HRESULT = HRESULT::from_constant(0xC0370500); // VM_SAVED_STATE_DUMP_E_PARTITION_STATE_NOT_FOUND
+pub const E_PARTITION_STATE_NOT_FOUND : ErrorHResult = ErrorHResult::from_constant(0xC0370500); // VM_SAVED_STATE_DUMP_E_PARTITION_STATE_NOT_FOUND
 
 /// Guest memory not found. Make sure the virtual machine is saved for this content to be included in the saved state file(s).
-pub const E_GUEST_MEMORY_NOT_FOUND : HRESULT = HRESULT::from_constant(0xC0370501); // VM_SAVED_STATE_DUMP_E_GUEST_MEMORY_NOT_FOUND
+pub const E_GUEST_MEMORY_NOT_FOUND : ErrorHResult = ErrorHResult::from_constant(0xC0370501); // VM_SAVED_STATE_DUMP_E_GUEST_MEMORY_NOT_FOUND
 
 /// No virtual processor information found in the saved partition blob. Make sure the virtual machine is saved successfully for this content to be included in the partition state.
-pub const E_NO_VP_FOUND_IN_PARTITION_STATE : HRESULT = HRESULT::from_constant(0xC0370502); // VM_SAVED_STATE_DUMP_E_NO_VP_FOUND_IN_PARTITION_STATE
+pub const E_NO_VP_FOUND_IN_PARTITION_STATE : ErrorHResult = ErrorHResult::from_constant(0xC0370502); // VM_SAVED_STATE_DUMP_E_NO_VP_FOUND_IN_PARTITION_STATE
 
 /// A virtual processor has been detected to have nested virtualization enabled. Nested Virtualization is not supported yet by VmSavedStateDumpProvider.
-pub const E_NESTED_VIRTUALIZATION_NOT_SUPPORTED : HRESULT = HRESULT::from_constant(0xC0370503); // VM_SAVED_STATE_DUMP_E_NESTED_VIRTUALIZATION_NOT_SUPPORTED
+pub const E_NESTED_VIRTUALIZATION_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0xC0370503); // VM_SAVED_STATE_DUMP_E_NESTED_VIRTUALIZATION_NOT_SUPPORTED
 
 /// The Windows kernel image address could not be found in the virtual machine saved state.
-pub const E_WINDOWS_KERNEL_IMAGE_NOT_FOUND : HRESULT = HRESULT::from_constant(0xC0370504); // VM_SAVED_STATE_DUMP_E_WINDOWS_KERNEL_IMAGE_NOT_FOUND
+pub const E_WINDOWS_KERNEL_IMAGE_NOT_FOUND : ErrorHResult = ErrorHResult::from_constant(0xC0370504); // VM_SAVED_STATE_DUMP_E_WINDOWS_KERNEL_IMAGE_NOT_FOUND
 
 /// Failed to read Page Map Level 4 entry (pxe) for a virtual address.
-pub const E_PXE_NOT_PRESENT : HRESULT = HRESULT::from_constant(0xC0370505); // VM_SAVED_STATE_DUMP_E_PXE_NOT_PRESENT
+pub const E_PXE_NOT_PRESENT : ErrorHResult = ErrorHResult::from_constant(0xC0370505); // VM_SAVED_STATE_DUMP_E_PXE_NOT_PRESENT
 
 /// Failed to read Page Directory Page Table entry (pdpte) for a virtual address.
-pub const E_PDPTE_NOT_PRESENT : HRESULT = HRESULT::from_constant(0xC0370506); // VM_SAVED_STATE_DUMP_E_PDPTE_NOT_PRESENT
+pub const E_PDPTE_NOT_PRESENT : ErrorHResult = ErrorHResult::from_constant(0xC0370506); // VM_SAVED_STATE_DUMP_E_PDPTE_NOT_PRESENT
 
 /// Failed to read Page Directory entry (pde) for a virtual address.
-pub const E_PDE_NOT_PRESENT : HRESULT = HRESULT::from_constant(0xC0370507); // VM_SAVED_STATE_DUMP_E_PDE_NOT_PRESENT
+pub const E_PDE_NOT_PRESENT : ErrorHResult = ErrorHResult::from_constant(0xC0370507); // VM_SAVED_STATE_DUMP_E_PDE_NOT_PRESENT
 
 /// Failed to read Page Table entry (pte) for a virtual address.
-pub const E_PTE_NOT_PRESENT : HRESULT = HRESULT::from_constant(0xC0370508); // VM_SAVED_STATE_DUMP_E_PTE_NOT_PRESENT
+pub const E_PTE_NOT_PRESENT : ErrorHResult = ErrorHResult::from_constant(0xC0370508); // VM_SAVED_STATE_DUMP_E_PTE_NOT_PRESENT

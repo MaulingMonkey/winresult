@@ -4,25 +4,25 @@ use super::*;
 
 
 /// OLESTREAM Get method failed
-pub const E_OLESTREAM_GET : HRESULT = HRESULT::from_constant(0x800401C0); // CONVERT10_E_OLESTREAM_GET
+pub const E_OLESTREAM_GET : ErrorHResult = ErrorHResult::from_constant(0x800401C0); // CONVERT10_E_OLESTREAM_GET
 
 /// OLESTREAM Put method failed
-pub const E_OLESTREAM_PUT : HRESULT = HRESULT::from_constant(0x800401C1); // CONVERT10_E_OLESTREAM_PUT
+pub const E_OLESTREAM_PUT : ErrorHResult = ErrorHResult::from_constant(0x800401C1); // CONVERT10_E_OLESTREAM_PUT
 
 /// Contents of the OLESTREAM not in correct format
-pub const E_OLESTREAM_FMT : HRESULT = HRESULT::from_constant(0x800401C2); // CONVERT10_E_OLESTREAM_FMT
+pub const E_OLESTREAM_FMT : ErrorHResult = ErrorHResult::from_constant(0x800401C2); // CONVERT10_E_OLESTREAM_FMT
 
 /// There was an error in a Windows GDI call while converting the bitmap to a DIB
-pub const E_OLESTREAM_BITMAP_TO_DIB : HRESULT = HRESULT::from_constant(0x800401C3); // CONVERT10_E_OLESTREAM_BITMAP_TO_DIB
+pub const E_OLESTREAM_BITMAP_TO_DIB : ErrorHResult = ErrorHResult::from_constant(0x800401C3); // CONVERT10_E_OLESTREAM_BITMAP_TO_DIB
 
 /// Contents of the IStorage not in correct format
-pub const E_STG_FMT : HRESULT = HRESULT::from_constant(0x800401C4); // CONVERT10_E_STG_FMT
+pub const E_STG_FMT : ErrorHResult = ErrorHResult::from_constant(0x800401C4); // CONVERT10_E_STG_FMT
 
 /// Contents of IStorage is missing one of the standard streams
-pub const E_STG_NO_STD_STREAM : HRESULT = HRESULT::from_constant(0x800401C5); // CONVERT10_E_STG_NO_STD_STREAM
+pub const E_STG_NO_STD_STREAM : ErrorHResult = ErrorHResult::from_constant(0x800401C5); // CONVERT10_E_STG_NO_STD_STREAM
 
 /// There was an error in a Windows GDI call while converting the DIB to a bitmap.
-pub const E_STG_DIB_TO_BITMAP : HRESULT = HRESULT::from_constant(0x800401C6); // CONVERT10_E_STG_DIB_TO_BITMAP
+pub const E_STG_DIB_TO_BITMAP : ErrorHResult = ErrorHResult::from_constant(0x800401C6); // CONVERT10_E_STG_DIB_TO_BITMAP
 
 /// Unable to convert OLESTREAM to IStorage
-pub const S_NO_PRESENTATION : HRESULT = HRESULT::from_constant(0x000401C0); // CONVERT10_S_NO_PRESENTATION
+pub const S_NO_PRESENTATION : SuccessHResult = SuccessHResult::from_constant(0x000401C0); // CONVERT10_S_NO_PRESENTATION

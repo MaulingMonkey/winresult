@@ -4,55 +4,55 @@ use super::*;
 
 
 /// A required certificate is not within its validity period when verifying against the current system clock or the timestamp in the signed file.
-pub const E_EXPIRED : HRESULT = HRESULT::from_constant(0x800B0101); // CERT_E_EXPIRED
+pub const E_EXPIRED : ErrorHResult = ErrorHResult::from_constant(0x800B0101); // CERT_E_EXPIRED
 
 /// The validity periods of the certification chain do not nest correctly.
-pub const E_VALIDITYPERIODNESTING : HRESULT = HRESULT::from_constant(0x800B0102); // CERT_E_VALIDITYPERIODNESTING
+pub const E_VALIDITYPERIODNESTING : ErrorHResult = ErrorHResult::from_constant(0x800B0102); // CERT_E_VALIDITYPERIODNESTING
 
 /// A certificate that can only be used as an end-entity is being used as a CA or vice versa.
-pub const E_ROLE : HRESULT = HRESULT::from_constant(0x800B0103); // CERT_E_ROLE
+pub const E_ROLE : ErrorHResult = ErrorHResult::from_constant(0x800B0103); // CERT_E_ROLE
 
 /// A path length constraint in the certification chain has been violated.
-pub const E_PATHLENCONST : HRESULT = HRESULT::from_constant(0x800B0104); // CERT_E_PATHLENCONST
+pub const E_PATHLENCONST : ErrorHResult = ErrorHResult::from_constant(0x800B0104); // CERT_E_PATHLENCONST
 
 /// A certificate contains an unknown extension that is marked 'critical'.
-pub const E_CRITICAL : HRESULT = HRESULT::from_constant(0x800B0105); // CERT_E_CRITICAL
+pub const E_CRITICAL : ErrorHResult = ErrorHResult::from_constant(0x800B0105); // CERT_E_CRITICAL
 
 /// A certificate being used for a purpose other than the ones specified by its CA.
-pub const E_PURPOSE : HRESULT = HRESULT::from_constant(0x800B0106); // CERT_E_PURPOSE
+pub const E_PURPOSE : ErrorHResult = ErrorHResult::from_constant(0x800B0106); // CERT_E_PURPOSE
 
 /// A parent of a given certificate in fact did not issue that child certificate.
-pub const E_ISSUERCHAINING : HRESULT = HRESULT::from_constant(0x800B0107); // CERT_E_ISSUERCHAINING
+pub const E_ISSUERCHAINING : ErrorHResult = ErrorHResult::from_constant(0x800B0107); // CERT_E_ISSUERCHAINING
 
 /// A certificate is missing or has an empty value for an important field, such as a subject or issuer name.
-pub const E_MALFORMED : HRESULT = HRESULT::from_constant(0x800B0108); // CERT_E_MALFORMED
+pub const E_MALFORMED : ErrorHResult = ErrorHResult::from_constant(0x800B0108); // CERT_E_MALFORMED
 
 /// A certificate chain processed, but terminated in a root certificate which is not trusted by the trust provider.
-pub const E_UNTRUSTEDROOT : HRESULT = HRESULT::from_constant(0x800B0109); // CERT_E_UNTRUSTEDROOT
+pub const E_UNTRUSTEDROOT : ErrorHResult = ErrorHResult::from_constant(0x800B0109); // CERT_E_UNTRUSTEDROOT
 
 /// A certificate chain could not be built to a trusted root authority.
-pub const E_CHAINING : HRESULT = HRESULT::from_constant(0x800B010A); // CERT_E_CHAINING
+pub const E_CHAINING : ErrorHResult = ErrorHResult::from_constant(0x800B010A); // CERT_E_CHAINING
 
 /// A certificate was explicitly revoked by its issuer.
-pub const E_REVOKED : HRESULT = HRESULT::from_constant(0x800B010C); // CERT_E_REVOKED
+pub const E_REVOKED : ErrorHResult = ErrorHResult::from_constant(0x800B010C); // CERT_E_REVOKED
 
 /// The certification path terminates with the test root which is not trusted with the current policy settings.
-pub const E_UNTRUSTEDTESTROOT : HRESULT = HRESULT::from_constant(0x800B010D); // CERT_E_UNTRUSTEDTESTROOT
+pub const E_UNTRUSTEDTESTROOT : ErrorHResult = ErrorHResult::from_constant(0x800B010D); // CERT_E_UNTRUSTEDTESTROOT
 
 /// The revocation process could not continue - the certificate(s) could not be checked.
-pub const E_REVOCATION_FAILURE : HRESULT = HRESULT::from_constant(0x800B010E); // CERT_E_REVOCATION_FAILURE
+pub const E_REVOCATION_FAILURE : ErrorHResult = ErrorHResult::from_constant(0x800B010E); // CERT_E_REVOCATION_FAILURE
 
 /// The certificate's CN name does not match the passed value.
-pub const E_CN_NO_MATCH : HRESULT = HRESULT::from_constant(0x800B010F); // CERT_E_CN_NO_MATCH
+pub const E_CN_NO_MATCH : ErrorHResult = ErrorHResult::from_constant(0x800B010F); // CERT_E_CN_NO_MATCH
 
 /// The certificate is not valid for the requested usage.
-pub const E_WRONG_USAGE : HRESULT = HRESULT::from_constant(0x800B0110); // CERT_E_WRONG_USAGE
+pub const E_WRONG_USAGE : ErrorHResult = ErrorHResult::from_constant(0x800B0110); // CERT_E_WRONG_USAGE
 
 /// A certification chain processed correctly, but one of the CA certificates is not trusted by the policy provider.
-pub const E_UNTRUSTEDCA : HRESULT = HRESULT::from_constant(0x800B0112); // CERT_E_UNTRUSTEDCA
+pub const E_UNTRUSTEDCA : ErrorHResult = ErrorHResult::from_constant(0x800B0112); // CERT_E_UNTRUSTEDCA
 
 /// The certificate has invalid policy.
-pub const E_INVALID_POLICY : HRESULT = HRESULT::from_constant(0x800B0113); // CERT_E_INVALID_POLICY
+pub const E_INVALID_POLICY : ErrorHResult = ErrorHResult::from_constant(0x800B0113); // CERT_E_INVALID_POLICY
 
 /// The certificate has an invalid name. The name is not included in the permitted list or is explicitly excluded.
-pub const E_INVALID_NAME : HRESULT = HRESULT::from_constant(0x800B0114); // CERT_E_INVALID_NAME
+pub const E_INVALID_NAME : ErrorHResult = ErrorHResult::from_constant(0x800B0114); // CERT_E_INVALID_NAME

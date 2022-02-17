@@ -4,19 +4,19 @@ use super::*;
 
 
 /// The key is not exportable.
-pub const E_KEY_NOT_EXPORTABLE : HRESULT = HRESULT::from_constant(0x80095000); // XENROLL_E_KEY_NOT_EXPORTABLE
+pub const E_KEY_NOT_EXPORTABLE : ErrorHResult = ErrorHResult::from_constant(0x80095000); // XENROLL_E_KEY_NOT_EXPORTABLE
 
 /// You cannot add the root CA certificate into your local store.
-pub const E_CANNOT_ADD_ROOT_CERT : HRESULT = HRESULT::from_constant(0x80095001); // XENROLL_E_CANNOT_ADD_ROOT_CERT
+pub const E_CANNOT_ADD_ROOT_CERT : ErrorHResult = ErrorHResult::from_constant(0x80095001); // XENROLL_E_CANNOT_ADD_ROOT_CERT
 
 /// The key archival hash attribute was not found in the response.
-pub const E_RESPONSE_KA_HASH_NOT_FOUND : HRESULT = HRESULT::from_constant(0x80095002); // XENROLL_E_RESPONSE_KA_HASH_NOT_FOUND
+pub const E_RESPONSE_KA_HASH_NOT_FOUND : ErrorHResult = ErrorHResult::from_constant(0x80095002); // XENROLL_E_RESPONSE_KA_HASH_NOT_FOUND
 
 /// An unexpected key archival hash attribute was found in the response.
-pub const E_RESPONSE_UNEXPECTED_KA_HASH : HRESULT = HRESULT::from_constant(0x80095003); // XENROLL_E_RESPONSE_UNEXPECTED_KA_HASH
+pub const E_RESPONSE_UNEXPECTED_KA_HASH : ErrorHResult = ErrorHResult::from_constant(0x80095003); // XENROLL_E_RESPONSE_UNEXPECTED_KA_HASH
 
 /// There is a key archival hash mismatch between the request and the response.
-pub const E_RESPONSE_KA_HASH_MISMATCH : HRESULT = HRESULT::from_constant(0x80095004); // XENROLL_E_RESPONSE_KA_HASH_MISMATCH
+pub const E_RESPONSE_KA_HASH_MISMATCH : ErrorHResult = ErrorHResult::from_constant(0x80095004); // XENROLL_E_RESPONSE_KA_HASH_MISMATCH
 
 /// Signing certificate cannot include SMIME extension.
-pub const E_KEYSPEC_SMIME_MISMATCH : HRESULT = HRESULT::from_constant(0x80095005); // XENROLL_E_KEYSPEC_SMIME_MISMATCH
+pub const E_KEYSPEC_SMIME_MISMATCH : ErrorHResult = ErrorHResult::from_constant(0x80095005); // XENROLL_E_KEYSPEC_SMIME_MISMATCH

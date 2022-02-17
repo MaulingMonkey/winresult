@@ -4,64 +4,64 @@ use super::*;
 
 
 /// Debugger was attached.
-pub const S_REPORT_DEBUG : HRESULT = HRESULT::from_constant(0x001B0000); // WER_S_REPORT_DEBUG
+pub const S_REPORT_DEBUG : SuccessHResult = SuccessHResult::from_constant(0x001B0000); // WER_S_REPORT_DEBUG
 
 /// Report was uploaded.
-pub const S_REPORT_UPLOADED : HRESULT = HRESULT::from_constant(0x001B0001); // WER_S_REPORT_UPLOADED
+pub const S_REPORT_UPLOADED : SuccessHResult = SuccessHResult::from_constant(0x001B0001); // WER_S_REPORT_UPLOADED
 
 /// Report was queued.
-pub const S_REPORT_QUEUED : HRESULT = HRESULT::from_constant(0x001B0002); // WER_S_REPORT_QUEUED
+pub const S_REPORT_QUEUED : SuccessHResult = SuccessHResult::from_constant(0x001B0002); // WER_S_REPORT_QUEUED
 
 /// Reporting was disabled.
-pub const S_DISABLED : HRESULT = HRESULT::from_constant(0x001B0003); // WER_S_DISABLED
+pub const S_DISABLED : SuccessHResult = SuccessHResult::from_constant(0x001B0003); // WER_S_DISABLED
 
 /// Reporting was temporarily suspended.
-pub const S_SUSPENDED_UPLOAD : HRESULT = HRESULT::from_constant(0x001B0004); // WER_S_SUSPENDED_UPLOAD
+pub const S_SUSPENDED_UPLOAD : SuccessHResult = SuccessHResult::from_constant(0x001B0004); // WER_S_SUSPENDED_UPLOAD
 
 /// Report was not queued to queuing being disabled.
-pub const S_DISABLED_QUEUE : HRESULT = HRESULT::from_constant(0x001B0005); // WER_S_DISABLED_QUEUE
+pub const S_DISABLED_QUEUE : SuccessHResult = SuccessHResult::from_constant(0x001B0005); // WER_S_DISABLED_QUEUE
 
 /// Report was uploaded, but not archived due to archiving being disabled.
-pub const S_DISABLED_ARCHIVE : HRESULT = HRESULT::from_constant(0x001B0006); // WER_S_DISABLED_ARCHIVE
+pub const S_DISABLED_ARCHIVE : SuccessHResult = SuccessHResult::from_constant(0x001B0006); // WER_S_DISABLED_ARCHIVE
 
 /// Reporting was successfully spun off as an asynchronous operation.
-pub const S_REPORT_ASYNC : HRESULT = HRESULT::from_constant(0x001B0007); // WER_S_REPORT_ASYNC
+pub const S_REPORT_ASYNC : SuccessHResult = SuccessHResult::from_constant(0x001B0007); // WER_S_REPORT_ASYNC
 
 /// The assertion was handled.
-pub const S_IGNORE_ASSERT_INSTANCE : HRESULT = HRESULT::from_constant(0x001B0008); // WER_S_IGNORE_ASSERT_INSTANCE
+pub const S_IGNORE_ASSERT_INSTANCE : SuccessHResult = SuccessHResult::from_constant(0x001B0008); // WER_S_IGNORE_ASSERT_INSTANCE
 
 /// The assertion was handled and added to a permanent ignore list.
-pub const S_IGNORE_ALL_ASSERTS : HRESULT = HRESULT::from_constant(0x001B0009); // WER_S_IGNORE_ALL_ASSERTS
+pub const S_IGNORE_ALL_ASSERTS : SuccessHResult = SuccessHResult::from_constant(0x001B0009); // WER_S_IGNORE_ALL_ASSERTS
 
 /// The assertion was resumed as unhandled.
-pub const S_ASSERT_CONTINUE : HRESULT = HRESULT::from_constant(0x001B000A); // WER_S_ASSERT_CONTINUE
+pub const S_ASSERT_CONTINUE : SuccessHResult = SuccessHResult::from_constant(0x001B000A); // WER_S_ASSERT_CONTINUE
 
 /// Report was throttled.
-pub const S_THROTTLED : HRESULT = HRESULT::from_constant(0x001B000B); // WER_S_THROTTLED
+pub const S_THROTTLED : SuccessHResult = SuccessHResult::from_constant(0x001B000B); // WER_S_THROTTLED
 
 /// Report was uploaded with cab.
-pub const S_REPORT_UPLOADED_CAB : HRESULT = HRESULT::from_constant(0x001B000C); // WER_S_REPORT_UPLOADED_CAB
+pub const S_REPORT_UPLOADED_CAB : SuccessHResult = SuccessHResult::from_constant(0x001B000C); // WER_S_REPORT_UPLOADED_CAB
 
 /// Crash reporting failed.
-pub const E_CRASH_FAILURE : HRESULT = HRESULT::from_constant(0x801B8000); // WER_E_CRASH_FAILURE
+pub const E_CRASH_FAILURE : ErrorHResult = ErrorHResult::from_constant(0x801B8000); // WER_E_CRASH_FAILURE
 
 /// Report aborted due to user cancellation.
-pub const E_CANCELED : HRESULT = HRESULT::from_constant(0x801B8001); // WER_E_CANCELED
+pub const E_CANCELED : ErrorHResult = ErrorHResult::from_constant(0x801B8001); // WER_E_CANCELED
 
 /// Report aborted due to network failure.
-pub const E_NETWORK_FAILURE : HRESULT = HRESULT::from_constant(0x801B8002); // WER_E_NETWORK_FAILURE
+pub const E_NETWORK_FAILURE : ErrorHResult = ErrorHResult::from_constant(0x801B8002); // WER_E_NETWORK_FAILURE
 
 /// Report not initialized.
-pub const E_NOT_INITIALIZED : HRESULT = HRESULT::from_constant(0x801B8003); // WER_E_NOT_INITIALIZED
+pub const E_NOT_INITIALIZED : ErrorHResult = ErrorHResult::from_constant(0x801B8003); // WER_E_NOT_INITIALIZED
 
 /// Reporting is already in progress for the specified process.
-pub const E_ALREADY_REPORTING : HRESULT = HRESULT::from_constant(0x801B8004); // WER_E_ALREADY_REPORTING
+pub const E_ALREADY_REPORTING : ErrorHResult = ErrorHResult::from_constant(0x801B8004); // WER_E_ALREADY_REPORTING
 
 /// Dump not generated due to a throttle.
-pub const E_DUMP_THROTTLED : HRESULT = HRESULT::from_constant(0x801B8005); // WER_E_DUMP_THROTTLED
+pub const E_DUMP_THROTTLED : ErrorHResult = ErrorHResult::from_constant(0x801B8005); // WER_E_DUMP_THROTTLED
 
 /// Operation failed due to insufficient user consent.
-pub const E_INSUFFICIENT_CONSENT : HRESULT = HRESULT::from_constant(0x801B8006); // WER_E_INSUFFICIENT_CONSENT
+pub const E_INSUFFICIENT_CONSENT : ErrorHResult = ErrorHResult::from_constant(0x801B8006); // WER_E_INSUFFICIENT_CONSENT
 
 /// Report aborted due to performance criteria.
-pub const E_TOO_HEAVY : HRESULT = HRESULT::from_constant(0x801B8007); // WER_E_TOO_HEAVY
+pub const E_TOO_HEAVY : ErrorHResult = ErrorHResult::from_constant(0x801B8007); // WER_E_TOO_HEAVY

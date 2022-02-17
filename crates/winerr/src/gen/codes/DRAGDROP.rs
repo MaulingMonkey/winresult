@@ -4,22 +4,22 @@ use super::*;
 
 
 /// Trying to revoke a drop target that has not been registered
-pub const E_NOTREGISTERED : HRESULT = HRESULT::from_constant(0x80040100); // DRAGDROP_E_NOTREGISTERED
+pub const E_NOTREGISTERED : ErrorHResult = ErrorHResult::from_constant(0x80040100); // DRAGDROP_E_NOTREGISTERED
 
 /// This window has already been registered as a drop target
-pub const E_ALREADYREGISTERED : HRESULT = HRESULT::from_constant(0x80040101); // DRAGDROP_E_ALREADYREGISTERED
+pub const E_ALREADYREGISTERED : ErrorHResult = ErrorHResult::from_constant(0x80040101); // DRAGDROP_E_ALREADYREGISTERED
 
 /// Invalid window handle
-pub const E_INVALIDHWND : HRESULT = HRESULT::from_constant(0x80040102); // DRAGDROP_E_INVALIDHWND
+pub const E_INVALIDHWND : ErrorHResult = ErrorHResult::from_constant(0x80040102); // DRAGDROP_E_INVALIDHWND
 
 /// A drag operation is already in progress
-pub const E_CONCURRENT_DRAG_ATTEMPTED : HRESULT = HRESULT::from_constant(0x80040103); // DRAGDROP_E_CONCURRENT_DRAG_ATTEMPTED
+pub const E_CONCURRENT_DRAG_ATTEMPTED : ErrorHResult = ErrorHResult::from_constant(0x80040103); // DRAGDROP_E_CONCURRENT_DRAG_ATTEMPTED
 
 /// Successful drop took place
-pub const S_DROP : HRESULT = HRESULT::from_constant(0x00040100); // DRAGDROP_S_DROP
+pub const S_DROP : SuccessHResult = SuccessHResult::from_constant(0x00040100); // DRAGDROP_S_DROP
 
 /// Drag-drop operation canceled
-pub const S_CANCEL : HRESULT = HRESULT::from_constant(0x00040101); // DRAGDROP_S_CANCEL
+pub const S_CANCEL : SuccessHResult = SuccessHResult::from_constant(0x00040101); // DRAGDROP_S_CANCEL
 
 /// Use the default cursor
-pub const S_USEDEFAULTCURSORS : HRESULT = HRESULT::from_constant(0x00040102); // DRAGDROP_S_USEDEFAULTCURSORS
+pub const S_USEDEFAULTCURSORS : SuccessHResult = SuccessHResult::from_constant(0x00040102); // DRAGDROP_S_USEDEFAULTCURSORS

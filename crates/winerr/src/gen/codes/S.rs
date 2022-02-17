@@ -4,18 +4,18 @@ use super::*;
 
 
 /// Success codes
-pub const OK : HRESULT = HRESULT::from_constant(0); // S_OK
+pub const OK : SuccessHResult = SuccessHResult::from_constant(0); // S_OK
 
 /// Success codes
-pub const FALSE : HRESULT = HRESULT::from_constant(1); // S_FALSE
+pub const FALSE : SuccessHResult = SuccessHResult::from_constant(1); // S_FALSE
 
 /// The Store was launched instead of the specified app because the app's package was in an invalid state.
-pub const STORE_LAUNCHED_FOR_REMEDIATION : HRESULT = HRESULT::from_constant(0x00270258); // S_STORE_LAUNCHED_FOR_REMEDIATION
+pub const STORE_LAUNCHED_FOR_REMEDIATION : SuccessHResult = SuccessHResult::from_constant(0x00270258); // S_STORE_LAUNCHED_FOR_REMEDIATION
 
 /// This app failed to launch, but the error was handled with a dialog.
-pub const APPLICATION_ACTIVATION_ERROR_HANDLED_BY_DIALOG : HRESULT = HRESULT::from_constant(0x00270259); // S_APPLICATION_ACTIVATION_ERROR_HANDLED_BY_DIALOG
+pub const APPLICATION_ACTIVATION_ERROR_HANDLED_BY_DIALOG : SuccessHResult = SuccessHResult::from_constant(0x00270259); // S_APPLICATION_ACTIVATION_ERROR_HANDLED_BY_DIALOG
 
-pub const NOT_RESIDENT : HRESULT = HRESULT::from_constant(141953141); // S_NOT_RESIDENT
-pub const RESIDENT_IN_SHARED_MEMORY : HRESULT = HRESULT::from_constant(141953142); // S_RESIDENT_IN_SHARED_MEMORY
-pub const PRESENT_MODE_CHANGED : HRESULT = HRESULT::from_constant(141953143); // S_PRESENT_MODE_CHANGED
-pub const PRESENT_OCCLUDED : HRESULT = HRESULT::from_constant(141953144); // S_PRESENT_OCCLUDED
+pub const NOT_RESIDENT : SuccessHResult = SuccessHResult::from_constant(141953141); // S_NOT_RESIDENT
+pub const RESIDENT_IN_SHARED_MEMORY : SuccessHResult = SuccessHResult::from_constant(141953142); // S_RESIDENT_IN_SHARED_MEMORY
+pub const PRESENT_MODE_CHANGED : SuccessHResult = SuccessHResult::from_constant(141953143); // S_PRESENT_MODE_CHANGED
+pub const PRESENT_OCCLUDED : SuccessHResult = SuccessHResult::from_constant(141953144); // S_PRESENT_OCCLUDED

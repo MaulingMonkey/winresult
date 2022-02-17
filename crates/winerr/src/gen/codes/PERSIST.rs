@@ -4,10 +4,10 @@ use super::*;
 
 
 /// The size of the data could not be determined.
-pub const E_SIZEDEFINITE : HRESULT = HRESULT::from_constant(0x800B0009); // PERSIST_E_SIZEDEFINITE
+pub const E_SIZEDEFINITE : ErrorHResult = ErrorHResult::from_constant(0x800B0009); // PERSIST_E_SIZEDEFINITE
 
 /// The size of the indefinite-sized data could not be determined.
-pub const E_SIZEINDEFINITE : HRESULT = HRESULT::from_constant(0x800B000A); // PERSIST_E_SIZEINDEFINITE
+pub const E_SIZEINDEFINITE : ErrorHResult = ErrorHResult::from_constant(0x800B000A); // PERSIST_E_SIZEINDEFINITE
 
 /// This object does not read and write self-sizing data.
-pub const E_NOTSELFSIZING : HRESULT = HRESULT::from_constant(0x800B000B); // PERSIST_E_NOTSELFSIZING
+pub const E_NOTSELFSIZING : ErrorHResult = ErrorHResult::from_constant(0x800B000B); // PERSIST_E_NOTSELFSIZING

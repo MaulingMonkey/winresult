@@ -4,7 +4,7 @@ use super::*;
 
 
 /// The blob provided does not match the adapter that the device was created on.
-pub const ERROR_ADAPTER_NOT_FOUND : HRESULT = HRESULT::from_constant(0x887E0001); // D3D12_ERROR_ADAPTER_NOT_FOUND
+pub const ERROR_ADAPTER_NOT_FOUND : ErrorHResult = ErrorHResult::from_constant(0x887E0001); // D3D12_ERROR_ADAPTER_NOT_FOUND
 
 /// The blob provided was created for a different version of the driver, and must be re-created.
-pub const ERROR_DRIVER_VERSION_MISMATCH : HRESULT = HRESULT::from_constant(0x887E0002); // D3D12_ERROR_DRIVER_VERSION_MISMATCH
+pub const ERROR_DRIVER_VERSION_MISMATCH : ErrorHResult = ErrorHResult::from_constant(0x887E0002); // D3D12_ERROR_DRIVER_VERSION_MISMATCH

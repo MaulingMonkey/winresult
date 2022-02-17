@@ -4,28 +4,28 @@ use super::*;
 
 
 /// One or more fixed volumes are not provisioned with the 3rd party encryption providers to support device encryption. Enable encryption with the 3rd party provider to comply with policy.
-pub const E_NOT_PROVISIONED_ON_ALL_VOLUMES : HRESULT = HRESULT::from_constant(0x88010001); // WEP_E_NOT_PROVISIONED_ON_ALL_VOLUMES
+pub const E_NOT_PROVISIONED_ON_ALL_VOLUMES : ErrorHResult = ErrorHResult::from_constant(0x88010001); // WEP_E_NOT_PROVISIONED_ON_ALL_VOLUMES
 
 /// This computer is not fully encrypted. There are fixed volumes present which are not supported for encryption.
-pub const E_FIXED_DATA_NOT_SUPPORTED : HRESULT = HRESULT::from_constant(0x88010002); // WEP_E_FIXED_DATA_NOT_SUPPORTED
+pub const E_FIXED_DATA_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x88010002); // WEP_E_FIXED_DATA_NOT_SUPPORTED
 
 /// This computer does not meet the hardware requirements to support device encryption with the installed 3rd party provider.
-pub const E_HARDWARE_NOT_COMPLIANT : HRESULT = HRESULT::from_constant(0x88010003); // WEP_E_HARDWARE_NOT_COMPLIANT
+pub const E_HARDWARE_NOT_COMPLIANT : ErrorHResult = ErrorHResult::from_constant(0x88010003); // WEP_E_HARDWARE_NOT_COMPLIANT
 
 /// This computer cannot support device encryption because the requisites for the device lock feature are not configured.
-pub const E_LOCK_NOT_CONFIGURED : HRESULT = HRESULT::from_constant(0x88010004); // WEP_E_LOCK_NOT_CONFIGURED
+pub const E_LOCK_NOT_CONFIGURED : ErrorHResult = ErrorHResult::from_constant(0x88010004); // WEP_E_LOCK_NOT_CONFIGURED
 
 /// Protection is enabled on this volume but is not in the active state.
-pub const E_PROTECTION_SUSPENDED : HRESULT = HRESULT::from_constant(0x88010005); // WEP_E_PROTECTION_SUSPENDED
+pub const E_PROTECTION_SUSPENDED : ErrorHResult = ErrorHResult::from_constant(0x88010005); // WEP_E_PROTECTION_SUSPENDED
 
 /// The 3rd party provider has been installed, but cannot activate encryption because a license has not been activated.
-pub const E_NO_LICENSE : HRESULT = HRESULT::from_constant(0x88010006); // WEP_E_NO_LICENSE
+pub const E_NO_LICENSE : ErrorHResult = ErrorHResult::from_constant(0x88010006); // WEP_E_NO_LICENSE
 
 /// The operating system drive is not protected by 3rd party drive encryption.
-pub const E_OS_NOT_PROTECTED : HRESULT = HRESULT::from_constant(0x88010007); // WEP_E_OS_NOT_PROTECTED
+pub const E_OS_NOT_PROTECTED : ErrorHResult = ErrorHResult::from_constant(0x88010007); // WEP_E_OS_NOT_PROTECTED
 
 /// Unexpected failure was encountered while calling into the 3rd Party drive encryption plugin.
-pub const E_UNEXPECTED_FAIL : HRESULT = HRESULT::from_constant(0x88010008); // WEP_E_UNEXPECTED_FAIL
+pub const E_UNEXPECTED_FAIL : ErrorHResult = ErrorHResult::from_constant(0x88010008); // WEP_E_UNEXPECTED_FAIL
 
 /// The input buffer size for the lockout metadata used by the 3rd party drive encryption is too large.
-pub const E_BUFFER_TOO_LARGE : HRESULT = HRESULT::from_constant(0x88010009); // WEP_E_BUFFER_TOO_LARGE
+pub const E_BUFFER_TOO_LARGE : ErrorHResult = ErrorHResult::from_constant(0x88010009); // WEP_E_BUFFER_TOO_LARGE
