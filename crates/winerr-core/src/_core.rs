@@ -81,6 +81,50 @@ impl From<ErrorCodeMicrosoft> for u32 { fn from(c: ErrorCodeMicrosoft) -> Self {
 
 
 /// \[[docs.microsoft.com](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/0642cb2f-2075-4469-918c-4441e69c548a)\]
+/// Success HRESULT
+#[derive(Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash, Default, Pod, Zeroable)] #[repr(transparent)] pub struct SuccessHResult(u32);
+
+impl SuccessHResult {
+    #[doc(hidden)] pub const fn from_constant(value: u32) -> Self { assert!(value & 0x8000_0000 == 0, "SuccessHResult::from_constant: HRESULT is an error (high bit set)"); Self(value) }
+
+    pub const fn is_error   (self) -> bool { false }
+    //  const fn is_reserved(self) -> bool { self.0 & 0x40000000 != 0 }
+    pub const fn is_customer(self) -> bool { self.0 & 0x20000000 != 0 }
+    pub const fn is_ntstatus(self) -> bool { self.0 & 0x10000000 != 0 }
+
+    pub const fn facility   (self) -> u16  { (self.0 & 0x0FFF0000 >> 16) as _ }
+    pub const fn code       (self) -> u16  { self.0 as _ }
+    pub const fn to_u32     (self) -> u32  { self.0 }
+}
+
+impl From<SuccessHResult> for u32 { fn from(hr: SuccessHResult) -> Self { hr.0 } }
+impl From<u32> for SuccessHResult { fn from(hr: u32) -> Self { Self(hr) } }
+
+
+
+/// \[[docs.microsoft.com](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/0642cb2f-2075-4469-918c-4441e69c548a)\]
+/// Error HRESULT
+#[derive(Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash, Default, Pod, Zeroable)] #[repr(transparent)] pub struct ErrorHResult(u32);
+
+impl ErrorHResult {
+    #[doc(hidden)] pub const fn from_constant(value: u32) -> Self { assert!(value & 0x8000_0000 != 0, "ErrorHResult::from_constant: HRESULT is a success (high bit not set)"); Self(value) }
+
+    pub const fn is_error   (self) -> bool { true }
+    //  const fn is_reserved(self) -> bool { self.0 & 0x40000000 != 0 }
+    pub const fn is_customer(self) -> bool { self.0 & 0x20000000 != 0 }
+    pub const fn is_ntstatus(self) -> bool { self.0 & 0x10000000 != 0 }
+
+    pub const fn facility   (self) -> u16  { (self.0 & 0x0FFF0000 >> 16) as _ }
+    pub const fn code       (self) -> u16  { self.0 as _ }
+    pub const fn to_u32     (self) -> u32  { self.0 }
+}
+
+impl From<ErrorHResult> for u32 { fn from(hr: ErrorHResult) -> Self { hr.0 } }
+impl From<u32> for ErrorHResult { fn from(hr: u32) -> Self { Self(hr) } }
+
+
+
+/// \[[docs.microsoft.com](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/0642cb2f-2075-4469-918c-4441e69c548a)\]
 /// HRESULT
 #[derive(Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash, Default, Pod, Zeroable)] #[repr(transparent)] pub struct HRESULT(u32);
 
@@ -95,11 +139,20 @@ impl HRESULT {
     pub const fn facility   (self) -> u16  { (self.0 & 0x0FFF0000 >> 16) as _ }
     pub const fn code       (self) -> u16  { self.0 as _ }
     pub const fn to_u32     (self) -> u32  { self.0 }
+
+    pub const fn succeeded(self) -> Result<SuccessHResult, ErrorHResult> {
+        if self.is_error() {
+            Err(ErrorHResult(self.0))
+        } else {
+            Ok(SuccessHResult(self.0))
+        }
+    }
 }
 
-impl From<HRESULT> for u32 { fn from(hr: HRESULT) -> Self { hr.0 } }
-impl From<u32> for HRESULT { fn from(hr: u32) -> Self { Self(hr) } }
-
+impl From<HRESULT>          for u32     { fn from(hr: HRESULT       ) -> Self { hr.0 } }
+impl From<u32>              for HRESULT { fn from(hr: u32           ) -> Self { Self(hr) } }
+impl From<SuccessHResult>   for HRESULT { fn from(hr: SuccessHResult) -> Self { Self(hr.0) } }
+impl From<ErrorHResult>     for HRESULT { fn from(hr: ErrorHResult  ) -> Self { Self(hr.0) } }
 
 
 /// \[[docs.microsoft.com](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/87fba13e-bf06-450e-83b1-9241dc81e781)\]
