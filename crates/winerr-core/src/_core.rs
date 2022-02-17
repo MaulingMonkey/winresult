@@ -82,7 +82,9 @@ impl From<ErrorCodeMicrosoft> for u32 { fn from(c: ErrorCodeMicrosoft) -> Self {
 
 /// \[[docs.microsoft.com](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/0642cb2f-2075-4469-918c-4441e69c548a)\]
 /// Success HRESULT
-#[derive(Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash, Default, Pod, Zeroable)] #[repr(transparent)] pub struct SuccessHResult(u32);
+#[derive(Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash, Default, Zeroable)] #[repr(transparent)] pub struct SuccessHResult(u32);
+// DO NOT IMPLEMENT:
+//  Pod (error bit patterns are forbidden)
 
 impl SuccessHResult {
     #[doc(hidden)] pub const fn from_constant(value: u32) -> Self { assert!(value & 0x8000_0000 == 0, "SuccessHResult::from_constant: HRESULT is an error (high bit set)"); Self(value) }
@@ -104,7 +106,11 @@ impl From<u32> for SuccessHResult { fn from(hr: u32) -> Self { Self(hr) } }
 
 /// \[[docs.microsoft.com](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/0642cb2f-2075-4469-918c-4441e69c548a)\]
 /// Error HRESULT
-#[derive(Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash, Default, Pod, Zeroable)] #[repr(transparent)] pub struct ErrorHResult(u32);
+#[derive(Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash)] #[repr(transparent)] pub struct ErrorHResult(u32);
+// DO NOT IMPLEMENT:
+//  Pod         (success bit patterns are forbidden)
+//  Default     (0 is success)
+//  Zeroable    (0 is success)
 
 impl ErrorHResult {
     #[doc(hidden)] pub const fn from_constant(value: u32) -> Self { assert!(value & 0x8000_0000 != 0, "ErrorHResult::from_constant: HRESULT is a success (high bit not set)"); Self(value) }

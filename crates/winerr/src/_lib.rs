@@ -55,7 +55,7 @@ mod gen {
     pub mod codes {
         #![allow(non_snake_case)]
         #![allow(non_upper_case_globals)]
-        use core::{ErrorCodeMicrosoft, SuccessCodeMicrosoft, HRESULT};
+        use core::{ErrorCodeMicrosoft, SuccessCodeMicrosoft, SuccessHResult, ErrorHResult};
 
 
 
@@ -120,7 +120,7 @@ mod gen {
         pub mod CS;
 
         /// [Direct3D](https://docs.microsoft.com/en-us/windows/win32/direct3d)
-        pub mod D3D { use super::*; pub const OK : HRESULT = HRESULT::from_constant(0); }
+        pub mod D3D { use super::*; pub const OK : SuccessHResult = SuccessHResult::from_constant(0); }
 
         /// [Direct3D](https://docs.microsoft.com/en-us/windows/win32/direct3d) 10+
         pub mod D3D10;
@@ -170,7 +170,7 @@ mod gen {
         /// [DXGI](https://docs.microsoft.com/en-us/windows/win32/direct3ddxgi/dx-graphics-dxgi)
         pub mod DXGI;
 
-        /// **Errors Codes**.  Typically [HRESULT]s.
+        /// **Errors Codes**.  Typically [ErrorHResult]s.
         pub mod E;
 
         /// Exchange ActiveSync
@@ -179,7 +179,7 @@ mod gen {
         /// **E**ntry **P**oin**t** for Remote Procedure Calls
         pub mod EPT;
 
-        /// **Error Codes**.  A mixture of [HRESULT]s and non-[HRESULT]s.
+        /// **Error Codes**.  Mostly a mixture of [ErrorHResult]s and [ErrorCodeMicrosoft]s.
         /// submodules:
         /// [CLOUD_FILE](Self::CLOUD_FILE),
         /// [CLUSTER](Self::CLUSTER),
@@ -203,7 +203,7 @@ mod gen {
         /// Note that `ERROR::SUBCATEGORY::CODE` is also generally exported as `ERROR::SUBCATEGORY_CODE`, although the latter is hidden from the docs to reduce clutter.
         /// <br><br>
         pub mod ERROR {
-            use core::{ErrorCodeMicrosoft, SuccessCodeMicrosoft, HRESULT};
+            use core::{ErrorCodeMicrosoft, SuccessCodeMicrosoft, SuccessHResult, ErrorHResult};
 
             // TODO: SUCCESS = 0 ?
 

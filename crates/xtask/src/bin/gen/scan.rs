@@ -56,6 +56,16 @@ pub struct Code<'s> {
     pub hide:       bool,
 }
 
+impl Code<'_> {
+    pub fn matches_ty(&self, ty: &str) -> bool {
+        match (self.rs_ty, ty) {
+            ("SuccessHResult",  "HRESULT")  => true,
+            ("ErrorHResult",    "HRESULT")  => true,
+            (x, y)                          => x == y,
+        }
+    }
+}
+
 pub fn hardcoded(codes: &mut Codes) {
     // success codes
     let mut redundant = false;
@@ -154,21 +164,36 @@ pub fn winerror_h<'s: 'c, 'c>(header: &'s str, codes: &mut Codes<'c>) {
                 continue // XXX
             } else if value.starts_with("SEC_E_") {
                 continue // XXX
-            } else if value.parse::<u16>().is_ok() || value.strip_prefix("0x").map_or(false, |value| u16::from_str_radix(value, 16).is_ok()) {
+            } else if let Some(_value16) = value.try_parse_u16() {
                 if success {
                     ("SuccessCodeMicrosoft", value)
                 } else {
                     ("ErrorCodeMicrosoft", value)
                 }
-            } else if value.parse::<u32>().is_ok() || value.strip_prefix("0x").map_or(false, |value| u32::from_str_radix(value, 16).is_ok()) {
+            } else if let Some(_value32) = value.try_parse_u32() {
                 ("HRESULT", value)
             } else {
                 mmrbi::error!(at: path, line: line_idx+1, "unexpected value for `{}`: `{}`", error, value);
                 continue
             };
 
+            let ty = if ty == "HRESULT" {
+                if let Some(value) = value.try_parse_u32() {
+                    if value >= 0x8000_0000 {
+                        "ErrorHResult"
+                    } else {
+                        "SuccessHResult"
+                    }
+                } else {
+                    mmrbi::error!(at: path, line: line_idx+1, "unable to parse integer value for `{}`: `{}`", error, value);
+                    continue
+                }
+            } else {
+                ty
+            };
+
             let ty = match error {
-                "S_OK" | "S_FALSE" => "HRESULT",
+                "S_OK" | "S_FALSE" => "SuccessHResult",
                 _ => ty,
             };
 
@@ -298,7 +323,7 @@ pub fn d3d9_h<'s: 'c, 'c>(header: &'s str, codes: &mut Codes<'c>) {
                 continue // Ok
             } else if let Some(value) = value.strip_prefix_suffix("MAKE_D3DSTATUS(", ")") {
                 match value.parse::<u16>() {
-                    Ok(value)   => ("HRESULT", format!("{}", u32::from(value)+0x08760000)),
+                    Ok(value)   => ("SuccessHResult", format!("{}", u32::from(value)+0x08760000)),
                     Err(_) => {
                         mmrbi::error!(at: path, line: line_idx+1, "unexpected value for {}", error);
                         continue
@@ -306,7 +331,7 @@ pub fn d3d9_h<'s: 'c, 'c>(header: &'s str, codes: &mut Codes<'c>) {
                 }
             } else if let Some(value) = value.strip_prefix_suffix("MAKE_D3DHRESULT(", ")") {
                 match value.parse::<u16>() {
-                    Ok(value)   => ("HRESULT", format!("{}", u32::from(value)+0x88760000)),
+                    Ok(value)   => ("ErrorHResult", format!("{}", u32::from(value)+0x88760000)),
                     Err(_) => {
                         mmrbi::error!(at: path, line: line_idx+1, "unexpected value for {}", error);
                         continue
@@ -360,6 +385,36 @@ pub fn ntstatus_h<'s: 'c, 'c>(header: &'s str, codes: &mut Codes<'c>) {
 trait StrExt<'s> : AsRef<str> + 's {
     fn strip_prefix_suffix(&'s self, prefix: &str, suffix: &str) -> Option<&'s str> {
         self.as_ref().strip_prefix(prefix).and_then(|s| s.strip_suffix(suffix))
+    }
+
+    fn try_parse_u16(&self) -> Option<u16> {
+        let s = self.as_ref();
+        if let Some(s) = s.strip_prefix("0x") {
+            u16::from_str_radix(s, 16).ok()
+        } else if let Some(s) = s.strip_prefix("0") {
+            if s.is_empty() {
+                Some(0)
+            } else {
+                u16::from_str_radix(s, 8).ok()
+            }
+        } else {
+            u16::from_str_radix(s, 10).ok()
+        }
+    }
+
+    fn try_parse_u32(&self) -> Option<u32> {
+        let s = self.as_ref();
+        if let Some(s) = s.strip_prefix("0x") {
+            u32::from_str_radix(s, 16).ok()
+        } else if let Some(s) = s.strip_prefix("0") {
+            if s.is_empty() {
+                Some(0)
+            } else {
+                u32::from_str_radix(s, 8).ok()
+            }
+        } else {
+            u32::from_str_radix(s, 10).ok()
+        }
     }
 }
 

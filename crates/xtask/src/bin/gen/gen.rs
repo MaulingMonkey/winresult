@@ -3,7 +3,7 @@ use crate::scan;
 
 
 pub fn codes(codes: &scan::Codes) {
-    let types = "ErrorCodeMicrosoft SuccessCodeMicrosoft HRESULT NTSTATUS";
+    let types = "ErrorCodeMicrosoft SuccessCodeMicrosoft ErrorHResult SuccessHResult HRESULT NTSTATUS";
 
     let _ = std::fs::create_dir_all("crates/winerr/src/gen/codes/ERROR");
 
@@ -96,7 +96,7 @@ pub fn codes(codes: &scan::Codes) {
             for (_rs_mod, codes) in codes.mods.iter() {
                 for code in codes.iter() {
                     if code.redundant { continue }
-                    if code.rs_ty != ty { continue }
+                    if !code.matches_ty(ty) { continue }
                     #[allow(unused_variables)] let scan::Code { cpp, rs_mod, rs_id, rs_ty, rs_value, docs, redundant, hide } = &code;
                     if *hide { continue }
                     writeln!(rs, r#"            {rs_value} => "{rs_mod}::{rs_id}","#)?;
@@ -162,14 +162,16 @@ pub fn codes(codes: &scan::Codes) {
             writeln!(nv, r#"    <Type Name="winerr_core::{ty}">"#)?;
             match ty {
                 "HRESULT"               => writeln!(nv, r#"        <DisplayString Condition="__0 == 0">S::OK</DisplayString>"#)?,
+                "SuccessHResult"        => writeln!(nv, r#"        <DisplayString Condition="__0 == 0">S::OK</DisplayString>"#)?,
+                "ErrorHResult"          => writeln!(nv, r#"        <DisplayString Condition="__0 == 0">E::??? (invalid: value 0, but ErrorHResult s start at 0x8000_0000</DisplayString>"#)?,
                 "NTSTATUS"              => writeln!(nv, r#"        <DisplayString Condition="__0 == 0">STATUS::SUCCESS</DisplayString>"#)?,
-                "ErrorCodeMicrosoft"    => writeln!(nv, r#"        <DisplayString Condition="__0 == 0">ERROR::SUCCESS</DisplayString>"#)?,
+                "ErrorCodeMicrosoft"    => writeln!(nv, r#"        <DisplayString Condition="__0 == 0">ERROR::SUCCESS (invalid: value 0, ErrorCodeMicrosoft s should never be successful</DisplayString>"#)?,
                 _                       => {},
             }
             for (_rs_mod, codes) in codes.mods.iter() {
                 for code in codes.iter() {
                     if code.redundant { continue }
-                    if code.rs_ty != ty { continue }
+                    if !code.matches_ty(ty) { continue }
                     #[allow(unused_variables)] let scan::Code { cpp, rs_mod, rs_id, rs_ty, rs_value, docs, redundant, hide } = &code;
                     if *hide { continue }
                     writeln!(nv, r#"        <DisplayString Condition="__0 == {rs_value}">{rs_mod}::{rs_id}</DisplayString>"#)?;
@@ -178,7 +180,7 @@ pub fn codes(codes: &scan::Codes) {
 
             match ty {
                 // https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/0642cb2f-2075-4469-918c-4441e69c548a
-                "HRESULT" => {
+                "HRESULT" | "SuccessHResult" | "ErrorHResult" => {
                     writeln!(nv, r#"        <DisplayString>{ty}({{__0,X}})</DisplayString>"#)?;
                     writeln!(nv, r#"        <Expand>"#)?;
                     writeln!(nv, r#"            <Item Name="S (failure)" >((__0 &amp; 0x80000000) != 0)</Item>"#)?;
