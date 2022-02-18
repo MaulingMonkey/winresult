@@ -242,6 +242,9 @@ mod gen {
             #[path = "../ERROR.rs"] mod _SELF;
             pub use _SELF::*;
 
+            /// WinSpool / Printer related
+            pub mod BIDI;
+
             /// [OneDrive](https://en.wikipedia.org/wiki/OneDrive) / [Cloud Filter API](https://docs.microsoft.com/en-us/windows/win32/api/_cloudapi/)
             pub mod CLOUD_FILE;
 

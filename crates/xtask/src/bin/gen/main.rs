@@ -78,8 +78,8 @@ fn main() {
         r"um\WinInet.h":        scan::winerror_h,
         r"um\Winineti.h":       scan::winerror_h,
         //r"um\winioctl.h":     scan::winerror_h, // will need to be handled manually, too many bespoke error types
+        r"um\winspool.h":       scan::winerror_h,
         // TODO:
-        //r"um\winspool.h":     scan::winerror_h,
         //r"um\wsmerror.h":     scan::winerror_h,
     }
 

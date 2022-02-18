@@ -7,6 +7,7 @@ use std::collections::*;
 
 const ERROR_PREFIX_TO_RUSTY : &'static [(&'static str, &'static str)] = &[
     // cpp prefix           mod
+    ("ERROR_BIDI_",         "ERROR::BIDI",          ),
     ("ERROR_CLOUD_FILE_",   "ERROR::CLOUD_FILE",    ),
     ("ERROR_CLUSTER_",      "ERROR::CLUSTER",       ),
     ("ERROR_DBG_",          "ERROR::DBG",           ),
@@ -42,6 +43,7 @@ const PREFIX_TO_SKIP : &'static [&'static str] = &[
     "FLAGS_ERROR_UI_",
     "HTTP_QUERY_X_",
     "INTERNET_OPTION_",
+    "PRINTER_ERROR_",       // TODO: unique error namespace?
 ];
 
 const MIDFIX_TO_SKIP : &'static [&'static str] = &[
@@ -53,6 +55,7 @@ const POSTFIX_TO_SKIP : &'static [&'static str] = &[
     "_E_LAST",
     "_S_FIRST",
     "_S_LAST",
+    "_X_EXTENT",
 ];
 
 const POSTFIX_TO_SKIP_WARN : &'static [&'static str] = &[
@@ -174,6 +177,7 @@ pub(crate) fn winerror_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) 
                 "NO_ERROR"                  => { docs.clear(); continue },
                 "ERROR_INVALID_DATA"        => ("13",   true),
                 "ERROR_OUTOFMEMORY"         => ("14",   true),
+                "ERROR_NOT_SUPPORTED"       => ("50",   true),
                 "ERROR_INVALID_NAME"        => ("123",  true),
                 "DNS_ERROR_RCODE_BADTIME"   => ("9018", true),
                 "ERROR_INTERNET_DISCONNECTED"=>("12163",true),
@@ -188,6 +192,7 @@ pub(crate) fn winerror_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) 
 
             redundant |= match error {
                 "SEC_E_OK"                  => true,
+                "ERROR_BIDI_STATUS_OK"      => true,
                 _                           => false,
             };
 
@@ -216,6 +221,7 @@ pub(crate) fn winerror_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) 
                 ("(TCBASE+",                                        ")",    "ErrorCodeMicrosoft",   true,         7500, "TCError.h",    ),
                 ("(WINHTTP_ERROR_BASE + ",                          ")",    "ErrorCodeMicrosoft",   false,       12000, "winhttp.h",    ),
                 ("(INTERNET_ERROR_BASE + ",                         ")",    "ErrorCodeMicrosoft",   true,        12000, "",             ), // conflicts: with itself -_-
+                ("(ERROR_BIDI_ERROR_BASE + ",                       ")",    "ErrorCodeMicrosoft",   true,        13000, "winspool.h",   ), // conflicts: with ipsec
                 ("(INTERNET_INTERNAL_ERROR_BASE + ",                ")",    "ErrorCodeMicrosoft",   true,  900 + 12000, "Winineti.h"    ),
                 ("(NETSH_ERROR_BASE + ",                            ")",    "ErrorCodeMicrosoft",   true,        15000, "NetSh.h",      ), // conflicts: ERROR_EVT_INVALID_CHANNEL_PATH 15000 (winerror.h)
                 ("(ERROR_PCW_BASE + ",                              ")",    "ErrorHResult",         false,  0xC00E5101, "PatchWiz.h",   ),
