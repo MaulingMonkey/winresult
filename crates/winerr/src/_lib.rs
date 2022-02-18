@@ -206,8 +206,10 @@ mod gen {
         /// Exchange ActiveSync
         pub mod EAS;
 
+        /// DO NOT EXPOSE THIS MESS AS IS.  See [doc/ept-and-rpc-codes-are-evil.md](https://github.com/MaulingMonkey/winerr/blob/5094a8a5568392ef855babd8bc62458f29153e46/crates/winerr/doc/ept-and-rpc-codes-are-evil.md) for details.
+        ///
         /// **E**ntry **P**oin**t** for Remote Procedure Calls
-        pub mod EPT;
+        #[allow(dead_code)] mod EPT;
 
         /// **Error Codes**.  Mostly a mixture of [ErrorHResult]s and [ErrorCodeMicrosoft]s.
         /// submodules:
@@ -359,8 +361,10 @@ mod gen {
         /// WinRT COM
         pub mod RO;
 
+        /// DO NOT EXPOSE THIS MESS AS IS.  See [doc/ept-and-rpc-codes-are-evil.md](https://github.com/MaulingMonkey/winerr/blob/5094a8a5568392ef855babd8bc62458f29153e46/crates/winerr/doc/ept-and-rpc-codes-are-evil.md) for details.
+        ///
         /// Remote Procedure Call
-        pub mod RPC;
+        #[allow(dead_code)] mod RPC;
 
         /// [Smart Card](https://docs.microsoft.com/en-us/windows/security/identity-protection/smart-cards/smart-card-windows-smart-card-technical-reference)
         pub mod SCARD;
