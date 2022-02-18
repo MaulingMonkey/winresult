@@ -75,8 +75,8 @@ fn main() {
         r"um\SetupAPI.h":       scan::winerror_h,
         r"um\TCError.h":        scan::winerror_h,
         r"um\winhttp.h":        scan::winerror_h,
+        r"um\WinInet.h":        scan::winerror_h,
         // TODO:
-        //r"um\WinInet.h":      scan::winerror_h,
         //r"um\Winineti.h":     scan::winerror_h,
         //r"um\winioctl.h":     scan::winerror_h,
         //r"um\winspool.h":     scan::winerror_h,

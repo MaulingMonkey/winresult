@@ -15,7 +15,11 @@ const ERROR_PREFIX_TO_RUSTY : &'static [(&'static str, &'static str)] = &[
     ("ERROR_DS_",           "ERROR::DS",            ),
     ("ERROR_EVT_",          "ERROR::EVT",           ),
     ("ERROR_FLT_",          "ERROR::FLT",           ),
+    ("ERROR_FTP_",          "ERROR::FTP",           ),
     ("ERROR_GRAPHICS_",     "ERROR::GRAPHICS",      ),
+    ("ERROR_GOPHER_",       "ERROR::GOPHER",        ),
+    ("ERROR_HTTP_",         "ERROR::HTTP",          ),
+    ("ERROR_INTERNET_",     "ERROR::INTERNET",      ),
     ("ERROR_IPSEC_",        "ERROR::IPSEC",         ),
     ("ERROR_MRM_",          "ERROR::MRM",           ),
     ("ERROR_MUI_",          "ERROR::MUI",           ),
@@ -123,6 +127,10 @@ pub(crate) fn winerror_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) 
                 "UI_E_START_KEYFRAME_AFTER_END"             => false,
                 "WS_S_END"                                  => false,
 
+                _ if error.starts_with("HTTP_QUERY_X_")     => true,
+                _ if error.starts_with("FLAGS_ERROR_UI_")   => true,
+                _ if error.contains("_ERROR_MASK_")         => true,
+
                 _ if "_E_FIRST _E_LAST _S_FIRST _S_LAST".split(' ').any(|s| error.ends_with(s)) => true, // don't warn
                 _ if "_BASE _END _MASK _FIRST _LAST".split(' ').any(|s| error.ends_with(s)) => {
                     if !docs.is_empty() { mmrbi::warning!(at: &header.path, line: line.no(), "{} is documented? not skipping...", error) }
@@ -181,6 +189,7 @@ pub(crate) fn winerror_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) 
                 ("(ROUTEBASE+",                                     ")",    "ErrorCodeMicrosoft",   false,         900, "MprError.h",   ),
                 ("(TCBASE+",                                        ")",    "ErrorCodeMicrosoft",   true,         7500, "TCError.h",    ),
                 ("(WINHTTP_ERROR_BASE + ",                          ")",    "ErrorCodeMicrosoft",   false,       12000, "winhttp.h",    ),
+                ("(INTERNET_ERROR_BASE + ",                         ")",    "ErrorCodeMicrosoft",   true,        12000, "WinInet.h",    ), // conflicts: with itself -_-
                 ("(NETSH_ERROR_BASE + ",                            ")",    "ErrorCodeMicrosoft",   true,        15000, "NetSh.h",      ), // conflicts: ERROR_EVT_INVALID_CHANNEL_PATH 15000 (winerror.h)
                 ("(ERROR_PCW_BASE + ",                              ")",    "ErrorHResult",         false,  0xC00E5101, "PatchWiz.h",   ),
                 ("(APPLICATION_ERROR_MASK|ERROR_SEVERITY_ERROR|",   ")",    "ErrorHResult",         false,  0xE0000000, "",             ),

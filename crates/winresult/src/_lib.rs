@@ -266,8 +266,20 @@ mod gen {
             /// I/O Filter
             pub mod FLT;
 
+            /// WinINet / File Transfer Protocol
+            pub mod FTP;
+
             /// Direct3D and other graphics APIs
             pub mod GRAPHICS;
+
+            /// WinINet / Gopher Protocol
+            pub mod GOPHER;
+
+            /// WinINet / Hyper Text Transfer Protocol
+            pub mod HTTP;
+
+            /// WinINet
+            pub mod INTERNET;
 
             /// [IPSec](https://en.wikipedia.org/wiki/IPsec)
             pub mod IPSEC;
