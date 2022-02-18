@@ -100,6 +100,7 @@ impl SuccessHResult {
 
 impl From<SuccessHResult> for u32 { fn from(hr: SuccessHResult) -> Self { hr.0 } }
 impl From<u32> for SuccessHResult { fn from(hr: u32) -> Self { Self(hr) } }
+impl From<(FacilityHrMicrosoft, SuccessCodeMicrosoft)> for SuccessHResult { fn from((fac, code): (FacilityHrMicrosoft, SuccessCodeMicrosoft)) -> Self { Self((fac.to_u32()<<16) | code.to_u32()) } }
 
 
 
@@ -125,6 +126,7 @@ impl ErrorHResult {
 
 impl From<ErrorHResult> for u32 { fn from(hr: ErrorHResult) -> Self { hr.0 } }
 impl From<u32> for ErrorHResult { fn from(hr: u32) -> Self { Self(hr) } }
+impl From<(FacilityHrMicrosoft, ErrorCodeMicrosoft)> for ErrorHResult { fn from((fac, code): (FacilityHrMicrosoft, ErrorCodeMicrosoft)) -> Self { Self(0x8000_0000 | (fac.to_u32()<<16) | code.to_u32()) } }
 
 
 
@@ -157,6 +159,8 @@ impl From<HRESULT>          for u32     { fn from(hr: HRESULT       ) -> Self { 
 impl From<u32>              for HRESULT { fn from(hr: u32           ) -> Self { Self(hr) } }
 impl From<SuccessHResult>   for HRESULT { fn from(hr: SuccessHResult) -> Self { Self(hr.0) } }
 impl From<ErrorHResult>     for HRESULT { fn from(hr: ErrorHResult  ) -> Self { Self(hr.0) } }
+impl From<(FacilityHrMicrosoft, ErrorCodeMicrosoft  )> for HRESULT { fn from((fac, code): (FacilityHrMicrosoft, ErrorCodeMicrosoft  )) -> Self { Self(0x8000_0000 | (fac.to_u32()<<16) | code.to_u32()) } }
+impl From<(FacilityHrMicrosoft, SuccessCodeMicrosoft)> for HRESULT { fn from((fac, code): (FacilityHrMicrosoft, SuccessCodeMicrosoft)) -> Self { Self(              (fac.to_u32()<<16) | code.to_u32()) } }
 
 
 /// \[[docs.microsoft.com](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/87fba13e-bf06-450e-83b1-9241dc81e781)\]
