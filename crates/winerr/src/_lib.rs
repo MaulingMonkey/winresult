@@ -1,3 +1,31 @@
+#![doc = include_str!("../doc/intro.md")]
+//!
+//! ### Error/Success Code Types
+//!
+//! |        min |        max | type                    | union of |
+//! | ----------:| ----------:| ----------------------- | -------- |
+//! |          0 |     0xFFFF | [`SuccessCodeMicrosoft`]
+//! |          0 |     0xFFFF | [`ErrorCodeMicrosoft`]
+//! |          0 | 0x7FFFFFFF | [`SuccessHResult`]
+//! | 0x80000000 | 0xFFFFFFFF | [`ErrorHResult`]
+//! |          0 | 0xFFFFFFFF | [`HRESULT`]             | [`SuccessHResult`] \| [`ErrorHResult`]
+//! |          0 | 0xFFFFFFFF | [`NTSTATUS`]            | ~~`SuccessNtStatus` \| `ErrorNtStatus`~~
+//!
+//! ### Buggy Bitwise Comparisons to Forbid
+//!
+//! | left                      | right                 | why |
+//! | ------------------------- | --------------------- | --- |
+//! | [`ErrorCodeMicrosoft`]    | [`ErrorHResult`]      | never `true`, non-overlapping ranges, need to add or remove facility
+//! | [`ErrorCodeMicrosoft`]    | [`SuccessHResult`]    | `ERROR_INVALID_FUNCTION == S_FALSE`, need to add or remove facility
+//! | [`ErrorCodeMicrosoft`]    | [`HRESULT`]           | `ERROR_INVALID_FUNCTION == S_FALSE`, need to add or remove facility
+//! | Success\*                 | Error\*               | never `true` except by accident
+//!
+//! ### Conversions
+//!
+//! *   ([FacilityHrMicrosoft], [SuccessCodeMicrosoft]) → [SuccessHResult] → [HRESULT]
+//! *   ([FacilityHrMicrosoft], [ErrorCodeMicrosoft]) → [ErrorHResult] → [HRESULT]
+
+
 extern crate winerr_core as core;
 
 pub use core::{

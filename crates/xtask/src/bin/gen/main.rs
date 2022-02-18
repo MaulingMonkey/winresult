@@ -25,4 +25,5 @@ fn main() {
     scan::ntstatus_h    (&ntstatus_h,   &mut codes);
 
     gen::codes(&codes);
+    gen::readme();
 }
