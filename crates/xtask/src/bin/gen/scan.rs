@@ -174,6 +174,14 @@ pub(crate) fn winerror_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) 
             } else if let Some(value) = value.strip_prefix_suffix("((HRESULT)", "L)") {
                 rs_value = value.into();
                 "HRESULT"
+            } else if let Some(value) = value.strip_prefix_suffix("(RASBASE + ", ")").filter(|_| header.path.ends_with("RasError.h")).and_then(|v| v.try_parse_u16()) {
+                rs_value = format!("{}", value+600).into();
+                redundant = true; // conflicts galore
+                "ErrorCodeMicrosoft"
+            } else if let Some(value) = value.strip_prefix_suffix("(RASBASE+", ")").filter(|_| header.path.ends_with("RasError.h")).and_then(|v| v.try_parse_u16()) {
+                rs_value = format!("{}", value+600).into();
+                redundant = true; // conflicts galore
+                "ErrorCodeMicrosoft"
             } else if let Some(value) = value.strip_prefix_suffix("(ROUTEBASE+", ")").filter(|_| header.path.ends_with("MprError.h")).and_then(|v| v.try_parse_u16()) {
                 rs_value = format!("{}", value+900).into();
                 "ErrorCodeMicrosoft"

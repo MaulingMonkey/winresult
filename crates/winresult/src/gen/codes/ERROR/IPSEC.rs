@@ -449,3 +449,5 @@ pub const DOSP_NOT_INSTALLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_con
 
 /// IPsec DoS Protection failed to create a per internal IP rate limit queue because the maximum number of queues allowed by policy has been reached.
 pub const DOSP_MAX_PER_IP_RATELIMIT_QUEUES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13932); // ERROR_IPSEC_DOSP_MAX_PER_IP_RATELIMIT_QUEUES
+
+pub const SERVICE_STOPPED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(827); // ERROR_IPSEC_SERVICE_STOPPED

@@ -20,3 +20,17 @@ pub const HAS_OPEN_HANDLES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_const
 
 pub const INVALID_BOOT_FILE_TABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E3C); // ERROR_SERVER_INVALID_BOOT_FILE_TABLE
 pub const UNKNOWN_BOOT_FILE_NAME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E3D); // ERROR_SERVER_UNKNOWN_BOOT_FILE_NAME
+
+/// The server cannot allocate NetBIOS resources needed to support the client.
+/// This error was obsoleted in the Windows Vista  release.
+pub const OUT_OF_RESOURCES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(641); // ERROR_SERVER_OUT_OF_RESOURCES
+
+/// A network adapter at the server failed.
+/// This error was obsoleted in the Windows Vista  release.
+pub const GENERAL_NET_FAILURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(643); // ERROR_SERVER_GENERAL_NET_FAILURE
+
+/// The remote access server is not responding.
+/// This error was obsoleted in the Windows Vista  release.
+pub const NOT_RESPONDING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(650); // ERROR_SERVER_NOT_RESPONDING
+
+pub const POLICY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(812); // ERROR_SERVER_POLICY

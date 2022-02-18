@@ -7632,3 +7632,451 @@ pub const PARSING_FAILURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_consta
 #[doc(hidden)] pub const PCW_INVALID_MAJOR_VERSION : ErrorHResult = ErrorHResult::from_constant(3222163990); // ERROR_PCW_INVALID_MAJOR_VERSION
 #[doc(hidden)] pub const PCW_INVALID_PCP_PROPERTIES : ErrorHResult = ErrorHResult::from_constant(3222163991); // ERROR_PCW_INVALID_PCP_PROPERTIES
 #[doc(hidden)] pub const PCW_INVALID_PCP_FAMILYFILERANGES : ErrorHResult = ErrorHResult::from_constant(3222163992); // ERROR_PCW_INVALID_PCP_FAMILYFILERANGES
+pub const INVALID_PORT_HANDLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(601); // ERROR_INVALID_PORT_HANDLE
+pub const PORT_ALREADY_OPEN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(602); // ERROR_PORT_ALREADY_OPEN
+pub const BUFFER_TOO_SMALL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(603); // ERROR_BUFFER_TOO_SMALL
+pub const WRONG_INFO_SPECIFIED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(604); // ERROR_WRONG_INFO_SPECIFIED
+
+/// The port information cannot be set.
+/// This error was obsoleted in the Windows Vista  release.
+pub const CANNOT_SET_PORT_INFO : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(605); // ERROR_CANNOT_SET_PORT_INFO
+
+pub const PORT_NOT_CONNECTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(606); // ERROR_PORT_NOT_CONNECTED
+
+/// An invalid event was detected.
+/// This error was obsoleted in the Windows Vista  release.
+pub const EVENT_INVALID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(607); // ERROR_EVENT_INVALID
+
+pub const DEVICE_DOES_NOT_EXIST : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(608); // ERROR_DEVICE_DOES_NOT_EXIST
+pub const DEVICETYPE_DOES_NOT_EXIST : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(609); // ERROR_DEVICETYPE_DOES_NOT_EXIST
+pub const BUFFER_INVALID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(610); // ERROR_BUFFER_INVALID
+
+/// A route was specified that is not available.
+/// This error was obsoleted in the Windows Vista  release.
+pub const ROUTE_NOT_AVAILABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(611); // ERROR_ROUTE_NOT_AVAILABLE
+
+pub const ROUTE_NOT_ALLOCATED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(612); // ERROR_ROUTE_NOT_ALLOCATED
+
+/// An invalid compression was specified.
+/// This error was obsoleted in the Windows Vista  release.
+pub const INVALID_COMPRESSION_SPECIFIED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(613); // ERROR_INVALID_COMPRESSION_SPECIFIED
+
+/// There were insufficient buffers available.
+/// This error was obsoleted in the Windows Vista  release.
+pub const OUT_OF_BUFFERS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(614); // ERROR_OUT_OF_BUFFERS
+
+pub const PORT_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(615); // ERROR_PORT_NOT_FOUND
+pub const ASYNC_REQUEST_PENDING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(616); // ERROR_ASYNC_REQUEST_PENDING
+pub const ALREADY_DISCONNECTING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(617); // ERROR_ALREADY_DISCONNECTING
+pub const PORT_NOT_OPEN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(618); // ERROR_PORT_NOT_OPEN
+pub const PORT_DISCONNECTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(619); // ERROR_PORT_DISCONNECTED
+
+/// No endpoints could be determined.
+/// This error was obsoleted in the Windows Vista  release.
+pub const NO_ENDPOINTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(620); // ERROR_NO_ENDPOINTS
+
+pub const CANNOT_OPEN_PHONEBOOK : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(621); // ERROR_CANNOT_OPEN_PHONEBOOK
+pub const CANNOT_LOAD_PHONEBOOK : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(622); // ERROR_CANNOT_LOAD_PHONEBOOK
+pub const CANNOT_FIND_PHONEBOOK_ENTRY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(623); // ERROR_CANNOT_FIND_PHONEBOOK_ENTRY
+pub const CANNOT_WRITE_PHONEBOOK : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(624); // ERROR_CANNOT_WRITE_PHONEBOOK
+pub const CORRUPT_PHONEBOOK : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(625); // ERROR_CORRUPT_PHONEBOOK
+
+/// A string could not be loaded.
+/// This error was obsoleted in the Windows Vista  release.
+pub const CANNOT_LOAD_STRING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(626); // ERROR_CANNOT_LOAD_STRING
+
+pub const KEY_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(627); // ERROR_KEY_NOT_FOUND
+pub const DISCONNECTION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(628); // ERROR_DISCONNECTION
+pub const REMOTE_DISCONNECTION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(629); // ERROR_REMOTE_DISCONNECTION
+pub const HARDWARE_FAILURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(630); // ERROR_HARDWARE_FAILURE
+pub const USER_DISCONNECTION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(631); // ERROR_USER_DISCONNECTION
+pub const INVALID_SIZE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(632); // ERROR_INVALID_SIZE
+pub const PORT_NOT_AVAILABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(633); // ERROR_PORT_NOT_AVAILABLE
+
+/// Your computer could not be registered on the remote network.
+/// This error was obsoleted in the Windows Vista  release.
+pub const CANNOT_PROJECT_CLIENT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(634); // ERROR_CANNOT_PROJECT_CLIENT
+
+pub const UNKNOWN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(635); // ERROR_UNKNOWN
+pub const WRONG_DEVICE_ATTACHED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(636); // ERROR_WRONG_DEVICE_ATTACHED
+
+/// A string was detected that could not be converted.
+/// This error was obsoleted in the Windows Vista  release.
+pub const BAD_STRING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(637); // ERROR_BAD_STRING
+
+pub const REQUEST_TIMEOUT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(638); // ERROR_REQUEST_TIMEOUT
+
+/// No asynchronous net is available.
+/// This error was obsoleted in the Windows Vista  release.
+pub const CANNOT_GET_LANA : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(639); // ERROR_CANNOT_GET_LANA
+
+/// An error has occurred involving NetBIOS.
+/// This error was obsoleted in the Windows Vista  release.
+pub const NETBIOS_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(640); // ERROR_NETBIOS_ERROR
+
+#[doc(hidden)] pub const SERVER_OUT_OF_RESOURCES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(641); // ERROR_SERVER_OUT_OF_RESOURCES
+
+/// One of your computer's NetBIOS names is already registered on the remote network.
+/// This error was obsoleted in the Windows Vista  release.
+pub const NAME_EXISTS_ON_NET : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(642); // ERROR_NAME_EXISTS_ON_NET
+
+#[doc(hidden)] pub const SERVER_GENERAL_NET_FAILURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(643); // ERROR_SERVER_GENERAL_NET_FAILURE
+pub const AUTH_INTERNAL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(645); // ERROR_AUTH_INTERNAL
+pub const RESTRICTED_LOGON_HOURS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(646); // ERROR_RESTRICTED_LOGON_HOURS
+pub const ACCT_DISABLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(647); // ERROR_ACCT_DISABLED
+pub const PASSWD_EXPIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(648); // ERROR_PASSWD_EXPIRED
+pub const NO_DIALIN_PERMISSION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(649); // ERROR_NO_DIALIN_PERMISSION
+#[doc(hidden)] pub const SERVER_NOT_RESPONDING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(650); // ERROR_SERVER_NOT_RESPONDING
+pub const FROM_DEVICE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(651); // ERROR_FROM_DEVICE
+pub const UNRECOGNIZED_RESPONSE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(652); // ERROR_UNRECOGNIZED_RESPONSE
+pub const MACRO_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(653); // ERROR_MACRO_NOT_FOUND
+pub const MACRO_NOT_DEFINED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(654); // ERROR_MACRO_NOT_DEFINED
+pub const MESSAGE_MACRO_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(655); // ERROR_MESSAGE_MACRO_NOT_FOUND
+pub const DEFAULTOFF_MACRO_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(656); // ERROR_DEFAULTOFF_MACRO_NOT_FOUND
+pub const FILE_COULD_NOT_BE_OPENED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(657); // ERROR_FILE_COULD_NOT_BE_OPENED
+pub const DEVICENAME_TOO_LONG : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(658); // ERROR_DEVICENAME_TOO_LONG
+pub const DEVICENAME_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(659); // ERROR_DEVICENAME_NOT_FOUND
+pub const NO_RESPONSES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(660); // ERROR_NO_RESPONSES
+pub const NO_COMMAND_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(661); // ERROR_NO_COMMAND_FOUND
+pub const WRONG_KEY_SPECIFIED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(662); // ERROR_WRONG_KEY_SPECIFIED
+pub const UNKNOWN_DEVICE_TYPE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(663); // ERROR_UNKNOWN_DEVICE_TYPE
+pub const ALLOCATING_MEMORY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(664); // ERROR_ALLOCATING_MEMORY
+pub const PORT_NOT_CONFIGURED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(665); // ERROR_PORT_NOT_CONFIGURED
+pub const DEVICE_NOT_READY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(666); // ERROR_DEVICE_NOT_READY
+pub const READING_INI_FILE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(667); // ERROR_READING_INI_FILE
+pub const NO_CONNECTION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(668); // ERROR_NO_CONNECTION
+pub const BAD_USAGE_IN_INI_FILE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(669); // ERROR_BAD_USAGE_IN_INI_FILE
+pub const READING_SECTIONNAME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(670); // ERROR_READING_SECTIONNAME
+pub const READING_DEVICETYPE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(671); // ERROR_READING_DEVICETYPE
+pub const READING_DEVICENAME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(672); // ERROR_READING_DEVICENAME
+pub const READING_USAGE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(673); // ERROR_READING_USAGE
+
+/// The system was unable to read the maximum connection BPS rate from the media.INI file.
+/// This error was obsoleted in the Windows Vista  release.
+pub const READING_MAXCONNECTBPS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(674); // ERROR_READING_MAXCONNECTBPS
+
+/// The system was unable to read the maximum carrier connection speed from the media.INI file.
+/// This error was obsoleted in the Windows Vista  release.
+pub const READING_MAXCARRIERBPS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(675); // ERROR_READING_MAXCARRIERBPS
+
+pub const LINE_BUSY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(676); // ERROR_LINE_BUSY
+pub const VOICE_ANSWER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(677); // ERROR_VOICE_ANSWER
+pub const NO_ANSWER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(678); // ERROR_NO_ANSWER
+pub const NO_CARRIER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(679); // ERROR_NO_CARRIER
+pub const NO_DIALTONE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(680); // ERROR_NO_DIALTONE
+
+/// The modem (or other connecting device) reported a general error.
+/// This error was obsoleted in the Windows Vista  release.
+pub const IN_COMMAND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(681); // ERROR_IN_COMMAND
+
+/// There was an error in writing the section name.
+/// This error was obsoleted in the Windows Vista  release.
+pub const WRITING_SECTIONNAME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(682); // ERROR_WRITING_SECTIONNAME
+
+/// There was an error in writing the device type.
+/// This error was obsoleted in the Windows Vista  release.
+pub const WRITING_DEVICETYPE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(683); // ERROR_WRITING_DEVICETYPE
+
+/// There was an error in writing the device name.
+/// This error was obsoleted in the Windows Vista  release.
+pub const WRITING_DEVICENAME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(684); // ERROR_WRITING_DEVICENAME
+
+/// There was an error in writing the maximum connection speed.
+/// This error was obsoleted in the Windows Vista  release.
+pub const WRITING_MAXCONNECTBPS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(685); // ERROR_WRITING_MAXCONNECTBPS
+
+/// There was an error in writing the maximum carrier speed.
+/// This error was obsoleted in the Windows Vista  release.
+pub const WRITING_MAXCARRIERBPS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(686); // ERROR_WRITING_MAXCARRIERBPS
+
+/// There was an error in writing the usage.
+/// This error was obsoleted in the Windows Vista  release.
+pub const WRITING_USAGE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(687); // ERROR_WRITING_USAGE
+
+/// There was an error in writing the default-off.
+/// This error was obsoleted in the Windows Vista  release.
+pub const WRITING_DEFAULTOFF : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(688); // ERROR_WRITING_DEFAULTOFF
+
+/// There was an error in reading the default-off.
+/// This error was obsoleted in the Windows Vista  release.
+pub const READING_DEFAULTOFF : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(689); // ERROR_READING_DEFAULTOFF
+
+/// ERROR_EMPTY_INI_FILE
+/// This error was obsoleted in the Windows Vista  release.
+pub const EMPTY_INI_FILE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(690); // ERROR_EMPTY_INI_FILE
+
+pub const AUTHENTICATION_FAILURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(691); // ERROR_AUTHENTICATION_FAILURE
+pub const PORT_OR_DEVICE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(692); // ERROR_PORT_OR_DEVICE
+pub const NOT_BINARY_MACRO : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(693); // ERROR_NOT_BINARY_MACRO
+pub const DCB_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(694); // ERROR_DCB_NOT_FOUND
+pub const STATE_MACHINES_NOT_STARTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(695); // ERROR_STATE_MACHINES_NOT_STARTED
+pub const STATE_MACHINES_ALREADY_STARTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(696); // ERROR_STATE_MACHINES_ALREADY_STARTED
+pub const PARTIAL_RESPONSE_LOOPING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(697); // ERROR_PARTIAL_RESPONSE_LOOPING
+pub const UNKNOWN_RESPONSE_KEY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(698); // ERROR_UNKNOWN_RESPONSE_KEY
+pub const RECV_BUF_FULL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(699); // ERROR_RECV_BUF_FULL
+pub const CMD_TOO_LONG : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(700); // ERROR_CMD_TOO_LONG
+pub const UNSUPPORTED_BPS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(701); // ERROR_UNSUPPORTED_BPS
+pub const UNEXPECTED_RESPONSE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(702); // ERROR_UNEXPECTED_RESPONSE
+pub const INTERACTIVE_MODE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(703); // ERROR_INTERACTIVE_MODE
+pub const BAD_CALLBACK_NUMBER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(704); // ERROR_BAD_CALLBACK_NUMBER
+pub const INVALID_AUTH_STATE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(705); // ERROR_INVALID_AUTH_STATE
+
+/// ERROR_WRITING_INITBPS
+/// This error was obsoleted in the Windows Vista  release.
+pub const WRITING_INITBPS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(706); // ERROR_WRITING_INITBPS
+
+pub const X25_DIAGNOSTIC : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(707); // ERROR_X25_DIAGNOSTIC
+pub const ACCT_EXPIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(708); // ERROR_ACCT_EXPIRED
+pub const CHANGING_PASSWORD : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(709); // ERROR_CHANGING_PASSWORD
+pub const OVERRUN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(710); // ERROR_OVERRUN
+pub const RASMAN_CANNOT_INITIALIZE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(711); // ERROR_RASMAN_CANNOT_INITIALIZE
+
+/// The two-way port is initializing.  Wait a few seconds and redial.
+/// This error was obsoleted in the Windows Vista  release.
+pub const BIPLEX_PORT_NOT_AVAILABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(712); // ERROR_BIPLEX_PORT_NOT_AVAILABLE
+
+pub const NO_ACTIVE_ISDN_LINES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(713); // ERROR_NO_ACTIVE_ISDN_LINES
+
+/// No ISDN channels are available to make the call.
+/// This error was obsoleted in the Windows Vista  release.
+pub const NO_ISDN_CHANNELS_AVAILABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(714); // ERROR_NO_ISDN_CHANNELS_AVAILABLE
+
+/// Too many errors occurred because of poor phone line quality.
+/// This error was obsoleted in the Windows Vista  release.
+pub const TOO_MANY_LINE_ERRORS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(715); // ERROR_TOO_MANY_LINE_ERRORS
+
+pub const IP_CONFIGURATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(716); // ERROR_IP_CONFIGURATION
+pub const NO_IP_ADDRESSES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(717); // ERROR_NO_IP_ADDRESSES
+pub const PPP_TIMEOUT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(718); // ERROR_PPP_TIMEOUT
+
+/// The connection was terminated by the remote computer.
+/// This error was obsoleted in the Windows Vista  release.
+pub const PPP_REMOTE_TERMINATED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(719); // ERROR_PPP_REMOTE_TERMINATED
+
+pub const PPP_NO_PROTOCOLS_CONFIGURED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(720); // ERROR_PPP_NO_PROTOCOLS_CONFIGURED
+pub const PPP_NO_RESPONSE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(721); // ERROR_PPP_NO_RESPONSE
+pub const PPP_INVALID_PACKET : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(722); // ERROR_PPP_INVALID_PACKET
+pub const PHONE_NUMBER_TOO_LONG : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(723); // ERROR_PHONE_NUMBER_TOO_LONG
+
+/// The IPX protocol cannot dial out on the modem (or other connecting device) because this computer is not configured for dialing out (it is an IPX router).
+/// This error was obsoleted in the Windows Vista  release.
+pub const IPXCP_NO_DIALOUT_CONFIGURED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(724); // ERROR_IPXCP_NO_DIALOUT_CONFIGURED
+
+/// The IPX protocol cannot dial in on the modem (or other connecting device) because this computer is not configured for dialing in (the IPX router is not installed).
+/// This error was obsoleted in the Windows Vista  release.
+pub const IPXCP_NO_DIALIN_CONFIGURED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(725); // ERROR_IPXCP_NO_DIALIN_CONFIGURED
+
+pub const IPXCP_DIALOUT_ALREADY_ACTIVE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(726); // ERROR_IPXCP_DIALOUT_ALREADY_ACTIVE
+
+/// Cannot access TCPCFG.DLL.
+/// This error was obsoleted in the Windows Vista  release.
+pub const ACCESSING_TCPCFGDLL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(727); // ERROR_ACCESSING_TCPCFGDLL
+
+pub const NO_IP_RAS_ADAPTER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(728); // ERROR_NO_IP_RAS_ADAPTER
+pub const SLIP_REQUIRES_IP : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(729); // ERROR_SLIP_REQUIRES_IP
+
+/// Computer registration is not complete.
+/// This error was obsoleted in the Windows Vista  release.
+pub const PROJECTION_NOT_COMPLETE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(730); // ERROR_PROJECTION_NOT_COMPLETE
+
+pub const PROTOCOL_NOT_CONFIGURED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(731); // ERROR_PROTOCOL_NOT_CONFIGURED
+pub const PPP_NOT_CONVERGING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(732); // ERROR_PPP_NOT_CONVERGING
+pub const PPP_CP_REJECTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(733); // ERROR_PPP_CP_REJECTED
+pub const PPP_LCP_TERMINATED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(734); // ERROR_PPP_LCP_TERMINATED
+pub const PPP_REQUIRED_ADDRESS_REJECTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(735); // ERROR_PPP_REQUIRED_ADDRESS_REJECTED
+pub const PPP_NCP_TERMINATED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(736); // ERROR_PPP_NCP_TERMINATED
+pub const PPP_LOOPBACK_DETECTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(737); // ERROR_PPP_LOOPBACK_DETECTED
+pub const PPP_NO_ADDRESS_ASSIGNED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(738); // ERROR_PPP_NO_ADDRESS_ASSIGNED
+pub const CANNOT_USE_LOGON_CREDENTIALS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(739); // ERROR_CANNOT_USE_LOGON_CREDENTIALS
+pub const TAPI_CONFIGURATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(740); // ERROR_TAPI_CONFIGURATION
+pub const NO_LOCAL_ENCRYPTION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(741); // ERROR_NO_LOCAL_ENCRYPTION
+pub const NO_REMOTE_ENCRYPTION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(742); // ERROR_NO_REMOTE_ENCRYPTION
+
+/// The remote computer requires data encryption.
+/// This error was obsoleted in the Windows Vista  release.
+pub const REMOTE_REQUIRES_ENCRYPTION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(743); // ERROR_REMOTE_REQUIRES_ENCRYPTION
+
+/// The system cannot use the IPX network number assigned by the remote computer.  Additional information is provided in the event log.
+/// This error was obsoleted in the Windows Vista  release.
+pub const IPXCP_NET_NUMBER_CONFLICT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(744); // ERROR_IPXCP_NET_NUMBER_CONFLICT
+
+/// ERROR_INVALID_SMM
+/// This error was obsoleted in the Windows Vista  release.
+pub const INVALID_SMM : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(745); // ERROR_INVALID_SMM
+
+/// ERROR_SMM_UNINITIALIZED
+/// This error was obsoleted in the Windows Vista  release.
+pub const SMM_UNINITIALIZED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(746); // ERROR_SMM_UNINITIALIZED
+
+/// ERROR_NO_MAC_FOR_PORT
+/// This error was obsoleted in the Windows Vista  release.
+pub const NO_MAC_FOR_PORT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(747); // ERROR_NO_MAC_FOR_PORT
+
+/// ERROR_SMM_TIMEOUT
+/// This error was obsoleted in the Windows Vista  release.
+pub const SMM_TIMEOUT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(748); // ERROR_SMM_TIMEOUT
+
+pub const BAD_PHONE_NUMBER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(749); // ERROR_BAD_PHONE_NUMBER
+
+/// ERROR_WRONG_MODULE
+/// This error was obsoleted in the Windows Vista  release.
+pub const WRONG_MODULE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(750); // ERROR_WRONG_MODULE
+
+/// The callback number contains an invalid character.  Only the following 18 characters are allowed:  0 to 9, T, P, W, (, ), -, @, and space.
+/// This error was obsoleted in the Windows Vista  release.
+pub const INVALID_CALLBACK_NUMBER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(751); // ERROR_INVALID_CALLBACK_NUMBER
+
+pub const SCRIPT_SYNTAX : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(752); // ERROR_SCRIPT_SYNTAX
+pub const HANGUP_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(753); // ERROR_HANGUP_FAILED
+pub const BUNDLE_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(754); // ERROR_BUNDLE_NOT_FOUND
+pub const CANNOT_DO_CUSTOMDIAL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(755); // ERROR_CANNOT_DO_CUSTOMDIAL
+pub const DIAL_ALREADY_IN_PROGRESS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(756); // ERROR_DIAL_ALREADY_IN_PROGRESS
+pub const RASAUTO_CANNOT_INITIALIZE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(757); // ERROR_RASAUTO_CANNOT_INITIALIZE
+
+/// Internet Connection Sharing is already enabled on the connection.
+/// This error was obsoleted in the Windows Vista  release.
+pub const CONNECTION_ALREADY_SHARED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(758); // ERROR_CONNECTION_ALREADY_SHARED
+
+/// An error occurred while the existing Internet Connection Sharing settings were being changed.
+/// This error was obsoleted in the Windows Vista  release.
+pub const SHARING_CHANGE_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(759); // ERROR_SHARING_CHANGE_FAILED
+
+/// An error occurred while routing capabilities were being enabled.
+/// This error was obsoleted in the Windows Vista  release.
+pub const SHARING_ROUTER_INSTALL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(760); // ERROR_SHARING_ROUTER_INSTALL
+
+/// An error occurred while Internet Connection Sharing was being enabled for the connection.
+/// This error was obsoleted in the Windows Vista  release.
+pub const SHARE_CONNECTION_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(761); // ERROR_SHARE_CONNECTION_FAILED
+
+/// An error occurred while the local network was being configured for sharing.
+/// This error was obsoleted in the Windows Vista  release.
+pub const SHARING_PRIVATE_INSTALL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(762); // ERROR_SHARING_PRIVATE_INSTALL
+
+/// Internet Connection Sharing cannot be enabled.  There is more than one LAN connection other than the connection to be shared.
+/// This error was obsoleted in the Windows Vista  release.
+pub const CANNOT_SHARE_CONNECTION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(763); // ERROR_CANNOT_SHARE_CONNECTION
+
+pub const NO_SMART_CARD_READER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(764); // ERROR_NO_SMART_CARD_READER
+pub const SHARING_ADDRESS_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(765); // ERROR_SHARING_ADDRESS_EXISTS
+pub const NO_CERTIFICATE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(766); // ERROR_NO_CERTIFICATE
+pub const SHARING_MULTIPLE_ADDRESSES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(767); // ERROR_SHARING_MULTIPLE_ADDRESSES
+pub const FAILED_TO_ENCRYPT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(768); // ERROR_FAILED_TO_ENCRYPT
+pub const BAD_ADDRESS_SPECIFIED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(769); // ERROR_BAD_ADDRESS_SPECIFIED
+pub const CONNECTION_REJECT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(770); // ERROR_CONNECTION_REJECT
+pub const CONGESTION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(771); // ERROR_CONGESTION
+pub const INCOMPATIBLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(772); // ERROR_INCOMPATIBLE
+pub const NUMBERCHANGED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(773); // ERROR_NUMBERCHANGED
+pub const TEMPFAILURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(774); // ERROR_TEMPFAILURE
+pub const BLOCKED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(775); // ERROR_BLOCKED
+pub const DONOTDISTURB : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(776); // ERROR_DONOTDISTURB
+pub const OUTOFORDER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(777); // ERROR_OUTOFORDER
+pub const UNABLE_TO_AUTHENTICATE_SERVER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(778); // ERROR_UNABLE_TO_AUTHENTICATE_SERVER
+
+/// To dial out using this connection you must use a smart card.
+/// This error was obsoleted in the Windows Vista  release.
+pub const SMART_CARD_REQUIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(779); // ERROR_SMART_CARD_REQUIRED
+
+pub const INVALID_FUNCTION_FOR_ENTRY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(780); // ERROR_INVALID_FUNCTION_FOR_ENTRY
+
+/// The connection requires a certificate, and no valid certificate was found.  For further assistance, click More Info or search Help and Support Center for this error number.
+/// This error was obsoleted in the Windows Vista  release.
+pub const CERT_FOR_ENCRYPTION_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(781); // ERROR_CERT_FOR_ENCRYPTION_NOT_FOUND
+
+pub const SHARING_RRAS_CONFLICT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(782); // ERROR_SHARING_RRAS_CONFLICT
+pub const SHARING_NO_PRIVATE_LAN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(783); // ERROR_SHARING_NO_PRIVATE_LAN
+pub const NO_DIFF_USER_AT_LOGON : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(784); // ERROR_NO_DIFF_USER_AT_LOGON
+pub const NO_REG_CERT_AT_LOGON : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(785); // ERROR_NO_REG_CERT_AT_LOGON
+pub const OAKLEY_NO_CERT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(786); // ERROR_OAKLEY_NO_CERT
+pub const OAKLEY_AUTH_FAIL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(787); // ERROR_OAKLEY_AUTH_FAIL
+pub const OAKLEY_ATTRIB_FAIL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(788); // ERROR_OAKLEY_ATTRIB_FAIL
+pub const OAKLEY_GENERAL_PROCESSING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(789); // ERROR_OAKLEY_GENERAL_PROCESSING
+pub const OAKLEY_NO_PEER_CERT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(790); // ERROR_OAKLEY_NO_PEER_CERT
+pub const OAKLEY_NO_POLICY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(791); // ERROR_OAKLEY_NO_POLICY
+pub const OAKLEY_TIMED_OUT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(792); // ERROR_OAKLEY_TIMED_OUT
+pub const OAKLEY_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(793); // ERROR_OAKLEY_ERROR
+pub const UNKNOWN_FRAMED_PROTOCOL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(794); // ERROR_UNKNOWN_FRAMED_PROTOCOL
+pub const WRONG_TUNNEL_TYPE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(795); // ERROR_WRONG_TUNNEL_TYPE
+pub const UNKNOWN_SERVICE_TYPE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(796); // ERROR_UNKNOWN_SERVICE_TYPE
+pub const CONNECTING_DEVICE_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(797); // ERROR_CONNECTING_DEVICE_NOT_FOUND
+pub const NO_EAPTLS_CERTIFICATE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(798); // ERROR_NO_EAPTLS_CERTIFICATE
+pub const SHARING_HOST_ADDRESS_CONFLICT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(799); // ERROR_SHARING_HOST_ADDRESS_CONFLICT
+pub const AUTOMATIC_VPN_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(800); // ERROR_AUTOMATIC_VPN_FAILED
+pub const VALIDATING_SERVER_CERT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(801); // ERROR_VALIDATING_SERVER_CERT
+pub const READING_SCARD : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(802); // ERROR_READING_SCARD
+pub const INVALID_PEAP_COOKIE_CONFIG : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(803); // ERROR_INVALID_PEAP_COOKIE_CONFIG
+pub const INVALID_PEAP_COOKIE_USER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(804); // ERROR_INVALID_PEAP_COOKIE_USER
+pub const INVALID_MSCHAPV2_CONFIG : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(805); // ERROR_INVALID_MSCHAPV2_CONFIG
+
+/// New Errors for Windows Vista
+pub const VPN_GRE_BLOCKED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(806); // ERROR_VPN_GRE_BLOCKED
+
+pub const VPN_DISCONNECT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(807); // ERROR_VPN_DISCONNECT
+pub const VPN_REFUSED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(808); // ERROR_VPN_REFUSED
+pub const VPN_TIMEOUT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(809); // ERROR_VPN_TIMEOUT
+pub const VPN_BAD_CERT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(810); // ERROR_VPN_BAD_CERT
+pub const VPN_BAD_PSK : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(811); // ERROR_VPN_BAD_PSK
+#[doc(hidden)] pub const SERVER_POLICY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(812); // ERROR_SERVER_POLICY
+pub const BROADBAND_ACTIVE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(813); // ERROR_BROADBAND_ACTIVE
+pub const BROADBAND_NO_NIC : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(814); // ERROR_BROADBAND_NO_NIC
+pub const BROADBAND_TIMEOUT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(815); // ERROR_BROADBAND_TIMEOUT
+pub const FEATURE_DEPRECATED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(816); // ERROR_FEATURE_DEPRECATED
+pub const CANNOT_DELETE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(817); // ERROR_CANNOT_DELETE
+pub const RASQEC_RESOURCE_CREATION_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(818); // ERROR_RASQEC_RESOURCE_CREATION_FAILED
+pub const RASQEC_NAPAGENT_NOT_ENABLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(819); // ERROR_RASQEC_NAPAGENT_NOT_ENABLED
+pub const RASQEC_NAPAGENT_NOT_CONNECTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(820); // ERROR_RASQEC_NAPAGENT_NOT_CONNECTED
+pub const RASQEC_CONN_DOESNOTEXIST : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(821); // ERROR_RASQEC_CONN_DOESNOTEXIST
+pub const RASQEC_TIMEOUT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(822); // ERROR_RASQEC_TIMEOUT
+pub const PEAP_CRYPTOBINDING_INVALID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(823); // ERROR_PEAP_CRYPTOBINDING_INVALID
+pub const PEAP_CRYPTOBINDING_NOTRECEIVED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(824); // ERROR_PEAP_CRYPTOBINDING_NOTRECEIVED
+pub const INVALID_VPNSTRATEGY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(825); // ERROR_INVALID_VPNSTRATEGY
+pub const EAPTLS_CACHE_CREDENTIALS_INVALID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(826); // ERROR_EAPTLS_CACHE_CREDENTIALS_INVALID
+#[doc(hidden)] pub const IPSEC_SERVICE_STOPPED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(827); // ERROR_IPSEC_SERVICE_STOPPED
+pub const IDLE_TIMEOUT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(828); // ERROR_IDLE_TIMEOUT
+pub const LINK_FAILURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(829); // ERROR_LINK_FAILURE
+pub const USER_LOGOFF : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(830); // ERROR_USER_LOGOFF
+pub const FAST_USER_SWITCH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(831); // ERROR_FAST_USER_SWITCH
+pub const HIBERNATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(832); // ERROR_HIBERNATION
+pub const SYSTEM_SUSPENDED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(833); // ERROR_SYSTEM_SUSPENDED
+pub const RASMAN_SERVICE_STOPPED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(834); // ERROR_RASMAN_SERVICE_STOPPED
+pub const INVALID_SERVER_CERT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(835); // ERROR_INVALID_SERVER_CERT
+pub const NOT_NAP_CAPABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(836); // ERROR_NOT_NAP_CAPABLE
+pub const INVALID_TUNNELID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(837); // ERROR_INVALID_TUNNELID
+pub const UPDATECONNECTION_REQUEST_IN_PROCESS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(838); // ERROR_UPDATECONNECTION_REQUEST_IN_PROCESS
+pub const PROTOCOL_ENGINE_DISABLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(839); // ERROR_PROTOCOL_ENGINE_DISABLED
+pub const INTERNAL_ADDRESS_FAILURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(840); // ERROR_INTERNAL_ADDRESS_FAILURE
+pub const FAILED_CP_REQUIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(841); // ERROR_FAILED_CP_REQUIRED
+pub const TS_UNACCEPTABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(842); // ERROR_TS_UNACCEPTABLE
+pub const MOBIKE_DISABLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(843); // ERROR_MOBIKE_DISABLED
+pub const CANNOT_INITIATE_MOBIKE_UPDATE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(844); // ERROR_CANNOT_INITIATE_MOBIKE_UPDATE
+pub const PEAP_SERVER_REJECTED_CLIENT_TLV : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(845); // ERROR_PEAP_SERVER_REJECTED_CLIENT_TLV
+pub const INVALID_PREFERENCES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(846); // ERROR_INVALID_PREFERENCES
+pub const EAPTLS_SCARD_CACHE_CREDENTIALS_INVALID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(847); // ERROR_EAPTLS_SCARD_CACHE_CREDENTIALS_INVALID
+pub const SSTP_COOKIE_SET_FAILURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(848); // ERROR_SSTP_COOKIE_SET_FAILURE
+pub const INVALID_PEAP_COOKIE_ATTRIBUTES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(849); // ERROR_INVALID_PEAP_COOKIE_ATTRIBUTES
+pub const EAP_METHOD_NOT_INSTALLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(850); // ERROR_EAP_METHOD_NOT_INSTALLED
+pub const EAP_METHOD_DOES_NOT_SUPPORT_SSO : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(851); // ERROR_EAP_METHOD_DOES_NOT_SUPPORT_SSO
+pub const EAP_METHOD_OPERATION_NOT_SUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(852); // ERROR_EAP_METHOD_OPERATION_NOT_SUPPORTED
+pub const EAP_USER_CERT_INVALID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(853); // ERROR_EAP_USER_CERT_INVALID
+pub const EAP_USER_CERT_EXPIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(854); // ERROR_EAP_USER_CERT_EXPIRED
+pub const EAP_USER_CERT_REVOKED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(855); // ERROR_EAP_USER_CERT_REVOKED
+pub const EAP_USER_CERT_OTHER_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(856); // ERROR_EAP_USER_CERT_OTHER_ERROR
+pub const EAP_SERVER_CERT_INVALID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(857); // ERROR_EAP_SERVER_CERT_INVALID
+pub const EAP_SERVER_CERT_EXPIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(858); // ERROR_EAP_SERVER_CERT_EXPIRED
+pub const EAP_SERVER_CERT_REVOKED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(859); // ERROR_EAP_SERVER_CERT_REVOKED
+pub const EAP_SERVER_CERT_OTHER_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(860); // ERROR_EAP_SERVER_CERT_OTHER_ERROR
+pub const EAP_USER_ROOT_CERT_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(861); // ERROR_EAP_USER_ROOT_CERT_NOT_FOUND
+pub const EAP_USER_ROOT_CERT_INVALID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(862); // ERROR_EAP_USER_ROOT_CERT_INVALID
+pub const EAP_USER_ROOT_CERT_EXPIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(863); // ERROR_EAP_USER_ROOT_CERT_EXPIRED
+pub const EAP_SERVER_ROOT_CERT_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(864); // ERROR_EAP_SERVER_ROOT_CERT_NOT_FOUND
+pub const EAP_SERVER_ROOT_CERT_INVALID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(865); // ERROR_EAP_SERVER_ROOT_CERT_INVALID
+pub const EAP_SERVER_ROOT_CERT_NAME_REQUIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(866); // ERROR_EAP_SERVER_ROOT_CERT_NAME_REQUIRED
+pub const PEAP_IDENTITY_MISMATCH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(867); // ERROR_PEAP_IDENTITY_MISMATCH
+pub const DNSNAME_NOT_RESOLVABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(868); // ERROR_DNSNAME_NOT_RESOLVABLE
+pub const EAPTLS_PASSWD_INVALID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(869); // ERROR_EAPTLS_PASSWD_INVALID
+pub const IKEV2_PSK_INTERFACE_ALREADY_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(870); // ERROR_IKEV2_PSK_INTERFACE_ALREADY_EXISTS
+pub const INVALID_DESTINATION_IP : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(871); // ERROR_INVALID_DESTINATION_IP
+pub const INVALID_INTERFACE_CONFIG : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(872); // ERROR_INVALID_INTERFACE_CONFIG
+pub const VPN_PLUGIN_GENERIC : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(873); // ERROR_VPN_PLUGIN_GENERIC
+pub const SSO_CERT_MISSING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(874); // ERROR_SSO_CERT_MISSING
+pub const DEVICE_COMPLIANCE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(875); // ERROR_DEVICE_COMPLIANCE
