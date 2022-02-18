@@ -331,8 +331,14 @@ mod gen {
 
             pub mod WINHTTP;
 
+            /// WinRS / WinRM shell/client for WS-Management Service?
+            pub mod WINRS;
+
             /// [Windows Management Instrumentation](https://docs.microsoft.com/en-us/windows/win32/wmisdk/wmi-start-page)
             pub mod WMI;
+
+            /// WS-Management Service
+            pub mod WSMAN;
         }
 
         /// [COM Events](https://docs.microsoft.com/en-us/windows/win32/api/eventsys/)

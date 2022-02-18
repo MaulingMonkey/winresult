@@ -36,6 +36,8 @@ const ERROR_PREFIX_TO_RUSTY : &'static [(&'static str, &'static str)] = &[
     ("ERROR_VHD_",          "ERROR::VHD",           ),
     ("ERROR_WINHTTP_",      "ERROR::WINHTTP",       ),
     ("ERROR_WMI_",          "ERROR::WMI",           ),
+    ("ERROR_WSMAN_",        "ERROR::WSMAN",         ),
+    ("ERROR_WINRS_",        "ERROR::WINRS",         ),
 ];
 
 const PREFIX_TO_SKIP : &'static [&'static str] = &[
@@ -111,8 +113,9 @@ impl Code<'_> {
 pub(crate) fn winerror_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) {
     let mut lines = header.lines();
     let re_define_error = Regex::new(r##"^#\s*define\s+(?P<error>(?P<prefix>([A-Z0-9_]+?_)?(S|E|X|ERROR))_(?P<err>[a-zA-Z0-9_]+))\s+(?P<value>.+?)[L]?\s*(//.*)?$"##).expect("re_define_error");
-    let re_placeholders = Regex::new(r"(0x)?%[0-9a-zA-Z_]+").expect("re_placeholders");
-    let re_url          = Regex::new(r"( |^)(http[s]?://[^ ]+)").expect("re_url");
+    let re_placeholders = Regex::new(r#"(0x)?%[0-9a-zA-Z_]+"#).expect("re_placeholders");
+    let re_url          = Regex::new(r#"([ "]|^)(http[s]?://[^" ]+)"#).expect("re_url");
+    let re_escape       = Regex::new(r#"[*\[\]]"#).expect("re_escape");
 
     let mut docs = Vec::new();
     while let Some(line) = lines.next() {
@@ -380,8 +383,8 @@ pub(crate) fn winerror_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) 
             } else {
                 let comment = re_placeholders   .replace_all(&comment, "`$0`");
                 let comment = re_url            .replace_all(&comment, "$1<$2>");
-                let comment = comment.replace("*", "\\*");
-                docs.push(comment.into());
+                let comment = re_escape         .replace_all(&comment, "\\$0");
+                docs.push(comment.into_owned().into());
             }
         } else {
             docs.clear();
@@ -455,9 +458,9 @@ pub(crate) fn d3d<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) {
 pub(crate) fn ntstatus_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) {
     let mut lines = header.lines();
     let re_ntstatus     = Regex::new(r##"^\s*#\s*define\s+(?P<error>(?P<prefix>STATUS)_(?P<err>[a-zA-Z0-9_]+))\s+\(\(NTSTATUS\)(?P<value>(0x)?[0-9a-fA-F]+)[L]?\)\s*(//.*)?$"##).expect("re_ntstatus");
-    let re_placeholders = Regex::new(r"(0x)?%[0-9a-zA-Z_]+").expect("re_placeholders");
-    let re_url          = Regex::new(r"( |^)(http[s]?://[^ ]+)").expect("re_url");
-    let re_escape       = Regex::new(r"[*\[\]]").expect("re_escape");
+    let re_placeholders = Regex::new(r#"(0x)?%[0-9a-zA-Z_]+"#).expect("re_placeholders");
+    let re_url          = Regex::new(r#"([ "]|^)(http[s]?://[^" ]+)"#).expect("re_url");
+    let re_escape       = Regex::new(r#"[*\[\]]"#).expect("re_escape");
     while let Some(line) = lines.next() {
         if let Some(def) = re_ntstatus.captures(line.text) {
             let error   = def.name("error" ).unwrap().as_str();

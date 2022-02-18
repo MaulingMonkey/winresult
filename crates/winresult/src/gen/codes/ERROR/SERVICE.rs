@@ -67,3 +67,7 @@ pub const NOTIFY_CLIENT_LAGGING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_
 pub const EXISTS_AS_NON_PACKAGED_SERVICE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15655); // ERROR_SERVICE_EXISTS_AS_NON_PACKAGED_SERVICE
 
 pub const IS_PAUSED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(928); // ERROR_SERVICE_IS_PAUSED
+
+/// The WinRM service cannot process the request. The Channel Binding Token Hardening Level (CbtHardeningLevel) value is invalid.
+/// The valid values are "None", "Relaxed" and "Strict". Change the CbtHardeningLevel value and try again.
+pub const CBT_HARDENING_INVALID : ErrorHResult = ErrorHResult::from_constant(0x803381B8); // ERROR_SERVICE_CBT_HARDENING_INVALID
