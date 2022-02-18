@@ -69,24 +69,21 @@ impl Code<'_> {
 }
 
 pub(crate) fn winerror_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) {
-    let path = &header.path;
-    let header = header.code.as_str();
-
-    let mut lines = header.lines().enumerate();
+    let mut lines = header.lines();
     let re_define_error = Regex::new(r##"^#\s*define\s+(?P<error>(?P<prefix>([A-Z0-9_]+?_)?(S|E|X|ERROR))_(?P<err>[a-zA-Z0-9_]+))\s+(?P<value>.+?)[L]?\s*(//.*)?$"##).expect("re_define_error");
     let re_placeholders = Regex::new(r"(0x)?%[0-9a-zA-Z_]+").expect("re_placeholders");
     let re_url          = Regex::new(r"( |^)(http[s]?://[^ ]+)").expect("re_url");
 
     let mut docs = Vec::new();
-    while let Some((line_idx, line)) = lines.next() {
-        let line = line.trim();
+    while let Some(line) = lines.next() {
+        let text = line.text.trim();
 
-        if line.is_empty() || line.contains("vailable") && line.contains("error codes") { // XXX: simplify
+        if text.is_empty() || text.contains("vailable") && text.contains("error codes") { // XXX: simplify
             docs.clear();
             continue;
         }
 
-        if let Some(define_error) = re_define_error.captures(line) {
+        if let Some(define_error) = re_define_error.captures(text) {
             let error   = define_error.name("error" ).unwrap().as_str();
             let prefix  = define_error.name("prefix").unwrap().as_str();
             let err     = define_error.name("err"   ).unwrap().as_str();
@@ -129,7 +126,7 @@ pub(crate) fn winerror_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) 
                     // normal: these COM-related defines get redefined on _MAC (OS X), just ignore the second def
                     "E_NOTIMPL" | "E_OUTOFMEMORY" | "E_INVALIDARG" | "E_NOINTERFACE" | "E_POINTER" | "E_HANDLE" | "E_ABORT" | "E_FAIL" | "E_ACCESSDENIED" => {},
                     _ => {
-                        mmrbi::warning!(at: path, line: line_idx+1, "{} found multiple times", error);
+                        mmrbi::warning!(at: &header.path, line: line.no(), "{} found multiple times", error);
                     },
                 }
                 docs.clear();
@@ -157,7 +154,7 @@ pub(crate) fn winerror_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) 
             } else if let Some(_value32) = value.try_parse_u32() {
                 ("HRESULT", value)
             } else {
-                mmrbi::error!(at: path, line: line_idx+1, "unexpected value for `{}`: `{}`", error, value);
+                mmrbi::error!(at: &header.path, line: line.no(), "unexpected value for `{}`: `{}`", error, value);
                 continue
             };
 
@@ -169,7 +166,7 @@ pub(crate) fn winerror_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) 
                         "SuccessHResult"
                     }
                 } else {
-                    mmrbi::error!(at: path, line: line_idx+1, "unable to parse integer value for `{}`: `{}`", error, value);
+                    mmrbi::error!(at: &header.path, line: line.no(), "unable to parse integer value for `{}`: `{}`", error, value);
                     continue
                 }
             } else {
@@ -274,7 +271,7 @@ pub(crate) fn winerror_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) 
                     });
                 }
             }
-        } else if let Some(comment) = line.strip_prefix("//") {
+        } else if let Some(comment) = text.strip_prefix("//") {
             let comment = comment.trim_start();
             if comment.is_empty() { continue }
             if comment.starts_with("MessageId:") || comment == "MessageText:" { docs.clear(); continue }
@@ -294,13 +291,10 @@ pub(crate) fn winerror_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) 
 }
 
 pub(crate) fn d3d<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) {
-    let path = &header.path;
-    let header = header.code.as_str();
-
-    let mut lines = header.lines().enumerate();
+    let mut lines = header.lines();
     let re_d3d_hr = Regex::new(r##"^\s*#\s*define\s+(?P<error>(?P<prefix>S|D3D(ERR|OK)?)_(?P<err>[a-zA-Z0-9_]+))\s+(?P<value>S_OK|MAKE_D3D.+?|MAKE_DD.+?)$"##).expect("re_d3d_hr");
-    while let Some((line_idx, line)) = lines.next() {
-        if let Some(def) = re_d3d_hr.captures(line) {
+    while let Some(line) = lines.next() {
+        if let Some(def) = re_d3d_hr.captures(line.text) {
             let error   = def.name("error" ).unwrap().as_str();
             let prefix  = def.name("prefix").unwrap().as_str();
             let err     = def.name("err"   ).unwrap().as_str();
@@ -312,7 +306,7 @@ pub(crate) fn d3d<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) {
                 match value.parse::<u16>() {
                     Ok(value)   => ("SuccessHResult", format!("{}", u32::from(value)+0x08760000)),
                     Err(_) => {
-                        mmrbi::error!(at: path, line: line_idx+1, "unexpected value for {}", error);
+                        mmrbi::error!(at: &header.path, line: line.no(), "unexpected value for {}", error);
                         continue
                     },
                 }
@@ -320,7 +314,7 @@ pub(crate) fn d3d<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) {
                 match value.parse::<u16>() {
                     Ok(value)   => ("SuccessHResult", format!("{}", u32::from(value)+0x08760000)),
                     Err(_) => {
-                        mmrbi::error!(at: path, line: line_idx+1, "unexpected value for {}", error);
+                        mmrbi::error!(at: &header.path, line: line.no(), "unexpected value for {}", error);
                         continue
                     },
                 }
@@ -328,7 +322,7 @@ pub(crate) fn d3d<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) {
                 match value.parse::<u16>() {
                     Ok(value)   => ("ErrorHResult", format!("{}", u32::from(value)+0x88760000)),
                     Err(_) => {
-                        mmrbi::error!(at: path, line: line_idx+1, "unexpected value for {}", error);
+                        mmrbi::error!(at: &header.path, line: line.no(), "unexpected value for {}", error);
                         continue
                     },
                 }
@@ -336,12 +330,12 @@ pub(crate) fn d3d<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) {
                 match value.parse::<u16>() {
                     Ok(value)   => ("ErrorHResult", format!("{}", u32::from(value)+0x88760000)),
                     Err(_) => {
-                        mmrbi::error!(at: path, line: line_idx+1, "unexpected value for {}", error);
+                        mmrbi::error!(at: &header.path, line: line.no(), "unexpected value for {}", error);
                         continue
                     },
                 }
             } else {
-                mmrbi::error!(at: path, line: line_idx+1, "unexpected value for {}", error);
+                mmrbi::error!(at: &header.path, line: line.no(), "unexpected value for {}", error);
                 continue
             };
 
@@ -360,13 +354,10 @@ pub(crate) fn d3d<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) {
 }
 
 pub(crate) fn ntstatus_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) {
-    let _path = &header.path;
-    let header = header.code.as_str();
-
     let mut lines = header.lines();
     let re_ntstatus = Regex::new(r##"^\s*#\s*define\s+(?P<error>(?P<prefix>STATUS)_(?P<err>[a-zA-Z0-9_]+))\s+\(\(NTSTATUS\)(?P<value>(0x)?[0-9a-fA-F]+)[L]?\)\s*(//.*)?$"##).expect("re_ntstatus");
     while let Some(line) = lines.next() {
-        if let Some(def) = re_ntstatus.captures(line) {
+        if let Some(def) = re_ntstatus.captures(line.text) {
             let error   = def.name("error" ).unwrap().as_str();
             let prefix  = def.name("prefix").unwrap().as_str();
             let err     = def.name("err"   ).unwrap().as_str();

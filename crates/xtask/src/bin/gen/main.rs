@@ -11,6 +11,20 @@ struct Header {
     pub code: String,
 }
 
+impl Header {
+    pub fn lines<'h>(&'h self) -> impl Iterator<Item = HeaderLine<'h>> + 'h { self.code.lines().enumerate().map(|(idx, text)| HeaderLine { idx, text }) }
+}
+
+struct HeaderLine<'s> {
+    pub text:   &'s str,
+    idx:    usize,
+}
+
+#[allow(dead_code)] impl<'s> HeaderLine<'s> {
+    pub fn idx(&self) -> usize { self.idx }
+    pub fn no(&self) -> usize { self.idx + 1 }
+}
+
 fn main() {
     assert!(Path::new(".git").exists(), "expected to be run in the root of this repository");
     let sdk = sdk::WindowsKit::find_latest().expect("sdk");
