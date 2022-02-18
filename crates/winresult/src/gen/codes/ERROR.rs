@@ -8474,3 +8474,65 @@ pub const UNRECOVERABLE_STACK_OVERFLOW : ErrorHResult = ErrorHResult::from_const
 
 /// Win9x migration DLL error code
 pub const NOT_INSTALLED : ErrorHResult = ErrorHResult::from_constant(0xE0001000); // ERROR_NOT_INSTALLED
+
+/// Incompatible TC version number
+pub const INCOMPATIBLE_TCI_VERSION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7501); // ERROR_INCOMPATIBLE_TCI_VERSION
+
+/// Unspecified or bad intserv service type
+pub const INVALID_SERVICE_TYPE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7502); // ERROR_INVALID_SERVICE_TYPE
+
+/// Unspecified or bad TokenRate
+pub const INVALID_TOKEN_RATE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7503); // ERROR_INVALID_TOKEN_RATE
+
+/// Bad PeakBandwidth
+pub const INVALID_PEAK_RATE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7504); // ERROR_INVALID_PEAK_RATE
+
+/// Invalid ShapeDiscardMode
+pub const INVALID_SD_MODE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7505); // ERROR_INVALID_SD_MODE
+
+/// Invalid priority value
+pub const INVALID_QOS_PRIORITY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7506); // ERROR_INVALID_QOS_PRIORITY
+
+/// Invalid traffic class value
+pub const INVALID_TRAFFIC_CLASS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7507); // ERROR_INVALID_TRAFFIC_CLASS
+
+/// Invalid address type
+pub const INVALID_ADDRESS_TYPE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7508); // ERROR_INVALID_ADDRESS_TYPE
+
+/// Attempt to install identical filter on same flow
+pub const DUPLICATE_FILTER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7509); // ERROR_DUPLICATE_FILTER
+
+/// Attempt to install conflicting filter
+pub const FILTER_CONFLICT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7510); // ERROR_FILTER_CONFLICT
+
+/// This address type is not supported
+pub const ADDRESS_TYPE_NOT_SUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7511); // ERROR_ADDRESS_TYPE_NOT_SUPPORTED
+
+/// This object can not be deleted since its suporting opened objects
+pub const TC_SUPPORTED_OBJECTS_EXIST : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7512); // ERROR_TC_SUPPORTED_OBJECTS_EXIST
+
+/// Incompatable QoS parameters
+pub const INCOMPATABLE_QOS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7513); // ERROR_INCOMPATABLE_QOS
+
+/// Traffic Control is not supported in the system
+pub const TC_NOT_SUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7514); // ERROR_TC_NOT_SUPPORTED
+
+/// TcObjectsLength is inconsistent with CfInfoSize
+pub const TC_OBJECT_LENGTH_INVALID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7515); // ERROR_TC_OBJECT_LENGTH_INVALID
+
+/// Adding an Intserv flow in Diffserv mode or vice versa
+pub const INVALID_FLOW_MODE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7516); // ERROR_INVALID_FLOW_MODE
+
+/// Invalid Diffserv flow
+pub const INVALID_DIFFSERV_FLOW : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7517); // ERROR_INVALID_DIFFSERV_FLOW
+
+#[doc(hidden)] pub const DS_MAPPING_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7518); // ERROR_DS_MAPPING_EXISTS
+
+/// Invalid Shape Rate specified
+pub const INVALID_SHAPE_RATE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7519); // ERROR_INVALID_SHAPE_RATE
+
+/// Invalid DCLASS
+pub const INVALID_DS_CLASS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7520); // ERROR_INVALID_DS_CLASS
+
+/// Too many GPC clients
+pub const TOO_MANY_CLIENTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7521); // ERROR_TOO_MANY_CLIENTS

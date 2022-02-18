@@ -178,6 +178,7 @@ pub(crate) fn winerror_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) 
                 ("(RASBASE+",                                       ")",    "ErrorCodeMicrosoft",   true,          600, "RasError.h",   ),
                 ("(RASBASE + ",                                     ")",    "ErrorCodeMicrosoft",   true,          600, "RasError.h",   ),
                 ("(ROUTEBASE+",                                     ")",    "ErrorCodeMicrosoft",   false,         900, "MprError.h",   ),
+                ("(TCBASE+",                                        ")",    "ErrorCodeMicrosoft",   true,         7500, "TCError.h",    ),
                 ("(NETSH_ERROR_BASE + ",                            ")",    "ErrorCodeMicrosoft",   true,        15000, "NetSh.h",      ), // conflicts: ERROR_EVT_INVALID_CHANNEL_PATH 15000 (winerror.h)
                 ("(ERROR_PCW_BASE + ",                              ")",    "ErrorHResult",         false,  0xC00E5101, "PatchWiz.h",   ),
                 ("(APPLICATION_ERROR_MASK|ERROR_SEVERITY_ERROR|",   ")",    "ErrorHResult",         false,  0xE0000000, "",             ),

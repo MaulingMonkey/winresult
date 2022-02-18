@@ -1205,3 +1205,6 @@ pub const MISSING_FOREST_TRUST : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_c
 
 /// The link value specified was not found, but a link value with that key was found.
 pub const VALUE_KEY_NOT_UNIQUE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8650); // ERROR_DS_VALUE_KEY_NOT_UNIQUE
+
+/// DS codepoint already exists
+pub const MAPPING_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7518); // ERROR_DS_MAPPING_EXISTS
