@@ -65,3 +65,5 @@ pub const NOTIFY_CLIENT_LAGGING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_
 
 /// The package installation failed because a version of the service exists outside of APPX packaging. Please contact your software vendor.
 pub const EXISTS_AS_NON_PACKAGED_SERVICE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15655); // ERROR_SERVICE_EXISTS_AS_NON_PACKAGED_SERVICE
+
+pub const IS_PAUSED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(928); // ERROR_SERVICE_IS_PAUSED

@@ -2066,6 +2066,60 @@
         <DisplayString Condition="__0 == 0x00004E56">ERROR::MSCOPE_RANGE_TOO_SMALL</DisplayString>
         <DisplayString Condition="__0 == 0x00004E90">ERROR::SCOPE_RANGE_POLICY_RANGE_CONFLICT</DisplayString>
         <DisplayString Condition="__0 == 0x00004EAB">ERROR::LAST_DHCP_SERVER_ERROR</DisplayString>
+        <DisplayString Condition="__0 == 900">ERROR::ROUTER_STOPPED</DisplayString>
+        <DisplayString Condition="__0 == 901">ERROR::ALREADY_CONNECTED</DisplayString>
+        <DisplayString Condition="__0 == 902">ERROR::UNKNOWN_PROTOCOL_ID</DisplayString>
+        <DisplayString Condition="__0 == 903">ERROR::DDM_NOT_RUNNING</DisplayString>
+        <DisplayString Condition="__0 == 904">ERROR::INTERFACE_ALREADY_EXISTS</DisplayString>
+        <DisplayString Condition="__0 == 905">ERROR::NO_SUCH_INTERFACE</DisplayString>
+        <DisplayString Condition="__0 == 906">ERROR::INTERFACE_NOT_CONNECTED</DisplayString>
+        <DisplayString Condition="__0 == 907">ERROR::PROTOCOL_STOP_PENDING</DisplayString>
+        <DisplayString Condition="__0 == 908">ERROR::INTERFACE_CONNECTED</DisplayString>
+        <DisplayString Condition="__0 == 909">ERROR::NO_INTERFACE_CREDENTIALS_SET</DisplayString>
+        <DisplayString Condition="__0 == 910">ERROR::ALREADY_CONNECTING</DisplayString>
+        <DisplayString Condition="__0 == 911">ERROR::UPDATE_IN_PROGRESS</DisplayString>
+        <DisplayString Condition="__0 == 912">ERROR::INTERFACE_CONFIGURATION</DisplayString>
+        <DisplayString Condition="__0 == 913">ERROR::NOT_CLIENT_PORT</DisplayString>
+        <DisplayString Condition="__0 == 914">ERROR::NOT_ROUTER_PORT</DisplayString>
+        <DisplayString Condition="__0 == 915">ERROR::CLIENT_INTERFACE_ALREADY_EXISTS</DisplayString>
+        <DisplayString Condition="__0 == 916">ERROR::INTERFACE_DISABLED</DisplayString>
+        <DisplayString Condition="__0 == 917">ERROR::AUTH_PROTOCOL_REJECTED</DisplayString>
+        <DisplayString Condition="__0 == 918">ERROR::NO_AUTH_PROTOCOL_AVAILABLE</DisplayString>
+        <DisplayString Condition="__0 == 919">ERROR::PEER_REFUSED_AUTH</DisplayString>
+        <DisplayString Condition="__0 == 920">ERROR::REMOTE_NO_DIALIN_PERMISSION</DisplayString>
+        <DisplayString Condition="__0 == 921">ERROR::REMOTE_PASSWD_EXPIRED</DisplayString>
+        <DisplayString Condition="__0 == 922">ERROR::REMOTE_ACCT_DISABLED</DisplayString>
+        <DisplayString Condition="__0 == 923">ERROR::REMOTE_RESTRICTED_LOGON_HOURS</DisplayString>
+        <DisplayString Condition="__0 == 924">ERROR::REMOTE_AUTHENTICATION_FAILURE</DisplayString>
+        <DisplayString Condition="__0 == 925">ERROR::INTERFACE_HAS_NO_DEVICES</DisplayString>
+        <DisplayString Condition="__0 == 926">ERROR::IDLE_DISCONNECTED</DisplayString>
+        <DisplayString Condition="__0 == 927">ERROR::INTERFACE_UNREACHABLE</DisplayString>
+        <DisplayString Condition="__0 == 929">ERROR::INTERFACE_DISCONNECTED</DisplayString>
+        <DisplayString Condition="__0 == 930">ERROR::AUTH_SERVER_TIMEOUT</DisplayString>
+        <DisplayString Condition="__0 == 931">ERROR::PORT_LIMIT_REACHED</DisplayString>
+        <DisplayString Condition="__0 == 932">ERROR::PPP_SESSION_TIMEOUT</DisplayString>
+        <DisplayString Condition="__0 == 933">ERROR::MAX_LAN_INTERFACE_LIMIT</DisplayString>
+        <DisplayString Condition="__0 == 934">ERROR::MAX_WAN_INTERFACE_LIMIT</DisplayString>
+        <DisplayString Condition="__0 == 935">ERROR::MAX_CLIENT_INTERFACE_LIMIT</DisplayString>
+        <DisplayString Condition="__0 == 936">ERROR::BAP_DISCONNECTED</DisplayString>
+        <DisplayString Condition="__0 == 937">ERROR::USER_LIMIT</DisplayString>
+        <DisplayString Condition="__0 == 938">ERROR::NO_RADIUS_SERVERS</DisplayString>
+        <DisplayString Condition="__0 == 939">ERROR::INVALID_RADIUS_RESPONSE</DisplayString>
+        <DisplayString Condition="__0 == 940">ERROR::DIALIN_HOURS_RESTRICTION</DisplayString>
+        <DisplayString Condition="__0 == 941">ERROR::ALLOWED_PORT_TYPE_RESTRICTION</DisplayString>
+        <DisplayString Condition="__0 == 942">ERROR::AUTH_PROTOCOL_RESTRICTION</DisplayString>
+        <DisplayString Condition="__0 == 943">ERROR::BAP_REQUIRED</DisplayString>
+        <DisplayString Condition="__0 == 944">ERROR::DIALOUT_HOURS_RESTRICTION</DisplayString>
+        <DisplayString Condition="__0 == 945">ERROR::ROUTER_CONFIG_INCOMPATIBLE</DisplayString>
+        <DisplayString Condition="__0 == 948">ERROR::PROTOCOL_ALREADY_INSTALLED</DisplayString>
+        <DisplayString Condition="__0 == 949">ERROR::INVALID_SIGNATURE_LENGTH</DisplayString>
+        <DisplayString Condition="__0 == 950">ERROR::INVALID_SIGNATURE</DisplayString>
+        <DisplayString Condition="__0 == 951">ERROR::NO_SIGNATURE</DisplayString>
+        <DisplayString Condition="__0 == 952">ERROR::INVALID_PACKET_LENGTH_OR_ID</DisplayString>
+        <DisplayString Condition="__0 == 953">ERROR::INVALID_ATTRIBUTE_LENGTH</DisplayString>
+        <DisplayString Condition="__0 == 954">ERROR::INVALID_PACKET</DisplayString>
+        <DisplayString Condition="__0 == 955">ERROR::AUTHENTICATOR_MISMATCH</DisplayString>
+        <DisplayString Condition="__0 == 956">ERROR::REMOTEACCESS_NOT_CONFIGURED</DisplayString>
         <DisplayString Condition="__0 == 358">ERROR::CLOUD_FILE::SYNC_ROOT_METADATA_CORRUPT</DisplayString>
         <DisplayString Condition="__0 == 362">ERROR::CLOUD_FILE::PROVIDER_NOT_RUNNING</DisplayString>
         <DisplayString Condition="__0 == 363">ERROR::CLOUD_FILE::METADATA_CORRUPT</DisplayString>
@@ -3035,6 +3089,7 @@
         <DisplayString Condition="__0 == 1243">ERROR::SERVICE::NOT_FOUND</DisplayString>
         <DisplayString Condition="__0 == 1294">ERROR::SERVICE::NOTIFY_CLIENT_LAGGING</DisplayString>
         <DisplayString Condition="__0 == 15655">ERROR::SERVICE::EXISTS_AS_NON_PACKAGED_SERVICE</DisplayString>
+        <DisplayString Condition="__0 == 928">ERROR::SERVICE::IS_PAUSED</DisplayString>
         <DisplayString Condition="__0 == 14000">ERROR::SXS::SECTION_NOT_FOUND</DisplayString>
         <DisplayString Condition="__0 == 14001">ERROR::SXS::CANT_GEN_ACTCTX</DisplayString>
         <DisplayString Condition="__0 == 14002">ERROR::SXS::INVALID_ACTCTXDATA_FORMAT</DisplayString>

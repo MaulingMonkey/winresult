@@ -137,33 +137,38 @@ pub(crate) fn winerror_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) 
                 continue;
             }
 
-            let (ty, value) = if value == "nope" {
+            let rs_value : Cow<'c, str>;
+            let ty = if value == "nope" {
                 continue // XXX
             } else if let Some(value) = value.strip_prefix_suffix("_NDIS_ERROR_TYPEDEF_(", "L)") {
-                ("HRESULT", value)
+                rs_value = value.into();
+                "HRESULT"
             } else if let Some(value) = value.strip_prefix_suffix("_HRESULT_TYPEDEF_(", "L)") {
-                ("HRESULT", value)
+                rs_value = value.into();
+                "HRESULT"
             } else if let Some(value) = value.strip_prefix_suffix("((HRESULT)", "L)") {
-                ("HRESULT", value)
+                rs_value = value.into();
+                "HRESULT"
+            } else if let Some(value) = value.strip_prefix_suffix("(ROUTEBASE+", ")").filter(|_| header.path.ends_with("MprError.h")).and_then(|v| v.try_parse_u16()) {
+                rs_value = format!("{}", value+900).into();
+                "ErrorCodeMicrosoft"
             } else if value.starts_with("HRESULT_FROM_WIN32(ERROR_") {
                 continue // XXX
             } else if value.starts_with("SEC_E_") {
                 continue // XXX
             } else if let Some(_value16) = value.try_parse_u16() {
-                if success {
-                    ("SuccessCodeMicrosoft", value)
-                } else {
-                    ("ErrorCodeMicrosoft", value)
-                }
+                rs_value = value.into();
+                if success { "SuccessCodeMicrosoft" } else { "ErrorCodeMicrosoft" }
             } else if let Some(_value32) = value.try_parse_u32() {
-                ("HRESULT", value)
+                rs_value = value.into();
+                "HRESULT"
             } else {
                 mmrbi::error!(at: &header.path, line: line.no(), "unexpected value for `{}`: `{}`", error, value);
                 continue
             };
 
             let ty = if ty == "HRESULT" {
-                if let Some(value) = value.try_parse_u32() {
+                if let Some(value) = rs_value.try_parse_u32() {
                     if value >= 0x8000_0000 {
                         "ErrorHResult"
                     } else {
@@ -198,7 +203,7 @@ pub(crate) fn winerror_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) 
                     rs_mod:     prefix,
                     rs_id:      err.into(),
                     rs_ty:      ty.into(),
-                    rs_value:   value.into(),
+                    rs_value,
                     docs:       docs.iter().cloned().collect(),
                     hide:       false,
                     redundant,
@@ -211,7 +216,7 @@ pub(crate) fn winerror_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) 
                     rs_mod:     prefix,
                     rs_id:      err.into(),
                     rs_ty:      ty.into(),
-                    rs_value:   value.into(),
+                    rs_value,
                     docs:       docs.iter().cloned().collect(),
                     hide:       false,
                     redundant,
@@ -226,7 +231,7 @@ pub(crate) fn winerror_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) 
                     rs_mod:     prefix,
                     rs_id:      err.into(),
                     rs_ty:      ty.into(),
-                    rs_value:   value.into(),
+                    rs_value,
                     docs:       docs.iter().cloned().collect(),
                     hide:       false,
                     redundant,
@@ -240,7 +245,7 @@ pub(crate) fn winerror_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) 
                             rs_mod:     rs_mod.into(),
                             rs_id:      err.into(),
                             rs_ty:      ty.into(),
-                            rs_value:   value.into(),
+                            rs_value:   rs_value.clone(),
                             docs:       docs.iter().cloned().collect(),
                             hide:       false,
                             redundant,
@@ -257,7 +262,7 @@ pub(crate) fn winerror_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) 
                         rs_mod:     "ERROR".into(),
                         rs_id:      error.strip_prefix("ERROR_").unwrap().into(),
                         rs_ty:      ty.into(),
-                        rs_value:   value.into(),
+                        rs_value:   rs_value,
                         docs:       docs.iter().cloned().collect(),
                         redundant,
                         hide,
@@ -268,7 +273,7 @@ pub(crate) fn winerror_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) 
                         rs_mod:     prefix,
                         rs_id:      err.into(),
                         rs_ty:      ty.into(),
-                        rs_value:   value.into(),
+                        rs_value,
                         docs:       docs.iter().cloned().collect(),
                         redundant,
                         hide,
