@@ -4,10 +4,10 @@ use super::*;
 
 
 /// Success codes
-pub const OK : SuccessHResult = SuccessHResult::from_constant(0); // S_OK
+pub const OK : SuccessHResult = SuccessHResult::from_constant(0x00000000); // S_OK
 
 /// Success codes
-pub const FALSE : SuccessHResult = SuccessHResult::from_constant(1); // S_FALSE
+pub const FALSE : SuccessHResult = SuccessHResult::from_constant(0x00000001); // S_FALSE
 
 /// The Store was launched instead of the specified app because the app's package was in an invalid state.
 pub const STORE_LAUNCHED_FOR_REMEDIATION : SuccessHResult = SuccessHResult::from_constant(0x00270258); // S_STORE_LAUNCHED_FOR_REMEDIATION

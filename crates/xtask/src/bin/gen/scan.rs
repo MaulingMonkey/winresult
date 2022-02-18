@@ -168,41 +168,35 @@ pub(crate) fn winerror_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) 
                 continue;
             }
 
-            let rs_value : Cow<'c, str>;
-            let ty = if value == "nope" {
-                continue // XXX
-            } else if let Some(value) = value.strip_prefix_suffix("_NDIS_ERROR_TYPEDEF_(", "L)") {
-                rs_value = value.into();
-                "HRESULT"
-            } else if let Some(value) = value.strip_prefix_suffix("_HRESULT_TYPEDEF_(", "L)") {
-                rs_value = value.into();
-                "HRESULT"
-            } else if let Some(value) = value.strip_prefix_suffix("((HRESULT)", "L)") {
-                rs_value = value.into();
-                "HRESULT"
-            } else if let Some(value) = value.strip_prefix_suffix("(RASBASE + ", ")").filter(|_| header.path.ends_with("RasError.h")).and_then(|v| v.try_parse_u16()) {
-                rs_value = format!("{}", value+600).into();
-                redundant = true; // conflicts galore
-                "ErrorCodeMicrosoft"
-            } else if let Some(value) = value.strip_prefix_suffix("(RASBASE+", ")").filter(|_| header.path.ends_with("RasError.h")).and_then(|v| v.try_parse_u16()) {
-                rs_value = format!("{}", value+600).into();
-                redundant = true; // conflicts galore
-                "ErrorCodeMicrosoft"
-            } else if let Some(value) = value.strip_prefix_suffix("(ROUTEBASE+", ")").filter(|_| header.path.ends_with("MprError.h")).and_then(|v| v.try_parse_u16()) {
-                rs_value = format!("{}", value+900).into();
-                "ErrorCodeMicrosoft"
-            } else if let Some(value) = value.strip_prefix_suffix("(ERROR_PCW_BASE + ", ")").filter(|_| header.path.ends_with("PatchWiz.h")).and_then(|v| v.try_parse_u32()) {
-                rs_value = format!("{}", value+0xC00E5101).into();
-                "ErrorHResult"
-            } else if let Some(value) = value.strip_prefix_suffix("(APPLICATION_ERROR_MASK|ERROR_SEVERITY_ERROR|", ")").and_then(|v| v.try_parse_u32()) {
-                rs_value = format!("{:#X}", 0x20000000 | 0xC0000000 | value).into();
-                "ErrorHResult"
-            } else if let Some(value) = value.strip_prefix_suffix("(NETSH_ERROR_BASE + ", ")").filter(|_| header.path.ends_with("NetSh.h")).and_then(|v| v.try_parse_u16()) {
-                rs_value = format!("{}", value+15000).into();
-                redundant = true; // conflict:
-                // #define ERROR_EVT_INVALID_CHANNEL_PATH   15000   (winerror.h)
-                // #define ERROR_NO_ENTRIES                 15000   (netsh.h)
-                "ErrorCodeMicrosoft"
+            let mut rs_value    : Cow<'c, str> = "".into();
+            let mut rs_ty       : &'static str = "";
+
+            for (pre,                                               post,   ty,                     p_redundant,  base, pattern_header, ) in [
+                ("_NDIS_ERROR_TYPEDEF_(",                           "L)",   "HRESULT",              false,           0, "",             ),
+                ("_HRESULT_TYPEDEF_(",                              "L)",   "HRESULT",              false,           0, "",             ),
+                ("((HRESULT)",                                      "L)",   "HRESULT",              false,           0, "",             ),
+                ("(RASBASE+",                                       ")",    "ErrorCodeMicrosoft",   true,          600, "RasError.h",   ),
+                ("(RASBASE + ",                                     ")",    "ErrorCodeMicrosoft",   true,          600, "RasError.h",   ),
+                ("(ROUTEBASE+",                                     ")",    "ErrorCodeMicrosoft",   false,         900, "MprError.h",   ),
+                ("(NETSH_ERROR_BASE + ",                            ")",    "ErrorCodeMicrosoft",   true,        15000, "NetSh.h",      ), // conflicts: ERROR_EVT_INVALID_CHANNEL_PATH 15000 (winerror.h)
+                ("(ERROR_PCW_BASE + ",                              ")",    "ErrorHResult",         false,  0xC00E5101, "PatchWiz.h",   ),
+                ("(APPLICATION_ERROR_MASK|ERROR_SEVERITY_ERROR|",   ")",    "ErrorHResult",         false,  0xE0000000, "",             ),
+            ].iter().copied() {
+                if !pattern_header.is_empty() && !header.path.ends_with(pattern_header) { continue }
+                if let Some(value) = value.strip_prefix_suffix(pre, post).and_then(|v| v.try_parse_u32()) {
+                    let value = value + base;
+                    rs_ty = ty;
+                    rs_value = match ty {
+                        "HRESULT" | "ErrorHResult"  => format!("0x{:08X}", value),
+                        _                           => format!("{}", value),
+                    }.into();
+                    redundant |= p_redundant;
+                    break;
+                }
+            }
+
+            let ty = if !rs_ty.is_empty() {
+                rs_ty
             } else if value.starts_with("HRESULT_FROM_WIN32(ERROR_") {
                 continue // XXX
             } else if value.starts_with("SEC_E_") {
