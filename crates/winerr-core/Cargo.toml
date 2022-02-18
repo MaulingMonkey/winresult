@@ -1,4 +1,5 @@
 # https://doc.rust-lang.org/cargo/reference/manifest.html
+# https://crates.io/category_slugs
 
 [package]
 name                                    = "winerr-core"
@@ -6,6 +7,8 @@ description                             = "windows error codes"
 version                                 = "0.0.0-git-core"
 authors                                 = ["MaulingMonkey <git@maulingmonkey.com>"]
 edition                                 = "2021"
+repository                              = "https://github.com/MaulingMonkey/winerr"
+documentation                           = "https://docs.rs/winerr" # re-exports everything anyways, just point at that
 license                                 = "Apache-2.0 OR MIT"
 
 [package.metadata.docs.rs]
