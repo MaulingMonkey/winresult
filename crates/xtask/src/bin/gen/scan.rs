@@ -94,7 +94,7 @@ pub(crate) fn winerror_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) 
     let header = header.code.as_str();
 
     let mut lines = header.lines().enumerate();
-    let re_define_error = Regex::new(r##"^#\s*define\s+(?P<error>(?P<prefix>([A-Z0-9_]+?_)?(S|E|ERROR))_(?P<err>[a-zA-Z0-9_]+))\s+(?P<value>.+?)[L]?\s*(//.*)?$"##).expect("re_define_error");
+    let re_define_error = Regex::new(r##"^#\s*define\s+(?P<error>(?P<prefix>([A-Z0-9_]+?_)?(S|E|X|ERROR))_(?P<err>[a-zA-Z0-9_]+))\s+(?P<value>.+?)[L]?\s*(//.*)?$"##).expect("re_define_error");
     let re_placeholders = Regex::new(r"(0x)?%[0-9a-zA-Z_]+").expect("re_placeholders");
     let re_url          = Regex::new(r"( |^)(http[s]?://[^ ]+)").expect("re_url");
 
@@ -201,7 +201,7 @@ pub(crate) fn winerror_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) 
                 _ => ty,
             };
 
-            if prefix.ends_with("_S") || prefix.ends_with("_E") {
+            if prefix.ends_with("_S") || prefix.ends_with("_E") || prefix.ends_with("_X") {
                 // translate:   WHATEVER_E::... => WHATEVER::E_...
                 let prefix = &prefix[..prefix.len()-2];
                 let err    = &error[prefix.len()+1..];
@@ -221,7 +221,7 @@ pub(crate) fn winerror_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) 
                     hide:       false,
                     redundant,
                 });
-            } else if prefix.starts_with("S_") || prefix.starts_with("E_") {
+            } else if prefix.starts_with("S_") || prefix.starts_with("E_") || prefix.starts_with("X_") {
                 let prefix  = &prefix[..1];
                 let err     = &error[2..];
                 codes.push_force(Code {

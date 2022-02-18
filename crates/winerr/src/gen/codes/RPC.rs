@@ -204,6 +204,39 @@ pub const S_FP_UNDERFLOW : SuccessCodeMicrosoft = SuccessCodeMicrosoft::from_con
 /// A floating-point overflow occurred at the RPC server.
 pub const S_FP_OVERFLOW : SuccessCodeMicrosoft = SuccessCodeMicrosoft::from_constant(1771); // RPC_S_FP_OVERFLOW
 
+/// The list of RPC servers available for the binding of auto handles has been exhausted.
+pub const X_NO_MORE_ENTRIES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1772); // RPC_X_NO_MORE_ENTRIES
+
+/// Unable to open the character translation table file.
+pub const X_SS_CHAR_TRANS_OPEN_FAIL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1773); // RPC_X_SS_CHAR_TRANS_OPEN_FAIL
+
+/// The file containing the character translation table has fewer than 512 bytes.
+pub const X_SS_CHAR_TRANS_SHORT_FILE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1774); // RPC_X_SS_CHAR_TRANS_SHORT_FILE
+
+/// A null context handle was passed from the client to the host during a remote procedure call.
+pub const X_SS_IN_NULL_CONTEXT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1775); // RPC_X_SS_IN_NULL_CONTEXT
+
+/// The context handle changed during a remote procedure call.
+pub const X_SS_CONTEXT_DAMAGED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1777); // RPC_X_SS_CONTEXT_DAMAGED
+
+/// The binding handles passed to a remote procedure call do not match.
+pub const X_SS_HANDLES_MISMATCH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1778); // RPC_X_SS_HANDLES_MISMATCH
+
+/// The stub is unable to get the remote procedure call handle.
+pub const X_SS_CANNOT_GET_CALL_HANDLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1779); // RPC_X_SS_CANNOT_GET_CALL_HANDLE
+
+/// A null reference pointer was passed to the stub.
+pub const X_NULL_REF_POINTER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1780); // RPC_X_NULL_REF_POINTER
+
+/// The enumeration value is out of range.
+pub const X_ENUM_VALUE_OUT_OF_RANGE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1781); // RPC_X_ENUM_VALUE_OUT_OF_RANGE
+
+/// The byte count is too small.
+pub const X_BYTE_COUNT_TOO_SMALL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1782); // RPC_X_BYTE_COUNT_TOO_SMALL
+
+/// The stub received bad data.
+pub const X_BAD_STUB_DATA : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1783); // RPC_X_BAD_STUB_DATA
+
 /// A remote procedure call is already in progress for this thread.
 pub const S_CALL_IN_PROGRESS : SuccessCodeMicrosoft = SuccessCodeMicrosoft::from_constant(1791); // RPC_S_CALL_IN_PROGRESS
 
@@ -240,6 +273,24 @@ pub const S_SEC_PKG_ERROR : SuccessCodeMicrosoft = SuccessCodeMicrosoft::from_co
 /// Thread is not canceled.
 pub const S_NOT_CANCELLED : SuccessCodeMicrosoft = SuccessCodeMicrosoft::from_constant(1826); // RPC_S_NOT_CANCELLED
 
+/// Invalid operation on the encoding/decoding handle.
+pub const X_INVALID_ES_ACTION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1827); // RPC_X_INVALID_ES_ACTION
+
+/// Incompatible version of the serializing package.
+pub const X_WRONG_ES_VERSION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1828); // RPC_X_WRONG_ES_VERSION
+
+/// Incompatible version of the RPC stub.
+pub const X_WRONG_STUB_VERSION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1829); // RPC_X_WRONG_STUB_VERSION
+
+/// The RPC pipe object is invalid or corrupted.
+pub const X_INVALID_PIPE_OBJECT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1830); // RPC_X_INVALID_PIPE_OBJECT
+
+/// An invalid operation was attempted on an RPC pipe object.
+pub const X_WRONG_PIPE_ORDER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1831); // RPC_X_WRONG_PIPE_ORDER
+
+/// Unsupported RPC pipe version.
+pub const X_WRONG_PIPE_VERSION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1832); // RPC_X_WRONG_PIPE_VERSION
+
 /// HTTP proxy server rejected the connection because the cookie authentication failed.
 pub const S_COOKIE_AUTH_FAILED : SuccessCodeMicrosoft = SuccessCodeMicrosoft::from_constant(1833); // RPC_S_COOKIE_AUTH_FAILED
 
@@ -266,6 +317,15 @@ pub const S_INVALID_ASYNC_HANDLE : SuccessCodeMicrosoft = SuccessCodeMicrosoft::
 
 /// Invalid asynchronous RPC call handle for this operation.
 pub const S_INVALID_ASYNC_CALL : SuccessCodeMicrosoft = SuccessCodeMicrosoft::from_constant(1915); // RPC_S_INVALID_ASYNC_CALL
+
+/// The RPC pipe object has already been closed.
+pub const X_PIPE_CLOSED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1916); // RPC_X_PIPE_CLOSED
+
+/// The RPC call completed before all pipes were processed.
+pub const X_PIPE_DISCIPLINE_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1917); // RPC_X_PIPE_DISCIPLINE_ERROR
+
+/// No more data is available from the RPC pipe.
+pub const X_PIPE_EMPTY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1918); // RPC_X_PIPE_EMPTY
 
 /// The entry is not of the expected type.
 pub const S_ENTRY_TYPE_MISMATCH : SuccessCodeMicrosoft = SuccessCodeMicrosoft::from_constant(1922); // RPC_S_ENTRY_TYPE_MISMATCH

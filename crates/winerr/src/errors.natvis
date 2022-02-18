@@ -3055,6 +3055,26 @@
         <DisplayString Condition="__0 == 4064">PEERDIST::ERROR_NOT_LICENSED</DisplayString>
         <DisplayString Condition="__0 == 4065">PEERDIST::ERROR_SERVICE_UNAVAILABLE</DisplayString>
         <DisplayString Condition="__0 == 4066">PEERDIST::ERROR_TRUST_FAILURE</DisplayString>
+        <DisplayString Condition="__0 == 1772">RPC::X_NO_MORE_ENTRIES</DisplayString>
+        <DisplayString Condition="__0 == 1773">RPC::X_SS_CHAR_TRANS_OPEN_FAIL</DisplayString>
+        <DisplayString Condition="__0 == 1774">RPC::X_SS_CHAR_TRANS_SHORT_FILE</DisplayString>
+        <DisplayString Condition="__0 == 1775">RPC::X_SS_IN_NULL_CONTEXT</DisplayString>
+        <DisplayString Condition="__0 == 1777">RPC::X_SS_CONTEXT_DAMAGED</DisplayString>
+        <DisplayString Condition="__0 == 1778">RPC::X_SS_HANDLES_MISMATCH</DisplayString>
+        <DisplayString Condition="__0 == 1779">RPC::X_SS_CANNOT_GET_CALL_HANDLE</DisplayString>
+        <DisplayString Condition="__0 == 1780">RPC::X_NULL_REF_POINTER</DisplayString>
+        <DisplayString Condition="__0 == 1781">RPC::X_ENUM_VALUE_OUT_OF_RANGE</DisplayString>
+        <DisplayString Condition="__0 == 1782">RPC::X_BYTE_COUNT_TOO_SMALL</DisplayString>
+        <DisplayString Condition="__0 == 1783">RPC::X_BAD_STUB_DATA</DisplayString>
+        <DisplayString Condition="__0 == 1827">RPC::X_INVALID_ES_ACTION</DisplayString>
+        <DisplayString Condition="__0 == 1828">RPC::X_WRONG_ES_VERSION</DisplayString>
+        <DisplayString Condition="__0 == 1829">RPC::X_WRONG_STUB_VERSION</DisplayString>
+        <DisplayString Condition="__0 == 1830">RPC::X_INVALID_PIPE_OBJECT</DisplayString>
+        <DisplayString Condition="__0 == 1831">RPC::X_WRONG_PIPE_ORDER</DisplayString>
+        <DisplayString Condition="__0 == 1832">RPC::X_WRONG_PIPE_VERSION</DisplayString>
+        <DisplayString Condition="__0 == 1916">RPC::X_PIPE_CLOSED</DisplayString>
+        <DisplayString Condition="__0 == 1917">RPC::X_PIPE_DISCIPLINE_ERROR</DisplayString>
+        <DisplayString Condition="__0 == 1918">RPC::X_PIPE_EMPTY</DisplayString>
         <DisplayString Condition="__0 == 6200">SCHED::E_SERVICE_NOT_LOCALSYSTEM</DisplayString>
         <DisplayString Condition="__0 == 15861">STORE::ERROR_UNLICENSED</DisplayString>
         <DisplayString Condition="__0 == 15862">STORE::ERROR_UNLICENSED_USER</DisplayString>
