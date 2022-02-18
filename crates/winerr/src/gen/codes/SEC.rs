@@ -2,6 +2,7 @@
 
 use super::*;
 
+pub const E_OK : SuccessHResult = SuccessHResult::from_constant(0x00000000); // SEC_E_OK
 
 /// Not enough memory is available to complete this request
 pub const E_INSUFFICIENT_MEMORY : ErrorHResult = ErrorHResult::from_constant(0x80090300); // SEC_E_INSUFFICIENT_MEMORY

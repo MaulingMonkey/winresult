@@ -39,7 +39,6 @@ fn main() {
     }
 
     let mut codes   = scan::Codes::default();
-    scan::hardcoded     (               &mut codes);
     scan::winerror_h    (&winerror_h,   &mut codes);
     scan::d3d           (&d3d9_h,       &mut codes);
     scan::d3d           (&d3d_h,        &mut codes);

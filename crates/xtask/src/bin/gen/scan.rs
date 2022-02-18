@@ -68,27 +68,6 @@ impl Code<'_> {
     }
 }
 
-pub(crate) fn hardcoded(codes: &mut Codes) {
-    // success codes
-    let mut redundant = false;
-    for (cpp,               rs_mod,     rs_id,      value) in [
-        // redundant codes after this line
-        ("ERROR_SUCCESS",   "ERROR",    "SUCCESS",  "0"),
-    ].iter().copied() {
-        if value == "0" && cpp != "S_OK" { redundant = true }
-        codes.mods.entry(rs_mod).or_default().push(Code {
-            cpp:        cpp.into(),
-            rs_mod:     rs_mod.into(),
-            rs_id:      rs_id.into(),
-            rs_ty:      "SuccessCodeMicrosoft".into(),
-            rs_value:   value.into(),
-            docs:       Default::default(),
-            hide:       false,
-            redundant,
-        });
-    }
-}
-
 pub(crate) fn winerror_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) {
     let path = &header.path;
     let header = header.code.as_str();
@@ -97,15 +76,6 @@ pub(crate) fn winerror_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) 
     let re_define_error = Regex::new(r##"^#\s*define\s+(?P<error>(?P<prefix>([A-Z0-9_]+?_)?(S|E|X|ERROR))_(?P<err>[a-zA-Z0-9_]+))\s+(?P<value>.+?)[L]?\s*(//.*)?$"##).expect("re_define_error");
     let re_placeholders = Regex::new(r"(0x)?%[0-9a-zA-Z_]+").expect("re_placeholders");
     let re_url          = Regex::new(r"( |^)(http[s]?://[^ ]+)").expect("re_url");
-
-    // Skip to, and past, ERROR_SUCCESS.  TODO: manually support it?
-    loop {
-        let line = lines.next().expect("EOF before finding #define ERROR_SUCCESS").1;
-        if line.starts_with("#define ERROR_SUCCESS") {
-            for _ in 0 .. 3 { let _ = lines.next(); }
-            break;
-        }
-    }
 
     let mut docs = Vec::new();
     while let Some((line_idx, line)) = lines.next() {
@@ -123,6 +93,11 @@ pub(crate) fn winerror_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) 
             let value   = define_error.name("value" ).unwrap().as_str();
             let success = prefix == "S" || prefix.ends_with("_S");
 
+            // DO NOT EXPOSE THIS MESS AS IS.  See [doc/ept-and-rpc-codes-are-evil.md](https://github.com/MaulingMonkey/winerr/blob/5094a8a5568392ef855babd8bc62458f29153e46/crates/winerr/doc/ept-and-rpc-codes-are-evil.md) for details.
+            if error.starts_with("EPT_") { docs.clear(); continue }
+            if error.starts_with("RPC_") { docs.clear(); continue }
+
+            // Not really meant as codes, but used for ranges of codes.  Prefer ranges or range detection fns?
             if error.ends_with("_MASK"   ) { docs.clear(); continue }
             if error.ends_with("_E_FIRST") { docs.clear(); continue }
             if error.ends_with("_E_LAST" ) { docs.clear(); continue }
@@ -142,6 +117,11 @@ pub(crate) fn winerror_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) 
                 "CLASS_E_NOAGGREGATION"     => (value,  true),
 
                 _                           => (value,  false),
+            };
+
+            redundant |= match error {
+                "SEC_E_OK"                  => true,
+                _                           => false,
             };
 
             if !codes.cpp_processed.insert(error) {
@@ -198,6 +178,7 @@ pub(crate) fn winerror_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) 
 
             let ty = match error {
                 "S_OK" | "S_FALSE" => "SuccessHResult",
+                "ERROR_SUCCESS"    => "SuccessCodeMicrosoft",
                 _ => ty,
             };
 

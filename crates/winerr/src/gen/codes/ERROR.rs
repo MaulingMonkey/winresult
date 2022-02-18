@@ -2,6 +2,8 @@
 
 use super::*;
 
+
+/// The operation completed successfully.
 pub const SUCCESS : SuccessCodeMicrosoft = SuccessCodeMicrosoft::from_constant(0); // ERROR_SUCCESS
 
 /// Incorrect function.

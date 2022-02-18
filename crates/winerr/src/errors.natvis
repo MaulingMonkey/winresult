@@ -3055,26 +3055,6 @@
         <DisplayString Condition="__0 == 4064">PEERDIST::ERROR_NOT_LICENSED</DisplayString>
         <DisplayString Condition="__0 == 4065">PEERDIST::ERROR_SERVICE_UNAVAILABLE</DisplayString>
         <DisplayString Condition="__0 == 4066">PEERDIST::ERROR_TRUST_FAILURE</DisplayString>
-        <DisplayString Condition="__0 == 1772">RPC::X_NO_MORE_ENTRIES</DisplayString>
-        <DisplayString Condition="__0 == 1773">RPC::X_SS_CHAR_TRANS_OPEN_FAIL</DisplayString>
-        <DisplayString Condition="__0 == 1774">RPC::X_SS_CHAR_TRANS_SHORT_FILE</DisplayString>
-        <DisplayString Condition="__0 == 1775">RPC::X_SS_IN_NULL_CONTEXT</DisplayString>
-        <DisplayString Condition="__0 == 1777">RPC::X_SS_CONTEXT_DAMAGED</DisplayString>
-        <DisplayString Condition="__0 == 1778">RPC::X_SS_HANDLES_MISMATCH</DisplayString>
-        <DisplayString Condition="__0 == 1779">RPC::X_SS_CANNOT_GET_CALL_HANDLE</DisplayString>
-        <DisplayString Condition="__0 == 1780">RPC::X_NULL_REF_POINTER</DisplayString>
-        <DisplayString Condition="__0 == 1781">RPC::X_ENUM_VALUE_OUT_OF_RANGE</DisplayString>
-        <DisplayString Condition="__0 == 1782">RPC::X_BYTE_COUNT_TOO_SMALL</DisplayString>
-        <DisplayString Condition="__0 == 1783">RPC::X_BAD_STUB_DATA</DisplayString>
-        <DisplayString Condition="__0 == 1827">RPC::X_INVALID_ES_ACTION</DisplayString>
-        <DisplayString Condition="__0 == 1828">RPC::X_WRONG_ES_VERSION</DisplayString>
-        <DisplayString Condition="__0 == 1829">RPC::X_WRONG_STUB_VERSION</DisplayString>
-        <DisplayString Condition="__0 == 1830">RPC::X_INVALID_PIPE_OBJECT</DisplayString>
-        <DisplayString Condition="__0 == 1831">RPC::X_WRONG_PIPE_ORDER</DisplayString>
-        <DisplayString Condition="__0 == 1832">RPC::X_WRONG_PIPE_VERSION</DisplayString>
-        <DisplayString Condition="__0 == 1916">RPC::X_PIPE_CLOSED</DisplayString>
-        <DisplayString Condition="__0 == 1917">RPC::X_PIPE_DISCIPLINE_ERROR</DisplayString>
-        <DisplayString Condition="__0 == 1918">RPC::X_PIPE_EMPTY</DisplayString>
         <DisplayString Condition="__0 == 6200">SCHED::E_SERVICE_NOT_LOCALSYSTEM</DisplayString>
         <DisplayString Condition="__0 == 15861">STORE::ERROR_UNLICENSED</DisplayString>
         <DisplayString Condition="__0 == 15862">STORE::ERROR_UNLICENSED_USER</DisplayString>
@@ -3086,106 +3066,7 @@
     </Type>
 
     <Type Name="winerr_core::SuccessCodeMicrosoft">
-        <DisplayString Condition="__0 == 1751">EPT::S_INVALID_ENTRY</DisplayString>
-        <DisplayString Condition="__0 == 1752">EPT::S_CANT_PERFORM_OP</DisplayString>
-        <DisplayString Condition="__0 == 1753">EPT::S_NOT_REGISTERED</DisplayString>
-        <DisplayString Condition="__0 == 1899">EPT::S_CANT_CREATE</DisplayString>
-        <DisplayString Condition="__0 == 1700">RPC::S_INVALID_STRING_BINDING</DisplayString>
-        <DisplayString Condition="__0 == 1701">RPC::S_WRONG_KIND_OF_BINDING</DisplayString>
-        <DisplayString Condition="__0 == 1702">RPC::S_INVALID_BINDING</DisplayString>
-        <DisplayString Condition="__0 == 1703">RPC::S_PROTSEQ_NOT_SUPPORTED</DisplayString>
-        <DisplayString Condition="__0 == 1704">RPC::S_INVALID_RPC_PROTSEQ</DisplayString>
-        <DisplayString Condition="__0 == 1705">RPC::S_INVALID_STRING_UUID</DisplayString>
-        <DisplayString Condition="__0 == 1706">RPC::S_INVALID_ENDPOINT_FORMAT</DisplayString>
-        <DisplayString Condition="__0 == 1707">RPC::S_INVALID_NET_ADDR</DisplayString>
-        <DisplayString Condition="__0 == 1708">RPC::S_NO_ENDPOINT_FOUND</DisplayString>
-        <DisplayString Condition="__0 == 1709">RPC::S_INVALID_TIMEOUT</DisplayString>
-        <DisplayString Condition="__0 == 1710">RPC::S_OBJECT_NOT_FOUND</DisplayString>
-        <DisplayString Condition="__0 == 1711">RPC::S_ALREADY_REGISTERED</DisplayString>
-        <DisplayString Condition="__0 == 1712">RPC::S_TYPE_ALREADY_REGISTERED</DisplayString>
-        <DisplayString Condition="__0 == 1713">RPC::S_ALREADY_LISTENING</DisplayString>
-        <DisplayString Condition="__0 == 1714">RPC::S_NO_PROTSEQS_REGISTERED</DisplayString>
-        <DisplayString Condition="__0 == 1715">RPC::S_NOT_LISTENING</DisplayString>
-        <DisplayString Condition="__0 == 1716">RPC::S_UNKNOWN_MGR_TYPE</DisplayString>
-        <DisplayString Condition="__0 == 1717">RPC::S_UNKNOWN_IF</DisplayString>
-        <DisplayString Condition="__0 == 1718">RPC::S_NO_BINDINGS</DisplayString>
-        <DisplayString Condition="__0 == 1719">RPC::S_NO_PROTSEQS</DisplayString>
-        <DisplayString Condition="__0 == 1720">RPC::S_CANT_CREATE_ENDPOINT</DisplayString>
-        <DisplayString Condition="__0 == 1721">RPC::S_OUT_OF_RESOURCES</DisplayString>
-        <DisplayString Condition="__0 == 1722">RPC::S_SERVER_UNAVAILABLE</DisplayString>
-        <DisplayString Condition="__0 == 1723">RPC::S_SERVER_TOO_BUSY</DisplayString>
-        <DisplayString Condition="__0 == 1724">RPC::S_INVALID_NETWORK_OPTIONS</DisplayString>
-        <DisplayString Condition="__0 == 1725">RPC::S_NO_CALL_ACTIVE</DisplayString>
-        <DisplayString Condition="__0 == 1726">RPC::S_CALL_FAILED</DisplayString>
-        <DisplayString Condition="__0 == 1727">RPC::S_CALL_FAILED_DNE</DisplayString>
-        <DisplayString Condition="__0 == 1728">RPC::S_PROTOCOL_ERROR</DisplayString>
-        <DisplayString Condition="__0 == 1729">RPC::S_PROXY_ACCESS_DENIED</DisplayString>
-        <DisplayString Condition="__0 == 1730">RPC::S_UNSUPPORTED_TRANS_SYN</DisplayString>
-        <DisplayString Condition="__0 == 1732">RPC::S_UNSUPPORTED_TYPE</DisplayString>
-        <DisplayString Condition="__0 == 1733">RPC::S_INVALID_TAG</DisplayString>
-        <DisplayString Condition="__0 == 1734">RPC::S_INVALID_BOUND</DisplayString>
-        <DisplayString Condition="__0 == 1735">RPC::S_NO_ENTRY_NAME</DisplayString>
-        <DisplayString Condition="__0 == 1736">RPC::S_INVALID_NAME_SYNTAX</DisplayString>
-        <DisplayString Condition="__0 == 1737">RPC::S_UNSUPPORTED_NAME_SYNTAX</DisplayString>
-        <DisplayString Condition="__0 == 1739">RPC::S_UUID_NO_ADDRESS</DisplayString>
-        <DisplayString Condition="__0 == 1740">RPC::S_DUPLICATE_ENDPOINT</DisplayString>
-        <DisplayString Condition="__0 == 1741">RPC::S_UNKNOWN_AUTHN_TYPE</DisplayString>
-        <DisplayString Condition="__0 == 1742">RPC::S_MAX_CALLS_TOO_SMALL</DisplayString>
-        <DisplayString Condition="__0 == 1743">RPC::S_STRING_TOO_LONG</DisplayString>
-        <DisplayString Condition="__0 == 1744">RPC::S_PROTSEQ_NOT_FOUND</DisplayString>
-        <DisplayString Condition="__0 == 1745">RPC::S_PROCNUM_OUT_OF_RANGE</DisplayString>
-        <DisplayString Condition="__0 == 1746">RPC::S_BINDING_HAS_NO_AUTH</DisplayString>
-        <DisplayString Condition="__0 == 1747">RPC::S_UNKNOWN_AUTHN_SERVICE</DisplayString>
-        <DisplayString Condition="__0 == 1748">RPC::S_UNKNOWN_AUTHN_LEVEL</DisplayString>
-        <DisplayString Condition="__0 == 1749">RPC::S_INVALID_AUTH_IDENTITY</DisplayString>
-        <DisplayString Condition="__0 == 1750">RPC::S_UNKNOWN_AUTHZ_SERVICE</DisplayString>
-        <DisplayString Condition="__0 == 1754">RPC::S_NOTHING_TO_EXPORT</DisplayString>
-        <DisplayString Condition="__0 == 1755">RPC::S_INCOMPLETE_NAME</DisplayString>
-        <DisplayString Condition="__0 == 1756">RPC::S_INVALID_VERS_OPTION</DisplayString>
-        <DisplayString Condition="__0 == 1757">RPC::S_NO_MORE_MEMBERS</DisplayString>
-        <DisplayString Condition="__0 == 1758">RPC::S_NOT_ALL_OBJS_UNEXPORTED</DisplayString>
-        <DisplayString Condition="__0 == 1759">RPC::S_INTERFACE_NOT_FOUND</DisplayString>
-        <DisplayString Condition="__0 == 1760">RPC::S_ENTRY_ALREADY_EXISTS</DisplayString>
-        <DisplayString Condition="__0 == 1761">RPC::S_ENTRY_NOT_FOUND</DisplayString>
-        <DisplayString Condition="__0 == 1762">RPC::S_NAME_SERVICE_UNAVAILABLE</DisplayString>
-        <DisplayString Condition="__0 == 1763">RPC::S_INVALID_NAF_ID</DisplayString>
-        <DisplayString Condition="__0 == 1764">RPC::S_CANNOT_SUPPORT</DisplayString>
-        <DisplayString Condition="__0 == 1765">RPC::S_NO_CONTEXT_AVAILABLE</DisplayString>
-        <DisplayString Condition="__0 == 1766">RPC::S_INTERNAL_ERROR</DisplayString>
-        <DisplayString Condition="__0 == 1767">RPC::S_ZERO_DIVIDE</DisplayString>
-        <DisplayString Condition="__0 == 1768">RPC::S_ADDRESS_ERROR</DisplayString>
-        <DisplayString Condition="__0 == 1769">RPC::S_FP_DIV_ZERO</DisplayString>
-        <DisplayString Condition="__0 == 1770">RPC::S_FP_UNDERFLOW</DisplayString>
-        <DisplayString Condition="__0 == 1771">RPC::S_FP_OVERFLOW</DisplayString>
-        <DisplayString Condition="__0 == 1791">RPC::S_CALL_IN_PROGRESS</DisplayString>
-        <DisplayString Condition="__0 == 1806">RPC::S_NO_MORE_BINDINGS</DisplayString>
-        <DisplayString Condition="__0 == 1817">RPC::S_NO_INTERFACES</DisplayString>
-        <DisplayString Condition="__0 == 1818">RPC::S_CALL_CANCELLED</DisplayString>
-        <DisplayString Condition="__0 == 1819">RPC::S_BINDING_INCOMPLETE</DisplayString>
-        <DisplayString Condition="__0 == 1820">RPC::S_COMM_FAILURE</DisplayString>
-        <DisplayString Condition="__0 == 1821">RPC::S_UNSUPPORTED_AUTHN_LEVEL</DisplayString>
-        <DisplayString Condition="__0 == 1822">RPC::S_NO_PRINC_NAME</DisplayString>
-        <DisplayString Condition="__0 == 1823">RPC::S_NOT_RPC_ERROR</DisplayString>
-        <DisplayString Condition="__0 == 1824">RPC::S_UUID_LOCAL_ONLY</DisplayString>
-        <DisplayString Condition="__0 == 1825">RPC::S_SEC_PKG_ERROR</DisplayString>
-        <DisplayString Condition="__0 == 1826">RPC::S_NOT_CANCELLED</DisplayString>
-        <DisplayString Condition="__0 == 1833">RPC::S_COOKIE_AUTH_FAILED</DisplayString>
-        <DisplayString Condition="__0 == 1834">RPC::S_DO_NOT_DISTURB</DisplayString>
-        <DisplayString Condition="__0 == 1835">RPC::S_SYSTEM_HANDLE_COUNT_EXCEEDED</DisplayString>
-        <DisplayString Condition="__0 == 1836">RPC::S_SYSTEM_HANDLE_TYPE_MISMATCH</DisplayString>
-        <DisplayString Condition="__0 == 1898">RPC::S_GROUP_MEMBER_NOT_FOUND</DisplayString>
-        <DisplayString Condition="__0 == 1900">RPC::S_INVALID_OBJECT</DisplayString>
-        <DisplayString Condition="__0 == 1913">RPC::S_SEND_INCOMPLETE</DisplayString>
-        <DisplayString Condition="__0 == 1914">RPC::S_INVALID_ASYNC_HANDLE</DisplayString>
-        <DisplayString Condition="__0 == 1915">RPC::S_INVALID_ASYNC_CALL</DisplayString>
-        <DisplayString Condition="__0 == 1922">RPC::S_ENTRY_TYPE_MISMATCH</DisplayString>
-        <DisplayString Condition="__0 == 1923">RPC::S_NOT_ALL_OBJS_EXPORTED</DisplayString>
-        <DisplayString Condition="__0 == 1924">RPC::S_INTERFACE_NOT_EXPORTED</DisplayString>
-        <DisplayString Condition="__0 == 1925">RPC::S_PROFILE_NOT_ADDED</DisplayString>
-        <DisplayString Condition="__0 == 1926">RPC::S_PRF_ELT_NOT_ADDED</DisplayString>
-        <DisplayString Condition="__0 == 1927">RPC::S_PRF_ELT_NOT_REMOVED</DisplayString>
-        <DisplayString Condition="__0 == 1928">RPC::S_GRP_ELT_NOT_ADDED</DisplayString>
-        <DisplayString Condition="__0 == 1929">RPC::S_GRP_ELT_NOT_REMOVED</DisplayString>
+        <DisplayString Condition="__0 == 0">ERROR::SUCCESS</DisplayString>
         <DisplayString>{__0} (SuccessCodeMicrosoft)</DisplayString>
     </Type>
 
@@ -8633,60 +8514,6 @@
     <HResult Name="RO_E_BLOCKED_CROSS_ASTA_CALL"><HRValue>0x8000001F</HRValue></HResult>
     <HResult Name="RO_E_CANNOT_ACTIVATE_FULL_TRUST_SERVER"><HRValue>0x80000020</HRValue></HResult>
     <HResult Name="RO_E_CANNOT_ACTIVATE_UNIVERSAL_APPLICATION_SERVER"><HRValue>0x80000021</HRValue></HResult>
-    <HResult Name="RPC_E_CALL_REJECTED"><HRValue>0x80010001</HRValue></HResult>
-    <HResult Name="RPC_E_CALL_CANCELED"><HRValue>0x80010002</HRValue></HResult>
-    <HResult Name="RPC_E_CANTPOST_INSENDCALL"><HRValue>0x80010003</HRValue></HResult>
-    <HResult Name="RPC_E_CANTCALLOUT_INASYNCCALL"><HRValue>0x80010004</HRValue></HResult>
-    <HResult Name="RPC_E_CANTCALLOUT_INEXTERNALCALL"><HRValue>0x80010005</HRValue></HResult>
-    <HResult Name="RPC_E_CONNECTION_TERMINATED"><HRValue>0x80010006</HRValue></HResult>
-    <HResult Name="RPC_E_SERVER_DIED"><HRValue>0x80010007</HRValue></HResult>
-    <HResult Name="RPC_E_CLIENT_DIED"><HRValue>0x80010008</HRValue></HResult>
-    <HResult Name="RPC_E_INVALID_DATAPACKET"><HRValue>0x80010009</HRValue></HResult>
-    <HResult Name="RPC_E_CANTTRANSMIT_CALL"><HRValue>0x8001000A</HRValue></HResult>
-    <HResult Name="RPC_E_CLIENT_CANTMARSHAL_DATA"><HRValue>0x8001000B</HRValue></HResult>
-    <HResult Name="RPC_E_CLIENT_CANTUNMARSHAL_DATA"><HRValue>0x8001000C</HRValue></HResult>
-    <HResult Name="RPC_E_SERVER_CANTMARSHAL_DATA"><HRValue>0x8001000D</HRValue></HResult>
-    <HResult Name="RPC_E_SERVER_CANTUNMARSHAL_DATA"><HRValue>0x8001000E</HRValue></HResult>
-    <HResult Name="RPC_E_INVALID_DATA"><HRValue>0x8001000F</HRValue></HResult>
-    <HResult Name="RPC_E_INVALID_PARAMETER"><HRValue>0x80010010</HRValue></HResult>
-    <HResult Name="RPC_E_CANTCALLOUT_AGAIN"><HRValue>0x80010011</HRValue></HResult>
-    <HResult Name="RPC_E_SERVER_DIED_DNE"><HRValue>0x80010012</HRValue></HResult>
-    <HResult Name="RPC_E_SYS_CALL_FAILED"><HRValue>0x80010100</HRValue></HResult>
-    <HResult Name="RPC_E_OUT_OF_RESOURCES"><HRValue>0x80010101</HRValue></HResult>
-    <HResult Name="RPC_E_ATTEMPTED_MULTITHREAD"><HRValue>0x80010102</HRValue></HResult>
-    <HResult Name="RPC_E_NOT_REGISTERED"><HRValue>0x80010103</HRValue></HResult>
-    <HResult Name="RPC_E_FAULT"><HRValue>0x80010104</HRValue></HResult>
-    <HResult Name="RPC_E_SERVERFAULT"><HRValue>0x80010105</HRValue></HResult>
-    <HResult Name="RPC_E_CHANGED_MODE"><HRValue>0x80010106</HRValue></HResult>
-    <HResult Name="RPC_E_INVALIDMETHOD"><HRValue>0x80010107</HRValue></HResult>
-    <HResult Name="RPC_E_DISCONNECTED"><HRValue>0x80010108</HRValue></HResult>
-    <HResult Name="RPC_E_RETRY"><HRValue>0x80010109</HRValue></HResult>
-    <HResult Name="RPC_E_SERVERCALL_RETRYLATER"><HRValue>0x8001010A</HRValue></HResult>
-    <HResult Name="RPC_E_SERVERCALL_REJECTED"><HRValue>0x8001010B</HRValue></HResult>
-    <HResult Name="RPC_E_INVALID_CALLDATA"><HRValue>0x8001010C</HRValue></HResult>
-    <HResult Name="RPC_E_CANTCALLOUT_ININPUTSYNCCALL"><HRValue>0x8001010D</HRValue></HResult>
-    <HResult Name="RPC_E_WRONG_THREAD"><HRValue>0x8001010E</HRValue></HResult>
-    <HResult Name="RPC_E_THREAD_NOT_INIT"><HRValue>0x8001010F</HRValue></HResult>
-    <HResult Name="RPC_E_VERSION_MISMATCH"><HRValue>0x80010110</HRValue></HResult>
-    <HResult Name="RPC_E_INVALID_HEADER"><HRValue>0x80010111</HRValue></HResult>
-    <HResult Name="RPC_E_INVALID_EXTENSION"><HRValue>0x80010112</HRValue></HResult>
-    <HResult Name="RPC_E_INVALID_IPID"><HRValue>0x80010113</HRValue></HResult>
-    <HResult Name="RPC_E_INVALID_OBJECT"><HRValue>0x80010114</HRValue></HResult>
-    <HResult Name="RPC_S_CALLPENDING"><HRValue>0x80010115</HRValue></HResult>
-    <HResult Name="RPC_S_WAITONTIMER"><HRValue>0x80010116</HRValue></HResult>
-    <HResult Name="RPC_E_CALL_COMPLETE"><HRValue>0x80010117</HRValue></HResult>
-    <HResult Name="RPC_E_UNSECURE_CALL"><HRValue>0x80010118</HRValue></HResult>
-    <HResult Name="RPC_E_TOO_LATE"><HRValue>0x80010119</HRValue></HResult>
-    <HResult Name="RPC_E_NO_GOOD_SECURITY_PACKAGES"><HRValue>0x8001011A</HRValue></HResult>
-    <HResult Name="RPC_E_ACCESS_DENIED"><HRValue>0x8001011B</HRValue></HResult>
-    <HResult Name="RPC_E_REMOTE_DISABLED"><HRValue>0x8001011C</HRValue></HResult>
-    <HResult Name="RPC_E_INVALID_OBJREF"><HRValue>0x8001011D</HRValue></HResult>
-    <HResult Name="RPC_E_NO_CONTEXT"><HRValue>0x8001011E</HRValue></HResult>
-    <HResult Name="RPC_E_TIMEOUT"><HRValue>0x8001011F</HRValue></HResult>
-    <HResult Name="RPC_E_NO_SYNC"><HRValue>0x80010120</HRValue></HResult>
-    <HResult Name="RPC_E_FULLSIC_REQUIRED"><HRValue>0x80010121</HRValue></HResult>
-    <HResult Name="RPC_E_INVALID_STD_NAME"><HRValue>0x80010122</HRValue></HResult>
-    <HResult Name="RPC_E_UNEXPECTED"><HRValue>0x8001FFFF</HRValue></HResult>
     <HResult Name="S_OK"><HRValue>0</HRValue></HResult>
     <HResult Name="S_FALSE"><HRValue>1</HRValue></HResult>
     <HResult Name="S_STORE_LAUNCHED_FOR_REMEDIATION"><HRValue>0x00270258</HRValue></HResult>
