@@ -111,6 +111,12 @@ pub(crate) fn winerror_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) 
                 "TPM_E_ERROR_MASK"                          => true,
                 "TPM_E_PCP_ERROR_MASK"                      => true,
 
+                // "Backward compatibility--do not use."
+                "ERROR_NO_DEFAULT_INTERFACE_DEVICE"         => true,
+                "ERROR_INTERFACE_DEVICE_ACTIVE"             => true,
+                "ERROR_INTERFACE_DEVICE_REMOVED"            => true,
+                "ERROR_NO_SUCH_INTERFACE_DEVICE"            => true,
+
                 "ERROR_IMAGE_NOT_AT_BASE"                   => false,
                 "ERROR_IMAGE_AT_DIFFERENT_BASE"             => false,
                 "UI_E_START_KEYFRAME_AFTER_END"             => false,
@@ -187,6 +193,9 @@ pub(crate) fn winerror_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) 
                 "ErrorCodeMicrosoft"
             } else if let Some(value) = value.strip_prefix_suffix("(ERROR_PCW_BASE + ", ")").filter(|_| header.path.ends_with("PatchWiz.h")).and_then(|v| v.try_parse_u32()) {
                 rs_value = format!("{}", value+0xC00E5101).into();
+                "ErrorHResult"
+            } else if let Some(value) = value.strip_prefix_suffix("(APPLICATION_ERROR_MASK|ERROR_SEVERITY_ERROR|", ")").and_then(|v| v.try_parse_u32()) {
+                rs_value = format!("{:#X}", 0x20000000 | 0xC0000000 | value).into();
                 "ErrorHResult"
             } else if let Some(value) = value.strip_prefix_suffix("(NETSH_ERROR_BASE + ", ")").filter(|_| header.path.ends_with("NetSh.h")).and_then(|v| v.try_parse_u16()) {
                 rs_value = format!("{}", value+15000).into();

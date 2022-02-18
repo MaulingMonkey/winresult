@@ -72,8 +72,8 @@ fn main() {
         r"um\PatchApi.h":       scan::winerror_h,
         r"um\PatchWiz.h":       scan::winerror_h,
         r"um\RasError.h":       scan::winerror_h,
+        r"um\SetupAPI.h":       scan::winerror_h,
         // TODO:
-        //r"um\SetupAPI.h":     scan::winerror_h,
         //r"um\TCError.h":      scan::winerror_h,
         //r"um\winhttp.h":      scan::winerror_h,
         //r"um\WinInet.h":      scan::winerror_h,

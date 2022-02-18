@@ -8080,3 +8080,397 @@ pub const INVALID_INTERFACE_CONFIG : ErrorCodeMicrosoft = ErrorCodeMicrosoft::fr
 pub const VPN_PLUGIN_GENERIC : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(873); // ERROR_VPN_PLUGIN_GENERIC
 pub const SSO_CERT_MISSING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(874); // ERROR_SSO_CERT_MISSING
 pub const DEVICE_COMPLIANCE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(875); // ERROR_DEVICE_COMPLIANCE
+
+/// Setupapi-specific error codes
+/// Inf parse outcomes
+pub const EXPECTED_SECTION_NAME : ErrorHResult = ErrorHResult::from_constant(0xE0000000); // ERROR_EXPECTED_SECTION_NAME
+
+/// Setupapi-specific error codes
+/// Inf parse outcomes
+pub const BAD_SECTION_NAME_LINE : ErrorHResult = ErrorHResult::from_constant(0xE0000001); // ERROR_BAD_SECTION_NAME_LINE
+
+/// Setupapi-specific error codes
+/// Inf parse outcomes
+pub const SECTION_NAME_TOO_LONG : ErrorHResult = ErrorHResult::from_constant(0xE0000002); // ERROR_SECTION_NAME_TOO_LONG
+
+/// Setupapi-specific error codes
+/// Inf parse outcomes
+pub const GENERAL_SYNTAX : ErrorHResult = ErrorHResult::from_constant(0xE0000003); // ERROR_GENERAL_SYNTAX
+
+/// Setupapi-specific error codes
+/// Inf parse outcomes
+/// Inf runtime errors
+pub const WRONG_INF_STYLE : ErrorHResult = ErrorHResult::from_constant(0xE0000100); // ERROR_WRONG_INF_STYLE
+
+/// Setupapi-specific error codes
+/// Inf parse outcomes
+/// Inf runtime errors
+pub const SECTION_NOT_FOUND : ErrorHResult = ErrorHResult::from_constant(0xE0000101); // ERROR_SECTION_NOT_FOUND
+
+/// Setupapi-specific error codes
+/// Inf parse outcomes
+/// Inf runtime errors
+pub const LINE_NOT_FOUND : ErrorHResult = ErrorHResult::from_constant(0xE0000102); // ERROR_LINE_NOT_FOUND
+
+/// Setupapi-specific error codes
+/// Inf parse outcomes
+/// Inf runtime errors
+pub const NO_BACKUP : ErrorHResult = ErrorHResult::from_constant(0xE0000103); // ERROR_NO_BACKUP
+
+/// Setupapi-specific error codes
+/// Inf parse outcomes
+/// Inf runtime errors
+/// Device Installer/other errors
+pub const NO_ASSOCIATED_CLASS : ErrorHResult = ErrorHResult::from_constant(0xE0000200); // ERROR_NO_ASSOCIATED_CLASS
+
+/// Setupapi-specific error codes
+/// Inf parse outcomes
+/// Inf runtime errors
+/// Device Installer/other errors
+pub const CLASS_MISMATCH : ErrorHResult = ErrorHResult::from_constant(0xE0000201); // ERROR_CLASS_MISMATCH
+
+/// Setupapi-specific error codes
+/// Inf parse outcomes
+/// Inf runtime errors
+/// Device Installer/other errors
+pub const DUPLICATE_FOUND : ErrorHResult = ErrorHResult::from_constant(0xE0000202); // ERROR_DUPLICATE_FOUND
+
+/// Setupapi-specific error codes
+/// Inf parse outcomes
+/// Inf runtime errors
+/// Device Installer/other errors
+pub const NO_DRIVER_SELECTED : ErrorHResult = ErrorHResult::from_constant(0xE0000203); // ERROR_NO_DRIVER_SELECTED
+
+/// Setupapi-specific error codes
+/// Inf parse outcomes
+/// Inf runtime errors
+/// Device Installer/other errors
+pub const KEY_DOES_NOT_EXIST : ErrorHResult = ErrorHResult::from_constant(0xE0000204); // ERROR_KEY_DOES_NOT_EXIST
+
+/// Setupapi-specific error codes
+/// Inf parse outcomes
+/// Inf runtime errors
+/// Device Installer/other errors
+pub const INVALID_DEVINST_NAME : ErrorHResult = ErrorHResult::from_constant(0xE0000205); // ERROR_INVALID_DEVINST_NAME
+
+/// Setupapi-specific error codes
+/// Inf parse outcomes
+/// Inf runtime errors
+/// Device Installer/other errors
+pub const INVALID_CLASS : ErrorHResult = ErrorHResult::from_constant(0xE0000206); // ERROR_INVALID_CLASS
+
+/// Setupapi-specific error codes
+/// Inf parse outcomes
+/// Inf runtime errors
+/// Device Installer/other errors
+pub const DEVINST_ALREADY_EXISTS : ErrorHResult = ErrorHResult::from_constant(0xE0000207); // ERROR_DEVINST_ALREADY_EXISTS
+
+/// Setupapi-specific error codes
+/// Inf parse outcomes
+/// Inf runtime errors
+/// Device Installer/other errors
+pub const DEVINFO_NOT_REGISTERED : ErrorHResult = ErrorHResult::from_constant(0xE0000208); // ERROR_DEVINFO_NOT_REGISTERED
+
+/// Setupapi-specific error codes
+/// Inf parse outcomes
+/// Inf runtime errors
+/// Device Installer/other errors
+pub const INVALID_REG_PROPERTY : ErrorHResult = ErrorHResult::from_constant(0xE0000209); // ERROR_INVALID_REG_PROPERTY
+
+/// Setupapi-specific error codes
+/// Inf parse outcomes
+/// Inf runtime errors
+/// Device Installer/other errors
+pub const NO_INF : ErrorHResult = ErrorHResult::from_constant(0xE000020A); // ERROR_NO_INF
+
+/// Setupapi-specific error codes
+/// Inf parse outcomes
+/// Inf runtime errors
+/// Device Installer/other errors
+pub const NO_SUCH_DEVINST : ErrorHResult = ErrorHResult::from_constant(0xE000020B); // ERROR_NO_SUCH_DEVINST
+
+/// Setupapi-specific error codes
+/// Inf parse outcomes
+/// Inf runtime errors
+/// Device Installer/other errors
+pub const CANT_LOAD_CLASS_ICON : ErrorHResult = ErrorHResult::from_constant(0xE000020C); // ERROR_CANT_LOAD_CLASS_ICON
+
+/// Setupapi-specific error codes
+/// Inf parse outcomes
+/// Inf runtime errors
+/// Device Installer/other errors
+pub const INVALID_CLASS_INSTALLER : ErrorHResult = ErrorHResult::from_constant(0xE000020D); // ERROR_INVALID_CLASS_INSTALLER
+
+/// Setupapi-specific error codes
+/// Inf parse outcomes
+/// Inf runtime errors
+/// Device Installer/other errors
+pub const DI_DO_DEFAULT : ErrorHResult = ErrorHResult::from_constant(0xE000020E); // ERROR_DI_DO_DEFAULT
+
+/// Setupapi-specific error codes
+/// Inf parse outcomes
+/// Inf runtime errors
+/// Device Installer/other errors
+pub const DI_NOFILECOPY : ErrorHResult = ErrorHResult::from_constant(0xE000020F); // ERROR_DI_NOFILECOPY
+
+/// Setupapi-specific error codes
+/// Inf parse outcomes
+/// Inf runtime errors
+/// Device Installer/other errors
+pub const INVALID_HWPROFILE : ErrorHResult = ErrorHResult::from_constant(0xE0000210); // ERROR_INVALID_HWPROFILE
+
+/// Setupapi-specific error codes
+/// Inf parse outcomes
+/// Inf runtime errors
+/// Device Installer/other errors
+pub const NO_DEVICE_SELECTED : ErrorHResult = ErrorHResult::from_constant(0xE0000211); // ERROR_NO_DEVICE_SELECTED
+
+/// Setupapi-specific error codes
+/// Inf parse outcomes
+/// Inf runtime errors
+/// Device Installer/other errors
+pub const DEVINFO_LIST_LOCKED : ErrorHResult = ErrorHResult::from_constant(0xE0000212); // ERROR_DEVINFO_LIST_LOCKED
+
+/// Setupapi-specific error codes
+/// Inf parse outcomes
+/// Inf runtime errors
+/// Device Installer/other errors
+pub const DEVINFO_DATA_LOCKED : ErrorHResult = ErrorHResult::from_constant(0xE0000213); // ERROR_DEVINFO_DATA_LOCKED
+
+/// Setupapi-specific error codes
+/// Inf parse outcomes
+/// Inf runtime errors
+/// Device Installer/other errors
+pub const DI_BAD_PATH : ErrorHResult = ErrorHResult::from_constant(0xE0000214); // ERROR_DI_BAD_PATH
+
+/// Setupapi-specific error codes
+/// Inf parse outcomes
+/// Inf runtime errors
+/// Device Installer/other errors
+pub const NO_CLASSINSTALL_PARAMS : ErrorHResult = ErrorHResult::from_constant(0xE0000215); // ERROR_NO_CLASSINSTALL_PARAMS
+
+/// Setupapi-specific error codes
+/// Inf parse outcomes
+/// Inf runtime errors
+/// Device Installer/other errors
+pub const FILEQUEUE_LOCKED : ErrorHResult = ErrorHResult::from_constant(0xE0000216); // ERROR_FILEQUEUE_LOCKED
+
+/// Setupapi-specific error codes
+/// Inf parse outcomes
+/// Inf runtime errors
+/// Device Installer/other errors
+pub const BAD_SERVICE_INSTALLSECT : ErrorHResult = ErrorHResult::from_constant(0xE0000217); // ERROR_BAD_SERVICE_INSTALLSECT
+
+/// Setupapi-specific error codes
+/// Inf parse outcomes
+/// Inf runtime errors
+/// Device Installer/other errors
+pub const NO_CLASS_DRIVER_LIST : ErrorHResult = ErrorHResult::from_constant(0xE0000218); // ERROR_NO_CLASS_DRIVER_LIST
+
+/// Setupapi-specific error codes
+/// Inf parse outcomes
+/// Inf runtime errors
+/// Device Installer/other errors
+pub const NO_ASSOCIATED_SERVICE : ErrorHResult = ErrorHResult::from_constant(0xE0000219); // ERROR_NO_ASSOCIATED_SERVICE
+
+/// Setupapi-specific error codes
+/// Inf parse outcomes
+/// Inf runtime errors
+/// Device Installer/other errors
+pub const NO_DEFAULT_DEVICE_INTERFACE : ErrorHResult = ErrorHResult::from_constant(0xE000021A); // ERROR_NO_DEFAULT_DEVICE_INTERFACE
+
+/// Setupapi-specific error codes
+/// Inf parse outcomes
+/// Inf runtime errors
+/// Device Installer/other errors
+pub const DEVICE_INTERFACE_ACTIVE : ErrorHResult = ErrorHResult::from_constant(0xE000021B); // ERROR_DEVICE_INTERFACE_ACTIVE
+
+/// Setupapi-specific error codes
+/// Inf parse outcomes
+/// Inf runtime errors
+/// Device Installer/other errors
+pub const DEVICE_INTERFACE_REMOVED : ErrorHResult = ErrorHResult::from_constant(0xE000021C); // ERROR_DEVICE_INTERFACE_REMOVED
+
+/// Setupapi-specific error codes
+/// Inf parse outcomes
+/// Inf runtime errors
+/// Device Installer/other errors
+pub const BAD_INTERFACE_INSTALLSECT : ErrorHResult = ErrorHResult::from_constant(0xE000021D); // ERROR_BAD_INTERFACE_INSTALLSECT
+
+/// Setupapi-specific error codes
+/// Inf parse outcomes
+/// Inf runtime errors
+/// Device Installer/other errors
+pub const NO_SUCH_INTERFACE_CLASS : ErrorHResult = ErrorHResult::from_constant(0xE000021E); // ERROR_NO_SUCH_INTERFACE_CLASS
+
+/// Setupapi-specific error codes
+/// Inf parse outcomes
+/// Inf runtime errors
+/// Device Installer/other errors
+pub const INVALID_REFERENCE_STRING : ErrorHResult = ErrorHResult::from_constant(0xE000021F); // ERROR_INVALID_REFERENCE_STRING
+
+/// Setupapi-specific error codes
+/// Inf parse outcomes
+/// Inf runtime errors
+/// Device Installer/other errors
+pub const INVALID_MACHINENAME : ErrorHResult = ErrorHResult::from_constant(0xE0000220); // ERROR_INVALID_MACHINENAME
+
+/// Setupapi-specific error codes
+/// Inf parse outcomes
+/// Inf runtime errors
+/// Device Installer/other errors
+pub const REMOTE_COMM_FAILURE : ErrorHResult = ErrorHResult::from_constant(0xE0000221); // ERROR_REMOTE_COMM_FAILURE
+
+/// Setupapi-specific error codes
+/// Inf parse outcomes
+/// Inf runtime errors
+/// Device Installer/other errors
+pub const MACHINE_UNAVAILABLE : ErrorHResult = ErrorHResult::from_constant(0xE0000222); // ERROR_MACHINE_UNAVAILABLE
+
+/// Setupapi-specific error codes
+/// Inf parse outcomes
+/// Inf runtime errors
+/// Device Installer/other errors
+pub const NO_CONFIGMGR_SERVICES : ErrorHResult = ErrorHResult::from_constant(0xE0000223); // ERROR_NO_CONFIGMGR_SERVICES
+
+/// Setupapi-specific error codes
+/// Inf parse outcomes
+/// Inf runtime errors
+/// Device Installer/other errors
+pub const INVALID_PROPPAGE_PROVIDER : ErrorHResult = ErrorHResult::from_constant(0xE0000224); // ERROR_INVALID_PROPPAGE_PROVIDER
+
+/// Setupapi-specific error codes
+/// Inf parse outcomes
+/// Inf runtime errors
+/// Device Installer/other errors
+pub const NO_SUCH_DEVICE_INTERFACE : ErrorHResult = ErrorHResult::from_constant(0xE0000225); // ERROR_NO_SUCH_DEVICE_INTERFACE
+
+/// Setupapi-specific error codes
+/// Inf parse outcomes
+/// Inf runtime errors
+/// Device Installer/other errors
+pub const DI_POSTPROCESSING_REQUIRED : ErrorHResult = ErrorHResult::from_constant(0xE0000226); // ERROR_DI_POSTPROCESSING_REQUIRED
+
+/// Setupapi-specific error codes
+/// Inf parse outcomes
+/// Inf runtime errors
+/// Device Installer/other errors
+pub const INVALID_COINSTALLER : ErrorHResult = ErrorHResult::from_constant(0xE0000227); // ERROR_INVALID_COINSTALLER
+
+/// Setupapi-specific error codes
+/// Inf parse outcomes
+/// Inf runtime errors
+/// Device Installer/other errors
+pub const NO_COMPAT_DRIVERS : ErrorHResult = ErrorHResult::from_constant(0xE0000228); // ERROR_NO_COMPAT_DRIVERS
+
+/// Setupapi-specific error codes
+/// Inf parse outcomes
+/// Inf runtime errors
+/// Device Installer/other errors
+pub const NO_DEVICE_ICON : ErrorHResult = ErrorHResult::from_constant(0xE0000229); // ERROR_NO_DEVICE_ICON
+
+/// Setupapi-specific error codes
+/// Inf parse outcomes
+/// Inf runtime errors
+/// Device Installer/other errors
+pub const INVALID_INF_LOGCONFIG : ErrorHResult = ErrorHResult::from_constant(0xE000022A); // ERROR_INVALID_INF_LOGCONFIG
+
+/// Setupapi-specific error codes
+/// Inf parse outcomes
+/// Inf runtime errors
+/// Device Installer/other errors
+pub const DI_DONT_INSTALL : ErrorHResult = ErrorHResult::from_constant(0xE000022B); // ERROR_DI_DONT_INSTALL
+
+/// Setupapi-specific error codes
+/// Inf parse outcomes
+/// Inf runtime errors
+/// Device Installer/other errors
+pub const INVALID_FILTER_DRIVER : ErrorHResult = ErrorHResult::from_constant(0xE000022C); // ERROR_INVALID_FILTER_DRIVER
+
+/// Setupapi-specific error codes
+/// Inf parse outcomes
+/// Inf runtime errors
+/// Device Installer/other errors
+pub const NON_WINDOWS_NT_DRIVER : ErrorHResult = ErrorHResult::from_constant(0xE000022D); // ERROR_NON_WINDOWS_NT_DRIVER
+
+/// Setupapi-specific error codes
+/// Inf parse outcomes
+/// Inf runtime errors
+/// Device Installer/other errors
+pub const NON_WINDOWS_DRIVER : ErrorHResult = ErrorHResult::from_constant(0xE000022E); // ERROR_NON_WINDOWS_DRIVER
+
+/// Setupapi-specific error codes
+/// Inf parse outcomes
+/// Inf runtime errors
+/// Device Installer/other errors
+pub const NO_CATALOG_FOR_OEM_INF : ErrorHResult = ErrorHResult::from_constant(0xE000022F); // ERROR_NO_CATALOG_FOR_OEM_INF
+
+/// Setupapi-specific error codes
+/// Inf parse outcomes
+/// Inf runtime errors
+/// Device Installer/other errors
+pub const DEVINSTALL_QUEUE_NONNATIVE : ErrorHResult = ErrorHResult::from_constant(0xE0000230); // ERROR_DEVINSTALL_QUEUE_NONNATIVE
+
+/// Setupapi-specific error codes
+/// Inf parse outcomes
+/// Inf runtime errors
+/// Device Installer/other errors
+pub const NOT_DISABLEABLE : ErrorHResult = ErrorHResult::from_constant(0xE0000231); // ERROR_NOT_DISABLEABLE
+
+/// Setupapi-specific error codes
+/// Inf parse outcomes
+/// Inf runtime errors
+/// Device Installer/other errors
+pub const CANT_REMOVE_DEVINST : ErrorHResult = ErrorHResult::from_constant(0xE0000232); // ERROR_CANT_REMOVE_DEVINST
+
+/// Setupapi-specific error codes
+/// Inf parse outcomes
+/// Inf runtime errors
+/// Device Installer/other errors
+pub const INVALID_TARGET : ErrorHResult = ErrorHResult::from_constant(0xE0000233); // ERROR_INVALID_TARGET
+
+/// Setupapi-specific error codes
+/// Inf parse outcomes
+/// Inf runtime errors
+/// Device Installer/other errors
+pub const DRIVER_NONNATIVE : ErrorHResult = ErrorHResult::from_constant(0xE0000234); // ERROR_DRIVER_NONNATIVE
+
+/// Setupapi-specific error codes
+/// Inf parse outcomes
+/// Inf runtime errors
+/// Device Installer/other errors
+pub const IN_WOW64 : ErrorHResult = ErrorHResult::from_constant(0xE0000235); // ERROR_IN_WOW64
+
+/// Setupapi-specific error codes
+/// Inf parse outcomes
+/// Inf runtime errors
+/// Device Installer/other errors
+pub const SET_SYSTEM_RESTORE_POINT : ErrorHResult = ErrorHResult::from_constant(0xE0000236); // ERROR_SET_SYSTEM_RESTORE_POINT
+
+pub const SCE_DISABLED : ErrorHResult = ErrorHResult::from_constant(0xE0000238); // ERROR_SCE_DISABLED
+pub const UNKNOWN_EXCEPTION : ErrorHResult = ErrorHResult::from_constant(0xE0000239); // ERROR_UNKNOWN_EXCEPTION
+pub const PNP_REGISTRY_ERROR : ErrorHResult = ErrorHResult::from_constant(0xE000023A); // ERROR_PNP_REGISTRY_ERROR
+pub const REMOTE_REQUEST_UNSUPPORTED : ErrorHResult = ErrorHResult::from_constant(0xE000023B); // ERROR_REMOTE_REQUEST_UNSUPPORTED
+pub const NOT_AN_INSTALLED_OEM_INF : ErrorHResult = ErrorHResult::from_constant(0xE000023C); // ERROR_NOT_AN_INSTALLED_OEM_INF
+pub const INF_IN_USE_BY_DEVICES : ErrorHResult = ErrorHResult::from_constant(0xE000023D); // ERROR_INF_IN_USE_BY_DEVICES
+pub const DI_FUNCTION_OBSOLETE : ErrorHResult = ErrorHResult::from_constant(0xE000023E); // ERROR_DI_FUNCTION_OBSOLETE
+pub const NO_AUTHENTICODE_CATALOG : ErrorHResult = ErrorHResult::from_constant(0xE000023F); // ERROR_NO_AUTHENTICODE_CATALOG
+pub const AUTHENTICODE_DISALLOWED : ErrorHResult = ErrorHResult::from_constant(0xE0000240); // ERROR_AUTHENTICODE_DISALLOWED
+pub const AUTHENTICODE_TRUSTED_PUBLISHER : ErrorHResult = ErrorHResult::from_constant(0xE0000241); // ERROR_AUTHENTICODE_TRUSTED_PUBLISHER
+pub const AUTHENTICODE_TRUST_NOT_ESTABLISHED : ErrorHResult = ErrorHResult::from_constant(0xE0000242); // ERROR_AUTHENTICODE_TRUST_NOT_ESTABLISHED
+pub const AUTHENTICODE_PUBLISHER_NOT_TRUSTED : ErrorHResult = ErrorHResult::from_constant(0xE0000243); // ERROR_AUTHENTICODE_PUBLISHER_NOT_TRUSTED
+pub const SIGNATURE_OSATTRIBUTE_MISMATCH : ErrorHResult = ErrorHResult::from_constant(0xE0000244); // ERROR_SIGNATURE_OSATTRIBUTE_MISMATCH
+pub const ONLY_VALIDATE_VIA_AUTHENTICODE : ErrorHResult = ErrorHResult::from_constant(0xE0000245); // ERROR_ONLY_VALIDATE_VIA_AUTHENTICODE
+pub const DEVICE_INSTALLER_NOT_READY : ErrorHResult = ErrorHResult::from_constant(0xE0000246); // ERROR_DEVICE_INSTALLER_NOT_READY
+pub const DRIVER_STORE_ADD_FAILED : ErrorHResult = ErrorHResult::from_constant(0xE0000247); // ERROR_DRIVER_STORE_ADD_FAILED
+pub const DEVICE_INSTALL_BLOCKED : ErrorHResult = ErrorHResult::from_constant(0xE0000248); // ERROR_DEVICE_INSTALL_BLOCKED
+pub const DRIVER_INSTALL_BLOCKED : ErrorHResult = ErrorHResult::from_constant(0xE0000249); // ERROR_DRIVER_INSTALL_BLOCKED
+pub const WRONG_INF_TYPE : ErrorHResult = ErrorHResult::from_constant(0xE000024A); // ERROR_WRONG_INF_TYPE
+pub const FILE_HASH_NOT_IN_CATALOG : ErrorHResult = ErrorHResult::from_constant(0xE000024B); // ERROR_FILE_HASH_NOT_IN_CATALOG
+pub const DRIVER_STORE_DELETE_FAILED : ErrorHResult = ErrorHResult::from_constant(0xE000024C); // ERROR_DRIVER_STORE_DELETE_FAILED
+
+/// Setupapi exception codes
+pub const UNRECOVERABLE_STACK_OVERFLOW : ErrorHResult = ErrorHResult::from_constant(0xE0000300); // ERROR_UNRECOVERABLE_STACK_OVERFLOW
+
+/// Win9x migration DLL error code
+pub const NOT_INSTALLED : ErrorHResult = ErrorHResult::from_constant(0xE0001000); // ERROR_NOT_INSTALLED
