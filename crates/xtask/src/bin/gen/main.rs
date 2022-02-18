@@ -48,63 +48,40 @@ fn main() {
     let expected_sdk ="10.0.19041.0";
     if actual_sdk != expected_sdk { mmrbi::warning!("expected sdk {} but found sdk {}", expected_sdk, actual_sdk) }
 
+    let mut codes   = scan::Codes::default();
 
-    macro_rules! headers { ( $( $name:ident => $path:literal ),* $(,)? ) => {$(
-        let $name = Header::read(&sdk, $path);
+    macro_rules! headers { ( $( $path:literal : $scan_fn:path ),* $(,)? ) => {$(
+        let header = Header::read(&sdk, $path);
+        $scan_fn(&header, &mut codes);
     )*}}
 
     headers! {
-        ntstatus_h      => r"shared\ntstatus.h",
-        winerror_h      => r"shared\winerror.h",
-        // already covered by winerror.h:
-        //  um\fltWinError.h
-        //  um\Msi.h
+        r"shared\ntstatus.h":   scan::ntstatus_h,
+        r"shared\winerror.h":   scan::winerror_h,
+        //r"um\fltWinError.h":  scan::winerror_h, // already covered by winerror.h
+        //r"um\Msi.h":          scan::winerror_h, // already covered by winerror.h
 
-        d3d9_h          => r"shared\d3d9.h",
-        d3d_h           => r"um\d3d.h",
-        d3d9helper_h    => r"um\d3d9helper.h",
-        d3dhal_h        => r"um\d3dhal.h",
+        r"shared\d3d9.h":       scan::d3d,
+        r"um\d3d.h":            scan::d3d,
+        r"um\d3d9helper.h":     scan::d3d,
+        r"um\d3dhal.h":         scan::d3d,
 
         // TODO:
-        //  dhcpsapi_h      => r"um\dhcpsapi.h",
-        //  mprerror_h      => r"um\MprError.h",
-        //  netsh_h         => r"um\NetSh.h",
-        //  patchapi_h      => r"um\PatchApi.h",
-        //  patchwiz_h      => r"um\PatchWiz.h",
-        //  raserror_h      => r"um\RasError.h",
-        //  setupapi_h      => r"um\SetupAPI.h",
-        //  tcerror_h       => r"um\TCError.h",
-        //  winhttp_h       => r"um\winhttp.h",
-        //  wininet_h       => r"um\WinInet.h",
-        //  winineti_h      => r"um\Winineti.h",
-        //  winioctl_h      => r"um\winioctl.h",
-        //  winspool_h      => r"um\winspool.h",
-        //  wsmerror        => r"um\wsmerror.h",
+        //r"um\dhcpsapi.h":     scan::winerror_h,
+        //r"um\MprError.h":     scan::winerror_h,
+        //r"um\NetSh.h":        scan::winerror_h,
+        //r"um\PatchApi.h":     scan::winerror_h,
+        //r"um\PatchWiz.h":     scan::winerror_h,
+        //r"um\RasError.h":     scan::winerror_h,
+        //r"um\SetupAPI.h":     scan::winerror_h,
+        //r"um\TCError.h":      scan::winerror_h,
+        //r"um\winhttp.h":      scan::winerror_h,
+        //r"um\WinInet.h":      scan::winerror_h,
+        //r"um\Winineti.h":     scan::winerror_h,
+        //r"um\winioctl.h":     scan::winerror_h,
+        //r"um\winspool.h":     scan::winerror_h,
+        //r"um\wsmerror.h":     scan::winerror_h,
     }
-
-    let mut codes   = scan::Codes::default();
-    scan::ntstatus_h    (&ntstatus_h,   &mut codes);
-    scan::winerror_h    (&winerror_h,   &mut codes);
-
-    scan::d3d           (&d3d9_h,       &mut codes);
-    scan::d3d           (&d3d_h,        &mut codes);
-    scan::d3d           (&d3d9helper_h, &mut codes);
-    scan::d3d           (&d3dhal_h,     &mut codes);
-
-    //scan::winerror_h    (&dhcpsapi_h,   &mut codes);
-    //scan::winerror_h    (&mprerror_h,   &mut codes);
-    //scan::winerror_h    (&netsh_h,      &mut codes);
-    //scan::winerror_h    (&patchapi_h,   &mut codes);
-    //scan::winerror_h    (&patchwiz_h,   &mut codes);
-    //scan::winerror_h    (&raserror_h,   &mut codes);
-    //scan::winerror_h    (&setupapi_h,   &mut codes);
-    //scan::winerror_h    (&tcerror_h,    &mut codes);
-    //scan::winerror_h    (&winhttp_h,    &mut codes);
-    //scan::winerror_h    (&wininet_h,    &mut codes);
-    //scan::winerror_h    (&winineti_h,   &mut codes);
-    //scan::winerror_h    (&winioctl_h,   &mut codes);
-    //scan::winerror_h    (&winspool_h,   &mut codes);
-    //scan::winerror_h    (&wsmerror,     &mut codes);
 
     gen::codes(&codes);
     gen::readme();
