@@ -127,6 +127,7 @@ pub(crate) fn winerror_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) 
                 "UI_E_START_KEYFRAME_AFTER_END"             => false,
                 "WS_S_END"                                  => false,
 
+                _ if error.starts_with("INTERNET_OPTION_")  => true,
                 _ if error.starts_with("HTTP_QUERY_X_")     => true,
                 _ if error.starts_with("FLAGS_ERROR_UI_")   => true,
                 _ if error.contains("_ERROR_MASK_")         => true,
@@ -151,6 +152,7 @@ pub(crate) fn winerror_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) 
                 "ERROR_OUTOFMEMORY"         => ("14",   true),
                 "ERROR_INVALID_NAME"        => ("123",  true),
                 "DNS_ERROR_RCODE_BADTIME"   => ("9018", true),
+                "ERROR_INTERNET_DISCONNECTED"=>("12163",true),
 
                 "CACHE_E_NOCACHE_UPDATED"   => (value,  true),
                 "CAT_E_CATIDNOEXIST"        => (value,  true),
@@ -189,7 +191,8 @@ pub(crate) fn winerror_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) 
                 ("(ROUTEBASE+",                                     ")",    "ErrorCodeMicrosoft",   false,         900, "MprError.h",   ),
                 ("(TCBASE+",                                        ")",    "ErrorCodeMicrosoft",   true,         7500, "TCError.h",    ),
                 ("(WINHTTP_ERROR_BASE + ",                          ")",    "ErrorCodeMicrosoft",   false,       12000, "winhttp.h",    ),
-                ("(INTERNET_ERROR_BASE + ",                         ")",    "ErrorCodeMicrosoft",   true,        12000, "WinInet.h",    ), // conflicts: with itself -_-
+                ("(INTERNET_ERROR_BASE + ",                         ")",    "ErrorCodeMicrosoft",   true,        12000, "",             ), // conflicts: with itself -_-
+                ("(INTERNET_INTERNAL_ERROR_BASE + ",                ")",    "ErrorCodeMicrosoft",   true,  900 + 12000, "Winineti.h"    ),
                 ("(NETSH_ERROR_BASE + ",                            ")",    "ErrorCodeMicrosoft",   true,        15000, "NetSh.h",      ), // conflicts: ERROR_EVT_INVALID_CHANNEL_PATH 15000 (winerror.h)
                 ("(ERROR_PCW_BASE + ",                              ")",    "ErrorHResult",         false,  0xC00E5101, "PatchWiz.h",   ),
                 ("(APPLICATION_ERROR_MASK|ERROR_SEVERITY_ERROR|",   ")",    "ErrorHResult",         false,  0xE0000000, "",             ),

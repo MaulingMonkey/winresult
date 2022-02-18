@@ -14,3 +14,7 @@ pub const NOT_REDIRECTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constan
 pub const COOKIE_NEEDS_CONFIRMATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12161); // ERROR_HTTP_COOKIE_NEEDS_CONFIRMATION
 pub const COOKIE_DECLINED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12162); // ERROR_HTTP_COOKIE_DECLINED
 pub const REDIRECT_NEEDS_CONFIRMATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12168); // ERROR_HTTP_REDIRECT_NEEDS_CONFIRMATION
+pub const PUSH_STATUS_CODE_NOT_SUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12147); // ERROR_HTTP_PUSH_STATUS_CODE_NOT_SUPPORTED
+pub const PUSH_RETRY_NOT_SUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12148); // ERROR_HTTP_PUSH_RETRY_NOT_SUPPORTED
+pub const PUSH_ENABLE_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12149); // ERROR_HTTP_PUSH_ENABLE_FAILED
+pub const COOKIE_NEEDS_CONFIRMATION_EX : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12907); // ERROR_HTTP_COOKIE_NEEDS_CONFIRMATION_EX
