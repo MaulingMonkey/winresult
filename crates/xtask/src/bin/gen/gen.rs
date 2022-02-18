@@ -134,7 +134,7 @@ pub fn codes(codes: &scan::Codes) {
             )*) => {{$(
                 let value = $value;
                 let cpp = concat!(stringify!($prefix), stringify!($f));
-                writeln!(nv, r#"        <DisplayString Condition="__0 == {value}">{cpp}</DisplayString>"#)?;
+                writeln!(nv, r#"        <DisplayString Condition="__0 == {value}">{cpp} (FacilityHrMicrosoft)</DisplayString>"#)?;
             )*}}}
             include!("../../../../../crates/winerr/src/hresult/extra.facilities.rs");
             include!("../../../../../crates/winerr/src/hresult/winerror.facilities.rs");
@@ -150,7 +150,7 @@ pub fn codes(codes: &scan::Codes) {
             )*) => {{$(
                 let value = $value;
                 let cpp = concat!(stringify!($prefix), stringify!($f));
-                writeln!(nv, r#"        <DisplayString Condition="__0 == {value}">{cpp}</DisplayString>"#)?;
+                writeln!(nv, r#"        <DisplayString Condition="__0 == {value}">{cpp} (FacilityNtStatusMicrosoft)</DisplayString>"#)?;
             )*}}}
             include!("../../../../../crates/winerr/src/ntstatus/facilities.rs");
         }
@@ -161,27 +161,30 @@ pub fn codes(codes: &scan::Codes) {
             writeln!(nv)?;
             writeln!(nv, r#"    <Type Name="winerr_core::{ty}">"#)?;
             match ty {
-                "HRESULT"               => writeln!(nv, r#"        <DisplayString Condition="__0 == 0">S::OK</DisplayString>"#)?,
-                "SuccessHResult"        => writeln!(nv, r#"        <DisplayString Condition="__0 == 0">S::OK</DisplayString>"#)?,
-                "ErrorHResult"          => writeln!(nv, r#"        <DisplayString Condition="__0 == 0">E::??? (invalid: value 0, but ErrorHResult s start at 0x8000_0000</DisplayString>"#)?,
+                "HRESULT"               => {},
+                "SuccessHResult"        => {},
+                "ErrorHResult"          => {},
                 "NTSTATUS"              => writeln!(nv, r#"        <DisplayString Condition="__0 == 0">STATUS::SUCCESS</DisplayString>"#)?,
                 "ErrorCodeMicrosoft"    => writeln!(nv, r#"        <DisplayString Condition="__0 == 0">ERROR::SUCCESS (invalid: value 0, ErrorCodeMicrosoft s should never be successful</DisplayString>"#)?,
                 _                       => {},
             }
-            for (_rs_mod, codes) in codes.mods.iter() {
-                for code in codes.iter() {
-                    if code.redundant { continue }
-                    if !code.matches_ty(ty) { continue }
-                    #[allow(unused_variables)] let scan::Code { cpp, rs_mod, rs_id, rs_ty, rs_value, docs, redundant, hide } = &code;
-                    if *hide { continue }
-                    writeln!(nv, r#"        <DisplayString Condition="__0 == {rs_value}">{rs_mod}::{rs_id}</DisplayString>"#)?;
+
+            if !"HRESULT SuccessHResult ErrorHResult".split(' ').any(|t| t == ty) { // don't emit DisplayString codes for HRESULTs, instead leverage <HResult>...</HResult>s with (::HRESULT) casts
+                for (_rs_mod, codes) in codes.mods.iter() {
+                    for code in codes.iter() {
+                        if code.redundant { continue }
+                        if !code.matches_ty(ty) { continue }
+                        #[allow(unused_variables)] let scan::Code { cpp, rs_mod, rs_id, rs_ty, rs_value, docs, redundant, hide } = &code;
+                        if *hide { continue }
+                        writeln!(nv, r#"        <DisplayString Condition="__0 == {rs_value}">{rs_mod}::{rs_id}</DisplayString>"#)?;
+                    }
                 }
             }
 
             match ty {
                 // https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/0642cb2f-2075-4469-918c-4441e69c548a
                 "HRESULT" | "SuccessHResult" | "ErrorHResult" => {
-                    writeln!(nv, r#"        <DisplayString>{ty}({{__0,X}})</DisplayString>"#)?;
+                    writeln!(nv, r#"        <DisplayString>{{(::HRESULT)__0,hr}} ({ty})</DisplayString>"#)?;
                     writeln!(nv, r#"        <Expand>"#)?;
                     writeln!(nv, r#"            <Item Name="S (failure)" >((__0 &amp; 0x80000000) != 0)</Item>"#)?;
                     writeln!(nv, r#"            <Item Name="R (reserved)">((__0 &amp; 0x40000000) != 0)</Item>"#)?;
@@ -227,7 +230,7 @@ pub fn codes(codes: &scan::Codes) {
                 },
                 // https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/87fba13e-bf06-450e-83b1-9241dc81e781
                 "NTSTATUS" => {
-                    writeln!(nv, r#"        <DisplayString>{ty}({{__0,X}})</DisplayString>"#)?;
+                    writeln!(nv, r#"        <DisplayString>{{__0,X}} ({ty})</DisplayString>"#)?;
                     writeln!(nv, r#"        <Expand>"#)?;
                     //writeln!(nv, r#"            <Item Name="Sev"         >((__0 &amp; 0xC0000000) >>30)</Item>"#)?;
                     writeln!(nv, r#"            <Synthetic Name="Sev">"#)?;
@@ -261,16 +264,29 @@ pub fn codes(codes: &scan::Codes) {
                     writeln!(nv, r#"        </Expand>"#)?;
                 },
                 "ErrorCodeMicrosoft" => {
-                    writeln!(nv, r#"        <DisplayString>ERROR::??? ({{__0}})</DisplayString>"#)?;
+                    writeln!(nv, r#"        <DisplayString>{{__0}} ({ty})</DisplayString>"#)?;
                 },
                 "SuccessCodeMicrosoft" => {
-                    writeln!(nv, r#"        <DisplayString>S::??? ({{__0}})</DisplayString>"#)?;
+                    writeln!(nv, r#"        <DisplayString>{{__0}} ({ty})</DisplayString>"#)?;
                 },
                 _ => {
                 },
             }
 
             writeln!(nv, r#"    </Type>"#)?;
+        }
+
+        writeln!(nv)?;
+        writeln!(nv, r#"    <!-- HRESULTs -->"#)?;
+        for (_rs_mod, codes) in codes.mods.iter() {
+            for code in codes.iter() {
+                if code.redundant { continue }
+                if !code.matches_ty("HRESULT") { continue }
+                #[allow(unused_variables)] let scan::Code { cpp, rs_mod, rs_id, rs_ty, rs_value, docs, redundant, hide } = &code;
+                if *hide { continue }
+                writeln!(nv, r#"    <HResult Name="{cpp}"><HRValue>{rs_value}</HRValue></HResult>"#)?;
+                //writeln!(nv, r#"        <HRDescription>No elements in the collection.</HRDescription>"#)?;
+            }
         }
 
         writeln!(nv)?;
