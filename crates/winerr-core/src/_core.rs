@@ -63,7 +63,7 @@ impl From<SuccessCodeMicrosoft> for u32 { fn from(c: SuccessCodeMicrosoft) -> Se
 
 
 
-
+/// \[[docs.microsoft.com](https://docs.microsoft.com/en-us/windows/win32/debug/system-error-codes)\]
 /// ERROR_\* values that aren't HRESULTs (but might be implicitly convertable)
 #[derive(Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash)] pub struct ErrorCodeMicrosoft(u16);
 
