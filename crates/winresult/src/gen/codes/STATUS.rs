@@ -2,2591 +2,8058 @@
 
 use super::*;
 
+
+/// The success status codes 0 - 63 are reserved for wait completion status.
+/// FacilityCodes 0x5 - 0xF have been allocated by various drivers.
 pub const WAIT_0 : NTSTATUS = NTSTATUS::from_constant(0x00000000); // STATUS_WAIT_0
+
+/// STATUS_SUCCESS
 pub const SUCCESS : NTSTATUS = NTSTATUS::from_constant(0x00000000); // STATUS_SUCCESS
+
+/// STATUS_WAIT_1
 pub const WAIT_1 : NTSTATUS = NTSTATUS::from_constant(0x00000001); // STATUS_WAIT_1
+
+/// STATUS_WAIT_2
 pub const WAIT_2 : NTSTATUS = NTSTATUS::from_constant(0x00000002); // STATUS_WAIT_2
+
+/// STATUS_WAIT_3
 pub const WAIT_3 : NTSTATUS = NTSTATUS::from_constant(0x00000003); // STATUS_WAIT_3
+
+/// STATUS_WAIT_63
 pub const WAIT_63 : NTSTATUS = NTSTATUS::from_constant(0x0000003F); // STATUS_WAIT_63
+
+/// The success status codes 128 - 191 are reserved for wait completion
+/// status with an abandoned mutant object.
 pub const ABANDONED : NTSTATUS = NTSTATUS::from_constant(0x00000080); // STATUS_ABANDONED
+
+/// STATUS_ABANDONED_WAIT_0
 pub const ABANDONED_WAIT_0 : NTSTATUS = NTSTATUS::from_constant(0x00000080); // STATUS_ABANDONED_WAIT_0
+
+/// STATUS_ABANDONED_WAIT_63
 pub const ABANDONED_WAIT_63 : NTSTATUS = NTSTATUS::from_constant(0x000000BF); // STATUS_ABANDONED_WAIT_63
+
+/// STATUS_USER_APC
 pub const USER_APC : NTSTATUS = NTSTATUS::from_constant(0x000000C0); // STATUS_USER_APC
+
+/// The requested action was completed by an earlier operation.
 pub const ALREADY_COMPLETE : NTSTATUS = NTSTATUS::from_constant(0x000000FF); // STATUS_ALREADY_COMPLETE
+
+/// STATUS_KERNEL_APC
 pub const KERNEL_APC : NTSTATUS = NTSTATUS::from_constant(0x00000100); // STATUS_KERNEL_APC
+
+/// STATUS_ALERTED
 pub const ALERTED : NTSTATUS = NTSTATUS::from_constant(0x00000101); // STATUS_ALERTED
+
+/// STATUS_TIMEOUT
 pub const TIMEOUT : NTSTATUS = NTSTATUS::from_constant(0x00000102); // STATUS_TIMEOUT
+
+/// The operation that was requested is pending completion.
 pub const PENDING : NTSTATUS = NTSTATUS::from_constant(0x00000103); // STATUS_PENDING
+
+/// A reparse should be performed by the Object Manager since the name of the file resulted in a symbolic link.
 pub const REPARSE : NTSTATUS = NTSTATUS::from_constant(0x00000104); // STATUS_REPARSE
+
+/// Returned by enumeration APIs to indicate more information is available to successive calls.
 pub const MORE_ENTRIES : NTSTATUS = NTSTATUS::from_constant(0x00000105); // STATUS_MORE_ENTRIES
+
+/// Indicates not all privileges or groups referenced are assigned to the caller.
+/// This allows, for example, all privileges to be disabled without having to know exactly which privileges are assigned.
 pub const NOT_ALL_ASSIGNED : NTSTATUS = NTSTATUS::from_constant(0x00000106); // STATUS_NOT_ALL_ASSIGNED
+
+/// Some of the information to be translated has not been translated.
 pub const SOME_NOT_MAPPED : NTSTATUS = NTSTATUS::from_constant(0x00000107); // STATUS_SOME_NOT_MAPPED
+
+/// An open/create operation completed while an oplock break is underway.
 pub const OPLOCK_BREAK_IN_PROGRESS : NTSTATUS = NTSTATUS::from_constant(0x00000108); // STATUS_OPLOCK_BREAK_IN_PROGRESS
+
+/// A new volume has been mounted by a file system.
 pub const VOLUME_MOUNTED : NTSTATUS = NTSTATUS::from_constant(0x00000109); // STATUS_VOLUME_MOUNTED
+
+/// This success level status indicates that the transaction state already exists for the registry sub-tree, but that a transaction commit was previously aborted. The commit has now been completed.
 pub const RXACT_COMMITTED : NTSTATUS = NTSTATUS::from_constant(0x0000010A); // STATUS_RXACT_COMMITTED
+
+/// This indicates that a notify change request has been completed due to closing the handle which made the notify change request.
 pub const NOTIFY_CLEANUP : NTSTATUS = NTSTATUS::from_constant(0x0000010B); // STATUS_NOTIFY_CLEANUP
+
+/// This indicates that a notify change request is being completed and that the information is not being returned in the caller's buffer.
+/// The caller now needs to enumerate the files to find the changes.
 pub const NOTIFY_ENUM_DIR : NTSTATUS = NTSTATUS::from_constant(0x0000010C); // STATUS_NOTIFY_ENUM_DIR
+
+/// ### No Quotas
+/// No system quota limits are specifically set for this account.
 pub const NO_QUOTAS_FOR_ACCOUNT : NTSTATUS = NTSTATUS::from_constant(0x0000010D); // STATUS_NO_QUOTAS_FOR_ACCOUNT
+
+/// ### Connect Failure on Primary Transport
+/// An attempt was made to connect to the remote server `%hs` on the primary transport, but the connection failed.
+/// The computer WAS able to connect on a secondary transport.
 pub const PRIMARY_TRANSPORT_CONNECT_FAILED : NTSTATUS = NTSTATUS::from_constant(0x0000010E); // STATUS_PRIMARY_TRANSPORT_CONNECT_FAILED
+
+/// Page fault was a transition fault.
 pub const PAGE_FAULT_TRANSITION : NTSTATUS = NTSTATUS::from_constant(0x00000110); // STATUS_PAGE_FAULT_TRANSITION
+
+/// Page fault was a demand zero fault.
 pub const PAGE_FAULT_DEMAND_ZERO : NTSTATUS = NTSTATUS::from_constant(0x00000111); // STATUS_PAGE_FAULT_DEMAND_ZERO
+
+/// Page fault was a demand zero fault.
 pub const PAGE_FAULT_COPY_ON_WRITE : NTSTATUS = NTSTATUS::from_constant(0x00000112); // STATUS_PAGE_FAULT_COPY_ON_WRITE
+
+/// Page fault was a demand zero fault.
 pub const PAGE_FAULT_GUARD_PAGE : NTSTATUS = NTSTATUS::from_constant(0x00000113); // STATUS_PAGE_FAULT_GUARD_PAGE
+
+/// Page fault was satisfied by reading from a secondary storage device.
 pub const PAGE_FAULT_PAGING_FILE : NTSTATUS = NTSTATUS::from_constant(0x00000114); // STATUS_PAGE_FAULT_PAGING_FILE
+
+/// Cached page was locked during operation.
 pub const CACHE_PAGE_LOCKED : NTSTATUS = NTSTATUS::from_constant(0x00000115); // STATUS_CACHE_PAGE_LOCKED
+
+/// Crash dump exists in paging file.
 pub const CRASH_DUMP : NTSTATUS = NTSTATUS::from_constant(0x00000116); // STATUS_CRASH_DUMP
+
+/// Specified buffer contains all zeros.
 pub const BUFFER_ALL_ZEROS : NTSTATUS = NTSTATUS::from_constant(0x00000117); // STATUS_BUFFER_ALL_ZEROS
+
+/// A reparse should be performed by the Object Manager since the name of the file resulted in a symbolic link.
 pub const REPARSE_OBJECT : NTSTATUS = NTSTATUS::from_constant(0x00000118); // STATUS_REPARSE_OBJECT
+
+/// The device has succeeded a query-stop and its resource requirements have changed.
 pub const RESOURCE_REQUIREMENTS_CHANGED : NTSTATUS = NTSTATUS::from_constant(0x00000119); // STATUS_RESOURCE_REQUIREMENTS_CHANGED
+
+/// The translator has translated these resources into the global space and no further translations should be performed.
 pub const TRANSLATION_COMPLETE : NTSTATUS = NTSTATUS::from_constant(0x00000120); // STATUS_TRANSLATION_COMPLETE
+
+/// The directory service evaluated group memberships locally, as it was unable to contact a global catalog server.
 pub const DS_MEMBERSHIP_EVALUATED_LOCALLY : NTSTATUS = NTSTATUS::from_constant(0x00000121); // STATUS_DS_MEMBERSHIP_EVALUATED_LOCALLY
+
+/// A process being terminated has no threads to terminate.
 pub const NOTHING_TO_TERMINATE : NTSTATUS = NTSTATUS::from_constant(0x00000122); // STATUS_NOTHING_TO_TERMINATE
+
+/// The specified process is not part of a job.
 pub const PROCESS_NOT_IN_JOB : NTSTATUS = NTSTATUS::from_constant(0x00000123); // STATUS_PROCESS_NOT_IN_JOB
+
+/// The specified process is part of a job.
 pub const PROCESS_IN_JOB : NTSTATUS = NTSTATUS::from_constant(0x00000124); // STATUS_PROCESS_IN_JOB
+
+/// ### Volume Shadow Copy Service
+/// The system is now ready for hibernation.
 pub const VOLSNAP_HIBERNATE_READY : NTSTATUS = NTSTATUS::from_constant(0x00000125); // STATUS_VOLSNAP_HIBERNATE_READY
+
+/// A file system or file system filter driver has successfully completed an FsFilter operation.
 pub const FSFILTER_OP_COMPLETED_SUCCESSFULLY : NTSTATUS = NTSTATUS::from_constant(0x00000126); // STATUS_FSFILTER_OP_COMPLETED_SUCCESSFULLY
+
+/// The specified interrupt vector was already connected.
 pub const INTERRUPT_VECTOR_ALREADY_CONNECTED : NTSTATUS = NTSTATUS::from_constant(0x00000127); // STATUS_INTERRUPT_VECTOR_ALREADY_CONNECTED
+
+/// The specified interrupt vector is still connected.
 pub const INTERRUPT_STILL_CONNECTED : NTSTATUS = NTSTATUS::from_constant(0x00000128); // STATUS_INTERRUPT_STILL_CONNECTED
+
+/// The current process is a cloned process.
 pub const PROCESS_CLONED : NTSTATUS = NTSTATUS::from_constant(0x00000129); // STATUS_PROCESS_CLONED
+
+/// The file was locked and all users of the file can only read.
 pub const FILE_LOCKED_WITH_ONLY_READERS : NTSTATUS = NTSTATUS::from_constant(0x0000012A); // STATUS_FILE_LOCKED_WITH_ONLY_READERS
+
+/// The file was locked and at least one user of the file can write.
 pub const FILE_LOCKED_WITH_WRITERS : NTSTATUS = NTSTATUS::from_constant(0x0000012B); // STATUS_FILE_LOCKED_WITH_WRITERS
+
+/// The file image hash is valid.
 pub const VALID_IMAGE_HASH : NTSTATUS = NTSTATUS::from_constant(0x0000012C); // STATUS_VALID_IMAGE_HASH
+
+/// The file catalog hash is valid.
 pub const VALID_CATALOG_HASH : NTSTATUS = NTSTATUS::from_constant(0x0000012D); // STATUS_VALID_CATALOG_HASH
+
+/// The file hash is valid and uses strong code integrity.
 pub const VALID_STRONG_CODE_HASH : NTSTATUS = NTSTATUS::from_constant(0x0000012E); // STATUS_VALID_STRONG_CODE_HASH
+
+/// At least a portion of IO range intersects with a ghosted file range.
 pub const GHOSTED : NTSTATUS = NTSTATUS::from_constant(0x0000012F); // STATUS_GHOSTED
+
+/// A completed operation may have overwritten previous data.
 pub const DATA_OVERWRITTEN : NTSTATUS = NTSTATUS::from_constant(0x00000130); // STATUS_DATA_OVERWRITTEN
+
+/// The specified ResourceManager made no changes or updates to the resource under this transaction.
 pub const RESOURCEMANAGER_READ_ONLY : NTSTATUS = NTSTATUS::from_constant(0x00000202); // STATUS_RESOURCEMANAGER_READ_ONLY
+
+/// The specified ring buffer was empty before the packet was successfully inserted.
 pub const RING_PREVIOUSLY_EMPTY : NTSTATUS = NTSTATUS::from_constant(0x00000210); // STATUS_RING_PREVIOUSLY_EMPTY
+
+/// The specified ring buffer was full before the packet was successfully removed.
 pub const RING_PREVIOUSLY_FULL : NTSTATUS = NTSTATUS::from_constant(0x00000211); // STATUS_RING_PREVIOUSLY_FULL
+
+/// The specified ring buffer has dropped below its quota of outstanding transactions.
 pub const RING_PREVIOUSLY_ABOVE_QUOTA : NTSTATUS = NTSTATUS::from_constant(0x00000212); // STATUS_RING_PREVIOUSLY_ABOVE_QUOTA
+
+/// The specified ring buffer has, with the removal of the current packet, now become empty.
 pub const RING_NEWLY_EMPTY : NTSTATUS = NTSTATUS::from_constant(0x00000213); // STATUS_RING_NEWLY_EMPTY
+
+/// The specified ring buffer was either previously empty or previously full which implies that the caller should signal the opposite endpoint.
 pub const RING_SIGNAL_OPPOSITE_ENDPOINT : NTSTATUS = NTSTATUS::from_constant(0x00000214); // STATUS_RING_SIGNAL_OPPOSITE_ENDPOINT
+
+/// The oplock that was associated with this handle is now associated with a different handle.
 pub const OPLOCK_SWITCHED_TO_NEW_HANDLE : NTSTATUS = NTSTATUS::from_constant(0x00000215); // STATUS_OPLOCK_SWITCHED_TO_NEW_HANDLE
+
+/// The handle with which this oplock was associated has been closed.  The oplock is now broken.
 pub const OPLOCK_HANDLE_CLOSED : NTSTATUS = NTSTATUS::from_constant(0x00000216); // STATUS_OPLOCK_HANDLE_CLOSED
+
+/// An operation is blocked waiting for an oplock.
 pub const WAIT_FOR_OPLOCK : NTSTATUS = NTSTATUS::from_constant(0x00000367); // STATUS_WAIT_FOR_OPLOCK
+
+/// A reparse should be performed by the Object Manager from the global root to escape the container name space.
 pub const REPARSE_GLOBAL : NTSTATUS = NTSTATUS::from_constant(0x00000368); // STATUS_REPARSE_GLOBAL
+
+/// The IO was completed by a filter.
 pub const FLT_IO_COMPLETE : NTSTATUS = NTSTATUS::from_constant(0x001C0001); // STATUS_FLT_IO_COMPLETE
+
+/// ### Object Exists
+/// An attempt was made to create an object and the object name already existed.
 pub const OBJECT_NAME_EXISTS : NTSTATUS = NTSTATUS::from_constant(0x40000000); // STATUS_OBJECT_NAME_EXISTS
+
+/// ### Thread Suspended
+/// A thread termination occurred while the thread was suspended. The thread was resumed, and termination proceeded.
 pub const THREAD_WAS_SUSPENDED : NTSTATUS = NTSTATUS::from_constant(0x40000001); // STATUS_THREAD_WAS_SUSPENDED
+
+/// ### Working Set Range Error
+/// An attempt was made to set the working set minimum or maximum to values which are outside of the allowable range.
 pub const WORKING_SET_LIMIT_RANGE : NTSTATUS = NTSTATUS::from_constant(0x40000002); // STATUS_WORKING_SET_LIMIT_RANGE
+
+/// ### Image Relocated
+/// An image file could not be mapped at the address specified in the image file. Local fixups must be performed on this image.
 pub const IMAGE_NOT_AT_BASE : NTSTATUS = NTSTATUS::from_constant(0x40000003); // STATUS_IMAGE_NOT_AT_BASE
+
+/// This informational level status indicates that a specified registry sub-tree transaction state did not yet exist and had to be created.
 pub const RXACT_STATE_CREATED : NTSTATUS = NTSTATUS::from_constant(0x40000004); // STATUS_RXACT_STATE_CREATED
+
+/// ### Segment Load
+/// A virtual DOS machine (VDM) is loading, unloading, or moving an MS-DOS or Win16 program segment image.
+/// An exception is raised so a debugger can load, unload or track symbols and breakpoints within these 16-bit segments.
 pub const SEGMENT_NOTIFICATION : NTSTATUS = NTSTATUS::from_constant(0x40000005); // STATUS_SEGMENT_NOTIFICATION
+
+/// ### Local Session Key
+/// A user session key was requested for a local RPC connection. The session key returned is a constant value and not unique to this connection.
 pub const LOCAL_USER_SESSION_KEY : NTSTATUS = NTSTATUS::from_constant(0x40000006); // STATUS_LOCAL_USER_SESSION_KEY
+
+/// ### Invalid Current Directory
+/// The process cannot switch to the startup current directory `%hs`.
+/// Select OK to set current directory to `%hs`, or select CANCEL to exit.
 pub const BAD_CURRENT_DIRECTORY : NTSTATUS = NTSTATUS::from_constant(0x40000007); // STATUS_BAD_CURRENT_DIRECTORY
+
+/// ### Serial IOCTL Complete
+/// A serial I/O operation was completed by another write to a serial port.
+/// (The IOCTL_SERIAL_XOFF_COUNTER reached zero.)
 pub const SERIAL_MORE_WRITES : NTSTATUS = NTSTATUS::from_constant(0x40000008); // STATUS_SERIAL_MORE_WRITES
+
+/// ### Registry Recovery
+/// One of the files containing the system's Registry data had to be recovered by use of a log or alternate copy. The recovery was successful.
 pub const REGISTRY_RECOVERED : NTSTATUS = NTSTATUS::from_constant(0x40000009); // STATUS_REGISTRY_RECOVERED
+
+/// ### Redundant Read
+/// To satisfy a read request, the NT fault-tolerant file system successfully read the requested data from a redundant copy.
+/// This was done because the file system encountered a failure on a member of the fault-tolerant volume, but was unable to reassign the failing area of the device.
 pub const FT_READ_RECOVERY_FROM_BACKUP : NTSTATUS = NTSTATUS::from_constant(0x4000000A); // STATUS_FT_READ_RECOVERY_FROM_BACKUP
+
+/// ### Redundant Write
+/// To satisfy a write request, the NT fault-tolerant file system successfully wrote a redundant copy of the information.
+/// This was done because the file system encountered a failure on a member of the fault-tolerant volume, but was not able to reassign the failing area of the device.
 pub const FT_WRITE_RECOVERY : NTSTATUS = NTSTATUS::from_constant(0x4000000B); // STATUS_FT_WRITE_RECOVERY
+
+/// ### Serial IOCTL Timeout
+/// A serial I/O operation completed because the time-out period expired. (The IOCTL_SERIAL_XOFF_COUNTER had not reached zero.)
 pub const SERIAL_COUNTER_TIMEOUT : NTSTATUS = NTSTATUS::from_constant(0x4000000C); // STATUS_SERIAL_COUNTER_TIMEOUT
+
+/// ### Password Too Complex
+/// The Windows password is too complex to be converted to a LAN Manager password. The LAN Manager password returned is a NULL string.
 pub const NULL_LM_PASSWORD : NTSTATUS = NTSTATUS::from_constant(0x4000000D); // STATUS_NULL_LM_PASSWORD
+
+/// ### Machine Type Mismatch
+/// The image file `%hs` is valid, but is for a machine type other than the current machine. Select OK to continue, or CANCEL to fail the DLL load.
 pub const IMAGE_MACHINE_TYPE_MISMATCH : NTSTATUS = NTSTATUS::from_constant(0x4000000E); // STATUS_IMAGE_MACHINE_TYPE_MISMATCH
+
+/// ### Partial Data Received
+/// The network transport returned partial data to its client. The remaining data will be sent later.
 pub const RECEIVE_PARTIAL : NTSTATUS = NTSTATUS::from_constant(0x4000000F); // STATUS_RECEIVE_PARTIAL
+
+/// ### Expedited Data Received
+/// The network transport returned data to its client that was marked as expedited by the remote system.
 pub const RECEIVE_EXPEDITED : NTSTATUS = NTSTATUS::from_constant(0x40000010); // STATUS_RECEIVE_EXPEDITED
+
+/// ### Partial Expedited Data Received
+/// The network transport returned partial data to its client and this data was marked as expedited by the remote system. The remaining data will be sent later.
 pub const RECEIVE_PARTIAL_EXPEDITED : NTSTATUS = NTSTATUS::from_constant(0x40000011); // STATUS_RECEIVE_PARTIAL_EXPEDITED
+
+/// ### TDI Event Done
+/// The TDI indication has completed successfully.
 pub const EVENT_DONE : NTSTATUS = NTSTATUS::from_constant(0x40000012); // STATUS_EVENT_DONE
+
+/// ### TDI Event Pending
+/// The TDI indication has entered the pending state.
 pub const EVENT_PENDING : NTSTATUS = NTSTATUS::from_constant(0x40000013); // STATUS_EVENT_PENDING
+
+/// Checking file system on `%wZ`
 pub const CHECKING_FILE_SYSTEM : NTSTATUS = NTSTATUS::from_constant(0x40000014); // STATUS_CHECKING_FILE_SYSTEM
+
+/// ### Fatal Application Exit
+/// `%hs`
 pub const FATAL_APP_EXIT : NTSTATUS = NTSTATUS::from_constant(0x40000015); // STATUS_FATAL_APP_EXIT
+
+/// The specified registry key is referenced by a predefined handle.
 pub const PREDEFINED_HANDLE : NTSTATUS = NTSTATUS::from_constant(0x40000016); // STATUS_PREDEFINED_HANDLE
+
+/// ### Page Unlocked
+/// The page protection of a locked page was changed to 'No Access' and the page was unlocked from memory and from the process.
 pub const WAS_UNLOCKED : NTSTATUS = NTSTATUS::from_constant(0x40000017); // STATUS_WAS_UNLOCKED
+
+/// `%hs`
 pub const SERVICE_NOTIFICATION : NTSTATUS = NTSTATUS::from_constant(0x40000018); // STATUS_SERVICE_NOTIFICATION
+
+/// ### Page Locked
+/// One of the pages to lock was already locked.
 pub const WAS_LOCKED : NTSTATUS = NTSTATUS::from_constant(0x40000019); // STATUS_WAS_LOCKED
+
+/// Application popup: `%1` : `%2`
 pub const LOG_HARD_ERROR : NTSTATUS = NTSTATUS::from_constant(0x4000001A); // STATUS_LOG_HARD_ERROR
+
+/// STATUS_ALREADY_WIN32
 pub const ALREADY_WIN32 : NTSTATUS = NTSTATUS::from_constant(0x4000001B); // STATUS_ALREADY_WIN32
+
+/// Exception status code used by Win32 x86 emulation subsystem.
 pub const WX86_UNSIMULATE : NTSTATUS = NTSTATUS::from_constant(0x4000001C); // STATUS_WX86_UNSIMULATE
+
+/// Exception status code used by Win32 x86 emulation subsystem.
 pub const WX86_CONTINUE : NTSTATUS = NTSTATUS::from_constant(0x4000001D); // STATUS_WX86_CONTINUE
+
+/// Exception status code used by Win32 x86 emulation subsystem.
 pub const WX86_SINGLE_STEP : NTSTATUS = NTSTATUS::from_constant(0x4000001E); // STATUS_WX86_SINGLE_STEP
+
+/// Exception status code used by Win32 x86 emulation subsystem.
 pub const WX86_BREAKPOINT : NTSTATUS = NTSTATUS::from_constant(0x4000001F); // STATUS_WX86_BREAKPOINT
+
+/// Exception status code used by Win32 x86 emulation subsystem.
 pub const WX86_EXCEPTION_CONTINUE : NTSTATUS = NTSTATUS::from_constant(0x40000020); // STATUS_WX86_EXCEPTION_CONTINUE
+
+/// Exception status code used by Win32 x86 emulation subsystem.
 pub const WX86_EXCEPTION_LASTCHANCE : NTSTATUS = NTSTATUS::from_constant(0x40000021); // STATUS_WX86_EXCEPTION_LASTCHANCE
+
+/// Exception status code used by Win32 x86 emulation subsystem.
 pub const WX86_EXCEPTION_CHAIN : NTSTATUS = NTSTATUS::from_constant(0x40000022); // STATUS_WX86_EXCEPTION_CHAIN
+
+/// ### Machine Type Mismatch
+/// The image file `%hs` is valid, but is for a machine type other than the current machine.
 pub const IMAGE_MACHINE_TYPE_MISMATCH_EXE : NTSTATUS = NTSTATUS::from_constant(0x40000023); // STATUS_IMAGE_MACHINE_TYPE_MISMATCH_EXE
+
+/// A yield execution was performed and no thread was available to run.
 pub const NO_YIELD_PERFORMED : NTSTATUS = NTSTATUS::from_constant(0x40000024); // STATUS_NO_YIELD_PERFORMED
+
+/// The resumable flag to a timer API was ignored.
 pub const TIMER_RESUME_IGNORED : NTSTATUS = NTSTATUS::from_constant(0x40000025); // STATUS_TIMER_RESUME_IGNORED
+
+/// The arbiter has deferred arbitration of these resources to its parent
 pub const ARBITRATION_UNHANDLED : NTSTATUS = NTSTATUS::from_constant(0x40000026); // STATUS_ARBITRATION_UNHANDLED
+
+/// The device "`%hs`" has detected a CardBus card in its slot, but the firmware on this system is not configured to allow the CardBus controller to be run in CardBus mode.
+/// The operating system will currently accept only 16-bit (R2) pc-cards on this controller.
 pub const CARDBUS_NOT_SUPPORTED : NTSTATUS = NTSTATUS::from_constant(0x40000027); // STATUS_CARDBUS_NOT_SUPPORTED
+
+/// Exception status code used by Win32 x86 emulation subsystem.
 pub const WX86_CREATEWX86TIB : NTSTATUS = NTSTATUS::from_constant(0x40000028); // STATUS_WX86_CREATEWX86TIB
+
+/// The CPUs in this multiprocessor system are not all the same revision level. To use all processors the operating system restricts itself to the features of the least capable processor in the system. Should problems occur with this system, contact the CPU manufacturer to see if this mix of processors is supported.
 pub const MP_PROCESSOR_MISMATCH : NTSTATUS = NTSTATUS::from_constant(0x40000029); // STATUS_MP_PROCESSOR_MISMATCH
+
+/// The system was put into hibernation.
 pub const HIBERNATED : NTSTATUS = NTSTATUS::from_constant(0x4000002A); // STATUS_HIBERNATED
+
+/// The system was resumed from hibernation.
 pub const RESUME_HIBERNATION : NTSTATUS = NTSTATUS::from_constant(0x4000002B); // STATUS_RESUME_HIBERNATION
+
+/// Windows has detected that the system firmware (BIOS) was updated \[previous firmware date = `%2`, current firmware date `%3`\].
 pub const FIRMWARE_UPDATED : NTSTATUS = NTSTATUS::from_constant(0x4000002C); // STATUS_FIRMWARE_UPDATED
+
+/// A device driver is leaking locked I/O pages causing system degradation. The system has automatically enabled tracking code in order to try and catch the culprit.
 pub const DRIVERS_LEAKING_LOCKED_PAGES : NTSTATUS = NTSTATUS::from_constant(0x4000002D); // STATUS_DRIVERS_LEAKING_LOCKED_PAGES
+
+/// The ALPC message being canceled has already been retrieved from the queue on the other side.
 pub const MESSAGE_RETRIEVED : NTSTATUS = NTSTATUS::from_constant(0x4000002E); // STATUS_MESSAGE_RETRIEVED
+
+/// The system power state is transitioning from `%2` to `%3`.
 pub const SYSTEM_POWERSTATE_TRANSITION : NTSTATUS = NTSTATUS::from_constant(0x4000002F); // STATUS_SYSTEM_POWERSTATE_TRANSITION
+
+/// The receive operation was successful. Check the ALPC completion list for the received message.
 pub const ALPC_CHECK_COMPLETION_LIST : NTSTATUS = NTSTATUS::from_constant(0x40000030); // STATUS_ALPC_CHECK_COMPLETION_LIST
+
+/// The system power state is transitioning from `%2` to `%3` but could enter `%4`.
 pub const SYSTEM_POWERSTATE_COMPLEX_TRANSITION : NTSTATUS = NTSTATUS::from_constant(0x40000031); // STATUS_SYSTEM_POWERSTATE_COMPLEX_TRANSITION
+
+/// Access to `%1` is monitored by policy rule `%2`.
 pub const ACCESS_AUDIT_BY_POLICY : NTSTATUS = NTSTATUS::from_constant(0x40000032); // STATUS_ACCESS_AUDIT_BY_POLICY
+
+/// A valid hibernation file has been invalidated and should be abandoned.
 pub const ABANDON_HIBERFILE : NTSTATUS = NTSTATUS::from_constant(0x40000033); // STATUS_ABANDON_HIBERFILE
+
+/// Business rule scripts are disabled for the calling application.
 pub const BIZRULES_NOT_ENABLED : NTSTATUS = NTSTATUS::from_constant(0x40000034); // STATUS_BIZRULES_NOT_ENABLED
+
+/// The specified copy of the requested data was successfully read.
 pub const FT_READ_FROM_COPY : NTSTATUS = NTSTATUS::from_constant(0x40000035); // STATUS_FT_READ_FROM_COPY
+
+/// ### Image Relocated
+/// An image file was mapped at a different address from the one specified in the image file but fixups will still be automatically performed on the image.
 pub const IMAGE_AT_DIFFERENT_BASE : NTSTATUS = NTSTATUS::from_constant(0x40000036); // STATUS_IMAGE_AT_DIFFERENT_BASE
+
+/// A system patch was successfully loaded but is not applicable to any currently loaded images.
 pub const PATCH_DEFERRED : NTSTATUS = NTSTATUS::from_constant(0x40000037); // STATUS_PATCH_DEFERRED
+
+/// The attempt to commit the Transaction completed, but it is possible that some portion of the transaction tree did not commit successfully due to heuristics.  Therefore it is possible that some data modified in the transaction may not have committed, resulting in transactional inconsistency.  If possible, check the consistency of the associated data.
 pub const HEURISTIC_DAMAGE_POSSIBLE : NTSTATUS = NTSTATUS::from_constant(0x40190001); // STATUS_HEURISTIC_DAMAGE_POSSIBLE
+
+/// ### EXCEPTION
+/// Guard Page Exception
+/// A page of memory that marks the end of a data structure, such as a stack or an array, has been accessed.
 pub const GUARD_PAGE_VIOLATION : NTSTATUS = NTSTATUS::from_constant(0x80000001); // STATUS_GUARD_PAGE_VIOLATION
+
+/// ### EXCEPTION
+/// Alignment Fault
+/// A datatype misalignment was detected in a load or store instruction.
 pub const DATATYPE_MISALIGNMENT : NTSTATUS = NTSTATUS::from_constant(0x80000002); // STATUS_DATATYPE_MISALIGNMENT
+
+/// ### EXCEPTION
+/// Breakpoint
+/// A breakpoint has been reached.
 pub const BREAKPOINT : NTSTATUS = NTSTATUS::from_constant(0x80000003); // STATUS_BREAKPOINT
+
+/// ### EXCEPTION
+/// Single Step
+/// A single step or trace operation has just been completed.
 pub const SINGLE_STEP : NTSTATUS = NTSTATUS::from_constant(0x80000004); // STATUS_SINGLE_STEP
+
+/// ### Buffer Overflow
+/// The data was too large to fit into the specified buffer.
 pub const BUFFER_OVERFLOW : NTSTATUS = NTSTATUS::from_constant(0x80000005); // STATUS_BUFFER_OVERFLOW
+
+/// ### No More Files
+/// No more files were found which match the file specification.
 pub const NO_MORE_FILES : NTSTATUS = NTSTATUS::from_constant(0x80000006); // STATUS_NO_MORE_FILES
+
+/// ### Kernel Debugger Awakened
+/// the system debugger was awakened by an interrupt.
 pub const WAKE_SYSTEM_DEBUGGER : NTSTATUS = NTSTATUS::from_constant(0x80000007); // STATUS_WAKE_SYSTEM_DEBUGGER
+
+/// ### Handles Closed
+/// Handles to objects have been automatically closed as a result of the requested operation.
 pub const HANDLES_CLOSED : NTSTATUS = NTSTATUS::from_constant(0x8000000A); // STATUS_HANDLES_CLOSED
+
+/// ### Non-Inheritable ACL
+/// An access control list (ACL) contains no components that can be inherited.
 pub const NO_INHERITANCE : NTSTATUS = NTSTATUS::from_constant(0x8000000B); // STATUS_NO_INHERITANCE
+
+/// ### GUID Substitution
+/// During the translation of a global identifier (GUID) to a Windows security ID (SID), no administratively-defined GUID prefix was found. A substitute prefix was used, which will not compromise system security. However, this may provide a more restrictive access than intended.
 pub const GUID_SUBSTITUTION_MADE : NTSTATUS = NTSTATUS::from_constant(0x8000000C); // STATUS_GUID_SUBSTITUTION_MADE
+
+/// ### Partial Copy
+/// Due to protection conflicts not all the requested bytes could be copied.
 pub const PARTIAL_COPY : NTSTATUS = NTSTATUS::from_constant(0x8000000D); // STATUS_PARTIAL_COPY
+
+/// ### Out of Paper
+/// The printer is out of paper.
 pub const DEVICE_PAPER_EMPTY : NTSTATUS = NTSTATUS::from_constant(0x8000000E); // STATUS_DEVICE_PAPER_EMPTY
+
+/// ### Device Power Is Off
+/// The printer power has been turned off.
 pub const DEVICE_POWERED_OFF : NTSTATUS = NTSTATUS::from_constant(0x8000000F); // STATUS_DEVICE_POWERED_OFF
+
+/// ### Device Offline
+/// The printer has been taken offline.
 pub const DEVICE_OFF_LINE : NTSTATUS = NTSTATUS::from_constant(0x80000010); // STATUS_DEVICE_OFF_LINE
+
+/// ### Device Busy
+/// The device is currently busy.
 pub const DEVICE_BUSY : NTSTATUS = NTSTATUS::from_constant(0x80000011); // STATUS_DEVICE_BUSY
+
+/// ### No More EAs
+/// No more extended attributes (EAs) were found for the file.
 pub const NO_MORE_EAS : NTSTATUS = NTSTATUS::from_constant(0x80000012); // STATUS_NO_MORE_EAS
+
+/// ### Illegal EA
+/// The specified extended attribute (EA) name contains at least one illegal character.
 pub const INVALID_EA_NAME : NTSTATUS = NTSTATUS::from_constant(0x80000013); // STATUS_INVALID_EA_NAME
+
+/// ### Inconsistent EA List
+/// The extended attribute (EA) list is inconsistent.
 pub const EA_LIST_INCONSISTENT : NTSTATUS = NTSTATUS::from_constant(0x80000014); // STATUS_EA_LIST_INCONSISTENT
+
+/// ### Invalid EA Flag
+/// An invalid extended attribute (EA) flag was set.
 pub const INVALID_EA_FLAG : NTSTATUS = NTSTATUS::from_constant(0x80000015); // STATUS_INVALID_EA_FLAG
+
+/// ### Verifying Disk
+/// The media has changed and a verify operation is in progress so no reads or writes may be performed to the device, except those used in the verify operation.
 pub const VERIFY_REQUIRED : NTSTATUS = NTSTATUS::from_constant(0x80000016); // STATUS_VERIFY_REQUIRED
+
+/// ### Too Much Information
+/// The specified access control list (ACL) contained more information than was expected.
 pub const EXTRANEOUS_INFORMATION : NTSTATUS = NTSTATUS::from_constant(0x80000017); // STATUS_EXTRANEOUS_INFORMATION
+
+/// This warning level status indicates that the transaction state already exists for the registry sub-tree, but that a transaction commit was previously aborted.
+/// The commit has NOT been completed, but has not been rolled back either (so it may still be committed if desired).
 pub const RXACT_COMMIT_NECESSARY : NTSTATUS = NTSTATUS::from_constant(0x80000018); // STATUS_RXACT_COMMIT_NECESSARY
+
+/// ### No More Entries
+/// No more entries are available from an enumeration operation.
 pub const NO_MORE_ENTRIES : NTSTATUS = NTSTATUS::from_constant(0x8000001A); // STATUS_NO_MORE_ENTRIES
+
+/// ### Filemark Found
+/// A filemark was detected.
 pub const FILEMARK_DETECTED : NTSTATUS = NTSTATUS::from_constant(0x8000001B); // STATUS_FILEMARK_DETECTED
+
+/// ### Media Changed
+/// The media may have changed.
 pub const MEDIA_CHANGED : NTSTATUS = NTSTATUS::from_constant(0x8000001C); // STATUS_MEDIA_CHANGED
+
+/// ### I/O Bus Reset
+/// An I/O bus reset was detected.
 pub const BUS_RESET : NTSTATUS = NTSTATUS::from_constant(0x8000001D); // STATUS_BUS_RESET
+
+/// ### End of Media
+/// The end of the media was encountered.
 pub const END_OF_MEDIA : NTSTATUS = NTSTATUS::from_constant(0x8000001E); // STATUS_END_OF_MEDIA
+
+/// Beginning of tape or partition has been detected.
 pub const BEGINNING_OF_MEDIA : NTSTATUS = NTSTATUS::from_constant(0x8000001F); // STATUS_BEGINNING_OF_MEDIA
+
+/// ### Media Changed
+/// The media may have changed.
 pub const MEDIA_CHECK : NTSTATUS = NTSTATUS::from_constant(0x80000020); // STATUS_MEDIA_CHECK
+
+/// A tape access reached a setmark.
 pub const SETMARK_DETECTED : NTSTATUS = NTSTATUS::from_constant(0x80000021); // STATUS_SETMARK_DETECTED
+
+/// During a tape access, the end of the data written is reached.
 pub const NO_DATA_DETECTED : NTSTATUS = NTSTATUS::from_constant(0x80000022); // STATUS_NO_DATA_DETECTED
+
+/// The redirector is in use and cannot be unloaded.
 pub const REDIRECTOR_HAS_OPEN_HANDLES : NTSTATUS = NTSTATUS::from_constant(0x80000023); // STATUS_REDIRECTOR_HAS_OPEN_HANDLES
+
+/// The server is in use and cannot be unloaded.
 pub const SERVER_HAS_OPEN_HANDLES : NTSTATUS = NTSTATUS::from_constant(0x80000024); // STATUS_SERVER_HAS_OPEN_HANDLES
+
+/// The specified connection has already been disconnected.
 pub const ALREADY_DISCONNECTED : NTSTATUS = NTSTATUS::from_constant(0x80000025); // STATUS_ALREADY_DISCONNECTED
+
+/// A long jump has been executed.
 pub const LONGJUMP : NTSTATUS = NTSTATUS::from_constant(0x80000026); // STATUS_LONGJUMP
+
+/// A cleaner cartridge is present in the tape library.
 pub const CLEANER_CARTRIDGE_INSTALLED : NTSTATUS = NTSTATUS::from_constant(0x80000027); // STATUS_CLEANER_CARTRIDGE_INSTALLED
+
+/// The Plug and Play query operation was not successful.
 pub const PLUGPLAY_QUERY_VETOED : NTSTATUS = NTSTATUS::from_constant(0x80000028); // STATUS_PLUGPLAY_QUERY_VETOED
+
+/// A frame consolidation has been executed.
 pub const UNWIND_CONSOLIDATE : NTSTATUS = NTSTATUS::from_constant(0x80000029); // STATUS_UNWIND_CONSOLIDATE
+
+/// ### Registry Hive Recovered
+/// Registry hive (file):
+/// `%hs`
+/// was corrupted and it has been recovered. Some data might have been lost.
 pub const REGISTRY_HIVE_RECOVERED : NTSTATUS = NTSTATUS::from_constant(0x8000002A); // STATUS_REGISTRY_HIVE_RECOVERED
+
+/// The application is attempting to run executable code from the module `%hs`. This may be insecure. An alternative, `%hs`, is available. Should the application use the secure module `%hs`?
 pub const DLL_MIGHT_BE_INSECURE : NTSTATUS = NTSTATUS::from_constant(0x8000002B); // STATUS_DLL_MIGHT_BE_INSECURE
+
+/// The application is loading executable code from the module `%hs`. This is secure, but may be incompatible with previous releases of the operating system. An alternative, `%hs`, is available. Should the application use the secure module `%hs`?
 pub const DLL_MIGHT_BE_INCOMPATIBLE : NTSTATUS = NTSTATUS::from_constant(0x8000002C); // STATUS_DLL_MIGHT_BE_INCOMPATIBLE
+
+/// The create operation stopped after reaching a symbolic link.
 pub const STOPPED_ON_SYMLINK : NTSTATUS = NTSTATUS::from_constant(0x8000002D); // STATUS_STOPPED_ON_SYMLINK
+
+/// An oplock of the requested level cannot be granted.  An oplock of a lower level may be available.
 pub const CANNOT_GRANT_REQUESTED_OPLOCK : NTSTATUS = NTSTATUS::from_constant(0x8000002E); // STATUS_CANNOT_GRANT_REQUESTED_OPLOCK
+
+/// ### No ACE Condition
+/// The specified access control entry (ACE) does not contain a condition.
 pub const NO_ACE_CONDITION : NTSTATUS = NTSTATUS::from_constant(0x8000002F); // STATUS_NO_ACE_CONDITION
+
+/// ### Support Being Determined
+/// Device's command support detection is in progress.
 pub const DEVICE_SUPPORT_IN_PROGRESS : NTSTATUS = NTSTATUS::from_constant(0x80000030); // STATUS_DEVICE_SUPPORT_IN_PROGRESS
+
+/// The device needs to be power cycled.
 pub const DEVICE_POWER_CYCLE_REQUIRED : NTSTATUS = NTSTATUS::from_constant(0x80000031); // STATUS_DEVICE_POWER_CYCLE_REQUIRED
+
+/// The action requested resulted in no work being done. Error-style clean-up has been performed.
 pub const NO_WORK_DONE : NTSTATUS = NTSTATUS::from_constant(0x80000032); // STATUS_NO_WORK_DONE
+
+/// A return address hijack is being attempted. This is supported by the operating system when user-mode shadow stacks are enabled.
 pub const RETURN_ADDRESS_HIJACK_ATTEMPT : NTSTATUS = NTSTATUS::from_constant(0x80000033); // STATUS_RETURN_ADDRESS_HIJACK_ATTEMPT
+
+/// The cluster node is already up.
 pub const CLUSTER_NODE_ALREADY_UP : NTSTATUS = NTSTATUS::from_constant(0x80130001); // STATUS_CLUSTER_NODE_ALREADY_UP
+
+/// The cluster node is already down.
 pub const CLUSTER_NODE_ALREADY_DOWN : NTSTATUS = NTSTATUS::from_constant(0x80130002); // STATUS_CLUSTER_NODE_ALREADY_DOWN
+
+/// The cluster network is already online.
 pub const CLUSTER_NETWORK_ALREADY_ONLINE : NTSTATUS = NTSTATUS::from_constant(0x80130003); // STATUS_CLUSTER_NETWORK_ALREADY_ONLINE
+
+/// The cluster network is already offline.
 pub const CLUSTER_NETWORK_ALREADY_OFFLINE : NTSTATUS = NTSTATUS::from_constant(0x80130004); // STATUS_CLUSTER_NETWORK_ALREADY_OFFLINE
+
+/// The cluster node is already a member of the cluster.
 pub const CLUSTER_NODE_ALREADY_MEMBER : NTSTATUS = NTSTATUS::from_constant(0x80130005); // STATUS_CLUSTER_NODE_ALREADY_MEMBER
+
+/// ### Buffer too small
+/// The buffer is too small to contain the entry. No information has been written to the buffer.
 pub const FLT_BUFFER_TOO_SMALL : NTSTATUS = NTSTATUS::from_constant(0x801C0001); // STATUS_FLT_BUFFER_TOO_SMALL
+
+/// Volume Metadata read or write is incomplete.
 pub const FVE_PARTIAL_METADATA : NTSTATUS = NTSTATUS::from_constant(0x80210001); // STATUS_FVE_PARTIAL_METADATA
+
+/// BitLocker encryption keys were ignored because the volume was in a transient state.
 pub const FVE_TRANSIENT_STATE : NTSTATUS = NTSTATUS::from_constant(0x80210002); // STATUS_FVE_TRANSIENT_STATE
+
+/// The cloud file property is possibly corrupt. The on-disk checksum does not match the computed checksum.
 pub const CLOUD_FILE_PROPERTY_BLOB_CHECKSUM_MISMATCH : NTSTATUS = NTSTATUS::from_constant(0x8000CF00); // STATUS_CLOUD_FILE_PROPERTY_BLOB_CHECKSUM_MISMATCH
+
+/// ### Operation Failed
+/// The requested operation was unsuccessful.
 pub const UNSUCCESSFUL : NTSTATUS = NTSTATUS::from_constant(0xC0000001); // STATUS_UNSUCCESSFUL
+
+/// ### Not Implemented
+/// The requested operation is not implemented.
 pub const NOT_IMPLEMENTED : NTSTATUS = NTSTATUS::from_constant(0xC0000002); // STATUS_NOT_IMPLEMENTED
+
+/// ### Invalid Parameter
+/// The specified information class is not a valid information class for the specified object.
 pub const INVALID_INFO_CLASS : NTSTATUS = NTSTATUS::from_constant(0xC0000003); // STATUS_INVALID_INFO_CLASS
+
+/// The specified information record length does not match the length required for the specified information class.
 pub const INFO_LENGTH_MISMATCH : NTSTATUS = NTSTATUS::from_constant(0xC0000004); // STATUS_INFO_LENGTH_MISMATCH
+
+/// The instruction at `0x%p` referenced memory at `0x%p`. The memory could not be `%s`.
 pub const ACCESS_VIOLATION : NTSTATUS = NTSTATUS::from_constant(0xC0000005); // STATUS_ACCESS_VIOLATION
+
+/// The instruction at `0x%p` referenced memory at `0x%p`. The required data was not placed into memory because of an I/O error status of `0x%x`.
 pub const IN_PAGE_ERROR : NTSTATUS = NTSTATUS::from_constant(0xC0000006); // STATUS_IN_PAGE_ERROR
+
+/// The pagefile quota for the process has been exhausted.
 pub const PAGEFILE_QUOTA : NTSTATUS = NTSTATUS::from_constant(0xC0000007); // STATUS_PAGEFILE_QUOTA
+
+/// An invalid HANDLE was specified.
 pub const INVALID_HANDLE : NTSTATUS = NTSTATUS::from_constant(0xC0000008); // STATUS_INVALID_HANDLE
+
+/// An invalid initial stack was specified in a call to NtCreateThread.
 pub const BAD_INITIAL_STACK : NTSTATUS = NTSTATUS::from_constant(0xC0000009); // STATUS_BAD_INITIAL_STACK
+
+/// An invalid initial start address was specified in a call to NtCreateThread.
 pub const BAD_INITIAL_PC : NTSTATUS = NTSTATUS::from_constant(0xC000000A); // STATUS_BAD_INITIAL_PC
+
+/// An invalid Client ID was specified.
 pub const INVALID_CID : NTSTATUS = NTSTATUS::from_constant(0xC000000B); // STATUS_INVALID_CID
+
+/// An attempt was made to cancel or set a timer that has an associated APC and the subject thread is not the thread that originally set the timer with an associated APC routine.
 pub const TIMER_NOT_CANCELED : NTSTATUS = NTSTATUS::from_constant(0xC000000C); // STATUS_TIMER_NOT_CANCELED
+
+/// An invalid parameter was passed to a service or function.
 pub const INVALID_PARAMETER : NTSTATUS = NTSTATUS::from_constant(0xC000000D); // STATUS_INVALID_PARAMETER
+
+/// A device which does not exist was specified.
 pub const NO_SUCH_DEVICE : NTSTATUS = NTSTATUS::from_constant(0xC000000E); // STATUS_NO_SUCH_DEVICE
+
+/// ### File Not Found
+/// The file `%hs` does not exist.
 pub const NO_SUCH_FILE : NTSTATUS = NTSTATUS::from_constant(0xC000000F); // STATUS_NO_SUCH_FILE
+
+/// The specified request is not a valid operation for the target device.
 pub const INVALID_DEVICE_REQUEST : NTSTATUS = NTSTATUS::from_constant(0xC0000010); // STATUS_INVALID_DEVICE_REQUEST
+
+/// The end-of-file marker has been reached. There is no valid data in the file beyond this marker.
 pub const END_OF_FILE : NTSTATUS = NTSTATUS::from_constant(0xC0000011); // STATUS_END_OF_FILE
+
+/// ### Wrong Volume
+/// The wrong volume is in the drive.
+/// Please insert volume `%hs` into drive `%hs`.
 pub const WRONG_VOLUME : NTSTATUS = NTSTATUS::from_constant(0xC0000012); // STATUS_WRONG_VOLUME
+
+/// ### No Disk
+/// There is no disk in the drive.
+/// Please insert a disk into drive `%hs`.
 pub const NO_MEDIA_IN_DEVICE : NTSTATUS = NTSTATUS::from_constant(0xC0000013); // STATUS_NO_MEDIA_IN_DEVICE
+
+/// ### Unknown Disk Format
+/// The disk in drive `%hs` is not formatted properly.
+/// Please check the disk, and reformat if necessary.
 pub const UNRECOGNIZED_MEDIA : NTSTATUS = NTSTATUS::from_constant(0xC0000014); // STATUS_UNRECOGNIZED_MEDIA
+
+/// ### Sector Not Found
+/// The specified sector does not exist.
 pub const NONEXISTENT_SECTOR : NTSTATUS = NTSTATUS::from_constant(0xC0000015); // STATUS_NONEXISTENT_SECTOR
+
+/// ### Still Busy
+/// The specified I/O request packet (IRP) cannot be disposed of because the I/O operation is not complete.
 pub const MORE_PROCESSING_REQUIRED : NTSTATUS = NTSTATUS::from_constant(0xC0000016); // STATUS_MORE_PROCESSING_REQUIRED
+
+/// ### Not Enough Quota
+/// Not enough virtual memory or paging file quota is available to complete the specified operation.
 pub const NO_MEMORY : NTSTATUS = NTSTATUS::from_constant(0xC0000017); // STATUS_NO_MEMORY
+
+/// ### Conflicting Address Range
+/// The specified address range conflicts with the address space.
 pub const CONFLICTING_ADDRESSES : NTSTATUS = NTSTATUS::from_constant(0xC0000018); // STATUS_CONFLICTING_ADDRESSES
+
+/// Address range to unmap is not a mapped view.
 pub const NOT_MAPPED_VIEW : NTSTATUS = NTSTATUS::from_constant(0xC0000019); // STATUS_NOT_MAPPED_VIEW
+
+/// Virtual memory cannot be freed.
 pub const UNABLE_TO_FREE_VM : NTSTATUS = NTSTATUS::from_constant(0xC000001A); // STATUS_UNABLE_TO_FREE_VM
+
+/// Specified section cannot be deleted.
 pub const UNABLE_TO_DELETE_SECTION : NTSTATUS = NTSTATUS::from_constant(0xC000001B); // STATUS_UNABLE_TO_DELETE_SECTION
+
+/// An invalid system service was specified in a system service call.
 pub const INVALID_SYSTEM_SERVICE : NTSTATUS = NTSTATUS::from_constant(0xC000001C); // STATUS_INVALID_SYSTEM_SERVICE
+
+/// ### EXCEPTION
+/// Illegal Instruction
+/// An attempt was made to execute an illegal instruction.
 pub const ILLEGAL_INSTRUCTION : NTSTATUS = NTSTATUS::from_constant(0xC000001D); // STATUS_ILLEGAL_INSTRUCTION
+
+/// ### Invalid Lock Sequence
+/// An attempt was made to execute an invalid lock sequence.
 pub const INVALID_LOCK_SEQUENCE : NTSTATUS = NTSTATUS::from_constant(0xC000001E); // STATUS_INVALID_LOCK_SEQUENCE
+
+/// ### Invalid Mapping
+/// An attempt was made to create a view for a section which is bigger than the section.
 pub const INVALID_VIEW_SIZE : NTSTATUS = NTSTATUS::from_constant(0xC000001F); // STATUS_INVALID_VIEW_SIZE
+
+/// ### Bad File
+/// The attributes of the specified mapping file for a section of memory cannot be read.
 pub const INVALID_FILE_FOR_SECTION : NTSTATUS = NTSTATUS::from_constant(0xC0000020); // STATUS_INVALID_FILE_FOR_SECTION
+
+/// ### Already Committed
+/// The specified address range is already committed.
 pub const ALREADY_COMMITTED : NTSTATUS = NTSTATUS::from_constant(0xC0000021); // STATUS_ALREADY_COMMITTED
+
+/// ### Access Denied
+/// A process has requested access to an object, but has not been granted those access rights.
 pub const ACCESS_DENIED : NTSTATUS = NTSTATUS::from_constant(0xC0000022); // STATUS_ACCESS_DENIED
+
+/// ### Buffer Too Small
+/// The buffer is too small to contain the entry. No information has been written to the buffer.
 pub const BUFFER_TOO_SMALL : NTSTATUS = NTSTATUS::from_constant(0xC0000023); // STATUS_BUFFER_TOO_SMALL
+
+/// ### Wrong Type
+/// There is a mismatch between the type of object required by the requested operation and the type of object that is specified in the request.
 pub const OBJECT_TYPE_MISMATCH : NTSTATUS = NTSTATUS::from_constant(0xC0000024); // STATUS_OBJECT_TYPE_MISMATCH
+
+/// ### EXCEPTION
+/// Cannot Continue
+/// Windows cannot continue from this exception.
 pub const NONCONTINUABLE_EXCEPTION : NTSTATUS = NTSTATUS::from_constant(0xC0000025); // STATUS_NONCONTINUABLE_EXCEPTION
+
+/// An invalid exception disposition was returned by an exception handler.
 pub const INVALID_DISPOSITION : NTSTATUS = NTSTATUS::from_constant(0xC0000026); // STATUS_INVALID_DISPOSITION
+
+/// Unwind exception code.
 pub const UNWIND : NTSTATUS = NTSTATUS::from_constant(0xC0000027); // STATUS_UNWIND
+
+/// An invalid or unaligned stack was encountered during an unwind operation.
 pub const BAD_STACK : NTSTATUS = NTSTATUS::from_constant(0xC0000028); // STATUS_BAD_STACK
+
+/// An invalid unwind target was encountered during an unwind operation.
 pub const INVALID_UNWIND_TARGET : NTSTATUS = NTSTATUS::from_constant(0xC0000029); // STATUS_INVALID_UNWIND_TARGET
+
+/// An attempt was made to unlock a page of memory which was not locked.
 pub const NOT_LOCKED : NTSTATUS = NTSTATUS::from_constant(0xC000002A); // STATUS_NOT_LOCKED
+
+/// Device parity error on I/O operation.
 pub const PARITY_ERROR : NTSTATUS = NTSTATUS::from_constant(0xC000002B); // STATUS_PARITY_ERROR
+
+/// An attempt was made to decommit uncommitted virtual memory.
 pub const UNABLE_TO_DECOMMIT_VM : NTSTATUS = NTSTATUS::from_constant(0xC000002C); // STATUS_UNABLE_TO_DECOMMIT_VM
+
+/// An attempt was made to change the attributes on memory that has not been committed.
 pub const NOT_COMMITTED : NTSTATUS = NTSTATUS::from_constant(0xC000002D); // STATUS_NOT_COMMITTED
+
+/// Invalid Object Attributes specified to NtCreatePort or invalid Port Attributes specified to NtConnectPort
 pub const INVALID_PORT_ATTRIBUTES : NTSTATUS = NTSTATUS::from_constant(0xC000002E); // STATUS_INVALID_PORT_ATTRIBUTES
+
+/// Length of message passed to NtRequestPort or NtRequestWaitReplyPort was longer than the maximum message allowed by the port.
 pub const PORT_MESSAGE_TOO_LONG : NTSTATUS = NTSTATUS::from_constant(0xC000002F); // STATUS_PORT_MESSAGE_TOO_LONG
+
+/// An invalid combination of parameters was specified.
 pub const INVALID_PARAMETER_MIX : NTSTATUS = NTSTATUS::from_constant(0xC0000030); // STATUS_INVALID_PARAMETER_MIX
+
+/// An attempt was made to lower a quota limit below the current usage.
 pub const INVALID_QUOTA_LOWER : NTSTATUS = NTSTATUS::from_constant(0xC0000031); // STATUS_INVALID_QUOTA_LOWER
+
+/// ### Corrupt Disk
+/// The file system structure on the disk is corrupt and unusable.
+/// Please run the Chkdsk utility on the volume `%hs`.
 pub const DISK_CORRUPT_ERROR : NTSTATUS = NTSTATUS::from_constant(0xC0000032); // STATUS_DISK_CORRUPT_ERROR
+
+/// Object Name invalid.
 pub const OBJECT_NAME_INVALID : NTSTATUS = NTSTATUS::from_constant(0xC0000033); // STATUS_OBJECT_NAME_INVALID
+
+/// Object Name not found.
 pub const OBJECT_NAME_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC0000034); // STATUS_OBJECT_NAME_NOT_FOUND
+
+/// Object Name already exists.
 pub const OBJECT_NAME_COLLISION : NTSTATUS = NTSTATUS::from_constant(0xC0000035); // STATUS_OBJECT_NAME_COLLISION
+
+/// A port with the 'do not disturb' flag set attempted to send a message to a port in a suspended process.
+/// The process was not woken, and the message was not delivered.
 pub const PORT_DO_NOT_DISTURB : NTSTATUS = NTSTATUS::from_constant(0xC0000036); // STATUS_PORT_DO_NOT_DISTURB
+
+/// Attempt to send a message to a disconnected communication port.
 pub const PORT_DISCONNECTED : NTSTATUS = NTSTATUS::from_constant(0xC0000037); // STATUS_PORT_DISCONNECTED
+
+/// An attempt was made to attach to a device that was already attached to another device.
 pub const DEVICE_ALREADY_ATTACHED : NTSTATUS = NTSTATUS::from_constant(0xC0000038); // STATUS_DEVICE_ALREADY_ATTACHED
+
+/// Object Path Component was not a directory object.
 pub const OBJECT_PATH_INVALID : NTSTATUS = NTSTATUS::from_constant(0xC0000039); // STATUS_OBJECT_PATH_INVALID
+
+/// ### Path Not Found
+/// The path `%hs` does not exist.
 pub const OBJECT_PATH_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC000003A); // STATUS_OBJECT_PATH_NOT_FOUND
+
+/// Object Path Component was not a directory object.
 pub const OBJECT_PATH_SYNTAX_BAD : NTSTATUS = NTSTATUS::from_constant(0xC000003B); // STATUS_OBJECT_PATH_SYNTAX_BAD
+
+/// ### Data Overrun
+/// A data overrun error occurred.
 pub const DATA_OVERRUN : NTSTATUS = NTSTATUS::from_constant(0xC000003C); // STATUS_DATA_OVERRUN
+
+/// ### Data Late
+/// A data late error occurred.
 pub const DATA_LATE_ERROR : NTSTATUS = NTSTATUS::from_constant(0xC000003D); // STATUS_DATA_LATE_ERROR
+
+/// ### Data Error
+/// An error in reading or writing data occurred.
 pub const DATA_ERROR : NTSTATUS = NTSTATUS::from_constant(0xC000003E); // STATUS_DATA_ERROR
+
+/// ### Bad CRC
+/// A cyclic redundancy check (CRC) checksum error occurred.
 pub const CRC_ERROR : NTSTATUS = NTSTATUS::from_constant(0xC000003F); // STATUS_CRC_ERROR
+
+/// ### Section Too Large
+/// The specified section is too big to map the file.
 pub const SECTION_TOO_BIG : NTSTATUS = NTSTATUS::from_constant(0xC0000040); // STATUS_SECTION_TOO_BIG
+
+/// The NtConnectPort request is refused.
 pub const PORT_CONNECTION_REFUSED : NTSTATUS = NTSTATUS::from_constant(0xC0000041); // STATUS_PORT_CONNECTION_REFUSED
+
+/// The type of port handle is invalid for the operation requested.
 pub const INVALID_PORT_HANDLE : NTSTATUS = NTSTATUS::from_constant(0xC0000042); // STATUS_INVALID_PORT_HANDLE
+
+/// A file cannot be opened because the share access flags are incompatible.
 pub const SHARING_VIOLATION : NTSTATUS = NTSTATUS::from_constant(0xC0000043); // STATUS_SHARING_VIOLATION
+
+/// Insufficient quota exists to complete the operation
 pub const QUOTA_EXCEEDED : NTSTATUS = NTSTATUS::from_constant(0xC0000044); // STATUS_QUOTA_EXCEEDED
+
+/// The specified page protection was not valid.
 pub const INVALID_PAGE_PROTECTION : NTSTATUS = NTSTATUS::from_constant(0xC0000045); // STATUS_INVALID_PAGE_PROTECTION
+
+/// An attempt to release a mutant object was made by a thread that was not the owner of the mutant object.
 pub const MUTANT_NOT_OWNED : NTSTATUS = NTSTATUS::from_constant(0xC0000046); // STATUS_MUTANT_NOT_OWNED
+
+/// An attempt was made to release a semaphore such that its maximum count would have been exceeded.
 pub const SEMAPHORE_LIMIT_EXCEEDED : NTSTATUS = NTSTATUS::from_constant(0xC0000047); // STATUS_SEMAPHORE_LIMIT_EXCEEDED
+
+/// An attempt to set a process's DebugPort or ExceptionPort was made, but a port already exists in the process or an attempt to set a file's CompletionPort made, but a port was already set in the file or an attempt to set an ALPC port's associated completion port was made, but it is already set.
 pub const PORT_ALREADY_SET : NTSTATUS = NTSTATUS::from_constant(0xC0000048); // STATUS_PORT_ALREADY_SET
+
+/// An attempt was made to query image information on a section which does not map an image.
 pub const SECTION_NOT_IMAGE : NTSTATUS = NTSTATUS::from_constant(0xC0000049); // STATUS_SECTION_NOT_IMAGE
+
+/// An attempt was made to suspend a thread whose suspend count was at its maximum.
 pub const SUSPEND_COUNT_EXCEEDED : NTSTATUS = NTSTATUS::from_constant(0xC000004A); // STATUS_SUSPEND_COUNT_EXCEEDED
+
+/// An attempt was made to access a thread that has begun termination.
 pub const THREAD_IS_TERMINATING : NTSTATUS = NTSTATUS::from_constant(0xC000004B); // STATUS_THREAD_IS_TERMINATING
+
+/// An attempt was made to set the working set limit to an invalid value (minimum greater than maximum, etc).
 pub const BAD_WORKING_SET_LIMIT : NTSTATUS = NTSTATUS::from_constant(0xC000004C); // STATUS_BAD_WORKING_SET_LIMIT
+
+/// A section was created to map a file which is not compatible to an already existing section which maps the same file.
 pub const INCOMPATIBLE_FILE_MAP : NTSTATUS = NTSTATUS::from_constant(0xC000004D); // STATUS_INCOMPATIBLE_FILE_MAP
+
+/// A view to a section specifies a protection which is incompatible with the initial view's protection.
 pub const SECTION_PROTECTION : NTSTATUS = NTSTATUS::from_constant(0xC000004E); // STATUS_SECTION_PROTECTION
+
+/// An operation involving EAs failed because the file system does not support EAs.
 pub const EAS_NOT_SUPPORTED : NTSTATUS = NTSTATUS::from_constant(0xC000004F); // STATUS_EAS_NOT_SUPPORTED
+
+/// An EA operation failed because EA set is too large.
 pub const EA_TOO_LARGE : NTSTATUS = NTSTATUS::from_constant(0xC0000050); // STATUS_EA_TOO_LARGE
+
+/// An EA operation failed because the name or EA index is invalid.
 pub const NONEXISTENT_EA_ENTRY : NTSTATUS = NTSTATUS::from_constant(0xC0000051); // STATUS_NONEXISTENT_EA_ENTRY
+
+/// The file for which EAs were requested has no EAs.
 pub const NO_EAS_ON_FILE : NTSTATUS = NTSTATUS::from_constant(0xC0000052); // STATUS_NO_EAS_ON_FILE
+
+/// The EA is corrupt and non-readable.
 pub const EA_CORRUPT_ERROR : NTSTATUS = NTSTATUS::from_constant(0xC0000053); // STATUS_EA_CORRUPT_ERROR
+
+/// A requested read/write cannot be granted due to a conflicting file lock.
 pub const FILE_LOCK_CONFLICT : NTSTATUS = NTSTATUS::from_constant(0xC0000054); // STATUS_FILE_LOCK_CONFLICT
+
+/// A requested file lock cannot be granted due to other existing locks.
 pub const LOCK_NOT_GRANTED : NTSTATUS = NTSTATUS::from_constant(0xC0000055); // STATUS_LOCK_NOT_GRANTED
+
+/// A non close operation has been requested of a file object with a delete pending.
 pub const DELETE_PENDING : NTSTATUS = NTSTATUS::from_constant(0xC0000056); // STATUS_DELETE_PENDING
+
+/// An attempt was made to set the control attribute on a file. This attribute is not supported in the target file system.
 pub const CTL_FILE_NOT_SUPPORTED : NTSTATUS = NTSTATUS::from_constant(0xC0000057); // STATUS_CTL_FILE_NOT_SUPPORTED
+
+/// Indicates a revision number encountered or specified is not one known by the service. It may be a more recent revision than the service is aware of.
 pub const UNKNOWN_REVISION : NTSTATUS = NTSTATUS::from_constant(0xC0000058); // STATUS_UNKNOWN_REVISION
+
+/// Indicates two revision levels are incompatible.
 pub const REVISION_MISMATCH : NTSTATUS = NTSTATUS::from_constant(0xC0000059); // STATUS_REVISION_MISMATCH
+
+/// Indicates a particular Security ID may not be assigned as the owner of an object.
 pub const INVALID_OWNER : NTSTATUS = NTSTATUS::from_constant(0xC000005A); // STATUS_INVALID_OWNER
+
+/// Indicates a particular Security ID may not be assigned as the primary group of an object.
 pub const INVALID_PRIMARY_GROUP : NTSTATUS = NTSTATUS::from_constant(0xC000005B); // STATUS_INVALID_PRIMARY_GROUP
+
+/// An attempt has been made to operate on an impersonation token by a thread that is not currently impersonating a client.
 pub const NO_IMPERSONATION_TOKEN : NTSTATUS = NTSTATUS::from_constant(0xC000005C); // STATUS_NO_IMPERSONATION_TOKEN
+
+/// A mandatory group may not be disabled.
 pub const CANT_DISABLE_MANDATORY : NTSTATUS = NTSTATUS::from_constant(0xC000005D); // STATUS_CANT_DISABLE_MANDATORY
+
+/// We can't sign you in with this credential because your domain isn't available. Make sure your device is connected to your organization's network and try again. If you previously signed in on this device with another credential, you can sign in with that credential.
 pub const NO_LOGON_SERVERS : NTSTATUS = NTSTATUS::from_constant(0xC000005E); // STATUS_NO_LOGON_SERVERS
+
+/// A specified logon session does not exist. It may already have been terminated.
 pub const NO_SUCH_LOGON_SESSION : NTSTATUS = NTSTATUS::from_constant(0xC000005F); // STATUS_NO_SUCH_LOGON_SESSION
+
+/// A specified privilege does not exist.
 pub const NO_SUCH_PRIVILEGE : NTSTATUS = NTSTATUS::from_constant(0xC0000060); // STATUS_NO_SUCH_PRIVILEGE
+
+/// A required privilege is not held by the client.
 pub const PRIVILEGE_NOT_HELD : NTSTATUS = NTSTATUS::from_constant(0xC0000061); // STATUS_PRIVILEGE_NOT_HELD
+
+/// The name provided is not a properly formed account name.
 pub const INVALID_ACCOUNT_NAME : NTSTATUS = NTSTATUS::from_constant(0xC0000062); // STATUS_INVALID_ACCOUNT_NAME
+
+/// The specified account already exists.
 pub const USER_EXISTS : NTSTATUS = NTSTATUS::from_constant(0xC0000063); // STATUS_USER_EXISTS
+
+/// The specified account does not exist.
 pub const NO_SUCH_USER : NTSTATUS = NTSTATUS::from_constant(0xC0000064); // STATUS_NO_SUCH_USER
+
+/// The specified group already exists.
 pub const GROUP_EXISTS : NTSTATUS = NTSTATUS::from_constant(0xC0000065); // STATUS_GROUP_EXISTS
+
+/// The specified group does not exist.
 pub const NO_SUCH_GROUP : NTSTATUS = NTSTATUS::from_constant(0xC0000066); // STATUS_NO_SUCH_GROUP
+
+/// The specified user account is already in the specified group account. Also used to indicate a group cannot be deleted because it contains a member.
 pub const MEMBER_IN_GROUP : NTSTATUS = NTSTATUS::from_constant(0xC0000067); // STATUS_MEMBER_IN_GROUP
+
+/// The specified user account is not a member of the specified group account.
 pub const MEMBER_NOT_IN_GROUP : NTSTATUS = NTSTATUS::from_constant(0xC0000068); // STATUS_MEMBER_NOT_IN_GROUP
+
+/// Indicates the requested operation would disable, delete or could prevent logon for an administration account.
+/// This is not allowed to prevent creating a situation in which the system cannot be administrated.
 pub const LAST_ADMIN : NTSTATUS = NTSTATUS::from_constant(0xC0000069); // STATUS_LAST_ADMIN
+
+/// When trying to update a password, this return status indicates that the value provided as the current password is not correct.
 pub const WRONG_PASSWORD : NTSTATUS = NTSTATUS::from_constant(0xC000006A); // STATUS_WRONG_PASSWORD
+
+/// When trying to update a password, this return status indicates that the value provided for the new password contains values that are not allowed in passwords.
 pub const ILL_FORMED_PASSWORD : NTSTATUS = NTSTATUS::from_constant(0xC000006B); // STATUS_ILL_FORMED_PASSWORD
+
+/// When trying to update a password, this status indicates that some password update rule has been violated. For example, the password may not meet length criteria.
 pub const PASSWORD_RESTRICTION : NTSTATUS = NTSTATUS::from_constant(0xC000006C); // STATUS_PASSWORD_RESTRICTION
+
+/// The attempted logon is invalid. This is either due to a bad username or authentication information.
 pub const LOGON_FAILURE : NTSTATUS = NTSTATUS::from_constant(0xC000006D); // STATUS_LOGON_FAILURE
+
+/// Indicates a referenced user name and authentication information are valid, but some user account restriction has prevented successful authentication (such as time-of-day restrictions).
 pub const ACCOUNT_RESTRICTION : NTSTATUS = NTSTATUS::from_constant(0xC000006E); // STATUS_ACCOUNT_RESTRICTION
+
+/// The user account has time restrictions and may not be logged onto at this time.
 pub const INVALID_LOGON_HOURS : NTSTATUS = NTSTATUS::from_constant(0xC000006F); // STATUS_INVALID_LOGON_HOURS
+
+/// The user account is restricted such that it may not be used to log on from the source workstation.
 pub const INVALID_WORKSTATION : NTSTATUS = NTSTATUS::from_constant(0xC0000070); // STATUS_INVALID_WORKSTATION
+
+/// The user account's password has expired.
 pub const PASSWORD_EXPIRED : NTSTATUS = NTSTATUS::from_constant(0xC0000071); // STATUS_PASSWORD_EXPIRED
+
+/// The referenced account is currently disabled and may not be logged on to.
 pub const ACCOUNT_DISABLED : NTSTATUS = NTSTATUS::from_constant(0xC0000072); // STATUS_ACCOUNT_DISABLED
+
+/// None of the information to be translated has been translated.
 pub const NONE_MAPPED : NTSTATUS = NTSTATUS::from_constant(0xC0000073); // STATUS_NONE_MAPPED
+
+/// The number of LUIDs requested may not be allocated with a single allocation.
 pub const TOO_MANY_LUIDS_REQUESTED : NTSTATUS = NTSTATUS::from_constant(0xC0000074); // STATUS_TOO_MANY_LUIDS_REQUESTED
+
+/// Indicates there are no more LUIDs to allocate.
 pub const LUIDS_EXHAUSTED : NTSTATUS = NTSTATUS::from_constant(0xC0000075); // STATUS_LUIDS_EXHAUSTED
+
+/// Indicates the sub-authority value is invalid for the particular use.
 pub const INVALID_SUB_AUTHORITY : NTSTATUS = NTSTATUS::from_constant(0xC0000076); // STATUS_INVALID_SUB_AUTHORITY
+
+/// Indicates the ACL structure is not valid.
 pub const INVALID_ACL : NTSTATUS = NTSTATUS::from_constant(0xC0000077); // STATUS_INVALID_ACL
+
+/// Indicates the SID structure is not valid.
 pub const INVALID_SID : NTSTATUS = NTSTATUS::from_constant(0xC0000078); // STATUS_INVALID_SID
+
+/// Indicates the SECURITY_DESCRIPTOR structure is not valid.
 pub const INVALID_SECURITY_DESCR : NTSTATUS = NTSTATUS::from_constant(0xC0000079); // STATUS_INVALID_SECURITY_DESCR
+
+/// Indicates the specified procedure address cannot be found in the DLL.
 pub const PROCEDURE_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC000007A); // STATUS_PROCEDURE_NOT_FOUND
+
+/// ### Bad Image
+/// `%hs` is either not designed to run on Windows or it contains an error. Try installing the program again using the original installation media or contact your system administrator or the software vendor for support. Error status `0x%08lx`.
 pub const INVALID_IMAGE_FORMAT : NTSTATUS = NTSTATUS::from_constant(0xC000007B); // STATUS_INVALID_IMAGE_FORMAT
+
+/// An attempt was made to reference a token that doesn't exist.
+/// This is typically done by referencing the token associated with a thread when the thread is not impersonating a client.
 pub const NO_TOKEN : NTSTATUS = NTSTATUS::from_constant(0xC000007C); // STATUS_NO_TOKEN
+
+/// Indicates that an attempt to build either an inherited ACL or ACE was not successful.
+/// This can be caused by a number of things. One of the more probable causes is the replacement of a CreatorId with an SID that didn't fit into the ACE or ACL.
 pub const BAD_INHERITANCE_ACL : NTSTATUS = NTSTATUS::from_constant(0xC000007D); // STATUS_BAD_INHERITANCE_ACL
+
+/// The range specified in NtUnlockFile was not locked.
 pub const RANGE_NOT_LOCKED : NTSTATUS = NTSTATUS::from_constant(0xC000007E); // STATUS_RANGE_NOT_LOCKED
+
+/// An operation failed because the disk was full.
+/// If this is a thinly provisioned volume the physical storage backing this volume has been exhausted.
 pub const DISK_FULL : NTSTATUS = NTSTATUS::from_constant(0xC000007F); // STATUS_DISK_FULL
+
+/// The GUID allocation server is \[already\] disabled at the moment.
 pub const SERVER_DISABLED : NTSTATUS = NTSTATUS::from_constant(0xC0000080); // STATUS_SERVER_DISABLED
+
+/// The GUID allocation server is \[already\] enabled at the moment.
 pub const SERVER_NOT_DISABLED : NTSTATUS = NTSTATUS::from_constant(0xC0000081); // STATUS_SERVER_NOT_DISABLED
+
+/// Too many GUIDs were requested from the allocation server at once.
 pub const TOO_MANY_GUIDS_REQUESTED : NTSTATUS = NTSTATUS::from_constant(0xC0000082); // STATUS_TOO_MANY_GUIDS_REQUESTED
+
+/// The GUIDs could not be allocated because the Authority Agent was exhausted.
 pub const GUIDS_EXHAUSTED : NTSTATUS = NTSTATUS::from_constant(0xC0000083); // STATUS_GUIDS_EXHAUSTED
+
+/// The value provided was an invalid value for an identifier authority.
 pub const INVALID_ID_AUTHORITY : NTSTATUS = NTSTATUS::from_constant(0xC0000084); // STATUS_INVALID_ID_AUTHORITY
+
+/// There are no more authority agent values available for the given identifier authority value.
 pub const AGENTS_EXHAUSTED : NTSTATUS = NTSTATUS::from_constant(0xC0000085); // STATUS_AGENTS_EXHAUSTED
+
+/// An invalid volume label has been specified.
 pub const INVALID_VOLUME_LABEL : NTSTATUS = NTSTATUS::from_constant(0xC0000086); // STATUS_INVALID_VOLUME_LABEL
+
+/// A mapped section could not be extended.
 pub const SECTION_NOT_EXTENDED : NTSTATUS = NTSTATUS::from_constant(0xC0000087); // STATUS_SECTION_NOT_EXTENDED
+
+/// Specified section to flush does not map a data file.
 pub const NOT_MAPPED_DATA : NTSTATUS = NTSTATUS::from_constant(0xC0000088); // STATUS_NOT_MAPPED_DATA
+
+/// Indicates the specified image file did not contain a resource section.
 pub const RESOURCE_DATA_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC0000089); // STATUS_RESOURCE_DATA_NOT_FOUND
+
+/// Indicates the specified resource type cannot be found in the image file.
 pub const RESOURCE_TYPE_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC000008A); // STATUS_RESOURCE_TYPE_NOT_FOUND
+
+/// Indicates the specified resource name cannot be found in the image file.
 pub const RESOURCE_NAME_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC000008B); // STATUS_RESOURCE_NAME_NOT_FOUND
+
+/// ### EXCEPTION
+/// Array bounds exceeded.
 pub const ARRAY_BOUNDS_EXCEEDED : NTSTATUS = NTSTATUS::from_constant(0xC000008C); // STATUS_ARRAY_BOUNDS_EXCEEDED
+
+/// ### EXCEPTION
+/// Floating-point denormal operand.
 pub const FLOAT_DENORMAL_OPERAND : NTSTATUS = NTSTATUS::from_constant(0xC000008D); // STATUS_FLOAT_DENORMAL_OPERAND
+
+/// ### EXCEPTION
+/// Floating-point division by zero.
 pub const FLOAT_DIVIDE_BY_ZERO : NTSTATUS = NTSTATUS::from_constant(0xC000008E); // STATUS_FLOAT_DIVIDE_BY_ZERO
+
+/// ### EXCEPTION
+/// Floating-point inexact result.
 pub const FLOAT_INEXACT_RESULT : NTSTATUS = NTSTATUS::from_constant(0xC000008F); // STATUS_FLOAT_INEXACT_RESULT
+
+/// ### EXCEPTION
+/// Floating-point invalid operation.
 pub const FLOAT_INVALID_OPERATION : NTSTATUS = NTSTATUS::from_constant(0xC0000090); // STATUS_FLOAT_INVALID_OPERATION
+
+/// ### EXCEPTION
+/// Floating-point overflow.
 pub const FLOAT_OVERFLOW : NTSTATUS = NTSTATUS::from_constant(0xC0000091); // STATUS_FLOAT_OVERFLOW
+
+/// ### EXCEPTION
+/// Floating-point stack check.
 pub const FLOAT_STACK_CHECK : NTSTATUS = NTSTATUS::from_constant(0xC0000092); // STATUS_FLOAT_STACK_CHECK
+
+/// ### EXCEPTION
+/// Floating-point underflow.
 pub const FLOAT_UNDERFLOW : NTSTATUS = NTSTATUS::from_constant(0xC0000093); // STATUS_FLOAT_UNDERFLOW
+
+/// ### EXCEPTION
+/// Integer division by zero.
 pub const INTEGER_DIVIDE_BY_ZERO : NTSTATUS = NTSTATUS::from_constant(0xC0000094); // STATUS_INTEGER_DIVIDE_BY_ZERO
+
+/// ### EXCEPTION
+/// Integer overflow.
 pub const INTEGER_OVERFLOW : NTSTATUS = NTSTATUS::from_constant(0xC0000095); // STATUS_INTEGER_OVERFLOW
+
+/// ### EXCEPTION
+/// Privileged instruction.
 pub const PRIVILEGED_INSTRUCTION : NTSTATUS = NTSTATUS::from_constant(0xC0000096); // STATUS_PRIVILEGED_INSTRUCTION
+
+/// An attempt was made to install more paging files than the system supports.
 pub const TOO_MANY_PAGING_FILES : NTSTATUS = NTSTATUS::from_constant(0xC0000097); // STATUS_TOO_MANY_PAGING_FILES
+
+/// The volume for a file has been externally altered such that the opened file is no longer valid.
 pub const FILE_INVALID : NTSTATUS = NTSTATUS::from_constant(0xC0000098); // STATUS_FILE_INVALID
+
+/// When a block of memory is allotted for future updates, such as the memory allocated to hold discretionary access control and primary group information, successive updates may exceed the amount of memory originally allotted.
+/// Since quota may already have been charged to several processes which have handles to the object, it is not reasonable to alter the size of the allocated memory.
+/// Instead, a request that requires more memory than has been allotted must fail and the STATUS_ALLOTED_SPACE_EXCEEDED error returned.
 pub const ALLOTTED_SPACE_EXCEEDED : NTSTATUS = NTSTATUS::from_constant(0xC0000099); // STATUS_ALLOTTED_SPACE_EXCEEDED
+
+/// Insufficient system resources exist to complete the API.
 pub const INSUFFICIENT_RESOURCES : NTSTATUS = NTSTATUS::from_constant(0xC000009A); // STATUS_INSUFFICIENT_RESOURCES
+
+/// An attempt has been made to open a DFS exit path control file.
 pub const DFS_EXIT_PATH_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC000009B); // STATUS_DFS_EXIT_PATH_FOUND
+
+/// STATUS_DEVICE_DATA_ERROR
 pub const DEVICE_DATA_ERROR : NTSTATUS = NTSTATUS::from_constant(0xC000009C); // STATUS_DEVICE_DATA_ERROR
+
+/// STATUS_DEVICE_NOT_CONNECTED
 pub const DEVICE_NOT_CONNECTED : NTSTATUS = NTSTATUS::from_constant(0xC000009D); // STATUS_DEVICE_NOT_CONNECTED
+
+/// STATUS_DEVICE_POWER_FAILURE
 pub const DEVICE_POWER_FAILURE : NTSTATUS = NTSTATUS::from_constant(0xC000009E); // STATUS_DEVICE_POWER_FAILURE
+
+/// Virtual memory cannot be freed as base address is not the base of the region and a region size of zero was specified.
 pub const FREE_VM_NOT_AT_BASE : NTSTATUS = NTSTATUS::from_constant(0xC000009F); // STATUS_FREE_VM_NOT_AT_BASE
+
+/// An attempt was made to free virtual memory which is not allocated.
 pub const MEMORY_NOT_ALLOCATED : NTSTATUS = NTSTATUS::from_constant(0xC00000A0); // STATUS_MEMORY_NOT_ALLOCATED
+
+/// The working set is not big enough to allow the requested pages to be locked.
 pub const WORKING_SET_QUOTA : NTSTATUS = NTSTATUS::from_constant(0xC00000A1); // STATUS_WORKING_SET_QUOTA
+
+/// ### Write Protect Error
+/// The disk cannot be written to because it is write protected. Please remove the write protection from the volume `%hs` in drive `%hs`.
 pub const MEDIA_WRITE_PROTECTED : NTSTATUS = NTSTATUS::from_constant(0xC00000A2); // STATUS_MEDIA_WRITE_PROTECTED
+
+/// ### Drive Not Ready
+/// The drive is not ready for use; its door may be open. Please check drive `%hs` and make sure that a disk is inserted and that the drive door is closed.
 pub const DEVICE_NOT_READY : NTSTATUS = NTSTATUS::from_constant(0xC00000A3); // STATUS_DEVICE_NOT_READY
+
+/// The specified attributes are invalid, or incompatible with the attributes for the group as a whole.
 pub const INVALID_GROUP_ATTRIBUTES : NTSTATUS = NTSTATUS::from_constant(0xC00000A4); // STATUS_INVALID_GROUP_ATTRIBUTES
+
+/// A specified impersonation level is invalid.
+/// Also used to indicate a required impersonation level was not provided.
 pub const BAD_IMPERSONATION_LEVEL : NTSTATUS = NTSTATUS::from_constant(0xC00000A5); // STATUS_BAD_IMPERSONATION_LEVEL
+
+/// An attempt was made to open an Anonymous level token.
+/// Anonymous tokens may not be opened.
 pub const CANT_OPEN_ANONYMOUS : NTSTATUS = NTSTATUS::from_constant(0xC00000A6); // STATUS_CANT_OPEN_ANONYMOUS
+
+/// The validation information class requested was invalid.
 pub const BAD_VALIDATION_CLASS : NTSTATUS = NTSTATUS::from_constant(0xC00000A7); // STATUS_BAD_VALIDATION_CLASS
+
+/// The type of a token object is inappropriate for its attempted use.
 pub const BAD_TOKEN_TYPE : NTSTATUS = NTSTATUS::from_constant(0xC00000A8); // STATUS_BAD_TOKEN_TYPE
+
+/// The type of a token object is inappropriate for its attempted use.
 pub const BAD_MASTER_BOOT_RECORD : NTSTATUS = NTSTATUS::from_constant(0xC00000A9); // STATUS_BAD_MASTER_BOOT_RECORD
+
+/// An attempt was made to execute an instruction at an unaligned address and the host system does not support unaligned instruction references.
 pub const INSTRUCTION_MISALIGNMENT : NTSTATUS = NTSTATUS::from_constant(0xC00000AA); // STATUS_INSTRUCTION_MISALIGNMENT
+
+/// The maximum named pipe instance count has been reached.
 pub const INSTANCE_NOT_AVAILABLE : NTSTATUS = NTSTATUS::from_constant(0xC00000AB); // STATUS_INSTANCE_NOT_AVAILABLE
+
+/// An instance of a named pipe cannot be found in the listening state.
 pub const PIPE_NOT_AVAILABLE : NTSTATUS = NTSTATUS::from_constant(0xC00000AC); // STATUS_PIPE_NOT_AVAILABLE
+
+/// The named pipe is not in the connected or closing state.
 pub const INVALID_PIPE_STATE : NTSTATUS = NTSTATUS::from_constant(0xC00000AD); // STATUS_INVALID_PIPE_STATE
+
+/// The specified pipe is set to complete operations and there are current I/O operations queued so it cannot be changed to queue operations.
 pub const PIPE_BUSY : NTSTATUS = NTSTATUS::from_constant(0xC00000AE); // STATUS_PIPE_BUSY
+
+/// The specified handle is not open to the server end of the named pipe.
 pub const ILLEGAL_FUNCTION : NTSTATUS = NTSTATUS::from_constant(0xC00000AF); // STATUS_ILLEGAL_FUNCTION
+
+/// The specified named pipe is in the disconnected state.
 pub const PIPE_DISCONNECTED : NTSTATUS = NTSTATUS::from_constant(0xC00000B0); // STATUS_PIPE_DISCONNECTED
+
+/// The specified named pipe is in the closing state.
 pub const PIPE_CLOSING : NTSTATUS = NTSTATUS::from_constant(0xC00000B1); // STATUS_PIPE_CLOSING
+
+/// The specified named pipe is in the connected state.
 pub const PIPE_CONNECTED : NTSTATUS = NTSTATUS::from_constant(0xC00000B2); // STATUS_PIPE_CONNECTED
+
+/// The specified named pipe is in the listening state.
 pub const PIPE_LISTENING : NTSTATUS = NTSTATUS::from_constant(0xC00000B3); // STATUS_PIPE_LISTENING
+
+/// The specified named pipe is not in message mode.
 pub const INVALID_READ_MODE : NTSTATUS = NTSTATUS::from_constant(0xC00000B4); // STATUS_INVALID_READ_MODE
+
+/// ### Device Timeout
+/// The specified I/O operation on `%hs` was not completed before the time-out period expired.
 pub const IO_TIMEOUT : NTSTATUS = NTSTATUS::from_constant(0xC00000B5); // STATUS_IO_TIMEOUT
+
+/// The specified file has been closed by another process.
 pub const FILE_FORCED_CLOSED : NTSTATUS = NTSTATUS::from_constant(0xC00000B6); // STATUS_FILE_FORCED_CLOSED
+
+/// Profiling not started.
 pub const PROFILING_NOT_STARTED : NTSTATUS = NTSTATUS::from_constant(0xC00000B7); // STATUS_PROFILING_NOT_STARTED
+
+/// Profiling not stopped.
 pub const PROFILING_NOT_STOPPED : NTSTATUS = NTSTATUS::from_constant(0xC00000B8); // STATUS_PROFILING_NOT_STOPPED
+
+/// The passed ACL did not contain the minimum required information.
 pub const COULD_NOT_INTERPRET : NTSTATUS = NTSTATUS::from_constant(0xC00000B9); // STATUS_COULD_NOT_INTERPRET
+
+/// The file that was specified as a target is a directory and the caller specified that it could be anything but a directory.
 pub const FILE_IS_A_DIRECTORY : NTSTATUS = NTSTATUS::from_constant(0xC00000BA); // STATUS_FILE_IS_A_DIRECTORY
+
+/// The request is not supported.
 pub const NOT_SUPPORTED : NTSTATUS = NTSTATUS::from_constant(0xC00000BB); // STATUS_NOT_SUPPORTED
+
+/// This remote computer is not listening.
 pub const REMOTE_NOT_LISTENING : NTSTATUS = NTSTATUS::from_constant(0xC00000BC); // STATUS_REMOTE_NOT_LISTENING
+
+/// A duplicate name exists on the network.
 pub const DUPLICATE_NAME : NTSTATUS = NTSTATUS::from_constant(0xC00000BD); // STATUS_DUPLICATE_NAME
+
+/// The network path cannot be located.
 pub const BAD_NETWORK_PATH : NTSTATUS = NTSTATUS::from_constant(0xC00000BE); // STATUS_BAD_NETWORK_PATH
+
+/// The network is busy.
 pub const NETWORK_BUSY : NTSTATUS = NTSTATUS::from_constant(0xC00000BF); // STATUS_NETWORK_BUSY
+
+/// This device does not exist.
 pub const DEVICE_DOES_NOT_EXIST : NTSTATUS = NTSTATUS::from_constant(0xC00000C0); // STATUS_DEVICE_DOES_NOT_EXIST
+
+/// The network BIOS command limit has been reached.
 pub const TOO_MANY_COMMANDS : NTSTATUS = NTSTATUS::from_constant(0xC00000C1); // STATUS_TOO_MANY_COMMANDS
+
+/// An I/O adapter hardware error has occurred.
 pub const ADAPTER_HARDWARE_ERROR : NTSTATUS = NTSTATUS::from_constant(0xC00000C2); // STATUS_ADAPTER_HARDWARE_ERROR
+
+/// The network responded incorrectly.
 pub const INVALID_NETWORK_RESPONSE : NTSTATUS = NTSTATUS::from_constant(0xC00000C3); // STATUS_INVALID_NETWORK_RESPONSE
+
+/// An unexpected network error occurred.
 pub const UNEXPECTED_NETWORK_ERROR : NTSTATUS = NTSTATUS::from_constant(0xC00000C4); // STATUS_UNEXPECTED_NETWORK_ERROR
+
+/// The remote adapter is not compatible.
 pub const BAD_REMOTE_ADAPTER : NTSTATUS = NTSTATUS::from_constant(0xC00000C5); // STATUS_BAD_REMOTE_ADAPTER
+
+/// The printer queue is full.
 pub const PRINT_QUEUE_FULL : NTSTATUS = NTSTATUS::from_constant(0xC00000C6); // STATUS_PRINT_QUEUE_FULL
+
+/// Space to store the file waiting to be printed is not available on the server.
 pub const NO_SPOOL_SPACE : NTSTATUS = NTSTATUS::from_constant(0xC00000C7); // STATUS_NO_SPOOL_SPACE
+
+/// The requested print file has been canceled.
 pub const PRINT_CANCELLED : NTSTATUS = NTSTATUS::from_constant(0xC00000C8); // STATUS_PRINT_CANCELLED
+
+/// The network name was deleted.
 pub const NETWORK_NAME_DELETED : NTSTATUS = NTSTATUS::from_constant(0xC00000C9); // STATUS_NETWORK_NAME_DELETED
+
+/// Network access is denied.
 pub const NETWORK_ACCESS_DENIED : NTSTATUS = NTSTATUS::from_constant(0xC00000CA); // STATUS_NETWORK_ACCESS_DENIED
+
+/// ### Incorrect Network Resource Type
+/// The specified device type (LPT, for example) conflicts with the actual device type on the remote resource.
 pub const BAD_DEVICE_TYPE : NTSTATUS = NTSTATUS::from_constant(0xC00000CB); // STATUS_BAD_DEVICE_TYPE
+
+/// ### Network Name Not Found
+/// The specified share name cannot be found on the remote server.
 pub const BAD_NETWORK_NAME : NTSTATUS = NTSTATUS::from_constant(0xC00000CC); // STATUS_BAD_NETWORK_NAME
+
+/// The name limit for the local computer network adapter card was exceeded.
 pub const TOO_MANY_NAMES : NTSTATUS = NTSTATUS::from_constant(0xC00000CD); // STATUS_TOO_MANY_NAMES
+
+/// The network BIOS session limit was exceeded.
 pub const TOO_MANY_SESSIONS : NTSTATUS = NTSTATUS::from_constant(0xC00000CE); // STATUS_TOO_MANY_SESSIONS
+
+/// File sharing has been temporarily paused.
 pub const SHARING_PAUSED : NTSTATUS = NTSTATUS::from_constant(0xC00000CF); // STATUS_SHARING_PAUSED
+
+/// No more connections can be made to this remote computer at this time because there are already as many connections as the computer can accept.
 pub const REQUEST_NOT_ACCEPTED : NTSTATUS = NTSTATUS::from_constant(0xC00000D0); // STATUS_REQUEST_NOT_ACCEPTED
+
+/// Print or disk redirection is temporarily paused.
 pub const REDIRECTOR_PAUSED : NTSTATUS = NTSTATUS::from_constant(0xC00000D1); // STATUS_REDIRECTOR_PAUSED
+
+/// A network data fault occurred.
 pub const NET_WRITE_FAULT : NTSTATUS = NTSTATUS::from_constant(0xC00000D2); // STATUS_NET_WRITE_FAULT
+
+/// The number of active profiling objects is at the maximum and no more may be started.
 pub const PROFILING_AT_LIMIT : NTSTATUS = NTSTATUS::from_constant(0xC00000D3); // STATUS_PROFILING_AT_LIMIT
+
+/// ### Incorrect Volume
+/// The target file of a rename request is located on a different device than the source of the rename request.
 pub const NOT_SAME_DEVICE : NTSTATUS = NTSTATUS::from_constant(0xC00000D4); // STATUS_NOT_SAME_DEVICE
+
+/// The file specified has been renamed and thus cannot be modified.
 pub const FILE_RENAMED : NTSTATUS = NTSTATUS::from_constant(0xC00000D5); // STATUS_FILE_RENAMED
+
+/// ### Network Request Timeout
+/// The session with a remote server has been disconnected because the time-out interval for a request has expired.
 pub const VIRTUAL_CIRCUIT_CLOSED : NTSTATUS = NTSTATUS::from_constant(0xC00000D6); // STATUS_VIRTUAL_CIRCUIT_CLOSED
+
+/// Indicates an attempt was made to operate on the security of an object that does not have security associated with it.
 pub const NO_SECURITY_ON_OBJECT : NTSTATUS = NTSTATUS::from_constant(0xC00000D7); // STATUS_NO_SECURITY_ON_OBJECT
+
+/// Used to indicate that an operation cannot continue without blocking for I/O.
 pub const CANT_WAIT : NTSTATUS = NTSTATUS::from_constant(0xC00000D8); // STATUS_CANT_WAIT
+
+/// Used to indicate that a read operation was done on an empty pipe.
 pub const PIPE_EMPTY : NTSTATUS = NTSTATUS::from_constant(0xC00000D9); // STATUS_PIPE_EMPTY
+
+/// Configuration information could not be read from the domain controller, either because the machine is unavailable, or access has been denied.
 pub const CANT_ACCESS_DOMAIN_INFO : NTSTATUS = NTSTATUS::from_constant(0xC00000DA); // STATUS_CANT_ACCESS_DOMAIN_INFO
+
+/// Indicates that a thread attempted to terminate itself by default (called NtTerminateThread with NULL) and it was the last thread in the current process.
 pub const CANT_TERMINATE_SELF : NTSTATUS = NTSTATUS::from_constant(0xC00000DB); // STATUS_CANT_TERMINATE_SELF
+
+/// Indicates the Sam Server was in the wrong state to perform the desired operation.
 pub const INVALID_SERVER_STATE : NTSTATUS = NTSTATUS::from_constant(0xC00000DC); // STATUS_INVALID_SERVER_STATE
+
+/// Indicates the Domain was in the wrong state to perform the desired operation.
 pub const INVALID_DOMAIN_STATE : NTSTATUS = NTSTATUS::from_constant(0xC00000DD); // STATUS_INVALID_DOMAIN_STATE
+
+/// This operation is only allowed for the Primary Domain Controller of the domain.
 pub const INVALID_DOMAIN_ROLE : NTSTATUS = NTSTATUS::from_constant(0xC00000DE); // STATUS_INVALID_DOMAIN_ROLE
+
+/// The specified Domain did not exist.
 pub const NO_SUCH_DOMAIN : NTSTATUS = NTSTATUS::from_constant(0xC00000DF); // STATUS_NO_SUCH_DOMAIN
+
+/// The specified Domain already exists.
 pub const DOMAIN_EXISTS : NTSTATUS = NTSTATUS::from_constant(0xC00000E0); // STATUS_DOMAIN_EXISTS
+
+/// An attempt was made to exceed the limit on the number of domains per server for this release.
 pub const DOMAIN_LIMIT_EXCEEDED : NTSTATUS = NTSTATUS::from_constant(0xC00000E1); // STATUS_DOMAIN_LIMIT_EXCEEDED
+
+/// Error status returned when oplock request is denied.
 pub const OPLOCK_NOT_GRANTED : NTSTATUS = NTSTATUS::from_constant(0xC00000E2); // STATUS_OPLOCK_NOT_GRANTED
+
+/// Error status returned when an invalid oplock acknowledgment is received by a file system.
 pub const INVALID_OPLOCK_PROTOCOL : NTSTATUS = NTSTATUS::from_constant(0xC00000E3); // STATUS_INVALID_OPLOCK_PROTOCOL
+
+/// This error indicates that the requested operation cannot be completed due to a catastrophic media failure or on-disk data structure corruption.
 pub const INTERNAL_DB_CORRUPTION : NTSTATUS = NTSTATUS::from_constant(0xC00000E4); // STATUS_INTERNAL_DB_CORRUPTION
+
+/// An internal error occurred.
 pub const INTERNAL_ERROR : NTSTATUS = NTSTATUS::from_constant(0xC00000E5); // STATUS_INTERNAL_ERROR
+
+/// Indicates generic access types were contained in an access mask which should already be mapped to non-generic access types.
 pub const GENERIC_NOT_MAPPED : NTSTATUS = NTSTATUS::from_constant(0xC00000E6); // STATUS_GENERIC_NOT_MAPPED
+
+/// Indicates a security descriptor is not in the necessary format (absolute or self-relative).
 pub const BAD_DESCRIPTOR_FORMAT : NTSTATUS = NTSTATUS::from_constant(0xC00000E7); // STATUS_BAD_DESCRIPTOR_FORMAT
+
+/// An access to a user buffer failed at an "expected" point in time. This code is defined since the caller does not want to accept STATUS_ACCESS_VIOLATION in its filter.
 pub const INVALID_USER_BUFFER : NTSTATUS = NTSTATUS::from_constant(0xC00000E8); // STATUS_INVALID_USER_BUFFER
+
+/// If an I/O error is returned which is not defined in the standard FsRtl filter, it is converted to the following error which is guaranteed to be in the filter. In this case information is lost, however, the filter correctly handles the exception.
 pub const UNEXPECTED_IO_ERROR : NTSTATUS = NTSTATUS::from_constant(0xC00000E9); // STATUS_UNEXPECTED_IO_ERROR
+
+/// If an MM error is returned which is not defined in the standard FsRtl filter, it is converted to one of the following errors which is guaranteed to be in the filter. In this case information is lost, however, the filter correctly handles the exception.
 pub const UNEXPECTED_MM_CREATE_ERR : NTSTATUS = NTSTATUS::from_constant(0xC00000EA); // STATUS_UNEXPECTED_MM_CREATE_ERR
+
+/// If an MM error is returned which is not defined in the standard FsRtl filter, it is converted to one of the following errors which is guaranteed to be in the filter. In this case information is lost, however, the filter correctly handles the exception.
 pub const UNEXPECTED_MM_MAP_ERROR : NTSTATUS = NTSTATUS::from_constant(0xC00000EB); // STATUS_UNEXPECTED_MM_MAP_ERROR
+
+/// If an MM error is returned which is not defined in the standard FsRtl filter, it is converted to one of the following errors which is guaranteed to be in the filter. In this case information is lost, however, the filter correctly handles the exception.
 pub const UNEXPECTED_MM_EXTEND_ERR : NTSTATUS = NTSTATUS::from_constant(0xC00000EC); // STATUS_UNEXPECTED_MM_EXTEND_ERR
+
+/// The requested action is restricted for use by logon processes only. The calling process has not registered as a logon process.
 pub const NOT_LOGON_PROCESS : NTSTATUS = NTSTATUS::from_constant(0xC00000ED); // STATUS_NOT_LOGON_PROCESS
+
+/// An attempt has been made to start a new session manager or LSA logon session with an ID that is already in use.
 pub const LOGON_SESSION_EXISTS : NTSTATUS = NTSTATUS::from_constant(0xC00000EE); // STATUS_LOGON_SESSION_EXISTS
+
+/// An invalid parameter was passed to a service or function as the first argument.
 pub const INVALID_PARAMETER_1 : NTSTATUS = NTSTATUS::from_constant(0xC00000EF); // STATUS_INVALID_PARAMETER_1
+
+/// An invalid parameter was passed to a service or function as the second argument.
 pub const INVALID_PARAMETER_2 : NTSTATUS = NTSTATUS::from_constant(0xC00000F0); // STATUS_INVALID_PARAMETER_2
+
+/// An invalid parameter was passed to a service or function as the third argument.
 pub const INVALID_PARAMETER_3 : NTSTATUS = NTSTATUS::from_constant(0xC00000F1); // STATUS_INVALID_PARAMETER_3
+
+/// An invalid parameter was passed to a service or function as the fourth argument.
 pub const INVALID_PARAMETER_4 : NTSTATUS = NTSTATUS::from_constant(0xC00000F2); // STATUS_INVALID_PARAMETER_4
+
+/// An invalid parameter was passed to a service or function as the fifth argument.
 pub const INVALID_PARAMETER_5 : NTSTATUS = NTSTATUS::from_constant(0xC00000F3); // STATUS_INVALID_PARAMETER_5
+
+/// An invalid parameter was passed to a service or function as the sixth argument.
 pub const INVALID_PARAMETER_6 : NTSTATUS = NTSTATUS::from_constant(0xC00000F4); // STATUS_INVALID_PARAMETER_6
+
+/// An invalid parameter was passed to a service or function as the seventh argument.
 pub const INVALID_PARAMETER_7 : NTSTATUS = NTSTATUS::from_constant(0xC00000F5); // STATUS_INVALID_PARAMETER_7
+
+/// An invalid parameter was passed to a service or function as the eighth argument.
 pub const INVALID_PARAMETER_8 : NTSTATUS = NTSTATUS::from_constant(0xC00000F6); // STATUS_INVALID_PARAMETER_8
+
+/// An invalid parameter was passed to a service or function as the ninth argument.
 pub const INVALID_PARAMETER_9 : NTSTATUS = NTSTATUS::from_constant(0xC00000F7); // STATUS_INVALID_PARAMETER_9
+
+/// An invalid parameter was passed to a service or function as the tenth argument.
 pub const INVALID_PARAMETER_10 : NTSTATUS = NTSTATUS::from_constant(0xC00000F8); // STATUS_INVALID_PARAMETER_10
+
+/// An invalid parameter was passed to a service or function as the eleventh argument.
 pub const INVALID_PARAMETER_11 : NTSTATUS = NTSTATUS::from_constant(0xC00000F9); // STATUS_INVALID_PARAMETER_11
+
+/// An invalid parameter was passed to a service or function as the twelfth argument.
 pub const INVALID_PARAMETER_12 : NTSTATUS = NTSTATUS::from_constant(0xC00000FA); // STATUS_INVALID_PARAMETER_12
+
+/// An attempt was made to access a network file, but the network software was not yet started.
 pub const REDIRECTOR_NOT_STARTED : NTSTATUS = NTSTATUS::from_constant(0xC00000FB); // STATUS_REDIRECTOR_NOT_STARTED
+
+/// An attempt was made to start the redirector, but the redirector has already been started.
 pub const REDIRECTOR_STARTED : NTSTATUS = NTSTATUS::from_constant(0xC00000FC); // STATUS_REDIRECTOR_STARTED
+
+/// A new guard page for the stack cannot be created.
 pub const STACK_OVERFLOW : NTSTATUS = NTSTATUS::from_constant(0xC00000FD); // STATUS_STACK_OVERFLOW
+
+/// A specified authentication package is unknown.
 pub const NO_SUCH_PACKAGE : NTSTATUS = NTSTATUS::from_constant(0xC00000FE); // STATUS_NO_SUCH_PACKAGE
+
+/// A malformed function table was encountered during an unwind operation.
 pub const BAD_FUNCTION_TABLE : NTSTATUS = NTSTATUS::from_constant(0xC00000FF); // STATUS_BAD_FUNCTION_TABLE
+
+/// Indicates the specified environment variable name was not found in the specified environment block.
 pub const VARIABLE_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC0000100); // STATUS_VARIABLE_NOT_FOUND
+
+/// Indicates that the directory trying to be deleted is not empty.
 pub const DIRECTORY_NOT_EMPTY : NTSTATUS = NTSTATUS::from_constant(0xC0000101); // STATUS_DIRECTORY_NOT_EMPTY
+
+/// ### Corrupt File
+/// The file or directory `%hs` is corrupt and unreadable.
+/// Please run the Chkdsk utility.
 pub const FILE_CORRUPT_ERROR : NTSTATUS = NTSTATUS::from_constant(0xC0000102); // STATUS_FILE_CORRUPT_ERROR
+
+/// A requested opened file is not a directory.
 pub const NOT_A_DIRECTORY : NTSTATUS = NTSTATUS::from_constant(0xC0000103); // STATUS_NOT_A_DIRECTORY
+
+/// The logon session is not in a state that is consistent with the requested operation.
 pub const BAD_LOGON_SESSION_STATE : NTSTATUS = NTSTATUS::from_constant(0xC0000104); // STATUS_BAD_LOGON_SESSION_STATE
+
+/// An internal LSA error has occurred. An authentication package has requested the creation of a Logon Session but the ID of an already existing Logon Session has been specified.
 pub const LOGON_SESSION_COLLISION : NTSTATUS = NTSTATUS::from_constant(0xC0000105); // STATUS_LOGON_SESSION_COLLISION
+
+/// A specified name string is too long for its intended use.
 pub const NAME_TOO_LONG : NTSTATUS = NTSTATUS::from_constant(0xC0000106); // STATUS_NAME_TOO_LONG
+
+/// The user attempted to force close the files on a redirected drive, but there were opened files on the drive, and the user did not specify a sufficient level of force.
 pub const FILES_OPEN : NTSTATUS = NTSTATUS::from_constant(0xC0000107); // STATUS_FILES_OPEN
+
+/// The user attempted to force close the files on a redirected drive, but there were opened directories on the drive, and the user did not specify a sufficient level of force.
 pub const CONNECTION_IN_USE : NTSTATUS = NTSTATUS::from_constant(0xC0000108); // STATUS_CONNECTION_IN_USE
+
+/// RtlFindMessage could not locate the requested message ID in the message table resource.
 pub const MESSAGE_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC0000109); // STATUS_MESSAGE_NOT_FOUND
+
+/// An attempt was made to access an exiting process.
 pub const PROCESS_IS_TERMINATING : NTSTATUS = NTSTATUS::from_constant(0xC000010A); // STATUS_PROCESS_IS_TERMINATING
+
+/// Indicates an invalid value has been provided for the LogonType requested.
 pub const INVALID_LOGON_TYPE : NTSTATUS = NTSTATUS::from_constant(0xC000010B); // STATUS_INVALID_LOGON_TYPE
+
+/// Indicates that an attempt was made to assign protection to a file system file or directory and one of the SIDs in the security descriptor could not be translated into a GUID that could be stored by the file system.
+/// This causes the protection attempt to fail, which may cause a file creation attempt to fail.
 pub const NO_GUID_TRANSLATION : NTSTATUS = NTSTATUS::from_constant(0xC000010C); // STATUS_NO_GUID_TRANSLATION
+
+/// Indicates that an attempt has been made to impersonate via a named pipe that has not yet been read from.
 pub const CANNOT_IMPERSONATE : NTSTATUS = NTSTATUS::from_constant(0xC000010D); // STATUS_CANNOT_IMPERSONATE
+
+/// Indicates that the specified image is already loaded.
 pub const IMAGE_ALREADY_LOADED : NTSTATUS = NTSTATUS::from_constant(0xC000010E); // STATUS_IMAGE_ALREADY_LOADED
+
+/// STATUS_ABIOS_NOT_PRESENT
 pub const ABIOS_NOT_PRESENT : NTSTATUS = NTSTATUS::from_constant(0xC000010F); // STATUS_ABIOS_NOT_PRESENT
+
+/// STATUS_ABIOS_LID_NOT_EXIST
 pub const ABIOS_LID_NOT_EXIST : NTSTATUS = NTSTATUS::from_constant(0xC0000110); // STATUS_ABIOS_LID_NOT_EXIST
+
+/// STATUS_ABIOS_LID_ALREADY_OWNED
 pub const ABIOS_LID_ALREADY_OWNED : NTSTATUS = NTSTATUS::from_constant(0xC0000111); // STATUS_ABIOS_LID_ALREADY_OWNED
+
+/// STATUS_ABIOS_NOT_LID_OWNER
 pub const ABIOS_NOT_LID_OWNER : NTSTATUS = NTSTATUS::from_constant(0xC0000112); // STATUS_ABIOS_NOT_LID_OWNER
+
+/// STATUS_ABIOS_INVALID_COMMAND
 pub const ABIOS_INVALID_COMMAND : NTSTATUS = NTSTATUS::from_constant(0xC0000113); // STATUS_ABIOS_INVALID_COMMAND
+
+/// STATUS_ABIOS_INVALID_LID
 pub const ABIOS_INVALID_LID : NTSTATUS = NTSTATUS::from_constant(0xC0000114); // STATUS_ABIOS_INVALID_LID
+
+/// STATUS_ABIOS_SELECTOR_NOT_AVAILABLE
 pub const ABIOS_SELECTOR_NOT_AVAILABLE : NTSTATUS = NTSTATUS::from_constant(0xC0000115); // STATUS_ABIOS_SELECTOR_NOT_AVAILABLE
+
+/// STATUS_ABIOS_INVALID_SELECTOR
 pub const ABIOS_INVALID_SELECTOR : NTSTATUS = NTSTATUS::from_constant(0xC0000116); // STATUS_ABIOS_INVALID_SELECTOR
+
+/// Indicates that an attempt was made to change the size of the LDT for a process that has no LDT.
 pub const NO_LDT : NTSTATUS = NTSTATUS::from_constant(0xC0000117); // STATUS_NO_LDT
+
+/// Indicates that an attempt was made to grow an LDT by setting its size, or that the size was not an even number of selectors.
 pub const INVALID_LDT_SIZE : NTSTATUS = NTSTATUS::from_constant(0xC0000118); // STATUS_INVALID_LDT_SIZE
+
+/// Indicates that the starting value for the LDT information was not an integral multiple of the selector size.
 pub const INVALID_LDT_OFFSET : NTSTATUS = NTSTATUS::from_constant(0xC0000119); // STATUS_INVALID_LDT_OFFSET
+
+/// Indicates that the user supplied an invalid descriptor when trying to set up Ldt descriptors.
 pub const INVALID_LDT_DESCRIPTOR : NTSTATUS = NTSTATUS::from_constant(0xC000011A); // STATUS_INVALID_LDT_DESCRIPTOR
+
+/// The specified image file did not have the correct format. It appears to be NE format.
 pub const INVALID_IMAGE_NE_FORMAT : NTSTATUS = NTSTATUS::from_constant(0xC000011B); // STATUS_INVALID_IMAGE_NE_FORMAT
+
+/// Indicates that the transaction state of a registry sub-tree is incompatible with the requested operation. For example, a request has been made to start a new transaction with one already in progress, or a request has been made to apply a transaction when one is not currently in progress.
 pub const RXACT_INVALID_STATE : NTSTATUS = NTSTATUS::from_constant(0xC000011C); // STATUS_RXACT_INVALID_STATE
+
+/// Indicates an error has occurred during a registry transaction commit. The database has been left in an unknown, but probably inconsistent, state. The state of the registry transaction is left as COMMITTING.
 pub const RXACT_COMMIT_FAILURE : NTSTATUS = NTSTATUS::from_constant(0xC000011D); // STATUS_RXACT_COMMIT_FAILURE
+
+/// An attempt was made to map a file of size zero with the maximum size specified as zero.
 pub const MAPPED_FILE_SIZE_ZERO : NTSTATUS = NTSTATUS::from_constant(0xC000011E); // STATUS_MAPPED_FILE_SIZE_ZERO
+
+/// Too many files are opened on a remote server.
+/// This error should only be returned by the Windows redirector on a remote drive.
 pub const TOO_MANY_OPENED_FILES : NTSTATUS = NTSTATUS::from_constant(0xC000011F); // STATUS_TOO_MANY_OPENED_FILES
+
+/// The I/O request was canceled.
 pub const CANCELLED : NTSTATUS = NTSTATUS::from_constant(0xC0000120); // STATUS_CANCELLED
+
+/// An attempt has been made to remove a file or directory that cannot be deleted.
 pub const CANNOT_DELETE : NTSTATUS = NTSTATUS::from_constant(0xC0000121); // STATUS_CANNOT_DELETE
+
+/// Indicates a name specified as a remote computer name is syntactically invalid.
 pub const INVALID_COMPUTER_NAME : NTSTATUS = NTSTATUS::from_constant(0xC0000122); // STATUS_INVALID_COMPUTER_NAME
+
+/// An I/O request other than close was performed on a file after it has been deleted, which can only happen to a request which did not complete before the last handle was closed via NtClose.
 pub const FILE_DELETED : NTSTATUS = NTSTATUS::from_constant(0xC0000123); // STATUS_FILE_DELETED
+
+/// Indicates an operation has been attempted on a built-in (special) SAM account which is incompatible with built-in accounts. For example, built-in accounts cannot be deleted.
 pub const SPECIAL_ACCOUNT : NTSTATUS = NTSTATUS::from_constant(0xC0000124); // STATUS_SPECIAL_ACCOUNT
+
+/// The operation requested may not be performed on the specified group because it is a built-in special group.
 pub const SPECIAL_GROUP : NTSTATUS = NTSTATUS::from_constant(0xC0000125); // STATUS_SPECIAL_GROUP
+
+/// The operation requested may not be performed on the specified user because it is a built-in special user.
 pub const SPECIAL_USER : NTSTATUS = NTSTATUS::from_constant(0xC0000126); // STATUS_SPECIAL_USER
+
+/// Indicates a member cannot be removed from a group because the group is currently the member's primary group.
 pub const MEMBERS_PRIMARY_GROUP : NTSTATUS = NTSTATUS::from_constant(0xC0000127); // STATUS_MEMBERS_PRIMARY_GROUP
+
+/// An I/O request other than close and several other special case operations was attempted using a file object that had already been closed.
 pub const FILE_CLOSED : NTSTATUS = NTSTATUS::from_constant(0xC0000128); // STATUS_FILE_CLOSED
+
+/// Indicates a process has too many threads to perform the requested action. For example, assignment of a primary token may only be performed when a process has zero or one threads.
 pub const TOO_MANY_THREADS : NTSTATUS = NTSTATUS::from_constant(0xC0000129); // STATUS_TOO_MANY_THREADS
+
+/// An attempt was made to operate on a thread within a specific process, but the thread specified is not in the process specified.
 pub const THREAD_NOT_IN_PROCESS : NTSTATUS = NTSTATUS::from_constant(0xC000012A); // STATUS_THREAD_NOT_IN_PROCESS
+
+/// An attempt was made to establish a token for use as a primary token but the token is already in use. A token can only be the primary token of one process at a time.
 pub const TOKEN_ALREADY_IN_USE : NTSTATUS = NTSTATUS::from_constant(0xC000012B); // STATUS_TOKEN_ALREADY_IN_USE
+
+/// Page file quota was exceeded.
 pub const PAGEFILE_QUOTA_EXCEEDED : NTSTATUS = NTSTATUS::from_constant(0xC000012C); // STATUS_PAGEFILE_QUOTA_EXCEEDED
+
+/// ### Out of Virtual Memory
+/// Your system is low on virtual memory. To ensure that Windows runs properly, increase the size of your virtual memory paging file. For more information, see Help.
 pub const COMMITMENT_LIMIT : NTSTATUS = NTSTATUS::from_constant(0xC000012D); // STATUS_COMMITMENT_LIMIT
+
+/// The specified image file did not have the correct format, it appears to be LE format.
 pub const INVALID_IMAGE_LE_FORMAT : NTSTATUS = NTSTATUS::from_constant(0xC000012E); // STATUS_INVALID_IMAGE_LE_FORMAT
+
+/// The specified image file did not have the correct format, it did not have an initial MZ.
 pub const INVALID_IMAGE_NOT_MZ : NTSTATUS = NTSTATUS::from_constant(0xC000012F); // STATUS_INVALID_IMAGE_NOT_MZ
+
+/// The specified image file did not have the correct format, it did not have a proper e_lfarlc in the MZ header.
 pub const INVALID_IMAGE_PROTECT : NTSTATUS = NTSTATUS::from_constant(0xC0000130); // STATUS_INVALID_IMAGE_PROTECT
+
+/// The specified image file did not have the correct format, it appears to be a 16-bit Windows image.
 pub const INVALID_IMAGE_WIN_16 : NTSTATUS = NTSTATUS::from_constant(0xC0000131); // STATUS_INVALID_IMAGE_WIN_16
+
+/// The Netlogon service cannot start because another Netlogon service running in the domain conflicts with the specified role.
 pub const LOGON_SERVER_CONFLICT : NTSTATUS = NTSTATUS::from_constant(0xC0000132); // STATUS_LOGON_SERVER_CONFLICT
+
+/// The time at the Primary Domain Controller is different than the time at the Backup Domain Controller or member server by too large an amount.
 pub const TIME_DIFFERENCE_AT_DC : NTSTATUS = NTSTATUS::from_constant(0xC0000133); // STATUS_TIME_DIFFERENCE_AT_DC
+
+/// The SAM database on a Windows Server is significantly out of synchronization with the copy on the Domain Controller. A complete synchronization is required.
 pub const SYNCHRONIZATION_REQUIRED : NTSTATUS = NTSTATUS::from_constant(0xC0000134); // STATUS_SYNCHRONIZATION_REQUIRED
+
+/// The code execution cannot proceed because `%hs` was not found. Reinstalling the program may fix this problem.
 pub const DLL_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC0000135); // STATUS_DLL_NOT_FOUND
+
+/// The NtCreateFile API failed. This error should never be returned to an application, it is a place holder for the Windows Lan Manager Redirector to use in its internal error mapping routines.
 pub const OPEN_FAILED : NTSTATUS = NTSTATUS::from_constant(0xC0000136); // STATUS_OPEN_FAILED
+
+/// ### Privilege Failed
+/// The I/O permissions for the process could not be changed.
 pub const IO_PRIVILEGE_FAILED : NTSTATUS = NTSTATUS::from_constant(0xC0000137); // STATUS_IO_PRIVILEGE_FAILED
+
+/// ### Ordinal Not Found
+/// The ordinal `%ld` could not be located in the dynamic link library `%hs`.
 pub const ORDINAL_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC0000138); // STATUS_ORDINAL_NOT_FOUND
+
+/// ### Entry Point Not Found
+/// The procedure entry point `%hs` could not be located in the dynamic link library `%hs`.
 pub const ENTRYPOINT_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC0000139); // STATUS_ENTRYPOINT_NOT_FOUND
+
+/// ### Application Exit by CTRL+C
+/// The application terminated as a result of a CTRL+C.
 pub const CONTROL_C_EXIT : NTSTATUS = NTSTATUS::from_constant(0xC000013A); // STATUS_CONTROL_C_EXIT
+
+/// ### Virtual Circuit Closed
+/// The network transport on your computer has closed a network connection. There may or may not be I/O requests outstanding.
 pub const LOCAL_DISCONNECT : NTSTATUS = NTSTATUS::from_constant(0xC000013B); // STATUS_LOCAL_DISCONNECT
+
+/// ### Virtual Circuit Closed
+/// The network transport on a remote computer has closed a network connection. There may or may not be I/O requests outstanding.
 pub const REMOTE_DISCONNECT : NTSTATUS = NTSTATUS::from_constant(0xC000013C); // STATUS_REMOTE_DISCONNECT
+
+/// ### Insufficient Resources on Remote Computer
+/// The remote computer has insufficient resources to complete the network request. For instance, there may not be enough memory available on the remote computer to carry out the request at this time.
 pub const REMOTE_RESOURCES : NTSTATUS = NTSTATUS::from_constant(0xC000013D); // STATUS_REMOTE_RESOURCES
+
+/// ### Virtual Circuit Closed
+/// An existing connection (virtual circuit) has been broken at the remote computer. There is probably something wrong with the network software protocol or the network hardware on the remote computer.
 pub const LINK_FAILED : NTSTATUS = NTSTATUS::from_constant(0xC000013E); // STATUS_LINK_FAILED
+
+/// ### Virtual Circuit Closed
+/// The network transport on your computer has closed a network connection because it had to wait too long for a response from the remote computer.
 pub const LINK_TIMEOUT : NTSTATUS = NTSTATUS::from_constant(0xC000013F); // STATUS_LINK_TIMEOUT
+
+/// The connection handle given to the transport was invalid.
 pub const INVALID_CONNECTION : NTSTATUS = NTSTATUS::from_constant(0xC0000140); // STATUS_INVALID_CONNECTION
+
+/// The address handle given to the transport was invalid.
 pub const INVALID_ADDRESS : NTSTATUS = NTSTATUS::from_constant(0xC0000141); // STATUS_INVALID_ADDRESS
+
+/// ### DLL Initialization Failed
+/// Initialization of the dynamic link library `%hs` failed. The process is terminating abnormally.
 pub const DLL_INIT_FAILED : NTSTATUS = NTSTATUS::from_constant(0xC0000142); // STATUS_DLL_INIT_FAILED
+
+/// ### Missing System File
+/// The required system file `%hs` is bad or missing.
 pub const MISSING_SYSTEMFILE : NTSTATUS = NTSTATUS::from_constant(0xC0000143); // STATUS_MISSING_SYSTEMFILE
+
+/// ### Application Error
+/// The exception `%s` (`0x%08lx`) occurred in the application at location `0x%p`.
 pub const UNHANDLED_EXCEPTION : NTSTATUS = NTSTATUS::from_constant(0xC0000144); // STATUS_UNHANDLED_EXCEPTION
+
+/// ### Application Error
+/// The application was unable to start correctly (`0x%lx`). Click OK to close the application.
 pub const APP_INIT_FAILURE : NTSTATUS = NTSTATUS::from_constant(0xC0000145); // STATUS_APP_INIT_FAILURE
+
+/// ### Unable to Create Paging File
+/// The creation of the paging file `%hs` failed (`%lx`). The requested size was `%ld`.
 pub const PAGEFILE_CREATE_FAILED : NTSTATUS = NTSTATUS::from_constant(0xC0000146); // STATUS_PAGEFILE_CREATE_FAILED
+
+/// ### No Paging File Specified
+/// No paging file was specified in the system configuration.
 pub const NO_PAGEFILE : NTSTATUS = NTSTATUS::from_constant(0xC0000147); // STATUS_NO_PAGEFILE
+
+/// ### Incorrect System Call Level
+/// An invalid level was passed into the specified system call.
 pub const INVALID_LEVEL : NTSTATUS = NTSTATUS::from_constant(0xC0000148); // STATUS_INVALID_LEVEL
+
+/// ### Incorrect Password to LAN Manager Server
+/// You specified an incorrect password to a LAN Manager 2.x or MS-NET server.
 pub const WRONG_PASSWORD_CORE : NTSTATUS = NTSTATUS::from_constant(0xC0000149); // STATUS_WRONG_PASSWORD_CORE
+
+/// ### EXCEPTION
+/// A real-mode application issued a floating-point instruction and floating-point hardware is not present.
 pub const ILLEGAL_FLOAT_CONTEXT : NTSTATUS = NTSTATUS::from_constant(0xC000014A); // STATUS_ILLEGAL_FLOAT_CONTEXT
+
+/// The pipe operation has failed because the other end of the pipe has been closed.
 pub const PIPE_BROKEN : NTSTATUS = NTSTATUS::from_constant(0xC000014B); // STATUS_PIPE_BROKEN
+
+/// ### The Registry Is Corrupt
+/// The structure of one of the files that contains Registry data is corrupt, or the image of the file in memory is corrupt, or the file could not be recovered because the alternate copy or log was absent or corrupt.
 pub const REGISTRY_CORRUPT : NTSTATUS = NTSTATUS::from_constant(0xC000014C); // STATUS_REGISTRY_CORRUPT
+
+/// An I/O operation initiated by the Registry failed unrecoverably. The Registry could not read in, or write out, or flush, one of the files that contain the system's image of the Registry.
 pub const REGISTRY_IO_FAILED : NTSTATUS = NTSTATUS::from_constant(0xC000014D); // STATUS_REGISTRY_IO_FAILED
+
+/// An event pair synchronization operation was performed using the thread specific client/server event pair object, but no event pair object was associated with the thread.
 pub const NO_EVENT_PAIR : NTSTATUS = NTSTATUS::from_constant(0xC000014E); // STATUS_NO_EVENT_PAIR
+
+/// The volume does not contain a recognized file system. Please make sure that all required file system drivers are loaded and that the volume is not corrupt.
 pub const UNRECOGNIZED_VOLUME : NTSTATUS = NTSTATUS::from_constant(0xC000014F); // STATUS_UNRECOGNIZED_VOLUME
+
+/// No serial device was successfully initialized. The serial driver will unload.
 pub const SERIAL_NO_DEVICE_INITED : NTSTATUS = NTSTATUS::from_constant(0xC0000150); // STATUS_SERIAL_NO_DEVICE_INITED
+
+/// The specified local group does not exist.
 pub const NO_SUCH_ALIAS : NTSTATUS = NTSTATUS::from_constant(0xC0000151); // STATUS_NO_SUCH_ALIAS
+
+/// The specified account name is not a member of the group.
 pub const MEMBER_NOT_IN_ALIAS : NTSTATUS = NTSTATUS::from_constant(0xC0000152); // STATUS_MEMBER_NOT_IN_ALIAS
+
+/// The specified account name is already a member of the group.
 pub const MEMBER_IN_ALIAS : NTSTATUS = NTSTATUS::from_constant(0xC0000153); // STATUS_MEMBER_IN_ALIAS
+
+/// The specified local group already exists.
 pub const ALIAS_EXISTS : NTSTATUS = NTSTATUS::from_constant(0xC0000154); // STATUS_ALIAS_EXISTS
+
+/// A requested type of logon (e.g., Interactive, Network, Service) is not granted by the target system's local security policy.
+/// Please ask the system administrator to grant the necessary form of logon.
 pub const LOGON_NOT_GRANTED : NTSTATUS = NTSTATUS::from_constant(0xC0000155); // STATUS_LOGON_NOT_GRANTED
+
+/// The maximum number of secrets that may be stored in a single system has been exceeded. The length and number of secrets is limited to satisfy United States State Department export restrictions.
 pub const TOO_MANY_SECRETS : NTSTATUS = NTSTATUS::from_constant(0xC0000156); // STATUS_TOO_MANY_SECRETS
+
+/// The length of a secret exceeds the maximum length allowed. The length and number of secrets is limited to satisfy United States State Department export restrictions.
 pub const SECRET_TOO_LONG : NTSTATUS = NTSTATUS::from_constant(0xC0000157); // STATUS_SECRET_TOO_LONG
+
+/// The Local Security Authority (LSA) database contains an internal inconsistency.
 pub const INTERNAL_DB_ERROR : NTSTATUS = NTSTATUS::from_constant(0xC0000158); // STATUS_INTERNAL_DB_ERROR
+
+/// The requested operation cannot be performed in fullscreen mode.
 pub const FULLSCREEN_MODE : NTSTATUS = NTSTATUS::from_constant(0xC0000159); // STATUS_FULLSCREEN_MODE
+
+/// During a logon attempt, the user's security context accumulated too many security IDs. This is a very unusual situation. Remove the user from some global or local groups to reduce the number of security ids to incorporate into the security context.
 pub const TOO_MANY_CONTEXT_IDS : NTSTATUS = NTSTATUS::from_constant(0xC000015A); // STATUS_TOO_MANY_CONTEXT_IDS
+
+/// A user has requested a type of logon (e.g., interactive or network) that has not been granted. An administrator has control over who may logon interactively and through the network.
 pub const LOGON_TYPE_NOT_GRANTED : NTSTATUS = NTSTATUS::from_constant(0xC000015B); // STATUS_LOGON_TYPE_NOT_GRANTED
+
+/// The system has attempted to load or restore a file into the registry, and the specified file is not in the format of a registry file.
 pub const NOT_REGISTRY_FILE : NTSTATUS = NTSTATUS::from_constant(0xC000015C); // STATUS_NOT_REGISTRY_FILE
+
+/// An attempt was made to change a user password in the security account manager without providing the necessary Windows cross-encrypted password.
 pub const NT_CROSS_ENCRYPTION_REQUIRED : NTSTATUS = NTSTATUS::from_constant(0xC000015D); // STATUS_NT_CROSS_ENCRYPTION_REQUIRED
+
+/// A Windows Server has an incorrect configuration.
 pub const DOMAIN_CTRLR_CONFIG_ERROR : NTSTATUS = NTSTATUS::from_constant(0xC000015E); // STATUS_DOMAIN_CTRLR_CONFIG_ERROR
+
+/// An attempt was made to explicitly access the secondary copy of information via a device control to the Fault Tolerance driver and the secondary copy is not present in the system.
 pub const FT_MISSING_MEMBER : NTSTATUS = NTSTATUS::from_constant(0xC000015F); // STATUS_FT_MISSING_MEMBER
+
+/// A configuration registry node representing a driver service entry was ill-formed and did not contain required value entries.
 pub const ILL_FORMED_SERVICE_ENTRY : NTSTATUS = NTSTATUS::from_constant(0xC0000160); // STATUS_ILL_FORMED_SERVICE_ENTRY
+
+/// An illegal character was encountered. For a multi-byte character set this includes a lead byte without a succeeding trail byte. For the Unicode character set this includes the characters 0xFFFF and 0xFFFE.
 pub const ILLEGAL_CHARACTER : NTSTATUS = NTSTATUS::from_constant(0xC0000161); // STATUS_ILLEGAL_CHARACTER
+
+/// No mapping for the Unicode character exists in the target multi-byte code page.
 pub const UNMAPPABLE_CHARACTER : NTSTATUS = NTSTATUS::from_constant(0xC0000162); // STATUS_UNMAPPABLE_CHARACTER
+
+/// The Unicode character is not defined in the Unicode character set installed on the system.
 pub const UNDEFINED_CHARACTER : NTSTATUS = NTSTATUS::from_constant(0xC0000163); // STATUS_UNDEFINED_CHARACTER
+
+/// The paging file cannot be created on a floppy diskette.
 pub const FLOPPY_VOLUME : NTSTATUS = NTSTATUS::from_constant(0xC0000164); // STATUS_FLOPPY_VOLUME
+
+/// ### Floppy Disk Error
+/// While accessing a floppy disk, an ID address mark was not found.
 pub const FLOPPY_ID_MARK_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC0000165); // STATUS_FLOPPY_ID_MARK_NOT_FOUND
+
+/// ### Floppy Disk Error
+/// While accessing a floppy disk, the track address from the sector ID field was found to be different than the track address maintained by the controller.
 pub const FLOPPY_WRONG_CYLINDER : NTSTATUS = NTSTATUS::from_constant(0xC0000166); // STATUS_FLOPPY_WRONG_CYLINDER
+
+/// ### Floppy Disk Error
+/// The floppy disk controller reported an error that is not recognized by the floppy disk driver.
 pub const FLOPPY_UNKNOWN_ERROR : NTSTATUS = NTSTATUS::from_constant(0xC0000167); // STATUS_FLOPPY_UNKNOWN_ERROR
+
+/// ### Floppy Disk Error
+/// While accessing a floppy-disk, the controller returned inconsistent results via its registers.
 pub const FLOPPY_BAD_REGISTERS : NTSTATUS = NTSTATUS::from_constant(0xC0000168); // STATUS_FLOPPY_BAD_REGISTERS
+
+/// ### Hard Disk Error
+/// While accessing the hard disk, a recalibrate operation failed, even after retries.
 pub const DISK_RECALIBRATE_FAILED : NTSTATUS = NTSTATUS::from_constant(0xC0000169); // STATUS_DISK_RECALIBRATE_FAILED
+
+/// ### Hard Disk Error
+/// While accessing the hard disk, a disk operation failed even after retries.
 pub const DISK_OPERATION_FAILED : NTSTATUS = NTSTATUS::from_constant(0xC000016A); // STATUS_DISK_OPERATION_FAILED
+
+/// ### Hard Disk Error
+/// While accessing the hard disk, a disk controller reset was needed, but even that failed.
 pub const DISK_RESET_FAILED : NTSTATUS = NTSTATUS::from_constant(0xC000016B); // STATUS_DISK_RESET_FAILED
+
+/// An attempt was made to open a device that was sharing an IRQ with other devices.
+/// At least one other device that uses that IRQ was already opened.
+/// Two concurrent opens of devices that share an IRQ and only work via interrupts is not supported for the particular bus type that the devices use.
 pub const SHARED_IRQ_BUSY : NTSTATUS = NTSTATUS::from_constant(0xC000016C); // STATUS_SHARED_IRQ_BUSY
+
+/// ### FT Orphaning
+/// A disk that is part of a fault-tolerant volume can no longer be accessed.
 pub const FT_ORPHANING : NTSTATUS = NTSTATUS::from_constant(0xC000016D); // STATUS_FT_ORPHANING
+
+/// The system bios failed to connect a system interrupt to the device or bus for which the device is connected.
 pub const BIOS_FAILED_TO_CONNECT_INTERRUPT : NTSTATUS = NTSTATUS::from_constant(0xC000016E); // STATUS_BIOS_FAILED_TO_CONNECT_INTERRUPT
+
+/// Tape could not be partitioned.
 pub const PARTITION_FAILURE : NTSTATUS = NTSTATUS::from_constant(0xC0000172); // STATUS_PARTITION_FAILURE
+
+/// When accessing a new tape of a multivolume partition, the current blocksize is incorrect.
 pub const INVALID_BLOCK_LENGTH : NTSTATUS = NTSTATUS::from_constant(0xC0000173); // STATUS_INVALID_BLOCK_LENGTH
+
+/// Tape partition information could not be found when loading a tape.
 pub const DEVICE_NOT_PARTITIONED : NTSTATUS = NTSTATUS::from_constant(0xC0000174); // STATUS_DEVICE_NOT_PARTITIONED
+
+/// Attempt to lock the eject media mechanism fails.
 pub const UNABLE_TO_LOCK_MEDIA : NTSTATUS = NTSTATUS::from_constant(0xC0000175); // STATUS_UNABLE_TO_LOCK_MEDIA
+
+/// Unload media fails.
 pub const UNABLE_TO_UNLOAD_MEDIA : NTSTATUS = NTSTATUS::from_constant(0xC0000176); // STATUS_UNABLE_TO_UNLOAD_MEDIA
+
+/// Physical end of tape was detected.
 pub const EOM_OVERFLOW : NTSTATUS = NTSTATUS::from_constant(0xC0000177); // STATUS_EOM_OVERFLOW
+
+/// ### No Media
+/// There is no media in the drive. Please insert media into drive `%hs`.
 pub const NO_MEDIA : NTSTATUS = NTSTATUS::from_constant(0xC0000178); // STATUS_NO_MEDIA
+
+/// A member could not be added to or removed from the local group because the member does not exist.
 pub const NO_SUCH_MEMBER : NTSTATUS = NTSTATUS::from_constant(0xC000017A); // STATUS_NO_SUCH_MEMBER
+
+/// A new member could not be added to a local group because the member has the wrong account type.
 pub const INVALID_MEMBER : NTSTATUS = NTSTATUS::from_constant(0xC000017B); // STATUS_INVALID_MEMBER
+
+/// Illegal operation attempted on a registry key which has been marked for deletion.
 pub const KEY_DELETED : NTSTATUS = NTSTATUS::from_constant(0xC000017C); // STATUS_KEY_DELETED
+
+/// System could not allocate required space in a registry log.
 pub const NO_LOG_SPACE : NTSTATUS = NTSTATUS::from_constant(0xC000017D); // STATUS_NO_LOG_SPACE
+
+/// Too many Sids have been specified.
 pub const TOO_MANY_SIDS : NTSTATUS = NTSTATUS::from_constant(0xC000017E); // STATUS_TOO_MANY_SIDS
+
+/// An attempt was made to change a user password in the security account manager without providing the necessary LM cross-encrypted password.
 pub const LM_CROSS_ENCRYPTION_REQUIRED : NTSTATUS = NTSTATUS::from_constant(0xC000017F); // STATUS_LM_CROSS_ENCRYPTION_REQUIRED
+
+/// An attempt was made to create a symbolic link in a registry key that already has subkeys or values.
 pub const KEY_HAS_CHILDREN : NTSTATUS = NTSTATUS::from_constant(0xC0000180); // STATUS_KEY_HAS_CHILDREN
+
+/// An attempt was made to create a Stable subkey under a Volatile parent key.
 pub const CHILD_MUST_BE_VOLATILE : NTSTATUS = NTSTATUS::from_constant(0xC0000181); // STATUS_CHILD_MUST_BE_VOLATILE
+
+/// The I/O device is configured incorrectly or the configuration parameters to the driver are incorrect.
 pub const DEVICE_CONFIGURATION_ERROR : NTSTATUS = NTSTATUS::from_constant(0xC0000182); // STATUS_DEVICE_CONFIGURATION_ERROR
+
+/// An error was detected between two drivers or within an I/O driver.
 pub const DRIVER_INTERNAL_ERROR : NTSTATUS = NTSTATUS::from_constant(0xC0000183); // STATUS_DRIVER_INTERNAL_ERROR
+
+/// The device is not in a valid state to perform this request.
 pub const INVALID_DEVICE_STATE : NTSTATUS = NTSTATUS::from_constant(0xC0000184); // STATUS_INVALID_DEVICE_STATE
+
+/// The I/O device reported an I/O error.
 pub const IO_DEVICE_ERROR : NTSTATUS = NTSTATUS::from_constant(0xC0000185); // STATUS_IO_DEVICE_ERROR
+
+/// A protocol error was detected between the driver and the device.
 pub const DEVICE_PROTOCOL_ERROR : NTSTATUS = NTSTATUS::from_constant(0xC0000186); // STATUS_DEVICE_PROTOCOL_ERROR
+
+/// This operation is only allowed for the Primary Domain Controller of the domain.
 pub const BACKUP_CONTROLLER : NTSTATUS = NTSTATUS::from_constant(0xC0000187); // STATUS_BACKUP_CONTROLLER
+
+/// Log file space is insufficient to support this operation.
 pub const LOG_FILE_FULL : NTSTATUS = NTSTATUS::from_constant(0xC0000188); // STATUS_LOG_FILE_FULL
+
+/// A write operation was attempted to a volume after it was dismounted.
 pub const TOO_LATE : NTSTATUS = NTSTATUS::from_constant(0xC0000189); // STATUS_TOO_LATE
+
+/// The workstation does not have a trust secret for the primary domain in the local LSA database.
 pub const NO_TRUST_LSA_SECRET : NTSTATUS = NTSTATUS::from_constant(0xC000018A); // STATUS_NO_TRUST_LSA_SECRET
+
+/// The SAM database on the Windows Server does not have a computer account for this workstation trust relationship.
 pub const NO_TRUST_SAM_ACCOUNT : NTSTATUS = NTSTATUS::from_constant(0xC000018B); // STATUS_NO_TRUST_SAM_ACCOUNT
+
+/// The logon request failed because the trust relationship between the primary domain and the trusted domain failed.
 pub const TRUSTED_DOMAIN_FAILURE : NTSTATUS = NTSTATUS::from_constant(0xC000018C); // STATUS_TRUSTED_DOMAIN_FAILURE
+
+/// The logon request failed because the trust relationship between this workstation and the primary domain failed.
 pub const TRUSTED_RELATIONSHIP_FAILURE : NTSTATUS = NTSTATUS::from_constant(0xC000018D); // STATUS_TRUSTED_RELATIONSHIP_FAILURE
+
+/// The Eventlog log file is corrupt.
 pub const EVENTLOG_FILE_CORRUPT : NTSTATUS = NTSTATUS::from_constant(0xC000018E); // STATUS_EVENTLOG_FILE_CORRUPT
+
+/// No Eventlog log file could be opened. The Eventlog service did not start.
 pub const EVENTLOG_CANT_START : NTSTATUS = NTSTATUS::from_constant(0xC000018F); // STATUS_EVENTLOG_CANT_START
+
+/// The network logon failed. This may be because the validation authority can't be reached.
 pub const TRUST_FAILURE : NTSTATUS = NTSTATUS::from_constant(0xC0000190); // STATUS_TRUST_FAILURE
+
+/// An attempt was made to acquire a mutant such that its maximum count would have been exceeded.
 pub const MUTANT_LIMIT_EXCEEDED : NTSTATUS = NTSTATUS::from_constant(0xC0000191); // STATUS_MUTANT_LIMIT_EXCEEDED
+
+/// An attempt was made to logon, but the netlogon service was not started.
 pub const NETLOGON_NOT_STARTED : NTSTATUS = NTSTATUS::from_constant(0xC0000192); // STATUS_NETLOGON_NOT_STARTED
+
+/// The user's account has expired.
 pub const ACCOUNT_EXPIRED : NTSTATUS = NTSTATUS::from_constant(0xC0000193); // STATUS_ACCOUNT_EXPIRED
+
+/// ### EXCEPTION
+/// Possible deadlock condition.
 pub const POSSIBLE_DEADLOCK : NTSTATUS = NTSTATUS::from_constant(0xC0000194); // STATUS_POSSIBLE_DEADLOCK
+
+/// Multiple connections to a server or shared resource by the same user, using more than one user name, are not allowed. Disconnect all previous connections to the server or shared resource and try again.
 pub const NETWORK_CREDENTIAL_CONFLICT : NTSTATUS = NTSTATUS::from_constant(0xC0000195); // STATUS_NETWORK_CREDENTIAL_CONFLICT
+
+/// An attempt was made to establish a session to a network server, but there are already too many sessions established to that server.
 pub const REMOTE_SESSION_LIMIT : NTSTATUS = NTSTATUS::from_constant(0xC0000196); // STATUS_REMOTE_SESSION_LIMIT
+
+/// The log file has changed between reads.
 pub const EVENTLOG_FILE_CHANGED : NTSTATUS = NTSTATUS::from_constant(0xC0000197); // STATUS_EVENTLOG_FILE_CHANGED
+
+/// The account used is an Interdomain Trust account. Use your global user account or local user account to access this server.
 pub const NOLOGON_INTERDOMAIN_TRUST_ACCOUNT : NTSTATUS = NTSTATUS::from_constant(0xC0000198); // STATUS_NOLOGON_INTERDOMAIN_TRUST_ACCOUNT
+
+/// The account used is a Computer Account. Use your global user account or local user account to access this server.
 pub const NOLOGON_WORKSTATION_TRUST_ACCOUNT : NTSTATUS = NTSTATUS::from_constant(0xC0000199); // STATUS_NOLOGON_WORKSTATION_TRUST_ACCOUNT
+
+/// The account used is an Server Trust account. Use your global user account or local user account to access this server.
 pub const NOLOGON_SERVER_TRUST_ACCOUNT : NTSTATUS = NTSTATUS::from_constant(0xC000019A); // STATUS_NOLOGON_SERVER_TRUST_ACCOUNT
+
+/// The name or SID of the domain specified is inconsistent with the trust information for that domain.
 pub const DOMAIN_TRUST_INCONSISTENT : NTSTATUS = NTSTATUS::from_constant(0xC000019B); // STATUS_DOMAIN_TRUST_INCONSISTENT
+
+/// A volume has been accessed for which a file system driver is required that has not yet been loaded.
 pub const FS_DRIVER_REQUIRED : NTSTATUS = NTSTATUS::from_constant(0xC000019C); // STATUS_FS_DRIVER_REQUIRED
+
+/// Indicates that the specified image is already loaded as a DLL.
 pub const IMAGE_ALREADY_LOADED_AS_DLL : NTSTATUS = NTSTATUS::from_constant(0xC000019D); // STATUS_IMAGE_ALREADY_LOADED_AS_DLL
+
+/// Short name settings may not be changed on this volume due to the global registry setting.
 pub const INCOMPATIBLE_WITH_GLOBAL_SHORT_NAME_REGISTRY_SETTING : NTSTATUS = NTSTATUS::from_constant(0xC000019E); // STATUS_INCOMPATIBLE_WITH_GLOBAL_SHORT_NAME_REGISTRY_SETTING
+
+/// Short names are not enabled on this volume.
 pub const SHORT_NAMES_NOT_ENABLED_ON_VOLUME : NTSTATUS = NTSTATUS::from_constant(0xC000019F); // STATUS_SHORT_NAMES_NOT_ENABLED_ON_VOLUME
+
+/// The security stream for the given volume is in an inconsistent state.
+/// Please run CHKDSK on the volume.
 pub const SECURITY_STREAM_IS_INCONSISTENT : NTSTATUS = NTSTATUS::from_constant(0xC00001A0); // STATUS_SECURITY_STREAM_IS_INCONSISTENT
+
+/// A requested file lock operation cannot be processed due to an invalid byte range.
 pub const INVALID_LOCK_RANGE : NTSTATUS = NTSTATUS::from_constant(0xC00001A1); // STATUS_INVALID_LOCK_RANGE
+
+/// ### Invalid ACE Condition
+/// The specified access control entry (ACE) contains an invalid condition.
 pub const INVALID_ACE_CONDITION : NTSTATUS = NTSTATUS::from_constant(0xC00001A2); // STATUS_INVALID_ACE_CONDITION
+
+/// The subsystem needed to support the image type is not present.
 pub const IMAGE_SUBSYSTEM_NOT_PRESENT : NTSTATUS = NTSTATUS::from_constant(0xC00001A3); // STATUS_IMAGE_SUBSYSTEM_NOT_PRESENT
+
+/// ### Invalid ACE Condition
+/// The specified file already has a notification GUID associated with it.
 pub const NOTIFICATION_GUID_ALREADY_DEFINED : NTSTATUS = NTSTATUS::from_constant(0xC00001A4); // STATUS_NOTIFICATION_GUID_ALREADY_DEFINED
+
+/// An invalid exception handler routine has been detected.
 pub const INVALID_EXCEPTION_HANDLER : NTSTATUS = NTSTATUS::from_constant(0xC00001A5); // STATUS_INVALID_EXCEPTION_HANDLER
+
+/// Duplicate privileges were specified for the token.
 pub const DUPLICATE_PRIVILEGES : NTSTATUS = NTSTATUS::from_constant(0xC00001A6); // STATUS_DUPLICATE_PRIVILEGES
+
+/// Requested action not allowed on a file system internal file.
 pub const NOT_ALLOWED_ON_SYSTEM_FILE : NTSTATUS = NTSTATUS::from_constant(0xC00001A7); // STATUS_NOT_ALLOWED_ON_SYSTEM_FILE
+
+/// A portion of the file system requires repair.
 pub const REPAIR_NEEDED : NTSTATUS = NTSTATUS::from_constant(0xC00001A8); // STATUS_REPAIR_NEEDED
+
+/// Quota support is not enabled on the system.
 pub const QUOTA_NOT_ENABLED : NTSTATUS = NTSTATUS::from_constant(0xC00001A9); // STATUS_QUOTA_NOT_ENABLED
+
+/// The operation failed because the application is not part of an application package.
 pub const NO_APPLICATION_PACKAGE : NTSTATUS = NTSTATUS::from_constant(0xC00001AA); // STATUS_NO_APPLICATION_PACKAGE
+
+/// File metadata optimization is already in progress.
 pub const FILE_METADATA_OPTIMIZATION_IN_PROGRESS : NTSTATUS = NTSTATUS::from_constant(0xC00001AB); // STATUS_FILE_METADATA_OPTIMIZATION_IN_PROGRESS
+
+/// The objects are not identical.
 pub const NOT_SAME_OBJECT : NTSTATUS = NTSTATUS::from_constant(0xC00001AC); // STATUS_NOT_SAME_OBJECT
+
+/// The process has terminated because it could not allocate additional memory.
 pub const FATAL_MEMORY_EXHAUSTION : NTSTATUS = NTSTATUS::from_constant(0xC00001AD); // STATUS_FATAL_MEMORY_EXHAUSTION
+
+/// The process is not part of a job.
 pub const ERROR_PROCESS_NOT_IN_JOB : NTSTATUS = NTSTATUS::from_constant(0xC00001AE); // STATUS_ERROR_PROCESS_NOT_IN_JOB
+
+/// The specified CPU Set IDs are invalid.
 pub const CPU_SET_INVALID : NTSTATUS = NTSTATUS::from_constant(0xC00001AF); // STATUS_CPU_SET_INVALID
+
+/// The device reported an invalid data error.
 pub const IO_DEVICE_INVALID_DATA : NTSTATUS = NTSTATUS::from_constant(0xC00001B0); // STATUS_IO_DEVICE_INVALID_DATA
+
+/// The device reported an unaligned write error.
 pub const IO_UNALIGNED_WRITE : NTSTATUS = NTSTATUS::from_constant(0xC00001B1); // STATUS_IO_UNALIGNED_WRITE
+
+/// An invalid address was found on the control flow stack.
 pub const CONTROL_STACK_VIOLATION : NTSTATUS = NTSTATUS::from_constant(0xC00001B2); // STATUS_CONTROL_STACK_VIOLATION
+
+/// A remote open failed because the network open restrictions were not satisfied.
 pub const NETWORK_OPEN_RESTRICTION : NTSTATUS = NTSTATUS::from_constant(0xC0000201); // STATUS_NETWORK_OPEN_RESTRICTION
+
+/// There is no user session key for the specified logon session.
 pub const NO_USER_SESSION_KEY : NTSTATUS = NTSTATUS::from_constant(0xC0000202); // STATUS_NO_USER_SESSION_KEY
+
+/// The remote user session has been deleted.
 pub const USER_SESSION_DELETED : NTSTATUS = NTSTATUS::from_constant(0xC0000203); // STATUS_USER_SESSION_DELETED
+
+/// Indicates the specified resource language ID cannot be found in the
+/// image file.
 pub const RESOURCE_LANG_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC0000204); // STATUS_RESOURCE_LANG_NOT_FOUND
+
+/// Insufficient server resources exist to complete the request.
 pub const INSUFF_SERVER_RESOURCES : NTSTATUS = NTSTATUS::from_constant(0xC0000205); // STATUS_INSUFF_SERVER_RESOURCES
+
+/// The size of the buffer is invalid for the specified operation.
 pub const INVALID_BUFFER_SIZE : NTSTATUS = NTSTATUS::from_constant(0xC0000206); // STATUS_INVALID_BUFFER_SIZE
+
+/// The transport rejected the network address specified as invalid.
 pub const INVALID_ADDRESS_COMPONENT : NTSTATUS = NTSTATUS::from_constant(0xC0000207); // STATUS_INVALID_ADDRESS_COMPONENT
+
+/// The transport rejected the network address specified due to an invalid use of a wildcard.
 pub const INVALID_ADDRESS_WILDCARD : NTSTATUS = NTSTATUS::from_constant(0xC0000208); // STATUS_INVALID_ADDRESS_WILDCARD
+
+/// The transport address could not be opened because all the available addresses are in use.
 pub const TOO_MANY_ADDRESSES : NTSTATUS = NTSTATUS::from_constant(0xC0000209); // STATUS_TOO_MANY_ADDRESSES
+
+/// The transport address could not be opened because it already exists.
 pub const ADDRESS_ALREADY_EXISTS : NTSTATUS = NTSTATUS::from_constant(0xC000020A); // STATUS_ADDRESS_ALREADY_EXISTS
+
+/// The transport address is now closed.
 pub const ADDRESS_CLOSED : NTSTATUS = NTSTATUS::from_constant(0xC000020B); // STATUS_ADDRESS_CLOSED
+
+/// The transport connection is now disconnected.
 pub const CONNECTION_DISCONNECTED : NTSTATUS = NTSTATUS::from_constant(0xC000020C); // STATUS_CONNECTION_DISCONNECTED
+
+/// The transport connection has been reset.
 pub const CONNECTION_RESET : NTSTATUS = NTSTATUS::from_constant(0xC000020D); // STATUS_CONNECTION_RESET
+
+/// The transport cannot dynamically acquire any more nodes.
 pub const TOO_MANY_NODES : NTSTATUS = NTSTATUS::from_constant(0xC000020E); // STATUS_TOO_MANY_NODES
+
+/// The transport aborted a pending transaction.
 pub const TRANSACTION_ABORTED : NTSTATUS = NTSTATUS::from_constant(0xC000020F); // STATUS_TRANSACTION_ABORTED
+
+/// The transport timed out a request waiting for a response.
 pub const TRANSACTION_TIMED_OUT : NTSTATUS = NTSTATUS::from_constant(0xC0000210); // STATUS_TRANSACTION_TIMED_OUT
+
+/// The transport did not receive a release for a pending response.
 pub const TRANSACTION_NO_RELEASE : NTSTATUS = NTSTATUS::from_constant(0xC0000211); // STATUS_TRANSACTION_NO_RELEASE
+
+/// The transport did not find a transaction matching the specific token.
 pub const TRANSACTION_NO_MATCH : NTSTATUS = NTSTATUS::from_constant(0xC0000212); // STATUS_TRANSACTION_NO_MATCH
+
+/// The transport had previously responded to a transaction request.
 pub const TRANSACTION_RESPONDED : NTSTATUS = NTSTATUS::from_constant(0xC0000213); // STATUS_TRANSACTION_RESPONDED
+
+/// The transport does not recognized the transaction request identifier specified.
 pub const TRANSACTION_INVALID_ID : NTSTATUS = NTSTATUS::from_constant(0xC0000214); // STATUS_TRANSACTION_INVALID_ID
+
+/// The transport does not recognize the transaction request type specified.
 pub const TRANSACTION_INVALID_TYPE : NTSTATUS = NTSTATUS::from_constant(0xC0000215); // STATUS_TRANSACTION_INVALID_TYPE
+
+/// The transport can only process the specified request on the server side of a session.
 pub const NOT_SERVER_SESSION : NTSTATUS = NTSTATUS::from_constant(0xC0000216); // STATUS_NOT_SERVER_SESSION
+
+/// The transport can only process the specified request on the client side of a session.
 pub const NOT_CLIENT_SESSION : NTSTATUS = NTSTATUS::from_constant(0xC0000217); // STATUS_NOT_CLIENT_SESSION
+
+/// ### Registry File Failure
+/// The registry cannot load the hive (file):
+/// `%hs`
+/// or its log or alternate.
+/// It is corrupt, absent, or not writable.
 pub const CANNOT_LOAD_REGISTRY_FILE : NTSTATUS = NTSTATUS::from_constant(0xC0000218); // STATUS_CANNOT_LOAD_REGISTRY_FILE
+
+/// ### Unexpected Failure in DebugActiveProcess
+/// An unexpected failure occurred while processing a DebugActiveProcess API request. You may choose OK to terminate the process, or Cancel to ignore the error.
 pub const DEBUG_ATTACH_FAILED : NTSTATUS = NTSTATUS::from_constant(0xC0000219); // STATUS_DEBUG_ATTACH_FAILED
+
+/// ### Fatal System Error
+/// The `%hs` system process terminated unexpectedly with a status of `0x%08x` (`0x%08x` `0x%08x`).
+/// The system has been shut down.
 pub const SYSTEM_PROCESS_TERMINATED : NTSTATUS = NTSTATUS::from_constant(0xC000021A); // STATUS_SYSTEM_PROCESS_TERMINATED
+
+/// ### Data Not Accepted
+/// The TDI client could not handle the data received during an indication.
 pub const DATA_NOT_ACCEPTED : NTSTATUS = NTSTATUS::from_constant(0xC000021B); // STATUS_DATA_NOT_ACCEPTED
+
+/// ### Unable to Retrieve Browser Server List
+/// The list of servers for this workgroup is not currently available.
 pub const NO_BROWSER_SERVERS_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC000021C); // STATUS_NO_BROWSER_SERVERS_FOUND
+
+/// NTVDM encountered a hard error.
 pub const VDM_HARD_ERROR : NTSTATUS = NTSTATUS::from_constant(0xC000021D); // STATUS_VDM_HARD_ERROR
+
+/// ### Cancel Timeout
+/// The driver `%hs` failed to complete a cancelled I/O request in the allotted time.
 pub const DRIVER_CANCEL_TIMEOUT : NTSTATUS = NTSTATUS::from_constant(0xC000021E); // STATUS_DRIVER_CANCEL_TIMEOUT
+
+/// ### Reply Message Mismatch
+/// An attempt was made to reply to an LPC message, but the thread specified by the client ID in the message was not waiting on that message.
 pub const REPLY_MESSAGE_MISMATCH : NTSTATUS = NTSTATUS::from_constant(0xC000021F); // STATUS_REPLY_MESSAGE_MISMATCH
+
+/// ### Mapped View Alignment Incorrect
+/// An attempt was made to map a view of a file, but either the specified base address or the offset into the file were not aligned on the proper allocation granularity.
 pub const MAPPED_ALIGNMENT : NTSTATUS = NTSTATUS::from_constant(0xC0000220); // STATUS_MAPPED_ALIGNMENT
+
+/// ### Bad Image Checksum
+/// The image `%hs` is possibly corrupt. The header checksum does not match the computed checksum.
 pub const IMAGE_CHECKSUM_MISMATCH : NTSTATUS = NTSTATUS::from_constant(0xC0000221); // STATUS_IMAGE_CHECKSUM_MISMATCH
+
+/// ### Delayed Write Failed
+/// Windows was unable to save all the data for the file `%hs`. The data has been lost. This error may be caused by a failure of your computer hardware or network connection. Please try to save this file elsewhere.
 pub const LOST_WRITEBEHIND_DATA : NTSTATUS = NTSTATUS::from_constant(0xC0000222); // STATUS_LOST_WRITEBEHIND_DATA
+
+/// The parameter(s) passed to the server in the client/server shared memory window were invalid. Too much data may have been put in the shared memory window.
 pub const CLIENT_SERVER_PARAMETERS_INVALID : NTSTATUS = NTSTATUS::from_constant(0xC0000223); // STATUS_CLIENT_SERVER_PARAMETERS_INVALID
+
+/// The user's password must be changed before signing in.
 pub const PASSWORD_MUST_CHANGE : NTSTATUS = NTSTATUS::from_constant(0xC0000224); // STATUS_PASSWORD_MUST_CHANGE
+
+/// The object was not found.
 pub const NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC0000225); // STATUS_NOT_FOUND
+
+/// The stream is not a tiny stream.
 pub const NOT_TINY_STREAM : NTSTATUS = NTSTATUS::from_constant(0xC0000226); // STATUS_NOT_TINY_STREAM
+
+/// A transaction recover failed.
 pub const RECOVERY_FAILURE : NTSTATUS = NTSTATUS::from_constant(0xC0000227); // STATUS_RECOVERY_FAILURE
+
+/// The request must be handled by the stack overflow code.
 pub const STACK_OVERFLOW_READ : NTSTATUS = NTSTATUS::from_constant(0xC0000228); // STATUS_STACK_OVERFLOW_READ
+
+/// A consistency check failed.
 pub const FAIL_CHECK : NTSTATUS = NTSTATUS::from_constant(0xC0000229); // STATUS_FAIL_CHECK
+
+/// The attempt to insert the ID in the index failed because the ID is already in the index.
 pub const DUPLICATE_OBJECTID : NTSTATUS = NTSTATUS::from_constant(0xC000022A); // STATUS_DUPLICATE_OBJECTID
+
+/// The attempt to set the object's ID failed because the object already has an ID.
 pub const OBJECTID_EXISTS : NTSTATUS = NTSTATUS::from_constant(0xC000022B); // STATUS_OBJECTID_EXISTS
+
+/// Internal OFS status codes indicating how an allocation operation is handled. Either it is retried after the containing onode is moved or the extent stream is converted to a large stream.
 pub const CONVERT_TO_LARGE : NTSTATUS = NTSTATUS::from_constant(0xC000022C); // STATUS_CONVERT_TO_LARGE
+
+/// The request needs to be retried.
 pub const RETRY : NTSTATUS = NTSTATUS::from_constant(0xC000022D); // STATUS_RETRY
+
+/// The attempt to find the object found an object matching by ID on the volume but it is out of the scope of the handle used for the operation.
 pub const FOUND_OUT_OF_SCOPE : NTSTATUS = NTSTATUS::from_constant(0xC000022E); // STATUS_FOUND_OUT_OF_SCOPE
+
+/// The bucket array must be grown. Retry transaction after doing so.
 pub const ALLOCATE_BUCKET : NTSTATUS = NTSTATUS::from_constant(0xC000022F); // STATUS_ALLOCATE_BUCKET
+
+/// The property set specified does not exist on the object.
 pub const PROPSET_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC0000230); // STATUS_PROPSET_NOT_FOUND
+
+/// The user/kernel marshalling buffer has overflowed.
 pub const MARSHALL_OVERFLOW : NTSTATUS = NTSTATUS::from_constant(0xC0000231); // STATUS_MARSHALL_OVERFLOW
+
+/// The supplied variant structure contains invalid data.
 pub const INVALID_VARIANT : NTSTATUS = NTSTATUS::from_constant(0xC0000232); // STATUS_INVALID_VARIANT
+
+/// Could not find a domain controller for this domain.
 pub const DOMAIN_CONTROLLER_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC0000233); // STATUS_DOMAIN_CONTROLLER_NOT_FOUND
+
+/// The user account has been automatically locked because too many invalid logon attempts or password change attempts have been requested.
 pub const ACCOUNT_LOCKED_OUT : NTSTATUS = NTSTATUS::from_constant(0xC0000234); // STATUS_ACCOUNT_LOCKED_OUT
+
+/// NtClose was called on a handle that was protected from close via NtSetInformationObject.
 pub const HANDLE_NOT_CLOSABLE : NTSTATUS = NTSTATUS::from_constant(0xC0000235); // STATUS_HANDLE_NOT_CLOSABLE
+
+/// The transport connection attempt was refused by the remote system.
 pub const CONNECTION_REFUSED : NTSTATUS = NTSTATUS::from_constant(0xC0000236); // STATUS_CONNECTION_REFUSED
+
+/// The transport connection was gracefully closed.
 pub const GRACEFUL_DISCONNECT : NTSTATUS = NTSTATUS::from_constant(0xC0000237); // STATUS_GRACEFUL_DISCONNECT
+
+/// The transport endpoint already has an address associated with it.
 pub const ADDRESS_ALREADY_ASSOCIATED : NTSTATUS = NTSTATUS::from_constant(0xC0000238); // STATUS_ADDRESS_ALREADY_ASSOCIATED
+
+/// An address has not yet been associated with the transport endpoint.
 pub const ADDRESS_NOT_ASSOCIATED : NTSTATUS = NTSTATUS::from_constant(0xC0000239); // STATUS_ADDRESS_NOT_ASSOCIATED
+
+/// An operation was attempted on a nonexistent transport connection.
 pub const CONNECTION_INVALID : NTSTATUS = NTSTATUS::from_constant(0xC000023A); // STATUS_CONNECTION_INVALID
+
+/// An invalid operation was attempted on an active transport connection.
 pub const CONNECTION_ACTIVE : NTSTATUS = NTSTATUS::from_constant(0xC000023B); // STATUS_CONNECTION_ACTIVE
+
+/// The remote network is not reachable by the transport.
 pub const NETWORK_UNREACHABLE : NTSTATUS = NTSTATUS::from_constant(0xC000023C); // STATUS_NETWORK_UNREACHABLE
+
+/// The remote system is not reachable by the transport.
 pub const HOST_UNREACHABLE : NTSTATUS = NTSTATUS::from_constant(0xC000023D); // STATUS_HOST_UNREACHABLE
+
+/// The remote system does not support the transport protocol.
 pub const PROTOCOL_UNREACHABLE : NTSTATUS = NTSTATUS::from_constant(0xC000023E); // STATUS_PROTOCOL_UNREACHABLE
+
+/// No service is operating at the destination port of the transport on the remote system.
 pub const PORT_UNREACHABLE : NTSTATUS = NTSTATUS::from_constant(0xC000023F); // STATUS_PORT_UNREACHABLE
+
+/// The request was aborted.
 pub const REQUEST_ABORTED : NTSTATUS = NTSTATUS::from_constant(0xC0000240); // STATUS_REQUEST_ABORTED
+
+/// The transport connection was aborted by the local system.
 pub const CONNECTION_ABORTED : NTSTATUS = NTSTATUS::from_constant(0xC0000241); // STATUS_CONNECTION_ABORTED
+
+/// The specified buffer contains ill-formed data.
 pub const BAD_COMPRESSION_BUFFER : NTSTATUS = NTSTATUS::from_constant(0xC0000242); // STATUS_BAD_COMPRESSION_BUFFER
+
+/// The requested operation cannot be performed on a file with a user mapped section open.
 pub const USER_MAPPED_FILE : NTSTATUS = NTSTATUS::from_constant(0xC0000243); // STATUS_USER_MAPPED_FILE
+
+/// ### Audit Failed
+/// An attempt to generate a security audit failed.
 pub const AUDIT_FAILED : NTSTATUS = NTSTATUS::from_constant(0xC0000244); // STATUS_AUDIT_FAILED
+
+/// The timer resolution was not previously set by the current process.
 pub const TIMER_RESOLUTION_NOT_SET : NTSTATUS = NTSTATUS::from_constant(0xC0000245); // STATUS_TIMER_RESOLUTION_NOT_SET
+
+/// A connection to the server could not be made because the limit on the number of concurrent connections for this account has been reached.
 pub const CONNECTION_COUNT_LIMIT : NTSTATUS = NTSTATUS::from_constant(0xC0000246); // STATUS_CONNECTION_COUNT_LIMIT
+
+/// Attempting to login during an unauthorized time of day for this account.
 pub const LOGIN_TIME_RESTRICTION : NTSTATUS = NTSTATUS::from_constant(0xC0000247); // STATUS_LOGIN_TIME_RESTRICTION
+
+/// The account is not authorized to login from this station.
 pub const LOGIN_WKSTA_RESTRICTION : NTSTATUS = NTSTATUS::from_constant(0xC0000248); // STATUS_LOGIN_WKSTA_RESTRICTION
+
+/// ### UP/MP Image Mismatch
+/// The image `%hs` has been modified for use on a uniprocessor system, but you are running it on a multiprocessor machine.
+/// Please reinstall the image file.
 pub const IMAGE_MP_UP_MISMATCH : NTSTATUS = NTSTATUS::from_constant(0xC0000249); // STATUS_IMAGE_MP_UP_MISMATCH
+
+/// There is insufficient account information to log you on.
 pub const INSUFFICIENT_LOGON_INFO : NTSTATUS = NTSTATUS::from_constant(0xC0000250); // STATUS_INSUFFICIENT_LOGON_INFO
+
+/// ### Invalid DLL Entrypoint
+/// The dynamic link library `%hs` is not written correctly. The stack pointer has been left in an inconsistent state. The entrypoint should be declared as WINAPI or STDCALL. Select YES to fail the DLL load. Select NO to continue execution. Selecting NO may cause the application to operate incorrectly.
 pub const BAD_DLL_ENTRYPOINT : NTSTATUS = NTSTATUS::from_constant(0xC0000251); // STATUS_BAD_DLL_ENTRYPOINT
+
+/// ### Invalid Service Callback Entrypoint
+/// The `%hs` service is not written correctly. The stack pointer has been left in an inconsistent state. The callback entrypoint should be declared as WINAPI or STDCALL. Selecting OK will cause the service to continue operation. However, the service process may operate incorrectly.
 pub const BAD_SERVICE_ENTRYPOINT : NTSTATUS = NTSTATUS::from_constant(0xC0000252); // STATUS_BAD_SERVICE_ENTRYPOINT
+
+/// The server received the messages but did not send a reply.
 pub const LPC_REPLY_LOST : NTSTATUS = NTSTATUS::from_constant(0xC0000253); // STATUS_LPC_REPLY_LOST
+
+/// There is an IP address conflict with another system on the network
 pub const IP_ADDRESS_CONFLICT1 : NTSTATUS = NTSTATUS::from_constant(0xC0000254); // STATUS_IP_ADDRESS_CONFLICT1
+
+/// There is an IP address conflict with another system on the network
 pub const IP_ADDRESS_CONFLICT2 : NTSTATUS = NTSTATUS::from_constant(0xC0000255); // STATUS_IP_ADDRESS_CONFLICT2
+
+/// ### Low On Registry Space
+/// The system has reached the maximum size allowed for the system part of the registry. Additional storage requests will be ignored.
 pub const REGISTRY_QUOTA_LIMIT : NTSTATUS = NTSTATUS::from_constant(0xC0000256); // STATUS_REGISTRY_QUOTA_LIMIT
+
+/// The contacted server does not support the indicated part of the DFS namespace.
 pub const PATH_NOT_COVERED : NTSTATUS = NTSTATUS::from_constant(0xC0000257); // STATUS_PATH_NOT_COVERED
+
+/// A callback return system service cannot be executed when no callback is active.
 pub const NO_CALLBACK_ACTIVE : NTSTATUS = NTSTATUS::from_constant(0xC0000258); // STATUS_NO_CALLBACK_ACTIVE
+
+/// The service being accessed is licensed for a particular number of connections. No more connections can be made to the service at this time because there are already as many connections as the service can accept.
 pub const LICENSE_QUOTA_EXCEEDED : NTSTATUS = NTSTATUS::from_constant(0xC0000259); // STATUS_LICENSE_QUOTA_EXCEEDED
+
+/// The password provided is too short to meet the policy of your user account. Please choose a longer password.
 pub const PWD_TOO_SHORT : NTSTATUS = NTSTATUS::from_constant(0xC000025A); // STATUS_PWD_TOO_SHORT
+
+/// The policy of your user account does not allow you to change passwords too frequently. This is done to prevent users from changing back to a familiar, but potentially discovered, password. If you feel your password has been compromised then please contact your administrator immediately to have a new one assigned.
 pub const PWD_TOO_RECENT : NTSTATUS = NTSTATUS::from_constant(0xC000025B); // STATUS_PWD_TOO_RECENT
+
+/// You have attempted to change your password to one that you have used in the past. The policy of your user account does not allow this. Please select a password that you have not previously used.
 pub const PWD_HISTORY_CONFLICT : NTSTATUS = NTSTATUS::from_constant(0xC000025C); // STATUS_PWD_HISTORY_CONFLICT
+
+/// You have attempted to load a legacy device driver while its device instance had been disabled.
 pub const PLUGPLAY_NO_DEVICE : NTSTATUS = NTSTATUS::from_constant(0xC000025E); // STATUS_PLUGPLAY_NO_DEVICE
+
+/// The specified compression format is unsupported.
 pub const UNSUPPORTED_COMPRESSION : NTSTATUS = NTSTATUS::from_constant(0xC000025F); // STATUS_UNSUPPORTED_COMPRESSION
+
+/// The specified hardware profile configuration is invalid.
 pub const INVALID_HW_PROFILE : NTSTATUS = NTSTATUS::from_constant(0xC0000260); // STATUS_INVALID_HW_PROFILE
+
+/// The specified Plug and Play registry device path is invalid.
 pub const INVALID_PLUGPLAY_DEVICE_PATH : NTSTATUS = NTSTATUS::from_constant(0xC0000261); // STATUS_INVALID_PLUGPLAY_DEVICE_PATH
+
+/// ### Driver Entry Point Not Found
+/// The `%hs` device driver could not locate the ordinal `%ld` in driver `%hs`.
 pub const DRIVER_ORDINAL_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC0000262); // STATUS_DRIVER_ORDINAL_NOT_FOUND
+
+/// ### Driver Entry Point Not Found
+/// The `%hs` device driver could not locate the entry point `%hs` in driver `%hs`.
 pub const DRIVER_ENTRYPOINT_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC0000263); // STATUS_DRIVER_ENTRYPOINT_NOT_FOUND
+
+/// ### Application Error
+/// The application attempted to release a resource it did not own. Click OK to terminate the application.
 pub const RESOURCE_NOT_OWNED : NTSTATUS = NTSTATUS::from_constant(0xC0000264); // STATUS_RESOURCE_NOT_OWNED
+
+/// An attempt was made to create more links on a file than the file system supports.
 pub const TOO_MANY_LINKS : NTSTATUS = NTSTATUS::from_constant(0xC0000265); // STATUS_TOO_MANY_LINKS
+
+/// The specified quota list is internally inconsistent with its descriptor.
 pub const QUOTA_LIST_INCONSISTENT : NTSTATUS = NTSTATUS::from_constant(0xC0000266); // STATUS_QUOTA_LIST_INCONSISTENT
+
+/// The specified file has been relocated to offline storage.
 pub const FILE_IS_OFFLINE : NTSTATUS = NTSTATUS::from_constant(0xC0000267); // STATUS_FILE_IS_OFFLINE
+
+/// ### Windows Evaluation Notification
+/// The evaluation period for this installation of Windows has expired. This system will shutdown in 1 hour. To restore access to this installation of Windows, please upgrade this installation using a licensed distribution of this product.
 pub const EVALUATION_EXPIRATION : NTSTATUS = NTSTATUS::from_constant(0xC0000268); // STATUS_EVALUATION_EXPIRATION
+
+/// ### Illegal System DLL Relocation
+/// The system DLL `%hs` was relocated in memory. The application will not run properly. The relocation occurred because the DLL `%hs` occupied an address range reserved for Windows system DLLs. The vendor supplying the DLL should be contacted for a new DLL.
 pub const ILLEGAL_DLL_RELOCATION : NTSTATUS = NTSTATUS::from_constant(0xC0000269); // STATUS_ILLEGAL_DLL_RELOCATION
+
+/// ### License Violation
+/// The system has detected tampering with your registered product type. This is a violation of your software license. Tampering with product type is not permitted.
 pub const LICENSE_VIOLATION : NTSTATUS = NTSTATUS::from_constant(0xC000026A); // STATUS_LICENSE_VIOLATION
+
+/// ### DLL Initialization Failed
+/// The application failed to initialize because the window station is shutting down.
 pub const DLL_INIT_FAILED_LOGOFF : NTSTATUS = NTSTATUS::from_constant(0xC000026B); // STATUS_DLL_INIT_FAILED_LOGOFF
+
+/// ### Unable to Load Device Driver
+/// `%hs` device driver could not be loaded.
+/// Error Status was `0x%x`
 pub const DRIVER_UNABLE_TO_LOAD : NTSTATUS = NTSTATUS::from_constant(0xC000026C); // STATUS_DRIVER_UNABLE_TO_LOAD
+
+/// DFS is unavailable on the contacted server.
 pub const DFS_UNAVAILABLE : NTSTATUS = NTSTATUS::from_constant(0xC000026D); // STATUS_DFS_UNAVAILABLE
+
+/// An operation was attempted to a volume after it was dismounted.
 pub const VOLUME_DISMOUNTED : NTSTATUS = NTSTATUS::from_constant(0xC000026E); // STATUS_VOLUME_DISMOUNTED
+
+/// An internal error occurred in the Win32 x86 emulation subsystem.
 pub const WX86_INTERNAL_ERROR : NTSTATUS = NTSTATUS::from_constant(0xC000026F); // STATUS_WX86_INTERNAL_ERROR
+
+/// Win32 x86 emulation subsystem Floating-point stack check.
 pub const WX86_FLOAT_STACK_CHECK : NTSTATUS = NTSTATUS::from_constant(0xC0000270); // STATUS_WX86_FLOAT_STACK_CHECK
+
+/// The validation process needs to continue on to the next step.
 pub const VALIDATE_CONTINUE : NTSTATUS = NTSTATUS::from_constant(0xC0000271); // STATUS_VALIDATE_CONTINUE
+
+/// There was no match for the specified key in the index.
 pub const NO_MATCH : NTSTATUS = NTSTATUS::from_constant(0xC0000272); // STATUS_NO_MATCH
+
+/// There are no more matches for the current index enumeration.
 pub const NO_MORE_MATCHES : NTSTATUS = NTSTATUS::from_constant(0xC0000273); // STATUS_NO_MORE_MATCHES
+
+/// The file or directory is not a reparse point.
 pub const NOT_A_REPARSE_POINT : NTSTATUS = NTSTATUS::from_constant(0xC0000275); // STATUS_NOT_A_REPARSE_POINT
+
+/// The Windows I/O reparse tag passed for the reparse point is invalid.
 pub const IO_REPARSE_TAG_INVALID : NTSTATUS = NTSTATUS::from_constant(0xC0000276); // STATUS_IO_REPARSE_TAG_INVALID
+
+/// The Windows I/O reparse tag does not match the one present in the reparse point.
 pub const IO_REPARSE_TAG_MISMATCH : NTSTATUS = NTSTATUS::from_constant(0xC0000277); // STATUS_IO_REPARSE_TAG_MISMATCH
+
+/// The user data passed for the reparse point is invalid.
 pub const IO_REPARSE_DATA_INVALID : NTSTATUS = NTSTATUS::from_constant(0xC0000278); // STATUS_IO_REPARSE_DATA_INVALID
+
+/// The layered file system driver for this IO tag did not handle it when needed.
 pub const IO_REPARSE_TAG_NOT_HANDLED : NTSTATUS = NTSTATUS::from_constant(0xC0000279); // STATUS_IO_REPARSE_TAG_NOT_HANDLED
+
+/// The password provided is too long to meet the policy of your user account. Please choose a shorter password.
 pub const PWD_TOO_LONG : NTSTATUS = NTSTATUS::from_constant(0xC000027A); // STATUS_PWD_TOO_LONG
+
+/// An application-internal exception has occurred.
 pub const STOWED_EXCEPTION : NTSTATUS = NTSTATUS::from_constant(0xC000027B); // STATUS_STOWED_EXCEPTION
+
+/// An application-internal exception has occurred.
 pub const CONTEXT_STOWED_EXCEPTION : NTSTATUS = NTSTATUS::from_constant(0xC000027C); // STATUS_CONTEXT_STOWED_EXCEPTION
+
+/// The symbolic link could not be resolved even though the initial file name is valid.
 pub const REPARSE_POINT_NOT_RESOLVED : NTSTATUS = NTSTATUS::from_constant(0xC0000280); // STATUS_REPARSE_POINT_NOT_RESOLVED
+
+/// The directory is a reparse point.
 pub const DIRECTORY_IS_A_REPARSE_POINT : NTSTATUS = NTSTATUS::from_constant(0xC0000281); // STATUS_DIRECTORY_IS_A_REPARSE_POINT
+
+/// The range could not be added to the range list because of a conflict.
 pub const RANGE_LIST_CONFLICT : NTSTATUS = NTSTATUS::from_constant(0xC0000282); // STATUS_RANGE_LIST_CONFLICT
+
+/// The specified medium changer source element contains no media.
 pub const SOURCE_ELEMENT_EMPTY : NTSTATUS = NTSTATUS::from_constant(0xC0000283); // STATUS_SOURCE_ELEMENT_EMPTY
+
+/// The specified medium changer destination element already contains media.
 pub const DESTINATION_ELEMENT_FULL : NTSTATUS = NTSTATUS::from_constant(0xC0000284); // STATUS_DESTINATION_ELEMENT_FULL
+
+/// The specified medium changer element does not exist.
 pub const ILLEGAL_ELEMENT_ADDRESS : NTSTATUS = NTSTATUS::from_constant(0xC0000285); // STATUS_ILLEGAL_ELEMENT_ADDRESS
+
+/// The specified element is contained within a magazine that is no longer present.
 pub const MAGAZINE_NOT_PRESENT : NTSTATUS = NTSTATUS::from_constant(0xC0000286); // STATUS_MAGAZINE_NOT_PRESENT
+
+/// The device requires reinitialization due to hardware errors.
 pub const REINITIALIZATION_NEEDED : NTSTATUS = NTSTATUS::from_constant(0xC0000287); // STATUS_REINITIALIZATION_NEEDED
+
+/// The device has indicated that cleaning is necessary.
 pub const DEVICE_REQUIRES_CLEANING : NTSTATUS = NTSTATUS::from_constant(0x80000288); // STATUS_DEVICE_REQUIRES_CLEANING
+
+/// The device has indicated that its door is open. Further operations require it closed and secured.
 pub const DEVICE_DOOR_OPEN : NTSTATUS = NTSTATUS::from_constant(0x80000289); // STATUS_DEVICE_DOOR_OPEN
+
+/// The file encryption attempt failed.
 pub const ENCRYPTION_FAILED : NTSTATUS = NTSTATUS::from_constant(0xC000028A); // STATUS_ENCRYPTION_FAILED
+
+/// The file decryption attempt failed.
 pub const DECRYPTION_FAILED : NTSTATUS = NTSTATUS::from_constant(0xC000028B); // STATUS_DECRYPTION_FAILED
+
+/// The specified range could not be found in the range list.
 pub const RANGE_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC000028C); // STATUS_RANGE_NOT_FOUND
+
+/// There is no encryption recovery policy configured for this system.
 pub const NO_RECOVERY_POLICY : NTSTATUS = NTSTATUS::from_constant(0xC000028D); // STATUS_NO_RECOVERY_POLICY
+
+/// The required encryption driver is not loaded for this system.
 pub const NO_EFS : NTSTATUS = NTSTATUS::from_constant(0xC000028E); // STATUS_NO_EFS
+
+/// The file was encrypted with a different encryption driver than is currently loaded.
 pub const WRONG_EFS : NTSTATUS = NTSTATUS::from_constant(0xC000028F); // STATUS_WRONG_EFS
+
+/// There are no EFS keys defined for the user.
 pub const NO_USER_KEYS : NTSTATUS = NTSTATUS::from_constant(0xC0000290); // STATUS_NO_USER_KEYS
+
+/// The specified file is not encrypted.
 pub const FILE_NOT_ENCRYPTED : NTSTATUS = NTSTATUS::from_constant(0xC0000291); // STATUS_FILE_NOT_ENCRYPTED
+
+/// The specified file is not in the defined EFS export format.
 pub const NOT_EXPORT_FORMAT : NTSTATUS = NTSTATUS::from_constant(0xC0000292); // STATUS_NOT_EXPORT_FORMAT
+
+/// The specified file is encrypted and the user does not have the ability to decrypt it.
 pub const FILE_ENCRYPTED : NTSTATUS = NTSTATUS::from_constant(0xC0000293); // STATUS_FILE_ENCRYPTED
+
+/// The system has awoken
 pub const WAKE_SYSTEM : NTSTATUS = NTSTATUS::from_constant(0x40000294); // STATUS_WAKE_SYSTEM
+
+/// The guid passed was not recognized as valid by a WMI data provider.
 pub const WMI_GUID_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC0000295); // STATUS_WMI_GUID_NOT_FOUND
+
+/// The instance name passed was not recognized as valid by a WMI data provider.
 pub const WMI_INSTANCE_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC0000296); // STATUS_WMI_INSTANCE_NOT_FOUND
+
+/// The data item id passed was not recognized as valid by a WMI data provider.
 pub const WMI_ITEMID_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC0000297); // STATUS_WMI_ITEMID_NOT_FOUND
+
+/// The WMI request could not be completed and should be retried.
 pub const WMI_TRY_AGAIN : NTSTATUS = NTSTATUS::from_constant(0xC0000298); // STATUS_WMI_TRY_AGAIN
+
+/// The policy object is shared and can only be modified at the root
 pub const SHARED_POLICY : NTSTATUS = NTSTATUS::from_constant(0xC0000299); // STATUS_SHARED_POLICY
+
+/// The policy object does not exist when it should
 pub const POLICY_OBJECT_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC000029A); // STATUS_POLICY_OBJECT_NOT_FOUND
+
+/// The requested policy information only lives in the Ds
 pub const POLICY_ONLY_IN_DS : NTSTATUS = NTSTATUS::from_constant(0xC000029B); // STATUS_POLICY_ONLY_IN_DS
+
+/// The volume must be upgraded to enable this feature
 pub const VOLUME_NOT_UPGRADED : NTSTATUS = NTSTATUS::from_constant(0xC000029C); // STATUS_VOLUME_NOT_UPGRADED
+
+/// The remote storage service is not operational at this time.
 pub const REMOTE_STORAGE_NOT_ACTIVE : NTSTATUS = NTSTATUS::from_constant(0xC000029D); // STATUS_REMOTE_STORAGE_NOT_ACTIVE
+
+/// The remote storage service encountered a media error.
 pub const REMOTE_STORAGE_MEDIA_ERROR : NTSTATUS = NTSTATUS::from_constant(0xC000029E); // STATUS_REMOTE_STORAGE_MEDIA_ERROR
+
+/// The tracking (workstation) service is not running.
 pub const NO_TRACKING_SERVICE : NTSTATUS = NTSTATUS::from_constant(0xC000029F); // STATUS_NO_TRACKING_SERVICE
+
+/// The server process is running under a SID different than that required by client.
 pub const SERVER_SID_MISMATCH : NTSTATUS = NTSTATUS::from_constant(0xC00002A0); // STATUS_SERVER_SID_MISMATCH
+
+/// The specified directory service attribute or value does not exist.
 pub const DS_NO_ATTRIBUTE_OR_VALUE : NTSTATUS = NTSTATUS::from_constant(0xC00002A1); // STATUS_DS_NO_ATTRIBUTE_OR_VALUE
+
+/// The attribute syntax specified to the directory service is invalid.
 pub const DS_INVALID_ATTRIBUTE_SYNTAX : NTSTATUS = NTSTATUS::from_constant(0xC00002A2); // STATUS_DS_INVALID_ATTRIBUTE_SYNTAX
+
+/// The attribute type specified to the directory service is not defined.
 pub const DS_ATTRIBUTE_TYPE_UNDEFINED : NTSTATUS = NTSTATUS::from_constant(0xC00002A3); // STATUS_DS_ATTRIBUTE_TYPE_UNDEFINED
+
+/// The specified directory service attribute or value already exists.
 pub const DS_ATTRIBUTE_OR_VALUE_EXISTS : NTSTATUS = NTSTATUS::from_constant(0xC00002A4); // STATUS_DS_ATTRIBUTE_OR_VALUE_EXISTS
+
+/// The directory service is busy.
 pub const DS_BUSY : NTSTATUS = NTSTATUS::from_constant(0xC00002A5); // STATUS_DS_BUSY
+
+/// The directory service is not available.
 pub const DS_UNAVAILABLE : NTSTATUS = NTSTATUS::from_constant(0xC00002A6); // STATUS_DS_UNAVAILABLE
+
+/// The directory service was unable to allocate a relative identifier.
 pub const DS_NO_RIDS_ALLOCATED : NTSTATUS = NTSTATUS::from_constant(0xC00002A7); // STATUS_DS_NO_RIDS_ALLOCATED
+
+/// The directory service has exhausted the pool of relative identifiers.
 pub const DS_NO_MORE_RIDS : NTSTATUS = NTSTATUS::from_constant(0xC00002A8); // STATUS_DS_NO_MORE_RIDS
+
+/// The requested operation could not be performed because the directory service is not the master for that type of operation.
 pub const DS_INCORRECT_ROLE_OWNER : NTSTATUS = NTSTATUS::from_constant(0xC00002A9); // STATUS_DS_INCORRECT_ROLE_OWNER
+
+/// The directory service was unable to initialize the subsystem that allocates relative identifiers.
 pub const DS_RIDMGR_INIT_ERROR : NTSTATUS = NTSTATUS::from_constant(0xC00002AA); // STATUS_DS_RIDMGR_INIT_ERROR
+
+/// The requested operation did not satisfy one or more constraints associated with the class of the object.
 pub const DS_OBJ_CLASS_VIOLATION : NTSTATUS = NTSTATUS::from_constant(0xC00002AB); // STATUS_DS_OBJ_CLASS_VIOLATION
+
+/// The directory service can perform the requested operation only on a leaf object.
 pub const DS_CANT_ON_NON_LEAF : NTSTATUS = NTSTATUS::from_constant(0xC00002AC); // STATUS_DS_CANT_ON_NON_LEAF
+
+/// The directory service cannot perform the requested operation on the Relatively Defined Name (RDN) attribute of an object.
 pub const DS_CANT_ON_RDN : NTSTATUS = NTSTATUS::from_constant(0xC00002AD); // STATUS_DS_CANT_ON_RDN
+
+/// The directory service detected an attempt to modify the object class of an object.
 pub const DS_CANT_MOD_OBJ_CLASS : NTSTATUS = NTSTATUS::from_constant(0xC00002AE); // STATUS_DS_CANT_MOD_OBJ_CLASS
+
+/// An error occurred while performing a cross domain move operation.
 pub const DS_CROSS_DOM_MOVE_FAILED : NTSTATUS = NTSTATUS::from_constant(0xC00002AF); // STATUS_DS_CROSS_DOM_MOVE_FAILED
+
+/// Unable to Contact the Global Catalog Server.
 pub const DS_GC_NOT_AVAILABLE : NTSTATUS = NTSTATUS::from_constant(0xC00002B0); // STATUS_DS_GC_NOT_AVAILABLE
+
+/// The requested operation requires a directory service, and none was available.
 pub const DIRECTORY_SERVICE_REQUIRED : NTSTATUS = NTSTATUS::from_constant(0xC00002B1); // STATUS_DIRECTORY_SERVICE_REQUIRED
+
+/// The reparse attribute cannot be set as it is incompatible with an existing attribute.
 pub const REPARSE_ATTRIBUTE_CONFLICT : NTSTATUS = NTSTATUS::from_constant(0xC00002B2); // STATUS_REPARSE_ATTRIBUTE_CONFLICT
+
+/// A group marked use for deny only cannot be enabled.
 pub const CANT_ENABLE_DENY_ONLY : NTSTATUS = NTSTATUS::from_constant(0xC00002B3); // STATUS_CANT_ENABLE_DENY_ONLY
+
+/// ### EXCEPTION
+/// Multiple floating point faults.
 pub const FLOAT_MULTIPLE_FAULTS : NTSTATUS = NTSTATUS::from_constant(0xC00002B4); // STATUS_FLOAT_MULTIPLE_FAULTS
+
+/// ### EXCEPTION
+/// Multiple floating point traps.
 pub const FLOAT_MULTIPLE_TRAPS : NTSTATUS = NTSTATUS::from_constant(0xC00002B5); // STATUS_FLOAT_MULTIPLE_TRAPS
+
+/// The device has been removed.
 pub const DEVICE_REMOVED : NTSTATUS = NTSTATUS::from_constant(0xC00002B6); // STATUS_DEVICE_REMOVED
+
+/// The volume change journal is being deleted.
 pub const JOURNAL_DELETE_IN_PROGRESS : NTSTATUS = NTSTATUS::from_constant(0xC00002B7); // STATUS_JOURNAL_DELETE_IN_PROGRESS
+
+/// The volume change journal is not active.
 pub const JOURNAL_NOT_ACTIVE : NTSTATUS = NTSTATUS::from_constant(0xC00002B8); // STATUS_JOURNAL_NOT_ACTIVE
+
+/// The requested interface is not supported.
 pub const NOINTERFACE : NTSTATUS = NTSTATUS::from_constant(0xC00002B9); // STATUS_NOINTERFACE
+
+/// The directory service detected the subsystem that allocates relative identifiers is disabled. This can occur as a protective mechanism when the system determines a significant portion of relative identifiers (RIDs) have been exhausted. Please see <http://go.microsoft.com/fwlink/?LinkId=228610> for recommended diagnostic steps and the procedure to re-enable account creation.
 pub const DS_RIDMGR_DISABLED : NTSTATUS = NTSTATUS::from_constant(0xC00002BA); // STATUS_DS_RIDMGR_DISABLED
+
+/// A directory service resource limit has been exceeded.
 pub const DS_ADMIN_LIMIT_EXCEEDED : NTSTATUS = NTSTATUS::from_constant(0xC00002C1); // STATUS_DS_ADMIN_LIMIT_EXCEEDED
+
+/// ### System Standby Failed
+/// The driver `%hs` does not support standby mode. Updating this driver may allow the system to go to standby mode.
 pub const DRIVER_FAILED_SLEEP : NTSTATUS = NTSTATUS::from_constant(0xC00002C2); // STATUS_DRIVER_FAILED_SLEEP
+
+/// Mutual Authentication failed. The server's password is out of date at the domain controller.
 pub const MUTUAL_AUTHENTICATION_FAILED : NTSTATUS = NTSTATUS::from_constant(0xC00002C3); // STATUS_MUTUAL_AUTHENTICATION_FAILED
+
+/// The system file `%1` has become corrupt and has been replaced.
 pub const CORRUPT_SYSTEM_FILE : NTSTATUS = NTSTATUS::from_constant(0xC00002C4); // STATUS_CORRUPT_SYSTEM_FILE
+
+/// ### EXCEPTION
+/// Alignment Error
+/// A datatype misalignment error was detected in a load or store instruction.
 pub const DATATYPE_MISALIGNMENT_ERROR : NTSTATUS = NTSTATUS::from_constant(0xC00002C5); // STATUS_DATATYPE_MISALIGNMENT_ERROR
+
+/// The WMI data item or data block is read only.
 pub const WMI_READ_ONLY : NTSTATUS = NTSTATUS::from_constant(0xC00002C6); // STATUS_WMI_READ_ONLY
+
+/// The WMI data item or data block could not be changed.
 pub const WMI_SET_FAILURE : NTSTATUS = NTSTATUS::from_constant(0xC00002C7); // STATUS_WMI_SET_FAILURE
+
+/// ### Virtual Memory Minimum Too Low
+/// Your system is low on virtual memory. Windows is increasing the size of your virtual memory paging file. During this process, memory requests for some applications may be denied. For more information, see Help.
 pub const COMMITMENT_MINIMUM : NTSTATUS = NTSTATUS::from_constant(0xC00002C8); // STATUS_COMMITMENT_MINIMUM
+
+/// ### EXCEPTION
+/// Register NaT consumption faults.
+/// A NaT value is consumed on a non speculative instruction.
 pub const REG_NAT_CONSUMPTION : NTSTATUS = NTSTATUS::from_constant(0xC00002C9); // STATUS_REG_NAT_CONSUMPTION
+
+/// The medium changer's transport element contains media, which is causing the operation to fail.
 pub const TRANSPORT_FULL : NTSTATUS = NTSTATUS::from_constant(0xC00002CA); // STATUS_TRANSPORT_FULL
+
+/// Security Accounts Manager initialization failed because of the following error:
+/// `%hs`
+/// Error Status: `0x%x`.
+/// Please shutdown this system and reboot into Directory Services Restore Mode, check the event log for more detailed information.
 pub const DS_SAM_INIT_FAILURE : NTSTATUS = NTSTATUS::from_constant(0xC00002CB); // STATUS_DS_SAM_INIT_FAILURE
+
+/// This operation is supported only when you are connected to the server.
 pub const ONLY_IF_CONNECTED : NTSTATUS = NTSTATUS::from_constant(0xC00002CC); // STATUS_ONLY_IF_CONNECTED
+
+/// Only an administrator can modify the membership list of an administrative group.
 pub const DS_SENSITIVE_GROUP_VIOLATION : NTSTATUS = NTSTATUS::from_constant(0xC00002CD); // STATUS_DS_SENSITIVE_GROUP_VIOLATION
+
+/// A device was removed so enumeration must be restarted.
 pub const PNP_RESTART_ENUMERATION : NTSTATUS = NTSTATUS::from_constant(0xC00002CE); // STATUS_PNP_RESTART_ENUMERATION
+
+/// The journal entry has been deleted from the journal.
 pub const JOURNAL_ENTRY_DELETED : NTSTATUS = NTSTATUS::from_constant(0xC00002CF); // STATUS_JOURNAL_ENTRY_DELETED
+
+/// Cannot change the primary group ID of a domain controller account.
 pub const DS_CANT_MOD_PRIMARYGROUPID : NTSTATUS = NTSTATUS::from_constant(0xC00002D0); // STATUS_DS_CANT_MOD_PRIMARYGROUPID
+
+/// ### Fatal System Error
+/// The system image `%s` is not properly signed. The file has been replaced with the signed file. The system has been shut down.
 pub const SYSTEM_IMAGE_BAD_SIGNATURE : NTSTATUS = NTSTATUS::from_constant(0xC00002D1); // STATUS_SYSTEM_IMAGE_BAD_SIGNATURE
+
+/// Device will not start without a reboot.
 pub const PNP_REBOOT_REQUIRED : NTSTATUS = NTSTATUS::from_constant(0xC00002D2); // STATUS_PNP_REBOOT_REQUIRED
+
+/// Current device power state cannot support this request.
 pub const POWER_STATE_INVALID : NTSTATUS = NTSTATUS::from_constant(0xC00002D3); // STATUS_POWER_STATE_INVALID
+
+/// The specified group type is invalid.
 pub const DS_INVALID_GROUP_TYPE : NTSTATUS = NTSTATUS::from_constant(0xC00002D4); // STATUS_DS_INVALID_GROUP_TYPE
+
+/// In mixed domain no nesting of global group if group is security enabled.
 pub const DS_NO_NEST_GLOBALGROUP_IN_MIXEDDOMAIN : NTSTATUS = NTSTATUS::from_constant(0xC00002D5); // STATUS_DS_NO_NEST_GLOBALGROUP_IN_MIXEDDOMAIN
+
+/// In mixed domain, cannot nest local groups with other local groups, if the group is security enabled.
 pub const DS_NO_NEST_LOCALGROUP_IN_MIXEDDOMAIN : NTSTATUS = NTSTATUS::from_constant(0xC00002D6); // STATUS_DS_NO_NEST_LOCALGROUP_IN_MIXEDDOMAIN
+
+/// A global group cannot have a local group as a member.
 pub const DS_GLOBAL_CANT_HAVE_LOCAL_MEMBER : NTSTATUS = NTSTATUS::from_constant(0xC00002D7); // STATUS_DS_GLOBAL_CANT_HAVE_LOCAL_MEMBER
+
+/// A global group cannot have a universal group as a member.
 pub const DS_GLOBAL_CANT_HAVE_UNIVERSAL_MEMBER : NTSTATUS = NTSTATUS::from_constant(0xC00002D8); // STATUS_DS_GLOBAL_CANT_HAVE_UNIVERSAL_MEMBER
+
+/// A universal group cannot have a local group as a member.
 pub const DS_UNIVERSAL_CANT_HAVE_LOCAL_MEMBER : NTSTATUS = NTSTATUS::from_constant(0xC00002D9); // STATUS_DS_UNIVERSAL_CANT_HAVE_LOCAL_MEMBER
+
+/// A global group cannot have a cross domain member.
 pub const DS_GLOBAL_CANT_HAVE_CROSSDOMAIN_MEMBER : NTSTATUS = NTSTATUS::from_constant(0xC00002DA); // STATUS_DS_GLOBAL_CANT_HAVE_CROSSDOMAIN_MEMBER
+
+/// A local group cannot have another cross domain local group as a member.
 pub const DS_LOCAL_CANT_HAVE_CROSSDOMAIN_LOCAL_MEMBER : NTSTATUS = NTSTATUS::from_constant(0xC00002DB); // STATUS_DS_LOCAL_CANT_HAVE_CROSSDOMAIN_LOCAL_MEMBER
+
+/// Cannot change to security disabled group because of having primary members in this group.
 pub const DS_HAVE_PRIMARY_MEMBERS : NTSTATUS = NTSTATUS::from_constant(0xC00002DC); // STATUS_DS_HAVE_PRIMARY_MEMBERS
+
+/// The WMI operation is not supported by the data block or method.
 pub const WMI_NOT_SUPPORTED : NTSTATUS = NTSTATUS::from_constant(0xC00002DD); // STATUS_WMI_NOT_SUPPORTED
+
+/// There is not enough power to complete the requested operation.
 pub const INSUFFICIENT_POWER : NTSTATUS = NTSTATUS::from_constant(0xC00002DE); // STATUS_INSUFFICIENT_POWER
+
+/// Security Account Manager needs to get the boot password.
 pub const SAM_NEED_BOOTKEY_PASSWORD : NTSTATUS = NTSTATUS::from_constant(0xC00002DF); // STATUS_SAM_NEED_BOOTKEY_PASSWORD
+
+/// Security Account Manager needs to get the boot key from floppy disk.
 pub const SAM_NEED_BOOTKEY_FLOPPY : NTSTATUS = NTSTATUS::from_constant(0xC00002E0); // STATUS_SAM_NEED_BOOTKEY_FLOPPY
+
+/// Directory Service cannot start.
 pub const DS_CANT_START : NTSTATUS = NTSTATUS::from_constant(0xC00002E1); // STATUS_DS_CANT_START
+
+/// Directory Services could not start because of the following error:
+/// `%hs`
+/// Error Status: `0x%x`.
+/// Please shutdown this system and reboot into Directory Services Restore Mode, check the event log for more detailed information.
 pub const DS_INIT_FAILURE : NTSTATUS = NTSTATUS::from_constant(0xC00002E2); // STATUS_DS_INIT_FAILURE
+
+/// Security Accounts Manager initialization failed because of the following error:
+/// `%hs`
+/// Error Status: `0x%x`.
+/// Please click OK to shutdown this system and reboot into Safe Mode, check the event log for more detailed information.
 pub const SAM_INIT_FAILURE : NTSTATUS = NTSTATUS::from_constant(0xC00002E3); // STATUS_SAM_INIT_FAILURE
+
+/// The requested operation can be performed only on a global catalog server.
 pub const DS_GC_REQUIRED : NTSTATUS = NTSTATUS::from_constant(0xC00002E4); // STATUS_DS_GC_REQUIRED
+
+/// A local group can only be a member of other local groups in the same domain.
 pub const DS_LOCAL_MEMBER_OF_LOCAL_ONLY : NTSTATUS = NTSTATUS::from_constant(0xC00002E5); // STATUS_DS_LOCAL_MEMBER_OF_LOCAL_ONLY
+
+/// Foreign security principals cannot be members of universal groups.
 pub const DS_NO_FPO_IN_UNIVERSAL_GROUPS : NTSTATUS = NTSTATUS::from_constant(0xC00002E6); // STATUS_DS_NO_FPO_IN_UNIVERSAL_GROUPS
+
+/// Your computer could not be joined to the domain. You have exceeded the maximum number of computer accounts you are allowed to create in this domain. Contact your system administrator to have this limit reset or increased.
 pub const DS_MACHINE_ACCOUNT_QUOTA_EXCEEDED : NTSTATUS = NTSTATUS::from_constant(0xC00002E7); // STATUS_DS_MACHINE_ACCOUNT_QUOTA_EXCEEDED
+
+/// STATUS_MULTIPLE_FAULT_VIOLATION
 pub const MULTIPLE_FAULT_VIOLATION : NTSTATUS = NTSTATUS::from_constant(0xC00002E8); // STATUS_MULTIPLE_FAULT_VIOLATION
+
+/// This operation cannot be performed on the current domain.
 pub const CURRENT_DOMAIN_NOT_ALLOWED : NTSTATUS = NTSTATUS::from_constant(0xC00002E9); // STATUS_CURRENT_DOMAIN_NOT_ALLOWED
+
+/// The directory or file cannot be created.
 pub const CANNOT_MAKE : NTSTATUS = NTSTATUS::from_constant(0xC00002EA); // STATUS_CANNOT_MAKE
+
+/// The system is in the process of shutting down.
 pub const SYSTEM_SHUTDOWN : NTSTATUS = NTSTATUS::from_constant(0xC00002EB); // STATUS_SYSTEM_SHUTDOWN
+
+/// Directory Services could not start because of the following error:
+/// `%hs`
+/// Error Status: `0x%x`.
+/// Please click OK to shutdown the system. You can use the recovery console to diagnose the system further.
 pub const DS_INIT_FAILURE_CONSOLE : NTSTATUS = NTSTATUS::from_constant(0xC00002EC); // STATUS_DS_INIT_FAILURE_CONSOLE
+
+/// Security Accounts Manager initialization failed because of the following error:
+/// `%hs`
+/// Error Status: `0x%x`.
+/// Please click OK to shutdown the system. You can use the recovery console to diagnose the system further.
 pub const DS_SAM_INIT_FAILURE_CONSOLE : NTSTATUS = NTSTATUS::from_constant(0xC00002ED); // STATUS_DS_SAM_INIT_FAILURE_CONSOLE
+
+/// A security context was deleted before the context was completed. This is considered a logon failure.
 pub const UNFINISHED_CONTEXT_DELETED : NTSTATUS = NTSTATUS::from_constant(0xC00002EE); // STATUS_UNFINISHED_CONTEXT_DELETED
+
+/// The client is trying to negotiate a context and the server requires user-to-user but didn't send a TGT reply.
 pub const NO_TGT_REPLY : NTSTATUS = NTSTATUS::from_constant(0xC00002EF); // STATUS_NO_TGT_REPLY
+
+/// An object ID was not found in the file.
 pub const OBJECTID_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC00002F0); // STATUS_OBJECTID_NOT_FOUND
+
+/// Unable to accomplish the requested task because the local machine does not have any IP addresses.
 pub const NO_IP_ADDRESSES : NTSTATUS = NTSTATUS::from_constant(0xC00002F1); // STATUS_NO_IP_ADDRESSES
+
+/// The supplied credential handle does not match the credential associated with the security context.
 pub const WRONG_CREDENTIAL_HANDLE : NTSTATUS = NTSTATUS::from_constant(0xC00002F2); // STATUS_WRONG_CREDENTIAL_HANDLE
+
+/// The crypto system or checksum function is invalid because a required function is unavailable.
 pub const CRYPTO_SYSTEM_INVALID : NTSTATUS = NTSTATUS::from_constant(0xC00002F3); // STATUS_CRYPTO_SYSTEM_INVALID
+
+/// The number of maximum ticket referrals has been exceeded.
 pub const MAX_REFERRALS_EXCEEDED : NTSTATUS = NTSTATUS::from_constant(0xC00002F4); // STATUS_MAX_REFERRALS_EXCEEDED
+
+/// The local machine must be a Kerberos KDC (domain controller) and it is not.
 pub const MUST_BE_KDC : NTSTATUS = NTSTATUS::from_constant(0xC00002F5); // STATUS_MUST_BE_KDC
+
+/// The other end of the security negotiation is requires strong crypto but it is not supported on the local machine.
 pub const STRONG_CRYPTO_NOT_SUPPORTED : NTSTATUS = NTSTATUS::from_constant(0xC00002F6); // STATUS_STRONG_CRYPTO_NOT_SUPPORTED
+
+/// The KDC reply contained more than one principal name.
 pub const TOO_MANY_PRINCIPALS : NTSTATUS = NTSTATUS::from_constant(0xC00002F7); // STATUS_TOO_MANY_PRINCIPALS
+
+/// Expected to find PA data for a hint of what etype to use, but it was not found.
 pub const NO_PA_DATA : NTSTATUS = NTSTATUS::from_constant(0xC00002F8); // STATUS_NO_PA_DATA
+
+/// The client certificate does not contain a valid UPN, or does not match the client name in the logon request. Please contact your administrator.
 pub const PKINIT_NAME_MISMATCH : NTSTATUS = NTSTATUS::from_constant(0xC00002F9); // STATUS_PKINIT_NAME_MISMATCH
+
+/// Smartcard logon is required and was not used.
 pub const SMARTCARD_LOGON_REQUIRED : NTSTATUS = NTSTATUS::from_constant(0xC00002FA); // STATUS_SMARTCARD_LOGON_REQUIRED
+
+/// An invalid request was sent to the KDC.
 pub const KDC_INVALID_REQUEST : NTSTATUS = NTSTATUS::from_constant(0xC00002FB); // STATUS_KDC_INVALID_REQUEST
+
+/// The KDC was unable to generate a referral for the service requested.
 pub const KDC_UNABLE_TO_REFER : NTSTATUS = NTSTATUS::from_constant(0xC00002FC); // STATUS_KDC_UNABLE_TO_REFER
+
+/// The encryption type requested is not supported by the KDC.
 pub const KDC_UNKNOWN_ETYPE : NTSTATUS = NTSTATUS::from_constant(0xC00002FD); // STATUS_KDC_UNKNOWN_ETYPE
+
+/// A system shutdown is in progress.
 pub const SHUTDOWN_IN_PROGRESS : NTSTATUS = NTSTATUS::from_constant(0xC00002FE); // STATUS_SHUTDOWN_IN_PROGRESS
+
+/// The server machine is shutting down.
 pub const SERVER_SHUTDOWN_IN_PROGRESS : NTSTATUS = NTSTATUS::from_constant(0xC00002FF); // STATUS_SERVER_SHUTDOWN_IN_PROGRESS
+
+/// This operation is not supported on a computer running Windows Server 2003 for Small Business Server
 pub const NOT_SUPPORTED_ON_SBS : NTSTATUS = NTSTATUS::from_constant(0xC0000300); // STATUS_NOT_SUPPORTED_ON_SBS
+
+/// The WMI GUID is no longer available
 pub const WMI_GUID_DISCONNECTED : NTSTATUS = NTSTATUS::from_constant(0xC0000301); // STATUS_WMI_GUID_DISCONNECTED
+
+/// Collection or events for the WMI GUID is already disabled.
 pub const WMI_ALREADY_DISABLED : NTSTATUS = NTSTATUS::from_constant(0xC0000302); // STATUS_WMI_ALREADY_DISABLED
+
+/// Collection or events for the WMI GUID is already enabled.
 pub const WMI_ALREADY_ENABLED : NTSTATUS = NTSTATUS::from_constant(0xC0000303); // STATUS_WMI_ALREADY_ENABLED
+
+/// The Master File Table on the volume is too fragmented to complete this operation.
 pub const MFT_TOO_FRAGMENTED : NTSTATUS = NTSTATUS::from_constant(0xC0000304); // STATUS_MFT_TOO_FRAGMENTED
+
+/// Copy protection failure.
 pub const COPY_PROTECTION_FAILURE : NTSTATUS = NTSTATUS::from_constant(0xC0000305); // STATUS_COPY_PROTECTION_FAILURE
+
+/// Copy protection error - DVD CSS Authentication failed.
 pub const CSS_AUTHENTICATION_FAILURE : NTSTATUS = NTSTATUS::from_constant(0xC0000306); // STATUS_CSS_AUTHENTICATION_FAILURE
+
+/// Copy protection error - The given sector does not contain a valid key.
 pub const CSS_KEY_NOT_PRESENT : NTSTATUS = NTSTATUS::from_constant(0xC0000307); // STATUS_CSS_KEY_NOT_PRESENT
+
+/// Copy protection error - DVD session key not established.
 pub const CSS_KEY_NOT_ESTABLISHED : NTSTATUS = NTSTATUS::from_constant(0xC0000308); // STATUS_CSS_KEY_NOT_ESTABLISHED
+
+/// Copy protection error - The read failed because the sector is encrypted.
 pub const CSS_SCRAMBLED_SECTOR : NTSTATUS = NTSTATUS::from_constant(0xC0000309); // STATUS_CSS_SCRAMBLED_SECTOR
+
+/// Copy protection error - The given DVD's region does not correspond to the
+/// region setting of the drive.
 pub const CSS_REGION_MISMATCH : NTSTATUS = NTSTATUS::from_constant(0xC000030A); // STATUS_CSS_REGION_MISMATCH
+
+/// Copy protection error - The drive's region setting may be permanent.
 pub const CSS_RESETS_EXHAUSTED : NTSTATUS = NTSTATUS::from_constant(0xC000030B); // STATUS_CSS_RESETS_EXHAUSTED
+
+/// EAS policy requires that the user change their password before this operation can be performed.
 pub const PASSWORD_CHANGE_REQUIRED : NTSTATUS = NTSTATUS::from_constant(0xC000030C); // STATUS_PASSWORD_CHANGE_REQUIRED
+
+/// An administrator has restricted sign in. To sign in, make sure your device is connected to the Internet, and have your administrator sign in first.
 pub const LOST_MODE_LOGON_RESTRICTION : NTSTATUS = NTSTATUS::from_constant(0xC000030D); // STATUS_LOST_MODE_LOGON_RESTRICTION
+
+/// The Kerberos protocol encountered an error while validating the KDC certificate during logon. There is more information in the system event log.
 pub const PKINIT_FAILURE : NTSTATUS = NTSTATUS::from_constant(0xC0000320); // STATUS_PKINIT_FAILURE
+
+/// The Kerberos protocol encountered an error while attempting to utilize the smartcard subsystem.
 pub const SMARTCARD_SUBSYSTEM_FAILURE : NTSTATUS = NTSTATUS::from_constant(0xC0000321); // STATUS_SMARTCARD_SUBSYSTEM_FAILURE
+
+/// The target server does not have acceptable Kerberos credentials.
 pub const NO_KERB_KEY : NTSTATUS = NTSTATUS::from_constant(0xC0000322); // STATUS_NO_KERB_KEY
+
+/// The transport determined that the remote system is down.
 pub const HOST_DOWN : NTSTATUS = NTSTATUS::from_constant(0xC0000350); // STATUS_HOST_DOWN
+
+/// An unsupported preauthentication mechanism was presented to the Kerberos package.
 pub const UNSUPPORTED_PREAUTH : NTSTATUS = NTSTATUS::from_constant(0xC0000351); // STATUS_UNSUPPORTED_PREAUTH
+
+/// The encryption algorithm used on the source file needs a bigger key buffer than the one used on the destination file.
 pub const EFS_ALG_BLOB_TOO_BIG : NTSTATUS = NTSTATUS::from_constant(0xC0000352); // STATUS_EFS_ALG_BLOB_TOO_BIG
+
+/// An attempt to remove a process's DebugPort was made, but a port was not already associated with the process.
 pub const PORT_NOT_SET : NTSTATUS = NTSTATUS::from_constant(0xC0000353); // STATUS_PORT_NOT_SET
+
+/// Debugger Inactive: Windows may have been started without kernel debugging enabled.
 pub const DEBUGGER_INACTIVE : NTSTATUS = NTSTATUS::from_constant(0xC0000354); // STATUS_DEBUGGER_INACTIVE
+
+/// This version of Windows is not compatible with the behavior version of directory forest, domain or domain controller.
 pub const DS_VERSION_CHECK_FAILURE : NTSTATUS = NTSTATUS::from_constant(0xC0000355); // STATUS_DS_VERSION_CHECK_FAILURE
+
+/// The specified event is currently not being audited.
 pub const AUDITING_DISABLED : NTSTATUS = NTSTATUS::from_constant(0xC0000356); // STATUS_AUDITING_DISABLED
+
+/// The machine account was created pre-NT4. The account needs to be recreated.
 pub const PRENT4_MACHINE_ACCOUNT : NTSTATUS = NTSTATUS::from_constant(0xC0000357); // STATUS_PRENT4_MACHINE_ACCOUNT
+
+/// A account group cannot have a universal group as a member.
 pub const DS_AG_CANT_HAVE_UNIVERSAL_MEMBER : NTSTATUS = NTSTATUS::from_constant(0xC0000358); // STATUS_DS_AG_CANT_HAVE_UNIVERSAL_MEMBER
+
+/// The specified image file did not have the correct format, it appears to be a 32-bit Windows image.
 pub const INVALID_IMAGE_WIN_32 : NTSTATUS = NTSTATUS::from_constant(0xC0000359); // STATUS_INVALID_IMAGE_WIN_32
+
+/// The specified image file did not have the correct format, it appears to be a 64-bit Windows image.
 pub const INVALID_IMAGE_WIN_64 : NTSTATUS = NTSTATUS::from_constant(0xC000035A); // STATUS_INVALID_IMAGE_WIN_64
+
+/// Client's supplied SSPI channel bindings were incorrect.
 pub const BAD_BINDINGS : NTSTATUS = NTSTATUS::from_constant(0xC000035B); // STATUS_BAD_BINDINGS
+
+/// The client's session has expired, so the client must reauthenticate to continue accessing the remote resources.
 pub const NETWORK_SESSION_EXPIRED : NTSTATUS = NTSTATUS::from_constant(0xC000035C); // STATUS_NETWORK_SESSION_EXPIRED
+
+/// AppHelp dialog canceled thus preventing the application from starting.
 pub const APPHELP_BLOCK : NTSTATUS = NTSTATUS::from_constant(0xC000035D); // STATUS_APPHELP_BLOCK
+
+/// The SID filtering operation removed all SIDs.
 pub const ALL_SIDS_FILTERED : NTSTATUS = NTSTATUS::from_constant(0xC000035E); // STATUS_ALL_SIDS_FILTERED
+
+/// The driver was not loaded because the system is booting into safe mode.
 pub const NOT_SAFE_MODE_DRIVER : NTSTATUS = NTSTATUS::from_constant(0xC000035F); // STATUS_NOT_SAFE_MODE_DRIVER
+
+/// Access to `%1` has been restricted by your Administrator by the default software restriction policy level.
 pub const ACCESS_DISABLED_BY_POLICY_DEFAULT : NTSTATUS = NTSTATUS::from_constant(0xC0000361); // STATUS_ACCESS_DISABLED_BY_POLICY_DEFAULT
+
+/// Access to `%1` has been restricted by your Administrator by location with policy rule `%2` placed on path `%3`
 pub const ACCESS_DISABLED_BY_POLICY_PATH : NTSTATUS = NTSTATUS::from_constant(0xC0000362); // STATUS_ACCESS_DISABLED_BY_POLICY_PATH
+
+/// Access to `%1` has been restricted by your Administrator by software publisher policy.
 pub const ACCESS_DISABLED_BY_POLICY_PUBLISHER : NTSTATUS = NTSTATUS::from_constant(0xC0000363); // STATUS_ACCESS_DISABLED_BY_POLICY_PUBLISHER
+
+/// Access to `%1` has been restricted by your Administrator by policy rule `%2`.
 pub const ACCESS_DISABLED_BY_POLICY_OTHER : NTSTATUS = NTSTATUS::from_constant(0xC0000364); // STATUS_ACCESS_DISABLED_BY_POLICY_OTHER
+
+/// The driver was not loaded because it failed its initialization call.
 pub const FAILED_DRIVER_ENTRY : NTSTATUS = NTSTATUS::from_constant(0xC0000365); // STATUS_FAILED_DRIVER_ENTRY
+
+/// The "`%hs`" encountered an error while applying power or reading the device configuration. This may be caused by a failure of your hardware or by a poor connection.
 pub const DEVICE_ENUMERATION_ERROR : NTSTATUS = NTSTATUS::from_constant(0xC0000366); // STATUS_DEVICE_ENUMERATION_ERROR
+
+/// The create operation failed because the name contained at least one mount point which resolves to a volume to which the specified device object is not attached.
 pub const MOUNT_POINT_NOT_RESOLVED : NTSTATUS = NTSTATUS::from_constant(0xC0000368); // STATUS_MOUNT_POINT_NOT_RESOLVED
+
+/// The device object parameter is either not a valid device object or is not attached to the volume specified by the file name.
 pub const INVALID_DEVICE_OBJECT_PARAMETER : NTSTATUS = NTSTATUS::from_constant(0xC0000369); // STATUS_INVALID_DEVICE_OBJECT_PARAMETER
+
+/// A Machine Check Error has occurred. Please check the system eventlog for additional information.
 pub const MCA_OCCURED : NTSTATUS = NTSTATUS::from_constant(0xC000036A); // STATUS_MCA_OCCURED
+
+/// Driver `%2` has been blocked from loading.
 pub const DRIVER_BLOCKED_CRITICAL : NTSTATUS = NTSTATUS::from_constant(0xC000036B); // STATUS_DRIVER_BLOCKED_CRITICAL
+
+/// Driver `%2` has been blocked from loading.
 pub const DRIVER_BLOCKED : NTSTATUS = NTSTATUS::from_constant(0xC000036C); // STATUS_DRIVER_BLOCKED
+
+/// There was error \[`%2`\] processing the driver database.
 pub const DRIVER_DATABASE_ERROR : NTSTATUS = NTSTATUS::from_constant(0xC000036D); // STATUS_DRIVER_DATABASE_ERROR
+
+/// System hive size has exceeded its limit.
 pub const SYSTEM_HIVE_TOO_LARGE : NTSTATUS = NTSTATUS::from_constant(0xC000036E); // STATUS_SYSTEM_HIVE_TOO_LARGE
+
+/// A dynamic link library (DLL) referenced a module that was neither a DLL nor the process's executable image.
 pub const INVALID_IMPORT_OF_NON_DLL : NTSTATUS = NTSTATUS::from_constant(0xC000036F); // STATUS_INVALID_IMPORT_OF_NON_DLL
+
+/// The Directory Service is shutting down.
 pub const DS_SHUTTING_DOWN : NTSTATUS = NTSTATUS::from_constant(0x40000370); // STATUS_DS_SHUTTING_DOWN
+
+/// The local account store does not contain secret material for the specified account.
 pub const NO_SECRETS : NTSTATUS = NTSTATUS::from_constant(0xC0000371); // STATUS_NO_SECRETS
+
+/// Access to `%1` has been restricted by your Administrator by policy rule `%2`.
 pub const ACCESS_DISABLED_NO_SAFER_UI_BY_POLICY : NTSTATUS = NTSTATUS::from_constant(0xC0000372); // STATUS_ACCESS_DISABLED_NO_SAFER_UI_BY_POLICY
+
+/// The system was not able to allocate enough memory to perform a stack switch.
 pub const FAILED_STACK_SWITCH : NTSTATUS = NTSTATUS::from_constant(0xC0000373); // STATUS_FAILED_STACK_SWITCH
+
+/// A heap has been corrupted.
 pub const HEAP_CORRUPTION : NTSTATUS = NTSTATUS::from_constant(0xC0000374); // STATUS_HEAP_CORRUPTION
+
+/// An incorrect PIN was presented to the smart card
 pub const SMARTCARD_WRONG_PIN : NTSTATUS = NTSTATUS::from_constant(0xC0000380); // STATUS_SMARTCARD_WRONG_PIN
+
+/// The smart card is blocked
 pub const SMARTCARD_CARD_BLOCKED : NTSTATUS = NTSTATUS::from_constant(0xC0000381); // STATUS_SMARTCARD_CARD_BLOCKED
+
+/// No PIN was presented to the smart card
 pub const SMARTCARD_CARD_NOT_AUTHENTICATED : NTSTATUS = NTSTATUS::from_constant(0xC0000382); // STATUS_SMARTCARD_CARD_NOT_AUTHENTICATED
+
+/// No smart card available
 pub const SMARTCARD_NO_CARD : NTSTATUS = NTSTATUS::from_constant(0xC0000383); // STATUS_SMARTCARD_NO_CARD
+
+/// The requested key container does not exist on the smart card
 pub const SMARTCARD_NO_KEY_CONTAINER : NTSTATUS = NTSTATUS::from_constant(0xC0000384); // STATUS_SMARTCARD_NO_KEY_CONTAINER
+
+/// The requested certificate does not exist on the smart card
 pub const SMARTCARD_NO_CERTIFICATE : NTSTATUS = NTSTATUS::from_constant(0xC0000385); // STATUS_SMARTCARD_NO_CERTIFICATE
+
+/// The requested keyset does not exist
 pub const SMARTCARD_NO_KEYSET : NTSTATUS = NTSTATUS::from_constant(0xC0000386); // STATUS_SMARTCARD_NO_KEYSET
+
+/// A communication error with the smart card has been detected.
 pub const SMARTCARD_IO_ERROR : NTSTATUS = NTSTATUS::from_constant(0xC0000387); // STATUS_SMARTCARD_IO_ERROR
+
+/// The system cannot contact a domain controller to service the authentication request. Please try again later.
 pub const DOWNGRADE_DETECTED : NTSTATUS = NTSTATUS::from_constant(0xC0000388); // STATUS_DOWNGRADE_DETECTED
+
+/// The smartcard certificate used for authentication has been revoked. Please contact your system administrator. There may be additional information in the event log.
 pub const SMARTCARD_CERT_REVOKED : NTSTATUS = NTSTATUS::from_constant(0xC0000389); // STATUS_SMARTCARD_CERT_REVOKED
+
+/// An untrusted certificate authority was detected while processing the certificate used for authentication.
 pub const ISSUING_CA_UNTRUSTED : NTSTATUS = NTSTATUS::from_constant(0xC000038A); // STATUS_ISSUING_CA_UNTRUSTED
+
+/// The revocation status of the certificate used for authentication could not be determined.
 pub const REVOCATION_OFFLINE_C : NTSTATUS = NTSTATUS::from_constant(0xC000038B); // STATUS_REVOCATION_OFFLINE_C
+
+/// The client certificate used for authentication was not trusted.
 pub const PKINIT_CLIENT_FAILURE : NTSTATUS = NTSTATUS::from_constant(0xC000038C); // STATUS_PKINIT_CLIENT_FAILURE
+
+/// The smartcard certificate used for authentication has expired. Please
+/// contact your system administrator.
 pub const SMARTCARD_CERT_EXPIRED : NTSTATUS = NTSTATUS::from_constant(0xC000038D); // STATUS_SMARTCARD_CERT_EXPIRED
+
+/// The driver could not be loaded because a previous version of the driver is still in memory.
 pub const DRIVER_FAILED_PRIOR_UNLOAD : NTSTATUS = NTSTATUS::from_constant(0xC000038E); // STATUS_DRIVER_FAILED_PRIOR_UNLOAD
+
+/// The smartcard provider could not perform the action since the context was acquired as silent.
 pub const SMARTCARD_SILENT_CONTEXT : NTSTATUS = NTSTATUS::from_constant(0xC000038F); // STATUS_SMARTCARD_SILENT_CONTEXT
+
+/// The current user's delegated trust creation quota has been exceeded.
 pub const PER_USER_TRUST_QUOTA_EXCEEDED : NTSTATUS = NTSTATUS::from_constant(0xC0000401); // STATUS_PER_USER_TRUST_QUOTA_EXCEEDED
+
+/// The total delegated trust creation quota has been exceeded.
 pub const ALL_USER_TRUST_QUOTA_EXCEEDED : NTSTATUS = NTSTATUS::from_constant(0xC0000402); // STATUS_ALL_USER_TRUST_QUOTA_EXCEEDED
+
+/// The current user's delegated trust deletion quota has been exceeded.
 pub const USER_DELETE_TRUST_QUOTA_EXCEEDED : NTSTATUS = NTSTATUS::from_constant(0xC0000403); // STATUS_USER_DELETE_TRUST_QUOTA_EXCEEDED
+
+/// The requested name already exists as a unique identifier.
 pub const DS_NAME_NOT_UNIQUE : NTSTATUS = NTSTATUS::from_constant(0xC0000404); // STATUS_DS_NAME_NOT_UNIQUE
+
+/// The requested object has a non-unique identifier and cannot be retrieved.
 pub const DS_DUPLICATE_ID_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC0000405); // STATUS_DS_DUPLICATE_ID_FOUND
+
+/// The group cannot be converted due to attribute restrictions on the requested group type.
 pub const DS_GROUP_CONVERSION_ERROR : NTSTATUS = NTSTATUS::from_constant(0xC0000406); // STATUS_DS_GROUP_CONVERSION_ERROR
+
+/// ### Volume Shadow Copy Service
+/// Please wait while the Volume Shadow Copy Service prepares volume `%hs` for hibernation.
 pub const VOLSNAP_PREPARE_HIBERNATE : NTSTATUS = NTSTATUS::from_constant(0xC0000407); // STATUS_VOLSNAP_PREPARE_HIBERNATE
+
+/// Kerberos sub-protocol User2User is required.
 pub const USER2USER_REQUIRED : NTSTATUS = NTSTATUS::from_constant(0xC0000408); // STATUS_USER2USER_REQUIRED
+
+/// The system detected an overrun of a stack-based buffer in this application. This overrun could potentially allow a malicious user to gain control of this application.
 pub const STACK_BUFFER_OVERRUN : NTSTATUS = NTSTATUS::from_constant(0xC0000409); // STATUS_STACK_BUFFER_OVERRUN
+
+/// The Kerberos subsystem encountered an error. A service for user protocol request was made against a domain controller which does not support service for user.
 pub const NO_S4U_PROT_SUPPORT : NTSTATUS = NTSTATUS::from_constant(0xC000040A); // STATUS_NO_S4U_PROT_SUPPORT
+
+/// An attempt was made by this server to make a Kerberos constrained delegation request for a target outside of the server's realm. This is not supported, and indicates a misconfiguration on this server's allowed to delegate to list. Please contact your administrator.
 pub const CROSSREALM_DELEGATION_FAILURE : NTSTATUS = NTSTATUS::from_constant(0xC000040B); // STATUS_CROSSREALM_DELEGATION_FAILURE
+
+/// The revocation status of the domain controller certificate used for authentication could not be determined. There is additional information in the system event log.
 pub const REVOCATION_OFFLINE_KDC : NTSTATUS = NTSTATUS::from_constant(0xC000040C); // STATUS_REVOCATION_OFFLINE_KDC
+
+/// An untrusted certificate authority was detected while processing the domain controller certificate used for authentication. There is additional information in the system event log. Please contact your system administrator.
 pub const ISSUING_CA_UNTRUSTED_KDC : NTSTATUS = NTSTATUS::from_constant(0xC000040D); // STATUS_ISSUING_CA_UNTRUSTED_KDC
+
+/// The domain controller certificate used for logon has expired. There is additional information in the system event log.
 pub const KDC_CERT_EXPIRED : NTSTATUS = NTSTATUS::from_constant(0xC000040E); // STATUS_KDC_CERT_EXPIRED
+
+/// The domain controller certificate used for logon has been revoked. There is additional information in the system event log.
 pub const KDC_CERT_REVOKED : NTSTATUS = NTSTATUS::from_constant(0xC000040F); // STATUS_KDC_CERT_REVOKED
+
+/// Data present in one of the parameters is more than the function can operate on.
 pub const PARAMETER_QUOTA_EXCEEDED : NTSTATUS = NTSTATUS::from_constant(0xC0000410); // STATUS_PARAMETER_QUOTA_EXCEEDED
+
+/// The system has failed to hibernate (The error code is `%hs`). Hibernation will be disabled until the system is restarted.
 pub const HIBERNATION_FAILURE : NTSTATUS = NTSTATUS::from_constant(0xC0000411); // STATUS_HIBERNATION_FAILURE
+
+/// An attempt to delay-load a .dll or get a function address in a delay-loaded .dll failed.
 pub const DELAY_LOAD_FAILED : NTSTATUS = NTSTATUS::from_constant(0xC0000412); // STATUS_DELAY_LOAD_FAILED
+
+/// Logon Failure: The machine you are logging onto is protected by an authentication firewall. The specified account is not allowed to authenticate to the machine.
 pub const AUTHENTICATION_FIREWALL_FAILED : NTSTATUS = NTSTATUS::from_constant(0xC0000413); // STATUS_AUTHENTICATION_FIREWALL_FAILED
+
+/// `%hs` is a 16-bit application. You do not have permissions to execute 16-bit applications. Check your permissions with your system administrator.
 pub const VDM_DISALLOWED : NTSTATUS = NTSTATUS::from_constant(0xC0000414); // STATUS_VDM_DISALLOWED
+
+/// ### Display Driver Stopped Responding
+/// The `%hs` display driver has stopped working normally. Save your work and reboot the system to restore full display functionality. The next time you reboot the machine a dialog will be displayed giving you a chance to report this failure to Microsoft.
 pub const HUNG_DISPLAY_DRIVER_THREAD : NTSTATUS = NTSTATUS::from_constant(0xC0000415); // STATUS_HUNG_DISPLAY_DRIVER_THREAD
+
+/// The Desktop heap encountered an error while allocating session memory. There is more information in the system event log.
 pub const INSUFFICIENT_RESOURCE_FOR_SPECIFIED_SHARED_SECTION_SIZE : NTSTATUS = NTSTATUS::from_constant(0xC0000416); // STATUS_INSUFFICIENT_RESOURCE_FOR_SPECIFIED_SHARED_SECTION_SIZE
+
+/// An invalid parameter was passed to a C runtime function.
 pub const INVALID_CRUNTIME_PARAMETER : NTSTATUS = NTSTATUS::from_constant(0xC0000417); // STATUS_INVALID_CRUNTIME_PARAMETER
+
+/// The authentication failed since NTLM was blocked.
 pub const NTLM_BLOCKED : NTSTATUS = NTSTATUS::from_constant(0xC0000418); // STATUS_NTLM_BLOCKED
+
+/// The source object's SID already exists in destination forest.
 pub const DS_SRC_SID_EXISTS_IN_FOREST : NTSTATUS = NTSTATUS::from_constant(0xC0000419); // STATUS_DS_SRC_SID_EXISTS_IN_FOREST
+
+/// The domain name of the trusted domain already exists in the forest.
 pub const DS_DOMAIN_NAME_EXISTS_IN_FOREST : NTSTATUS = NTSTATUS::from_constant(0xC000041A); // STATUS_DS_DOMAIN_NAME_EXISTS_IN_FOREST
+
+/// The flat name of the trusted domain already exists in the forest.
 pub const DS_FLAT_NAME_EXISTS_IN_FOREST : NTSTATUS = NTSTATUS::from_constant(0xC000041B); // STATUS_DS_FLAT_NAME_EXISTS_IN_FOREST
+
+/// The User Principal Name (UPN) is invalid.
 pub const INVALID_USER_PRINCIPAL_NAME : NTSTATUS = NTSTATUS::from_constant(0xC000041C); // STATUS_INVALID_USER_PRINCIPAL_NAME
+
+/// An unhandled exception was encountered during a user callback.
 pub const FATAL_USER_CALLBACK_EXCEPTION : NTSTATUS = NTSTATUS::from_constant(0xC000041D); // STATUS_FATAL_USER_CALLBACK_EXCEPTION
+
+/// An assertion failure has occurred.
 pub const ASSERTION_FAILURE : NTSTATUS = NTSTATUS::from_constant(0xC0000420); // STATUS_ASSERTION_FAILURE
+
+/// Application verifier has found an error in the current process.
 pub const VERIFIER_STOP : NTSTATUS = NTSTATUS::from_constant(0xC0000421); // STATUS_VERIFIER_STOP
+
+/// An exception has occurred in a user mode callback and the kernel callback frame should be removed.
 pub const CALLBACK_POP_STACK : NTSTATUS = NTSTATUS::from_constant(0xC0000423); // STATUS_CALLBACK_POP_STACK
+
+/// `%2` has been blocked from loading due to incompatibility with this system. Please contact your software vendor for a compatible version of the driver.
 pub const INCOMPATIBLE_DRIVER_BLOCKED : NTSTATUS = NTSTATUS::from_constant(0xC0000424); // STATUS_INCOMPATIBLE_DRIVER_BLOCKED
+
+/// Illegal operation attempted on a registry key which has already been unloaded.
 pub const HIVE_UNLOADED : NTSTATUS = NTSTATUS::from_constant(0xC0000425); // STATUS_HIVE_UNLOADED
+
+/// Compression is disabled for this volume.
 pub const COMPRESSION_DISABLED : NTSTATUS = NTSTATUS::from_constant(0xC0000426); // STATUS_COMPRESSION_DISABLED
+
+/// The requested operation could not be completed due to a file system limitation
 pub const FILE_SYSTEM_LIMITATION : NTSTATUS = NTSTATUS::from_constant(0xC0000427); // STATUS_FILE_SYSTEM_LIMITATION
+
+/// Windows cannot verify the digital signature for this file. A recent hardware or software change might have installed a file that is signed incorrectly or damaged, or that might be malicious software from an unknown source.
 pub const INVALID_IMAGE_HASH : NTSTATUS = NTSTATUS::from_constant(0xC0000428); // STATUS_INVALID_IMAGE_HASH
+
+/// The implementation is not capable of performing the request.
 pub const NOT_CAPABLE : NTSTATUS = NTSTATUS::from_constant(0xC0000429); // STATUS_NOT_CAPABLE
+
+/// The requested operation is out of order with respect to other operations.
 pub const REQUEST_OUT_OF_SEQUENCE : NTSTATUS = NTSTATUS::from_constant(0xC000042A); // STATUS_REQUEST_OUT_OF_SEQUENCE
+
+/// An operation attempted to exceed an implementation-defined limit.
 pub const IMPLEMENTATION_LIMIT : NTSTATUS = NTSTATUS::from_constant(0xC000042B); // STATUS_IMPLEMENTATION_LIMIT
+
+/// The requested operation requires elevation.
 pub const ELEVATION_REQUIRED : NTSTATUS = NTSTATUS::from_constant(0xC000042C); // STATUS_ELEVATION_REQUIRED
+
+/// The required security context does not exist.
 pub const NO_SECURITY_CONTEXT : NTSTATUS = NTSTATUS::from_constant(0xC000042D); // STATUS_NO_SECURITY_CONTEXT
+
+/// The PKU2U protocol encountered an error while attempting to utilize the associated certificates.
 pub const PKU2U_CERT_FAILURE : NTSTATUS = NTSTATUS::from_constant(0xC000042F); // STATUS_PKU2U_CERT_FAILURE
+
+/// The operation was attempted beyond the valid data length of the file.
 pub const BEYOND_VDL : NTSTATUS = NTSTATUS::from_constant(0xC0000432); // STATUS_BEYOND_VDL
+
+/// The attempted write operation encountered a write already in progress for some portion of the range.
 pub const ENCOUNTERED_WRITE_IN_PROGRESS : NTSTATUS = NTSTATUS::from_constant(0xC0000433); // STATUS_ENCOUNTERED_WRITE_IN_PROGRESS
+
+/// The page fault mappings changed in the middle of processing a fault so the operation must be retried.
 pub const PTE_CHANGED : NTSTATUS = NTSTATUS::from_constant(0xC0000434); // STATUS_PTE_CHANGED
+
+/// The attempt to purge this file from memory failed to purge some or all the data from memory.
 pub const PURGE_FAILED : NTSTATUS = NTSTATUS::from_constant(0xC0000435); // STATUS_PURGE_FAILED
+
+/// The requested credential requires confirmation.
 pub const CRED_REQUIRES_CONFIRMATION : NTSTATUS = NTSTATUS::from_constant(0xC0000440); // STATUS_CRED_REQUIRES_CONFIRMATION
+
+/// The remote server sent an invalid response for a file being opened with Client Side Encryption.
 pub const CS_ENCRYPTION_INVALID_SERVER_RESPONSE : NTSTATUS = NTSTATUS::from_constant(0xC0000441); // STATUS_CS_ENCRYPTION_INVALID_SERVER_RESPONSE
+
+/// Client Side Encryption is not supported by the remote server even though it claims to support it.
 pub const CS_ENCRYPTION_UNSUPPORTED_SERVER : NTSTATUS = NTSTATUS::from_constant(0xC0000442); // STATUS_CS_ENCRYPTION_UNSUPPORTED_SERVER
+
+/// File is encrypted and should be opened in Client Side Encryption mode.
 pub const CS_ENCRYPTION_EXISTING_ENCRYPTED_FILE : NTSTATUS = NTSTATUS::from_constant(0xC0000443); // STATUS_CS_ENCRYPTION_EXISTING_ENCRYPTED_FILE
+
+/// A new encrypted file is being created and a $EFS needs to be provided.
 pub const CS_ENCRYPTION_NEW_ENCRYPTED_FILE : NTSTATUS = NTSTATUS::from_constant(0xC0000444); // STATUS_CS_ENCRYPTION_NEW_ENCRYPTED_FILE
+
+/// The SMB client requested a CSE FSCTL on a non-CSE file.
 pub const CS_ENCRYPTION_FILE_NOT_CSE : NTSTATUS = NTSTATUS::from_constant(0xC0000445); // STATUS_CS_ENCRYPTION_FILE_NOT_CSE
+
+/// Indicates a particular Security ID may not be assigned as the label of an object.
 pub const INVALID_LABEL : NTSTATUS = NTSTATUS::from_constant(0xC0000446); // STATUS_INVALID_LABEL
+
+/// The process hosting the driver for this device has terminated.
 pub const DRIVER_PROCESS_TERMINATED : NTSTATUS = NTSTATUS::from_constant(0xC0000450); // STATUS_DRIVER_PROCESS_TERMINATED
+
+/// The requested system device cannot be identified due to multiple indistinguishable devices potentially matching the identification criteria.
 pub const AMBIGUOUS_SYSTEM_DEVICE : NTSTATUS = NTSTATUS::from_constant(0xC0000451); // STATUS_AMBIGUOUS_SYSTEM_DEVICE
+
+/// The requested system device cannot be found.
 pub const SYSTEM_DEVICE_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC0000452); // STATUS_SYSTEM_DEVICE_NOT_FOUND
+
+/// This boot application must be restarted.
 pub const RESTART_BOOT_APPLICATION : NTSTATUS = NTSTATUS::from_constant(0xC0000453); // STATUS_RESTART_BOOT_APPLICATION
+
+/// Insufficient NVRAM resources exist to complete the API.  A reboot might be required.
 pub const INSUFFICIENT_NVRAM_RESOURCES : NTSTATUS = NTSTATUS::from_constant(0xC0000454); // STATUS_INSUFFICIENT_NVRAM_RESOURCES
+
+/// The specified session is invalid.
 pub const INVALID_SESSION : NTSTATUS = NTSTATUS::from_constant(0xC0000455); // STATUS_INVALID_SESSION
+
+/// The specified thread is already in a session.
 pub const THREAD_ALREADY_IN_SESSION : NTSTATUS = NTSTATUS::from_constant(0xC0000456); // STATUS_THREAD_ALREADY_IN_SESSION
+
+/// The specified thread is not in a session.
 pub const THREAD_NOT_IN_SESSION : NTSTATUS = NTSTATUS::from_constant(0xC0000457); // STATUS_THREAD_NOT_IN_SESSION
+
+/// The specified weight is invalid.
 pub const INVALID_WEIGHT : NTSTATUS = NTSTATUS::from_constant(0xC0000458); // STATUS_INVALID_WEIGHT
+
+/// The operation was paused.
 pub const REQUEST_PAUSED : NTSTATUS = NTSTATUS::from_constant(0xC0000459); // STATUS_REQUEST_PAUSED
+
+/// No ranges for the specified operation were able to be processed.
 pub const NO_RANGES_PROCESSED : NTSTATUS = NTSTATUS::from_constant(0xC0000460); // STATUS_NO_RANGES_PROCESSED
+
+/// The physical resources of this disk have been exhausted.
 pub const DISK_RESOURCES_EXHAUSTED : NTSTATUS = NTSTATUS::from_constant(0xC0000461); // STATUS_DISK_RESOURCES_EXHAUSTED
+
+/// The application cannot be started. Try reinstalling the application to fix the problem.
 pub const NEEDS_REMEDIATION : NTSTATUS = NTSTATUS::from_constant(0xC0000462); // STATUS_NEEDS_REMEDIATION
+
+/// ### Device Feature Not Supported
+/// The device does not support the command feature.
 pub const DEVICE_FEATURE_NOT_SUPPORTED : NTSTATUS = NTSTATUS::from_constant(0xC0000463); // STATUS_DEVICE_FEATURE_NOT_SUPPORTED
+
+/// ### Source/Destination device unreachable
+/// The device is unreachable.
 pub const DEVICE_UNREACHABLE : NTSTATUS = NTSTATUS::from_constant(0xC0000464); // STATUS_DEVICE_UNREACHABLE
+
+/// ### Invalid Proxy Data Token
+/// The token representing the data is invalid.
 pub const INVALID_TOKEN : NTSTATUS = NTSTATUS::from_constant(0xC0000465); // STATUS_INVALID_TOKEN
+
+/// The file server is temporarily unavailable.
 pub const SERVER_UNAVAILABLE : NTSTATUS = NTSTATUS::from_constant(0xC0000466); // STATUS_SERVER_UNAVAILABLE
+
+/// The file is temporarily unavailable.
 pub const FILE_NOT_AVAILABLE : NTSTATUS = NTSTATUS::from_constant(0xC0000467); // STATUS_FILE_NOT_AVAILABLE
+
+/// ### Device Insufficient Resources
+/// The target device has insufficient resources to complete the operation.
 pub const DEVICE_INSUFFICIENT_RESOURCES : NTSTATUS = NTSTATUS::from_constant(0xC0000468); // STATUS_DEVICE_INSUFFICIENT_RESOURCES
+
+/// The application cannot be started because it is currently updating.
 pub const PACKAGE_UPDATING : NTSTATUS = NTSTATUS::from_constant(0xC0000469); // STATUS_PACKAGE_UPDATING
+
+/// The specified copy of the requested data could not be read.
 pub const NOT_READ_FROM_COPY : NTSTATUS = NTSTATUS::from_constant(0xC000046A); // STATUS_NOT_READ_FROM_COPY
+
+/// The specified data could not be written to any of the copies.
 pub const FT_WRITE_FAILURE : NTSTATUS = NTSTATUS::from_constant(0xC000046B); // STATUS_FT_WRITE_FAILURE
+
+/// One or more copies of data on this device may be out of sync. No writes may be performed until a data integrity scan is completed.
 pub const FT_DI_SCAN_REQUIRED : NTSTATUS = NTSTATUS::from_constant(0xC000046C); // STATUS_FT_DI_SCAN_REQUIRED
+
+/// This object is not externally backed by any provider.
 pub const OBJECT_NOT_EXTERNALLY_BACKED : NTSTATUS = NTSTATUS::from_constant(0xC000046D); // STATUS_OBJECT_NOT_EXTERNALLY_BACKED
+
+/// The external backing provider is not recognized.
 pub const EXTERNAL_BACKING_PROVIDER_UNKNOWN : NTSTATUS = NTSTATUS::from_constant(0xC000046E); // STATUS_EXTERNAL_BACKING_PROVIDER_UNKNOWN
+
+/// Compressing this object would not save space.
 pub const COMPRESSION_NOT_BENEFICIAL : NTSTATUS = NTSTATUS::from_constant(0xC000046F); // STATUS_COMPRESSION_NOT_BENEFICIAL
+
+/// A data integrity checksum error occurred. Data in the file stream is corrupt.
 pub const DATA_CHECKSUM_ERROR : NTSTATUS = NTSTATUS::from_constant(0xC0000470); // STATUS_DATA_CHECKSUM_ERROR
+
+/// An attempt was made to modify both a KERNEL and normal Extended Attribute (EA) in the same operation.
 pub const INTERMIXED_KERNEL_EA_OPERATION : NTSTATUS = NTSTATUS::from_constant(0xC0000471); // STATUS_INTERMIXED_KERNEL_EA_OPERATION
+
+/// ### LogicalBlockProvisioningReadZero Not Supported
+/// The target device does not support read returning zeros from trimmed/unmapped blocks.
 pub const TRIM_READ_ZERO_NOT_SUPPORTED : NTSTATUS = NTSTATUS::from_constant(0xC0000472); // STATUS_TRIM_READ_ZERO_NOT_SUPPORTED
+
+/// ### Maximum Segment Descriptors Exceeded
+/// The command specified a number of descriptors that exceeded the maximum supported by the device.
 pub const TOO_MANY_SEGMENT_DESCRIPTORS : NTSTATUS = NTSTATUS::from_constant(0xC0000473); // STATUS_TOO_MANY_SEGMENT_DESCRIPTORS
+
+/// ### Alignment Violation
+/// The command specified a data offset that does not align to the device's granularity/alignment.
 pub const INVALID_OFFSET_ALIGNMENT : NTSTATUS = NTSTATUS::from_constant(0xC0000474); // STATUS_INVALID_OFFSET_ALIGNMENT
+
+/// ### Invalid Field In Parameter List
+/// The command specified an invalid field in its parameter list.
 pub const INVALID_FIELD_IN_PARAMETER_LIST : NTSTATUS = NTSTATUS::from_constant(0xC0000475); // STATUS_INVALID_FIELD_IN_PARAMETER_LIST
+
+/// ### Operation In Progress
+/// An operation is currently in progress with the device.
 pub const OPERATION_IN_PROGRESS : NTSTATUS = NTSTATUS::from_constant(0xC0000476); // STATUS_OPERATION_IN_PROGRESS
+
+/// ### Invalid I_T Nexus
+/// An attempt was made to send down the command via an invalid path to the target device.
 pub const INVALID_INITIATOR_TARGET_PATH : NTSTATUS = NTSTATUS::from_constant(0xC0000477); // STATUS_INVALID_INITIATOR_TARGET_PATH
+
+/// Scrub is disabled on the specified file.
 pub const SCRUB_DATA_DISABLED : NTSTATUS = NTSTATUS::from_constant(0xC0000478); // STATUS_SCRUB_DATA_DISABLED
+
+/// The storage device does not provide redundancy.
 pub const NOT_REDUNDANT_STORAGE : NTSTATUS = NTSTATUS::from_constant(0xC0000479); // STATUS_NOT_REDUNDANT_STORAGE
+
+/// An operation is not supported on a resident file.
 pub const RESIDENT_FILE_NOT_SUPPORTED : NTSTATUS = NTSTATUS::from_constant(0xC000047A); // STATUS_RESIDENT_FILE_NOT_SUPPORTED
+
+/// An operation is not supported on a compressed file.
 pub const COMPRESSED_FILE_NOT_SUPPORTED : NTSTATUS = NTSTATUS::from_constant(0xC000047B); // STATUS_COMPRESSED_FILE_NOT_SUPPORTED
+
+/// An operation is not supported on a directory.
 pub const DIRECTORY_NOT_SUPPORTED : NTSTATUS = NTSTATUS::from_constant(0xC000047C); // STATUS_DIRECTORY_NOT_SUPPORTED
+
+/// ### IO Operation Timeout
+/// The specified I/O operation failed to complete within the expected time period.
 pub const IO_OPERATION_TIMEOUT : NTSTATUS = NTSTATUS::from_constant(0xC000047D); // STATUS_IO_OPERATION_TIMEOUT
+
+/// An error in a system binary was detected. Try refreshing the PC to fix the problem.
 pub const SYSTEM_NEEDS_REMEDIATION : NTSTATUS = NTSTATUS::from_constant(0xC000047E); // STATUS_SYSTEM_NEEDS_REMEDIATION
+
+/// A corrupted CLR NGEN binary was detected on the system.
 pub const APPX_INTEGRITY_FAILURE_CLR_NGEN : NTSTATUS = NTSTATUS::from_constant(0xC000047F); // STATUS_APPX_INTEGRITY_FAILURE_CLR_NGEN
+
+/// The share is temporarily unavailable.
 pub const SHARE_UNAVAILABLE : NTSTATUS = NTSTATUS::from_constant(0xC0000480); // STATUS_SHARE_UNAVAILABLE
+
+/// The target dll was not found because the apiset `%hs` is not hosted.
 pub const APISET_NOT_HOSTED : NTSTATUS = NTSTATUS::from_constant(0xC0000481); // STATUS_APISET_NOT_HOSTED
+
+/// The API set extension contains a host for a non-existent API set.
 pub const APISET_NOT_PRESENT : NTSTATUS = NTSTATUS::from_constant(0xC0000482); // STATUS_APISET_NOT_PRESENT
+
+/// The request failed due to a fatal device hardware error.
 pub const DEVICE_HARDWARE_ERROR : NTSTATUS = NTSTATUS::from_constant(0xC0000483); // STATUS_DEVICE_HARDWARE_ERROR
+
+/// The specified firmware slot is invalid.
 pub const FIRMWARE_SLOT_INVALID : NTSTATUS = NTSTATUS::from_constant(0xC0000484); // STATUS_FIRMWARE_SLOT_INVALID
+
+/// The specified firmware image is invalid.
 pub const FIRMWARE_IMAGE_INVALID : NTSTATUS = NTSTATUS::from_constant(0xC0000485); // STATUS_FIRMWARE_IMAGE_INVALID
+
+/// The request failed due to a storage topology ID mismatch.
 pub const STORAGE_TOPOLOGY_ID_MISMATCH : NTSTATUS = NTSTATUS::from_constant(0xC0000486); // STATUS_STORAGE_TOPOLOGY_ID_MISMATCH
+
+/// The specified Windows Image (WIM) is not marked as bootable.
 pub const WIM_NOT_BOOTABLE : NTSTATUS = NTSTATUS::from_constant(0xC0000487); // STATUS_WIM_NOT_BOOTABLE
+
+/// The operation was blocked by parental controls.
 pub const BLOCKED_BY_PARENTAL_CONTROLS : NTSTATUS = NTSTATUS::from_constant(0xC0000488); // STATUS_BLOCKED_BY_PARENTAL_CONTROLS
+
+/// The deployment operation failed because the specified application needs to be registered first.
 pub const NEEDS_REGISTRATION : NTSTATUS = NTSTATUS::from_constant(0xC0000489); // STATUS_NEEDS_REGISTRATION
+
+/// The requested operation failed due to quota operation is still in progress.
 pub const QUOTA_ACTIVITY : NTSTATUS = NTSTATUS::from_constant(0xC000048A); // STATUS_QUOTA_ACTIVITY
+
+/// The callback function must be invoked inline.
 pub const CALLBACK_INVOKE_INLINE : NTSTATUS = NTSTATUS::from_constant(0xC000048B); // STATUS_CALLBACK_INVOKE_INLINE
+
+/// A file system block being referenced has already reached the maximum reference count and can't be referenced any further.
 pub const BLOCK_TOO_MANY_REFERENCES : NTSTATUS = NTSTATUS::from_constant(0xC000048C); // STATUS_BLOCK_TOO_MANY_REFERENCES
+
+/// The requested operation failed because the file stream is marked to disallow writes.
 pub const MARKED_TO_DISALLOW_WRITES : NTSTATUS = NTSTATUS::from_constant(0xC000048D); // STATUS_MARKED_TO_DISALLOW_WRITES
+
+/// Windows Information Protection policy does not allow access to this network resource.
 pub const NETWORK_ACCESS_DENIED_EDP : NTSTATUS = NTSTATUS::from_constant(0xC000048E); // STATUS_NETWORK_ACCESS_DENIED_EDP
+
+/// The requested operation failed with an architecture-specific failure code.
 pub const ENCLAVE_FAILURE : NTSTATUS = NTSTATUS::from_constant(0xC000048F); // STATUS_ENCLAVE_FAILURE
+
+/// There are no compatible drivers available for this device.
 pub const PNP_NO_COMPAT_DRIVERS : NTSTATUS = NTSTATUS::from_constant(0xC0000490); // STATUS_PNP_NO_COMPAT_DRIVERS
+
+/// The specified driver package cannot be found on the system.
 pub const PNP_DRIVER_PACKAGE_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC0000491); // STATUS_PNP_DRIVER_PACKAGE_NOT_FOUND
+
+/// The driver package cannot find a required driver configuration.
 pub const PNP_DRIVER_CONFIGURATION_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC0000492); // STATUS_PNP_DRIVER_CONFIGURATION_NOT_FOUND
+
+/// The driver configuration is incomplete for use with this device.
 pub const PNP_DRIVER_CONFIGURATION_INCOMPLETE : NTSTATUS = NTSTATUS::from_constant(0xC0000493); // STATUS_PNP_DRIVER_CONFIGURATION_INCOMPLETE
+
+/// The device requires a driver configuration with a function driver.
 pub const PNP_FUNCTION_DRIVER_REQUIRED : NTSTATUS = NTSTATUS::from_constant(0xC0000494); // STATUS_PNP_FUNCTION_DRIVER_REQUIRED
+
+/// The device is pending further configuration.
 pub const PNP_DEVICE_CONFIGURATION_PENDING : NTSTATUS = NTSTATUS::from_constant(0xC0000495); // STATUS_PNP_DEVICE_CONFIGURATION_PENDING
+
+/// The device hint name buffer is too small to receive the remaining name.
 pub const DEVICE_HINT_NAME_BUFFER_TOO_SMALL : NTSTATUS = NTSTATUS::from_constant(0xC0000496); // STATUS_DEVICE_HINT_NAME_BUFFER_TOO_SMALL
+
+/// The package is currently not available.
 pub const PACKAGE_NOT_AVAILABLE : NTSTATUS = NTSTATUS::from_constant(0xC0000497); // STATUS_PACKAGE_NOT_AVAILABLE
+
+/// The device is in maintenance mode.
 pub const DEVICE_IN_MAINTENANCE : NTSTATUS = NTSTATUS::from_constant(0xC0000499); // STATUS_DEVICE_IN_MAINTENANCE
+
+/// This operation is not supported on a DAX volume.
 pub const NOT_SUPPORTED_ON_DAX : NTSTATUS = NTSTATUS::from_constant(0xC000049A); // STATUS_NOT_SUPPORTED_ON_DAX
+
+/// The free space on the volume is too fragmented to complete this operation.
 pub const FREE_SPACE_TOO_FRAGMENTED : NTSTATUS = NTSTATUS::from_constant(0xC000049B); // STATUS_FREE_SPACE_TOO_FRAGMENTED
+
+/// The volume has active DAX mappings.
 pub const DAX_MAPPING_EXISTS : NTSTATUS = NTSTATUS::from_constant(0xC000049C); // STATUS_DAX_MAPPING_EXISTS
+
+/// The process creation has been blocked.
 pub const CHILD_PROCESS_BLOCKED : NTSTATUS = NTSTATUS::from_constant(0xC000049D); // STATUS_CHILD_PROCESS_BLOCKED
+
+/// The storage device has lost data or persistence.
 pub const STORAGE_LOST_DATA_PERSISTENCE : NTSTATUS = NTSTATUS::from_constant(0xC000049E); // STATUS_STORAGE_LOST_DATA_PERSISTENCE
+
+/// Driver Verifier Volatile settings cannot be set when CFG and IO are enabled.
 pub const VRF_CFG_AND_IO_ENABLED : NTSTATUS = NTSTATUS::from_constant(0xC000049F); // STATUS_VRF_CFG_AND_IO_ENABLED
+
+/// An attempt was made to access a partition that has begun termination.
 pub const PARTITION_TERMINATING : NTSTATUS = NTSTATUS::from_constant(0xC00004A0); // STATUS_PARTITION_TERMINATING
+
+/// An externally encrypted syskey has been configured, but the system no longer supports this feature.  Please see <https://go.microsoft.com/fwlink/?linkid=851152> for more information.
 pub const EXTERNAL_SYSKEY_NOT_SUPPORTED : NTSTATUS = NTSTATUS::from_constant(0xC00004A1); // STATUS_EXTERNAL_SYSKEY_NOT_SUPPORTED
+
+/// An attempt was made to access protected memory in violation of its secure access policy.
 pub const ENCLAVE_VIOLATION : NTSTATUS = NTSTATUS::from_constant(0xC00004A2); // STATUS_ENCLAVE_VIOLATION
+
+/// The read or write operation to an encrypted file could not be completed because the file can only be accessed when the device is unlocked.
 pub const FILE_PROTECTED_UNDER_DPL : NTSTATUS = NTSTATUS::from_constant(0xC00004A3); // STATUS_FILE_PROTECTED_UNDER_DPL
+
+/// The volume is not cluster aligned on the disk.
 pub const VOLUME_NOT_CLUSTER_ALIGNED : NTSTATUS = NTSTATUS::from_constant(0xC00004A4); // STATUS_VOLUME_NOT_CLUSTER_ALIGNED
+
+/// No physically aligned free space was found on the volume.
 pub const NO_PHYSICALLY_ALIGNED_FREE_SPACE_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC00004A5); // STATUS_NO_PHYSICALLY_ALIGNED_FREE_SPACE_FOUND
+
+/// The APPX file can not be accessed because it is not encrypted as expected.
 pub const APPX_FILE_NOT_ENCRYPTED : NTSTATUS = NTSTATUS::from_constant(0xC00004A6); // STATUS_APPX_FILE_NOT_ENCRYPTED
+
+/// A read or write of raw encrypted data cannot be performed because the file is not encrypted.
 pub const RWRAW_ENCRYPTED_FILE_NOT_ENCRYPTED : NTSTATUS = NTSTATUS::from_constant(0xC00004A7); // STATUS_RWRAW_ENCRYPTED_FILE_NOT_ENCRYPTED
+
+/// An invalid file offset in the encrypted data info block was passed for read or write operation of file's raw encrypted data.
 pub const RWRAW_ENCRYPTED_INVALID_EDATAINFO_FILEOFFSET : NTSTATUS = NTSTATUS::from_constant(0xC00004A8); // STATUS_RWRAW_ENCRYPTED_INVALID_EDATAINFO_FILEOFFSET
+
+/// An invalid offset and length combination in the encrypted data info was passed for read or write operation of file's raw encrypted data.
 pub const RWRAW_ENCRYPTED_INVALID_EDATAINFO_FILERANGE : NTSTATUS = NTSTATUS::from_constant(0xC00004A9); // STATUS_RWRAW_ENCRYPTED_INVALID_EDATAINFO_FILERANGE
+
+/// An invalid parameter in the encrypted data info was passed for read or write operation of file's raw encrypted data.
 pub const RWRAW_ENCRYPTED_INVALID_EDATAINFO_PARAMETER : NTSTATUS = NTSTATUS::from_constant(0xC00004AA); // STATUS_RWRAW_ENCRYPTED_INVALID_EDATAINFO_PARAMETER
+
+/// The specified data could not be read from any of the copies.
 pub const FT_READ_FAILURE : NTSTATUS = NTSTATUS::from_constant(0xC00004AB); // STATUS_FT_READ_FAILURE
+
+/// A system patch could not be applied due to conflicting accesses to the system image.
 pub const PATCH_CONFLICT : NTSTATUS = NTSTATUS::from_constant(0xC00004AC); // STATUS_PATCH_CONFLICT
+
+/// The specified storage reserve ID is invalid.
 pub const STORAGE_RESERVE_ID_INVALID : NTSTATUS = NTSTATUS::from_constant(0xC00004AD); // STATUS_STORAGE_RESERVE_ID_INVALID
+
+/// The specified storage reserve does not exist.
 pub const STORAGE_RESERVE_DOES_NOT_EXIST : NTSTATUS = NTSTATUS::from_constant(0xC00004AE); // STATUS_STORAGE_RESERVE_DOES_NOT_EXIST
+
+/// The specified storage reserve already exists.
 pub const STORAGE_RESERVE_ALREADY_EXISTS : NTSTATUS = NTSTATUS::from_constant(0xC00004AF); // STATUS_STORAGE_RESERVE_ALREADY_EXISTS
+
+/// The specified storage reserve is not empty.
 pub const STORAGE_RESERVE_NOT_EMPTY : NTSTATUS = NTSTATUS::from_constant(0xC00004B0); // STATUS_STORAGE_RESERVE_NOT_EMPTY
+
+/// This operation requires a DAX volume.
 pub const NOT_A_DAX_VOLUME : NTSTATUS = NTSTATUS::from_constant(0xC00004B1); // STATUS_NOT_A_DAX_VOLUME
+
+/// This stream is not DAX mappable.
 pub const NOT_DAX_MAPPABLE : NTSTATUS = NTSTATUS::from_constant(0xC00004B2); // STATUS_NOT_DAX_MAPPABLE
+
+/// This directory contains entries whose names differ only in case.
 pub const CASE_DIFFERING_NAMES_IN_DIR : NTSTATUS = NTSTATUS::from_constant(0xC00004B3); // STATUS_CASE_DIFFERING_NAMES_IN_DIR
+
+/// The file cannot be safely opened because it is not supported by this version of Windows.
 pub const FILE_NOT_SUPPORTED : NTSTATUS = NTSTATUS::from_constant(0xC00004B4); // STATUS_FILE_NOT_SUPPORTED
+
+/// This operation is not supported with BTT enabled.
 pub const NOT_SUPPORTED_WITH_BTT : NTSTATUS = NTSTATUS::from_constant(0xC00004B5); // STATUS_NOT_SUPPORTED_WITH_BTT
+
+/// This operation cannot be performed because encryption is currently disabled.
 pub const ENCRYPTION_DISABLED : NTSTATUS = NTSTATUS::from_constant(0xC00004B6); // STATUS_ENCRYPTION_DISABLED
+
+/// This encryption operation cannot be performed on filesystem metadata.
 pub const ENCRYPTING_METADATA_DISALLOWED : NTSTATUS = NTSTATUS::from_constant(0xC00004B7); // STATUS_ENCRYPTING_METADATA_DISALLOWED
+
+/// Encryption cannot be cleared on this file/directory because it still has an encrypted attribute.
 pub const CANT_CLEAR_ENCRYPTION_FLAG : NTSTATUS = NTSTATUS::from_constant(0xC00004B8); // STATUS_CANT_CLEAR_ENCRYPTION_FLAG
+
+/// The operation could not be completed due to one or more unsatisfied dependencies.
 pub const UNSATISFIED_DEPENDENCIES : NTSTATUS = NTSTATUS::from_constant(0xC00004B9); // STATUS_UNSATISFIED_DEPENDENCIES
+
+/// The file cannot be opened because the path has a case-sensitive directory.
 pub const CASE_SENSITIVE_PATH : NTSTATUS = NTSTATUS::from_constant(0xC00004BA); // STATUS_CASE_SENSITIVE_PATH
+
+/// The volume contains paging, crash dump or other system critical files.
 pub const HAS_SYSTEM_CRITICAL_FILES : NTSTATUS = NTSTATUS::from_constant(0xC00004BD); // STATUS_HAS_SYSTEM_CRITICAL_FILES
+
+/// The specified task name is invalid.
 pub const INVALID_TASK_NAME : NTSTATUS = NTSTATUS::from_constant(0xC0000500); // STATUS_INVALID_TASK_NAME
+
+/// The specified task index is invalid.
 pub const INVALID_TASK_INDEX : NTSTATUS = NTSTATUS::from_constant(0xC0000501); // STATUS_INVALID_TASK_INDEX
+
+/// The specified thread is already joining a task.
 pub const THREAD_ALREADY_IN_TASK : NTSTATUS = NTSTATUS::from_constant(0xC0000502); // STATUS_THREAD_ALREADY_IN_TASK
+
+/// A callback has requested to bypass native code.
 pub const CALLBACK_BYPASS : NTSTATUS = NTSTATUS::from_constant(0xC0000503); // STATUS_CALLBACK_BYPASS
+
+/// The Central Access Policy specified is not defined on the target machine.
 pub const UNDEFINED_SCOPE : NTSTATUS = NTSTATUS::from_constant(0xC0000504); // STATUS_UNDEFINED_SCOPE
+
+/// The Central Access Policy obtained from Active Directory is invalid.
 pub const INVALID_CAP : NTSTATUS = NTSTATUS::from_constant(0xC0000505); // STATUS_INVALID_CAP
+
+/// Unable to finish the requested operation because the specified process is not a GUI process.
 pub const NOT_GUI_PROCESS : NTSTATUS = NTSTATUS::from_constant(0xC0000506); // STATUS_NOT_GUI_PROCESS
+
+/// The device is not responding and cannot be safely removed.
 pub const DEVICE_HUNG : NTSTATUS = NTSTATUS::from_constant(0xC0000507); // STATUS_DEVICE_HUNG
+
+/// The specified Job already has a container assigned to it.
 pub const CONTAINER_ASSIGNED : NTSTATUS = NTSTATUS::from_constant(0xC0000508); // STATUS_CONTAINER_ASSIGNED
+
+/// The specified Job does not have a container assigned to it.
 pub const JOB_NO_CONTAINER : NTSTATUS = NTSTATUS::from_constant(0xC0000509); // STATUS_JOB_NO_CONTAINER
+
+/// The device is unresponsive.
 pub const DEVICE_UNRESPONSIVE : NTSTATUS = NTSTATUS::from_constant(0xC000050A); // STATUS_DEVICE_UNRESPONSIVE
+
+/// The object manager encountered a reparse point while retrieving an object.
 pub const REPARSE_POINT_ENCOUNTERED : NTSTATUS = NTSTATUS::from_constant(0xC000050B); // STATUS_REPARSE_POINT_ENCOUNTERED
+
+/// The requested attribute is not present on the specified file or directory.
 pub const ATTRIBUTE_NOT_PRESENT : NTSTATUS = NTSTATUS::from_constant(0xC000050C); // STATUS_ATTRIBUTE_NOT_PRESENT
+
+/// This volume is not a tiered volume.
 pub const NOT_A_TIERED_VOLUME : NTSTATUS = NTSTATUS::from_constant(0xC000050D); // STATUS_NOT_A_TIERED_VOLUME
+
+/// This file is currently associated with a different stream id.
 pub const ALREADY_HAS_STREAM_ID : NTSTATUS = NTSTATUS::from_constant(0xC000050E); // STATUS_ALREADY_HAS_STREAM_ID
+
+/// The requested operation could not be completed because the specified job has children.
 pub const JOB_NOT_EMPTY : NTSTATUS = NTSTATUS::from_constant(0xC000050F); // STATUS_JOB_NOT_EMPTY
+
+/// The specified object has already been initialized.
 pub const ALREADY_INITIALIZED : NTSTATUS = NTSTATUS::from_constant(0xC0000510); // STATUS_ALREADY_INITIALIZED
+
+/// The specified enclave has not yet been terminated.
 pub const ENCLAVE_NOT_TERMINATED : NTSTATUS = NTSTATUS::from_constant(0xC0000511); // STATUS_ENCLAVE_NOT_TERMINATED
+
+/// An attempt was made to access an enclave that has begun termination.
 pub const ENCLAVE_IS_TERMINATING : NTSTATUS = NTSTATUS::from_constant(0xC0000512); // STATUS_ENCLAVE_IS_TERMINATING
+
+/// You can't connect to the file share because it's not secure. This share requires the obsolete SMB1 protocol, which is unsafe and could expose your system to attack.
+/// Your system requires SMB2 or higher. For more info on resolving this issue, see: <https://go.microsoft.com/fwlink/?linkid=852747>
 pub const SMB1_NOT_AVAILABLE : NTSTATUS = NTSTATUS::from_constant(0xC0000513); // STATUS_SMB1_NOT_AVAILABLE
+
+/// The volume must undergo garbage collection.
 pub const SMR_GARBAGE_COLLECTION_REQUIRED : NTSTATUS = NTSTATUS::from_constant(0xC0000514); // STATUS_SMR_GARBAGE_COLLECTION_REQUIRED
+
+/// Execution of the thread was interrupted.
 pub const INTERRUPTED : NTSTATUS = NTSTATUS::from_constant(0xC0000515); // STATUS_INTERRUPTED
+
+/// The target thread is not currently running.
 pub const THREAD_NOT_RUNNING : NTSTATUS = NTSTATUS::from_constant(0xC0000516); // STATUS_THREAD_NOT_RUNNING
+
+/// ### Fail Fast Exception
+/// A fail fast exception occurred. Exception handlers will not be invoked and the process will be terminated immediately.
 pub const FAIL_FAST_EXCEPTION : NTSTATUS = NTSTATUS::from_constant(0xC0000602); // STATUS_FAIL_FAST_EXCEPTION
+
+/// Windows cannot verify the digital signature for this file. The signing certificate for this file has been revoked.
 pub const IMAGE_CERT_REVOKED : NTSTATUS = NTSTATUS::from_constant(0xC0000603); // STATUS_IMAGE_CERT_REVOKED
+
+/// The operation was blocked as the process prohibits dynamic code generation.
 pub const DYNAMIC_CODE_BLOCKED : NTSTATUS = NTSTATUS::from_constant(0xC0000604); // STATUS_DYNAMIC_CODE_BLOCKED
+
+/// Windows cannot verify the digital signature for this file. The signing certificate for this file has expired.
 pub const IMAGE_CERT_EXPIRED : NTSTATUS = NTSTATUS::from_constant(0xC0000605); // STATUS_IMAGE_CERT_EXPIRED
+
+/// The specified image file was blocked from loading because it does not enable a feature required by the process: Control Flow Guard.
 pub const STRICT_CFG_VIOLATION : NTSTATUS = NTSTATUS::from_constant(0xC0000606); // STATUS_STRICT_CFG_VIOLATION
+
+/// The thread context could not be updated because this has been restricted for the process.
 pub const SET_CONTEXT_DENIED : NTSTATUS = NTSTATUS::from_constant(0xC000060A); // STATUS_SET_CONTEXT_DENIED
+
+/// An attempt to access another partition's private file/section was rejected.
 pub const CROSS_PARTITION_VIOLATION : NTSTATUS = NTSTATUS::from_constant(0xC000060B); // STATUS_CROSS_PARTITION_VIOLATION
+
+/// The ALPC port is closed.
 pub const PORT_CLOSED : NTSTATUS = NTSTATUS::from_constant(0xC0000700); // STATUS_PORT_CLOSED
+
+/// The ALPC message requested is no longer available.
 pub const MESSAGE_LOST : NTSTATUS = NTSTATUS::from_constant(0xC0000701); // STATUS_MESSAGE_LOST
+
+/// The ALPC message supplied is invalid.
 pub const INVALID_MESSAGE : NTSTATUS = NTSTATUS::from_constant(0xC0000702); // STATUS_INVALID_MESSAGE
+
+/// The ALPC message has been canceled.
 pub const REQUEST_CANCELED : NTSTATUS = NTSTATUS::from_constant(0xC0000703); // STATUS_REQUEST_CANCELED
+
+/// Invalid recursive dispatch attempt.
 pub const RECURSIVE_DISPATCH : NTSTATUS = NTSTATUS::from_constant(0xC0000704); // STATUS_RECURSIVE_DISPATCH
+
+/// No receive buffer has been supplied in a synchronous request.
 pub const LPC_RECEIVE_BUFFER_EXPECTED : NTSTATUS = NTSTATUS::from_constant(0xC0000705); // STATUS_LPC_RECEIVE_BUFFER_EXPECTED
+
+/// The connection port is used in an invalid context.
 pub const LPC_INVALID_CONNECTION_USAGE : NTSTATUS = NTSTATUS::from_constant(0xC0000706); // STATUS_LPC_INVALID_CONNECTION_USAGE
+
+/// The ALPC port does not accept new request messages.
 pub const LPC_REQUESTS_NOT_ALLOWED : NTSTATUS = NTSTATUS::from_constant(0xC0000707); // STATUS_LPC_REQUESTS_NOT_ALLOWED
+
+/// The resource requested is already in use.
 pub const RESOURCE_IN_USE : NTSTATUS = NTSTATUS::from_constant(0xC0000708); // STATUS_RESOURCE_IN_USE
+
+/// The hardware has reported an uncorrectable memory error.
 pub const HARDWARE_MEMORY_ERROR : NTSTATUS = NTSTATUS::from_constant(0xC0000709); // STATUS_HARDWARE_MEMORY_ERROR
+
+/// Status `0x%08x` was returned, waiting on handle `0x%x` for wait `0x%p`, in waiter `0x%p`.
 pub const THREADPOOL_HANDLE_EXCEPTION : NTSTATUS = NTSTATUS::from_constant(0xC000070A); // STATUS_THREADPOOL_HANDLE_EXCEPTION
+
+/// After a callback to `0x%p`(`0x%p`), a completion call to SetEvent(`0x%p`) failed with status `0x%08x`.
 pub const THREADPOOL_SET_EVENT_ON_COMPLETION_FAILED : NTSTATUS = NTSTATUS::from_constant(0xC000070B); // STATUS_THREADPOOL_SET_EVENT_ON_COMPLETION_FAILED
+
+/// After a callback to `0x%p`(`0x%p`), a completion call to ReleaseSemaphore(`0x%p`, `%d`) failed with status `0x%08x`.
 pub const THREADPOOL_RELEASE_SEMAPHORE_ON_COMPLETION_FAILED : NTSTATUS = NTSTATUS::from_constant(0xC000070C); // STATUS_THREADPOOL_RELEASE_SEMAPHORE_ON_COMPLETION_FAILED
+
+/// After a callback to `0x%p`(`0x%p`), a completion call to ReleaseMutex(`%p`) failed with status `0x%08x`.
 pub const THREADPOOL_RELEASE_MUTEX_ON_COMPLETION_FAILED : NTSTATUS = NTSTATUS::from_constant(0xC000070D); // STATUS_THREADPOOL_RELEASE_MUTEX_ON_COMPLETION_FAILED
+
+/// After a callback to `0x%p`(`0x%p`), an completion call to FreeLibrary(`%p`) failed with status `0x%08x`.
 pub const THREADPOOL_FREE_LIBRARY_ON_COMPLETION_FAILED : NTSTATUS = NTSTATUS::from_constant(0xC000070E); // STATUS_THREADPOOL_FREE_LIBRARY_ON_COMPLETION_FAILED
+
+/// The threadpool `0x%p` was released while a thread was posting a callback to `0x%p`(`0x%p`) to it.
 pub const THREADPOOL_RELEASED_DURING_OPERATION : NTSTATUS = NTSTATUS::from_constant(0xC000070F); // STATUS_THREADPOOL_RELEASED_DURING_OPERATION
+
+/// A threadpool worker thread is impersonating a client, after a callback to `0x%p`(`0x%p`).
+/// This is unexpected, indicating that the callback is missing a call to revert the impersonation.
 pub const CALLBACK_RETURNED_WHILE_IMPERSONATING : NTSTATUS = NTSTATUS::from_constant(0xC0000710); // STATUS_CALLBACK_RETURNED_WHILE_IMPERSONATING
+
+/// A threadpool worker thread is impersonating a client, after executing an APC.
+/// This is unexpected, indicating that the APC is missing a call to revert the impersonation.
 pub const APC_RETURNED_WHILE_IMPERSONATING : NTSTATUS = NTSTATUS::from_constant(0xC0000711); // STATUS_APC_RETURNED_WHILE_IMPERSONATING
+
+/// Either the target process, or the target thread's containing process, is a protected process.
 pub const PROCESS_IS_PROTECTED : NTSTATUS = NTSTATUS::from_constant(0xC0000712); // STATUS_PROCESS_IS_PROTECTED
+
+/// A Thread is getting dispatched with MCA EXCEPTION because of MCA.
 pub const MCA_EXCEPTION : NTSTATUS = NTSTATUS::from_constant(0xC0000713); // STATUS_MCA_EXCEPTION
+
+/// The client certificate account mapping is not unique.
 pub const CERTIFICATE_MAPPING_NOT_UNIQUE : NTSTATUS = NTSTATUS::from_constant(0xC0000714); // STATUS_CERTIFICATE_MAPPING_NOT_UNIQUE
+
+/// The symbolic link cannot be followed because its type is disabled.
 pub const SYMLINK_CLASS_DISABLED : NTSTATUS = NTSTATUS::from_constant(0xC0000715); // STATUS_SYMLINK_CLASS_DISABLED
+
+/// Indicates that the specified string is not valid for IDN normalization.
 pub const INVALID_IDN_NORMALIZATION : NTSTATUS = NTSTATUS::from_constant(0xC0000716); // STATUS_INVALID_IDN_NORMALIZATION
+
+/// No mapping for the Unicode character exists in the target multi-byte code page.
 pub const NO_UNICODE_TRANSLATION : NTSTATUS = NTSTATUS::from_constant(0xC0000717); // STATUS_NO_UNICODE_TRANSLATION
+
+/// The provided callback is already registered.
 pub const ALREADY_REGISTERED : NTSTATUS = NTSTATUS::from_constant(0xC0000718); // STATUS_ALREADY_REGISTERED
+
+/// The provided context did not match the target.
 pub const CONTEXT_MISMATCH : NTSTATUS = NTSTATUS::from_constant(0xC0000719); // STATUS_CONTEXT_MISMATCH
+
+/// The specified port already has a completion list.
 pub const PORT_ALREADY_HAS_COMPLETION_LIST : NTSTATUS = NTSTATUS::from_constant(0xC000071A); // STATUS_PORT_ALREADY_HAS_COMPLETION_LIST
+
+/// A threadpool worker thread enter a callback at thread base priority `0x%x` and exited at priority `0x%x`.
+/// This is unexpected, indicating that the callback missed restoring the priority.
 pub const CALLBACK_RETURNED_THREAD_PRIORITY : NTSTATUS = NTSTATUS::from_constant(0xC000071B); // STATUS_CALLBACK_RETURNED_THREAD_PRIORITY
+
+/// An invalid thread, handle `%p`, is specified for this operation. Possibly, a threadpool worker thread was specified.
 pub const INVALID_THREAD : NTSTATUS = NTSTATUS::from_constant(0xC000071C); // STATUS_INVALID_THREAD
+
+/// A threadpool worker thread enter a callback, which left transaction state.
+/// This is unexpected, indicating that the callback missed clearing the transaction.
 pub const CALLBACK_RETURNED_TRANSACTION : NTSTATUS = NTSTATUS::from_constant(0xC000071D); // STATUS_CALLBACK_RETURNED_TRANSACTION
+
+/// A threadpool worker thread enter a callback, which left the loader lock held.
+/// This is unexpected, indicating that the callback missed releasing the lock.
 pub const CALLBACK_RETURNED_LDR_LOCK : NTSTATUS = NTSTATUS::from_constant(0xC000071E); // STATUS_CALLBACK_RETURNED_LDR_LOCK
+
+/// A threadpool worker thread enter a callback, which left with preferred languages set.
+/// This is unexpected, indicating that the callback missed clearing them.
 pub const CALLBACK_RETURNED_LANG : NTSTATUS = NTSTATUS::from_constant(0xC000071F); // STATUS_CALLBACK_RETURNED_LANG
+
+/// A threadpool worker thread enter a callback, which left with background priorities set.
+/// This is unexpected, indicating that the callback missed restoring the original priorities.
 pub const CALLBACK_RETURNED_PRI_BACK : NTSTATUS = NTSTATUS::from_constant(0xC0000720); // STATUS_CALLBACK_RETURNED_PRI_BACK
+
+/// A threadpool worker thread enter a callback at thread affinity `%p` and exited at affinity `%p`.
+/// This is unexpected, indicating that the callback missed restoring the priority.
 pub const CALLBACK_RETURNED_THREAD_AFFINITY : NTSTATUS = NTSTATUS::from_constant(0xC0000721); // STATUS_CALLBACK_RETURNED_THREAD_AFFINITY
+
+/// The caller has exceeded the maximum number of handles that may be transmitted in
+/// a single local procedure call.
 pub const LPC_HANDLE_COUNT_EXCEEDED : NTSTATUS = NTSTATUS::from_constant(0xC0000722); // STATUS_LPC_HANDLE_COUNT_EXCEEDED
+
+/// A write to executable memory occurred for a process that is managing such operations.
 pub const EXECUTABLE_MEMORY_WRITE : NTSTATUS = NTSTATUS::from_constant(0xC0000723); // STATUS_EXECUTABLE_MEMORY_WRITE
+
+/// A write to executable memory occurred from kernel mode for a process that is managing such operations.
 pub const KERNEL_EXECUTABLE_MEMORY_WRITE : NTSTATUS = NTSTATUS::from_constant(0xC0000724); // STATUS_KERNEL_EXECUTABLE_MEMORY_WRITE
+
+/// A write to executable memory occurred from kernel mode while attached to a process that is managing such operations.
 pub const ATTACHED_EXECUTABLE_MEMORY_WRITE : NTSTATUS = NTSTATUS::from_constant(0xC0000725); // STATUS_ATTACHED_EXECUTABLE_MEMORY_WRITE
+
+/// A write to executable memory was triggered cross-process to a process that is managing such operations.
 pub const TRIGGERED_EXECUTABLE_MEMORY_WRITE : NTSTATUS = NTSTATUS::from_constant(0xC0000726); // STATUS_TRIGGERED_EXECUTABLE_MEMORY_WRITE
+
+/// The attempted operation required self healing to be enabled.
 pub const DISK_REPAIR_DISABLED : NTSTATUS = NTSTATUS::from_constant(0xC0000800); // STATUS_DISK_REPAIR_DISABLED
+
+/// The Directory Service cannot perform the requested operation because a domain rename operation is in progress.
 pub const DS_DOMAIN_RENAME_IN_PROGRESS : NTSTATUS = NTSTATUS::from_constant(0xC0000801); // STATUS_DS_DOMAIN_RENAME_IN_PROGRESS
+
+/// The requested file operation failed because the storage quota was exceeded.
+/// To free up disk space, move files to a different location or delete unnecessary files. For more information, contact your system administrator.
 pub const DISK_QUOTA_EXCEEDED : NTSTATUS = NTSTATUS::from_constant(0xC0000802); // STATUS_DISK_QUOTA_EXCEEDED
+
+/// Windows discovered a corruption in the file "`%hs`".
+/// This file has now been repaired.
+/// Please check if any data in the file was lost because of the corruption.
 pub const DATA_LOST_REPAIR : NTSTATUS = NTSTATUS::from_constant(0x80000803); // STATUS_DATA_LOST_REPAIR
+
+/// The requested file operation failed because the storage policy blocks that type of file. For more information, contact your system administrator.
 pub const CONTENT_BLOCKED : NTSTATUS = NTSTATUS::from_constant(0xC0000804); // STATUS_CONTENT_BLOCKED
+
+/// The operation could not be completed due to bad clusters on disk.
 pub const BAD_CLUSTERS : NTSTATUS = NTSTATUS::from_constant(0xC0000805); // STATUS_BAD_CLUSTERS
+
+/// The operation could not be completed because the volume is dirty. Please run chkdsk and try again.
 pub const VOLUME_DIRTY : NTSTATUS = NTSTATUS::from_constant(0xC0000806); // STATUS_VOLUME_DIRTY
+
+/// The volume repair could not be performed while it is online.
+/// Please schedule to take the volume offline so that it can be repaired.
 pub const DISK_REPAIR_REDIRECTED : NTSTATUS = NTSTATUS::from_constant(0x40000807); // STATUS_DISK_REPAIR_REDIRECTED
+
+/// The volume repair was not successful.
 pub const DISK_REPAIR_UNSUCCESSFUL : NTSTATUS = NTSTATUS::from_constant(0xC0000808); // STATUS_DISK_REPAIR_UNSUCCESSFUL
+
+/// One of the volume corruption logs is full. Further corruptions that may be detected won't be logged.
 pub const CORRUPT_LOG_OVERFULL : NTSTATUS = NTSTATUS::from_constant(0xC0000809); // STATUS_CORRUPT_LOG_OVERFULL
+
+/// One of the volume corruption logs is internally corrupted and needs to be recreated. The volume may contain undetected corruptions and must be scanned.
 pub const CORRUPT_LOG_CORRUPTED : NTSTATUS = NTSTATUS::from_constant(0xC000080A); // STATUS_CORRUPT_LOG_CORRUPTED
+
+/// One of the volume corruption logs is unavailable for being operated on.
 pub const CORRUPT_LOG_UNAVAILABLE : NTSTATUS = NTSTATUS::from_constant(0xC000080B); // STATUS_CORRUPT_LOG_UNAVAILABLE
+
+/// One of the volume corruption logs was deleted while still having corruption records in them. The volume contains detected corruptions and must be scanned.
 pub const CORRUPT_LOG_DELETED_FULL : NTSTATUS = NTSTATUS::from_constant(0xC000080C); // STATUS_CORRUPT_LOG_DELETED_FULL
+
+/// One of the volume corruption logs was cleared by chkdsk and no longer contains real corruptions.
 pub const CORRUPT_LOG_CLEARED : NTSTATUS = NTSTATUS::from_constant(0xC000080D); // STATUS_CORRUPT_LOG_CLEARED
+
+/// Orphaned files exist on the volume but could not be recovered because no more new names could be created in the recovery directory. Files must be moved from the recovery directory.
 pub const ORPHAN_NAME_EXHAUSTED : NTSTATUS = NTSTATUS::from_constant(0xC000080E); // STATUS_ORPHAN_NAME_EXHAUSTED
+
+/// The operation could not be completed because an instance of Proactive Scanner is currently running.
 pub const PROACTIVE_SCAN_IN_PROGRESS : NTSTATUS = NTSTATUS::from_constant(0xC000080F); // STATUS_PROACTIVE_SCAN_IN_PROGRESS
+
+/// The read or write operation to an encrypted file could not be completed because the file has not been opened for data access.
 pub const ENCRYPTED_IO_NOT_POSSIBLE : NTSTATUS = NTSTATUS::from_constant(0xC0000810); // STATUS_ENCRYPTED_IO_NOT_POSSIBLE
+
+/// One of the volume corruption logs comes from a newer version of Windows and contains corruption records. The log will be emptied and reset to the current version, and the volume health state will be updated accordingly.
 pub const CORRUPT_LOG_UPLEVEL_RECORDS : NTSTATUS = NTSTATUS::from_constant(0xC0000811); // STATUS_CORRUPT_LOG_UPLEVEL_RECORDS
+
+/// This file is checked out or locked for editing by another user.
 pub const FILE_CHECKED_OUT : NTSTATUS = NTSTATUS::from_constant(0xC0000901); // STATUS_FILE_CHECKED_OUT
+
+/// The file must be checked out before saving changes.
 pub const CHECKOUT_REQUIRED : NTSTATUS = NTSTATUS::from_constant(0xC0000902); // STATUS_CHECKOUT_REQUIRED
+
+/// The file type being saved or retrieved has been blocked.
 pub const BAD_FILE_TYPE : NTSTATUS = NTSTATUS::from_constant(0xC0000903); // STATUS_BAD_FILE_TYPE
+
+/// The file size exceeds the limit allowed and cannot be saved.
 pub const FILE_TOO_LARGE : NTSTATUS = NTSTATUS::from_constant(0xC0000904); // STATUS_FILE_TOO_LARGE
+
+/// Access Denied. Before opening files in this location, you must first browse to the web site and select the option to login automatically.
 pub const FORMS_AUTH_REQUIRED : NTSTATUS = NTSTATUS::from_constant(0xC0000905); // STATUS_FORMS_AUTH_REQUIRED
+
+/// Operation did not complete successfully because the file contains a virus or potentially unwanted software.
 pub const VIRUS_INFECTED : NTSTATUS = NTSTATUS::from_constant(0xC0000906); // STATUS_VIRUS_INFECTED
+
+/// This file contains a virus or potentially unwanted software and cannot be opened. Due to the nature of this virus or potentially unwanted software, the file has been removed from this location.
 pub const VIRUS_DELETED : NTSTATUS = NTSTATUS::from_constant(0xC0000907); // STATUS_VIRUS_DELETED
+
+/// The resources required for this device conflict with the MCFG table.
 pub const BAD_MCFG_TABLE : NTSTATUS = NTSTATUS::from_constant(0xC0000908); // STATUS_BAD_MCFG_TABLE
+
+/// The operation did not complete successfully because it would cause an oplock to be broken. The caller has requested that existing oplocks not be broken.
 pub const CANNOT_BREAK_OPLOCK : NTSTATUS = NTSTATUS::from_constant(0xC0000909); // STATUS_CANNOT_BREAK_OPLOCK
+
+/// Bad key.
 pub const BAD_KEY : NTSTATUS = NTSTATUS::from_constant(0xC000090A); // STATUS_BAD_KEY
+
+/// Bad data.
 pub const BAD_DATA : NTSTATUS = NTSTATUS::from_constant(0xC000090B); // STATUS_BAD_DATA
+
+/// Key does not exist.
 pub const NO_KEY : NTSTATUS = NTSTATUS::from_constant(0xC000090C); // STATUS_NO_KEY
+
+/// Access to the specified file handle has been revoked.
 pub const FILE_HANDLE_REVOKED : NTSTATUS = NTSTATUS::from_constant(0xC0000910); // STATUS_FILE_HANDLE_REVOKED
+
+/// WOW Assertion Error.
 pub const WOW_ASSERTION : NTSTATUS = NTSTATUS::from_constant(0xC0009898); // STATUS_WOW_ASSERTION
+
+/// The cryptographic signature is invalid.
 pub const INVALID_SIGNATURE : NTSTATUS = NTSTATUS::from_constant(0xC000A000); // STATUS_INVALID_SIGNATURE
+
+/// The cryptographic provider does not support HMAC.
 pub const HMAC_NOT_SUPPORTED : NTSTATUS = NTSTATUS::from_constant(0xC000A001); // STATUS_HMAC_NOT_SUPPORTED
+
+/// The computed authentication tag did not match the input authentication tag.
 pub const AUTH_TAG_MISMATCH : NTSTATUS = NTSTATUS::from_constant(0xC000A002); // STATUS_AUTH_TAG_MISMATCH
+
+/// The requested state transition is invalid and cannot be performed.
 pub const INVALID_STATE_TRANSITION : NTSTATUS = NTSTATUS::from_constant(0xC000A003); // STATUS_INVALID_STATE_TRANSITION
+
+/// The supplied kernel information version is invalid.
 pub const INVALID_KERNEL_INFO_VERSION : NTSTATUS = NTSTATUS::from_constant(0xC000A004); // STATUS_INVALID_KERNEL_INFO_VERSION
+
+/// The supplied PEP information version is invalid.
 pub const INVALID_PEP_INFO_VERSION : NTSTATUS = NTSTATUS::from_constant(0xC000A005); // STATUS_INVALID_PEP_INFO_VERSION
+
+/// Access to the specified handle has been revoked.
 pub const HANDLE_REVOKED : NTSTATUS = NTSTATUS::from_constant(0xC000A006); // STATUS_HANDLE_REVOKED
+
+/// The file operation will result in the end of file being on a ghosted range.
 pub const EOF_ON_GHOSTED_RANGE : NTSTATUS = NTSTATUS::from_constant(0xC000A007); // STATUS_EOF_ON_GHOSTED_RANGE
+
+/// Filesystem needs to release all the file resources and callback into Cc to drain pending section deletions, before retrying the operation.
 pub const CC_NEEDS_CALLBACK_SECTION_DRAIN : NTSTATUS = NTSTATUS::from_constant(0xC000A008); // STATUS_CC_NEEDS_CALLBACK_SECTION_DRAIN
+
+/// The IPSEC queue overflowed.
 pub const IPSEC_QUEUE_OVERFLOW : NTSTATUS = NTSTATUS::from_constant(0xC000A010); // STATUS_IPSEC_QUEUE_OVERFLOW
+
+/// The neighbor discovery queue overflowed.
 pub const ND_QUEUE_OVERFLOW : NTSTATUS = NTSTATUS::from_constant(0xC000A011); // STATUS_ND_QUEUE_OVERFLOW
+
+/// An ICMP hop limit exceeded error was received.
 pub const HOPLIMIT_EXCEEDED : NTSTATUS = NTSTATUS::from_constant(0xC000A012); // STATUS_HOPLIMIT_EXCEEDED
+
+/// The protocol is not installed on the local machine.
 pub const PROTOCOL_NOT_SUPPORTED : NTSTATUS = NTSTATUS::from_constant(0xC000A013); // STATUS_PROTOCOL_NOT_SUPPORTED
+
+/// An operation or data has been rejected while on the network fast path.
 pub const FASTPATH_REJECTED : NTSTATUS = NTSTATUS::from_constant(0xC000A014); // STATUS_FASTPATH_REJECTED
+
+/// ### Delayed Write Failed
+/// Windows was unable to save all the data for the file `%hs`; the data has been lost.
+/// This error may be caused by network connectivity issues. Please try to save this file elsewhere.
 pub const LOST_WRITEBEHIND_DATA_NETWORK_DISCONNECTED : NTSTATUS = NTSTATUS::from_constant(0xC000A080); // STATUS_LOST_WRITEBEHIND_DATA_NETWORK_DISCONNECTED
+
+/// ### Delayed Write Failed
+/// Windows was unable to save all the data for the file `%hs`; the data has been lost.
+/// This error was returned by the server on which the file exists. Please try to save this file elsewhere.
 pub const LOST_WRITEBEHIND_DATA_NETWORK_SERVER_ERROR : NTSTATUS = NTSTATUS::from_constant(0xC000A081); // STATUS_LOST_WRITEBEHIND_DATA_NETWORK_SERVER_ERROR
+
+/// ### Delayed Write Failed
+/// Windows was unable to save all the data for the file `%hs`; the data has been lost.
+/// This error may be caused if the device has been removed or the media is write-protected.
 pub const LOST_WRITEBEHIND_DATA_LOCAL_DISK_ERROR : NTSTATUS = NTSTATUS::from_constant(0xC000A082); // STATUS_LOST_WRITEBEHIND_DATA_LOCAL_DISK_ERROR
+
+/// Windows was unable to parse the requested XML data.
 pub const XML_PARSE_ERROR : NTSTATUS = NTSTATUS::from_constant(0xC000A083); // STATUS_XML_PARSE_ERROR
+
+/// An error was encountered while processing an XML digital signature.
 pub const XMLDSIG_ERROR : NTSTATUS = NTSTATUS::from_constant(0xC000A084); // STATUS_XMLDSIG_ERROR
+
+/// Indicates that the caller made the connection request in the wrong routing compartment.
 pub const WRONG_COMPARTMENT : NTSTATUS = NTSTATUS::from_constant(0xC000A085); // STATUS_WRONG_COMPARTMENT
+
+/// Indicates that there was an AuthIP failure when attempting to connect to the remote host.
 pub const AUTHIP_FAILURE : NTSTATUS = NTSTATUS::from_constant(0xC000A086); // STATUS_AUTHIP_FAILURE
+
+/// OID mapped groups cannot have members.
 pub const DS_OID_MAPPED_GROUP_CANT_HAVE_MEMBERS : NTSTATUS = NTSTATUS::from_constant(0xC000A087); // STATUS_DS_OID_MAPPED_GROUP_CANT_HAVE_MEMBERS
+
+/// The specified OID cannot be found.
 pub const DS_OID_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC000A088); // STATUS_DS_OID_NOT_FOUND
+
+/// The system is not authoritative for the specified account and therefore cannot complete the operation. Please retry the operation using the provider associated with this account. If this is an online provider please use the provider's online site.
 pub const INCORRECT_ACCOUNT_TYPE : NTSTATUS = NTSTATUS::from_constant(0xC000A089); // STATUS_INCORRECT_ACCOUNT_TYPE
+
+/// Hash generation for the specified version and hash type is not enabled on server.
 pub const HASH_NOT_SUPPORTED : NTSTATUS = NTSTATUS::from_constant(0xC000A100); // STATUS_HASH_NOT_SUPPORTED
+
+/// The hash requests is not present or not up to date with the current file contents.
 pub const HASH_NOT_PRESENT : NTSTATUS = NTSTATUS::from_constant(0xC000A101); // STATUS_HASH_NOT_PRESENT
+
+/// The secondary interrupt controller instance that manages the specified interrupt is not registered.
 pub const SECONDARY_IC_PROVIDER_NOT_REGISTERED : NTSTATUS = NTSTATUS::from_constant(0xC000A121); // STATUS_SECONDARY_IC_PROVIDER_NOT_REGISTERED
+
+/// The information supplied by the GPIO client driver is invalid.
 pub const GPIO_CLIENT_INFORMATION_INVALID : NTSTATUS = NTSTATUS::from_constant(0xC000A122); // STATUS_GPIO_CLIENT_INFORMATION_INVALID
+
+/// The version specified by the GPIO client driver is not supported.
 pub const GPIO_VERSION_NOT_SUPPORTED : NTSTATUS = NTSTATUS::from_constant(0xC000A123); // STATUS_GPIO_VERSION_NOT_SUPPORTED
+
+/// The registration packet supplied by the GPIO client driver is not valid.
 pub const GPIO_INVALID_REGISTRATION_PACKET : NTSTATUS = NTSTATUS::from_constant(0xC000A124); // STATUS_GPIO_INVALID_REGISTRATION_PACKET
+
+/// The requested operation is not supported for the specified handle.
 pub const GPIO_OPERATION_DENIED : NTSTATUS = NTSTATUS::from_constant(0xC000A125); // STATUS_GPIO_OPERATION_DENIED
+
+/// The requested connect mode conflicts with an existing mode on one or more of the specified pins.
 pub const GPIO_INCOMPATIBLE_CONNECT_MODE : NTSTATUS = NTSTATUS::from_constant(0xC000A126); // STATUS_GPIO_INCOMPATIBLE_CONNECT_MODE
+
+/// The interrupt requested to be unmasked is not masked.
 pub const GPIO_INTERRUPT_ALREADY_UNMASKED : NTSTATUS = NTSTATUS::from_constant(0x8000A127); // STATUS_GPIO_INTERRUPT_ALREADY_UNMASKED
+
+/// The requested run level switch cannot be completed successfully since
+/// one or more services refused to stop or restart.
 pub const CANNOT_SWITCH_RUNLEVEL : NTSTATUS = NTSTATUS::from_constant(0xC000A141); // STATUS_CANNOT_SWITCH_RUNLEVEL
+
+/// The service has an invalid run level setting. The run level for a service
+/// must not be higher than the run level of its dependent services.
 pub const INVALID_RUNLEVEL_SETTING : NTSTATUS = NTSTATUS::from_constant(0xC000A142); // STATUS_INVALID_RUNLEVEL_SETTING
+
+/// The requested run level switch cannot be completed successfully since
+/// one or more services will not stop or restart within the specified timeout.
 pub const RUNLEVEL_SWITCH_TIMEOUT : NTSTATUS = NTSTATUS::from_constant(0xC000A143); // STATUS_RUNLEVEL_SWITCH_TIMEOUT
+
+/// One or more services failed to start during the service startup phase of a run level switch.
 pub const SERVICES_FAILED_AUTOSTART : NTSTATUS = NTSTATUS::from_constant(0x4000A144); // STATUS_SERVICES_FAILED_AUTOSTART
+
+/// A run level switch agent did not respond within the specified timeout.
 pub const RUNLEVEL_SWITCH_AGENT_TIMEOUT : NTSTATUS = NTSTATUS::from_constant(0xC000A145); // STATUS_RUNLEVEL_SWITCH_AGENT_TIMEOUT
+
+/// A run level switch is currently in progress.
 pub const RUNLEVEL_SWITCH_IN_PROGRESS : NTSTATUS = NTSTATUS::from_constant(0xC000A146); // STATUS_RUNLEVEL_SWITCH_IN_PROGRESS
+
+/// This operation is only valid in the context of an app container.
 pub const NOT_APPCONTAINER : NTSTATUS = NTSTATUS::from_constant(0xC000A200); // STATUS_NOT_APPCONTAINER
+
+/// This functionality is not supported in the context of an app container.
 pub const NOT_SUPPORTED_IN_APPCONTAINER : NTSTATUS = NTSTATUS::from_constant(0xC000A201); // STATUS_NOT_SUPPORTED_IN_APPCONTAINER
+
+/// The length of the SID supplied is not a valid length for app container SIDs.
 pub const INVALID_PACKAGE_SID_LENGTH : NTSTATUS = NTSTATUS::from_constant(0xC000A202); // STATUS_INVALID_PACKAGE_SID_LENGTH
+
+/// Access to the specified resource has been denied for a less privileged app container.
 pub const LPAC_ACCESS_DENIED : NTSTATUS = NTSTATUS::from_constant(0xC000A203); // STATUS_LPAC_ACCESS_DENIED
+
+/// Access to the specified resource has been denied for an adminless system.
 pub const ADMINLESS_ACCESS_DENIED : NTSTATUS = NTSTATUS::from_constant(0xC000A204); // STATUS_ADMINLESS_ACCESS_DENIED
+
+/// Fast Cache data not found.
 pub const APP_DATA_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC000A281); // STATUS_APP_DATA_NOT_FOUND
+
+/// Fast Cache data expired.
 pub const APP_DATA_EXPIRED : NTSTATUS = NTSTATUS::from_constant(0xC000A282); // STATUS_APP_DATA_EXPIRED
+
+/// Fast Cache data corrupt.
 pub const APP_DATA_CORRUPT : NTSTATUS = NTSTATUS::from_constant(0xC000A283); // STATUS_APP_DATA_CORRUPT
+
+/// Fast Cache data has exceeded its max size and cannot be updated.
 pub const APP_DATA_LIMIT_EXCEEDED : NTSTATUS = NTSTATUS::from_constant(0xC000A284); // STATUS_APP_DATA_LIMIT_EXCEEDED
+
+/// Fast Cache has been ReArmed and requires a reboot until it can be updated.
 pub const APP_DATA_REBOOT_REQUIRED : NTSTATUS = NTSTATUS::from_constant(0xC000A285); // STATUS_APP_DATA_REBOOT_REQUIRED
+
+/// The copy offload read operation is not supported by a filter.
 pub const OFFLOAD_READ_FLT_NOT_SUPPORTED : NTSTATUS = NTSTATUS::from_constant(0xC000A2A1); // STATUS_OFFLOAD_READ_FLT_NOT_SUPPORTED
+
+/// The copy offload write operation is not supported by a filter.
 pub const OFFLOAD_WRITE_FLT_NOT_SUPPORTED : NTSTATUS = NTSTATUS::from_constant(0xC000A2A2); // STATUS_OFFLOAD_WRITE_FLT_NOT_SUPPORTED
+
+/// The copy offload read operation is not supported for the file.
 pub const OFFLOAD_READ_FILE_NOT_SUPPORTED : NTSTATUS = NTSTATUS::from_constant(0xC000A2A3); // STATUS_OFFLOAD_READ_FILE_NOT_SUPPORTED
+
+/// The copy offload write operation is not supported for the file.
 pub const OFFLOAD_WRITE_FILE_NOT_SUPPORTED : NTSTATUS = NTSTATUS::from_constant(0xC000A2A4); // STATUS_OFFLOAD_WRITE_FILE_NOT_SUPPORTED
+
+/// The WOF driver encountered a corruption in WIM image's Header.
 pub const WOF_WIM_HEADER_CORRUPT : NTSTATUS = NTSTATUS::from_constant(0xC000A2A5); // STATUS_WOF_WIM_HEADER_CORRUPT
+
+/// The WOF driver encountered a corruption in WIM image's Resource Table.
 pub const WOF_WIM_RESOURCE_TABLE_CORRUPT : NTSTATUS = NTSTATUS::from_constant(0xC000A2A6); // STATUS_WOF_WIM_RESOURCE_TABLE_CORRUPT
+
+/// The WOF driver encountered a corruption in the compressed file's Resource Table.
 pub const WOF_FILE_RESOURCE_TABLE_CORRUPT : NTSTATUS = NTSTATUS::from_constant(0xC000A2A7); // STATUS_WOF_FILE_RESOURCE_TABLE_CORRUPT
+
+/// The CimFS image is corrupted.
 pub const CIMFS_IMAGE_CORRUPT : NTSTATUS = NTSTATUS::from_constant(0xC000C001); // STATUS_CIMFS_IMAGE_CORRUPT
+
+/// The provider that supports file system virtualization is temporarily unavailable.
 pub const FILE_SYSTEM_VIRTUALIZATION_UNAVAILABLE : NTSTATUS = NTSTATUS::from_constant(0xC000CE01); // STATUS_FILE_SYSTEM_VIRTUALIZATION_UNAVAILABLE
+
+/// The metadata for file system virtualization is corrupt and unreadable.
 pub const FILE_SYSTEM_VIRTUALIZATION_METADATA_CORRUPT : NTSTATUS = NTSTATUS::from_constant(0xC000CE02); // STATUS_FILE_SYSTEM_VIRTUALIZATION_METADATA_CORRUPT
+
+/// The provider that supports file system virtualization is too busy to complete this operation.
 pub const FILE_SYSTEM_VIRTUALIZATION_BUSY : NTSTATUS = NTSTATUS::from_constant(0xC000CE03); // STATUS_FILE_SYSTEM_VIRTUALIZATION_BUSY
+
+/// The provider that supports file system virtualization is unknown.
 pub const FILE_SYSTEM_VIRTUALIZATION_PROVIDER_UNKNOWN : NTSTATUS = NTSTATUS::from_constant(0xC000CE04); // STATUS_FILE_SYSTEM_VIRTUALIZATION_PROVIDER_UNKNOWN
+
+/// The virtualization operation is not allowed on the file in its current state.
 pub const FILE_SYSTEM_VIRTUALIZATION_INVALID_OPERATION : NTSTATUS = NTSTATUS::from_constant(0xC000CE05); // STATUS_FILE_SYSTEM_VIRTUALIZATION_INVALID_OPERATION
+
+/// The cloud sync root metadata is corrupted.
 pub const CLOUD_FILE_SYNC_ROOT_METADATA_CORRUPT : NTSTATUS = NTSTATUS::from_constant(0xC000CF00); // STATUS_CLOUD_FILE_SYNC_ROOT_METADATA_CORRUPT
+
+/// The cloud file provider is not running.
 pub const CLOUD_FILE_PROVIDER_NOT_RUNNING : NTSTATUS = NTSTATUS::from_constant(0xC000CF01); // STATUS_CLOUD_FILE_PROVIDER_NOT_RUNNING
+
+/// The cloud file metadata is corrupt and unreadable.
 pub const CLOUD_FILE_METADATA_CORRUPT : NTSTATUS = NTSTATUS::from_constant(0xC000CF02); // STATUS_CLOUD_FILE_METADATA_CORRUPT
+
+/// The cloud file metadata is too large.
 pub const CLOUD_FILE_METADATA_TOO_LARGE : NTSTATUS = NTSTATUS::from_constant(0xC000CF03); // STATUS_CLOUD_FILE_METADATA_TOO_LARGE
+
+/// The cloud file property is too large.
 pub const CLOUD_FILE_PROPERTY_BLOB_TOO_LARGE : NTSTATUS = NTSTATUS::from_constant(0x8000CF04); // STATUS_CLOUD_FILE_PROPERTY_BLOB_TOO_LARGE
+
+/// The maximum number of cloud file properties has been reached.
 pub const CLOUD_FILE_TOO_MANY_PROPERTY_BLOBS : NTSTATUS = NTSTATUS::from_constant(0x8000CF05); // STATUS_CLOUD_FILE_TOO_MANY_PROPERTY_BLOBS
+
+/// The version of the cloud file property store is not supported.
 pub const CLOUD_FILE_PROPERTY_VERSION_NOT_SUPPORTED : NTSTATUS = NTSTATUS::from_constant(0xC000CF06); // STATUS_CLOUD_FILE_PROPERTY_VERSION_NOT_SUPPORTED
+
+/// The file is not a cloud file.
 pub const NOT_A_CLOUD_FILE : NTSTATUS = NTSTATUS::from_constant(0xC000CF07); // STATUS_NOT_A_CLOUD_FILE
+
+/// The file is not in sync with the cloud.
 pub const CLOUD_FILE_NOT_IN_SYNC : NTSTATUS = NTSTATUS::from_constant(0xC000CF08); // STATUS_CLOUD_FILE_NOT_IN_SYNC
+
+/// The cloud sync root is already connected with another cloud sync provider.
 pub const CLOUD_FILE_ALREADY_CONNECTED : NTSTATUS = NTSTATUS::from_constant(0xC000CF09); // STATUS_CLOUD_FILE_ALREADY_CONNECTED
+
+/// The operation is not supported by the cloud sync provider.
 pub const CLOUD_FILE_NOT_SUPPORTED : NTSTATUS = NTSTATUS::from_constant(0xC000CF0A); // STATUS_CLOUD_FILE_NOT_SUPPORTED
+
+/// The cloud operation is invalid.
 pub const CLOUD_FILE_INVALID_REQUEST : NTSTATUS = NTSTATUS::from_constant(0xC000CF0B); // STATUS_CLOUD_FILE_INVALID_REQUEST
+
+/// The cloud operation is not supported on a read-only volume.
 pub const CLOUD_FILE_READ_ONLY_VOLUME : NTSTATUS = NTSTATUS::from_constant(0xC000CF0C); // STATUS_CLOUD_FILE_READ_ONLY_VOLUME
+
+/// The operation is reserved for a connected cloud sync provider.
 pub const CLOUD_FILE_CONNECTED_PROVIDER_ONLY : NTSTATUS = NTSTATUS::from_constant(0xC000CF0D); // STATUS_CLOUD_FILE_CONNECTED_PROVIDER_ONLY
+
+/// The cloud sync provider failed to validate the downloaded data.
 pub const CLOUD_FILE_VALIDATION_FAILED : NTSTATUS = NTSTATUS::from_constant(0xC000CF0E); // STATUS_CLOUD_FILE_VALIDATION_FAILED
+
+/// The cloud sync provider failed user authentication.
 pub const CLOUD_FILE_AUTHENTICATION_FAILED : NTSTATUS = NTSTATUS::from_constant(0xC000CF0F); // STATUS_CLOUD_FILE_AUTHENTICATION_FAILED
+
+/// The cloud sync provider failed to perform the operation due to low system resources.
 pub const CLOUD_FILE_INSUFFICIENT_RESOURCES : NTSTATUS = NTSTATUS::from_constant(0xC000CF10); // STATUS_CLOUD_FILE_INSUFFICIENT_RESOURCES
+
+/// The cloud sync provider failed to perform the operation due to network being unavailable.
 pub const CLOUD_FILE_NETWORK_UNAVAILABLE : NTSTATUS = NTSTATUS::from_constant(0xC000CF11); // STATUS_CLOUD_FILE_NETWORK_UNAVAILABLE
+
+/// The cloud operation was unsuccessful.
 pub const CLOUD_FILE_UNSUCCESSFUL : NTSTATUS = NTSTATUS::from_constant(0xC000CF12); // STATUS_CLOUD_FILE_UNSUCCESSFUL
+
+/// The operation is only supported on files under a cloud sync root.
 pub const CLOUD_FILE_NOT_UNDER_SYNC_ROOT : NTSTATUS = NTSTATUS::from_constant(0xC000CF13); // STATUS_CLOUD_FILE_NOT_UNDER_SYNC_ROOT
+
+/// The operation cannot be performed on cloud files in use.
 pub const CLOUD_FILE_IN_USE : NTSTATUS = NTSTATUS::from_constant(0xC000CF14); // STATUS_CLOUD_FILE_IN_USE
+
+/// The operation cannot be performed on pinned cloud files.
 pub const CLOUD_FILE_PINNED : NTSTATUS = NTSTATUS::from_constant(0xC000CF15); // STATUS_CLOUD_FILE_PINNED
+
+/// The cloud operation was aborted.
 pub const CLOUD_FILE_REQUEST_ABORTED : NTSTATUS = NTSTATUS::from_constant(0xC000CF16); // STATUS_CLOUD_FILE_REQUEST_ABORTED
+
+/// The cloud file's property store is corrupt.
 pub const CLOUD_FILE_PROPERTY_CORRUPT : NTSTATUS = NTSTATUS::from_constant(0xC000CF17); // STATUS_CLOUD_FILE_PROPERTY_CORRUPT
+
+/// Access to the cloud file is denied.
 pub const CLOUD_FILE_ACCESS_DENIED : NTSTATUS = NTSTATUS::from_constant(0xC000CF18); // STATUS_CLOUD_FILE_ACCESS_DENIED
+
+/// The cloud operation cannot be performed on a file with incompatible hardlinks.
 pub const CLOUD_FILE_INCOMPATIBLE_HARDLINKS : NTSTATUS = NTSTATUS::from_constant(0xC000CF19); // STATUS_CLOUD_FILE_INCOMPATIBLE_HARDLINKS
+
+/// The operation failed due to a conflicting cloud file property lock.
 pub const CLOUD_FILE_PROPERTY_LOCK_CONFLICT : NTSTATUS = NTSTATUS::from_constant(0xC000CF1A); // STATUS_CLOUD_FILE_PROPERTY_LOCK_CONFLICT
+
+/// The cloud operation was canceled by user.
 pub const CLOUD_FILE_REQUEST_CANCELED : NTSTATUS = NTSTATUS::from_constant(0xC000CF1B); // STATUS_CLOUD_FILE_REQUEST_CANCELED
+
+/// The cloud file provider exited unexpectedly.
 pub const CLOUD_FILE_PROVIDER_TERMINATED : NTSTATUS = NTSTATUS::from_constant(0xC000CF1D); // STATUS_CLOUD_FILE_PROVIDER_TERMINATED
+
+/// The file is not a cloud sync root.
 pub const NOT_A_CLOUD_SYNC_ROOT : NTSTATUS = NTSTATUS::from_constant(0xC000CF1E); // STATUS_NOT_A_CLOUD_SYNC_ROOT
+
+/// The cloud operation was not completed before the time-out period expired.
 pub const CLOUD_FILE_REQUEST_TIMEOUT : NTSTATUS = NTSTATUS::from_constant(0xC000CF1F); // STATUS_CLOUD_FILE_REQUEST_TIMEOUT
+
+/// Dehydration of the cloud file is disallowed by the cloud sync provider.
 pub const CLOUD_FILE_DEHYDRATION_DISALLOWED : NTSTATUS = NTSTATUS::from_constant(0xC000CF20); // STATUS_CLOUD_FILE_DEHYDRATION_DISALLOWED
+
+/// A file snapshot operation was attempted when one is already in progress.
 pub const FILE_SNAP_IN_PROGRESS : NTSTATUS = NTSTATUS::from_constant(0xC000F500); // STATUS_FILE_SNAP_IN_PROGRESS
+
+/// A snapshot of the file cannot be taken because a user-mapped section is present.
 pub const FILE_SNAP_USER_SECTION_NOT_SUPPORTED : NTSTATUS = NTSTATUS::from_constant(0xC000F501); // STATUS_FILE_SNAP_USER_SECTION_NOT_SUPPORTED
+
+/// The file snapshot operation was terminated because one of the files was modified in a way incompatible with a snapshot operation.  Please try again.
 pub const FILE_SNAP_MODIFY_NOT_SUPPORTED : NTSTATUS = NTSTATUS::from_constant(0xC000F502); // STATUS_FILE_SNAP_MODIFY_NOT_SUPPORTED
+
+/// An I/O request could not be coordinated with a file snapshot operation.
 pub const FILE_SNAP_IO_NOT_COORDINATED : NTSTATUS = NTSTATUS::from_constant(0xC000F503); // STATUS_FILE_SNAP_IO_NOT_COORDINATED
+
+/// An unexpected error occurred while processing a file snapshot operation.
 pub const FILE_SNAP_UNEXPECTED_ERROR : NTSTATUS = NTSTATUS::from_constant(0xC000F504); // STATUS_FILE_SNAP_UNEXPECTED_ERROR
+
+/// A file snapshot operation received an invalid parameter.
 pub const FILE_SNAP_INVALID_PARAMETER : NTSTATUS = NTSTATUS::from_constant(0xC000F505); // STATUS_FILE_SNAP_INVALID_PARAMETER
+
+/// An attempt was made to run an invalid AML opcode
 pub const ACPI_INVALID_OPCODE : NTSTATUS = NTSTATUS::from_constant(0xC0140001); // STATUS_ACPI_INVALID_OPCODE
+
+/// The AML Interpreter Stack has overflowed
 pub const ACPI_STACK_OVERFLOW : NTSTATUS = NTSTATUS::from_constant(0xC0140002); // STATUS_ACPI_STACK_OVERFLOW
+
+/// An inconsistent state has occurred
 pub const ACPI_ASSERT_FAILED : NTSTATUS = NTSTATUS::from_constant(0xC0140003); // STATUS_ACPI_ASSERT_FAILED
+
+/// An attempt was made to access an array outside of its bounds
 pub const ACPI_INVALID_INDEX : NTSTATUS = NTSTATUS::from_constant(0xC0140004); // STATUS_ACPI_INVALID_INDEX
+
+/// A required argument was not specified
 pub const ACPI_INVALID_ARGUMENT : NTSTATUS = NTSTATUS::from_constant(0xC0140005); // STATUS_ACPI_INVALID_ARGUMENT
+
+/// A fatal error has occurred
 pub const ACPI_FATAL : NTSTATUS = NTSTATUS::from_constant(0xC0140006); // STATUS_ACPI_FATAL
+
+/// An invalid SuperName was specified
 pub const ACPI_INVALID_SUPERNAME : NTSTATUS = NTSTATUS::from_constant(0xC0140007); // STATUS_ACPI_INVALID_SUPERNAME
+
+/// An argument with an incorrect type was specified
 pub const ACPI_INVALID_ARGTYPE : NTSTATUS = NTSTATUS::from_constant(0xC0140008); // STATUS_ACPI_INVALID_ARGTYPE
+
+/// An object with an incorrect type was specified
 pub const ACPI_INVALID_OBJTYPE : NTSTATUS = NTSTATUS::from_constant(0xC0140009); // STATUS_ACPI_INVALID_OBJTYPE
+
+/// A target with an incorrect type was specified
 pub const ACPI_INVALID_TARGETTYPE : NTSTATUS = NTSTATUS::from_constant(0xC014000A); // STATUS_ACPI_INVALID_TARGETTYPE
+
+/// An incorrect number of arguments were specified
 pub const ACPI_INCORRECT_ARGUMENT_COUNT : NTSTATUS = NTSTATUS::from_constant(0xC014000B); // STATUS_ACPI_INCORRECT_ARGUMENT_COUNT
+
+/// An address failed to translate
 pub const ACPI_ADDRESS_NOT_MAPPED : NTSTATUS = NTSTATUS::from_constant(0xC014000C); // STATUS_ACPI_ADDRESS_NOT_MAPPED
+
+/// An incorrect event type was specified
 pub const ACPI_INVALID_EVENTTYPE : NTSTATUS = NTSTATUS::from_constant(0xC014000D); // STATUS_ACPI_INVALID_EVENTTYPE
+
+/// A handler for the target already exists
 pub const ACPI_HANDLER_COLLISION : NTSTATUS = NTSTATUS::from_constant(0xC014000E); // STATUS_ACPI_HANDLER_COLLISION
+
+/// Invalid data for the target was specified
 pub const ACPI_INVALID_DATA : NTSTATUS = NTSTATUS::from_constant(0xC014000F); // STATUS_ACPI_INVALID_DATA
+
+/// An invalid region for the target was specified
 pub const ACPI_INVALID_REGION : NTSTATUS = NTSTATUS::from_constant(0xC0140010); // STATUS_ACPI_INVALID_REGION
+
+/// An attempt was made to access a field outside of the defined range
 pub const ACPI_INVALID_ACCESS_SIZE : NTSTATUS = NTSTATUS::from_constant(0xC0140011); // STATUS_ACPI_INVALID_ACCESS_SIZE
+
+/// The Global system lock could not be acquired
 pub const ACPI_ACQUIRE_GLOBAL_LOCK : NTSTATUS = NTSTATUS::from_constant(0xC0140012); // STATUS_ACPI_ACQUIRE_GLOBAL_LOCK
+
+/// An attempt was made to reinitialize the ACPI subsystem
 pub const ACPI_ALREADY_INITIALIZED : NTSTATUS = NTSTATUS::from_constant(0xC0140013); // STATUS_ACPI_ALREADY_INITIALIZED
+
+/// The ACPI subsystem has not been initialized
 pub const ACPI_NOT_INITIALIZED : NTSTATUS = NTSTATUS::from_constant(0xC0140014); // STATUS_ACPI_NOT_INITIALIZED
+
+/// An incorrect mutex was specified
 pub const ACPI_INVALID_MUTEX_LEVEL : NTSTATUS = NTSTATUS::from_constant(0xC0140015); // STATUS_ACPI_INVALID_MUTEX_LEVEL
+
+/// The mutex is not currently owned
 pub const ACPI_MUTEX_NOT_OWNED : NTSTATUS = NTSTATUS::from_constant(0xC0140016); // STATUS_ACPI_MUTEX_NOT_OWNED
+
+/// An attempt was made to access the mutex by a process that was not the owner
 pub const ACPI_MUTEX_NOT_OWNER : NTSTATUS = NTSTATUS::from_constant(0xC0140017); // STATUS_ACPI_MUTEX_NOT_OWNER
+
+/// An error occurred during an access to Region Space
 pub const ACPI_RS_ACCESS : NTSTATUS = NTSTATUS::from_constant(0xC0140018); // STATUS_ACPI_RS_ACCESS
+
+/// An attempt was made to use an incorrect table
 pub const ACPI_INVALID_TABLE : NTSTATUS = NTSTATUS::from_constant(0xC0140019); // STATUS_ACPI_INVALID_TABLE
+
+/// The registration of an ACPI event failed
 pub const ACPI_REG_HANDLER_FAILED : NTSTATUS = NTSTATUS::from_constant(0xC0140020); // STATUS_ACPI_REG_HANDLER_FAILED
+
+/// An ACPI Power Object failed to transition state
 pub const ACPI_POWER_REQUEST_FAILED : NTSTATUS = NTSTATUS::from_constant(0xC0140021); // STATUS_ACPI_POWER_REQUEST_FAILED
+
+/// Session name `%1` is invalid.
 pub const CTX_WINSTATION_NAME_INVALID : NTSTATUS = NTSTATUS::from_constant(0xC00A0001); // STATUS_CTX_WINSTATION_NAME_INVALID
+
+/// The protocol driver `%1` is invalid.
 pub const CTX_INVALID_PD : NTSTATUS = NTSTATUS::from_constant(0xC00A0002); // STATUS_CTX_INVALID_PD
+
+/// The protocol driver `%1` was not found in the system path.
 pub const CTX_PD_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC00A0003); // STATUS_CTX_PD_NOT_FOUND
+
+/// The Client Drive Mapping Service Has Connected on Terminal Connection.
 pub const CTX_CDM_CONNECT : NTSTATUS = NTSTATUS::from_constant(0x400A0004); // STATUS_CTX_CDM_CONNECT
+
+/// The Client Drive Mapping Service Has Disconnected on Terminal Connection.
 pub const CTX_CDM_DISCONNECT : NTSTATUS = NTSTATUS::from_constant(0x400A0005); // STATUS_CTX_CDM_DISCONNECT
+
+/// A close operation is pending on the Terminal Connection.
 pub const CTX_CLOSE_PENDING : NTSTATUS = NTSTATUS::from_constant(0xC00A0006); // STATUS_CTX_CLOSE_PENDING
+
+/// There are no free output buffers available.
 pub const CTX_NO_OUTBUF : NTSTATUS = NTSTATUS::from_constant(0xC00A0007); // STATUS_CTX_NO_OUTBUF
+
+/// The MODEM.INF file was not found.
 pub const CTX_MODEM_INF_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC00A0008); // STATUS_CTX_MODEM_INF_NOT_FOUND
+
+/// The modem (`%1`) was not found in MODEM.INF.
 pub const CTX_INVALID_MODEMNAME : NTSTATUS = NTSTATUS::from_constant(0xC00A0009); // STATUS_CTX_INVALID_MODEMNAME
+
+/// The modem did not accept the command sent to it.
+/// Verify the configured modem name matches the attached modem.
 pub const CTX_RESPONSE_ERROR : NTSTATUS = NTSTATUS::from_constant(0xC00A000A); // STATUS_CTX_RESPONSE_ERROR
+
+/// The modem did not respond to the command sent to it.
+/// Verify the modem is properly cabled and powered on.
 pub const CTX_MODEM_RESPONSE_TIMEOUT : NTSTATUS = NTSTATUS::from_constant(0xC00A000B); // STATUS_CTX_MODEM_RESPONSE_TIMEOUT
+
+/// Carrier detect has failed or carrier has been dropped due to disconnect.
 pub const CTX_MODEM_RESPONSE_NO_CARRIER : NTSTATUS = NTSTATUS::from_constant(0xC00A000C); // STATUS_CTX_MODEM_RESPONSE_NO_CARRIER
+
+/// Dial tone not detected within required time.
+/// Verify phone cable is properly attached and functional.
 pub const CTX_MODEM_RESPONSE_NO_DIALTONE : NTSTATUS = NTSTATUS::from_constant(0xC00A000D); // STATUS_CTX_MODEM_RESPONSE_NO_DIALTONE
+
+/// Busy signal detected at remote site on callback.
 pub const CTX_MODEM_RESPONSE_BUSY : NTSTATUS = NTSTATUS::from_constant(0xC00A000E); // STATUS_CTX_MODEM_RESPONSE_BUSY
+
+/// Voice detected at remote site on callback.
 pub const CTX_MODEM_RESPONSE_VOICE : NTSTATUS = NTSTATUS::from_constant(0xC00A000F); // STATUS_CTX_MODEM_RESPONSE_VOICE
+
+/// Transport driver error
 pub const CTX_TD_ERROR : NTSTATUS = NTSTATUS::from_constant(0xC00A0010); // STATUS_CTX_TD_ERROR
+
+/// The client you are using is not licensed to use this system. Your logon request is denied.
 pub const CTX_LICENSE_CLIENT_INVALID : NTSTATUS = NTSTATUS::from_constant(0xC00A0012); // STATUS_CTX_LICENSE_CLIENT_INVALID
+
+/// The system has reached its licensed logon limit.
+/// Please try again later.
 pub const CTX_LICENSE_NOT_AVAILABLE : NTSTATUS = NTSTATUS::from_constant(0xC00A0013); // STATUS_CTX_LICENSE_NOT_AVAILABLE
+
+/// The system license has expired. Your logon request is denied.
 pub const CTX_LICENSE_EXPIRED : NTSTATUS = NTSTATUS::from_constant(0xC00A0014); // STATUS_CTX_LICENSE_EXPIRED
+
+/// The specified session cannot be found.
 pub const CTX_WINSTATION_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC00A0015); // STATUS_CTX_WINSTATION_NOT_FOUND
+
+/// The specified session name is already in use.
 pub const CTX_WINSTATION_NAME_COLLISION : NTSTATUS = NTSTATUS::from_constant(0xC00A0016); // STATUS_CTX_WINSTATION_NAME_COLLISION
+
+/// The task you are trying to do can't be completed because Remote Desktop Services is currently busy. Please try again in a few minutes. Other users should still be able to log on.
 pub const CTX_WINSTATION_BUSY : NTSTATUS = NTSTATUS::from_constant(0xC00A0017); // STATUS_CTX_WINSTATION_BUSY
+
+/// An attempt has been made to connect to a session whose video mode is not supported by the current client.
 pub const CTX_BAD_VIDEO_MODE : NTSTATUS = NTSTATUS::from_constant(0xC00A0018); // STATUS_CTX_BAD_VIDEO_MODE
+
+/// The application attempted to enable DOS graphics mode.
+/// DOS graphics mode is not supported.
 pub const CTX_GRAPHICS_INVALID : NTSTATUS = NTSTATUS::from_constant(0xC00A0022); // STATUS_CTX_GRAPHICS_INVALID
+
+/// The requested operation can be performed only on the system console.
+/// This is most often the result of a driver or system DLL requiring direct console access.
 pub const CTX_NOT_CONSOLE : NTSTATUS = NTSTATUS::from_constant(0xC00A0024); // STATUS_CTX_NOT_CONSOLE
+
+/// The client failed to respond to the server connect message.
 pub const CTX_CLIENT_QUERY_TIMEOUT : NTSTATUS = NTSTATUS::from_constant(0xC00A0026); // STATUS_CTX_CLIENT_QUERY_TIMEOUT
+
+/// Disconnecting the console session is not supported.
 pub const CTX_CONSOLE_DISCONNECT : NTSTATUS = NTSTATUS::from_constant(0xC00A0027); // STATUS_CTX_CONSOLE_DISCONNECT
+
+/// Reconnecting a disconnected session to the console is not supported.
 pub const CTX_CONSOLE_CONNECT : NTSTATUS = NTSTATUS::from_constant(0xC00A0028); // STATUS_CTX_CONSOLE_CONNECT
+
+/// The request to control another session remotely was denied.
 pub const CTX_SHADOW_DENIED : NTSTATUS = NTSTATUS::from_constant(0xC00A002A); // STATUS_CTX_SHADOW_DENIED
+
+/// A process has requested access to a session, but has not been granted those access rights.
 pub const CTX_WINSTATION_ACCESS_DENIED : NTSTATUS = NTSTATUS::from_constant(0xC00A002B); // STATUS_CTX_WINSTATION_ACCESS_DENIED
+
+/// The Terminal Connection driver `%1` is invalid.
 pub const CTX_INVALID_WD : NTSTATUS = NTSTATUS::from_constant(0xC00A002E); // STATUS_CTX_INVALID_WD
+
+/// The Terminal Connection driver `%1` was not found in the system path.
 pub const CTX_WD_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC00A002F); // STATUS_CTX_WD_NOT_FOUND
+
+/// The requested session cannot be controlled remotely.
+/// You cannot control your own session, a session that is trying to control your session,
+/// a session that has no user logged on, nor control other sessions from the console.
 pub const CTX_SHADOW_INVALID : NTSTATUS = NTSTATUS::from_constant(0xC00A0030); // STATUS_CTX_SHADOW_INVALID
+
+/// The requested session is not configured to allow remote control.
 pub const CTX_SHADOW_DISABLED : NTSTATUS = NTSTATUS::from_constant(0xC00A0031); // STATUS_CTX_SHADOW_DISABLED
+
+/// The RDP protocol component `%2` detected an error in the protocol stream and has disconnected the client.
 pub const RDP_PROTOCOL_ERROR : NTSTATUS = NTSTATUS::from_constant(0xC00A0032); // STATUS_RDP_PROTOCOL_ERROR
+
+/// Your request to connect to this Terminal server has been rejected.
+/// Your Terminal Server Client license number has not been entered for this copy of the Terminal Client.
+/// Please call your system administrator for help in entering a valid, unique license number for this Terminal Server Client.
+/// Click OK to continue.
 pub const CTX_CLIENT_LICENSE_NOT_SET : NTSTATUS = NTSTATUS::from_constant(0xC00A0033); // STATUS_CTX_CLIENT_LICENSE_NOT_SET
+
+/// Your request to connect to this Terminal server has been rejected.
+/// Your Terminal Server Client license number is currently being used by another user.
+/// Please call your system administrator to obtain a new copy of the Terminal Server Client with a valid, unique license number.
+/// Click OK to continue.
 pub const CTX_CLIENT_LICENSE_IN_USE : NTSTATUS = NTSTATUS::from_constant(0xC00A0034); // STATUS_CTX_CLIENT_LICENSE_IN_USE
+
+/// The remote control of the console was terminated because the display mode was changed. Changing the display mode in a remote control session is not supported.
 pub const CTX_SHADOW_ENDED_BY_MODE_CHANGE : NTSTATUS = NTSTATUS::from_constant(0xC00A0035); // STATUS_CTX_SHADOW_ENDED_BY_MODE_CHANGE
+
+/// Remote control could not be terminated because the specified session is not currently being remotely controlled.
 pub const CTX_SHADOW_NOT_RUNNING : NTSTATUS = NTSTATUS::from_constant(0xC00A0036); // STATUS_CTX_SHADOW_NOT_RUNNING
+
+/// Your interactive logon privilege has been disabled.
+/// Please contact your system administrator.
 pub const CTX_LOGON_DISABLED : NTSTATUS = NTSTATUS::from_constant(0xC00A0037); // STATUS_CTX_LOGON_DISABLED
+
+/// The Terminal Server security layer detected an error in the protocol stream and has disconnected the client.
+/// Client IP: `%2`.
 pub const CTX_SECURITY_LAYER_ERROR : NTSTATUS = NTSTATUS::from_constant(0xC00A0038); // STATUS_CTX_SECURITY_LAYER_ERROR
+
+/// The target session is incompatible with the current session.
 pub const TS_INCOMPATIBLE_SESSIONS : NTSTATUS = NTSTATUS::from_constant(0xC00A0039); // STATUS_TS_INCOMPATIBLE_SESSIONS
+
+/// Windows can't connect to your session because a problem occurred in the Windows video subsystem. Try connecting again later, or contact the server administrator for assistance.
 pub const TS_VIDEO_SUBSYSTEM_ERROR : NTSTATUS = NTSTATUS::from_constant(0xC00A003A); // STATUS_TS_VIDEO_SUBSYSTEM_ERROR
+
+/// A device is missing in the system BIOS MPS table. This device will not be used.
+/// Please contact your system vendor for system BIOS update.
 pub const PNP_BAD_MPS_TABLE : NTSTATUS = NTSTATUS::from_constant(0xC0040035); // STATUS_PNP_BAD_MPS_TABLE
+
+/// A translator failed to translate resources.
 pub const PNP_TRANSLATION_FAILED : NTSTATUS = NTSTATUS::from_constant(0xC0040036); // STATUS_PNP_TRANSLATION_FAILED
+
+/// A IRQ translator failed to translate resources.
 pub const PNP_IRQ_TRANSLATION_FAILED : NTSTATUS = NTSTATUS::from_constant(0xC0040037); // STATUS_PNP_IRQ_TRANSLATION_FAILED
+
+/// Driver `%2` returned invalid ID for a child device (`%3`).
 pub const PNP_INVALID_ID : NTSTATUS = NTSTATUS::from_constant(0xC0040038); // STATUS_PNP_INVALID_ID
+
+/// Reissue the given operation as a cached IO operation
 pub const IO_REISSUE_AS_CACHED : NTSTATUS = NTSTATUS::from_constant(0xC0040039); // STATUS_IO_REISSUE_AS_CACHED
+
+/// The resource loader failed to find MUI file.
 pub const MUI_FILE_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC00B0001); // STATUS_MUI_FILE_NOT_FOUND
+
+/// The resource loader failed to load MUI file because the file fail to pass validation.
 pub const MUI_INVALID_FILE : NTSTATUS = NTSTATUS::from_constant(0xC00B0002); // STATUS_MUI_INVALID_FILE
+
+/// The RC Manifest is corrupted with garbage data or unsupported version or missing required item.
 pub const MUI_INVALID_RC_CONFIG : NTSTATUS = NTSTATUS::from_constant(0xC00B0003); // STATUS_MUI_INVALID_RC_CONFIG
+
+/// The RC Manifest has invalid culture name.
 pub const MUI_INVALID_LOCALE_NAME : NTSTATUS = NTSTATUS::from_constant(0xC00B0004); // STATUS_MUI_INVALID_LOCALE_NAME
+
+/// The RC Manifest has invalid ultimatefallback name.
 pub const MUI_INVALID_ULTIMATEFALLBACK_NAME : NTSTATUS = NTSTATUS::from_constant(0xC00B0005); // STATUS_MUI_INVALID_ULTIMATEFALLBACK_NAME
+
+/// The resource loader cache doesn't have loaded MUI entry.
 pub const MUI_FILE_NOT_LOADED : NTSTATUS = NTSTATUS::from_constant(0xC00B0006); // STATUS_MUI_FILE_NOT_LOADED
+
+/// User stopped resource enumeration.
 pub const RESOURCE_ENUM_USER_STOP : NTSTATUS = NTSTATUS::from_constant(0xC00B0007); // STATUS_RESOURCE_ENUM_USER_STOP
+
+/// A handler was not defined by the filter for this operation.
 pub const FLT_NO_HANDLER_DEFINED : NTSTATUS = NTSTATUS::from_constant(0xC01C0001); // STATUS_FLT_NO_HANDLER_DEFINED
+
+/// A context is already defined for this object.
 pub const FLT_CONTEXT_ALREADY_DEFINED : NTSTATUS = NTSTATUS::from_constant(0xC01C0002); // STATUS_FLT_CONTEXT_ALREADY_DEFINED
+
+/// Asynchronous requests are not valid for this operation.
 pub const FLT_INVALID_ASYNCHRONOUS_REQUEST : NTSTATUS = NTSTATUS::from_constant(0xC01C0003); // STATUS_FLT_INVALID_ASYNCHRONOUS_REQUEST
+
+/// Internal error code used by the filter manager to determine if a fastio operation should be forced down the IRP path. Mini-filters should never return this value.
 pub const FLT_DISALLOW_FAST_IO : NTSTATUS = NTSTATUS::from_constant(0xC01C0004); // STATUS_FLT_DISALLOW_FAST_IO
+
+/// An invalid name request was made. The name requested cannot be retrieved at this time.
 pub const FLT_INVALID_NAME_REQUEST : NTSTATUS = NTSTATUS::from_constant(0xC01C0005); // STATUS_FLT_INVALID_NAME_REQUEST
+
+/// Posting this operation to a worker thread for further processing is not safe at this time because it could lead to a system deadlock.
 pub const FLT_NOT_SAFE_TO_POST_OPERATION : NTSTATUS = NTSTATUS::from_constant(0xC01C0006); // STATUS_FLT_NOT_SAFE_TO_POST_OPERATION
+
+/// The Filter Manager was not initialized when a filter tried to register. Make sure that the Filter Manager is getting loaded as a driver.
 pub const FLT_NOT_INITIALIZED : NTSTATUS = NTSTATUS::from_constant(0xC01C0007); // STATUS_FLT_NOT_INITIALIZED
+
+/// The filter is not ready for attachment to volumes because it has not finished initializing (FltStartFiltering has not been called).
 pub const FLT_FILTER_NOT_READY : NTSTATUS = NTSTATUS::from_constant(0xC01C0008); // STATUS_FLT_FILTER_NOT_READY
+
+/// The filter must cleanup any operation specific context at this time because it is being removed from the system before the operation is completed by the lower drivers.
 pub const FLT_POST_OPERATION_CLEANUP : NTSTATUS = NTSTATUS::from_constant(0xC01C0009); // STATUS_FLT_POST_OPERATION_CLEANUP
+
+/// The Filter Manager had an internal error from which it cannot recover, therefore the operation has been failed. This is usually the result of a filter returning an invalid value from a pre-operation callback.
 pub const FLT_INTERNAL_ERROR : NTSTATUS = NTSTATUS::from_constant(0xC01C000A); // STATUS_FLT_INTERNAL_ERROR
+
+/// The object specified for this action is in the process of being deleted, therefore the action requested cannot be completed at this time.
 pub const FLT_DELETING_OBJECT : NTSTATUS = NTSTATUS::from_constant(0xC01C000B); // STATUS_FLT_DELETING_OBJECT
+
+/// Non-paged pool must be used for this type of context.
 pub const FLT_MUST_BE_NONPAGED_POOL : NTSTATUS = NTSTATUS::from_constant(0xC01C000C); // STATUS_FLT_MUST_BE_NONPAGED_POOL
+
+/// A duplicate handler definition has been provided for an operation.
 pub const FLT_DUPLICATE_ENTRY : NTSTATUS = NTSTATUS::from_constant(0xC01C000D); // STATUS_FLT_DUPLICATE_ENTRY
+
+/// The callback data queue has been disabled.
 pub const FLT_CBDQ_DISABLED : NTSTATUS = NTSTATUS::from_constant(0xC01C000E); // STATUS_FLT_CBDQ_DISABLED
+
+/// Do not attach the filter to the volume at this time.
 pub const FLT_DO_NOT_ATTACH : NTSTATUS = NTSTATUS::from_constant(0xC01C000F); // STATUS_FLT_DO_NOT_ATTACH
+
+/// Do not detach the filter from the volume at this time.
 pub const FLT_DO_NOT_DETACH : NTSTATUS = NTSTATUS::from_constant(0xC01C0010); // STATUS_FLT_DO_NOT_DETACH
+
+/// An instance already exists at this altitude on the volume specified.
 pub const FLT_INSTANCE_ALTITUDE_COLLISION : NTSTATUS = NTSTATUS::from_constant(0xC01C0011); // STATUS_FLT_INSTANCE_ALTITUDE_COLLISION
+
+/// An instance already exists with this name on the volume specified.
 pub const FLT_INSTANCE_NAME_COLLISION : NTSTATUS = NTSTATUS::from_constant(0xC01C0012); // STATUS_FLT_INSTANCE_NAME_COLLISION
+
+/// The system could not find the filter specified.
 pub const FLT_FILTER_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC01C0013); // STATUS_FLT_FILTER_NOT_FOUND
+
+/// The system could not find the volume specified.
 pub const FLT_VOLUME_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC01C0014); // STATUS_FLT_VOLUME_NOT_FOUND
+
+/// The system could not find the instance specified.
 pub const FLT_INSTANCE_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC01C0015); // STATUS_FLT_INSTANCE_NOT_FOUND
+
+/// No registered context allocation definition was found for the given request.
 pub const FLT_CONTEXT_ALLOCATION_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC01C0016); // STATUS_FLT_CONTEXT_ALLOCATION_NOT_FOUND
+
+/// An invalid parameter was specified during context registration.
 pub const FLT_INVALID_CONTEXT_REGISTRATION : NTSTATUS = NTSTATUS::from_constant(0xC01C0017); // STATUS_FLT_INVALID_CONTEXT_REGISTRATION
+
+/// The name requested was not found in Filter Manager's name cache and could not be retrieved from the file system.
 pub const FLT_NAME_CACHE_MISS : NTSTATUS = NTSTATUS::from_constant(0xC01C0018); // STATUS_FLT_NAME_CACHE_MISS
+
+/// The requested device object does not exist for the given volume.
 pub const FLT_NO_DEVICE_OBJECT : NTSTATUS = NTSTATUS::from_constant(0xC01C0019); // STATUS_FLT_NO_DEVICE_OBJECT
+
+/// The specified volume is already mounted.
 pub const FLT_VOLUME_ALREADY_MOUNTED : NTSTATUS = NTSTATUS::from_constant(0xC01C001A); // STATUS_FLT_VOLUME_ALREADY_MOUNTED
+
+/// The specified Transaction Context is already enlisted in a transaction
 pub const FLT_ALREADY_ENLISTED : NTSTATUS = NTSTATUS::from_constant(0xC01C001B); // STATUS_FLT_ALREADY_ENLISTED
+
+/// The specified context is already attached to another object
 pub const FLT_CONTEXT_ALREADY_LINKED : NTSTATUS = NTSTATUS::from_constant(0xC01C001C); // STATUS_FLT_CONTEXT_ALREADY_LINKED
+
+/// No waiter is present for the filter's reply to this message.
 pub const FLT_NO_WAITER_FOR_REPLY : NTSTATUS = NTSTATUS::from_constant(0xC01C0020); // STATUS_FLT_NO_WAITER_FOR_REPLY
+
+/// The filesystem database resource is in use. Registration cannot complete at this time.
 pub const FLT_REGISTRATION_BUSY : NTSTATUS = NTSTATUS::from_constant(0xC01C0023); // STATUS_FLT_REGISTRATION_BUSY
+
+/// The requested section is not present in the activation context.
 pub const SXS_SECTION_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC0150001); // STATUS_SXS_SECTION_NOT_FOUND
+
+/// Windows was not able to process the application binding information.
+/// Please refer to your System Event Log for further information.
 pub const SXS_CANT_GEN_ACTCTX : NTSTATUS = NTSTATUS::from_constant(0xC0150002); // STATUS_SXS_CANT_GEN_ACTCTX
+
+/// The application binding data format is invalid.
 pub const SXS_INVALID_ACTCTXDATA_FORMAT : NTSTATUS = NTSTATUS::from_constant(0xC0150003); // STATUS_SXS_INVALID_ACTCTXDATA_FORMAT
+
+/// The referenced assembly is not installed on your system.
 pub const SXS_ASSEMBLY_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC0150004); // STATUS_SXS_ASSEMBLY_NOT_FOUND
+
+/// The manifest file does not begin with the required tag and format information.
 pub const SXS_MANIFEST_FORMAT_ERROR : NTSTATUS = NTSTATUS::from_constant(0xC0150005); // STATUS_SXS_MANIFEST_FORMAT_ERROR
+
+/// The manifest file contains one or more syntax errors.
 pub const SXS_MANIFEST_PARSE_ERROR : NTSTATUS = NTSTATUS::from_constant(0xC0150006); // STATUS_SXS_MANIFEST_PARSE_ERROR
+
+/// The application attempted to activate a disabled activation context.
 pub const SXS_ACTIVATION_CONTEXT_DISABLED : NTSTATUS = NTSTATUS::from_constant(0xC0150007); // STATUS_SXS_ACTIVATION_CONTEXT_DISABLED
+
+/// The requested lookup key was not found in any active activation context.
 pub const SXS_KEY_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC0150008); // STATUS_SXS_KEY_NOT_FOUND
+
+/// A component version required by the application conflicts with another component version already active.
 pub const SXS_VERSION_CONFLICT : NTSTATUS = NTSTATUS::from_constant(0xC0150009); // STATUS_SXS_VERSION_CONFLICT
+
+/// The type requested activation context section does not match the query API used.
 pub const SXS_WRONG_SECTION_TYPE : NTSTATUS = NTSTATUS::from_constant(0xC015000A); // STATUS_SXS_WRONG_SECTION_TYPE
+
+/// Lack of system resources has required isolated activation to be disabled for the current thread of execution.
 pub const SXS_THREAD_QUERIES_DISABLED : NTSTATUS = NTSTATUS::from_constant(0xC015000B); // STATUS_SXS_THREAD_QUERIES_DISABLED
+
+/// The referenced assembly could not be found.
 pub const SXS_ASSEMBLY_MISSING : NTSTATUS = NTSTATUS::from_constant(0xC015000C); // STATUS_SXS_ASSEMBLY_MISSING
+
+/// A kernel mode component is releasing a reference on an activation context.
 pub const SXS_RELEASE_ACTIVATION_CONTEXT : NTSTATUS = NTSTATUS::from_constant(0x4015000D); // STATUS_SXS_RELEASE_ACTIVATION_CONTEXT
+
+/// An attempt to set the process default activation context failed because the process default activation context was already set.
 pub const SXS_PROCESS_DEFAULT_ALREADY_SET : NTSTATUS = NTSTATUS::from_constant(0xC015000E); // STATUS_SXS_PROCESS_DEFAULT_ALREADY_SET
+
+/// The activation context being deactivated is not the most recently activated one.
 pub const SXS_EARLY_DEACTIVATION : NTSTATUS = NTSTATUS::from_constant(0xC015000F); // STATUS_SXS_EARLY_DEACTIVATION
+
+/// The activation context being deactivated is not active for the current thread of execution.
 pub const SXS_INVALID_DEACTIVATION : NTSTATUS = NTSTATUS::from_constant(0xC0150010); // STATUS_SXS_INVALID_DEACTIVATION
+
+/// The activation context being deactivated has already been deactivated.
 pub const SXS_MULTIPLE_DEACTIVATION : NTSTATUS = NTSTATUS::from_constant(0xC0150011); // STATUS_SXS_MULTIPLE_DEACTIVATION
+
+/// The activation context of system default assembly could not be generated.
 pub const SXS_SYSTEM_DEFAULT_ACTIVATION_CONTEXT_EMPTY : NTSTATUS = NTSTATUS::from_constant(0xC0150012); // STATUS_SXS_SYSTEM_DEFAULT_ACTIVATION_CONTEXT_EMPTY
+
+/// A component used by the isolation facility has requested to terminate the process.
 pub const SXS_PROCESS_TERMINATION_REQUESTED : NTSTATUS = NTSTATUS::from_constant(0xC0150013); // STATUS_SXS_PROCESS_TERMINATION_REQUESTED
+
+/// The activation context activation stack for the running thread of execution is corrupt.
 pub const SXS_CORRUPT_ACTIVATION_STACK : NTSTATUS = NTSTATUS::from_constant(0xC0150014); // STATUS_SXS_CORRUPT_ACTIVATION_STACK
+
+/// The application isolation metadata for this process or thread has become corrupt.
 pub const SXS_CORRUPTION : NTSTATUS = NTSTATUS::from_constant(0xC0150015); // STATUS_SXS_CORRUPTION
+
+/// The value of an attribute in an identity is not within the legal range.
 pub const SXS_INVALID_IDENTITY_ATTRIBUTE_VALUE : NTSTATUS = NTSTATUS::from_constant(0xC0150016); // STATUS_SXS_INVALID_IDENTITY_ATTRIBUTE_VALUE
+
+/// The name of an attribute in an identity is not within the legal range.
 pub const SXS_INVALID_IDENTITY_ATTRIBUTE_NAME : NTSTATUS = NTSTATUS::from_constant(0xC0150017); // STATUS_SXS_INVALID_IDENTITY_ATTRIBUTE_NAME
+
+/// An identity contains two definitions for the same attribute.
 pub const SXS_IDENTITY_DUPLICATE_ATTRIBUTE : NTSTATUS = NTSTATUS::from_constant(0xC0150018); // STATUS_SXS_IDENTITY_DUPLICATE_ATTRIBUTE
+
+/// The identity string is malformed. This may be due to a trailing comma, more than two unnamed attributes, missing attribute name or missing attribute value.
 pub const SXS_IDENTITY_PARSE_ERROR : NTSTATUS = NTSTATUS::from_constant(0xC0150019); // STATUS_SXS_IDENTITY_PARSE_ERROR
+
+/// The component store has been corrupted.
 pub const SXS_COMPONENT_STORE_CORRUPT : NTSTATUS = NTSTATUS::from_constant(0xC015001A); // STATUS_SXS_COMPONENT_STORE_CORRUPT
+
+/// A component's file does not match the verification information present in the component manifest.
 pub const SXS_FILE_HASH_MISMATCH : NTSTATUS = NTSTATUS::from_constant(0xC015001B); // STATUS_SXS_FILE_HASH_MISMATCH
+
+/// The identities of the manifests are identical but their contents are different.
 pub const SXS_MANIFEST_IDENTITY_SAME_BUT_CONTENTS_DIFFERENT : NTSTATUS = NTSTATUS::from_constant(0xC015001C); // STATUS_SXS_MANIFEST_IDENTITY_SAME_BUT_CONTENTS_DIFFERENT
+
+/// The component identities are different.
 pub const SXS_IDENTITIES_DIFFERENT : NTSTATUS = NTSTATUS::from_constant(0xC015001D); // STATUS_SXS_IDENTITIES_DIFFERENT
+
+/// The assembly is not a deployment.
 pub const SXS_ASSEMBLY_IS_NOT_A_DEPLOYMENT : NTSTATUS = NTSTATUS::from_constant(0xC015001E); // STATUS_SXS_ASSEMBLY_IS_NOT_A_DEPLOYMENT
+
+/// The file is not a part of the assembly.
 pub const SXS_FILE_NOT_PART_OF_ASSEMBLY : NTSTATUS = NTSTATUS::from_constant(0xC015001F); // STATUS_SXS_FILE_NOT_PART_OF_ASSEMBLY
+
+/// An advanced installer failed during setup or servicing.
 pub const ADVANCED_INSTALLER_FAILED : NTSTATUS = NTSTATUS::from_constant(0xC0150020); // STATUS_ADVANCED_INSTALLER_FAILED
+
+/// The character encoding in the XML declaration did not match the encoding used in the document.
 pub const XML_ENCODING_MISMATCH : NTSTATUS = NTSTATUS::from_constant(0xC0150021); // STATUS_XML_ENCODING_MISMATCH
+
+/// The size of the manifest exceeds the maximum allowed.
 pub const SXS_MANIFEST_TOO_BIG : NTSTATUS = NTSTATUS::from_constant(0xC0150022); // STATUS_SXS_MANIFEST_TOO_BIG
+
+/// The setting is not registered.
 pub const SXS_SETTING_NOT_REGISTERED : NTSTATUS = NTSTATUS::from_constant(0xC0150023); // STATUS_SXS_SETTING_NOT_REGISTERED
+
+/// One or more required members of the transaction are not present.
 pub const SXS_TRANSACTION_CLOSURE_INCOMPLETE : NTSTATUS = NTSTATUS::from_constant(0xC0150024); // STATUS_SXS_TRANSACTION_CLOSURE_INCOMPLETE
+
+/// The SMI primitive installer failed during setup or servicing.
 pub const SMI_PRIMITIVE_INSTALLER_FAILED : NTSTATUS = NTSTATUS::from_constant(0xC0150025); // STATUS_SMI_PRIMITIVE_INSTALLER_FAILED
+
+/// A generic command executable returned a result that indicates failure.
 pub const GENERIC_COMMAND_FAILED : NTSTATUS = NTSTATUS::from_constant(0xC0150026); // STATUS_GENERIC_COMMAND_FAILED
+
+/// A component is missing file verification information in its manifest.
 pub const SXS_FILE_HASH_MISSING : NTSTATUS = NTSTATUS::from_constant(0xC0150027); // STATUS_SXS_FILE_HASH_MISSING
+
+/// The cluster node is not valid.
 pub const CLUSTER_INVALID_NODE : NTSTATUS = NTSTATUS::from_constant(0xC0130001); // STATUS_CLUSTER_INVALID_NODE
+
+/// The cluster node already exists.
 pub const CLUSTER_NODE_EXISTS : NTSTATUS = NTSTATUS::from_constant(0xC0130002); // STATUS_CLUSTER_NODE_EXISTS
+
+/// A node is in the process of joining the cluster.
 pub const CLUSTER_JOIN_IN_PROGRESS : NTSTATUS = NTSTATUS::from_constant(0xC0130003); // STATUS_CLUSTER_JOIN_IN_PROGRESS
+
+/// The cluster node was not found.
 pub const CLUSTER_NODE_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC0130004); // STATUS_CLUSTER_NODE_NOT_FOUND
+
+/// The cluster local node information was not found.
 pub const CLUSTER_LOCAL_NODE_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC0130005); // STATUS_CLUSTER_LOCAL_NODE_NOT_FOUND
+
+/// The cluster network already exists.
 pub const CLUSTER_NETWORK_EXISTS : NTSTATUS = NTSTATUS::from_constant(0xC0130006); // STATUS_CLUSTER_NETWORK_EXISTS
+
+/// The cluster network was not found.
 pub const CLUSTER_NETWORK_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC0130007); // STATUS_CLUSTER_NETWORK_NOT_FOUND
+
+/// The cluster network interface already exists.
 pub const CLUSTER_NETINTERFACE_EXISTS : NTSTATUS = NTSTATUS::from_constant(0xC0130008); // STATUS_CLUSTER_NETINTERFACE_EXISTS
+
+/// The cluster network interface was not found.
 pub const CLUSTER_NETINTERFACE_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC0130009); // STATUS_CLUSTER_NETINTERFACE_NOT_FOUND
+
+/// The cluster request is not valid for this object.
 pub const CLUSTER_INVALID_REQUEST : NTSTATUS = NTSTATUS::from_constant(0xC013000A); // STATUS_CLUSTER_INVALID_REQUEST
+
+/// The cluster network provider is not valid.
 pub const CLUSTER_INVALID_NETWORK_PROVIDER : NTSTATUS = NTSTATUS::from_constant(0xC013000B); // STATUS_CLUSTER_INVALID_NETWORK_PROVIDER
+
+/// The cluster node is down.
 pub const CLUSTER_NODE_DOWN : NTSTATUS = NTSTATUS::from_constant(0xC013000C); // STATUS_CLUSTER_NODE_DOWN
+
+/// The cluster node is not reachable.
 pub const CLUSTER_NODE_UNREACHABLE : NTSTATUS = NTSTATUS::from_constant(0xC013000D); // STATUS_CLUSTER_NODE_UNREACHABLE
+
+/// The cluster node is not a member of the cluster.
 pub const CLUSTER_NODE_NOT_MEMBER : NTSTATUS = NTSTATUS::from_constant(0xC013000E); // STATUS_CLUSTER_NODE_NOT_MEMBER
+
+/// A cluster join operation is not in progress.
 pub const CLUSTER_JOIN_NOT_IN_PROGRESS : NTSTATUS = NTSTATUS::from_constant(0xC013000F); // STATUS_CLUSTER_JOIN_NOT_IN_PROGRESS
+
+/// The cluster network is not valid.
 pub const CLUSTER_INVALID_NETWORK : NTSTATUS = NTSTATUS::from_constant(0xC0130010); // STATUS_CLUSTER_INVALID_NETWORK
+
+/// No network adapters are available.
 pub const CLUSTER_NO_NET_ADAPTERS : NTSTATUS = NTSTATUS::from_constant(0xC0130011); // STATUS_CLUSTER_NO_NET_ADAPTERS
+
+/// The cluster node is up.
 pub const CLUSTER_NODE_UP : NTSTATUS = NTSTATUS::from_constant(0xC0130012); // STATUS_CLUSTER_NODE_UP
+
+/// The cluster node is paused.
 pub const CLUSTER_NODE_PAUSED : NTSTATUS = NTSTATUS::from_constant(0xC0130013); // STATUS_CLUSTER_NODE_PAUSED
+
+/// The cluster node is not paused.
 pub const CLUSTER_NODE_NOT_PAUSED : NTSTATUS = NTSTATUS::from_constant(0xC0130014); // STATUS_CLUSTER_NODE_NOT_PAUSED
+
+/// No cluster security context is available.
 pub const CLUSTER_NO_SECURITY_CONTEXT : NTSTATUS = NTSTATUS::from_constant(0xC0130015); // STATUS_CLUSTER_NO_SECURITY_CONTEXT
+
+/// The cluster network is not configured for internal cluster communication.
 pub const CLUSTER_NETWORK_NOT_INTERNAL : NTSTATUS = NTSTATUS::from_constant(0xC0130016); // STATUS_CLUSTER_NETWORK_NOT_INTERNAL
+
+/// The cluster node has been poisoned.
 pub const CLUSTER_POISONED : NTSTATUS = NTSTATUS::from_constant(0xC0130017); // STATUS_CLUSTER_POISONED
+
+/// The path does not belong to a cluster shared volume.
 pub const CLUSTER_NON_CSV_PATH : NTSTATUS = NTSTATUS::from_constant(0xC0130018); // STATUS_CLUSTER_NON_CSV_PATH
+
+/// The cluster shared volume is not locally mounted.
 pub const CLUSTER_CSV_VOLUME_NOT_LOCAL : NTSTATUS = NTSTATUS::from_constant(0xC0130019); // STATUS_CLUSTER_CSV_VOLUME_NOT_LOCAL
+
+/// The operation has failed because read oplock break is in progress.
 pub const CLUSTER_CSV_READ_OPLOCK_BREAK_IN_PROGRESS : NTSTATUS = NTSTATUS::from_constant(0xC0130020); // STATUS_CLUSTER_CSV_READ_OPLOCK_BREAK_IN_PROGRESS
+
+/// The operation has failed. CSVFS has to pause and refresh information.
 pub const CLUSTER_CSV_AUTO_PAUSE_ERROR : NTSTATUS = NTSTATUS::from_constant(0xC0130021); // STATUS_CLUSTER_CSV_AUTO_PAUSE_ERROR
+
+/// The operation has failed. CSVFS does not allow block i/o in redirected mode.
 pub const CLUSTER_CSV_REDIRECTED : NTSTATUS = NTSTATUS::from_constant(0xC0130022); // STATUS_CLUSTER_CSV_REDIRECTED
+
+/// The operation has failed. CSVFS is not in redirected mode.
 pub const CLUSTER_CSV_NOT_REDIRECTED : NTSTATUS = NTSTATUS::from_constant(0xC0130023); // STATUS_CLUSTER_CSV_NOT_REDIRECTED
+
+/// CSVFS is failing operation because it is in draining state.
 pub const CLUSTER_CSV_VOLUME_DRAINING : NTSTATUS = NTSTATUS::from_constant(0xC0130024); // STATUS_CLUSTER_CSV_VOLUME_DRAINING
+
+/// The operation has failed because snapshot creation is in progress.
 pub const CLUSTER_CSV_SNAPSHOT_CREATION_IN_PROGRESS : NTSTATUS = NTSTATUS::from_constant(0xC0130025); // STATUS_CLUSTER_CSV_SNAPSHOT_CREATION_IN_PROGRESS
+
+/// The operation has succeeded on the down level file system, but CSV is failing it because it is in draining state.
 pub const CLUSTER_CSV_VOLUME_DRAINING_SUCCEEDED_DOWNLEVEL : NTSTATUS = NTSTATUS::from_constant(0xC0130026); // STATUS_CLUSTER_CSV_VOLUME_DRAINING_SUCCEEDED_DOWNLEVEL
+
+/// Volsnap on the coordinating node returned an error indicating that there is no snapshots on this volume.
 pub const CLUSTER_CSV_NO_SNAPSHOTS : NTSTATUS = NTSTATUS::from_constant(0xC0130027); // STATUS_CLUSTER_CSV_NO_SNAPSHOTS
+
+/// The operation has failed because CSV volume was not able to recover in time specified on this file object.
 pub const CSV_IO_PAUSE_TIMEOUT : NTSTATUS = NTSTATUS::from_constant(0xC0130028); // STATUS_CSV_IO_PAUSE_TIMEOUT
+
+/// The operation has failed because CSV has invalidated this file object.
 pub const CLUSTER_CSV_INVALID_HANDLE : NTSTATUS = NTSTATUS::from_constant(0xC0130029); // STATUS_CLUSTER_CSV_INVALID_HANDLE
+
+/// This operation is supported only on the CSV coordinator node.
 pub const CLUSTER_CSV_SUPPORTED_ONLY_ON_COORDINATOR : NTSTATUS = NTSTATUS::from_constant(0xC0130030); // STATUS_CLUSTER_CSV_SUPPORTED_ONLY_ON_COORDINATOR
+
+/// Cluster CAM has detected that someone is trying to replay ticket.
 pub const CLUSTER_CAM_TICKET_REPLAY_DETECTED : NTSTATUS = NTSTATUS::from_constant(0xC0130031); // STATUS_CLUSTER_CAM_TICKET_REPLAY_DETECTED
+
+/// The function attempted to use a name that is reserved for use by another transaction.
 pub const TRANSACTIONAL_CONFLICT : NTSTATUS = NTSTATUS::from_constant(0xC0190001); // STATUS_TRANSACTIONAL_CONFLICT
+
+/// The transaction handle associated with this operation is not valid.
 pub const INVALID_TRANSACTION : NTSTATUS = NTSTATUS::from_constant(0xC0190002); // STATUS_INVALID_TRANSACTION
+
+/// The requested operation was made in the context of a transaction that is no longer active.
 pub const TRANSACTION_NOT_ACTIVE : NTSTATUS = NTSTATUS::from_constant(0xC0190003); // STATUS_TRANSACTION_NOT_ACTIVE
+
+/// The Transaction Manager was unable to be successfully initialized. Transacted operations are not supported.
 pub const TM_INITIALIZATION_FAILED : NTSTATUS = NTSTATUS::from_constant(0xC0190004); // STATUS_TM_INITIALIZATION_FAILED
+
+/// Transaction support within the specified resource manager is not started or was shut down due to an error.
 pub const RM_NOT_ACTIVE : NTSTATUS = NTSTATUS::from_constant(0xC0190005); // STATUS_RM_NOT_ACTIVE
+
+/// The metadata of the RM has been corrupted. The RM will not function.
 pub const RM_METADATA_CORRUPT : NTSTATUS = NTSTATUS::from_constant(0xC0190006); // STATUS_RM_METADATA_CORRUPT
+
+/// The resource manager has attempted to prepare a transaction that it has not successfully joined.
 pub const TRANSACTION_NOT_JOINED : NTSTATUS = NTSTATUS::from_constant(0xC0190007); // STATUS_TRANSACTION_NOT_JOINED
+
+/// The specified directory does not contain a file system resource manager.
 pub const DIRECTORY_NOT_RM : NTSTATUS = NTSTATUS::from_constant(0xC0190008); // STATUS_DIRECTORY_NOT_RM
+
+/// The log could not be set to the requested size.
 pub const COULD_NOT_RESIZE_LOG : NTSTATUS = NTSTATUS::from_constant(0x80190009); // STATUS_COULD_NOT_RESIZE_LOG
+
+/// The remote server or share does not support transacted file operations.
 pub const TRANSACTIONS_UNSUPPORTED_REMOTE : NTSTATUS = NTSTATUS::from_constant(0xC019000A); // STATUS_TRANSACTIONS_UNSUPPORTED_REMOTE
+
+/// The requested log size for the file system resource manager is invalid.
 pub const LOG_RESIZE_INVALID_SIZE : NTSTATUS = NTSTATUS::from_constant(0xC019000B); // STATUS_LOG_RESIZE_INVALID_SIZE
+
+/// The remote server sent mismatching version number or Fid for a file opened with transactions.
 pub const REMOTE_FILE_VERSION_MISMATCH : NTSTATUS = NTSTATUS::from_constant(0xC019000C); // STATUS_REMOTE_FILE_VERSION_MISMATCH
+
+/// The RM tried to register a protocol that already exists.
 pub const CRM_PROTOCOL_ALREADY_EXISTS : NTSTATUS = NTSTATUS::from_constant(0xC019000F); // STATUS_CRM_PROTOCOL_ALREADY_EXISTS
+
+/// The attempt to propagate the Transaction failed.
 pub const TRANSACTION_PROPAGATION_FAILED : NTSTATUS = NTSTATUS::from_constant(0xC0190010); // STATUS_TRANSACTION_PROPAGATION_FAILED
+
+/// The requested propagation protocol was not registered as a CRM.
 pub const CRM_PROTOCOL_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC0190011); // STATUS_CRM_PROTOCOL_NOT_FOUND
+
+/// The Transaction object already has a superior enlistment, and the caller attempted an operation that would have created a new superior. Only a single superior enlistment is allowed.
 pub const TRANSACTION_SUPERIOR_EXISTS : NTSTATUS = NTSTATUS::from_constant(0xC0190012); // STATUS_TRANSACTION_SUPERIOR_EXISTS
+
+/// The requested operation is not valid on the Transaction object in its current state.
 pub const TRANSACTION_REQUEST_NOT_VALID : NTSTATUS = NTSTATUS::from_constant(0xC0190013); // STATUS_TRANSACTION_REQUEST_NOT_VALID
+
+/// The caller has called a response API, but the response is not expected because the TM did not issue the corresponding request to the caller.
 pub const TRANSACTION_NOT_REQUESTED : NTSTATUS = NTSTATUS::from_constant(0xC0190014); // STATUS_TRANSACTION_NOT_REQUESTED
+
+/// It is too late to perform the requested operation, since the Transaction has already been aborted.
 pub const TRANSACTION_ALREADY_ABORTED : NTSTATUS = NTSTATUS::from_constant(0xC0190015); // STATUS_TRANSACTION_ALREADY_ABORTED
+
+/// It is too late to perform the requested operation, since the Transaction has already been committed.
 pub const TRANSACTION_ALREADY_COMMITTED : NTSTATUS = NTSTATUS::from_constant(0xC0190016); // STATUS_TRANSACTION_ALREADY_COMMITTED
+
+/// The buffer passed in to NtPushTransaction or NtPullTransaction is not in a valid format.
 pub const TRANSACTION_INVALID_MARSHALL_BUFFER : NTSTATUS = NTSTATUS::from_constant(0xC0190017); // STATUS_TRANSACTION_INVALID_MARSHALL_BUFFER
+
+/// The current transaction context associated with the thread is not a valid handle to a transaction object.
 pub const CURRENT_TRANSACTION_NOT_VALID : NTSTATUS = NTSTATUS::from_constant(0xC0190018); // STATUS_CURRENT_TRANSACTION_NOT_VALID
+
+/// An attempt to create space in the transactional resource manager's log failed. The failure status has been recorded in the event log.
 pub const LOG_GROWTH_FAILED : NTSTATUS = NTSTATUS::from_constant(0xC0190019); // STATUS_LOG_GROWTH_FAILED
+
+/// The object (file, stream, link) corresponding to the handle has been deleted by a transaction savepoint rollback.
 pub const OBJECT_NO_LONGER_EXISTS : NTSTATUS = NTSTATUS::from_constant(0xC0190021); // STATUS_OBJECT_NO_LONGER_EXISTS
+
+/// The specified file miniversion was not found for this transacted file open.
 pub const STREAM_MINIVERSION_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC0190022); // STATUS_STREAM_MINIVERSION_NOT_FOUND
+
+/// The specified file miniversion was found but has been invalidated. Most likely cause is a transaction savepoint rollback.
 pub const STREAM_MINIVERSION_NOT_VALID : NTSTATUS = NTSTATUS::from_constant(0xC0190023); // STATUS_STREAM_MINIVERSION_NOT_VALID
+
+/// A miniversion may only be opened in the context of the transaction that created it.
 pub const MINIVERSION_INACCESSIBLE_FROM_SPECIFIED_TRANSACTION : NTSTATUS = NTSTATUS::from_constant(0xC0190024); // STATUS_MINIVERSION_INACCESSIBLE_FROM_SPECIFIED_TRANSACTION
+
+/// It is not possible to open a miniversion with modify access.
 pub const CANT_OPEN_MINIVERSION_WITH_MODIFY_INTENT : NTSTATUS = NTSTATUS::from_constant(0xC0190025); // STATUS_CANT_OPEN_MINIVERSION_WITH_MODIFY_INTENT
+
+/// It is not possible to create any more miniversions for this stream.
 pub const CANT_CREATE_MORE_STREAM_MINIVERSIONS : NTSTATUS = NTSTATUS::from_constant(0xC0190026); // STATUS_CANT_CREATE_MORE_STREAM_MINIVERSIONS
+
+/// The handle has been invalidated by a transaction. The most likely cause is the presence of memory mapping on a file or an open handle when the transaction ended or rolled back to savepoint.
 pub const HANDLE_NO_LONGER_VALID : NTSTATUS = NTSTATUS::from_constant(0xC0190028); // STATUS_HANDLE_NO_LONGER_VALID
+
+/// There is no transaction metadata on the file.
 pub const NO_TXF_METADATA : NTSTATUS = NTSTATUS::from_constant(0x80190029); // STATUS_NO_TXF_METADATA
+
+/// The log data is corrupt.
 pub const LOG_CORRUPTION_DETECTED : NTSTATUS = NTSTATUS::from_constant(0xC0190030); // STATUS_LOG_CORRUPTION_DETECTED
+
+/// The file can't be recovered because there is a handle still open on it.
 pub const CANT_RECOVER_WITH_HANDLE_OPEN : NTSTATUS = NTSTATUS::from_constant(0x80190031); // STATUS_CANT_RECOVER_WITH_HANDLE_OPEN
+
+/// The transaction outcome is unavailable because the resource manager responsible for it has disconnected.
 pub const RM_DISCONNECTED : NTSTATUS = NTSTATUS::from_constant(0xC0190032); // STATUS_RM_DISCONNECTED
+
+/// The request was rejected because the enlistment in question is not a superior enlistment.
 pub const ENLISTMENT_NOT_SUPERIOR : NTSTATUS = NTSTATUS::from_constant(0xC0190033); // STATUS_ENLISTMENT_NOT_SUPERIOR
+
+/// The transactional resource manager is already consistent. Recovery is not needed.
 pub const RECOVERY_NOT_NEEDED : NTSTATUS = NTSTATUS::from_constant(0x40190034); // STATUS_RECOVERY_NOT_NEEDED
+
+/// The transactional resource manager has already been started.
 pub const RM_ALREADY_STARTED : NTSTATUS = NTSTATUS::from_constant(0x40190035); // STATUS_RM_ALREADY_STARTED
+
+/// The file cannot be opened transactionally, because its identity depends on the outcome of an unresolved transaction.
 pub const FILE_IDENTITY_NOT_PERSISTENT : NTSTATUS = NTSTATUS::from_constant(0xC0190036); // STATUS_FILE_IDENTITY_NOT_PERSISTENT
+
+/// The operation cannot be performed because another transaction is depending on the fact that this property will not change.
 pub const CANT_BREAK_TRANSACTIONAL_DEPENDENCY : NTSTATUS = NTSTATUS::from_constant(0xC0190037); // STATUS_CANT_BREAK_TRANSACTIONAL_DEPENDENCY
+
+/// The operation would involve a single file with two transactional resource managers and is therefore not allowed.
 pub const CANT_CROSS_RM_BOUNDARY : NTSTATUS = NTSTATUS::from_constant(0xC0190038); // STATUS_CANT_CROSS_RM_BOUNDARY
+
+/// The $Txf directory must be empty for this operation to succeed.
 pub const TXF_DIR_NOT_EMPTY : NTSTATUS = NTSTATUS::from_constant(0xC0190039); // STATUS_TXF_DIR_NOT_EMPTY
+
+/// The operation would leave a transactional resource manager in an inconsistent state and is therefore not allowed.
 pub const INDOUBT_TRANSACTIONS_EXIST : NTSTATUS = NTSTATUS::from_constant(0xC019003A); // STATUS_INDOUBT_TRANSACTIONS_EXIST
+
+/// The operation could not be completed because the transaction manager does not have a log.
 pub const TM_VOLATILE : NTSTATUS = NTSTATUS::from_constant(0xC019003B); // STATUS_TM_VOLATILE
+
+/// A rollback could not be scheduled because a previously scheduled rollback has already executed or been queued for execution.
 pub const ROLLBACK_TIMER_EXPIRED : NTSTATUS = NTSTATUS::from_constant(0xC019003C); // STATUS_ROLLBACK_TIMER_EXPIRED
+
+/// The transactional metadata attribute on the file or directory `%hs` is corrupt and unreadable.
 pub const TXF_ATTRIBUTE_CORRUPT : NTSTATUS = NTSTATUS::from_constant(0xC019003D); // STATUS_TXF_ATTRIBUTE_CORRUPT
+
+/// The encryption operation could not be completed because a transaction is active.
 pub const EFS_NOT_ALLOWED_IN_TRANSACTION : NTSTATUS = NTSTATUS::from_constant(0xC019003E); // STATUS_EFS_NOT_ALLOWED_IN_TRANSACTION
+
+/// This object is not allowed to be opened in a transaction.
 pub const TRANSACTIONAL_OPEN_NOT_ALLOWED : NTSTATUS = NTSTATUS::from_constant(0xC019003F); // STATUS_TRANSACTIONAL_OPEN_NOT_ALLOWED
+
+/// Memory mapping (creating a mapped section) a remote file under a transaction is not supported.
 pub const TRANSACTED_MAPPING_UNSUPPORTED_REMOTE : NTSTATUS = NTSTATUS::from_constant(0xC0190040); // STATUS_TRANSACTED_MAPPING_UNSUPPORTED_REMOTE
+
+/// Transaction metadata is already present on this file and cannot be superseded.
 pub const TXF_METADATA_ALREADY_PRESENT : NTSTATUS = NTSTATUS::from_constant(0x80190041); // STATUS_TXF_METADATA_ALREADY_PRESENT
+
+/// A transaction scope could not be entered because the scope handler has not been initialized.
 pub const TRANSACTION_SCOPE_CALLBACKS_NOT_SET : NTSTATUS = NTSTATUS::from_constant(0x80190042); // STATUS_TRANSACTION_SCOPE_CALLBACKS_NOT_SET
+
+/// Promotion was required in order to allow the resource manager to enlist, but the transaction was set to disallow it.
 pub const TRANSACTION_REQUIRED_PROMOTION : NTSTATUS = NTSTATUS::from_constant(0xC0190043); // STATUS_TRANSACTION_REQUIRED_PROMOTION
+
+/// This file is open for modification in an unresolved transaction and may be opened for execute only by a transacted reader.
 pub const CANNOT_EXECUTE_FILE_IN_TRANSACTION : NTSTATUS = NTSTATUS::from_constant(0xC0190044); // STATUS_CANNOT_EXECUTE_FILE_IN_TRANSACTION
+
+/// The request to thaw frozen transactions was ignored because transactions had not previously been frozen.
 pub const TRANSACTIONS_NOT_FROZEN : NTSTATUS = NTSTATUS::from_constant(0xC0190045); // STATUS_TRANSACTIONS_NOT_FROZEN
+
+/// Transactions cannot be frozen because a freeze is already in progress.
 pub const TRANSACTION_FREEZE_IN_PROGRESS : NTSTATUS = NTSTATUS::from_constant(0xC0190046); // STATUS_TRANSACTION_FREEZE_IN_PROGRESS
+
+/// The target volume is not a snapshot volume. This operation is only valid on a volume mounted as a snapshot.
 pub const NOT_SNAPSHOT_VOLUME : NTSTATUS = NTSTATUS::from_constant(0xC0190047); // STATUS_NOT_SNAPSHOT_VOLUME
+
+/// The savepoint operation failed because files are open on the transaction. This is not permitted.
 pub const NO_SAVEPOINT_WITH_OPEN_FILES : NTSTATUS = NTSTATUS::from_constant(0xC0190048); // STATUS_NO_SAVEPOINT_WITH_OPEN_FILES
+
+/// The sparse operation could not be completed because a transaction is active on the file.
 pub const SPARSE_NOT_ALLOWED_IN_TRANSACTION : NTSTATUS = NTSTATUS::from_constant(0xC0190049); // STATUS_SPARSE_NOT_ALLOWED_IN_TRANSACTION
+
+/// The call to create a TransactionManager object failed because the Tm Identity stored in the logfile does not match the Tm Identity that was passed in as an argument.
 pub const TM_IDENTITY_MISMATCH : NTSTATUS = NTSTATUS::from_constant(0xC019004A); // STATUS_TM_IDENTITY_MISMATCH
+
+/// I/O was attempted on a section object that has been floated as a result of a transaction ending. There is no valid data.
 pub const FLOATED_SECTION : NTSTATUS = NTSTATUS::from_constant(0xC019004B); // STATUS_FLOATED_SECTION
+
+/// The transactional resource manager cannot currently accept transacted work due to a transient condition such as low resources.
 pub const CANNOT_ACCEPT_TRANSACTED_WORK : NTSTATUS = NTSTATUS::from_constant(0xC019004C); // STATUS_CANNOT_ACCEPT_TRANSACTED_WORK
+
+/// The transactional resource manager had too many transactions outstanding that could not be aborted. The transactional resource manger has been shut down.
 pub const CANNOT_ABORT_TRANSACTIONS : NTSTATUS = NTSTATUS::from_constant(0xC019004D); // STATUS_CANNOT_ABORT_TRANSACTIONS
+
+/// The specified Transaction was unable to be opened, because it was not found.
 pub const TRANSACTION_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC019004E); // STATUS_TRANSACTION_NOT_FOUND
+
+/// The specified ResourceManager was unable to be opened, because it was not found.
 pub const RESOURCEMANAGER_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC019004F); // STATUS_RESOURCEMANAGER_NOT_FOUND
+
+/// The specified Enlistment was unable to be opened, because it was not found.
 pub const ENLISTMENT_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC0190050); // STATUS_ENLISTMENT_NOT_FOUND
+
+/// The specified TransactionManager was unable to be opened, because it was not found.
 pub const TRANSACTIONMANAGER_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC0190051); // STATUS_TRANSACTIONMANAGER_NOT_FOUND
+
+/// The object specified could not be created or opened, because its associated TransactionManager is not online.  The TransactionManager must be brought fully Online by calling RecoverTransactionManager to recover to the end of its LogFile before objects in its Transaction or ResourceManager namespaces can be opened.  In addition, errors in writing records to its LogFile can cause a TransactionManager to go offline.
 pub const TRANSACTIONMANAGER_NOT_ONLINE : NTSTATUS = NTSTATUS::from_constant(0xC0190052); // STATUS_TRANSACTIONMANAGER_NOT_ONLINE
+
+/// The specified TransactionManager was unable to create the objects contained in its logfile in the Ob namespace. Therefore, the TransactionManager was unable to recover.
 pub const TRANSACTIONMANAGER_RECOVERY_NAME_COLLISION : NTSTATUS = NTSTATUS::from_constant(0xC0190053); // STATUS_TRANSACTIONMANAGER_RECOVERY_NAME_COLLISION
+
+/// The call to create a superior Enlistment on this Transaction object could not be completed, because the Transaction object specified for the enlistment is a subordinate branch of the Transaction. Only the root of the Transaction can be enlisted on as a superior.
 pub const TRANSACTION_NOT_ROOT : NTSTATUS = NTSTATUS::from_constant(0xC0190054); // STATUS_TRANSACTION_NOT_ROOT
+
+/// Because the associated transaction manager or resource manager has been closed, the handle is no longer valid.
 pub const TRANSACTION_OBJECT_EXPIRED : NTSTATUS = NTSTATUS::from_constant(0xC0190055); // STATUS_TRANSACTION_OBJECT_EXPIRED
+
+/// The compression operation could not be completed because a transaction is active on the file.
 pub const COMPRESSION_NOT_ALLOWED_IN_TRANSACTION : NTSTATUS = NTSTATUS::from_constant(0xC0190056); // STATUS_COMPRESSION_NOT_ALLOWED_IN_TRANSACTION
+
+/// The specified operation could not be performed on this Superior enlistment, because the enlistment was not created with the corresponding completion response in the NotificationMask.
 pub const TRANSACTION_RESPONSE_NOT_ENLISTED : NTSTATUS = NTSTATUS::from_constant(0xC0190057); // STATUS_TRANSACTION_RESPONSE_NOT_ENLISTED
+
+/// The specified operation could not be performed, because the record that would be logged was too long. This can occur because of two conditions:  either there are too many Enlistments on this Transaction, or the combined RecoveryInformation being logged on behalf of those Enlistments is too long.
 pub const TRANSACTION_RECORD_TOO_LONG : NTSTATUS = NTSTATUS::from_constant(0xC0190058); // STATUS_TRANSACTION_RECORD_TOO_LONG
+
+/// The link tracking operation could not be completed because a transaction is active.
 pub const NO_LINK_TRACKING_IN_TRANSACTION : NTSTATUS = NTSTATUS::from_constant(0xC0190059); // STATUS_NO_LINK_TRACKING_IN_TRANSACTION
+
+/// This operation cannot be performed in a transaction.
 pub const OPERATION_NOT_SUPPORTED_IN_TRANSACTION : NTSTATUS = NTSTATUS::from_constant(0xC019005A); // STATUS_OPERATION_NOT_SUPPORTED_IN_TRANSACTION
+
+/// The kernel transaction manager had to abort or forget the transaction because it blocked forward progress.
 pub const TRANSACTION_INTEGRITY_VIOLATED : NTSTATUS = NTSTATUS::from_constant(0xC019005B); // STATUS_TRANSACTION_INTEGRITY_VIOLATED
+
+/// The TransactionManager identity that was supplied did not match the one recorded in the TransactionManager's log file.
 pub const TRANSACTIONMANAGER_IDENTITY_MISMATCH : NTSTATUS = NTSTATUS::from_constant(0xC019005C); // STATUS_TRANSACTIONMANAGER_IDENTITY_MISMATCH
+
+/// This snapshot operation cannot continue because a transactional resource manager cannot be frozen in its current state.  Please try again.
 pub const RM_CANNOT_BE_FROZEN_FOR_SNAPSHOT : NTSTATUS = NTSTATUS::from_constant(0xC019005D); // STATUS_RM_CANNOT_BE_FROZEN_FOR_SNAPSHOT
+
+/// The transaction cannot be enlisted on with the specified EnlistmentMask, because the transaction has already completed the PrePrepare phase.  In order to ensure correctness, the ResourceManager must switch to a write-through mode and cease caching data within this transaction.  Enlisting for only subsequent transaction phases may still succeed.
 pub const TRANSACTION_MUST_WRITETHROUGH : NTSTATUS = NTSTATUS::from_constant(0xC019005E); // STATUS_TRANSACTION_MUST_WRITETHROUGH
+
+/// The transaction does not have a superior enlistment.
 pub const TRANSACTION_NO_SUPERIOR : NTSTATUS = NTSTATUS::from_constant(0xC019005F); // STATUS_TRANSACTION_NO_SUPERIOR
+
+/// The handle is no longer properly associated with its transaction.  It may have been opened in a transactional resource manager that was subsequently forced to restart.  Please close the handle and open a new one.
 pub const EXPIRED_HANDLE : NTSTATUS = NTSTATUS::from_constant(0xC0190060); // STATUS_EXPIRED_HANDLE
+
+/// The specified operation could not be performed because the resource manager is not enlisted in the transaction.
 pub const TRANSACTION_NOT_ENLISTED : NTSTATUS = NTSTATUS::from_constant(0xC0190061); // STATUS_TRANSACTION_NOT_ENLISTED
+
+/// Log service found an invalid log sector.
 pub const LOG_SECTOR_INVALID : NTSTATUS = NTSTATUS::from_constant(0xC01A0001); // STATUS_LOG_SECTOR_INVALID
+
+/// Log service encountered a log sector with invalid block parity.
 pub const LOG_SECTOR_PARITY_INVALID : NTSTATUS = NTSTATUS::from_constant(0xC01A0002); // STATUS_LOG_SECTOR_PARITY_INVALID
+
+/// Log service encountered a remapped log sector.
 pub const LOG_SECTOR_REMAPPED : NTSTATUS = NTSTATUS::from_constant(0xC01A0003); // STATUS_LOG_SECTOR_REMAPPED
+
+/// Log service encountered a partial or incomplete log block.
 pub const LOG_BLOCK_INCOMPLETE : NTSTATUS = NTSTATUS::from_constant(0xC01A0004); // STATUS_LOG_BLOCK_INCOMPLETE
+
+/// Log service encountered an attempt access data outside the active log range.
 pub const LOG_INVALID_RANGE : NTSTATUS = NTSTATUS::from_constant(0xC01A0005); // STATUS_LOG_INVALID_RANGE
+
+/// Log service user log marshalling buffers are exhausted.
 pub const LOG_BLOCKS_EXHAUSTED : NTSTATUS = NTSTATUS::from_constant(0xC01A0006); // STATUS_LOG_BLOCKS_EXHAUSTED
+
+/// Log service encountered an attempt read from a marshalling area with an invalid read context.
 pub const LOG_READ_CONTEXT_INVALID : NTSTATUS = NTSTATUS::from_constant(0xC01A0007); // STATUS_LOG_READ_CONTEXT_INVALID
+
+/// Log service encountered an invalid log restart area.
 pub const LOG_RESTART_INVALID : NTSTATUS = NTSTATUS::from_constant(0xC01A0008); // STATUS_LOG_RESTART_INVALID
+
+/// Log service encountered an invalid log block version.
 pub const LOG_BLOCK_VERSION : NTSTATUS = NTSTATUS::from_constant(0xC01A0009); // STATUS_LOG_BLOCK_VERSION
+
+/// Log service encountered an invalid log block.
 pub const LOG_BLOCK_INVALID : NTSTATUS = NTSTATUS::from_constant(0xC01A000A); // STATUS_LOG_BLOCK_INVALID
+
+/// Log service encountered an attempt to read the log with an invalid read mode.
 pub const LOG_READ_MODE_INVALID : NTSTATUS = NTSTATUS::from_constant(0xC01A000B); // STATUS_LOG_READ_MODE_INVALID
+
+/// Log service encountered a log stream with no restart area.
 pub const LOG_NO_RESTART : NTSTATUS = NTSTATUS::from_constant(0x401A000C); // STATUS_LOG_NO_RESTART
+
+/// Log service encountered a corrupted metadata file.
 pub const LOG_METADATA_CORRUPT : NTSTATUS = NTSTATUS::from_constant(0xC01A000D); // STATUS_LOG_METADATA_CORRUPT
+
+/// Log service encountered a metadata file that could not be created by the log file system.
 pub const LOG_METADATA_INVALID : NTSTATUS = NTSTATUS::from_constant(0xC01A000E); // STATUS_LOG_METADATA_INVALID
+
+/// Log service encountered a metadata file with inconsistent data.
 pub const LOG_METADATA_INCONSISTENT : NTSTATUS = NTSTATUS::from_constant(0xC01A000F); // STATUS_LOG_METADATA_INCONSISTENT
+
+/// Log service encountered an attempt to erroneously allocate or dispose reservation space.
 pub const LOG_RESERVATION_INVALID : NTSTATUS = NTSTATUS::from_constant(0xC01A0010); // STATUS_LOG_RESERVATION_INVALID
+
+/// Log service cannot delete log file or file system container.
 pub const LOG_CANT_DELETE : NTSTATUS = NTSTATUS::from_constant(0xC01A0011); // STATUS_LOG_CANT_DELETE
+
+/// Log service has reached the maximum allowable containers allocated to a log file.
 pub const LOG_CONTAINER_LIMIT_EXCEEDED : NTSTATUS = NTSTATUS::from_constant(0xC01A0012); // STATUS_LOG_CONTAINER_LIMIT_EXCEEDED
+
+/// Log service has attempted to read or write backwards past the start of the log.
 pub const LOG_START_OF_LOG : NTSTATUS = NTSTATUS::from_constant(0xC01A0013); // STATUS_LOG_START_OF_LOG
+
+/// Log policy could not be installed because a policy of the same type is already present.
 pub const LOG_POLICY_ALREADY_INSTALLED : NTSTATUS = NTSTATUS::from_constant(0xC01A0014); // STATUS_LOG_POLICY_ALREADY_INSTALLED
+
+/// Log policy in question was not installed at the time of the request.
 pub const LOG_POLICY_NOT_INSTALLED : NTSTATUS = NTSTATUS::from_constant(0xC01A0015); // STATUS_LOG_POLICY_NOT_INSTALLED
+
+/// The installed set of policies on the log is invalid.
 pub const LOG_POLICY_INVALID : NTSTATUS = NTSTATUS::from_constant(0xC01A0016); // STATUS_LOG_POLICY_INVALID
+
+/// A policy on the log in question prevented the operation from completing.
 pub const LOG_POLICY_CONFLICT : NTSTATUS = NTSTATUS::from_constant(0xC01A0017); // STATUS_LOG_POLICY_CONFLICT
+
+/// Log space cannot be reclaimed because the log is pinned by the archive tail.
 pub const LOG_PINNED_ARCHIVE_TAIL : NTSTATUS = NTSTATUS::from_constant(0xC01A0018); // STATUS_LOG_PINNED_ARCHIVE_TAIL
+
+/// Log record is not a record in the log file.
 pub const LOG_RECORD_NONEXISTENT : NTSTATUS = NTSTATUS::from_constant(0xC01A0019); // STATUS_LOG_RECORD_NONEXISTENT
+
+/// Number of reserved log records or the adjustment of the number of reserved log records is invalid.
 pub const LOG_RECORDS_RESERVED_INVALID : NTSTATUS = NTSTATUS::from_constant(0xC01A001A); // STATUS_LOG_RECORDS_RESERVED_INVALID
+
+/// Reserved log space or the adjustment of the log space is invalid.
 pub const LOG_SPACE_RESERVED_INVALID : NTSTATUS = NTSTATUS::from_constant(0xC01A001B); // STATUS_LOG_SPACE_RESERVED_INVALID
+
+/// A new or existing archive tail or base of the active log is invalid.
 pub const LOG_TAIL_INVALID : NTSTATUS = NTSTATUS::from_constant(0xC01A001C); // STATUS_LOG_TAIL_INVALID
+
+/// Log space is exhausted.
 pub const LOG_FULL : NTSTATUS = NTSTATUS::from_constant(0xC01A001D); // STATUS_LOG_FULL
+
+/// Log is multiplexed, no direct writes to the physical log is allowed.
 pub const LOG_MULTIPLEXED : NTSTATUS = NTSTATUS::from_constant(0xC01A001E); // STATUS_LOG_MULTIPLEXED
+
+/// The operation failed because the log is a dedicated log.
 pub const LOG_DEDICATED : NTSTATUS = NTSTATUS::from_constant(0xC01A001F); // STATUS_LOG_DEDICATED
+
+/// The operation requires an archive context.
 pub const LOG_ARCHIVE_NOT_IN_PROGRESS : NTSTATUS = NTSTATUS::from_constant(0xC01A0020); // STATUS_LOG_ARCHIVE_NOT_IN_PROGRESS
+
+/// Log archival is in progress.
 pub const LOG_ARCHIVE_IN_PROGRESS : NTSTATUS = NTSTATUS::from_constant(0xC01A0021); // STATUS_LOG_ARCHIVE_IN_PROGRESS
+
+/// The operation requires a non-ephemeral log, but the log is ephemeral.
 pub const LOG_EPHEMERAL : NTSTATUS = NTSTATUS::from_constant(0xC01A0022); // STATUS_LOG_EPHEMERAL
+
+/// The log must have at least two containers before it can be read from or written to.
 pub const LOG_NOT_ENOUGH_CONTAINERS : NTSTATUS = NTSTATUS::from_constant(0xC01A0023); // STATUS_LOG_NOT_ENOUGH_CONTAINERS
+
+/// A log client has already registered on the stream.
 pub const LOG_CLIENT_ALREADY_REGISTERED : NTSTATUS = NTSTATUS::from_constant(0xC01A0024); // STATUS_LOG_CLIENT_ALREADY_REGISTERED
+
+/// A log client has not been registered on the stream.
 pub const LOG_CLIENT_NOT_REGISTERED : NTSTATUS = NTSTATUS::from_constant(0xC01A0025); // STATUS_LOG_CLIENT_NOT_REGISTERED
+
+/// A request has already been made to handle the log full condition.
 pub const LOG_FULL_HANDLER_IN_PROGRESS : NTSTATUS = NTSTATUS::from_constant(0xC01A0026); // STATUS_LOG_FULL_HANDLER_IN_PROGRESS
+
+/// Log service encountered an error when attempting to read from a log container.
 pub const LOG_CONTAINER_READ_FAILED : NTSTATUS = NTSTATUS::from_constant(0xC01A0027); // STATUS_LOG_CONTAINER_READ_FAILED
+
+/// Log service encountered an error when attempting to write to a log container.
 pub const LOG_CONTAINER_WRITE_FAILED : NTSTATUS = NTSTATUS::from_constant(0xC01A0028); // STATUS_LOG_CONTAINER_WRITE_FAILED
+
+/// Log service encountered an error when attempting open a log container.
 pub const LOG_CONTAINER_OPEN_FAILED : NTSTATUS = NTSTATUS::from_constant(0xC01A0029); // STATUS_LOG_CONTAINER_OPEN_FAILED
+
+/// Log service encountered an invalid container state when attempting a requested action.
 pub const LOG_CONTAINER_STATE_INVALID : NTSTATUS = NTSTATUS::from_constant(0xC01A002A); // STATUS_LOG_CONTAINER_STATE_INVALID
+
+/// Log service is not in the correct state to perform a requested action.
 pub const LOG_STATE_INVALID : NTSTATUS = NTSTATUS::from_constant(0xC01A002B); // STATUS_LOG_STATE_INVALID
+
+/// Log space cannot be reclaimed because the log is pinned.
 pub const LOG_PINNED : NTSTATUS = NTSTATUS::from_constant(0xC01A002C); // STATUS_LOG_PINNED
+
+/// Log metadata flush failed.
 pub const LOG_METADATA_FLUSH_FAILED : NTSTATUS = NTSTATUS::from_constant(0xC01A002D); // STATUS_LOG_METADATA_FLUSH_FAILED
+
+/// Security on the log and its containers is inconsistent.
 pub const LOG_INCONSISTENT_SECURITY : NTSTATUS = NTSTATUS::from_constant(0xC01A002E); // STATUS_LOG_INCONSISTENT_SECURITY
+
+/// Records were appended to the log or reservation changes were made, but the log could not be flushed.
 pub const LOG_APPENDED_FLUSH_FAILED : NTSTATUS = NTSTATUS::from_constant(0xC01A002F); // STATUS_LOG_APPENDED_FLUSH_FAILED
+
+/// The log is pinned due to reservation consuming most of the log space. Free some reserved records to make space available.
 pub const LOG_PINNED_RESERVATION : NTSTATUS = NTSTATUS::from_constant(0xC01A0030); // STATUS_LOG_PINNED_RESERVATION
+
+/// ### Display Driver Stopped Responding
+/// The `%hs` display driver has stopped working normally. Save your work and reboot the system to restore full display functionality. The next time you reboot the machine a dialog will be displayed giving you a chance to upload data about this failure to Microsoft.
 pub const VIDEO_HUNG_DISPLAY_DRIVER_THREAD : NTSTATUS = NTSTATUS::from_constant(0xC01B00EA); // STATUS_VIDEO_HUNG_DISPLAY_DRIVER_THREAD
+
+/// ### Display Driver Stopped Responding and recovered
+/// The `%hs` display driver has stopped working normally. The recovery had been performed.
 pub const VIDEO_HUNG_DISPLAY_DRIVER_THREAD_RECOVERED : NTSTATUS = NTSTATUS::from_constant(0x801B00EB); // STATUS_VIDEO_HUNG_DISPLAY_DRIVER_THREAD_RECOVERED
+
+/// ### Display Driver Recovered From Failure
+/// The `%hs` display driver has detected and recovered from a failure. Some graphical operations may have failed. The next time you reboot the machine a dialog will be displayed giving you a chance to upload data about this failure to Microsoft.
 pub const VIDEO_DRIVER_DEBUG_REPORT_REQUEST : NTSTATUS = NTSTATUS::from_constant(0x401B00EC); // STATUS_VIDEO_DRIVER_DEBUG_REPORT_REQUEST
+
+/// Monitor descriptor could not be obtained.
 pub const MONITOR_NO_DESCRIPTOR : NTSTATUS = NTSTATUS::from_constant(0xC01D0001); // STATUS_MONITOR_NO_DESCRIPTOR
+
+/// Format of the obtained monitor descriptor is not supported by this release.
 pub const MONITOR_UNKNOWN_DESCRIPTOR_FORMAT : NTSTATUS = NTSTATUS::from_constant(0xC01D0002); // STATUS_MONITOR_UNKNOWN_DESCRIPTOR_FORMAT
+
+/// Checksum of the obtained monitor descriptor is invalid.
 pub const MONITOR_INVALID_DESCRIPTOR_CHECKSUM : NTSTATUS = NTSTATUS::from_constant(0xC01D0003); // STATUS_MONITOR_INVALID_DESCRIPTOR_CHECKSUM
+
+/// Monitor descriptor contains an invalid standard timing block.
 pub const MONITOR_INVALID_STANDARD_TIMING_BLOCK : NTSTATUS = NTSTATUS::from_constant(0xC01D0004); // STATUS_MONITOR_INVALID_STANDARD_TIMING_BLOCK
+
+/// WMI data block registration failed for one of the MSMonitorClass WMI subclasses.
 pub const MONITOR_WMI_DATABLOCK_REGISTRATION_FAILED : NTSTATUS = NTSTATUS::from_constant(0xC01D0005); // STATUS_MONITOR_WMI_DATABLOCK_REGISTRATION_FAILED
+
+/// Provided monitor descriptor block is either corrupted or does not contain monitor's detailed serial number.
 pub const MONITOR_INVALID_SERIAL_NUMBER_MONDSC_BLOCK : NTSTATUS = NTSTATUS::from_constant(0xC01D0006); // STATUS_MONITOR_INVALID_SERIAL_NUMBER_MONDSC_BLOCK
+
+/// Provided monitor descriptor block is either corrupted or does not contain monitor's user friendly name.
 pub const MONITOR_INVALID_USER_FRIENDLY_MONDSC_BLOCK : NTSTATUS = NTSTATUS::from_constant(0xC01D0007); // STATUS_MONITOR_INVALID_USER_FRIENDLY_MONDSC_BLOCK
+
+/// There is no monitor descriptor data at the specified (offset, size) region.
 pub const MONITOR_NO_MORE_DESCRIPTOR_DATA : NTSTATUS = NTSTATUS::from_constant(0xC01D0008); // STATUS_MONITOR_NO_MORE_DESCRIPTOR_DATA
+
+/// Monitor descriptor contains an invalid detailed timing block.
 pub const MONITOR_INVALID_DETAILED_TIMING_BLOCK : NTSTATUS = NTSTATUS::from_constant(0xC01D0009); // STATUS_MONITOR_INVALID_DETAILED_TIMING_BLOCK
+
+/// Monitor descriptor contains invalid manufacture date.
 pub const MONITOR_INVALID_MANUFACTURE_DATE : NTSTATUS = NTSTATUS::from_constant(0xC01D000A); // STATUS_MONITOR_INVALID_MANUFACTURE_DATE
+
+/// Exclusive mode ownership is needed to create unmanaged primary allocation.
 pub const GRAPHICS_NOT_EXCLUSIVE_MODE_OWNER : NTSTATUS = NTSTATUS::from_constant(0xC01E0000); // STATUS_GRAPHICS_NOT_EXCLUSIVE_MODE_OWNER
+
+/// The driver needs more DMA buffer space in order to complete the requested operation.
 pub const GRAPHICS_INSUFFICIENT_DMA_BUFFER : NTSTATUS = NTSTATUS::from_constant(0xC01E0001); // STATUS_GRAPHICS_INSUFFICIENT_DMA_BUFFER
+
+/// Specified display adapter handle is invalid.
 pub const GRAPHICS_INVALID_DISPLAY_ADAPTER : NTSTATUS = NTSTATUS::from_constant(0xC01E0002); // STATUS_GRAPHICS_INVALID_DISPLAY_ADAPTER
+
+/// Specified display adapter and all of its state has been reset.
 pub const GRAPHICS_ADAPTER_WAS_RESET : NTSTATUS = NTSTATUS::from_constant(0xC01E0003); // STATUS_GRAPHICS_ADAPTER_WAS_RESET
+
+/// The driver stack doesn't match the expected driver model.
 pub const GRAPHICS_INVALID_DRIVER_MODEL : NTSTATUS = NTSTATUS::from_constant(0xC01E0004); // STATUS_GRAPHICS_INVALID_DRIVER_MODEL
+
+/// Present happened but ended up into the changed desktop mode
 pub const GRAPHICS_PRESENT_MODE_CHANGED : NTSTATUS = NTSTATUS::from_constant(0xC01E0005); // STATUS_GRAPHICS_PRESENT_MODE_CHANGED
+
+/// Nothing to present due to desktop occlusion
 pub const GRAPHICS_PRESENT_OCCLUDED : NTSTATUS = NTSTATUS::from_constant(0xC01E0006); // STATUS_GRAPHICS_PRESENT_OCCLUDED
+
+/// Not able to present due to denial of desktop access
 pub const GRAPHICS_PRESENT_DENIED : NTSTATUS = NTSTATUS::from_constant(0xC01E0007); // STATUS_GRAPHICS_PRESENT_DENIED
+
+/// Not able to present with color conversion
 pub const GRAPHICS_CANNOTCOLORCONVERT : NTSTATUS = NTSTATUS::from_constant(0xC01E0008); // STATUS_GRAPHICS_CANNOTCOLORCONVERT
+
+/// The kernel driver detected a version mismatch between it and the user mode driver.
 pub const GRAPHICS_DRIVER_MISMATCH : NTSTATUS = NTSTATUS::from_constant(0xC01E0009); // STATUS_GRAPHICS_DRIVER_MISMATCH
+
+/// Specified buffer is not big enough to contain entire requested dataset. Partial data populated up to the size of the buffer. Caller needs to provide buffer of size as specified in the partially populated buffer's content (interface specific).
 pub const GRAPHICS_PARTIAL_DATA_POPULATED : NTSTATUS = NTSTATUS::from_constant(0x401E000A); // STATUS_GRAPHICS_PARTIAL_DATA_POPULATED
+
+/// Present redirection is disabled (desktop windowing management subsystem is off).
 pub const GRAPHICS_PRESENT_REDIRECTION_DISABLED : NTSTATUS = NTSTATUS::from_constant(0xC01E000B); // STATUS_GRAPHICS_PRESENT_REDIRECTION_DISABLED
+
+/// Previous exclusive VidPn source owner has released its ownership
 pub const GRAPHICS_PRESENT_UNOCCLUDED : NTSTATUS = NTSTATUS::from_constant(0xC01E000C); // STATUS_GRAPHICS_PRESENT_UNOCCLUDED
+
+/// Window DC is not available for presentation
 pub const GRAPHICS_WINDOWDC_NOT_AVAILABLE : NTSTATUS = NTSTATUS::from_constant(0xC01E000D); // STATUS_GRAPHICS_WINDOWDC_NOT_AVAILABLE
+
+/// Windowless present is disabled (desktop windowing management subsystem is off).
 pub const GRAPHICS_WINDOWLESS_PRESENT_DISABLED : NTSTATUS = NTSTATUS::from_constant(0xC01E000E); // STATUS_GRAPHICS_WINDOWLESS_PRESENT_DISABLED
+
+/// Window handle is invalid
 pub const GRAPHICS_PRESENT_INVALID_WINDOW : NTSTATUS = NTSTATUS::from_constant(0xC01E000F); // STATUS_GRAPHICS_PRESENT_INVALID_WINDOW
+
+/// No buffer is bound to composition surface
 pub const GRAPHICS_PRESENT_BUFFER_NOT_BOUND : NTSTATUS = NTSTATUS::from_constant(0xC01E0010); // STATUS_GRAPHICS_PRESENT_BUFFER_NOT_BOUND
+
+/// Vail state has been changed
 pub const GRAPHICS_VAIL_STATE_CHANGED : NTSTATUS = NTSTATUS::from_constant(0xC01E0011); // STATUS_GRAPHICS_VAIL_STATE_CHANGED
+
+/// Notifying indirect display UMDF class driver to abandon current swapchain.
 pub const GRAPHICS_INDIRECT_DISPLAY_ABANDON_SWAPCHAIN : NTSTATUS = NTSTATUS::from_constant(0xC01E0012); // STATUS_GRAPHICS_INDIRECT_DISPLAY_ABANDON_SWAPCHAIN
+
+/// Notifying indirect display UMDF class driver that indirect display device has been stopped.
 pub const GRAPHICS_INDIRECT_DISPLAY_DEVICE_STOPPED : NTSTATUS = NTSTATUS::from_constant(0xC01E0013); // STATUS_GRAPHICS_INDIRECT_DISPLAY_DEVICE_STOPPED
+
+/// Not enough video memory available to complete the operation.
 pub const GRAPHICS_NO_VIDEO_MEMORY : NTSTATUS = NTSTATUS::from_constant(0xC01E0100); // STATUS_GRAPHICS_NO_VIDEO_MEMORY
+
+/// Couldn't probe and lock the underlying memory of an allocation.
 pub const GRAPHICS_CANT_LOCK_MEMORY : NTSTATUS = NTSTATUS::from_constant(0xC01E0101); // STATUS_GRAPHICS_CANT_LOCK_MEMORY
+
+/// The allocation is currently busy.
 pub const GRAPHICS_ALLOCATION_BUSY : NTSTATUS = NTSTATUS::from_constant(0xC01E0102); // STATUS_GRAPHICS_ALLOCATION_BUSY
+
+/// An object being referenced has already reached the maximum reference count and can't be referenced any further.
 pub const GRAPHICS_TOO_MANY_REFERENCES : NTSTATUS = NTSTATUS::from_constant(0xC01E0103); // STATUS_GRAPHICS_TOO_MANY_REFERENCES
+
+/// A problem couldn't be solved due to some currently existing condition. The problem should be tried again later.
 pub const GRAPHICS_TRY_AGAIN_LATER : NTSTATUS = NTSTATUS::from_constant(0xC01E0104); // STATUS_GRAPHICS_TRY_AGAIN_LATER
+
+/// A problem couldn't be solved due to some currently existing condition. The problem should be tried again immediately.
 pub const GRAPHICS_TRY_AGAIN_NOW : NTSTATUS = NTSTATUS::from_constant(0xC01E0105); // STATUS_GRAPHICS_TRY_AGAIN_NOW
+
+/// The allocation is invalid.
 pub const GRAPHICS_ALLOCATION_INVALID : NTSTATUS = NTSTATUS::from_constant(0xC01E0106); // STATUS_GRAPHICS_ALLOCATION_INVALID
+
+/// No more unswizzling aperture are currently available.
 pub const GRAPHICS_UNSWIZZLING_APERTURE_UNAVAILABLE : NTSTATUS = NTSTATUS::from_constant(0xC01E0107); // STATUS_GRAPHICS_UNSWIZZLING_APERTURE_UNAVAILABLE
+
+/// The current allocation can't be unswizzled by an aperture.
 pub const GRAPHICS_UNSWIZZLING_APERTURE_UNSUPPORTED : NTSTATUS = NTSTATUS::from_constant(0xC01E0108); // STATUS_GRAPHICS_UNSWIZZLING_APERTURE_UNSUPPORTED
+
+/// The request failed because a pinned allocation can't be evicted.
 pub const GRAPHICS_CANT_EVICT_PINNED_ALLOCATION : NTSTATUS = NTSTATUS::from_constant(0xC01E0109); // STATUS_GRAPHICS_CANT_EVICT_PINNED_ALLOCATION
+
+/// The allocation can't be used from its current segment location for the specified operation.
 pub const GRAPHICS_INVALID_ALLOCATION_USAGE : NTSTATUS = NTSTATUS::from_constant(0xC01E0110); // STATUS_GRAPHICS_INVALID_ALLOCATION_USAGE
+
+/// A locked allocation can't be used in the current command buffer.
 pub const GRAPHICS_CANT_RENDER_LOCKED_ALLOCATION : NTSTATUS = NTSTATUS::from_constant(0xC01E0111); // STATUS_GRAPHICS_CANT_RENDER_LOCKED_ALLOCATION
+
+/// The allocation being referenced has been closed permanently.
 pub const GRAPHICS_ALLOCATION_CLOSED : NTSTATUS = NTSTATUS::from_constant(0xC01E0112); // STATUS_GRAPHICS_ALLOCATION_CLOSED
+
+/// An invalid allocation instance is being referenced.
 pub const GRAPHICS_INVALID_ALLOCATION_INSTANCE : NTSTATUS = NTSTATUS::from_constant(0xC01E0113); // STATUS_GRAPHICS_INVALID_ALLOCATION_INSTANCE
+
+/// An invalid allocation handle is being referenced.
 pub const GRAPHICS_INVALID_ALLOCATION_HANDLE : NTSTATUS = NTSTATUS::from_constant(0xC01E0114); // STATUS_GRAPHICS_INVALID_ALLOCATION_HANDLE
+
+/// The allocation being referenced doesn't belong to the current device.
 pub const GRAPHICS_WRONG_ALLOCATION_DEVICE : NTSTATUS = NTSTATUS::from_constant(0xC01E0115); // STATUS_GRAPHICS_WRONG_ALLOCATION_DEVICE
+
+/// The specified allocation lost its content.
 pub const GRAPHICS_ALLOCATION_CONTENT_LOST : NTSTATUS = NTSTATUS::from_constant(0xC01E0116); // STATUS_GRAPHICS_ALLOCATION_CONTENT_LOST
+
+/// GPU exception is detected on the given device. The device is not able to be scheduled.
 pub const GRAPHICS_GPU_EXCEPTION_ON_DEVICE : NTSTATUS = NTSTATUS::from_constant(0xC01E0200); // STATUS_GRAPHICS_GPU_EXCEPTION_ON_DEVICE
+
+/// Skip preparation of allocations referenced by the DMA buffer.
 pub const GRAPHICS_SKIP_ALLOCATION_PREPARATION : NTSTATUS = NTSTATUS::from_constant(0x401E0201); // STATUS_GRAPHICS_SKIP_ALLOCATION_PREPARATION
+
+/// Specified VidPN topology is invalid.
 pub const GRAPHICS_INVALID_VIDPN_TOPOLOGY : NTSTATUS = NTSTATUS::from_constant(0xC01E0300); // STATUS_GRAPHICS_INVALID_VIDPN_TOPOLOGY
+
+/// Specified VidPN topology is valid but is not supported by this model of the display adapter.
 pub const GRAPHICS_VIDPN_TOPOLOGY_NOT_SUPPORTED : NTSTATUS = NTSTATUS::from_constant(0xC01E0301); // STATUS_GRAPHICS_VIDPN_TOPOLOGY_NOT_SUPPORTED
+
+/// Specified VidPN topology is valid but is not supported by the display adapter at this time, due to current allocation of its resources.
 pub const GRAPHICS_VIDPN_TOPOLOGY_CURRENTLY_NOT_SUPPORTED : NTSTATUS = NTSTATUS::from_constant(0xC01E0302); // STATUS_GRAPHICS_VIDPN_TOPOLOGY_CURRENTLY_NOT_SUPPORTED
+
+/// Specified VidPN handle is invalid.
 pub const GRAPHICS_INVALID_VIDPN : NTSTATUS = NTSTATUS::from_constant(0xC01E0303); // STATUS_GRAPHICS_INVALID_VIDPN
+
+/// Specified video present source is invalid.
 pub const GRAPHICS_INVALID_VIDEO_PRESENT_SOURCE : NTSTATUS = NTSTATUS::from_constant(0xC01E0304); // STATUS_GRAPHICS_INVALID_VIDEO_PRESENT_SOURCE
+
+/// Specified video present target is invalid.
 pub const GRAPHICS_INVALID_VIDEO_PRESENT_TARGET : NTSTATUS = NTSTATUS::from_constant(0xC01E0305); // STATUS_GRAPHICS_INVALID_VIDEO_PRESENT_TARGET
+
+/// Specified VidPN modality is not supported (e.g. at least two of the pinned modes are not cofunctional).
 pub const GRAPHICS_VIDPN_MODALITY_NOT_SUPPORTED : NTSTATUS = NTSTATUS::from_constant(0xC01E0306); // STATUS_GRAPHICS_VIDPN_MODALITY_NOT_SUPPORTED
+
+/// No mode is pinned on the specified VidPN source/target.
 pub const GRAPHICS_MODE_NOT_PINNED : NTSTATUS = NTSTATUS::from_constant(0x401E0307); // STATUS_GRAPHICS_MODE_NOT_PINNED
+
+/// Specified VidPN source mode set is invalid.
 pub const GRAPHICS_INVALID_VIDPN_SOURCEMODESET : NTSTATUS = NTSTATUS::from_constant(0xC01E0308); // STATUS_GRAPHICS_INVALID_VIDPN_SOURCEMODESET
+
+/// Specified VidPN target mode set is invalid.
 pub const GRAPHICS_INVALID_VIDPN_TARGETMODESET : NTSTATUS = NTSTATUS::from_constant(0xC01E0309); // STATUS_GRAPHICS_INVALID_VIDPN_TARGETMODESET
+
+/// Specified video signal frequency is invalid.
 pub const GRAPHICS_INVALID_FREQUENCY : NTSTATUS = NTSTATUS::from_constant(0xC01E030A); // STATUS_GRAPHICS_INVALID_FREQUENCY
+
+/// Specified video signal active region is invalid.
 pub const GRAPHICS_INVALID_ACTIVE_REGION : NTSTATUS = NTSTATUS::from_constant(0xC01E030B); // STATUS_GRAPHICS_INVALID_ACTIVE_REGION
+
+/// Specified video signal total region is invalid.
 pub const GRAPHICS_INVALID_TOTAL_REGION : NTSTATUS = NTSTATUS::from_constant(0xC01E030C); // STATUS_GRAPHICS_INVALID_TOTAL_REGION
+
+/// Specified video present source mode is invalid.
 pub const GRAPHICS_INVALID_VIDEO_PRESENT_SOURCE_MODE : NTSTATUS = NTSTATUS::from_constant(0xC01E0310); // STATUS_GRAPHICS_INVALID_VIDEO_PRESENT_SOURCE_MODE
+
+/// Specified video present target mode is invalid.
 pub const GRAPHICS_INVALID_VIDEO_PRESENT_TARGET_MODE : NTSTATUS = NTSTATUS::from_constant(0xC01E0311); // STATUS_GRAPHICS_INVALID_VIDEO_PRESENT_TARGET_MODE
+
+/// Pinned mode must remain in the set on VidPN's cofunctional modality enumeration.
 pub const GRAPHICS_PINNED_MODE_MUST_REMAIN_IN_SET : NTSTATUS = NTSTATUS::from_constant(0xC01E0312); // STATUS_GRAPHICS_PINNED_MODE_MUST_REMAIN_IN_SET
+
+/// Specified video present path is already in VidPN's topology.
 pub const GRAPHICS_PATH_ALREADY_IN_TOPOLOGY : NTSTATUS = NTSTATUS::from_constant(0xC01E0313); // STATUS_GRAPHICS_PATH_ALREADY_IN_TOPOLOGY
+
+/// Specified mode is already in the mode set.
 pub const GRAPHICS_MODE_ALREADY_IN_MODESET : NTSTATUS = NTSTATUS::from_constant(0xC01E0314); // STATUS_GRAPHICS_MODE_ALREADY_IN_MODESET
+
+/// Specified video present source set is invalid.
 pub const GRAPHICS_INVALID_VIDEOPRESENTSOURCESET : NTSTATUS = NTSTATUS::from_constant(0xC01E0315); // STATUS_GRAPHICS_INVALID_VIDEOPRESENTSOURCESET
+
+/// Specified video present target set is invalid.
 pub const GRAPHICS_INVALID_VIDEOPRESENTTARGETSET : NTSTATUS = NTSTATUS::from_constant(0xC01E0316); // STATUS_GRAPHICS_INVALID_VIDEOPRESENTTARGETSET
+
+/// Specified video present source is already in the video present source set.
 pub const GRAPHICS_SOURCE_ALREADY_IN_SET : NTSTATUS = NTSTATUS::from_constant(0xC01E0317); // STATUS_GRAPHICS_SOURCE_ALREADY_IN_SET
+
+/// Specified video present target is already in the video present target set.
 pub const GRAPHICS_TARGET_ALREADY_IN_SET : NTSTATUS = NTSTATUS::from_constant(0xC01E0318); // STATUS_GRAPHICS_TARGET_ALREADY_IN_SET
+
+/// Specified VidPN present path is invalid.
 pub const GRAPHICS_INVALID_VIDPN_PRESENT_PATH : NTSTATUS = NTSTATUS::from_constant(0xC01E0319); // STATUS_GRAPHICS_INVALID_VIDPN_PRESENT_PATH
+
+/// Miniport has no recommendation for augmentation of the specified VidPN's topology.
 pub const GRAPHICS_NO_RECOMMENDED_VIDPN_TOPOLOGY : NTSTATUS = NTSTATUS::from_constant(0xC01E031A); // STATUS_GRAPHICS_NO_RECOMMENDED_VIDPN_TOPOLOGY
+
+/// Specified monitor frequency range set is invalid.
 pub const GRAPHICS_INVALID_MONITOR_FREQUENCYRANGESET : NTSTATUS = NTSTATUS::from_constant(0xC01E031B); // STATUS_GRAPHICS_INVALID_MONITOR_FREQUENCYRANGESET
+
+/// Specified monitor frequency range is invalid.
 pub const GRAPHICS_INVALID_MONITOR_FREQUENCYRANGE : NTSTATUS = NTSTATUS::from_constant(0xC01E031C); // STATUS_GRAPHICS_INVALID_MONITOR_FREQUENCYRANGE
+
+/// Specified frequency range is not in the specified monitor frequency range set.
 pub const GRAPHICS_FREQUENCYRANGE_NOT_IN_SET : NTSTATUS = NTSTATUS::from_constant(0xC01E031D); // STATUS_GRAPHICS_FREQUENCYRANGE_NOT_IN_SET
+
+/// Specified mode set does not specify preference for one of its modes.
 pub const GRAPHICS_NO_PREFERRED_MODE : NTSTATUS = NTSTATUS::from_constant(0x401E031E); // STATUS_GRAPHICS_NO_PREFERRED_MODE
+
+/// Specified frequency range is already in the specified monitor frequency range set.
 pub const GRAPHICS_FREQUENCYRANGE_ALREADY_IN_SET : NTSTATUS = NTSTATUS::from_constant(0xC01E031F); // STATUS_GRAPHICS_FREQUENCYRANGE_ALREADY_IN_SET
+
+/// Specified mode set is stale. Please reacquire the new mode set.
 pub const GRAPHICS_STALE_MODESET : NTSTATUS = NTSTATUS::from_constant(0xC01E0320); // STATUS_GRAPHICS_STALE_MODESET
+
+/// Specified monitor source mode set is invalid.
 pub const GRAPHICS_INVALID_MONITOR_SOURCEMODESET : NTSTATUS = NTSTATUS::from_constant(0xC01E0321); // STATUS_GRAPHICS_INVALID_MONITOR_SOURCEMODESET
+
+/// Specified monitor source mode is invalid.
 pub const GRAPHICS_INVALID_MONITOR_SOURCE_MODE : NTSTATUS = NTSTATUS::from_constant(0xC01E0322); // STATUS_GRAPHICS_INVALID_MONITOR_SOURCE_MODE
+
+/// Miniport does not have any recommendation regarding the request to provide a functional VidPN given the current display adapter configuration.
 pub const GRAPHICS_NO_RECOMMENDED_FUNCTIONAL_VIDPN : NTSTATUS = NTSTATUS::from_constant(0xC01E0323); // STATUS_GRAPHICS_NO_RECOMMENDED_FUNCTIONAL_VIDPN
+
+/// ID of the specified mode is already used by another mode in the set.
 pub const GRAPHICS_MODE_ID_MUST_BE_UNIQUE : NTSTATUS = NTSTATUS::from_constant(0xC01E0324); // STATUS_GRAPHICS_MODE_ID_MUST_BE_UNIQUE
+
+/// System failed to determine a mode that is supported by both the display adapter and the monitor connected to it.
 pub const GRAPHICS_EMPTY_ADAPTER_MONITOR_MODE_SUPPORT_INTERSECTION : NTSTATUS = NTSTATUS::from_constant(0xC01E0325); // STATUS_GRAPHICS_EMPTY_ADAPTER_MONITOR_MODE_SUPPORT_INTERSECTION
+
+/// Number of video present targets must be greater than or equal to the number of video present sources.
 pub const GRAPHICS_VIDEO_PRESENT_TARGETS_LESS_THAN_SOURCES : NTSTATUS = NTSTATUS::from_constant(0xC01E0326); // STATUS_GRAPHICS_VIDEO_PRESENT_TARGETS_LESS_THAN_SOURCES
+
+/// Specified present path is not in VidPN's topology.
 pub const GRAPHICS_PATH_NOT_IN_TOPOLOGY : NTSTATUS = NTSTATUS::from_constant(0xC01E0327); // STATUS_GRAPHICS_PATH_NOT_IN_TOPOLOGY
+
+/// Display adapter must have at least one video present source.
 pub const GRAPHICS_ADAPTER_MUST_HAVE_AT_LEAST_ONE_SOURCE : NTSTATUS = NTSTATUS::from_constant(0xC01E0328); // STATUS_GRAPHICS_ADAPTER_MUST_HAVE_AT_LEAST_ONE_SOURCE
+
+/// Display adapter must have at least one video present target.
 pub const GRAPHICS_ADAPTER_MUST_HAVE_AT_LEAST_ONE_TARGET : NTSTATUS = NTSTATUS::from_constant(0xC01E0329); // STATUS_GRAPHICS_ADAPTER_MUST_HAVE_AT_LEAST_ONE_TARGET
+
+/// Specified monitor descriptor set is invalid.
 pub const GRAPHICS_INVALID_MONITORDESCRIPTORSET : NTSTATUS = NTSTATUS::from_constant(0xC01E032A); // STATUS_GRAPHICS_INVALID_MONITORDESCRIPTORSET
+
+/// Specified monitor descriptor is invalid.
 pub const GRAPHICS_INVALID_MONITORDESCRIPTOR : NTSTATUS = NTSTATUS::from_constant(0xC01E032B); // STATUS_GRAPHICS_INVALID_MONITORDESCRIPTOR
+
+/// Specified descriptor is not in the specified monitor descriptor set.
 pub const GRAPHICS_MONITORDESCRIPTOR_NOT_IN_SET : NTSTATUS = NTSTATUS::from_constant(0xC01E032C); // STATUS_GRAPHICS_MONITORDESCRIPTOR_NOT_IN_SET
+
+/// Specified descriptor is already in the specified monitor descriptor set.
 pub const GRAPHICS_MONITORDESCRIPTOR_ALREADY_IN_SET : NTSTATUS = NTSTATUS::from_constant(0xC01E032D); // STATUS_GRAPHICS_MONITORDESCRIPTOR_ALREADY_IN_SET
+
+/// ID of the specified monitor descriptor is already used by another descriptor in the set.
 pub const GRAPHICS_MONITORDESCRIPTOR_ID_MUST_BE_UNIQUE : NTSTATUS = NTSTATUS::from_constant(0xC01E032E); // STATUS_GRAPHICS_MONITORDESCRIPTOR_ID_MUST_BE_UNIQUE
+
+/// Specified video present target subset type is invalid.
 pub const GRAPHICS_INVALID_VIDPN_TARGET_SUBSET_TYPE : NTSTATUS = NTSTATUS::from_constant(0xC01E032F); // STATUS_GRAPHICS_INVALID_VIDPN_TARGET_SUBSET_TYPE
+
+/// Two or more of the specified resources are not related to each other, as defined by the interface semantics.
 pub const GRAPHICS_RESOURCES_NOT_RELATED : NTSTATUS = NTSTATUS::from_constant(0xC01E0330); // STATUS_GRAPHICS_RESOURCES_NOT_RELATED
+
+/// ID of the specified video present source is already used by another source in the set.
 pub const GRAPHICS_SOURCE_ID_MUST_BE_UNIQUE : NTSTATUS = NTSTATUS::from_constant(0xC01E0331); // STATUS_GRAPHICS_SOURCE_ID_MUST_BE_UNIQUE
+
+/// ID of the specified video present target is already used by another target in the set.
 pub const GRAPHICS_TARGET_ID_MUST_BE_UNIQUE : NTSTATUS = NTSTATUS::from_constant(0xC01E0332); // STATUS_GRAPHICS_TARGET_ID_MUST_BE_UNIQUE
+
+/// Specified VidPN source cannot be used because there is no available VidPN target to connect it to.
 pub const GRAPHICS_NO_AVAILABLE_VIDPN_TARGET : NTSTATUS = NTSTATUS::from_constant(0xC01E0333); // STATUS_GRAPHICS_NO_AVAILABLE_VIDPN_TARGET
+
+/// Newly arrived monitor could not be associated with a display adapter.
 pub const GRAPHICS_MONITOR_COULD_NOT_BE_ASSOCIATED_WITH_ADAPTER : NTSTATUS = NTSTATUS::from_constant(0xC01E0334); // STATUS_GRAPHICS_MONITOR_COULD_NOT_BE_ASSOCIATED_WITH_ADAPTER
+
+/// Display adapter in question does not have an associated VidPN manager.
 pub const GRAPHICS_NO_VIDPNMGR : NTSTATUS = NTSTATUS::from_constant(0xC01E0335); // STATUS_GRAPHICS_NO_VIDPNMGR
+
+/// VidPN manager of the display adapter in question does not have an active VidPN.
 pub const GRAPHICS_NO_ACTIVE_VIDPN : NTSTATUS = NTSTATUS::from_constant(0xC01E0336); // STATUS_GRAPHICS_NO_ACTIVE_VIDPN
+
+/// Specified VidPN topology is stale. Please reacquire the new topology.
 pub const GRAPHICS_STALE_VIDPN_TOPOLOGY : NTSTATUS = NTSTATUS::from_constant(0xC01E0337); // STATUS_GRAPHICS_STALE_VIDPN_TOPOLOGY
+
+/// There is no monitor connected on the specified video present target.
 pub const GRAPHICS_MONITOR_NOT_CONNECTED : NTSTATUS = NTSTATUS::from_constant(0xC01E0338); // STATUS_GRAPHICS_MONITOR_NOT_CONNECTED
+
+/// Specified source is not part of the specified VidPN's topology.
 pub const GRAPHICS_SOURCE_NOT_IN_TOPOLOGY : NTSTATUS = NTSTATUS::from_constant(0xC01E0339); // STATUS_GRAPHICS_SOURCE_NOT_IN_TOPOLOGY
+
+/// Specified primary surface size is invalid.
 pub const GRAPHICS_INVALID_PRIMARYSURFACE_SIZE : NTSTATUS = NTSTATUS::from_constant(0xC01E033A); // STATUS_GRAPHICS_INVALID_PRIMARYSURFACE_SIZE
+
+/// Specified visible region size is invalid.
 pub const GRAPHICS_INVALID_VISIBLEREGION_SIZE : NTSTATUS = NTSTATUS::from_constant(0xC01E033B); // STATUS_GRAPHICS_INVALID_VISIBLEREGION_SIZE
+
+/// Specified stride is invalid.
 pub const GRAPHICS_INVALID_STRIDE : NTSTATUS = NTSTATUS::from_constant(0xC01E033C); // STATUS_GRAPHICS_INVALID_STRIDE
+
+/// Specified pixel format is invalid.
 pub const GRAPHICS_INVALID_PIXELFORMAT : NTSTATUS = NTSTATUS::from_constant(0xC01E033D); // STATUS_GRAPHICS_INVALID_PIXELFORMAT
+
+/// Specified color basis is invalid.
 pub const GRAPHICS_INVALID_COLORBASIS : NTSTATUS = NTSTATUS::from_constant(0xC01E033E); // STATUS_GRAPHICS_INVALID_COLORBASIS
+
+/// Specified pixel value access mode is invalid.
 pub const GRAPHICS_INVALID_PIXELVALUEACCESSMODE : NTSTATUS = NTSTATUS::from_constant(0xC01E033F); // STATUS_GRAPHICS_INVALID_PIXELVALUEACCESSMODE
+
+/// Specified target is not part of the specified VidPN's topology.
 pub const GRAPHICS_TARGET_NOT_IN_TOPOLOGY : NTSTATUS = NTSTATUS::from_constant(0xC01E0340); // STATUS_GRAPHICS_TARGET_NOT_IN_TOPOLOGY
+
+/// Failed to acquire display mode management interface.
 pub const GRAPHICS_NO_DISPLAY_MODE_MANAGEMENT_SUPPORT : NTSTATUS = NTSTATUS::from_constant(0xC01E0341); // STATUS_GRAPHICS_NO_DISPLAY_MODE_MANAGEMENT_SUPPORT
+
+/// Specified VidPN source is already owned by a DMM client and cannot be used until that client releases it.
 pub const GRAPHICS_VIDPN_SOURCE_IN_USE : NTSTATUS = NTSTATUS::from_constant(0xC01E0342); // STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE
+
+/// Specified VidPN is active and cannot be accessed.
 pub const GRAPHICS_CANT_ACCESS_ACTIVE_VIDPN : NTSTATUS = NTSTATUS::from_constant(0xC01E0343); // STATUS_GRAPHICS_CANT_ACCESS_ACTIVE_VIDPN
+
+/// Specified VidPN present path importance ordinal is invalid.
 pub const GRAPHICS_INVALID_PATH_IMPORTANCE_ORDINAL : NTSTATUS = NTSTATUS::from_constant(0xC01E0344); // STATUS_GRAPHICS_INVALID_PATH_IMPORTANCE_ORDINAL
+
+/// Specified VidPN present path content geometry transformation is invalid.
 pub const GRAPHICS_INVALID_PATH_CONTENT_GEOMETRY_TRANSFORMATION : NTSTATUS = NTSTATUS::from_constant(0xC01E0345); // STATUS_GRAPHICS_INVALID_PATH_CONTENT_GEOMETRY_TRANSFORMATION
+
+/// Specified content geometry transformation is not supported on the respective VidPN present path.
 pub const GRAPHICS_PATH_CONTENT_GEOMETRY_TRANSFORMATION_NOT_SUPPORTED : NTSTATUS = NTSTATUS::from_constant(0xC01E0346); // STATUS_GRAPHICS_PATH_CONTENT_GEOMETRY_TRANSFORMATION_NOT_SUPPORTED
+
+/// Specified gamma ramp is invalid.
 pub const GRAPHICS_INVALID_GAMMA_RAMP : NTSTATUS = NTSTATUS::from_constant(0xC01E0347); // STATUS_GRAPHICS_INVALID_GAMMA_RAMP
+
+/// Specified gamma ramp is not supported on the respective VidPN present path.
 pub const GRAPHICS_GAMMA_RAMP_NOT_SUPPORTED : NTSTATUS = NTSTATUS::from_constant(0xC01E0348); // STATUS_GRAPHICS_GAMMA_RAMP_NOT_SUPPORTED
+
+/// Multi-sampling is not supported on the respective VidPN present path.
 pub const GRAPHICS_MULTISAMPLING_NOT_SUPPORTED : NTSTATUS = NTSTATUS::from_constant(0xC01E0349); // STATUS_GRAPHICS_MULTISAMPLING_NOT_SUPPORTED
+
+/// Specified mode is not in the specified mode set.
 pub const GRAPHICS_MODE_NOT_IN_MODESET : NTSTATUS = NTSTATUS::from_constant(0xC01E034A); // STATUS_GRAPHICS_MODE_NOT_IN_MODESET
+
+/// Specified data set (e.g. mode set, frequency range set, descriptor set, topology, etc.) is empty.
 pub const GRAPHICS_DATASET_IS_EMPTY : NTSTATUS = NTSTATUS::from_constant(0x401E034B); // STATUS_GRAPHICS_DATASET_IS_EMPTY
+
+/// Specified data set (e.g. mode set, frequency range set, descriptor set, topology, etc.) does not contain any more elements.
 pub const GRAPHICS_NO_MORE_ELEMENTS_IN_DATASET : NTSTATUS = NTSTATUS::from_constant(0x401E034C); // STATUS_GRAPHICS_NO_MORE_ELEMENTS_IN_DATASET
+
+/// Specified VidPN topology recommendation reason is invalid.
 pub const GRAPHICS_INVALID_VIDPN_TOPOLOGY_RECOMMENDATION_REASON : NTSTATUS = NTSTATUS::from_constant(0xC01E034D); // STATUS_GRAPHICS_INVALID_VIDPN_TOPOLOGY_RECOMMENDATION_REASON
+
+/// Specified VidPN present path content type is invalid.
 pub const GRAPHICS_INVALID_PATH_CONTENT_TYPE : NTSTATUS = NTSTATUS::from_constant(0xC01E034E); // STATUS_GRAPHICS_INVALID_PATH_CONTENT_TYPE
+
+/// Specified VidPN present path copy protection type is invalid.
 pub const GRAPHICS_INVALID_COPYPROTECTION_TYPE : NTSTATUS = NTSTATUS::from_constant(0xC01E034F); // STATUS_GRAPHICS_INVALID_COPYPROTECTION_TYPE
+
+/// No more than one unassigned mode set can exist at any given time for a given VidPN source/target.
 pub const GRAPHICS_UNASSIGNED_MODESET_ALREADY_EXISTS : NTSTATUS = NTSTATUS::from_constant(0xC01E0350); // STATUS_GRAPHICS_UNASSIGNED_MODESET_ALREADY_EXISTS
+
+/// Specified content transformation is not pinned on the specified VidPN present path.
 pub const GRAPHICS_PATH_CONTENT_GEOMETRY_TRANSFORMATION_NOT_PINNED : NTSTATUS = NTSTATUS::from_constant(0x401E0351); // STATUS_GRAPHICS_PATH_CONTENT_GEOMETRY_TRANSFORMATION_NOT_PINNED
+
+/// Specified scanline ordering type is invalid.
 pub const GRAPHICS_INVALID_SCANLINE_ORDERING : NTSTATUS = NTSTATUS::from_constant(0xC01E0352); // STATUS_GRAPHICS_INVALID_SCANLINE_ORDERING
+
+/// Topology changes are not allowed for the specified VidPN.
 pub const GRAPHICS_TOPOLOGY_CHANGES_NOT_ALLOWED : NTSTATUS = NTSTATUS::from_constant(0xC01E0353); // STATUS_GRAPHICS_TOPOLOGY_CHANGES_NOT_ALLOWED
+
+/// All available importance ordinals are already used in specified topology.
 pub const GRAPHICS_NO_AVAILABLE_IMPORTANCE_ORDINALS : NTSTATUS = NTSTATUS::from_constant(0xC01E0354); // STATUS_GRAPHICS_NO_AVAILABLE_IMPORTANCE_ORDINALS
+
+/// Specified primary surface has a different private format attribute than the current primary surface
 pub const GRAPHICS_INCOMPATIBLE_PRIVATE_FORMAT : NTSTATUS = NTSTATUS::from_constant(0xC01E0355); // STATUS_GRAPHICS_INCOMPATIBLE_PRIVATE_FORMAT
+
+/// Specified mode pruning algorithm is invalid
 pub const GRAPHICS_INVALID_MODE_PRUNING_ALGORITHM : NTSTATUS = NTSTATUS::from_constant(0xC01E0356); // STATUS_GRAPHICS_INVALID_MODE_PRUNING_ALGORITHM
+
+/// Specified monitor capability origin is invalid.
 pub const GRAPHICS_INVALID_MONITOR_CAPABILITY_ORIGIN : NTSTATUS = NTSTATUS::from_constant(0xC01E0357); // STATUS_GRAPHICS_INVALID_MONITOR_CAPABILITY_ORIGIN
+
+/// Specified monitor frequency range constraint is invalid.
 pub const GRAPHICS_INVALID_MONITOR_FREQUENCYRANGE_CONSTRAINT : NTSTATUS = NTSTATUS::from_constant(0xC01E0358); // STATUS_GRAPHICS_INVALID_MONITOR_FREQUENCYRANGE_CONSTRAINT
+
+/// Maximum supported number of present paths has been reached.
 pub const GRAPHICS_MAX_NUM_PATHS_REACHED : NTSTATUS = NTSTATUS::from_constant(0xC01E0359); // STATUS_GRAPHICS_MAX_NUM_PATHS_REACHED
+
+/// Miniport requested that augmentation be cancelled for the specified source of the specified VidPN's topology.
 pub const GRAPHICS_CANCEL_VIDPN_TOPOLOGY_AUGMENTATION : NTSTATUS = NTSTATUS::from_constant(0xC01E035A); // STATUS_GRAPHICS_CANCEL_VIDPN_TOPOLOGY_AUGMENTATION
+
+/// Specified client type was not recognized.
 pub const GRAPHICS_INVALID_CLIENT_TYPE : NTSTATUS = NTSTATUS::from_constant(0xC01E035B); // STATUS_GRAPHICS_INVALID_CLIENT_TYPE
+
+/// Client VidPN is not set on this adapter (e.g. no user mode initiated mode changes took place on this adapter yet).
 pub const GRAPHICS_CLIENTVIDPN_NOT_SET : NTSTATUS = NTSTATUS::from_constant(0xC01E035C); // STATUS_GRAPHICS_CLIENTVIDPN_NOT_SET
+
+/// Specified display adapter child device already has an external device connected to it.
 pub const GRAPHICS_SPECIFIED_CHILD_ALREADY_CONNECTED : NTSTATUS = NTSTATUS::from_constant(0xC01E0400); // STATUS_GRAPHICS_SPECIFIED_CHILD_ALREADY_CONNECTED
+
+/// Specified display adapter child device does not support descriptor exposure.
 pub const GRAPHICS_CHILD_DESCRIPTOR_NOT_SUPPORTED : NTSTATUS = NTSTATUS::from_constant(0xC01E0401); // STATUS_GRAPHICS_CHILD_DESCRIPTOR_NOT_SUPPORTED
+
+/// Child device presence was not reliably detected.
 pub const GRAPHICS_UNKNOWN_CHILD_STATUS : NTSTATUS = NTSTATUS::from_constant(0x401E042F); // STATUS_GRAPHICS_UNKNOWN_CHILD_STATUS
+
+/// The display adapter is not linked to any other adapters.
 pub const GRAPHICS_NOT_A_LINKED_ADAPTER : NTSTATUS = NTSTATUS::from_constant(0xC01E0430); // STATUS_GRAPHICS_NOT_A_LINKED_ADAPTER
+
+/// Lead adapter in a linked configuration was not enumerated yet.
 pub const GRAPHICS_LEADLINK_NOT_ENUMERATED : NTSTATUS = NTSTATUS::from_constant(0xC01E0431); // STATUS_GRAPHICS_LEADLINK_NOT_ENUMERATED
+
+/// Some chain adapters in a linked configuration were not enumerated yet.
 pub const GRAPHICS_CHAINLINKS_NOT_ENUMERATED : NTSTATUS = NTSTATUS::from_constant(0xC01E0432); // STATUS_GRAPHICS_CHAINLINKS_NOT_ENUMERATED
+
+/// The chain of linked adapters is not ready to start because of an unknown failure.
 pub const GRAPHICS_ADAPTER_CHAIN_NOT_READY : NTSTATUS = NTSTATUS::from_constant(0xC01E0433); // STATUS_GRAPHICS_ADAPTER_CHAIN_NOT_READY
+
+/// An attempt was made to start a lead link display adapter when the chain links were not started yet.
 pub const GRAPHICS_CHAINLINKS_NOT_STARTED : NTSTATUS = NTSTATUS::from_constant(0xC01E0434); // STATUS_GRAPHICS_CHAINLINKS_NOT_STARTED
+
+/// An attempt was made to power up a lead link display adapter when the chain links were powered down.
 pub const GRAPHICS_CHAINLINKS_NOT_POWERED_ON : NTSTATUS = NTSTATUS::from_constant(0xC01E0435); // STATUS_GRAPHICS_CHAINLINKS_NOT_POWERED_ON
+
+/// The adapter link was found to be in an inconsistent state. Not all adapters are in an expected PNP/Power state.
 pub const GRAPHICS_INCONSISTENT_DEVICE_LINK_STATE : NTSTATUS = NTSTATUS::from_constant(0xC01E0436); // STATUS_GRAPHICS_INCONSISTENT_DEVICE_LINK_STATE
+
+/// Starting the leadlink adapter has been deferred temporarily.
 pub const GRAPHICS_LEADLINK_START_DEFERRED : NTSTATUS = NTSTATUS::from_constant(0x401E0437); // STATUS_GRAPHICS_LEADLINK_START_DEFERRED
+
+/// The driver trying to start is not the same as the driver for the POSTed display adapter.
 pub const GRAPHICS_NOT_POST_DEVICE_DRIVER : NTSTATUS = NTSTATUS::from_constant(0xC01E0438); // STATUS_GRAPHICS_NOT_POST_DEVICE_DRIVER
+
+/// The display adapter is being polled for children too frequently at the same polling level.
 pub const GRAPHICS_POLLING_TOO_FREQUENTLY : NTSTATUS = NTSTATUS::from_constant(0x401E0439); // STATUS_GRAPHICS_POLLING_TOO_FREQUENTLY
+
+/// Starting the adapter has been deferred temporarily.
 pub const GRAPHICS_START_DEFERRED : NTSTATUS = NTSTATUS::from_constant(0x401E043A); // STATUS_GRAPHICS_START_DEFERRED
+
+/// An operation is being attempted that requires the display adapter to be in a quiescent state.
 pub const GRAPHICS_ADAPTER_ACCESS_NOT_EXCLUDED : NTSTATUS = NTSTATUS::from_constant(0xC01E043B); // STATUS_GRAPHICS_ADAPTER_ACCESS_NOT_EXCLUDED
+
+/// We can depend on the child device presence returned by the driver.
 pub const GRAPHICS_DEPENDABLE_CHILD_STATUS : NTSTATUS = NTSTATUS::from_constant(0x401E043C); // STATUS_GRAPHICS_DEPENDABLE_CHILD_STATUS
+
+/// The driver does not support OPM.
 pub const GRAPHICS_OPM_NOT_SUPPORTED : NTSTATUS = NTSTATUS::from_constant(0xC01E0500); // STATUS_GRAPHICS_OPM_NOT_SUPPORTED
+
+/// The driver does not support COPP.
 pub const GRAPHICS_COPP_NOT_SUPPORTED : NTSTATUS = NTSTATUS::from_constant(0xC01E0501); // STATUS_GRAPHICS_COPP_NOT_SUPPORTED
+
+/// The driver does not support UAB.
 pub const GRAPHICS_UAB_NOT_SUPPORTED : NTSTATUS = NTSTATUS::from_constant(0xC01E0502); // STATUS_GRAPHICS_UAB_NOT_SUPPORTED
+
+/// The specified encrypted parameters are invalid.
 pub const GRAPHICS_OPM_INVALID_ENCRYPTED_PARAMETERS : NTSTATUS = NTSTATUS::from_constant(0xC01E0503); // STATUS_GRAPHICS_OPM_INVALID_ENCRYPTED_PARAMETERS
+
+/// The GDI display device passed to this function does not have any active protected outputs.
 pub const GRAPHICS_OPM_NO_PROTECTED_OUTPUTS_EXIST : NTSTATUS = NTSTATUS::from_constant(0xC01E0505); // STATUS_GRAPHICS_OPM_NO_PROTECTED_OUTPUTS_EXIST
+
+/// An internal error caused an operation to fail.
 pub const GRAPHICS_OPM_INTERNAL_ERROR : NTSTATUS = NTSTATUS::from_constant(0xC01E050B); // STATUS_GRAPHICS_OPM_INTERNAL_ERROR
+
+/// The function failed because the caller passed in an invalid OPM user mode handle.
 pub const GRAPHICS_OPM_INVALID_HANDLE : NTSTATUS = NTSTATUS::from_constant(0xC01E050C); // STATUS_GRAPHICS_OPM_INVALID_HANDLE
+
+/// A certificate could not be returned because the certificate buffer passed to the function was too small.
 pub const GRAPHICS_PVP_INVALID_CERTIFICATE_LENGTH : NTSTATUS = NTSTATUS::from_constant(0xC01E050E); // STATUS_GRAPHICS_PVP_INVALID_CERTIFICATE_LENGTH
+
+/// The DxgkDdiOpmCreateProtectedOutput function could not create a protected output because the Video Present Target is in spanning mode.
 pub const GRAPHICS_OPM_SPANNING_MODE_ENABLED : NTSTATUS = NTSTATUS::from_constant(0xC01E050F); // STATUS_GRAPHICS_OPM_SPANNING_MODE_ENABLED
+
+/// The DxgkDdiOpmCreateProtectedOutput function could not create a protected output because the Video Present Target is in theater mode.
 pub const GRAPHICS_OPM_THEATER_MODE_ENABLED : NTSTATUS = NTSTATUS::from_constant(0xC01E0510); // STATUS_GRAPHICS_OPM_THEATER_MODE_ENABLED
+
+/// The function failed because the display adapter's Hardware Functionality Scan failed to validate the graphics hardware.
 pub const GRAPHICS_PVP_HFS_FAILED : NTSTATUS = NTSTATUS::from_constant(0xC01E0511); // STATUS_GRAPHICS_PVP_HFS_FAILED
+
+/// The HDCP System Renewability Message passed to this function did not comply with section 5 of the HDCP 1.1 specification.
 pub const GRAPHICS_OPM_INVALID_SRM : NTSTATUS = NTSTATUS::from_constant(0xC01E0512); // STATUS_GRAPHICS_OPM_INVALID_SRM
+
+/// The protected output cannot enable the High-bandwidth Digital Content Protection (HDCP) System because it does not support HDCP.
 pub const GRAPHICS_OPM_OUTPUT_DOES_NOT_SUPPORT_HDCP : NTSTATUS = NTSTATUS::from_constant(0xC01E0513); // STATUS_GRAPHICS_OPM_OUTPUT_DOES_NOT_SUPPORT_HDCP
+
+/// The protected output cannot enable Analogue Copy Protection (ACP) because it does not support ACP.
 pub const GRAPHICS_OPM_OUTPUT_DOES_NOT_SUPPORT_ACP : NTSTATUS = NTSTATUS::from_constant(0xC01E0514); // STATUS_GRAPHICS_OPM_OUTPUT_DOES_NOT_SUPPORT_ACP
+
+/// The protected output cannot enable the Content Generation Management System Analogue (CGMS-A) protection technology because it does not support CGMS-A.
 pub const GRAPHICS_OPM_OUTPUT_DOES_NOT_SUPPORT_CGMSA : NTSTATUS = NTSTATUS::from_constant(0xC01E0515); // STATUS_GRAPHICS_OPM_OUTPUT_DOES_NOT_SUPPORT_CGMSA
+
+/// The DxgkDdiOPMGetInformation function cannot return the version of the SRM being used because the application never successfully passed an SRM to the protected output.
 pub const GRAPHICS_OPM_HDCP_SRM_NEVER_SET : NTSTATUS = NTSTATUS::from_constant(0xC01E0516); // STATUS_GRAPHICS_OPM_HDCP_SRM_NEVER_SET
+
+/// The DxgkDdiOPMConfigureProtectedOutput function cannot enable the specified output protection technology because the output's screen resolution is too high.
 pub const GRAPHICS_OPM_RESOLUTION_TOO_HIGH : NTSTATUS = NTSTATUS::from_constant(0xC01E0517); // STATUS_GRAPHICS_OPM_RESOLUTION_TOO_HIGH
+
+/// The DxgkDdiOPMConfigureProtectedOutput function cannot enable HDCP because the display adapter's HDCP hardware is already being used by other physical outputs.
 pub const GRAPHICS_OPM_ALL_HDCP_HARDWARE_ALREADY_IN_USE : NTSTATUS = NTSTATUS::from_constant(0xC01E0518); // STATUS_GRAPHICS_OPM_ALL_HDCP_HARDWARE_ALREADY_IN_USE
+
+/// The operating system asynchronously destroyed this OPM protected output because the operating system's state changed. This error typically occurs because the monitor PDO associated with this protected output was removed, the monitor PDO associated with this protected output was stopped, or the protected output's session became a non-console session.
 pub const GRAPHICS_OPM_PROTECTED_OUTPUT_NO_LONGER_EXISTS : NTSTATUS = NTSTATUS::from_constant(0xC01E051A); // STATUS_GRAPHICS_OPM_PROTECTED_OUTPUT_NO_LONGER_EXISTS
+
+/// Either the DxgkDdiOPMGetCOPPCompatibleInformation, DxgkDdiOPMGetInformation, or DxgkDdiOPMConfigureProtectedOutput function failed. This error is returned when the caller tries to use a COPP specific command while the protected output has OPM semantics only.
 pub const GRAPHICS_OPM_PROTECTED_OUTPUT_DOES_NOT_HAVE_COPP_SEMANTICS : NTSTATUS = NTSTATUS::from_constant(0xC01E051C); // STATUS_GRAPHICS_OPM_PROTECTED_OUTPUT_DOES_NOT_HAVE_COPP_SEMANTICS
+
+/// The DxgkDdiOPMGetInformation and DxgkDdiOPMGetCOPPCompatibleInformation functions return this error code if the passed in sequence number is not the expected sequence number or the passed in OMAC value is invalid.
 pub const GRAPHICS_OPM_INVALID_INFORMATION_REQUEST : NTSTATUS = NTSTATUS::from_constant(0xC01E051D); // STATUS_GRAPHICS_OPM_INVALID_INFORMATION_REQUEST
+
+/// The function failed because an unexpected error occurred inside of a display driver.
 pub const GRAPHICS_OPM_DRIVER_INTERNAL_ERROR : NTSTATUS = NTSTATUS::from_constant(0xC01E051E); // STATUS_GRAPHICS_OPM_DRIVER_INTERNAL_ERROR
+
+/// Either the DxgkDdiOPMGetCOPPCompatibleInformation, DxgkDdiOPMGetInformation, or DxgkDdiOPMConfigureProtectedOutput function failed. This error is returned when the caller tries to use an OPM specific command while the protected output has COPP semantics only.
 pub const GRAPHICS_OPM_PROTECTED_OUTPUT_DOES_NOT_HAVE_OPM_SEMANTICS : NTSTATUS = NTSTATUS::from_constant(0xC01E051F); // STATUS_GRAPHICS_OPM_PROTECTED_OUTPUT_DOES_NOT_HAVE_OPM_SEMANTICS
+
+/// The DxgkDdiOPMGetCOPPCompatibleInformation and DxgkDdiOPMConfigureProtectedOutput functions return this error if the display driver does not support the DXGKMDT_OPM_GET_ACP_AND_CGMSA_SIGNALING and DXGKMDT_OPM_SET_ACP_AND_CGMSA_SIGNALING GUIDs.
 pub const GRAPHICS_OPM_SIGNALING_NOT_SUPPORTED : NTSTATUS = NTSTATUS::from_constant(0xC01E0520); // STATUS_GRAPHICS_OPM_SIGNALING_NOT_SUPPORTED
+
+/// The DxgkDdiOPMConfigureProtectedOutput function returns this error code if the passed in sequence number is not the expected sequence number or the passed in OMAC value is invalid.
 pub const GRAPHICS_OPM_INVALID_CONFIGURATION_REQUEST : NTSTATUS = NTSTATUS::from_constant(0xC01E0521); // STATUS_GRAPHICS_OPM_INVALID_CONFIGURATION_REQUEST
+
+/// The monitor connected to the specified video output does not have an I2C bus.
 pub const GRAPHICS_I2C_NOT_SUPPORTED : NTSTATUS = NTSTATUS::from_constant(0xC01E0580); // STATUS_GRAPHICS_I2C_NOT_SUPPORTED
+
+/// No device on the I2C bus has the specified address.
 pub const GRAPHICS_I2C_DEVICE_DOES_NOT_EXIST : NTSTATUS = NTSTATUS::from_constant(0xC01E0581); // STATUS_GRAPHICS_I2C_DEVICE_DOES_NOT_EXIST
+
+/// An error occurred while transmitting data to the device on the I2C bus.
 pub const GRAPHICS_I2C_ERROR_TRANSMITTING_DATA : NTSTATUS = NTSTATUS::from_constant(0xC01E0582); // STATUS_GRAPHICS_I2C_ERROR_TRANSMITTING_DATA
+
+/// An error occurred while receiving data from the device on the I2C bus.
 pub const GRAPHICS_I2C_ERROR_RECEIVING_DATA : NTSTATUS = NTSTATUS::from_constant(0xC01E0583); // STATUS_GRAPHICS_I2C_ERROR_RECEIVING_DATA
+
+/// The monitor does not support the specified VCP code.
 pub const GRAPHICS_DDCCI_VCP_NOT_SUPPORTED : NTSTATUS = NTSTATUS::from_constant(0xC01E0584); // STATUS_GRAPHICS_DDCCI_VCP_NOT_SUPPORTED
+
+/// The data received from the monitor is invalid.
 pub const GRAPHICS_DDCCI_INVALID_DATA : NTSTATUS = NTSTATUS::from_constant(0xC01E0585); // STATUS_GRAPHICS_DDCCI_INVALID_DATA
+
+/// The function failed because a monitor returned an invalid Timing Status byte when the operating system used the DDC/CI Get Timing Report & Timing Message command to get a timing report from a monitor.
 pub const GRAPHICS_DDCCI_MONITOR_RETURNED_INVALID_TIMING_STATUS_BYTE : NTSTATUS = NTSTATUS::from_constant(0xC01E0586); // STATUS_GRAPHICS_DDCCI_MONITOR_RETURNED_INVALID_TIMING_STATUS_BYTE
+
+/// A monitor returned a DDC/CI capabilities string which did not comply with the ACCESS.bus 3.0, DDC/CI 1.1, or MCCS 2 Revision 1 specification.
 pub const GRAPHICS_DDCCI_INVALID_CAPABILITIES_STRING : NTSTATUS = NTSTATUS::from_constant(0xC01E0587); // STATUS_GRAPHICS_DDCCI_INVALID_CAPABILITIES_STRING
+
+/// An internal error caused an operation to fail.
 pub const GRAPHICS_MCA_INTERNAL_ERROR : NTSTATUS = NTSTATUS::from_constant(0xC01E0588); // STATUS_GRAPHICS_MCA_INTERNAL_ERROR
+
+/// An operation failed because a DDC/CI message had an invalid value in its command field.
 pub const GRAPHICS_DDCCI_INVALID_MESSAGE_COMMAND : NTSTATUS = NTSTATUS::from_constant(0xC01E0589); // STATUS_GRAPHICS_DDCCI_INVALID_MESSAGE_COMMAND
+
+/// An error occurred because the field length of a DDC/CI message contained an invalid value.
 pub const GRAPHICS_DDCCI_INVALID_MESSAGE_LENGTH : NTSTATUS = NTSTATUS::from_constant(0xC01E058A); // STATUS_GRAPHICS_DDCCI_INVALID_MESSAGE_LENGTH
+
+/// An error occurred because the checksum field in a DDC/CI message did not match the message's computed checksum value. This error implies that the data was corrupted while it was being transmitted from a monitor to a computer.
 pub const GRAPHICS_DDCCI_INVALID_MESSAGE_CHECKSUM : NTSTATUS = NTSTATUS::from_constant(0xC01E058B); // STATUS_GRAPHICS_DDCCI_INVALID_MESSAGE_CHECKSUM
+
+/// This function failed because an invalid monitor handle was passed to it.
 pub const GRAPHICS_INVALID_PHYSICAL_MONITOR_HANDLE : NTSTATUS = NTSTATUS::from_constant(0xC01E058C); // STATUS_GRAPHICS_INVALID_PHYSICAL_MONITOR_HANDLE
+
+/// The operating system asynchronously destroyed the monitor which corresponds to this handle because the operating system's state changed. This error typically occurs because the monitor PDO associated with this handle was removed, the monitor PDO associated with this handle was stopped, or a display mode change occurred. A display mode change occurs when windows sends a WM_DISPLAYCHANGE windows message to applications.
 pub const GRAPHICS_MONITOR_NO_LONGER_EXISTS : NTSTATUS = NTSTATUS::from_constant(0xC01E058D); // STATUS_GRAPHICS_MONITOR_NO_LONGER_EXISTS
+
+/// This function can only be used if a program is running in the local console session. It cannot be used if a program is running on a remote desktop session or on a terminal server session.
 pub const GRAPHICS_ONLY_CONSOLE_SESSION_SUPPORTED : NTSTATUS = NTSTATUS::from_constant(0xC01E05E0); // STATUS_GRAPHICS_ONLY_CONSOLE_SESSION_SUPPORTED
+
+/// This function cannot find an actual GDI display device which corresponds to the specified GDI display device name.
 pub const GRAPHICS_NO_DISPLAY_DEVICE_CORRESPONDS_TO_NAME : NTSTATUS = NTSTATUS::from_constant(0xC01E05E1); // STATUS_GRAPHICS_NO_DISPLAY_DEVICE_CORRESPONDS_TO_NAME
+
+/// The function failed because the specified GDI display device was not attached to the Windows desktop.
 pub const GRAPHICS_DISPLAY_DEVICE_NOT_ATTACHED_TO_DESKTOP : NTSTATUS = NTSTATUS::from_constant(0xC01E05E2); // STATUS_GRAPHICS_DISPLAY_DEVICE_NOT_ATTACHED_TO_DESKTOP
+
+/// This function does not support GDI mirroring display devices because GDI mirroring display devices do not have any physical monitors associated with them.
 pub const GRAPHICS_MIRRORING_DEVICES_NOT_SUPPORTED : NTSTATUS = NTSTATUS::from_constant(0xC01E05E3); // STATUS_GRAPHICS_MIRRORING_DEVICES_NOT_SUPPORTED
+
+/// The function failed because an invalid pointer parameter was passed to it. A pointer parameter is invalid if it is NULL, it points to an invalid address, it points to a kernel mode address or it is not correctly aligned.
 pub const GRAPHICS_INVALID_POINTER : NTSTATUS = NTSTATUS::from_constant(0xC01E05E4); // STATUS_GRAPHICS_INVALID_POINTER
+
+/// This function failed because the GDI device passed to it did not have any monitors associated with it.
 pub const GRAPHICS_NO_MONITORS_CORRESPOND_TO_DISPLAY_DEVICE : NTSTATUS = NTSTATUS::from_constant(0xC01E05E5); // STATUS_GRAPHICS_NO_MONITORS_CORRESPOND_TO_DISPLAY_DEVICE
+
+/// An array passed to the function cannot hold all of the data that the function must copy into the array.
 pub const GRAPHICS_PARAMETER_ARRAY_TOO_SMALL : NTSTATUS = NTSTATUS::from_constant(0xC01E05E6); // STATUS_GRAPHICS_PARAMETER_ARRAY_TOO_SMALL
+
+/// An internal error caused an operation to fail.
 pub const GRAPHICS_INTERNAL_ERROR : NTSTATUS = NTSTATUS::from_constant(0xC01E05E7); // STATUS_GRAPHICS_INTERNAL_ERROR
+
+/// The function failed because the current session is changing its type. This function cannot be called when the current session is changing its type. There are currently three types of sessions: console, disconnected and remote.
 pub const GRAPHICS_SESSION_TYPE_CHANGE_IN_PROGRESS : NTSTATUS = NTSTATUS::from_constant(0xC01E05E8); // STATUS_GRAPHICS_SESSION_TYPE_CHANGE_IN_PROGRESS
+
+/// This volume is locked by BitLocker Drive Encryption.
 pub const FVE_LOCKED_VOLUME : NTSTATUS = NTSTATUS::from_constant(0xC0210000); // STATUS_FVE_LOCKED_VOLUME
+
+/// The volume is not encrypted, no key is available.
 pub const FVE_NOT_ENCRYPTED : NTSTATUS = NTSTATUS::from_constant(0xC0210001); // STATUS_FVE_NOT_ENCRYPTED
+
+/// The control block for the encrypted volume is not valid.
 pub const FVE_BAD_INFORMATION : NTSTATUS = NTSTATUS::from_constant(0xC0210002); // STATUS_FVE_BAD_INFORMATION
+
+/// The volume cannot be encrypted because it does not have enough free space.
 pub const FVE_TOO_SMALL : NTSTATUS = NTSTATUS::from_constant(0xC0210003); // STATUS_FVE_TOO_SMALL
+
+/// The volume cannot be encrypted because the file system is not supported.
 pub const FVE_FAILED_WRONG_FS : NTSTATUS = NTSTATUS::from_constant(0xC0210004); // STATUS_FVE_FAILED_WRONG_FS
+
+/// The file system size is larger than the partition size in the partition table.
 pub const FVE_BAD_PARTITION_SIZE : NTSTATUS = NTSTATUS::from_constant(0xC0210005); // STATUS_FVE_BAD_PARTITION_SIZE
+
+/// The file system does not extend to the end of the volume.
 pub const FVE_FS_NOT_EXTENDED : NTSTATUS = NTSTATUS::from_constant(0xC0210006); // STATUS_FVE_FS_NOT_EXTENDED
+
+/// This operation cannot be performed while a file system is mounted on the volume.
 pub const FVE_FS_MOUNTED : NTSTATUS = NTSTATUS::from_constant(0xC0210007); // STATUS_FVE_FS_MOUNTED
+
+/// BitLocker Drive Encryption is not included with this version of Windows.
 pub const FVE_NO_LICENSE : NTSTATUS = NTSTATUS::from_constant(0xC0210008); // STATUS_FVE_NO_LICENSE
+
+/// Requested action not allowed in the current volume state.
 pub const FVE_ACTION_NOT_ALLOWED : NTSTATUS = NTSTATUS::from_constant(0xC0210009); // STATUS_FVE_ACTION_NOT_ALLOWED
+
+/// Data supplied is malformed.
 pub const FVE_BAD_DATA : NTSTATUS = NTSTATUS::from_constant(0xC021000A); // STATUS_FVE_BAD_DATA
+
+/// The volume is not bound to the system.
 pub const FVE_VOLUME_NOT_BOUND : NTSTATUS = NTSTATUS::from_constant(0xC021000B); // STATUS_FVE_VOLUME_NOT_BOUND
+
+/// That volume is not a data volume.
 pub const FVE_NOT_DATA_VOLUME : NTSTATUS = NTSTATUS::from_constant(0xC021000C); // STATUS_FVE_NOT_DATA_VOLUME
+
+/// A read operation failed while converting the volume.
 pub const FVE_CONV_READ_ERROR : NTSTATUS = NTSTATUS::from_constant(0xC021000D); // STATUS_FVE_CONV_READ_ERROR
+
+/// A write operation failed while converting the volume.
 pub const FVE_CONV_WRITE_ERROR : NTSTATUS = NTSTATUS::from_constant(0xC021000E); // STATUS_FVE_CONV_WRITE_ERROR
+
+/// The control block for the encrypted volume was updated by another thread. Try again.
 pub const FVE_OVERLAPPED_UPDATE : NTSTATUS = NTSTATUS::from_constant(0xC021000F); // STATUS_FVE_OVERLAPPED_UPDATE
+
+/// The encryption algorithm does not support the sector size of that volume.
 pub const FVE_FAILED_SECTOR_SIZE : NTSTATUS = NTSTATUS::from_constant(0xC0210010); // STATUS_FVE_FAILED_SECTOR_SIZE
+
+/// BitLocker recovery authentication failed.
 pub const FVE_FAILED_AUTHENTICATION : NTSTATUS = NTSTATUS::from_constant(0xC0210011); // STATUS_FVE_FAILED_AUTHENTICATION
+
+/// That volume is not the OS volume.
 pub const FVE_NOT_OS_VOLUME : NTSTATUS = NTSTATUS::from_constant(0xC0210012); // STATUS_FVE_NOT_OS_VOLUME
+
+/// The BitLocker startup key or recovery password could not be read from external media.
 pub const FVE_KEYFILE_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC0210013); // STATUS_FVE_KEYFILE_NOT_FOUND
+
+/// The BitLocker startup key or recovery password file is corrupt or invalid.
 pub const FVE_KEYFILE_INVALID : NTSTATUS = NTSTATUS::from_constant(0xC0210014); // STATUS_FVE_KEYFILE_INVALID
+
+/// The BitLocker encryption key could not be obtained from the startup key or recovery password.
 pub const FVE_KEYFILE_NO_VMK : NTSTATUS = NTSTATUS::from_constant(0xC0210015); // STATUS_FVE_KEYFILE_NO_VMK
+
+/// The Trusted Platform Module (TPM) is disabled.
 pub const FVE_TPM_DISABLED : NTSTATUS = NTSTATUS::from_constant(0xC0210016); // STATUS_FVE_TPM_DISABLED
+
+/// The authorization data for the Storage Root Key (SRK) of the Trusted Platform Module (TPM) is not zero.
 pub const FVE_TPM_SRK_AUTH_NOT_ZERO : NTSTATUS = NTSTATUS::from_constant(0xC0210017); // STATUS_FVE_TPM_SRK_AUTH_NOT_ZERO
+
+/// The system boot information changed or the Trusted Platform Module (TPM) locked out access to BitLocker encryption keys until the computer is restarted.
 pub const FVE_TPM_INVALID_PCR : NTSTATUS = NTSTATUS::from_constant(0xC0210018); // STATUS_FVE_TPM_INVALID_PCR
+
+/// The BitLocker encryption key could not be obtained from the Trusted Platform Module (TPM).
 pub const FVE_TPM_NO_VMK : NTSTATUS = NTSTATUS::from_constant(0xC0210019); // STATUS_FVE_TPM_NO_VMK
+
+/// The BitLocker encryption key could not be obtained from the Trusted Platform Module (TPM) and PIN.
 pub const FVE_PIN_INVALID : NTSTATUS = NTSTATUS::from_constant(0xC021001A); // STATUS_FVE_PIN_INVALID
+
+/// A boot application hash does not match the hash computed when BitLocker was turned on.
 pub const FVE_AUTH_INVALID_APPLICATION : NTSTATUS = NTSTATUS::from_constant(0xC021001B); // STATUS_FVE_AUTH_INVALID_APPLICATION
+
+/// The Boot Configuration Data (BCD) settings are not supported or have changed since BitLocker was enabled.
 pub const FVE_AUTH_INVALID_CONFIG : NTSTATUS = NTSTATUS::from_constant(0xC021001C); // STATUS_FVE_AUTH_INVALID_CONFIG
+
+/// Boot debugging is enabled. Run bcdedit to turn it off.
 pub const FVE_DEBUGGER_ENABLED : NTSTATUS = NTSTATUS::from_constant(0xC021001D); // STATUS_FVE_DEBUGGER_ENABLED
+
+/// The BitLocker encryption key could not be obtained.
 pub const FVE_DRY_RUN_FAILED : NTSTATUS = NTSTATUS::from_constant(0xC021001E); // STATUS_FVE_DRY_RUN_FAILED
+
+/// The metadata disk region pointer is incorrect.
 pub const FVE_BAD_METADATA_POINTER : NTSTATUS = NTSTATUS::from_constant(0xC021001F); // STATUS_FVE_BAD_METADATA_POINTER
+
+/// The backup copy of the metadata is out of date.
 pub const FVE_OLD_METADATA_COPY : NTSTATUS = NTSTATUS::from_constant(0xC0210020); // STATUS_FVE_OLD_METADATA_COPY
+
+/// No action was taken as a system reboot is required.
 pub const FVE_REBOOT_REQUIRED : NTSTATUS = NTSTATUS::from_constant(0xC0210021); // STATUS_FVE_REBOOT_REQUIRED
+
+/// No action was taken as BitLocker Drive Encryption is in RAW access mode.
 pub const FVE_RAW_ACCESS : NTSTATUS = NTSTATUS::from_constant(0xC0210022); // STATUS_FVE_RAW_ACCESS
+
+/// BitLocker Drive Encryption cannot enter raw access mode for this volume.
 pub const FVE_RAW_BLOCKED : NTSTATUS = NTSTATUS::from_constant(0xC0210023); // STATUS_FVE_RAW_BLOCKED
+
+/// The auto-unlock master key was not available from the operating system volume. Retry the operation using the BitLocker WMI interface.
 pub const FVE_NO_AUTOUNLOCK_MASTER_KEY : NTSTATUS = NTSTATUS::from_constant(0xC0210024); // STATUS_FVE_NO_AUTOUNLOCK_MASTER_KEY
+
+/// The system firmware failed to enable clearing of system memory on reboot.
 pub const FVE_MOR_FAILED : NTSTATUS = NTSTATUS::from_constant(0xC0210025); // STATUS_FVE_MOR_FAILED
+
+/// This feature of BitLocker Drive Encryption is not included with this version of Windows.
 pub const FVE_NO_FEATURE_LICENSE : NTSTATUS = NTSTATUS::from_constant(0xC0210026); // STATUS_FVE_NO_FEATURE_LICENSE
+
+/// Group policy does not permit turning off BitLocker Drive Encryption on roaming data volumes.
 pub const FVE_POLICY_USER_DISABLE_RDV_NOT_ALLOWED : NTSTATUS = NTSTATUS::from_constant(0xC0210027); // STATUS_FVE_POLICY_USER_DISABLE_RDV_NOT_ALLOWED
+
+/// Bitlocker Drive Encryption failed to recover from aborted conversion. This could be due to either all conversion logs being corrupted or the media being write-protected.
 pub const FVE_CONV_RECOVERY_FAILED : NTSTATUS = NTSTATUS::from_constant(0xC0210028); // STATUS_FVE_CONV_RECOVERY_FAILED
+
+/// The requested virtualization size is too big.
 pub const FVE_VIRTUALIZED_SPACE_TOO_BIG : NTSTATUS = NTSTATUS::from_constant(0xC0210029); // STATUS_FVE_VIRTUALIZED_SPACE_TOO_BIG
+
+/// The management information stored on the drive contained an unknown type. If you are using an old version of Windows, try accessing the drive from the latest version.
 pub const FVE_INVALID_DATUM_TYPE : NTSTATUS = NTSTATUS::from_constant(0xC021002A); // STATUS_FVE_INVALID_DATUM_TYPE
+
+/// The drive is too small to be protected using BitLocker Drive Encryption.
 pub const FVE_VOLUME_TOO_SMALL : NTSTATUS = NTSTATUS::from_constant(0xC0210030); // STATUS_FVE_VOLUME_TOO_SMALL
+
+/// The BitLocker encryption key could not be obtained from the Trusted Platform Module (TPM) and enhanced PIN. Try using a PIN containing only numerals.
 pub const FVE_ENH_PIN_INVALID : NTSTATUS = NTSTATUS::from_constant(0xC0210031); // STATUS_FVE_ENH_PIN_INVALID
+
+/// BitLocker Drive Encryption only supports Used Space Only encryption on thin provisioned storage.
 pub const FVE_FULL_ENCRYPTION_NOT_ALLOWED_ON_TP_STORAGE : NTSTATUS = NTSTATUS::from_constant(0xC0210032); // STATUS_FVE_FULL_ENCRYPTION_NOT_ALLOWED_ON_TP_STORAGE
+
+/// BitLocker Drive Encryption does not support wiping free space on thin provisioned storage.
 pub const FVE_WIPE_NOT_ALLOWED_ON_TP_STORAGE : NTSTATUS = NTSTATUS::from_constant(0xC0210033); // STATUS_FVE_WIPE_NOT_ALLOWED_ON_TP_STORAGE
+
+/// This command can only be performed from the coordinator node for the specified CSV volume.
 pub const FVE_NOT_ALLOWED_ON_CSV_STACK : NTSTATUS = NTSTATUS::from_constant(0xC0210034); // STATUS_FVE_NOT_ALLOWED_ON_CSV_STACK
+
+/// This command cannot be performed on a volume when it is part of a cluster.
 pub const FVE_NOT_ALLOWED_ON_CLUSTER : NTSTATUS = NTSTATUS::from_constant(0xC0210035); // STATUS_FVE_NOT_ALLOWED_ON_CLUSTER
+
+/// BitLocker cannot be upgraded during disk encryption or decryption.
 pub const FVE_NOT_ALLOWED_TO_UPGRADE_WHILE_CONVERTING : NTSTATUS = NTSTATUS::from_constant(0xC0210036); // STATUS_FVE_NOT_ALLOWED_TO_UPGRADE_WHILE_CONVERTING
+
+/// Wipe of free space is not currently taking place.
 pub const FVE_WIPE_CANCEL_NOT_APPLICABLE : NTSTATUS = NTSTATUS::from_constant(0xC0210037); // STATUS_FVE_WIPE_CANCEL_NOT_APPLICABLE
+
+/// Your computer doesn't support BitLocker hardware-based encryption. Check with your computer manufacturer for firmware updates.
 pub const FVE_EDRIVE_DRY_RUN_FAILED : NTSTATUS = NTSTATUS::from_constant(0xC0210038); // STATUS_FVE_EDRIVE_DRY_RUN_FAILED
+
+/// Secure Boot has been disabled. Either Secure Boot must be re-enabled, or BitLocker must be suspended for Windows to start normally.
 pub const FVE_SECUREBOOT_DISABLED : NTSTATUS = NTSTATUS::from_constant(0xC0210039); // STATUS_FVE_SECUREBOOT_DISABLED
+
+/// Secure Boot policy has unexpectedly changed.
 pub const FVE_SECUREBOOT_CONFIG_CHANGE : NTSTATUS = NTSTATUS::from_constant(0xC021003A); // STATUS_FVE_SECUREBOOT_CONFIG_CHANGE
+
+/// Device Lock has been triggered due to too many incorrect password attempts.
 pub const FVE_DEVICE_LOCKEDOUT : NTSTATUS = NTSTATUS::from_constant(0xC021003B); // STATUS_FVE_DEVICE_LOCKEDOUT
+
+/// Device encryption removal is blocked due to volume being extended beyond its original size.
 pub const FVE_VOLUME_EXTEND_PREVENTS_EOW_DECRYPT : NTSTATUS = NTSTATUS::from_constant(0xC021003C); // STATUS_FVE_VOLUME_EXTEND_PREVENTS_EOW_DECRYPT
+
+/// This action isn't supported because this drive isn't automatically managed with device encryption.
 pub const FVE_NOT_DE_VOLUME : NTSTATUS = NTSTATUS::from_constant(0xC021003D); // STATUS_FVE_NOT_DE_VOLUME
+
+/// BitLocker Drive Encryption has been suspended on this drive. All BitLocker key protectors configured for this drive are effectively disabled, and the drive will be automatically unlocked using an unencrypted (clear) key.
 pub const FVE_PROTECTION_DISABLED : NTSTATUS = NTSTATUS::from_constant(0xC021003E); // STATUS_FVE_PROTECTION_DISABLED
+
+/// BitLocker can't be suspended on this drive until the next restart.
 pub const FVE_PROTECTION_CANNOT_BE_DISABLED : NTSTATUS = NTSTATUS::from_constant(0xC021003F); // STATUS_FVE_PROTECTION_CANNOT_BE_DISABLED
+
+/// BitLocker Drive Encryption policy does not allow KSR operation with protected OS volume.
 pub const FVE_OSV_KSR_NOT_ALLOWED : NTSTATUS = NTSTATUS::from_constant(0xC0210040); // STATUS_FVE_OSV_KSR_NOT_ALLOWED
+
+/// The callout does not exist.
 pub const FWP_CALLOUT_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC0220001); // STATUS_FWP_CALLOUT_NOT_FOUND
+
+/// The filter condition does not exist.
 pub const FWP_CONDITION_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC0220002); // STATUS_FWP_CONDITION_NOT_FOUND
+
+/// The filter does not exist.
 pub const FWP_FILTER_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC0220003); // STATUS_FWP_FILTER_NOT_FOUND
+
+/// The layer does not exist.
 pub const FWP_LAYER_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC0220004); // STATUS_FWP_LAYER_NOT_FOUND
+
+/// The provider does not exist.
 pub const FWP_PROVIDER_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC0220005); // STATUS_FWP_PROVIDER_NOT_FOUND
+
+/// The provider context does not exist.
 pub const FWP_PROVIDER_CONTEXT_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC0220006); // STATUS_FWP_PROVIDER_CONTEXT_NOT_FOUND
+
+/// The sublayer does not exist.
 pub const FWP_SUBLAYER_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC0220007); // STATUS_FWP_SUBLAYER_NOT_FOUND
+
+/// The object does not exist.
 pub const FWP_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC0220008); // STATUS_FWP_NOT_FOUND
+
+/// An object with that GUID or LUID already exists.
 pub const FWP_ALREADY_EXISTS : NTSTATUS = NTSTATUS::from_constant(0xC0220009); // STATUS_FWP_ALREADY_EXISTS
+
+/// The object is referenced by other objects so cannot be deleted.
 pub const FWP_IN_USE : NTSTATUS = NTSTATUS::from_constant(0xC022000A); // STATUS_FWP_IN_USE
+
+/// The call is not allowed from within a dynamic session.
 pub const FWP_DYNAMIC_SESSION_IN_PROGRESS : NTSTATUS = NTSTATUS::from_constant(0xC022000B); // STATUS_FWP_DYNAMIC_SESSION_IN_PROGRESS
+
+/// The call was made from the wrong session so cannot be completed.
 pub const FWP_WRONG_SESSION : NTSTATUS = NTSTATUS::from_constant(0xC022000C); // STATUS_FWP_WRONG_SESSION
+
+/// The call must be made from within an explicit transaction.
 pub const FWP_NO_TXN_IN_PROGRESS : NTSTATUS = NTSTATUS::from_constant(0xC022000D); // STATUS_FWP_NO_TXN_IN_PROGRESS
+
+/// The call is not allowed from within an explicit transaction.
 pub const FWP_TXN_IN_PROGRESS : NTSTATUS = NTSTATUS::from_constant(0xC022000E); // STATUS_FWP_TXN_IN_PROGRESS
+
+/// The explicit transaction has been forcibly cancelled.
 pub const FWP_TXN_ABORTED : NTSTATUS = NTSTATUS::from_constant(0xC022000F); // STATUS_FWP_TXN_ABORTED
+
+/// The session has been cancelled.
 pub const FWP_SESSION_ABORTED : NTSTATUS = NTSTATUS::from_constant(0xC0220010); // STATUS_FWP_SESSION_ABORTED
+
+/// The call is not allowed from within a read-only transaction.
 pub const FWP_INCOMPATIBLE_TXN : NTSTATUS = NTSTATUS::from_constant(0xC0220011); // STATUS_FWP_INCOMPATIBLE_TXN
+
+/// The call timed out while waiting to acquire the transaction lock.
 pub const FWP_TIMEOUT : NTSTATUS = NTSTATUS::from_constant(0xC0220012); // STATUS_FWP_TIMEOUT
+
+/// Collection of network diagnostic events is disabled.
 pub const FWP_NET_EVENTS_DISABLED : NTSTATUS = NTSTATUS::from_constant(0xC0220013); // STATUS_FWP_NET_EVENTS_DISABLED
+
+/// The operation is not supported by the specified layer.
 pub const FWP_INCOMPATIBLE_LAYER : NTSTATUS = NTSTATUS::from_constant(0xC0220014); // STATUS_FWP_INCOMPATIBLE_LAYER
+
+/// The call is allowed for kernel-mode callers only.
 pub const FWP_KM_CLIENTS_ONLY : NTSTATUS = NTSTATUS::from_constant(0xC0220015); // STATUS_FWP_KM_CLIENTS_ONLY
+
+/// The call tried to associate two objects with incompatible lifetimes.
 pub const FWP_LIFETIME_MISMATCH : NTSTATUS = NTSTATUS::from_constant(0xC0220016); // STATUS_FWP_LIFETIME_MISMATCH
+
+/// The object is built in so cannot be deleted.
 pub const FWP_BUILTIN_OBJECT : NTSTATUS = NTSTATUS::from_constant(0xC0220017); // STATUS_FWP_BUILTIN_OBJECT
+
+/// The maximum number of callouts has been reached.
 pub const FWP_TOO_MANY_CALLOUTS : NTSTATUS = NTSTATUS::from_constant(0xC0220018); // STATUS_FWP_TOO_MANY_CALLOUTS
+
+/// A notification could not be delivered because a message queue is at its maximum capacity.
 pub const FWP_NOTIFICATION_DROPPED : NTSTATUS = NTSTATUS::from_constant(0xC0220019); // STATUS_FWP_NOTIFICATION_DROPPED
+
+/// The traffic parameters do not match those for the security association context.
 pub const FWP_TRAFFIC_MISMATCH : NTSTATUS = NTSTATUS::from_constant(0xC022001A); // STATUS_FWP_TRAFFIC_MISMATCH
+
+/// The call is not allowed for the current security association state.
 pub const FWP_INCOMPATIBLE_SA_STATE : NTSTATUS = NTSTATUS::from_constant(0xC022001B); // STATUS_FWP_INCOMPATIBLE_SA_STATE
+
+/// A required pointer is null.
 pub const FWP_NULL_POINTER : NTSTATUS = NTSTATUS::from_constant(0xC022001C); // STATUS_FWP_NULL_POINTER
+
+/// An enumerator is not valid.
 pub const FWP_INVALID_ENUMERATOR : NTSTATUS = NTSTATUS::from_constant(0xC022001D); // STATUS_FWP_INVALID_ENUMERATOR
+
+/// The flags field contains an invalid value.
 pub const FWP_INVALID_FLAGS : NTSTATUS = NTSTATUS::from_constant(0xC022001E); // STATUS_FWP_INVALID_FLAGS
+
+/// A network mask is not valid.
 pub const FWP_INVALID_NET_MASK : NTSTATUS = NTSTATUS::from_constant(0xC022001F); // STATUS_FWP_INVALID_NET_MASK
+
+/// An FWP_RANGE is not valid.
 pub const FWP_INVALID_RANGE : NTSTATUS = NTSTATUS::from_constant(0xC0220020); // STATUS_FWP_INVALID_RANGE
+
+/// The time interval is not valid.
 pub const FWP_INVALID_INTERVAL : NTSTATUS = NTSTATUS::from_constant(0xC0220021); // STATUS_FWP_INVALID_INTERVAL
+
+/// An array that must contain at least one element is zero length.
 pub const FWP_ZERO_LENGTH_ARRAY : NTSTATUS = NTSTATUS::from_constant(0xC0220022); // STATUS_FWP_ZERO_LENGTH_ARRAY
+
+/// The displayData.name field cannot be null.
 pub const FWP_NULL_DISPLAY_NAME : NTSTATUS = NTSTATUS::from_constant(0xC0220023); // STATUS_FWP_NULL_DISPLAY_NAME
+
+/// The action type is not one of the allowed action types for a filter.
 pub const FWP_INVALID_ACTION_TYPE : NTSTATUS = NTSTATUS::from_constant(0xC0220024); // STATUS_FWP_INVALID_ACTION_TYPE
+
+/// The filter weight is not valid.
 pub const FWP_INVALID_WEIGHT : NTSTATUS = NTSTATUS::from_constant(0xC0220025); // STATUS_FWP_INVALID_WEIGHT
+
+/// A filter condition contains a match type that is not compatible with the operands.
 pub const FWP_MATCH_TYPE_MISMATCH : NTSTATUS = NTSTATUS::from_constant(0xC0220026); // STATUS_FWP_MATCH_TYPE_MISMATCH
+
+/// An FWP_VALUE or FWPM_CONDITION_VALUE is of the wrong type.
 pub const FWP_TYPE_MISMATCH : NTSTATUS = NTSTATUS::from_constant(0xC0220027); // STATUS_FWP_TYPE_MISMATCH
+
+/// An integer value is outside the allowed range.
 pub const FWP_OUT_OF_BOUNDS : NTSTATUS = NTSTATUS::from_constant(0xC0220028); // STATUS_FWP_OUT_OF_BOUNDS
+
+/// A reserved field is non-zero.
 pub const FWP_RESERVED : NTSTATUS = NTSTATUS::from_constant(0xC0220029); // STATUS_FWP_RESERVED
+
+/// A filter cannot contain multiple conditions operating on a single field.
 pub const FWP_DUPLICATE_CONDITION : NTSTATUS = NTSTATUS::from_constant(0xC022002A); // STATUS_FWP_DUPLICATE_CONDITION
+
+/// A policy cannot contain the same keying module more than once.
 pub const FWP_DUPLICATE_KEYMOD : NTSTATUS = NTSTATUS::from_constant(0xC022002B); // STATUS_FWP_DUPLICATE_KEYMOD
+
+/// The action type is not compatible with the layer.
 pub const FWP_ACTION_INCOMPATIBLE_WITH_LAYER : NTSTATUS = NTSTATUS::from_constant(0xC022002C); // STATUS_FWP_ACTION_INCOMPATIBLE_WITH_LAYER
+
+/// The action type is not compatible with the sublayer.
 pub const FWP_ACTION_INCOMPATIBLE_WITH_SUBLAYER : NTSTATUS = NTSTATUS::from_constant(0xC022002D); // STATUS_FWP_ACTION_INCOMPATIBLE_WITH_SUBLAYER
+
+/// The raw context or the provider context is not compatible with the layer.
 pub const FWP_CONTEXT_INCOMPATIBLE_WITH_LAYER : NTSTATUS = NTSTATUS::from_constant(0xC022002E); // STATUS_FWP_CONTEXT_INCOMPATIBLE_WITH_LAYER
+
+/// The raw context or the provider context is not compatible with the callout.
 pub const FWP_CONTEXT_INCOMPATIBLE_WITH_CALLOUT : NTSTATUS = NTSTATUS::from_constant(0xC022002F); // STATUS_FWP_CONTEXT_INCOMPATIBLE_WITH_CALLOUT
+
+/// The authentication method is not compatible with the policy type.
 pub const FWP_INCOMPATIBLE_AUTH_METHOD : NTSTATUS = NTSTATUS::from_constant(0xC0220030); // STATUS_FWP_INCOMPATIBLE_AUTH_METHOD
+
+/// The Diffie-Hellman group is not compatible with the policy type.
 pub const FWP_INCOMPATIBLE_DH_GROUP : NTSTATUS = NTSTATUS::from_constant(0xC0220031); // STATUS_FWP_INCOMPATIBLE_DH_GROUP
+
+/// An IKE policy cannot contain an Extended Mode policy.
 pub const FWP_EM_NOT_SUPPORTED : NTSTATUS = NTSTATUS::from_constant(0xC0220032); // STATUS_FWP_EM_NOT_SUPPORTED
+
+/// The enumeration template or subscription will never match any objects.
 pub const FWP_NEVER_MATCH : NTSTATUS = NTSTATUS::from_constant(0xC0220033); // STATUS_FWP_NEVER_MATCH
+
+/// The provider context is of the wrong type.
 pub const FWP_PROVIDER_CONTEXT_MISMATCH : NTSTATUS = NTSTATUS::from_constant(0xC0220034); // STATUS_FWP_PROVIDER_CONTEXT_MISMATCH
+
+/// The parameter is incorrect.
 pub const FWP_INVALID_PARAMETER : NTSTATUS = NTSTATUS::from_constant(0xC0220035); // STATUS_FWP_INVALID_PARAMETER
+
+/// The maximum number of sublayers has been reached.
 pub const FWP_TOO_MANY_SUBLAYERS : NTSTATUS = NTSTATUS::from_constant(0xC0220036); // STATUS_FWP_TOO_MANY_SUBLAYERS
+
+/// The notification function for a callout returned an error.
 pub const FWP_CALLOUT_NOTIFICATION_FAILED : NTSTATUS = NTSTATUS::from_constant(0xC0220037); // STATUS_FWP_CALLOUT_NOTIFICATION_FAILED
+
+/// The IPsec authentication transform is not valid.
 pub const FWP_INVALID_AUTH_TRANSFORM : NTSTATUS = NTSTATUS::from_constant(0xC0220038); // STATUS_FWP_INVALID_AUTH_TRANSFORM
+
+/// The IPsec cipher transform is not valid.
 pub const FWP_INVALID_CIPHER_TRANSFORM : NTSTATUS = NTSTATUS::from_constant(0xC0220039); // STATUS_FWP_INVALID_CIPHER_TRANSFORM
+
+/// The IPsec cipher transform is not compatible with the policy.
 pub const FWP_INCOMPATIBLE_CIPHER_TRANSFORM : NTSTATUS = NTSTATUS::from_constant(0xC022003A); // STATUS_FWP_INCOMPATIBLE_CIPHER_TRANSFORM
+
+/// The combination of IPsec transform types is not valid.
 pub const FWP_INVALID_TRANSFORM_COMBINATION : NTSTATUS = NTSTATUS::from_constant(0xC022003B); // STATUS_FWP_INVALID_TRANSFORM_COMBINATION
+
+/// A policy cannot contain the same auth method more than once.
 pub const FWP_DUPLICATE_AUTH_METHOD : NTSTATUS = NTSTATUS::from_constant(0xC022003C); // STATUS_FWP_DUPLICATE_AUTH_METHOD
+
+/// A tunnel endpoint configuration is invalid.
 pub const FWP_INVALID_TUNNEL_ENDPOINT : NTSTATUS = NTSTATUS::from_constant(0xC022003D); // STATUS_FWP_INVALID_TUNNEL_ENDPOINT
+
+/// The WFP MAC Layers are not ready.
 pub const FWP_L2_DRIVER_NOT_READY : NTSTATUS = NTSTATUS::from_constant(0xC022003E); // STATUS_FWP_L2_DRIVER_NOT_READY
+
+/// A key manager capable of key dictation is already registered
 pub const FWP_KEY_DICTATOR_ALREADY_REGISTERED : NTSTATUS = NTSTATUS::from_constant(0xC022003F); // STATUS_FWP_KEY_DICTATOR_ALREADY_REGISTERED
+
+/// A key manager dictated invalid keys
 pub const FWP_KEY_DICTATION_INVALID_KEYING_MATERIAL : NTSTATUS = NTSTATUS::from_constant(0xC0220040); // STATUS_FWP_KEY_DICTATION_INVALID_KEYING_MATERIAL
+
+/// The BFE IPsec Connection Tracking is disabled.
 pub const FWP_CONNECTIONS_DISABLED : NTSTATUS = NTSTATUS::from_constant(0xC0220041); // STATUS_FWP_CONNECTIONS_DISABLED
+
+/// The DNS name is invalid.
 pub const FWP_INVALID_DNS_NAME : NTSTATUS = NTSTATUS::from_constant(0xC0220042); // STATUS_FWP_INVALID_DNS_NAME
+
+/// The engine option is still enabled due to other configuration settings.
 pub const FWP_STILL_ON : NTSTATUS = NTSTATUS::from_constant(0xC0220043); // STATUS_FWP_STILL_ON
+
+/// The IKEEXT service is not running.  This service only runs when there is IPsec policy applied to the machine.
 pub const FWP_IKEEXT_NOT_RUNNING : NTSTATUS = NTSTATUS::from_constant(0xC0220044); // STATUS_FWP_IKEEXT_NOT_RUNNING
+
+/// The TCP/IP stack is not ready.
 pub const FWP_TCPIP_NOT_READY : NTSTATUS = NTSTATUS::from_constant(0xC0220100); // STATUS_FWP_TCPIP_NOT_READY
+
+/// The injection handle is being closed by another thread.
 pub const FWP_INJECT_HANDLE_CLOSING : NTSTATUS = NTSTATUS::from_constant(0xC0220101); // STATUS_FWP_INJECT_HANDLE_CLOSING
+
+/// The injection handle is stale.
 pub const FWP_INJECT_HANDLE_STALE : NTSTATUS = NTSTATUS::from_constant(0xC0220102); // STATUS_FWP_INJECT_HANDLE_STALE
+
+/// The classify cannot be pended.
 pub const FWP_CANNOT_PEND : NTSTATUS = NTSTATUS::from_constant(0xC0220103); // STATUS_FWP_CANNOT_PEND
+
+/// The packet should be dropped, no ICMP should be sent.
 pub const FWP_DROP_NOICMP : NTSTATUS = NTSTATUS::from_constant(0xC0220104); // STATUS_FWP_DROP_NOICMP
+
+/// The binding to the network interface is being closed.
 pub const NDIS_CLOSING : NTSTATUS = NTSTATUS::from_constant(0xC0230002); // STATUS_NDIS_CLOSING
+
+/// An invalid version was specified.
 pub const NDIS_BAD_VERSION : NTSTATUS = NTSTATUS::from_constant(0xC0230004); // STATUS_NDIS_BAD_VERSION
+
+/// An invalid characteristics table was used.
 pub const NDIS_BAD_CHARACTERISTICS : NTSTATUS = NTSTATUS::from_constant(0xC0230005); // STATUS_NDIS_BAD_CHARACTERISTICS
+
+/// Failed to find the network interface or network interface is not ready.
 pub const NDIS_ADAPTER_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC0230006); // STATUS_NDIS_ADAPTER_NOT_FOUND
+
+/// Failed to open the network interface.
 pub const NDIS_OPEN_FAILED : NTSTATUS = NTSTATUS::from_constant(0xC0230007); // STATUS_NDIS_OPEN_FAILED
+
+/// Network interface has encountered an internal unrecoverable failure.
 pub const NDIS_DEVICE_FAILED : NTSTATUS = NTSTATUS::from_constant(0xC0230008); // STATUS_NDIS_DEVICE_FAILED
+
+/// The multicast list on the network interface is full.
 pub const NDIS_MULTICAST_FULL : NTSTATUS = NTSTATUS::from_constant(0xC0230009); // STATUS_NDIS_MULTICAST_FULL
+
+/// An attempt was made to add a duplicate multicast address to the list.
 pub const NDIS_MULTICAST_EXISTS : NTSTATUS = NTSTATUS::from_constant(0xC023000A); // STATUS_NDIS_MULTICAST_EXISTS
+
+/// At attempt was made to remove a multicast address that was never added.
 pub const NDIS_MULTICAST_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC023000B); // STATUS_NDIS_MULTICAST_NOT_FOUND
+
+/// Network interface aborted the request.
 pub const NDIS_REQUEST_ABORTED : NTSTATUS = NTSTATUS::from_constant(0xC023000C); // STATUS_NDIS_REQUEST_ABORTED
+
+/// Network interface can not process the request because it is being reset.
 pub const NDIS_RESET_IN_PROGRESS : NTSTATUS = NTSTATUS::from_constant(0xC023000D); // STATUS_NDIS_RESET_IN_PROGRESS
+
+/// Network interface does not support this request.
 pub const NDIS_NOT_SUPPORTED : NTSTATUS = NTSTATUS::from_constant(0xC02300BB); // STATUS_NDIS_NOT_SUPPORTED
+
+/// An attempt was made to send an invalid packet on a network interface.
 pub const NDIS_INVALID_PACKET : NTSTATUS = NTSTATUS::from_constant(0xC023000F); // STATUS_NDIS_INVALID_PACKET
+
+/// Network interface is not ready to complete this operation.
 pub const NDIS_ADAPTER_NOT_READY : NTSTATUS = NTSTATUS::from_constant(0xC0230011); // STATUS_NDIS_ADAPTER_NOT_READY
+
+/// The length of the buffer submitted for this operation is not valid.
 pub const NDIS_INVALID_LENGTH : NTSTATUS = NTSTATUS::from_constant(0xC0230014); // STATUS_NDIS_INVALID_LENGTH
+
+/// The data used for this operation is not valid.
 pub const NDIS_INVALID_DATA : NTSTATUS = NTSTATUS::from_constant(0xC0230015); // STATUS_NDIS_INVALID_DATA
+
+/// The length of buffer submitted for this operation is too small.
 pub const NDIS_BUFFER_TOO_SHORT : NTSTATUS = NTSTATUS::from_constant(0xC0230016); // STATUS_NDIS_BUFFER_TOO_SHORT
+
+/// Network interface does not support this OID (Object Identifier)
 pub const NDIS_INVALID_OID : NTSTATUS = NTSTATUS::from_constant(0xC0230017); // STATUS_NDIS_INVALID_OID
+
+/// The network interface has been removed.
 pub const NDIS_ADAPTER_REMOVED : NTSTATUS = NTSTATUS::from_constant(0xC0230018); // STATUS_NDIS_ADAPTER_REMOVED
+
+/// Network interface does not support this media type.
 pub const NDIS_UNSUPPORTED_MEDIA : NTSTATUS = NTSTATUS::from_constant(0xC0230019); // STATUS_NDIS_UNSUPPORTED_MEDIA
+
+/// An attempt was made to remove a token ring group address that is in use by other components.
 pub const NDIS_GROUP_ADDRESS_IN_USE : NTSTATUS = NTSTATUS::from_constant(0xC023001A); // STATUS_NDIS_GROUP_ADDRESS_IN_USE
+
+/// An attempt was made to map a file that can not be found.
 pub const NDIS_FILE_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC023001B); // STATUS_NDIS_FILE_NOT_FOUND
+
+/// An error occurred while NDIS tried to map the file.
 pub const NDIS_ERROR_READING_FILE : NTSTATUS = NTSTATUS::from_constant(0xC023001C); // STATUS_NDIS_ERROR_READING_FILE
+
+/// An attempt was made to map a file that is already mapped.
 pub const NDIS_ALREADY_MAPPED : NTSTATUS = NTSTATUS::from_constant(0xC023001D); // STATUS_NDIS_ALREADY_MAPPED
+
+/// An attempt to allocate a hardware resource failed because the resource is used by another component.
 pub const NDIS_RESOURCE_CONFLICT : NTSTATUS = NTSTATUS::from_constant(0xC023001E); // STATUS_NDIS_RESOURCE_CONFLICT
+
+/// The I/O operation failed because network media is disconnected or wireless access point is out of range.
 pub const NDIS_MEDIA_DISCONNECTED : NTSTATUS = NTSTATUS::from_constant(0xC023001F); // STATUS_NDIS_MEDIA_DISCONNECTED
+
+/// The network address used in the request is invalid.
 pub const NDIS_INVALID_ADDRESS : NTSTATUS = NTSTATUS::from_constant(0xC0230022); // STATUS_NDIS_INVALID_ADDRESS
+
+/// The specified request is not a valid operation for the target device.
 pub const NDIS_INVALID_DEVICE_REQUEST : NTSTATUS = NTSTATUS::from_constant(0xC0230010); // STATUS_NDIS_INVALID_DEVICE_REQUEST
+
+/// The offload operation on the network interface has been paused.
 pub const NDIS_PAUSED : NTSTATUS = NTSTATUS::from_constant(0xC023002A); // STATUS_NDIS_PAUSED
+
+/// Network interface was not found.
 pub const NDIS_INTERFACE_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC023002B); // STATUS_NDIS_INTERFACE_NOT_FOUND
+
+/// The revision number specified in the structure is not supported.
 pub const NDIS_UNSUPPORTED_REVISION : NTSTATUS = NTSTATUS::from_constant(0xC023002C); // STATUS_NDIS_UNSUPPORTED_REVISION
+
+/// The specified port does not exist on this network interface.
 pub const NDIS_INVALID_PORT : NTSTATUS = NTSTATUS::from_constant(0xC023002D); // STATUS_NDIS_INVALID_PORT
+
+/// The current state of the specified port on this network interface does not support the requested operation.
 pub const NDIS_INVALID_PORT_STATE : NTSTATUS = NTSTATUS::from_constant(0xC023002E); // STATUS_NDIS_INVALID_PORT_STATE
+
+/// The miniport adapter is in lower power state.
 pub const NDIS_LOW_POWER_STATE : NTSTATUS = NTSTATUS::from_constant(0xC023002F); // STATUS_NDIS_LOW_POWER_STATE
+
+/// This operation requires the miniport adapter to be reinitialized.
 pub const NDIS_REINIT_REQUIRED : NTSTATUS = NTSTATUS::from_constant(0xC0230030); // STATUS_NDIS_REINIT_REQUIRED
+
+/// There are not enough queues to complete the operation.
 pub const NDIS_NO_QUEUES : NTSTATUS = NTSTATUS::from_constant(0xC0230031); // STATUS_NDIS_NO_QUEUES
+
+/// The wireless local area network interface is in auto configuration mode and doesn't support the requested parameter change operation.
 pub const NDIS_DOT11_AUTO_CONFIG_ENABLED : NTSTATUS = NTSTATUS::from_constant(0xC0232000); // STATUS_NDIS_DOT11_AUTO_CONFIG_ENABLED
+
+/// The wireless local area network interface is busy and can not perform the requested operation.
 pub const NDIS_DOT11_MEDIA_IN_USE : NTSTATUS = NTSTATUS::from_constant(0xC0232001); // STATUS_NDIS_DOT11_MEDIA_IN_USE
+
+/// The wireless local area network interface is powered down and doesn't support the requested operation.
 pub const NDIS_DOT11_POWER_STATE_INVALID : NTSTATUS = NTSTATUS::from_constant(0xC0232002); // STATUS_NDIS_DOT11_POWER_STATE_INVALID
+
+/// The list of wake on LAN patterns is full.
 pub const NDIS_PM_WOL_PATTERN_LIST_FULL : NTSTATUS = NTSTATUS::from_constant(0xC0232003); // STATUS_NDIS_PM_WOL_PATTERN_LIST_FULL
+
+/// The list of low power protocol offloads is full.
 pub const NDIS_PM_PROTOCOL_OFFLOAD_LIST_FULL : NTSTATUS = NTSTATUS::from_constant(0xC0232004); // STATUS_NDIS_PM_PROTOCOL_OFFLOAD_LIST_FULL
+
+/// The wireless local area network interface cannot start an AP on the specified channel right now.
 pub const NDIS_DOT11_AP_CHANNEL_CURRENTLY_NOT_AVAILABLE : NTSTATUS = NTSTATUS::from_constant(0xC0232005); // STATUS_NDIS_DOT11_AP_CHANNEL_CURRENTLY_NOT_AVAILABLE
+
+/// The wireless local area network interface cannot start an AP on the specified band right now.
 pub const NDIS_DOT11_AP_BAND_CURRENTLY_NOT_AVAILABLE : NTSTATUS = NTSTATUS::from_constant(0xC0232006); // STATUS_NDIS_DOT11_AP_BAND_CURRENTLY_NOT_AVAILABLE
+
+/// The wireless local area network interface cannot start an AP on this channel due to regulatory reasons.
 pub const NDIS_DOT11_AP_CHANNEL_NOT_ALLOWED : NTSTATUS = NTSTATUS::from_constant(0xC0232007); // STATUS_NDIS_DOT11_AP_CHANNEL_NOT_ALLOWED
+
+/// The wireless local area network interface cannot start an AP on this band due to regulatory reasons.
 pub const NDIS_DOT11_AP_BAND_NOT_ALLOWED : NTSTATUS = NTSTATUS::from_constant(0xC0232008); // STATUS_NDIS_DOT11_AP_BAND_NOT_ALLOWED
+
+/// The request will be completed later by NDIS status indication.
 pub const NDIS_INDICATION_REQUIRED : NTSTATUS = NTSTATUS::from_constant(0x40230001); // STATUS_NDIS_INDICATION_REQUIRED
+
+/// The TCP connection is not offloadable because of a local policy setting.
 pub const NDIS_OFFLOAD_POLICY : NTSTATUS = NTSTATUS::from_constant(0xC023100F); // STATUS_NDIS_OFFLOAD_POLICY
+
+/// The TCP connection is not offloadable by the Chimney offload target.
 pub const NDIS_OFFLOAD_CONNECTION_REJECTED : NTSTATUS = NTSTATUS::from_constant(0xC0231012); // STATUS_NDIS_OFFLOAD_CONNECTION_REJECTED
+
+/// The IP Path object is not in an offloadable state.
 pub const NDIS_OFFLOAD_PATH_REJECTED : NTSTATUS = NTSTATUS::from_constant(0xC0231013); // STATUS_NDIS_OFFLOAD_PATH_REJECTED
+
+/// This is an error mask to convert TPM hardware errors to win errors.
 pub const TPM_ERROR_MASK : NTSTATUS = NTSTATUS::from_constant(0xC0290000); // STATUS_TPM_ERROR_MASK
+
+/// TPM 1.2: Authentication failed.
 pub const TPM_AUTHFAIL : NTSTATUS = NTSTATUS::from_constant(0xC0290001); // STATUS_TPM_AUTHFAIL
+
+/// TPM 1.2: The index to a PCR, DIR or other register is incorrect.
 pub const TPM_BADINDEX : NTSTATUS = NTSTATUS::from_constant(0xC0290002); // STATUS_TPM_BADINDEX
+
+/// TPM 1.2: One or more parameter is bad.
 pub const TPM_BAD_PARAMETER : NTSTATUS = NTSTATUS::from_constant(0xC0290003); // STATUS_TPM_BAD_PARAMETER
+
+/// TPM 1.2: An operation completed successfully but the auditing of that operation failed.
 pub const TPM_AUDITFAILURE : NTSTATUS = NTSTATUS::from_constant(0xC0290004); // STATUS_TPM_AUDITFAILURE
+
+/// TPM 1.2: The clear disable flag is set and all clear operations now require physical access.
 pub const TPM_CLEAR_DISABLED : NTSTATUS = NTSTATUS::from_constant(0xC0290005); // STATUS_TPM_CLEAR_DISABLED
+
+/// TPM 1.2: Activate the Trusted Platform Module (TPM).
 pub const TPM_DEACTIVATED : NTSTATUS = NTSTATUS::from_constant(0xC0290006); // STATUS_TPM_DEACTIVATED
+
+/// TPM 1.2: Enable the Trusted Platform Module (TPM).
 pub const TPM_DISABLED : NTSTATUS = NTSTATUS::from_constant(0xC0290007); // STATUS_TPM_DISABLED
+
+/// TPM 1.2: The target command has been disabled.
 pub const TPM_DISABLED_CMD : NTSTATUS = NTSTATUS::from_constant(0xC0290008); // STATUS_TPM_DISABLED_CMD
+
+/// TPM 1.2: The operation failed.
 pub const TPM_FAIL : NTSTATUS = NTSTATUS::from_constant(0xC0290009); // STATUS_TPM_FAIL
+
+/// TPM 1.2: The ordinal was unknown or inconsistent.
 pub const TPM_BAD_ORDINAL : NTSTATUS = NTSTATUS::from_constant(0xC029000A); // STATUS_TPM_BAD_ORDINAL
+
+/// TPM 1.2: The ability to install an owner is disabled.
 pub const TPM_INSTALL_DISABLED : NTSTATUS = NTSTATUS::from_constant(0xC029000B); // STATUS_TPM_INSTALL_DISABLED
+
+/// TPM 1.2: The key handle cannot be interpreted.
 pub const TPM_INVALID_KEYHANDLE : NTSTATUS = NTSTATUS::from_constant(0xC029000C); // STATUS_TPM_INVALID_KEYHANDLE
+
+/// TPM 1.2: The key handle points to an invalid key.
 pub const TPM_KEYNOTFOUND : NTSTATUS = NTSTATUS::from_constant(0xC029000D); // STATUS_TPM_KEYNOTFOUND
+
+/// TPM 1.2: Unacceptable encryption scheme.
 pub const TPM_INAPPROPRIATE_ENC : NTSTATUS = NTSTATUS::from_constant(0xC029000E); // STATUS_TPM_INAPPROPRIATE_ENC
+
+/// TPM 1.2: Migration authorization failed.
 pub const TPM_MIGRATEFAIL : NTSTATUS = NTSTATUS::from_constant(0xC029000F); // STATUS_TPM_MIGRATEFAIL
+
+/// TPM 1.2: PCR information could not be interpreted.
 pub const TPM_INVALID_PCR_INFO : NTSTATUS = NTSTATUS::from_constant(0xC0290010); // STATUS_TPM_INVALID_PCR_INFO
+
+/// TPM 1.2: No room to load key.
 pub const TPM_NOSPACE : NTSTATUS = NTSTATUS::from_constant(0xC0290011); // STATUS_TPM_NOSPACE
+
+/// TPM 1.2: There is no Storage Root Key (SRK) set.
 pub const TPM_NOSRK : NTSTATUS = NTSTATUS::from_constant(0xC0290012); // STATUS_TPM_NOSRK
+
+/// TPM 1.2: An encrypted blob is invalid or was not created by this TPM.
 pub const TPM_NOTSEALED_BLOB : NTSTATUS = NTSTATUS::from_constant(0xC0290013); // STATUS_TPM_NOTSEALED_BLOB
+
+/// TPM 1.2: The Trusted Platform Module (TPM) already has an owner.
 pub const TPM_OWNER_SET : NTSTATUS = NTSTATUS::from_constant(0xC0290014); // STATUS_TPM_OWNER_SET
+
+/// TPM 1.2: The TPM has insufficient internal resources to perform the requested action.
 pub const TPM_RESOURCES : NTSTATUS = NTSTATUS::from_constant(0xC0290015); // STATUS_TPM_RESOURCES
+
+/// TPM 1.2: A random string was too short.
 pub const TPM_SHORTRANDOM : NTSTATUS = NTSTATUS::from_constant(0xC0290016); // STATUS_TPM_SHORTRANDOM
+
+/// TPM 1.2: The TPM does not have the space to perform the operation.
 pub const TPM_SIZE : NTSTATUS = NTSTATUS::from_constant(0xC0290017); // STATUS_TPM_SIZE
+
+/// TPM 1.2: The named PCR value does not match the current PCR value.
 pub const TPM_WRONGPCRVAL : NTSTATUS = NTSTATUS::from_constant(0xC0290018); // STATUS_TPM_WRONGPCRVAL
+
+/// TPM 1.2: The paramSize argument to the command has the incorrect value .
 pub const TPM_BAD_PARAM_SIZE : NTSTATUS = NTSTATUS::from_constant(0xC0290019); // STATUS_TPM_BAD_PARAM_SIZE
+
+/// TPM 1.2: There is no existing SHA-1 thread.
 pub const TPM_SHA_THREAD : NTSTATUS = NTSTATUS::from_constant(0xC029001A); // STATUS_TPM_SHA_THREAD
+
+/// TPM 1.2: The calculation is unable to proceed because the existing SHA-1 thread has already encountered an error.
 pub const TPM_SHA_ERROR : NTSTATUS = NTSTATUS::from_constant(0xC029001B); // STATUS_TPM_SHA_ERROR
+
+/// TPM 1.2: The TPM hardware device reported a failure during its internal self test. Try restarting the computer to resolve the problem. If the problem continues, you might need to replace your TPM hardware or motherboard.
 pub const TPM_FAILEDSELFTEST : NTSTATUS = NTSTATUS::from_constant(0xC029001C); // STATUS_TPM_FAILEDSELFTEST
+
+/// TPM 1.2: The authorization for the second key in a 2 key function failed authorization.
 pub const TPM_AUTH2FAIL : NTSTATUS = NTSTATUS::from_constant(0xC029001D); // STATUS_TPM_AUTH2FAIL
+
+/// TPM 1.2: The tag value sent to for a command is invalid.
 pub const TPM_BADTAG : NTSTATUS = NTSTATUS::from_constant(0xC029001E); // STATUS_TPM_BADTAG
+
+/// TPM 1.2: An IO error occurred transmitting information to the TPM.
 pub const TPM_IOERROR : NTSTATUS = NTSTATUS::from_constant(0xC029001F); // STATUS_TPM_IOERROR
+
+/// TPM 1.2: The encryption process had a problem.
 pub const TPM_ENCRYPT_ERROR : NTSTATUS = NTSTATUS::from_constant(0xC0290020); // STATUS_TPM_ENCRYPT_ERROR
+
+/// TPM 1.2: The decryption process did not complete.
 pub const TPM_DECRYPT_ERROR : NTSTATUS = NTSTATUS::from_constant(0xC0290021); // STATUS_TPM_DECRYPT_ERROR
+
+/// TPM 1.2: An invalid handle was used.
 pub const TPM_INVALID_AUTHHANDLE : NTSTATUS = NTSTATUS::from_constant(0xC0290022); // STATUS_TPM_INVALID_AUTHHANDLE
+
+/// TPM 1.2: The TPM does not have an Endorsement Key (EK) installed.
 pub const TPM_NO_ENDORSEMENT : NTSTATUS = NTSTATUS::from_constant(0xC0290023); // STATUS_TPM_NO_ENDORSEMENT
+
+/// TPM 1.2: The usage of a key is not allowed.
 pub const TPM_INVALID_KEYUSAGE : NTSTATUS = NTSTATUS::from_constant(0xC0290024); // STATUS_TPM_INVALID_KEYUSAGE
+
+/// TPM 1.2: The submitted entity type is not allowed.
 pub const TPM_WRONG_ENTITYTYPE : NTSTATUS = NTSTATUS::from_constant(0xC0290025); // STATUS_TPM_WRONG_ENTITYTYPE
+
+/// TPM 1.2: The command was received in the wrong sequence relative to TPM_Init and a subsequent TPM_Startup.
 pub const TPM_INVALID_POSTINIT : NTSTATUS = NTSTATUS::from_constant(0xC0290026); // STATUS_TPM_INVALID_POSTINIT
+
+/// TPM 1.2: Signed data cannot include additional DER information.
 pub const TPM_INAPPROPRIATE_SIG : NTSTATUS = NTSTATUS::from_constant(0xC0290027); // STATUS_TPM_INAPPROPRIATE_SIG
+
+/// TPM 1.2: The key properties in TPM_KEY_PARMs are not supported by this TPM.
 pub const TPM_BAD_KEY_PROPERTY : NTSTATUS = NTSTATUS::from_constant(0xC0290028); // STATUS_TPM_BAD_KEY_PROPERTY
+
+/// TPM 1.2: The migration properties of this key are incorrect.
 pub const TPM_BAD_MIGRATION : NTSTATUS = NTSTATUS::from_constant(0xC0290029); // STATUS_TPM_BAD_MIGRATION
+
+/// TPM 1.2: The signature or encryption scheme for this key is incorrect or not permitted in this situation.
 pub const TPM_BAD_SCHEME : NTSTATUS = NTSTATUS::from_constant(0xC029002A); // STATUS_TPM_BAD_SCHEME
+
+/// TPM 1.2: The size of the data (or blob) parameter is bad or inconsistent with the referenced key.
 pub const TPM_BAD_DATASIZE : NTSTATUS = NTSTATUS::from_constant(0xC029002B); // STATUS_TPM_BAD_DATASIZE
+
+/// TPM 1.2: A mode parameter is bad, such as capArea or subCapArea for TPM_GetCapability, phsicalPresence parameter for TPM_PhysicalPresence, or migrationType for TPM_CreateMigrationBlob.
 pub const TPM_BAD_MODE : NTSTATUS = NTSTATUS::from_constant(0xC029002C); // STATUS_TPM_BAD_MODE
+
+/// TPM 1.2: Either the physicalPresence or physicalPresenceLock bits have the wrong value.
 pub const TPM_BAD_PRESENCE : NTSTATUS = NTSTATUS::from_constant(0xC029002D); // STATUS_TPM_BAD_PRESENCE
+
+/// TPM 1.2: The TPM cannot perform this version of the capability.
 pub const TPM_BAD_VERSION : NTSTATUS = NTSTATUS::from_constant(0xC029002E); // STATUS_TPM_BAD_VERSION
+
+/// TPM 1.2: The TPM does not allow for wrapped transport sessions.
 pub const TPM_NO_WRAP_TRANSPORT : NTSTATUS = NTSTATUS::from_constant(0xC029002F); // STATUS_TPM_NO_WRAP_TRANSPORT
+
+/// TPM 1.2: TPM audit construction failed and the underlying command was returning a failure code also.
 pub const TPM_AUDITFAIL_UNSUCCESSFUL : NTSTATUS = NTSTATUS::from_constant(0xC0290030); // STATUS_TPM_AUDITFAIL_UNSUCCESSFUL
+
+/// TPM 1.2: TPM audit construction failed and the underlying command was returning success.
 pub const TPM_AUDITFAIL_SUCCESSFUL : NTSTATUS = NTSTATUS::from_constant(0xC0290031); // STATUS_TPM_AUDITFAIL_SUCCESSFUL
+
+/// TPM 1.2: Attempt to reset a PCR register that does not have the resettable attribute.
 pub const TPM_NOTRESETABLE : NTSTATUS = NTSTATUS::from_constant(0xC0290032); // STATUS_TPM_NOTRESETABLE
+
+/// TPM 1.2: Attempt to reset a PCR register that requires locality and locality modifier not part of command transport.
 pub const TPM_NOTLOCAL : NTSTATUS = NTSTATUS::from_constant(0xC0290033); // STATUS_TPM_NOTLOCAL
+
+/// TPM 1.2: Make identity blob not properly typed.
 pub const TPM_BAD_TYPE : NTSTATUS = NTSTATUS::from_constant(0xC0290034); // STATUS_TPM_BAD_TYPE
+
+/// TPM 1.2: When saving context identified resource type does not match actual resource.
 pub const TPM_INVALID_RESOURCE : NTSTATUS = NTSTATUS::from_constant(0xC0290035); // STATUS_TPM_INVALID_RESOURCE
+
+/// TPM 1.2: The TPM is attempting to execute a command only available when in FIPS mode.
 pub const TPM_NOTFIPS : NTSTATUS = NTSTATUS::from_constant(0xC0290036); // STATUS_TPM_NOTFIPS
+
+/// TPM 1.2: The command is attempting to use an invalid family ID.
 pub const TPM_INVALID_FAMILY : NTSTATUS = NTSTATUS::from_constant(0xC0290037); // STATUS_TPM_INVALID_FAMILY
+
+/// TPM 1.2: The permission to manipulate the NV storage is not available.
 pub const TPM_NO_NV_PERMISSION : NTSTATUS = NTSTATUS::from_constant(0xC0290038); // STATUS_TPM_NO_NV_PERMISSION
+
+/// TPM 1.2: The operation requires a signed command.
 pub const TPM_REQUIRES_SIGN : NTSTATUS = NTSTATUS::from_constant(0xC0290039); // STATUS_TPM_REQUIRES_SIGN
+
+/// TPM 1.2: Wrong operation to load an NV key.
 pub const TPM_KEY_NOTSUPPORTED : NTSTATUS = NTSTATUS::from_constant(0xC029003A); // STATUS_TPM_KEY_NOTSUPPORTED
+
+/// TPM 1.2: NV_LoadKey blob requires both owner and blob authorization.
 pub const TPM_AUTH_CONFLICT : NTSTATUS = NTSTATUS::from_constant(0xC029003B); // STATUS_TPM_AUTH_CONFLICT
+
+/// TPM 1.2: The NV area is locked and not writable.
 pub const TPM_AREA_LOCKED : NTSTATUS = NTSTATUS::from_constant(0xC029003C); // STATUS_TPM_AREA_LOCKED
+
+/// TPM 1.2: The locality is incorrect for the attempted operation.
 pub const TPM_BAD_LOCALITY : NTSTATUS = NTSTATUS::from_constant(0xC029003D); // STATUS_TPM_BAD_LOCALITY
+
+/// TPM 1.2: The NV area is read only and can't be written to.
 pub const TPM_READ_ONLY : NTSTATUS = NTSTATUS::from_constant(0xC029003E); // STATUS_TPM_READ_ONLY
+
+/// TPM 1.2: There is no protection on the write to the NV area.
 pub const TPM_PER_NOWRITE : NTSTATUS = NTSTATUS::from_constant(0xC029003F); // STATUS_TPM_PER_NOWRITE
+
+/// TPM 1.2: The family count value does not match.
 pub const TPM_FAMILYCOUNT : NTSTATUS = NTSTATUS::from_constant(0xC0290040); // STATUS_TPM_FAMILYCOUNT
+
+/// TPM 1.2: The NV area has already been written to.
 pub const TPM_WRITE_LOCKED : NTSTATUS = NTSTATUS::from_constant(0xC0290041); // STATUS_TPM_WRITE_LOCKED
+
+/// TPM 1.2: The NV area attributes conflict.
 pub const TPM_BAD_ATTRIBUTES : NTSTATUS = NTSTATUS::from_constant(0xC0290042); // STATUS_TPM_BAD_ATTRIBUTES
+
+/// TPM 1.2: The structure tag and version are invalid or inconsistent.
 pub const TPM_INVALID_STRUCTURE : NTSTATUS = NTSTATUS::from_constant(0xC0290043); // STATUS_TPM_INVALID_STRUCTURE
+
+/// TPM 1.2: The key is under control of the TPM Owner and can only be evicted by the TPM Owner.
 pub const TPM_KEY_OWNER_CONTROL : NTSTATUS = NTSTATUS::from_constant(0xC0290044); // STATUS_TPM_KEY_OWNER_CONTROL
+
+/// TPM 1.2: The counter handle is incorrect.
 pub const TPM_BAD_COUNTER : NTSTATUS = NTSTATUS::from_constant(0xC0290045); // STATUS_TPM_BAD_COUNTER
+
+/// TPM 1.2: The write is not a complete write of the area.
 pub const TPM_NOT_FULLWRITE : NTSTATUS = NTSTATUS::from_constant(0xC0290046); // STATUS_TPM_NOT_FULLWRITE
+
+/// TPM 1.2: The gap between saved context counts is too large.
 pub const TPM_CONTEXT_GAP : NTSTATUS = NTSTATUS::from_constant(0xC0290047); // STATUS_TPM_CONTEXT_GAP
+
+/// TPM 1.2: The maximum number of NV writes without an owner has been exceeded.
 pub const TPM_MAXNVWRITES : NTSTATUS = NTSTATUS::from_constant(0xC0290048); // STATUS_TPM_MAXNVWRITES
+
+/// TPM 1.2: No operator AuthData value is set.
 pub const TPM_NOOPERATOR : NTSTATUS = NTSTATUS::from_constant(0xC0290049); // STATUS_TPM_NOOPERATOR
+
+/// TPM 1.2: The resource pointed to by context is not loaded.
 pub const TPM_RESOURCEMISSING : NTSTATUS = NTSTATUS::from_constant(0xC029004A); // STATUS_TPM_RESOURCEMISSING
+
+/// TPM 1.2: The delegate administration is locked.
 pub const TPM_DELEGATE_LOCK : NTSTATUS = NTSTATUS::from_constant(0xC029004B); // STATUS_TPM_DELEGATE_LOCK
+
+/// TPM 1.2: Attempt to manage a family other then the delegated family.
 pub const TPM_DELEGATE_FAMILY : NTSTATUS = NTSTATUS::from_constant(0xC029004C); // STATUS_TPM_DELEGATE_FAMILY
+
+/// TPM 1.2: Delegation table management not enabled.
 pub const TPM_DELEGATE_ADMIN : NTSTATUS = NTSTATUS::from_constant(0xC029004D); // STATUS_TPM_DELEGATE_ADMIN
+
+/// TPM 1.2: There was a command executed outside of an exclusive transport session.
 pub const TPM_TRANSPORT_NOTEXCLUSIVE : NTSTATUS = NTSTATUS::from_constant(0xC029004E); // STATUS_TPM_TRANSPORT_NOTEXCLUSIVE
+
+/// TPM 1.2: Attempt to context save a owner evict controlled key.
 pub const TPM_OWNER_CONTROL : NTSTATUS = NTSTATUS::from_constant(0xC029004F); // STATUS_TPM_OWNER_CONTROL
+
+/// TPM 1.2: The DAA command has no resources available to execute the command.
 pub const TPM_DAA_RESOURCES : NTSTATUS = NTSTATUS::from_constant(0xC0290050); // STATUS_TPM_DAA_RESOURCES
+
+/// TPM 1.2: The consistency check on DAA parameter inputData0 has failed.
 pub const TPM_DAA_INPUT_DATA0 : NTSTATUS = NTSTATUS::from_constant(0xC0290051); // STATUS_TPM_DAA_INPUT_DATA0
+
+/// TPM 1.2: The consistency check on DAA parameter inputData1 has failed.
 pub const TPM_DAA_INPUT_DATA1 : NTSTATUS = NTSTATUS::from_constant(0xC0290052); // STATUS_TPM_DAA_INPUT_DATA1
+
+/// TPM 1.2: The consistency check on DAA_issuerSettings has failed.
 pub const TPM_DAA_ISSUER_SETTINGS : NTSTATUS = NTSTATUS::from_constant(0xC0290053); // STATUS_TPM_DAA_ISSUER_SETTINGS
+
+/// TPM 1.2: The consistency check on DAA_tpmSpecific has failed.
 pub const TPM_DAA_TPM_SETTINGS : NTSTATUS = NTSTATUS::from_constant(0xC0290054); // STATUS_TPM_DAA_TPM_SETTINGS
+
+/// TPM 1.2: The atomic process indicated by the submitted DAA command is not the expected process.
 pub const TPM_DAA_STAGE : NTSTATUS = NTSTATUS::from_constant(0xC0290055); // STATUS_TPM_DAA_STAGE
+
+/// TPM 1.2: The issuer's validity check has detected an inconsistency.
 pub const TPM_DAA_ISSUER_VALIDITY : NTSTATUS = NTSTATUS::from_constant(0xC0290056); // STATUS_TPM_DAA_ISSUER_VALIDITY
+
+/// TPM 1.2: The consistency check on w has failed.
 pub const TPM_DAA_WRONG_W : NTSTATUS = NTSTATUS::from_constant(0xC0290057); // STATUS_TPM_DAA_WRONG_W
+
+/// TPM 1.2: The handle is incorrect.
 pub const TPM_BAD_HANDLE : NTSTATUS = NTSTATUS::from_constant(0xC0290058); // STATUS_TPM_BAD_HANDLE
+
+/// TPM 1.2: Delegation is not correct.
 pub const TPM_BAD_DELEGATE : NTSTATUS = NTSTATUS::from_constant(0xC0290059); // STATUS_TPM_BAD_DELEGATE
+
+/// TPM 1.2: The context blob is invalid.
 pub const TPM_BADCONTEXT : NTSTATUS = NTSTATUS::from_constant(0xC029005A); // STATUS_TPM_BADCONTEXT
+
+/// TPM 1.2: Too many contexts held by the TPM.
 pub const TPM_TOOMANYCONTEXTS : NTSTATUS = NTSTATUS::from_constant(0xC029005B); // STATUS_TPM_TOOMANYCONTEXTS
+
+/// TPM 1.2: Migration authority signature validation failure.
 pub const TPM_MA_TICKET_SIGNATURE : NTSTATUS = NTSTATUS::from_constant(0xC029005C); // STATUS_TPM_MA_TICKET_SIGNATURE
+
+/// TPM 1.2: Migration destination not authenticated.
 pub const TPM_MA_DESTINATION : NTSTATUS = NTSTATUS::from_constant(0xC029005D); // STATUS_TPM_MA_DESTINATION
+
+/// TPM 1.2: Migration source incorrect.
 pub const TPM_MA_SOURCE : NTSTATUS = NTSTATUS::from_constant(0xC029005E); // STATUS_TPM_MA_SOURCE
+
+/// TPM 1.2: Incorrect migration authority.
 pub const TPM_MA_AUTHORITY : NTSTATUS = NTSTATUS::from_constant(0xC029005F); // STATUS_TPM_MA_AUTHORITY
+
+/// TPM 1.2: Attempt to revoke the EK and the EK is not revocable.
 pub const TPM_PERMANENTEK : NTSTATUS = NTSTATUS::from_constant(0xC0290061); // STATUS_TPM_PERMANENTEK
+
+/// TPM 1.2: Bad signature of CMK ticket.
 pub const TPM_BAD_SIGNATURE : NTSTATUS = NTSTATUS::from_constant(0xC0290062); // STATUS_TPM_BAD_SIGNATURE
+
+/// TPM 1.2: There is no room in the context list for additional contexts.
 pub const TPM_NOCONTEXTSPACE : NTSTATUS = NTSTATUS::from_constant(0xC0290063); // STATUS_TPM_NOCONTEXTSPACE
+
+/// TPM 2.0: Asymmetric algorithm not supported or not correct.
 pub const TPM_20_E_ASYMMETRIC : NTSTATUS = NTSTATUS::from_constant(0xC0290081); // STATUS_TPM_20_E_ASYMMETRIC
+
+/// TPM 2.0: Inconsistent attributes.
 pub const TPM_20_E_ATTRIBUTES : NTSTATUS = NTSTATUS::from_constant(0xC0290082); // STATUS_TPM_20_E_ATTRIBUTES
+
+/// TPM 2.0: Hash algorithm not supported or not appropriate.
 pub const TPM_20_E_HASH : NTSTATUS = NTSTATUS::from_constant(0xC0290083); // STATUS_TPM_20_E_HASH
+
+/// TPM 2.0: Value is out of range or is not correct for the context.
 pub const TPM_20_E_VALUE : NTSTATUS = NTSTATUS::from_constant(0xC0290084); // STATUS_TPM_20_E_VALUE
+
+/// TPM 2.0: Hierarchy is not enabled or is not correct for the use.
 pub const TPM_20_E_HIERARCHY : NTSTATUS = NTSTATUS::from_constant(0xC0290085); // STATUS_TPM_20_E_HIERARCHY
+
+/// TPM 2.0: Key size is not supported.
 pub const TPM_20_E_KEY_SIZE : NTSTATUS = NTSTATUS::from_constant(0xC0290087); // STATUS_TPM_20_E_KEY_SIZE
+
+/// TPM 2.0: Mask generation function not supported.
 pub const TPM_20_E_MGF : NTSTATUS = NTSTATUS::from_constant(0xC0290088); // STATUS_TPM_20_E_MGF
+
+/// TPM 2.0: Mode of operation not supported.
 pub const TPM_20_E_MODE : NTSTATUS = NTSTATUS::from_constant(0xC0290089); // STATUS_TPM_20_E_MODE
+
+/// TPM 2.0: The type of the value is not appropriate for the use.
 pub const TPM_20_E_TYPE : NTSTATUS = NTSTATUS::from_constant(0xC029008A); // STATUS_TPM_20_E_TYPE
+
+/// TPM 2.0: The Handle is not correct for the use.
 pub const TPM_20_E_HANDLE : NTSTATUS = NTSTATUS::from_constant(0xC029008B); // STATUS_TPM_20_E_HANDLE
+
+/// TPM 2.0: Unsupported key derivation function or function not appropriate for use.
 pub const TPM_20_E_KDF : NTSTATUS = NTSTATUS::from_constant(0xC029008C); // STATUS_TPM_20_E_KDF
+
+/// TPM 2.0: Value was out of allowed range.
 pub const TPM_20_E_RANGE : NTSTATUS = NTSTATUS::from_constant(0xC029008D); // STATUS_TPM_20_E_RANGE
+
+/// TPM 2.0: The authorization HMAC check failed and DA counter incremented.
 pub const TPM_20_E_AUTH_FAIL : NTSTATUS = NTSTATUS::from_constant(0xC029008E); // STATUS_TPM_20_E_AUTH_FAIL
+
+/// TPM 2.0: Invalid nonce size.
 pub const TPM_20_E_NONCE : NTSTATUS = NTSTATUS::from_constant(0xC029008F); // STATUS_TPM_20_E_NONCE
+
+/// TPM 2.0: Authorization requires assertion of PP.
 pub const TPM_20_E_PP : NTSTATUS = NTSTATUS::from_constant(0xC0290090); // STATUS_TPM_20_E_PP
+
+/// TPM 2.0: Unsupported or incompatible scheme.
 pub const TPM_20_E_SCHEME : NTSTATUS = NTSTATUS::from_constant(0xC0290092); // STATUS_TPM_20_E_SCHEME
+
+/// TPM 2.0: Structure is wrong size.
 pub const TPM_20_E_SIZE : NTSTATUS = NTSTATUS::from_constant(0xC0290095); // STATUS_TPM_20_E_SIZE
+
+/// TPM 2.0: Unsupported symmetric algorithm or key size, or not appropriate for instance.
 pub const TPM_20_E_SYMMETRIC : NTSTATUS = NTSTATUS::from_constant(0xC0290096); // STATUS_TPM_20_E_SYMMETRIC
+
+/// TPM 2.0: Incorrect structure tag.
 pub const TPM_20_E_TAG : NTSTATUS = NTSTATUS::from_constant(0xC0290097); // STATUS_TPM_20_E_TAG
+
+/// TPM 2.0: Union selector is incorrect.
 pub const TPM_20_E_SELECTOR : NTSTATUS = NTSTATUS::from_constant(0xC0290098); // STATUS_TPM_20_E_SELECTOR
+
+/// TPM 2.0: The TPM was unable to unmarshal a value because there were not enough octets in the input buffer.
 pub const TPM_20_E_INSUFFICIENT : NTSTATUS = NTSTATUS::from_constant(0xC029009A); // STATUS_TPM_20_E_INSUFFICIENT
+
+/// TPM 2.0: The signature is not valid.
 pub const TPM_20_E_SIGNATURE : NTSTATUS = NTSTATUS::from_constant(0xC029009B); // STATUS_TPM_20_E_SIGNATURE
+
+/// TPM 2.0: Key fields are not compatible with the selected use.
 pub const TPM_20_E_KEY : NTSTATUS = NTSTATUS::from_constant(0xC029009C); // STATUS_TPM_20_E_KEY
+
+/// TPM 2.0: A policy check failed.
 pub const TPM_20_E_POLICY_FAIL : NTSTATUS = NTSTATUS::from_constant(0xC029009D); // STATUS_TPM_20_E_POLICY_FAIL
+
+/// TPM 2.0: Integrity check failed.
 pub const TPM_20_E_INTEGRITY : NTSTATUS = NTSTATUS::from_constant(0xC029009F); // STATUS_TPM_20_E_INTEGRITY
+
+/// TPM 2.0: Invalid ticket.
 pub const TPM_20_E_TICKET : NTSTATUS = NTSTATUS::from_constant(0xC02900A0); // STATUS_TPM_20_E_TICKET
+
+/// TPM 2.0: Reserved bits not set to zero as required.
 pub const TPM_20_E_RESERVED_BITS : NTSTATUS = NTSTATUS::from_constant(0xC02900A1); // STATUS_TPM_20_E_RESERVED_BITS
+
+/// TPM 2.0: Authorization failure without DA implications.
 pub const TPM_20_E_BAD_AUTH : NTSTATUS = NTSTATUS::from_constant(0xC02900A2); // STATUS_TPM_20_E_BAD_AUTH
+
+/// TPM 2.0: The policy has expired.
 pub const TPM_20_E_EXPIRED : NTSTATUS = NTSTATUS::from_constant(0xC02900A3); // STATUS_TPM_20_E_EXPIRED
+
+/// TPM 2.0: The command code in the policy is not the command code of the command or the command code in a policy command references a command that is not implemented.
 pub const TPM_20_E_POLICY_CC : NTSTATUS = NTSTATUS::from_constant(0xC02900A4); // STATUS_TPM_20_E_POLICY_CC
+
+/// TPM 2.0: Public and sensitive portions of an object are not cryptographically bound.
 pub const TPM_20_E_BINDING : NTSTATUS = NTSTATUS::from_constant(0xC02900A5); // STATUS_TPM_20_E_BINDING
+
+/// TPM 2.0: Curve not supported.
 pub const TPM_20_E_CURVE : NTSTATUS = NTSTATUS::from_constant(0xC02900A6); // STATUS_TPM_20_E_CURVE
+
+/// TPM 2.0: Point is not on the required curve.
 pub const TPM_20_E_ECC_POINT : NTSTATUS = NTSTATUS::from_constant(0xC02900A7); // STATUS_TPM_20_E_ECC_POINT
+
+/// TPM 2.0: TPM not initialized.
 pub const TPM_20_E_INITIALIZE : NTSTATUS = NTSTATUS::from_constant(0xC0290100); // STATUS_TPM_20_E_INITIALIZE
+
+/// TPM 2.0: Commands not being accepted because of a TPM failure.
 pub const TPM_20_E_FAILURE : NTSTATUS = NTSTATUS::from_constant(0xC0290101); // STATUS_TPM_20_E_FAILURE
+
+/// TPM 2.0: Improper use of a sequence handle.
 pub const TPM_20_E_SEQUENCE : NTSTATUS = NTSTATUS::from_constant(0xC0290103); // STATUS_TPM_20_E_SEQUENCE
+
+/// TPM 2.0: TPM_RC_PRIVATE error.
 pub const TPM_20_E_PRIVATE : NTSTATUS = NTSTATUS::from_constant(0xC029010B); // STATUS_TPM_20_E_PRIVATE
+
+/// TPM 2.0: TPM_RC_HMAC.
 pub const TPM_20_E_HMAC : NTSTATUS = NTSTATUS::from_constant(0xC0290119); // STATUS_TPM_20_E_HMAC
+
+/// TPM 2.0: TPM_RC_DISABLED.
 pub const TPM_20_E_DISABLED : NTSTATUS = NTSTATUS::from_constant(0xC0290120); // STATUS_TPM_20_E_DISABLED
+
+/// TPM 2.0: Command failed because audit sequence required exclusivity.
 pub const TPM_20_E_EXCLUSIVE : NTSTATUS = NTSTATUS::from_constant(0xC0290121); // STATUS_TPM_20_E_EXCLUSIVE
+
+/// TPM 2.0: Unsupported ECC curve.
 pub const TPM_20_E_ECC_CURVE : NTSTATUS = NTSTATUS::from_constant(0xC0290123); // STATUS_TPM_20_E_ECC_CURVE
+
+/// TPM 2.0: Authorization handle is not correct for command.
 pub const TPM_20_E_AUTH_TYPE : NTSTATUS = NTSTATUS::from_constant(0xC0290124); // STATUS_TPM_20_E_AUTH_TYPE
+
+/// TPM 2.0: Command requires an authorization session for handle and is not present.
 pub const TPM_20_E_AUTH_MISSING : NTSTATUS = NTSTATUS::from_constant(0xC0290125); // STATUS_TPM_20_E_AUTH_MISSING
+
+/// TPM 2.0: Policy failure in Math Operation or an invalid authPolicy value.
 pub const TPM_20_E_POLICY : NTSTATUS = NTSTATUS::from_constant(0xC0290126); // STATUS_TPM_20_E_POLICY
+
+/// TPM 2.0: PCR check fail.
 pub const TPM_20_E_PCR : NTSTATUS = NTSTATUS::from_constant(0xC0290127); // STATUS_TPM_20_E_PCR
+
+/// TPM 2.0: PCR have changed since checked.
 pub const TPM_20_E_PCR_CHANGED : NTSTATUS = NTSTATUS::from_constant(0xC0290128); // STATUS_TPM_20_E_PCR_CHANGED
+
+/// TPM 2.0: The TPM is not in the right mode for upgrade.
 pub const TPM_20_E_UPGRADE : NTSTATUS = NTSTATUS::from_constant(0xC029012D); // STATUS_TPM_20_E_UPGRADE
+
+/// TPM 2.0: Context ID counter is at maximum.
 pub const TPM_20_E_TOO_MANY_CONTEXTS : NTSTATUS = NTSTATUS::from_constant(0xC029012E); // STATUS_TPM_20_E_TOO_MANY_CONTEXTS
+
+/// TPM 2.0: authValue or authPolicy is not available for selected entity.
 pub const TPM_20_E_AUTH_UNAVAILABLE : NTSTATUS = NTSTATUS::from_constant(0xC029012F); // STATUS_TPM_20_E_AUTH_UNAVAILABLE
+
+/// TPM 2.0: A _TPM_Init and Startup(CLEAR) is required before the TPM can resume operation.
 pub const TPM_20_E_REBOOT : NTSTATUS = NTSTATUS::from_constant(0xC0290130); // STATUS_TPM_20_E_REBOOT
+
+/// TPM 2.0: The protection algorithms (hash and symmetric) are not reasonably balanced. The digest size of the hash must be larger than the key size of the symmetric algorithm.
 pub const TPM_20_E_UNBALANCED : NTSTATUS = NTSTATUS::from_constant(0xC0290131); // STATUS_TPM_20_E_UNBALANCED
+
+/// TPM 2.0: The TPM command's commandSize value is inconsistent with contents of the command buffer; either the size is not the same as the bytes loaded by the hardware interface layer or the value is not large enough to hold a command header.
 pub const TPM_20_E_COMMAND_SIZE : NTSTATUS = NTSTATUS::from_constant(0xC0290142); // STATUS_TPM_20_E_COMMAND_SIZE
+
+/// TPM 2.0: Command code not supported.
 pub const TPM_20_E_COMMAND_CODE : NTSTATUS = NTSTATUS::from_constant(0xC0290143); // STATUS_TPM_20_E_COMMAND_CODE
+
+/// TPM 2.0: The value of authorizationSize is out of range or the number of octets in the authorization Area is greater than required.
 pub const TPM_20_E_AUTHSIZE : NTSTATUS = NTSTATUS::from_constant(0xC0290144); // STATUS_TPM_20_E_AUTHSIZE
+
+/// TPM 2.0: Use of an authorization session with a context command or another command that cannot have an authorization session.
 pub const TPM_20_E_AUTH_CONTEXT : NTSTATUS = NTSTATUS::from_constant(0xC0290145); // STATUS_TPM_20_E_AUTH_CONTEXT
+
+/// TPM 2.0: NV offset+size is out of range.
 pub const TPM_20_E_NV_RANGE : NTSTATUS = NTSTATUS::from_constant(0xC0290146); // STATUS_TPM_20_E_NV_RANGE
+
+/// TPM 2.0: Requested allocation size is larger than allowed.
 pub const TPM_20_E_NV_SIZE : NTSTATUS = NTSTATUS::from_constant(0xC0290147); // STATUS_TPM_20_E_NV_SIZE
+
+/// TPM 2.0: NV access locked.
 pub const TPM_20_E_NV_LOCKED : NTSTATUS = NTSTATUS::from_constant(0xC0290148); // STATUS_TPM_20_E_NV_LOCKED
+
+/// TPM 2.0: NV access authorization fails in command actions
 pub const TPM_20_E_NV_AUTHORIZATION : NTSTATUS = NTSTATUS::from_constant(0xC0290149); // STATUS_TPM_20_E_NV_AUTHORIZATION
+
+/// TPM 2.0: An NV index is used before being initialized or the state saved by TPM2_Shutdown(STATE) could not be restored.
 pub const TPM_20_E_NV_UNINITIALIZED : NTSTATUS = NTSTATUS::from_constant(0xC029014A); // STATUS_TPM_20_E_NV_UNINITIALIZED
+
+/// TPM 2.0: Insufficient space for NV allocation.
 pub const TPM_20_E_NV_SPACE : NTSTATUS = NTSTATUS::from_constant(0xC029014B); // STATUS_TPM_20_E_NV_SPACE
+
+/// TPM 2.0: NV index or persistent object already defined.
 pub const TPM_20_E_NV_DEFINED : NTSTATUS = NTSTATUS::from_constant(0xC029014C); // STATUS_TPM_20_E_NV_DEFINED
+
+/// TPM 2.0: Context in TPM2_ContextLoad() is not valid.
 pub const TPM_20_E_BAD_CONTEXT : NTSTATUS = NTSTATUS::from_constant(0xC0290150); // STATUS_TPM_20_E_BAD_CONTEXT
+
+/// TPM 2.0: chHash value already set or not correct for use.
 pub const TPM_20_E_CPHASH : NTSTATUS = NTSTATUS::from_constant(0xC0290151); // STATUS_TPM_20_E_CPHASH
+
+/// TPM 2.0: Handle for parent is not a valid parent.
 pub const TPM_20_E_PARENT : NTSTATUS = NTSTATUS::from_constant(0xC0290152); // STATUS_TPM_20_E_PARENT
+
+/// TPM 2.0: Some function needs testing.
 pub const TPM_20_E_NEEDS_TEST : NTSTATUS = NTSTATUS::from_constant(0xC0290153); // STATUS_TPM_20_E_NEEDS_TEST
+
+/// TPM 2.0: returned when an internal function cannot process a request due to an unspecified problem. This code is usually related to invalid parameters that are not properly filtered by the input unmarshaling code.
 pub const TPM_20_E_NO_RESULT : NTSTATUS = NTSTATUS::from_constant(0xC0290154); // STATUS_TPM_20_E_NO_RESULT
+
+/// TPM 2.0: The sensitive area did not unmarshal correctly after decryption - this code is used in lieu of the other unmarshaling errors so that an attacker cannot determine where the unmarshaling error occurred.
 pub const TPM_20_E_SENSITIVE : NTSTATUS = NTSTATUS::from_constant(0xC0290155); // STATUS_TPM_20_E_SENSITIVE
+
+/// The command was blocked.
 pub const TPM_COMMAND_BLOCKED : NTSTATUS = NTSTATUS::from_constant(0xC0290400); // STATUS_TPM_COMMAND_BLOCKED
+
+/// The specified handle was not found.
 pub const TPM_INVALID_HANDLE : NTSTATUS = NTSTATUS::from_constant(0xC0290401); // STATUS_TPM_INVALID_HANDLE
+
+/// The TPM returned a duplicate handle and the command needs to be resubmitted.
 pub const TPM_DUPLICATE_VHANDLE : NTSTATUS = NTSTATUS::from_constant(0xC0290402); // STATUS_TPM_DUPLICATE_VHANDLE
+
+/// The command within the transport was blocked.
 pub const TPM_EMBEDDED_COMMAND_BLOCKED : NTSTATUS = NTSTATUS::from_constant(0xC0290403); // STATUS_TPM_EMBEDDED_COMMAND_BLOCKED
+
+/// The command within the transport is not supported.
 pub const TPM_EMBEDDED_COMMAND_UNSUPPORTED : NTSTATUS = NTSTATUS::from_constant(0xC0290404); // STATUS_TPM_EMBEDDED_COMMAND_UNSUPPORTED
+
+/// The TPM is too busy to respond to the command immediately, but the command could be resubmitted at a later time.
 pub const TPM_RETRY : NTSTATUS = NTSTATUS::from_constant(0xC0290800); // STATUS_TPM_RETRY
+
+/// SelfTestFull has not been run.
 pub const TPM_NEEDS_SELFTEST : NTSTATUS = NTSTATUS::from_constant(0xC0290801); // STATUS_TPM_NEEDS_SELFTEST
+
+/// The TPM is currently executing a full selftest.
 pub const TPM_DOING_SELFTEST : NTSTATUS = NTSTATUS::from_constant(0xC0290802); // STATUS_TPM_DOING_SELFTEST
+
+/// The TPM is defending against dictionary attacks and is in a time-out period.
 pub const TPM_DEFEND_LOCK_RUNNING : NTSTATUS = NTSTATUS::from_constant(0xC0290803); // STATUS_TPM_DEFEND_LOCK_RUNNING
+
+/// The command was cancelled.
 pub const TPM_COMMAND_CANCELED : NTSTATUS = NTSTATUS::from_constant(0xC0291001); // STATUS_TPM_COMMAND_CANCELED
+
+/// A new TPM context could not be created because there are too many open contexts.
 pub const TPM_TOO_MANY_CONTEXTS : NTSTATUS = NTSTATUS::from_constant(0xC0291002); // STATUS_TPM_TOO_MANY_CONTEXTS
+
+/// TPM driver is not compatible with the version of TPM found on the system.
 pub const TPM_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC0291003); // STATUS_TPM_NOT_FOUND
+
+/// The caller does not have the appropriate rights to perform the requested operation.
 pub const TPM_ACCESS_DENIED : NTSTATUS = NTSTATUS::from_constant(0xC0291004); // STATUS_TPM_ACCESS_DENIED
+
+/// The caller does not have the appropriate rights to perform the requested operation.
 pub const TPM_INSUFFICIENT_BUFFER : NTSTATUS = NTSTATUS::from_constant(0xC0291005); // STATUS_TPM_INSUFFICIENT_BUFFER
+
+/// The Physical Presence Interface of this firmware does not support the requested method.
 pub const TPM_PPI_FUNCTION_UNSUPPORTED : NTSTATUS = NTSTATUS::from_constant(0xC0291006); // STATUS_TPM_PPI_FUNCTION_UNSUPPORTED
+
+/// This is an error mask to convert Platform Crypto Provider errors to win errors.
 pub const PCP_ERROR_MASK : NTSTATUS = NTSTATUS::from_constant(0xC0292000); // STATUS_PCP_ERROR_MASK
+
+/// The Platform Crypto Device is currently not ready. It needs to be fully provisioned to be operational.
 pub const PCP_DEVICE_NOT_READY : NTSTATUS = NTSTATUS::from_constant(0xC0292001); // STATUS_PCP_DEVICE_NOT_READY
+
+/// The handle provided to the Platform Crypto Provider is invalid.
 pub const PCP_INVALID_HANDLE : NTSTATUS = NTSTATUS::from_constant(0xC0292002); // STATUS_PCP_INVALID_HANDLE
+
+/// A parameter provided to the Platform Crypto Provider is invalid.
 pub const PCP_INVALID_PARAMETER : NTSTATUS = NTSTATUS::from_constant(0xC0292003); // STATUS_PCP_INVALID_PARAMETER
+
+/// A provided flag to the Platform Crypto Provider is not supported.
 pub const PCP_FLAG_NOT_SUPPORTED : NTSTATUS = NTSTATUS::from_constant(0xC0292004); // STATUS_PCP_FLAG_NOT_SUPPORTED
+
+/// The requested operation is not supported by this Platform Crypto Provider.
 pub const PCP_NOT_SUPPORTED : NTSTATUS = NTSTATUS::from_constant(0xC0292005); // STATUS_PCP_NOT_SUPPORTED
+
+/// The buffer is too small to contain all data. No information has been written to the buffer.
 pub const PCP_BUFFER_TOO_SMALL : NTSTATUS = NTSTATUS::from_constant(0xC0292006); // STATUS_PCP_BUFFER_TOO_SMALL
+
+/// An unexpected internal error has occurred in the Platform Crypto Provider.
 pub const PCP_INTERNAL_ERROR : NTSTATUS = NTSTATUS::from_constant(0xC0292007); // STATUS_PCP_INTERNAL_ERROR
+
+/// The authorization to use a provider object has failed.
 pub const PCP_AUTHENTICATION_FAILED : NTSTATUS = NTSTATUS::from_constant(0xC0292008); // STATUS_PCP_AUTHENTICATION_FAILED
+
+/// The Platform Crypto Device has ignored the authorization for the provider object, to mitigate against a dictionary attack.
 pub const PCP_AUTHENTICATION_IGNORED : NTSTATUS = NTSTATUS::from_constant(0xC0292009); // STATUS_PCP_AUTHENTICATION_IGNORED
+
+/// The referenced policy was not found.
 pub const PCP_POLICY_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC029200A); // STATUS_PCP_POLICY_NOT_FOUND
+
+/// The referenced profile was not found.
 pub const PCP_PROFILE_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC029200B); // STATUS_PCP_PROFILE_NOT_FOUND
+
+/// The validation was not successful.
 pub const PCP_VALIDATION_FAILED : NTSTATUS = NTSTATUS::from_constant(0xC029200C); // STATUS_PCP_VALIDATION_FAILED
+
+/// A Platform Crypto Device was not found.  Operations that require a Platform Crypto Device will not be submitted.
 pub const PCP_DEVICE_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC029200D); // STATUS_PCP_DEVICE_NOT_FOUND
+
+/// An attempt was made to import or load a key under an incorrect storage parent.
 pub const PCP_WRONG_PARENT : NTSTATUS = NTSTATUS::from_constant(0xC029200E); // STATUS_PCP_WRONG_PARENT
+
+/// The TPM key is not loaded.
 pub const PCP_KEY_NOT_LOADED : NTSTATUS = NTSTATUS::from_constant(0xC029200F); // STATUS_PCP_KEY_NOT_LOADED
+
+/// The TPM key certification has not been generated.
 pub const PCP_NO_KEY_CERTIFICATION : NTSTATUS = NTSTATUS::from_constant(0xC0292010); // STATUS_PCP_NO_KEY_CERTIFICATION
+
+/// The TPM key is not yet finalized.
 pub const PCP_KEY_NOT_FINALIZED : NTSTATUS = NTSTATUS::from_constant(0xC0292011); // STATUS_PCP_KEY_NOT_FINALIZED
+
+/// The TPM attestation challenge is not set.
 pub const PCP_ATTESTATION_CHALLENGE_NOT_SET : NTSTATUS = NTSTATUS::from_constant(0xC0292012); // STATUS_PCP_ATTESTATION_CHALLENGE_NOT_SET
+
+/// The TPM key is not bound to PCR info.
 pub const PCP_NOT_PCR_BOUND : NTSTATUS = NTSTATUS::from_constant(0xC0292013); // STATUS_PCP_NOT_PCR_BOUND
+
+/// The TPM key is already finalized.
 pub const PCP_KEY_ALREADY_FINALIZED : NTSTATUS = NTSTATUS::from_constant(0xC0292014); // STATUS_PCP_KEY_ALREADY_FINALIZED
+
+/// The TPM key usage policy is not supported.
 pub const PCP_KEY_USAGE_POLICY_NOT_SUPPORTED : NTSTATUS = NTSTATUS::from_constant(0xC0292015); // STATUS_PCP_KEY_USAGE_POLICY_NOT_SUPPORTED
+
+/// The TPM key usage policy is invalid.
 pub const PCP_KEY_USAGE_POLICY_INVALID : NTSTATUS = NTSTATUS::from_constant(0xC0292016); // STATUS_PCP_KEY_USAGE_POLICY_INVALID
+
+/// There was a problem with the software key being imported into the TPM.
 pub const PCP_SOFT_KEY_ERROR : NTSTATUS = NTSTATUS::from_constant(0xC0292017); // STATUS_PCP_SOFT_KEY_ERROR
+
+/// The TPM key is not authenticated.
 pub const PCP_KEY_NOT_AUTHENTICATED : NTSTATUS = NTSTATUS::from_constant(0xC0292018); // STATUS_PCP_KEY_NOT_AUTHENTICATED
+
+/// The TPM key is not an AIK.
 pub const PCP_KEY_NOT_AIK : NTSTATUS = NTSTATUS::from_constant(0xC0292019); // STATUS_PCP_KEY_NOT_AIK
+
+/// The TPM key is not a signing key.
 pub const PCP_KEY_NOT_SIGNING_KEY : NTSTATUS = NTSTATUS::from_constant(0xC029201A); // STATUS_PCP_KEY_NOT_SIGNING_KEY
+
+/// The TPM is locked out.
 pub const PCP_LOCKED_OUT : NTSTATUS = NTSTATUS::from_constant(0xC029201B); // STATUS_PCP_LOCKED_OUT
+
+/// The claim type requested is not supported.
 pub const PCP_CLAIM_TYPE_NOT_SUPPORTED : NTSTATUS = NTSTATUS::from_constant(0xC029201C); // STATUS_PCP_CLAIM_TYPE_NOT_SUPPORTED
+
+/// The current TPM version is not supported.
 pub const PCP_TPM_VERSION_NOT_SUPPORTED : NTSTATUS = NTSTATUS::from_constant(0xC029201D); // STATUS_PCP_TPM_VERSION_NOT_SUPPORTED
+
+/// The buffer lengths do not match.
 pub const PCP_BUFFER_LENGTH_MISMATCH : NTSTATUS = NTSTATUS::from_constant(0xC029201E); // STATUS_PCP_BUFFER_LENGTH_MISMATCH
+
+/// The RSA key creation is blocked on this TPM due to known security vulnerabilities.
 pub const PCP_IFX_RSA_KEY_CREATION_BLOCKED : NTSTATUS = NTSTATUS::from_constant(0xC029201F); // STATUS_PCP_IFX_RSA_KEY_CREATION_BLOCKED
+
+/// A ticket required to use a key was not provided.
 pub const PCP_TICKET_MISSING : NTSTATUS = NTSTATUS::from_constant(0xC0292020); // STATUS_PCP_TICKET_MISSING
+
+/// This key has a raw policy so the KSP can't authenticate against it.
 pub const PCP_RAW_POLICY_NOT_SUPPORTED : NTSTATUS = NTSTATUS::from_constant(0xC0292021); // STATUS_PCP_RAW_POLICY_NOT_SUPPORTED
+
+/// The TPM key's handle was unexpectedly invalidated due to a hardware or firmware issue.
 pub const PCP_KEY_HANDLE_INVALIDATED : NTSTATUS = NTSTATUS::from_constant(0xC0292022); // STATUS_PCP_KEY_HANDLE_INVALIDATED
+
+/// The requested salt size for signing with RSAPSS does not match what the TPM uses.
 pub const PCP_UNSUPPORTED_PSS_SALT : NTSTATUS = NTSTATUS::from_constant(0x40292023); // STATUS_PCP_UNSUPPORTED_PSS_SALT
+
+/// The remote TPM context exchange is not complete. The context should be transported to the target and continued.
 pub const RTPM_CONTEXT_CONTINUE : NTSTATUS = NTSTATUS::from_constant(0x00293000); // STATUS_RTPM_CONTEXT_CONTINUE
+
+/// The remote TPM operation is complete.
 pub const RTPM_CONTEXT_COMPLETE : NTSTATUS = NTSTATUS::from_constant(0x00293001); // STATUS_RTPM_CONTEXT_COMPLETE
+
+/// No result associated with this instance exists.
 pub const RTPM_NO_RESULT : NTSTATUS = NTSTATUS::from_constant(0xC0293002); // STATUS_RTPM_NO_RESULT
+
+/// The TPM returned incomplete PCR results. This maybe due to an unsupported selection set. Attempt the read again with a different selection set.
 pub const RTPM_PCR_READ_INCOMPLETE : NTSTATUS = NTSTATUS::from_constant(0xC0293003); // STATUS_RTPM_PCR_READ_INCOMPLETE
+
+/// The rTPM context has been corrupted. The rTPM operation must be restarted.
 pub const RTPM_INVALID_CONTEXT : NTSTATUS = NTSTATUS::from_constant(0xC0293004); // STATUS_RTPM_INVALID_CONTEXT
+
+/// The rTPM target does not support remote processing of the specified TPM command.
 pub const RTPM_UNSUPPORTED_CMD : NTSTATUS = NTSTATUS::from_constant(0xC0293005); // STATUS_RTPM_UNSUPPORTED_CMD
+
+/// TPM related network operations are blocked as Zero Exhaust mode is enabled on client.
 pub const TPM_ZERO_EXHAUST_ENABLED : NTSTATUS = NTSTATUS::from_constant(0xC0294000); // STATUS_TPM_ZERO_EXHAUST_ENABLED
+
+/// The hypervisor does not support the operation because the specified hypercall code is not supported.
 pub const HV_INVALID_HYPERCALL_CODE : NTSTATUS = NTSTATUS::from_constant(0xC0350002); // STATUS_HV_INVALID_HYPERCALL_CODE
+
+/// The hypervisor does not support the operation because the encoding for the hypercall input register is not supported.
 pub const HV_INVALID_HYPERCALL_INPUT : NTSTATUS = NTSTATUS::from_constant(0xC0350003); // STATUS_HV_INVALID_HYPERCALL_INPUT
+
+/// The hypervisor could not perform the operation because a parameter has an invalid alignment.
 pub const HV_INVALID_ALIGNMENT : NTSTATUS = NTSTATUS::from_constant(0xC0350004); // STATUS_HV_INVALID_ALIGNMENT
+
+/// The hypervisor could not perform the operation because an invalid parameter was specified.
 pub const HV_INVALID_PARAMETER : NTSTATUS = NTSTATUS::from_constant(0xC0350005); // STATUS_HV_INVALID_PARAMETER
+
+/// Access to the specified object was denied.
 pub const HV_ACCESS_DENIED : NTSTATUS = NTSTATUS::from_constant(0xC0350006); // STATUS_HV_ACCESS_DENIED
+
+/// The hypervisor could not perform the operation because the partition is entering or in an invalid state.
 pub const HV_INVALID_PARTITION_STATE : NTSTATUS = NTSTATUS::from_constant(0xC0350007); // STATUS_HV_INVALID_PARTITION_STATE
+
+/// The operation is not allowed in the current state.
 pub const HV_OPERATION_DENIED : NTSTATUS = NTSTATUS::from_constant(0xC0350008); // STATUS_HV_OPERATION_DENIED
+
+/// The hypervisor does not recognize the specified partition property.
 pub const HV_UNKNOWN_PROPERTY : NTSTATUS = NTSTATUS::from_constant(0xC0350009); // STATUS_HV_UNKNOWN_PROPERTY
+
+/// The specified value of a partition property is out of range or violates an invariant.
 pub const HV_PROPERTY_VALUE_OUT_OF_RANGE : NTSTATUS = NTSTATUS::from_constant(0xC035000A); // STATUS_HV_PROPERTY_VALUE_OUT_OF_RANGE
+
+/// There is not enough memory in the hypervisor pool to complete the operation.
 pub const HV_INSUFFICIENT_MEMORY : NTSTATUS = NTSTATUS::from_constant(0xC035000B); // STATUS_HV_INSUFFICIENT_MEMORY
+
+/// The maximum partition depth has been exceeded for the partition hierarchy.
 pub const HV_PARTITION_TOO_DEEP : NTSTATUS = NTSTATUS::from_constant(0xC035000C); // STATUS_HV_PARTITION_TOO_DEEP
+
+/// A partition with the specified partition Id does not exist.
 pub const HV_INVALID_PARTITION_ID : NTSTATUS = NTSTATUS::from_constant(0xC035000D); // STATUS_HV_INVALID_PARTITION_ID
+
+/// The hypervisor could not perform the operation because the specified VP index is invalid.
 pub const HV_INVALID_VP_INDEX : NTSTATUS = NTSTATUS::from_constant(0xC035000E); // STATUS_HV_INVALID_VP_INDEX
+
+/// The hypervisor could not perform the operation because the specified port identifier is invalid.
 pub const HV_INVALID_PORT_ID : NTSTATUS = NTSTATUS::from_constant(0xC0350011); // STATUS_HV_INVALID_PORT_ID
+
+/// The hypervisor could not perform the operation because the specified connection identifier is invalid.
 pub const HV_INVALID_CONNECTION_ID : NTSTATUS = NTSTATUS::from_constant(0xC0350012); // STATUS_HV_INVALID_CONNECTION_ID
+
+/// Not enough buffers were supplied to send a message.
 pub const HV_INSUFFICIENT_BUFFERS : NTSTATUS = NTSTATUS::from_constant(0xC0350013); // STATUS_HV_INSUFFICIENT_BUFFERS
+
+/// The previous virtual interrupt has not been acknowledged.
 pub const HV_NOT_ACKNOWLEDGED : NTSTATUS = NTSTATUS::from_constant(0xC0350014); // STATUS_HV_NOT_ACKNOWLEDGED
+
+/// A virtual processor is not in the correct state for the indicated operation.
 pub const HV_INVALID_VP_STATE : NTSTATUS = NTSTATUS::from_constant(0xC0350015); // STATUS_HV_INVALID_VP_STATE
+
+/// The previous virtual interrupt has already been acknowledged.
 pub const HV_ACKNOWLEDGED : NTSTATUS = NTSTATUS::from_constant(0xC0350016); // STATUS_HV_ACKNOWLEDGED
+
+/// The indicated partition is not in a valid state for saving or restoring.
 pub const HV_INVALID_SAVE_RESTORE_STATE : NTSTATUS = NTSTATUS::from_constant(0xC0350017); // STATUS_HV_INVALID_SAVE_RESTORE_STATE
+
+/// The hypervisor could not complete the operation because a required feature of the synthetic interrupt controller (SynIC) was disabled.
 pub const HV_INVALID_SYNIC_STATE : NTSTATUS = NTSTATUS::from_constant(0xC0350018); // STATUS_HV_INVALID_SYNIC_STATE
+
+/// The hypervisor could not perform the operation because the object or value was either already in use or being used for a purpose that would not permit completing the operation.
 pub const HV_OBJECT_IN_USE : NTSTATUS = NTSTATUS::from_constant(0xC0350019); // STATUS_HV_OBJECT_IN_USE
+
+/// The proximity domain information is invalid.
 pub const HV_INVALID_PROXIMITY_DOMAIN_INFO : NTSTATUS = NTSTATUS::from_constant(0xC035001A); // STATUS_HV_INVALID_PROXIMITY_DOMAIN_INFO
+
+/// An attempt to retrieve debugging data failed because none was available.
 pub const HV_NO_DATA : NTSTATUS = NTSTATUS::from_constant(0xC035001B); // STATUS_HV_NO_DATA
+
+/// The physical connection being used for debugging has not recorded any receive activity since the last operation.
 pub const HV_INACTIVE : NTSTATUS = NTSTATUS::from_constant(0xC035001C); // STATUS_HV_INACTIVE
+
+/// There are not enough resources to complete the operation.
 pub const HV_NO_RESOURCES : NTSTATUS = NTSTATUS::from_constant(0xC035001D); // STATUS_HV_NO_RESOURCES
+
+/// A hypervisor feature is not available to the user.
 pub const HV_FEATURE_UNAVAILABLE : NTSTATUS = NTSTATUS::from_constant(0xC035001E); // STATUS_HV_FEATURE_UNAVAILABLE
+
+/// The specified buffer was too small to contain all of the requested data.
 pub const HV_INSUFFICIENT_BUFFER : NTSTATUS = NTSTATUS::from_constant(0xC0350033); // STATUS_HV_INSUFFICIENT_BUFFER
+
+/// The maximum number of domains supported by the platform I/O remapping hardware is currently in use. No domains are available to assign this device to this partition.
 pub const HV_INSUFFICIENT_DEVICE_DOMAINS : NTSTATUS = NTSTATUS::from_constant(0xC0350038); // STATUS_HV_INSUFFICIENT_DEVICE_DOMAINS
+
+/// Validation of CPUID data of the processor failed.
 pub const HV_CPUID_FEATURE_VALIDATION_ERROR : NTSTATUS = NTSTATUS::from_constant(0xC035003C); // STATUS_HV_CPUID_FEATURE_VALIDATION_ERROR
+
+/// Validation of XSAVE CPUID data of the processor failed.
 pub const HV_CPUID_XSAVE_FEATURE_VALIDATION_ERROR : NTSTATUS = NTSTATUS::from_constant(0xC035003D); // STATUS_HV_CPUID_XSAVE_FEATURE_VALIDATION_ERROR
+
+/// Processor did not respond within the timeout period.
 pub const HV_PROCESSOR_STARTUP_TIMEOUT : NTSTATUS = NTSTATUS::from_constant(0xC035003E); // STATUS_HV_PROCESSOR_STARTUP_TIMEOUT
+
+/// SMX has been enabled in the BIOS.
 pub const HV_SMX_ENABLED : NTSTATUS = NTSTATUS::from_constant(0xC035003F); // STATUS_HV_SMX_ENABLED
+
+/// The hypervisor could not perform the operation because the specified LP index is invalid.
 pub const HV_INVALID_LP_INDEX : NTSTATUS = NTSTATUS::from_constant(0xC0350041); // STATUS_HV_INVALID_LP_INDEX
+
+/// The supplied register value is invalid.
 pub const HV_INVALID_REGISTER_VALUE : NTSTATUS = NTSTATUS::from_constant(0xC0350050); // STATUS_HV_INVALID_REGISTER_VALUE
+
+/// The supplied virtual trust level is not in the correct state to perform the requested operation.
 pub const HV_INVALID_VTL_STATE : NTSTATUS = NTSTATUS::from_constant(0xC0350051); // STATUS_HV_INVALID_VTL_STATE
+
+/// No execute feature (NX) is not present or not enabled in the BIOS.
 pub const HV_NX_NOT_DETECTED : NTSTATUS = NTSTATUS::from_constant(0xC0350055); // STATUS_HV_NX_NOT_DETECTED
+
+/// The supplied device ID is invalid.
 pub const HV_INVALID_DEVICE_ID : NTSTATUS = NTSTATUS::from_constant(0xC0350057); // STATUS_HV_INVALID_DEVICE_ID
+
+/// The operation is not allowed in the current device state.
 pub const HV_INVALID_DEVICE_STATE : NTSTATUS = NTSTATUS::from_constant(0xC0350058); // STATUS_HV_INVALID_DEVICE_STATE
+
+/// The device had pending page requests which were discarded.
 pub const HV_PENDING_PAGE_REQUESTS : NTSTATUS = NTSTATUS::from_constant(0x00350059); // STATUS_HV_PENDING_PAGE_REQUESTS
+
+/// The supplied page request specifies a memory access that the guest does not have permissions to perform.
 pub const HV_PAGE_REQUEST_INVALID : NTSTATUS = NTSTATUS::from_constant(0xC0350060); // STATUS_HV_PAGE_REQUEST_INVALID
+
+/// A CPU group with the specified CPU group Id does not exist.
 pub const HV_INVALID_CPU_GROUP_ID : NTSTATUS = NTSTATUS::from_constant(0xC035006F); // STATUS_HV_INVALID_CPU_GROUP_ID
+
+/// The hypervisor could not perform the operation because the CPU group is entering or in an invalid state.
 pub const HV_INVALID_CPU_GROUP_STATE : NTSTATUS = NTSTATUS::from_constant(0xC0350070); // STATUS_HV_INVALID_CPU_GROUP_STATE
+
+/// The requested operation failed.
 pub const HV_OPERATION_FAILED : NTSTATUS = NTSTATUS::from_constant(0xC0350071); // STATUS_HV_OPERATION_FAILED
+
+/// The hypervisor could not perform the operation because it is not allowed with nested virtualization active.
 pub const HV_NOT_ALLOWED_WITH_NESTED_VIRT_ACTIVE : NTSTATUS = NTSTATUS::from_constant(0xC0350072); // STATUS_HV_NOT_ALLOWED_WITH_NESTED_VIRT_ACTIVE
+
+/// There is not enough memory in the root partition's pool to complete the operation.
 pub const HV_INSUFFICIENT_ROOT_MEMORY : NTSTATUS = NTSTATUS::from_constant(0xC0350073); // STATUS_HV_INSUFFICIENT_ROOT_MEMORY
+
+/// The provided event log buffer was already marked as freed.
 pub const HV_EVENT_BUFFER_ALREADY_FREED : NTSTATUS = NTSTATUS::from_constant(0xC0350074); // STATUS_HV_EVENT_BUFFER_ALREADY_FREED
+
+/// There is not enough contiguous memory in the partition's pool to complete the operation.
 pub const HV_INSUFFICIENT_CONTIGUOUS_MEMORY : NTSTATUS = NTSTATUS::from_constant(0xC0350075); // STATUS_HV_INSUFFICIENT_CONTIGUOUS_MEMORY
+
+/// No hypervisor is present on this system.
 pub const HV_NOT_PRESENT : NTSTATUS = NTSTATUS::from_constant(0xC0351000); // STATUS_HV_NOT_PRESENT
+
+/// The handler for the virtualization infrastructure driver is already registered. Restarting the virtual machine may fix the problem. If the problem persists, try restarting the physical computer.
 pub const VID_DUPLICATE_HANDLER : NTSTATUS = NTSTATUS::from_constant(0xC0370001); // STATUS_VID_DUPLICATE_HANDLER
+
+/// The number of registered handlers for the virtualization infrastructure driver exceeded the maximum. Restarting the virtual machine may fix the problem. If the problem persists, try restarting the physical computer.
 pub const VID_TOO_MANY_HANDLERS : NTSTATUS = NTSTATUS::from_constant(0xC0370002); // STATUS_VID_TOO_MANY_HANDLERS
+
+/// The message queue for the virtualization infrastructure driver is full and cannot accept new messages. Restarting the virtual machine may fix the problem. If the problem persists, try restarting the physical computer.
 pub const VID_QUEUE_FULL : NTSTATUS = NTSTATUS::from_constant(0xC0370003); // STATUS_VID_QUEUE_FULL
+
+/// No handler exists to handle the message for the virtualization infrastructure driver. Restarting the virtual machine may fix the problem. If the problem persists, try restarting the physical computer.
 pub const VID_HANDLER_NOT_PRESENT : NTSTATUS = NTSTATUS::from_constant(0xC0370004); // STATUS_VID_HANDLER_NOT_PRESENT
+
+/// The name of the partition or message queue for the virtualization infrastructure driver is invalid. Restarting the virtual machine may fix the problem. If the problem persists, try restarting the physical computer.
 pub const VID_INVALID_OBJECT_NAME : NTSTATUS = NTSTATUS::from_constant(0xC0370005); // STATUS_VID_INVALID_OBJECT_NAME
+
+/// The partition name of the virtualization infrastructure driver exceeds the maximum.
 pub const VID_PARTITION_NAME_TOO_LONG : NTSTATUS = NTSTATUS::from_constant(0xC0370006); // STATUS_VID_PARTITION_NAME_TOO_LONG
+
+/// The message queue name of the virtualization infrastructure driver exceeds the maximum.
 pub const VID_MESSAGE_QUEUE_NAME_TOO_LONG : NTSTATUS = NTSTATUS::from_constant(0xC0370007); // STATUS_VID_MESSAGE_QUEUE_NAME_TOO_LONG
+
+/// Cannot create the partition for the virtualization infrastructure driver because another partition with the same name already exists.
 pub const VID_PARTITION_ALREADY_EXISTS : NTSTATUS = NTSTATUS::from_constant(0xC0370008); // STATUS_VID_PARTITION_ALREADY_EXISTS
+
+/// The virtualization infrastructure driver has encountered an error. The requested partition does not exist. Restarting the virtual machine may fix the problem. If the problem persists, try restarting the physical computer.
 pub const VID_PARTITION_DOES_NOT_EXIST : NTSTATUS = NTSTATUS::from_constant(0xC0370009); // STATUS_VID_PARTITION_DOES_NOT_EXIST
+
+/// The virtualization infrastructure driver has encountered an error. Could not find the requested partition. Restarting the virtual machine may fix the problem. If the problem persists, try restarting the physical computer.
 pub const VID_PARTITION_NAME_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC037000A); // STATUS_VID_PARTITION_NAME_NOT_FOUND
+
+/// A message queue with the same name already exists for the virtualization infrastructure driver.
 pub const VID_MESSAGE_QUEUE_ALREADY_EXISTS : NTSTATUS = NTSTATUS::from_constant(0xC037000B); // STATUS_VID_MESSAGE_QUEUE_ALREADY_EXISTS
+
+/// The memory block page for the virtualization infrastructure driver cannot be mapped because the page map limit has been reached. Restarting the virtual machine may fix the problem. If the problem persists, try restarting the physical computer.
 pub const VID_EXCEEDED_MBP_ENTRY_MAP_LIMIT : NTSTATUS = NTSTATUS::from_constant(0xC037000C); // STATUS_VID_EXCEEDED_MBP_ENTRY_MAP_LIMIT
+
+/// The memory block for the virtualization infrastructure driver is still being used and cannot be destroyed.
 pub const VID_MB_STILL_REFERENCED : NTSTATUS = NTSTATUS::from_constant(0xC037000D); // STATUS_VID_MB_STILL_REFERENCED
+
+/// Cannot unlock the page array for the guest operating system memory address because it does not match a previous lock request. Restarting the virtual machine may fix the problem. If the problem persists, try restarting the physical computer.
 pub const VID_CHILD_GPA_PAGE_SET_CORRUPTED : NTSTATUS = NTSTATUS::from_constant(0xC037000E); // STATUS_VID_CHILD_GPA_PAGE_SET_CORRUPTED
+
+/// The non-uniform memory access (NUMA) node settings do not match the system NUMA topology. In order to start the virtual machine, you will need to modify the NUMA configuration.
 pub const VID_INVALID_NUMA_SETTINGS : NTSTATUS = NTSTATUS::from_constant(0xC037000F); // STATUS_VID_INVALID_NUMA_SETTINGS
+
+/// The non-uniform memory access (NUMA) node index does not match a valid index in the system NUMA topology.
 pub const VID_INVALID_NUMA_NODE_INDEX : NTSTATUS = NTSTATUS::from_constant(0xC0370010); // STATUS_VID_INVALID_NUMA_NODE_INDEX
+
+/// The memory block for the virtualization infrastructure driver is already associated with a message queue.
 pub const VID_NOTIFICATION_QUEUE_ALREADY_ASSOCIATED : NTSTATUS = NTSTATUS::from_constant(0xC0370011); // STATUS_VID_NOTIFICATION_QUEUE_ALREADY_ASSOCIATED
+
+/// The handle is not a valid memory block handle for the virtualization infrastructure driver.
 pub const VID_INVALID_MEMORY_BLOCK_HANDLE : NTSTATUS = NTSTATUS::from_constant(0xC0370012); // STATUS_VID_INVALID_MEMORY_BLOCK_HANDLE
+
+/// The request exceeded the memory block page limit for the virtualization infrastructure driver. Restarting the virtual machine may fix the problem. If the problem persists, try restarting the physical computer.
 pub const VID_PAGE_RANGE_OVERFLOW : NTSTATUS = NTSTATUS::from_constant(0xC0370013); // STATUS_VID_PAGE_RANGE_OVERFLOW
+
+/// The handle is not a valid message queue handle for the virtualization infrastructure driver.
 pub const VID_INVALID_MESSAGE_QUEUE_HANDLE : NTSTATUS = NTSTATUS::from_constant(0xC0370014); // STATUS_VID_INVALID_MESSAGE_QUEUE_HANDLE
+
+/// The handle is not a valid page range handle for the virtualization infrastructure driver.
 pub const VID_INVALID_GPA_RANGE_HANDLE : NTSTATUS = NTSTATUS::from_constant(0xC0370015); // STATUS_VID_INVALID_GPA_RANGE_HANDLE
+
+/// Cannot install client notifications because no message queue for the virtualization infrastructure driver is associated with the memory block.
 pub const VID_NO_MEMORY_BLOCK_NOTIFICATION_QUEUE : NTSTATUS = NTSTATUS::from_constant(0xC0370016); // STATUS_VID_NO_MEMORY_BLOCK_NOTIFICATION_QUEUE
+
+/// The request to lock or map a memory block page failed because the virtualization infrastructure driver memory block limit has been reached. Restarting the virtual machine may fix the problem. If the problem persists, try restarting the physical computer.
 pub const VID_MEMORY_BLOCK_LOCK_COUNT_EXCEEDED : NTSTATUS = NTSTATUS::from_constant(0xC0370017); // STATUS_VID_MEMORY_BLOCK_LOCK_COUNT_EXCEEDED
+
+/// The handle is not a valid parent partition mapping handle for the virtualization infrastructure driver.
 pub const VID_INVALID_PPM_HANDLE : NTSTATUS = NTSTATUS::from_constant(0xC0370018); // STATUS_VID_INVALID_PPM_HANDLE
+
+/// Notifications cannot be created on the memory block because it is use.
 pub const VID_MBPS_ARE_LOCKED : NTSTATUS = NTSTATUS::from_constant(0xC0370019); // STATUS_VID_MBPS_ARE_LOCKED
+
+/// The message queue for the virtualization infrastructure driver has been closed. Restarting the virtual machine may fix the problem. If the problem persists, try restarting the physical computer.
 pub const VID_MESSAGE_QUEUE_CLOSED : NTSTATUS = NTSTATUS::from_constant(0xC037001A); // STATUS_VID_MESSAGE_QUEUE_CLOSED
+
+/// Cannot add a virtual processor to the partition because the maximum has been reached.
 pub const VID_VIRTUAL_PROCESSOR_LIMIT_EXCEEDED : NTSTATUS = NTSTATUS::from_constant(0xC037001B); // STATUS_VID_VIRTUAL_PROCESSOR_LIMIT_EXCEEDED
+
+/// Cannot stop the virtual processor immediately because of a pending intercept.
 pub const VID_STOP_PENDING : NTSTATUS = NTSTATUS::from_constant(0xC037001C); // STATUS_VID_STOP_PENDING
+
+/// Invalid state for the virtual processor. Restarting the virtual machine may fix the problem. If the problem persists, try restarting the physical computer.
 pub const VID_INVALID_PROCESSOR_STATE : NTSTATUS = NTSTATUS::from_constant(0xC037001D); // STATUS_VID_INVALID_PROCESSOR_STATE
+
+/// The maximum number of kernel mode clients for the virtualization infrastructure driver has been reached. Restarting the virtual machine may fix the problem. If the problem persists, try restarting the physical computer.
 pub const VID_EXCEEDED_KM_CONTEXT_COUNT_LIMIT : NTSTATUS = NTSTATUS::from_constant(0xC037001E); // STATUS_VID_EXCEEDED_KM_CONTEXT_COUNT_LIMIT
+
+/// This kernel mode interface for the virtualization infrastructure driver has already been initialized. Restarting the virtual machine may fix the problem. If the problem persists, try restarting the physical computer.
 pub const VID_KM_INTERFACE_ALREADY_INITIALIZED : NTSTATUS = NTSTATUS::from_constant(0xC037001F); // STATUS_VID_KM_INTERFACE_ALREADY_INITIALIZED
+
+/// Cannot set or reset the memory block property more than once for the virtualization infrastructure driver. Restarting the virtual machine may fix the problem. If the problem persists, try restarting the physical computer.
 pub const VID_MB_PROPERTY_ALREADY_SET_RESET : NTSTATUS = NTSTATUS::from_constant(0xC0370020); // STATUS_VID_MB_PROPERTY_ALREADY_SET_RESET
+
+/// The memory mapped I/O for this page range no longer exists. Restarting the virtual machine may fix the problem. If the problem persists, try restarting the physical computer.
 pub const VID_MMIO_RANGE_DESTROYED : NTSTATUS = NTSTATUS::from_constant(0xC0370021); // STATUS_VID_MMIO_RANGE_DESTROYED
+
+/// The lock or unlock request uses an invalid guest operating system memory address. Restarting the virtual machine may fix the problem. If the problem persists, try restarting the physical computer.
 pub const VID_INVALID_CHILD_GPA_PAGE_SET : NTSTATUS = NTSTATUS::from_constant(0xC0370022); // STATUS_VID_INVALID_CHILD_GPA_PAGE_SET
+
+/// Cannot destroy or reuse the reserve page set for the virtualization infrastructure driver because it is in use. Restarting the virtual machine may fix the problem. If the problem persists, try restarting the physical computer.
 pub const VID_RESERVE_PAGE_SET_IS_BEING_USED : NTSTATUS = NTSTATUS::from_constant(0xC0370023); // STATUS_VID_RESERVE_PAGE_SET_IS_BEING_USED
+
+/// The reserve page set for the virtualization infrastructure driver is too small to use in the lock request. Restarting the virtual machine may fix the problem. If the problem persists, try restarting the physical computer.
 pub const VID_RESERVE_PAGE_SET_TOO_SMALL : NTSTATUS = NTSTATUS::from_constant(0xC0370024); // STATUS_VID_RESERVE_PAGE_SET_TOO_SMALL
+
+/// Cannot lock or map the memory block page for the virtualization infrastructure driver because it has already been locked using a reserve page set page. Restarting the virtual machine may fix the problem. If the problem persists, try restarting the physical computer.
 pub const VID_MBP_ALREADY_LOCKED_USING_RESERVED_PAGE : NTSTATUS = NTSTATUS::from_constant(0xC0370025); // STATUS_VID_MBP_ALREADY_LOCKED_USING_RESERVED_PAGE
+
+/// Cannot create the memory block for the virtualization infrastructure driver because the requested number of pages exceeded the limit. Restarting the virtual machine may fix the problem. If the problem persists, try restarting the physical computer.
 pub const VID_MBP_COUNT_EXCEEDED_LIMIT : NTSTATUS = NTSTATUS::from_constant(0xC0370026); // STATUS_VID_MBP_COUNT_EXCEEDED_LIMIT
+
+/// Cannot restore this virtual machine because the saved state data cannot be read. Delete the saved state data and then try to start the virtual machine.
 pub const VID_SAVED_STATE_CORRUPT : NTSTATUS = NTSTATUS::from_constant(0xC0370027); // STATUS_VID_SAVED_STATE_CORRUPT
+
+/// Cannot restore this virtual machine because an item read from the saved state data is not recognized. Delete the saved state data and then try to start the virtual machine.
 pub const VID_SAVED_STATE_UNRECOGNIZED_ITEM : NTSTATUS = NTSTATUS::from_constant(0xC0370028); // STATUS_VID_SAVED_STATE_UNRECOGNIZED_ITEM
+
+/// Cannot restore this virtual machine to the saved state because of hypervisor incompatibility. Delete the saved state data and then try to start the virtual machine.
 pub const VID_SAVED_STATE_INCOMPATIBLE : NTSTATUS = NTSTATUS::from_constant(0xC0370029); // STATUS_VID_SAVED_STATE_INCOMPATIBLE
+
+/// The specified VTL does not have the permission to access the resource.
 pub const VID_VTL_ACCESS_DENIED : NTSTATUS = NTSTATUS::from_constant(0xC037002A); // STATUS_VID_VTL_ACCESS_DENIED
+
+/// A virtual machine is running with its memory allocated across multiple NUMA nodes. This does not indicate a problem unless the performance of your virtual machine is unusually slow. If you are experiencing performance problems, you may need to modify the NUMA configuration.
 pub const VID_REMOTE_NODE_PARENT_GPA_PAGES_USED : NTSTATUS = NTSTATUS::from_constant(0x80370001); // STATUS_VID_REMOTE_NODE_PARENT_GPA_PAGES_USED
+
+/// The SPI in the packet does not match a valid IPsec SA.
 pub const IPSEC_BAD_SPI : NTSTATUS = NTSTATUS::from_constant(0xC0360001); // STATUS_IPSEC_BAD_SPI
+
+/// Packet was received on an IPsec SA whose lifetime has expired.
 pub const IPSEC_SA_LIFETIME_EXPIRED : NTSTATUS = NTSTATUS::from_constant(0xC0360002); // STATUS_IPSEC_SA_LIFETIME_EXPIRED
+
+/// Packet was received on an IPsec SA that does not match the packet characteristics.
 pub const IPSEC_WRONG_SA : NTSTATUS = NTSTATUS::from_constant(0xC0360003); // STATUS_IPSEC_WRONG_SA
+
+/// Packet sequence number replay check failed.
 pub const IPSEC_REPLAY_CHECK_FAILED : NTSTATUS = NTSTATUS::from_constant(0xC0360004); // STATUS_IPSEC_REPLAY_CHECK_FAILED
+
+/// IPsec header and/or trailer in the packet is invalid.
 pub const IPSEC_INVALID_PACKET : NTSTATUS = NTSTATUS::from_constant(0xC0360005); // STATUS_IPSEC_INVALID_PACKET
+
+/// IPsec integrity check failed.
 pub const IPSEC_INTEGRITY_CHECK_FAILED : NTSTATUS = NTSTATUS::from_constant(0xC0360006); // STATUS_IPSEC_INTEGRITY_CHECK_FAILED
+
+/// IPsec dropped a clear text packet.
 pub const IPSEC_CLEAR_TEXT_DROP : NTSTATUS = NTSTATUS::from_constant(0xC0360007); // STATUS_IPSEC_CLEAR_TEXT_DROP
+
+/// IPsec dropped an incoming ESP packet in authenticated firewall mode. This drop is benign.
 pub const IPSEC_AUTH_FIREWALL_DROP : NTSTATUS = NTSTATUS::from_constant(0xC0360008); // STATUS_IPSEC_AUTH_FIREWALL_DROP
+
+/// IPsec dropped a packet due to DoS throttling.
 pub const IPSEC_THROTTLE_DROP : NTSTATUS = NTSTATUS::from_constant(0xC0360009); // STATUS_IPSEC_THROTTLE_DROP
+
+/// IPsec DoS Protection matched an explicit block rule.
 pub const IPSEC_DOSP_BLOCK : NTSTATUS = NTSTATUS::from_constant(0xC0368000); // STATUS_IPSEC_DOSP_BLOCK
+
+/// IPsec DoS Protection received an IPsec specific multicast packet which is not allowed.
 pub const IPSEC_DOSP_RECEIVED_MULTICAST : NTSTATUS = NTSTATUS::from_constant(0xC0368001); // STATUS_IPSEC_DOSP_RECEIVED_MULTICAST
+
+/// IPsec DoS Protection received an incorrectly formatted packet.
 pub const IPSEC_DOSP_INVALID_PACKET : NTSTATUS = NTSTATUS::from_constant(0xC0368002); // STATUS_IPSEC_DOSP_INVALID_PACKET
+
+/// IPsec DoS Protection failed to look up state.
 pub const IPSEC_DOSP_STATE_LOOKUP_FAILED : NTSTATUS = NTSTATUS::from_constant(0xC0368003); // STATUS_IPSEC_DOSP_STATE_LOOKUP_FAILED
+
+/// IPsec DoS Protection failed to create state because the maximum number of entries allowed by policy has been reached.
 pub const IPSEC_DOSP_MAX_ENTRIES : NTSTATUS = NTSTATUS::from_constant(0xC0368004); // STATUS_IPSEC_DOSP_MAX_ENTRIES
+
+/// IPsec DoS Protection received an IPsec negotiation packet for a keying module which is not allowed by policy.
 pub const IPSEC_DOSP_KEYMOD_NOT_ALLOWED : NTSTATUS = NTSTATUS::from_constant(0xC0368005); // STATUS_IPSEC_DOSP_KEYMOD_NOT_ALLOWED
+
+/// IPsec DoS Protection failed to create a per internal IP rate limit queue because the maximum number of queues allowed by policy has been reached.
 pub const IPSEC_DOSP_MAX_PER_IP_RATELIMIT_QUEUES : NTSTATUS = NTSTATUS::from_constant(0xC0368006); // STATUS_IPSEC_DOSP_MAX_PER_IP_RATELIMIT_QUEUES
+
+/// The regeneration operation was not able to copy all data from the active plexes due to bad sectors.
 pub const VOLMGR_INCOMPLETE_REGENERATION : NTSTATUS = NTSTATUS::from_constant(0x80380001); // STATUS_VOLMGR_INCOMPLETE_REGENERATION
+
+/// One or more disks were not fully migrated to the target pack. They may or may not require reimport after fixing the hardware problems.
 pub const VOLMGR_INCOMPLETE_DISK_MIGRATION : NTSTATUS = NTSTATUS::from_constant(0x80380002); // STATUS_VOLMGR_INCOMPLETE_DISK_MIGRATION
+
+/// The configuration database is full.
 pub const VOLMGR_DATABASE_FULL : NTSTATUS = NTSTATUS::from_constant(0xC0380001); // STATUS_VOLMGR_DATABASE_FULL
+
+/// The configuration data on the disk is corrupted.
 pub const VOLMGR_DISK_CONFIGURATION_CORRUPTED : NTSTATUS = NTSTATUS::from_constant(0xC0380002); // STATUS_VOLMGR_DISK_CONFIGURATION_CORRUPTED
+
+/// The configuration on the disk is not insync with the in-memory configuration.
 pub const VOLMGR_DISK_CONFIGURATION_NOT_IN_SYNC : NTSTATUS = NTSTATUS::from_constant(0xC0380003); // STATUS_VOLMGR_DISK_CONFIGURATION_NOT_IN_SYNC
+
+/// A majority of disks failed to be updated with the new configuration.
 pub const VOLMGR_PACK_CONFIG_UPDATE_FAILED : NTSTATUS = NTSTATUS::from_constant(0xC0380004); // STATUS_VOLMGR_PACK_CONFIG_UPDATE_FAILED
+
+/// The disk contains non-simple volumes.
 pub const VOLMGR_DISK_CONTAINS_NON_SIMPLE_VOLUME : NTSTATUS = NTSTATUS::from_constant(0xC0380005); // STATUS_VOLMGR_DISK_CONTAINS_NON_SIMPLE_VOLUME
+
+/// The same disk was specified more than once in the migration list.
 pub const VOLMGR_DISK_DUPLICATE : NTSTATUS = NTSTATUS::from_constant(0xC0380006); // STATUS_VOLMGR_DISK_DUPLICATE
+
+/// The disk is already dynamic.
 pub const VOLMGR_DISK_DYNAMIC : NTSTATUS = NTSTATUS::from_constant(0xC0380007); // STATUS_VOLMGR_DISK_DYNAMIC
+
+/// The specified disk id is invalid. There are no disks with the specified disk id.
 pub const VOLMGR_DISK_ID_INVALID : NTSTATUS = NTSTATUS::from_constant(0xC0380008); // STATUS_VOLMGR_DISK_ID_INVALID
+
+/// The specified disk is an invalid disk. Operation cannot complete on an invalid disk.
 pub const VOLMGR_DISK_INVALID : NTSTATUS = NTSTATUS::from_constant(0xC0380009); // STATUS_VOLMGR_DISK_INVALID
+
+/// The specified disk(s) cannot be removed since it is the last remaining voter.
 pub const VOLMGR_DISK_LAST_VOTER : NTSTATUS = NTSTATUS::from_constant(0xC038000A); // STATUS_VOLMGR_DISK_LAST_VOTER
+
+/// The specified disk has an invalid disk layout.
 pub const VOLMGR_DISK_LAYOUT_INVALID : NTSTATUS = NTSTATUS::from_constant(0xC038000B); // STATUS_VOLMGR_DISK_LAYOUT_INVALID
+
+/// The disk layout contains non-basic partitions which appear after basic partitions. This is an invalid disk layout.
 pub const VOLMGR_DISK_LAYOUT_NON_BASIC_BETWEEN_BASIC_PARTITIONS : NTSTATUS = NTSTATUS::from_constant(0xC038000C); // STATUS_VOLMGR_DISK_LAYOUT_NON_BASIC_BETWEEN_BASIC_PARTITIONS
+
+/// The disk layout contains partitions which are not cylinder aligned.
 pub const VOLMGR_DISK_LAYOUT_NOT_CYLINDER_ALIGNED : NTSTATUS = NTSTATUS::from_constant(0xC038000D); // STATUS_VOLMGR_DISK_LAYOUT_NOT_CYLINDER_ALIGNED
+
+/// The disk layout contains partitions which are smaller than the minimum size.
 pub const VOLMGR_DISK_LAYOUT_PARTITIONS_TOO_SMALL : NTSTATUS = NTSTATUS::from_constant(0xC038000E); // STATUS_VOLMGR_DISK_LAYOUT_PARTITIONS_TOO_SMALL
+
+/// The disk layout contains primary partitions in between logical drives. This is an invalid disk layout.
 pub const VOLMGR_DISK_LAYOUT_PRIMARY_BETWEEN_LOGICAL_PARTITIONS : NTSTATUS = NTSTATUS::from_constant(0xC038000F); // STATUS_VOLMGR_DISK_LAYOUT_PRIMARY_BETWEEN_LOGICAL_PARTITIONS
+
+/// The disk layout contains more than the maximum number of supported partitions.
 pub const VOLMGR_DISK_LAYOUT_TOO_MANY_PARTITIONS : NTSTATUS = NTSTATUS::from_constant(0xC0380010); // STATUS_VOLMGR_DISK_LAYOUT_TOO_MANY_PARTITIONS
+
+/// The specified disk is missing. The operation cannot complete on a missing disk.
 pub const VOLMGR_DISK_MISSING : NTSTATUS = NTSTATUS::from_constant(0xC0380011); // STATUS_VOLMGR_DISK_MISSING
+
+/// The specified disk is not empty.
 pub const VOLMGR_DISK_NOT_EMPTY : NTSTATUS = NTSTATUS::from_constant(0xC0380012); // STATUS_VOLMGR_DISK_NOT_EMPTY
+
+/// There is not enough usable space for this operation.
 pub const VOLMGR_DISK_NOT_ENOUGH_SPACE : NTSTATUS = NTSTATUS::from_constant(0xC0380013); // STATUS_VOLMGR_DISK_NOT_ENOUGH_SPACE
+
+/// The force revectoring of bad sectors failed.
 pub const VOLMGR_DISK_REVECTORING_FAILED : NTSTATUS = NTSTATUS::from_constant(0xC0380014); // STATUS_VOLMGR_DISK_REVECTORING_FAILED
+
+/// The specified disk has an invalid sector size.
 pub const VOLMGR_DISK_SECTOR_SIZE_INVALID : NTSTATUS = NTSTATUS::from_constant(0xC0380015); // STATUS_VOLMGR_DISK_SECTOR_SIZE_INVALID
+
+/// The specified disk set contains volumes which exist on disks outside of the set.
 pub const VOLMGR_DISK_SET_NOT_CONTAINED : NTSTATUS = NTSTATUS::from_constant(0xC0380016); // STATUS_VOLMGR_DISK_SET_NOT_CONTAINED
+
+/// A disk in the volume layout provides extents to more than one member of a plex.
 pub const VOLMGR_DISK_USED_BY_MULTIPLE_MEMBERS : NTSTATUS = NTSTATUS::from_constant(0xC0380017); // STATUS_VOLMGR_DISK_USED_BY_MULTIPLE_MEMBERS
+
+/// A disk in the volume layout provides extents to more than one plex.
 pub const VOLMGR_DISK_USED_BY_MULTIPLE_PLEXES : NTSTATUS = NTSTATUS::from_constant(0xC0380018); // STATUS_VOLMGR_DISK_USED_BY_MULTIPLE_PLEXES
+
+/// Dynamic disks are not supported on this system.
 pub const VOLMGR_DYNAMIC_DISK_NOT_SUPPORTED : NTSTATUS = NTSTATUS::from_constant(0xC0380019); // STATUS_VOLMGR_DYNAMIC_DISK_NOT_SUPPORTED
+
+/// The specified extent is already used by other volumes.
 pub const VOLMGR_EXTENT_ALREADY_USED : NTSTATUS = NTSTATUS::from_constant(0xC038001A); // STATUS_VOLMGR_EXTENT_ALREADY_USED
+
+/// The specified volume is retained and can only be extended into a contiguous extent. The specified extent to grow the volume is not contiguous with the specified volume.
 pub const VOLMGR_EXTENT_NOT_CONTIGUOUS : NTSTATUS = NTSTATUS::from_constant(0xC038001B); // STATUS_VOLMGR_EXTENT_NOT_CONTIGUOUS
+
+/// The specified volume extent is not within the public region of the disk.
 pub const VOLMGR_EXTENT_NOT_IN_PUBLIC_REGION : NTSTATUS = NTSTATUS::from_constant(0xC038001C); // STATUS_VOLMGR_EXTENT_NOT_IN_PUBLIC_REGION
+
+/// The specified volume extent is not sector aligned.
 pub const VOLMGR_EXTENT_NOT_SECTOR_ALIGNED : NTSTATUS = NTSTATUS::from_constant(0xC038001D); // STATUS_VOLMGR_EXTENT_NOT_SECTOR_ALIGNED
+
+/// The specified partition overlaps an EBR (the first track of an extended partition on a MBR disks).
 pub const VOLMGR_EXTENT_OVERLAPS_EBR_PARTITION : NTSTATUS = NTSTATUS::from_constant(0xC038001E); // STATUS_VOLMGR_EXTENT_OVERLAPS_EBR_PARTITION
+
+/// The specified extent lengths cannot be used to construct a volume with specified length.
 pub const VOLMGR_EXTENT_VOLUME_LENGTHS_DO_NOT_MATCH : NTSTATUS = NTSTATUS::from_constant(0xC038001F); // STATUS_VOLMGR_EXTENT_VOLUME_LENGTHS_DO_NOT_MATCH
+
+/// The system does not support fault tolerant volumes.
 pub const VOLMGR_FAULT_TOLERANT_NOT_SUPPORTED : NTSTATUS = NTSTATUS::from_constant(0xC0380020); // STATUS_VOLMGR_FAULT_TOLERANT_NOT_SUPPORTED
+
+/// The specified interleave length is invalid.
 pub const VOLMGR_INTERLEAVE_LENGTH_INVALID : NTSTATUS = NTSTATUS::from_constant(0xC0380021); // STATUS_VOLMGR_INTERLEAVE_LENGTH_INVALID
+
+/// There is already a maximum number of registered users.
 pub const VOLMGR_MAXIMUM_REGISTERED_USERS : NTSTATUS = NTSTATUS::from_constant(0xC0380022); // STATUS_VOLMGR_MAXIMUM_REGISTERED_USERS
+
+/// The specified member is already in-sync with the other active members. It does not need to be regenerated.
 pub const VOLMGR_MEMBER_IN_SYNC : NTSTATUS = NTSTATUS::from_constant(0xC0380023); // STATUS_VOLMGR_MEMBER_IN_SYNC
+
+/// The same member index was specified more than once.
 pub const VOLMGR_MEMBER_INDEX_DUPLICATE : NTSTATUS = NTSTATUS::from_constant(0xC0380024); // STATUS_VOLMGR_MEMBER_INDEX_DUPLICATE
+
+/// The specified member index is greater or equal than the number of members in the volume plex.
 pub const VOLMGR_MEMBER_INDEX_INVALID : NTSTATUS = NTSTATUS::from_constant(0xC0380025); // STATUS_VOLMGR_MEMBER_INDEX_INVALID
+
+/// The specified member is missing. It cannot be regenerated.
 pub const VOLMGR_MEMBER_MISSING : NTSTATUS = NTSTATUS::from_constant(0xC0380026); // STATUS_VOLMGR_MEMBER_MISSING
+
+/// The specified member is not detached. Cannot replace a member which is not detached.
 pub const VOLMGR_MEMBER_NOT_DETACHED : NTSTATUS = NTSTATUS::from_constant(0xC0380027); // STATUS_VOLMGR_MEMBER_NOT_DETACHED
+
+/// The specified member is already regenerating.
 pub const VOLMGR_MEMBER_REGENERATING : NTSTATUS = NTSTATUS::from_constant(0xC0380028); // STATUS_VOLMGR_MEMBER_REGENERATING
+
+/// All disks belonging to the pack failed.
 pub const VOLMGR_ALL_DISKS_FAILED : NTSTATUS = NTSTATUS::from_constant(0xC0380029); // STATUS_VOLMGR_ALL_DISKS_FAILED
+
+/// There are currently no registered users for notifications. The task number is irrelevant unless there are registered users.
 pub const VOLMGR_NO_REGISTERED_USERS : NTSTATUS = NTSTATUS::from_constant(0xC038002A); // STATUS_VOLMGR_NO_REGISTERED_USERS
+
+/// The specified notification user does not exist. Failed to unregister user for notifications.
 pub const VOLMGR_NO_SUCH_USER : NTSTATUS = NTSTATUS::from_constant(0xC038002B); // STATUS_VOLMGR_NO_SUCH_USER
+
+/// The notifications have been reset. Notifications for the current user are invalid. Unregister and re-register for notifications.
 pub const VOLMGR_NOTIFICATION_RESET : NTSTATUS = NTSTATUS::from_constant(0xC038002C); // STATUS_VOLMGR_NOTIFICATION_RESET
+
+/// The specified number of members is invalid.
 pub const VOLMGR_NUMBER_OF_MEMBERS_INVALID : NTSTATUS = NTSTATUS::from_constant(0xC038002D); // STATUS_VOLMGR_NUMBER_OF_MEMBERS_INVALID
+
+/// The specified number of plexes is invalid.
 pub const VOLMGR_NUMBER_OF_PLEXES_INVALID : NTSTATUS = NTSTATUS::from_constant(0xC038002E); // STATUS_VOLMGR_NUMBER_OF_PLEXES_INVALID
+
+/// The specified source and target packs are identical.
 pub const VOLMGR_PACK_DUPLICATE : NTSTATUS = NTSTATUS::from_constant(0xC038002F); // STATUS_VOLMGR_PACK_DUPLICATE
+
+/// The specified pack id is invalid. There are no packs with the specified pack id.
 pub const VOLMGR_PACK_ID_INVALID : NTSTATUS = NTSTATUS::from_constant(0xC0380030); // STATUS_VOLMGR_PACK_ID_INVALID
+
+/// The specified pack is the invalid pack. The operation cannot complete with the invalid pack.
 pub const VOLMGR_PACK_INVALID : NTSTATUS = NTSTATUS::from_constant(0xC0380031); // STATUS_VOLMGR_PACK_INVALID
+
+/// The specified pack name is invalid.
 pub const VOLMGR_PACK_NAME_INVALID : NTSTATUS = NTSTATUS::from_constant(0xC0380032); // STATUS_VOLMGR_PACK_NAME_INVALID
+
+/// The specified pack is offline.
 pub const VOLMGR_PACK_OFFLINE : NTSTATUS = NTSTATUS::from_constant(0xC0380033); // STATUS_VOLMGR_PACK_OFFLINE
+
+/// The specified pack already has a quorum of healthy disks.
 pub const VOLMGR_PACK_HAS_QUORUM : NTSTATUS = NTSTATUS::from_constant(0xC0380034); // STATUS_VOLMGR_PACK_HAS_QUORUM
+
+/// The pack does not have a quorum of healthy disks.
 pub const VOLMGR_PACK_WITHOUT_QUORUM : NTSTATUS = NTSTATUS::from_constant(0xC0380035); // STATUS_VOLMGR_PACK_WITHOUT_QUORUM
+
+/// The specified disk has an unsupported partition style. Only MBR and GPT partition styles are supported.
 pub const VOLMGR_PARTITION_STYLE_INVALID : NTSTATUS = NTSTATUS::from_constant(0xC0380036); // STATUS_VOLMGR_PARTITION_STYLE_INVALID
+
+/// Failed to update the disk's partition layout.
 pub const VOLMGR_PARTITION_UPDATE_FAILED : NTSTATUS = NTSTATUS::from_constant(0xC0380037); // STATUS_VOLMGR_PARTITION_UPDATE_FAILED
+
+/// The specified plex is already in-sync with the other active plexes. It does not need to be regenerated.
 pub const VOLMGR_PLEX_IN_SYNC : NTSTATUS = NTSTATUS::from_constant(0xC0380038); // STATUS_VOLMGR_PLEX_IN_SYNC
+
+/// The same plex index was specified more than once.
 pub const VOLMGR_PLEX_INDEX_DUPLICATE : NTSTATUS = NTSTATUS::from_constant(0xC0380039); // STATUS_VOLMGR_PLEX_INDEX_DUPLICATE
+
+/// The specified plex index is greater or equal than the number of plexes in the volume.
 pub const VOLMGR_PLEX_INDEX_INVALID : NTSTATUS = NTSTATUS::from_constant(0xC038003A); // STATUS_VOLMGR_PLEX_INDEX_INVALID
+
+/// The specified plex is the last active plex in the volume. The plex cannot be removed or else the volume will go offline.
 pub const VOLMGR_PLEX_LAST_ACTIVE : NTSTATUS = NTSTATUS::from_constant(0xC038003B); // STATUS_VOLMGR_PLEX_LAST_ACTIVE
+
+/// The specified plex is missing.
 pub const VOLMGR_PLEX_MISSING : NTSTATUS = NTSTATUS::from_constant(0xC038003C); // STATUS_VOLMGR_PLEX_MISSING
+
+/// The specified plex is currently regenerating.
 pub const VOLMGR_PLEX_REGENERATING : NTSTATUS = NTSTATUS::from_constant(0xC038003D); // STATUS_VOLMGR_PLEX_REGENERATING
+
+/// The specified plex type is invalid.
 pub const VOLMGR_PLEX_TYPE_INVALID : NTSTATUS = NTSTATUS::from_constant(0xC038003E); // STATUS_VOLMGR_PLEX_TYPE_INVALID
+
+/// The operation is only supported on RAID-5 plexes.
 pub const VOLMGR_PLEX_NOT_RAID5 : NTSTATUS = NTSTATUS::from_constant(0xC038003F); // STATUS_VOLMGR_PLEX_NOT_RAID5
+
+/// The operation is only supported on simple plexes.
 pub const VOLMGR_PLEX_NOT_SIMPLE : NTSTATUS = NTSTATUS::from_constant(0xC0380040); // STATUS_VOLMGR_PLEX_NOT_SIMPLE
+
+/// The Size fields in the VM_VOLUME_LAYOUT input structure are incorrectly set.
 pub const VOLMGR_STRUCTURE_SIZE_INVALID : NTSTATUS = NTSTATUS::from_constant(0xC0380041); // STATUS_VOLMGR_STRUCTURE_SIZE_INVALID
+
+/// There is already a pending request for notifications. Wait for the existing request to return before requesting for more notifications.
 pub const VOLMGR_TOO_MANY_NOTIFICATION_REQUESTS : NTSTATUS = NTSTATUS::from_constant(0xC0380042); // STATUS_VOLMGR_TOO_MANY_NOTIFICATION_REQUESTS
+
+/// There is currently a transaction in process.
 pub const VOLMGR_TRANSACTION_IN_PROGRESS : NTSTATUS = NTSTATUS::from_constant(0xC0380043); // STATUS_VOLMGR_TRANSACTION_IN_PROGRESS
+
+/// An unexpected layout change occurred outside of the volume manager.
 pub const VOLMGR_UNEXPECTED_DISK_LAYOUT_CHANGE : NTSTATUS = NTSTATUS::from_constant(0xC0380044); // STATUS_VOLMGR_UNEXPECTED_DISK_LAYOUT_CHANGE
+
+/// The specified volume contains a missing disk.
 pub const VOLMGR_VOLUME_CONTAINS_MISSING_DISK : NTSTATUS = NTSTATUS::from_constant(0xC0380045); // STATUS_VOLMGR_VOLUME_CONTAINS_MISSING_DISK
+
+/// The specified volume id is invalid. There are no volumes with the specified volume id.
 pub const VOLMGR_VOLUME_ID_INVALID : NTSTATUS = NTSTATUS::from_constant(0xC0380046); // STATUS_VOLMGR_VOLUME_ID_INVALID
+
+/// The specified volume length is invalid.
 pub const VOLMGR_VOLUME_LENGTH_INVALID : NTSTATUS = NTSTATUS::from_constant(0xC0380047); // STATUS_VOLMGR_VOLUME_LENGTH_INVALID
+
+/// The specified size for the volume is not a multiple of the sector size.
 pub const VOLMGR_VOLUME_LENGTH_NOT_SECTOR_SIZE_MULTIPLE : NTSTATUS = NTSTATUS::from_constant(0xC0380048); // STATUS_VOLMGR_VOLUME_LENGTH_NOT_SECTOR_SIZE_MULTIPLE
+
+/// The operation is only supported on mirrored volumes.
 pub const VOLMGR_VOLUME_NOT_MIRRORED : NTSTATUS = NTSTATUS::from_constant(0xC0380049); // STATUS_VOLMGR_VOLUME_NOT_MIRRORED
+
+/// The specified volume does not have a retain partition.
 pub const VOLMGR_VOLUME_NOT_RETAINED : NTSTATUS = NTSTATUS::from_constant(0xC038004A); // STATUS_VOLMGR_VOLUME_NOT_RETAINED
+
+/// The specified volume is offline.
 pub const VOLMGR_VOLUME_OFFLINE : NTSTATUS = NTSTATUS::from_constant(0xC038004B); // STATUS_VOLMGR_VOLUME_OFFLINE
+
+/// The specified volume already has a retain partition.
 pub const VOLMGR_VOLUME_RETAINED : NTSTATUS = NTSTATUS::from_constant(0xC038004C); // STATUS_VOLMGR_VOLUME_RETAINED
+
+/// The specified number of extents is invalid.
 pub const VOLMGR_NUMBER_OF_EXTENTS_INVALID : NTSTATUS = NTSTATUS::from_constant(0xC038004D); // STATUS_VOLMGR_NUMBER_OF_EXTENTS_INVALID
+
+/// All disks participating to the volume must have the same sector size.
 pub const VOLMGR_DIFFERENT_SECTOR_SIZE : NTSTATUS = NTSTATUS::from_constant(0xC038004E); // STATUS_VOLMGR_DIFFERENT_SECTOR_SIZE
+
+/// The boot disk experienced failures.
 pub const VOLMGR_BAD_BOOT_DISK : NTSTATUS = NTSTATUS::from_constant(0xC038004F); // STATUS_VOLMGR_BAD_BOOT_DISK
+
+/// The configuration of the pack is offline.
 pub const VOLMGR_PACK_CONFIG_OFFLINE : NTSTATUS = NTSTATUS::from_constant(0xC0380050); // STATUS_VOLMGR_PACK_CONFIG_OFFLINE
+
+/// The configuration of the pack is online.
 pub const VOLMGR_PACK_CONFIG_ONLINE : NTSTATUS = NTSTATUS::from_constant(0xC0380051); // STATUS_VOLMGR_PACK_CONFIG_ONLINE
+
+/// The specified pack is not the primary pack.
 pub const VOLMGR_NOT_PRIMARY_PACK : NTSTATUS = NTSTATUS::from_constant(0xC0380052); // STATUS_VOLMGR_NOT_PRIMARY_PACK
+
+/// All disks failed to be updated with the new content of the log.
 pub const VOLMGR_PACK_LOG_UPDATE_FAILED : NTSTATUS = NTSTATUS::from_constant(0xC0380053); // STATUS_VOLMGR_PACK_LOG_UPDATE_FAILED
+
+/// The specified number of disks in a plex is invalid.
 pub const VOLMGR_NUMBER_OF_DISKS_IN_PLEX_INVALID : NTSTATUS = NTSTATUS::from_constant(0xC0380054); // STATUS_VOLMGR_NUMBER_OF_DISKS_IN_PLEX_INVALID
+
+/// The specified number of disks in a plex member is invalid.
 pub const VOLMGR_NUMBER_OF_DISKS_IN_MEMBER_INVALID : NTSTATUS = NTSTATUS::from_constant(0xC0380055); // STATUS_VOLMGR_NUMBER_OF_DISKS_IN_MEMBER_INVALID
+
+/// The operation is not supported on mirrored volumes.
 pub const VOLMGR_VOLUME_MIRRORED : NTSTATUS = NTSTATUS::from_constant(0xC0380056); // STATUS_VOLMGR_VOLUME_MIRRORED
+
+/// The operation is only supported on simple and spanned plexes.
 pub const VOLMGR_PLEX_NOT_SIMPLE_SPANNED : NTSTATUS = NTSTATUS::from_constant(0xC0380057); // STATUS_VOLMGR_PLEX_NOT_SIMPLE_SPANNED
+
+/// The pack has no valid log copies.
 pub const VOLMGR_NO_VALID_LOG_COPIES : NTSTATUS = NTSTATUS::from_constant(0xC0380058); // STATUS_VOLMGR_NO_VALID_LOG_COPIES
+
+/// A primary pack is already present.
 pub const VOLMGR_PRIMARY_PACK_PRESENT : NTSTATUS = NTSTATUS::from_constant(0xC0380059); // STATUS_VOLMGR_PRIMARY_PACK_PRESENT
+
+/// The specified number of disks is invalid.
 pub const VOLMGR_NUMBER_OF_DISKS_INVALID : NTSTATUS = NTSTATUS::from_constant(0xC038005A); // STATUS_VOLMGR_NUMBER_OF_DISKS_INVALID
+
+/// The system does not support mirrored volumes.
 pub const VOLMGR_MIRROR_NOT_SUPPORTED : NTSTATUS = NTSTATUS::from_constant(0xC038005B); // STATUS_VOLMGR_MIRROR_NOT_SUPPORTED
+
+/// The system does not support RAID-5 volumes.
 pub const VOLMGR_RAID5_NOT_SUPPORTED : NTSTATUS = NTSTATUS::from_constant(0xC038005C); // STATUS_VOLMGR_RAID5_NOT_SUPPORTED
+
+/// Some BCD entries were not imported correctly from the BCD store.
 pub const BCD_NOT_ALL_ENTRIES_IMPORTED : NTSTATUS = NTSTATUS::from_constant(0x80390001); // STATUS_BCD_NOT_ALL_ENTRIES_IMPORTED
+
+/// Entries enumerated have exceeded the allowed threshold.
 pub const BCD_TOO_MANY_ELEMENTS : NTSTATUS = NTSTATUS::from_constant(0xC0390002); // STATUS_BCD_TOO_MANY_ELEMENTS
+
+/// Some BCD entries were not synchronized correctly with the firmware.
 pub const BCD_NOT_ALL_ENTRIES_SYNCHRONIZED : NTSTATUS = NTSTATUS::from_constant(0x80390003); // STATUS_BCD_NOT_ALL_ENTRIES_SYNCHRONIZED
+
+/// The virtual hard disk is corrupted. The virtual hard disk drive footer is missing.
 pub const VHD_DRIVE_FOOTER_MISSING : NTSTATUS = NTSTATUS::from_constant(0xC03A0001); // STATUS_VHD_DRIVE_FOOTER_MISSING
+
+/// The virtual hard disk is corrupted. The virtual hard disk drive footer checksum does not match the on-disk checksum.
 pub const VHD_DRIVE_FOOTER_CHECKSUM_MISMATCH : NTSTATUS = NTSTATUS::from_constant(0xC03A0002); // STATUS_VHD_DRIVE_FOOTER_CHECKSUM_MISMATCH
+
+/// The virtual hard disk is corrupted. The virtual hard disk drive footer in the virtual hard disk is corrupted.
 pub const VHD_DRIVE_FOOTER_CORRUPT : NTSTATUS = NTSTATUS::from_constant(0xC03A0003); // STATUS_VHD_DRIVE_FOOTER_CORRUPT
+
+/// The system does not recognize the file format of this virtual hard disk.
 pub const VHD_FORMAT_UNKNOWN : NTSTATUS = NTSTATUS::from_constant(0xC03A0004); // STATUS_VHD_FORMAT_UNKNOWN
+
+/// The version does not support this version of the file format.
 pub const VHD_FORMAT_UNSUPPORTED_VERSION : NTSTATUS = NTSTATUS::from_constant(0xC03A0005); // STATUS_VHD_FORMAT_UNSUPPORTED_VERSION
+
+/// The virtual hard disk is corrupted. The sparse header checksum does not match the on-disk checksum.
 pub const VHD_SPARSE_HEADER_CHECKSUM_MISMATCH : NTSTATUS = NTSTATUS::from_constant(0xC03A0006); // STATUS_VHD_SPARSE_HEADER_CHECKSUM_MISMATCH
+
+/// The system does not support this version of the virtual hard disk.This version of the sparse header is not supported.
 pub const VHD_SPARSE_HEADER_UNSUPPORTED_VERSION : NTSTATUS = NTSTATUS::from_constant(0xC03A0007); // STATUS_VHD_SPARSE_HEADER_UNSUPPORTED_VERSION
+
+/// The virtual hard disk is corrupted. The sparse header in the virtual hard disk is corrupt.
 pub const VHD_SPARSE_HEADER_CORRUPT : NTSTATUS = NTSTATUS::from_constant(0xC03A0008); // STATUS_VHD_SPARSE_HEADER_CORRUPT
+
+/// Failed to write to the virtual hard disk failed because the system failed to allocate a new block in the virtual hard disk.
 pub const VHD_BLOCK_ALLOCATION_FAILURE : NTSTATUS = NTSTATUS::from_constant(0xC03A0009); // STATUS_VHD_BLOCK_ALLOCATION_FAILURE
+
+/// The virtual hard disk is corrupted. The block allocation table in the virtual hard disk is corrupt.
 pub const VHD_BLOCK_ALLOCATION_TABLE_CORRUPT : NTSTATUS = NTSTATUS::from_constant(0xC03A000A); // STATUS_VHD_BLOCK_ALLOCATION_TABLE_CORRUPT
+
+/// The system does not support this version of the virtual hard disk. The block size is invalid.
 pub const VHD_INVALID_BLOCK_SIZE : NTSTATUS = NTSTATUS::from_constant(0xC03A000B); // STATUS_VHD_INVALID_BLOCK_SIZE
+
+/// The virtual hard disk is corrupted. The block bitmap does not match with the block data present in the virtual hard disk.
 pub const VHD_BITMAP_MISMATCH : NTSTATUS = NTSTATUS::from_constant(0xC03A000C); // STATUS_VHD_BITMAP_MISMATCH
+
+/// The chain of virtual hard disks is broken. The system cannot locate the parent virtual hard disk for the differencing disk.
 pub const VHD_PARENT_VHD_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC03A000D); // STATUS_VHD_PARENT_VHD_NOT_FOUND
+
+/// The chain of virtual hard disks is corrupted. There is a mismatch in the identifiers of the parent virtual hard disk and differencing disk.
 pub const VHD_CHILD_PARENT_ID_MISMATCH : NTSTATUS = NTSTATUS::from_constant(0xC03A000E); // STATUS_VHD_CHILD_PARENT_ID_MISMATCH
+
+/// The chain of virtual hard disks is corrupted. The time stamp of the parent virtual hard disk does not match the time stamp of the differencing disk.
 pub const VHD_CHILD_PARENT_TIMESTAMP_MISMATCH : NTSTATUS = NTSTATUS::from_constant(0xC03A000F); // STATUS_VHD_CHILD_PARENT_TIMESTAMP_MISMATCH
+
+/// Failed to read the metadata of the virtual hard disk.
 pub const VHD_METADATA_READ_FAILURE : NTSTATUS = NTSTATUS::from_constant(0xC03A0010); // STATUS_VHD_METADATA_READ_FAILURE
+
+/// Failed to write to the metadata of the virtual hard disk.
 pub const VHD_METADATA_WRITE_FAILURE : NTSTATUS = NTSTATUS::from_constant(0xC03A0011); // STATUS_VHD_METADATA_WRITE_FAILURE
+
+/// The size of the virtual hard disk is not valid.
 pub const VHD_INVALID_SIZE : NTSTATUS = NTSTATUS::from_constant(0xC03A0012); // STATUS_VHD_INVALID_SIZE
+
+/// The file size of this virtual hard disk is not valid.
 pub const VHD_INVALID_FILE_SIZE : NTSTATUS = NTSTATUS::from_constant(0xC03A0013); // STATUS_VHD_INVALID_FILE_SIZE
+
+/// A virtual disk support provider for the specified file was not found.
 pub const VIRTDISK_PROVIDER_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC03A0014); // STATUS_VIRTDISK_PROVIDER_NOT_FOUND
+
+/// The specified disk is not a virtual disk.
 pub const VIRTDISK_NOT_VIRTUAL_DISK : NTSTATUS = NTSTATUS::from_constant(0xC03A0015); // STATUS_VIRTDISK_NOT_VIRTUAL_DISK
+
+/// The chain of virtual hard disks is inaccessible. The process has not been granted access rights to the parent virtual hard disk for the differencing disk.
 pub const VHD_PARENT_VHD_ACCESS_DENIED : NTSTATUS = NTSTATUS::from_constant(0xC03A0016); // STATUS_VHD_PARENT_VHD_ACCESS_DENIED
+
+/// The chain of virtual hard disks is corrupted. There is a mismatch in the virtual sizes of the parent virtual hard disk and differencing disk.
 pub const VHD_CHILD_PARENT_SIZE_MISMATCH : NTSTATUS = NTSTATUS::from_constant(0xC03A0017); // STATUS_VHD_CHILD_PARENT_SIZE_MISMATCH
+
+/// The chain of virtual hard disks is corrupted. A differencing disk is indicated in its own parent chain.
 pub const VHD_DIFFERENCING_CHAIN_CYCLE_DETECTED : NTSTATUS = NTSTATUS::from_constant(0xC03A0018); // STATUS_VHD_DIFFERENCING_CHAIN_CYCLE_DETECTED
+
+/// The chain of virtual hard disks is inaccessible. There was an error opening a virtual hard disk further up the chain.
 pub const VHD_DIFFERENCING_CHAIN_ERROR_IN_PARENT : NTSTATUS = NTSTATUS::from_constant(0xC03A0019); // STATUS_VHD_DIFFERENCING_CHAIN_ERROR_IN_PARENT
+
+/// The requested operation could not be completed due to a virtual disk system limitation.  Virtual hard disk files must be uncompressed and unencrypted and must not be sparse.
 pub const VIRTUAL_DISK_LIMITATION : NTSTATUS = NTSTATUS::from_constant(0xC03A001A); // STATUS_VIRTUAL_DISK_LIMITATION
+
+/// The requested operation cannot be performed on a virtual disk of this type.
 pub const VHD_INVALID_TYPE : NTSTATUS = NTSTATUS::from_constant(0xC03A001B); // STATUS_VHD_INVALID_TYPE
+
+/// The requested operation cannot be performed on the virtual disk in its current state.
 pub const VHD_INVALID_STATE : NTSTATUS = NTSTATUS::from_constant(0xC03A001C); // STATUS_VHD_INVALID_STATE
+
+/// The sector size of the physical disk on which the virtual disk resides is not supported.
 pub const VIRTDISK_UNSUPPORTED_DISK_SECTOR_SIZE : NTSTATUS = NTSTATUS::from_constant(0xC03A001D); // STATUS_VIRTDISK_UNSUPPORTED_DISK_SECTOR_SIZE
+
+/// The disk is already owned by a different owner.
 pub const VIRTDISK_DISK_ALREADY_OWNED : NTSTATUS = NTSTATUS::from_constant(0xC03A001E); // STATUS_VIRTDISK_DISK_ALREADY_OWNED
+
+/// The disk must be offline or read-only.
 pub const VIRTDISK_DISK_ONLINE_AND_WRITABLE : NTSTATUS = NTSTATUS::from_constant(0xC03A001F); // STATUS_VIRTDISK_DISK_ONLINE_AND_WRITABLE
+
+/// Change Tracking is not initialized for this virtual disk.
 pub const CTLOG_TRACKING_NOT_INITIALIZED : NTSTATUS = NTSTATUS::from_constant(0xC03A0020); // STATUS_CTLOG_TRACKING_NOT_INITIALIZED
+
+/// Size of change tracking file exceeded the maximum size limit.
 pub const CTLOG_LOGFILE_SIZE_EXCEEDED_MAXSIZE : NTSTATUS = NTSTATUS::from_constant(0xC03A0021); // STATUS_CTLOG_LOGFILE_SIZE_EXCEEDED_MAXSIZE
+
+/// VHD file is changed due to compaction, expansion, or offline updates.
 pub const CTLOG_VHD_CHANGED_OFFLINE : NTSTATUS = NTSTATUS::from_constant(0xC03A0022); // STATUS_CTLOG_VHD_CHANGED_OFFLINE
+
+/// Change Tracking for the virtual disk is not in a valid state to perform this request.  Change tracking could be discontinued or already in the requested state.
 pub const CTLOG_INVALID_TRACKING_STATE : NTSTATUS = NTSTATUS::from_constant(0xC03A0023); // STATUS_CTLOG_INVALID_TRACKING_STATE
+
+/// Change Tracking file for the virtual disk is not in a valid state.
 pub const CTLOG_INCONSISTENT_TRACKING_FILE : NTSTATUS = NTSTATUS::from_constant(0xC03A0024); // STATUS_CTLOG_INCONSISTENT_TRACKING_FILE
+
+/// There is not enough space in the virtual disk file for the provided metadata item.
 pub const VHD_METADATA_FULL : NTSTATUS = NTSTATUS::from_constant(0xC03A0028); // STATUS_VHD_METADATA_FULL
+
+/// The specified change tracking identifier is not valid.
 pub const VHD_INVALID_CHANGE_TRACKING_ID : NTSTATUS = NTSTATUS::from_constant(0xC03A0029); // STATUS_VHD_INVALID_CHANGE_TRACKING_ID
+
+/// Change tracking is disabled for the specified virtual hard disk, so no change tracking information is available.
 pub const VHD_CHANGE_TRACKING_DISABLED : NTSTATUS = NTSTATUS::from_constant(0xC03A002A); // STATUS_VHD_CHANGE_TRACKING_DISABLED
+
+/// There is no change tracking data available associated with the specified change tracking identifier.
 pub const VHD_MISSING_CHANGE_TRACKING_INFORMATION : NTSTATUS = NTSTATUS::from_constant(0xC03A0030); // STATUS_VHD_MISSING_CHANGE_TRACKING_INFORMATION
+
+/// The requested resize operation might truncate user data residing on the virtual disk.
 pub const VHD_RESIZE_WOULD_TRUNCATE_DATA : NTSTATUS = NTSTATUS::from_constant(0xC03A0031); // STATUS_VHD_RESIZE_WOULD_TRUNCATE_DATA
+
+/// The minimum safe size of the virtual disk could not be determined. This may be due to a missing or corrupt partition table.
 pub const VHD_COULD_NOT_COMPUTE_MINIMUM_VIRTUAL_SIZE : NTSTATUS = NTSTATUS::from_constant(0xC03A0032); // STATUS_VHD_COULD_NOT_COMPUTE_MINIMUM_VIRTUAL_SIZE
+
+/// The size of the virtual disk cannot be safely reduced further.
 pub const VHD_ALREADY_AT_OR_BELOW_MINIMUM_VIRTUAL_SIZE : NTSTATUS = NTSTATUS::from_constant(0xC03A0033); // STATUS_VHD_ALREADY_AT_OR_BELOW_MINIMUM_VIRTUAL_SIZE
+
+/// The virtualization storage subsystem has generated an error.
 pub const QUERY_STORAGE_ERROR : NTSTATUS = NTSTATUS::from_constant(0x803A0001); // STATUS_QUERY_STORAGE_ERROR
+
+/// GDI handles were potentially leaked by the application.
 pub const GDI_HANDLE_LEAK : NTSTATUS = NTSTATUS::from_constant(0x803F0001); // STATUS_GDI_HANDLE_LEAK
+
+/// The Resume Key Filter could not find the resume key supplied for the operation.
 pub const RKF_KEY_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC0400001); // STATUS_RKF_KEY_NOT_FOUND
+
+/// The Resume Key Filter found an existing resume key that matches the one supplied for the handle.
 pub const RKF_DUPLICATE_KEY : NTSTATUS = NTSTATUS::from_constant(0xC0400002); // STATUS_RKF_DUPLICATE_KEY
+
+/// The Resume Key Filter data blob attached to the handle is full. No more space is available.
 pub const RKF_BLOB_FULL : NTSTATUS = NTSTATUS::from_constant(0xC0400003); // STATUS_RKF_BLOB_FULL
+
+/// The Resume Key Filter handle store is full. No more resume handles can be accepted.
 pub const RKF_STORE_FULL : NTSTATUS = NTSTATUS::from_constant(0xC0400004); // STATUS_RKF_STORE_FULL
+
+/// The Resume Key Filter failed the operation because the file is temporarily blocked pending the resume of existing handles on the file.
 pub const RKF_FILE_BLOCKED : NTSTATUS = NTSTATUS::from_constant(0xC0400005); // STATUS_RKF_FILE_BLOCKED
+
+/// The Resume Key Filter found an existing resume key that matches the one supplied on a handle that's active/open. The operation requires an inactive/closed handle.
 pub const RKF_ACTIVE_KEY : NTSTATUS = NTSTATUS::from_constant(0xC0400006); // STATUS_RKF_ACTIVE_KEY
+
+/// The operation must be restarted by RDBSS.
 pub const RDBSS_RESTART_OPERATION : NTSTATUS = NTSTATUS::from_constant(0xC0410001); // STATUS_RDBSS_RESTART_OPERATION
+
+/// The operation must continue processing.
 pub const RDBSS_CONTINUE_OPERATION : NTSTATUS = NTSTATUS::from_constant(0xC0410002); // STATUS_RDBSS_CONTINUE_OPERATION
+
+/// The operation must be posted to a thread to be retried at passive IRQL.
 pub const RDBSS_POST_OPERATION : NTSTATUS = NTSTATUS::from_constant(0xC0410003); // STATUS_RDBSS_POST_OPERATION
+
+/// The caller must retry by looking up the object in the name table.
 pub const RDBSS_RETRY_LOOKUP : NTSTATUS = NTSTATUS::from_constant(0xC0410004); // STATUS_RDBSS_RETRY_LOOKUP
+
+/// The attribute handle given was not valid on this server.
 pub const BTH_ATT_INVALID_HANDLE : NTSTATUS = NTSTATUS::from_constant(0xC0420001); // STATUS_BTH_ATT_INVALID_HANDLE
+
+/// The attribute cannot be read.
 pub const BTH_ATT_READ_NOT_PERMITTED : NTSTATUS = NTSTATUS::from_constant(0xC0420002); // STATUS_BTH_ATT_READ_NOT_PERMITTED
+
+/// The attribute cannot be written.
 pub const BTH_ATT_WRITE_NOT_PERMITTED : NTSTATUS = NTSTATUS::from_constant(0xC0420003); // STATUS_BTH_ATT_WRITE_NOT_PERMITTED
+
+/// The attribute PDU was invalid.
 pub const BTH_ATT_INVALID_PDU : NTSTATUS = NTSTATUS::from_constant(0xC0420004); // STATUS_BTH_ATT_INVALID_PDU
+
+/// The attribute requires authentication before it can be read or written.
 pub const BTH_ATT_INSUFFICIENT_AUTHENTICATION : NTSTATUS = NTSTATUS::from_constant(0xC0420005); // STATUS_BTH_ATT_INSUFFICIENT_AUTHENTICATION
+
+/// Attribute server does not support the request received from the client.
 pub const BTH_ATT_REQUEST_NOT_SUPPORTED : NTSTATUS = NTSTATUS::from_constant(0xC0420006); // STATUS_BTH_ATT_REQUEST_NOT_SUPPORTED
+
+/// Offset specified was past the end of the attribute.
 pub const BTH_ATT_INVALID_OFFSET : NTSTATUS = NTSTATUS::from_constant(0xC0420007); // STATUS_BTH_ATT_INVALID_OFFSET
+
+/// The attribute requires authorization before it can be read or written.
 pub const BTH_ATT_INSUFFICIENT_AUTHORIZATION : NTSTATUS = NTSTATUS::from_constant(0xC0420008); // STATUS_BTH_ATT_INSUFFICIENT_AUTHORIZATION
+
+/// Too many prepare writes have been queued.
 pub const BTH_ATT_PREPARE_QUEUE_FULL : NTSTATUS = NTSTATUS::from_constant(0xC0420009); // STATUS_BTH_ATT_PREPARE_QUEUE_FULL
+
+/// No attribute found within the given attribute handle range.
 pub const BTH_ATT_ATTRIBUTE_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC042000A); // STATUS_BTH_ATT_ATTRIBUTE_NOT_FOUND
+
+/// The attribute cannot be read or written using the Read Blob Request.
 pub const BTH_ATT_ATTRIBUTE_NOT_LONG : NTSTATUS = NTSTATUS::from_constant(0xC042000B); // STATUS_BTH_ATT_ATTRIBUTE_NOT_LONG
+
+/// The Encryption Key Size used for encrypting this link is insufficient.
 pub const BTH_ATT_INSUFFICIENT_ENCRYPTION_KEY_SIZE : NTSTATUS = NTSTATUS::from_constant(0xC042000C); // STATUS_BTH_ATT_INSUFFICIENT_ENCRYPTION_KEY_SIZE
+
+/// The attribute value length is invalid for the operation.
 pub const BTH_ATT_INVALID_ATTRIBUTE_VALUE_LENGTH : NTSTATUS = NTSTATUS::from_constant(0xC042000D); // STATUS_BTH_ATT_INVALID_ATTRIBUTE_VALUE_LENGTH
+
+/// The attribute request that was requested has encountered an error that was unlikely, and therefore could not be completed as requested.
 pub const BTH_ATT_UNLIKELY : NTSTATUS = NTSTATUS::from_constant(0xC042000E); // STATUS_BTH_ATT_UNLIKELY
+
+/// The attribute requires encryption before it can be read or written.
 pub const BTH_ATT_INSUFFICIENT_ENCRYPTION : NTSTATUS = NTSTATUS::from_constant(0xC042000F); // STATUS_BTH_ATT_INSUFFICIENT_ENCRYPTION
+
+/// The attribute type is not a supported grouping attribute as defined by a higher layer specification.
 pub const BTH_ATT_UNSUPPORTED_GROUP_TYPE : NTSTATUS = NTSTATUS::from_constant(0xC0420010); // STATUS_BTH_ATT_UNSUPPORTED_GROUP_TYPE
+
+/// Insufficient Resources to complete the request.
 pub const BTH_ATT_INSUFFICIENT_RESOURCES : NTSTATUS = NTSTATUS::from_constant(0xC0420011); // STATUS_BTH_ATT_INSUFFICIENT_RESOURCES
+
+/// An error that lies in the reserved range has been received.
 pub const BTH_ATT_UNKNOWN_ERROR : NTSTATUS = NTSTATUS::from_constant(0xC0421000); // STATUS_BTH_ATT_UNKNOWN_ERROR
+
+/// Secure Boot detected that rollback of protected data has been attempted.
 pub const SECUREBOOT_ROLLBACK_DETECTED : NTSTATUS = NTSTATUS::from_constant(0xC0430001); // STATUS_SECUREBOOT_ROLLBACK_DETECTED
+
+/// The value is protected by Secure Boot policy and cannot be modified or deleted.
 pub const SECUREBOOT_POLICY_VIOLATION : NTSTATUS = NTSTATUS::from_constant(0xC0430002); // STATUS_SECUREBOOT_POLICY_VIOLATION
+
+/// The Secure Boot policy is invalid.
 pub const SECUREBOOT_INVALID_POLICY : NTSTATUS = NTSTATUS::from_constant(0xC0430003); // STATUS_SECUREBOOT_INVALID_POLICY
+
+/// A new Secure Boot policy did not contain the current publisher on its update list.
 pub const SECUREBOOT_POLICY_PUBLISHER_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC0430004); // STATUS_SECUREBOOT_POLICY_PUBLISHER_NOT_FOUND
+
+/// The Secure Boot policy is either not signed or is signed by a non-trusted signer.
 pub const SECUREBOOT_POLICY_NOT_SIGNED : NTSTATUS = NTSTATUS::from_constant(0xC0430005); // STATUS_SECUREBOOT_POLICY_NOT_SIGNED
+
+/// Secure Boot is not enabled on this machine.
 pub const SECUREBOOT_NOT_ENABLED : NTSTATUS = NTSTATUS::from_constant(0x80430006); // STATUS_SECUREBOOT_NOT_ENABLED
+
+/// Secure Boot requires that certain files and drivers are not replaced by other files or drivers.
 pub const SECUREBOOT_FILE_REPLACED : NTSTATUS = NTSTATUS::from_constant(0xC0430007); // STATUS_SECUREBOOT_FILE_REPLACED
+
+/// The Secure Boot Supplemental Policy file was not authorized on this machine.
 pub const SECUREBOOT_POLICY_NOT_AUTHORIZED : NTSTATUS = NTSTATUS::from_constant(0xC0430008); // STATUS_SECUREBOOT_POLICY_NOT_AUTHORIZED
+
+/// The Supplemental Policy is not recognized on this device.
 pub const SECUREBOOT_POLICY_UNKNOWN : NTSTATUS = NTSTATUS::from_constant(0xC0430009); // STATUS_SECUREBOOT_POLICY_UNKNOWN
+
+/// The Antirollback version was not found in the Secure Boot Policy.
 pub const SECUREBOOT_POLICY_MISSING_ANTIROLLBACKVERSION : NTSTATUS = NTSTATUS::from_constant(0xC043000A); // STATUS_SECUREBOOT_POLICY_MISSING_ANTIROLLBACKVERSION
+
+/// The Platform ID specified in the Secure Boot policy does not match the Platform ID on this device.
 pub const SECUREBOOT_PLATFORM_ID_MISMATCH : NTSTATUS = NTSTATUS::from_constant(0xC043000B); // STATUS_SECUREBOOT_PLATFORM_ID_MISMATCH
+
+/// The Secure Boot policy file has an older Antirollback Version than this device.
 pub const SECUREBOOT_POLICY_ROLLBACK_DETECTED : NTSTATUS = NTSTATUS::from_constant(0xC043000C); // STATUS_SECUREBOOT_POLICY_ROLLBACK_DETECTED
+
+/// The Secure Boot policy file does not match the upgraded legacy policy.
 pub const SECUREBOOT_POLICY_UPGRADE_MISMATCH : NTSTATUS = NTSTATUS::from_constant(0xC043000D); // STATUS_SECUREBOOT_POLICY_UPGRADE_MISMATCH
+
+/// The Secure Boot policy file is required but could not be found.
 pub const SECUREBOOT_REQUIRED_POLICY_FILE_MISSING : NTSTATUS = NTSTATUS::from_constant(0xC043000E); // STATUS_SECUREBOOT_REQUIRED_POLICY_FILE_MISSING
+
+/// Supplemental Secure Boot policy file can not be loaded as a base Secure Boot policy.
 pub const SECUREBOOT_NOT_BASE_POLICY : NTSTATUS = NTSTATUS::from_constant(0xC043000F); // STATUS_SECUREBOOT_NOT_BASE_POLICY
+
+/// Base Secure Boot policy file can not be loaded as a Supplemental Secure Boot policy.
 pub const SECUREBOOT_NOT_SUPPLEMENTAL_POLICY : NTSTATUS = NTSTATUS::from_constant(0xC0430010); // STATUS_SECUREBOOT_NOT_SUPPLEMENTAL_POLICY
+
+/// The Platform Manifest file was not authorized on this machine.
 pub const PLATFORM_MANIFEST_NOT_AUTHORIZED : NTSTATUS = NTSTATUS::from_constant(0xC0EB0001); // STATUS_PLATFORM_MANIFEST_NOT_AUTHORIZED
+
+/// The Platform Manifest file was not valid.
 pub const PLATFORM_MANIFEST_INVALID : NTSTATUS = NTSTATUS::from_constant(0xC0EB0002); // STATUS_PLATFORM_MANIFEST_INVALID
+
+/// The file is not authorized on this platform because an entry was not found in the Platform Manifest.
 pub const PLATFORM_MANIFEST_FILE_NOT_AUTHORIZED : NTSTATUS = NTSTATUS::from_constant(0xC0EB0003); // STATUS_PLATFORM_MANIFEST_FILE_NOT_AUTHORIZED
+
+/// The catalog is not authorized on this platform because an entry was not found in the Platform Manifest.
 pub const PLATFORM_MANIFEST_CATALOG_NOT_AUTHORIZED : NTSTATUS = NTSTATUS::from_constant(0xC0EB0004); // STATUS_PLATFORM_MANIFEST_CATALOG_NOT_AUTHORIZED
+
+/// The file is not authorized on this platform because a Binary ID was not found in the embedded signature.
 pub const PLATFORM_MANIFEST_BINARY_ID_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC0EB0005); // STATUS_PLATFORM_MANIFEST_BINARY_ID_NOT_FOUND
+
+/// No active Platform Manifest exists on this system.
 pub const PLATFORM_MANIFEST_NOT_ACTIVE : NTSTATUS = NTSTATUS::from_constant(0xC0EB0006); // STATUS_PLATFORM_MANIFEST_NOT_ACTIVE
+
+/// The Platform Manifest file was not properly signed.
 pub const PLATFORM_MANIFEST_NOT_SIGNED : NTSTATUS = NTSTATUS::from_constant(0xC0EB0007); // STATUS_PLATFORM_MANIFEST_NOT_SIGNED
+
+/// System Integrity detected that policy rollback has been attempted.
 pub const SYSTEM_INTEGRITY_ROLLBACK_DETECTED : NTSTATUS = NTSTATUS::from_constant(0xC0E90001); // STATUS_SYSTEM_INTEGRITY_ROLLBACK_DETECTED
+
+/// System Integrity policy has been violated.
 pub const SYSTEM_INTEGRITY_POLICY_VIOLATION : NTSTATUS = NTSTATUS::from_constant(0xC0E90002); // STATUS_SYSTEM_INTEGRITY_POLICY_VIOLATION
+
+/// The System Integrity policy is invalid.
 pub const SYSTEM_INTEGRITY_INVALID_POLICY : NTSTATUS = NTSTATUS::from_constant(0xC0E90003); // STATUS_SYSTEM_INTEGRITY_INVALID_POLICY
+
+/// The System Integrity policy is either not signed or is signed by a non-trusted signer.
 pub const SYSTEM_INTEGRITY_POLICY_NOT_SIGNED : NTSTATUS = NTSTATUS::from_constant(0xC0E90004); // STATUS_SYSTEM_INTEGRITY_POLICY_NOT_SIGNED
+
+/// The number of System Integrity policies is out of limit.
 pub const SYSTEM_INTEGRITY_TOO_MANY_POLICIES : NTSTATUS = NTSTATUS::from_constant(0xC0E90005); // STATUS_SYSTEM_INTEGRITY_TOO_MANY_POLICIES
+
+/// The Code Integrity supplemental policy is not authorized by a Code Integrity base policy.
 pub const SYSTEM_INTEGRITY_SUPPLEMENTAL_POLICY_NOT_AUTHORIZED : NTSTATUS = NTSTATUS::from_constant(0xC0E90006); // STATUS_SYSTEM_INTEGRITY_SUPPLEMENTAL_POLICY_NOT_AUTHORIZED
+
+/// No applicable app licenses found.
 pub const NO_APPLICABLE_APP_LICENSES_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC0EA0001); // STATUS_NO_APPLICABLE_APP_LICENSES_FOUND
+
+/// CLiP license not found.
 pub const CLIP_LICENSE_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC0EA0002); // STATUS_CLIP_LICENSE_NOT_FOUND
+
+/// CLiP device license not found.
 pub const CLIP_DEVICE_LICENSE_MISSING : NTSTATUS = NTSTATUS::from_constant(0xC0EA0003); // STATUS_CLIP_DEVICE_LICENSE_MISSING
+
+/// CLiP license has an invalid signature.
 pub const CLIP_LICENSE_INVALID_SIGNATURE : NTSTATUS = NTSTATUS::from_constant(0xC0EA0004); // STATUS_CLIP_LICENSE_INVALID_SIGNATURE
+
+/// CLiP keyholder license is invalid or missing.
 pub const CLIP_KEYHOLDER_LICENSE_MISSING_OR_INVALID : NTSTATUS = NTSTATUS::from_constant(0xC0EA0005); // STATUS_CLIP_KEYHOLDER_LICENSE_MISSING_OR_INVALID
+
+/// CLiP license has expired.
 pub const CLIP_LICENSE_EXPIRED : NTSTATUS = NTSTATUS::from_constant(0xC0EA0006); // STATUS_CLIP_LICENSE_EXPIRED
+
+/// CLiP license is signed by an unknown source.
 pub const CLIP_LICENSE_SIGNED_BY_UNKNOWN_SOURCE : NTSTATUS = NTSTATUS::from_constant(0xC0EA0007); // STATUS_CLIP_LICENSE_SIGNED_BY_UNKNOWN_SOURCE
+
+/// CLiP license is not signed.
 pub const CLIP_LICENSE_NOT_SIGNED : NTSTATUS = NTSTATUS::from_constant(0xC0EA0008); // STATUS_CLIP_LICENSE_NOT_SIGNED
+
+/// CLiP license hardware ID is out of tolerance.
 pub const CLIP_LICENSE_HARDWARE_ID_OUT_OF_TOLERANCE : NTSTATUS = NTSTATUS::from_constant(0xC0EA0009); // STATUS_CLIP_LICENSE_HARDWARE_ID_OUT_OF_TOLERANCE
+
+/// CLiP license device ID does not match the device ID in the bound device license.
 pub const CLIP_LICENSE_DEVICE_ID_MISMATCH : NTSTATUS = NTSTATUS::from_constant(0xC0EA000A); // STATUS_CLIP_LICENSE_DEVICE_ID_MISMATCH
+
+/// PortCls could not find an audio engine node exposed by a miniport driver claiming support for IMiniportAudioEngineNode.
 pub const AUDIO_ENGINE_NODE_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC0440001); // STATUS_AUDIO_ENGINE_NODE_NOT_FOUND
+
+/// HD Audio widget encountered an unexpected empty connection list.
 pub const HDAUDIO_EMPTY_CONNECTION_LIST : NTSTATUS = NTSTATUS::from_constant(0xC0440002); // STATUS_HDAUDIO_EMPTY_CONNECTION_LIST
+
+/// HD Audio widget does not support the connection list parameter.
 pub const HDAUDIO_CONNECTION_LIST_NOT_SUPPORTED : NTSTATUS = NTSTATUS::from_constant(0xC0440003); // STATUS_HDAUDIO_CONNECTION_LIST_NOT_SUPPORTED
+
+/// No HD Audio subdevices were successfully created.
 pub const HDAUDIO_NO_LOGICAL_DEVICES_CREATED : NTSTATUS = NTSTATUS::from_constant(0xC0440004); // STATUS_HDAUDIO_NO_LOGICAL_DEVICES_CREATED
+
+/// An unexpected NULL pointer was encountered in a linked list.
 pub const HDAUDIO_NULL_LINKED_LIST_ENTRY : NTSTATUS = NTSTATUS::from_constant(0xC0440005); // STATUS_HDAUDIO_NULL_LINKED_LIST_ENTRY
+
+/// The repair was successful.
 pub const SPACES_REPAIRED : NTSTATUS = NTSTATUS::from_constant(0x00E70000); // STATUS_SPACES_REPAIRED
+
+/// The operation has been paused.
 pub const SPACES_PAUSE : NTSTATUS = NTSTATUS::from_constant(0x00E70001); // STATUS_SPACES_PAUSE
+
+/// The operation is complete.
 pub const SPACES_COMPLETE : NTSTATUS = NTSTATUS::from_constant(0x00E70002); // STATUS_SPACES_COMPLETE
+
+/// The operation should be redirected to another node.
 pub const SPACES_REDIRECT : NTSTATUS = NTSTATUS::from_constant(0x00E70003); // STATUS_SPACES_REDIRECT
+
+/// The specified fault domain type or combination of minimum / maximum fault domain type is not valid.
 pub const SPACES_FAULT_DOMAIN_TYPE_INVALID : NTSTATUS = NTSTATUS::from_constant(0xC0E70001); // STATUS_SPACES_FAULT_DOMAIN_TYPE_INVALID
+
+/// The specified resiliency type is not valid.
 pub const SPACES_RESILIENCY_TYPE_INVALID : NTSTATUS = NTSTATUS::from_constant(0xC0E70003); // STATUS_SPACES_RESILIENCY_TYPE_INVALID
+
+/// The sector size of the physical disk is not supported by the storage pool.
 pub const SPACES_DRIVE_SECTOR_SIZE_INVALID : NTSTATUS = NTSTATUS::from_constant(0xC0E70004); // STATUS_SPACES_DRIVE_SECTOR_SIZE_INVALID
+
+/// The value for fault tolerance is outside of the supported range of values.
 pub const SPACES_DRIVE_REDUNDANCY_INVALID : NTSTATUS = NTSTATUS::from_constant(0xC0E70006); // STATUS_SPACES_DRIVE_REDUNDANCY_INVALID
+
+/// The number of data copies requested is outside of the supported range of values.
 pub const SPACES_NUMBER_OF_DATA_COPIES_INVALID : NTSTATUS = NTSTATUS::from_constant(0xC0E70007); // STATUS_SPACES_NUMBER_OF_DATA_COPIES_INVALID
+
+/// The value for interleave length is outside of the supported range of values or is not a power of 2.
 pub const SPACES_INTERLEAVE_LENGTH_INVALID : NTSTATUS = NTSTATUS::from_constant(0xC0E70009); // STATUS_SPACES_INTERLEAVE_LENGTH_INVALID
+
+/// The number of columns specified is outside of the supported range of values.
 pub const SPACES_NUMBER_OF_COLUMNS_INVALID : NTSTATUS = NTSTATUS::from_constant(0xC0E7000A); // STATUS_SPACES_NUMBER_OF_COLUMNS_INVALID
+
+/// There were not enough physical disks to complete the requested operation.
 pub const SPACES_NOT_ENOUGH_DRIVES : NTSTATUS = NTSTATUS::from_constant(0xC0E7000B); // STATUS_SPACES_NOT_ENOUGH_DRIVES
+
+/// Extended error information is available.
 pub const SPACES_EXTENDED_ERROR : NTSTATUS = NTSTATUS::from_constant(0xC0E7000C); // STATUS_SPACES_EXTENDED_ERROR
+
+/// The specified provisioning type is not valid.
 pub const SPACES_PROVISIONING_TYPE_INVALID : NTSTATUS = NTSTATUS::from_constant(0xC0E7000D); // STATUS_SPACES_PROVISIONING_TYPE_INVALID
+
+/// The allocation size is outside of the supported range of values.
 pub const SPACES_ALLOCATION_SIZE_INVALID : NTSTATUS = NTSTATUS::from_constant(0xC0E7000E); // STATUS_SPACES_ALLOCATION_SIZE_INVALID
+
+/// Enclosure awareness is not supported for this virtual disk.
 pub const SPACES_ENCLOSURE_AWARE_INVALID : NTSTATUS = NTSTATUS::from_constant(0xC0E7000F); // STATUS_SPACES_ENCLOSURE_AWARE_INVALID
+
+/// The write cache size is outside of the supported range of values.
 pub const SPACES_WRITE_CACHE_SIZE_INVALID : NTSTATUS = NTSTATUS::from_constant(0xC0E70010); // STATUS_SPACES_WRITE_CACHE_SIZE_INVALID
+
+/// The value for number of groups is outside of the supported range of values.
 pub const SPACES_NUMBER_OF_GROUPS_INVALID : NTSTATUS = NTSTATUS::from_constant(0xC0E70011); // STATUS_SPACES_NUMBER_OF_GROUPS_INVALID
+
+/// The OperationalState of the physical disk is invalid for this operation.
 pub const SPACES_DRIVE_OPERATIONAL_STATE_INVALID : NTSTATUS = NTSTATUS::from_constant(0xC0E70012); // STATUS_SPACES_DRIVE_OPERATIONAL_STATE_INVALID
+
+/// A column's state needs to be updated.
 pub const SPACES_UPDATE_COLUMN_STATE : NTSTATUS = NTSTATUS::from_constant(0xC0E70013); // STATUS_SPACES_UPDATE_COLUMN_STATE
+
+/// An extent needs to be allocated.
 pub const SPACES_MAP_REQUIRED : NTSTATUS = NTSTATUS::from_constant(0xC0E70014); // STATUS_SPACES_MAP_REQUIRED
+
+/// The metadata version is unsupported.
 pub const SPACES_UNSUPPORTED_VERSION : NTSTATUS = NTSTATUS::from_constant(0xC0E70015); // STATUS_SPACES_UNSUPPORTED_VERSION
+
+/// The metadata read was corrupt.
 pub const SPACES_CORRUPT_METADATA : NTSTATUS = NTSTATUS::from_constant(0xC0E70016); // STATUS_SPACES_CORRUPT_METADATA
+
+/// The DRT is full.
 pub const SPACES_DRT_FULL : NTSTATUS = NTSTATUS::from_constant(0xC0E70017); // STATUS_SPACES_DRT_FULL
+
+/// An inconsistency was found.
 pub const SPACES_INCONSISTENCY : NTSTATUS = NTSTATUS::from_constant(0xC0E70018); // STATUS_SPACES_INCONSISTENCY
+
+/// The log is not ready.
 pub const SPACES_LOG_NOT_READY : NTSTATUS = NTSTATUS::from_constant(0xC0E70019); // STATUS_SPACES_LOG_NOT_READY
+
+/// No good copy of data was available.
 pub const SPACES_NO_REDUNDANCY : NTSTATUS = NTSTATUS::from_constant(0xC0E7001A); // STATUS_SPACES_NO_REDUNDANCY
+
+/// The drive is not ready.
 pub const SPACES_DRIVE_NOT_READY : NTSTATUS = NTSTATUS::from_constant(0xC0E7001B); // STATUS_SPACES_DRIVE_NOT_READY
+
+/// The data on this drive is stale.
 pub const SPACES_DRIVE_SPLIT : NTSTATUS = NTSTATUS::from_constant(0xC0E7001C); // STATUS_SPACES_DRIVE_SPLIT
+
+/// The data on this drive has been lost.
 pub const SPACES_DRIVE_LOST_DATA : NTSTATUS = NTSTATUS::from_constant(0xC0E7001D); // STATUS_SPACES_DRIVE_LOST_DATA
+
+/// The specified log entry is not complete.
 pub const SPACES_ENTRY_INCOMPLETE : NTSTATUS = NTSTATUS::from_constant(0xC0E7001E); // STATUS_SPACES_ENTRY_INCOMPLETE
+
+/// The specified log entry is not valid.
 pub const SPACES_ENTRY_INVALID : NTSTATUS = NTSTATUS::from_constant(0xC0E7001F); // STATUS_SPACES_ENTRY_INVALID
+
+/// A slab needs to be marked dirty.
 pub const SPACES_MARK_DIRTY : NTSTATUS = NTSTATUS::from_constant(0xC0E70020); // STATUS_SPACES_MARK_DIRTY
+
+/// The bootfile is too small to support persistent snapshots.
 pub const VOLSNAP_BOOTFILE_NOT_VALID : NTSTATUS = NTSTATUS::from_constant(0xC0500003); // STATUS_VOLSNAP_BOOTFILE_NOT_VALID
+
+/// Activation of persistent snapshots on this volume took longer than was allowed.
 pub const VOLSNAP_ACTIVATION_TIMEOUT : NTSTATUS = NTSTATUS::from_constant(0xC0500004); // STATUS_VOLSNAP_ACTIVATION_TIMEOUT
+
+/// The operation was preempted by a higher priority operation. It must be resumed later.
 pub const IO_PREEMPTED : NTSTATUS = NTSTATUS::from_constant(0xC0510001); // STATUS_IO_PREEMPTED
+
+/// The proper error code with sense data was stored on server side.
 pub const SVHDX_ERROR_STORED : NTSTATUS = NTSTATUS::from_constant(0xC05C0000); // STATUS_SVHDX_ERROR_STORED
+
+/// The requested error data is not available on the server.
 pub const SVHDX_ERROR_NOT_AVAILABLE : NTSTATUS = NTSTATUS::from_constant(0xC05CFF00); // STATUS_SVHDX_ERROR_NOT_AVAILABLE
+
+/// Unit Attention data is available for the initiator to query.
 pub const SVHDX_UNIT_ATTENTION_AVAILABLE : NTSTATUS = NTSTATUS::from_constant(0xC05CFF01); // STATUS_SVHDX_UNIT_ATTENTION_AVAILABLE
+
+/// The data capacity of the device has changed, resulting in a Unit Attention condition.
 pub const SVHDX_UNIT_ATTENTION_CAPACITY_DATA_CHANGED : NTSTATUS = NTSTATUS::from_constant(0xC05CFF02); // STATUS_SVHDX_UNIT_ATTENTION_CAPACITY_DATA_CHANGED
+
+/// A previous operation resulted in this initiator's reservations being preempted, resulting in a Unit Attention condition.
 pub const SVHDX_UNIT_ATTENTION_RESERVATIONS_PREEMPTED : NTSTATUS = NTSTATUS::from_constant(0xC05CFF03); // STATUS_SVHDX_UNIT_ATTENTION_RESERVATIONS_PREEMPTED
+
+/// A previous operation resulted in this initiator's reservations being released, resulting in a Unit Attention condition.
 pub const SVHDX_UNIT_ATTENTION_RESERVATIONS_RELEASED : NTSTATUS = NTSTATUS::from_constant(0xC05CFF04); // STATUS_SVHDX_UNIT_ATTENTION_RESERVATIONS_RELEASED
+
+/// A previous operation resulted in this initiator's registrations being preempted, resulting in a Unit Attention condition.
 pub const SVHDX_UNIT_ATTENTION_REGISTRATIONS_PREEMPTED : NTSTATUS = NTSTATUS::from_constant(0xC05CFF05); // STATUS_SVHDX_UNIT_ATTENTION_REGISTRATIONS_PREEMPTED
+
+/// The data storage format of the device has changed, resulting in a Unit Attention condition.
 pub const SVHDX_UNIT_ATTENTION_OPERATING_DEFINITION_CHANGED : NTSTATUS = NTSTATUS::from_constant(0xC05CFF06); // STATUS_SVHDX_UNIT_ATTENTION_OPERATING_DEFINITION_CHANGED
+
+/// The current initiator is not allowed to perform the SCSI command because of a reservation conflict.
 pub const SVHDX_RESERVATION_CONFLICT : NTSTATUS = NTSTATUS::from_constant(0xC05CFF07); // STATUS_SVHDX_RESERVATION_CONFLICT
+
+/// Multiple virtual machines sharing a virtual hard disk is supported only on Fixed or Dynamic VHDX format virtual hard disks.
 pub const SVHDX_WRONG_FILE_TYPE : NTSTATUS = NTSTATUS::from_constant(0xC05CFF08); // STATUS_SVHDX_WRONG_FILE_TYPE
+
+/// The server version does not match the requested version.
 pub const SVHDX_VERSION_MISMATCH : NTSTATUS = NTSTATUS::from_constant(0xC05CFF09); // STATUS_SVHDX_VERSION_MISMATCH
+
+/// The requested operation cannot be performed on the virtual disk as it is currently used in shared mode.
 pub const VHD_SHARED : NTSTATUS = NTSTATUS::from_constant(0xC05CFF0A); // STATUS_VHD_SHARED
+
+/// Invalid Shared VHDX open due to lack of initiator ID. Check for related Continuous Availability failures.
 pub const SVHDX_NO_INITIATOR : NTSTATUS = NTSTATUS::from_constant(0xC05CFF0B); // STATUS_SVHDX_NO_INITIATOR
+
+/// The requested operation failed due to a missing backing storage file.
 pub const VHDSET_BACKING_STORAGE_NOT_FOUND : NTSTATUS = NTSTATUS::from_constant(0xC05CFF0C); // STATUS_VHDSET_BACKING_STORAGE_NOT_FOUND
+
+/// Failed to negotiate a preauthentication integrity hash function.
 pub const SMB_NO_PREAUTH_INTEGRITY_HASH_OVERLAP : NTSTATUS = NTSTATUS::from_constant(0xC05D0000); // STATUS_SMB_NO_PREAUTH_INTEGRITY_HASH_OVERLAP
+
+/// The current cluster functional level does not support this SMB dialect.
 pub const SMB_BAD_CLUSTER_DIALECT : NTSTATUS = NTSTATUS::from_constant(0xC05D0001); // STATUS_SMB_BAD_CLUSTER_DIALECT
+
+/// You can't access this shared folder because your organization's security policies block unauthenticated guest access. These policies help protect your PC from unsafe or malicious devices on the network.
 pub const SMB_GUEST_LOGON_BLOCKED : NTSTATUS = NTSTATUS::from_constant(0xC05D0002); // STATUS_SMB_GUEST_LOGON_BLOCKED
+
+/// The command was not recognized by the security core
 pub const SECCORE_INVALID_COMMAND : NTSTATUS = NTSTATUS::from_constant(0xC0E80000); // STATUS_SECCORE_INVALID_COMMAND
+
+/// Virtual Secure Mode (VSM) is not initialized. The hypervisor or VSM may not be present or enabled.
 pub const VSM_NOT_INITIALIZED : NTSTATUS = NTSTATUS::from_constant(0xC0450000); // STATUS_VSM_NOT_INITIALIZED
+
+/// The hypervisor is not protecting DMA because an IOMMU is not present or not enabled in the BIOS.
 pub const VSM_DMA_PROTECTION_NOT_IN_USE : NTSTATUS = NTSTATUS::from_constant(0xC0450001); // STATUS_VSM_DMA_PROTECTION_NOT_IN_USE
+
+/// The condition supplied for the app execution request was not satisfied, so the request was not performed.
 pub const APPEXEC_CONDITION_NOT_SATISFIED : NTSTATUS = NTSTATUS::from_constant(0xC0EC0000); // STATUS_APPEXEC_CONDITION_NOT_SATISFIED
+
+/// The supplied handle has been invalidated and may not be used for the requested operation.
 pub const APPEXEC_HANDLE_INVALIDATED : NTSTATUS = NTSTATUS::from_constant(0xC0EC0001); // STATUS_APPEXEC_HANDLE_INVALIDATED
+
+/// The supplied host generation has been invalidated and may not be used for the requested operation.
 pub const APPEXEC_INVALID_HOST_GENERATION : NTSTATUS = NTSTATUS::from_constant(0xC0EC0002); // STATUS_APPEXEC_INVALID_HOST_GENERATION
+
+/// An attempt to register a process failed because the target host was not in a valid state to receive process registrations.
 pub const APPEXEC_UNEXPECTED_PROCESS_REGISTRATION : NTSTATUS = NTSTATUS::from_constant(0xC0EC0003); // STATUS_APPEXEC_UNEXPECTED_PROCESS_REGISTRATION
+
+/// The host is not in a valid state to support the execution request.
 pub const APPEXEC_INVALID_HOST_STATE : NTSTATUS = NTSTATUS::from_constant(0xC0EC0004); // STATUS_APPEXEC_INVALID_HOST_STATE
+
+/// The operation was not completed because a required resource donor was not found for the host.
 pub const APPEXEC_NO_DONOR : NTSTATUS = NTSTATUS::from_constant(0xC0EC0005); // STATUS_APPEXEC_NO_DONOR
+
+/// The operation was not completed because an unexpected host ID was encountered.
 pub const APPEXEC_HOST_ID_MISMATCH : NTSTATUS = NTSTATUS::from_constant(0xC0EC0006); // STATUS_APPEXEC_HOST_ID_MISMATCH
+
+/// The operation was not completed because the specified user was not known to the service.
 pub const APPEXEC_UNKNOWN_USER : NTSTATUS = NTSTATUS::from_constant(0xC0EC0007); // STATUS_APPEXEC_UNKNOWN_USER
+
+/// The QUIC connection handshake failed.
 pub const QUIC_HANDSHAKE_FAILURE : NTSTATUS = NTSTATUS::from_constant(0xC0240000); // STATUS_QUIC_HANDSHAKE_FAILURE
+
+/// The QUIC connection failed to negotiate a compatible protocol version.
 pub const QUIC_VER_NEG_FAILURE : NTSTATUS = NTSTATUS::from_constant(0xC0240001); // STATUS_QUIC_VER_NEG_FAILURE

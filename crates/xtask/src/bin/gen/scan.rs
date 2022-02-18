@@ -355,7 +355,10 @@ pub(crate) fn d3d<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) {
 
 pub(crate) fn ntstatus_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) {
     let mut lines = header.lines();
-    let re_ntstatus = Regex::new(r##"^\s*#\s*define\s+(?P<error>(?P<prefix>STATUS)_(?P<err>[a-zA-Z0-9_]+))\s+\(\(NTSTATUS\)(?P<value>(0x)?[0-9a-fA-F]+)[L]?\)\s*(//.*)?$"##).expect("re_ntstatus");
+    let re_ntstatus     = Regex::new(r##"^\s*#\s*define\s+(?P<error>(?P<prefix>STATUS)_(?P<err>[a-zA-Z0-9_]+))\s+\(\(NTSTATUS\)(?P<value>(0x)?[0-9a-fA-F]+)[L]?\)\s*(//.*)?$"##).expect("re_ntstatus");
+    let re_placeholders = Regex::new(r"(0x)?%[0-9a-zA-Z_]+").expect("re_placeholders");
+    let re_url          = Regex::new(r"( |^)(http[s]?://[^ ]+)").expect("re_url");
+    let re_escape       = Regex::new(r"[*\[\]]").expect("re_escape");
     while let Some(line) = lines.next() {
         if let Some(def) = re_ntstatus.captures(line.text) {
             let error   = def.name("error" ).unwrap().as_str();
@@ -363,7 +366,28 @@ pub(crate) fn ntstatus_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) 
             let err     = def.name("err"   ).unwrap().as_str();
             let value   = def.name("value" ).unwrap().as_str();
 
-            // TODO: harvest MessageText: for doc comments
+            let mut comment_start_line_idx = line.idx();
+            while let Some(prev_line) = comment_start_line_idx.checked_sub(1).and_then(|l| header.line(l)) {
+                let trim_start = prev_line.text.trim_start();
+                if !trim_start.starts_with("//") { break }
+                if trim_start.starts_with("// MessageText:") { break }
+                comment_start_line_idx -= 1;
+            }
+
+            let docs = (comment_start_line_idx .. line.idx()).filter_map(|l| Some({
+                let comment = header.line(l)?.text;
+                let comment = comment.strip_prefix("//").unwrap_or(comment);
+                let comment = comment.trim();
+                if comment.is_empty() { return None }
+                let comment = re_placeholders   .replace_all(&comment, "`$0`");
+                let comment = re_url            .replace_all(&comment, "$1<$2>");
+                let comment = re_escape         .replace_all(&comment, "\\$0");
+                if let Some(header) = comment.strip_prefix_suffix("{", "}") {
+                    format!("### {header}").into()
+                } else {
+                    comment.into_owned().into()
+                }
+            })).collect();
 
             codes.push(Code {
                 cpp:        error,
@@ -371,7 +395,7 @@ pub(crate) fn ntstatus_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) 
                 rs_id:      err.into(),
                 rs_ty:      "NTSTATUS".into(),
                 rs_value:   value.into(),
-                docs:       Default::default(),
+                docs,
                 redundant:  (value == "0x00000000") || error == "STATUS_ABANDONED_WAIT_0",
                 hide:       false,
             });

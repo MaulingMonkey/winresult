@@ -9,15 +9,30 @@ use std::path::*;
 struct Header {
     pub path: PathBuf,
     pub code: String,
+    pub eols: Vec<usize>,
 }
 
 impl Header {
+    pub fn read(sdk: &sdk::WindowsKit, path_h: &str) -> Self {
+        let path = sdk.include.join(path_h);
+        let code = std::fs::read_to_string(&path).expect(path_h);
+        let bytes = code.as_bytes();
+        let eols = bytes.into_iter().enumerate().filter(|l| *l.1 == b'\n').map(|l| l.0).chain([bytes.len()]).collect();
+        Self { path, code, eols }
+    }
+
+    pub fn line<'h>(&'h self, idx: usize) -> Option<HeaderLine<'h>> {
+        let start = if idx == 0 { 0 } else { *self.eols.get(idx-1)? + 1 };
+        let end   = *self.eols.get(idx-0)?;
+        Some(HeaderLine { idx, text: &self.code.get(start..end)? })
+    }
+
     pub fn lines<'h>(&'h self) -> impl Iterator<Item = HeaderLine<'h>> + 'h { self.code.lines().enumerate().map(|(idx, text)| HeaderLine { idx, text }) }
 }
 
 struct HeaderLine<'s> {
     pub text:   &'s str,
-    idx:    usize,
+    idx:        usize,
 }
 
 #[allow(dead_code)] impl<'s> HeaderLine<'s> {
@@ -35,11 +50,7 @@ fn main() {
 
 
     macro_rules! headers { ( $( $name:ident => $path:literal ),* $(,)? ) => {$(
-        let $name = {
-            let path = sdk.include.join($path);
-            let code = std::fs::read_to_string(&path).expect($path);
-            Header { path, code }
-        };
+        let $name = Header::read(&sdk, $path);
     )*}}
 
     headers! {
