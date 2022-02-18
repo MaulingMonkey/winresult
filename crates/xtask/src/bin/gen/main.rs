@@ -66,8 +66,8 @@ fn main() {
         r"um\d3d9helper.h":     scan::d3d,
         r"um\d3dhal.h":         scan::d3d,
 
+        r"um\dhcpsapi.h":       scan::winerror_h,
         // TODO:
-        //r"um\dhcpsapi.h":     scan::winerror_h,
         //r"um\MprError.h":     scan::winerror_h,
         //r"um\NetSh.h":        scan::winerror_h,
         //r"um\PatchApi.h":     scan::winerror_h,

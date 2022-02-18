@@ -251,6 +251,12 @@ mod gen {
             /// [Debugging](https://docs.microsoft.com/en-us/windows/win32/debug/debugging-functions)
             pub mod DBG;
 
+            /// DHCP-related?
+            pub mod DDS;
+
+            /// DHCP
+            pub mod DHCP;
+
             /// [Domain Services](https://en.wikipedia.org/wiki/Active_Directory#Domain_Services)
             pub mod DS;
 
@@ -280,6 +286,8 @@ mod gen {
 
             /// [Secure Boot](https://docs.microsoft.com/en-us/windows-hardware/design/device-experiences/oem-secure-boot)
             pub mod SECUREBOOT;
+
+            pub mod SERVER;
 
             /// [Service Application](https://docs.microsoft.com/en-us/windows/win32/services/services)
             pub mod SERVICE;

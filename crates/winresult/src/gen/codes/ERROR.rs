@@ -1367,8 +1367,7 @@ pub const NO_MORE_MATCHES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_consta
 /// The range could not be added to the range list because of a conflict.
 pub const RANGE_LIST_CONFLICT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(627); // ERROR_RANGE_LIST_CONFLICT
 
-/// The server process is running under a SID different than that required by client.
-pub const SERVER_SID_MISMATCH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(628); // ERROR_SERVER_SID_MISMATCH
+#[doc(hidden)] pub const SERVER_SID_MISMATCH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(628); // ERROR_SERVER_SID_MISMATCH
 
 /// A group marked use for deny only cannot be enabled.
 pub const CANT_ENABLE_DENY_ONLY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(629); // ERROR_CANT_ENABLE_DENY_ONLY
@@ -2468,8 +2467,7 @@ pub const BAD_USER_PROFILE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_const
 /// This operation is not supported on a computer running Windows Server 2003 for Small Business Server
 pub const NOT_SUPPORTED_ON_SBS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1254); // ERROR_NOT_SUPPORTED_ON_SBS
 
-/// The server machine is shutting down.
-pub const SERVER_SHUTDOWN_IN_PROGRESS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1255); // ERROR_SERVER_SHUTDOWN_IN_PROGRESS
+#[doc(hidden)] pub const SERVER_SHUTDOWN_IN_PROGRESS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1255); // ERROR_SERVER_SHUTDOWN_IN_PROGRESS
 
 /// The remote system is not available. For information about network troubleshooting, see Windows Help.
 pub const HOST_DOWN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1256); // ERROR_HOST_DOWN
@@ -2709,11 +2707,8 @@ pub const INVALID_SECURITY_DESCR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from
 /// The inherited access control list (ACL) or access control entry (ACE) could not be built.
 pub const BAD_INHERITANCE_ACL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1340); // ERROR_BAD_INHERITANCE_ACL
 
-/// The server is currently disabled.
-pub const SERVER_DISABLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1341); // ERROR_SERVER_DISABLED
-
-/// The server is currently enabled.
-pub const SERVER_NOT_DISABLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1342); // ERROR_SERVER_NOT_DISABLED
+#[doc(hidden)] pub const SERVER_DISABLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1341); // ERROR_SERVER_DISABLED
+#[doc(hidden)] pub const SERVER_NOT_DISABLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1342); // ERROR_SERVER_NOT_DISABLED
 
 /// The value provided was an invalid value for an identifier authority.
 pub const INVALID_ID_AUTHORITY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1343); // ERROR_INVALID_ID_AUTHORITY
@@ -3384,8 +3379,7 @@ pub const NOLOGON_SERVER_TRUST_ACCOUNT : ErrorCodeMicrosoft = ErrorCodeMicrosoft
 /// The name or security ID (SID) of the domain specified is inconsistent with the trust information for that domain.
 pub const DOMAIN_TRUST_INCONSISTENT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1810); // ERROR_DOMAIN_TRUST_INCONSISTENT
 
-/// The server is in use and cannot be unloaded.
-pub const SERVER_HAS_OPEN_HANDLES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1811); // ERROR_SERVER_HAS_OPEN_HANDLES
+#[doc(hidden)] pub const SERVER_HAS_OPEN_HANDLES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1811); // ERROR_SERVER_HAS_OPEN_HANDLES
 
 /// The specified image file did not contain a resource section.
 pub const RESOURCE_DATA_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1812); // ERROR_RESOURCE_DATA_NOT_FOUND
@@ -3669,9 +3663,7 @@ pub const REC_NON_EXISTENT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_const
 /// Replication with a nonconfigured partner is not allowed.
 pub const RPL_NOT_ALLOWED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4006); // ERROR_RPL_NOT_ALLOWED
 
-/// The DHCP client has obtained an IP address that is already in use on the network. The local interface will be disabled until the DHCP client can obtain a new address.
-pub const DHCP_ADDRESS_CONFLICT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4100); // ERROR_DHCP_ADDRESS_CONFLICT
-
+#[doc(hidden)] pub const DHCP_ADDRESS_CONFLICT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4100); // ERROR_DHCP_ADDRESS_CONFLICT
 #[doc(hidden)] pub const WMI_GUID_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4200); // ERROR_WMI_GUID_NOT_FOUND
 #[doc(hidden)] pub const WMI_INSTANCE_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4201); // ERROR_WMI_INSTANCE_NOT_FOUND
 #[doc(hidden)] pub const WMI_ITEMID_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4202); // ERROR_WMI_ITEMID_NOT_FOUND
@@ -7281,3 +7273,122 @@ pub const QUIC_HANDSHAKE_FAILURE : ErrorHResult = ErrorHResult::from_constant(0x
 
 /// The QUIC connection failed to negotiate a compatible protocol version.
 pub const QUIC_VER_NEG_FAILURE : ErrorHResult = ErrorHResult::from_constant(0x80410001); // ERROR_QUIC_VER_NEG_FAILURE
+
+#[doc(hidden)] pub const DHCP_REGISTRY_INIT_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E20); // ERROR_DHCP_REGISTRY_INIT_FAILED
+#[doc(hidden)] pub const DHCP_DATABASE_INIT_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E21); // ERROR_DHCP_DATABASE_INIT_FAILED
+#[doc(hidden)] pub const DHCP_RPC_INIT_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E22); // ERROR_DHCP_RPC_INIT_FAILED
+#[doc(hidden)] pub const DHCP_NETWORK_INIT_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E23); // ERROR_DHCP_NETWORK_INIT_FAILED
+#[doc(hidden)] pub const DHCP_SUBNET_EXITS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E24); // ERROR_DHCP_SUBNET_EXITS
+#[doc(hidden)] pub const DHCP_SUBNET_NOT_PRESENT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E25); // ERROR_DHCP_SUBNET_NOT_PRESENT
+#[doc(hidden)] pub const DHCP_PRIMARY_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E26); // ERROR_DHCP_PRIMARY_NOT_FOUND
+#[doc(hidden)] pub const DHCP_ELEMENT_CANT_REMOVE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E27); // ERROR_DHCP_ELEMENT_CANT_REMOVE
+#[doc(hidden)] pub const DHCP_OPTION_EXITS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E29); // ERROR_DHCP_OPTION_EXITS
+#[doc(hidden)] pub const DHCP_OPTION_NOT_PRESENT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E2A); // ERROR_DHCP_OPTION_NOT_PRESENT
+#[doc(hidden)] pub const DHCP_ADDRESS_NOT_AVAILABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E2B); // ERROR_DHCP_ADDRESS_NOT_AVAILABLE
+#[doc(hidden)] pub const DHCP_RANGE_FULL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E2C); // ERROR_DHCP_RANGE_FULL
+#[doc(hidden)] pub const DHCP_JET_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E2D); // ERROR_DHCP_JET_ERROR
+#[doc(hidden)] pub const DHCP_CLIENT_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E2E); // ERROR_DHCP_CLIENT_EXISTS
+#[doc(hidden)] pub const DHCP_INVALID_DHCP_MESSAGE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E2F); // ERROR_DHCP_INVALID_DHCP_MESSAGE
+#[doc(hidden)] pub const DHCP_INVALID_DHCP_CLIENT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E30); // ERROR_DHCP_INVALID_DHCP_CLIENT
+#[doc(hidden)] pub const DHCP_SERVICE_PAUSED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E31); // ERROR_DHCP_SERVICE_PAUSED
+#[doc(hidden)] pub const DHCP_NOT_RESERVED_CLIENT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E32); // ERROR_DHCP_NOT_RESERVED_CLIENT
+#[doc(hidden)] pub const DHCP_RESERVED_CLIENT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E33); // ERROR_DHCP_RESERVED_CLIENT
+#[doc(hidden)] pub const DHCP_RANGE_TOO_SMALL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E34); // ERROR_DHCP_RANGE_TOO_SMALL
+#[doc(hidden)] pub const DHCP_IPRANGE_EXITS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E35); // ERROR_DHCP_IPRANGE_EXITS
+#[doc(hidden)] pub const DHCP_RESERVEDIP_EXITS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E36); // ERROR_DHCP_RESERVEDIP_EXITS
+#[doc(hidden)] pub const DHCP_INVALID_RANGE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E37); // ERROR_DHCP_INVALID_RANGE
+#[doc(hidden)] pub const DHCP_RANGE_EXTENDED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E38); // ERROR_DHCP_RANGE_EXTENDED
+pub const EXTEND_TOO_SMALL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E39); // ERROR_EXTEND_TOO_SMALL
+#[doc(hidden)] pub const DHCP_JET_CONV_REQUIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E3B); // ERROR_DHCP_JET_CONV_REQUIRED
+#[doc(hidden)] pub const SERVER_INVALID_BOOT_FILE_TABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E3C); // ERROR_SERVER_INVALID_BOOT_FILE_TABLE
+#[doc(hidden)] pub const SERVER_UNKNOWN_BOOT_FILE_NAME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E3D); // ERROR_SERVER_UNKNOWN_BOOT_FILE_NAME
+#[doc(hidden)] pub const DHCP_SUPER_SCOPE_NAME_TOO_LONG : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E3E); // ERROR_DHCP_SUPER_SCOPE_NAME_TOO_LONG
+#[doc(hidden)] pub const DHCP_IP_ADDRESS_IN_USE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E40); // ERROR_DHCP_IP_ADDRESS_IN_USE
+#[doc(hidden)] pub const DHCP_LOG_FILE_PATH_TOO_LONG : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E41); // ERROR_DHCP_LOG_FILE_PATH_TOO_LONG
+#[doc(hidden)] pub const DHCP_UNSUPPORTED_CLIENT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E42); // ERROR_DHCP_UNSUPPORTED_CLIENT
+#[doc(hidden)] pub const DHCP_JET97_CONV_REQUIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E44); // ERROR_DHCP_JET97_CONV_REQUIRED
+#[doc(hidden)] pub const DHCP_ROGUE_INIT_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E45); // ERROR_DHCP_ROGUE_INIT_FAILED
+#[doc(hidden)] pub const DHCP_ROGUE_SAMSHUTDOWN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E46); // ERROR_DHCP_ROGUE_SAMSHUTDOWN
+#[doc(hidden)] pub const DHCP_ROGUE_NOT_AUTHORIZED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E47); // ERROR_DHCP_ROGUE_NOT_AUTHORIZED
+#[doc(hidden)] pub const DHCP_ROGUE_DS_UNREACHABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E48); // ERROR_DHCP_ROGUE_DS_UNREACHABLE
+#[doc(hidden)] pub const DHCP_ROGUE_DS_CONFLICT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E49); // ERROR_DHCP_ROGUE_DS_CONFLICT
+#[doc(hidden)] pub const DHCP_ROGUE_NOT_OUR_ENTERPRISE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E4A); // ERROR_DHCP_ROGUE_NOT_OUR_ENTERPRISE
+#[doc(hidden)] pub const DHCP_ROGUE_STANDALONE_IN_DS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E4B); // ERROR_DHCP_ROGUE_STANDALONE_IN_DS
+#[doc(hidden)] pub const DHCP_CLASS_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E4C); // ERROR_DHCP_CLASS_NOT_FOUND
+#[doc(hidden)] pub const DHCP_CLASS_ALREADY_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E4D); // ERROR_DHCP_CLASS_ALREADY_EXISTS
+#[doc(hidden)] pub const DHCP_SCOPE_NAME_TOO_LONG : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E4E); // ERROR_DHCP_SCOPE_NAME_TOO_LONG
+#[doc(hidden)] pub const DHCP_DEFAULT_SCOPE_EXITS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E4F); // ERROR_DHCP_DEFAULT_SCOPE_EXITS
+#[doc(hidden)] pub const DHCP_CANT_CHANGE_ATTRIBUTE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E50); // ERROR_DHCP_CANT_CHANGE_ATTRIBUTE
+#[doc(hidden)] pub const DHCP_IPRANGE_CONV_ILLEGAL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E51); // ERROR_DHCP_IPRANGE_CONV_ILLEGAL
+#[doc(hidden)] pub const DHCP_NETWORK_CHANGED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E52); // ERROR_DHCP_NETWORK_CHANGED
+#[doc(hidden)] pub const DHCP_CANNOT_MODIFY_BINDINGS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E53); // ERROR_DHCP_CANNOT_MODIFY_BINDINGS
+#[doc(hidden)] pub const DHCP_SUBNET_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E54); // ERROR_DHCP_SUBNET_EXISTS
+#[doc(hidden)] pub const DHCP_MSCOPE_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E55); // ERROR_DHCP_MSCOPE_EXISTS
+pub const MSCOPE_RANGE_TOO_SMALL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E56); // ERROR_MSCOPE_RANGE_TOO_SMALL
+#[doc(hidden)] pub const DHCP_EXEMPTION_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E57); // ERROR_DHCP_EXEMPTION_EXISTS
+#[doc(hidden)] pub const DHCP_EXEMPTION_NOT_PRESENT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E58); // ERROR_DHCP_EXEMPTION_NOT_PRESENT
+#[doc(hidden)] pub const DHCP_INVALID_PARAMETER_OPTION32 : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E59); // ERROR_DHCP_INVALID_PARAMETER_OPTION32
+#[doc(hidden)] pub const DDS_NO_DS_AVAILABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E66); // ERROR_DDS_NO_DS_AVAILABLE
+#[doc(hidden)] pub const DDS_NO_DHCP_ROOT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E67); // ERROR_DDS_NO_DHCP_ROOT
+#[doc(hidden)] pub const DDS_UNEXPECTED_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E68); // ERROR_DDS_UNEXPECTED_ERROR
+#[doc(hidden)] pub const DDS_TOO_MANY_ERRORS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E69); // ERROR_DDS_TOO_MANY_ERRORS
+#[doc(hidden)] pub const DDS_DHCP_SERVER_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E6A); // ERROR_DDS_DHCP_SERVER_NOT_FOUND
+#[doc(hidden)] pub const DDS_OPTION_ALREADY_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E6B); // ERROR_DDS_OPTION_ALREADY_EXISTS
+#[doc(hidden)] pub const DDS_OPTION_DOES_NOT_EXIST : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E6C); // ERROR_DDS_OPTION_DOES_NOT_EXIST
+#[doc(hidden)] pub const DDS_CLASS_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E6D); // ERROR_DDS_CLASS_EXISTS
+#[doc(hidden)] pub const DDS_CLASS_DOES_NOT_EXIST : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E6E); // ERROR_DDS_CLASS_DOES_NOT_EXIST
+#[doc(hidden)] pub const DDS_SERVER_ALREADY_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E6F); // ERROR_DDS_SERVER_ALREADY_EXISTS
+#[doc(hidden)] pub const DDS_SERVER_DOES_NOT_EXIST : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E70); // ERROR_DDS_SERVER_DOES_NOT_EXIST
+#[doc(hidden)] pub const DDS_SERVER_ADDRESS_MISMATCH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E71); // ERROR_DDS_SERVER_ADDRESS_MISMATCH
+#[doc(hidden)] pub const DDS_SUBNET_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E72); // ERROR_DDS_SUBNET_EXISTS
+#[doc(hidden)] pub const DDS_SUBNET_HAS_DIFF_SSCOPE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E73); // ERROR_DDS_SUBNET_HAS_DIFF_SSCOPE
+#[doc(hidden)] pub const DDS_SUBNET_NOT_PRESENT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E74); // ERROR_DDS_SUBNET_NOT_PRESENT
+#[doc(hidden)] pub const DDS_RESERVATION_NOT_PRESENT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E75); // ERROR_DDS_RESERVATION_NOT_PRESENT
+#[doc(hidden)] pub const DDS_RESERVATION_CONFLICT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E76); // ERROR_DDS_RESERVATION_CONFLICT
+#[doc(hidden)] pub const DDS_POSSIBLE_RANGE_CONFLICT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E77); // ERROR_DDS_POSSIBLE_RANGE_CONFLICT
+#[doc(hidden)] pub const DDS_RANGE_DOES_NOT_EXIST : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E78); // ERROR_DDS_RANGE_DOES_NOT_EXIST
+#[doc(hidden)] pub const DHCP_DELETE_BUILTIN_CLASS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E79); // ERROR_DHCP_DELETE_BUILTIN_CLASS
+#[doc(hidden)] pub const DHCP_INVALID_SUBNET_PREFIX : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E7B); // ERROR_DHCP_INVALID_SUBNET_PREFIX
+#[doc(hidden)] pub const DHCP_INVALID_DELAY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E7C); // ERROR_DHCP_INVALID_DELAY
+#[doc(hidden)] pub const DHCP_LINKLAYER_ADDRESS_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E7D); // ERROR_DHCP_LINKLAYER_ADDRESS_EXISTS
+#[doc(hidden)] pub const DHCP_LINKLAYER_ADDRESS_RESERVATION_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E7E); // ERROR_DHCP_LINKLAYER_ADDRESS_RESERVATION_EXISTS
+#[doc(hidden)] pub const DHCP_LINKLAYER_ADDRESS_DOES_NOT_EXIST : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E7F); // ERROR_DHCP_LINKLAYER_ADDRESS_DOES_NOT_EXIST
+#[doc(hidden)] pub const DHCP_HARDWARE_ADDRESS_TYPE_ALREADY_EXEMPT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E85); // ERROR_DHCP_HARDWARE_ADDRESS_TYPE_ALREADY_EXEMPT
+#[doc(hidden)] pub const DHCP_UNDEFINED_HARDWARE_ADDRESS_TYPE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E86); // ERROR_DHCP_UNDEFINED_HARDWARE_ADDRESS_TYPE
+#[doc(hidden)] pub const DHCP_OPTION_TYPE_MISMATCH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E87); // ERROR_DHCP_OPTION_TYPE_MISMATCH
+#[doc(hidden)] pub const DHCP_POLICY_BAD_PARENT_EXPR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E88); // ERROR_DHCP_POLICY_BAD_PARENT_EXPR
+#[doc(hidden)] pub const DHCP_POLICY_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E89); // ERROR_DHCP_POLICY_EXISTS
+#[doc(hidden)] pub const DHCP_POLICY_RANGE_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E8A); // ERROR_DHCP_POLICY_RANGE_EXISTS
+#[doc(hidden)] pub const DHCP_POLICY_RANGE_BAD : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E8B); // ERROR_DHCP_POLICY_RANGE_BAD
+#[doc(hidden)] pub const DHCP_RANGE_INVALID_IN_SERVER_POLICY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E8C); // ERROR_DHCP_RANGE_INVALID_IN_SERVER_POLICY
+#[doc(hidden)] pub const DHCP_INVALID_POLICY_EXPRESSION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E8D); // ERROR_DHCP_INVALID_POLICY_EXPRESSION
+#[doc(hidden)] pub const DHCP_INVALID_PROCESSING_ORDER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E8E); // ERROR_DHCP_INVALID_PROCESSING_ORDER
+#[doc(hidden)] pub const DHCP_POLICY_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E8F); // ERROR_DHCP_POLICY_NOT_FOUND
+pub const SCOPE_RANGE_POLICY_RANGE_CONFLICT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E90); // ERROR_SCOPE_RANGE_POLICY_RANGE_CONFLICT
+#[doc(hidden)] pub const DHCP_FO_SCOPE_ALREADY_IN_RELATIONSHIP : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E91); // ERROR_DHCP_FO_SCOPE_ALREADY_IN_RELATIONSHIP
+#[doc(hidden)] pub const DHCP_FO_RELATIONSHIP_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E92); // ERROR_DHCP_FO_RELATIONSHIP_EXISTS
+#[doc(hidden)] pub const DHCP_FO_RELATIONSHIP_DOES_NOT_EXIST : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E93); // ERROR_DHCP_FO_RELATIONSHIP_DOES_NOT_EXIST
+#[doc(hidden)] pub const DHCP_FO_SCOPE_NOT_IN_RELATIONSHIP : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E94); // ERROR_DHCP_FO_SCOPE_NOT_IN_RELATIONSHIP
+#[doc(hidden)] pub const DHCP_FO_RELATION_IS_SECONDARY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E95); // ERROR_DHCP_FO_RELATION_IS_SECONDARY
+#[doc(hidden)] pub const DHCP_FO_NOT_SUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E96); // ERROR_DHCP_FO_NOT_SUPPORTED
+#[doc(hidden)] pub const DHCP_FO_TIME_OUT_OF_SYNC : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E97); // ERROR_DHCP_FO_TIME_OUT_OF_SYNC
+#[doc(hidden)] pub const DHCP_FO_STATE_NOT_NORMAL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E98); // ERROR_DHCP_FO_STATE_NOT_NORMAL
+#[doc(hidden)] pub const DHCP_NO_ADMIN_PERMISSION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E99); // ERROR_DHCP_NO_ADMIN_PERMISSION
+#[doc(hidden)] pub const DHCP_SERVER_NOT_REACHABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E9A); // ERROR_DHCP_SERVER_NOT_REACHABLE
+#[doc(hidden)] pub const DHCP_SERVER_NOT_RUNNING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E9B); // ERROR_DHCP_SERVER_NOT_RUNNING
+#[doc(hidden)] pub const DHCP_SERVER_NAME_NOT_RESOLVED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E9C); // ERROR_DHCP_SERVER_NAME_NOT_RESOLVED
+#[doc(hidden)] pub const DHCP_FO_RELATIONSHIP_NAME_TOO_LONG : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E9D); // ERROR_DHCP_FO_RELATIONSHIP_NAME_TOO_LONG
+#[doc(hidden)] pub const DHCP_REACHED_END_OF_SELECTION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E9E); // ERROR_DHCP_REACHED_END_OF_SELECTION
+#[doc(hidden)] pub const DHCP_FO_ADDSCOPE_LEASES_NOT_SYNCED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E9F); // ERROR_DHCP_FO_ADDSCOPE_LEASES_NOT_SYNCED
+#[doc(hidden)] pub const DHCP_FO_MAX_RELATIONSHIPS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004EA0); // ERROR_DHCP_FO_MAX_RELATIONSHIPS
+#[doc(hidden)] pub const DHCP_FO_IPRANGE_TYPE_CONV_ILLEGAL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004EA1); // ERROR_DHCP_FO_IPRANGE_TYPE_CONV_ILLEGAL
+#[doc(hidden)] pub const DHCP_FO_MAX_ADD_SCOPES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004EA2); // ERROR_DHCP_FO_MAX_ADD_SCOPES
+#[doc(hidden)] pub const DHCP_FO_BOOT_NOT_SUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004EA3); // ERROR_DHCP_FO_BOOT_NOT_SUPPORTED
+#[doc(hidden)] pub const DHCP_FO_RANGE_PART_OF_REL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004EA4); // ERROR_DHCP_FO_RANGE_PART_OF_REL
+#[doc(hidden)] pub const DHCP_FO_SCOPE_SYNC_IN_PROGRESS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004EA5); // ERROR_DHCP_FO_SCOPE_SYNC_IN_PROGRESS
+#[doc(hidden)] pub const DHCP_FO_FEATURE_NOT_SUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004EA6); // ERROR_DHCP_FO_FEATURE_NOT_SUPPORTED
+#[doc(hidden)] pub const DHCP_POLICY_FQDN_RANGE_UNSUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004EA7); // ERROR_DHCP_POLICY_FQDN_RANGE_UNSUPPORTED
+#[doc(hidden)] pub const DHCP_POLICY_FQDN_OPTION_UNSUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004EA8); // ERROR_DHCP_POLICY_FQDN_OPTION_UNSUPPORTED
+#[doc(hidden)] pub const DHCP_POLICY_EDIT_FQDN_UNSUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004EA9); // ERROR_DHCP_POLICY_EDIT_FQDN_UNSUPPORTED
+#[doc(hidden)] pub const DHCP_NAP_NOT_SUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004EAA); // ERROR_DHCP_NAP_NOT_SUPPORTED
+pub const LAST_DHCP_SERVER_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004EAB); // ERROR_LAST_DHCP_SERVER_ERROR

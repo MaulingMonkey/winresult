@@ -836,7 +836,6 @@
         <DisplayString Condition="__0 == 625">ERROR::VALIDATE_CONTINUE</DisplayString>
         <DisplayString Condition="__0 == 626">ERROR::NO_MORE_MATCHES</DisplayString>
         <DisplayString Condition="__0 == 627">ERROR::RANGE_LIST_CONFLICT</DisplayString>
-        <DisplayString Condition="__0 == 628">ERROR::SERVER_SID_MISMATCH</DisplayString>
         <DisplayString Condition="__0 == 629">ERROR::CANT_ENABLE_DENY_ONLY</DisplayString>
         <DisplayString Condition="__0 == 630">ERROR::FLOAT_MULTIPLE_FAULTS</DisplayString>
         <DisplayString Condition="__0 == 631">ERROR::FLOAT_MULTIPLE_TRAPS</DisplayString>
@@ -1168,7 +1167,6 @@
         <DisplayString Condition="__0 == 1252">ERROR::OVERRIDE_NOCHANGES</DisplayString>
         <DisplayString Condition="__0 == 1253">ERROR::BAD_USER_PROFILE</DisplayString>
         <DisplayString Condition="__0 == 1254">ERROR::NOT_SUPPORTED_ON_SBS</DisplayString>
-        <DisplayString Condition="__0 == 1255">ERROR::SERVER_SHUTDOWN_IN_PROGRESS</DisplayString>
         <DisplayString Condition="__0 == 1256">ERROR::HOST_DOWN</DisplayString>
         <DisplayString Condition="__0 == 1257">ERROR::NON_ACCOUNT_SID</DisplayString>
         <DisplayString Condition="__0 == 1258">ERROR::NON_DOMAIN_SID</DisplayString>
@@ -1247,8 +1245,6 @@
         <DisplayString Condition="__0 == 1337">ERROR::INVALID_SID</DisplayString>
         <DisplayString Condition="__0 == 1338">ERROR::INVALID_SECURITY_DESCR</DisplayString>
         <DisplayString Condition="__0 == 1340">ERROR::BAD_INHERITANCE_ACL</DisplayString>
-        <DisplayString Condition="__0 == 1341">ERROR::SERVER_DISABLED</DisplayString>
-        <DisplayString Condition="__0 == 1342">ERROR::SERVER_NOT_DISABLED</DisplayString>
         <DisplayString Condition="__0 == 1343">ERROR::INVALID_ID_AUTHORITY</DisplayString>
         <DisplayString Condition="__0 == 1344">ERROR::ALLOTTED_SPACE_EXCEEDED</DisplayString>
         <DisplayString Condition="__0 == 1345">ERROR::INVALID_GROUP_ATTRIBUTES</DisplayString>
@@ -1472,7 +1468,6 @@
         <DisplayString Condition="__0 == 1808">ERROR::NOLOGON_WORKSTATION_TRUST_ACCOUNT</DisplayString>
         <DisplayString Condition="__0 == 1809">ERROR::NOLOGON_SERVER_TRUST_ACCOUNT</DisplayString>
         <DisplayString Condition="__0 == 1810">ERROR::DOMAIN_TRUST_INCONSISTENT</DisplayString>
-        <DisplayString Condition="__0 == 1811">ERROR::SERVER_HAS_OPEN_HANDLES</DisplayString>
         <DisplayString Condition="__0 == 1812">ERROR::RESOURCE_DATA_NOT_FOUND</DisplayString>
         <DisplayString Condition="__0 == 1813">ERROR::RESOURCE_TYPE_NOT_FOUND</DisplayString>
         <DisplayString Condition="__0 == 1814">ERROR::RESOURCE_NAME_NOT_FOUND</DisplayString>
@@ -1567,7 +1562,6 @@
         <DisplayString Condition="__0 == 4004">ERROR::FULL_BACKUP</DisplayString>
         <DisplayString Condition="__0 == 4005">ERROR::REC_NON_EXISTENT</DisplayString>
         <DisplayString Condition="__0 == 4006">ERROR::RPL_NOT_ALLOWED</DisplayString>
-        <DisplayString Condition="__0 == 4100">ERROR::DHCP_ADDRESS_CONFLICT</DisplayString>
         <DisplayString Condition="__0 == 4250">ERROR::NOT_APPCONTAINER</DisplayString>
         <DisplayString Condition="__0 == 4251">ERROR::APPCONTAINER_REQUIRED</DisplayString>
         <DisplayString Condition="__0 == 4252">ERROR::NOT_SUPPORTED_IN_APPCONTAINER</DisplayString>
@@ -2068,6 +2062,10 @@
         <DisplayString Condition="__0 == 15817">ERROR::STATE_SETTING_NAME_SIZE_LIMIT_EXCEEDED</DisplayString>
         <DisplayString Condition="__0 == 15818">ERROR::STATE_CONTAINER_NAME_SIZE_LIMIT_EXCEEDED</DisplayString>
         <DisplayString Condition="__0 == 15841">ERROR::API_UNAVAILABLE</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E39">ERROR::EXTEND_TOO_SMALL</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E56">ERROR::MSCOPE_RANGE_TOO_SMALL</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E90">ERROR::SCOPE_RANGE_POLICY_RANGE_CONFLICT</DisplayString>
+        <DisplayString Condition="__0 == 0x00004EAB">ERROR::LAST_DHCP_SERVER_ERROR</DisplayString>
         <DisplayString Condition="__0 == 358">ERROR::CLOUD_FILE::SYNC_ROOT_METADATA_CORRUPT</DisplayString>
         <DisplayString Condition="__0 == 362">ERROR::CLOUD_FILE::PROVIDER_NOT_RUNNING</DisplayString>
         <DisplayString Condition="__0 == 363">ERROR::CLOUD_FILE::METADATA_CORRUPT</DisplayString>
@@ -2244,6 +2242,119 @@
         <DisplayString Condition="__0 == 697">ERROR::DBG::COMMAND_EXCEPTION</DisplayString>
         <DisplayString Condition="__0 == 766">ERROR::DBG::EXCEPTION_HANDLED</DisplayString>
         <DisplayString Condition="__0 == 767">ERROR::DBG::CONTINUE</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E66">ERROR::DDS::NO_DS_AVAILABLE</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E67">ERROR::DDS::NO_DHCP_ROOT</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E68">ERROR::DDS::UNEXPECTED_ERROR</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E69">ERROR::DDS::TOO_MANY_ERRORS</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E6A">ERROR::DDS::DHCP_SERVER_NOT_FOUND</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E6B">ERROR::DDS::OPTION_ALREADY_EXISTS</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E6C">ERROR::DDS::OPTION_DOES_NOT_EXIST</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E6D">ERROR::DDS::CLASS_EXISTS</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E6E">ERROR::DDS::CLASS_DOES_NOT_EXIST</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E6F">ERROR::DDS::SERVER_ALREADY_EXISTS</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E70">ERROR::DDS::SERVER_DOES_NOT_EXIST</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E71">ERROR::DDS::SERVER_ADDRESS_MISMATCH</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E72">ERROR::DDS::SUBNET_EXISTS</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E73">ERROR::DDS::SUBNET_HAS_DIFF_SSCOPE</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E74">ERROR::DDS::SUBNET_NOT_PRESENT</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E75">ERROR::DDS::RESERVATION_NOT_PRESENT</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E76">ERROR::DDS::RESERVATION_CONFLICT</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E77">ERROR::DDS::POSSIBLE_RANGE_CONFLICT</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E78">ERROR::DDS::RANGE_DOES_NOT_EXIST</DisplayString>
+        <DisplayString Condition="__0 == 4100">ERROR::DHCP::ADDRESS_CONFLICT</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E20">ERROR::DHCP::REGISTRY_INIT_FAILED</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E21">ERROR::DHCP::DATABASE_INIT_FAILED</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E22">ERROR::DHCP::RPC_INIT_FAILED</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E23">ERROR::DHCP::NETWORK_INIT_FAILED</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E24">ERROR::DHCP::SUBNET_EXITS</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E25">ERROR::DHCP::SUBNET_NOT_PRESENT</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E26">ERROR::DHCP::PRIMARY_NOT_FOUND</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E27">ERROR::DHCP::ELEMENT_CANT_REMOVE</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E29">ERROR::DHCP::OPTION_EXITS</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E2A">ERROR::DHCP::OPTION_NOT_PRESENT</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E2B">ERROR::DHCP::ADDRESS_NOT_AVAILABLE</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E2C">ERROR::DHCP::RANGE_FULL</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E2D">ERROR::DHCP::JET_ERROR</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E2E">ERROR::DHCP::CLIENT_EXISTS</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E2F">ERROR::DHCP::INVALID_DHCP_MESSAGE</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E30">ERROR::DHCP::INVALID_DHCP_CLIENT</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E31">ERROR::DHCP::SERVICE_PAUSED</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E32">ERROR::DHCP::NOT_RESERVED_CLIENT</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E33">ERROR::DHCP::RESERVED_CLIENT</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E34">ERROR::DHCP::RANGE_TOO_SMALL</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E35">ERROR::DHCP::IPRANGE_EXITS</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E36">ERROR::DHCP::RESERVEDIP_EXITS</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E37">ERROR::DHCP::INVALID_RANGE</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E38">ERROR::DHCP::RANGE_EXTENDED</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E3B">ERROR::DHCP::JET_CONV_REQUIRED</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E3E">ERROR::DHCP::SUPER_SCOPE_NAME_TOO_LONG</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E40">ERROR::DHCP::IP_ADDRESS_IN_USE</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E41">ERROR::DHCP::LOG_FILE_PATH_TOO_LONG</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E42">ERROR::DHCP::UNSUPPORTED_CLIENT</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E44">ERROR::DHCP::JET97_CONV_REQUIRED</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E45">ERROR::DHCP::ROGUE_INIT_FAILED</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E46">ERROR::DHCP::ROGUE_SAMSHUTDOWN</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E47">ERROR::DHCP::ROGUE_NOT_AUTHORIZED</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E48">ERROR::DHCP::ROGUE_DS_UNREACHABLE</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E49">ERROR::DHCP::ROGUE_DS_CONFLICT</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E4A">ERROR::DHCP::ROGUE_NOT_OUR_ENTERPRISE</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E4B">ERROR::DHCP::ROGUE_STANDALONE_IN_DS</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E4C">ERROR::DHCP::CLASS_NOT_FOUND</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E4D">ERROR::DHCP::CLASS_ALREADY_EXISTS</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E4E">ERROR::DHCP::SCOPE_NAME_TOO_LONG</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E4F">ERROR::DHCP::DEFAULT_SCOPE_EXITS</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E50">ERROR::DHCP::CANT_CHANGE_ATTRIBUTE</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E51">ERROR::DHCP::IPRANGE_CONV_ILLEGAL</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E52">ERROR::DHCP::NETWORK_CHANGED</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E53">ERROR::DHCP::CANNOT_MODIFY_BINDINGS</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E54">ERROR::DHCP::SUBNET_EXISTS</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E55">ERROR::DHCP::MSCOPE_EXISTS</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E57">ERROR::DHCP::EXEMPTION_EXISTS</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E58">ERROR::DHCP::EXEMPTION_NOT_PRESENT</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E59">ERROR::DHCP::INVALID_PARAMETER_OPTION32</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E79">ERROR::DHCP::DELETE_BUILTIN_CLASS</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E7B">ERROR::DHCP::INVALID_SUBNET_PREFIX</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E7C">ERROR::DHCP::INVALID_DELAY</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E7D">ERROR::DHCP::LINKLAYER_ADDRESS_EXISTS</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E7E">ERROR::DHCP::LINKLAYER_ADDRESS_RESERVATION_EXISTS</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E7F">ERROR::DHCP::LINKLAYER_ADDRESS_DOES_NOT_EXIST</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E85">ERROR::DHCP::HARDWARE_ADDRESS_TYPE_ALREADY_EXEMPT</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E86">ERROR::DHCP::UNDEFINED_HARDWARE_ADDRESS_TYPE</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E87">ERROR::DHCP::OPTION_TYPE_MISMATCH</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E88">ERROR::DHCP::POLICY_BAD_PARENT_EXPR</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E89">ERROR::DHCP::POLICY_EXISTS</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E8A">ERROR::DHCP::POLICY_RANGE_EXISTS</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E8B">ERROR::DHCP::POLICY_RANGE_BAD</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E8C">ERROR::DHCP::RANGE_INVALID_IN_SERVER_POLICY</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E8D">ERROR::DHCP::INVALID_POLICY_EXPRESSION</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E8E">ERROR::DHCP::INVALID_PROCESSING_ORDER</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E8F">ERROR::DHCP::POLICY_NOT_FOUND</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E91">ERROR::DHCP::FO_SCOPE_ALREADY_IN_RELATIONSHIP</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E92">ERROR::DHCP::FO_RELATIONSHIP_EXISTS</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E93">ERROR::DHCP::FO_RELATIONSHIP_DOES_NOT_EXIST</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E94">ERROR::DHCP::FO_SCOPE_NOT_IN_RELATIONSHIP</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E95">ERROR::DHCP::FO_RELATION_IS_SECONDARY</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E96">ERROR::DHCP::FO_NOT_SUPPORTED</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E97">ERROR::DHCP::FO_TIME_OUT_OF_SYNC</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E98">ERROR::DHCP::FO_STATE_NOT_NORMAL</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E99">ERROR::DHCP::NO_ADMIN_PERMISSION</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E9A">ERROR::DHCP::SERVER_NOT_REACHABLE</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E9B">ERROR::DHCP::SERVER_NOT_RUNNING</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E9C">ERROR::DHCP::SERVER_NAME_NOT_RESOLVED</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E9D">ERROR::DHCP::FO_RELATIONSHIP_NAME_TOO_LONG</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E9E">ERROR::DHCP::REACHED_END_OF_SELECTION</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E9F">ERROR::DHCP::FO_ADDSCOPE_LEASES_NOT_SYNCED</DisplayString>
+        <DisplayString Condition="__0 == 0x00004EA0">ERROR::DHCP::FO_MAX_RELATIONSHIPS</DisplayString>
+        <DisplayString Condition="__0 == 0x00004EA1">ERROR::DHCP::FO_IPRANGE_TYPE_CONV_ILLEGAL</DisplayString>
+        <DisplayString Condition="__0 == 0x00004EA2">ERROR::DHCP::FO_MAX_ADD_SCOPES</DisplayString>
+        <DisplayString Condition="__0 == 0x00004EA3">ERROR::DHCP::FO_BOOT_NOT_SUPPORTED</DisplayString>
+        <DisplayString Condition="__0 == 0x00004EA4">ERROR::DHCP::FO_RANGE_PART_OF_REL</DisplayString>
+        <DisplayString Condition="__0 == 0x00004EA5">ERROR::DHCP::FO_SCOPE_SYNC_IN_PROGRESS</DisplayString>
+        <DisplayString Condition="__0 == 0x00004EA6">ERROR::DHCP::FO_FEATURE_NOT_SUPPORTED</DisplayString>
+        <DisplayString Condition="__0 == 0x00004EA7">ERROR::DHCP::POLICY_FQDN_RANGE_UNSUPPORTED</DisplayString>
+        <DisplayString Condition="__0 == 0x00004EA8">ERROR::DHCP::POLICY_FQDN_OPTION_UNSUPPORTED</DisplayString>
+        <DisplayString Condition="__0 == 0x00004EA9">ERROR::DHCP::POLICY_EDIT_FQDN_UNSUPPORTED</DisplayString>
+        <DisplayString Condition="__0 == 0x00004EAA">ERROR::DHCP::NAP_NOT_SUPPORTED</DisplayString>
         <DisplayString Condition="__0 == 643">ERROR::DS::VERSION_CHECK_FAILURE</DisplayString>
         <DisplayString Condition="__0 == 8200">ERROR::DS::NOT_INSTALLED</DisplayString>
         <DisplayString Condition="__0 == 8201">ERROR::DS::MEMBERSHIP_EVALUATED_LOCALLY</DisplayString>
@@ -2896,6 +3007,13 @@
         <DisplayString Condition="__0 == 4433">ERROR::SECUREBOOT::REQUIRED_POLICY_FILE_MISSING</DisplayString>
         <DisplayString Condition="__0 == 4434">ERROR::SECUREBOOT::NOT_BASE_POLICY</DisplayString>
         <DisplayString Condition="__0 == 4435">ERROR::SECUREBOOT::NOT_SUPPLEMENTAL_POLICY</DisplayString>
+        <DisplayString Condition="__0 == 628">ERROR::SERVER::SID_MISMATCH</DisplayString>
+        <DisplayString Condition="__0 == 1255">ERROR::SERVER::SHUTDOWN_IN_PROGRESS</DisplayString>
+        <DisplayString Condition="__0 == 1341">ERROR::SERVER::DISABLED</DisplayString>
+        <DisplayString Condition="__0 == 1342">ERROR::SERVER::NOT_DISABLED</DisplayString>
+        <DisplayString Condition="__0 == 1811">ERROR::SERVER::HAS_OPEN_HANDLES</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E3C">ERROR::SERVER::INVALID_BOOT_FILE_TABLE</DisplayString>
+        <DisplayString Condition="__0 == 0x00004E3D">ERROR::SERVER::UNKNOWN_BOOT_FILE_NAME</DisplayString>
         <DisplayString Condition="__0 == 716">ERROR::SERVICE::NOTIFICATION</DisplayString>
         <DisplayString Condition="__0 == 1053">ERROR::SERVICE::REQUEST_TIMEOUT</DisplayString>
         <DisplayString Condition="__0 == 1054">ERROR::SERVICE::NO_THREAD</DisplayString>
