@@ -12,6 +12,7 @@ const ERROR_PREFIX_TO_RUSTY : &'static [(&'static str, &'static str)] = &[
     ("ERROR_DBG_",          "ERROR::DBG",           ),
     ("ERROR_DS_",           "ERROR::DS",            ),
     ("ERROR_EVT_",          "ERROR::EVT",           ),
+    ("ERROR_FLT_",          "ERROR::FLT",           ),
     ("ERROR_GRAPHICS_",     "ERROR::GRAPHICS",      ),
     ("ERROR_IPSEC_",        "ERROR::IPSEC",         ),
     ("ERROR_MRM_",          "ERROR::MRM",           ),

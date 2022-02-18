@@ -6088,98 +6088,37 @@ pub const BIZRULES_NOT_ENABLED : ErrorHResult = ErrorHResult::from_constant(0xC0
 /// The requested credential requires confirmation.
 pub const CRED_REQUIRES_CONFIRMATION : ErrorHResult = ErrorHResult::from_constant(0x80097019); // ERROR_CRED_REQUIRES_CONFIRMATION
 
-/// The IO was completed by a filter.
-pub const FLT_IO_COMPLETE : SuccessHResult = SuccessHResult::from_constant(0x001F0001); // ERROR_FLT_IO_COMPLETE
-
-/// A handler was not defined by the filter for this operation.
-pub const FLT_NO_HANDLER_DEFINED : ErrorHResult = ErrorHResult::from_constant(0x801F0001); // ERROR_FLT_NO_HANDLER_DEFINED
-
-/// A context is already defined for this object.
-pub const FLT_CONTEXT_ALREADY_DEFINED : ErrorHResult = ErrorHResult::from_constant(0x801F0002); // ERROR_FLT_CONTEXT_ALREADY_DEFINED
-
-/// Asynchronous requests are not valid for this operation.
-pub const FLT_INVALID_ASYNCHRONOUS_REQUEST : ErrorHResult = ErrorHResult::from_constant(0x801F0003); // ERROR_FLT_INVALID_ASYNCHRONOUS_REQUEST
-
-/// Disallow the Fast IO path for this operation.
-pub const FLT_DISALLOW_FAST_IO : ErrorHResult = ErrorHResult::from_constant(0x801F0004); // ERROR_FLT_DISALLOW_FAST_IO
-
-/// An invalid name request was made. The name requested cannot be retrieved at this time.
-pub const FLT_INVALID_NAME_REQUEST : ErrorHResult = ErrorHResult::from_constant(0x801F0005); // ERROR_FLT_INVALID_NAME_REQUEST
-
-/// Posting this operation to a worker thread for further processing is not safe at this time because it could lead to a system deadlock.
-pub const FLT_NOT_SAFE_TO_POST_OPERATION : ErrorHResult = ErrorHResult::from_constant(0x801F0006); // ERROR_FLT_NOT_SAFE_TO_POST_OPERATION
-
-/// The Filter Manager was not initialized when a filter tried to register. Make sure that the Filter Manager is getting loaded as a driver.
-pub const FLT_NOT_INITIALIZED : ErrorHResult = ErrorHResult::from_constant(0x801F0007); // ERROR_FLT_NOT_INITIALIZED
-
-/// The filter is not ready for attachment to volumes because it has not finished initializing (FltStartFiltering has not been called).
-pub const FLT_FILTER_NOT_READY : ErrorHResult = ErrorHResult::from_constant(0x801F0008); // ERROR_FLT_FILTER_NOT_READY
-
-/// The filter must cleanup any operation specific context at this time because it is being removed from the system before the operation is completed by the lower drivers.
-pub const FLT_POST_OPERATION_CLEANUP : ErrorHResult = ErrorHResult::from_constant(0x801F0009); // ERROR_FLT_POST_OPERATION_CLEANUP
-
-/// The Filter Manager had an internal error from which it cannot recover, therefore the operation has been failed. This is usually the result of a filter returning an invalid value from a pre-operation callback.
-pub const FLT_INTERNAL_ERROR : ErrorHResult = ErrorHResult::from_constant(0x801F000A); // ERROR_FLT_INTERNAL_ERROR
-
-/// The object specified for this action is in the process of being deleted, therefore the action requested cannot be completed at this time.
-pub const FLT_DELETING_OBJECT : ErrorHResult = ErrorHResult::from_constant(0x801F000B); // ERROR_FLT_DELETING_OBJECT
-
-/// Non-paged pool must be used for this type of context.
-pub const FLT_MUST_BE_NONPAGED_POOL : ErrorHResult = ErrorHResult::from_constant(0x801F000C); // ERROR_FLT_MUST_BE_NONPAGED_POOL
-
-/// A duplicate handler definition has been provided for an operation.
-pub const FLT_DUPLICATE_ENTRY : ErrorHResult = ErrorHResult::from_constant(0x801F000D); // ERROR_FLT_DUPLICATE_ENTRY
-
-/// The callback data queue has been disabled.
-pub const FLT_CBDQ_DISABLED : ErrorHResult = ErrorHResult::from_constant(0x801F000E); // ERROR_FLT_CBDQ_DISABLED
-
-/// Do not attach the filter to the volume at this time.
-pub const FLT_DO_NOT_ATTACH : ErrorHResult = ErrorHResult::from_constant(0x801F000F); // ERROR_FLT_DO_NOT_ATTACH
-
-/// Do not detach the filter from the volume at this time.
-pub const FLT_DO_NOT_DETACH : ErrorHResult = ErrorHResult::from_constant(0x801F0010); // ERROR_FLT_DO_NOT_DETACH
-
-/// An instance already exists at this altitude on the volume specified.
-pub const FLT_INSTANCE_ALTITUDE_COLLISION : ErrorHResult = ErrorHResult::from_constant(0x801F0011); // ERROR_FLT_INSTANCE_ALTITUDE_COLLISION
-
-/// An instance already exists with this name on the volume specified.
-pub const FLT_INSTANCE_NAME_COLLISION : ErrorHResult = ErrorHResult::from_constant(0x801F0012); // ERROR_FLT_INSTANCE_NAME_COLLISION
-
-/// The system could not find the filter specified.
-pub const FLT_FILTER_NOT_FOUND : ErrorHResult = ErrorHResult::from_constant(0x801F0013); // ERROR_FLT_FILTER_NOT_FOUND
-
-/// The system could not find the volume specified.
-pub const FLT_VOLUME_NOT_FOUND : ErrorHResult = ErrorHResult::from_constant(0x801F0014); // ERROR_FLT_VOLUME_NOT_FOUND
-
-/// The system could not find the instance specified.
-pub const FLT_INSTANCE_NOT_FOUND : ErrorHResult = ErrorHResult::from_constant(0x801F0015); // ERROR_FLT_INSTANCE_NOT_FOUND
-
-/// No registered context allocation definition was found for the given request.
-pub const FLT_CONTEXT_ALLOCATION_NOT_FOUND : ErrorHResult = ErrorHResult::from_constant(0x801F0016); // ERROR_FLT_CONTEXT_ALLOCATION_NOT_FOUND
-
-/// An invalid parameter was specified during context registration.
-pub const FLT_INVALID_CONTEXT_REGISTRATION : ErrorHResult = ErrorHResult::from_constant(0x801F0017); // ERROR_FLT_INVALID_CONTEXT_REGISTRATION
-
-/// The name requested was not found in Filter Manager's name cache and could not be retrieved from the file system.
-pub const FLT_NAME_CACHE_MISS : ErrorHResult = ErrorHResult::from_constant(0x801F0018); // ERROR_FLT_NAME_CACHE_MISS
-
-/// The requested device object does not exist for the given volume.
-pub const FLT_NO_DEVICE_OBJECT : ErrorHResult = ErrorHResult::from_constant(0x801F0019); // ERROR_FLT_NO_DEVICE_OBJECT
-
-/// The specified volume is already mounted.
-pub const FLT_VOLUME_ALREADY_MOUNTED : ErrorHResult = ErrorHResult::from_constant(0x801F001A); // ERROR_FLT_VOLUME_ALREADY_MOUNTED
-
-/// The specified Transaction Context is already enlisted in a transaction
-pub const FLT_ALREADY_ENLISTED : ErrorHResult = ErrorHResult::from_constant(0x801F001B); // ERROR_FLT_ALREADY_ENLISTED
-
-/// The specified context is already attached to another object
-pub const FLT_CONTEXT_ALREADY_LINKED : ErrorHResult = ErrorHResult::from_constant(0x801F001C); // ERROR_FLT_CONTEXT_ALREADY_LINKED
-
-/// No waiter is present for the filter's reply to this message.
-pub const FLT_NO_WAITER_FOR_REPLY : ErrorHResult = ErrorHResult::from_constant(0x801F0020); // ERROR_FLT_NO_WAITER_FOR_REPLY
-
-/// The filesystem database resource is in use. Registration cannot complete at this time.
-pub const FLT_REGISTRATION_BUSY : ErrorHResult = ErrorHResult::from_constant(0x801F0023); // ERROR_FLT_REGISTRATION_BUSY
+#[doc(hidden)] pub const FLT_IO_COMPLETE : SuccessHResult = SuccessHResult::from_constant(0x001F0001); // ERROR_FLT_IO_COMPLETE
+#[doc(hidden)] pub const FLT_NO_HANDLER_DEFINED : ErrorHResult = ErrorHResult::from_constant(0x801F0001); // ERROR_FLT_NO_HANDLER_DEFINED
+#[doc(hidden)] pub const FLT_CONTEXT_ALREADY_DEFINED : ErrorHResult = ErrorHResult::from_constant(0x801F0002); // ERROR_FLT_CONTEXT_ALREADY_DEFINED
+#[doc(hidden)] pub const FLT_INVALID_ASYNCHRONOUS_REQUEST : ErrorHResult = ErrorHResult::from_constant(0x801F0003); // ERROR_FLT_INVALID_ASYNCHRONOUS_REQUEST
+#[doc(hidden)] pub const FLT_DISALLOW_FAST_IO : ErrorHResult = ErrorHResult::from_constant(0x801F0004); // ERROR_FLT_DISALLOW_FAST_IO
+#[doc(hidden)] pub const FLT_INVALID_NAME_REQUEST : ErrorHResult = ErrorHResult::from_constant(0x801F0005); // ERROR_FLT_INVALID_NAME_REQUEST
+#[doc(hidden)] pub const FLT_NOT_SAFE_TO_POST_OPERATION : ErrorHResult = ErrorHResult::from_constant(0x801F0006); // ERROR_FLT_NOT_SAFE_TO_POST_OPERATION
+#[doc(hidden)] pub const FLT_NOT_INITIALIZED : ErrorHResult = ErrorHResult::from_constant(0x801F0007); // ERROR_FLT_NOT_INITIALIZED
+#[doc(hidden)] pub const FLT_FILTER_NOT_READY : ErrorHResult = ErrorHResult::from_constant(0x801F0008); // ERROR_FLT_FILTER_NOT_READY
+#[doc(hidden)] pub const FLT_POST_OPERATION_CLEANUP : ErrorHResult = ErrorHResult::from_constant(0x801F0009); // ERROR_FLT_POST_OPERATION_CLEANUP
+#[doc(hidden)] pub const FLT_INTERNAL_ERROR : ErrorHResult = ErrorHResult::from_constant(0x801F000A); // ERROR_FLT_INTERNAL_ERROR
+#[doc(hidden)] pub const FLT_DELETING_OBJECT : ErrorHResult = ErrorHResult::from_constant(0x801F000B); // ERROR_FLT_DELETING_OBJECT
+#[doc(hidden)] pub const FLT_MUST_BE_NONPAGED_POOL : ErrorHResult = ErrorHResult::from_constant(0x801F000C); // ERROR_FLT_MUST_BE_NONPAGED_POOL
+#[doc(hidden)] pub const FLT_DUPLICATE_ENTRY : ErrorHResult = ErrorHResult::from_constant(0x801F000D); // ERROR_FLT_DUPLICATE_ENTRY
+#[doc(hidden)] pub const FLT_CBDQ_DISABLED : ErrorHResult = ErrorHResult::from_constant(0x801F000E); // ERROR_FLT_CBDQ_DISABLED
+#[doc(hidden)] pub const FLT_DO_NOT_ATTACH : ErrorHResult = ErrorHResult::from_constant(0x801F000F); // ERROR_FLT_DO_NOT_ATTACH
+#[doc(hidden)] pub const FLT_DO_NOT_DETACH : ErrorHResult = ErrorHResult::from_constant(0x801F0010); // ERROR_FLT_DO_NOT_DETACH
+#[doc(hidden)] pub const FLT_INSTANCE_ALTITUDE_COLLISION : ErrorHResult = ErrorHResult::from_constant(0x801F0011); // ERROR_FLT_INSTANCE_ALTITUDE_COLLISION
+#[doc(hidden)] pub const FLT_INSTANCE_NAME_COLLISION : ErrorHResult = ErrorHResult::from_constant(0x801F0012); // ERROR_FLT_INSTANCE_NAME_COLLISION
+#[doc(hidden)] pub const FLT_FILTER_NOT_FOUND : ErrorHResult = ErrorHResult::from_constant(0x801F0013); // ERROR_FLT_FILTER_NOT_FOUND
+#[doc(hidden)] pub const FLT_VOLUME_NOT_FOUND : ErrorHResult = ErrorHResult::from_constant(0x801F0014); // ERROR_FLT_VOLUME_NOT_FOUND
+#[doc(hidden)] pub const FLT_INSTANCE_NOT_FOUND : ErrorHResult = ErrorHResult::from_constant(0x801F0015); // ERROR_FLT_INSTANCE_NOT_FOUND
+#[doc(hidden)] pub const FLT_CONTEXT_ALLOCATION_NOT_FOUND : ErrorHResult = ErrorHResult::from_constant(0x801F0016); // ERROR_FLT_CONTEXT_ALLOCATION_NOT_FOUND
+#[doc(hidden)] pub const FLT_INVALID_CONTEXT_REGISTRATION : ErrorHResult = ErrorHResult::from_constant(0x801F0017); // ERROR_FLT_INVALID_CONTEXT_REGISTRATION
+#[doc(hidden)] pub const FLT_NAME_CACHE_MISS : ErrorHResult = ErrorHResult::from_constant(0x801F0018); // ERROR_FLT_NAME_CACHE_MISS
+#[doc(hidden)] pub const FLT_NO_DEVICE_OBJECT : ErrorHResult = ErrorHResult::from_constant(0x801F0019); // ERROR_FLT_NO_DEVICE_OBJECT
+#[doc(hidden)] pub const FLT_VOLUME_ALREADY_MOUNTED : ErrorHResult = ErrorHResult::from_constant(0x801F001A); // ERROR_FLT_VOLUME_ALREADY_MOUNTED
+#[doc(hidden)] pub const FLT_ALREADY_ENLISTED : ErrorHResult = ErrorHResult::from_constant(0x801F001B); // ERROR_FLT_ALREADY_ENLISTED
+#[doc(hidden)] pub const FLT_CONTEXT_ALREADY_LINKED : ErrorHResult = ErrorHResult::from_constant(0x801F001C); // ERROR_FLT_CONTEXT_ALREADY_LINKED
+#[doc(hidden)] pub const FLT_NO_WAITER_FOR_REPLY : ErrorHResult = ErrorHResult::from_constant(0x801F0020); // ERROR_FLT_NO_WAITER_FOR_REPLY
+#[doc(hidden)] pub const FLT_REGISTRATION_BUSY : ErrorHResult = ErrorHResult::from_constant(0x801F0023); // ERROR_FLT_REGISTRATION_BUSY
 
 /// ### Display Driver Stopped Responding
 /// The `%hs` display driver has stopped working normally. Save your work and reboot the system to restore full display functionality.

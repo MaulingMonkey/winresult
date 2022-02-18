@@ -257,6 +257,9 @@ mod gen {
             /// [Windows Event Log](https://docs.microsoft.com/en-us/windows/win32/wes/windows-event-log-error-constants)
             pub mod EVT;
 
+            /// I/O Filter
+            pub mod FLT;
+
             /// Direct3D and other graphics APIs
             pub mod GRAPHICS;
 
