@@ -37,6 +37,32 @@ const ERROR_PREFIX_TO_RUSTY : &'static [(&'static str, &'static str)] = &[
     ("ERROR_WMI_",          "ERROR::WMI",           ),
 ];
 
+const PREFIX_TO_SKIP : &'static [&'static str] = &[
+    "DEVICE_DSM_RANGE_",
+    "FLAGS_ERROR_UI_",
+    "HTTP_QUERY_X_",
+    "INTERNET_OPTION_",
+];
+
+const MIDFIX_TO_SKIP : &'static [&'static str] = &[
+    "_ERROR_MASK_",
+];
+
+const POSTFIX_TO_SKIP : &'static [&'static str] = &[
+    "_E_FIRST",
+    "_E_LAST",
+    "_S_FIRST",
+    "_S_LAST",
+];
+
+const POSTFIX_TO_SKIP_WARN : &'static [&'static str] = &[
+    "_BASE",
+    "_END",
+    "_MASK",
+    "_FIRST",
+    "_LAST",
+];
+
 
 
 #[derive(Default)]
@@ -127,13 +153,11 @@ pub(crate) fn winerror_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) 
                 "UI_E_START_KEYFRAME_AFTER_END"             => false,
                 "WS_S_END"                                  => false,
 
-                _ if error.starts_with("INTERNET_OPTION_")  => true,
-                _ if error.starts_with("HTTP_QUERY_X_")     => true,
-                _ if error.starts_with("FLAGS_ERROR_UI_")   => true,
-                _ if error.contains("_ERROR_MASK_")         => true,
+                _ if PREFIX_TO_SKIP .iter().copied().any(|f| error.starts_with  (f)) => true,
+                _ if POSTFIX_TO_SKIP.iter().copied().any(|f| error.ends_with    (f)) => true,
+                _ if MIDFIX_TO_SKIP .iter().copied().any(|f| error.contains     (f)) => true,
 
-                _ if "_E_FIRST _E_LAST _S_FIRST _S_LAST".split(' ').any(|s| error.ends_with(s)) => true, // don't warn
-                _ if "_BASE _END _MASK _FIRST _LAST".split(' ').any(|s| error.ends_with(s)) => {
+                _ if POSTFIX_TO_SKIP_WARN.iter().copied().any(|s| error.ends_with(s)) => {
                     if !docs.is_empty() { mmrbi::warning!(at: &header.path, line: line.no(), "{} is documented? not skipping...", error) }
                     true
                 },
