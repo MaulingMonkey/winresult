@@ -93,7 +93,7 @@ pub(crate) fn winerror_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) 
             let value   = define_error.name("value" ).unwrap().as_str();
             let success = prefix == "S" || prefix.ends_with("_S");
 
-            // DO NOT EXPOSE THIS MESS AS IS.  See [doc/ept-and-rpc-codes-are-evil.md](https://github.com/MaulingMonkey/winerr/blob/5094a8a5568392ef855babd8bc62458f29153e46/crates/winerr/doc/ept-and-rpc-codes-are-evil.md) for details.
+            // DO NOT EXPOSE THIS MESS AS IS.  See [doc/ept-and-rpc-codes-are-evil.md](https://github.com/MaulingMonkey/winresult/blob/5094a8a5568392ef855babd8bc62458f29153e46/crates/winresult/doc/ept-and-rpc-codes-are-evil.md) for details.
             if error.starts_with("EPT_") { docs.clear(); continue }
             if error.starts_with("RPC_") { docs.clear(); continue }
 

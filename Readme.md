@@ -2,18 +2,18 @@
 
 
 
-<!-- crates/winerr/doc/intro.md -->
+<!-- crates/winresult/doc/intro.md -->
 
-# 🦀 winerr - windows error codes 🦀
+# 🦀 winresult - windows result codes 🦀
 
-Debug-friendly types for windows error codes.
+Debug-friendly types for windows result codes.
 
 
 
 ### Why?
 
-*   `u32` error codes are annoying to `dbg!(...)`.  `winerr` has awesome [`Debug`] impls.
-*   `u32` error codes are annoying to view in your debugger.  `winerr` has awesome \*.natvis files.  Use [`natvis-pdbs`]!
+*   `u32` error codes are annoying to `dbg!(...)`.  `winresult` has awesome [`Debug`] impls.
+*   `u32` error codes are annoying to view in your debugger.  `winresult` has awesome \*.natvis files.  Use [`natvis-pdbs`]!
 *   typoing `ERROR_WHATEVER` in a `match` is a mere warning. `ERROR::WHATEVER` is a hard error. <br> (I'd still use `#![deny(unreachable_patterns)]` anyways.)
 *   `ERROR_INVALID_FUNCTION` == `S_FALSE` (== `1`.)  Lame!
 *   `ERROR_FILE_NOT_FOUND` (2) is a mess.  A function or [`GetLastError`] might return:

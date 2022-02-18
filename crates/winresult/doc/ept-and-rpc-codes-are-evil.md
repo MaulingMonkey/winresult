@@ -93,4 +93,4 @@ Okay, so, that's `HRESULT_FROM_WIN32(EPT_S_CANT_PERFORM_OP)` with the winerror.h
 
 ### Conclusion
 
-Using `EPT_*` or `RPC_*` is a bug.  `winerr` will save you from making the mistake of using these error codes by banning them.  *You're welcome.*
+Using `EPT_*` or `RPC_*` is a bug.  `winresult` will save you from making the mistake of using these error codes by banning them.  *You're welcome.*

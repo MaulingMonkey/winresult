@@ -2,16 +2,16 @@
 # https://crates.io/category_slugs
 
 [package]
-name                                    = "winerr"
-description                             = "windows error codes"
+name                                    = "winresult"
+description                             = "windows result codes"
 version                                 = "0.0.0-git-lib"
 authors                                 = ["MaulingMonkey <git@maulingmonkey.com>"]
 edition                                 = "2021"
-repository                              = "https://github.com/MaulingMonkey/winerr"
-documentation                           = "https://docs.rs/winerr"
+repository                              = "https://github.com/MaulingMonkey/winresult"
+documentation                           = "https://docs.rs/winresult"
 license                                 = "Apache-2.0 OR MIT"
 readme                                  = "Readme.md"
-keywords                                = ["win32", "error", "hresult", "natvis"]
+keywords                                = ["win32", "error", "hresult", "ntstatus", "natvis"]
 categories                              = ["os::windows-apis"]
 
 [package.metadata.docs.rs]
@@ -22,5 +22,5 @@ default-target                          = "x86_64-pc-windows-msvc"
 path                                    = "src/_lib.rs"
 
 [dependencies]
-winerr-core.path                        = "../winerr-core"
-winerr-core.version                     = "0.0.0-git-core"
+winresult-core.path                     = "../winresult-core"
+winresult-core.version                  = "0.0.0-git-core"

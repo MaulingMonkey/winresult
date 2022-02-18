@@ -26,7 +26,7 @@
 //! *   ([FacilityHrMicrosoft], [ErrorCodeMicrosoft]) → [ErrorHResult] → [HRESULT]
 
 
-extern crate winerr_core as core;
+extern crate winresult_core as core;
 
 pub use core::{
     FacilityHrMicrosoft,
@@ -206,7 +206,7 @@ mod gen {
         /// Exchange ActiveSync
         pub mod EAS;
 
-        /// DO NOT EXPOSE THIS MESS AS IS.  See [doc/ept-and-rpc-codes-are-evil.md](https://github.com/MaulingMonkey/winerr/blob/5094a8a5568392ef855babd8bc62458f29153e46/crates/winerr/doc/ept-and-rpc-codes-are-evil.md) for details.
+        /// DO NOT EXPOSE THIS MESS AS IS.  See [doc/ept-and-rpc-codes-are-evil.md](https://github.com/MaulingMonkey/winresult/blob/5094a8a5568392ef855babd8bc62458f29153e46/crates/winresult/doc/ept-and-rpc-codes-are-evil.md) for details.
         ///
         /// **E**ntry **P**oin**t** for Remote Procedure Calls
         #[allow(dead_code)] mod EPT {}
@@ -361,7 +361,7 @@ mod gen {
         /// WinRT COM
         pub mod RO;
 
-        /// DO NOT EXPOSE THIS MESS AS IS.  See [doc/ept-and-rpc-codes-are-evil.md](https://github.com/MaulingMonkey/winerr/blob/5094a8a5568392ef855babd8bc62458f29153e46/crates/winerr/doc/ept-and-rpc-codes-are-evil.md) for details.
+        /// DO NOT EXPOSE THIS MESS AS IS.  See [doc/ept-and-rpc-codes-are-evil.md](https://github.com/MaulingMonkey/winresult/blob/5094a8a5568392ef855babd8bc62458f29153e46/crates/winresult/doc/ept-and-rpc-codes-are-evil.md) for details.
         ///
         /// Remote Procedure Call
         #[allow(dead_code)] mod RPC {}

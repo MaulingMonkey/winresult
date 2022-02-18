@@ -1,4 +1,4 @@
-use winerr::*;
+use winresult::*;
 
 fn main() {
     let _fhr = dbg!(FACILITY::WIN32);

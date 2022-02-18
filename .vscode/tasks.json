@@ -23,15 +23,15 @@
             "command":          "${workspaceFolder}\\scripts\\gen.cmd <NUL",
         },
 
-        // winerr
+        // winresult
         {
-            "label":            "cargo build --package winerr --example example",
-            "command":          "cargo build --package winerr --example example",
+            "label":            "cargo build --package winresult --example example",
+            "command":          "cargo build --package winresult --example example",
             "dependsOn":        ["gen"],
         },
         {
-            "label":            "cargo build --package winerr --example example --release",
-            "command":          "cargo build --package winerr --example example --release",
+            "label":            "cargo build --package winresult --example example --release",
+            "command":          "cargo build --package winresult --example example --release",
             "dependsOn":        ["gen"],
         },
 
@@ -46,8 +46,8 @@
             "command":          "git commit --amend",
         },
 
-        { "label": "open repository",   "command": "start \"\" https://github.com/MaulingMonkey/winerr" },
-        { "label": "open issues",       "command": "start \"\" https://github.com/MaulingMonkey/winerr/issues" },
-        { "label": "open wiki",         "command": "start \"\" https://github.com/MaulingMonkey/winerr/wiki" },
+        { "label": "open repository",   "command": "start \"\" https://github.com/MaulingMonkey/winresult" },
+        { "label": "open issues",       "command": "start \"\" https://github.com/MaulingMonkey/winresult/issues" },
+        { "label": "open wiki",         "command": "start \"\" https://github.com/MaulingMonkey/winresult/wiki" },
     ]
 }

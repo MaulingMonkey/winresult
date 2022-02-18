@@ -2,13 +2,13 @@
 # https://crates.io/category_slugs
 
 [package]
-name                                    = "winerr-core"
-description                             = "windows error codes"
+name                                    = "winresult-core"
+description                             = "windows result codes"
 version                                 = "0.0.0-git-core"
 authors                                 = ["MaulingMonkey <git@maulingmonkey.com>"]
 edition                                 = "2021"
-repository                              = "https://github.com/MaulingMonkey/winerr"
-documentation                           = "https://docs.rs/winerr" # re-exports everything anyways, just point at that
+repository                              = "https://github.com/MaulingMonkey/winresult"
+documentation                           = "https://docs.rs/winresult" # re-exports everything anyways, just point at that
 license                                 = "Apache-2.0 OR MIT"
 
 [package.metadata.docs.rs]
