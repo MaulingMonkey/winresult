@@ -1406,23 +1406,14 @@
         <DisplayString Condition="__0 == 1632">ERROR::INSTALL_TEMP_UNWRITABLE</DisplayString>
         <DisplayString Condition="__0 == 1633">ERROR::INSTALL_PLATFORM_UNSUPPORTED</DisplayString>
         <DisplayString Condition="__0 == 1634">ERROR::INSTALL_NOTUSED</DisplayString>
-        <DisplayString Condition="__0 == 1635">ERROR::PATCH_PACKAGE_OPEN_FAILED</DisplayString>
-        <DisplayString Condition="__0 == 1636">ERROR::PATCH_PACKAGE_INVALID</DisplayString>
-        <DisplayString Condition="__0 == 1637">ERROR::PATCH_PACKAGE_UNSUPPORTED</DisplayString>
         <DisplayString Condition="__0 == 1638">ERROR::PRODUCT_VERSION</DisplayString>
         <DisplayString Condition="__0 == 1639">ERROR::INVALID_COMMAND_LINE</DisplayString>
         <DisplayString Condition="__0 == 1640">ERROR::INSTALL_REMOTE_DISALLOWED</DisplayString>
         <DisplayString Condition="__0 == 1641">ERROR::SUCCESS_REBOOT_INITIATED</DisplayString>
-        <DisplayString Condition="__0 == 1642">ERROR::PATCH_TARGET_NOT_FOUND</DisplayString>
-        <DisplayString Condition="__0 == 1643">ERROR::PATCH_PACKAGE_REJECTED</DisplayString>
         <DisplayString Condition="__0 == 1644">ERROR::INSTALL_TRANSFORM_REJECTED</DisplayString>
         <DisplayString Condition="__0 == 1645">ERROR::INSTALL_REMOTE_PROHIBITED</DisplayString>
-        <DisplayString Condition="__0 == 1646">ERROR::PATCH_REMOVAL_UNSUPPORTED</DisplayString>
         <DisplayString Condition="__0 == 1647">ERROR::UNKNOWN_PATCH</DisplayString>
-        <DisplayString Condition="__0 == 1648">ERROR::PATCH_NO_SEQUENCE</DisplayString>
-        <DisplayString Condition="__0 == 1649">ERROR::PATCH_REMOVAL_DISALLOWED</DisplayString>
         <DisplayString Condition="__0 == 1650">ERROR::INVALID_PATCH_XML</DisplayString>
-        <DisplayString Condition="__0 == 1651">ERROR::PATCH_MANAGED_ADVERTISED_PRODUCT</DisplayString>
         <DisplayString Condition="__0 == 1652">ERROR::INSTALL_SERVICE_SAFEBOOT</DisplayString>
         <DisplayString Condition="__0 == 1653">ERROR::FAIL_FAST_EXCEPTION</DisplayString>
         <DisplayString Condition="__0 == 1654">ERROR::INSTALL_REJECTED</DisplayString>
@@ -3021,6 +3012,15 @@
         <DisplayString Condition="__0 == 15105">ERROR::MUI::FILE_NOT_LOADED</DisplayString>
         <DisplayString Condition="__0 == 15107">ERROR::MUI::INTLSETTINGS_UILANG_NOT_INSTALLED</DisplayString>
         <DisplayString Condition="__0 == 15108">ERROR::MUI::INTLSETTINGS_INVALID_LOCALE_NAME</DisplayString>
+        <DisplayString Condition="__0 == 1635">ERROR::PATCH::PACKAGE_OPEN_FAILED</DisplayString>
+        <DisplayString Condition="__0 == 1636">ERROR::PATCH::PACKAGE_INVALID</DisplayString>
+        <DisplayString Condition="__0 == 1637">ERROR::PATCH::PACKAGE_UNSUPPORTED</DisplayString>
+        <DisplayString Condition="__0 == 1642">ERROR::PATCH::TARGET_NOT_FOUND</DisplayString>
+        <DisplayString Condition="__0 == 1643">ERROR::PATCH::PACKAGE_REJECTED</DisplayString>
+        <DisplayString Condition="__0 == 1646">ERROR::PATCH::REMOVAL_UNSUPPORTED</DisplayString>
+        <DisplayString Condition="__0 == 1648">ERROR::PATCH::NO_SEQUENCE</DisplayString>
+        <DisplayString Condition="__0 == 1649">ERROR::PATCH::REMOVAL_DISALLOWED</DisplayString>
+        <DisplayString Condition="__0 == 1651">ERROR::PATCH::MANAGED_ADVERTISED_PRODUCT</DisplayString>
         <DisplayString Condition="__0 == 15148">ERROR::PRI_MERGE::VERSION_MISMATCH</DisplayString>
         <DisplayString Condition="__0 == 15149">ERROR::PRI_MERGE::MISSING_SCHEMA</DisplayString>
         <DisplayString Condition="__0 == 15150">ERROR::PRI_MERGE::LOAD_FILE_FAILED</DisplayString>
@@ -7937,6 +7937,18 @@
     <HResult Name="ERROR_NDIS_OFFLOAD_POLICY"><HRValue>0xC034100F</HRValue></HResult>
     <HResult Name="ERROR_NDIS_OFFLOAD_CONNECTION_REJECTED"><HRValue>0xC0341012</HRValue></HResult>
     <HResult Name="ERROR_NDIS_OFFLOAD_PATH_REJECTED"><HRValue>0xC0341013</HRValue></HResult>
+    <HResult Name="ERROR_PATCH_ENCODE_FAILURE"><HRValue>0xC00E3101</HRValue></HResult>
+    <HResult Name="ERROR_PATCH_INVALID_OPTIONS"><HRValue>0xC00E3102</HRValue></HResult>
+    <HResult Name="ERROR_PATCH_SAME_FILE"><HRValue>0xC00E3103</HRValue></HResult>
+    <HResult Name="ERROR_PATCH_RETAIN_RANGES_DIFFER"><HRValue>0xC00E3104</HRValue></HResult>
+    <HResult Name="ERROR_PATCH_BIGGER_THAN_COMPRESSED"><HRValue>0xC00E3105</HRValue></HResult>
+    <HResult Name="ERROR_PATCH_IMAGEHLP_FAILURE"><HRValue>0xC00E3106</HRValue></HResult>
+    <HResult Name="ERROR_PATCH_DECODE_FAILURE"><HRValue>0xC00E4101</HRValue></HResult>
+    <HResult Name="ERROR_PATCH_CORRUPT"><HRValue>0xC00E4102</HRValue></HResult>
+    <HResult Name="ERROR_PATCH_NEWER_FORMAT"><HRValue>0xC00E4103</HRValue></HResult>
+    <HResult Name="ERROR_PATCH_WRONG_FILE"><HRValue>0xC00E4104</HRValue></HResult>
+    <HResult Name="ERROR_PATCH_NOT_NECESSARY"><HRValue>0xC00E4105</HRValue></HResult>
+    <HResult Name="ERROR_PATCH_NOT_AVAILABLE"><HRValue>0xC00E4106</HRValue></HResult>
     <HResult Name="ERROR_SVHDX_ERROR_STORED"><HRValue>0xC05C0000</HRValue></HResult>
     <HResult Name="ERROR_SVHDX_ERROR_NOT_AVAILABLE"><HRValue>0xC05CFF00</HRValue></HResult>
     <HResult Name="ERROR_SVHDX_UNIT_ATTENTION_AVAILABLE"><HRValue>0xC05CFF01</HRValue></HResult>

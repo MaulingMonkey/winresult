@@ -281,6 +281,8 @@ mod gen {
             /// Network Driver Interface Services
             pub mod NDIS;
 
+            pub mod PATCH;
+
             /// [Package Resource Indexing](https://docs.microsoft.com/en-us/windows/win32/menurc/pri-indexing-reference)
             pub mod PRI_MERGE;
 

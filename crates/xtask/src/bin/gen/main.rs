@@ -69,8 +69,8 @@ fn main() {
         r"um\dhcpsapi.h":       scan::winerror_h,
         r"um\MprError.h":       scan::winerror_h,
         r"um\NetSh.h":          scan::winerror_h,
+        r"um\PatchApi.h":       scan::winerror_h,
         // TODO:
-        //r"um\PatchApi.h":     scan::winerror_h,
         //r"um\PatchWiz.h":     scan::winerror_h,
         //r"um\RasError.h":     scan::winerror_h,
         //r"um\SetupAPI.h":     scan::winerror_h,

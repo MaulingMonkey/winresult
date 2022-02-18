@@ -3226,14 +3226,9 @@ pub const INSTALL_PLATFORM_UNSUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft
 /// Component not used on this computer.
 pub const INSTALL_NOTUSED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1634); // ERROR_INSTALL_NOTUSED
 
-/// This update package could not be opened. Verify that the update package exists and that you can access it, or contact the application vendor to verify that this is a valid Windows Installer update package.
-pub const PATCH_PACKAGE_OPEN_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1635); // ERROR_PATCH_PACKAGE_OPEN_FAILED
-
-/// This update package could not be opened. Contact the application vendor to verify that this is a valid Windows Installer update package.
-pub const PATCH_PACKAGE_INVALID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1636); // ERROR_PATCH_PACKAGE_INVALID
-
-/// This update package cannot be processed by the Windows Installer service. You must install a Windows service pack that contains a newer version of the Windows Installer service.
-pub const PATCH_PACKAGE_UNSUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1637); // ERROR_PATCH_PACKAGE_UNSUPPORTED
+#[doc(hidden)] pub const PATCH_PACKAGE_OPEN_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1635); // ERROR_PATCH_PACKAGE_OPEN_FAILED
+#[doc(hidden)] pub const PATCH_PACKAGE_INVALID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1636); // ERROR_PATCH_PACKAGE_INVALID
+#[doc(hidden)] pub const PATCH_PACKAGE_UNSUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1637); // ERROR_PATCH_PACKAGE_UNSUPPORTED
 
 /// Another version of this product is already installed. Installation of this version cannot continue. To configure or remove the existing version of this product, use Add/Remove Programs on the Control Panel.
 pub const PRODUCT_VERSION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1638); // ERROR_PRODUCT_VERSION
@@ -3247,11 +3242,8 @@ pub const INSTALL_REMOTE_DISALLOWED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::f
 /// The requested operation completed successfully. The system will be restarted so the changes can take effect.
 pub const SUCCESS_REBOOT_INITIATED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1641); // ERROR_SUCCESS_REBOOT_INITIATED
 
-/// The upgrade cannot be installed by the Windows Installer service because the program to be upgraded may be missing, or the upgrade may update a different version of the program. Verify that the program to be upgraded exists on your computer and that you have the correct upgrade.
-pub const PATCH_TARGET_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1642); // ERROR_PATCH_TARGET_NOT_FOUND
-
-/// The update package is not permitted by software restriction policy.
-pub const PATCH_PACKAGE_REJECTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1643); // ERROR_PATCH_PACKAGE_REJECTED
+#[doc(hidden)] pub const PATCH_TARGET_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1642); // ERROR_PATCH_TARGET_NOT_FOUND
+#[doc(hidden)] pub const PATCH_PACKAGE_REJECTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1643); // ERROR_PATCH_PACKAGE_REJECTED
 
 /// One or more customizations are not permitted by software restriction policy.
 pub const INSTALL_TRANSFORM_REJECTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1644); // ERROR_INSTALL_TRANSFORM_REJECTED
@@ -3259,23 +3251,18 @@ pub const INSTALL_TRANSFORM_REJECTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::
 /// The Windows Installer does not permit installation from a Remote Desktop Connection.
 pub const INSTALL_REMOTE_PROHIBITED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1645); // ERROR_INSTALL_REMOTE_PROHIBITED
 
-/// Uninstallation of the update package is not supported.
-pub const PATCH_REMOVAL_UNSUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1646); // ERROR_PATCH_REMOVAL_UNSUPPORTED
+#[doc(hidden)] pub const PATCH_REMOVAL_UNSUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1646); // ERROR_PATCH_REMOVAL_UNSUPPORTED
 
 /// The update is not applied to this product.
 pub const UNKNOWN_PATCH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1647); // ERROR_UNKNOWN_PATCH
 
-/// No valid sequence could be found for the set of updates.
-pub const PATCH_NO_SEQUENCE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1648); // ERROR_PATCH_NO_SEQUENCE
-
-/// Update removal was disallowed by policy.
-pub const PATCH_REMOVAL_DISALLOWED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1649); // ERROR_PATCH_REMOVAL_DISALLOWED
+#[doc(hidden)] pub const PATCH_NO_SEQUENCE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1648); // ERROR_PATCH_NO_SEQUENCE
+#[doc(hidden)] pub const PATCH_REMOVAL_DISALLOWED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1649); // ERROR_PATCH_REMOVAL_DISALLOWED
 
 /// The XML update data is invalid.
 pub const INVALID_PATCH_XML : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1650); // ERROR_INVALID_PATCH_XML
 
-/// Windows Installer does not permit updating of managed advertised products. At least one feature of the product must be installed before applying the update.
-pub const PATCH_MANAGED_ADVERTISED_PRODUCT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1651); // ERROR_PATCH_MANAGED_ADVERTISED_PRODUCT
+#[doc(hidden)] pub const PATCH_MANAGED_ADVERTISED_PRODUCT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1651); // ERROR_PATCH_MANAGED_ADVERTISED_PRODUCT
 
 /// The Windows Installer service is not accessible in Safe Mode. Please try again when your computer is not in Safe Mode or you can use System Restore to return your machine to a previous good state.
 pub const INSTALL_SERVICE_SAFEBOOT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1652); // ERROR_INSTALL_SERVICE_SAFEBOOT
@@ -7466,3 +7453,15 @@ pub const SUPPRESS_OUTPUT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_consta
 pub const HELPER_ALREADY_REGISTERED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15018); // ERROR_HELPER_ALREADY_REGISTERED
 pub const CONTEXT_ALREADY_REGISTERED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15019); // ERROR_CONTEXT_ALREADY_REGISTERED
 pub const PARSING_FAILURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15020); // ERROR_PARSING_FAILURE
+#[doc(hidden)] pub const PATCH_ENCODE_FAILURE : ErrorHResult = ErrorHResult::from_constant(0xC00E3101); // ERROR_PATCH_ENCODE_FAILURE
+#[doc(hidden)] pub const PATCH_INVALID_OPTIONS : ErrorHResult = ErrorHResult::from_constant(0xC00E3102); // ERROR_PATCH_INVALID_OPTIONS
+#[doc(hidden)] pub const PATCH_SAME_FILE : ErrorHResult = ErrorHResult::from_constant(0xC00E3103); // ERROR_PATCH_SAME_FILE
+#[doc(hidden)] pub const PATCH_RETAIN_RANGES_DIFFER : ErrorHResult = ErrorHResult::from_constant(0xC00E3104); // ERROR_PATCH_RETAIN_RANGES_DIFFER
+#[doc(hidden)] pub const PATCH_BIGGER_THAN_COMPRESSED : ErrorHResult = ErrorHResult::from_constant(0xC00E3105); // ERROR_PATCH_BIGGER_THAN_COMPRESSED
+#[doc(hidden)] pub const PATCH_IMAGEHLP_FAILURE : ErrorHResult = ErrorHResult::from_constant(0xC00E3106); // ERROR_PATCH_IMAGEHLP_FAILURE
+#[doc(hidden)] pub const PATCH_DECODE_FAILURE : ErrorHResult = ErrorHResult::from_constant(0xC00E4101); // ERROR_PATCH_DECODE_FAILURE
+#[doc(hidden)] pub const PATCH_CORRUPT : ErrorHResult = ErrorHResult::from_constant(0xC00E4102); // ERROR_PATCH_CORRUPT
+#[doc(hidden)] pub const PATCH_NEWER_FORMAT : ErrorHResult = ErrorHResult::from_constant(0xC00E4103); // ERROR_PATCH_NEWER_FORMAT
+#[doc(hidden)] pub const PATCH_WRONG_FILE : ErrorHResult = ErrorHResult::from_constant(0xC00E4104); // ERROR_PATCH_WRONG_FILE
+#[doc(hidden)] pub const PATCH_NOT_NECESSARY : ErrorHResult = ErrorHResult::from_constant(0xC00E4105); // ERROR_PATCH_NOT_NECESSARY
+#[doc(hidden)] pub const PATCH_NOT_AVAILABLE : ErrorHResult = ErrorHResult::from_constant(0xC00E4106); // ERROR_PATCH_NOT_AVAILABLE

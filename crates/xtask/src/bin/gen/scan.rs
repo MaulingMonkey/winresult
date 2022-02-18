@@ -20,6 +20,7 @@ const ERROR_PREFIX_TO_RUSTY : &'static [(&'static str, &'static str)] = &[
     ("ERROR_MRM_",          "ERROR::MRM",           ),
     ("ERROR_MUI_",          "ERROR::MUI",           ),
     ("ERROR_NDIS_",         "ERROR::NDIS",          ),
+    ("ERROR_PATCH_",        "ERROR::PATCH",         ),
     ("ERROR_PRI_MERGE_",    "ERROR::PRI_MERGE",     ),
     ("ERROR_SECUREBOOT_",   "ERROR::SECUREBOOT",    ),
     ("ERROR_SERVER_",       "ERROR::SERVER",        ),
