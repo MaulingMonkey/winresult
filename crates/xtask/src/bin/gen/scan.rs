@@ -1,3 +1,5 @@
+use crate::Header;
+
 use regex::Regex;
 
 use std::borrow::*;
@@ -57,7 +59,7 @@ pub struct Code<'s> {
 }
 
 impl Code<'_> {
-    pub fn matches_ty(&self, ty: &str) -> bool {
+    pub(crate) fn matches_ty(&self, ty: &str) -> bool {
         match (self.rs_ty, ty) {
             ("SuccessHResult",  "HRESULT")  => true,
             ("ErrorHResult",    "HRESULT")  => true,
@@ -66,7 +68,7 @@ impl Code<'_> {
     }
 }
 
-pub fn hardcoded(codes: &mut Codes) {
+pub(crate) fn hardcoded(codes: &mut Codes) {
     // success codes
     let mut redundant = false;
     for (cpp,               rs_mod,     rs_id,      value) in [
@@ -87,8 +89,10 @@ pub fn hardcoded(codes: &mut Codes) {
     }
 }
 
-pub fn winerror_h<'s: 'c, 'c>(header: &'s str, codes: &mut Codes<'c>) {
-    let path = r"C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\shared\winerror.h";
+pub(crate) fn winerror_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) {
+    let path = &header.path;
+    let header = header.code.as_str();
+
     let mut lines = header.lines().enumerate();
     let re_define_error = Regex::new(r##"^#\s*define\s+(?P<error>(?P<prefix>([A-Z0-9_]+?_)?(S|E|ERROR))_(?P<err>[a-zA-Z0-9_]+))\s+(?P<value>.+?)[L]?\s*(//.*)?$"##).expect("re_define_error");
     let re_placeholders = Regex::new(r"(0x)?%[0-9a-zA-Z_]+").expect("re_placeholders");
@@ -308,10 +312,12 @@ pub fn winerror_h<'s: 'c, 'c>(header: &'s str, codes: &mut Codes<'c>) {
     }
 }
 
-pub fn d3d9_h<'s: 'c, 'c>(header: &'s str, codes: &mut Codes<'c>) {
-    let path = r"C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\shared\d3d9.h";
+pub(crate) fn d3d<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) {
+    let path = &header.path;
+    let header = header.code.as_str();
+
     let mut lines = header.lines().enumerate();
-    let re_d3d_hr = Regex::new(r##"^\s*#\s*define\s+(?P<error>(?P<prefix>S|D3D(ERR|OK)?)_(?P<err>[a-zA-Z0-9_]+))\s+(?P<value>S_OK|MAKE_D3D.+?)$"##).expect("re_d3d_hr");
+    let re_d3d_hr = Regex::new(r##"^\s*#\s*define\s+(?P<error>(?P<prefix>S|D3D(ERR|OK)?)_(?P<err>[a-zA-Z0-9_]+))\s+(?P<value>S_OK|MAKE_D3D.+?|MAKE_DD.+?)$"##).expect("re_d3d_hr");
     while let Some((line_idx, line)) = lines.next() {
         if let Some(def) = re_d3d_hr.captures(line) {
             let error   = def.name("error" ).unwrap().as_str();
@@ -329,7 +335,23 @@ pub fn d3d9_h<'s: 'c, 'c>(header: &'s str, codes: &mut Codes<'c>) {
                         continue
                     },
                 }
+            } else if let Some(value) = value.strip_prefix_suffix("MAKE_DDSTATUS(", ")") {
+                match value.parse::<u16>() {
+                    Ok(value)   => ("SuccessHResult", format!("{}", u32::from(value)+0x08760000)),
+                    Err(_) => {
+                        mmrbi::error!(at: path, line: line_idx+1, "unexpected value for {}", error);
+                        continue
+                    },
+                }
             } else if let Some(value) = value.strip_prefix_suffix("MAKE_D3DHRESULT(", ")") {
+                match value.parse::<u16>() {
+                    Ok(value)   => ("ErrorHResult", format!("{}", u32::from(value)+0x88760000)),
+                    Err(_) => {
+                        mmrbi::error!(at: path, line: line_idx+1, "unexpected value for {}", error);
+                        continue
+                    },
+                }
+            } else if let Some(value) = value.strip_prefix_suffix("MAKE_DDHRESULT(", ")") {
                 match value.parse::<u16>() {
                     Ok(value)   => ("ErrorHResult", format!("{}", u32::from(value)+0x88760000)),
                     Err(_) => {
@@ -356,7 +378,10 @@ pub fn d3d9_h<'s: 'c, 'c>(header: &'s str, codes: &mut Codes<'c>) {
     }
 }
 
-pub fn ntstatus_h<'s: 'c, 'c>(header: &'s str, codes: &mut Codes<'c>) {
+pub(crate) fn ntstatus_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) {
+    let _path = &header.path;
+    let header = header.code.as_str();
+
     let mut lines = header.lines();
     let re_ntstatus = Regex::new(r##"^\s*#\s*define\s+(?P<error>(?P<prefix>STATUS)_(?P<err>[a-zA-Z0-9_]+))\s+\(\(NTSTATUS\)(?P<value>(0x)?[0-9a-fA-F]+)[L]?\)\s*(//.*)?$"##).expect("re_ntstatus");
     while let Some(line) = lines.next() {

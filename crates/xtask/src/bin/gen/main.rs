@@ -6,6 +6,11 @@ use std::path::*;
 
 
 
+struct Header {
+    pub path: PathBuf,
+    pub code: String,
+}
+
 fn main() {
     assert!(Path::new(".git").exists(), "expected to be run in the root of this repository");
     let sdk = sdk::WindowsKit::find_latest().expect("sdk");
@@ -14,14 +19,32 @@ fn main() {
     let expected_sdk ="10.0.19041.0";
     if actual_sdk != expected_sdk { mmrbi::warning!("expected sdk {} but found sdk {}", expected_sdk, actual_sdk) }
 
-    let d3d9_h      = std::fs::read_to_string(sdk.include.join(r"shared\d3d9.h"     )).expect("d3d9.h"      );
-    let ntstatus_h  = std::fs::read_to_string(sdk.include.join(r"shared\ntstatus.h" )).expect("ntstatus.h"  );
-    let winerror_h  = std::fs::read_to_string(sdk.include.join(r"shared\winerror.h" )).expect("winerror.h"  );
+
+    macro_rules! headers { ( $( $name:ident => $path:literal ),* $(,)? ) => {$(
+        let $name = {
+            let path = sdk.include.join($path);
+            let code = std::fs::read_to_string(&path).expect($path);
+            Header { path, code }
+        };
+    )*}}
+
+    headers! {
+        d3d9_h          => r"shared\d3d9.h",
+        ntstatus_h      => r"shared\ntstatus.h",
+        winerror_h      => r"shared\winerror.h",
+
+        d3d_h           => r"um\d3d.h",
+        d3d9helper_h    => r"um\d3d9helper.h",
+        d3dhal_h        => r"um\d3dhal.h",
+    }
 
     let mut codes   = scan::Codes::default();
     scan::hardcoded     (               &mut codes);
     scan::winerror_h    (&winerror_h,   &mut codes);
-    scan::d3d9_h        (&d3d9_h,       &mut codes);
+    scan::d3d           (&d3d9_h,       &mut codes);
+    scan::d3d           (&d3d_h,        &mut codes);
+    scan::d3d           (&d3d9helper_h, &mut codes);
+    scan::d3d           (&d3dhal_h,     &mut codes);
     scan::ntstatus_h    (&ntstatus_h,   &mut codes);
 
     gen::codes(&codes);
