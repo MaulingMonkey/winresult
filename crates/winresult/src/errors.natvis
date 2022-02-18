@@ -224,7 +224,6 @@
         <DisplayString Condition="__0 == 15705">APPMODEL::ERROR_DYNAMIC_PROPERTY_INVALID</DisplayString>
         <DisplayString Condition="__0 == 15706">APPMODEL::ERROR_PACKAGE_NOT_AVAILABLE</DisplayString>
         <DisplayString Condition="__0 == 15707">APPMODEL::ERROR_NO_MUTABLE_DIRECTORY</DisplayString>
-        <DisplayString Condition="__0 == 9000">DNS::ERROR_RESPONSE_CODES_BASE</DisplayString>
         <DisplayString Condition="__0 == 9001">DNS::ERROR_RCODE_FORMAT_ERROR</DisplayString>
         <DisplayString Condition="__0 == 9002">DNS::ERROR_RCODE_SERVER_FAILURE</DisplayString>
         <DisplayString Condition="__0 == 9003">DNS::ERROR_RCODE_NAME_ERROR</DisplayString>
@@ -238,7 +237,6 @@
         <DisplayString Condition="__0 == 9016">DNS::ERROR_RCODE_BADSIG</DisplayString>
         <DisplayString Condition="__0 == 9017">DNS::ERROR_RCODE_BADKEY</DisplayString>
         <DisplayString Condition="__0 == 9018">DNS::ERROR_RCODE_BADTIME</DisplayString>
-        <DisplayString Condition="__0 == 9100">DNS::ERROR_DNSSEC_BASE</DisplayString>
         <DisplayString Condition="__0 == 9101">DNS::ERROR_KEYMASTER_REQUIRED</DisplayString>
         <DisplayString Condition="__0 == 9102">DNS::ERROR_NOT_ALLOWED_ON_SIGNED_ZONE</DisplayString>
         <DisplayString Condition="__0 == 9103">DNS::ERROR_NSEC3_INCOMPATIBLE_WITH_RSA_SHA1</DisplayString>
@@ -269,12 +267,10 @@
         <DisplayString Condition="__0 == 9128">DNS::ERROR_ROLLOVER_NOT_POKEABLE</DisplayString>
         <DisplayString Condition="__0 == 9129">DNS::ERROR_NSEC3_NAME_COLLISION</DisplayString>
         <DisplayString Condition="__0 == 9130">DNS::ERROR_NSEC_INCOMPATIBLE_WITH_NSEC3_RSA_SHA1</DisplayString>
-        <DisplayString Condition="__0 == 9500">DNS::ERROR_PACKET_FMT_BASE</DisplayString>
         <DisplayString Condition="__0 == 9502">DNS::ERROR_BAD_PACKET</DisplayString>
         <DisplayString Condition="__0 == 9503">DNS::ERROR_NO_PACKET</DisplayString>
         <DisplayString Condition="__0 == 9504">DNS::ERROR_RCODE</DisplayString>
         <DisplayString Condition="__0 == 9505">DNS::ERROR_UNSECURE_PACKET</DisplayString>
-        <DisplayString Condition="__0 == 9550">DNS::ERROR_GENERAL_API_BASE</DisplayString>
         <DisplayString Condition="__0 == 9551">DNS::ERROR_INVALID_TYPE</DisplayString>
         <DisplayString Condition="__0 == 9552">DNS::ERROR_INVALID_IP_ADDRESS</DisplayString>
         <DisplayString Condition="__0 == 9553">DNS::ERROR_INVALID_PROPERTY</DisplayString>
@@ -295,7 +291,6 @@
         <DisplayString Condition="__0 == 9571">DNS::ERROR_DELEGATION_REQUIRED</DisplayString>
         <DisplayString Condition="__0 == 9572">DNS::ERROR_INVALID_POLICY_TABLE</DisplayString>
         <DisplayString Condition="__0 == 9573">DNS::ERROR_ADDRESS_REQUIRED</DisplayString>
-        <DisplayString Condition="__0 == 9600">DNS::ERROR_ZONE_BASE</DisplayString>
         <DisplayString Condition="__0 == 9601">DNS::ERROR_ZONE_DOES_NOT_EXIST</DisplayString>
         <DisplayString Condition="__0 == 9602">DNS::ERROR_NO_ZONE_INFO</DisplayString>
         <DisplayString Condition="__0 == 9603">DNS::ERROR_INVALID_ZONE_OPERATION</DisplayString>
@@ -318,13 +313,11 @@
         <DisplayString Condition="__0 == 9620">DNS::ERROR_ZONE_REQUIRES_MASTER_IP</DisplayString>
         <DisplayString Condition="__0 == 9621">DNS::ERROR_ZONE_IS_SHUTDOWN</DisplayString>
         <DisplayString Condition="__0 == 9622">DNS::ERROR_ZONE_LOCKED_FOR_SIGNING</DisplayString>
-        <DisplayString Condition="__0 == 9650">DNS::ERROR_DATAFILE_BASE</DisplayString>
         <DisplayString Condition="__0 == 9651">DNS::ERROR_PRIMARY_REQUIRES_DATAFILE</DisplayString>
         <DisplayString Condition="__0 == 9652">DNS::ERROR_INVALID_DATAFILE_NAME</DisplayString>
         <DisplayString Condition="__0 == 9653">DNS::ERROR_DATAFILE_OPEN_FAILURE</DisplayString>
         <DisplayString Condition="__0 == 9654">DNS::ERROR_FILE_WRITEBACK_FAILED</DisplayString>
         <DisplayString Condition="__0 == 9655">DNS::ERROR_DATAFILE_PARSING</DisplayString>
-        <DisplayString Condition="__0 == 9700">DNS::ERROR_DATABASE_BASE</DisplayString>
         <DisplayString Condition="__0 == 9701">DNS::ERROR_RECORD_DOES_NOT_EXIST</DisplayString>
         <DisplayString Condition="__0 == 9702">DNS::ERROR_RECORD_FORMAT</DisplayString>
         <DisplayString Condition="__0 == 9703">DNS::ERROR_NODE_CREATION_FAILED</DisplayString>
@@ -345,13 +338,9 @@
         <DisplayString Condition="__0 == 9720">DNS::ERROR_NODE_IS_DNAME</DisplayString>
         <DisplayString Condition="__0 == 9721">DNS::ERROR_DNAME_COLLISION</DisplayString>
         <DisplayString Condition="__0 == 9722">DNS::ERROR_ALIAS_LOOP</DisplayString>
-        <DisplayString Condition="__0 == 9750">DNS::ERROR_OPERATION_BASE</DisplayString>
         <DisplayString Condition="__0 == 9752">DNS::ERROR_AXFR</DisplayString>
-        <DisplayString Condition="__0 == 9800">DNS::ERROR_SECURE_BASE</DisplayString>
-        <DisplayString Condition="__0 == 9850">DNS::ERROR_SETUP_BASE</DisplayString>
         <DisplayString Condition="__0 == 9851">DNS::ERROR_NO_TCPIP</DisplayString>
         <DisplayString Condition="__0 == 9852">DNS::ERROR_NO_DNS_SERVERS</DisplayString>
-        <DisplayString Condition="__0 == 9900">DNS::ERROR_DP_BASE</DisplayString>
         <DisplayString Condition="__0 == 9901">DNS::ERROR_DP_DOES_NOT_EXIST</DisplayString>
         <DisplayString Condition="__0 == 9902">DNS::ERROR_DP_ALREADY_EXISTS</DisplayString>
         <DisplayString Condition="__0 == 9903">DNS::ERROR_DP_NOT_ENLISTED</DisplayString>
@@ -2968,7 +2957,6 @@
         <DisplayString Condition="__0 == 13894">ERROR::IPSEC::IKE_INVALID_MM_FOR_QM</DisplayString>
         <DisplayString Condition="__0 == 13895">ERROR::IPSEC::IKE_QM_EXPIRED</DisplayString>
         <DisplayString Condition="__0 == 13896">ERROR::IPSEC::IKE_TOO_MANY_FILTERS</DisplayString>
-        <DisplayString Condition="__0 == 13897">ERROR::IPSEC::IKE_NEG_STATUS_END</DisplayString>
         <DisplayString Condition="__0 == 13898">ERROR::IPSEC::IKE_KILL_DUMMY_NAP_TUNNEL</DisplayString>
         <DisplayString Condition="__0 == 13899">ERROR::IPSEC::IKE_INNER_IP_ASSIGNMENT_FAILURE</DisplayString>
         <DisplayString Condition="__0 == 13900">ERROR::IPSEC::IKE_REQUIRE_CP_PAYLOAD_MISSING</DisplayString>
@@ -2980,7 +2968,6 @@
         <DisplayString Condition="__0 == 13906">ERROR::IPSEC::IKE_STRONG_CRED_AUTHORIZATION_FAILURE</DisplayString>
         <DisplayString Condition="__0 == 13907">ERROR::IPSEC::IKE_AUTHORIZATION_FAILURE_WITH_OPTIONAL_RETRY</DisplayString>
         <DisplayString Condition="__0 == 13908">ERROR::IPSEC::IKE_STRONG_CRED_AUTHORIZATION_AND_CERTMAP_FAILURE</DisplayString>
-        <DisplayString Condition="__0 == 13909">ERROR::IPSEC::IKE_NEG_STATUS_EXTENDED_END</DisplayString>
         <DisplayString Condition="__0 == 13910">ERROR::IPSEC::BAD_SPI</DisplayString>
         <DisplayString Condition="__0 == 13911">ERROR::IPSEC::SA_LIFETIME_EXPIRED</DisplayString>
         <DisplayString Condition="__0 == 13912">ERROR::IPSEC::WRONG_SA</DisplayString>

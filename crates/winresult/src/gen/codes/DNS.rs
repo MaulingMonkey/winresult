@@ -2,7 +2,6 @@
 
 use super::*;
 
-pub const ERROR_RESPONSE_CODES_BASE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(9000); // DNS_ERROR_RESPONSE_CODES_BASE
 
 /// DNS server unable to interpret format.
 pub const ERROR_RCODE_FORMAT_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(9001); // DNS_ERROR_RCODE_FORMAT_ERROR
@@ -44,7 +43,6 @@ pub const ERROR_RCODE_BADKEY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_con
 pub const ERROR_RCODE_BADTIME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(9018); // DNS_ERROR_RCODE_BADTIME
 
 pub const ERROR_RCODE_LAST : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(9018); // DNS_ERROR_RCODE_LAST
-pub const ERROR_DNSSEC_BASE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(9100); // DNS_ERROR_DNSSEC_BASE
 
 /// Only the DNS server acting as the key master for the zone may perform this operation.
 pub const ERROR_KEYMASTER_REQUIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(9101); // DNS_ERROR_KEYMASTER_REQUIRED
@@ -136,8 +134,6 @@ pub const ERROR_NSEC3_NAME_COLLISION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::
 /// NSEC is not compatible with the NSEC3-RSA-SHA-1 algorithm. Choose a different algorithm or use NSEC3.
 pub const ERROR_NSEC_INCOMPATIBLE_WITH_NSEC3_RSA_SHA1 : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(9130); // DNS_ERROR_NSEC_INCOMPATIBLE_WITH_NSEC3_RSA_SHA1
 
-pub const ERROR_PACKET_FMT_BASE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(9500); // DNS_ERROR_PACKET_FMT_BASE
-
 /// Bad DNS packet.
 pub const ERROR_BAD_PACKET : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(9502); // DNS_ERROR_BAD_PACKET
 
@@ -153,7 +149,6 @@ pub const ERROR_UNSECURE_PACKET : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_
 pub const ERROR_NO_MEMORY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(14); // DNS_ERROR_NO_MEMORY
 pub const ERROR_INVALID_NAME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(123); // DNS_ERROR_INVALID_NAME
 pub const ERROR_INVALID_DATA : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13); // DNS_ERROR_INVALID_DATA
-pub const ERROR_GENERAL_API_BASE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(9550); // DNS_ERROR_GENERAL_API_BASE
 
 /// Invalid DNS type.
 pub const ERROR_INVALID_TYPE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(9551); // DNS_ERROR_INVALID_TYPE
@@ -214,8 +209,6 @@ pub const ERROR_INVALID_POLICY_TABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::
 
 /// Not allowed to remove all addresses.
 pub const ERROR_ADDRESS_REQUIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(9573); // DNS_ERROR_ADDRESS_REQUIRED
-
-pub const ERROR_ZONE_BASE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(9600); // DNS_ERROR_ZONE_BASE
 
 /// DNS zone does not exist.
 pub const ERROR_ZONE_DOES_NOT_EXIST : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(9601); // DNS_ERROR_ZONE_DOES_NOT_EXIST
@@ -283,8 +276,6 @@ pub const ERROR_ZONE_IS_SHUTDOWN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from
 /// This operation cannot be performed because the zone is currently being signed. Please try again later.
 pub const ERROR_ZONE_LOCKED_FOR_SIGNING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(9622); // DNS_ERROR_ZONE_LOCKED_FOR_SIGNING
 
-pub const ERROR_DATAFILE_BASE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(9650); // DNS_ERROR_DATAFILE_BASE
-
 /// Primary DNS zone requires datafile.
 pub const ERROR_PRIMARY_REQUIRES_DATAFILE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(9651); // DNS_ERROR_PRIMARY_REQUIRES_DATAFILE
 
@@ -299,8 +290,6 @@ pub const ERROR_FILE_WRITEBACK_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft:
 
 /// Failure while reading datafile for DNS zone.
 pub const ERROR_DATAFILE_PARSING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(9655); // DNS_ERROR_DATAFILE_PARSING
-
-pub const ERROR_DATABASE_BASE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(9700); // DNS_ERROR_DATABASE_BASE
 
 /// DNS record does not exist.
 pub const ERROR_RECORD_DOES_NOT_EXIST : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(9701); // DNS_ERROR_RECORD_DOES_NOT_EXIST
@@ -362,21 +351,14 @@ pub const ERROR_DNAME_COLLISION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_
 /// An alias loop has been detected with either CNAME or DNAME records.
 pub const ERROR_ALIAS_LOOP : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(9722); // DNS_ERROR_ALIAS_LOOP
 
-pub const ERROR_OPERATION_BASE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(9750); // DNS_ERROR_OPERATION_BASE
-
 /// DNS zone transfer failed.
 pub const ERROR_AXFR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(9752); // DNS_ERROR_AXFR
-
-pub const ERROR_SECURE_BASE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(9800); // DNS_ERROR_SECURE_BASE
-pub const ERROR_SETUP_BASE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(9850); // DNS_ERROR_SETUP_BASE
 
 /// TCP/IP network protocol not installed.
 pub const ERROR_NO_TCPIP : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(9851); // DNS_ERROR_NO_TCPIP
 
 /// No DNS servers configured for local system.
 pub const ERROR_NO_DNS_SERVERS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(9852); // DNS_ERROR_NO_DNS_SERVERS
-
-pub const ERROR_DP_BASE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(9900); // DNS_ERROR_DP_BASE
 
 /// The specified directory partition does not exist.
 pub const ERROR_DP_DOES_NOT_EXIST : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(9901); // DNS_ERROR_DP_DOES_NOT_EXIST

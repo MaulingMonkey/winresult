@@ -98,12 +98,34 @@ pub(crate) fn winerror_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) 
             if error.starts_with("EPT_") { docs.clear(); continue }
             if error.starts_with("RPC_") { docs.clear(); continue }
 
-            // Not really meant as codes, but used for ranges of codes.  Prefer ranges or range detection fns?
-            if error.ends_with("_MASK"   ) { docs.clear(); continue }
-            if error.ends_with("_E_FIRST") { docs.clear(); continue }
-            if error.ends_with("_E_LAST" ) { docs.clear(); continue }
-            if error.ends_with("_S_FIRST") { docs.clear(); continue }
-            if error.ends_with("_S_LAST" ) { docs.clear(); continue }
+            // Handle suffixes not really meant as codes, but used for ranges of codes, masks, bases, etc.
+            // Prefer ranges or range detection fns?
+            let skip = match error {
+                "ERROR_IPSEC_IKE_NEG_STATUS_END"            => true, // these seem to be not quite error codes, but can't quite tell 100%
+                "ERROR_IPSEC_IKE_NEG_STATUS_EXTENDED_END"   => true, // these seem to be not quite error codes, but can't quite tell 100%
+                "FWP_E_INVALID_NET_MASK"                    => true,
+                "NETSH_ERROR_BASE"                          => true,
+                "TPM_E_ERROR_MASK"                          => true,
+                "TPM_E_PCP_ERROR_MASK"                      => true,
+
+                "ERROR_IMAGE_NOT_AT_BASE"                   => false,
+                "ERROR_IMAGE_AT_DIFFERENT_BASE"             => false,
+                "UI_E_START_KEYFRAME_AFTER_END"             => false,
+                "WS_S_END"                                  => false,
+
+                _ if "_E_FIRST _E_LAST _S_FIRST _S_LAST".split(' ').any(|s| error.ends_with(s)) => true, // don't warn
+                _ if "_BASE _END _MASK".split(' ').any(|s| error.ends_with(s)) => {
+                    if !docs.is_empty() { mmrbi::warning!(at: &header.path, line: line.no(), "{} is documented? not skipping...", error) }
+                    true
+                },
+                _ => false
+            };
+
+            if skip {
+                docs.clear();
+                continue
+            }
+
 
             let (value, mut redundant) = match value {
                 "NO_ERROR"                  => { docs.clear(); continue },
@@ -151,6 +173,12 @@ pub(crate) fn winerror_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) 
                 "HRESULT"
             } else if let Some(value) = value.strip_prefix_suffix("(ROUTEBASE+", ")").filter(|_| header.path.ends_with("MprError.h")).and_then(|v| v.try_parse_u16()) {
                 rs_value = format!("{}", value+900).into();
+                "ErrorCodeMicrosoft"
+            } else if let Some(value) = value.strip_prefix_suffix("(NETSH_ERROR_BASE + ", ")").filter(|_| header.path.ends_with("NetSh.h")).and_then(|v| v.try_parse_u16()) {
+                rs_value = format!("{}", value+15000).into();
+                redundant = true; // conflict:
+                // #define ERROR_EVT_INVALID_CHANNEL_PATH   15000   (winerror.h)
+                // #define ERROR_NO_ENTRIES                 15000   (netsh.h)
                 "ErrorCodeMicrosoft"
             } else if value.starts_with("HRESULT_FROM_WIN32(ERROR_") {
                 continue // XXX

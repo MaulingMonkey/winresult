@@ -366,9 +366,6 @@ pub const IKE_QM_EXPIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constan
 /// Too many dynamically added IKEEXT filters were detected.
 pub const IKE_TOO_MANY_FILTERS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13896); // ERROR_IPSEC_IKE_TOO_MANY_FILTERS
 
-/// ERROR_IPSEC_IKE_NEG_STATUS_END
-pub const IKE_NEG_STATUS_END : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13897); // ERROR_IPSEC_IKE_NEG_STATUS_END
-
 /// NAP reauth succeeded and must delete the dummy NAP IKEv2 tunnel.
 pub const IKE_KILL_DUMMY_NAP_TUNNEL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13898); // ERROR_IPSEC_IKE_KILL_DUMMY_NAP_TUNNEL
 
@@ -401,9 +398,6 @@ pub const IKE_AUTHORIZATION_FAILURE_WITH_OPTIONAL_RETRY : ErrorCodeMicrosoft = E
 
 /// SA establishment is not authorized because there is not a sufficiently strong PKINIT-based credential. This might be related to certificate-to-account mapping failure for the SA.
 pub const IKE_STRONG_CRED_AUTHORIZATION_AND_CERTMAP_FAILURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13908); // ERROR_IPSEC_IKE_STRONG_CRED_AUTHORIZATION_AND_CERTMAP_FAILURE
-
-/// ERROR_IPSEC_IKE_NEG_STATUS_EXTENDED_END
-pub const IKE_NEG_STATUS_EXTENDED_END : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13909); // ERROR_IPSEC_IKE_NEG_STATUS_EXTENDED_END
 
 /// The SPI in the packet does not match a valid IPsec SA.
 pub const BAD_SPI : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13910); // ERROR_IPSEC_BAD_SPI
