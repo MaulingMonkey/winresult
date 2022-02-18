@@ -3139,6 +3139,59 @@
         <DisplayString Condition="__0 == 14107">ERROR::SXS::TRANSACTION_CLOSURE_INCOMPLETE</DisplayString>
         <DisplayString Condition="__0 == 14110">ERROR::SXS::FILE_HASH_MISSING</DisplayString>
         <DisplayString Condition="__0 == 14111">ERROR::SXS::DUPLICATE_ACTIVATABLE_CLASS</DisplayString>
+        <DisplayString Condition="__0 == 12001">ERROR::WINHTTP::OUT_OF_HANDLES</DisplayString>
+        <DisplayString Condition="__0 == 12002">ERROR::WINHTTP::TIMEOUT</DisplayString>
+        <DisplayString Condition="__0 == 12004">ERROR::WINHTTP::INTERNAL_ERROR</DisplayString>
+        <DisplayString Condition="__0 == 12005">ERROR::WINHTTP::INVALID_URL</DisplayString>
+        <DisplayString Condition="__0 == 12006">ERROR::WINHTTP::UNRECOGNIZED_SCHEME</DisplayString>
+        <DisplayString Condition="__0 == 12007">ERROR::WINHTTP::NAME_NOT_RESOLVED</DisplayString>
+        <DisplayString Condition="__0 == 12009">ERROR::WINHTTP::INVALID_OPTION</DisplayString>
+        <DisplayString Condition="__0 == 12011">ERROR::WINHTTP::OPTION_NOT_SETTABLE</DisplayString>
+        <DisplayString Condition="__0 == 12012">ERROR::WINHTTP::SHUTDOWN</DisplayString>
+        <DisplayString Condition="__0 == 12015">ERROR::WINHTTP::LOGIN_FAILURE</DisplayString>
+        <DisplayString Condition="__0 == 12017">ERROR::WINHTTP::OPERATION_CANCELLED</DisplayString>
+        <DisplayString Condition="__0 == 12018">ERROR::WINHTTP::INCORRECT_HANDLE_TYPE</DisplayString>
+        <DisplayString Condition="__0 == 12019">ERROR::WINHTTP::INCORRECT_HANDLE_STATE</DisplayString>
+        <DisplayString Condition="__0 == 12029">ERROR::WINHTTP::CANNOT_CONNECT</DisplayString>
+        <DisplayString Condition="__0 == 12030">ERROR::WINHTTP::CONNECTION_ERROR</DisplayString>
+        <DisplayString Condition="__0 == 12032">ERROR::WINHTTP::RESEND_REQUEST</DisplayString>
+        <DisplayString Condition="__0 == 12044">ERROR::WINHTTP::CLIENT_AUTH_CERT_NEEDED</DisplayString>
+        <DisplayString Condition="__0 == 12100">ERROR::WINHTTP::CANNOT_CALL_BEFORE_OPEN</DisplayString>
+        <DisplayString Condition="__0 == 12101">ERROR::WINHTTP::CANNOT_CALL_BEFORE_SEND</DisplayString>
+        <DisplayString Condition="__0 == 12102">ERROR::WINHTTP::CANNOT_CALL_AFTER_SEND</DisplayString>
+        <DisplayString Condition="__0 == 12103">ERROR::WINHTTP::CANNOT_CALL_AFTER_OPEN</DisplayString>
+        <DisplayString Condition="__0 == 12150">ERROR::WINHTTP::HEADER_NOT_FOUND</DisplayString>
+        <DisplayString Condition="__0 == 12152">ERROR::WINHTTP::INVALID_SERVER_RESPONSE</DisplayString>
+        <DisplayString Condition="__0 == 12153">ERROR::WINHTTP::INVALID_HEADER</DisplayString>
+        <DisplayString Condition="__0 == 12154">ERROR::WINHTTP::INVALID_QUERY_REQUEST</DisplayString>
+        <DisplayString Condition="__0 == 12155">ERROR::WINHTTP::HEADER_ALREADY_EXISTS</DisplayString>
+        <DisplayString Condition="__0 == 12156">ERROR::WINHTTP::REDIRECT_FAILED</DisplayString>
+        <DisplayString Condition="__0 == 12178">ERROR::WINHTTP::AUTO_PROXY_SERVICE_ERROR</DisplayString>
+        <DisplayString Condition="__0 == 12166">ERROR::WINHTTP::BAD_AUTO_PROXY_SCRIPT</DisplayString>
+        <DisplayString Condition="__0 == 12167">ERROR::WINHTTP::UNABLE_TO_DOWNLOAD_SCRIPT</DisplayString>
+        <DisplayString Condition="__0 == 12176">ERROR::WINHTTP::UNHANDLED_SCRIPT_TYPE</DisplayString>
+        <DisplayString Condition="__0 == 12177">ERROR::WINHTTP::SCRIPT_EXECUTION_ERROR</DisplayString>
+        <DisplayString Condition="__0 == 12172">ERROR::WINHTTP::NOT_INITIALIZED</DisplayString>
+        <DisplayString Condition="__0 == 12175">ERROR::WINHTTP::SECURE_FAILURE</DisplayString>
+        <DisplayString Condition="__0 == 12037">ERROR::WINHTTP::SECURE_CERT_DATE_INVALID</DisplayString>
+        <DisplayString Condition="__0 == 12038">ERROR::WINHTTP::SECURE_CERT_CN_INVALID</DisplayString>
+        <DisplayString Condition="__0 == 12045">ERROR::WINHTTP::SECURE_INVALID_CA</DisplayString>
+        <DisplayString Condition="__0 == 12057">ERROR::WINHTTP::SECURE_CERT_REV_FAILED</DisplayString>
+        <DisplayString Condition="__0 == 12157">ERROR::WINHTTP::SECURE_CHANNEL_ERROR</DisplayString>
+        <DisplayString Condition="__0 == 12169">ERROR::WINHTTP::SECURE_INVALID_CERT</DisplayString>
+        <DisplayString Condition="__0 == 12170">ERROR::WINHTTP::SECURE_CERT_REVOKED</DisplayString>
+        <DisplayString Condition="__0 == 12179">ERROR::WINHTTP::SECURE_CERT_WRONG_USAGE</DisplayString>
+        <DisplayString Condition="__0 == 12180">ERROR::WINHTTP::AUTODETECTION_FAILED</DisplayString>
+        <DisplayString Condition="__0 == 12181">ERROR::WINHTTP::HEADER_COUNT_EXCEEDED</DisplayString>
+        <DisplayString Condition="__0 == 12182">ERROR::WINHTTP::HEADER_SIZE_OVERFLOW</DisplayString>
+        <DisplayString Condition="__0 == 12183">ERROR::WINHTTP::CHUNKED_ENCODING_HEADER_SIZE_OVERFLOW</DisplayString>
+        <DisplayString Condition="__0 == 12184">ERROR::WINHTTP::RESPONSE_DRAIN_OVERFLOW</DisplayString>
+        <DisplayString Condition="__0 == 12185">ERROR::WINHTTP::CLIENT_CERT_NO_PRIVATE_KEY</DisplayString>
+        <DisplayString Condition="__0 == 12186">ERROR::WINHTTP::CLIENT_CERT_NO_ACCESS_PRIVATE_KEY</DisplayString>
+        <DisplayString Condition="__0 == 12187">ERROR::WINHTTP::CLIENT_AUTH_CERT_NEEDED_PROXY</DisplayString>
+        <DisplayString Condition="__0 == 12188">ERROR::WINHTTP::SECURE_FAILURE_PROXY</DisplayString>
+        <DisplayString Condition="__0 == 12189">ERROR::WINHTTP::RESERVED_189</DisplayString>
+        <DisplayString Condition="__0 == 12190">ERROR::WINHTTP::HTTP_PROTOCOL_MISMATCH</DisplayString>
         <DisplayString Condition="__0 == 4200">ERROR::WMI::GUID_NOT_FOUND</DisplayString>
         <DisplayString Condition="__0 == 4201">ERROR::WMI::INSTANCE_NOT_FOUND</DisplayString>
         <DisplayString Condition="__0 == 4202">ERROR::WMI::ITEMID_NOT_FOUND</DisplayString>

@@ -29,6 +29,7 @@ const ERROR_PREFIX_TO_RUSTY : &'static [(&'static str, &'static str)] = &[
     ("ERROR_SVHDX_",        "ERROR::SVHDX",         ),
     ("ERROR_SXS_",          "ERROR::SXS",           ),
     ("ERROR_VHD_",          "ERROR::VHD",           ),
+    ("ERROR_WINHTTP_",      "ERROR::WINHTTP",       ),
     ("ERROR_WMI_",          "ERROR::WMI",           ),
 ];
 
@@ -123,7 +124,7 @@ pub(crate) fn winerror_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) 
                 "WS_S_END"                                  => false,
 
                 _ if "_E_FIRST _E_LAST _S_FIRST _S_LAST".split(' ').any(|s| error.ends_with(s)) => true, // don't warn
-                _ if "_BASE _END _MASK".split(' ').any(|s| error.ends_with(s)) => {
+                _ if "_BASE _END _MASK _FIRST _LAST".split(' ').any(|s| error.ends_with(s)) => {
                     if !docs.is_empty() { mmrbi::warning!(at: &header.path, line: line.no(), "{} is documented? not skipping...", error) }
                     true
                 },
@@ -179,6 +180,7 @@ pub(crate) fn winerror_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) 
                 ("(RASBASE + ",                                     ")",    "ErrorCodeMicrosoft",   true,          600, "RasError.h",   ),
                 ("(ROUTEBASE+",                                     ")",    "ErrorCodeMicrosoft",   false,         900, "MprError.h",   ),
                 ("(TCBASE+",                                        ")",    "ErrorCodeMicrosoft",   true,         7500, "TCError.h",    ),
+                ("(WINHTTP_ERROR_BASE + ",                          ")",    "ErrorCodeMicrosoft",   false,       12000, "winhttp.h",    ),
                 ("(NETSH_ERROR_BASE + ",                            ")",    "ErrorCodeMicrosoft",   true,        15000, "NetSh.h",      ), // conflicts: ERROR_EVT_INVALID_CHANNEL_PATH 15000 (winerror.h)
                 ("(ERROR_PCW_BASE + ",                              ")",    "ErrorHResult",         false,  0xC00E5101, "PatchWiz.h",   ),
                 ("(APPLICATION_ERROR_MASK|ERROR_SEVERITY_ERROR|",   ")",    "ErrorHResult",         false,  0xE0000000, "",             ),

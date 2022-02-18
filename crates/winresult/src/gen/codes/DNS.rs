@@ -42,8 +42,6 @@ pub const ERROR_RCODE_BADKEY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_con
 /// DNS signature validity expired.
 pub const ERROR_RCODE_BADTIME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(9018); // DNS_ERROR_RCODE_BADTIME
 
-pub const ERROR_RCODE_LAST : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(9018); // DNS_ERROR_RCODE_LAST
-
 /// Only the DNS server acting as the key master for the zone may perform this operation.
 pub const ERROR_KEYMASTER_REQUIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(9101); // DNS_ERROR_KEYMASTER_REQUIRED
 
