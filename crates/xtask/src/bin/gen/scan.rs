@@ -21,6 +21,7 @@ const ERROR_PREFIX_TO_RUSTY : &'static [(&'static str, &'static str)] = &[
     ("ERROR_MUI_",          "ERROR::MUI",           ),
     ("ERROR_NDIS_",         "ERROR::NDIS",          ),
     ("ERROR_PATCH_",        "ERROR::PATCH",         ),
+    ("ERROR_PCW_",          "ERROR::PCW",           ),
     ("ERROR_PRI_MERGE_",    "ERROR::PRI_MERGE",     ),
     ("ERROR_SECUREBOOT_",   "ERROR::SECUREBOOT",    ),
     ("ERROR_SERVER_",       "ERROR::SERVER",        ),
@@ -104,6 +105,7 @@ pub(crate) fn winerror_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) 
             let skip = match error {
                 "ERROR_IPSEC_IKE_NEG_STATUS_END"            => true, // these seem to be not quite error codes, but can't quite tell 100%
                 "ERROR_IPSEC_IKE_NEG_STATUS_EXTENDED_END"   => true, // these seem to be not quite error codes, but can't quite tell 100%
+                "ERROR_PCW_BASE"                            => true,
                 "FWP_E_INVALID_NET_MASK"                    => true,
                 "NETSH_ERROR_BASE"                          => true,
                 "TPM_E_ERROR_MASK"                          => true,
@@ -175,6 +177,9 @@ pub(crate) fn winerror_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) 
             } else if let Some(value) = value.strip_prefix_suffix("(ROUTEBASE+", ")").filter(|_| header.path.ends_with("MprError.h")).and_then(|v| v.try_parse_u16()) {
                 rs_value = format!("{}", value+900).into();
                 "ErrorCodeMicrosoft"
+            } else if let Some(value) = value.strip_prefix_suffix("(ERROR_PCW_BASE + ", ")").filter(|_| header.path.ends_with("PatchWiz.h")).and_then(|v| v.try_parse_u32()) {
+                rs_value = format!("{}", value+0xC00E5101).into();
+                "ErrorHResult"
             } else if let Some(value) = value.strip_prefix_suffix("(NETSH_ERROR_BASE + ", ")").filter(|_| header.path.ends_with("NetSh.h")).and_then(|v| v.try_parse_u16()) {
                 rs_value = format!("{}", value+15000).into();
                 redundant = true; // conflict:
@@ -312,7 +317,7 @@ pub(crate) fn winerror_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) 
         } else if let Some(comment) = text.strip_prefix("//") {
             let comment = comment.trim_start();
             if comment.is_empty() { continue }
-            if comment.starts_with("MessageId:") || comment == "MessageText:" { docs.clear(); continue }
+            if comment.starts_with("MessageId:") || comment == "MessageText:" || comment.starts_with("#define") { docs.clear(); continue }
             assert!(!comment.starts_with("MessageText:"), "MessageText text on same line as header");
             if let Some(header) = comment.strip_prefix_suffix("{", "}") {
                 docs.push(format!("### {header}").into());

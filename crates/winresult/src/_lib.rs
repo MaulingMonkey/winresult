@@ -283,6 +283,9 @@ mod gen {
 
             pub mod PATCH;
 
+            /// PatchWiz
+            pub mod PCW;
+
             /// [Package Resource Indexing](https://docs.microsoft.com/en-us/windows/win32/menurc/pri-indexing-reference)
             pub mod PRI_MERGE;
 
