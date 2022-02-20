@@ -127,7 +127,7 @@ pub fn codes(codes: &scan::Codes) {
         writeln!(nv)?;
 
         writeln!(nv)?;
-        writeln!(nv, r#"    <Type Name="winresult_core::FacilityHrMicrosoft">"#)?;
+        writeln!(nv, r#"    <Type Name="winresult_core::hresult::FacilityHrMicrosoft">"#)?;
         {
             macro_rules! microsoft_hresult_facilities {($(
                 #define $prefix:ident $f:ident $value:literal
@@ -143,7 +143,7 @@ pub fn codes(codes: &scan::Codes) {
         writeln!(nv, r#"    </Type>"#)?;
 
         writeln!(nv)?;
-        writeln!(nv, r#"    <Type Name="winresult_core::FacilityNtStatusMicrosoft">"#)?;
+        writeln!(nv, r#"    <Type Name="winresult_core::ntstatus::FacilityNtStatusMicrosoft">"#)?;
         {
             macro_rules! microsoft_ntstatus_facilities {($(
                 #define $prefix:ident $f:ident $value:literal
@@ -159,7 +159,16 @@ pub fn codes(codes: &scan::Codes) {
 
         for ty in types.split(' ') {
             writeln!(nv)?;
-            writeln!(nv, r#"    <Type Name="winresult_core::{ty}">"#)?;
+            match ty {
+                "SuccessCodeMicrosoft"  => writeln!(nv, r#"    <Type Name="winresult_core::code::{ty}">"#)?,
+                "ErrorCodeMicrosoft"    => writeln!(nv, r#"    <Type Name="winresult_core::code::{ty}">"#)?,
+                "HRESULT"               => writeln!(nv, r#"    <Type Name="winresult_core::hresult::{ty}">"#)?,
+                "SuccessHResult"        => writeln!(nv, r#"    <Type Name="winresult_core::hresult::{ty}">"#)?,
+                "ErrorHResult"          => writeln!(nv, r#"    <Type Name="winresult_core::hresult::{ty}">"#)?,
+                "NTSTATUS"              => writeln!(nv, r#"    <Type Name="winresult_core::ntstatus::{ty}">"#)?,
+                //_                       => writeln!(nv, r#"    <Type Name="winresult_core::{ty}">"#)?,
+                _                       => panic!("expected ty: {ty:?}"),
+            }
             match ty {
                 "HRESULT"               => {},
                 "SuccessHResult"        => {},
