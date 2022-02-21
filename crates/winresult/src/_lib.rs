@@ -459,8 +459,12 @@ mod gen {
         pub mod TYPE;
 
         pub mod UI;
+
+        /// Universal Telemetry Client (UTC) data in Event Tracing for Windows (ETW) traces.
         pub mod UTC;
+
         pub mod VIEW;
+
         pub mod VM_SAVED_STATE_DUMP;
 
         /// [WinINet / WinHTTP](https://docs.microsoft.com/en-us/windows/win32/wininet/wininet-vs-winhttp)
