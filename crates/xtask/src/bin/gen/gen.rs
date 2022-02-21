@@ -127,8 +127,8 @@ pub fn codes(codes: &scan::Codes) {
 
         writeln!(nv)?;
         writeln!(nv, r#"    <Type Name="winresult_core::wait::WaitCode">"#)?;
-        writeln!(nv, r#"        <DisplayString Condition="__0 &lt;     0x40">WAIT::OBJECT_{{__0}}</DisplayString>"#)?;
-        writeln!(nv, r#"        <DisplayString Condition="__0 &lt;     0xC0">WAIT::ABANDONED_{{__0 - 0x80}}</DisplayString>"#)?;
+        writeln!(nv, r#"        <DisplayString Condition="(0x00 &lt;= __0) &amp;&amp; (__0 &lt; 0x40)">WAIT::OBJECT_{{__0    - 0x00}}</DisplayString>"#)?;
+        writeln!(nv, r#"        <DisplayString Condition="(0x80 &lt;= __0) &amp;&amp; (__0 &lt; 0xC0)">WAIT::ABANDONED_{{__0 - 0x80}}</DisplayString>"#)?;
         writeln!(nv, r#"        <DisplayString Condition="__0 ==       0xC0">WAIT::IO_COMPLETION</DisplayString>"#)?;
         writeln!(nv, r#"        <DisplayString Condition="__0 ==      0x102">WAIT::TIMEOUT</DisplayString>"#)?;
         writeln!(nv, r#"        <DisplayString Condition="__0 == 0xFFFFFFFF">WAIT::FAILED</DisplayString>"#)?;
