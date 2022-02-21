@@ -8,6 +8,11 @@
 
 Debug-friendly types for windows result codes.
 
+[![GitHub](https://img.shields.io/github/stars/MaulingMonkey/winresult.svg?label=GitHub&style=social)](https://github.com/MaulingMonkey/winresult)
+[![crates.io](https://img.shields.io/crates/v/winresult.svg)](https://crates.io/crates/winresult)
+[![docs.rs](https://img.shields.io/docsrs/winresult)](https://docs.rs/winresult)
+[![License](https://img.shields.io/crates/l/winresult.svg)](https://github.com/MaulingMonkey/winresult)
+
 
 
 ### Why?
