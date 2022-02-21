@@ -17,5 +17,6 @@ impl ErrorHResultOrCode {
 }
 
 impl From<ErrorHResultOrCode> for u32                { fn from(v: ErrorHResultOrCode) -> Self { v.0 } }
+impl From<u32               > for ErrorHResultOrCode { fn from(v: u32               ) -> Self { Self(v) } }
 impl From<ErrorCode         > for ErrorHResultOrCode { fn from(v: ErrorCode         ) -> Self { Self(v.0.into()) } }
 impl From<HResultError      > for ErrorHResultOrCode { fn from(v: HResultError      ) -> Self { Self(v.0) } }
