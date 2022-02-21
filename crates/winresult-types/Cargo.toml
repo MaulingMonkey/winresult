@@ -4,12 +4,15 @@
 [package]
 name                                    = "winresult-types"
 description                             = "windows result types"
-version                                 = "0.0.0-git-types"
+version                                 = "0.1.0"
 authors                                 = ["MaulingMonkey <git@maulingmonkey.com>"]
 edition                                 = "2021"
 repository                              = "https://github.com/MaulingMonkey/winresult"
 documentation                           = "https://docs.rs/winresult" # re-exports everything anyways, just point at that
 license                                 = "Apache-2.0 OR MIT"
+# readme                                = "Readme.md"
+# keywords                              = ["win32", "error", "hresult", "ntstatus", "natvis"]
+# categories                            = ["os::windows-apis"]
 
 [package.metadata.docs.rs]
 all-features                            = true
