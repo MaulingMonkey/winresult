@@ -45,6 +45,10 @@
             "label":            "git commit --amend",
             "command":          "git commit --amend",
         },
+        {
+            "label":            "gitk --all &",
+            "command":          "gitk --all &",
+        },
 
         { "label": "open repository",   "command": "start \"\" https://github.com/MaulingMonkey/winresult" },
         { "label": "open issues",       "command": "start \"\" https://github.com/MaulingMonkey/winresult/issues" },
