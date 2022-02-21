@@ -144,10 +144,24 @@ mod gen {
 
 
 
+        /// \[[docs.microsoft.com](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/87fba13e-bf06-450e-83b1-9241dc81e781)\]
         /// [NtStatus](types::NtStatus) errors, warnings, and other codes (for use in e.g. Kernel / Drivers)
         pub mod STATUS {
             use types::NtStatus;
-            pub use types::STATUS::*;
+
+            /// \[[docs.microsoft.com](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/87fba13e-bf06-450e-83b1-9241dc81e781)\]
+            /// [NtStatus::sev]\(\):
+            /// [SUCCESS](Self::SUCCESS)
+            /// [INFORMATIONAL](Self::INFORMATIONAL)
+            /// [WARNING](Self::WARNING)
+            /// [ERROR](Self::ERROR)
+            pub mod SEVERITY {
+                use types::NtStatusSeverity;
+                pub const SUCCESS       : NtStatusSeverity = NtStatusSeverity::from_constant(0);
+                pub const INFORMATIONAL : NtStatusSeverity = NtStatusSeverity::from_constant(1);
+                pub const WARNING       : NtStatusSeverity = NtStatusSeverity::from_constant(2);
+                pub const ERROR         : NtStatusSeverity = NtStatusSeverity::from_constant(3);
+            }
 
             // TODO: SUCCESS = 0 ?
 

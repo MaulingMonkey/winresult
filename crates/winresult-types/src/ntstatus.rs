@@ -11,10 +11,10 @@ impl NtStatus {
 
     pub const fn sev                (self) -> NtStatusSeverity { NtStatusSeverity((self.0 >> 30) as _) }
 
-    pub const fn is_error           (self) -> bool { matches!(self.sev(), STATUS::SEVERITY::ERROR            ) }
-    pub const fn is_warning         (self) -> bool { matches!(self.sev(), STATUS::SEVERITY::WARNING          ) }
-    pub const fn is_informational   (self) -> bool { matches!(self.sev(), STATUS::SEVERITY::INFORMATIONAL    ) }
-    pub const fn is_success         (self) -> bool { matches!(self.sev(), STATUS::SEVERITY::SUCCESS          ) }
+    pub const fn is_error           (self) -> bool { self.sev().0 == 3 }
+    pub const fn is_warning         (self) -> bool { self.sev().0 == 2 }
+    pub const fn is_informational   (self) -> bool { self.sev().0 == 1 }
+    pub const fn is_success         (self) -> bool { self.sev().0 == 0 }
 
     pub const fn is_customer        (self) -> bool { self.0 & 0x20000000 != 0 }
     pub const fn is_ntstatus        (self) -> bool { self.0 & 0x10000000 != 0 }
@@ -58,22 +58,3 @@ impl NtStatusFacilityMicrosoft {
 
 impl From<NtStatusFacilityMicrosoft> for u16 { fn from(f: NtStatusFacilityMicrosoft) -> Self { f.0 } }
 impl From<NtStatusFacilityMicrosoft> for u32 { fn from(f: NtStatusFacilityMicrosoft) -> Self { f.0.into() } }
-
-
-
-/// \[[docs.microsoft.com](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/87fba13e-bf06-450e-83b1-9241dc81e781)\]
-/// NtStatus::Sev
-#[allow(non_snake_case)]
-pub mod STATUS {
-    /// [SUCCESS](Self::SUCCESS)
-    /// [INFORMATIONAL](Self::INFORMATIONAL)
-    /// [WARNING](Self::WARNING)
-    /// [ERROR](Self::ERROR)
-    pub mod SEVERITY {
-        use crate::*;
-        pub const SUCCESS       : NtStatusSeverity = NtStatusSeverity::from_constant(0);
-        pub const INFORMATIONAL : NtStatusSeverity = NtStatusSeverity::from_constant(1);
-        pub const WARNING       : NtStatusSeverity = NtStatusSeverity::from_constant(2);
-        pub const ERROR         : NtStatusSeverity = NtStatusSeverity::from_constant(3);
-    }
-}
