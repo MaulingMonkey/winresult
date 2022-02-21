@@ -47,17 +47,17 @@ impl NtStatusSeverity {
 /// FACILITY_\* values corresponding to Microsoft (non-customer) `NTSTATUS`es.
 ///
 /// Note that HRESULT facilities, despite also being prefixed with FACILITY_\*, are incompatible (overlapping values interpreted differently!)
-#[derive(Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash)] pub struct FacilityNtStatusMicrosoft(pub(crate) u16);
+#[derive(Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash)] pub struct NtStatusFacilityMicrosoft(pub(crate) u16);
 
-impl FacilityNtStatusMicrosoft {
+impl NtStatusFacilityMicrosoft {
     #[doc(hidden)] pub const fn from_constant(value: u16) -> Self { assert!(value <= 0xFFF, "NTSTATUS facilities are only 12 bits"); Self(value) }
 
     pub const fn to_u16(self) -> u16 { self.0 }
     pub const fn to_u32(self) -> u32 { self.0 as _ }
 }
 
-impl From<FacilityNtStatusMicrosoft> for u16 { fn from(f: FacilityNtStatusMicrosoft) -> Self { f.0 } }
-impl From<FacilityNtStatusMicrosoft> for u32 { fn from(f: FacilityNtStatusMicrosoft) -> Self { f.0.into() } }
+impl From<NtStatusFacilityMicrosoft> for u16 { fn from(f: NtStatusFacilityMicrosoft) -> Self { f.0 } }
+impl From<NtStatusFacilityMicrosoft> for u32 { fn from(f: NtStatusFacilityMicrosoft) -> Self { f.0.into() } }
 
 
 

@@ -4,55 +4,55 @@ use super::*;
 
 
 /// Unknown interface.
-pub const E_UNKNOWNINTERFACE : ErrorHResult = ErrorHResult::from_constant(0x80020001); // DISP_E_UNKNOWNINTERFACE
+pub const E_UNKNOWNINTERFACE : HResultError = HResultError::from_constant(0x80020001); // DISP_E_UNKNOWNINTERFACE
 
 /// Member not found.
-pub const E_MEMBERNOTFOUND : ErrorHResult = ErrorHResult::from_constant(0x80020003); // DISP_E_MEMBERNOTFOUND
+pub const E_MEMBERNOTFOUND : HResultError = HResultError::from_constant(0x80020003); // DISP_E_MEMBERNOTFOUND
 
 /// Parameter not found.
-pub const E_PARAMNOTFOUND : ErrorHResult = ErrorHResult::from_constant(0x80020004); // DISP_E_PARAMNOTFOUND
+pub const E_PARAMNOTFOUND : HResultError = HResultError::from_constant(0x80020004); // DISP_E_PARAMNOTFOUND
 
 /// Type mismatch.
-pub const E_TYPEMISMATCH : ErrorHResult = ErrorHResult::from_constant(0x80020005); // DISP_E_TYPEMISMATCH
+pub const E_TYPEMISMATCH : HResultError = HResultError::from_constant(0x80020005); // DISP_E_TYPEMISMATCH
 
 /// Unknown name.
-pub const E_UNKNOWNNAME : ErrorHResult = ErrorHResult::from_constant(0x80020006); // DISP_E_UNKNOWNNAME
+pub const E_UNKNOWNNAME : HResultError = HResultError::from_constant(0x80020006); // DISP_E_UNKNOWNNAME
 
 /// No named arguments.
-pub const E_NONAMEDARGS : ErrorHResult = ErrorHResult::from_constant(0x80020007); // DISP_E_NONAMEDARGS
+pub const E_NONAMEDARGS : HResultError = HResultError::from_constant(0x80020007); // DISP_E_NONAMEDARGS
 
 /// Bad variable type.
-pub const E_BADVARTYPE : ErrorHResult = ErrorHResult::from_constant(0x80020008); // DISP_E_BADVARTYPE
+pub const E_BADVARTYPE : HResultError = HResultError::from_constant(0x80020008); // DISP_E_BADVARTYPE
 
 /// Exception occurred.
-pub const E_EXCEPTION : ErrorHResult = ErrorHResult::from_constant(0x80020009); // DISP_E_EXCEPTION
+pub const E_EXCEPTION : HResultError = HResultError::from_constant(0x80020009); // DISP_E_EXCEPTION
 
 /// Out of present range.
-pub const E_OVERFLOW : ErrorHResult = ErrorHResult::from_constant(0x8002000A); // DISP_E_OVERFLOW
+pub const E_OVERFLOW : HResultError = HResultError::from_constant(0x8002000A); // DISP_E_OVERFLOW
 
 /// Invalid index.
-pub const E_BADINDEX : ErrorHResult = ErrorHResult::from_constant(0x8002000B); // DISP_E_BADINDEX
+pub const E_BADINDEX : HResultError = HResultError::from_constant(0x8002000B); // DISP_E_BADINDEX
 
 /// Unknown language.
-pub const E_UNKNOWNLCID : ErrorHResult = ErrorHResult::from_constant(0x8002000C); // DISP_E_UNKNOWNLCID
+pub const E_UNKNOWNLCID : HResultError = HResultError::from_constant(0x8002000C); // DISP_E_UNKNOWNLCID
 
 /// Memory is locked.
-pub const E_ARRAYISLOCKED : ErrorHResult = ErrorHResult::from_constant(0x8002000D); // DISP_E_ARRAYISLOCKED
+pub const E_ARRAYISLOCKED : HResultError = HResultError::from_constant(0x8002000D); // DISP_E_ARRAYISLOCKED
 
 /// Invalid number of parameters.
-pub const E_BADPARAMCOUNT : ErrorHResult = ErrorHResult::from_constant(0x8002000E); // DISP_E_BADPARAMCOUNT
+pub const E_BADPARAMCOUNT : HResultError = HResultError::from_constant(0x8002000E); // DISP_E_BADPARAMCOUNT
 
 /// Parameter not optional.
-pub const E_PARAMNOTOPTIONAL : ErrorHResult = ErrorHResult::from_constant(0x8002000F); // DISP_E_PARAMNOTOPTIONAL
+pub const E_PARAMNOTOPTIONAL : HResultError = HResultError::from_constant(0x8002000F); // DISP_E_PARAMNOTOPTIONAL
 
 /// Invalid callee.
-pub const E_BADCALLEE : ErrorHResult = ErrorHResult::from_constant(0x80020010); // DISP_E_BADCALLEE
+pub const E_BADCALLEE : HResultError = HResultError::from_constant(0x80020010); // DISP_E_BADCALLEE
 
 /// Does not support a collection.
-pub const E_NOTACOLLECTION : ErrorHResult = ErrorHResult::from_constant(0x80020011); // DISP_E_NOTACOLLECTION
+pub const E_NOTACOLLECTION : HResultError = HResultError::from_constant(0x80020011); // DISP_E_NOTACOLLECTION
 
 /// Division by zero.
-pub const E_DIVBYZERO : ErrorHResult = ErrorHResult::from_constant(0x80020012); // DISP_E_DIVBYZERO
+pub const E_DIVBYZERO : HResultError = HResultError::from_constant(0x80020012); // DISP_E_DIVBYZERO
 
 /// Buffer too small
-pub const E_BUFFERTOOSMALL : ErrorHResult = ErrorHResult::from_constant(0x80020013); // DISP_E_BUFFERTOOSMALL
+pub const E_BUFFERTOOSMALL : HResultError = HResultError::from_constant(0x80020013); // DISP_E_BUFFERTOOSMALL

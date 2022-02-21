@@ -6054,1210 +6054,1210 @@ pub const STATE_CONTAINER_NAME_SIZE_LIMIT_EXCEEDED : ErrorCodeMicrosoft = ErrorC
 pub const API_UNAVAILABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15841); // ERROR_API_UNAVAILABLE
 
 /// The specified event is currently not being audited.
-pub const AUDITING_DISABLED : ErrorHResult = ErrorHResult::from_constant(0xC0090001); // ERROR_AUDITING_DISABLED
+pub const AUDITING_DISABLED : HResultError = HResultError::from_constant(0xC0090001); // ERROR_AUDITING_DISABLED
 
 /// The SID filtering operation removed all SIDs.
-pub const ALL_SIDS_FILTERED : ErrorHResult = ErrorHResult::from_constant(0xC0090002); // ERROR_ALL_SIDS_FILTERED
+pub const ALL_SIDS_FILTERED : HResultError = HResultError::from_constant(0xC0090002); // ERROR_ALL_SIDS_FILTERED
 
 /// Business rule scripts are disabled for the calling application.
-pub const BIZRULES_NOT_ENABLED : ErrorHResult = ErrorHResult::from_constant(0xC0090003); // ERROR_BIZRULES_NOT_ENABLED
+pub const BIZRULES_NOT_ENABLED : HResultError = HResultError::from_constant(0xC0090003); // ERROR_BIZRULES_NOT_ENABLED
 
 /// The requested credential requires confirmation.
-pub const CRED_REQUIRES_CONFIRMATION : ErrorHResult = ErrorHResult::from_constant(0x80097019); // ERROR_CRED_REQUIRES_CONFIRMATION
+pub const CRED_REQUIRES_CONFIRMATION : HResultError = HResultError::from_constant(0x80097019); // ERROR_CRED_REQUIRES_CONFIRMATION
 
-#[doc(hidden)] pub const FLT_IO_COMPLETE : SuccessHResult = SuccessHResult::from_constant(0x001F0001); // ERROR_FLT_IO_COMPLETE
-#[doc(hidden)] pub const FLT_NO_HANDLER_DEFINED : ErrorHResult = ErrorHResult::from_constant(0x801F0001); // ERROR_FLT_NO_HANDLER_DEFINED
-#[doc(hidden)] pub const FLT_CONTEXT_ALREADY_DEFINED : ErrorHResult = ErrorHResult::from_constant(0x801F0002); // ERROR_FLT_CONTEXT_ALREADY_DEFINED
-#[doc(hidden)] pub const FLT_INVALID_ASYNCHRONOUS_REQUEST : ErrorHResult = ErrorHResult::from_constant(0x801F0003); // ERROR_FLT_INVALID_ASYNCHRONOUS_REQUEST
-#[doc(hidden)] pub const FLT_DISALLOW_FAST_IO : ErrorHResult = ErrorHResult::from_constant(0x801F0004); // ERROR_FLT_DISALLOW_FAST_IO
-#[doc(hidden)] pub const FLT_INVALID_NAME_REQUEST : ErrorHResult = ErrorHResult::from_constant(0x801F0005); // ERROR_FLT_INVALID_NAME_REQUEST
-#[doc(hidden)] pub const FLT_NOT_SAFE_TO_POST_OPERATION : ErrorHResult = ErrorHResult::from_constant(0x801F0006); // ERROR_FLT_NOT_SAFE_TO_POST_OPERATION
-#[doc(hidden)] pub const FLT_NOT_INITIALIZED : ErrorHResult = ErrorHResult::from_constant(0x801F0007); // ERROR_FLT_NOT_INITIALIZED
-#[doc(hidden)] pub const FLT_FILTER_NOT_READY : ErrorHResult = ErrorHResult::from_constant(0x801F0008); // ERROR_FLT_FILTER_NOT_READY
-#[doc(hidden)] pub const FLT_POST_OPERATION_CLEANUP : ErrorHResult = ErrorHResult::from_constant(0x801F0009); // ERROR_FLT_POST_OPERATION_CLEANUP
-#[doc(hidden)] pub const FLT_INTERNAL_ERROR : ErrorHResult = ErrorHResult::from_constant(0x801F000A); // ERROR_FLT_INTERNAL_ERROR
-#[doc(hidden)] pub const FLT_DELETING_OBJECT : ErrorHResult = ErrorHResult::from_constant(0x801F000B); // ERROR_FLT_DELETING_OBJECT
-#[doc(hidden)] pub const FLT_MUST_BE_NONPAGED_POOL : ErrorHResult = ErrorHResult::from_constant(0x801F000C); // ERROR_FLT_MUST_BE_NONPAGED_POOL
-#[doc(hidden)] pub const FLT_DUPLICATE_ENTRY : ErrorHResult = ErrorHResult::from_constant(0x801F000D); // ERROR_FLT_DUPLICATE_ENTRY
-#[doc(hidden)] pub const FLT_CBDQ_DISABLED : ErrorHResult = ErrorHResult::from_constant(0x801F000E); // ERROR_FLT_CBDQ_DISABLED
-#[doc(hidden)] pub const FLT_DO_NOT_ATTACH : ErrorHResult = ErrorHResult::from_constant(0x801F000F); // ERROR_FLT_DO_NOT_ATTACH
-#[doc(hidden)] pub const FLT_DO_NOT_DETACH : ErrorHResult = ErrorHResult::from_constant(0x801F0010); // ERROR_FLT_DO_NOT_DETACH
-#[doc(hidden)] pub const FLT_INSTANCE_ALTITUDE_COLLISION : ErrorHResult = ErrorHResult::from_constant(0x801F0011); // ERROR_FLT_INSTANCE_ALTITUDE_COLLISION
-#[doc(hidden)] pub const FLT_INSTANCE_NAME_COLLISION : ErrorHResult = ErrorHResult::from_constant(0x801F0012); // ERROR_FLT_INSTANCE_NAME_COLLISION
-#[doc(hidden)] pub const FLT_FILTER_NOT_FOUND : ErrorHResult = ErrorHResult::from_constant(0x801F0013); // ERROR_FLT_FILTER_NOT_FOUND
-#[doc(hidden)] pub const FLT_VOLUME_NOT_FOUND : ErrorHResult = ErrorHResult::from_constant(0x801F0014); // ERROR_FLT_VOLUME_NOT_FOUND
-#[doc(hidden)] pub const FLT_INSTANCE_NOT_FOUND : ErrorHResult = ErrorHResult::from_constant(0x801F0015); // ERROR_FLT_INSTANCE_NOT_FOUND
-#[doc(hidden)] pub const FLT_CONTEXT_ALLOCATION_NOT_FOUND : ErrorHResult = ErrorHResult::from_constant(0x801F0016); // ERROR_FLT_CONTEXT_ALLOCATION_NOT_FOUND
-#[doc(hidden)] pub const FLT_INVALID_CONTEXT_REGISTRATION : ErrorHResult = ErrorHResult::from_constant(0x801F0017); // ERROR_FLT_INVALID_CONTEXT_REGISTRATION
-#[doc(hidden)] pub const FLT_NAME_CACHE_MISS : ErrorHResult = ErrorHResult::from_constant(0x801F0018); // ERROR_FLT_NAME_CACHE_MISS
-#[doc(hidden)] pub const FLT_NO_DEVICE_OBJECT : ErrorHResult = ErrorHResult::from_constant(0x801F0019); // ERROR_FLT_NO_DEVICE_OBJECT
-#[doc(hidden)] pub const FLT_VOLUME_ALREADY_MOUNTED : ErrorHResult = ErrorHResult::from_constant(0x801F001A); // ERROR_FLT_VOLUME_ALREADY_MOUNTED
-#[doc(hidden)] pub const FLT_ALREADY_ENLISTED : ErrorHResult = ErrorHResult::from_constant(0x801F001B); // ERROR_FLT_ALREADY_ENLISTED
-#[doc(hidden)] pub const FLT_CONTEXT_ALREADY_LINKED : ErrorHResult = ErrorHResult::from_constant(0x801F001C); // ERROR_FLT_CONTEXT_ALREADY_LINKED
-#[doc(hidden)] pub const FLT_NO_WAITER_FOR_REPLY : ErrorHResult = ErrorHResult::from_constant(0x801F0020); // ERROR_FLT_NO_WAITER_FOR_REPLY
-#[doc(hidden)] pub const FLT_REGISTRATION_BUSY : ErrorHResult = ErrorHResult::from_constant(0x801F0023); // ERROR_FLT_REGISTRATION_BUSY
+#[doc(hidden)] pub const FLT_IO_COMPLETE : HResultSuccess = HResultSuccess::from_constant(0x001F0001); // ERROR_FLT_IO_COMPLETE
+#[doc(hidden)] pub const FLT_NO_HANDLER_DEFINED : HResultError = HResultError::from_constant(0x801F0001); // ERROR_FLT_NO_HANDLER_DEFINED
+#[doc(hidden)] pub const FLT_CONTEXT_ALREADY_DEFINED : HResultError = HResultError::from_constant(0x801F0002); // ERROR_FLT_CONTEXT_ALREADY_DEFINED
+#[doc(hidden)] pub const FLT_INVALID_ASYNCHRONOUS_REQUEST : HResultError = HResultError::from_constant(0x801F0003); // ERROR_FLT_INVALID_ASYNCHRONOUS_REQUEST
+#[doc(hidden)] pub const FLT_DISALLOW_FAST_IO : HResultError = HResultError::from_constant(0x801F0004); // ERROR_FLT_DISALLOW_FAST_IO
+#[doc(hidden)] pub const FLT_INVALID_NAME_REQUEST : HResultError = HResultError::from_constant(0x801F0005); // ERROR_FLT_INVALID_NAME_REQUEST
+#[doc(hidden)] pub const FLT_NOT_SAFE_TO_POST_OPERATION : HResultError = HResultError::from_constant(0x801F0006); // ERROR_FLT_NOT_SAFE_TO_POST_OPERATION
+#[doc(hidden)] pub const FLT_NOT_INITIALIZED : HResultError = HResultError::from_constant(0x801F0007); // ERROR_FLT_NOT_INITIALIZED
+#[doc(hidden)] pub const FLT_FILTER_NOT_READY : HResultError = HResultError::from_constant(0x801F0008); // ERROR_FLT_FILTER_NOT_READY
+#[doc(hidden)] pub const FLT_POST_OPERATION_CLEANUP : HResultError = HResultError::from_constant(0x801F0009); // ERROR_FLT_POST_OPERATION_CLEANUP
+#[doc(hidden)] pub const FLT_INTERNAL_ERROR : HResultError = HResultError::from_constant(0x801F000A); // ERROR_FLT_INTERNAL_ERROR
+#[doc(hidden)] pub const FLT_DELETING_OBJECT : HResultError = HResultError::from_constant(0x801F000B); // ERROR_FLT_DELETING_OBJECT
+#[doc(hidden)] pub const FLT_MUST_BE_NONPAGED_POOL : HResultError = HResultError::from_constant(0x801F000C); // ERROR_FLT_MUST_BE_NONPAGED_POOL
+#[doc(hidden)] pub const FLT_DUPLICATE_ENTRY : HResultError = HResultError::from_constant(0x801F000D); // ERROR_FLT_DUPLICATE_ENTRY
+#[doc(hidden)] pub const FLT_CBDQ_DISABLED : HResultError = HResultError::from_constant(0x801F000E); // ERROR_FLT_CBDQ_DISABLED
+#[doc(hidden)] pub const FLT_DO_NOT_ATTACH : HResultError = HResultError::from_constant(0x801F000F); // ERROR_FLT_DO_NOT_ATTACH
+#[doc(hidden)] pub const FLT_DO_NOT_DETACH : HResultError = HResultError::from_constant(0x801F0010); // ERROR_FLT_DO_NOT_DETACH
+#[doc(hidden)] pub const FLT_INSTANCE_ALTITUDE_COLLISION : HResultError = HResultError::from_constant(0x801F0011); // ERROR_FLT_INSTANCE_ALTITUDE_COLLISION
+#[doc(hidden)] pub const FLT_INSTANCE_NAME_COLLISION : HResultError = HResultError::from_constant(0x801F0012); // ERROR_FLT_INSTANCE_NAME_COLLISION
+#[doc(hidden)] pub const FLT_FILTER_NOT_FOUND : HResultError = HResultError::from_constant(0x801F0013); // ERROR_FLT_FILTER_NOT_FOUND
+#[doc(hidden)] pub const FLT_VOLUME_NOT_FOUND : HResultError = HResultError::from_constant(0x801F0014); // ERROR_FLT_VOLUME_NOT_FOUND
+#[doc(hidden)] pub const FLT_INSTANCE_NOT_FOUND : HResultError = HResultError::from_constant(0x801F0015); // ERROR_FLT_INSTANCE_NOT_FOUND
+#[doc(hidden)] pub const FLT_CONTEXT_ALLOCATION_NOT_FOUND : HResultError = HResultError::from_constant(0x801F0016); // ERROR_FLT_CONTEXT_ALLOCATION_NOT_FOUND
+#[doc(hidden)] pub const FLT_INVALID_CONTEXT_REGISTRATION : HResultError = HResultError::from_constant(0x801F0017); // ERROR_FLT_INVALID_CONTEXT_REGISTRATION
+#[doc(hidden)] pub const FLT_NAME_CACHE_MISS : HResultError = HResultError::from_constant(0x801F0018); // ERROR_FLT_NAME_CACHE_MISS
+#[doc(hidden)] pub const FLT_NO_DEVICE_OBJECT : HResultError = HResultError::from_constant(0x801F0019); // ERROR_FLT_NO_DEVICE_OBJECT
+#[doc(hidden)] pub const FLT_VOLUME_ALREADY_MOUNTED : HResultError = HResultError::from_constant(0x801F001A); // ERROR_FLT_VOLUME_ALREADY_MOUNTED
+#[doc(hidden)] pub const FLT_ALREADY_ENLISTED : HResultError = HResultError::from_constant(0x801F001B); // ERROR_FLT_ALREADY_ENLISTED
+#[doc(hidden)] pub const FLT_CONTEXT_ALREADY_LINKED : HResultError = HResultError::from_constant(0x801F001C); // ERROR_FLT_CONTEXT_ALREADY_LINKED
+#[doc(hidden)] pub const FLT_NO_WAITER_FOR_REPLY : HResultError = HResultError::from_constant(0x801F0020); // ERROR_FLT_NO_WAITER_FOR_REPLY
+#[doc(hidden)] pub const FLT_REGISTRATION_BUSY : HResultError = HResultError::from_constant(0x801F0023); // ERROR_FLT_REGISTRATION_BUSY
 
 /// ### Display Driver Stopped Responding
 /// The `%hs` display driver has stopped working normally. Save your work and reboot the system to restore full display functionality.
 /// The next time you reboot the machine a dialog will be displayed giving you a chance to report this failure to Microsoft.
-pub const HUNG_DISPLAY_DRIVER_THREAD : ErrorHResult = ErrorHResult::from_constant(0x80260001); // ERROR_HUNG_DISPLAY_DRIVER_THREAD
+pub const HUNG_DISPLAY_DRIVER_THREAD : HResultError = HResultError::from_constant(0x80260001); // ERROR_HUNG_DISPLAY_DRIVER_THREAD
 
 /// Monitor descriptor could not be obtained.
-pub const MONITOR_NO_DESCRIPTOR : SuccessHResult = SuccessHResult::from_constant(0x00261001); // ERROR_MONITOR_NO_DESCRIPTOR
+pub const MONITOR_NO_DESCRIPTOR : HResultSuccess = HResultSuccess::from_constant(0x00261001); // ERROR_MONITOR_NO_DESCRIPTOR
 
 /// Format of the obtained monitor descriptor is not supported by this release.
-pub const MONITOR_UNKNOWN_DESCRIPTOR_FORMAT : SuccessHResult = SuccessHResult::from_constant(0x00261002); // ERROR_MONITOR_UNKNOWN_DESCRIPTOR_FORMAT
+pub const MONITOR_UNKNOWN_DESCRIPTOR_FORMAT : HResultSuccess = HResultSuccess::from_constant(0x00261002); // ERROR_MONITOR_UNKNOWN_DESCRIPTOR_FORMAT
 
 /// Checksum of the obtained monitor descriptor is invalid.
-pub const MONITOR_INVALID_DESCRIPTOR_CHECKSUM : ErrorHResult = ErrorHResult::from_constant(0xC0261003); // ERROR_MONITOR_INVALID_DESCRIPTOR_CHECKSUM
+pub const MONITOR_INVALID_DESCRIPTOR_CHECKSUM : HResultError = HResultError::from_constant(0xC0261003); // ERROR_MONITOR_INVALID_DESCRIPTOR_CHECKSUM
 
 /// Monitor descriptor contains an invalid standard timing block.
-pub const MONITOR_INVALID_STANDARD_TIMING_BLOCK : ErrorHResult = ErrorHResult::from_constant(0xC0261004); // ERROR_MONITOR_INVALID_STANDARD_TIMING_BLOCK
+pub const MONITOR_INVALID_STANDARD_TIMING_BLOCK : HResultError = HResultError::from_constant(0xC0261004); // ERROR_MONITOR_INVALID_STANDARD_TIMING_BLOCK
 
 /// WMI data block registration failed for one of the MSMonitorClass WMI subclasses.
-pub const MONITOR_WMI_DATABLOCK_REGISTRATION_FAILED : ErrorHResult = ErrorHResult::from_constant(0xC0261005); // ERROR_MONITOR_WMI_DATABLOCK_REGISTRATION_FAILED
+pub const MONITOR_WMI_DATABLOCK_REGISTRATION_FAILED : HResultError = HResultError::from_constant(0xC0261005); // ERROR_MONITOR_WMI_DATABLOCK_REGISTRATION_FAILED
 
 /// Provided monitor descriptor block is either corrupted or does not contain monitor's detailed serial number.
-pub const MONITOR_INVALID_SERIAL_NUMBER_MONDSC_BLOCK : ErrorHResult = ErrorHResult::from_constant(0xC0261006); // ERROR_MONITOR_INVALID_SERIAL_NUMBER_MONDSC_BLOCK
+pub const MONITOR_INVALID_SERIAL_NUMBER_MONDSC_BLOCK : HResultError = HResultError::from_constant(0xC0261006); // ERROR_MONITOR_INVALID_SERIAL_NUMBER_MONDSC_BLOCK
 
 /// Provided monitor descriptor block is either corrupted or does not contain monitor's user friendly name.
-pub const MONITOR_INVALID_USER_FRIENDLY_MONDSC_BLOCK : ErrorHResult = ErrorHResult::from_constant(0xC0261007); // ERROR_MONITOR_INVALID_USER_FRIENDLY_MONDSC_BLOCK
+pub const MONITOR_INVALID_USER_FRIENDLY_MONDSC_BLOCK : HResultError = HResultError::from_constant(0xC0261007); // ERROR_MONITOR_INVALID_USER_FRIENDLY_MONDSC_BLOCK
 
 /// There is no monitor descriptor data at the specified (offset, size) region.
-pub const MONITOR_NO_MORE_DESCRIPTOR_DATA : ErrorHResult = ErrorHResult::from_constant(0xC0261008); // ERROR_MONITOR_NO_MORE_DESCRIPTOR_DATA
+pub const MONITOR_NO_MORE_DESCRIPTOR_DATA : HResultError = HResultError::from_constant(0xC0261008); // ERROR_MONITOR_NO_MORE_DESCRIPTOR_DATA
 
 /// Monitor descriptor contains an invalid detailed timing block.
-pub const MONITOR_INVALID_DETAILED_TIMING_BLOCK : ErrorHResult = ErrorHResult::from_constant(0xC0261009); // ERROR_MONITOR_INVALID_DETAILED_TIMING_BLOCK
+pub const MONITOR_INVALID_DETAILED_TIMING_BLOCK : HResultError = HResultError::from_constant(0xC0261009); // ERROR_MONITOR_INVALID_DETAILED_TIMING_BLOCK
 
 /// Monitor descriptor contains invalid manufacture date.
-pub const MONITOR_INVALID_MANUFACTURE_DATE : ErrorHResult = ErrorHResult::from_constant(0xC026100A); // ERROR_MONITOR_INVALID_MANUFACTURE_DATE
+pub const MONITOR_INVALID_MANUFACTURE_DATE : HResultError = HResultError::from_constant(0xC026100A); // ERROR_MONITOR_INVALID_MANUFACTURE_DATE
 
-#[doc(hidden)] pub const GRAPHICS_NOT_EXCLUSIVE_MODE_OWNER : ErrorHResult = ErrorHResult::from_constant(0xC0262000); // ERROR_GRAPHICS_NOT_EXCLUSIVE_MODE_OWNER
-#[doc(hidden)] pub const GRAPHICS_INSUFFICIENT_DMA_BUFFER : ErrorHResult = ErrorHResult::from_constant(0xC0262001); // ERROR_GRAPHICS_INSUFFICIENT_DMA_BUFFER
-#[doc(hidden)] pub const GRAPHICS_INVALID_DISPLAY_ADAPTER : ErrorHResult = ErrorHResult::from_constant(0xC0262002); // ERROR_GRAPHICS_INVALID_DISPLAY_ADAPTER
-#[doc(hidden)] pub const GRAPHICS_ADAPTER_WAS_RESET : ErrorHResult = ErrorHResult::from_constant(0xC0262003); // ERROR_GRAPHICS_ADAPTER_WAS_RESET
-#[doc(hidden)] pub const GRAPHICS_INVALID_DRIVER_MODEL : ErrorHResult = ErrorHResult::from_constant(0xC0262004); // ERROR_GRAPHICS_INVALID_DRIVER_MODEL
-#[doc(hidden)] pub const GRAPHICS_PRESENT_MODE_CHANGED : ErrorHResult = ErrorHResult::from_constant(0xC0262005); // ERROR_GRAPHICS_PRESENT_MODE_CHANGED
-#[doc(hidden)] pub const GRAPHICS_PRESENT_OCCLUDED : ErrorHResult = ErrorHResult::from_constant(0xC0262006); // ERROR_GRAPHICS_PRESENT_OCCLUDED
-#[doc(hidden)] pub const GRAPHICS_PRESENT_DENIED : ErrorHResult = ErrorHResult::from_constant(0xC0262007); // ERROR_GRAPHICS_PRESENT_DENIED
-#[doc(hidden)] pub const GRAPHICS_CANNOTCOLORCONVERT : ErrorHResult = ErrorHResult::from_constant(0xC0262008); // ERROR_GRAPHICS_CANNOTCOLORCONVERT
-#[doc(hidden)] pub const GRAPHICS_DRIVER_MISMATCH : ErrorHResult = ErrorHResult::from_constant(0xC0262009); // ERROR_GRAPHICS_DRIVER_MISMATCH
-#[doc(hidden)] pub const GRAPHICS_PARTIAL_DATA_POPULATED : SuccessHResult = SuccessHResult::from_constant(0x4026200A); // ERROR_GRAPHICS_PARTIAL_DATA_POPULATED
-#[doc(hidden)] pub const GRAPHICS_PRESENT_REDIRECTION_DISABLED : ErrorHResult = ErrorHResult::from_constant(0xC026200B); // ERROR_GRAPHICS_PRESENT_REDIRECTION_DISABLED
-#[doc(hidden)] pub const GRAPHICS_PRESENT_UNOCCLUDED : ErrorHResult = ErrorHResult::from_constant(0xC026200C); // ERROR_GRAPHICS_PRESENT_UNOCCLUDED
-#[doc(hidden)] pub const GRAPHICS_WINDOWDC_NOT_AVAILABLE : ErrorHResult = ErrorHResult::from_constant(0xC026200D); // ERROR_GRAPHICS_WINDOWDC_NOT_AVAILABLE
-#[doc(hidden)] pub const GRAPHICS_WINDOWLESS_PRESENT_DISABLED : ErrorHResult = ErrorHResult::from_constant(0xC026200E); // ERROR_GRAPHICS_WINDOWLESS_PRESENT_DISABLED
-#[doc(hidden)] pub const GRAPHICS_PRESENT_INVALID_WINDOW : ErrorHResult = ErrorHResult::from_constant(0xC026200F); // ERROR_GRAPHICS_PRESENT_INVALID_WINDOW
-#[doc(hidden)] pub const GRAPHICS_PRESENT_BUFFER_NOT_BOUND : ErrorHResult = ErrorHResult::from_constant(0xC0262010); // ERROR_GRAPHICS_PRESENT_BUFFER_NOT_BOUND
-#[doc(hidden)] pub const GRAPHICS_VAIL_STATE_CHANGED : ErrorHResult = ErrorHResult::from_constant(0xC0262011); // ERROR_GRAPHICS_VAIL_STATE_CHANGED
-#[doc(hidden)] pub const GRAPHICS_INDIRECT_DISPLAY_ABANDON_SWAPCHAIN : ErrorHResult = ErrorHResult::from_constant(0xC0262012); // ERROR_GRAPHICS_INDIRECT_DISPLAY_ABANDON_SWAPCHAIN
-#[doc(hidden)] pub const GRAPHICS_INDIRECT_DISPLAY_DEVICE_STOPPED : ErrorHResult = ErrorHResult::from_constant(0xC0262013); // ERROR_GRAPHICS_INDIRECT_DISPLAY_DEVICE_STOPPED
-#[doc(hidden)] pub const GRAPHICS_VAIL_FAILED_TO_SEND_CREATE_SUPERWETINK_MESSAGE : ErrorHResult = ErrorHResult::from_constant(0xC0262014); // ERROR_GRAPHICS_VAIL_FAILED_TO_SEND_CREATE_SUPERWETINK_MESSAGE
-#[doc(hidden)] pub const GRAPHICS_VAIL_FAILED_TO_SEND_DESTROY_SUPERWETINK_MESSAGE : ErrorHResult = ErrorHResult::from_constant(0xC0262015); // ERROR_GRAPHICS_VAIL_FAILED_TO_SEND_DESTROY_SUPERWETINK_MESSAGE
-#[doc(hidden)] pub const GRAPHICS_NO_VIDEO_MEMORY : ErrorHResult = ErrorHResult::from_constant(0xC0262100); // ERROR_GRAPHICS_NO_VIDEO_MEMORY
-#[doc(hidden)] pub const GRAPHICS_CANT_LOCK_MEMORY : ErrorHResult = ErrorHResult::from_constant(0xC0262101); // ERROR_GRAPHICS_CANT_LOCK_MEMORY
-#[doc(hidden)] pub const GRAPHICS_ALLOCATION_BUSY : ErrorHResult = ErrorHResult::from_constant(0xC0262102); // ERROR_GRAPHICS_ALLOCATION_BUSY
-#[doc(hidden)] pub const GRAPHICS_TOO_MANY_REFERENCES : ErrorHResult = ErrorHResult::from_constant(0xC0262103); // ERROR_GRAPHICS_TOO_MANY_REFERENCES
-#[doc(hidden)] pub const GRAPHICS_TRY_AGAIN_LATER : ErrorHResult = ErrorHResult::from_constant(0xC0262104); // ERROR_GRAPHICS_TRY_AGAIN_LATER
-#[doc(hidden)] pub const GRAPHICS_TRY_AGAIN_NOW : ErrorHResult = ErrorHResult::from_constant(0xC0262105); // ERROR_GRAPHICS_TRY_AGAIN_NOW
-#[doc(hidden)] pub const GRAPHICS_ALLOCATION_INVALID : ErrorHResult = ErrorHResult::from_constant(0xC0262106); // ERROR_GRAPHICS_ALLOCATION_INVALID
-#[doc(hidden)] pub const GRAPHICS_UNSWIZZLING_APERTURE_UNAVAILABLE : ErrorHResult = ErrorHResult::from_constant(0xC0262107); // ERROR_GRAPHICS_UNSWIZZLING_APERTURE_UNAVAILABLE
-#[doc(hidden)] pub const GRAPHICS_UNSWIZZLING_APERTURE_UNSUPPORTED : ErrorHResult = ErrorHResult::from_constant(0xC0262108); // ERROR_GRAPHICS_UNSWIZZLING_APERTURE_UNSUPPORTED
-#[doc(hidden)] pub const GRAPHICS_CANT_EVICT_PINNED_ALLOCATION : ErrorHResult = ErrorHResult::from_constant(0xC0262109); // ERROR_GRAPHICS_CANT_EVICT_PINNED_ALLOCATION
-#[doc(hidden)] pub const GRAPHICS_INVALID_ALLOCATION_USAGE : ErrorHResult = ErrorHResult::from_constant(0xC0262110); // ERROR_GRAPHICS_INVALID_ALLOCATION_USAGE
-#[doc(hidden)] pub const GRAPHICS_CANT_RENDER_LOCKED_ALLOCATION : ErrorHResult = ErrorHResult::from_constant(0xC0262111); // ERROR_GRAPHICS_CANT_RENDER_LOCKED_ALLOCATION
-#[doc(hidden)] pub const GRAPHICS_ALLOCATION_CLOSED : ErrorHResult = ErrorHResult::from_constant(0xC0262112); // ERROR_GRAPHICS_ALLOCATION_CLOSED
-#[doc(hidden)] pub const GRAPHICS_INVALID_ALLOCATION_INSTANCE : ErrorHResult = ErrorHResult::from_constant(0xC0262113); // ERROR_GRAPHICS_INVALID_ALLOCATION_INSTANCE
-#[doc(hidden)] pub const GRAPHICS_INVALID_ALLOCATION_HANDLE : ErrorHResult = ErrorHResult::from_constant(0xC0262114); // ERROR_GRAPHICS_INVALID_ALLOCATION_HANDLE
-#[doc(hidden)] pub const GRAPHICS_WRONG_ALLOCATION_DEVICE : ErrorHResult = ErrorHResult::from_constant(0xC0262115); // ERROR_GRAPHICS_WRONG_ALLOCATION_DEVICE
-#[doc(hidden)] pub const GRAPHICS_ALLOCATION_CONTENT_LOST : ErrorHResult = ErrorHResult::from_constant(0xC0262116); // ERROR_GRAPHICS_ALLOCATION_CONTENT_LOST
-#[doc(hidden)] pub const GRAPHICS_GPU_EXCEPTION_ON_DEVICE : ErrorHResult = ErrorHResult::from_constant(0xC0262200); // ERROR_GRAPHICS_GPU_EXCEPTION_ON_DEVICE
-#[doc(hidden)] pub const GRAPHICS_SKIP_ALLOCATION_PREPARATION : SuccessHResult = SuccessHResult::from_constant(0x40262201); // ERROR_GRAPHICS_SKIP_ALLOCATION_PREPARATION
-#[doc(hidden)] pub const GRAPHICS_INVALID_VIDPN_TOPOLOGY : ErrorHResult = ErrorHResult::from_constant(0xC0262300); // ERROR_GRAPHICS_INVALID_VIDPN_TOPOLOGY
-#[doc(hidden)] pub const GRAPHICS_VIDPN_TOPOLOGY_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0xC0262301); // ERROR_GRAPHICS_VIDPN_TOPOLOGY_NOT_SUPPORTED
-#[doc(hidden)] pub const GRAPHICS_VIDPN_TOPOLOGY_CURRENTLY_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0xC0262302); // ERROR_GRAPHICS_VIDPN_TOPOLOGY_CURRENTLY_NOT_SUPPORTED
-#[doc(hidden)] pub const GRAPHICS_INVALID_VIDPN : ErrorHResult = ErrorHResult::from_constant(0xC0262303); // ERROR_GRAPHICS_INVALID_VIDPN
-#[doc(hidden)] pub const GRAPHICS_INVALID_VIDEO_PRESENT_SOURCE : ErrorHResult = ErrorHResult::from_constant(0xC0262304); // ERROR_GRAPHICS_INVALID_VIDEO_PRESENT_SOURCE
-#[doc(hidden)] pub const GRAPHICS_INVALID_VIDEO_PRESENT_TARGET : ErrorHResult = ErrorHResult::from_constant(0xC0262305); // ERROR_GRAPHICS_INVALID_VIDEO_PRESENT_TARGET
-#[doc(hidden)] pub const GRAPHICS_VIDPN_MODALITY_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0xC0262306); // ERROR_GRAPHICS_VIDPN_MODALITY_NOT_SUPPORTED
-#[doc(hidden)] pub const GRAPHICS_MODE_NOT_PINNED : SuccessHResult = SuccessHResult::from_constant(0x00262307); // ERROR_GRAPHICS_MODE_NOT_PINNED
-#[doc(hidden)] pub const GRAPHICS_INVALID_VIDPN_SOURCEMODESET : ErrorHResult = ErrorHResult::from_constant(0xC0262308); // ERROR_GRAPHICS_INVALID_VIDPN_SOURCEMODESET
-#[doc(hidden)] pub const GRAPHICS_INVALID_VIDPN_TARGETMODESET : ErrorHResult = ErrorHResult::from_constant(0xC0262309); // ERROR_GRAPHICS_INVALID_VIDPN_TARGETMODESET
-#[doc(hidden)] pub const GRAPHICS_INVALID_FREQUENCY : ErrorHResult = ErrorHResult::from_constant(0xC026230A); // ERROR_GRAPHICS_INVALID_FREQUENCY
-#[doc(hidden)] pub const GRAPHICS_INVALID_ACTIVE_REGION : ErrorHResult = ErrorHResult::from_constant(0xC026230B); // ERROR_GRAPHICS_INVALID_ACTIVE_REGION
-#[doc(hidden)] pub const GRAPHICS_INVALID_TOTAL_REGION : ErrorHResult = ErrorHResult::from_constant(0xC026230C); // ERROR_GRAPHICS_INVALID_TOTAL_REGION
-#[doc(hidden)] pub const GRAPHICS_INVALID_VIDEO_PRESENT_SOURCE_MODE : ErrorHResult = ErrorHResult::from_constant(0xC0262310); // ERROR_GRAPHICS_INVALID_VIDEO_PRESENT_SOURCE_MODE
-#[doc(hidden)] pub const GRAPHICS_INVALID_VIDEO_PRESENT_TARGET_MODE : ErrorHResult = ErrorHResult::from_constant(0xC0262311); // ERROR_GRAPHICS_INVALID_VIDEO_PRESENT_TARGET_MODE
-#[doc(hidden)] pub const GRAPHICS_PINNED_MODE_MUST_REMAIN_IN_SET : ErrorHResult = ErrorHResult::from_constant(0xC0262312); // ERROR_GRAPHICS_PINNED_MODE_MUST_REMAIN_IN_SET
-#[doc(hidden)] pub const GRAPHICS_PATH_ALREADY_IN_TOPOLOGY : ErrorHResult = ErrorHResult::from_constant(0xC0262313); // ERROR_GRAPHICS_PATH_ALREADY_IN_TOPOLOGY
-#[doc(hidden)] pub const GRAPHICS_MODE_ALREADY_IN_MODESET : ErrorHResult = ErrorHResult::from_constant(0xC0262314); // ERROR_GRAPHICS_MODE_ALREADY_IN_MODESET
-#[doc(hidden)] pub const GRAPHICS_INVALID_VIDEOPRESENTSOURCESET : ErrorHResult = ErrorHResult::from_constant(0xC0262315); // ERROR_GRAPHICS_INVALID_VIDEOPRESENTSOURCESET
-#[doc(hidden)] pub const GRAPHICS_INVALID_VIDEOPRESENTTARGETSET : ErrorHResult = ErrorHResult::from_constant(0xC0262316); // ERROR_GRAPHICS_INVALID_VIDEOPRESENTTARGETSET
-#[doc(hidden)] pub const GRAPHICS_SOURCE_ALREADY_IN_SET : ErrorHResult = ErrorHResult::from_constant(0xC0262317); // ERROR_GRAPHICS_SOURCE_ALREADY_IN_SET
-#[doc(hidden)] pub const GRAPHICS_TARGET_ALREADY_IN_SET : ErrorHResult = ErrorHResult::from_constant(0xC0262318); // ERROR_GRAPHICS_TARGET_ALREADY_IN_SET
-#[doc(hidden)] pub const GRAPHICS_INVALID_VIDPN_PRESENT_PATH : ErrorHResult = ErrorHResult::from_constant(0xC0262319); // ERROR_GRAPHICS_INVALID_VIDPN_PRESENT_PATH
-#[doc(hidden)] pub const GRAPHICS_NO_RECOMMENDED_VIDPN_TOPOLOGY : ErrorHResult = ErrorHResult::from_constant(0xC026231A); // ERROR_GRAPHICS_NO_RECOMMENDED_VIDPN_TOPOLOGY
-#[doc(hidden)] pub const GRAPHICS_INVALID_MONITOR_FREQUENCYRANGESET : ErrorHResult = ErrorHResult::from_constant(0xC026231B); // ERROR_GRAPHICS_INVALID_MONITOR_FREQUENCYRANGESET
-#[doc(hidden)] pub const GRAPHICS_INVALID_MONITOR_FREQUENCYRANGE : ErrorHResult = ErrorHResult::from_constant(0xC026231C); // ERROR_GRAPHICS_INVALID_MONITOR_FREQUENCYRANGE
-#[doc(hidden)] pub const GRAPHICS_FREQUENCYRANGE_NOT_IN_SET : ErrorHResult = ErrorHResult::from_constant(0xC026231D); // ERROR_GRAPHICS_FREQUENCYRANGE_NOT_IN_SET
-#[doc(hidden)] pub const GRAPHICS_NO_PREFERRED_MODE : SuccessHResult = SuccessHResult::from_constant(0x0026231E); // ERROR_GRAPHICS_NO_PREFERRED_MODE
-#[doc(hidden)] pub const GRAPHICS_FREQUENCYRANGE_ALREADY_IN_SET : ErrorHResult = ErrorHResult::from_constant(0xC026231F); // ERROR_GRAPHICS_FREQUENCYRANGE_ALREADY_IN_SET
-#[doc(hidden)] pub const GRAPHICS_STALE_MODESET : ErrorHResult = ErrorHResult::from_constant(0xC0262320); // ERROR_GRAPHICS_STALE_MODESET
-#[doc(hidden)] pub const GRAPHICS_INVALID_MONITOR_SOURCEMODESET : ErrorHResult = ErrorHResult::from_constant(0xC0262321); // ERROR_GRAPHICS_INVALID_MONITOR_SOURCEMODESET
-#[doc(hidden)] pub const GRAPHICS_INVALID_MONITOR_SOURCE_MODE : ErrorHResult = ErrorHResult::from_constant(0xC0262322); // ERROR_GRAPHICS_INVALID_MONITOR_SOURCE_MODE
-#[doc(hidden)] pub const GRAPHICS_NO_RECOMMENDED_FUNCTIONAL_VIDPN : ErrorHResult = ErrorHResult::from_constant(0xC0262323); // ERROR_GRAPHICS_NO_RECOMMENDED_FUNCTIONAL_VIDPN
-#[doc(hidden)] pub const GRAPHICS_MODE_ID_MUST_BE_UNIQUE : ErrorHResult = ErrorHResult::from_constant(0xC0262324); // ERROR_GRAPHICS_MODE_ID_MUST_BE_UNIQUE
-#[doc(hidden)] pub const GRAPHICS_EMPTY_ADAPTER_MONITOR_MODE_SUPPORT_INTERSECTION : ErrorHResult = ErrorHResult::from_constant(0xC0262325); // ERROR_GRAPHICS_EMPTY_ADAPTER_MONITOR_MODE_SUPPORT_INTERSECTION
-#[doc(hidden)] pub const GRAPHICS_VIDEO_PRESENT_TARGETS_LESS_THAN_SOURCES : ErrorHResult = ErrorHResult::from_constant(0xC0262326); // ERROR_GRAPHICS_VIDEO_PRESENT_TARGETS_LESS_THAN_SOURCES
-#[doc(hidden)] pub const GRAPHICS_PATH_NOT_IN_TOPOLOGY : ErrorHResult = ErrorHResult::from_constant(0xC0262327); // ERROR_GRAPHICS_PATH_NOT_IN_TOPOLOGY
-#[doc(hidden)] pub const GRAPHICS_ADAPTER_MUST_HAVE_AT_LEAST_ONE_SOURCE : ErrorHResult = ErrorHResult::from_constant(0xC0262328); // ERROR_GRAPHICS_ADAPTER_MUST_HAVE_AT_LEAST_ONE_SOURCE
-#[doc(hidden)] pub const GRAPHICS_ADAPTER_MUST_HAVE_AT_LEAST_ONE_TARGET : ErrorHResult = ErrorHResult::from_constant(0xC0262329); // ERROR_GRAPHICS_ADAPTER_MUST_HAVE_AT_LEAST_ONE_TARGET
-#[doc(hidden)] pub const GRAPHICS_INVALID_MONITORDESCRIPTORSET : ErrorHResult = ErrorHResult::from_constant(0xC026232A); // ERROR_GRAPHICS_INVALID_MONITORDESCRIPTORSET
-#[doc(hidden)] pub const GRAPHICS_INVALID_MONITORDESCRIPTOR : ErrorHResult = ErrorHResult::from_constant(0xC026232B); // ERROR_GRAPHICS_INVALID_MONITORDESCRIPTOR
-#[doc(hidden)] pub const GRAPHICS_MONITORDESCRIPTOR_NOT_IN_SET : ErrorHResult = ErrorHResult::from_constant(0xC026232C); // ERROR_GRAPHICS_MONITORDESCRIPTOR_NOT_IN_SET
-#[doc(hidden)] pub const GRAPHICS_MONITORDESCRIPTOR_ALREADY_IN_SET : ErrorHResult = ErrorHResult::from_constant(0xC026232D); // ERROR_GRAPHICS_MONITORDESCRIPTOR_ALREADY_IN_SET
-#[doc(hidden)] pub const GRAPHICS_MONITORDESCRIPTOR_ID_MUST_BE_UNIQUE : ErrorHResult = ErrorHResult::from_constant(0xC026232E); // ERROR_GRAPHICS_MONITORDESCRIPTOR_ID_MUST_BE_UNIQUE
-#[doc(hidden)] pub const GRAPHICS_INVALID_VIDPN_TARGET_SUBSET_TYPE : ErrorHResult = ErrorHResult::from_constant(0xC026232F); // ERROR_GRAPHICS_INVALID_VIDPN_TARGET_SUBSET_TYPE
-#[doc(hidden)] pub const GRAPHICS_RESOURCES_NOT_RELATED : ErrorHResult = ErrorHResult::from_constant(0xC0262330); // ERROR_GRAPHICS_RESOURCES_NOT_RELATED
-#[doc(hidden)] pub const GRAPHICS_SOURCE_ID_MUST_BE_UNIQUE : ErrorHResult = ErrorHResult::from_constant(0xC0262331); // ERROR_GRAPHICS_SOURCE_ID_MUST_BE_UNIQUE
-#[doc(hidden)] pub const GRAPHICS_TARGET_ID_MUST_BE_UNIQUE : ErrorHResult = ErrorHResult::from_constant(0xC0262332); // ERROR_GRAPHICS_TARGET_ID_MUST_BE_UNIQUE
-#[doc(hidden)] pub const GRAPHICS_NO_AVAILABLE_VIDPN_TARGET : ErrorHResult = ErrorHResult::from_constant(0xC0262333); // ERROR_GRAPHICS_NO_AVAILABLE_VIDPN_TARGET
-#[doc(hidden)] pub const GRAPHICS_MONITOR_COULD_NOT_BE_ASSOCIATED_WITH_ADAPTER : ErrorHResult = ErrorHResult::from_constant(0xC0262334); // ERROR_GRAPHICS_MONITOR_COULD_NOT_BE_ASSOCIATED_WITH_ADAPTER
-#[doc(hidden)] pub const GRAPHICS_NO_VIDPNMGR : ErrorHResult = ErrorHResult::from_constant(0xC0262335); // ERROR_GRAPHICS_NO_VIDPNMGR
-#[doc(hidden)] pub const GRAPHICS_NO_ACTIVE_VIDPN : ErrorHResult = ErrorHResult::from_constant(0xC0262336); // ERROR_GRAPHICS_NO_ACTIVE_VIDPN
-#[doc(hidden)] pub const GRAPHICS_STALE_VIDPN_TOPOLOGY : ErrorHResult = ErrorHResult::from_constant(0xC0262337); // ERROR_GRAPHICS_STALE_VIDPN_TOPOLOGY
-#[doc(hidden)] pub const GRAPHICS_MONITOR_NOT_CONNECTED : ErrorHResult = ErrorHResult::from_constant(0xC0262338); // ERROR_GRAPHICS_MONITOR_NOT_CONNECTED
-#[doc(hidden)] pub const GRAPHICS_SOURCE_NOT_IN_TOPOLOGY : ErrorHResult = ErrorHResult::from_constant(0xC0262339); // ERROR_GRAPHICS_SOURCE_NOT_IN_TOPOLOGY
-#[doc(hidden)] pub const GRAPHICS_INVALID_PRIMARYSURFACE_SIZE : ErrorHResult = ErrorHResult::from_constant(0xC026233A); // ERROR_GRAPHICS_INVALID_PRIMARYSURFACE_SIZE
-#[doc(hidden)] pub const GRAPHICS_INVALID_VISIBLEREGION_SIZE : ErrorHResult = ErrorHResult::from_constant(0xC026233B); // ERROR_GRAPHICS_INVALID_VISIBLEREGION_SIZE
-#[doc(hidden)] pub const GRAPHICS_INVALID_STRIDE : ErrorHResult = ErrorHResult::from_constant(0xC026233C); // ERROR_GRAPHICS_INVALID_STRIDE
-#[doc(hidden)] pub const GRAPHICS_INVALID_PIXELFORMAT : ErrorHResult = ErrorHResult::from_constant(0xC026233D); // ERROR_GRAPHICS_INVALID_PIXELFORMAT
-#[doc(hidden)] pub const GRAPHICS_INVALID_COLORBASIS : ErrorHResult = ErrorHResult::from_constant(0xC026233E); // ERROR_GRAPHICS_INVALID_COLORBASIS
-#[doc(hidden)] pub const GRAPHICS_INVALID_PIXELVALUEACCESSMODE : ErrorHResult = ErrorHResult::from_constant(0xC026233F); // ERROR_GRAPHICS_INVALID_PIXELVALUEACCESSMODE
-#[doc(hidden)] pub const GRAPHICS_TARGET_NOT_IN_TOPOLOGY : ErrorHResult = ErrorHResult::from_constant(0xC0262340); // ERROR_GRAPHICS_TARGET_NOT_IN_TOPOLOGY
-#[doc(hidden)] pub const GRAPHICS_NO_DISPLAY_MODE_MANAGEMENT_SUPPORT : ErrorHResult = ErrorHResult::from_constant(0xC0262341); // ERROR_GRAPHICS_NO_DISPLAY_MODE_MANAGEMENT_SUPPORT
-#[doc(hidden)] pub const GRAPHICS_VIDPN_SOURCE_IN_USE : ErrorHResult = ErrorHResult::from_constant(0xC0262342); // ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE
-#[doc(hidden)] pub const GRAPHICS_CANT_ACCESS_ACTIVE_VIDPN : ErrorHResult = ErrorHResult::from_constant(0xC0262343); // ERROR_GRAPHICS_CANT_ACCESS_ACTIVE_VIDPN
-#[doc(hidden)] pub const GRAPHICS_INVALID_PATH_IMPORTANCE_ORDINAL : ErrorHResult = ErrorHResult::from_constant(0xC0262344); // ERROR_GRAPHICS_INVALID_PATH_IMPORTANCE_ORDINAL
-#[doc(hidden)] pub const GRAPHICS_INVALID_PATH_CONTENT_GEOMETRY_TRANSFORMATION : ErrorHResult = ErrorHResult::from_constant(0xC0262345); // ERROR_GRAPHICS_INVALID_PATH_CONTENT_GEOMETRY_TRANSFORMATION
-#[doc(hidden)] pub const GRAPHICS_PATH_CONTENT_GEOMETRY_TRANSFORMATION_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0xC0262346); // ERROR_GRAPHICS_PATH_CONTENT_GEOMETRY_TRANSFORMATION_NOT_SUPPORTED
-#[doc(hidden)] pub const GRAPHICS_INVALID_GAMMA_RAMP : ErrorHResult = ErrorHResult::from_constant(0xC0262347); // ERROR_GRAPHICS_INVALID_GAMMA_RAMP
-#[doc(hidden)] pub const GRAPHICS_GAMMA_RAMP_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0xC0262348); // ERROR_GRAPHICS_GAMMA_RAMP_NOT_SUPPORTED
-#[doc(hidden)] pub const GRAPHICS_MULTISAMPLING_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0xC0262349); // ERROR_GRAPHICS_MULTISAMPLING_NOT_SUPPORTED
-#[doc(hidden)] pub const GRAPHICS_MODE_NOT_IN_MODESET : ErrorHResult = ErrorHResult::from_constant(0xC026234A); // ERROR_GRAPHICS_MODE_NOT_IN_MODESET
-#[doc(hidden)] pub const GRAPHICS_DATASET_IS_EMPTY : SuccessHResult = SuccessHResult::from_constant(0x0026234B); // ERROR_GRAPHICS_DATASET_IS_EMPTY
-#[doc(hidden)] pub const GRAPHICS_NO_MORE_ELEMENTS_IN_DATASET : SuccessHResult = SuccessHResult::from_constant(0x0026234C); // ERROR_GRAPHICS_NO_MORE_ELEMENTS_IN_DATASET
-#[doc(hidden)] pub const GRAPHICS_INVALID_VIDPN_TOPOLOGY_RECOMMENDATION_REASON : ErrorHResult = ErrorHResult::from_constant(0xC026234D); // ERROR_GRAPHICS_INVALID_VIDPN_TOPOLOGY_RECOMMENDATION_REASON
-#[doc(hidden)] pub const GRAPHICS_INVALID_PATH_CONTENT_TYPE : ErrorHResult = ErrorHResult::from_constant(0xC026234E); // ERROR_GRAPHICS_INVALID_PATH_CONTENT_TYPE
-#[doc(hidden)] pub const GRAPHICS_INVALID_COPYPROTECTION_TYPE : ErrorHResult = ErrorHResult::from_constant(0xC026234F); // ERROR_GRAPHICS_INVALID_COPYPROTECTION_TYPE
-#[doc(hidden)] pub const GRAPHICS_UNASSIGNED_MODESET_ALREADY_EXISTS : ErrorHResult = ErrorHResult::from_constant(0xC0262350); // ERROR_GRAPHICS_UNASSIGNED_MODESET_ALREADY_EXISTS
-#[doc(hidden)] pub const GRAPHICS_PATH_CONTENT_GEOMETRY_TRANSFORMATION_NOT_PINNED : SuccessHResult = SuccessHResult::from_constant(0x00262351); // ERROR_GRAPHICS_PATH_CONTENT_GEOMETRY_TRANSFORMATION_NOT_PINNED
-#[doc(hidden)] pub const GRAPHICS_INVALID_SCANLINE_ORDERING : ErrorHResult = ErrorHResult::from_constant(0xC0262352); // ERROR_GRAPHICS_INVALID_SCANLINE_ORDERING
-#[doc(hidden)] pub const GRAPHICS_TOPOLOGY_CHANGES_NOT_ALLOWED : ErrorHResult = ErrorHResult::from_constant(0xC0262353); // ERROR_GRAPHICS_TOPOLOGY_CHANGES_NOT_ALLOWED
-#[doc(hidden)] pub const GRAPHICS_NO_AVAILABLE_IMPORTANCE_ORDINALS : ErrorHResult = ErrorHResult::from_constant(0xC0262354); // ERROR_GRAPHICS_NO_AVAILABLE_IMPORTANCE_ORDINALS
-#[doc(hidden)] pub const GRAPHICS_INCOMPATIBLE_PRIVATE_FORMAT : ErrorHResult = ErrorHResult::from_constant(0xC0262355); // ERROR_GRAPHICS_INCOMPATIBLE_PRIVATE_FORMAT
-#[doc(hidden)] pub const GRAPHICS_INVALID_MODE_PRUNING_ALGORITHM : ErrorHResult = ErrorHResult::from_constant(0xC0262356); // ERROR_GRAPHICS_INVALID_MODE_PRUNING_ALGORITHM
-#[doc(hidden)] pub const GRAPHICS_INVALID_MONITOR_CAPABILITY_ORIGIN : ErrorHResult = ErrorHResult::from_constant(0xC0262357); // ERROR_GRAPHICS_INVALID_MONITOR_CAPABILITY_ORIGIN
-#[doc(hidden)] pub const GRAPHICS_INVALID_MONITOR_FREQUENCYRANGE_CONSTRAINT : ErrorHResult = ErrorHResult::from_constant(0xC0262358); // ERROR_GRAPHICS_INVALID_MONITOR_FREQUENCYRANGE_CONSTRAINT
-#[doc(hidden)] pub const GRAPHICS_MAX_NUM_PATHS_REACHED : ErrorHResult = ErrorHResult::from_constant(0xC0262359); // ERROR_GRAPHICS_MAX_NUM_PATHS_REACHED
-#[doc(hidden)] pub const GRAPHICS_CANCEL_VIDPN_TOPOLOGY_AUGMENTATION : ErrorHResult = ErrorHResult::from_constant(0xC026235A); // ERROR_GRAPHICS_CANCEL_VIDPN_TOPOLOGY_AUGMENTATION
-#[doc(hidden)] pub const GRAPHICS_INVALID_CLIENT_TYPE : ErrorHResult = ErrorHResult::from_constant(0xC026235B); // ERROR_GRAPHICS_INVALID_CLIENT_TYPE
-#[doc(hidden)] pub const GRAPHICS_CLIENTVIDPN_NOT_SET : ErrorHResult = ErrorHResult::from_constant(0xC026235C); // ERROR_GRAPHICS_CLIENTVIDPN_NOT_SET
-#[doc(hidden)] pub const GRAPHICS_SPECIFIED_CHILD_ALREADY_CONNECTED : ErrorHResult = ErrorHResult::from_constant(0xC0262400); // ERROR_GRAPHICS_SPECIFIED_CHILD_ALREADY_CONNECTED
-#[doc(hidden)] pub const GRAPHICS_CHILD_DESCRIPTOR_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0xC0262401); // ERROR_GRAPHICS_CHILD_DESCRIPTOR_NOT_SUPPORTED
-#[doc(hidden)] pub const GRAPHICS_UNKNOWN_CHILD_STATUS : SuccessHResult = SuccessHResult::from_constant(0x4026242F); // ERROR_GRAPHICS_UNKNOWN_CHILD_STATUS
-#[doc(hidden)] pub const GRAPHICS_NOT_A_LINKED_ADAPTER : ErrorHResult = ErrorHResult::from_constant(0xC0262430); // ERROR_GRAPHICS_NOT_A_LINKED_ADAPTER
-#[doc(hidden)] pub const GRAPHICS_LEADLINK_NOT_ENUMERATED : ErrorHResult = ErrorHResult::from_constant(0xC0262431); // ERROR_GRAPHICS_LEADLINK_NOT_ENUMERATED
-#[doc(hidden)] pub const GRAPHICS_CHAINLINKS_NOT_ENUMERATED : ErrorHResult = ErrorHResult::from_constant(0xC0262432); // ERROR_GRAPHICS_CHAINLINKS_NOT_ENUMERATED
-#[doc(hidden)] pub const GRAPHICS_ADAPTER_CHAIN_NOT_READY : ErrorHResult = ErrorHResult::from_constant(0xC0262433); // ERROR_GRAPHICS_ADAPTER_CHAIN_NOT_READY
-#[doc(hidden)] pub const GRAPHICS_CHAINLINKS_NOT_STARTED : ErrorHResult = ErrorHResult::from_constant(0xC0262434); // ERROR_GRAPHICS_CHAINLINKS_NOT_STARTED
-#[doc(hidden)] pub const GRAPHICS_CHAINLINKS_NOT_POWERED_ON : ErrorHResult = ErrorHResult::from_constant(0xC0262435); // ERROR_GRAPHICS_CHAINLINKS_NOT_POWERED_ON
-#[doc(hidden)] pub const GRAPHICS_INCONSISTENT_DEVICE_LINK_STATE : ErrorHResult = ErrorHResult::from_constant(0xC0262436); // ERROR_GRAPHICS_INCONSISTENT_DEVICE_LINK_STATE
-#[doc(hidden)] pub const GRAPHICS_LEADLINK_START_DEFERRED : SuccessHResult = SuccessHResult::from_constant(0x40262437); // ERROR_GRAPHICS_LEADLINK_START_DEFERRED
-#[doc(hidden)] pub const GRAPHICS_NOT_POST_DEVICE_DRIVER : ErrorHResult = ErrorHResult::from_constant(0xC0262438); // ERROR_GRAPHICS_NOT_POST_DEVICE_DRIVER
-#[doc(hidden)] pub const GRAPHICS_POLLING_TOO_FREQUENTLY : SuccessHResult = SuccessHResult::from_constant(0x40262439); // ERROR_GRAPHICS_POLLING_TOO_FREQUENTLY
-#[doc(hidden)] pub const GRAPHICS_START_DEFERRED : SuccessHResult = SuccessHResult::from_constant(0x4026243A); // ERROR_GRAPHICS_START_DEFERRED
-#[doc(hidden)] pub const GRAPHICS_ADAPTER_ACCESS_NOT_EXCLUDED : ErrorHResult = ErrorHResult::from_constant(0xC026243B); // ERROR_GRAPHICS_ADAPTER_ACCESS_NOT_EXCLUDED
-#[doc(hidden)] pub const GRAPHICS_DEPENDABLE_CHILD_STATUS : SuccessHResult = SuccessHResult::from_constant(0x4026243C); // ERROR_GRAPHICS_DEPENDABLE_CHILD_STATUS
-#[doc(hidden)] pub const GRAPHICS_OPM_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0xC0262500); // ERROR_GRAPHICS_OPM_NOT_SUPPORTED
-#[doc(hidden)] pub const GRAPHICS_COPP_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0xC0262501); // ERROR_GRAPHICS_COPP_NOT_SUPPORTED
-#[doc(hidden)] pub const GRAPHICS_UAB_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0xC0262502); // ERROR_GRAPHICS_UAB_NOT_SUPPORTED
-#[doc(hidden)] pub const GRAPHICS_OPM_INVALID_ENCRYPTED_PARAMETERS : ErrorHResult = ErrorHResult::from_constant(0xC0262503); // ERROR_GRAPHICS_OPM_INVALID_ENCRYPTED_PARAMETERS
-#[doc(hidden)] pub const GRAPHICS_OPM_NO_VIDEO_OUTPUTS_EXIST : ErrorHResult = ErrorHResult::from_constant(0xC0262505); // ERROR_GRAPHICS_OPM_NO_VIDEO_OUTPUTS_EXIST
-#[doc(hidden)] pub const GRAPHICS_OPM_INTERNAL_ERROR : ErrorHResult = ErrorHResult::from_constant(0xC026250B); // ERROR_GRAPHICS_OPM_INTERNAL_ERROR
-#[doc(hidden)] pub const GRAPHICS_OPM_INVALID_HANDLE : ErrorHResult = ErrorHResult::from_constant(0xC026250C); // ERROR_GRAPHICS_OPM_INVALID_HANDLE
-#[doc(hidden)] pub const GRAPHICS_PVP_INVALID_CERTIFICATE_LENGTH : ErrorHResult = ErrorHResult::from_constant(0xC026250E); // ERROR_GRAPHICS_PVP_INVALID_CERTIFICATE_LENGTH
-#[doc(hidden)] pub const GRAPHICS_OPM_SPANNING_MODE_ENABLED : ErrorHResult = ErrorHResult::from_constant(0xC026250F); // ERROR_GRAPHICS_OPM_SPANNING_MODE_ENABLED
-#[doc(hidden)] pub const GRAPHICS_OPM_THEATER_MODE_ENABLED : ErrorHResult = ErrorHResult::from_constant(0xC0262510); // ERROR_GRAPHICS_OPM_THEATER_MODE_ENABLED
-#[doc(hidden)] pub const GRAPHICS_PVP_HFS_FAILED : ErrorHResult = ErrorHResult::from_constant(0xC0262511); // ERROR_GRAPHICS_PVP_HFS_FAILED
-#[doc(hidden)] pub const GRAPHICS_OPM_INVALID_SRM : ErrorHResult = ErrorHResult::from_constant(0xC0262512); // ERROR_GRAPHICS_OPM_INVALID_SRM
-#[doc(hidden)] pub const GRAPHICS_OPM_OUTPUT_DOES_NOT_SUPPORT_HDCP : ErrorHResult = ErrorHResult::from_constant(0xC0262513); // ERROR_GRAPHICS_OPM_OUTPUT_DOES_NOT_SUPPORT_HDCP
-#[doc(hidden)] pub const GRAPHICS_OPM_OUTPUT_DOES_NOT_SUPPORT_ACP : ErrorHResult = ErrorHResult::from_constant(0xC0262514); // ERROR_GRAPHICS_OPM_OUTPUT_DOES_NOT_SUPPORT_ACP
-#[doc(hidden)] pub const GRAPHICS_OPM_OUTPUT_DOES_NOT_SUPPORT_CGMSA : ErrorHResult = ErrorHResult::from_constant(0xC0262515); // ERROR_GRAPHICS_OPM_OUTPUT_DOES_NOT_SUPPORT_CGMSA
-#[doc(hidden)] pub const GRAPHICS_OPM_HDCP_SRM_NEVER_SET : ErrorHResult = ErrorHResult::from_constant(0xC0262516); // ERROR_GRAPHICS_OPM_HDCP_SRM_NEVER_SET
-#[doc(hidden)] pub const GRAPHICS_OPM_RESOLUTION_TOO_HIGH : ErrorHResult = ErrorHResult::from_constant(0xC0262517); // ERROR_GRAPHICS_OPM_RESOLUTION_TOO_HIGH
-#[doc(hidden)] pub const GRAPHICS_OPM_ALL_HDCP_HARDWARE_ALREADY_IN_USE : ErrorHResult = ErrorHResult::from_constant(0xC0262518); // ERROR_GRAPHICS_OPM_ALL_HDCP_HARDWARE_ALREADY_IN_USE
-#[doc(hidden)] pub const GRAPHICS_OPM_VIDEO_OUTPUT_NO_LONGER_EXISTS : ErrorHResult = ErrorHResult::from_constant(0xC026251A); // ERROR_GRAPHICS_OPM_VIDEO_OUTPUT_NO_LONGER_EXISTS
-#[doc(hidden)] pub const GRAPHICS_OPM_SESSION_TYPE_CHANGE_IN_PROGRESS : ErrorHResult = ErrorHResult::from_constant(0xC026251B); // ERROR_GRAPHICS_OPM_SESSION_TYPE_CHANGE_IN_PROGRESS
-#[doc(hidden)] pub const GRAPHICS_OPM_VIDEO_OUTPUT_DOES_NOT_HAVE_COPP_SEMANTICS : ErrorHResult = ErrorHResult::from_constant(0xC026251C); // ERROR_GRAPHICS_OPM_VIDEO_OUTPUT_DOES_NOT_HAVE_COPP_SEMANTICS
-#[doc(hidden)] pub const GRAPHICS_OPM_INVALID_INFORMATION_REQUEST : ErrorHResult = ErrorHResult::from_constant(0xC026251D); // ERROR_GRAPHICS_OPM_INVALID_INFORMATION_REQUEST
-#[doc(hidden)] pub const GRAPHICS_OPM_DRIVER_INTERNAL_ERROR : ErrorHResult = ErrorHResult::from_constant(0xC026251E); // ERROR_GRAPHICS_OPM_DRIVER_INTERNAL_ERROR
-#[doc(hidden)] pub const GRAPHICS_OPM_VIDEO_OUTPUT_DOES_NOT_HAVE_OPM_SEMANTICS : ErrorHResult = ErrorHResult::from_constant(0xC026251F); // ERROR_GRAPHICS_OPM_VIDEO_OUTPUT_DOES_NOT_HAVE_OPM_SEMANTICS
-#[doc(hidden)] pub const GRAPHICS_OPM_SIGNALING_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0xC0262520); // ERROR_GRAPHICS_OPM_SIGNALING_NOT_SUPPORTED
-#[doc(hidden)] pub const GRAPHICS_OPM_INVALID_CONFIGURATION_REQUEST : ErrorHResult = ErrorHResult::from_constant(0xC0262521); // ERROR_GRAPHICS_OPM_INVALID_CONFIGURATION_REQUEST
-#[doc(hidden)] pub const GRAPHICS_I2C_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0xC0262580); // ERROR_GRAPHICS_I2C_NOT_SUPPORTED
-#[doc(hidden)] pub const GRAPHICS_I2C_DEVICE_DOES_NOT_EXIST : ErrorHResult = ErrorHResult::from_constant(0xC0262581); // ERROR_GRAPHICS_I2C_DEVICE_DOES_NOT_EXIST
-#[doc(hidden)] pub const GRAPHICS_I2C_ERROR_TRANSMITTING_DATA : ErrorHResult = ErrorHResult::from_constant(0xC0262582); // ERROR_GRAPHICS_I2C_ERROR_TRANSMITTING_DATA
-#[doc(hidden)] pub const GRAPHICS_I2C_ERROR_RECEIVING_DATA : ErrorHResult = ErrorHResult::from_constant(0xC0262583); // ERROR_GRAPHICS_I2C_ERROR_RECEIVING_DATA
-#[doc(hidden)] pub const GRAPHICS_DDCCI_VCP_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0xC0262584); // ERROR_GRAPHICS_DDCCI_VCP_NOT_SUPPORTED
-#[doc(hidden)] pub const GRAPHICS_DDCCI_INVALID_DATA : ErrorHResult = ErrorHResult::from_constant(0xC0262585); // ERROR_GRAPHICS_DDCCI_INVALID_DATA
-#[doc(hidden)] pub const GRAPHICS_DDCCI_MONITOR_RETURNED_INVALID_TIMING_STATUS_BYTE : ErrorHResult = ErrorHResult::from_constant(0xC0262586); // ERROR_GRAPHICS_DDCCI_MONITOR_RETURNED_INVALID_TIMING_STATUS_BYTE
-#[doc(hidden)] pub const GRAPHICS_MCA_INVALID_CAPABILITIES_STRING : ErrorHResult = ErrorHResult::from_constant(0xC0262587); // ERROR_GRAPHICS_MCA_INVALID_CAPABILITIES_STRING
-#[doc(hidden)] pub const GRAPHICS_MCA_INTERNAL_ERROR : ErrorHResult = ErrorHResult::from_constant(0xC0262588); // ERROR_GRAPHICS_MCA_INTERNAL_ERROR
-#[doc(hidden)] pub const GRAPHICS_DDCCI_INVALID_MESSAGE_COMMAND : ErrorHResult = ErrorHResult::from_constant(0xC0262589); // ERROR_GRAPHICS_DDCCI_INVALID_MESSAGE_COMMAND
-#[doc(hidden)] pub const GRAPHICS_DDCCI_INVALID_MESSAGE_LENGTH : ErrorHResult = ErrorHResult::from_constant(0xC026258A); // ERROR_GRAPHICS_DDCCI_INVALID_MESSAGE_LENGTH
-#[doc(hidden)] pub const GRAPHICS_DDCCI_INVALID_MESSAGE_CHECKSUM : ErrorHResult = ErrorHResult::from_constant(0xC026258B); // ERROR_GRAPHICS_DDCCI_INVALID_MESSAGE_CHECKSUM
-#[doc(hidden)] pub const GRAPHICS_INVALID_PHYSICAL_MONITOR_HANDLE : ErrorHResult = ErrorHResult::from_constant(0xC026258C); // ERROR_GRAPHICS_INVALID_PHYSICAL_MONITOR_HANDLE
-#[doc(hidden)] pub const GRAPHICS_MONITOR_NO_LONGER_EXISTS : ErrorHResult = ErrorHResult::from_constant(0xC026258D); // ERROR_GRAPHICS_MONITOR_NO_LONGER_EXISTS
-#[doc(hidden)] pub const GRAPHICS_DDCCI_CURRENT_CURRENT_VALUE_GREATER_THAN_MAXIMUM_VALUE : ErrorHResult = ErrorHResult::from_constant(0xC02625D8); // ERROR_GRAPHICS_DDCCI_CURRENT_CURRENT_VALUE_GREATER_THAN_MAXIMUM_VALUE
-#[doc(hidden)] pub const GRAPHICS_MCA_INVALID_VCP_VERSION : ErrorHResult = ErrorHResult::from_constant(0xC02625D9); // ERROR_GRAPHICS_MCA_INVALID_VCP_VERSION
-#[doc(hidden)] pub const GRAPHICS_MCA_MONITOR_VIOLATES_MCCS_SPECIFICATION : ErrorHResult = ErrorHResult::from_constant(0xC02625DA); // ERROR_GRAPHICS_MCA_MONITOR_VIOLATES_MCCS_SPECIFICATION
-#[doc(hidden)] pub const GRAPHICS_MCA_MCCS_VERSION_MISMATCH : ErrorHResult = ErrorHResult::from_constant(0xC02625DB); // ERROR_GRAPHICS_MCA_MCCS_VERSION_MISMATCH
-#[doc(hidden)] pub const GRAPHICS_MCA_UNSUPPORTED_MCCS_VERSION : ErrorHResult = ErrorHResult::from_constant(0xC02625DC); // ERROR_GRAPHICS_MCA_UNSUPPORTED_MCCS_VERSION
-#[doc(hidden)] pub const GRAPHICS_MCA_INVALID_TECHNOLOGY_TYPE_RETURNED : ErrorHResult = ErrorHResult::from_constant(0xC02625DE); // ERROR_GRAPHICS_MCA_INVALID_TECHNOLOGY_TYPE_RETURNED
-#[doc(hidden)] pub const GRAPHICS_MCA_UNSUPPORTED_COLOR_TEMPERATURE : ErrorHResult = ErrorHResult::from_constant(0xC02625DF); // ERROR_GRAPHICS_MCA_UNSUPPORTED_COLOR_TEMPERATURE
-#[doc(hidden)] pub const GRAPHICS_ONLY_CONSOLE_SESSION_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0xC02625E0); // ERROR_GRAPHICS_ONLY_CONSOLE_SESSION_SUPPORTED
-#[doc(hidden)] pub const GRAPHICS_NO_DISPLAY_DEVICE_CORRESPONDS_TO_NAME : ErrorHResult = ErrorHResult::from_constant(0xC02625E1); // ERROR_GRAPHICS_NO_DISPLAY_DEVICE_CORRESPONDS_TO_NAME
-#[doc(hidden)] pub const GRAPHICS_DISPLAY_DEVICE_NOT_ATTACHED_TO_DESKTOP : ErrorHResult = ErrorHResult::from_constant(0xC02625E2); // ERROR_GRAPHICS_DISPLAY_DEVICE_NOT_ATTACHED_TO_DESKTOP
-#[doc(hidden)] pub const GRAPHICS_MIRRORING_DEVICES_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0xC02625E3); // ERROR_GRAPHICS_MIRRORING_DEVICES_NOT_SUPPORTED
-#[doc(hidden)] pub const GRAPHICS_INVALID_POINTER : ErrorHResult = ErrorHResult::from_constant(0xC02625E4); // ERROR_GRAPHICS_INVALID_POINTER
-#[doc(hidden)] pub const GRAPHICS_NO_MONITORS_CORRESPOND_TO_DISPLAY_DEVICE : ErrorHResult = ErrorHResult::from_constant(0xC02625E5); // ERROR_GRAPHICS_NO_MONITORS_CORRESPOND_TO_DISPLAY_DEVICE
-#[doc(hidden)] pub const GRAPHICS_PARAMETER_ARRAY_TOO_SMALL : ErrorHResult = ErrorHResult::from_constant(0xC02625E6); // ERROR_GRAPHICS_PARAMETER_ARRAY_TOO_SMALL
-#[doc(hidden)] pub const GRAPHICS_INTERNAL_ERROR : ErrorHResult = ErrorHResult::from_constant(0xC02625E7); // ERROR_GRAPHICS_INTERNAL_ERROR
-#[doc(hidden)] pub const GRAPHICS_SESSION_TYPE_CHANGE_IN_PROGRESS : ErrorHResult = ErrorHResult::from_constant(0xC02605E8); // ERROR_GRAPHICS_SESSION_TYPE_CHANGE_IN_PROGRESS
-#[doc(hidden)] pub const NDIS_INTERFACE_CLOSING : ErrorHResult = ErrorHResult::from_constant(0x80340002); // ERROR_NDIS_INTERFACE_CLOSING
-#[doc(hidden)] pub const NDIS_BAD_VERSION : ErrorHResult = ErrorHResult::from_constant(0x80340004); // ERROR_NDIS_BAD_VERSION
-#[doc(hidden)] pub const NDIS_BAD_CHARACTERISTICS : ErrorHResult = ErrorHResult::from_constant(0x80340005); // ERROR_NDIS_BAD_CHARACTERISTICS
-#[doc(hidden)] pub const NDIS_ADAPTER_NOT_FOUND : ErrorHResult = ErrorHResult::from_constant(0x80340006); // ERROR_NDIS_ADAPTER_NOT_FOUND
-#[doc(hidden)] pub const NDIS_OPEN_FAILED : ErrorHResult = ErrorHResult::from_constant(0x80340007); // ERROR_NDIS_OPEN_FAILED
-#[doc(hidden)] pub const NDIS_DEVICE_FAILED : ErrorHResult = ErrorHResult::from_constant(0x80340008); // ERROR_NDIS_DEVICE_FAILED
-#[doc(hidden)] pub const NDIS_MULTICAST_FULL : ErrorHResult = ErrorHResult::from_constant(0x80340009); // ERROR_NDIS_MULTICAST_FULL
-#[doc(hidden)] pub const NDIS_MULTICAST_EXISTS : ErrorHResult = ErrorHResult::from_constant(0x8034000A); // ERROR_NDIS_MULTICAST_EXISTS
-#[doc(hidden)] pub const NDIS_MULTICAST_NOT_FOUND : ErrorHResult = ErrorHResult::from_constant(0x8034000B); // ERROR_NDIS_MULTICAST_NOT_FOUND
-#[doc(hidden)] pub const NDIS_REQUEST_ABORTED : ErrorHResult = ErrorHResult::from_constant(0x8034000C); // ERROR_NDIS_REQUEST_ABORTED
-#[doc(hidden)] pub const NDIS_RESET_IN_PROGRESS : ErrorHResult = ErrorHResult::from_constant(0x8034000D); // ERROR_NDIS_RESET_IN_PROGRESS
-#[doc(hidden)] pub const NDIS_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x803400BB); // ERROR_NDIS_NOT_SUPPORTED
-#[doc(hidden)] pub const NDIS_INVALID_PACKET : ErrorHResult = ErrorHResult::from_constant(0x8034000F); // ERROR_NDIS_INVALID_PACKET
-#[doc(hidden)] pub const NDIS_ADAPTER_NOT_READY : ErrorHResult = ErrorHResult::from_constant(0x80340011); // ERROR_NDIS_ADAPTER_NOT_READY
-#[doc(hidden)] pub const NDIS_INVALID_LENGTH : ErrorHResult = ErrorHResult::from_constant(0x80340014); // ERROR_NDIS_INVALID_LENGTH
-#[doc(hidden)] pub const NDIS_INVALID_DATA : ErrorHResult = ErrorHResult::from_constant(0x80340015); // ERROR_NDIS_INVALID_DATA
-#[doc(hidden)] pub const NDIS_BUFFER_TOO_SHORT : ErrorHResult = ErrorHResult::from_constant(0x80340016); // ERROR_NDIS_BUFFER_TOO_SHORT
-#[doc(hidden)] pub const NDIS_INVALID_OID : ErrorHResult = ErrorHResult::from_constant(0x80340017); // ERROR_NDIS_INVALID_OID
-#[doc(hidden)] pub const NDIS_ADAPTER_REMOVED : ErrorHResult = ErrorHResult::from_constant(0x80340018); // ERROR_NDIS_ADAPTER_REMOVED
-#[doc(hidden)] pub const NDIS_UNSUPPORTED_MEDIA : ErrorHResult = ErrorHResult::from_constant(0x80340019); // ERROR_NDIS_UNSUPPORTED_MEDIA
-#[doc(hidden)] pub const NDIS_GROUP_ADDRESS_IN_USE : ErrorHResult = ErrorHResult::from_constant(0x8034001A); // ERROR_NDIS_GROUP_ADDRESS_IN_USE
-#[doc(hidden)] pub const NDIS_FILE_NOT_FOUND : ErrorHResult = ErrorHResult::from_constant(0x8034001B); // ERROR_NDIS_FILE_NOT_FOUND
-#[doc(hidden)] pub const NDIS_ERROR_READING_FILE : ErrorHResult = ErrorHResult::from_constant(0x8034001C); // ERROR_NDIS_ERROR_READING_FILE
-#[doc(hidden)] pub const NDIS_ALREADY_MAPPED : ErrorHResult = ErrorHResult::from_constant(0x8034001D); // ERROR_NDIS_ALREADY_MAPPED
-#[doc(hidden)] pub const NDIS_RESOURCE_CONFLICT : ErrorHResult = ErrorHResult::from_constant(0x8034001E); // ERROR_NDIS_RESOURCE_CONFLICT
-#[doc(hidden)] pub const NDIS_MEDIA_DISCONNECTED : ErrorHResult = ErrorHResult::from_constant(0x8034001F); // ERROR_NDIS_MEDIA_DISCONNECTED
-#[doc(hidden)] pub const NDIS_INVALID_ADDRESS : ErrorHResult = ErrorHResult::from_constant(0x80340022); // ERROR_NDIS_INVALID_ADDRESS
-#[doc(hidden)] pub const NDIS_INVALID_DEVICE_REQUEST : ErrorHResult = ErrorHResult::from_constant(0x80340010); // ERROR_NDIS_INVALID_DEVICE_REQUEST
-#[doc(hidden)] pub const NDIS_PAUSED : ErrorHResult = ErrorHResult::from_constant(0x8034002A); // ERROR_NDIS_PAUSED
-#[doc(hidden)] pub const NDIS_INTERFACE_NOT_FOUND : ErrorHResult = ErrorHResult::from_constant(0x8034002B); // ERROR_NDIS_INTERFACE_NOT_FOUND
-#[doc(hidden)] pub const NDIS_UNSUPPORTED_REVISION : ErrorHResult = ErrorHResult::from_constant(0x8034002C); // ERROR_NDIS_UNSUPPORTED_REVISION
-#[doc(hidden)] pub const NDIS_INVALID_PORT : ErrorHResult = ErrorHResult::from_constant(0x8034002D); // ERROR_NDIS_INVALID_PORT
-#[doc(hidden)] pub const NDIS_INVALID_PORT_STATE : ErrorHResult = ErrorHResult::from_constant(0x8034002E); // ERROR_NDIS_INVALID_PORT_STATE
-#[doc(hidden)] pub const NDIS_LOW_POWER_STATE : ErrorHResult = ErrorHResult::from_constant(0x8034002F); // ERROR_NDIS_LOW_POWER_STATE
-#[doc(hidden)] pub const NDIS_REINIT_REQUIRED : ErrorHResult = ErrorHResult::from_constant(0x80340030); // ERROR_NDIS_REINIT_REQUIRED
-#[doc(hidden)] pub const NDIS_NO_QUEUES : ErrorHResult = ErrorHResult::from_constant(0x80340031); // ERROR_NDIS_NO_QUEUES
-#[doc(hidden)] pub const NDIS_DOT11_AUTO_CONFIG_ENABLED : ErrorHResult = ErrorHResult::from_constant(0x80342000); // ERROR_NDIS_DOT11_AUTO_CONFIG_ENABLED
-#[doc(hidden)] pub const NDIS_DOT11_MEDIA_IN_USE : ErrorHResult = ErrorHResult::from_constant(0x80342001); // ERROR_NDIS_DOT11_MEDIA_IN_USE
-#[doc(hidden)] pub const NDIS_DOT11_POWER_STATE_INVALID : ErrorHResult = ErrorHResult::from_constant(0x80342002); // ERROR_NDIS_DOT11_POWER_STATE_INVALID
-#[doc(hidden)] pub const NDIS_PM_WOL_PATTERN_LIST_FULL : ErrorHResult = ErrorHResult::from_constant(0x80342003); // ERROR_NDIS_PM_WOL_PATTERN_LIST_FULL
-#[doc(hidden)] pub const NDIS_PM_PROTOCOL_OFFLOAD_LIST_FULL : ErrorHResult = ErrorHResult::from_constant(0x80342004); // ERROR_NDIS_PM_PROTOCOL_OFFLOAD_LIST_FULL
-#[doc(hidden)] pub const NDIS_DOT11_AP_CHANNEL_CURRENTLY_NOT_AVAILABLE : ErrorHResult = ErrorHResult::from_constant(0x80342005); // ERROR_NDIS_DOT11_AP_CHANNEL_CURRENTLY_NOT_AVAILABLE
-#[doc(hidden)] pub const NDIS_DOT11_AP_BAND_CURRENTLY_NOT_AVAILABLE : ErrorHResult = ErrorHResult::from_constant(0x80342006); // ERROR_NDIS_DOT11_AP_BAND_CURRENTLY_NOT_AVAILABLE
-#[doc(hidden)] pub const NDIS_DOT11_AP_CHANNEL_NOT_ALLOWED : ErrorHResult = ErrorHResult::from_constant(0x80342007); // ERROR_NDIS_DOT11_AP_CHANNEL_NOT_ALLOWED
-#[doc(hidden)] pub const NDIS_DOT11_AP_BAND_NOT_ALLOWED : ErrorHResult = ErrorHResult::from_constant(0x80342008); // ERROR_NDIS_DOT11_AP_BAND_NOT_ALLOWED
-#[doc(hidden)] pub const NDIS_INDICATION_REQUIRED : SuccessHResult = SuccessHResult::from_constant(0x00340001); // ERROR_NDIS_INDICATION_REQUIRED
-#[doc(hidden)] pub const NDIS_OFFLOAD_POLICY : ErrorHResult = ErrorHResult::from_constant(0xC034100F); // ERROR_NDIS_OFFLOAD_POLICY
-#[doc(hidden)] pub const NDIS_OFFLOAD_CONNECTION_REJECTED : ErrorHResult = ErrorHResult::from_constant(0xC0341012); // ERROR_NDIS_OFFLOAD_CONNECTION_REJECTED
-#[doc(hidden)] pub const NDIS_OFFLOAD_PATH_REJECTED : ErrorHResult = ErrorHResult::from_constant(0xC0341013); // ERROR_NDIS_OFFLOAD_PATH_REJECTED
+#[doc(hidden)] pub const GRAPHICS_NOT_EXCLUSIVE_MODE_OWNER : HResultError = HResultError::from_constant(0xC0262000); // ERROR_GRAPHICS_NOT_EXCLUSIVE_MODE_OWNER
+#[doc(hidden)] pub const GRAPHICS_INSUFFICIENT_DMA_BUFFER : HResultError = HResultError::from_constant(0xC0262001); // ERROR_GRAPHICS_INSUFFICIENT_DMA_BUFFER
+#[doc(hidden)] pub const GRAPHICS_INVALID_DISPLAY_ADAPTER : HResultError = HResultError::from_constant(0xC0262002); // ERROR_GRAPHICS_INVALID_DISPLAY_ADAPTER
+#[doc(hidden)] pub const GRAPHICS_ADAPTER_WAS_RESET : HResultError = HResultError::from_constant(0xC0262003); // ERROR_GRAPHICS_ADAPTER_WAS_RESET
+#[doc(hidden)] pub const GRAPHICS_INVALID_DRIVER_MODEL : HResultError = HResultError::from_constant(0xC0262004); // ERROR_GRAPHICS_INVALID_DRIVER_MODEL
+#[doc(hidden)] pub const GRAPHICS_PRESENT_MODE_CHANGED : HResultError = HResultError::from_constant(0xC0262005); // ERROR_GRAPHICS_PRESENT_MODE_CHANGED
+#[doc(hidden)] pub const GRAPHICS_PRESENT_OCCLUDED : HResultError = HResultError::from_constant(0xC0262006); // ERROR_GRAPHICS_PRESENT_OCCLUDED
+#[doc(hidden)] pub const GRAPHICS_PRESENT_DENIED : HResultError = HResultError::from_constant(0xC0262007); // ERROR_GRAPHICS_PRESENT_DENIED
+#[doc(hidden)] pub const GRAPHICS_CANNOTCOLORCONVERT : HResultError = HResultError::from_constant(0xC0262008); // ERROR_GRAPHICS_CANNOTCOLORCONVERT
+#[doc(hidden)] pub const GRAPHICS_DRIVER_MISMATCH : HResultError = HResultError::from_constant(0xC0262009); // ERROR_GRAPHICS_DRIVER_MISMATCH
+#[doc(hidden)] pub const GRAPHICS_PARTIAL_DATA_POPULATED : HResultSuccess = HResultSuccess::from_constant(0x4026200A); // ERROR_GRAPHICS_PARTIAL_DATA_POPULATED
+#[doc(hidden)] pub const GRAPHICS_PRESENT_REDIRECTION_DISABLED : HResultError = HResultError::from_constant(0xC026200B); // ERROR_GRAPHICS_PRESENT_REDIRECTION_DISABLED
+#[doc(hidden)] pub const GRAPHICS_PRESENT_UNOCCLUDED : HResultError = HResultError::from_constant(0xC026200C); // ERROR_GRAPHICS_PRESENT_UNOCCLUDED
+#[doc(hidden)] pub const GRAPHICS_WINDOWDC_NOT_AVAILABLE : HResultError = HResultError::from_constant(0xC026200D); // ERROR_GRAPHICS_WINDOWDC_NOT_AVAILABLE
+#[doc(hidden)] pub const GRAPHICS_WINDOWLESS_PRESENT_DISABLED : HResultError = HResultError::from_constant(0xC026200E); // ERROR_GRAPHICS_WINDOWLESS_PRESENT_DISABLED
+#[doc(hidden)] pub const GRAPHICS_PRESENT_INVALID_WINDOW : HResultError = HResultError::from_constant(0xC026200F); // ERROR_GRAPHICS_PRESENT_INVALID_WINDOW
+#[doc(hidden)] pub const GRAPHICS_PRESENT_BUFFER_NOT_BOUND : HResultError = HResultError::from_constant(0xC0262010); // ERROR_GRAPHICS_PRESENT_BUFFER_NOT_BOUND
+#[doc(hidden)] pub const GRAPHICS_VAIL_STATE_CHANGED : HResultError = HResultError::from_constant(0xC0262011); // ERROR_GRAPHICS_VAIL_STATE_CHANGED
+#[doc(hidden)] pub const GRAPHICS_INDIRECT_DISPLAY_ABANDON_SWAPCHAIN : HResultError = HResultError::from_constant(0xC0262012); // ERROR_GRAPHICS_INDIRECT_DISPLAY_ABANDON_SWAPCHAIN
+#[doc(hidden)] pub const GRAPHICS_INDIRECT_DISPLAY_DEVICE_STOPPED : HResultError = HResultError::from_constant(0xC0262013); // ERROR_GRAPHICS_INDIRECT_DISPLAY_DEVICE_STOPPED
+#[doc(hidden)] pub const GRAPHICS_VAIL_FAILED_TO_SEND_CREATE_SUPERWETINK_MESSAGE : HResultError = HResultError::from_constant(0xC0262014); // ERROR_GRAPHICS_VAIL_FAILED_TO_SEND_CREATE_SUPERWETINK_MESSAGE
+#[doc(hidden)] pub const GRAPHICS_VAIL_FAILED_TO_SEND_DESTROY_SUPERWETINK_MESSAGE : HResultError = HResultError::from_constant(0xC0262015); // ERROR_GRAPHICS_VAIL_FAILED_TO_SEND_DESTROY_SUPERWETINK_MESSAGE
+#[doc(hidden)] pub const GRAPHICS_NO_VIDEO_MEMORY : HResultError = HResultError::from_constant(0xC0262100); // ERROR_GRAPHICS_NO_VIDEO_MEMORY
+#[doc(hidden)] pub const GRAPHICS_CANT_LOCK_MEMORY : HResultError = HResultError::from_constant(0xC0262101); // ERROR_GRAPHICS_CANT_LOCK_MEMORY
+#[doc(hidden)] pub const GRAPHICS_ALLOCATION_BUSY : HResultError = HResultError::from_constant(0xC0262102); // ERROR_GRAPHICS_ALLOCATION_BUSY
+#[doc(hidden)] pub const GRAPHICS_TOO_MANY_REFERENCES : HResultError = HResultError::from_constant(0xC0262103); // ERROR_GRAPHICS_TOO_MANY_REFERENCES
+#[doc(hidden)] pub const GRAPHICS_TRY_AGAIN_LATER : HResultError = HResultError::from_constant(0xC0262104); // ERROR_GRAPHICS_TRY_AGAIN_LATER
+#[doc(hidden)] pub const GRAPHICS_TRY_AGAIN_NOW : HResultError = HResultError::from_constant(0xC0262105); // ERROR_GRAPHICS_TRY_AGAIN_NOW
+#[doc(hidden)] pub const GRAPHICS_ALLOCATION_INVALID : HResultError = HResultError::from_constant(0xC0262106); // ERROR_GRAPHICS_ALLOCATION_INVALID
+#[doc(hidden)] pub const GRAPHICS_UNSWIZZLING_APERTURE_UNAVAILABLE : HResultError = HResultError::from_constant(0xC0262107); // ERROR_GRAPHICS_UNSWIZZLING_APERTURE_UNAVAILABLE
+#[doc(hidden)] pub const GRAPHICS_UNSWIZZLING_APERTURE_UNSUPPORTED : HResultError = HResultError::from_constant(0xC0262108); // ERROR_GRAPHICS_UNSWIZZLING_APERTURE_UNSUPPORTED
+#[doc(hidden)] pub const GRAPHICS_CANT_EVICT_PINNED_ALLOCATION : HResultError = HResultError::from_constant(0xC0262109); // ERROR_GRAPHICS_CANT_EVICT_PINNED_ALLOCATION
+#[doc(hidden)] pub const GRAPHICS_INVALID_ALLOCATION_USAGE : HResultError = HResultError::from_constant(0xC0262110); // ERROR_GRAPHICS_INVALID_ALLOCATION_USAGE
+#[doc(hidden)] pub const GRAPHICS_CANT_RENDER_LOCKED_ALLOCATION : HResultError = HResultError::from_constant(0xC0262111); // ERROR_GRAPHICS_CANT_RENDER_LOCKED_ALLOCATION
+#[doc(hidden)] pub const GRAPHICS_ALLOCATION_CLOSED : HResultError = HResultError::from_constant(0xC0262112); // ERROR_GRAPHICS_ALLOCATION_CLOSED
+#[doc(hidden)] pub const GRAPHICS_INVALID_ALLOCATION_INSTANCE : HResultError = HResultError::from_constant(0xC0262113); // ERROR_GRAPHICS_INVALID_ALLOCATION_INSTANCE
+#[doc(hidden)] pub const GRAPHICS_INVALID_ALLOCATION_HANDLE : HResultError = HResultError::from_constant(0xC0262114); // ERROR_GRAPHICS_INVALID_ALLOCATION_HANDLE
+#[doc(hidden)] pub const GRAPHICS_WRONG_ALLOCATION_DEVICE : HResultError = HResultError::from_constant(0xC0262115); // ERROR_GRAPHICS_WRONG_ALLOCATION_DEVICE
+#[doc(hidden)] pub const GRAPHICS_ALLOCATION_CONTENT_LOST : HResultError = HResultError::from_constant(0xC0262116); // ERROR_GRAPHICS_ALLOCATION_CONTENT_LOST
+#[doc(hidden)] pub const GRAPHICS_GPU_EXCEPTION_ON_DEVICE : HResultError = HResultError::from_constant(0xC0262200); // ERROR_GRAPHICS_GPU_EXCEPTION_ON_DEVICE
+#[doc(hidden)] pub const GRAPHICS_SKIP_ALLOCATION_PREPARATION : HResultSuccess = HResultSuccess::from_constant(0x40262201); // ERROR_GRAPHICS_SKIP_ALLOCATION_PREPARATION
+#[doc(hidden)] pub const GRAPHICS_INVALID_VIDPN_TOPOLOGY : HResultError = HResultError::from_constant(0xC0262300); // ERROR_GRAPHICS_INVALID_VIDPN_TOPOLOGY
+#[doc(hidden)] pub const GRAPHICS_VIDPN_TOPOLOGY_NOT_SUPPORTED : HResultError = HResultError::from_constant(0xC0262301); // ERROR_GRAPHICS_VIDPN_TOPOLOGY_NOT_SUPPORTED
+#[doc(hidden)] pub const GRAPHICS_VIDPN_TOPOLOGY_CURRENTLY_NOT_SUPPORTED : HResultError = HResultError::from_constant(0xC0262302); // ERROR_GRAPHICS_VIDPN_TOPOLOGY_CURRENTLY_NOT_SUPPORTED
+#[doc(hidden)] pub const GRAPHICS_INVALID_VIDPN : HResultError = HResultError::from_constant(0xC0262303); // ERROR_GRAPHICS_INVALID_VIDPN
+#[doc(hidden)] pub const GRAPHICS_INVALID_VIDEO_PRESENT_SOURCE : HResultError = HResultError::from_constant(0xC0262304); // ERROR_GRAPHICS_INVALID_VIDEO_PRESENT_SOURCE
+#[doc(hidden)] pub const GRAPHICS_INVALID_VIDEO_PRESENT_TARGET : HResultError = HResultError::from_constant(0xC0262305); // ERROR_GRAPHICS_INVALID_VIDEO_PRESENT_TARGET
+#[doc(hidden)] pub const GRAPHICS_VIDPN_MODALITY_NOT_SUPPORTED : HResultError = HResultError::from_constant(0xC0262306); // ERROR_GRAPHICS_VIDPN_MODALITY_NOT_SUPPORTED
+#[doc(hidden)] pub const GRAPHICS_MODE_NOT_PINNED : HResultSuccess = HResultSuccess::from_constant(0x00262307); // ERROR_GRAPHICS_MODE_NOT_PINNED
+#[doc(hidden)] pub const GRAPHICS_INVALID_VIDPN_SOURCEMODESET : HResultError = HResultError::from_constant(0xC0262308); // ERROR_GRAPHICS_INVALID_VIDPN_SOURCEMODESET
+#[doc(hidden)] pub const GRAPHICS_INVALID_VIDPN_TARGETMODESET : HResultError = HResultError::from_constant(0xC0262309); // ERROR_GRAPHICS_INVALID_VIDPN_TARGETMODESET
+#[doc(hidden)] pub const GRAPHICS_INVALID_FREQUENCY : HResultError = HResultError::from_constant(0xC026230A); // ERROR_GRAPHICS_INVALID_FREQUENCY
+#[doc(hidden)] pub const GRAPHICS_INVALID_ACTIVE_REGION : HResultError = HResultError::from_constant(0xC026230B); // ERROR_GRAPHICS_INVALID_ACTIVE_REGION
+#[doc(hidden)] pub const GRAPHICS_INVALID_TOTAL_REGION : HResultError = HResultError::from_constant(0xC026230C); // ERROR_GRAPHICS_INVALID_TOTAL_REGION
+#[doc(hidden)] pub const GRAPHICS_INVALID_VIDEO_PRESENT_SOURCE_MODE : HResultError = HResultError::from_constant(0xC0262310); // ERROR_GRAPHICS_INVALID_VIDEO_PRESENT_SOURCE_MODE
+#[doc(hidden)] pub const GRAPHICS_INVALID_VIDEO_PRESENT_TARGET_MODE : HResultError = HResultError::from_constant(0xC0262311); // ERROR_GRAPHICS_INVALID_VIDEO_PRESENT_TARGET_MODE
+#[doc(hidden)] pub const GRAPHICS_PINNED_MODE_MUST_REMAIN_IN_SET : HResultError = HResultError::from_constant(0xC0262312); // ERROR_GRAPHICS_PINNED_MODE_MUST_REMAIN_IN_SET
+#[doc(hidden)] pub const GRAPHICS_PATH_ALREADY_IN_TOPOLOGY : HResultError = HResultError::from_constant(0xC0262313); // ERROR_GRAPHICS_PATH_ALREADY_IN_TOPOLOGY
+#[doc(hidden)] pub const GRAPHICS_MODE_ALREADY_IN_MODESET : HResultError = HResultError::from_constant(0xC0262314); // ERROR_GRAPHICS_MODE_ALREADY_IN_MODESET
+#[doc(hidden)] pub const GRAPHICS_INVALID_VIDEOPRESENTSOURCESET : HResultError = HResultError::from_constant(0xC0262315); // ERROR_GRAPHICS_INVALID_VIDEOPRESENTSOURCESET
+#[doc(hidden)] pub const GRAPHICS_INVALID_VIDEOPRESENTTARGETSET : HResultError = HResultError::from_constant(0xC0262316); // ERROR_GRAPHICS_INVALID_VIDEOPRESENTTARGETSET
+#[doc(hidden)] pub const GRAPHICS_SOURCE_ALREADY_IN_SET : HResultError = HResultError::from_constant(0xC0262317); // ERROR_GRAPHICS_SOURCE_ALREADY_IN_SET
+#[doc(hidden)] pub const GRAPHICS_TARGET_ALREADY_IN_SET : HResultError = HResultError::from_constant(0xC0262318); // ERROR_GRAPHICS_TARGET_ALREADY_IN_SET
+#[doc(hidden)] pub const GRAPHICS_INVALID_VIDPN_PRESENT_PATH : HResultError = HResultError::from_constant(0xC0262319); // ERROR_GRAPHICS_INVALID_VIDPN_PRESENT_PATH
+#[doc(hidden)] pub const GRAPHICS_NO_RECOMMENDED_VIDPN_TOPOLOGY : HResultError = HResultError::from_constant(0xC026231A); // ERROR_GRAPHICS_NO_RECOMMENDED_VIDPN_TOPOLOGY
+#[doc(hidden)] pub const GRAPHICS_INVALID_MONITOR_FREQUENCYRANGESET : HResultError = HResultError::from_constant(0xC026231B); // ERROR_GRAPHICS_INVALID_MONITOR_FREQUENCYRANGESET
+#[doc(hidden)] pub const GRAPHICS_INVALID_MONITOR_FREQUENCYRANGE : HResultError = HResultError::from_constant(0xC026231C); // ERROR_GRAPHICS_INVALID_MONITOR_FREQUENCYRANGE
+#[doc(hidden)] pub const GRAPHICS_FREQUENCYRANGE_NOT_IN_SET : HResultError = HResultError::from_constant(0xC026231D); // ERROR_GRAPHICS_FREQUENCYRANGE_NOT_IN_SET
+#[doc(hidden)] pub const GRAPHICS_NO_PREFERRED_MODE : HResultSuccess = HResultSuccess::from_constant(0x0026231E); // ERROR_GRAPHICS_NO_PREFERRED_MODE
+#[doc(hidden)] pub const GRAPHICS_FREQUENCYRANGE_ALREADY_IN_SET : HResultError = HResultError::from_constant(0xC026231F); // ERROR_GRAPHICS_FREQUENCYRANGE_ALREADY_IN_SET
+#[doc(hidden)] pub const GRAPHICS_STALE_MODESET : HResultError = HResultError::from_constant(0xC0262320); // ERROR_GRAPHICS_STALE_MODESET
+#[doc(hidden)] pub const GRAPHICS_INVALID_MONITOR_SOURCEMODESET : HResultError = HResultError::from_constant(0xC0262321); // ERROR_GRAPHICS_INVALID_MONITOR_SOURCEMODESET
+#[doc(hidden)] pub const GRAPHICS_INVALID_MONITOR_SOURCE_MODE : HResultError = HResultError::from_constant(0xC0262322); // ERROR_GRAPHICS_INVALID_MONITOR_SOURCE_MODE
+#[doc(hidden)] pub const GRAPHICS_NO_RECOMMENDED_FUNCTIONAL_VIDPN : HResultError = HResultError::from_constant(0xC0262323); // ERROR_GRAPHICS_NO_RECOMMENDED_FUNCTIONAL_VIDPN
+#[doc(hidden)] pub const GRAPHICS_MODE_ID_MUST_BE_UNIQUE : HResultError = HResultError::from_constant(0xC0262324); // ERROR_GRAPHICS_MODE_ID_MUST_BE_UNIQUE
+#[doc(hidden)] pub const GRAPHICS_EMPTY_ADAPTER_MONITOR_MODE_SUPPORT_INTERSECTION : HResultError = HResultError::from_constant(0xC0262325); // ERROR_GRAPHICS_EMPTY_ADAPTER_MONITOR_MODE_SUPPORT_INTERSECTION
+#[doc(hidden)] pub const GRAPHICS_VIDEO_PRESENT_TARGETS_LESS_THAN_SOURCES : HResultError = HResultError::from_constant(0xC0262326); // ERROR_GRAPHICS_VIDEO_PRESENT_TARGETS_LESS_THAN_SOURCES
+#[doc(hidden)] pub const GRAPHICS_PATH_NOT_IN_TOPOLOGY : HResultError = HResultError::from_constant(0xC0262327); // ERROR_GRAPHICS_PATH_NOT_IN_TOPOLOGY
+#[doc(hidden)] pub const GRAPHICS_ADAPTER_MUST_HAVE_AT_LEAST_ONE_SOURCE : HResultError = HResultError::from_constant(0xC0262328); // ERROR_GRAPHICS_ADAPTER_MUST_HAVE_AT_LEAST_ONE_SOURCE
+#[doc(hidden)] pub const GRAPHICS_ADAPTER_MUST_HAVE_AT_LEAST_ONE_TARGET : HResultError = HResultError::from_constant(0xC0262329); // ERROR_GRAPHICS_ADAPTER_MUST_HAVE_AT_LEAST_ONE_TARGET
+#[doc(hidden)] pub const GRAPHICS_INVALID_MONITORDESCRIPTORSET : HResultError = HResultError::from_constant(0xC026232A); // ERROR_GRAPHICS_INVALID_MONITORDESCRIPTORSET
+#[doc(hidden)] pub const GRAPHICS_INVALID_MONITORDESCRIPTOR : HResultError = HResultError::from_constant(0xC026232B); // ERROR_GRAPHICS_INVALID_MONITORDESCRIPTOR
+#[doc(hidden)] pub const GRAPHICS_MONITORDESCRIPTOR_NOT_IN_SET : HResultError = HResultError::from_constant(0xC026232C); // ERROR_GRAPHICS_MONITORDESCRIPTOR_NOT_IN_SET
+#[doc(hidden)] pub const GRAPHICS_MONITORDESCRIPTOR_ALREADY_IN_SET : HResultError = HResultError::from_constant(0xC026232D); // ERROR_GRAPHICS_MONITORDESCRIPTOR_ALREADY_IN_SET
+#[doc(hidden)] pub const GRAPHICS_MONITORDESCRIPTOR_ID_MUST_BE_UNIQUE : HResultError = HResultError::from_constant(0xC026232E); // ERROR_GRAPHICS_MONITORDESCRIPTOR_ID_MUST_BE_UNIQUE
+#[doc(hidden)] pub const GRAPHICS_INVALID_VIDPN_TARGET_SUBSET_TYPE : HResultError = HResultError::from_constant(0xC026232F); // ERROR_GRAPHICS_INVALID_VIDPN_TARGET_SUBSET_TYPE
+#[doc(hidden)] pub const GRAPHICS_RESOURCES_NOT_RELATED : HResultError = HResultError::from_constant(0xC0262330); // ERROR_GRAPHICS_RESOURCES_NOT_RELATED
+#[doc(hidden)] pub const GRAPHICS_SOURCE_ID_MUST_BE_UNIQUE : HResultError = HResultError::from_constant(0xC0262331); // ERROR_GRAPHICS_SOURCE_ID_MUST_BE_UNIQUE
+#[doc(hidden)] pub const GRAPHICS_TARGET_ID_MUST_BE_UNIQUE : HResultError = HResultError::from_constant(0xC0262332); // ERROR_GRAPHICS_TARGET_ID_MUST_BE_UNIQUE
+#[doc(hidden)] pub const GRAPHICS_NO_AVAILABLE_VIDPN_TARGET : HResultError = HResultError::from_constant(0xC0262333); // ERROR_GRAPHICS_NO_AVAILABLE_VIDPN_TARGET
+#[doc(hidden)] pub const GRAPHICS_MONITOR_COULD_NOT_BE_ASSOCIATED_WITH_ADAPTER : HResultError = HResultError::from_constant(0xC0262334); // ERROR_GRAPHICS_MONITOR_COULD_NOT_BE_ASSOCIATED_WITH_ADAPTER
+#[doc(hidden)] pub const GRAPHICS_NO_VIDPNMGR : HResultError = HResultError::from_constant(0xC0262335); // ERROR_GRAPHICS_NO_VIDPNMGR
+#[doc(hidden)] pub const GRAPHICS_NO_ACTIVE_VIDPN : HResultError = HResultError::from_constant(0xC0262336); // ERROR_GRAPHICS_NO_ACTIVE_VIDPN
+#[doc(hidden)] pub const GRAPHICS_STALE_VIDPN_TOPOLOGY : HResultError = HResultError::from_constant(0xC0262337); // ERROR_GRAPHICS_STALE_VIDPN_TOPOLOGY
+#[doc(hidden)] pub const GRAPHICS_MONITOR_NOT_CONNECTED : HResultError = HResultError::from_constant(0xC0262338); // ERROR_GRAPHICS_MONITOR_NOT_CONNECTED
+#[doc(hidden)] pub const GRAPHICS_SOURCE_NOT_IN_TOPOLOGY : HResultError = HResultError::from_constant(0xC0262339); // ERROR_GRAPHICS_SOURCE_NOT_IN_TOPOLOGY
+#[doc(hidden)] pub const GRAPHICS_INVALID_PRIMARYSURFACE_SIZE : HResultError = HResultError::from_constant(0xC026233A); // ERROR_GRAPHICS_INVALID_PRIMARYSURFACE_SIZE
+#[doc(hidden)] pub const GRAPHICS_INVALID_VISIBLEREGION_SIZE : HResultError = HResultError::from_constant(0xC026233B); // ERROR_GRAPHICS_INVALID_VISIBLEREGION_SIZE
+#[doc(hidden)] pub const GRAPHICS_INVALID_STRIDE : HResultError = HResultError::from_constant(0xC026233C); // ERROR_GRAPHICS_INVALID_STRIDE
+#[doc(hidden)] pub const GRAPHICS_INVALID_PIXELFORMAT : HResultError = HResultError::from_constant(0xC026233D); // ERROR_GRAPHICS_INVALID_PIXELFORMAT
+#[doc(hidden)] pub const GRAPHICS_INVALID_COLORBASIS : HResultError = HResultError::from_constant(0xC026233E); // ERROR_GRAPHICS_INVALID_COLORBASIS
+#[doc(hidden)] pub const GRAPHICS_INVALID_PIXELVALUEACCESSMODE : HResultError = HResultError::from_constant(0xC026233F); // ERROR_GRAPHICS_INVALID_PIXELVALUEACCESSMODE
+#[doc(hidden)] pub const GRAPHICS_TARGET_NOT_IN_TOPOLOGY : HResultError = HResultError::from_constant(0xC0262340); // ERROR_GRAPHICS_TARGET_NOT_IN_TOPOLOGY
+#[doc(hidden)] pub const GRAPHICS_NO_DISPLAY_MODE_MANAGEMENT_SUPPORT : HResultError = HResultError::from_constant(0xC0262341); // ERROR_GRAPHICS_NO_DISPLAY_MODE_MANAGEMENT_SUPPORT
+#[doc(hidden)] pub const GRAPHICS_VIDPN_SOURCE_IN_USE : HResultError = HResultError::from_constant(0xC0262342); // ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE
+#[doc(hidden)] pub const GRAPHICS_CANT_ACCESS_ACTIVE_VIDPN : HResultError = HResultError::from_constant(0xC0262343); // ERROR_GRAPHICS_CANT_ACCESS_ACTIVE_VIDPN
+#[doc(hidden)] pub const GRAPHICS_INVALID_PATH_IMPORTANCE_ORDINAL : HResultError = HResultError::from_constant(0xC0262344); // ERROR_GRAPHICS_INVALID_PATH_IMPORTANCE_ORDINAL
+#[doc(hidden)] pub const GRAPHICS_INVALID_PATH_CONTENT_GEOMETRY_TRANSFORMATION : HResultError = HResultError::from_constant(0xC0262345); // ERROR_GRAPHICS_INVALID_PATH_CONTENT_GEOMETRY_TRANSFORMATION
+#[doc(hidden)] pub const GRAPHICS_PATH_CONTENT_GEOMETRY_TRANSFORMATION_NOT_SUPPORTED : HResultError = HResultError::from_constant(0xC0262346); // ERROR_GRAPHICS_PATH_CONTENT_GEOMETRY_TRANSFORMATION_NOT_SUPPORTED
+#[doc(hidden)] pub const GRAPHICS_INVALID_GAMMA_RAMP : HResultError = HResultError::from_constant(0xC0262347); // ERROR_GRAPHICS_INVALID_GAMMA_RAMP
+#[doc(hidden)] pub const GRAPHICS_GAMMA_RAMP_NOT_SUPPORTED : HResultError = HResultError::from_constant(0xC0262348); // ERROR_GRAPHICS_GAMMA_RAMP_NOT_SUPPORTED
+#[doc(hidden)] pub const GRAPHICS_MULTISAMPLING_NOT_SUPPORTED : HResultError = HResultError::from_constant(0xC0262349); // ERROR_GRAPHICS_MULTISAMPLING_NOT_SUPPORTED
+#[doc(hidden)] pub const GRAPHICS_MODE_NOT_IN_MODESET : HResultError = HResultError::from_constant(0xC026234A); // ERROR_GRAPHICS_MODE_NOT_IN_MODESET
+#[doc(hidden)] pub const GRAPHICS_DATASET_IS_EMPTY : HResultSuccess = HResultSuccess::from_constant(0x0026234B); // ERROR_GRAPHICS_DATASET_IS_EMPTY
+#[doc(hidden)] pub const GRAPHICS_NO_MORE_ELEMENTS_IN_DATASET : HResultSuccess = HResultSuccess::from_constant(0x0026234C); // ERROR_GRAPHICS_NO_MORE_ELEMENTS_IN_DATASET
+#[doc(hidden)] pub const GRAPHICS_INVALID_VIDPN_TOPOLOGY_RECOMMENDATION_REASON : HResultError = HResultError::from_constant(0xC026234D); // ERROR_GRAPHICS_INVALID_VIDPN_TOPOLOGY_RECOMMENDATION_REASON
+#[doc(hidden)] pub const GRAPHICS_INVALID_PATH_CONTENT_TYPE : HResultError = HResultError::from_constant(0xC026234E); // ERROR_GRAPHICS_INVALID_PATH_CONTENT_TYPE
+#[doc(hidden)] pub const GRAPHICS_INVALID_COPYPROTECTION_TYPE : HResultError = HResultError::from_constant(0xC026234F); // ERROR_GRAPHICS_INVALID_COPYPROTECTION_TYPE
+#[doc(hidden)] pub const GRAPHICS_UNASSIGNED_MODESET_ALREADY_EXISTS : HResultError = HResultError::from_constant(0xC0262350); // ERROR_GRAPHICS_UNASSIGNED_MODESET_ALREADY_EXISTS
+#[doc(hidden)] pub const GRAPHICS_PATH_CONTENT_GEOMETRY_TRANSFORMATION_NOT_PINNED : HResultSuccess = HResultSuccess::from_constant(0x00262351); // ERROR_GRAPHICS_PATH_CONTENT_GEOMETRY_TRANSFORMATION_NOT_PINNED
+#[doc(hidden)] pub const GRAPHICS_INVALID_SCANLINE_ORDERING : HResultError = HResultError::from_constant(0xC0262352); // ERROR_GRAPHICS_INVALID_SCANLINE_ORDERING
+#[doc(hidden)] pub const GRAPHICS_TOPOLOGY_CHANGES_NOT_ALLOWED : HResultError = HResultError::from_constant(0xC0262353); // ERROR_GRAPHICS_TOPOLOGY_CHANGES_NOT_ALLOWED
+#[doc(hidden)] pub const GRAPHICS_NO_AVAILABLE_IMPORTANCE_ORDINALS : HResultError = HResultError::from_constant(0xC0262354); // ERROR_GRAPHICS_NO_AVAILABLE_IMPORTANCE_ORDINALS
+#[doc(hidden)] pub const GRAPHICS_INCOMPATIBLE_PRIVATE_FORMAT : HResultError = HResultError::from_constant(0xC0262355); // ERROR_GRAPHICS_INCOMPATIBLE_PRIVATE_FORMAT
+#[doc(hidden)] pub const GRAPHICS_INVALID_MODE_PRUNING_ALGORITHM : HResultError = HResultError::from_constant(0xC0262356); // ERROR_GRAPHICS_INVALID_MODE_PRUNING_ALGORITHM
+#[doc(hidden)] pub const GRAPHICS_INVALID_MONITOR_CAPABILITY_ORIGIN : HResultError = HResultError::from_constant(0xC0262357); // ERROR_GRAPHICS_INVALID_MONITOR_CAPABILITY_ORIGIN
+#[doc(hidden)] pub const GRAPHICS_INVALID_MONITOR_FREQUENCYRANGE_CONSTRAINT : HResultError = HResultError::from_constant(0xC0262358); // ERROR_GRAPHICS_INVALID_MONITOR_FREQUENCYRANGE_CONSTRAINT
+#[doc(hidden)] pub const GRAPHICS_MAX_NUM_PATHS_REACHED : HResultError = HResultError::from_constant(0xC0262359); // ERROR_GRAPHICS_MAX_NUM_PATHS_REACHED
+#[doc(hidden)] pub const GRAPHICS_CANCEL_VIDPN_TOPOLOGY_AUGMENTATION : HResultError = HResultError::from_constant(0xC026235A); // ERROR_GRAPHICS_CANCEL_VIDPN_TOPOLOGY_AUGMENTATION
+#[doc(hidden)] pub const GRAPHICS_INVALID_CLIENT_TYPE : HResultError = HResultError::from_constant(0xC026235B); // ERROR_GRAPHICS_INVALID_CLIENT_TYPE
+#[doc(hidden)] pub const GRAPHICS_CLIENTVIDPN_NOT_SET : HResultError = HResultError::from_constant(0xC026235C); // ERROR_GRAPHICS_CLIENTVIDPN_NOT_SET
+#[doc(hidden)] pub const GRAPHICS_SPECIFIED_CHILD_ALREADY_CONNECTED : HResultError = HResultError::from_constant(0xC0262400); // ERROR_GRAPHICS_SPECIFIED_CHILD_ALREADY_CONNECTED
+#[doc(hidden)] pub const GRAPHICS_CHILD_DESCRIPTOR_NOT_SUPPORTED : HResultError = HResultError::from_constant(0xC0262401); // ERROR_GRAPHICS_CHILD_DESCRIPTOR_NOT_SUPPORTED
+#[doc(hidden)] pub const GRAPHICS_UNKNOWN_CHILD_STATUS : HResultSuccess = HResultSuccess::from_constant(0x4026242F); // ERROR_GRAPHICS_UNKNOWN_CHILD_STATUS
+#[doc(hidden)] pub const GRAPHICS_NOT_A_LINKED_ADAPTER : HResultError = HResultError::from_constant(0xC0262430); // ERROR_GRAPHICS_NOT_A_LINKED_ADAPTER
+#[doc(hidden)] pub const GRAPHICS_LEADLINK_NOT_ENUMERATED : HResultError = HResultError::from_constant(0xC0262431); // ERROR_GRAPHICS_LEADLINK_NOT_ENUMERATED
+#[doc(hidden)] pub const GRAPHICS_CHAINLINKS_NOT_ENUMERATED : HResultError = HResultError::from_constant(0xC0262432); // ERROR_GRAPHICS_CHAINLINKS_NOT_ENUMERATED
+#[doc(hidden)] pub const GRAPHICS_ADAPTER_CHAIN_NOT_READY : HResultError = HResultError::from_constant(0xC0262433); // ERROR_GRAPHICS_ADAPTER_CHAIN_NOT_READY
+#[doc(hidden)] pub const GRAPHICS_CHAINLINKS_NOT_STARTED : HResultError = HResultError::from_constant(0xC0262434); // ERROR_GRAPHICS_CHAINLINKS_NOT_STARTED
+#[doc(hidden)] pub const GRAPHICS_CHAINLINKS_NOT_POWERED_ON : HResultError = HResultError::from_constant(0xC0262435); // ERROR_GRAPHICS_CHAINLINKS_NOT_POWERED_ON
+#[doc(hidden)] pub const GRAPHICS_INCONSISTENT_DEVICE_LINK_STATE : HResultError = HResultError::from_constant(0xC0262436); // ERROR_GRAPHICS_INCONSISTENT_DEVICE_LINK_STATE
+#[doc(hidden)] pub const GRAPHICS_LEADLINK_START_DEFERRED : HResultSuccess = HResultSuccess::from_constant(0x40262437); // ERROR_GRAPHICS_LEADLINK_START_DEFERRED
+#[doc(hidden)] pub const GRAPHICS_NOT_POST_DEVICE_DRIVER : HResultError = HResultError::from_constant(0xC0262438); // ERROR_GRAPHICS_NOT_POST_DEVICE_DRIVER
+#[doc(hidden)] pub const GRAPHICS_POLLING_TOO_FREQUENTLY : HResultSuccess = HResultSuccess::from_constant(0x40262439); // ERROR_GRAPHICS_POLLING_TOO_FREQUENTLY
+#[doc(hidden)] pub const GRAPHICS_START_DEFERRED : HResultSuccess = HResultSuccess::from_constant(0x4026243A); // ERROR_GRAPHICS_START_DEFERRED
+#[doc(hidden)] pub const GRAPHICS_ADAPTER_ACCESS_NOT_EXCLUDED : HResultError = HResultError::from_constant(0xC026243B); // ERROR_GRAPHICS_ADAPTER_ACCESS_NOT_EXCLUDED
+#[doc(hidden)] pub const GRAPHICS_DEPENDABLE_CHILD_STATUS : HResultSuccess = HResultSuccess::from_constant(0x4026243C); // ERROR_GRAPHICS_DEPENDABLE_CHILD_STATUS
+#[doc(hidden)] pub const GRAPHICS_OPM_NOT_SUPPORTED : HResultError = HResultError::from_constant(0xC0262500); // ERROR_GRAPHICS_OPM_NOT_SUPPORTED
+#[doc(hidden)] pub const GRAPHICS_COPP_NOT_SUPPORTED : HResultError = HResultError::from_constant(0xC0262501); // ERROR_GRAPHICS_COPP_NOT_SUPPORTED
+#[doc(hidden)] pub const GRAPHICS_UAB_NOT_SUPPORTED : HResultError = HResultError::from_constant(0xC0262502); // ERROR_GRAPHICS_UAB_NOT_SUPPORTED
+#[doc(hidden)] pub const GRAPHICS_OPM_INVALID_ENCRYPTED_PARAMETERS : HResultError = HResultError::from_constant(0xC0262503); // ERROR_GRAPHICS_OPM_INVALID_ENCRYPTED_PARAMETERS
+#[doc(hidden)] pub const GRAPHICS_OPM_NO_VIDEO_OUTPUTS_EXIST : HResultError = HResultError::from_constant(0xC0262505); // ERROR_GRAPHICS_OPM_NO_VIDEO_OUTPUTS_EXIST
+#[doc(hidden)] pub const GRAPHICS_OPM_INTERNAL_ERROR : HResultError = HResultError::from_constant(0xC026250B); // ERROR_GRAPHICS_OPM_INTERNAL_ERROR
+#[doc(hidden)] pub const GRAPHICS_OPM_INVALID_HANDLE : HResultError = HResultError::from_constant(0xC026250C); // ERROR_GRAPHICS_OPM_INVALID_HANDLE
+#[doc(hidden)] pub const GRAPHICS_PVP_INVALID_CERTIFICATE_LENGTH : HResultError = HResultError::from_constant(0xC026250E); // ERROR_GRAPHICS_PVP_INVALID_CERTIFICATE_LENGTH
+#[doc(hidden)] pub const GRAPHICS_OPM_SPANNING_MODE_ENABLED : HResultError = HResultError::from_constant(0xC026250F); // ERROR_GRAPHICS_OPM_SPANNING_MODE_ENABLED
+#[doc(hidden)] pub const GRAPHICS_OPM_THEATER_MODE_ENABLED : HResultError = HResultError::from_constant(0xC0262510); // ERROR_GRAPHICS_OPM_THEATER_MODE_ENABLED
+#[doc(hidden)] pub const GRAPHICS_PVP_HFS_FAILED : HResultError = HResultError::from_constant(0xC0262511); // ERROR_GRAPHICS_PVP_HFS_FAILED
+#[doc(hidden)] pub const GRAPHICS_OPM_INVALID_SRM : HResultError = HResultError::from_constant(0xC0262512); // ERROR_GRAPHICS_OPM_INVALID_SRM
+#[doc(hidden)] pub const GRAPHICS_OPM_OUTPUT_DOES_NOT_SUPPORT_HDCP : HResultError = HResultError::from_constant(0xC0262513); // ERROR_GRAPHICS_OPM_OUTPUT_DOES_NOT_SUPPORT_HDCP
+#[doc(hidden)] pub const GRAPHICS_OPM_OUTPUT_DOES_NOT_SUPPORT_ACP : HResultError = HResultError::from_constant(0xC0262514); // ERROR_GRAPHICS_OPM_OUTPUT_DOES_NOT_SUPPORT_ACP
+#[doc(hidden)] pub const GRAPHICS_OPM_OUTPUT_DOES_NOT_SUPPORT_CGMSA : HResultError = HResultError::from_constant(0xC0262515); // ERROR_GRAPHICS_OPM_OUTPUT_DOES_NOT_SUPPORT_CGMSA
+#[doc(hidden)] pub const GRAPHICS_OPM_HDCP_SRM_NEVER_SET : HResultError = HResultError::from_constant(0xC0262516); // ERROR_GRAPHICS_OPM_HDCP_SRM_NEVER_SET
+#[doc(hidden)] pub const GRAPHICS_OPM_RESOLUTION_TOO_HIGH : HResultError = HResultError::from_constant(0xC0262517); // ERROR_GRAPHICS_OPM_RESOLUTION_TOO_HIGH
+#[doc(hidden)] pub const GRAPHICS_OPM_ALL_HDCP_HARDWARE_ALREADY_IN_USE : HResultError = HResultError::from_constant(0xC0262518); // ERROR_GRAPHICS_OPM_ALL_HDCP_HARDWARE_ALREADY_IN_USE
+#[doc(hidden)] pub const GRAPHICS_OPM_VIDEO_OUTPUT_NO_LONGER_EXISTS : HResultError = HResultError::from_constant(0xC026251A); // ERROR_GRAPHICS_OPM_VIDEO_OUTPUT_NO_LONGER_EXISTS
+#[doc(hidden)] pub const GRAPHICS_OPM_SESSION_TYPE_CHANGE_IN_PROGRESS : HResultError = HResultError::from_constant(0xC026251B); // ERROR_GRAPHICS_OPM_SESSION_TYPE_CHANGE_IN_PROGRESS
+#[doc(hidden)] pub const GRAPHICS_OPM_VIDEO_OUTPUT_DOES_NOT_HAVE_COPP_SEMANTICS : HResultError = HResultError::from_constant(0xC026251C); // ERROR_GRAPHICS_OPM_VIDEO_OUTPUT_DOES_NOT_HAVE_COPP_SEMANTICS
+#[doc(hidden)] pub const GRAPHICS_OPM_INVALID_INFORMATION_REQUEST : HResultError = HResultError::from_constant(0xC026251D); // ERROR_GRAPHICS_OPM_INVALID_INFORMATION_REQUEST
+#[doc(hidden)] pub const GRAPHICS_OPM_DRIVER_INTERNAL_ERROR : HResultError = HResultError::from_constant(0xC026251E); // ERROR_GRAPHICS_OPM_DRIVER_INTERNAL_ERROR
+#[doc(hidden)] pub const GRAPHICS_OPM_VIDEO_OUTPUT_DOES_NOT_HAVE_OPM_SEMANTICS : HResultError = HResultError::from_constant(0xC026251F); // ERROR_GRAPHICS_OPM_VIDEO_OUTPUT_DOES_NOT_HAVE_OPM_SEMANTICS
+#[doc(hidden)] pub const GRAPHICS_OPM_SIGNALING_NOT_SUPPORTED : HResultError = HResultError::from_constant(0xC0262520); // ERROR_GRAPHICS_OPM_SIGNALING_NOT_SUPPORTED
+#[doc(hidden)] pub const GRAPHICS_OPM_INVALID_CONFIGURATION_REQUEST : HResultError = HResultError::from_constant(0xC0262521); // ERROR_GRAPHICS_OPM_INVALID_CONFIGURATION_REQUEST
+#[doc(hidden)] pub const GRAPHICS_I2C_NOT_SUPPORTED : HResultError = HResultError::from_constant(0xC0262580); // ERROR_GRAPHICS_I2C_NOT_SUPPORTED
+#[doc(hidden)] pub const GRAPHICS_I2C_DEVICE_DOES_NOT_EXIST : HResultError = HResultError::from_constant(0xC0262581); // ERROR_GRAPHICS_I2C_DEVICE_DOES_NOT_EXIST
+#[doc(hidden)] pub const GRAPHICS_I2C_ERROR_TRANSMITTING_DATA : HResultError = HResultError::from_constant(0xC0262582); // ERROR_GRAPHICS_I2C_ERROR_TRANSMITTING_DATA
+#[doc(hidden)] pub const GRAPHICS_I2C_ERROR_RECEIVING_DATA : HResultError = HResultError::from_constant(0xC0262583); // ERROR_GRAPHICS_I2C_ERROR_RECEIVING_DATA
+#[doc(hidden)] pub const GRAPHICS_DDCCI_VCP_NOT_SUPPORTED : HResultError = HResultError::from_constant(0xC0262584); // ERROR_GRAPHICS_DDCCI_VCP_NOT_SUPPORTED
+#[doc(hidden)] pub const GRAPHICS_DDCCI_INVALID_DATA : HResultError = HResultError::from_constant(0xC0262585); // ERROR_GRAPHICS_DDCCI_INVALID_DATA
+#[doc(hidden)] pub const GRAPHICS_DDCCI_MONITOR_RETURNED_INVALID_TIMING_STATUS_BYTE : HResultError = HResultError::from_constant(0xC0262586); // ERROR_GRAPHICS_DDCCI_MONITOR_RETURNED_INVALID_TIMING_STATUS_BYTE
+#[doc(hidden)] pub const GRAPHICS_MCA_INVALID_CAPABILITIES_STRING : HResultError = HResultError::from_constant(0xC0262587); // ERROR_GRAPHICS_MCA_INVALID_CAPABILITIES_STRING
+#[doc(hidden)] pub const GRAPHICS_MCA_INTERNAL_ERROR : HResultError = HResultError::from_constant(0xC0262588); // ERROR_GRAPHICS_MCA_INTERNAL_ERROR
+#[doc(hidden)] pub const GRAPHICS_DDCCI_INVALID_MESSAGE_COMMAND : HResultError = HResultError::from_constant(0xC0262589); // ERROR_GRAPHICS_DDCCI_INVALID_MESSAGE_COMMAND
+#[doc(hidden)] pub const GRAPHICS_DDCCI_INVALID_MESSAGE_LENGTH : HResultError = HResultError::from_constant(0xC026258A); // ERROR_GRAPHICS_DDCCI_INVALID_MESSAGE_LENGTH
+#[doc(hidden)] pub const GRAPHICS_DDCCI_INVALID_MESSAGE_CHECKSUM : HResultError = HResultError::from_constant(0xC026258B); // ERROR_GRAPHICS_DDCCI_INVALID_MESSAGE_CHECKSUM
+#[doc(hidden)] pub const GRAPHICS_INVALID_PHYSICAL_MONITOR_HANDLE : HResultError = HResultError::from_constant(0xC026258C); // ERROR_GRAPHICS_INVALID_PHYSICAL_MONITOR_HANDLE
+#[doc(hidden)] pub const GRAPHICS_MONITOR_NO_LONGER_EXISTS : HResultError = HResultError::from_constant(0xC026258D); // ERROR_GRAPHICS_MONITOR_NO_LONGER_EXISTS
+#[doc(hidden)] pub const GRAPHICS_DDCCI_CURRENT_CURRENT_VALUE_GREATER_THAN_MAXIMUM_VALUE : HResultError = HResultError::from_constant(0xC02625D8); // ERROR_GRAPHICS_DDCCI_CURRENT_CURRENT_VALUE_GREATER_THAN_MAXIMUM_VALUE
+#[doc(hidden)] pub const GRAPHICS_MCA_INVALID_VCP_VERSION : HResultError = HResultError::from_constant(0xC02625D9); // ERROR_GRAPHICS_MCA_INVALID_VCP_VERSION
+#[doc(hidden)] pub const GRAPHICS_MCA_MONITOR_VIOLATES_MCCS_SPECIFICATION : HResultError = HResultError::from_constant(0xC02625DA); // ERROR_GRAPHICS_MCA_MONITOR_VIOLATES_MCCS_SPECIFICATION
+#[doc(hidden)] pub const GRAPHICS_MCA_MCCS_VERSION_MISMATCH : HResultError = HResultError::from_constant(0xC02625DB); // ERROR_GRAPHICS_MCA_MCCS_VERSION_MISMATCH
+#[doc(hidden)] pub const GRAPHICS_MCA_UNSUPPORTED_MCCS_VERSION : HResultError = HResultError::from_constant(0xC02625DC); // ERROR_GRAPHICS_MCA_UNSUPPORTED_MCCS_VERSION
+#[doc(hidden)] pub const GRAPHICS_MCA_INVALID_TECHNOLOGY_TYPE_RETURNED : HResultError = HResultError::from_constant(0xC02625DE); // ERROR_GRAPHICS_MCA_INVALID_TECHNOLOGY_TYPE_RETURNED
+#[doc(hidden)] pub const GRAPHICS_MCA_UNSUPPORTED_COLOR_TEMPERATURE : HResultError = HResultError::from_constant(0xC02625DF); // ERROR_GRAPHICS_MCA_UNSUPPORTED_COLOR_TEMPERATURE
+#[doc(hidden)] pub const GRAPHICS_ONLY_CONSOLE_SESSION_SUPPORTED : HResultError = HResultError::from_constant(0xC02625E0); // ERROR_GRAPHICS_ONLY_CONSOLE_SESSION_SUPPORTED
+#[doc(hidden)] pub const GRAPHICS_NO_DISPLAY_DEVICE_CORRESPONDS_TO_NAME : HResultError = HResultError::from_constant(0xC02625E1); // ERROR_GRAPHICS_NO_DISPLAY_DEVICE_CORRESPONDS_TO_NAME
+#[doc(hidden)] pub const GRAPHICS_DISPLAY_DEVICE_NOT_ATTACHED_TO_DESKTOP : HResultError = HResultError::from_constant(0xC02625E2); // ERROR_GRAPHICS_DISPLAY_DEVICE_NOT_ATTACHED_TO_DESKTOP
+#[doc(hidden)] pub const GRAPHICS_MIRRORING_DEVICES_NOT_SUPPORTED : HResultError = HResultError::from_constant(0xC02625E3); // ERROR_GRAPHICS_MIRRORING_DEVICES_NOT_SUPPORTED
+#[doc(hidden)] pub const GRAPHICS_INVALID_POINTER : HResultError = HResultError::from_constant(0xC02625E4); // ERROR_GRAPHICS_INVALID_POINTER
+#[doc(hidden)] pub const GRAPHICS_NO_MONITORS_CORRESPOND_TO_DISPLAY_DEVICE : HResultError = HResultError::from_constant(0xC02625E5); // ERROR_GRAPHICS_NO_MONITORS_CORRESPOND_TO_DISPLAY_DEVICE
+#[doc(hidden)] pub const GRAPHICS_PARAMETER_ARRAY_TOO_SMALL : HResultError = HResultError::from_constant(0xC02625E6); // ERROR_GRAPHICS_PARAMETER_ARRAY_TOO_SMALL
+#[doc(hidden)] pub const GRAPHICS_INTERNAL_ERROR : HResultError = HResultError::from_constant(0xC02625E7); // ERROR_GRAPHICS_INTERNAL_ERROR
+#[doc(hidden)] pub const GRAPHICS_SESSION_TYPE_CHANGE_IN_PROGRESS : HResultError = HResultError::from_constant(0xC02605E8); // ERROR_GRAPHICS_SESSION_TYPE_CHANGE_IN_PROGRESS
+#[doc(hidden)] pub const NDIS_INTERFACE_CLOSING : HResultError = HResultError::from_constant(0x80340002); // ERROR_NDIS_INTERFACE_CLOSING
+#[doc(hidden)] pub const NDIS_BAD_VERSION : HResultError = HResultError::from_constant(0x80340004); // ERROR_NDIS_BAD_VERSION
+#[doc(hidden)] pub const NDIS_BAD_CHARACTERISTICS : HResultError = HResultError::from_constant(0x80340005); // ERROR_NDIS_BAD_CHARACTERISTICS
+#[doc(hidden)] pub const NDIS_ADAPTER_NOT_FOUND : HResultError = HResultError::from_constant(0x80340006); // ERROR_NDIS_ADAPTER_NOT_FOUND
+#[doc(hidden)] pub const NDIS_OPEN_FAILED : HResultError = HResultError::from_constant(0x80340007); // ERROR_NDIS_OPEN_FAILED
+#[doc(hidden)] pub const NDIS_DEVICE_FAILED : HResultError = HResultError::from_constant(0x80340008); // ERROR_NDIS_DEVICE_FAILED
+#[doc(hidden)] pub const NDIS_MULTICAST_FULL : HResultError = HResultError::from_constant(0x80340009); // ERROR_NDIS_MULTICAST_FULL
+#[doc(hidden)] pub const NDIS_MULTICAST_EXISTS : HResultError = HResultError::from_constant(0x8034000A); // ERROR_NDIS_MULTICAST_EXISTS
+#[doc(hidden)] pub const NDIS_MULTICAST_NOT_FOUND : HResultError = HResultError::from_constant(0x8034000B); // ERROR_NDIS_MULTICAST_NOT_FOUND
+#[doc(hidden)] pub const NDIS_REQUEST_ABORTED : HResultError = HResultError::from_constant(0x8034000C); // ERROR_NDIS_REQUEST_ABORTED
+#[doc(hidden)] pub const NDIS_RESET_IN_PROGRESS : HResultError = HResultError::from_constant(0x8034000D); // ERROR_NDIS_RESET_IN_PROGRESS
+#[doc(hidden)] pub const NDIS_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x803400BB); // ERROR_NDIS_NOT_SUPPORTED
+#[doc(hidden)] pub const NDIS_INVALID_PACKET : HResultError = HResultError::from_constant(0x8034000F); // ERROR_NDIS_INVALID_PACKET
+#[doc(hidden)] pub const NDIS_ADAPTER_NOT_READY : HResultError = HResultError::from_constant(0x80340011); // ERROR_NDIS_ADAPTER_NOT_READY
+#[doc(hidden)] pub const NDIS_INVALID_LENGTH : HResultError = HResultError::from_constant(0x80340014); // ERROR_NDIS_INVALID_LENGTH
+#[doc(hidden)] pub const NDIS_INVALID_DATA : HResultError = HResultError::from_constant(0x80340015); // ERROR_NDIS_INVALID_DATA
+#[doc(hidden)] pub const NDIS_BUFFER_TOO_SHORT : HResultError = HResultError::from_constant(0x80340016); // ERROR_NDIS_BUFFER_TOO_SHORT
+#[doc(hidden)] pub const NDIS_INVALID_OID : HResultError = HResultError::from_constant(0x80340017); // ERROR_NDIS_INVALID_OID
+#[doc(hidden)] pub const NDIS_ADAPTER_REMOVED : HResultError = HResultError::from_constant(0x80340018); // ERROR_NDIS_ADAPTER_REMOVED
+#[doc(hidden)] pub const NDIS_UNSUPPORTED_MEDIA : HResultError = HResultError::from_constant(0x80340019); // ERROR_NDIS_UNSUPPORTED_MEDIA
+#[doc(hidden)] pub const NDIS_GROUP_ADDRESS_IN_USE : HResultError = HResultError::from_constant(0x8034001A); // ERROR_NDIS_GROUP_ADDRESS_IN_USE
+#[doc(hidden)] pub const NDIS_FILE_NOT_FOUND : HResultError = HResultError::from_constant(0x8034001B); // ERROR_NDIS_FILE_NOT_FOUND
+#[doc(hidden)] pub const NDIS_ERROR_READING_FILE : HResultError = HResultError::from_constant(0x8034001C); // ERROR_NDIS_ERROR_READING_FILE
+#[doc(hidden)] pub const NDIS_ALREADY_MAPPED : HResultError = HResultError::from_constant(0x8034001D); // ERROR_NDIS_ALREADY_MAPPED
+#[doc(hidden)] pub const NDIS_RESOURCE_CONFLICT : HResultError = HResultError::from_constant(0x8034001E); // ERROR_NDIS_RESOURCE_CONFLICT
+#[doc(hidden)] pub const NDIS_MEDIA_DISCONNECTED : HResultError = HResultError::from_constant(0x8034001F); // ERROR_NDIS_MEDIA_DISCONNECTED
+#[doc(hidden)] pub const NDIS_INVALID_ADDRESS : HResultError = HResultError::from_constant(0x80340022); // ERROR_NDIS_INVALID_ADDRESS
+#[doc(hidden)] pub const NDIS_INVALID_DEVICE_REQUEST : HResultError = HResultError::from_constant(0x80340010); // ERROR_NDIS_INVALID_DEVICE_REQUEST
+#[doc(hidden)] pub const NDIS_PAUSED : HResultError = HResultError::from_constant(0x8034002A); // ERROR_NDIS_PAUSED
+#[doc(hidden)] pub const NDIS_INTERFACE_NOT_FOUND : HResultError = HResultError::from_constant(0x8034002B); // ERROR_NDIS_INTERFACE_NOT_FOUND
+#[doc(hidden)] pub const NDIS_UNSUPPORTED_REVISION : HResultError = HResultError::from_constant(0x8034002C); // ERROR_NDIS_UNSUPPORTED_REVISION
+#[doc(hidden)] pub const NDIS_INVALID_PORT : HResultError = HResultError::from_constant(0x8034002D); // ERROR_NDIS_INVALID_PORT
+#[doc(hidden)] pub const NDIS_INVALID_PORT_STATE : HResultError = HResultError::from_constant(0x8034002E); // ERROR_NDIS_INVALID_PORT_STATE
+#[doc(hidden)] pub const NDIS_LOW_POWER_STATE : HResultError = HResultError::from_constant(0x8034002F); // ERROR_NDIS_LOW_POWER_STATE
+#[doc(hidden)] pub const NDIS_REINIT_REQUIRED : HResultError = HResultError::from_constant(0x80340030); // ERROR_NDIS_REINIT_REQUIRED
+#[doc(hidden)] pub const NDIS_NO_QUEUES : HResultError = HResultError::from_constant(0x80340031); // ERROR_NDIS_NO_QUEUES
+#[doc(hidden)] pub const NDIS_DOT11_AUTO_CONFIG_ENABLED : HResultError = HResultError::from_constant(0x80342000); // ERROR_NDIS_DOT11_AUTO_CONFIG_ENABLED
+#[doc(hidden)] pub const NDIS_DOT11_MEDIA_IN_USE : HResultError = HResultError::from_constant(0x80342001); // ERROR_NDIS_DOT11_MEDIA_IN_USE
+#[doc(hidden)] pub const NDIS_DOT11_POWER_STATE_INVALID : HResultError = HResultError::from_constant(0x80342002); // ERROR_NDIS_DOT11_POWER_STATE_INVALID
+#[doc(hidden)] pub const NDIS_PM_WOL_PATTERN_LIST_FULL : HResultError = HResultError::from_constant(0x80342003); // ERROR_NDIS_PM_WOL_PATTERN_LIST_FULL
+#[doc(hidden)] pub const NDIS_PM_PROTOCOL_OFFLOAD_LIST_FULL : HResultError = HResultError::from_constant(0x80342004); // ERROR_NDIS_PM_PROTOCOL_OFFLOAD_LIST_FULL
+#[doc(hidden)] pub const NDIS_DOT11_AP_CHANNEL_CURRENTLY_NOT_AVAILABLE : HResultError = HResultError::from_constant(0x80342005); // ERROR_NDIS_DOT11_AP_CHANNEL_CURRENTLY_NOT_AVAILABLE
+#[doc(hidden)] pub const NDIS_DOT11_AP_BAND_CURRENTLY_NOT_AVAILABLE : HResultError = HResultError::from_constant(0x80342006); // ERROR_NDIS_DOT11_AP_BAND_CURRENTLY_NOT_AVAILABLE
+#[doc(hidden)] pub const NDIS_DOT11_AP_CHANNEL_NOT_ALLOWED : HResultError = HResultError::from_constant(0x80342007); // ERROR_NDIS_DOT11_AP_CHANNEL_NOT_ALLOWED
+#[doc(hidden)] pub const NDIS_DOT11_AP_BAND_NOT_ALLOWED : HResultError = HResultError::from_constant(0x80342008); // ERROR_NDIS_DOT11_AP_BAND_NOT_ALLOWED
+#[doc(hidden)] pub const NDIS_INDICATION_REQUIRED : HResultSuccess = HResultSuccess::from_constant(0x00340001); // ERROR_NDIS_INDICATION_REQUIRED
+#[doc(hidden)] pub const NDIS_OFFLOAD_POLICY : HResultError = HResultError::from_constant(0xC034100F); // ERROR_NDIS_OFFLOAD_POLICY
+#[doc(hidden)] pub const NDIS_OFFLOAD_CONNECTION_REJECTED : HResultError = HResultError::from_constant(0xC0341012); // ERROR_NDIS_OFFLOAD_CONNECTION_REJECTED
+#[doc(hidden)] pub const NDIS_OFFLOAD_PATH_REJECTED : HResultError = HResultError::from_constant(0xC0341013); // ERROR_NDIS_OFFLOAD_PATH_REJECTED
 
 /// The hypervisor does not support the operation because the specified hypercall code is not supported.
-pub const HV_INVALID_HYPERCALL_CODE : ErrorHResult = ErrorHResult::from_constant(0xC0350002); // ERROR_HV_INVALID_HYPERCALL_CODE
+pub const HV_INVALID_HYPERCALL_CODE : HResultError = HResultError::from_constant(0xC0350002); // ERROR_HV_INVALID_HYPERCALL_CODE
 
 /// The hypervisor does not support the operation because the encoding for the hypercall input register is not supported.
-pub const HV_INVALID_HYPERCALL_INPUT : ErrorHResult = ErrorHResult::from_constant(0xC0350003); // ERROR_HV_INVALID_HYPERCALL_INPUT
+pub const HV_INVALID_HYPERCALL_INPUT : HResultError = HResultError::from_constant(0xC0350003); // ERROR_HV_INVALID_HYPERCALL_INPUT
 
 /// The hypervisor could not perform the operation because a parameter has an invalid alignment.
-pub const HV_INVALID_ALIGNMENT : ErrorHResult = ErrorHResult::from_constant(0xC0350004); // ERROR_HV_INVALID_ALIGNMENT
+pub const HV_INVALID_ALIGNMENT : HResultError = HResultError::from_constant(0xC0350004); // ERROR_HV_INVALID_ALIGNMENT
 
 /// The hypervisor could not perform the operation because an invalid parameter was specified.
-pub const HV_INVALID_PARAMETER : ErrorHResult = ErrorHResult::from_constant(0xC0350005); // ERROR_HV_INVALID_PARAMETER
+pub const HV_INVALID_PARAMETER : HResultError = HResultError::from_constant(0xC0350005); // ERROR_HV_INVALID_PARAMETER
 
 /// Access to the specified object was denied.
-pub const HV_ACCESS_DENIED : ErrorHResult = ErrorHResult::from_constant(0xC0350006); // ERROR_HV_ACCESS_DENIED
+pub const HV_ACCESS_DENIED : HResultError = HResultError::from_constant(0xC0350006); // ERROR_HV_ACCESS_DENIED
 
 /// The hypervisor could not perform the operation because the partition is entering or in an invalid state.
-pub const HV_INVALID_PARTITION_STATE : ErrorHResult = ErrorHResult::from_constant(0xC0350007); // ERROR_HV_INVALID_PARTITION_STATE
+pub const HV_INVALID_PARTITION_STATE : HResultError = HResultError::from_constant(0xC0350007); // ERROR_HV_INVALID_PARTITION_STATE
 
 /// The operation is not allowed in the current state.
-pub const HV_OPERATION_DENIED : ErrorHResult = ErrorHResult::from_constant(0xC0350008); // ERROR_HV_OPERATION_DENIED
+pub const HV_OPERATION_DENIED : HResultError = HResultError::from_constant(0xC0350008); // ERROR_HV_OPERATION_DENIED
 
 /// The hypervisor does not recognize the specified partition property.
-pub const HV_UNKNOWN_PROPERTY : ErrorHResult = ErrorHResult::from_constant(0xC0350009); // ERROR_HV_UNKNOWN_PROPERTY
+pub const HV_UNKNOWN_PROPERTY : HResultError = HResultError::from_constant(0xC0350009); // ERROR_HV_UNKNOWN_PROPERTY
 
 /// The specified value of a partition property is out of range or violates an invariant.
-pub const HV_PROPERTY_VALUE_OUT_OF_RANGE : ErrorHResult = ErrorHResult::from_constant(0xC035000A); // ERROR_HV_PROPERTY_VALUE_OUT_OF_RANGE
+pub const HV_PROPERTY_VALUE_OUT_OF_RANGE : HResultError = HResultError::from_constant(0xC035000A); // ERROR_HV_PROPERTY_VALUE_OUT_OF_RANGE
 
 /// There is not enough memory in the hypervisor pool to complete the operation.
-pub const HV_INSUFFICIENT_MEMORY : ErrorHResult = ErrorHResult::from_constant(0xC035000B); // ERROR_HV_INSUFFICIENT_MEMORY
+pub const HV_INSUFFICIENT_MEMORY : HResultError = HResultError::from_constant(0xC035000B); // ERROR_HV_INSUFFICIENT_MEMORY
 
 /// The maximum partition depth has been exceeded for the partition hierarchy.
-pub const HV_PARTITION_TOO_DEEP : ErrorHResult = ErrorHResult::from_constant(0xC035000C); // ERROR_HV_PARTITION_TOO_DEEP
+pub const HV_PARTITION_TOO_DEEP : HResultError = HResultError::from_constant(0xC035000C); // ERROR_HV_PARTITION_TOO_DEEP
 
 /// A partition with the specified partition Id does not exist.
-pub const HV_INVALID_PARTITION_ID : ErrorHResult = ErrorHResult::from_constant(0xC035000D); // ERROR_HV_INVALID_PARTITION_ID
+pub const HV_INVALID_PARTITION_ID : HResultError = HResultError::from_constant(0xC035000D); // ERROR_HV_INVALID_PARTITION_ID
 
 /// The hypervisor could not perform the operation because the specified VP index is invalid.
-pub const HV_INVALID_VP_INDEX : ErrorHResult = ErrorHResult::from_constant(0xC035000E); // ERROR_HV_INVALID_VP_INDEX
+pub const HV_INVALID_VP_INDEX : HResultError = HResultError::from_constant(0xC035000E); // ERROR_HV_INVALID_VP_INDEX
 
 /// The hypervisor could not perform the operation because the specified port identifier is invalid.
-pub const HV_INVALID_PORT_ID : ErrorHResult = ErrorHResult::from_constant(0xC0350011); // ERROR_HV_INVALID_PORT_ID
+pub const HV_INVALID_PORT_ID : HResultError = HResultError::from_constant(0xC0350011); // ERROR_HV_INVALID_PORT_ID
 
 /// The hypervisor could not perform the operation because the specified connection identifier is invalid.
-pub const HV_INVALID_CONNECTION_ID : ErrorHResult = ErrorHResult::from_constant(0xC0350012); // ERROR_HV_INVALID_CONNECTION_ID
+pub const HV_INVALID_CONNECTION_ID : HResultError = HResultError::from_constant(0xC0350012); // ERROR_HV_INVALID_CONNECTION_ID
 
 /// Not enough buffers were supplied to send a message.
-pub const HV_INSUFFICIENT_BUFFERS : ErrorHResult = ErrorHResult::from_constant(0xC0350013); // ERROR_HV_INSUFFICIENT_BUFFERS
+pub const HV_INSUFFICIENT_BUFFERS : HResultError = HResultError::from_constant(0xC0350013); // ERROR_HV_INSUFFICIENT_BUFFERS
 
 /// The previous virtual interrupt has not been acknowledged.
-pub const HV_NOT_ACKNOWLEDGED : ErrorHResult = ErrorHResult::from_constant(0xC0350014); // ERROR_HV_NOT_ACKNOWLEDGED
+pub const HV_NOT_ACKNOWLEDGED : HResultError = HResultError::from_constant(0xC0350014); // ERROR_HV_NOT_ACKNOWLEDGED
 
 /// A virtual processor is not in the correct state for the indicated operation.
-pub const HV_INVALID_VP_STATE : ErrorHResult = ErrorHResult::from_constant(0xC0350015); // ERROR_HV_INVALID_VP_STATE
+pub const HV_INVALID_VP_STATE : HResultError = HResultError::from_constant(0xC0350015); // ERROR_HV_INVALID_VP_STATE
 
 /// The previous virtual interrupt has already been acknowledged.
-pub const HV_ACKNOWLEDGED : ErrorHResult = ErrorHResult::from_constant(0xC0350016); // ERROR_HV_ACKNOWLEDGED
+pub const HV_ACKNOWLEDGED : HResultError = HResultError::from_constant(0xC0350016); // ERROR_HV_ACKNOWLEDGED
 
 /// The indicated partition is not in a valid state for saving or restoring.
-pub const HV_INVALID_SAVE_RESTORE_STATE : ErrorHResult = ErrorHResult::from_constant(0xC0350017); // ERROR_HV_INVALID_SAVE_RESTORE_STATE
+pub const HV_INVALID_SAVE_RESTORE_STATE : HResultError = HResultError::from_constant(0xC0350017); // ERROR_HV_INVALID_SAVE_RESTORE_STATE
 
 /// The hypervisor could not complete the operation because a required feature of the synthetic interrupt controller (SynIC) was disabled.
-pub const HV_INVALID_SYNIC_STATE : ErrorHResult = ErrorHResult::from_constant(0xC0350018); // ERROR_HV_INVALID_SYNIC_STATE
+pub const HV_INVALID_SYNIC_STATE : HResultError = HResultError::from_constant(0xC0350018); // ERROR_HV_INVALID_SYNIC_STATE
 
 /// The hypervisor could not perform the operation because the object or value was either already in use or being used for a purpose that would not permit completing the operation.
-pub const HV_OBJECT_IN_USE : ErrorHResult = ErrorHResult::from_constant(0xC0350019); // ERROR_HV_OBJECT_IN_USE
+pub const HV_OBJECT_IN_USE : HResultError = HResultError::from_constant(0xC0350019); // ERROR_HV_OBJECT_IN_USE
 
 /// The proximity domain information is invalid.
-pub const HV_INVALID_PROXIMITY_DOMAIN_INFO : ErrorHResult = ErrorHResult::from_constant(0xC035001A); // ERROR_HV_INVALID_PROXIMITY_DOMAIN_INFO
+pub const HV_INVALID_PROXIMITY_DOMAIN_INFO : HResultError = HResultError::from_constant(0xC035001A); // ERROR_HV_INVALID_PROXIMITY_DOMAIN_INFO
 
 /// An attempt to retrieve debugging data failed because none was available.
-pub const HV_NO_DATA : ErrorHResult = ErrorHResult::from_constant(0xC035001B); // ERROR_HV_NO_DATA
+pub const HV_NO_DATA : HResultError = HResultError::from_constant(0xC035001B); // ERROR_HV_NO_DATA
 
 /// The physical connection being used for debugging has not recorded any receive activity since the last operation.
-pub const HV_INACTIVE : ErrorHResult = ErrorHResult::from_constant(0xC035001C); // ERROR_HV_INACTIVE
+pub const HV_INACTIVE : HResultError = HResultError::from_constant(0xC035001C); // ERROR_HV_INACTIVE
 
 /// There are not enough resources to complete the operation.
-pub const HV_NO_RESOURCES : ErrorHResult = ErrorHResult::from_constant(0xC035001D); // ERROR_HV_NO_RESOURCES
+pub const HV_NO_RESOURCES : HResultError = HResultError::from_constant(0xC035001D); // ERROR_HV_NO_RESOURCES
 
 /// A hypervisor feature is not available to the user.
-pub const HV_FEATURE_UNAVAILABLE : ErrorHResult = ErrorHResult::from_constant(0xC035001E); // ERROR_HV_FEATURE_UNAVAILABLE
+pub const HV_FEATURE_UNAVAILABLE : HResultError = HResultError::from_constant(0xC035001E); // ERROR_HV_FEATURE_UNAVAILABLE
 
 /// The specified buffer was too small to contain all of the requested data.
-pub const HV_INSUFFICIENT_BUFFER : ErrorHResult = ErrorHResult::from_constant(0xC0350033); // ERROR_HV_INSUFFICIENT_BUFFER
+pub const HV_INSUFFICIENT_BUFFER : HResultError = HResultError::from_constant(0xC0350033); // ERROR_HV_INSUFFICIENT_BUFFER
 
 /// The maximum number of domains supported by the platform I/O remapping hardware is currently in use. No domains are available to assign this device to this partition.
-pub const HV_INSUFFICIENT_DEVICE_DOMAINS : ErrorHResult = ErrorHResult::from_constant(0xC0350038); // ERROR_HV_INSUFFICIENT_DEVICE_DOMAINS
+pub const HV_INSUFFICIENT_DEVICE_DOMAINS : HResultError = HResultError::from_constant(0xC0350038); // ERROR_HV_INSUFFICIENT_DEVICE_DOMAINS
 
 /// Validation of CPUID data of the processor failed.
-pub const HV_CPUID_FEATURE_VALIDATION : ErrorHResult = ErrorHResult::from_constant(0xC035003C); // ERROR_HV_CPUID_FEATURE_VALIDATION
+pub const HV_CPUID_FEATURE_VALIDATION : HResultError = HResultError::from_constant(0xC035003C); // ERROR_HV_CPUID_FEATURE_VALIDATION
 
 /// Validation of XSAVE CPUID data of the processor failed.
-pub const HV_CPUID_XSAVE_FEATURE_VALIDATION : ErrorHResult = ErrorHResult::from_constant(0xC035003D); // ERROR_HV_CPUID_XSAVE_FEATURE_VALIDATION
+pub const HV_CPUID_XSAVE_FEATURE_VALIDATION : HResultError = HResultError::from_constant(0xC035003D); // ERROR_HV_CPUID_XSAVE_FEATURE_VALIDATION
 
 /// Processor did not respond within the timeout period.
-pub const HV_PROCESSOR_STARTUP_TIMEOUT : ErrorHResult = ErrorHResult::from_constant(0xC035003E); // ERROR_HV_PROCESSOR_STARTUP_TIMEOUT
+pub const HV_PROCESSOR_STARTUP_TIMEOUT : HResultError = HResultError::from_constant(0xC035003E); // ERROR_HV_PROCESSOR_STARTUP_TIMEOUT
 
 /// SMX has been enabled in the BIOS.
-pub const HV_SMX_ENABLED : ErrorHResult = ErrorHResult::from_constant(0xC035003F); // ERROR_HV_SMX_ENABLED
+pub const HV_SMX_ENABLED : HResultError = HResultError::from_constant(0xC035003F); // ERROR_HV_SMX_ENABLED
 
 /// The hypervisor could not perform the operation because the specified LP index is invalid.
-pub const HV_INVALID_LP_INDEX : ErrorHResult = ErrorHResult::from_constant(0xC0350041); // ERROR_HV_INVALID_LP_INDEX
+pub const HV_INVALID_LP_INDEX : HResultError = HResultError::from_constant(0xC0350041); // ERROR_HV_INVALID_LP_INDEX
 
 /// The supplied register value is invalid.
-pub const HV_INVALID_REGISTER_VALUE : ErrorHResult = ErrorHResult::from_constant(0xC0350050); // ERROR_HV_INVALID_REGISTER_VALUE
+pub const HV_INVALID_REGISTER_VALUE : HResultError = HResultError::from_constant(0xC0350050); // ERROR_HV_INVALID_REGISTER_VALUE
 
 /// The supplied virtual trust level is not in the correct state to perform the requested operation.
-pub const HV_INVALID_VTL_STATE : ErrorHResult = ErrorHResult::from_constant(0xC0350051); // ERROR_HV_INVALID_VTL_STATE
+pub const HV_INVALID_VTL_STATE : HResultError = HResultError::from_constant(0xC0350051); // ERROR_HV_INVALID_VTL_STATE
 
 /// No execute feature (NX) is not present or not enabled in the BIOS.
-pub const HV_NX_NOT_DETECTED : ErrorHResult = ErrorHResult::from_constant(0xC0350055); // ERROR_HV_NX_NOT_DETECTED
+pub const HV_NX_NOT_DETECTED : HResultError = HResultError::from_constant(0xC0350055); // ERROR_HV_NX_NOT_DETECTED
 
 /// The supplied device ID is invalid.
-pub const HV_INVALID_DEVICE_ID : ErrorHResult = ErrorHResult::from_constant(0xC0350057); // ERROR_HV_INVALID_DEVICE_ID
+pub const HV_INVALID_DEVICE_ID : HResultError = HResultError::from_constant(0xC0350057); // ERROR_HV_INVALID_DEVICE_ID
 
 /// The operation is not allowed in the current device state.
-pub const HV_INVALID_DEVICE_STATE : ErrorHResult = ErrorHResult::from_constant(0xC0350058); // ERROR_HV_INVALID_DEVICE_STATE
+pub const HV_INVALID_DEVICE_STATE : HResultError = HResultError::from_constant(0xC0350058); // ERROR_HV_INVALID_DEVICE_STATE
 
 /// The device had pending page requests which were discarded.
-pub const HV_PENDING_PAGE_REQUESTS : SuccessHResult = SuccessHResult::from_constant(0x00350059); // ERROR_HV_PENDING_PAGE_REQUESTS
+pub const HV_PENDING_PAGE_REQUESTS : HResultSuccess = HResultSuccess::from_constant(0x00350059); // ERROR_HV_PENDING_PAGE_REQUESTS
 
 /// The supplied page request specifies a memory access that the guest does not have permissions to perform.
-pub const HV_PAGE_REQUEST_INVALID : ErrorHResult = ErrorHResult::from_constant(0xC0350060); // ERROR_HV_PAGE_REQUEST_INVALID
+pub const HV_PAGE_REQUEST_INVALID : HResultError = HResultError::from_constant(0xC0350060); // ERROR_HV_PAGE_REQUEST_INVALID
 
 /// A CPU group with the specified CPU group Id does not exist.
-pub const HV_INVALID_CPU_GROUP_ID : ErrorHResult = ErrorHResult::from_constant(0xC035006F); // ERROR_HV_INVALID_CPU_GROUP_ID
+pub const HV_INVALID_CPU_GROUP_ID : HResultError = HResultError::from_constant(0xC035006F); // ERROR_HV_INVALID_CPU_GROUP_ID
 
 /// The hypervisor could not perform the operation because the CPU group is entering or in an invalid state.
-pub const HV_INVALID_CPU_GROUP_STATE : ErrorHResult = ErrorHResult::from_constant(0xC0350070); // ERROR_HV_INVALID_CPU_GROUP_STATE
+pub const HV_INVALID_CPU_GROUP_STATE : HResultError = HResultError::from_constant(0xC0350070); // ERROR_HV_INVALID_CPU_GROUP_STATE
 
 /// The requested operation failed.
-pub const HV_OPERATION_FAILED : ErrorHResult = ErrorHResult::from_constant(0xC0350071); // ERROR_HV_OPERATION_FAILED
+pub const HV_OPERATION_FAILED : HResultError = HResultError::from_constant(0xC0350071); // ERROR_HV_OPERATION_FAILED
 
 /// The hypervisor could not perform the operation because it is not allowed with nested virtualization active.
-pub const HV_NOT_ALLOWED_WITH_NESTED_VIRT_ACTIVE : ErrorHResult = ErrorHResult::from_constant(0xC0350072); // ERROR_HV_NOT_ALLOWED_WITH_NESTED_VIRT_ACTIVE
+pub const HV_NOT_ALLOWED_WITH_NESTED_VIRT_ACTIVE : HResultError = HResultError::from_constant(0xC0350072); // ERROR_HV_NOT_ALLOWED_WITH_NESTED_VIRT_ACTIVE
 
 /// There is not enough memory in the root partition's pool to complete the operation.
-pub const HV_INSUFFICIENT_ROOT_MEMORY : ErrorHResult = ErrorHResult::from_constant(0xC0350073); // ERROR_HV_INSUFFICIENT_ROOT_MEMORY
+pub const HV_INSUFFICIENT_ROOT_MEMORY : HResultError = HResultError::from_constant(0xC0350073); // ERROR_HV_INSUFFICIENT_ROOT_MEMORY
 
 /// The provided event log buffer was already marked as freed.
-pub const HV_EVENT_BUFFER_ALREADY_FREED : ErrorHResult = ErrorHResult::from_constant(0xC0350074); // ERROR_HV_EVENT_BUFFER_ALREADY_FREED
+pub const HV_EVENT_BUFFER_ALREADY_FREED : HResultError = HResultError::from_constant(0xC0350074); // ERROR_HV_EVENT_BUFFER_ALREADY_FREED
 
 /// There is not enough contiguous memory in the partition's pool to complete the operation.
-pub const HV_INSUFFICIENT_CONTIGUOUS_MEMORY : ErrorHResult = ErrorHResult::from_constant(0xC0350075); // ERROR_HV_INSUFFICIENT_CONTIGUOUS_MEMORY
+pub const HV_INSUFFICIENT_CONTIGUOUS_MEMORY : HResultError = HResultError::from_constant(0xC0350075); // ERROR_HV_INSUFFICIENT_CONTIGUOUS_MEMORY
 
 /// No hypervisor is present on this system.
-pub const HV_NOT_PRESENT : ErrorHResult = ErrorHResult::from_constant(0xC0351000); // ERROR_HV_NOT_PRESENT
+pub const HV_NOT_PRESENT : HResultError = HResultError::from_constant(0xC0351000); // ERROR_HV_NOT_PRESENT
 
 /// The handler for the virtualization infrastructure driver is already registered. Restarting the virtual machine may fix the problem. If the problem persists, try restarting the physical computer.
-pub const VID_DUPLICATE_HANDLER : ErrorHResult = ErrorHResult::from_constant(0xC0370001); // ERROR_VID_DUPLICATE_HANDLER
+pub const VID_DUPLICATE_HANDLER : HResultError = HResultError::from_constant(0xC0370001); // ERROR_VID_DUPLICATE_HANDLER
 
 /// The number of registered handlers for the virtualization infrastructure driver exceeded the maximum. Restarting the virtual machine may fix the problem. If the problem persists, try restarting the physical computer.
-pub const VID_TOO_MANY_HANDLERS : ErrorHResult = ErrorHResult::from_constant(0xC0370002); // ERROR_VID_TOO_MANY_HANDLERS
+pub const VID_TOO_MANY_HANDLERS : HResultError = HResultError::from_constant(0xC0370002); // ERROR_VID_TOO_MANY_HANDLERS
 
 /// The message queue for the virtualization infrastructure driver is full and cannot accept new messages. Restarting the virtual machine may fix the problem. If the problem persists, try restarting the physical computer.
-pub const VID_QUEUE_FULL : ErrorHResult = ErrorHResult::from_constant(0xC0370003); // ERROR_VID_QUEUE_FULL
+pub const VID_QUEUE_FULL : HResultError = HResultError::from_constant(0xC0370003); // ERROR_VID_QUEUE_FULL
 
 /// No handler exists to handle the message for the virtualization infrastructure driver. Restarting the virtual machine may fix the problem. If the problem persists, try restarting the physical computer.
-pub const VID_HANDLER_NOT_PRESENT : ErrorHResult = ErrorHResult::from_constant(0xC0370004); // ERROR_VID_HANDLER_NOT_PRESENT
+pub const VID_HANDLER_NOT_PRESENT : HResultError = HResultError::from_constant(0xC0370004); // ERROR_VID_HANDLER_NOT_PRESENT
 
 /// The name of the partition or message queue for the virtualization infrastructure driver is invalid. Restarting the virtual machine may fix the problem. If the problem persists, try restarting the physical computer.
-pub const VID_INVALID_OBJECT_NAME : ErrorHResult = ErrorHResult::from_constant(0xC0370005); // ERROR_VID_INVALID_OBJECT_NAME
+pub const VID_INVALID_OBJECT_NAME : HResultError = HResultError::from_constant(0xC0370005); // ERROR_VID_INVALID_OBJECT_NAME
 
 /// The partition name of the virtualization infrastructure driver exceeds the maximum.
-pub const VID_PARTITION_NAME_TOO_LONG : ErrorHResult = ErrorHResult::from_constant(0xC0370006); // ERROR_VID_PARTITION_NAME_TOO_LONG
+pub const VID_PARTITION_NAME_TOO_LONG : HResultError = HResultError::from_constant(0xC0370006); // ERROR_VID_PARTITION_NAME_TOO_LONG
 
 /// The message queue name of the virtualization infrastructure driver exceeds the maximum.
-pub const VID_MESSAGE_QUEUE_NAME_TOO_LONG : ErrorHResult = ErrorHResult::from_constant(0xC0370007); // ERROR_VID_MESSAGE_QUEUE_NAME_TOO_LONG
+pub const VID_MESSAGE_QUEUE_NAME_TOO_LONG : HResultError = HResultError::from_constant(0xC0370007); // ERROR_VID_MESSAGE_QUEUE_NAME_TOO_LONG
 
 /// Cannot create the partition for the virtualization infrastructure driver because another partition with the same name already exists.
-pub const VID_PARTITION_ALREADY_EXISTS : ErrorHResult = ErrorHResult::from_constant(0xC0370008); // ERROR_VID_PARTITION_ALREADY_EXISTS
+pub const VID_PARTITION_ALREADY_EXISTS : HResultError = HResultError::from_constant(0xC0370008); // ERROR_VID_PARTITION_ALREADY_EXISTS
 
 /// The virtualization infrastructure driver has encountered an error. The requested partition does not exist. Restarting the virtual machine may fix the problem. If the problem persists, try restarting the physical computer.
-pub const VID_PARTITION_DOES_NOT_EXIST : ErrorHResult = ErrorHResult::from_constant(0xC0370009); // ERROR_VID_PARTITION_DOES_NOT_EXIST
+pub const VID_PARTITION_DOES_NOT_EXIST : HResultError = HResultError::from_constant(0xC0370009); // ERROR_VID_PARTITION_DOES_NOT_EXIST
 
 /// The virtualization infrastructure driver has encountered an error. Could not find the requested partition. Restarting the virtual machine may fix the problem. If the problem persists, try restarting the physical computer.
-pub const VID_PARTITION_NAME_NOT_FOUND : ErrorHResult = ErrorHResult::from_constant(0xC037000A); // ERROR_VID_PARTITION_NAME_NOT_FOUND
+pub const VID_PARTITION_NAME_NOT_FOUND : HResultError = HResultError::from_constant(0xC037000A); // ERROR_VID_PARTITION_NAME_NOT_FOUND
 
 /// A message queue with the same name already exists for the virtualization infrastructure driver.
-pub const VID_MESSAGE_QUEUE_ALREADY_EXISTS : ErrorHResult = ErrorHResult::from_constant(0xC037000B); // ERROR_VID_MESSAGE_QUEUE_ALREADY_EXISTS
+pub const VID_MESSAGE_QUEUE_ALREADY_EXISTS : HResultError = HResultError::from_constant(0xC037000B); // ERROR_VID_MESSAGE_QUEUE_ALREADY_EXISTS
 
 /// The memory block page for the virtualization infrastructure driver cannot be mapped because the page map limit has been reached. Restarting the virtual machine may fix the problem. If the problem persists, try restarting the physical computer.
-pub const VID_EXCEEDED_MBP_ENTRY_MAP_LIMIT : ErrorHResult = ErrorHResult::from_constant(0xC037000C); // ERROR_VID_EXCEEDED_MBP_ENTRY_MAP_LIMIT
+pub const VID_EXCEEDED_MBP_ENTRY_MAP_LIMIT : HResultError = HResultError::from_constant(0xC037000C); // ERROR_VID_EXCEEDED_MBP_ENTRY_MAP_LIMIT
 
 /// The memory block for the virtualization infrastructure driver is still being used and cannot be destroyed.
-pub const VID_MB_STILL_REFERENCED : ErrorHResult = ErrorHResult::from_constant(0xC037000D); // ERROR_VID_MB_STILL_REFERENCED
+pub const VID_MB_STILL_REFERENCED : HResultError = HResultError::from_constant(0xC037000D); // ERROR_VID_MB_STILL_REFERENCED
 
 /// Cannot unlock the page array for the guest operating system memory address because it does not match a previous lock request. Restarting the virtual machine may fix the problem. If the problem persists, try restarting the physical computer.
-pub const VID_CHILD_GPA_PAGE_SET_CORRUPTED : ErrorHResult = ErrorHResult::from_constant(0xC037000E); // ERROR_VID_CHILD_GPA_PAGE_SET_CORRUPTED
+pub const VID_CHILD_GPA_PAGE_SET_CORRUPTED : HResultError = HResultError::from_constant(0xC037000E); // ERROR_VID_CHILD_GPA_PAGE_SET_CORRUPTED
 
 /// The non-uniform memory access (NUMA) node settings do not match the system NUMA topology. In order to start the virtual machine, you will need to modify the NUMA configuration.
-pub const VID_INVALID_NUMA_SETTINGS : ErrorHResult = ErrorHResult::from_constant(0xC037000F); // ERROR_VID_INVALID_NUMA_SETTINGS
+pub const VID_INVALID_NUMA_SETTINGS : HResultError = HResultError::from_constant(0xC037000F); // ERROR_VID_INVALID_NUMA_SETTINGS
 
 /// The non-uniform memory access (NUMA) node index does not match a valid index in the system NUMA topology.
-pub const VID_INVALID_NUMA_NODE_INDEX : ErrorHResult = ErrorHResult::from_constant(0xC0370010); // ERROR_VID_INVALID_NUMA_NODE_INDEX
+pub const VID_INVALID_NUMA_NODE_INDEX : HResultError = HResultError::from_constant(0xC0370010); // ERROR_VID_INVALID_NUMA_NODE_INDEX
 
 /// The memory block for the virtualization infrastructure driver is already associated with a message queue.
-pub const VID_NOTIFICATION_QUEUE_ALREADY_ASSOCIATED : ErrorHResult = ErrorHResult::from_constant(0xC0370011); // ERROR_VID_NOTIFICATION_QUEUE_ALREADY_ASSOCIATED
+pub const VID_NOTIFICATION_QUEUE_ALREADY_ASSOCIATED : HResultError = HResultError::from_constant(0xC0370011); // ERROR_VID_NOTIFICATION_QUEUE_ALREADY_ASSOCIATED
 
 /// The handle is not a valid memory block handle for the virtualization infrastructure driver.
-pub const VID_INVALID_MEMORY_BLOCK_HANDLE : ErrorHResult = ErrorHResult::from_constant(0xC0370012); // ERROR_VID_INVALID_MEMORY_BLOCK_HANDLE
+pub const VID_INVALID_MEMORY_BLOCK_HANDLE : HResultError = HResultError::from_constant(0xC0370012); // ERROR_VID_INVALID_MEMORY_BLOCK_HANDLE
 
 /// The request exceeded the memory block page limit for the virtualization infrastructure driver. Restarting the virtual machine may fix the problem. If the problem persists, try restarting the physical computer.
-pub const VID_PAGE_RANGE_OVERFLOW : ErrorHResult = ErrorHResult::from_constant(0xC0370013); // ERROR_VID_PAGE_RANGE_OVERFLOW
+pub const VID_PAGE_RANGE_OVERFLOW : HResultError = HResultError::from_constant(0xC0370013); // ERROR_VID_PAGE_RANGE_OVERFLOW
 
 /// The handle is not a valid message queue handle for the virtualization infrastructure driver.
-pub const VID_INVALID_MESSAGE_QUEUE_HANDLE : ErrorHResult = ErrorHResult::from_constant(0xC0370014); // ERROR_VID_INVALID_MESSAGE_QUEUE_HANDLE
+pub const VID_INVALID_MESSAGE_QUEUE_HANDLE : HResultError = HResultError::from_constant(0xC0370014); // ERROR_VID_INVALID_MESSAGE_QUEUE_HANDLE
 
 /// The handle is not a valid page range handle for the virtualization infrastructure driver.
-pub const VID_INVALID_GPA_RANGE_HANDLE : ErrorHResult = ErrorHResult::from_constant(0xC0370015); // ERROR_VID_INVALID_GPA_RANGE_HANDLE
+pub const VID_INVALID_GPA_RANGE_HANDLE : HResultError = HResultError::from_constant(0xC0370015); // ERROR_VID_INVALID_GPA_RANGE_HANDLE
 
 /// Cannot install client notifications because no message queue for the virtualization infrastructure driver is associated with the memory block.
-pub const VID_NO_MEMORY_BLOCK_NOTIFICATION_QUEUE : ErrorHResult = ErrorHResult::from_constant(0xC0370016); // ERROR_VID_NO_MEMORY_BLOCK_NOTIFICATION_QUEUE
+pub const VID_NO_MEMORY_BLOCK_NOTIFICATION_QUEUE : HResultError = HResultError::from_constant(0xC0370016); // ERROR_VID_NO_MEMORY_BLOCK_NOTIFICATION_QUEUE
 
 /// The request to lock or map a memory block page failed because the virtualization infrastructure driver memory block limit has been reached. Restarting the virtual machine may fix the problem. If the problem persists, try restarting the physical computer.
-pub const VID_MEMORY_BLOCK_LOCK_COUNT_EXCEEDED : ErrorHResult = ErrorHResult::from_constant(0xC0370017); // ERROR_VID_MEMORY_BLOCK_LOCK_COUNT_EXCEEDED
+pub const VID_MEMORY_BLOCK_LOCK_COUNT_EXCEEDED : HResultError = HResultError::from_constant(0xC0370017); // ERROR_VID_MEMORY_BLOCK_LOCK_COUNT_EXCEEDED
 
 /// The handle is not a valid parent partition mapping handle for the virtualization infrastructure driver.
-pub const VID_INVALID_PPM_HANDLE : ErrorHResult = ErrorHResult::from_constant(0xC0370018); // ERROR_VID_INVALID_PPM_HANDLE
+pub const VID_INVALID_PPM_HANDLE : HResultError = HResultError::from_constant(0xC0370018); // ERROR_VID_INVALID_PPM_HANDLE
 
 /// Notifications cannot be created on the memory block because it is use.
-pub const VID_MBPS_ARE_LOCKED : ErrorHResult = ErrorHResult::from_constant(0xC0370019); // ERROR_VID_MBPS_ARE_LOCKED
+pub const VID_MBPS_ARE_LOCKED : HResultError = HResultError::from_constant(0xC0370019); // ERROR_VID_MBPS_ARE_LOCKED
 
 /// The message queue for the virtualization infrastructure driver has been closed. Restarting the virtual machine may fix the problem. If the problem persists, try restarting the physical computer.
-pub const VID_MESSAGE_QUEUE_CLOSED : ErrorHResult = ErrorHResult::from_constant(0xC037001A); // ERROR_VID_MESSAGE_QUEUE_CLOSED
+pub const VID_MESSAGE_QUEUE_CLOSED : HResultError = HResultError::from_constant(0xC037001A); // ERROR_VID_MESSAGE_QUEUE_CLOSED
 
 /// Cannot add a virtual processor to the partition because the maximum has been reached.
-pub const VID_VIRTUAL_PROCESSOR_LIMIT_EXCEEDED : ErrorHResult = ErrorHResult::from_constant(0xC037001B); // ERROR_VID_VIRTUAL_PROCESSOR_LIMIT_EXCEEDED
+pub const VID_VIRTUAL_PROCESSOR_LIMIT_EXCEEDED : HResultError = HResultError::from_constant(0xC037001B); // ERROR_VID_VIRTUAL_PROCESSOR_LIMIT_EXCEEDED
 
 /// Cannot stop the virtual processor immediately because of a pending intercept.
-pub const VID_STOP_PENDING : ErrorHResult = ErrorHResult::from_constant(0xC037001C); // ERROR_VID_STOP_PENDING
+pub const VID_STOP_PENDING : HResultError = HResultError::from_constant(0xC037001C); // ERROR_VID_STOP_PENDING
 
 /// Invalid state for the virtual processor. Restarting the virtual machine may fix the problem. If the problem persists, try restarting the physical computer.
-pub const VID_INVALID_PROCESSOR_STATE : ErrorHResult = ErrorHResult::from_constant(0xC037001D); // ERROR_VID_INVALID_PROCESSOR_STATE
+pub const VID_INVALID_PROCESSOR_STATE : HResultError = HResultError::from_constant(0xC037001D); // ERROR_VID_INVALID_PROCESSOR_STATE
 
 /// The maximum number of kernel mode clients for the virtualization infrastructure driver has been reached. Restarting the virtual machine may fix the problem. If the problem persists, try restarting the physical computer.
-pub const VID_EXCEEDED_KM_CONTEXT_COUNT_LIMIT : ErrorHResult = ErrorHResult::from_constant(0xC037001E); // ERROR_VID_EXCEEDED_KM_CONTEXT_COUNT_LIMIT
+pub const VID_EXCEEDED_KM_CONTEXT_COUNT_LIMIT : HResultError = HResultError::from_constant(0xC037001E); // ERROR_VID_EXCEEDED_KM_CONTEXT_COUNT_LIMIT
 
 /// This kernel mode interface for the virtualization infrastructure driver has already been initialized. Restarting the virtual machine may fix the problem. If the problem persists, try restarting the physical computer.
-pub const VID_KM_INTERFACE_ALREADY_INITIALIZED : ErrorHResult = ErrorHResult::from_constant(0xC037001F); // ERROR_VID_KM_INTERFACE_ALREADY_INITIALIZED
+pub const VID_KM_INTERFACE_ALREADY_INITIALIZED : HResultError = HResultError::from_constant(0xC037001F); // ERROR_VID_KM_INTERFACE_ALREADY_INITIALIZED
 
 /// Cannot set or reset the memory block property more than once for the virtualization infrastructure driver. Restarting the virtual machine may fix the problem. If the problem persists, try restarting the physical computer.
-pub const VID_MB_PROPERTY_ALREADY_SET_RESET : ErrorHResult = ErrorHResult::from_constant(0xC0370020); // ERROR_VID_MB_PROPERTY_ALREADY_SET_RESET
+pub const VID_MB_PROPERTY_ALREADY_SET_RESET : HResultError = HResultError::from_constant(0xC0370020); // ERROR_VID_MB_PROPERTY_ALREADY_SET_RESET
 
 /// The memory mapped I/O for this page range no longer exists. Restarting the virtual machine may fix the problem. If the problem persists, try restarting the physical computer.
-pub const VID_MMIO_RANGE_DESTROYED : ErrorHResult = ErrorHResult::from_constant(0xC0370021); // ERROR_VID_MMIO_RANGE_DESTROYED
+pub const VID_MMIO_RANGE_DESTROYED : HResultError = HResultError::from_constant(0xC0370021); // ERROR_VID_MMIO_RANGE_DESTROYED
 
 /// The lock or unlock request uses an invalid guest operating system memory address. Restarting the virtual machine may fix the problem. If the problem persists, try restarting the physical computer.
-pub const VID_INVALID_CHILD_GPA_PAGE_SET : ErrorHResult = ErrorHResult::from_constant(0xC0370022); // ERROR_VID_INVALID_CHILD_GPA_PAGE_SET
+pub const VID_INVALID_CHILD_GPA_PAGE_SET : HResultError = HResultError::from_constant(0xC0370022); // ERROR_VID_INVALID_CHILD_GPA_PAGE_SET
 
 /// Cannot destroy or reuse the reserve page set for the virtualization infrastructure driver because it is in use. Restarting the virtual machine may fix the problem. If the problem persists, try restarting the physical computer.
-pub const VID_RESERVE_PAGE_SET_IS_BEING_USED : ErrorHResult = ErrorHResult::from_constant(0xC0370023); // ERROR_VID_RESERVE_PAGE_SET_IS_BEING_USED
+pub const VID_RESERVE_PAGE_SET_IS_BEING_USED : HResultError = HResultError::from_constant(0xC0370023); // ERROR_VID_RESERVE_PAGE_SET_IS_BEING_USED
 
 /// The reserve page set for the virtualization infrastructure driver is too small to use in the lock request. Restarting the virtual machine may fix the problem. If the problem persists, try restarting the physical computer.
-pub const VID_RESERVE_PAGE_SET_TOO_SMALL : ErrorHResult = ErrorHResult::from_constant(0xC0370024); // ERROR_VID_RESERVE_PAGE_SET_TOO_SMALL
+pub const VID_RESERVE_PAGE_SET_TOO_SMALL : HResultError = HResultError::from_constant(0xC0370024); // ERROR_VID_RESERVE_PAGE_SET_TOO_SMALL
 
 /// Cannot lock or map the memory block page for the virtualization infrastructure driver because it has already been locked using a reserve page set page. Restarting the virtual machine may fix the problem. If the problem persists, try restarting the physical computer.
-pub const VID_MBP_ALREADY_LOCKED_USING_RESERVED_PAGE : ErrorHResult = ErrorHResult::from_constant(0xC0370025); // ERROR_VID_MBP_ALREADY_LOCKED_USING_RESERVED_PAGE
+pub const VID_MBP_ALREADY_LOCKED_USING_RESERVED_PAGE : HResultError = HResultError::from_constant(0xC0370025); // ERROR_VID_MBP_ALREADY_LOCKED_USING_RESERVED_PAGE
 
 /// Cannot create the memory block for the virtualization infrastructure driver because the requested number of pages exceeded the limit. Restarting the virtual machine may fix the problem. If the problem persists, try restarting the physical computer.
-pub const VID_MBP_COUNT_EXCEEDED_LIMIT : ErrorHResult = ErrorHResult::from_constant(0xC0370026); // ERROR_VID_MBP_COUNT_EXCEEDED_LIMIT
+pub const VID_MBP_COUNT_EXCEEDED_LIMIT : HResultError = HResultError::from_constant(0xC0370026); // ERROR_VID_MBP_COUNT_EXCEEDED_LIMIT
 
 /// Cannot restore this virtual machine because the saved state data cannot be read. Delete the saved state data and then try to start the virtual machine.
-pub const VID_SAVED_STATE_CORRUPT : ErrorHResult = ErrorHResult::from_constant(0xC0370027); // ERROR_VID_SAVED_STATE_CORRUPT
+pub const VID_SAVED_STATE_CORRUPT : HResultError = HResultError::from_constant(0xC0370027); // ERROR_VID_SAVED_STATE_CORRUPT
 
 /// Cannot restore this virtual machine because an item read from the saved state data is not recognized. Delete the saved state data and then try to start the virtual machine.
-pub const VID_SAVED_STATE_UNRECOGNIZED_ITEM : ErrorHResult = ErrorHResult::from_constant(0xC0370028); // ERROR_VID_SAVED_STATE_UNRECOGNIZED_ITEM
+pub const VID_SAVED_STATE_UNRECOGNIZED_ITEM : HResultError = HResultError::from_constant(0xC0370028); // ERROR_VID_SAVED_STATE_UNRECOGNIZED_ITEM
 
 /// Cannot restore this virtual machine to the saved state because of hypervisor incompatibility. Delete the saved state data and then try to start the virtual machine.
-pub const VID_SAVED_STATE_INCOMPATIBLE : ErrorHResult = ErrorHResult::from_constant(0xC0370029); // ERROR_VID_SAVED_STATE_INCOMPATIBLE
+pub const VID_SAVED_STATE_INCOMPATIBLE : HResultError = HResultError::from_constant(0xC0370029); // ERROR_VID_SAVED_STATE_INCOMPATIBLE
 
 /// The specified VTL does not have the permission to access the resource.
-pub const VID_VTL_ACCESS_DENIED : ErrorHResult = ErrorHResult::from_constant(0xC037002A); // ERROR_VID_VTL_ACCESS_DENIED
+pub const VID_VTL_ACCESS_DENIED : HResultError = HResultError::from_constant(0xC037002A); // ERROR_VID_VTL_ACCESS_DENIED
 
 /// The virtual machine or container exited unexpectedly while starting.
-pub const VMCOMPUTE_TERMINATED_DURING_START : ErrorHResult = ErrorHResult::from_constant(0xC0370100); // ERROR_VMCOMPUTE_TERMINATED_DURING_START
+pub const VMCOMPUTE_TERMINATED_DURING_START : HResultError = HResultError::from_constant(0xC0370100); // ERROR_VMCOMPUTE_TERMINATED_DURING_START
 
 /// The container operating system does not match the host operating system.
-pub const VMCOMPUTE_IMAGE_MISMATCH : ErrorHResult = ErrorHResult::from_constant(0xC0370101); // ERROR_VMCOMPUTE_IMAGE_MISMATCH
+pub const VMCOMPUTE_IMAGE_MISMATCH : HResultError = HResultError::from_constant(0xC0370101); // ERROR_VMCOMPUTE_IMAGE_MISMATCH
 
 /// The virtual machine could not be started because a required feature is not installed.
-pub const VMCOMPUTE_HYPERV_NOT_INSTALLED : ErrorHResult = ErrorHResult::from_constant(0xC0370102); // ERROR_VMCOMPUTE_HYPERV_NOT_INSTALLED
+pub const VMCOMPUTE_HYPERV_NOT_INSTALLED : HResultError = HResultError::from_constant(0xC0370102); // ERROR_VMCOMPUTE_HYPERV_NOT_INSTALLED
 
 /// The call to start an asynchronous operation succeeded and the operation is performed in the background.
-pub const VMCOMPUTE_OPERATION_PENDING : ErrorHResult = ErrorHResult::from_constant(0xC0370103); // ERROR_VMCOMPUTE_OPERATION_PENDING
+pub const VMCOMPUTE_OPERATION_PENDING : HResultError = HResultError::from_constant(0xC0370103); // ERROR_VMCOMPUTE_OPERATION_PENDING
 
 /// The supported number of notification callbacks has been exceeded.
-pub const VMCOMPUTE_TOO_MANY_NOTIFICATIONS : ErrorHResult = ErrorHResult::from_constant(0xC0370104); // ERROR_VMCOMPUTE_TOO_MANY_NOTIFICATIONS
+pub const VMCOMPUTE_TOO_MANY_NOTIFICATIONS : HResultError = HResultError::from_constant(0xC0370104); // ERROR_VMCOMPUTE_TOO_MANY_NOTIFICATIONS
 
 /// The requested virtual machine or container operation is not valid in the current state.
-pub const VMCOMPUTE_INVALID_STATE : ErrorHResult = ErrorHResult::from_constant(0xC0370105); // ERROR_VMCOMPUTE_INVALID_STATE
+pub const VMCOMPUTE_INVALID_STATE : HResultError = HResultError::from_constant(0xC0370105); // ERROR_VMCOMPUTE_INVALID_STATE
 
 /// The virtual machine or container exited unexpectedly.
-pub const VMCOMPUTE_UNEXPECTED_EXIT : ErrorHResult = ErrorHResult::from_constant(0xC0370106); // ERROR_VMCOMPUTE_UNEXPECTED_EXIT
+pub const VMCOMPUTE_UNEXPECTED_EXIT : HResultError = HResultError::from_constant(0xC0370106); // ERROR_VMCOMPUTE_UNEXPECTED_EXIT
 
 /// The virtual machine or container was forcefully exited.
-pub const VMCOMPUTE_TERMINATED : ErrorHResult = ErrorHResult::from_constant(0xC0370107); // ERROR_VMCOMPUTE_TERMINATED
+pub const VMCOMPUTE_TERMINATED : HResultError = HResultError::from_constant(0xC0370107); // ERROR_VMCOMPUTE_TERMINATED
 
 /// A connection could not be established with the container or virtual machine.
-pub const VMCOMPUTE_CONNECT_FAILED : ErrorHResult = ErrorHResult::from_constant(0xC0370108); // ERROR_VMCOMPUTE_CONNECT_FAILED
+pub const VMCOMPUTE_CONNECT_FAILED : HResultError = HResultError::from_constant(0xC0370108); // ERROR_VMCOMPUTE_CONNECT_FAILED
 
 /// The operation timed out because a response was not received from the virtual machine or container.
-pub const VMCOMPUTE_TIMEOUT : ErrorHResult = ErrorHResult::from_constant(0xC0370109); // ERROR_VMCOMPUTE_TIMEOUT
+pub const VMCOMPUTE_TIMEOUT : HResultError = HResultError::from_constant(0xC0370109); // ERROR_VMCOMPUTE_TIMEOUT
 
 /// The connection with the virtual machine or container was closed.
-pub const VMCOMPUTE_CONNECTION_CLOSED : ErrorHResult = ErrorHResult::from_constant(0xC037010A); // ERROR_VMCOMPUTE_CONNECTION_CLOSED
+pub const VMCOMPUTE_CONNECTION_CLOSED : HResultError = HResultError::from_constant(0xC037010A); // ERROR_VMCOMPUTE_CONNECTION_CLOSED
 
 /// An unknown internal message was received by the virtual machine or container.
-pub const VMCOMPUTE_UNKNOWN_MESSAGE : ErrorHResult = ErrorHResult::from_constant(0xC037010B); // ERROR_VMCOMPUTE_UNKNOWN_MESSAGE
+pub const VMCOMPUTE_UNKNOWN_MESSAGE : HResultError = HResultError::from_constant(0xC037010B); // ERROR_VMCOMPUTE_UNKNOWN_MESSAGE
 
 /// The virtual machine or container does not support an available version of the communication protocol with the host.
-pub const VMCOMPUTE_UNSUPPORTED_PROTOCOL_VERSION : ErrorHResult = ErrorHResult::from_constant(0xC037010C); // ERROR_VMCOMPUTE_UNSUPPORTED_PROTOCOL_VERSION
+pub const VMCOMPUTE_UNSUPPORTED_PROTOCOL_VERSION : HResultError = HResultError::from_constant(0xC037010C); // ERROR_VMCOMPUTE_UNSUPPORTED_PROTOCOL_VERSION
 
 /// The virtual machine or container JSON document is invalid.
-pub const VMCOMPUTE_INVALID_JSON : ErrorHResult = ErrorHResult::from_constant(0xC037010D); // ERROR_VMCOMPUTE_INVALID_JSON
+pub const VMCOMPUTE_INVALID_JSON : HResultError = HResultError::from_constant(0xC037010D); // ERROR_VMCOMPUTE_INVALID_JSON
 
 /// A virtual machine or container with the specified identifier does not exist.
-pub const VMCOMPUTE_SYSTEM_NOT_FOUND : ErrorHResult = ErrorHResult::from_constant(0xC037010E); // ERROR_VMCOMPUTE_SYSTEM_NOT_FOUND
+pub const VMCOMPUTE_SYSTEM_NOT_FOUND : HResultError = HResultError::from_constant(0xC037010E); // ERROR_VMCOMPUTE_SYSTEM_NOT_FOUND
 
 /// A virtual machine or container with the specified identifier already exists.
-pub const VMCOMPUTE_SYSTEM_ALREADY_EXISTS : ErrorHResult = ErrorHResult::from_constant(0xC037010F); // ERROR_VMCOMPUTE_SYSTEM_ALREADY_EXISTS
+pub const VMCOMPUTE_SYSTEM_ALREADY_EXISTS : HResultError = HResultError::from_constant(0xC037010F); // ERROR_VMCOMPUTE_SYSTEM_ALREADY_EXISTS
 
 /// The virtual machine or container with the specified identifier is not running.
-pub const VMCOMPUTE_SYSTEM_ALREADY_STOPPED : ErrorHResult = ErrorHResult::from_constant(0xC0370110); // ERROR_VMCOMPUTE_SYSTEM_ALREADY_STOPPED
+pub const VMCOMPUTE_SYSTEM_ALREADY_STOPPED : HResultError = HResultError::from_constant(0xC0370110); // ERROR_VMCOMPUTE_SYSTEM_ALREADY_STOPPED
 
 /// A communication protocol error has occurred between the virtual machine or container and the host.
-pub const VMCOMPUTE_PROTOCOL_ERROR : ErrorHResult = ErrorHResult::from_constant(0xC0370111); // ERROR_VMCOMPUTE_PROTOCOL_ERROR
+pub const VMCOMPUTE_PROTOCOL_ERROR : HResultError = HResultError::from_constant(0xC0370111); // ERROR_VMCOMPUTE_PROTOCOL_ERROR
 
 /// The container image contains a layer with an unrecognized format.
-pub const VMCOMPUTE_INVALID_LAYER : ErrorHResult = ErrorHResult::from_constant(0xC0370112); // ERROR_VMCOMPUTE_INVALID_LAYER
+pub const VMCOMPUTE_INVALID_LAYER : HResultError = HResultError::from_constant(0xC0370112); // ERROR_VMCOMPUTE_INVALID_LAYER
 
 /// To use this container image, you must join the Windows Insider Program. Please see <https://go.microsoft.com/fwlink/?linkid=850659> for more information.
-pub const VMCOMPUTE_WINDOWS_INSIDER_REQUIRED : ErrorHResult = ErrorHResult::from_constant(0xC0370113); // ERROR_VMCOMPUTE_WINDOWS_INSIDER_REQUIRED
+pub const VMCOMPUTE_WINDOWS_INSIDER_REQUIRED : HResultError = HResultError::from_constant(0xC0370113); // ERROR_VMCOMPUTE_WINDOWS_INSIDER_REQUIRED
 
 /// A virtual switch with the given name was not found.
-pub const VNET_VIRTUAL_SWITCH_NAME_NOT_FOUND : ErrorHResult = ErrorHResult::from_constant(0xC0370200); // ERROR_VNET_VIRTUAL_SWITCH_NAME_NOT_FOUND
+pub const VNET_VIRTUAL_SWITCH_NAME_NOT_FOUND : HResultError = HResultError::from_constant(0xC0370200); // ERROR_VNET_VIRTUAL_SWITCH_NAME_NOT_FOUND
 
 /// A virtual machine is running with its memory allocated across multiple NUMA nodes. This does not indicate a problem unless the performance of your virtual machine is unusually slow. If you are experiencing performance problems, you may need to modify the NUMA configuration.
-pub const VID_REMOTE_NODE_PARENT_GPA_PAGES_USED : ErrorHResult = ErrorHResult::from_constant(0x80370001); // ERROR_VID_REMOTE_NODE_PARENT_GPA_PAGES_USED
+pub const VID_REMOTE_NODE_PARENT_GPA_PAGES_USED : HResultError = HResultError::from_constant(0x80370001); // ERROR_VID_REMOTE_NODE_PARENT_GPA_PAGES_USED
 
 /// Cannot restore this virtual machine because a file read from the vSMB saved state data could not be found. Delete the saved state data and then try to start the virtual machine.
-pub const VSMB_SAVED_STATE_FILE_NOT_FOUND : ErrorHResult = ErrorHResult::from_constant(0xC0370400); // ERROR_VSMB_SAVED_STATE_FILE_NOT_FOUND
+pub const VSMB_SAVED_STATE_FILE_NOT_FOUND : HResultError = HResultError::from_constant(0xC0370400); // ERROR_VSMB_SAVED_STATE_FILE_NOT_FOUND
 
 /// Cannot restore this virtual machine because the vSMB saved state data cannot be read. Delete the saved state data and then try to start the virtual machine.
-pub const VSMB_SAVED_STATE_CORRUPT : ErrorHResult = ErrorHResult::from_constant(0xC0370401); // ERROR_VSMB_SAVED_STATE_CORRUPT
+pub const VSMB_SAVED_STATE_CORRUPT : HResultError = HResultError::from_constant(0xC0370401); // ERROR_VSMB_SAVED_STATE_CORRUPT
 
 /// The regeneration operation was not able to copy all data from the active plexes due to bad sectors.
-pub const VOLMGR_INCOMPLETE_REGENERATION : ErrorHResult = ErrorHResult::from_constant(0x80380001); // ERROR_VOLMGR_INCOMPLETE_REGENERATION
+pub const VOLMGR_INCOMPLETE_REGENERATION : HResultError = HResultError::from_constant(0x80380001); // ERROR_VOLMGR_INCOMPLETE_REGENERATION
 
 /// One or more disks were not fully migrated to the target pack. They may or may not require reimport after fixing the hardware problems.
-pub const VOLMGR_INCOMPLETE_DISK_MIGRATION : ErrorHResult = ErrorHResult::from_constant(0x80380002); // ERROR_VOLMGR_INCOMPLETE_DISK_MIGRATION
+pub const VOLMGR_INCOMPLETE_DISK_MIGRATION : HResultError = HResultError::from_constant(0x80380002); // ERROR_VOLMGR_INCOMPLETE_DISK_MIGRATION
 
 /// The configuration database is full.
-pub const VOLMGR_DATABASE_FULL : ErrorHResult = ErrorHResult::from_constant(0xC0380001); // ERROR_VOLMGR_DATABASE_FULL
+pub const VOLMGR_DATABASE_FULL : HResultError = HResultError::from_constant(0xC0380001); // ERROR_VOLMGR_DATABASE_FULL
 
 /// The configuration data on the disk is corrupted.
-pub const VOLMGR_DISK_CONFIGURATION_CORRUPTED : ErrorHResult = ErrorHResult::from_constant(0xC0380002); // ERROR_VOLMGR_DISK_CONFIGURATION_CORRUPTED
+pub const VOLMGR_DISK_CONFIGURATION_CORRUPTED : HResultError = HResultError::from_constant(0xC0380002); // ERROR_VOLMGR_DISK_CONFIGURATION_CORRUPTED
 
 /// The configuration on the disk is not insync with the in-memory configuration.
-pub const VOLMGR_DISK_CONFIGURATION_NOT_IN_SYNC : ErrorHResult = ErrorHResult::from_constant(0xC0380003); // ERROR_VOLMGR_DISK_CONFIGURATION_NOT_IN_SYNC
+pub const VOLMGR_DISK_CONFIGURATION_NOT_IN_SYNC : HResultError = HResultError::from_constant(0xC0380003); // ERROR_VOLMGR_DISK_CONFIGURATION_NOT_IN_SYNC
 
 /// A majority of disks failed to be updated with the new configuration.
-pub const VOLMGR_PACK_CONFIG_UPDATE_FAILED : ErrorHResult = ErrorHResult::from_constant(0xC0380004); // ERROR_VOLMGR_PACK_CONFIG_UPDATE_FAILED
+pub const VOLMGR_PACK_CONFIG_UPDATE_FAILED : HResultError = HResultError::from_constant(0xC0380004); // ERROR_VOLMGR_PACK_CONFIG_UPDATE_FAILED
 
 /// The disk contains non-simple volumes.
-pub const VOLMGR_DISK_CONTAINS_NON_SIMPLE_VOLUME : ErrorHResult = ErrorHResult::from_constant(0xC0380005); // ERROR_VOLMGR_DISK_CONTAINS_NON_SIMPLE_VOLUME
+pub const VOLMGR_DISK_CONTAINS_NON_SIMPLE_VOLUME : HResultError = HResultError::from_constant(0xC0380005); // ERROR_VOLMGR_DISK_CONTAINS_NON_SIMPLE_VOLUME
 
 /// The same disk was specified more than once in the migration list.
-pub const VOLMGR_DISK_DUPLICATE : ErrorHResult = ErrorHResult::from_constant(0xC0380006); // ERROR_VOLMGR_DISK_DUPLICATE
+pub const VOLMGR_DISK_DUPLICATE : HResultError = HResultError::from_constant(0xC0380006); // ERROR_VOLMGR_DISK_DUPLICATE
 
 /// The disk is already dynamic.
-pub const VOLMGR_DISK_DYNAMIC : ErrorHResult = ErrorHResult::from_constant(0xC0380007); // ERROR_VOLMGR_DISK_DYNAMIC
+pub const VOLMGR_DISK_DYNAMIC : HResultError = HResultError::from_constant(0xC0380007); // ERROR_VOLMGR_DISK_DYNAMIC
 
 /// The specified disk id is invalid. There are no disks with the specified disk id.
-pub const VOLMGR_DISK_ID_INVALID : ErrorHResult = ErrorHResult::from_constant(0xC0380008); // ERROR_VOLMGR_DISK_ID_INVALID
+pub const VOLMGR_DISK_ID_INVALID : HResultError = HResultError::from_constant(0xC0380008); // ERROR_VOLMGR_DISK_ID_INVALID
 
 /// The specified disk is an invalid disk. Operation cannot complete on an invalid disk.
-pub const VOLMGR_DISK_INVALID : ErrorHResult = ErrorHResult::from_constant(0xC0380009); // ERROR_VOLMGR_DISK_INVALID
+pub const VOLMGR_DISK_INVALID : HResultError = HResultError::from_constant(0xC0380009); // ERROR_VOLMGR_DISK_INVALID
 
 /// The specified disk(s) cannot be removed since it is the last remaining voter.
-pub const VOLMGR_DISK_LAST_VOTER : ErrorHResult = ErrorHResult::from_constant(0xC038000A); // ERROR_VOLMGR_DISK_LAST_VOTER
+pub const VOLMGR_DISK_LAST_VOTER : HResultError = HResultError::from_constant(0xC038000A); // ERROR_VOLMGR_DISK_LAST_VOTER
 
 /// The specified disk has an invalid disk layout.
-pub const VOLMGR_DISK_LAYOUT_INVALID : ErrorHResult = ErrorHResult::from_constant(0xC038000B); // ERROR_VOLMGR_DISK_LAYOUT_INVALID
+pub const VOLMGR_DISK_LAYOUT_INVALID : HResultError = HResultError::from_constant(0xC038000B); // ERROR_VOLMGR_DISK_LAYOUT_INVALID
 
 /// The disk layout contains non-basic partitions which appear after basic partitions. This is an invalid disk layout.
-pub const VOLMGR_DISK_LAYOUT_NON_BASIC_BETWEEN_BASIC_PARTITIONS : ErrorHResult = ErrorHResult::from_constant(0xC038000C); // ERROR_VOLMGR_DISK_LAYOUT_NON_BASIC_BETWEEN_BASIC_PARTITIONS
+pub const VOLMGR_DISK_LAYOUT_NON_BASIC_BETWEEN_BASIC_PARTITIONS : HResultError = HResultError::from_constant(0xC038000C); // ERROR_VOLMGR_DISK_LAYOUT_NON_BASIC_BETWEEN_BASIC_PARTITIONS
 
 /// The disk layout contains partitions which are not cylinder aligned.
-pub const VOLMGR_DISK_LAYOUT_NOT_CYLINDER_ALIGNED : ErrorHResult = ErrorHResult::from_constant(0xC038000D); // ERROR_VOLMGR_DISK_LAYOUT_NOT_CYLINDER_ALIGNED
+pub const VOLMGR_DISK_LAYOUT_NOT_CYLINDER_ALIGNED : HResultError = HResultError::from_constant(0xC038000D); // ERROR_VOLMGR_DISK_LAYOUT_NOT_CYLINDER_ALIGNED
 
 /// The disk layout contains partitions which are smaller than the minimum size.
-pub const VOLMGR_DISK_LAYOUT_PARTITIONS_TOO_SMALL : ErrorHResult = ErrorHResult::from_constant(0xC038000E); // ERROR_VOLMGR_DISK_LAYOUT_PARTITIONS_TOO_SMALL
+pub const VOLMGR_DISK_LAYOUT_PARTITIONS_TOO_SMALL : HResultError = HResultError::from_constant(0xC038000E); // ERROR_VOLMGR_DISK_LAYOUT_PARTITIONS_TOO_SMALL
 
 /// The disk layout contains primary partitions in between logical drives. This is an invalid disk layout.
-pub const VOLMGR_DISK_LAYOUT_PRIMARY_BETWEEN_LOGICAL_PARTITIONS : ErrorHResult = ErrorHResult::from_constant(0xC038000F); // ERROR_VOLMGR_DISK_LAYOUT_PRIMARY_BETWEEN_LOGICAL_PARTITIONS
+pub const VOLMGR_DISK_LAYOUT_PRIMARY_BETWEEN_LOGICAL_PARTITIONS : HResultError = HResultError::from_constant(0xC038000F); // ERROR_VOLMGR_DISK_LAYOUT_PRIMARY_BETWEEN_LOGICAL_PARTITIONS
 
 /// The disk layout contains more than the maximum number of supported partitions.
-pub const VOLMGR_DISK_LAYOUT_TOO_MANY_PARTITIONS : ErrorHResult = ErrorHResult::from_constant(0xC0380010); // ERROR_VOLMGR_DISK_LAYOUT_TOO_MANY_PARTITIONS
+pub const VOLMGR_DISK_LAYOUT_TOO_MANY_PARTITIONS : HResultError = HResultError::from_constant(0xC0380010); // ERROR_VOLMGR_DISK_LAYOUT_TOO_MANY_PARTITIONS
 
 /// The specified disk is missing. The operation cannot complete on a missing disk.
-pub const VOLMGR_DISK_MISSING : ErrorHResult = ErrorHResult::from_constant(0xC0380011); // ERROR_VOLMGR_DISK_MISSING
+pub const VOLMGR_DISK_MISSING : HResultError = HResultError::from_constant(0xC0380011); // ERROR_VOLMGR_DISK_MISSING
 
 /// The specified disk is not empty.
-pub const VOLMGR_DISK_NOT_EMPTY : ErrorHResult = ErrorHResult::from_constant(0xC0380012); // ERROR_VOLMGR_DISK_NOT_EMPTY
+pub const VOLMGR_DISK_NOT_EMPTY : HResultError = HResultError::from_constant(0xC0380012); // ERROR_VOLMGR_DISK_NOT_EMPTY
 
 /// There is not enough usable space for this operation.
-pub const VOLMGR_DISK_NOT_ENOUGH_SPACE : ErrorHResult = ErrorHResult::from_constant(0xC0380013); // ERROR_VOLMGR_DISK_NOT_ENOUGH_SPACE
+pub const VOLMGR_DISK_NOT_ENOUGH_SPACE : HResultError = HResultError::from_constant(0xC0380013); // ERROR_VOLMGR_DISK_NOT_ENOUGH_SPACE
 
 /// The force revectoring of bad sectors failed.
-pub const VOLMGR_DISK_REVECTORING_FAILED : ErrorHResult = ErrorHResult::from_constant(0xC0380014); // ERROR_VOLMGR_DISK_REVECTORING_FAILED
+pub const VOLMGR_DISK_REVECTORING_FAILED : HResultError = HResultError::from_constant(0xC0380014); // ERROR_VOLMGR_DISK_REVECTORING_FAILED
 
 /// The specified disk has an invalid sector size.
-pub const VOLMGR_DISK_SECTOR_SIZE_INVALID : ErrorHResult = ErrorHResult::from_constant(0xC0380015); // ERROR_VOLMGR_DISK_SECTOR_SIZE_INVALID
+pub const VOLMGR_DISK_SECTOR_SIZE_INVALID : HResultError = HResultError::from_constant(0xC0380015); // ERROR_VOLMGR_DISK_SECTOR_SIZE_INVALID
 
 /// The specified disk set contains volumes which exist on disks outside of the set.
-pub const VOLMGR_DISK_SET_NOT_CONTAINED : ErrorHResult = ErrorHResult::from_constant(0xC0380016); // ERROR_VOLMGR_DISK_SET_NOT_CONTAINED
+pub const VOLMGR_DISK_SET_NOT_CONTAINED : HResultError = HResultError::from_constant(0xC0380016); // ERROR_VOLMGR_DISK_SET_NOT_CONTAINED
 
 /// A disk in the volume layout provides extents to more than one member of a plex.
-pub const VOLMGR_DISK_USED_BY_MULTIPLE_MEMBERS : ErrorHResult = ErrorHResult::from_constant(0xC0380017); // ERROR_VOLMGR_DISK_USED_BY_MULTIPLE_MEMBERS
+pub const VOLMGR_DISK_USED_BY_MULTIPLE_MEMBERS : HResultError = HResultError::from_constant(0xC0380017); // ERROR_VOLMGR_DISK_USED_BY_MULTIPLE_MEMBERS
 
 /// A disk in the volume layout provides extents to more than one plex.
-pub const VOLMGR_DISK_USED_BY_MULTIPLE_PLEXES : ErrorHResult = ErrorHResult::from_constant(0xC0380018); // ERROR_VOLMGR_DISK_USED_BY_MULTIPLE_PLEXES
+pub const VOLMGR_DISK_USED_BY_MULTIPLE_PLEXES : HResultError = HResultError::from_constant(0xC0380018); // ERROR_VOLMGR_DISK_USED_BY_MULTIPLE_PLEXES
 
 /// Dynamic disks are not supported on this system.
-pub const VOLMGR_DYNAMIC_DISK_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0xC0380019); // ERROR_VOLMGR_DYNAMIC_DISK_NOT_SUPPORTED
+pub const VOLMGR_DYNAMIC_DISK_NOT_SUPPORTED : HResultError = HResultError::from_constant(0xC0380019); // ERROR_VOLMGR_DYNAMIC_DISK_NOT_SUPPORTED
 
 /// The specified extent is already used by other volumes.
-pub const VOLMGR_EXTENT_ALREADY_USED : ErrorHResult = ErrorHResult::from_constant(0xC038001A); // ERROR_VOLMGR_EXTENT_ALREADY_USED
+pub const VOLMGR_EXTENT_ALREADY_USED : HResultError = HResultError::from_constant(0xC038001A); // ERROR_VOLMGR_EXTENT_ALREADY_USED
 
 /// The specified volume is retained and can only be extended into a contiguous extent. The specified extent to grow the volume is not contiguous with the specified volume.
-pub const VOLMGR_EXTENT_NOT_CONTIGUOUS : ErrorHResult = ErrorHResult::from_constant(0xC038001B); // ERROR_VOLMGR_EXTENT_NOT_CONTIGUOUS
+pub const VOLMGR_EXTENT_NOT_CONTIGUOUS : HResultError = HResultError::from_constant(0xC038001B); // ERROR_VOLMGR_EXTENT_NOT_CONTIGUOUS
 
 /// The specified volume extent is not within the public region of the disk.
-pub const VOLMGR_EXTENT_NOT_IN_PUBLIC_REGION : ErrorHResult = ErrorHResult::from_constant(0xC038001C); // ERROR_VOLMGR_EXTENT_NOT_IN_PUBLIC_REGION
+pub const VOLMGR_EXTENT_NOT_IN_PUBLIC_REGION : HResultError = HResultError::from_constant(0xC038001C); // ERROR_VOLMGR_EXTENT_NOT_IN_PUBLIC_REGION
 
 /// The specified volume extent is not sector aligned.
-pub const VOLMGR_EXTENT_NOT_SECTOR_ALIGNED : ErrorHResult = ErrorHResult::from_constant(0xC038001D); // ERROR_VOLMGR_EXTENT_NOT_SECTOR_ALIGNED
+pub const VOLMGR_EXTENT_NOT_SECTOR_ALIGNED : HResultError = HResultError::from_constant(0xC038001D); // ERROR_VOLMGR_EXTENT_NOT_SECTOR_ALIGNED
 
 /// The specified partition overlaps an EBR (the first track of an extended partition on an MBR disk).
-pub const VOLMGR_EXTENT_OVERLAPS_EBR_PARTITION : ErrorHResult = ErrorHResult::from_constant(0xC038001E); // ERROR_VOLMGR_EXTENT_OVERLAPS_EBR_PARTITION
+pub const VOLMGR_EXTENT_OVERLAPS_EBR_PARTITION : HResultError = HResultError::from_constant(0xC038001E); // ERROR_VOLMGR_EXTENT_OVERLAPS_EBR_PARTITION
 
 /// The specified extent lengths cannot be used to construct a volume with specified length.
-pub const VOLMGR_EXTENT_VOLUME_LENGTHS_DO_NOT_MATCH : ErrorHResult = ErrorHResult::from_constant(0xC038001F); // ERROR_VOLMGR_EXTENT_VOLUME_LENGTHS_DO_NOT_MATCH
+pub const VOLMGR_EXTENT_VOLUME_LENGTHS_DO_NOT_MATCH : HResultError = HResultError::from_constant(0xC038001F); // ERROR_VOLMGR_EXTENT_VOLUME_LENGTHS_DO_NOT_MATCH
 
 /// The system does not support fault tolerant volumes.
-pub const VOLMGR_FAULT_TOLERANT_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0xC0380020); // ERROR_VOLMGR_FAULT_TOLERANT_NOT_SUPPORTED
+pub const VOLMGR_FAULT_TOLERANT_NOT_SUPPORTED : HResultError = HResultError::from_constant(0xC0380020); // ERROR_VOLMGR_FAULT_TOLERANT_NOT_SUPPORTED
 
 /// The specified interleave length is invalid.
-pub const VOLMGR_INTERLEAVE_LENGTH_INVALID : ErrorHResult = ErrorHResult::from_constant(0xC0380021); // ERROR_VOLMGR_INTERLEAVE_LENGTH_INVALID
+pub const VOLMGR_INTERLEAVE_LENGTH_INVALID : HResultError = HResultError::from_constant(0xC0380021); // ERROR_VOLMGR_INTERLEAVE_LENGTH_INVALID
 
 /// There is already a maximum number of registered users.
-pub const VOLMGR_MAXIMUM_REGISTERED_USERS : ErrorHResult = ErrorHResult::from_constant(0xC0380022); // ERROR_VOLMGR_MAXIMUM_REGISTERED_USERS
+pub const VOLMGR_MAXIMUM_REGISTERED_USERS : HResultError = HResultError::from_constant(0xC0380022); // ERROR_VOLMGR_MAXIMUM_REGISTERED_USERS
 
 /// The specified member is already in-sync with the other active members. It does not need to be regenerated.
-pub const VOLMGR_MEMBER_IN_SYNC : ErrorHResult = ErrorHResult::from_constant(0xC0380023); // ERROR_VOLMGR_MEMBER_IN_SYNC
+pub const VOLMGR_MEMBER_IN_SYNC : HResultError = HResultError::from_constant(0xC0380023); // ERROR_VOLMGR_MEMBER_IN_SYNC
 
 /// The same member index was specified more than once.
-pub const VOLMGR_MEMBER_INDEX_DUPLICATE : ErrorHResult = ErrorHResult::from_constant(0xC0380024); // ERROR_VOLMGR_MEMBER_INDEX_DUPLICATE
+pub const VOLMGR_MEMBER_INDEX_DUPLICATE : HResultError = HResultError::from_constant(0xC0380024); // ERROR_VOLMGR_MEMBER_INDEX_DUPLICATE
 
 /// The specified member index is greater or equal than the number of members in the volume plex.
-pub const VOLMGR_MEMBER_INDEX_INVALID : ErrorHResult = ErrorHResult::from_constant(0xC0380025); // ERROR_VOLMGR_MEMBER_INDEX_INVALID
+pub const VOLMGR_MEMBER_INDEX_INVALID : HResultError = HResultError::from_constant(0xC0380025); // ERROR_VOLMGR_MEMBER_INDEX_INVALID
 
 /// The specified member is missing. It cannot be regenerated.
-pub const VOLMGR_MEMBER_MISSING : ErrorHResult = ErrorHResult::from_constant(0xC0380026); // ERROR_VOLMGR_MEMBER_MISSING
+pub const VOLMGR_MEMBER_MISSING : HResultError = HResultError::from_constant(0xC0380026); // ERROR_VOLMGR_MEMBER_MISSING
 
 /// The specified member is not detached. Cannot replace a member which is not detached.
-pub const VOLMGR_MEMBER_NOT_DETACHED : ErrorHResult = ErrorHResult::from_constant(0xC0380027); // ERROR_VOLMGR_MEMBER_NOT_DETACHED
+pub const VOLMGR_MEMBER_NOT_DETACHED : HResultError = HResultError::from_constant(0xC0380027); // ERROR_VOLMGR_MEMBER_NOT_DETACHED
 
 /// The specified member is already regenerating.
-pub const VOLMGR_MEMBER_REGENERATING : ErrorHResult = ErrorHResult::from_constant(0xC0380028); // ERROR_VOLMGR_MEMBER_REGENERATING
+pub const VOLMGR_MEMBER_REGENERATING : HResultError = HResultError::from_constant(0xC0380028); // ERROR_VOLMGR_MEMBER_REGENERATING
 
 /// All disks belonging to the pack failed.
-pub const VOLMGR_ALL_DISKS_FAILED : ErrorHResult = ErrorHResult::from_constant(0xC0380029); // ERROR_VOLMGR_ALL_DISKS_FAILED
+pub const VOLMGR_ALL_DISKS_FAILED : HResultError = HResultError::from_constant(0xC0380029); // ERROR_VOLMGR_ALL_DISKS_FAILED
 
 /// There are currently no registered users for notifications. The task number is irrelevant unless there are registered users.
-pub const VOLMGR_NO_REGISTERED_USERS : ErrorHResult = ErrorHResult::from_constant(0xC038002A); // ERROR_VOLMGR_NO_REGISTERED_USERS
+pub const VOLMGR_NO_REGISTERED_USERS : HResultError = HResultError::from_constant(0xC038002A); // ERROR_VOLMGR_NO_REGISTERED_USERS
 
 /// The specified notification user does not exist. Failed to unregister user for notifications.
-pub const VOLMGR_NO_SUCH_USER : ErrorHResult = ErrorHResult::from_constant(0xC038002B); // ERROR_VOLMGR_NO_SUCH_USER
+pub const VOLMGR_NO_SUCH_USER : HResultError = HResultError::from_constant(0xC038002B); // ERROR_VOLMGR_NO_SUCH_USER
 
 /// The notifications have been reset. Notifications for the current user are invalid. Unregister and re-register for notifications.
-pub const VOLMGR_NOTIFICATION_RESET : ErrorHResult = ErrorHResult::from_constant(0xC038002C); // ERROR_VOLMGR_NOTIFICATION_RESET
+pub const VOLMGR_NOTIFICATION_RESET : HResultError = HResultError::from_constant(0xC038002C); // ERROR_VOLMGR_NOTIFICATION_RESET
 
 /// The specified number of members is invalid.
-pub const VOLMGR_NUMBER_OF_MEMBERS_INVALID : ErrorHResult = ErrorHResult::from_constant(0xC038002D); // ERROR_VOLMGR_NUMBER_OF_MEMBERS_INVALID
+pub const VOLMGR_NUMBER_OF_MEMBERS_INVALID : HResultError = HResultError::from_constant(0xC038002D); // ERROR_VOLMGR_NUMBER_OF_MEMBERS_INVALID
 
 /// The specified number of plexes is invalid.
-pub const VOLMGR_NUMBER_OF_PLEXES_INVALID : ErrorHResult = ErrorHResult::from_constant(0xC038002E); // ERROR_VOLMGR_NUMBER_OF_PLEXES_INVALID
+pub const VOLMGR_NUMBER_OF_PLEXES_INVALID : HResultError = HResultError::from_constant(0xC038002E); // ERROR_VOLMGR_NUMBER_OF_PLEXES_INVALID
 
 /// The specified source and target packs are identical.
-pub const VOLMGR_PACK_DUPLICATE : ErrorHResult = ErrorHResult::from_constant(0xC038002F); // ERROR_VOLMGR_PACK_DUPLICATE
+pub const VOLMGR_PACK_DUPLICATE : HResultError = HResultError::from_constant(0xC038002F); // ERROR_VOLMGR_PACK_DUPLICATE
 
 /// The specified pack id is invalid. There are no packs with the specified pack id.
-pub const VOLMGR_PACK_ID_INVALID : ErrorHResult = ErrorHResult::from_constant(0xC0380030); // ERROR_VOLMGR_PACK_ID_INVALID
+pub const VOLMGR_PACK_ID_INVALID : HResultError = HResultError::from_constant(0xC0380030); // ERROR_VOLMGR_PACK_ID_INVALID
 
 /// The specified pack is the invalid pack. The operation cannot complete with the invalid pack.
-pub const VOLMGR_PACK_INVALID : ErrorHResult = ErrorHResult::from_constant(0xC0380031); // ERROR_VOLMGR_PACK_INVALID
+pub const VOLMGR_PACK_INVALID : HResultError = HResultError::from_constant(0xC0380031); // ERROR_VOLMGR_PACK_INVALID
 
 /// The specified pack name is invalid.
-pub const VOLMGR_PACK_NAME_INVALID : ErrorHResult = ErrorHResult::from_constant(0xC0380032); // ERROR_VOLMGR_PACK_NAME_INVALID
+pub const VOLMGR_PACK_NAME_INVALID : HResultError = HResultError::from_constant(0xC0380032); // ERROR_VOLMGR_PACK_NAME_INVALID
 
 /// The specified pack is offline.
-pub const VOLMGR_PACK_OFFLINE : ErrorHResult = ErrorHResult::from_constant(0xC0380033); // ERROR_VOLMGR_PACK_OFFLINE
+pub const VOLMGR_PACK_OFFLINE : HResultError = HResultError::from_constant(0xC0380033); // ERROR_VOLMGR_PACK_OFFLINE
 
 /// The specified pack already has a quorum of healthy disks.
-pub const VOLMGR_PACK_HAS_QUORUM : ErrorHResult = ErrorHResult::from_constant(0xC0380034); // ERROR_VOLMGR_PACK_HAS_QUORUM
+pub const VOLMGR_PACK_HAS_QUORUM : HResultError = HResultError::from_constant(0xC0380034); // ERROR_VOLMGR_PACK_HAS_QUORUM
 
 /// The pack does not have a quorum of healthy disks.
-pub const VOLMGR_PACK_WITHOUT_QUORUM : ErrorHResult = ErrorHResult::from_constant(0xC0380035); // ERROR_VOLMGR_PACK_WITHOUT_QUORUM
+pub const VOLMGR_PACK_WITHOUT_QUORUM : HResultError = HResultError::from_constant(0xC0380035); // ERROR_VOLMGR_PACK_WITHOUT_QUORUM
 
 /// The specified disk has an unsupported partition style. Only MBR and GPT partition styles are supported.
-pub const VOLMGR_PARTITION_STYLE_INVALID : ErrorHResult = ErrorHResult::from_constant(0xC0380036); // ERROR_VOLMGR_PARTITION_STYLE_INVALID
+pub const VOLMGR_PARTITION_STYLE_INVALID : HResultError = HResultError::from_constant(0xC0380036); // ERROR_VOLMGR_PARTITION_STYLE_INVALID
 
 /// Failed to update the disk's partition layout.
-pub const VOLMGR_PARTITION_UPDATE_FAILED : ErrorHResult = ErrorHResult::from_constant(0xC0380037); // ERROR_VOLMGR_PARTITION_UPDATE_FAILED
+pub const VOLMGR_PARTITION_UPDATE_FAILED : HResultError = HResultError::from_constant(0xC0380037); // ERROR_VOLMGR_PARTITION_UPDATE_FAILED
 
 /// The specified plex is already in-sync with the other active plexes. It does not need to be regenerated.
-pub const VOLMGR_PLEX_IN_SYNC : ErrorHResult = ErrorHResult::from_constant(0xC0380038); // ERROR_VOLMGR_PLEX_IN_SYNC
+pub const VOLMGR_PLEX_IN_SYNC : HResultError = HResultError::from_constant(0xC0380038); // ERROR_VOLMGR_PLEX_IN_SYNC
 
 /// The same plex index was specified more than once.
-pub const VOLMGR_PLEX_INDEX_DUPLICATE : ErrorHResult = ErrorHResult::from_constant(0xC0380039); // ERROR_VOLMGR_PLEX_INDEX_DUPLICATE
+pub const VOLMGR_PLEX_INDEX_DUPLICATE : HResultError = HResultError::from_constant(0xC0380039); // ERROR_VOLMGR_PLEX_INDEX_DUPLICATE
 
 /// The specified plex index is greater or equal than the number of plexes in the volume.
-pub const VOLMGR_PLEX_INDEX_INVALID : ErrorHResult = ErrorHResult::from_constant(0xC038003A); // ERROR_VOLMGR_PLEX_INDEX_INVALID
+pub const VOLMGR_PLEX_INDEX_INVALID : HResultError = HResultError::from_constant(0xC038003A); // ERROR_VOLMGR_PLEX_INDEX_INVALID
 
 /// The specified plex is the last active plex in the volume. The plex cannot be removed or else the volume will go offline.
-pub const VOLMGR_PLEX_LAST_ACTIVE : ErrorHResult = ErrorHResult::from_constant(0xC038003B); // ERROR_VOLMGR_PLEX_LAST_ACTIVE
+pub const VOLMGR_PLEX_LAST_ACTIVE : HResultError = HResultError::from_constant(0xC038003B); // ERROR_VOLMGR_PLEX_LAST_ACTIVE
 
 /// The specified plex is missing.
-pub const VOLMGR_PLEX_MISSING : ErrorHResult = ErrorHResult::from_constant(0xC038003C); // ERROR_VOLMGR_PLEX_MISSING
+pub const VOLMGR_PLEX_MISSING : HResultError = HResultError::from_constant(0xC038003C); // ERROR_VOLMGR_PLEX_MISSING
 
 /// The specified plex is currently regenerating.
-pub const VOLMGR_PLEX_REGENERATING : ErrorHResult = ErrorHResult::from_constant(0xC038003D); // ERROR_VOLMGR_PLEX_REGENERATING
+pub const VOLMGR_PLEX_REGENERATING : HResultError = HResultError::from_constant(0xC038003D); // ERROR_VOLMGR_PLEX_REGENERATING
 
 /// The specified plex type is invalid.
-pub const VOLMGR_PLEX_TYPE_INVALID : ErrorHResult = ErrorHResult::from_constant(0xC038003E); // ERROR_VOLMGR_PLEX_TYPE_INVALID
+pub const VOLMGR_PLEX_TYPE_INVALID : HResultError = HResultError::from_constant(0xC038003E); // ERROR_VOLMGR_PLEX_TYPE_INVALID
 
 /// The operation is only supported on RAID-5 plexes.
-pub const VOLMGR_PLEX_NOT_RAID5 : ErrorHResult = ErrorHResult::from_constant(0xC038003F); // ERROR_VOLMGR_PLEX_NOT_RAID5
+pub const VOLMGR_PLEX_NOT_RAID5 : HResultError = HResultError::from_constant(0xC038003F); // ERROR_VOLMGR_PLEX_NOT_RAID5
 
 /// The operation is only supported on simple plexes.
-pub const VOLMGR_PLEX_NOT_SIMPLE : ErrorHResult = ErrorHResult::from_constant(0xC0380040); // ERROR_VOLMGR_PLEX_NOT_SIMPLE
+pub const VOLMGR_PLEX_NOT_SIMPLE : HResultError = HResultError::from_constant(0xC0380040); // ERROR_VOLMGR_PLEX_NOT_SIMPLE
 
 /// The Size fields in the VM_VOLUME_LAYOUT input structure are incorrectly set.
-pub const VOLMGR_STRUCTURE_SIZE_INVALID : ErrorHResult = ErrorHResult::from_constant(0xC0380041); // ERROR_VOLMGR_STRUCTURE_SIZE_INVALID
+pub const VOLMGR_STRUCTURE_SIZE_INVALID : HResultError = HResultError::from_constant(0xC0380041); // ERROR_VOLMGR_STRUCTURE_SIZE_INVALID
 
 /// There is already a pending request for notifications. Wait for the existing request to return before requesting for more notifications.
-pub const VOLMGR_TOO_MANY_NOTIFICATION_REQUESTS : ErrorHResult = ErrorHResult::from_constant(0xC0380042); // ERROR_VOLMGR_TOO_MANY_NOTIFICATION_REQUESTS
+pub const VOLMGR_TOO_MANY_NOTIFICATION_REQUESTS : HResultError = HResultError::from_constant(0xC0380042); // ERROR_VOLMGR_TOO_MANY_NOTIFICATION_REQUESTS
 
 /// There is currently a transaction in process.
-pub const VOLMGR_TRANSACTION_IN_PROGRESS : ErrorHResult = ErrorHResult::from_constant(0xC0380043); // ERROR_VOLMGR_TRANSACTION_IN_PROGRESS
+pub const VOLMGR_TRANSACTION_IN_PROGRESS : HResultError = HResultError::from_constant(0xC0380043); // ERROR_VOLMGR_TRANSACTION_IN_PROGRESS
 
 /// An unexpected layout change occurred outside of the volume manager.
-pub const VOLMGR_UNEXPECTED_DISK_LAYOUT_CHANGE : ErrorHResult = ErrorHResult::from_constant(0xC0380044); // ERROR_VOLMGR_UNEXPECTED_DISK_LAYOUT_CHANGE
+pub const VOLMGR_UNEXPECTED_DISK_LAYOUT_CHANGE : HResultError = HResultError::from_constant(0xC0380044); // ERROR_VOLMGR_UNEXPECTED_DISK_LAYOUT_CHANGE
 
 /// The specified volume contains a missing disk.
-pub const VOLMGR_VOLUME_CONTAINS_MISSING_DISK : ErrorHResult = ErrorHResult::from_constant(0xC0380045); // ERROR_VOLMGR_VOLUME_CONTAINS_MISSING_DISK
+pub const VOLMGR_VOLUME_CONTAINS_MISSING_DISK : HResultError = HResultError::from_constant(0xC0380045); // ERROR_VOLMGR_VOLUME_CONTAINS_MISSING_DISK
 
 /// The specified volume id is invalid. There are no volumes with the specified volume id.
-pub const VOLMGR_VOLUME_ID_INVALID : ErrorHResult = ErrorHResult::from_constant(0xC0380046); // ERROR_VOLMGR_VOLUME_ID_INVALID
+pub const VOLMGR_VOLUME_ID_INVALID : HResultError = HResultError::from_constant(0xC0380046); // ERROR_VOLMGR_VOLUME_ID_INVALID
 
 /// The specified volume length is invalid.
-pub const VOLMGR_VOLUME_LENGTH_INVALID : ErrorHResult = ErrorHResult::from_constant(0xC0380047); // ERROR_VOLMGR_VOLUME_LENGTH_INVALID
+pub const VOLMGR_VOLUME_LENGTH_INVALID : HResultError = HResultError::from_constant(0xC0380047); // ERROR_VOLMGR_VOLUME_LENGTH_INVALID
 
 /// The specified size for the volume is not a multiple of the sector size.
-pub const VOLMGR_VOLUME_LENGTH_NOT_SECTOR_SIZE_MULTIPLE : ErrorHResult = ErrorHResult::from_constant(0xC0380048); // ERROR_VOLMGR_VOLUME_LENGTH_NOT_SECTOR_SIZE_MULTIPLE
+pub const VOLMGR_VOLUME_LENGTH_NOT_SECTOR_SIZE_MULTIPLE : HResultError = HResultError::from_constant(0xC0380048); // ERROR_VOLMGR_VOLUME_LENGTH_NOT_SECTOR_SIZE_MULTIPLE
 
 /// The operation is only supported on mirrored volumes.
-pub const VOLMGR_VOLUME_NOT_MIRRORED : ErrorHResult = ErrorHResult::from_constant(0xC0380049); // ERROR_VOLMGR_VOLUME_NOT_MIRRORED
+pub const VOLMGR_VOLUME_NOT_MIRRORED : HResultError = HResultError::from_constant(0xC0380049); // ERROR_VOLMGR_VOLUME_NOT_MIRRORED
 
 /// The specified volume does not have a retain partition.
-pub const VOLMGR_VOLUME_NOT_RETAINED : ErrorHResult = ErrorHResult::from_constant(0xC038004A); // ERROR_VOLMGR_VOLUME_NOT_RETAINED
+pub const VOLMGR_VOLUME_NOT_RETAINED : HResultError = HResultError::from_constant(0xC038004A); // ERROR_VOLMGR_VOLUME_NOT_RETAINED
 
 /// The specified volume is offline.
-pub const VOLMGR_VOLUME_OFFLINE : ErrorHResult = ErrorHResult::from_constant(0xC038004B); // ERROR_VOLMGR_VOLUME_OFFLINE
+pub const VOLMGR_VOLUME_OFFLINE : HResultError = HResultError::from_constant(0xC038004B); // ERROR_VOLMGR_VOLUME_OFFLINE
 
 /// The specified volume already has a retain partition.
-pub const VOLMGR_VOLUME_RETAINED : ErrorHResult = ErrorHResult::from_constant(0xC038004C); // ERROR_VOLMGR_VOLUME_RETAINED
+pub const VOLMGR_VOLUME_RETAINED : HResultError = HResultError::from_constant(0xC038004C); // ERROR_VOLMGR_VOLUME_RETAINED
 
 /// The specified number of extents is invalid.
-pub const VOLMGR_NUMBER_OF_EXTENTS_INVALID : ErrorHResult = ErrorHResult::from_constant(0xC038004D); // ERROR_VOLMGR_NUMBER_OF_EXTENTS_INVALID
+pub const VOLMGR_NUMBER_OF_EXTENTS_INVALID : HResultError = HResultError::from_constant(0xC038004D); // ERROR_VOLMGR_NUMBER_OF_EXTENTS_INVALID
 
 /// All disks participating to the volume must have the same sector size.
-pub const VOLMGR_DIFFERENT_SECTOR_SIZE : ErrorHResult = ErrorHResult::from_constant(0xC038004E); // ERROR_VOLMGR_DIFFERENT_SECTOR_SIZE
+pub const VOLMGR_DIFFERENT_SECTOR_SIZE : HResultError = HResultError::from_constant(0xC038004E); // ERROR_VOLMGR_DIFFERENT_SECTOR_SIZE
 
 /// The boot disk experienced failures.
-pub const VOLMGR_BAD_BOOT_DISK : ErrorHResult = ErrorHResult::from_constant(0xC038004F); // ERROR_VOLMGR_BAD_BOOT_DISK
+pub const VOLMGR_BAD_BOOT_DISK : HResultError = HResultError::from_constant(0xC038004F); // ERROR_VOLMGR_BAD_BOOT_DISK
 
 /// The configuration of the pack is offline.
-pub const VOLMGR_PACK_CONFIG_OFFLINE : ErrorHResult = ErrorHResult::from_constant(0xC0380050); // ERROR_VOLMGR_PACK_CONFIG_OFFLINE
+pub const VOLMGR_PACK_CONFIG_OFFLINE : HResultError = HResultError::from_constant(0xC0380050); // ERROR_VOLMGR_PACK_CONFIG_OFFLINE
 
 /// The configuration of the pack is online.
-pub const VOLMGR_PACK_CONFIG_ONLINE : ErrorHResult = ErrorHResult::from_constant(0xC0380051); // ERROR_VOLMGR_PACK_CONFIG_ONLINE
+pub const VOLMGR_PACK_CONFIG_ONLINE : HResultError = HResultError::from_constant(0xC0380051); // ERROR_VOLMGR_PACK_CONFIG_ONLINE
 
 /// The specified pack is not the primary pack.
-pub const VOLMGR_NOT_PRIMARY_PACK : ErrorHResult = ErrorHResult::from_constant(0xC0380052); // ERROR_VOLMGR_NOT_PRIMARY_PACK
+pub const VOLMGR_NOT_PRIMARY_PACK : HResultError = HResultError::from_constant(0xC0380052); // ERROR_VOLMGR_NOT_PRIMARY_PACK
 
 /// All disks failed to be updated with the new content of the log.
-pub const VOLMGR_PACK_LOG_UPDATE_FAILED : ErrorHResult = ErrorHResult::from_constant(0xC0380053); // ERROR_VOLMGR_PACK_LOG_UPDATE_FAILED
+pub const VOLMGR_PACK_LOG_UPDATE_FAILED : HResultError = HResultError::from_constant(0xC0380053); // ERROR_VOLMGR_PACK_LOG_UPDATE_FAILED
 
 /// The specified number of disks in a plex is invalid.
-pub const VOLMGR_NUMBER_OF_DISKS_IN_PLEX_INVALID : ErrorHResult = ErrorHResult::from_constant(0xC0380054); // ERROR_VOLMGR_NUMBER_OF_DISKS_IN_PLEX_INVALID
+pub const VOLMGR_NUMBER_OF_DISKS_IN_PLEX_INVALID : HResultError = HResultError::from_constant(0xC0380054); // ERROR_VOLMGR_NUMBER_OF_DISKS_IN_PLEX_INVALID
 
 /// The specified number of disks in a plex member is invalid.
-pub const VOLMGR_NUMBER_OF_DISKS_IN_MEMBER_INVALID : ErrorHResult = ErrorHResult::from_constant(0xC0380055); // ERROR_VOLMGR_NUMBER_OF_DISKS_IN_MEMBER_INVALID
+pub const VOLMGR_NUMBER_OF_DISKS_IN_MEMBER_INVALID : HResultError = HResultError::from_constant(0xC0380055); // ERROR_VOLMGR_NUMBER_OF_DISKS_IN_MEMBER_INVALID
 
 /// The operation is not supported on mirrored volumes.
-pub const VOLMGR_VOLUME_MIRRORED : ErrorHResult = ErrorHResult::from_constant(0xC0380056); // ERROR_VOLMGR_VOLUME_MIRRORED
+pub const VOLMGR_VOLUME_MIRRORED : HResultError = HResultError::from_constant(0xC0380056); // ERROR_VOLMGR_VOLUME_MIRRORED
 
 /// The operation is only supported on simple and spanned plexes.
-pub const VOLMGR_PLEX_NOT_SIMPLE_SPANNED : ErrorHResult = ErrorHResult::from_constant(0xC0380057); // ERROR_VOLMGR_PLEX_NOT_SIMPLE_SPANNED
+pub const VOLMGR_PLEX_NOT_SIMPLE_SPANNED : HResultError = HResultError::from_constant(0xC0380057); // ERROR_VOLMGR_PLEX_NOT_SIMPLE_SPANNED
 
 /// The pack has no valid log copies.
-pub const VOLMGR_NO_VALID_LOG_COPIES : ErrorHResult = ErrorHResult::from_constant(0xC0380058); // ERROR_VOLMGR_NO_VALID_LOG_COPIES
+pub const VOLMGR_NO_VALID_LOG_COPIES : HResultError = HResultError::from_constant(0xC0380058); // ERROR_VOLMGR_NO_VALID_LOG_COPIES
 
 /// A primary pack is already present.
-pub const VOLMGR_PRIMARY_PACK_PRESENT : ErrorHResult = ErrorHResult::from_constant(0xC0380059); // ERROR_VOLMGR_PRIMARY_PACK_PRESENT
+pub const VOLMGR_PRIMARY_PACK_PRESENT : HResultError = HResultError::from_constant(0xC0380059); // ERROR_VOLMGR_PRIMARY_PACK_PRESENT
 
 /// The specified number of disks is invalid.
-pub const VOLMGR_NUMBER_OF_DISKS_INVALID : ErrorHResult = ErrorHResult::from_constant(0xC038005A); // ERROR_VOLMGR_NUMBER_OF_DISKS_INVALID
+pub const VOLMGR_NUMBER_OF_DISKS_INVALID : HResultError = HResultError::from_constant(0xC038005A); // ERROR_VOLMGR_NUMBER_OF_DISKS_INVALID
 
 /// The system does not support mirrored volumes.
-pub const VOLMGR_MIRROR_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0xC038005B); // ERROR_VOLMGR_MIRROR_NOT_SUPPORTED
+pub const VOLMGR_MIRROR_NOT_SUPPORTED : HResultError = HResultError::from_constant(0xC038005B); // ERROR_VOLMGR_MIRROR_NOT_SUPPORTED
 
 /// The system does not support RAID-5 volumes.
-pub const VOLMGR_RAID5_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0xC038005C); // ERROR_VOLMGR_RAID5_NOT_SUPPORTED
+pub const VOLMGR_RAID5_NOT_SUPPORTED : HResultError = HResultError::from_constant(0xC038005C); // ERROR_VOLMGR_RAID5_NOT_SUPPORTED
 
 /// Some BCD entries were not imported correctly from the BCD store.
-pub const BCD_NOT_ALL_ENTRIES_IMPORTED : ErrorHResult = ErrorHResult::from_constant(0x80390001); // ERROR_BCD_NOT_ALL_ENTRIES_IMPORTED
+pub const BCD_NOT_ALL_ENTRIES_IMPORTED : HResultError = HResultError::from_constant(0x80390001); // ERROR_BCD_NOT_ALL_ENTRIES_IMPORTED
 
 /// Entries enumerated have exceeded the allowed threshold.
-pub const BCD_TOO_MANY_ELEMENTS : ErrorHResult = ErrorHResult::from_constant(0xC0390002); // ERROR_BCD_TOO_MANY_ELEMENTS
+pub const BCD_TOO_MANY_ELEMENTS : HResultError = HResultError::from_constant(0xC0390002); // ERROR_BCD_TOO_MANY_ELEMENTS
 
 /// Some BCD entries were not synchronized correctly with the firmware.
-pub const BCD_NOT_ALL_ENTRIES_SYNCHRONIZED : ErrorHResult = ErrorHResult::from_constant(0x80390003); // ERROR_BCD_NOT_ALL_ENTRIES_SYNCHRONIZED
+pub const BCD_NOT_ALL_ENTRIES_SYNCHRONIZED : HResultError = HResultError::from_constant(0x80390003); // ERROR_BCD_NOT_ALL_ENTRIES_SYNCHRONIZED
 
-#[doc(hidden)] pub const VHD_DRIVE_FOOTER_MISSING : ErrorHResult = ErrorHResult::from_constant(0xC03A0001); // ERROR_VHD_DRIVE_FOOTER_MISSING
-#[doc(hidden)] pub const VHD_DRIVE_FOOTER_CHECKSUM_MISMATCH : ErrorHResult = ErrorHResult::from_constant(0xC03A0002); // ERROR_VHD_DRIVE_FOOTER_CHECKSUM_MISMATCH
-#[doc(hidden)] pub const VHD_DRIVE_FOOTER_CORRUPT : ErrorHResult = ErrorHResult::from_constant(0xC03A0003); // ERROR_VHD_DRIVE_FOOTER_CORRUPT
-#[doc(hidden)] pub const VHD_FORMAT_UNKNOWN : ErrorHResult = ErrorHResult::from_constant(0xC03A0004); // ERROR_VHD_FORMAT_UNKNOWN
-#[doc(hidden)] pub const VHD_FORMAT_UNSUPPORTED_VERSION : ErrorHResult = ErrorHResult::from_constant(0xC03A0005); // ERROR_VHD_FORMAT_UNSUPPORTED_VERSION
-#[doc(hidden)] pub const VHD_SPARSE_HEADER_CHECKSUM_MISMATCH : ErrorHResult = ErrorHResult::from_constant(0xC03A0006); // ERROR_VHD_SPARSE_HEADER_CHECKSUM_MISMATCH
-#[doc(hidden)] pub const VHD_SPARSE_HEADER_UNSUPPORTED_VERSION : ErrorHResult = ErrorHResult::from_constant(0xC03A0007); // ERROR_VHD_SPARSE_HEADER_UNSUPPORTED_VERSION
-#[doc(hidden)] pub const VHD_SPARSE_HEADER_CORRUPT : ErrorHResult = ErrorHResult::from_constant(0xC03A0008); // ERROR_VHD_SPARSE_HEADER_CORRUPT
-#[doc(hidden)] pub const VHD_BLOCK_ALLOCATION_FAILURE : ErrorHResult = ErrorHResult::from_constant(0xC03A0009); // ERROR_VHD_BLOCK_ALLOCATION_FAILURE
-#[doc(hidden)] pub const VHD_BLOCK_ALLOCATION_TABLE_CORRUPT : ErrorHResult = ErrorHResult::from_constant(0xC03A000A); // ERROR_VHD_BLOCK_ALLOCATION_TABLE_CORRUPT
-#[doc(hidden)] pub const VHD_INVALID_BLOCK_SIZE : ErrorHResult = ErrorHResult::from_constant(0xC03A000B); // ERROR_VHD_INVALID_BLOCK_SIZE
-#[doc(hidden)] pub const VHD_BITMAP_MISMATCH : ErrorHResult = ErrorHResult::from_constant(0xC03A000C); // ERROR_VHD_BITMAP_MISMATCH
-#[doc(hidden)] pub const VHD_PARENT_VHD_NOT_FOUND : ErrorHResult = ErrorHResult::from_constant(0xC03A000D); // ERROR_VHD_PARENT_VHD_NOT_FOUND
-#[doc(hidden)] pub const VHD_CHILD_PARENT_ID_MISMATCH : ErrorHResult = ErrorHResult::from_constant(0xC03A000E); // ERROR_VHD_CHILD_PARENT_ID_MISMATCH
-#[doc(hidden)] pub const VHD_CHILD_PARENT_TIMESTAMP_MISMATCH : ErrorHResult = ErrorHResult::from_constant(0xC03A000F); // ERROR_VHD_CHILD_PARENT_TIMESTAMP_MISMATCH
-#[doc(hidden)] pub const VHD_METADATA_READ_FAILURE : ErrorHResult = ErrorHResult::from_constant(0xC03A0010); // ERROR_VHD_METADATA_READ_FAILURE
-#[doc(hidden)] pub const VHD_METADATA_WRITE_FAILURE : ErrorHResult = ErrorHResult::from_constant(0xC03A0011); // ERROR_VHD_METADATA_WRITE_FAILURE
-#[doc(hidden)] pub const VHD_INVALID_SIZE : ErrorHResult = ErrorHResult::from_constant(0xC03A0012); // ERROR_VHD_INVALID_SIZE
-#[doc(hidden)] pub const VHD_INVALID_FILE_SIZE : ErrorHResult = ErrorHResult::from_constant(0xC03A0013); // ERROR_VHD_INVALID_FILE_SIZE
+#[doc(hidden)] pub const VHD_DRIVE_FOOTER_MISSING : HResultError = HResultError::from_constant(0xC03A0001); // ERROR_VHD_DRIVE_FOOTER_MISSING
+#[doc(hidden)] pub const VHD_DRIVE_FOOTER_CHECKSUM_MISMATCH : HResultError = HResultError::from_constant(0xC03A0002); // ERROR_VHD_DRIVE_FOOTER_CHECKSUM_MISMATCH
+#[doc(hidden)] pub const VHD_DRIVE_FOOTER_CORRUPT : HResultError = HResultError::from_constant(0xC03A0003); // ERROR_VHD_DRIVE_FOOTER_CORRUPT
+#[doc(hidden)] pub const VHD_FORMAT_UNKNOWN : HResultError = HResultError::from_constant(0xC03A0004); // ERROR_VHD_FORMAT_UNKNOWN
+#[doc(hidden)] pub const VHD_FORMAT_UNSUPPORTED_VERSION : HResultError = HResultError::from_constant(0xC03A0005); // ERROR_VHD_FORMAT_UNSUPPORTED_VERSION
+#[doc(hidden)] pub const VHD_SPARSE_HEADER_CHECKSUM_MISMATCH : HResultError = HResultError::from_constant(0xC03A0006); // ERROR_VHD_SPARSE_HEADER_CHECKSUM_MISMATCH
+#[doc(hidden)] pub const VHD_SPARSE_HEADER_UNSUPPORTED_VERSION : HResultError = HResultError::from_constant(0xC03A0007); // ERROR_VHD_SPARSE_HEADER_UNSUPPORTED_VERSION
+#[doc(hidden)] pub const VHD_SPARSE_HEADER_CORRUPT : HResultError = HResultError::from_constant(0xC03A0008); // ERROR_VHD_SPARSE_HEADER_CORRUPT
+#[doc(hidden)] pub const VHD_BLOCK_ALLOCATION_FAILURE : HResultError = HResultError::from_constant(0xC03A0009); // ERROR_VHD_BLOCK_ALLOCATION_FAILURE
+#[doc(hidden)] pub const VHD_BLOCK_ALLOCATION_TABLE_CORRUPT : HResultError = HResultError::from_constant(0xC03A000A); // ERROR_VHD_BLOCK_ALLOCATION_TABLE_CORRUPT
+#[doc(hidden)] pub const VHD_INVALID_BLOCK_SIZE : HResultError = HResultError::from_constant(0xC03A000B); // ERROR_VHD_INVALID_BLOCK_SIZE
+#[doc(hidden)] pub const VHD_BITMAP_MISMATCH : HResultError = HResultError::from_constant(0xC03A000C); // ERROR_VHD_BITMAP_MISMATCH
+#[doc(hidden)] pub const VHD_PARENT_VHD_NOT_FOUND : HResultError = HResultError::from_constant(0xC03A000D); // ERROR_VHD_PARENT_VHD_NOT_FOUND
+#[doc(hidden)] pub const VHD_CHILD_PARENT_ID_MISMATCH : HResultError = HResultError::from_constant(0xC03A000E); // ERROR_VHD_CHILD_PARENT_ID_MISMATCH
+#[doc(hidden)] pub const VHD_CHILD_PARENT_TIMESTAMP_MISMATCH : HResultError = HResultError::from_constant(0xC03A000F); // ERROR_VHD_CHILD_PARENT_TIMESTAMP_MISMATCH
+#[doc(hidden)] pub const VHD_METADATA_READ_FAILURE : HResultError = HResultError::from_constant(0xC03A0010); // ERROR_VHD_METADATA_READ_FAILURE
+#[doc(hidden)] pub const VHD_METADATA_WRITE_FAILURE : HResultError = HResultError::from_constant(0xC03A0011); // ERROR_VHD_METADATA_WRITE_FAILURE
+#[doc(hidden)] pub const VHD_INVALID_SIZE : HResultError = HResultError::from_constant(0xC03A0012); // ERROR_VHD_INVALID_SIZE
+#[doc(hidden)] pub const VHD_INVALID_FILE_SIZE : HResultError = HResultError::from_constant(0xC03A0013); // ERROR_VHD_INVALID_FILE_SIZE
 
 /// A virtual disk support provider for the specified file was not found.
-pub const VIRTDISK_PROVIDER_NOT_FOUND : ErrorHResult = ErrorHResult::from_constant(0xC03A0014); // ERROR_VIRTDISK_PROVIDER_NOT_FOUND
+pub const VIRTDISK_PROVIDER_NOT_FOUND : HResultError = HResultError::from_constant(0xC03A0014); // ERROR_VIRTDISK_PROVIDER_NOT_FOUND
 
 /// The specified disk is not a virtual disk.
-pub const VIRTDISK_NOT_VIRTUAL_DISK : ErrorHResult = ErrorHResult::from_constant(0xC03A0015); // ERROR_VIRTDISK_NOT_VIRTUAL_DISK
+pub const VIRTDISK_NOT_VIRTUAL_DISK : HResultError = HResultError::from_constant(0xC03A0015); // ERROR_VIRTDISK_NOT_VIRTUAL_DISK
 
-#[doc(hidden)] pub const VHD_PARENT_VHD_ACCESS_DENIED : ErrorHResult = ErrorHResult::from_constant(0xC03A0016); // ERROR_VHD_PARENT_VHD_ACCESS_DENIED
-#[doc(hidden)] pub const VHD_CHILD_PARENT_SIZE_MISMATCH : ErrorHResult = ErrorHResult::from_constant(0xC03A0017); // ERROR_VHD_CHILD_PARENT_SIZE_MISMATCH
-#[doc(hidden)] pub const VHD_DIFFERENCING_CHAIN_CYCLE_DETECTED : ErrorHResult = ErrorHResult::from_constant(0xC03A0018); // ERROR_VHD_DIFFERENCING_CHAIN_CYCLE_DETECTED
-#[doc(hidden)] pub const VHD_DIFFERENCING_CHAIN_ERROR_IN_PARENT : ErrorHResult = ErrorHResult::from_constant(0xC03A0019); // ERROR_VHD_DIFFERENCING_CHAIN_ERROR_IN_PARENT
+#[doc(hidden)] pub const VHD_PARENT_VHD_ACCESS_DENIED : HResultError = HResultError::from_constant(0xC03A0016); // ERROR_VHD_PARENT_VHD_ACCESS_DENIED
+#[doc(hidden)] pub const VHD_CHILD_PARENT_SIZE_MISMATCH : HResultError = HResultError::from_constant(0xC03A0017); // ERROR_VHD_CHILD_PARENT_SIZE_MISMATCH
+#[doc(hidden)] pub const VHD_DIFFERENCING_CHAIN_CYCLE_DETECTED : HResultError = HResultError::from_constant(0xC03A0018); // ERROR_VHD_DIFFERENCING_CHAIN_CYCLE_DETECTED
+#[doc(hidden)] pub const VHD_DIFFERENCING_CHAIN_ERROR_IN_PARENT : HResultError = HResultError::from_constant(0xC03A0019); // ERROR_VHD_DIFFERENCING_CHAIN_ERROR_IN_PARENT
 
 /// The requested operation could not be completed due to a virtual disk system limitation.  Virtual hard disk files must be uncompressed and unencrypted and must not be sparse.
-pub const VIRTUAL_DISK_LIMITATION : ErrorHResult = ErrorHResult::from_constant(0xC03A001A); // ERROR_VIRTUAL_DISK_LIMITATION
+pub const VIRTUAL_DISK_LIMITATION : HResultError = HResultError::from_constant(0xC03A001A); // ERROR_VIRTUAL_DISK_LIMITATION
 
-#[doc(hidden)] pub const VHD_INVALID_TYPE : ErrorHResult = ErrorHResult::from_constant(0xC03A001B); // ERROR_VHD_INVALID_TYPE
-#[doc(hidden)] pub const VHD_INVALID_STATE : ErrorHResult = ErrorHResult::from_constant(0xC03A001C); // ERROR_VHD_INVALID_STATE
+#[doc(hidden)] pub const VHD_INVALID_TYPE : HResultError = HResultError::from_constant(0xC03A001B); // ERROR_VHD_INVALID_TYPE
+#[doc(hidden)] pub const VHD_INVALID_STATE : HResultError = HResultError::from_constant(0xC03A001C); // ERROR_VHD_INVALID_STATE
 
 /// The sector size of the physical disk on which the virtual disk resides is not supported.
-pub const VIRTDISK_UNSUPPORTED_DISK_SECTOR_SIZE : ErrorHResult = ErrorHResult::from_constant(0xC03A001D); // ERROR_VIRTDISK_UNSUPPORTED_DISK_SECTOR_SIZE
+pub const VIRTDISK_UNSUPPORTED_DISK_SECTOR_SIZE : HResultError = HResultError::from_constant(0xC03A001D); // ERROR_VIRTDISK_UNSUPPORTED_DISK_SECTOR_SIZE
 
 /// The disk is already owned by a different owner.
-pub const VIRTDISK_DISK_ALREADY_OWNED : ErrorHResult = ErrorHResult::from_constant(0xC03A001E); // ERROR_VIRTDISK_DISK_ALREADY_OWNED
+pub const VIRTDISK_DISK_ALREADY_OWNED : HResultError = HResultError::from_constant(0xC03A001E); // ERROR_VIRTDISK_DISK_ALREADY_OWNED
 
 /// The disk must be offline or read-only.
-pub const VIRTDISK_DISK_ONLINE_AND_WRITABLE : ErrorHResult = ErrorHResult::from_constant(0xC03A001F); // ERROR_VIRTDISK_DISK_ONLINE_AND_WRITABLE
+pub const VIRTDISK_DISK_ONLINE_AND_WRITABLE : HResultError = HResultError::from_constant(0xC03A001F); // ERROR_VIRTDISK_DISK_ONLINE_AND_WRITABLE
 
 /// Change Tracking is not initialized for this virtual disk.
-pub const CTLOG_TRACKING_NOT_INITIALIZED : ErrorHResult = ErrorHResult::from_constant(0xC03A0020); // ERROR_CTLOG_TRACKING_NOT_INITIALIZED
+pub const CTLOG_TRACKING_NOT_INITIALIZED : HResultError = HResultError::from_constant(0xC03A0020); // ERROR_CTLOG_TRACKING_NOT_INITIALIZED
 
 /// Size of change tracking file exceeded the maximum size limit.
-pub const CTLOG_LOGFILE_SIZE_EXCEEDED_MAXSIZE : ErrorHResult = ErrorHResult::from_constant(0xC03A0021); // ERROR_CTLOG_LOGFILE_SIZE_EXCEEDED_MAXSIZE
+pub const CTLOG_LOGFILE_SIZE_EXCEEDED_MAXSIZE : HResultError = HResultError::from_constant(0xC03A0021); // ERROR_CTLOG_LOGFILE_SIZE_EXCEEDED_MAXSIZE
 
 /// VHD file is changed due to compaction, expansion, or offline updates.
-pub const CTLOG_VHD_CHANGED_OFFLINE : ErrorHResult = ErrorHResult::from_constant(0xC03A0022); // ERROR_CTLOG_VHD_CHANGED_OFFLINE
+pub const CTLOG_VHD_CHANGED_OFFLINE : HResultError = HResultError::from_constant(0xC03A0022); // ERROR_CTLOG_VHD_CHANGED_OFFLINE
 
 /// Change Tracking for the virtual disk is not in a valid state to perform this request.  Change tracking could be discontinued or already in the requested state.
-pub const CTLOG_INVALID_TRACKING_STATE : ErrorHResult = ErrorHResult::from_constant(0xC03A0023); // ERROR_CTLOG_INVALID_TRACKING_STATE
+pub const CTLOG_INVALID_TRACKING_STATE : HResultError = HResultError::from_constant(0xC03A0023); // ERROR_CTLOG_INVALID_TRACKING_STATE
 
 /// Change Tracking file for the virtual disk is not in a valid state.
-pub const CTLOG_INCONSISTENT_TRACKING_FILE : ErrorHResult = ErrorHResult::from_constant(0xC03A0024); // ERROR_CTLOG_INCONSISTENT_TRACKING_FILE
+pub const CTLOG_INCONSISTENT_TRACKING_FILE : HResultError = HResultError::from_constant(0xC03A0024); // ERROR_CTLOG_INCONSISTENT_TRACKING_FILE
 
-#[doc(hidden)] pub const VHD_RESIZE_WOULD_TRUNCATE_DATA : ErrorHResult = ErrorHResult::from_constant(0xC03A0025); // ERROR_VHD_RESIZE_WOULD_TRUNCATE_DATA
-#[doc(hidden)] pub const VHD_COULD_NOT_COMPUTE_MINIMUM_VIRTUAL_SIZE : ErrorHResult = ErrorHResult::from_constant(0xC03A0026); // ERROR_VHD_COULD_NOT_COMPUTE_MINIMUM_VIRTUAL_SIZE
-#[doc(hidden)] pub const VHD_ALREADY_AT_OR_BELOW_MINIMUM_VIRTUAL_SIZE : ErrorHResult = ErrorHResult::from_constant(0xC03A0027); // ERROR_VHD_ALREADY_AT_OR_BELOW_MINIMUM_VIRTUAL_SIZE
-#[doc(hidden)] pub const VHD_METADATA_FULL : ErrorHResult = ErrorHResult::from_constant(0xC03A0028); // ERROR_VHD_METADATA_FULL
-#[doc(hidden)] pub const VHD_INVALID_CHANGE_TRACKING_ID : ErrorHResult = ErrorHResult::from_constant(0xC03A0029); // ERROR_VHD_INVALID_CHANGE_TRACKING_ID
-#[doc(hidden)] pub const VHD_CHANGE_TRACKING_DISABLED : ErrorHResult = ErrorHResult::from_constant(0xC03A002A); // ERROR_VHD_CHANGE_TRACKING_DISABLED
-#[doc(hidden)] pub const VHD_MISSING_CHANGE_TRACKING_INFORMATION : ErrorHResult = ErrorHResult::from_constant(0xC03A0030); // ERROR_VHD_MISSING_CHANGE_TRACKING_INFORMATION
+#[doc(hidden)] pub const VHD_RESIZE_WOULD_TRUNCATE_DATA : HResultError = HResultError::from_constant(0xC03A0025); // ERROR_VHD_RESIZE_WOULD_TRUNCATE_DATA
+#[doc(hidden)] pub const VHD_COULD_NOT_COMPUTE_MINIMUM_VIRTUAL_SIZE : HResultError = HResultError::from_constant(0xC03A0026); // ERROR_VHD_COULD_NOT_COMPUTE_MINIMUM_VIRTUAL_SIZE
+#[doc(hidden)] pub const VHD_ALREADY_AT_OR_BELOW_MINIMUM_VIRTUAL_SIZE : HResultError = HResultError::from_constant(0xC03A0027); // ERROR_VHD_ALREADY_AT_OR_BELOW_MINIMUM_VIRTUAL_SIZE
+#[doc(hidden)] pub const VHD_METADATA_FULL : HResultError = HResultError::from_constant(0xC03A0028); // ERROR_VHD_METADATA_FULL
+#[doc(hidden)] pub const VHD_INVALID_CHANGE_TRACKING_ID : HResultError = HResultError::from_constant(0xC03A0029); // ERROR_VHD_INVALID_CHANGE_TRACKING_ID
+#[doc(hidden)] pub const VHD_CHANGE_TRACKING_DISABLED : HResultError = HResultError::from_constant(0xC03A002A); // ERROR_VHD_CHANGE_TRACKING_DISABLED
+#[doc(hidden)] pub const VHD_MISSING_CHANGE_TRACKING_INFORMATION : HResultError = HResultError::from_constant(0xC03A0030); // ERROR_VHD_MISSING_CHANGE_TRACKING_INFORMATION
 
 /// The virtualization storage subsystem has generated an error.
-pub const QUERY_STORAGE_ERROR : ErrorHResult = ErrorHResult::from_constant(0x803A0001); // ERROR_QUERY_STORAGE_ERROR
+pub const QUERY_STORAGE_ERROR : HResultError = HResultError::from_constant(0x803A0001); // ERROR_QUERY_STORAGE_ERROR
 
 /// The storage pool was deleted by the driver. The object cache should be updated.
-pub const SPACES_POOL_WAS_DELETED : SuccessHResult = SuccessHResult::from_constant(0x00E70001); // ERROR_SPACES_POOL_WAS_DELETED
+pub const SPACES_POOL_WAS_DELETED : HResultSuccess = HResultSuccess::from_constant(0x00E70001); // ERROR_SPACES_POOL_WAS_DELETED
 
 /// The specified fault domain type or combination of minimum / maximum fault domain type is not valid.
-pub const SPACES_FAULT_DOMAIN_TYPE_INVALID : ErrorHResult = ErrorHResult::from_constant(0x80E70001); // ERROR_SPACES_FAULT_DOMAIN_TYPE_INVALID
+pub const SPACES_FAULT_DOMAIN_TYPE_INVALID : HResultError = HResultError::from_constant(0x80E70001); // ERROR_SPACES_FAULT_DOMAIN_TYPE_INVALID
 
 /// A Storage Spaces internal error occurred.
-pub const SPACES_INTERNAL_ERROR : ErrorHResult = ErrorHResult::from_constant(0x80E70002); // ERROR_SPACES_INTERNAL_ERROR
+pub const SPACES_INTERNAL_ERROR : HResultError = HResultError::from_constant(0x80E70002); // ERROR_SPACES_INTERNAL_ERROR
 
 /// The specified resiliency type is not valid.
-pub const SPACES_RESILIENCY_TYPE_INVALID : ErrorHResult = ErrorHResult::from_constant(0x80E70003); // ERROR_SPACES_RESILIENCY_TYPE_INVALID
+pub const SPACES_RESILIENCY_TYPE_INVALID : HResultError = HResultError::from_constant(0x80E70003); // ERROR_SPACES_RESILIENCY_TYPE_INVALID
 
 /// The physical disk's sector size is not supported by the storage pool.
-pub const SPACES_DRIVE_SECTOR_SIZE_INVALID : ErrorHResult = ErrorHResult::from_constant(0x80E70004); // ERROR_SPACES_DRIVE_SECTOR_SIZE_INVALID
+pub const SPACES_DRIVE_SECTOR_SIZE_INVALID : HResultError = HResultError::from_constant(0x80E70004); // ERROR_SPACES_DRIVE_SECTOR_SIZE_INVALID
 
 /// The requested redundancy is outside of the supported range of values.
-pub const SPACES_DRIVE_REDUNDANCY_INVALID : ErrorHResult = ErrorHResult::from_constant(0x80E70006); // ERROR_SPACES_DRIVE_REDUNDANCY_INVALID
+pub const SPACES_DRIVE_REDUNDANCY_INVALID : HResultError = HResultError::from_constant(0x80E70006); // ERROR_SPACES_DRIVE_REDUNDANCY_INVALID
 
 /// The number of data copies requested is outside of the supported range of values.
-pub const SPACES_NUMBER_OF_DATA_COPIES_INVALID : ErrorHResult = ErrorHResult::from_constant(0x80E70007); // ERROR_SPACES_NUMBER_OF_DATA_COPIES_INVALID
+pub const SPACES_NUMBER_OF_DATA_COPIES_INVALID : HResultError = HResultError::from_constant(0x80E70007); // ERROR_SPACES_NUMBER_OF_DATA_COPIES_INVALID
 
 /// The value for ParityLayout is outside of the supported range of values.
-pub const SPACES_PARITY_LAYOUT_INVALID : ErrorHResult = ErrorHResult::from_constant(0x80E70008); // ERROR_SPACES_PARITY_LAYOUT_INVALID
+pub const SPACES_PARITY_LAYOUT_INVALID : HResultError = HResultError::from_constant(0x80E70008); // ERROR_SPACES_PARITY_LAYOUT_INVALID
 
 /// The value for interleave length is outside of the supported range of values or is not a power of 2.
-pub const SPACES_INTERLEAVE_LENGTH_INVALID : ErrorHResult = ErrorHResult::from_constant(0x80E70009); // ERROR_SPACES_INTERLEAVE_LENGTH_INVALID
+pub const SPACES_INTERLEAVE_LENGTH_INVALID : HResultError = HResultError::from_constant(0x80E70009); // ERROR_SPACES_INTERLEAVE_LENGTH_INVALID
 
 /// The number of columns specified is outside of the supported range of values.
-pub const SPACES_NUMBER_OF_COLUMNS_INVALID : ErrorHResult = ErrorHResult::from_constant(0x80E7000A); // ERROR_SPACES_NUMBER_OF_COLUMNS_INVALID
+pub const SPACES_NUMBER_OF_COLUMNS_INVALID : HResultError = HResultError::from_constant(0x80E7000A); // ERROR_SPACES_NUMBER_OF_COLUMNS_INVALID
 
 /// There were not enough physical disks to complete the requested operation.
-pub const SPACES_NOT_ENOUGH_DRIVES : ErrorHResult = ErrorHResult::from_constant(0x80E7000B); // ERROR_SPACES_NOT_ENOUGH_DRIVES
+pub const SPACES_NOT_ENOUGH_DRIVES : HResultError = HResultError::from_constant(0x80E7000B); // ERROR_SPACES_NOT_ENOUGH_DRIVES
 
 /// Extended error information is available.
-pub const SPACES_EXTENDED_ERROR : ErrorHResult = ErrorHResult::from_constant(0x80E7000C); // ERROR_SPACES_EXTENDED_ERROR
+pub const SPACES_EXTENDED_ERROR : HResultError = HResultError::from_constant(0x80E7000C); // ERROR_SPACES_EXTENDED_ERROR
 
 /// The specified provisioning type is not valid.
-pub const SPACES_PROVISIONING_TYPE_INVALID : ErrorHResult = ErrorHResult::from_constant(0x80E7000D); // ERROR_SPACES_PROVISIONING_TYPE_INVALID
+pub const SPACES_PROVISIONING_TYPE_INVALID : HResultError = HResultError::from_constant(0x80E7000D); // ERROR_SPACES_PROVISIONING_TYPE_INVALID
 
 /// The allocation size is outside of the supported range of values.
-pub const SPACES_ALLOCATION_SIZE_INVALID : ErrorHResult = ErrorHResult::from_constant(0x80E7000E); // ERROR_SPACES_ALLOCATION_SIZE_INVALID
+pub const SPACES_ALLOCATION_SIZE_INVALID : HResultError = HResultError::from_constant(0x80E7000E); // ERROR_SPACES_ALLOCATION_SIZE_INVALID
 
 /// Enclosure awareness is not supported for this virtual disk.
-pub const SPACES_ENCLOSURE_AWARE_INVALID : ErrorHResult = ErrorHResult::from_constant(0x80E7000F); // ERROR_SPACES_ENCLOSURE_AWARE_INVALID
+pub const SPACES_ENCLOSURE_AWARE_INVALID : HResultError = HResultError::from_constant(0x80E7000F); // ERROR_SPACES_ENCLOSURE_AWARE_INVALID
 
 /// The write cache size is outside of the supported range of values.
-pub const SPACES_WRITE_CACHE_SIZE_INVALID : ErrorHResult = ErrorHResult::from_constant(0x80E70010); // ERROR_SPACES_WRITE_CACHE_SIZE_INVALID
+pub const SPACES_WRITE_CACHE_SIZE_INVALID : HResultError = HResultError::from_constant(0x80E70010); // ERROR_SPACES_WRITE_CACHE_SIZE_INVALID
 
 /// The value for number of groups is outside of the supported range of values.
-pub const SPACES_NUMBER_OF_GROUPS_INVALID : ErrorHResult = ErrorHResult::from_constant(0x80E70011); // ERROR_SPACES_NUMBER_OF_GROUPS_INVALID
+pub const SPACES_NUMBER_OF_GROUPS_INVALID : HResultError = HResultError::from_constant(0x80E70011); // ERROR_SPACES_NUMBER_OF_GROUPS_INVALID
 
 /// The OperationalState of the physical disk is invalid for this operation.
-pub const SPACES_DRIVE_OPERATIONAL_STATE_INVALID : ErrorHResult = ErrorHResult::from_constant(0x80E70012); // ERROR_SPACES_DRIVE_OPERATIONAL_STATE_INVALID
+pub const SPACES_DRIVE_OPERATIONAL_STATE_INVALID : HResultError = HResultError::from_constant(0x80E70012); // ERROR_SPACES_DRIVE_OPERATIONAL_STATE_INVALID
 
 /// The specified log entry is not complete.
-pub const SPACES_ENTRY_INCOMPLETE : ErrorHResult = ErrorHResult::from_constant(0x80E70013); // ERROR_SPACES_ENTRY_INCOMPLETE
+pub const SPACES_ENTRY_INCOMPLETE : HResultError = HResultError::from_constant(0x80E70013); // ERROR_SPACES_ENTRY_INCOMPLETE
 
 /// The specified log entry is not valid.
-pub const SPACES_ENTRY_INVALID : ErrorHResult = ErrorHResult::from_constant(0x80E70014); // ERROR_SPACES_ENTRY_INVALID
+pub const SPACES_ENTRY_INVALID : HResultError = HResultError::from_constant(0x80E70014); // ERROR_SPACES_ENTRY_INVALID
 
 /// The bootfile is too small to support persistent snapshots.
-pub const VOLSNAP_BOOTFILE_NOT_VALID : ErrorHResult = ErrorHResult::from_constant(0x80820001); // ERROR_VOLSNAP_BOOTFILE_NOT_VALID
+pub const VOLSNAP_BOOTFILE_NOT_VALID : HResultError = HResultError::from_constant(0x80820001); // ERROR_VOLSNAP_BOOTFILE_NOT_VALID
 
 /// Activation of persistent snapshots on this volume took longer than was allowed.
-pub const VOLSNAP_ACTIVATION_TIMEOUT : ErrorHResult = ErrorHResult::from_constant(0x80820002); // ERROR_VOLSNAP_ACTIVATION_TIMEOUT
+pub const VOLSNAP_ACTIVATION_TIMEOUT : HResultError = HResultError::from_constant(0x80820002); // ERROR_VOLSNAP_ACTIVATION_TIMEOUT
 
 /// The specified volume does not support storage tiers.
-pub const TIERING_NOT_SUPPORTED_ON_VOLUME : ErrorHResult = ErrorHResult::from_constant(0x80830001); // ERROR_TIERING_NOT_SUPPORTED_ON_VOLUME
+pub const TIERING_NOT_SUPPORTED_ON_VOLUME : HResultError = HResultError::from_constant(0x80830001); // ERROR_TIERING_NOT_SUPPORTED_ON_VOLUME
 
 /// The Storage Tiers Management service detected that the specified volume is in the process of being dismounted.
-pub const TIERING_VOLUME_DISMOUNT_IN_PROGRESS : ErrorHResult = ErrorHResult::from_constant(0x80830002); // ERROR_TIERING_VOLUME_DISMOUNT_IN_PROGRESS
+pub const TIERING_VOLUME_DISMOUNT_IN_PROGRESS : HResultError = HResultError::from_constant(0x80830002); // ERROR_TIERING_VOLUME_DISMOUNT_IN_PROGRESS
 
 /// The specified storage tier could not be found on the volume. Confirm that the storage tier name is valid.
-pub const TIERING_STORAGE_TIER_NOT_FOUND : ErrorHResult = ErrorHResult::from_constant(0x80830003); // ERROR_TIERING_STORAGE_TIER_NOT_FOUND
+pub const TIERING_STORAGE_TIER_NOT_FOUND : HResultError = HResultError::from_constant(0x80830003); // ERROR_TIERING_STORAGE_TIER_NOT_FOUND
 
 /// The file identifier specified is not valid on the volume.
-pub const TIERING_INVALID_FILE_ID : ErrorHResult = ErrorHResult::from_constant(0x80830004); // ERROR_TIERING_INVALID_FILE_ID
+pub const TIERING_INVALID_FILE_ID : HResultError = HResultError::from_constant(0x80830004); // ERROR_TIERING_INVALID_FILE_ID
 
 /// Storage tier operations must be called on the clustering node that owns the metadata volume.
-pub const TIERING_WRONG_CLUSTER_NODE : ErrorHResult = ErrorHResult::from_constant(0x80830005); // ERROR_TIERING_WRONG_CLUSTER_NODE
+pub const TIERING_WRONG_CLUSTER_NODE : HResultError = HResultError::from_constant(0x80830005); // ERROR_TIERING_WRONG_CLUSTER_NODE
 
 /// The Storage Tiers Management service is already optimizing the storage tiers on the specified volume.
-pub const TIERING_ALREADY_PROCESSING : ErrorHResult = ErrorHResult::from_constant(0x80830006); // ERROR_TIERING_ALREADY_PROCESSING
+pub const TIERING_ALREADY_PROCESSING : HResultError = HResultError::from_constant(0x80830006); // ERROR_TIERING_ALREADY_PROCESSING
 
 /// The requested object type cannot be assigned to a storage tier.
-pub const TIERING_CANNOT_PIN_OBJECT : ErrorHResult = ErrorHResult::from_constant(0x80830007); // ERROR_TIERING_CANNOT_PIN_OBJECT
+pub const TIERING_CANNOT_PIN_OBJECT : HResultError = HResultError::from_constant(0x80830007); // ERROR_TIERING_CANNOT_PIN_OBJECT
 
 /// The requested file is not pinned to a tier.
-pub const TIERING_FILE_IS_NOT_PINNED : ErrorHResult = ErrorHResult::from_constant(0x80830008); // ERROR_TIERING_FILE_IS_NOT_PINNED
+pub const TIERING_FILE_IS_NOT_PINNED : HResultError = HResultError::from_constant(0x80830008); // ERROR_TIERING_FILE_IS_NOT_PINNED
 
 /// The volume is not a tiered volume.
-pub const NOT_A_TIERED_VOLUME : ErrorHResult = ErrorHResult::from_constant(0x80830009); // ERROR_NOT_A_TIERED_VOLUME
+pub const NOT_A_TIERED_VOLUME : HResultError = HResultError::from_constant(0x80830009); // ERROR_NOT_A_TIERED_VOLUME
 
 /// The requested attribute is not present on the specified file or directory.
-pub const ATTRIBUTE_NOT_PRESENT : ErrorHResult = ErrorHResult::from_constant(0x8083000A); // ERROR_ATTRIBUTE_NOT_PRESENT
+pub const ATTRIBUTE_NOT_PRESENT : HResultError = HResultError::from_constant(0x8083000A); // ERROR_ATTRIBUTE_NOT_PRESENT
 
 /// The command was not recognized by the security core
-pub const SECCORE_INVALID_COMMAND : ErrorHResult = ErrorHResult::from_constant(0xC0E80000); // ERROR_SECCORE_INVALID_COMMAND
+pub const SECCORE_INVALID_COMMAND : HResultError = HResultError::from_constant(0xC0E80000); // ERROR_SECCORE_INVALID_COMMAND
 
 /// No applicable app licenses found.
-pub const NO_APPLICABLE_APP_LICENSES_FOUND : ErrorHResult = ErrorHResult::from_constant(0xC0EA0001); // ERROR_NO_APPLICABLE_APP_LICENSES_FOUND
+pub const NO_APPLICABLE_APP_LICENSES_FOUND : HResultError = HResultError::from_constant(0xC0EA0001); // ERROR_NO_APPLICABLE_APP_LICENSES_FOUND
 
 /// CLiP license not found.
-pub const CLIP_LICENSE_NOT_FOUND : ErrorHResult = ErrorHResult::from_constant(0xC0EA0002); // ERROR_CLIP_LICENSE_NOT_FOUND
+pub const CLIP_LICENSE_NOT_FOUND : HResultError = HResultError::from_constant(0xC0EA0002); // ERROR_CLIP_LICENSE_NOT_FOUND
 
 /// CLiP device license not found.
-pub const CLIP_DEVICE_LICENSE_MISSING : ErrorHResult = ErrorHResult::from_constant(0xC0EA0003); // ERROR_CLIP_DEVICE_LICENSE_MISSING
+pub const CLIP_DEVICE_LICENSE_MISSING : HResultError = HResultError::from_constant(0xC0EA0003); // ERROR_CLIP_DEVICE_LICENSE_MISSING
 
 /// CLiP license has an invalid signature.
-pub const CLIP_LICENSE_INVALID_SIGNATURE : ErrorHResult = ErrorHResult::from_constant(0xC0EA0004); // ERROR_CLIP_LICENSE_INVALID_SIGNATURE
+pub const CLIP_LICENSE_INVALID_SIGNATURE : HResultError = HResultError::from_constant(0xC0EA0004); // ERROR_CLIP_LICENSE_INVALID_SIGNATURE
 
 /// CLiP keyholder license is invalid or missing.
-pub const CLIP_KEYHOLDER_LICENSE_MISSING_OR_INVALID : ErrorHResult = ErrorHResult::from_constant(0xC0EA0005); // ERROR_CLIP_KEYHOLDER_LICENSE_MISSING_OR_INVALID
+pub const CLIP_KEYHOLDER_LICENSE_MISSING_OR_INVALID : HResultError = HResultError::from_constant(0xC0EA0005); // ERROR_CLIP_KEYHOLDER_LICENSE_MISSING_OR_INVALID
 
 /// CLiP license has expired.
-pub const CLIP_LICENSE_EXPIRED : ErrorHResult = ErrorHResult::from_constant(0xC0EA0006); // ERROR_CLIP_LICENSE_EXPIRED
+pub const CLIP_LICENSE_EXPIRED : HResultError = HResultError::from_constant(0xC0EA0006); // ERROR_CLIP_LICENSE_EXPIRED
 
 /// CLiP license is signed by an unknown source.
-pub const CLIP_LICENSE_SIGNED_BY_UNKNOWN_SOURCE : ErrorHResult = ErrorHResult::from_constant(0xC0EA0007); // ERROR_CLIP_LICENSE_SIGNED_BY_UNKNOWN_SOURCE
+pub const CLIP_LICENSE_SIGNED_BY_UNKNOWN_SOURCE : HResultError = HResultError::from_constant(0xC0EA0007); // ERROR_CLIP_LICENSE_SIGNED_BY_UNKNOWN_SOURCE
 
 /// CLiP license is not signed.
-pub const CLIP_LICENSE_NOT_SIGNED : ErrorHResult = ErrorHResult::from_constant(0xC0EA0008); // ERROR_CLIP_LICENSE_NOT_SIGNED
+pub const CLIP_LICENSE_NOT_SIGNED : HResultError = HResultError::from_constant(0xC0EA0008); // ERROR_CLIP_LICENSE_NOT_SIGNED
 
 /// CLiP license hardware ID is out of tolerance.
-pub const CLIP_LICENSE_HARDWARE_ID_OUT_OF_TOLERANCE : ErrorHResult = ErrorHResult::from_constant(0xC0EA0009); // ERROR_CLIP_LICENSE_HARDWARE_ID_OUT_OF_TOLERANCE
+pub const CLIP_LICENSE_HARDWARE_ID_OUT_OF_TOLERANCE : HResultError = HResultError::from_constant(0xC0EA0009); // ERROR_CLIP_LICENSE_HARDWARE_ID_OUT_OF_TOLERANCE
 
 /// CLiP license device ID does not match the device ID in the bound device license.
-pub const CLIP_LICENSE_DEVICE_ID_MISMATCH : ErrorHResult = ErrorHResult::from_constant(0xC0EA000A); // ERROR_CLIP_LICENSE_DEVICE_ID_MISMATCH
+pub const CLIP_LICENSE_DEVICE_ID_MISMATCH : HResultError = HResultError::from_constant(0xC0EA000A); // ERROR_CLIP_LICENSE_DEVICE_ID_MISMATCH
 
-#[doc(hidden)] pub const DBG_CREATE_PROCESS_FAILURE_LOCKDOWN : ErrorHResult = ErrorHResult::from_constant(0x80B00001); // ERROR_DBG_CREATE_PROCESS_FAILURE_LOCKDOWN
-#[doc(hidden)] pub const DBG_ATTACH_PROCESS_FAILURE_LOCKDOWN : ErrorHResult = ErrorHResult::from_constant(0x80B00002); // ERROR_DBG_ATTACH_PROCESS_FAILURE_LOCKDOWN
-#[doc(hidden)] pub const DBG_CONNECT_SERVER_FAILURE_LOCKDOWN : ErrorHResult = ErrorHResult::from_constant(0x80B00003); // ERROR_DBG_CONNECT_SERVER_FAILURE_LOCKDOWN
-#[doc(hidden)] pub const DBG_START_SERVER_FAILURE_LOCKDOWN : ErrorHResult = ErrorHResult::from_constant(0x80B00004); // ERROR_DBG_START_SERVER_FAILURE_LOCKDOWN
+#[doc(hidden)] pub const DBG_CREATE_PROCESS_FAILURE_LOCKDOWN : HResultError = HResultError::from_constant(0x80B00001); // ERROR_DBG_CREATE_PROCESS_FAILURE_LOCKDOWN
+#[doc(hidden)] pub const DBG_ATTACH_PROCESS_FAILURE_LOCKDOWN : HResultError = HResultError::from_constant(0x80B00002); // ERROR_DBG_ATTACH_PROCESS_FAILURE_LOCKDOWN
+#[doc(hidden)] pub const DBG_CONNECT_SERVER_FAILURE_LOCKDOWN : HResultError = HResultError::from_constant(0x80B00003); // ERROR_DBG_CONNECT_SERVER_FAILURE_LOCKDOWN
+#[doc(hidden)] pub const DBG_START_SERVER_FAILURE_LOCKDOWN : HResultError = HResultError::from_constant(0x80B00004); // ERROR_DBG_START_SERVER_FAILURE_LOCKDOWN
 
 /// The operation was preempted by a higher priority operation. It must be resumed later.
-pub const IO_PREEMPTED : ErrorHResult = ErrorHResult::from_constant(0x89010001); // ERROR_IO_PREEMPTED
+pub const IO_PREEMPTED : HResultError = HResultError::from_constant(0x89010001); // ERROR_IO_PREEMPTED
 
-#[doc(hidden)] pub const SVHDX_ERROR_STORED : ErrorHResult = ErrorHResult::from_constant(0xC05C0000); // ERROR_SVHDX_ERROR_STORED
-#[doc(hidden)] pub const SVHDX_ERROR_NOT_AVAILABLE : ErrorHResult = ErrorHResult::from_constant(0xC05CFF00); // ERROR_SVHDX_ERROR_NOT_AVAILABLE
-#[doc(hidden)] pub const SVHDX_UNIT_ATTENTION_AVAILABLE : ErrorHResult = ErrorHResult::from_constant(0xC05CFF01); // ERROR_SVHDX_UNIT_ATTENTION_AVAILABLE
-#[doc(hidden)] pub const SVHDX_UNIT_ATTENTION_CAPACITY_DATA_CHANGED : ErrorHResult = ErrorHResult::from_constant(0xC05CFF02); // ERROR_SVHDX_UNIT_ATTENTION_CAPACITY_DATA_CHANGED
-#[doc(hidden)] pub const SVHDX_UNIT_ATTENTION_RESERVATIONS_PREEMPTED : ErrorHResult = ErrorHResult::from_constant(0xC05CFF03); // ERROR_SVHDX_UNIT_ATTENTION_RESERVATIONS_PREEMPTED
-#[doc(hidden)] pub const SVHDX_UNIT_ATTENTION_RESERVATIONS_RELEASED : ErrorHResult = ErrorHResult::from_constant(0xC05CFF04); // ERROR_SVHDX_UNIT_ATTENTION_RESERVATIONS_RELEASED
-#[doc(hidden)] pub const SVHDX_UNIT_ATTENTION_REGISTRATIONS_PREEMPTED : ErrorHResult = ErrorHResult::from_constant(0xC05CFF05); // ERROR_SVHDX_UNIT_ATTENTION_REGISTRATIONS_PREEMPTED
-#[doc(hidden)] pub const SVHDX_UNIT_ATTENTION_OPERATING_DEFINITION_CHANGED : ErrorHResult = ErrorHResult::from_constant(0xC05CFF06); // ERROR_SVHDX_UNIT_ATTENTION_OPERATING_DEFINITION_CHANGED
-#[doc(hidden)] pub const SVHDX_RESERVATION_CONFLICT : ErrorHResult = ErrorHResult::from_constant(0xC05CFF07); // ERROR_SVHDX_RESERVATION_CONFLICT
-#[doc(hidden)] pub const SVHDX_WRONG_FILE_TYPE : ErrorHResult = ErrorHResult::from_constant(0xC05CFF08); // ERROR_SVHDX_WRONG_FILE_TYPE
-#[doc(hidden)] pub const SVHDX_VERSION_MISMATCH : ErrorHResult = ErrorHResult::from_constant(0xC05CFF09); // ERROR_SVHDX_VERSION_MISMATCH
-#[doc(hidden)] pub const VHD_SHARED : ErrorHResult = ErrorHResult::from_constant(0xC05CFF0A); // ERROR_VHD_SHARED
-#[doc(hidden)] pub const SVHDX_NO_INITIATOR : ErrorHResult = ErrorHResult::from_constant(0xC05CFF0B); // ERROR_SVHDX_NO_INITIATOR
+#[doc(hidden)] pub const SVHDX_ERROR_STORED : HResultError = HResultError::from_constant(0xC05C0000); // ERROR_SVHDX_ERROR_STORED
+#[doc(hidden)] pub const SVHDX_ERROR_NOT_AVAILABLE : HResultError = HResultError::from_constant(0xC05CFF00); // ERROR_SVHDX_ERROR_NOT_AVAILABLE
+#[doc(hidden)] pub const SVHDX_UNIT_ATTENTION_AVAILABLE : HResultError = HResultError::from_constant(0xC05CFF01); // ERROR_SVHDX_UNIT_ATTENTION_AVAILABLE
+#[doc(hidden)] pub const SVHDX_UNIT_ATTENTION_CAPACITY_DATA_CHANGED : HResultError = HResultError::from_constant(0xC05CFF02); // ERROR_SVHDX_UNIT_ATTENTION_CAPACITY_DATA_CHANGED
+#[doc(hidden)] pub const SVHDX_UNIT_ATTENTION_RESERVATIONS_PREEMPTED : HResultError = HResultError::from_constant(0xC05CFF03); // ERROR_SVHDX_UNIT_ATTENTION_RESERVATIONS_PREEMPTED
+#[doc(hidden)] pub const SVHDX_UNIT_ATTENTION_RESERVATIONS_RELEASED : HResultError = HResultError::from_constant(0xC05CFF04); // ERROR_SVHDX_UNIT_ATTENTION_RESERVATIONS_RELEASED
+#[doc(hidden)] pub const SVHDX_UNIT_ATTENTION_REGISTRATIONS_PREEMPTED : HResultError = HResultError::from_constant(0xC05CFF05); // ERROR_SVHDX_UNIT_ATTENTION_REGISTRATIONS_PREEMPTED
+#[doc(hidden)] pub const SVHDX_UNIT_ATTENTION_OPERATING_DEFINITION_CHANGED : HResultError = HResultError::from_constant(0xC05CFF06); // ERROR_SVHDX_UNIT_ATTENTION_OPERATING_DEFINITION_CHANGED
+#[doc(hidden)] pub const SVHDX_RESERVATION_CONFLICT : HResultError = HResultError::from_constant(0xC05CFF07); // ERROR_SVHDX_RESERVATION_CONFLICT
+#[doc(hidden)] pub const SVHDX_WRONG_FILE_TYPE : HResultError = HResultError::from_constant(0xC05CFF08); // ERROR_SVHDX_WRONG_FILE_TYPE
+#[doc(hidden)] pub const SVHDX_VERSION_MISMATCH : HResultError = HResultError::from_constant(0xC05CFF09); // ERROR_SVHDX_VERSION_MISMATCH
+#[doc(hidden)] pub const VHD_SHARED : HResultError = HResultError::from_constant(0xC05CFF0A); // ERROR_VHD_SHARED
+#[doc(hidden)] pub const SVHDX_NO_INITIATOR : HResultError = HResultError::from_constant(0xC05CFF0B); // ERROR_SVHDX_NO_INITIATOR
 
 /// The requested operation failed due to a missing backing storage file.
-pub const VHDSET_BACKING_STORAGE_NOT_FOUND : ErrorHResult = ErrorHResult::from_constant(0xC05CFF0C); // ERROR_VHDSET_BACKING_STORAGE_NOT_FOUND
+pub const VHDSET_BACKING_STORAGE_NOT_FOUND : HResultError = HResultError::from_constant(0xC05CFF0C); // ERROR_VHDSET_BACKING_STORAGE_NOT_FOUND
 
 /// Failed to negotiate a preauthentication integrity hash function.
-pub const SMB_NO_PREAUTH_INTEGRITY_HASH_OVERLAP : ErrorHResult = ErrorHResult::from_constant(0xC05D0000); // ERROR_SMB_NO_PREAUTH_INTEGRITY_HASH_OVERLAP
+pub const SMB_NO_PREAUTH_INTEGRITY_HASH_OVERLAP : HResultError = HResultError::from_constant(0xC05D0000); // ERROR_SMB_NO_PREAUTH_INTEGRITY_HASH_OVERLAP
 
 /// The current cluster functional level does not support this SMB dialect.
-pub const SMB_BAD_CLUSTER_DIALECT : ErrorHResult = ErrorHResult::from_constant(0xC05D0001); // ERROR_SMB_BAD_CLUSTER_DIALECT
+pub const SMB_BAD_CLUSTER_DIALECT : HResultError = HResultError::from_constant(0xC05D0001); // ERROR_SMB_BAD_CLUSTER_DIALECT
 
 /// The QUIC connection handshake failed.
-pub const QUIC_HANDSHAKE_FAILURE : ErrorHResult = ErrorHResult::from_constant(0x80410000); // ERROR_QUIC_HANDSHAKE_FAILURE
+pub const QUIC_HANDSHAKE_FAILURE : HResultError = HResultError::from_constant(0x80410000); // ERROR_QUIC_HANDSHAKE_FAILURE
 
 /// The QUIC connection failed to negotiate a compatible protocol version.
-pub const QUIC_VER_NEG_FAILURE : ErrorHResult = ErrorHResult::from_constant(0x80410001); // ERROR_QUIC_VER_NEG_FAILURE
+pub const QUIC_VER_NEG_FAILURE : HResultError = HResultError::from_constant(0x80410001); // ERROR_QUIC_VER_NEG_FAILURE
 
 #[doc(hidden)] pub const DHCP_REGISTRY_INIT_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E20); // ERROR_DHCP_REGISTRY_INIT_FAILED
 #[doc(hidden)] pub const DHCP_DATABASE_INIT_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E21); // ERROR_DHCP_DATABASE_INIT_FAILED
@@ -7453,185 +7453,185 @@ pub const SUPPRESS_OUTPUT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_consta
 pub const HELPER_ALREADY_REGISTERED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15018); // ERROR_HELPER_ALREADY_REGISTERED
 pub const CONTEXT_ALREADY_REGISTERED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15019); // ERROR_CONTEXT_ALREADY_REGISTERED
 pub const PARSING_FAILURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15020); // ERROR_PARSING_FAILURE
-#[doc(hidden)] pub const PATCH_ENCODE_FAILURE : ErrorHResult = ErrorHResult::from_constant(0xC00E3101); // ERROR_PATCH_ENCODE_FAILURE
-#[doc(hidden)] pub const PATCH_INVALID_OPTIONS : ErrorHResult = ErrorHResult::from_constant(0xC00E3102); // ERROR_PATCH_INVALID_OPTIONS
-#[doc(hidden)] pub const PATCH_SAME_FILE : ErrorHResult = ErrorHResult::from_constant(0xC00E3103); // ERROR_PATCH_SAME_FILE
-#[doc(hidden)] pub const PATCH_RETAIN_RANGES_DIFFER : ErrorHResult = ErrorHResult::from_constant(0xC00E3104); // ERROR_PATCH_RETAIN_RANGES_DIFFER
-#[doc(hidden)] pub const PATCH_BIGGER_THAN_COMPRESSED : ErrorHResult = ErrorHResult::from_constant(0xC00E3105); // ERROR_PATCH_BIGGER_THAN_COMPRESSED
-#[doc(hidden)] pub const PATCH_IMAGEHLP_FAILURE : ErrorHResult = ErrorHResult::from_constant(0xC00E3106); // ERROR_PATCH_IMAGEHLP_FAILURE
-#[doc(hidden)] pub const PATCH_DECODE_FAILURE : ErrorHResult = ErrorHResult::from_constant(0xC00E4101); // ERROR_PATCH_DECODE_FAILURE
-#[doc(hidden)] pub const PATCH_CORRUPT : ErrorHResult = ErrorHResult::from_constant(0xC00E4102); // ERROR_PATCH_CORRUPT
-#[doc(hidden)] pub const PATCH_NEWER_FORMAT : ErrorHResult = ErrorHResult::from_constant(0xC00E4103); // ERROR_PATCH_NEWER_FORMAT
-#[doc(hidden)] pub const PATCH_WRONG_FILE : ErrorHResult = ErrorHResult::from_constant(0xC00E4104); // ERROR_PATCH_WRONG_FILE
-#[doc(hidden)] pub const PATCH_NOT_NECESSARY : ErrorHResult = ErrorHResult::from_constant(0xC00E4105); // ERROR_PATCH_NOT_NECESSARY
-#[doc(hidden)] pub const PATCH_NOT_AVAILABLE : ErrorHResult = ErrorHResult::from_constant(0xC00E4106); // ERROR_PATCH_NOT_AVAILABLE
-#[doc(hidden)] pub const PCW_PCP_DOESNT_EXIST : ErrorHResult = ErrorHResult::from_constant(0xC00E5101); // ERROR_PCW_PCP_DOESNT_EXIST
-#[doc(hidden)] pub const PCW_PCP_BAD_FORMAT : ErrorHResult = ErrorHResult::from_constant(0xC00E5102); // ERROR_PCW_PCP_BAD_FORMAT
-#[doc(hidden)] pub const PCW_CANT_CREATE_TEMP_FOLDER : ErrorHResult = ErrorHResult::from_constant(0xC00E5103); // ERROR_PCW_CANT_CREATE_TEMP_FOLDER
-#[doc(hidden)] pub const PCW_MISSING_PATCH_PATH : ErrorHResult = ErrorHResult::from_constant(0xC00E5104); // ERROR_PCW_MISSING_PATCH_PATH
-#[doc(hidden)] pub const PCW_CANT_OVERWRITE_PATCH : ErrorHResult = ErrorHResult::from_constant(0xC00E5105); // ERROR_PCW_CANT_OVERWRITE_PATCH
-#[doc(hidden)] pub const PCW_CANT_CREATE_PATCH_FILE : ErrorHResult = ErrorHResult::from_constant(0xC00E5106); // ERROR_PCW_CANT_CREATE_PATCH_FILE
-#[doc(hidden)] pub const PCW_MISSING_PATCH_GUID : ErrorHResult = ErrorHResult::from_constant(0xC00E5107); // ERROR_PCW_MISSING_PATCH_GUID
-#[doc(hidden)] pub const PCW_BAD_PATCH_GUID : ErrorHResult = ErrorHResult::from_constant(0xC00E5108); // ERROR_PCW_BAD_PATCH_GUID
-#[doc(hidden)] pub const PCW_BAD_GUIDS_TO_REPLACE : ErrorHResult = ErrorHResult::from_constant(0xC00E5109); // ERROR_PCW_BAD_GUIDS_TO_REPLACE
-#[doc(hidden)] pub const PCW_BAD_TARGET_PRODUCT_CODE_LIST : ErrorHResult = ErrorHResult::from_constant(0xC00E510A); // ERROR_PCW_BAD_TARGET_PRODUCT_CODE_LIST
-#[doc(hidden)] pub const PCW_NO_UPGRADED_IMAGES_TO_PATCH : ErrorHResult = ErrorHResult::from_constant(0xC00E510B); // ERROR_PCW_NO_UPGRADED_IMAGES_TO_PATCH
-#[doc(hidden)] pub const PCW_BAD_API_PATCHING_SYMBOL_FLAGS : ErrorHResult = ErrorHResult::from_constant(0xC00E510D); // ERROR_PCW_BAD_API_PATCHING_SYMBOL_FLAGS
-#[doc(hidden)] pub const PCW_OODS_COPYING_MSI : ErrorHResult = ErrorHResult::from_constant(0xC00E510E); // ERROR_PCW_OODS_COPYING_MSI
-#[doc(hidden)] pub const PCW_UPGRADED_IMAGE_NAME_TOO_LONG : ErrorHResult = ErrorHResult::from_constant(0xC00E510F); // ERROR_PCW_UPGRADED_IMAGE_NAME_TOO_LONG
-#[doc(hidden)] pub const PCW_BAD_UPGRADED_IMAGE_NAME : ErrorHResult = ErrorHResult::from_constant(0xC00E5110); // ERROR_PCW_BAD_UPGRADED_IMAGE_NAME
-#[doc(hidden)] pub const PCW_DUP_UPGRADED_IMAGE_NAME : ErrorHResult = ErrorHResult::from_constant(0xC00E5111); // ERROR_PCW_DUP_UPGRADED_IMAGE_NAME
-#[doc(hidden)] pub const PCW_UPGRADED_IMAGE_PATH_TOO_LONG : ErrorHResult = ErrorHResult::from_constant(0xC00E5112); // ERROR_PCW_UPGRADED_IMAGE_PATH_TOO_LONG
-#[doc(hidden)] pub const PCW_UPGRADED_IMAGE_PATH_EMPTY : ErrorHResult = ErrorHResult::from_constant(0xC00E5113); // ERROR_PCW_UPGRADED_IMAGE_PATH_EMPTY
-#[doc(hidden)] pub const PCW_UPGRADED_IMAGE_PATH_NOT_EXIST : ErrorHResult = ErrorHResult::from_constant(0xC00E5114); // ERROR_PCW_UPGRADED_IMAGE_PATH_NOT_EXIST
-#[doc(hidden)] pub const PCW_UPGRADED_IMAGE_PATH_NOT_MSI : ErrorHResult = ErrorHResult::from_constant(0xC00E5115); // ERROR_PCW_UPGRADED_IMAGE_PATH_NOT_MSI
-#[doc(hidden)] pub const PCW_UPGRADED_IMAGE_COMPRESSED : ErrorHResult = ErrorHResult::from_constant(0xC00E5116); // ERROR_PCW_UPGRADED_IMAGE_COMPRESSED
-#[doc(hidden)] pub const PCW_TARGET_IMAGE_NAME_TOO_LONG : ErrorHResult = ErrorHResult::from_constant(0xC00E5117); // ERROR_PCW_TARGET_IMAGE_NAME_TOO_LONG
-#[doc(hidden)] pub const PCW_BAD_TARGET_IMAGE_NAME : ErrorHResult = ErrorHResult::from_constant(0xC00E5118); // ERROR_PCW_BAD_TARGET_IMAGE_NAME
-#[doc(hidden)] pub const PCW_DUP_TARGET_IMAGE_NAME : ErrorHResult = ErrorHResult::from_constant(0xC00E5119); // ERROR_PCW_DUP_TARGET_IMAGE_NAME
-#[doc(hidden)] pub const PCW_TARGET_IMAGE_PATH_TOO_LONG : ErrorHResult = ErrorHResult::from_constant(0xC00E511A); // ERROR_PCW_TARGET_IMAGE_PATH_TOO_LONG
-#[doc(hidden)] pub const PCW_TARGET_IMAGE_PATH_EMPTY : ErrorHResult = ErrorHResult::from_constant(0xC00E511B); // ERROR_PCW_TARGET_IMAGE_PATH_EMPTY
-#[doc(hidden)] pub const PCW_TARGET_IMAGE_PATH_NOT_EXIST : ErrorHResult = ErrorHResult::from_constant(0xC00E511C); // ERROR_PCW_TARGET_IMAGE_PATH_NOT_EXIST
-#[doc(hidden)] pub const PCW_TARGET_IMAGE_PATH_NOT_MSI : ErrorHResult = ErrorHResult::from_constant(0xC00E511D); // ERROR_PCW_TARGET_IMAGE_PATH_NOT_MSI
-#[doc(hidden)] pub const PCW_TARGET_IMAGE_COMPRESSED : ErrorHResult = ErrorHResult::from_constant(0xC00E511E); // ERROR_PCW_TARGET_IMAGE_COMPRESSED
-#[doc(hidden)] pub const PCW_TARGET_BAD_PROD_VALIDATE : ErrorHResult = ErrorHResult::from_constant(0xC00E511F); // ERROR_PCW_TARGET_BAD_PROD_VALIDATE
-#[doc(hidden)] pub const PCW_TARGET_BAD_PROD_CODE_VAL : ErrorHResult = ErrorHResult::from_constant(0xC00E5120); // ERROR_PCW_TARGET_BAD_PROD_CODE_VAL
-#[doc(hidden)] pub const PCW_UPGRADED_MISSING_SRC_FILES : ErrorHResult = ErrorHResult::from_constant(0xC00E5121); // ERROR_PCW_UPGRADED_MISSING_SRC_FILES
-#[doc(hidden)] pub const PCW_TARGET_MISSING_SRC_FILES : ErrorHResult = ErrorHResult::from_constant(0xC00E5122); // ERROR_PCW_TARGET_MISSING_SRC_FILES
-#[doc(hidden)] pub const PCW_IMAGE_FAMILY_NAME_TOO_LONG : ErrorHResult = ErrorHResult::from_constant(0xC00E5123); // ERROR_PCW_IMAGE_FAMILY_NAME_TOO_LONG
-#[doc(hidden)] pub const PCW_BAD_IMAGE_FAMILY_NAME : ErrorHResult = ErrorHResult::from_constant(0xC00E5124); // ERROR_PCW_BAD_IMAGE_FAMILY_NAME
-#[doc(hidden)] pub const PCW_DUP_IMAGE_FAMILY_NAME : ErrorHResult = ErrorHResult::from_constant(0xC00E5125); // ERROR_PCW_DUP_IMAGE_FAMILY_NAME
-#[doc(hidden)] pub const PCW_BAD_IMAGE_FAMILY_SRC_PROP : ErrorHResult = ErrorHResult::from_constant(0xC00E5126); // ERROR_PCW_BAD_IMAGE_FAMILY_SRC_PROP
-#[doc(hidden)] pub const PCW_UFILEDATA_LONG_FILE_TABLE_KEY : ErrorHResult = ErrorHResult::from_constant(0xC00E5127); // ERROR_PCW_UFILEDATA_LONG_FILE_TABLE_KEY
-#[doc(hidden)] pub const PCW_UFILEDATA_BLANK_FILE_TABLE_KEY : ErrorHResult = ErrorHResult::from_constant(0xC00E5128); // ERROR_PCW_UFILEDATA_BLANK_FILE_TABLE_KEY
-#[doc(hidden)] pub const PCW_UFILEDATA_MISSING_FILE_TABLE_KEY : ErrorHResult = ErrorHResult::from_constant(0xC00E5129); // ERROR_PCW_UFILEDATA_MISSING_FILE_TABLE_KEY
-#[doc(hidden)] pub const PCW_EXTFILE_LONG_FILE_TABLE_KEY : ErrorHResult = ErrorHResult::from_constant(0xC00E512A); // ERROR_PCW_EXTFILE_LONG_FILE_TABLE_KEY
-#[doc(hidden)] pub const PCW_EXTFILE_BLANK_FILE_TABLE_KEY : ErrorHResult = ErrorHResult::from_constant(0xC00E512B); // ERROR_PCW_EXTFILE_BLANK_FILE_TABLE_KEY
-#[doc(hidden)] pub const PCW_EXTFILE_BAD_FAMILY_FIELD : ErrorHResult = ErrorHResult::from_constant(0xC00E512C); // ERROR_PCW_EXTFILE_BAD_FAMILY_FIELD
-#[doc(hidden)] pub const PCW_EXTFILE_LONG_PATH_TO_FILE : ErrorHResult = ErrorHResult::from_constant(0xC00E512D); // ERROR_PCW_EXTFILE_LONG_PATH_TO_FILE
-#[doc(hidden)] pub const PCW_EXTFILE_BLANK_PATH_TO_FILE : ErrorHResult = ErrorHResult::from_constant(0xC00E512E); // ERROR_PCW_EXTFILE_BLANK_PATH_TO_FILE
-#[doc(hidden)] pub const PCW_EXTFILE_MISSING_FILE : ErrorHResult = ErrorHResult::from_constant(0xC00E512F); // ERROR_PCW_EXTFILE_MISSING_FILE
-#[doc(hidden)] pub const PCW_BAD_FILE_SEQUENCE_START : ErrorHResult = ErrorHResult::from_constant(0xC00E513A); // ERROR_PCW_BAD_FILE_SEQUENCE_START
-#[doc(hidden)] pub const PCW_CANT_COPY_FILE_TO_TEMP_FOLDER : ErrorHResult = ErrorHResult::from_constant(0xC00E513B); // ERROR_PCW_CANT_COPY_FILE_TO_TEMP_FOLDER
-#[doc(hidden)] pub const PCW_CANT_CREATE_ONE_PATCH_FILE : ErrorHResult = ErrorHResult::from_constant(0xC00E513C); // ERROR_PCW_CANT_CREATE_ONE_PATCH_FILE
-#[doc(hidden)] pub const PCW_BAD_IMAGE_FAMILY_DISKID : ErrorHResult = ErrorHResult::from_constant(0xC00E513D); // ERROR_PCW_BAD_IMAGE_FAMILY_DISKID
-#[doc(hidden)] pub const PCW_BAD_IMAGE_FAMILY_FILESEQSTART : ErrorHResult = ErrorHResult::from_constant(0xC00E513E); // ERROR_PCW_BAD_IMAGE_FAMILY_FILESEQSTART
-#[doc(hidden)] pub const PCW_BAD_UPGRADED_IMAGE_FAMILY : ErrorHResult = ErrorHResult::from_constant(0xC00E513F); // ERROR_PCW_BAD_UPGRADED_IMAGE_FAMILY
-#[doc(hidden)] pub const PCW_BAD_TARGET_IMAGE_UPGRADED : ErrorHResult = ErrorHResult::from_constant(0xC00E5140); // ERROR_PCW_BAD_TARGET_IMAGE_UPGRADED
-#[doc(hidden)] pub const PCW_DUP_TARGET_IMAGE_PACKCODE : ErrorHResult = ErrorHResult::from_constant(0xC00E5141); // ERROR_PCW_DUP_TARGET_IMAGE_PACKCODE
-#[doc(hidden)] pub const PCW_UFILEDATA_BAD_UPGRADED_FIELD : ErrorHResult = ErrorHResult::from_constant(0xC00E5142); // ERROR_PCW_UFILEDATA_BAD_UPGRADED_FIELD
-#[doc(hidden)] pub const PCW_MISMATCHED_PRODUCT_CODES : ErrorHResult = ErrorHResult::from_constant(0xC00E5143); // ERROR_PCW_MISMATCHED_PRODUCT_CODES
-#[doc(hidden)] pub const PCW_MISMATCHED_PRODUCT_VERSIONS : ErrorHResult = ErrorHResult::from_constant(0xC00E5144); // ERROR_PCW_MISMATCHED_PRODUCT_VERSIONS
-#[doc(hidden)] pub const PCW_CANNOT_WRITE_DDF : ErrorHResult = ErrorHResult::from_constant(0xC00E5145); // ERROR_PCW_CANNOT_WRITE_DDF
-#[doc(hidden)] pub const PCW_CANNOT_RUN_MAKECAB : ErrorHResult = ErrorHResult::from_constant(0xC00E5146); // ERROR_PCW_CANNOT_RUN_MAKECAB
-#[doc(hidden)] pub const PCW_WRITE_SUMMARY_PROPERTIES : ErrorHResult = ErrorHResult::from_constant(0xC00E514B); // ERROR_PCW_WRITE_SUMMARY_PROPERTIES
-#[doc(hidden)] pub const PCW_TFILEDATA_LONG_FILE_TABLE_KEY : ErrorHResult = ErrorHResult::from_constant(0xC00E514C); // ERROR_PCW_TFILEDATA_LONG_FILE_TABLE_KEY
-#[doc(hidden)] pub const PCW_TFILEDATA_BLANK_FILE_TABLE_KEY : ErrorHResult = ErrorHResult::from_constant(0xC00E514D); // ERROR_PCW_TFILEDATA_BLANK_FILE_TABLE_KEY
-#[doc(hidden)] pub const PCW_TFILEDATA_MISSING_FILE_TABLE_KEY : ErrorHResult = ErrorHResult::from_constant(0xC00E514E); // ERROR_PCW_TFILEDATA_MISSING_FILE_TABLE_KEY
-#[doc(hidden)] pub const PCW_TFILEDATA_BAD_TARGET_FIELD : ErrorHResult = ErrorHResult::from_constant(0xC00E514F); // ERROR_PCW_TFILEDATA_BAD_TARGET_FIELD
-#[doc(hidden)] pub const PCW_UPGRADED_IMAGE_PATCH_PATH_TOO_LONG : ErrorHResult = ErrorHResult::from_constant(0xC00E5150); // ERROR_PCW_UPGRADED_IMAGE_PATCH_PATH_TOO_LONG
-#[doc(hidden)] pub const PCW_UPGRADED_IMAGE_PATCH_PATH_NOT_EXIST : ErrorHResult = ErrorHResult::from_constant(0xC00E5151); // ERROR_PCW_UPGRADED_IMAGE_PATCH_PATH_NOT_EXIST
-#[doc(hidden)] pub const PCW_UPGRADED_IMAGE_PATCH_PATH_NOT_MSI : ErrorHResult = ErrorHResult::from_constant(0xC00E5152); // ERROR_PCW_UPGRADED_IMAGE_PATCH_PATH_NOT_MSI
-#[doc(hidden)] pub const PCW_DUP_UPGRADED_IMAGE_PACKCODE : ErrorHResult = ErrorHResult::from_constant(0xC00E5153); // ERROR_PCW_DUP_UPGRADED_IMAGE_PACKCODE
-#[doc(hidden)] pub const PCW_UFILEIGNORE_BAD_UPGRADED_FIELD : ErrorHResult = ErrorHResult::from_constant(0xC00E5154); // ERROR_PCW_UFILEIGNORE_BAD_UPGRADED_FIELD
-#[doc(hidden)] pub const PCW_UFILEIGNORE_LONG_FILE_TABLE_KEY : ErrorHResult = ErrorHResult::from_constant(0xC00E5155); // ERROR_PCW_UFILEIGNORE_LONG_FILE_TABLE_KEY
-#[doc(hidden)] pub const PCW_UFILEIGNORE_BLANK_FILE_TABLE_KEY : ErrorHResult = ErrorHResult::from_constant(0xC00E5156); // ERROR_PCW_UFILEIGNORE_BLANK_FILE_TABLE_KEY
-#[doc(hidden)] pub const PCW_UFILEIGNORE_BAD_FILE_TABLE_KEY : ErrorHResult = ErrorHResult::from_constant(0xC00E5157); // ERROR_PCW_UFILEIGNORE_BAD_FILE_TABLE_KEY
-#[doc(hidden)] pub const PCW_FAMILY_RANGE_NAME_TOO_LONG : ErrorHResult = ErrorHResult::from_constant(0xC00E5158); // ERROR_PCW_FAMILY_RANGE_NAME_TOO_LONG
-#[doc(hidden)] pub const PCW_BAD_FAMILY_RANGE_NAME : ErrorHResult = ErrorHResult::from_constant(0xC00E5159); // ERROR_PCW_BAD_FAMILY_RANGE_NAME
-#[doc(hidden)] pub const PCW_FAMILY_RANGE_LONG_FILE_TABLE_KEY : ErrorHResult = ErrorHResult::from_constant(0xC00E515A); // ERROR_PCW_FAMILY_RANGE_LONG_FILE_TABLE_KEY
-#[doc(hidden)] pub const PCW_FAMILY_RANGE_BLANK_FILE_TABLE_KEY : ErrorHResult = ErrorHResult::from_constant(0xC00E515B); // ERROR_PCW_FAMILY_RANGE_BLANK_FILE_TABLE_KEY
-#[doc(hidden)] pub const PCW_FAMILY_RANGE_LONG_RETAIN_OFFSETS : ErrorHResult = ErrorHResult::from_constant(0xC00E515C); // ERROR_PCW_FAMILY_RANGE_LONG_RETAIN_OFFSETS
-#[doc(hidden)] pub const PCW_FAMILY_RANGE_BLANK_RETAIN_OFFSETS : ErrorHResult = ErrorHResult::from_constant(0xC00E515D); // ERROR_PCW_FAMILY_RANGE_BLANK_RETAIN_OFFSETS
-#[doc(hidden)] pub const PCW_FAMILY_RANGE_BAD_RETAIN_OFFSETS : ErrorHResult = ErrorHResult::from_constant(0xC00E515E); // ERROR_PCW_FAMILY_RANGE_BAD_RETAIN_OFFSETS
-#[doc(hidden)] pub const PCW_FAMILY_RANGE_LONG_RETAIN_LENGTHS : ErrorHResult = ErrorHResult::from_constant(0xC00E515F); // ERROR_PCW_FAMILY_RANGE_LONG_RETAIN_LENGTHS
-#[doc(hidden)] pub const PCW_FAMILY_RANGE_BLANK_RETAIN_LENGTHS : ErrorHResult = ErrorHResult::from_constant(0xC00E5160); // ERROR_PCW_FAMILY_RANGE_BLANK_RETAIN_LENGTHS
-#[doc(hidden)] pub const PCW_FAMILY_RANGE_BAD_RETAIN_LENGTHS : ErrorHResult = ErrorHResult::from_constant(0xC00E5161); // ERROR_PCW_FAMILY_RANGE_BAD_RETAIN_LENGTHS
-#[doc(hidden)] pub const PCW_FAMILY_RANGE_COUNT_MISMATCH : ErrorHResult = ErrorHResult::from_constant(0xC00E5162); // ERROR_PCW_FAMILY_RANGE_COUNT_MISMATCH
-#[doc(hidden)] pub const PCW_EXTFILE_LONG_IGNORE_OFFSETS : ErrorHResult = ErrorHResult::from_constant(0xC00E5163); // ERROR_PCW_EXTFILE_LONG_IGNORE_OFFSETS
-#[doc(hidden)] pub const PCW_EXTFILE_BAD_IGNORE_OFFSETS : ErrorHResult = ErrorHResult::from_constant(0xC00E5164); // ERROR_PCW_EXTFILE_BAD_IGNORE_OFFSETS
-#[doc(hidden)] pub const PCW_EXTFILE_LONG_IGNORE_LENGTHS : ErrorHResult = ErrorHResult::from_constant(0xC00E5165); // ERROR_PCW_EXTFILE_LONG_IGNORE_LENGTHS
-#[doc(hidden)] pub const PCW_EXTFILE_BAD_IGNORE_LENGTHS : ErrorHResult = ErrorHResult::from_constant(0xC00E5166); // ERROR_PCW_EXTFILE_BAD_IGNORE_LENGTHS
-#[doc(hidden)] pub const PCW_EXTFILE_IGNORE_COUNT_MISMATCH : ErrorHResult = ErrorHResult::from_constant(0xC00E5167); // ERROR_PCW_EXTFILE_IGNORE_COUNT_MISMATCH
-#[doc(hidden)] pub const PCW_EXTFILE_LONG_RETAIN_OFFSETS : ErrorHResult = ErrorHResult::from_constant(0xC00E5168); // ERROR_PCW_EXTFILE_LONG_RETAIN_OFFSETS
-#[doc(hidden)] pub const PCW_EXTFILE_BAD_RETAIN_OFFSETS : ErrorHResult = ErrorHResult::from_constant(0xC00E5169); // ERROR_PCW_EXTFILE_BAD_RETAIN_OFFSETS
-#[doc(hidden)] pub const PCW_TFILEDATA_LONG_IGNORE_OFFSETS : ErrorHResult = ErrorHResult::from_constant(0xC00E516B); // ERROR_PCW_TFILEDATA_LONG_IGNORE_OFFSETS
-#[doc(hidden)] pub const PCW_TFILEDATA_BAD_IGNORE_OFFSETS : ErrorHResult = ErrorHResult::from_constant(0xC00E516C); // ERROR_PCW_TFILEDATA_BAD_IGNORE_OFFSETS
-#[doc(hidden)] pub const PCW_TFILEDATA_LONG_IGNORE_LENGTHS : ErrorHResult = ErrorHResult::from_constant(0xC00E516D); // ERROR_PCW_TFILEDATA_LONG_IGNORE_LENGTHS
-#[doc(hidden)] pub const PCW_TFILEDATA_BAD_IGNORE_LENGTHS : ErrorHResult = ErrorHResult::from_constant(0xC00E516E); // ERROR_PCW_TFILEDATA_BAD_IGNORE_LENGTHS
-#[doc(hidden)] pub const PCW_TFILEDATA_IGNORE_COUNT_MISMATCH : ErrorHResult = ErrorHResult::from_constant(0xC00E516F); // ERROR_PCW_TFILEDATA_IGNORE_COUNT_MISMATCH
-#[doc(hidden)] pub const PCW_TFILEDATA_LONG_RETAIN_OFFSETS : ErrorHResult = ErrorHResult::from_constant(0xC00E5170); // ERROR_PCW_TFILEDATA_LONG_RETAIN_OFFSETS
-#[doc(hidden)] pub const PCW_TFILEDATA_BAD_RETAIN_OFFSETS : ErrorHResult = ErrorHResult::from_constant(0xC00E5171); // ERROR_PCW_TFILEDATA_BAD_RETAIN_OFFSETS
-#[doc(hidden)] pub const PCW_CANT_GENERATE_TRANSFORM : ErrorHResult = ErrorHResult::from_constant(0xC00E5173); // ERROR_PCW_CANT_GENERATE_TRANSFORM
-#[doc(hidden)] pub const PCW_CANT_CREATE_SUMMARY_INFO : ErrorHResult = ErrorHResult::from_constant(0xC00E5174); // ERROR_PCW_CANT_CREATE_SUMMARY_INFO
-#[doc(hidden)] pub const PCW_CANT_GENERATE_TRANSFORM_POUND : ErrorHResult = ErrorHResult::from_constant(0xC00E5175); // ERROR_PCW_CANT_GENERATE_TRANSFORM_POUND
-#[doc(hidden)] pub const PCW_CANT_CREATE_SUMMARY_INFO_POUND : ErrorHResult = ErrorHResult::from_constant(0xC00E5176); // ERROR_PCW_CANT_CREATE_SUMMARY_INFO_POUND
-#[doc(hidden)] pub const PCW_BAD_UPGRADED_IMAGE_PRODUCT_CODE : ErrorHResult = ErrorHResult::from_constant(0xC00E5177); // ERROR_PCW_BAD_UPGRADED_IMAGE_PRODUCT_CODE
-#[doc(hidden)] pub const PCW_BAD_UPGRADED_IMAGE_PRODUCT_VERSION : ErrorHResult = ErrorHResult::from_constant(0xC00E5178); // ERROR_PCW_BAD_UPGRADED_IMAGE_PRODUCT_VERSION
-#[doc(hidden)] pub const PCW_BAD_UPGRADED_IMAGE_UPGRADE_CODE : ErrorHResult = ErrorHResult::from_constant(0xC00E5179); // ERROR_PCW_BAD_UPGRADED_IMAGE_UPGRADE_CODE
-#[doc(hidden)] pub const PCW_BAD_TARGET_IMAGE_PRODUCT_CODE : ErrorHResult = ErrorHResult::from_constant(0xC00E517A); // ERROR_PCW_BAD_TARGET_IMAGE_PRODUCT_CODE
-#[doc(hidden)] pub const PCW_BAD_TARGET_IMAGE_PRODUCT_VERSION : ErrorHResult = ErrorHResult::from_constant(0xC00E517B); // ERROR_PCW_BAD_TARGET_IMAGE_PRODUCT_VERSION
-#[doc(hidden)] pub const PCW_BAD_TARGET_IMAGE_UPGRADE_CODE : ErrorHResult = ErrorHResult::from_constant(0xC00E517C); // ERROR_PCW_BAD_TARGET_IMAGE_UPGRADE_CODE
-#[doc(hidden)] pub const PCW_MATCHED_PRODUCT_VERSIONS : ErrorHResult = ErrorHResult::from_constant(0xC00E517D); // ERROR_PCW_MATCHED_PRODUCT_VERSIONS
-#[doc(hidden)] pub const PCW_OBSOLETION_WITH_SEQUENCE_DATA : ErrorHResult = ErrorHResult::from_constant(0xC00E517E); // ERROR_PCW_OBSOLETION_WITH_SEQUENCE_DATA
-#[doc(hidden)] pub const PCW_OBSOLETION_WITH_MSI30 : ErrorHResult = ErrorHResult::from_constant(0xC00E517F); // ERROR_PCW_OBSOLETION_WITH_MSI30
-#[doc(hidden)] pub const PCW_OBSOLETION_WITH_PATCHSEQUENCE : ErrorHResult = ErrorHResult::from_constant(0xC00E5180); // ERROR_PCW_OBSOLETION_WITH_PATCHSEQUENCE
-#[doc(hidden)] pub const PCW_CANNOT_CREATE_TABLE : ErrorHResult = ErrorHResult::from_constant(0xC00E5181); // ERROR_PCW_CANNOT_CREATE_TABLE
-#[doc(hidden)] pub const PCW_CANT_GENERATE_SEQUENCEINFO_MAJORUPGD : ErrorHResult = ErrorHResult::from_constant(0xC00E5182); // ERROR_PCW_CANT_GENERATE_SEQUENCEINFO_MAJORUPGD
-#[doc(hidden)] pub const PCW_MAJOR_UPGD_WITHOUT_SEQUENCING : ErrorHResult = ErrorHResult::from_constant(0xC00E5183); // ERROR_PCW_MAJOR_UPGD_WITHOUT_SEQUENCING
-#[doc(hidden)] pub const PCW_BAD_PRODUCTVERSION_VALIDATION : ErrorHResult = ErrorHResult::from_constant(0xC00E5184); // ERROR_PCW_BAD_PRODUCTVERSION_VALIDATION
-#[doc(hidden)] pub const PCW_BAD_TRANSFORMSET : ErrorHResult = ErrorHResult::from_constant(0xC00E5185); // ERROR_PCW_BAD_TRANSFORMSET
-#[doc(hidden)] pub const PCW_BAD_TGT_UPD_IMAGES : ErrorHResult = ErrorHResult::from_constant(0xC00E5186); // ERROR_PCW_BAD_TGT_UPD_IMAGES
-#[doc(hidden)] pub const PCW_BAD_SUPERCEDENCE : ErrorHResult = ErrorHResult::from_constant(0xC00E5187); // ERROR_PCW_BAD_SUPERCEDENCE
-#[doc(hidden)] pub const PCW_BAD_SEQUENCE : ErrorHResult = ErrorHResult::from_constant(0xC00E5188); // ERROR_PCW_BAD_SEQUENCE
-#[doc(hidden)] pub const PCW_BAD_TARGET : ErrorHResult = ErrorHResult::from_constant(0xC00E5189); // ERROR_PCW_BAD_TARGET
-#[doc(hidden)] pub const PCW_NULL_PATCHFAMILY : ErrorHResult = ErrorHResult::from_constant(0xC00E518A); // ERROR_PCW_NULL_PATCHFAMILY
-#[doc(hidden)] pub const PCW_NULL_SEQUENCE_NUMBER : ErrorHResult = ErrorHResult::from_constant(0xC00E518B); // ERROR_PCW_NULL_SEQUENCE_NUMBER
-#[doc(hidden)] pub const PCW_BAD_VERSION_STRING : ErrorHResult = ErrorHResult::from_constant(0xC00E518C); // ERROR_PCW_BAD_VERSION_STRING
-#[doc(hidden)] pub const PCW_BAD_MAJOR_VERSION : ErrorHResult = ErrorHResult::from_constant(0xC00E518D); // ERROR_PCW_BAD_MAJOR_VERSION
-#[doc(hidden)] pub const PCW_SEQUENCING_BAD_TARGET : ErrorHResult = ErrorHResult::from_constant(0xC00E518E); // ERROR_PCW_SEQUENCING_BAD_TARGET
-#[doc(hidden)] pub const PCW_PATCHMETADATA_PROP_NOT_SET : ErrorHResult = ErrorHResult::from_constant(0xC00E518F); // ERROR_PCW_PATCHMETADATA_PROP_NOT_SET
-#[doc(hidden)] pub const PCW_INVALID_PATCHMETADATA_PROP : ErrorHResult = ErrorHResult::from_constant(0xC00E5190); // ERROR_PCW_INVALID_PATCHMETADATA_PROP
-#[doc(hidden)] pub const PCW_INVALID_SUPERCEDENCE : ErrorHResult = ErrorHResult::from_constant(0xC00E5191); // ERROR_PCW_INVALID_SUPERCEDENCE
-#[doc(hidden)] pub const PCW_DUPLICATE_SEQUENCE_RECORD : ErrorHResult = ErrorHResult::from_constant(0xC00E5192); // ERROR_PCW_DUPLICATE_SEQUENCE_RECORD
-#[doc(hidden)] pub const PCW_WRONG_PATCHMETADATA_STRD_PROP : ErrorHResult = ErrorHResult::from_constant(0xC00E5193); // ERROR_PCW_WRONG_PATCHMETADATA_STRD_PROP
-#[doc(hidden)] pub const PCW_INVALID_PARAMETER : ErrorHResult = ErrorHResult::from_constant(0xC00E5194); // ERROR_PCW_INVALID_PARAMETER
-#[doc(hidden)] pub const PCW_CREATEFILE_LOG_FAILED : ErrorHResult = ErrorHResult::from_constant(0xC00E5195); // ERROR_PCW_CREATEFILE_LOG_FAILED
-#[doc(hidden)] pub const PCW_INVALID_LOG_LEVEL : ErrorHResult = ErrorHResult::from_constant(0xC00E5196); // ERROR_PCW_INVALID_LOG_LEVEL
-#[doc(hidden)] pub const PCW_INVALID_UI_LEVEL : ErrorHResult = ErrorHResult::from_constant(0xC00E5197); // ERROR_PCW_INVALID_UI_LEVEL
-#[doc(hidden)] pub const PCW_ERROR_WRITING_TO_LOG : ErrorHResult = ErrorHResult::from_constant(0xC00E5198); // ERROR_PCW_ERROR_WRITING_TO_LOG
-#[doc(hidden)] pub const PCW_OUT_OF_MEMORY : ErrorHResult = ErrorHResult::from_constant(0xC00E5199); // ERROR_PCW_OUT_OF_MEMORY
-#[doc(hidden)] pub const PCW_UNKNOWN_ERROR : ErrorHResult = ErrorHResult::from_constant(0xC00E519A); // ERROR_PCW_UNKNOWN_ERROR
-#[doc(hidden)] pub const PCW_UNKNOWN_INFO : ErrorHResult = ErrorHResult::from_constant(0xC00E519B); // ERROR_PCW_UNKNOWN_INFO
-#[doc(hidden)] pub const PCW_UNKNOWN_WARN : ErrorHResult = ErrorHResult::from_constant(0xC00E519C); // ERROR_PCW_UNKNOWN_WARN
-#[doc(hidden)] pub const PCW_OPEN_VIEW : ErrorHResult = ErrorHResult::from_constant(0xC00E519D); // ERROR_PCW_OPEN_VIEW
-#[doc(hidden)] pub const PCW_EXECUTE_VIEW : ErrorHResult = ErrorHResult::from_constant(0xC00E519E); // ERROR_PCW_EXECUTE_VIEW
-#[doc(hidden)] pub const PCW_VIEW_FETCH : ErrorHResult = ErrorHResult::from_constant(0xC00E519F); // ERROR_PCW_VIEW_FETCH
-#[doc(hidden)] pub const PCW_FAILED_EXPAND_PATH : ErrorHResult = ErrorHResult::from_constant(0xC00E51A0); // ERROR_PCW_FAILED_EXPAND_PATH
-#[doc(hidden)] pub const PCW_INTERNAL_ERROR : ErrorHResult = ErrorHResult::from_constant(0xC00E5201); // ERROR_PCW_INTERNAL_ERROR
-#[doc(hidden)] pub const PCW_INVALID_PCP_PROPERTY : ErrorHResult = ErrorHResult::from_constant(0xC00E5202); // ERROR_PCW_INVALID_PCP_PROPERTY
-#[doc(hidden)] pub const PCW_INVALID_PCP_TARGETIMAGES : ErrorHResult = ErrorHResult::from_constant(0xC00E5203); // ERROR_PCW_INVALID_PCP_TARGETIMAGES
-#[doc(hidden)] pub const PCW_LAX_VALIDATION_FLAGS : ErrorHResult = ErrorHResult::from_constant(0xC00E5204); // ERROR_PCW_LAX_VALIDATION_FLAGS
-#[doc(hidden)] pub const PCW_FAILED_CREATE_TRANSFORM : ErrorHResult = ErrorHResult::from_constant(0xC00E5205); // ERROR_PCW_FAILED_CREATE_TRANSFORM
-#[doc(hidden)] pub const PCW_CANT_DELETE_TEMP_FOLDER : ErrorHResult = ErrorHResult::from_constant(0xC00E5206); // ERROR_PCW_CANT_DELETE_TEMP_FOLDER
-#[doc(hidden)] pub const PCW_MISSING_DIRECTORY_TABLE : ErrorHResult = ErrorHResult::from_constant(0xC00E5207); // ERROR_PCW_MISSING_DIRECTORY_TABLE
-#[doc(hidden)] pub const PCW_INVALID_SUPERSEDENCE_VALUE : ErrorHResult = ErrorHResult::from_constant(0xC00E5208); // ERROR_PCW_INVALID_SUPERSEDENCE_VALUE
-#[doc(hidden)] pub const PCW_INVALID_PATCH_TYPE_SEQUENCING : ErrorHResult = ErrorHResult::from_constant(0xC00E5209); // ERROR_PCW_INVALID_PATCH_TYPE_SEQUENCING
-#[doc(hidden)] pub const PCW_CANT_READ_FILE : ErrorHResult = ErrorHResult::from_constant(0xC00E520A); // ERROR_PCW_CANT_READ_FILE
-#[doc(hidden)] pub const PCW_TARGET_WRONG_PRODUCT_VERSION_COMP : ErrorHResult = ErrorHResult::from_constant(0xC00E520B); // ERROR_PCW_TARGET_WRONG_PRODUCT_VERSION_COMP
-#[doc(hidden)] pub const PCW_INVALID_PCP_UPGRADEDFILESTOIGNORE : ErrorHResult = ErrorHResult::from_constant(0xC00E520C); // ERROR_PCW_INVALID_PCP_UPGRADEDFILESTOIGNORE
-#[doc(hidden)] pub const PCW_INVALID_PCP_UPGRADEDIMAGES : ErrorHResult = ErrorHResult::from_constant(0xC00E520D); // ERROR_PCW_INVALID_PCP_UPGRADEDIMAGES
-#[doc(hidden)] pub const PCW_INVALID_PCP_EXTERNALFILES : ErrorHResult = ErrorHResult::from_constant(0xC00E520E); // ERROR_PCW_INVALID_PCP_EXTERNALFILES
-#[doc(hidden)] pub const PCW_INVALID_PCP_IMAGEFAMILIES : ErrorHResult = ErrorHResult::from_constant(0xC00E520F); // ERROR_PCW_INVALID_PCP_IMAGEFAMILIES
-#[doc(hidden)] pub const PCW_INVALID_PCP_PATCHSEQUENCE : ErrorHResult = ErrorHResult::from_constant(0xC00E5210); // ERROR_PCW_INVALID_PCP_PATCHSEQUENCE
-#[doc(hidden)] pub const PCW_INVALID_PCP_TARGETFILES_OPTIONALDATA : ErrorHResult = ErrorHResult::from_constant(0xC00E5211); // ERROR_PCW_INVALID_PCP_TARGETFILES_OPTIONALDATA
-#[doc(hidden)] pub const PCW_INVALID_PCP_UPGRADEDFILES_OPTIONALDATA : ErrorHResult = ErrorHResult::from_constant(0xC00E5212); // ERROR_PCW_INVALID_PCP_UPGRADEDFILES_OPTIONALDATA
-#[doc(hidden)] pub const PCW_MISSING_PATCHMETADATA : ErrorHResult = ErrorHResult::from_constant(0xC00E5213); // ERROR_PCW_MISSING_PATCHMETADATA
-#[doc(hidden)] pub const PCW_IMAGE_PATH_NOT_EXIST : ErrorHResult = ErrorHResult::from_constant(0xC00E5214); // ERROR_PCW_IMAGE_PATH_NOT_EXIST
-#[doc(hidden)] pub const PCW_INVALID_RANGE_ELEMENT : ErrorHResult = ErrorHResult::from_constant(0xC00E5215); // ERROR_PCW_INVALID_RANGE_ELEMENT
-#[doc(hidden)] pub const PCW_INVALID_MAJOR_VERSION : ErrorHResult = ErrorHResult::from_constant(0xC00E5216); // ERROR_PCW_INVALID_MAJOR_VERSION
-#[doc(hidden)] pub const PCW_INVALID_PCP_PROPERTIES : ErrorHResult = ErrorHResult::from_constant(0xC00E5217); // ERROR_PCW_INVALID_PCP_PROPERTIES
-#[doc(hidden)] pub const PCW_INVALID_PCP_FAMILYFILERANGES : ErrorHResult = ErrorHResult::from_constant(0xC00E5218); // ERROR_PCW_INVALID_PCP_FAMILYFILERANGES
+#[doc(hidden)] pub const PATCH_ENCODE_FAILURE : HResultError = HResultError::from_constant(0xC00E3101); // ERROR_PATCH_ENCODE_FAILURE
+#[doc(hidden)] pub const PATCH_INVALID_OPTIONS : HResultError = HResultError::from_constant(0xC00E3102); // ERROR_PATCH_INVALID_OPTIONS
+#[doc(hidden)] pub const PATCH_SAME_FILE : HResultError = HResultError::from_constant(0xC00E3103); // ERROR_PATCH_SAME_FILE
+#[doc(hidden)] pub const PATCH_RETAIN_RANGES_DIFFER : HResultError = HResultError::from_constant(0xC00E3104); // ERROR_PATCH_RETAIN_RANGES_DIFFER
+#[doc(hidden)] pub const PATCH_BIGGER_THAN_COMPRESSED : HResultError = HResultError::from_constant(0xC00E3105); // ERROR_PATCH_BIGGER_THAN_COMPRESSED
+#[doc(hidden)] pub const PATCH_IMAGEHLP_FAILURE : HResultError = HResultError::from_constant(0xC00E3106); // ERROR_PATCH_IMAGEHLP_FAILURE
+#[doc(hidden)] pub const PATCH_DECODE_FAILURE : HResultError = HResultError::from_constant(0xC00E4101); // ERROR_PATCH_DECODE_FAILURE
+#[doc(hidden)] pub const PATCH_CORRUPT : HResultError = HResultError::from_constant(0xC00E4102); // ERROR_PATCH_CORRUPT
+#[doc(hidden)] pub const PATCH_NEWER_FORMAT : HResultError = HResultError::from_constant(0xC00E4103); // ERROR_PATCH_NEWER_FORMAT
+#[doc(hidden)] pub const PATCH_WRONG_FILE : HResultError = HResultError::from_constant(0xC00E4104); // ERROR_PATCH_WRONG_FILE
+#[doc(hidden)] pub const PATCH_NOT_NECESSARY : HResultError = HResultError::from_constant(0xC00E4105); // ERROR_PATCH_NOT_NECESSARY
+#[doc(hidden)] pub const PATCH_NOT_AVAILABLE : HResultError = HResultError::from_constant(0xC00E4106); // ERROR_PATCH_NOT_AVAILABLE
+#[doc(hidden)] pub const PCW_PCP_DOESNT_EXIST : HResultError = HResultError::from_constant(0xC00E5101); // ERROR_PCW_PCP_DOESNT_EXIST
+#[doc(hidden)] pub const PCW_PCP_BAD_FORMAT : HResultError = HResultError::from_constant(0xC00E5102); // ERROR_PCW_PCP_BAD_FORMAT
+#[doc(hidden)] pub const PCW_CANT_CREATE_TEMP_FOLDER : HResultError = HResultError::from_constant(0xC00E5103); // ERROR_PCW_CANT_CREATE_TEMP_FOLDER
+#[doc(hidden)] pub const PCW_MISSING_PATCH_PATH : HResultError = HResultError::from_constant(0xC00E5104); // ERROR_PCW_MISSING_PATCH_PATH
+#[doc(hidden)] pub const PCW_CANT_OVERWRITE_PATCH : HResultError = HResultError::from_constant(0xC00E5105); // ERROR_PCW_CANT_OVERWRITE_PATCH
+#[doc(hidden)] pub const PCW_CANT_CREATE_PATCH_FILE : HResultError = HResultError::from_constant(0xC00E5106); // ERROR_PCW_CANT_CREATE_PATCH_FILE
+#[doc(hidden)] pub const PCW_MISSING_PATCH_GUID : HResultError = HResultError::from_constant(0xC00E5107); // ERROR_PCW_MISSING_PATCH_GUID
+#[doc(hidden)] pub const PCW_BAD_PATCH_GUID : HResultError = HResultError::from_constant(0xC00E5108); // ERROR_PCW_BAD_PATCH_GUID
+#[doc(hidden)] pub const PCW_BAD_GUIDS_TO_REPLACE : HResultError = HResultError::from_constant(0xC00E5109); // ERROR_PCW_BAD_GUIDS_TO_REPLACE
+#[doc(hidden)] pub const PCW_BAD_TARGET_PRODUCT_CODE_LIST : HResultError = HResultError::from_constant(0xC00E510A); // ERROR_PCW_BAD_TARGET_PRODUCT_CODE_LIST
+#[doc(hidden)] pub const PCW_NO_UPGRADED_IMAGES_TO_PATCH : HResultError = HResultError::from_constant(0xC00E510B); // ERROR_PCW_NO_UPGRADED_IMAGES_TO_PATCH
+#[doc(hidden)] pub const PCW_BAD_API_PATCHING_SYMBOL_FLAGS : HResultError = HResultError::from_constant(0xC00E510D); // ERROR_PCW_BAD_API_PATCHING_SYMBOL_FLAGS
+#[doc(hidden)] pub const PCW_OODS_COPYING_MSI : HResultError = HResultError::from_constant(0xC00E510E); // ERROR_PCW_OODS_COPYING_MSI
+#[doc(hidden)] pub const PCW_UPGRADED_IMAGE_NAME_TOO_LONG : HResultError = HResultError::from_constant(0xC00E510F); // ERROR_PCW_UPGRADED_IMAGE_NAME_TOO_LONG
+#[doc(hidden)] pub const PCW_BAD_UPGRADED_IMAGE_NAME : HResultError = HResultError::from_constant(0xC00E5110); // ERROR_PCW_BAD_UPGRADED_IMAGE_NAME
+#[doc(hidden)] pub const PCW_DUP_UPGRADED_IMAGE_NAME : HResultError = HResultError::from_constant(0xC00E5111); // ERROR_PCW_DUP_UPGRADED_IMAGE_NAME
+#[doc(hidden)] pub const PCW_UPGRADED_IMAGE_PATH_TOO_LONG : HResultError = HResultError::from_constant(0xC00E5112); // ERROR_PCW_UPGRADED_IMAGE_PATH_TOO_LONG
+#[doc(hidden)] pub const PCW_UPGRADED_IMAGE_PATH_EMPTY : HResultError = HResultError::from_constant(0xC00E5113); // ERROR_PCW_UPGRADED_IMAGE_PATH_EMPTY
+#[doc(hidden)] pub const PCW_UPGRADED_IMAGE_PATH_NOT_EXIST : HResultError = HResultError::from_constant(0xC00E5114); // ERROR_PCW_UPGRADED_IMAGE_PATH_NOT_EXIST
+#[doc(hidden)] pub const PCW_UPGRADED_IMAGE_PATH_NOT_MSI : HResultError = HResultError::from_constant(0xC00E5115); // ERROR_PCW_UPGRADED_IMAGE_PATH_NOT_MSI
+#[doc(hidden)] pub const PCW_UPGRADED_IMAGE_COMPRESSED : HResultError = HResultError::from_constant(0xC00E5116); // ERROR_PCW_UPGRADED_IMAGE_COMPRESSED
+#[doc(hidden)] pub const PCW_TARGET_IMAGE_NAME_TOO_LONG : HResultError = HResultError::from_constant(0xC00E5117); // ERROR_PCW_TARGET_IMAGE_NAME_TOO_LONG
+#[doc(hidden)] pub const PCW_BAD_TARGET_IMAGE_NAME : HResultError = HResultError::from_constant(0xC00E5118); // ERROR_PCW_BAD_TARGET_IMAGE_NAME
+#[doc(hidden)] pub const PCW_DUP_TARGET_IMAGE_NAME : HResultError = HResultError::from_constant(0xC00E5119); // ERROR_PCW_DUP_TARGET_IMAGE_NAME
+#[doc(hidden)] pub const PCW_TARGET_IMAGE_PATH_TOO_LONG : HResultError = HResultError::from_constant(0xC00E511A); // ERROR_PCW_TARGET_IMAGE_PATH_TOO_LONG
+#[doc(hidden)] pub const PCW_TARGET_IMAGE_PATH_EMPTY : HResultError = HResultError::from_constant(0xC00E511B); // ERROR_PCW_TARGET_IMAGE_PATH_EMPTY
+#[doc(hidden)] pub const PCW_TARGET_IMAGE_PATH_NOT_EXIST : HResultError = HResultError::from_constant(0xC00E511C); // ERROR_PCW_TARGET_IMAGE_PATH_NOT_EXIST
+#[doc(hidden)] pub const PCW_TARGET_IMAGE_PATH_NOT_MSI : HResultError = HResultError::from_constant(0xC00E511D); // ERROR_PCW_TARGET_IMAGE_PATH_NOT_MSI
+#[doc(hidden)] pub const PCW_TARGET_IMAGE_COMPRESSED : HResultError = HResultError::from_constant(0xC00E511E); // ERROR_PCW_TARGET_IMAGE_COMPRESSED
+#[doc(hidden)] pub const PCW_TARGET_BAD_PROD_VALIDATE : HResultError = HResultError::from_constant(0xC00E511F); // ERROR_PCW_TARGET_BAD_PROD_VALIDATE
+#[doc(hidden)] pub const PCW_TARGET_BAD_PROD_CODE_VAL : HResultError = HResultError::from_constant(0xC00E5120); // ERROR_PCW_TARGET_BAD_PROD_CODE_VAL
+#[doc(hidden)] pub const PCW_UPGRADED_MISSING_SRC_FILES : HResultError = HResultError::from_constant(0xC00E5121); // ERROR_PCW_UPGRADED_MISSING_SRC_FILES
+#[doc(hidden)] pub const PCW_TARGET_MISSING_SRC_FILES : HResultError = HResultError::from_constant(0xC00E5122); // ERROR_PCW_TARGET_MISSING_SRC_FILES
+#[doc(hidden)] pub const PCW_IMAGE_FAMILY_NAME_TOO_LONG : HResultError = HResultError::from_constant(0xC00E5123); // ERROR_PCW_IMAGE_FAMILY_NAME_TOO_LONG
+#[doc(hidden)] pub const PCW_BAD_IMAGE_FAMILY_NAME : HResultError = HResultError::from_constant(0xC00E5124); // ERROR_PCW_BAD_IMAGE_FAMILY_NAME
+#[doc(hidden)] pub const PCW_DUP_IMAGE_FAMILY_NAME : HResultError = HResultError::from_constant(0xC00E5125); // ERROR_PCW_DUP_IMAGE_FAMILY_NAME
+#[doc(hidden)] pub const PCW_BAD_IMAGE_FAMILY_SRC_PROP : HResultError = HResultError::from_constant(0xC00E5126); // ERROR_PCW_BAD_IMAGE_FAMILY_SRC_PROP
+#[doc(hidden)] pub const PCW_UFILEDATA_LONG_FILE_TABLE_KEY : HResultError = HResultError::from_constant(0xC00E5127); // ERROR_PCW_UFILEDATA_LONG_FILE_TABLE_KEY
+#[doc(hidden)] pub const PCW_UFILEDATA_BLANK_FILE_TABLE_KEY : HResultError = HResultError::from_constant(0xC00E5128); // ERROR_PCW_UFILEDATA_BLANK_FILE_TABLE_KEY
+#[doc(hidden)] pub const PCW_UFILEDATA_MISSING_FILE_TABLE_KEY : HResultError = HResultError::from_constant(0xC00E5129); // ERROR_PCW_UFILEDATA_MISSING_FILE_TABLE_KEY
+#[doc(hidden)] pub const PCW_EXTFILE_LONG_FILE_TABLE_KEY : HResultError = HResultError::from_constant(0xC00E512A); // ERROR_PCW_EXTFILE_LONG_FILE_TABLE_KEY
+#[doc(hidden)] pub const PCW_EXTFILE_BLANK_FILE_TABLE_KEY : HResultError = HResultError::from_constant(0xC00E512B); // ERROR_PCW_EXTFILE_BLANK_FILE_TABLE_KEY
+#[doc(hidden)] pub const PCW_EXTFILE_BAD_FAMILY_FIELD : HResultError = HResultError::from_constant(0xC00E512C); // ERROR_PCW_EXTFILE_BAD_FAMILY_FIELD
+#[doc(hidden)] pub const PCW_EXTFILE_LONG_PATH_TO_FILE : HResultError = HResultError::from_constant(0xC00E512D); // ERROR_PCW_EXTFILE_LONG_PATH_TO_FILE
+#[doc(hidden)] pub const PCW_EXTFILE_BLANK_PATH_TO_FILE : HResultError = HResultError::from_constant(0xC00E512E); // ERROR_PCW_EXTFILE_BLANK_PATH_TO_FILE
+#[doc(hidden)] pub const PCW_EXTFILE_MISSING_FILE : HResultError = HResultError::from_constant(0xC00E512F); // ERROR_PCW_EXTFILE_MISSING_FILE
+#[doc(hidden)] pub const PCW_BAD_FILE_SEQUENCE_START : HResultError = HResultError::from_constant(0xC00E513A); // ERROR_PCW_BAD_FILE_SEQUENCE_START
+#[doc(hidden)] pub const PCW_CANT_COPY_FILE_TO_TEMP_FOLDER : HResultError = HResultError::from_constant(0xC00E513B); // ERROR_PCW_CANT_COPY_FILE_TO_TEMP_FOLDER
+#[doc(hidden)] pub const PCW_CANT_CREATE_ONE_PATCH_FILE : HResultError = HResultError::from_constant(0xC00E513C); // ERROR_PCW_CANT_CREATE_ONE_PATCH_FILE
+#[doc(hidden)] pub const PCW_BAD_IMAGE_FAMILY_DISKID : HResultError = HResultError::from_constant(0xC00E513D); // ERROR_PCW_BAD_IMAGE_FAMILY_DISKID
+#[doc(hidden)] pub const PCW_BAD_IMAGE_FAMILY_FILESEQSTART : HResultError = HResultError::from_constant(0xC00E513E); // ERROR_PCW_BAD_IMAGE_FAMILY_FILESEQSTART
+#[doc(hidden)] pub const PCW_BAD_UPGRADED_IMAGE_FAMILY : HResultError = HResultError::from_constant(0xC00E513F); // ERROR_PCW_BAD_UPGRADED_IMAGE_FAMILY
+#[doc(hidden)] pub const PCW_BAD_TARGET_IMAGE_UPGRADED : HResultError = HResultError::from_constant(0xC00E5140); // ERROR_PCW_BAD_TARGET_IMAGE_UPGRADED
+#[doc(hidden)] pub const PCW_DUP_TARGET_IMAGE_PACKCODE : HResultError = HResultError::from_constant(0xC00E5141); // ERROR_PCW_DUP_TARGET_IMAGE_PACKCODE
+#[doc(hidden)] pub const PCW_UFILEDATA_BAD_UPGRADED_FIELD : HResultError = HResultError::from_constant(0xC00E5142); // ERROR_PCW_UFILEDATA_BAD_UPGRADED_FIELD
+#[doc(hidden)] pub const PCW_MISMATCHED_PRODUCT_CODES : HResultError = HResultError::from_constant(0xC00E5143); // ERROR_PCW_MISMATCHED_PRODUCT_CODES
+#[doc(hidden)] pub const PCW_MISMATCHED_PRODUCT_VERSIONS : HResultError = HResultError::from_constant(0xC00E5144); // ERROR_PCW_MISMATCHED_PRODUCT_VERSIONS
+#[doc(hidden)] pub const PCW_CANNOT_WRITE_DDF : HResultError = HResultError::from_constant(0xC00E5145); // ERROR_PCW_CANNOT_WRITE_DDF
+#[doc(hidden)] pub const PCW_CANNOT_RUN_MAKECAB : HResultError = HResultError::from_constant(0xC00E5146); // ERROR_PCW_CANNOT_RUN_MAKECAB
+#[doc(hidden)] pub const PCW_WRITE_SUMMARY_PROPERTIES : HResultError = HResultError::from_constant(0xC00E514B); // ERROR_PCW_WRITE_SUMMARY_PROPERTIES
+#[doc(hidden)] pub const PCW_TFILEDATA_LONG_FILE_TABLE_KEY : HResultError = HResultError::from_constant(0xC00E514C); // ERROR_PCW_TFILEDATA_LONG_FILE_TABLE_KEY
+#[doc(hidden)] pub const PCW_TFILEDATA_BLANK_FILE_TABLE_KEY : HResultError = HResultError::from_constant(0xC00E514D); // ERROR_PCW_TFILEDATA_BLANK_FILE_TABLE_KEY
+#[doc(hidden)] pub const PCW_TFILEDATA_MISSING_FILE_TABLE_KEY : HResultError = HResultError::from_constant(0xC00E514E); // ERROR_PCW_TFILEDATA_MISSING_FILE_TABLE_KEY
+#[doc(hidden)] pub const PCW_TFILEDATA_BAD_TARGET_FIELD : HResultError = HResultError::from_constant(0xC00E514F); // ERROR_PCW_TFILEDATA_BAD_TARGET_FIELD
+#[doc(hidden)] pub const PCW_UPGRADED_IMAGE_PATCH_PATH_TOO_LONG : HResultError = HResultError::from_constant(0xC00E5150); // ERROR_PCW_UPGRADED_IMAGE_PATCH_PATH_TOO_LONG
+#[doc(hidden)] pub const PCW_UPGRADED_IMAGE_PATCH_PATH_NOT_EXIST : HResultError = HResultError::from_constant(0xC00E5151); // ERROR_PCW_UPGRADED_IMAGE_PATCH_PATH_NOT_EXIST
+#[doc(hidden)] pub const PCW_UPGRADED_IMAGE_PATCH_PATH_NOT_MSI : HResultError = HResultError::from_constant(0xC00E5152); // ERROR_PCW_UPGRADED_IMAGE_PATCH_PATH_NOT_MSI
+#[doc(hidden)] pub const PCW_DUP_UPGRADED_IMAGE_PACKCODE : HResultError = HResultError::from_constant(0xC00E5153); // ERROR_PCW_DUP_UPGRADED_IMAGE_PACKCODE
+#[doc(hidden)] pub const PCW_UFILEIGNORE_BAD_UPGRADED_FIELD : HResultError = HResultError::from_constant(0xC00E5154); // ERROR_PCW_UFILEIGNORE_BAD_UPGRADED_FIELD
+#[doc(hidden)] pub const PCW_UFILEIGNORE_LONG_FILE_TABLE_KEY : HResultError = HResultError::from_constant(0xC00E5155); // ERROR_PCW_UFILEIGNORE_LONG_FILE_TABLE_KEY
+#[doc(hidden)] pub const PCW_UFILEIGNORE_BLANK_FILE_TABLE_KEY : HResultError = HResultError::from_constant(0xC00E5156); // ERROR_PCW_UFILEIGNORE_BLANK_FILE_TABLE_KEY
+#[doc(hidden)] pub const PCW_UFILEIGNORE_BAD_FILE_TABLE_KEY : HResultError = HResultError::from_constant(0xC00E5157); // ERROR_PCW_UFILEIGNORE_BAD_FILE_TABLE_KEY
+#[doc(hidden)] pub const PCW_FAMILY_RANGE_NAME_TOO_LONG : HResultError = HResultError::from_constant(0xC00E5158); // ERROR_PCW_FAMILY_RANGE_NAME_TOO_LONG
+#[doc(hidden)] pub const PCW_BAD_FAMILY_RANGE_NAME : HResultError = HResultError::from_constant(0xC00E5159); // ERROR_PCW_BAD_FAMILY_RANGE_NAME
+#[doc(hidden)] pub const PCW_FAMILY_RANGE_LONG_FILE_TABLE_KEY : HResultError = HResultError::from_constant(0xC00E515A); // ERROR_PCW_FAMILY_RANGE_LONG_FILE_TABLE_KEY
+#[doc(hidden)] pub const PCW_FAMILY_RANGE_BLANK_FILE_TABLE_KEY : HResultError = HResultError::from_constant(0xC00E515B); // ERROR_PCW_FAMILY_RANGE_BLANK_FILE_TABLE_KEY
+#[doc(hidden)] pub const PCW_FAMILY_RANGE_LONG_RETAIN_OFFSETS : HResultError = HResultError::from_constant(0xC00E515C); // ERROR_PCW_FAMILY_RANGE_LONG_RETAIN_OFFSETS
+#[doc(hidden)] pub const PCW_FAMILY_RANGE_BLANK_RETAIN_OFFSETS : HResultError = HResultError::from_constant(0xC00E515D); // ERROR_PCW_FAMILY_RANGE_BLANK_RETAIN_OFFSETS
+#[doc(hidden)] pub const PCW_FAMILY_RANGE_BAD_RETAIN_OFFSETS : HResultError = HResultError::from_constant(0xC00E515E); // ERROR_PCW_FAMILY_RANGE_BAD_RETAIN_OFFSETS
+#[doc(hidden)] pub const PCW_FAMILY_RANGE_LONG_RETAIN_LENGTHS : HResultError = HResultError::from_constant(0xC00E515F); // ERROR_PCW_FAMILY_RANGE_LONG_RETAIN_LENGTHS
+#[doc(hidden)] pub const PCW_FAMILY_RANGE_BLANK_RETAIN_LENGTHS : HResultError = HResultError::from_constant(0xC00E5160); // ERROR_PCW_FAMILY_RANGE_BLANK_RETAIN_LENGTHS
+#[doc(hidden)] pub const PCW_FAMILY_RANGE_BAD_RETAIN_LENGTHS : HResultError = HResultError::from_constant(0xC00E5161); // ERROR_PCW_FAMILY_RANGE_BAD_RETAIN_LENGTHS
+#[doc(hidden)] pub const PCW_FAMILY_RANGE_COUNT_MISMATCH : HResultError = HResultError::from_constant(0xC00E5162); // ERROR_PCW_FAMILY_RANGE_COUNT_MISMATCH
+#[doc(hidden)] pub const PCW_EXTFILE_LONG_IGNORE_OFFSETS : HResultError = HResultError::from_constant(0xC00E5163); // ERROR_PCW_EXTFILE_LONG_IGNORE_OFFSETS
+#[doc(hidden)] pub const PCW_EXTFILE_BAD_IGNORE_OFFSETS : HResultError = HResultError::from_constant(0xC00E5164); // ERROR_PCW_EXTFILE_BAD_IGNORE_OFFSETS
+#[doc(hidden)] pub const PCW_EXTFILE_LONG_IGNORE_LENGTHS : HResultError = HResultError::from_constant(0xC00E5165); // ERROR_PCW_EXTFILE_LONG_IGNORE_LENGTHS
+#[doc(hidden)] pub const PCW_EXTFILE_BAD_IGNORE_LENGTHS : HResultError = HResultError::from_constant(0xC00E5166); // ERROR_PCW_EXTFILE_BAD_IGNORE_LENGTHS
+#[doc(hidden)] pub const PCW_EXTFILE_IGNORE_COUNT_MISMATCH : HResultError = HResultError::from_constant(0xC00E5167); // ERROR_PCW_EXTFILE_IGNORE_COUNT_MISMATCH
+#[doc(hidden)] pub const PCW_EXTFILE_LONG_RETAIN_OFFSETS : HResultError = HResultError::from_constant(0xC00E5168); // ERROR_PCW_EXTFILE_LONG_RETAIN_OFFSETS
+#[doc(hidden)] pub const PCW_EXTFILE_BAD_RETAIN_OFFSETS : HResultError = HResultError::from_constant(0xC00E5169); // ERROR_PCW_EXTFILE_BAD_RETAIN_OFFSETS
+#[doc(hidden)] pub const PCW_TFILEDATA_LONG_IGNORE_OFFSETS : HResultError = HResultError::from_constant(0xC00E516B); // ERROR_PCW_TFILEDATA_LONG_IGNORE_OFFSETS
+#[doc(hidden)] pub const PCW_TFILEDATA_BAD_IGNORE_OFFSETS : HResultError = HResultError::from_constant(0xC00E516C); // ERROR_PCW_TFILEDATA_BAD_IGNORE_OFFSETS
+#[doc(hidden)] pub const PCW_TFILEDATA_LONG_IGNORE_LENGTHS : HResultError = HResultError::from_constant(0xC00E516D); // ERROR_PCW_TFILEDATA_LONG_IGNORE_LENGTHS
+#[doc(hidden)] pub const PCW_TFILEDATA_BAD_IGNORE_LENGTHS : HResultError = HResultError::from_constant(0xC00E516E); // ERROR_PCW_TFILEDATA_BAD_IGNORE_LENGTHS
+#[doc(hidden)] pub const PCW_TFILEDATA_IGNORE_COUNT_MISMATCH : HResultError = HResultError::from_constant(0xC00E516F); // ERROR_PCW_TFILEDATA_IGNORE_COUNT_MISMATCH
+#[doc(hidden)] pub const PCW_TFILEDATA_LONG_RETAIN_OFFSETS : HResultError = HResultError::from_constant(0xC00E5170); // ERROR_PCW_TFILEDATA_LONG_RETAIN_OFFSETS
+#[doc(hidden)] pub const PCW_TFILEDATA_BAD_RETAIN_OFFSETS : HResultError = HResultError::from_constant(0xC00E5171); // ERROR_PCW_TFILEDATA_BAD_RETAIN_OFFSETS
+#[doc(hidden)] pub const PCW_CANT_GENERATE_TRANSFORM : HResultError = HResultError::from_constant(0xC00E5173); // ERROR_PCW_CANT_GENERATE_TRANSFORM
+#[doc(hidden)] pub const PCW_CANT_CREATE_SUMMARY_INFO : HResultError = HResultError::from_constant(0xC00E5174); // ERROR_PCW_CANT_CREATE_SUMMARY_INFO
+#[doc(hidden)] pub const PCW_CANT_GENERATE_TRANSFORM_POUND : HResultError = HResultError::from_constant(0xC00E5175); // ERROR_PCW_CANT_GENERATE_TRANSFORM_POUND
+#[doc(hidden)] pub const PCW_CANT_CREATE_SUMMARY_INFO_POUND : HResultError = HResultError::from_constant(0xC00E5176); // ERROR_PCW_CANT_CREATE_SUMMARY_INFO_POUND
+#[doc(hidden)] pub const PCW_BAD_UPGRADED_IMAGE_PRODUCT_CODE : HResultError = HResultError::from_constant(0xC00E5177); // ERROR_PCW_BAD_UPGRADED_IMAGE_PRODUCT_CODE
+#[doc(hidden)] pub const PCW_BAD_UPGRADED_IMAGE_PRODUCT_VERSION : HResultError = HResultError::from_constant(0xC00E5178); // ERROR_PCW_BAD_UPGRADED_IMAGE_PRODUCT_VERSION
+#[doc(hidden)] pub const PCW_BAD_UPGRADED_IMAGE_UPGRADE_CODE : HResultError = HResultError::from_constant(0xC00E5179); // ERROR_PCW_BAD_UPGRADED_IMAGE_UPGRADE_CODE
+#[doc(hidden)] pub const PCW_BAD_TARGET_IMAGE_PRODUCT_CODE : HResultError = HResultError::from_constant(0xC00E517A); // ERROR_PCW_BAD_TARGET_IMAGE_PRODUCT_CODE
+#[doc(hidden)] pub const PCW_BAD_TARGET_IMAGE_PRODUCT_VERSION : HResultError = HResultError::from_constant(0xC00E517B); // ERROR_PCW_BAD_TARGET_IMAGE_PRODUCT_VERSION
+#[doc(hidden)] pub const PCW_BAD_TARGET_IMAGE_UPGRADE_CODE : HResultError = HResultError::from_constant(0xC00E517C); // ERROR_PCW_BAD_TARGET_IMAGE_UPGRADE_CODE
+#[doc(hidden)] pub const PCW_MATCHED_PRODUCT_VERSIONS : HResultError = HResultError::from_constant(0xC00E517D); // ERROR_PCW_MATCHED_PRODUCT_VERSIONS
+#[doc(hidden)] pub const PCW_OBSOLETION_WITH_SEQUENCE_DATA : HResultError = HResultError::from_constant(0xC00E517E); // ERROR_PCW_OBSOLETION_WITH_SEQUENCE_DATA
+#[doc(hidden)] pub const PCW_OBSOLETION_WITH_MSI30 : HResultError = HResultError::from_constant(0xC00E517F); // ERROR_PCW_OBSOLETION_WITH_MSI30
+#[doc(hidden)] pub const PCW_OBSOLETION_WITH_PATCHSEQUENCE : HResultError = HResultError::from_constant(0xC00E5180); // ERROR_PCW_OBSOLETION_WITH_PATCHSEQUENCE
+#[doc(hidden)] pub const PCW_CANNOT_CREATE_TABLE : HResultError = HResultError::from_constant(0xC00E5181); // ERROR_PCW_CANNOT_CREATE_TABLE
+#[doc(hidden)] pub const PCW_CANT_GENERATE_SEQUENCEINFO_MAJORUPGD : HResultError = HResultError::from_constant(0xC00E5182); // ERROR_PCW_CANT_GENERATE_SEQUENCEINFO_MAJORUPGD
+#[doc(hidden)] pub const PCW_MAJOR_UPGD_WITHOUT_SEQUENCING : HResultError = HResultError::from_constant(0xC00E5183); // ERROR_PCW_MAJOR_UPGD_WITHOUT_SEQUENCING
+#[doc(hidden)] pub const PCW_BAD_PRODUCTVERSION_VALIDATION : HResultError = HResultError::from_constant(0xC00E5184); // ERROR_PCW_BAD_PRODUCTVERSION_VALIDATION
+#[doc(hidden)] pub const PCW_BAD_TRANSFORMSET : HResultError = HResultError::from_constant(0xC00E5185); // ERROR_PCW_BAD_TRANSFORMSET
+#[doc(hidden)] pub const PCW_BAD_TGT_UPD_IMAGES : HResultError = HResultError::from_constant(0xC00E5186); // ERROR_PCW_BAD_TGT_UPD_IMAGES
+#[doc(hidden)] pub const PCW_BAD_SUPERCEDENCE : HResultError = HResultError::from_constant(0xC00E5187); // ERROR_PCW_BAD_SUPERCEDENCE
+#[doc(hidden)] pub const PCW_BAD_SEQUENCE : HResultError = HResultError::from_constant(0xC00E5188); // ERROR_PCW_BAD_SEQUENCE
+#[doc(hidden)] pub const PCW_BAD_TARGET : HResultError = HResultError::from_constant(0xC00E5189); // ERROR_PCW_BAD_TARGET
+#[doc(hidden)] pub const PCW_NULL_PATCHFAMILY : HResultError = HResultError::from_constant(0xC00E518A); // ERROR_PCW_NULL_PATCHFAMILY
+#[doc(hidden)] pub const PCW_NULL_SEQUENCE_NUMBER : HResultError = HResultError::from_constant(0xC00E518B); // ERROR_PCW_NULL_SEQUENCE_NUMBER
+#[doc(hidden)] pub const PCW_BAD_VERSION_STRING : HResultError = HResultError::from_constant(0xC00E518C); // ERROR_PCW_BAD_VERSION_STRING
+#[doc(hidden)] pub const PCW_BAD_MAJOR_VERSION : HResultError = HResultError::from_constant(0xC00E518D); // ERROR_PCW_BAD_MAJOR_VERSION
+#[doc(hidden)] pub const PCW_SEQUENCING_BAD_TARGET : HResultError = HResultError::from_constant(0xC00E518E); // ERROR_PCW_SEQUENCING_BAD_TARGET
+#[doc(hidden)] pub const PCW_PATCHMETADATA_PROP_NOT_SET : HResultError = HResultError::from_constant(0xC00E518F); // ERROR_PCW_PATCHMETADATA_PROP_NOT_SET
+#[doc(hidden)] pub const PCW_INVALID_PATCHMETADATA_PROP : HResultError = HResultError::from_constant(0xC00E5190); // ERROR_PCW_INVALID_PATCHMETADATA_PROP
+#[doc(hidden)] pub const PCW_INVALID_SUPERCEDENCE : HResultError = HResultError::from_constant(0xC00E5191); // ERROR_PCW_INVALID_SUPERCEDENCE
+#[doc(hidden)] pub const PCW_DUPLICATE_SEQUENCE_RECORD : HResultError = HResultError::from_constant(0xC00E5192); // ERROR_PCW_DUPLICATE_SEQUENCE_RECORD
+#[doc(hidden)] pub const PCW_WRONG_PATCHMETADATA_STRD_PROP : HResultError = HResultError::from_constant(0xC00E5193); // ERROR_PCW_WRONG_PATCHMETADATA_STRD_PROP
+#[doc(hidden)] pub const PCW_INVALID_PARAMETER : HResultError = HResultError::from_constant(0xC00E5194); // ERROR_PCW_INVALID_PARAMETER
+#[doc(hidden)] pub const PCW_CREATEFILE_LOG_FAILED : HResultError = HResultError::from_constant(0xC00E5195); // ERROR_PCW_CREATEFILE_LOG_FAILED
+#[doc(hidden)] pub const PCW_INVALID_LOG_LEVEL : HResultError = HResultError::from_constant(0xC00E5196); // ERROR_PCW_INVALID_LOG_LEVEL
+#[doc(hidden)] pub const PCW_INVALID_UI_LEVEL : HResultError = HResultError::from_constant(0xC00E5197); // ERROR_PCW_INVALID_UI_LEVEL
+#[doc(hidden)] pub const PCW_ERROR_WRITING_TO_LOG : HResultError = HResultError::from_constant(0xC00E5198); // ERROR_PCW_ERROR_WRITING_TO_LOG
+#[doc(hidden)] pub const PCW_OUT_OF_MEMORY : HResultError = HResultError::from_constant(0xC00E5199); // ERROR_PCW_OUT_OF_MEMORY
+#[doc(hidden)] pub const PCW_UNKNOWN_ERROR : HResultError = HResultError::from_constant(0xC00E519A); // ERROR_PCW_UNKNOWN_ERROR
+#[doc(hidden)] pub const PCW_UNKNOWN_INFO : HResultError = HResultError::from_constant(0xC00E519B); // ERROR_PCW_UNKNOWN_INFO
+#[doc(hidden)] pub const PCW_UNKNOWN_WARN : HResultError = HResultError::from_constant(0xC00E519C); // ERROR_PCW_UNKNOWN_WARN
+#[doc(hidden)] pub const PCW_OPEN_VIEW : HResultError = HResultError::from_constant(0xC00E519D); // ERROR_PCW_OPEN_VIEW
+#[doc(hidden)] pub const PCW_EXECUTE_VIEW : HResultError = HResultError::from_constant(0xC00E519E); // ERROR_PCW_EXECUTE_VIEW
+#[doc(hidden)] pub const PCW_VIEW_FETCH : HResultError = HResultError::from_constant(0xC00E519F); // ERROR_PCW_VIEW_FETCH
+#[doc(hidden)] pub const PCW_FAILED_EXPAND_PATH : HResultError = HResultError::from_constant(0xC00E51A0); // ERROR_PCW_FAILED_EXPAND_PATH
+#[doc(hidden)] pub const PCW_INTERNAL_ERROR : HResultError = HResultError::from_constant(0xC00E5201); // ERROR_PCW_INTERNAL_ERROR
+#[doc(hidden)] pub const PCW_INVALID_PCP_PROPERTY : HResultError = HResultError::from_constant(0xC00E5202); // ERROR_PCW_INVALID_PCP_PROPERTY
+#[doc(hidden)] pub const PCW_INVALID_PCP_TARGETIMAGES : HResultError = HResultError::from_constant(0xC00E5203); // ERROR_PCW_INVALID_PCP_TARGETIMAGES
+#[doc(hidden)] pub const PCW_LAX_VALIDATION_FLAGS : HResultError = HResultError::from_constant(0xC00E5204); // ERROR_PCW_LAX_VALIDATION_FLAGS
+#[doc(hidden)] pub const PCW_FAILED_CREATE_TRANSFORM : HResultError = HResultError::from_constant(0xC00E5205); // ERROR_PCW_FAILED_CREATE_TRANSFORM
+#[doc(hidden)] pub const PCW_CANT_DELETE_TEMP_FOLDER : HResultError = HResultError::from_constant(0xC00E5206); // ERROR_PCW_CANT_DELETE_TEMP_FOLDER
+#[doc(hidden)] pub const PCW_MISSING_DIRECTORY_TABLE : HResultError = HResultError::from_constant(0xC00E5207); // ERROR_PCW_MISSING_DIRECTORY_TABLE
+#[doc(hidden)] pub const PCW_INVALID_SUPERSEDENCE_VALUE : HResultError = HResultError::from_constant(0xC00E5208); // ERROR_PCW_INVALID_SUPERSEDENCE_VALUE
+#[doc(hidden)] pub const PCW_INVALID_PATCH_TYPE_SEQUENCING : HResultError = HResultError::from_constant(0xC00E5209); // ERROR_PCW_INVALID_PATCH_TYPE_SEQUENCING
+#[doc(hidden)] pub const PCW_CANT_READ_FILE : HResultError = HResultError::from_constant(0xC00E520A); // ERROR_PCW_CANT_READ_FILE
+#[doc(hidden)] pub const PCW_TARGET_WRONG_PRODUCT_VERSION_COMP : HResultError = HResultError::from_constant(0xC00E520B); // ERROR_PCW_TARGET_WRONG_PRODUCT_VERSION_COMP
+#[doc(hidden)] pub const PCW_INVALID_PCP_UPGRADEDFILESTOIGNORE : HResultError = HResultError::from_constant(0xC00E520C); // ERROR_PCW_INVALID_PCP_UPGRADEDFILESTOIGNORE
+#[doc(hidden)] pub const PCW_INVALID_PCP_UPGRADEDIMAGES : HResultError = HResultError::from_constant(0xC00E520D); // ERROR_PCW_INVALID_PCP_UPGRADEDIMAGES
+#[doc(hidden)] pub const PCW_INVALID_PCP_EXTERNALFILES : HResultError = HResultError::from_constant(0xC00E520E); // ERROR_PCW_INVALID_PCP_EXTERNALFILES
+#[doc(hidden)] pub const PCW_INVALID_PCP_IMAGEFAMILIES : HResultError = HResultError::from_constant(0xC00E520F); // ERROR_PCW_INVALID_PCP_IMAGEFAMILIES
+#[doc(hidden)] pub const PCW_INVALID_PCP_PATCHSEQUENCE : HResultError = HResultError::from_constant(0xC00E5210); // ERROR_PCW_INVALID_PCP_PATCHSEQUENCE
+#[doc(hidden)] pub const PCW_INVALID_PCP_TARGETFILES_OPTIONALDATA : HResultError = HResultError::from_constant(0xC00E5211); // ERROR_PCW_INVALID_PCP_TARGETFILES_OPTIONALDATA
+#[doc(hidden)] pub const PCW_INVALID_PCP_UPGRADEDFILES_OPTIONALDATA : HResultError = HResultError::from_constant(0xC00E5212); // ERROR_PCW_INVALID_PCP_UPGRADEDFILES_OPTIONALDATA
+#[doc(hidden)] pub const PCW_MISSING_PATCHMETADATA : HResultError = HResultError::from_constant(0xC00E5213); // ERROR_PCW_MISSING_PATCHMETADATA
+#[doc(hidden)] pub const PCW_IMAGE_PATH_NOT_EXIST : HResultError = HResultError::from_constant(0xC00E5214); // ERROR_PCW_IMAGE_PATH_NOT_EXIST
+#[doc(hidden)] pub const PCW_INVALID_RANGE_ELEMENT : HResultError = HResultError::from_constant(0xC00E5215); // ERROR_PCW_INVALID_RANGE_ELEMENT
+#[doc(hidden)] pub const PCW_INVALID_MAJOR_VERSION : HResultError = HResultError::from_constant(0xC00E5216); // ERROR_PCW_INVALID_MAJOR_VERSION
+#[doc(hidden)] pub const PCW_INVALID_PCP_PROPERTIES : HResultError = HResultError::from_constant(0xC00E5217); // ERROR_PCW_INVALID_PCP_PROPERTIES
+#[doc(hidden)] pub const PCW_INVALID_PCP_FAMILYFILERANGES : HResultError = HResultError::from_constant(0xC00E5218); // ERROR_PCW_INVALID_PCP_FAMILYFILERANGES
 pub const INVALID_PORT_HANDLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(601); // ERROR_INVALID_PORT_HANDLE
 pub const PORT_ALREADY_OPEN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(602); // ERROR_PORT_ALREADY_OPEN
 pub const BUFFER_TOO_SMALL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(603); // ERROR_BUFFER_TOO_SMALL
@@ -8083,397 +8083,397 @@ pub const DEVICE_COMPLIANCE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_cons
 
 /// Setupapi-specific error codes
 /// Inf parse outcomes
-pub const EXPECTED_SECTION_NAME : ErrorHResult = ErrorHResult::from_constant(0xE0000000); // ERROR_EXPECTED_SECTION_NAME
+pub const EXPECTED_SECTION_NAME : HResultError = HResultError::from_constant(0xE0000000); // ERROR_EXPECTED_SECTION_NAME
 
 /// Setupapi-specific error codes
 /// Inf parse outcomes
-pub const BAD_SECTION_NAME_LINE : ErrorHResult = ErrorHResult::from_constant(0xE0000001); // ERROR_BAD_SECTION_NAME_LINE
+pub const BAD_SECTION_NAME_LINE : HResultError = HResultError::from_constant(0xE0000001); // ERROR_BAD_SECTION_NAME_LINE
 
 /// Setupapi-specific error codes
 /// Inf parse outcomes
-pub const SECTION_NAME_TOO_LONG : ErrorHResult = ErrorHResult::from_constant(0xE0000002); // ERROR_SECTION_NAME_TOO_LONG
+pub const SECTION_NAME_TOO_LONG : HResultError = HResultError::from_constant(0xE0000002); // ERROR_SECTION_NAME_TOO_LONG
 
 /// Setupapi-specific error codes
 /// Inf parse outcomes
-pub const GENERAL_SYNTAX : ErrorHResult = ErrorHResult::from_constant(0xE0000003); // ERROR_GENERAL_SYNTAX
-
-/// Setupapi-specific error codes
-/// Inf parse outcomes
-/// Inf runtime errors
-pub const WRONG_INF_STYLE : ErrorHResult = ErrorHResult::from_constant(0xE0000100); // ERROR_WRONG_INF_STYLE
+pub const GENERAL_SYNTAX : HResultError = HResultError::from_constant(0xE0000003); // ERROR_GENERAL_SYNTAX
 
 /// Setupapi-specific error codes
 /// Inf parse outcomes
 /// Inf runtime errors
-pub const SECTION_NOT_FOUND : ErrorHResult = ErrorHResult::from_constant(0xE0000101); // ERROR_SECTION_NOT_FOUND
+pub const WRONG_INF_STYLE : HResultError = HResultError::from_constant(0xE0000100); // ERROR_WRONG_INF_STYLE
 
 /// Setupapi-specific error codes
 /// Inf parse outcomes
 /// Inf runtime errors
-pub const LINE_NOT_FOUND : ErrorHResult = ErrorHResult::from_constant(0xE0000102); // ERROR_LINE_NOT_FOUND
+pub const SECTION_NOT_FOUND : HResultError = HResultError::from_constant(0xE0000101); // ERROR_SECTION_NOT_FOUND
 
 /// Setupapi-specific error codes
 /// Inf parse outcomes
 /// Inf runtime errors
-pub const NO_BACKUP : ErrorHResult = ErrorHResult::from_constant(0xE0000103); // ERROR_NO_BACKUP
+pub const LINE_NOT_FOUND : HResultError = HResultError::from_constant(0xE0000102); // ERROR_LINE_NOT_FOUND
 
 /// Setupapi-specific error codes
 /// Inf parse outcomes
 /// Inf runtime errors
-/// Device Installer/other errors
-pub const NO_ASSOCIATED_CLASS : ErrorHResult = ErrorHResult::from_constant(0xE0000200); // ERROR_NO_ASSOCIATED_CLASS
+pub const NO_BACKUP : HResultError = HResultError::from_constant(0xE0000103); // ERROR_NO_BACKUP
 
 /// Setupapi-specific error codes
 /// Inf parse outcomes
 /// Inf runtime errors
 /// Device Installer/other errors
-pub const CLASS_MISMATCH : ErrorHResult = ErrorHResult::from_constant(0xE0000201); // ERROR_CLASS_MISMATCH
+pub const NO_ASSOCIATED_CLASS : HResultError = HResultError::from_constant(0xE0000200); // ERROR_NO_ASSOCIATED_CLASS
 
 /// Setupapi-specific error codes
 /// Inf parse outcomes
 /// Inf runtime errors
 /// Device Installer/other errors
-pub const DUPLICATE_FOUND : ErrorHResult = ErrorHResult::from_constant(0xE0000202); // ERROR_DUPLICATE_FOUND
+pub const CLASS_MISMATCH : HResultError = HResultError::from_constant(0xE0000201); // ERROR_CLASS_MISMATCH
 
 /// Setupapi-specific error codes
 /// Inf parse outcomes
 /// Inf runtime errors
 /// Device Installer/other errors
-pub const NO_DRIVER_SELECTED : ErrorHResult = ErrorHResult::from_constant(0xE0000203); // ERROR_NO_DRIVER_SELECTED
+pub const DUPLICATE_FOUND : HResultError = HResultError::from_constant(0xE0000202); // ERROR_DUPLICATE_FOUND
 
 /// Setupapi-specific error codes
 /// Inf parse outcomes
 /// Inf runtime errors
 /// Device Installer/other errors
-pub const KEY_DOES_NOT_EXIST : ErrorHResult = ErrorHResult::from_constant(0xE0000204); // ERROR_KEY_DOES_NOT_EXIST
+pub const NO_DRIVER_SELECTED : HResultError = HResultError::from_constant(0xE0000203); // ERROR_NO_DRIVER_SELECTED
 
 /// Setupapi-specific error codes
 /// Inf parse outcomes
 /// Inf runtime errors
 /// Device Installer/other errors
-pub const INVALID_DEVINST_NAME : ErrorHResult = ErrorHResult::from_constant(0xE0000205); // ERROR_INVALID_DEVINST_NAME
+pub const KEY_DOES_NOT_EXIST : HResultError = HResultError::from_constant(0xE0000204); // ERROR_KEY_DOES_NOT_EXIST
 
 /// Setupapi-specific error codes
 /// Inf parse outcomes
 /// Inf runtime errors
 /// Device Installer/other errors
-pub const INVALID_CLASS : ErrorHResult = ErrorHResult::from_constant(0xE0000206); // ERROR_INVALID_CLASS
+pub const INVALID_DEVINST_NAME : HResultError = HResultError::from_constant(0xE0000205); // ERROR_INVALID_DEVINST_NAME
 
 /// Setupapi-specific error codes
 /// Inf parse outcomes
 /// Inf runtime errors
 /// Device Installer/other errors
-pub const DEVINST_ALREADY_EXISTS : ErrorHResult = ErrorHResult::from_constant(0xE0000207); // ERROR_DEVINST_ALREADY_EXISTS
+pub const INVALID_CLASS : HResultError = HResultError::from_constant(0xE0000206); // ERROR_INVALID_CLASS
 
 /// Setupapi-specific error codes
 /// Inf parse outcomes
 /// Inf runtime errors
 /// Device Installer/other errors
-pub const DEVINFO_NOT_REGISTERED : ErrorHResult = ErrorHResult::from_constant(0xE0000208); // ERROR_DEVINFO_NOT_REGISTERED
+pub const DEVINST_ALREADY_EXISTS : HResultError = HResultError::from_constant(0xE0000207); // ERROR_DEVINST_ALREADY_EXISTS
 
 /// Setupapi-specific error codes
 /// Inf parse outcomes
 /// Inf runtime errors
 /// Device Installer/other errors
-pub const INVALID_REG_PROPERTY : ErrorHResult = ErrorHResult::from_constant(0xE0000209); // ERROR_INVALID_REG_PROPERTY
+pub const DEVINFO_NOT_REGISTERED : HResultError = HResultError::from_constant(0xE0000208); // ERROR_DEVINFO_NOT_REGISTERED
 
 /// Setupapi-specific error codes
 /// Inf parse outcomes
 /// Inf runtime errors
 /// Device Installer/other errors
-pub const NO_INF : ErrorHResult = ErrorHResult::from_constant(0xE000020A); // ERROR_NO_INF
+pub const INVALID_REG_PROPERTY : HResultError = HResultError::from_constant(0xE0000209); // ERROR_INVALID_REG_PROPERTY
 
 /// Setupapi-specific error codes
 /// Inf parse outcomes
 /// Inf runtime errors
 /// Device Installer/other errors
-pub const NO_SUCH_DEVINST : ErrorHResult = ErrorHResult::from_constant(0xE000020B); // ERROR_NO_SUCH_DEVINST
+pub const NO_INF : HResultError = HResultError::from_constant(0xE000020A); // ERROR_NO_INF
 
 /// Setupapi-specific error codes
 /// Inf parse outcomes
 /// Inf runtime errors
 /// Device Installer/other errors
-pub const CANT_LOAD_CLASS_ICON : ErrorHResult = ErrorHResult::from_constant(0xE000020C); // ERROR_CANT_LOAD_CLASS_ICON
+pub const NO_SUCH_DEVINST : HResultError = HResultError::from_constant(0xE000020B); // ERROR_NO_SUCH_DEVINST
 
 /// Setupapi-specific error codes
 /// Inf parse outcomes
 /// Inf runtime errors
 /// Device Installer/other errors
-pub const INVALID_CLASS_INSTALLER : ErrorHResult = ErrorHResult::from_constant(0xE000020D); // ERROR_INVALID_CLASS_INSTALLER
+pub const CANT_LOAD_CLASS_ICON : HResultError = HResultError::from_constant(0xE000020C); // ERROR_CANT_LOAD_CLASS_ICON
 
 /// Setupapi-specific error codes
 /// Inf parse outcomes
 /// Inf runtime errors
 /// Device Installer/other errors
-pub const DI_DO_DEFAULT : ErrorHResult = ErrorHResult::from_constant(0xE000020E); // ERROR_DI_DO_DEFAULT
+pub const INVALID_CLASS_INSTALLER : HResultError = HResultError::from_constant(0xE000020D); // ERROR_INVALID_CLASS_INSTALLER
 
 /// Setupapi-specific error codes
 /// Inf parse outcomes
 /// Inf runtime errors
 /// Device Installer/other errors
-pub const DI_NOFILECOPY : ErrorHResult = ErrorHResult::from_constant(0xE000020F); // ERROR_DI_NOFILECOPY
+pub const DI_DO_DEFAULT : HResultError = HResultError::from_constant(0xE000020E); // ERROR_DI_DO_DEFAULT
 
 /// Setupapi-specific error codes
 /// Inf parse outcomes
 /// Inf runtime errors
 /// Device Installer/other errors
-pub const INVALID_HWPROFILE : ErrorHResult = ErrorHResult::from_constant(0xE0000210); // ERROR_INVALID_HWPROFILE
+pub const DI_NOFILECOPY : HResultError = HResultError::from_constant(0xE000020F); // ERROR_DI_NOFILECOPY
 
 /// Setupapi-specific error codes
 /// Inf parse outcomes
 /// Inf runtime errors
 /// Device Installer/other errors
-pub const NO_DEVICE_SELECTED : ErrorHResult = ErrorHResult::from_constant(0xE0000211); // ERROR_NO_DEVICE_SELECTED
+pub const INVALID_HWPROFILE : HResultError = HResultError::from_constant(0xE0000210); // ERROR_INVALID_HWPROFILE
 
 /// Setupapi-specific error codes
 /// Inf parse outcomes
 /// Inf runtime errors
 /// Device Installer/other errors
-pub const DEVINFO_LIST_LOCKED : ErrorHResult = ErrorHResult::from_constant(0xE0000212); // ERROR_DEVINFO_LIST_LOCKED
+pub const NO_DEVICE_SELECTED : HResultError = HResultError::from_constant(0xE0000211); // ERROR_NO_DEVICE_SELECTED
 
 /// Setupapi-specific error codes
 /// Inf parse outcomes
 /// Inf runtime errors
 /// Device Installer/other errors
-pub const DEVINFO_DATA_LOCKED : ErrorHResult = ErrorHResult::from_constant(0xE0000213); // ERROR_DEVINFO_DATA_LOCKED
+pub const DEVINFO_LIST_LOCKED : HResultError = HResultError::from_constant(0xE0000212); // ERROR_DEVINFO_LIST_LOCKED
 
 /// Setupapi-specific error codes
 /// Inf parse outcomes
 /// Inf runtime errors
 /// Device Installer/other errors
-pub const DI_BAD_PATH : ErrorHResult = ErrorHResult::from_constant(0xE0000214); // ERROR_DI_BAD_PATH
+pub const DEVINFO_DATA_LOCKED : HResultError = HResultError::from_constant(0xE0000213); // ERROR_DEVINFO_DATA_LOCKED
 
 /// Setupapi-specific error codes
 /// Inf parse outcomes
 /// Inf runtime errors
 /// Device Installer/other errors
-pub const NO_CLASSINSTALL_PARAMS : ErrorHResult = ErrorHResult::from_constant(0xE0000215); // ERROR_NO_CLASSINSTALL_PARAMS
+pub const DI_BAD_PATH : HResultError = HResultError::from_constant(0xE0000214); // ERROR_DI_BAD_PATH
 
 /// Setupapi-specific error codes
 /// Inf parse outcomes
 /// Inf runtime errors
 /// Device Installer/other errors
-pub const FILEQUEUE_LOCKED : ErrorHResult = ErrorHResult::from_constant(0xE0000216); // ERROR_FILEQUEUE_LOCKED
+pub const NO_CLASSINSTALL_PARAMS : HResultError = HResultError::from_constant(0xE0000215); // ERROR_NO_CLASSINSTALL_PARAMS
 
 /// Setupapi-specific error codes
 /// Inf parse outcomes
 /// Inf runtime errors
 /// Device Installer/other errors
-pub const BAD_SERVICE_INSTALLSECT : ErrorHResult = ErrorHResult::from_constant(0xE0000217); // ERROR_BAD_SERVICE_INSTALLSECT
+pub const FILEQUEUE_LOCKED : HResultError = HResultError::from_constant(0xE0000216); // ERROR_FILEQUEUE_LOCKED
 
 /// Setupapi-specific error codes
 /// Inf parse outcomes
 /// Inf runtime errors
 /// Device Installer/other errors
-pub const NO_CLASS_DRIVER_LIST : ErrorHResult = ErrorHResult::from_constant(0xE0000218); // ERROR_NO_CLASS_DRIVER_LIST
+pub const BAD_SERVICE_INSTALLSECT : HResultError = HResultError::from_constant(0xE0000217); // ERROR_BAD_SERVICE_INSTALLSECT
 
 /// Setupapi-specific error codes
 /// Inf parse outcomes
 /// Inf runtime errors
 /// Device Installer/other errors
-pub const NO_ASSOCIATED_SERVICE : ErrorHResult = ErrorHResult::from_constant(0xE0000219); // ERROR_NO_ASSOCIATED_SERVICE
+pub const NO_CLASS_DRIVER_LIST : HResultError = HResultError::from_constant(0xE0000218); // ERROR_NO_CLASS_DRIVER_LIST
 
 /// Setupapi-specific error codes
 /// Inf parse outcomes
 /// Inf runtime errors
 /// Device Installer/other errors
-pub const NO_DEFAULT_DEVICE_INTERFACE : ErrorHResult = ErrorHResult::from_constant(0xE000021A); // ERROR_NO_DEFAULT_DEVICE_INTERFACE
+pub const NO_ASSOCIATED_SERVICE : HResultError = HResultError::from_constant(0xE0000219); // ERROR_NO_ASSOCIATED_SERVICE
 
 /// Setupapi-specific error codes
 /// Inf parse outcomes
 /// Inf runtime errors
 /// Device Installer/other errors
-pub const DEVICE_INTERFACE_ACTIVE : ErrorHResult = ErrorHResult::from_constant(0xE000021B); // ERROR_DEVICE_INTERFACE_ACTIVE
+pub const NO_DEFAULT_DEVICE_INTERFACE : HResultError = HResultError::from_constant(0xE000021A); // ERROR_NO_DEFAULT_DEVICE_INTERFACE
 
 /// Setupapi-specific error codes
 /// Inf parse outcomes
 /// Inf runtime errors
 /// Device Installer/other errors
-pub const DEVICE_INTERFACE_REMOVED : ErrorHResult = ErrorHResult::from_constant(0xE000021C); // ERROR_DEVICE_INTERFACE_REMOVED
+pub const DEVICE_INTERFACE_ACTIVE : HResultError = HResultError::from_constant(0xE000021B); // ERROR_DEVICE_INTERFACE_ACTIVE
 
 /// Setupapi-specific error codes
 /// Inf parse outcomes
 /// Inf runtime errors
 /// Device Installer/other errors
-pub const BAD_INTERFACE_INSTALLSECT : ErrorHResult = ErrorHResult::from_constant(0xE000021D); // ERROR_BAD_INTERFACE_INSTALLSECT
+pub const DEVICE_INTERFACE_REMOVED : HResultError = HResultError::from_constant(0xE000021C); // ERROR_DEVICE_INTERFACE_REMOVED
 
 /// Setupapi-specific error codes
 /// Inf parse outcomes
 /// Inf runtime errors
 /// Device Installer/other errors
-pub const NO_SUCH_INTERFACE_CLASS : ErrorHResult = ErrorHResult::from_constant(0xE000021E); // ERROR_NO_SUCH_INTERFACE_CLASS
+pub const BAD_INTERFACE_INSTALLSECT : HResultError = HResultError::from_constant(0xE000021D); // ERROR_BAD_INTERFACE_INSTALLSECT
 
 /// Setupapi-specific error codes
 /// Inf parse outcomes
 /// Inf runtime errors
 /// Device Installer/other errors
-pub const INVALID_REFERENCE_STRING : ErrorHResult = ErrorHResult::from_constant(0xE000021F); // ERROR_INVALID_REFERENCE_STRING
+pub const NO_SUCH_INTERFACE_CLASS : HResultError = HResultError::from_constant(0xE000021E); // ERROR_NO_SUCH_INTERFACE_CLASS
 
 /// Setupapi-specific error codes
 /// Inf parse outcomes
 /// Inf runtime errors
 /// Device Installer/other errors
-pub const INVALID_MACHINENAME : ErrorHResult = ErrorHResult::from_constant(0xE0000220); // ERROR_INVALID_MACHINENAME
+pub const INVALID_REFERENCE_STRING : HResultError = HResultError::from_constant(0xE000021F); // ERROR_INVALID_REFERENCE_STRING
 
 /// Setupapi-specific error codes
 /// Inf parse outcomes
 /// Inf runtime errors
 /// Device Installer/other errors
-pub const REMOTE_COMM_FAILURE : ErrorHResult = ErrorHResult::from_constant(0xE0000221); // ERROR_REMOTE_COMM_FAILURE
+pub const INVALID_MACHINENAME : HResultError = HResultError::from_constant(0xE0000220); // ERROR_INVALID_MACHINENAME
 
 /// Setupapi-specific error codes
 /// Inf parse outcomes
 /// Inf runtime errors
 /// Device Installer/other errors
-pub const MACHINE_UNAVAILABLE : ErrorHResult = ErrorHResult::from_constant(0xE0000222); // ERROR_MACHINE_UNAVAILABLE
+pub const REMOTE_COMM_FAILURE : HResultError = HResultError::from_constant(0xE0000221); // ERROR_REMOTE_COMM_FAILURE
 
 /// Setupapi-specific error codes
 /// Inf parse outcomes
 /// Inf runtime errors
 /// Device Installer/other errors
-pub const NO_CONFIGMGR_SERVICES : ErrorHResult = ErrorHResult::from_constant(0xE0000223); // ERROR_NO_CONFIGMGR_SERVICES
+pub const MACHINE_UNAVAILABLE : HResultError = HResultError::from_constant(0xE0000222); // ERROR_MACHINE_UNAVAILABLE
 
 /// Setupapi-specific error codes
 /// Inf parse outcomes
 /// Inf runtime errors
 /// Device Installer/other errors
-pub const INVALID_PROPPAGE_PROVIDER : ErrorHResult = ErrorHResult::from_constant(0xE0000224); // ERROR_INVALID_PROPPAGE_PROVIDER
+pub const NO_CONFIGMGR_SERVICES : HResultError = HResultError::from_constant(0xE0000223); // ERROR_NO_CONFIGMGR_SERVICES
 
 /// Setupapi-specific error codes
 /// Inf parse outcomes
 /// Inf runtime errors
 /// Device Installer/other errors
-pub const NO_SUCH_DEVICE_INTERFACE : ErrorHResult = ErrorHResult::from_constant(0xE0000225); // ERROR_NO_SUCH_DEVICE_INTERFACE
+pub const INVALID_PROPPAGE_PROVIDER : HResultError = HResultError::from_constant(0xE0000224); // ERROR_INVALID_PROPPAGE_PROVIDER
 
 /// Setupapi-specific error codes
 /// Inf parse outcomes
 /// Inf runtime errors
 /// Device Installer/other errors
-pub const DI_POSTPROCESSING_REQUIRED : ErrorHResult = ErrorHResult::from_constant(0xE0000226); // ERROR_DI_POSTPROCESSING_REQUIRED
+pub const NO_SUCH_DEVICE_INTERFACE : HResultError = HResultError::from_constant(0xE0000225); // ERROR_NO_SUCH_DEVICE_INTERFACE
 
 /// Setupapi-specific error codes
 /// Inf parse outcomes
 /// Inf runtime errors
 /// Device Installer/other errors
-pub const INVALID_COINSTALLER : ErrorHResult = ErrorHResult::from_constant(0xE0000227); // ERROR_INVALID_COINSTALLER
+pub const DI_POSTPROCESSING_REQUIRED : HResultError = HResultError::from_constant(0xE0000226); // ERROR_DI_POSTPROCESSING_REQUIRED
 
 /// Setupapi-specific error codes
 /// Inf parse outcomes
 /// Inf runtime errors
 /// Device Installer/other errors
-pub const NO_COMPAT_DRIVERS : ErrorHResult = ErrorHResult::from_constant(0xE0000228); // ERROR_NO_COMPAT_DRIVERS
+pub const INVALID_COINSTALLER : HResultError = HResultError::from_constant(0xE0000227); // ERROR_INVALID_COINSTALLER
 
 /// Setupapi-specific error codes
 /// Inf parse outcomes
 /// Inf runtime errors
 /// Device Installer/other errors
-pub const NO_DEVICE_ICON : ErrorHResult = ErrorHResult::from_constant(0xE0000229); // ERROR_NO_DEVICE_ICON
+pub const NO_COMPAT_DRIVERS : HResultError = HResultError::from_constant(0xE0000228); // ERROR_NO_COMPAT_DRIVERS
 
 /// Setupapi-specific error codes
 /// Inf parse outcomes
 /// Inf runtime errors
 /// Device Installer/other errors
-pub const INVALID_INF_LOGCONFIG : ErrorHResult = ErrorHResult::from_constant(0xE000022A); // ERROR_INVALID_INF_LOGCONFIG
+pub const NO_DEVICE_ICON : HResultError = HResultError::from_constant(0xE0000229); // ERROR_NO_DEVICE_ICON
 
 /// Setupapi-specific error codes
 /// Inf parse outcomes
 /// Inf runtime errors
 /// Device Installer/other errors
-pub const DI_DONT_INSTALL : ErrorHResult = ErrorHResult::from_constant(0xE000022B); // ERROR_DI_DONT_INSTALL
+pub const INVALID_INF_LOGCONFIG : HResultError = HResultError::from_constant(0xE000022A); // ERROR_INVALID_INF_LOGCONFIG
 
 /// Setupapi-specific error codes
 /// Inf parse outcomes
 /// Inf runtime errors
 /// Device Installer/other errors
-pub const INVALID_FILTER_DRIVER : ErrorHResult = ErrorHResult::from_constant(0xE000022C); // ERROR_INVALID_FILTER_DRIVER
+pub const DI_DONT_INSTALL : HResultError = HResultError::from_constant(0xE000022B); // ERROR_DI_DONT_INSTALL
 
 /// Setupapi-specific error codes
 /// Inf parse outcomes
 /// Inf runtime errors
 /// Device Installer/other errors
-pub const NON_WINDOWS_NT_DRIVER : ErrorHResult = ErrorHResult::from_constant(0xE000022D); // ERROR_NON_WINDOWS_NT_DRIVER
+pub const INVALID_FILTER_DRIVER : HResultError = HResultError::from_constant(0xE000022C); // ERROR_INVALID_FILTER_DRIVER
 
 /// Setupapi-specific error codes
 /// Inf parse outcomes
 /// Inf runtime errors
 /// Device Installer/other errors
-pub const NON_WINDOWS_DRIVER : ErrorHResult = ErrorHResult::from_constant(0xE000022E); // ERROR_NON_WINDOWS_DRIVER
+pub const NON_WINDOWS_NT_DRIVER : HResultError = HResultError::from_constant(0xE000022D); // ERROR_NON_WINDOWS_NT_DRIVER
 
 /// Setupapi-specific error codes
 /// Inf parse outcomes
 /// Inf runtime errors
 /// Device Installer/other errors
-pub const NO_CATALOG_FOR_OEM_INF : ErrorHResult = ErrorHResult::from_constant(0xE000022F); // ERROR_NO_CATALOG_FOR_OEM_INF
+pub const NON_WINDOWS_DRIVER : HResultError = HResultError::from_constant(0xE000022E); // ERROR_NON_WINDOWS_DRIVER
 
 /// Setupapi-specific error codes
 /// Inf parse outcomes
 /// Inf runtime errors
 /// Device Installer/other errors
-pub const DEVINSTALL_QUEUE_NONNATIVE : ErrorHResult = ErrorHResult::from_constant(0xE0000230); // ERROR_DEVINSTALL_QUEUE_NONNATIVE
+pub const NO_CATALOG_FOR_OEM_INF : HResultError = HResultError::from_constant(0xE000022F); // ERROR_NO_CATALOG_FOR_OEM_INF
 
 /// Setupapi-specific error codes
 /// Inf parse outcomes
 /// Inf runtime errors
 /// Device Installer/other errors
-pub const NOT_DISABLEABLE : ErrorHResult = ErrorHResult::from_constant(0xE0000231); // ERROR_NOT_DISABLEABLE
+pub const DEVINSTALL_QUEUE_NONNATIVE : HResultError = HResultError::from_constant(0xE0000230); // ERROR_DEVINSTALL_QUEUE_NONNATIVE
 
 /// Setupapi-specific error codes
 /// Inf parse outcomes
 /// Inf runtime errors
 /// Device Installer/other errors
-pub const CANT_REMOVE_DEVINST : ErrorHResult = ErrorHResult::from_constant(0xE0000232); // ERROR_CANT_REMOVE_DEVINST
+pub const NOT_DISABLEABLE : HResultError = HResultError::from_constant(0xE0000231); // ERROR_NOT_DISABLEABLE
 
 /// Setupapi-specific error codes
 /// Inf parse outcomes
 /// Inf runtime errors
 /// Device Installer/other errors
-pub const INVALID_TARGET : ErrorHResult = ErrorHResult::from_constant(0xE0000233); // ERROR_INVALID_TARGET
+pub const CANT_REMOVE_DEVINST : HResultError = HResultError::from_constant(0xE0000232); // ERROR_CANT_REMOVE_DEVINST
 
 /// Setupapi-specific error codes
 /// Inf parse outcomes
 /// Inf runtime errors
 /// Device Installer/other errors
-pub const DRIVER_NONNATIVE : ErrorHResult = ErrorHResult::from_constant(0xE0000234); // ERROR_DRIVER_NONNATIVE
+pub const INVALID_TARGET : HResultError = HResultError::from_constant(0xE0000233); // ERROR_INVALID_TARGET
 
 /// Setupapi-specific error codes
 /// Inf parse outcomes
 /// Inf runtime errors
 /// Device Installer/other errors
-pub const IN_WOW64 : ErrorHResult = ErrorHResult::from_constant(0xE0000235); // ERROR_IN_WOW64
+pub const DRIVER_NONNATIVE : HResultError = HResultError::from_constant(0xE0000234); // ERROR_DRIVER_NONNATIVE
 
 /// Setupapi-specific error codes
 /// Inf parse outcomes
 /// Inf runtime errors
 /// Device Installer/other errors
-pub const SET_SYSTEM_RESTORE_POINT : ErrorHResult = ErrorHResult::from_constant(0xE0000236); // ERROR_SET_SYSTEM_RESTORE_POINT
+pub const IN_WOW64 : HResultError = HResultError::from_constant(0xE0000235); // ERROR_IN_WOW64
 
-pub const SCE_DISABLED : ErrorHResult = ErrorHResult::from_constant(0xE0000238); // ERROR_SCE_DISABLED
-pub const UNKNOWN_EXCEPTION : ErrorHResult = ErrorHResult::from_constant(0xE0000239); // ERROR_UNKNOWN_EXCEPTION
-pub const PNP_REGISTRY_ERROR : ErrorHResult = ErrorHResult::from_constant(0xE000023A); // ERROR_PNP_REGISTRY_ERROR
-pub const REMOTE_REQUEST_UNSUPPORTED : ErrorHResult = ErrorHResult::from_constant(0xE000023B); // ERROR_REMOTE_REQUEST_UNSUPPORTED
-pub const NOT_AN_INSTALLED_OEM_INF : ErrorHResult = ErrorHResult::from_constant(0xE000023C); // ERROR_NOT_AN_INSTALLED_OEM_INF
-pub const INF_IN_USE_BY_DEVICES : ErrorHResult = ErrorHResult::from_constant(0xE000023D); // ERROR_INF_IN_USE_BY_DEVICES
-pub const DI_FUNCTION_OBSOLETE : ErrorHResult = ErrorHResult::from_constant(0xE000023E); // ERROR_DI_FUNCTION_OBSOLETE
-pub const NO_AUTHENTICODE_CATALOG : ErrorHResult = ErrorHResult::from_constant(0xE000023F); // ERROR_NO_AUTHENTICODE_CATALOG
-pub const AUTHENTICODE_DISALLOWED : ErrorHResult = ErrorHResult::from_constant(0xE0000240); // ERROR_AUTHENTICODE_DISALLOWED
-pub const AUTHENTICODE_TRUSTED_PUBLISHER : ErrorHResult = ErrorHResult::from_constant(0xE0000241); // ERROR_AUTHENTICODE_TRUSTED_PUBLISHER
-pub const AUTHENTICODE_TRUST_NOT_ESTABLISHED : ErrorHResult = ErrorHResult::from_constant(0xE0000242); // ERROR_AUTHENTICODE_TRUST_NOT_ESTABLISHED
-pub const AUTHENTICODE_PUBLISHER_NOT_TRUSTED : ErrorHResult = ErrorHResult::from_constant(0xE0000243); // ERROR_AUTHENTICODE_PUBLISHER_NOT_TRUSTED
-pub const SIGNATURE_OSATTRIBUTE_MISMATCH : ErrorHResult = ErrorHResult::from_constant(0xE0000244); // ERROR_SIGNATURE_OSATTRIBUTE_MISMATCH
-pub const ONLY_VALIDATE_VIA_AUTHENTICODE : ErrorHResult = ErrorHResult::from_constant(0xE0000245); // ERROR_ONLY_VALIDATE_VIA_AUTHENTICODE
-pub const DEVICE_INSTALLER_NOT_READY : ErrorHResult = ErrorHResult::from_constant(0xE0000246); // ERROR_DEVICE_INSTALLER_NOT_READY
-pub const DRIVER_STORE_ADD_FAILED : ErrorHResult = ErrorHResult::from_constant(0xE0000247); // ERROR_DRIVER_STORE_ADD_FAILED
-pub const DEVICE_INSTALL_BLOCKED : ErrorHResult = ErrorHResult::from_constant(0xE0000248); // ERROR_DEVICE_INSTALL_BLOCKED
-pub const DRIVER_INSTALL_BLOCKED : ErrorHResult = ErrorHResult::from_constant(0xE0000249); // ERROR_DRIVER_INSTALL_BLOCKED
-pub const WRONG_INF_TYPE : ErrorHResult = ErrorHResult::from_constant(0xE000024A); // ERROR_WRONG_INF_TYPE
-pub const FILE_HASH_NOT_IN_CATALOG : ErrorHResult = ErrorHResult::from_constant(0xE000024B); // ERROR_FILE_HASH_NOT_IN_CATALOG
-pub const DRIVER_STORE_DELETE_FAILED : ErrorHResult = ErrorHResult::from_constant(0xE000024C); // ERROR_DRIVER_STORE_DELETE_FAILED
+/// Setupapi-specific error codes
+/// Inf parse outcomes
+/// Inf runtime errors
+/// Device Installer/other errors
+pub const SET_SYSTEM_RESTORE_POINT : HResultError = HResultError::from_constant(0xE0000236); // ERROR_SET_SYSTEM_RESTORE_POINT
+
+pub const SCE_DISABLED : HResultError = HResultError::from_constant(0xE0000238); // ERROR_SCE_DISABLED
+pub const UNKNOWN_EXCEPTION : HResultError = HResultError::from_constant(0xE0000239); // ERROR_UNKNOWN_EXCEPTION
+pub const PNP_REGISTRY_ERROR : HResultError = HResultError::from_constant(0xE000023A); // ERROR_PNP_REGISTRY_ERROR
+pub const REMOTE_REQUEST_UNSUPPORTED : HResultError = HResultError::from_constant(0xE000023B); // ERROR_REMOTE_REQUEST_UNSUPPORTED
+pub const NOT_AN_INSTALLED_OEM_INF : HResultError = HResultError::from_constant(0xE000023C); // ERROR_NOT_AN_INSTALLED_OEM_INF
+pub const INF_IN_USE_BY_DEVICES : HResultError = HResultError::from_constant(0xE000023D); // ERROR_INF_IN_USE_BY_DEVICES
+pub const DI_FUNCTION_OBSOLETE : HResultError = HResultError::from_constant(0xE000023E); // ERROR_DI_FUNCTION_OBSOLETE
+pub const NO_AUTHENTICODE_CATALOG : HResultError = HResultError::from_constant(0xE000023F); // ERROR_NO_AUTHENTICODE_CATALOG
+pub const AUTHENTICODE_DISALLOWED : HResultError = HResultError::from_constant(0xE0000240); // ERROR_AUTHENTICODE_DISALLOWED
+pub const AUTHENTICODE_TRUSTED_PUBLISHER : HResultError = HResultError::from_constant(0xE0000241); // ERROR_AUTHENTICODE_TRUSTED_PUBLISHER
+pub const AUTHENTICODE_TRUST_NOT_ESTABLISHED : HResultError = HResultError::from_constant(0xE0000242); // ERROR_AUTHENTICODE_TRUST_NOT_ESTABLISHED
+pub const AUTHENTICODE_PUBLISHER_NOT_TRUSTED : HResultError = HResultError::from_constant(0xE0000243); // ERROR_AUTHENTICODE_PUBLISHER_NOT_TRUSTED
+pub const SIGNATURE_OSATTRIBUTE_MISMATCH : HResultError = HResultError::from_constant(0xE0000244); // ERROR_SIGNATURE_OSATTRIBUTE_MISMATCH
+pub const ONLY_VALIDATE_VIA_AUTHENTICODE : HResultError = HResultError::from_constant(0xE0000245); // ERROR_ONLY_VALIDATE_VIA_AUTHENTICODE
+pub const DEVICE_INSTALLER_NOT_READY : HResultError = HResultError::from_constant(0xE0000246); // ERROR_DEVICE_INSTALLER_NOT_READY
+pub const DRIVER_STORE_ADD_FAILED : HResultError = HResultError::from_constant(0xE0000247); // ERROR_DRIVER_STORE_ADD_FAILED
+pub const DEVICE_INSTALL_BLOCKED : HResultError = HResultError::from_constant(0xE0000248); // ERROR_DEVICE_INSTALL_BLOCKED
+pub const DRIVER_INSTALL_BLOCKED : HResultError = HResultError::from_constant(0xE0000249); // ERROR_DRIVER_INSTALL_BLOCKED
+pub const WRONG_INF_TYPE : HResultError = HResultError::from_constant(0xE000024A); // ERROR_WRONG_INF_TYPE
+pub const FILE_HASH_NOT_IN_CATALOG : HResultError = HResultError::from_constant(0xE000024B); // ERROR_FILE_HASH_NOT_IN_CATALOG
+pub const DRIVER_STORE_DELETE_FAILED : HResultError = HResultError::from_constant(0xE000024C); // ERROR_DRIVER_STORE_DELETE_FAILED
 
 /// Setupapi exception codes
-pub const UNRECOVERABLE_STACK_OVERFLOW : ErrorHResult = ErrorHResult::from_constant(0xE0000300); // ERROR_UNRECOVERABLE_STACK_OVERFLOW
+pub const UNRECOVERABLE_STACK_OVERFLOW : HResultError = HResultError::from_constant(0xE0000300); // ERROR_UNRECOVERABLE_STACK_OVERFLOW
 
 /// Win9x migration DLL error code
-pub const NOT_INSTALLED : ErrorHResult = ErrorHResult::from_constant(0xE0001000); // ERROR_NOT_INSTALLED
+pub const NOT_INSTALLED : HResultError = HResultError::from_constant(0xE0001000); // ERROR_NOT_INSTALLED
 
 /// Incompatible TC version number
 pub const INCOMPATIBLE_TCI_VERSION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7501); // ERROR_INCOMPATIBLE_TCI_VERSION
@@ -8725,519 +8725,519 @@ pub const TOO_MANY_CLIENTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_const
 #[doc(hidden)] pub const BIDI_NO_BIDI_SCHEMA_EXTENSIONS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13016); // ERROR_BIDI_NO_BIDI_SCHEMA_EXTENSIONS
 #[doc(hidden)] pub const BIDI_UNSUPPORTED_CLIENT_LANGUAGE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13017); // ERROR_BIDI_UNSUPPORTED_CLIENT_LANGUAGE
 #[doc(hidden)] pub const BIDI_UNSUPPORTED_RESOURCE_FORMAT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13018); // ERROR_BIDI_UNSUPPORTED_RESOURCE_FORMAT
-#[doc(hidden)] pub const WSMAN_RESOURCE_NOT_FOUND : ErrorHResult = ErrorHResult::from_constant(0x80338000); // ERROR_WSMAN_RESOURCE_NOT_FOUND
-#[doc(hidden)] pub const WSMAN_INVALID_ACTIONURI : ErrorHResult = ErrorHResult::from_constant(0x80338001); // ERROR_WSMAN_INVALID_ACTIONURI
-#[doc(hidden)] pub const WSMAN_INVALID_URI : ErrorHResult = ErrorHResult::from_constant(0x80338002); // ERROR_WSMAN_INVALID_URI
-#[doc(hidden)] pub const WSMAN_PROVIDER_FAILURE : ErrorHResult = ErrorHResult::from_constant(0x80338003); // ERROR_WSMAN_PROVIDER_FAILURE
-#[doc(hidden)] pub const WSMAN_BATCH_COMPLETE : ErrorHResult = ErrorHResult::from_constant(0x80338004); // ERROR_WSMAN_BATCH_COMPLETE
-#[doc(hidden)] pub const WSMAN_CONFIG_CORRUPTED : ErrorHResult = ErrorHResult::from_constant(0x80338005); // ERROR_WSMAN_CONFIG_CORRUPTED
-#[doc(hidden)] pub const WSMAN_PULL_IN_PROGRESS : ErrorHResult = ErrorHResult::from_constant(0x80338006); // ERROR_WSMAN_PULL_IN_PROGRESS
-#[doc(hidden)] pub const WSMAN_ENUMERATION_CLOSED : ErrorHResult = ErrorHResult::from_constant(0x80338007); // ERROR_WSMAN_ENUMERATION_CLOSED
-#[doc(hidden)] pub const WSMAN_SUBSCRIPTION_CLOSED : ErrorHResult = ErrorHResult::from_constant(0x80338008); // ERROR_WSMAN_SUBSCRIPTION_CLOSED
-#[doc(hidden)] pub const WSMAN_SUBSCRIPTION_CLOSE_IN_PROGRESS : ErrorHResult = ErrorHResult::from_constant(0x80338009); // ERROR_WSMAN_SUBSCRIPTION_CLOSE_IN_PROGRESS
-#[doc(hidden)] pub const WSMAN_SUBSCRIPTION_CLIENT_DID_NOT_CALL_WITHIN_HEARTBEAT : ErrorHResult = ErrorHResult::from_constant(0x8033800A); // ERROR_WSMAN_SUBSCRIPTION_CLIENT_DID_NOT_CALL_WITHIN_HEARTBEAT
-#[doc(hidden)] pub const WSMAN_SUBSCRIPTION_NO_HEARTBEAT : ErrorHResult = ErrorHResult::from_constant(0x8033800B); // ERROR_WSMAN_SUBSCRIPTION_NO_HEARTBEAT
-#[doc(hidden)] pub const WSMAN_UNSUPPORTED_TIMEOUT : ErrorHResult = ErrorHResult::from_constant(0x8033800C); // ERROR_WSMAN_UNSUPPORTED_TIMEOUT
-#[doc(hidden)] pub const WSMAN_SOAP_VERSION_MISMATCH : ErrorHResult = ErrorHResult::from_constant(0x8033800D); // ERROR_WSMAN_SOAP_VERSION_MISMATCH
-#[doc(hidden)] pub const WSMAN_SOAP_DATA_ENCODING_UNKNOWN : ErrorHResult = ErrorHResult::from_constant(0x8033800E); // ERROR_WSMAN_SOAP_DATA_ENCODING_UNKNOWN
-#[doc(hidden)] pub const WSMAN_INVALID_MESSAGE_INFORMATION_HEADER : ErrorHResult = ErrorHResult::from_constant(0x8033800F); // ERROR_WSMAN_INVALID_MESSAGE_INFORMATION_HEADER
-#[doc(hidden)] pub const WSMAN_SOAP_FAULT_MUST_UNDERSTAND : ErrorHResult = ErrorHResult::from_constant(0x80338010); // ERROR_WSMAN_SOAP_FAULT_MUST_UNDERSTAND
-#[doc(hidden)] pub const WSMAN_MESSAGE_INFORMATION_HEADER_REQUIRED : ErrorHResult = ErrorHResult::from_constant(0x80338011); // ERROR_WSMAN_MESSAGE_INFORMATION_HEADER_REQUIRED
-#[doc(hidden)] pub const WSMAN_DESTINATION_UNREACHABLE : ErrorHResult = ErrorHResult::from_constant(0x80338012); // ERROR_WSMAN_DESTINATION_UNREACHABLE
-#[doc(hidden)] pub const WSMAN_ACTION_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x80338013); // ERROR_WSMAN_ACTION_NOT_SUPPORTED
-#[doc(hidden)] pub const WSMAN_ENDPOINT_UNAVAILABLE : ErrorHResult = ErrorHResult::from_constant(0x80338014); // ERROR_WSMAN_ENDPOINT_UNAVAILABLE
-#[doc(hidden)] pub const WSMAN_INVALID_REPRESENTATION : ErrorHResult = ErrorHResult::from_constant(0x80338015); // ERROR_WSMAN_INVALID_REPRESENTATION
-#[doc(hidden)] pub const WSMAN_ENUMERATE_INVALID_EXPIRATION_TIME : ErrorHResult = ErrorHResult::from_constant(0x80338016); // ERROR_WSMAN_ENUMERATE_INVALID_EXPIRATION_TIME
-#[doc(hidden)] pub const WSMAN_ENUMERATE_UNSUPPORTED_EXPIRATION_TIME : ErrorHResult = ErrorHResult::from_constant(0x80338017); // ERROR_WSMAN_ENUMERATE_UNSUPPORTED_EXPIRATION_TIME
-#[doc(hidden)] pub const WSMAN_ENUMERATE_FILTERING_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x80338018); // ERROR_WSMAN_ENUMERATE_FILTERING_NOT_SUPPORTED
-#[doc(hidden)] pub const WSMAN_ENUMERATE_FILTER_DIALECT_REQUESTED_UNAVAILABLE : ErrorHResult = ErrorHResult::from_constant(0x80338019); // ERROR_WSMAN_ENUMERATE_FILTER_DIALECT_REQUESTED_UNAVAILABLE
-#[doc(hidden)] pub const WSMAN_ENUMERATE_CANNOT_PROCESS_FILTER : ErrorHResult = ErrorHResult::from_constant(0x8033801A); // ERROR_WSMAN_ENUMERATE_CANNOT_PROCESS_FILTER
-#[doc(hidden)] pub const WSMAN_ENUMERATE_INVALID_ENUMERATION_CONTEXT : ErrorHResult = ErrorHResult::from_constant(0x8033801B); // ERROR_WSMAN_ENUMERATE_INVALID_ENUMERATION_CONTEXT
-#[doc(hidden)] pub const WSMAN_ENUMERATE_TIMED_OUT : ErrorHResult = ErrorHResult::from_constant(0x8033801C); // ERROR_WSMAN_ENUMERATE_TIMED_OUT
-#[doc(hidden)] pub const WSMAN_ENUMERATE_UNABLE_TO_RENEW : ErrorHResult = ErrorHResult::from_constant(0x8033801D); // ERROR_WSMAN_ENUMERATE_UNABLE_TO_RENEW
-#[doc(hidden)] pub const WSMAN_EVENTING_DELIVERY_MODE_REQUESTED_UNAVAILABLE : ErrorHResult = ErrorHResult::from_constant(0x8033801E); // ERROR_WSMAN_EVENTING_DELIVERY_MODE_REQUESTED_UNAVAILABLE
-#[doc(hidden)] pub const WSMAN_EVENTING_INVALID_EXPIRATION_TIME : ErrorHResult = ErrorHResult::from_constant(0x8033801F); // ERROR_WSMAN_EVENTING_INVALID_EXPIRATION_TIME
-#[doc(hidden)] pub const WSMAN_EVENTING_UNSUPPORTED_EXPIRATION_TYPE : ErrorHResult = ErrorHResult::from_constant(0x80338020); // ERROR_WSMAN_EVENTING_UNSUPPORTED_EXPIRATION_TYPE
-#[doc(hidden)] pub const WSMAN_EVENTING_FILTERING_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x80338021); // ERROR_WSMAN_EVENTING_FILTERING_NOT_SUPPORTED
-#[doc(hidden)] pub const WSMAN_EVENTING_FILTERING_REQUESTED_UNAVAILABLE : ErrorHResult = ErrorHResult::from_constant(0x80338022); // ERROR_WSMAN_EVENTING_FILTERING_REQUESTED_UNAVAILABLE
-#[doc(hidden)] pub const WSMAN_EVENTING_SOURCE_UNABLE_TO_PROCESS : ErrorHResult = ErrorHResult::from_constant(0x80338023); // ERROR_WSMAN_EVENTING_SOURCE_UNABLE_TO_PROCESS
-#[doc(hidden)] pub const WSMAN_EVENTING_UNABLE_TO_RENEW : ErrorHResult = ErrorHResult::from_constant(0x80338024); // ERROR_WSMAN_EVENTING_UNABLE_TO_RENEW
-#[doc(hidden)] pub const WSMAN_EVENTING_INVALID_MESSAGE : ErrorHResult = ErrorHResult::from_constant(0x80338025); // ERROR_WSMAN_EVENTING_INVALID_MESSAGE
-#[doc(hidden)] pub const WSMAN_ENVELOPE_TOO_LARGE : ErrorHResult = ErrorHResult::from_constant(0x80338026); // ERROR_WSMAN_ENVELOPE_TOO_LARGE
-#[doc(hidden)] pub const WSMAN_INVALID_SOAP_BODY : ErrorHResult = ErrorHResult::from_constant(0x80338027); // ERROR_WSMAN_INVALID_SOAP_BODY
-#[doc(hidden)] pub const WSMAN_INVALID_RESUMPTION_CONTEXT : ErrorHResult = ErrorHResult::from_constant(0x80338028); // ERROR_WSMAN_INVALID_RESUMPTION_CONTEXT
-#[doc(hidden)] pub const WSMAN_OPERATION_TIMEDOUT : ErrorHResult = ErrorHResult::from_constant(0x80338029); // ERROR_WSMAN_OPERATION_TIMEDOUT
-#[doc(hidden)] pub const WSMAN_RESUMPTION_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x8033802A); // ERROR_WSMAN_RESUMPTION_NOT_SUPPORTED
-#[doc(hidden)] pub const WSMAN_RESUMPTION_TYPE_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x8033802B); // ERROR_WSMAN_RESUMPTION_TYPE_NOT_SUPPORTED
-#[doc(hidden)] pub const WSMAN_UNSUPPORTED_ENCODING : ErrorHResult = ErrorHResult::from_constant(0x8033802C); // ERROR_WSMAN_UNSUPPORTED_ENCODING
-#[doc(hidden)] pub const WSMAN_URI_LIMIT : ErrorHResult = ErrorHResult::from_constant(0x8033802D); // ERROR_WSMAN_URI_LIMIT
-#[doc(hidden)] pub const WSMAN_INVALID_PROPOSED_ID : ErrorHResult = ErrorHResult::from_constant(0x8033802E); // ERROR_WSMAN_INVALID_PROPOSED_ID
-#[doc(hidden)] pub const WSMAN_INVALID_BATCH_PARAMETER : ErrorHResult = ErrorHResult::from_constant(0x8033802F); // ERROR_WSMAN_INVALID_BATCH_PARAMETER
-#[doc(hidden)] pub const WSMAN_NO_ACK : ErrorHResult = ErrorHResult::from_constant(0x80338030); // ERROR_WSMAN_NO_ACK
-#[doc(hidden)] pub const WSMAN_ACTION_MISMATCH : ErrorHResult = ErrorHResult::from_constant(0x80338031); // ERROR_WSMAN_ACTION_MISMATCH
-#[doc(hidden)] pub const WSMAN_CONCURRENCY : ErrorHResult = ErrorHResult::from_constant(0x80338032); // ERROR_WSMAN_CONCURRENCY
-#[doc(hidden)] pub const WSMAN_ALREADY_EXISTS : ErrorHResult = ErrorHResult::from_constant(0x80338033); // ERROR_WSMAN_ALREADY_EXISTS
-#[doc(hidden)] pub const WSMAN_DELIVERY_REFUSED : ErrorHResult = ErrorHResult::from_constant(0x80338034); // ERROR_WSMAN_DELIVERY_REFUSED
-#[doc(hidden)] pub const WSMAN_ENCODING_LIMIT : ErrorHResult = ErrorHResult::from_constant(0x80338035); // ERROR_WSMAN_ENCODING_LIMIT
-#[doc(hidden)] pub const WSMAN_FAILED_AUTHENTICATION : ErrorHResult = ErrorHResult::from_constant(0x80338036); // ERROR_WSMAN_FAILED_AUTHENTICATION
-#[doc(hidden)] pub const WSMAN_INCOMPATIBLE_EPR : ErrorHResult = ErrorHResult::from_constant(0x80338037); // ERROR_WSMAN_INCOMPATIBLE_EPR
-#[doc(hidden)] pub const WSMAN_INVALID_BOOKMARK : ErrorHResult = ErrorHResult::from_constant(0x80338038); // ERROR_WSMAN_INVALID_BOOKMARK
-#[doc(hidden)] pub const WSMAN_INVALID_OPTIONS : ErrorHResult = ErrorHResult::from_constant(0x80338039); // ERROR_WSMAN_INVALID_OPTIONS
-#[doc(hidden)] pub const WSMAN_INVALID_PARAMETER : ErrorHResult = ErrorHResult::from_constant(0x8033803A); // ERROR_WSMAN_INVALID_PARAMETER
-#[doc(hidden)] pub const WSMAN_INVALID_RESOURCE_URI : ErrorHResult = ErrorHResult::from_constant(0x8033803B); // ERROR_WSMAN_INVALID_RESOURCE_URI
-#[doc(hidden)] pub const WSMAN_INVALID_SYSTEM : ErrorHResult = ErrorHResult::from_constant(0x8033803C); // ERROR_WSMAN_INVALID_SYSTEM
-#[doc(hidden)] pub const WSMAN_INVALID_SELECTORS : ErrorHResult = ErrorHResult::from_constant(0x8033803D); // ERROR_WSMAN_INVALID_SELECTORS
-#[doc(hidden)] pub const WSMAN_METADATA_REDIRECT : ErrorHResult = ErrorHResult::from_constant(0x8033803E); // ERROR_WSMAN_METADATA_REDIRECT
-#[doc(hidden)] pub const WSMAN_QUOTA_LIMIT : ErrorHResult = ErrorHResult::from_constant(0x8033803F); // ERROR_WSMAN_QUOTA_LIMIT
-#[doc(hidden)] pub const WSMAN_RENAME_FAILURE : ErrorHResult = ErrorHResult::from_constant(0x80338040); // ERROR_WSMAN_RENAME_FAILURE
-#[doc(hidden)] pub const WSMAN_SCHEMA_VALIDATION_ERROR : ErrorHResult = ErrorHResult::from_constant(0x80338041); // ERROR_WSMAN_SCHEMA_VALIDATION_ERROR
-#[doc(hidden)] pub const WSMAN_UNSUPPORTED_FEATURE : ErrorHResult = ErrorHResult::from_constant(0x80338042); // ERROR_WSMAN_UNSUPPORTED_FEATURE
-#[doc(hidden)] pub const WSMAN_INVALID_XML : ErrorHResult = ErrorHResult::from_constant(0x80338043); // ERROR_WSMAN_INVALID_XML
-#[doc(hidden)] pub const WSMAN_INVALID_KEY : ErrorHResult = ErrorHResult::from_constant(0x80338044); // ERROR_WSMAN_INVALID_KEY
-#[doc(hidden)] pub const WSMAN_DELIVER_IN_PROGRESS : ErrorHResult = ErrorHResult::from_constant(0x80338045); // ERROR_WSMAN_DELIVER_IN_PROGRESS
-#[doc(hidden)] pub const WSMAN_SYSTEM_NOT_FOUND : ErrorHResult = ErrorHResult::from_constant(0x80338046); // ERROR_WSMAN_SYSTEM_NOT_FOUND
-#[doc(hidden)] pub const WSMAN_MAX_ENVELOPE_SIZE : ErrorHResult = ErrorHResult::from_constant(0x80338047); // ERROR_WSMAN_MAX_ENVELOPE_SIZE
-#[doc(hidden)] pub const WSMAN_MAX_ENVELOPE_SIZE_EXCEEDED : ErrorHResult = ErrorHResult::from_constant(0x80338048); // ERROR_WSMAN_MAX_ENVELOPE_SIZE_EXCEEDED
-#[doc(hidden)] pub const WSMAN_SERVER_ENVELOPE_LIMIT : ErrorHResult = ErrorHResult::from_constant(0x80338049); // ERROR_WSMAN_SERVER_ENVELOPE_LIMIT
-#[doc(hidden)] pub const WSMAN_SELECTOR_LIMIT : ErrorHResult = ErrorHResult::from_constant(0x8033804A); // ERROR_WSMAN_SELECTOR_LIMIT
-#[doc(hidden)] pub const WSMAN_OPTION_LIMIT : ErrorHResult = ErrorHResult::from_constant(0x8033804B); // ERROR_WSMAN_OPTION_LIMIT
-#[doc(hidden)] pub const WSMAN_CHARACTER_SET : ErrorHResult = ErrorHResult::from_constant(0x8033804C); // ERROR_WSMAN_CHARACTER_SET
-#[doc(hidden)] pub const WSMAN_UNREPORTABLE_SUCCESS : ErrorHResult = ErrorHResult::from_constant(0x8033804D); // ERROR_WSMAN_UNREPORTABLE_SUCCESS
-#[doc(hidden)] pub const WSMAN_WHITESPACE : ErrorHResult = ErrorHResult::from_constant(0x8033804E); // ERROR_WSMAN_WHITESPACE
-#[doc(hidden)] pub const WSMAN_FILTERING_REQUIRED : ErrorHResult = ErrorHResult::from_constant(0x8033804F); // ERROR_WSMAN_FILTERING_REQUIRED
-#[doc(hidden)] pub const WSMAN_BOOKMARK_EXPIRED : ErrorHResult = ErrorHResult::from_constant(0x80338050); // ERROR_WSMAN_BOOKMARK_EXPIRED
-#[doc(hidden)] pub const WSMAN_OPTIONS_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x80338051); // ERROR_WSMAN_OPTIONS_NOT_SUPPORTED
-#[doc(hidden)] pub const WSMAN_OPTIONS_INVALID_NAME : ErrorHResult = ErrorHResult::from_constant(0x80338052); // ERROR_WSMAN_OPTIONS_INVALID_NAME
-#[doc(hidden)] pub const WSMAN_OPTIONS_INVALID_VALUE : ErrorHResult = ErrorHResult::from_constant(0x80338053); // ERROR_WSMAN_OPTIONS_INVALID_VALUE
-#[doc(hidden)] pub const WSMAN_PARAMETER_TYPE_MISMATCH : ErrorHResult = ErrorHResult::from_constant(0x80338054); // ERROR_WSMAN_PARAMETER_TYPE_MISMATCH
-#[doc(hidden)] pub const WSMAN_INVALID_PARAMETER_NAME : ErrorHResult = ErrorHResult::from_constant(0x80338055); // ERROR_WSMAN_INVALID_PARAMETER_NAME
-#[doc(hidden)] pub const WSMAN_INVALID_XML_VALUES : ErrorHResult = ErrorHResult::from_constant(0x80338056); // ERROR_WSMAN_INVALID_XML_VALUES
-#[doc(hidden)] pub const WSMAN_INVALID_XML_MISSING_VALUES : ErrorHResult = ErrorHResult::from_constant(0x80338057); // ERROR_WSMAN_INVALID_XML_MISSING_VALUES
-#[doc(hidden)] pub const WSMAN_INVALID_XML_NAMESPACE : ErrorHResult = ErrorHResult::from_constant(0x80338058); // ERROR_WSMAN_INVALID_XML_NAMESPACE
-#[doc(hidden)] pub const WSMAN_INVALID_XML_FRAGMENT : ErrorHResult = ErrorHResult::from_constant(0x80338059); // ERROR_WSMAN_INVALID_XML_FRAGMENT
-#[doc(hidden)] pub const WSMAN_INSUFFCIENT_SELECTORS : ErrorHResult = ErrorHResult::from_constant(0x8033805A); // ERROR_WSMAN_INSUFFCIENT_SELECTORS
-#[doc(hidden)] pub const WSMAN_UNEXPECTED_SELECTORS : ErrorHResult = ErrorHResult::from_constant(0x8033805B); // ERROR_WSMAN_UNEXPECTED_SELECTORS
-#[doc(hidden)] pub const WSMAN_SELECTOR_TYPEMISMATCH : ErrorHResult = ErrorHResult::from_constant(0x8033805C); // ERROR_WSMAN_SELECTOR_TYPEMISMATCH
-#[doc(hidden)] pub const WSMAN_INVALID_SELECTOR_VALUE : ErrorHResult = ErrorHResult::from_constant(0x8033805D); // ERROR_WSMAN_INVALID_SELECTOR_VALUE
-#[doc(hidden)] pub const WSMAN_AMBIGUOUS_SELECTORS : ErrorHResult = ErrorHResult::from_constant(0x8033805E); // ERROR_WSMAN_AMBIGUOUS_SELECTORS
-#[doc(hidden)] pub const WSMAN_DUPLICATE_SELECTORS : ErrorHResult = ErrorHResult::from_constant(0x8033805F); // ERROR_WSMAN_DUPLICATE_SELECTORS
-#[doc(hidden)] pub const WSMAN_INVALID_TARGET_SELECTORS : ErrorHResult = ErrorHResult::from_constant(0x80338060); // ERROR_WSMAN_INVALID_TARGET_SELECTORS
-#[doc(hidden)] pub const WSMAN_INVALID_TARGET_RESOURCEURI : ErrorHResult = ErrorHResult::from_constant(0x80338061); // ERROR_WSMAN_INVALID_TARGET_RESOURCEURI
-#[doc(hidden)] pub const WSMAN_INVALID_TARGET_SYSTEM : ErrorHResult = ErrorHResult::from_constant(0x80338062); // ERROR_WSMAN_INVALID_TARGET_SYSTEM
-#[doc(hidden)] pub const WSMAN_TARGET_ALREADY_EXISTS : ErrorHResult = ErrorHResult::from_constant(0x80338063); // ERROR_WSMAN_TARGET_ALREADY_EXISTS
-#[doc(hidden)] pub const WSMAN_AUTHORIZATION_MODE_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x80338064); // ERROR_WSMAN_AUTHORIZATION_MODE_NOT_SUPPORTED
-#[doc(hidden)] pub const WSMAN_ACK_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x80338065); // ERROR_WSMAN_ACK_NOT_SUPPORTED
-#[doc(hidden)] pub const WSMAN_OPERATION_TIMEOUT_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x80338066); // ERROR_WSMAN_OPERATION_TIMEOUT_NOT_SUPPORTED
-#[doc(hidden)] pub const WSMAN_LOCALE_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x80338067); // ERROR_WSMAN_LOCALE_NOT_SUPPORTED
-#[doc(hidden)] pub const WSMAN_EXPIRATION_TIME_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x80338068); // ERROR_WSMAN_EXPIRATION_TIME_NOT_SUPPORTED
-#[doc(hidden)] pub const WSMAN_DELIVERY_RETRIES_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x80338069); // ERROR_WSMAN_DELIVERY_RETRIES_NOT_SUPPORTED
-#[doc(hidden)] pub const WSMAN_HEARTBEATS_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x8033806A); // ERROR_WSMAN_HEARTBEATS_NOT_SUPPORTED
-#[doc(hidden)] pub const WSMAN_BOOKMARKS_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x8033806B); // ERROR_WSMAN_BOOKMARKS_NOT_SUPPORTED
-#[doc(hidden)] pub const WSMAN_MAXITEMS_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x8033806C); // ERROR_WSMAN_MAXITEMS_NOT_SUPPORTED
-#[doc(hidden)] pub const WSMAN_MAXTIME_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x8033806D); // ERROR_WSMAN_MAXTIME_NOT_SUPPORTED
-#[doc(hidden)] pub const WSMAN_MAXENVELOPE_SIZE_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x8033806E); // ERROR_WSMAN_MAXENVELOPE_SIZE_NOT_SUPPORTED
-#[doc(hidden)] pub const WSMAN_MAXENVELOPE_POLICY_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x8033806F); // ERROR_WSMAN_MAXENVELOPE_POLICY_NOT_SUPPORTED
-#[doc(hidden)] pub const WSMAN_FILTERING_REQUIRED_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x80338070); // ERROR_WSMAN_FILTERING_REQUIRED_NOT_SUPPORTED
-#[doc(hidden)] pub const WSMAN_INSECURE_ADDRESS_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x80338071); // ERROR_WSMAN_INSECURE_ADDRESS_NOT_SUPPORTED
-#[doc(hidden)] pub const WSMAN_FORMAT_MISMATCH_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x80338072); // ERROR_WSMAN_FORMAT_MISMATCH_NOT_SUPPORTED
-#[doc(hidden)] pub const WSMAN_FORMAT_SECURITY_TOKEN_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x80338073); // ERROR_WSMAN_FORMAT_SECURITY_TOKEN_NOT_SUPPORTED
-#[doc(hidden)] pub const WSMAN_BAD_METHOD : ErrorHResult = ErrorHResult::from_constant(0x80338074); // ERROR_WSMAN_BAD_METHOD
-#[doc(hidden)] pub const WSMAN_UNSUPPORTED_MEDIA : ErrorHResult = ErrorHResult::from_constant(0x80338075); // ERROR_WSMAN_UNSUPPORTED_MEDIA
-#[doc(hidden)] pub const WSMAN_UNSUPPORTED_ADDRESSING_MODE : ErrorHResult = ErrorHResult::from_constant(0x80338076); // ERROR_WSMAN_UNSUPPORTED_ADDRESSING_MODE
-#[doc(hidden)] pub const WSMAN_FRAGMENT_TRANSFER_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x80338077); // ERROR_WSMAN_FRAGMENT_TRANSFER_NOT_SUPPORTED
-#[doc(hidden)] pub const WSMAN_ENUMERATION_INITIALIZING : ErrorHResult = ErrorHResult::from_constant(0x80338078); // ERROR_WSMAN_ENUMERATION_INITIALIZING
-#[doc(hidden)] pub const WSMAN_CONNECTOR_GET : ErrorHResult = ErrorHResult::from_constant(0x80338079); // ERROR_WSMAN_CONNECTOR_GET
-#[doc(hidden)] pub const WSMAN_URI_QUERY_STRING_SYNTAX_ERROR : ErrorHResult = ErrorHResult::from_constant(0x8033807A); // ERROR_WSMAN_URI_QUERY_STRING_SYNTAX_ERROR
-#[doc(hidden)] pub const WSMAN_INEXISTENT_MAC_ADDRESS : ErrorHResult = ErrorHResult::from_constant(0x8033807B); // ERROR_WSMAN_INEXISTENT_MAC_ADDRESS
-#[doc(hidden)] pub const WSMAN_NO_UNICAST_ADDRESSES : ErrorHResult = ErrorHResult::from_constant(0x8033807C); // ERROR_WSMAN_NO_UNICAST_ADDRESSES
-#[doc(hidden)] pub const WSMAN_NO_DHCP_ADDRESSES : ErrorHResult = ErrorHResult::from_constant(0x8033807D); // ERROR_WSMAN_NO_DHCP_ADDRESSES
-#[doc(hidden)] pub const WSMAN_MIN_ENVELOPE_SIZE : ErrorHResult = ErrorHResult::from_constant(0x8033807E); // ERROR_WSMAN_MIN_ENVELOPE_SIZE
-#[doc(hidden)] pub const WSMAN_EPR_NESTING_EXCEEDED : ErrorHResult = ErrorHResult::from_constant(0x8033807F); // ERROR_WSMAN_EPR_NESTING_EXCEEDED
-#[doc(hidden)] pub const WSMAN_REQUEST_INIT_ERROR : ErrorHResult = ErrorHResult::from_constant(0x80338080); // ERROR_WSMAN_REQUEST_INIT_ERROR
-#[doc(hidden)] pub const WSMAN_INVALID_TIMEOUT_HEADER : ErrorHResult = ErrorHResult::from_constant(0x80338081); // ERROR_WSMAN_INVALID_TIMEOUT_HEADER
-#[doc(hidden)] pub const WSMAN_CERT_NOT_FOUND : ErrorHResult = ErrorHResult::from_constant(0x80338082); // ERROR_WSMAN_CERT_NOT_FOUND
-#[doc(hidden)] pub const WSMAN_PLUGIN_FAILED : ErrorHResult = ErrorHResult::from_constant(0x80338083); // ERROR_WSMAN_PLUGIN_FAILED
-#[doc(hidden)] pub const WSMAN_ENUMERATION_INVALID : ErrorHResult = ErrorHResult::from_constant(0x80338084); // ERROR_WSMAN_ENUMERATION_INVALID
-#[doc(hidden)] pub const WSMAN_CONFIG_CANNOT_CHANGE_MUTUAL : ErrorHResult = ErrorHResult::from_constant(0x80338085); // ERROR_WSMAN_CONFIG_CANNOT_CHANGE_MUTUAL
-#[doc(hidden)] pub const WSMAN_ENUMERATION_MODE_UNSUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x80338086); // ERROR_WSMAN_ENUMERATION_MODE_UNSUPPORTED
-#[doc(hidden)] pub const WSMAN_MUSTUNDERSTAND_ON_LOCALE_UNSUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x80338087); // ERROR_WSMAN_MUSTUNDERSTAND_ON_LOCALE_UNSUPPORTED
-#[doc(hidden)] pub const WSMAN_POLICY_CORRUPTED : ErrorHResult = ErrorHResult::from_constant(0x80338088); // ERROR_WSMAN_POLICY_CORRUPTED
-#[doc(hidden)] pub const WSMAN_LISTENER_ADDRESS_INVALID : ErrorHResult = ErrorHResult::from_constant(0x80338089); // ERROR_WSMAN_LISTENER_ADDRESS_INVALID
-#[doc(hidden)] pub const WSMAN_CONFIG_CANNOT_CHANGE_GPO_CONTROLLED_SETTING : ErrorHResult = ErrorHResult::from_constant(0x8033808A); // ERROR_WSMAN_CONFIG_CANNOT_CHANGE_GPO_CONTROLLED_SETTING
-#[doc(hidden)] pub const WSMAN_EVENTING_CONCURRENT_CLIENT_RECEIVE : ErrorHResult = ErrorHResult::from_constant(0x8033808B); // ERROR_WSMAN_EVENTING_CONCURRENT_CLIENT_RECEIVE
-#[doc(hidden)] pub const WSMAN_EVENTING_FAST_SENDER : ErrorHResult = ErrorHResult::from_constant(0x8033808C); // ERROR_WSMAN_EVENTING_FAST_SENDER
-#[doc(hidden)] pub const WSMAN_EVENTING_INSECURE_PUSHSUBSCRIPTION_CONNECTION : ErrorHResult = ErrorHResult::from_constant(0x8033808D); // ERROR_WSMAN_EVENTING_INSECURE_PUSHSUBSCRIPTION_CONNECTION
-#[doc(hidden)] pub const WSMAN_EVENTING_INVALID_EVENTSOURCE : ErrorHResult = ErrorHResult::from_constant(0x8033808E); // ERROR_WSMAN_EVENTING_INVALID_EVENTSOURCE
-#[doc(hidden)] pub const WSMAN_EVENTING_NOMATCHING_LISTENER : ErrorHResult = ErrorHResult::from_constant(0x8033808F); // ERROR_WSMAN_EVENTING_NOMATCHING_LISTENER
-#[doc(hidden)] pub const WSMAN_FRAGMENT_DIALECT_REQUESTED_UNAVAILABLE : ErrorHResult = ErrorHResult::from_constant(0x80338090); // ERROR_WSMAN_FRAGMENT_DIALECT_REQUESTED_UNAVAILABLE
-#[doc(hidden)] pub const WSMAN_MISSING_FRAGMENT_PATH : ErrorHResult = ErrorHResult::from_constant(0x80338091); // ERROR_WSMAN_MISSING_FRAGMENT_PATH
-#[doc(hidden)] pub const WSMAN_INVALID_FRAGMENT_DIALECT : ErrorHResult = ErrorHResult::from_constant(0x80338092); // ERROR_WSMAN_INVALID_FRAGMENT_DIALECT
-#[doc(hidden)] pub const WSMAN_INVALID_FRAGMENT_PATH : ErrorHResult = ErrorHResult::from_constant(0x80338093); // ERROR_WSMAN_INVALID_FRAGMENT_PATH
-#[doc(hidden)] pub const WSMAN_EVENTING_INCOMPATIBLE_BATCHPARAMS_AND_DELIVERYMODE : ErrorHResult = ErrorHResult::from_constant(0x80338094); // ERROR_WSMAN_EVENTING_INCOMPATIBLE_BATCHPARAMS_AND_DELIVERYMODE
-#[doc(hidden)] pub const WSMAN_EVENTING_LOOPBACK_TESTFAILED : ErrorHResult = ErrorHResult::from_constant(0x80338095); // ERROR_WSMAN_EVENTING_LOOPBACK_TESTFAILED
-#[doc(hidden)] pub const WSMAN_EVENTING_INVALID_ENDTO_ADDRESSS : ErrorHResult = ErrorHResult::from_constant(0x80338096); // ERROR_WSMAN_EVENTING_INVALID_ENDTO_ADDRESSS
-#[doc(hidden)] pub const WSMAN_EVENTING_INVALID_INCOMING_EVENT_PACKET_HEADER : ErrorHResult = ErrorHResult::from_constant(0x80338097); // ERROR_WSMAN_EVENTING_INVALID_INCOMING_EVENT_PACKET_HEADER
-#[doc(hidden)] pub const WSMAN_SESSION_ALREADY_CLOSED : ErrorHResult = ErrorHResult::from_constant(0x80338098); // ERROR_WSMAN_SESSION_ALREADY_CLOSED
-#[doc(hidden)] pub const WSMAN_SUBSCRIPTION_LISTENER_NOLONGERVALID : ErrorHResult = ErrorHResult::from_constant(0x80338099); // ERROR_WSMAN_SUBSCRIPTION_LISTENER_NOLONGERVALID
-#[doc(hidden)] pub const WSMAN_PROVIDER_LOAD_FAILED : ErrorHResult = ErrorHResult::from_constant(0x8033809A); // ERROR_WSMAN_PROVIDER_LOAD_FAILED
-#[doc(hidden)] pub const WSMAN_EVENTING_SUBSCRIPTIONCLOSED_BYREMOTESERVICE : ErrorHResult = ErrorHResult::from_constant(0x8033809B); // ERROR_WSMAN_EVENTING_SUBSCRIPTIONCLOSED_BYREMOTESERVICE
-#[doc(hidden)] pub const WSMAN_EVENTING_DELIVERYFAILED_FROMSOURCE : ErrorHResult = ErrorHResult::from_constant(0x8033809C); // ERROR_WSMAN_EVENTING_DELIVERYFAILED_FROMSOURCE
-#[doc(hidden)] pub const WSMAN_SECURITY_UNMAPPED : ErrorHResult = ErrorHResult::from_constant(0x8033809D); // ERROR_WSMAN_SECURITY_UNMAPPED
-#[doc(hidden)] pub const WSMAN_EVENTING_SUBSCRIPTION_CANCELLED_BYSOURCE : ErrorHResult = ErrorHResult::from_constant(0x8033809E); // ERROR_WSMAN_EVENTING_SUBSCRIPTION_CANCELLED_BYSOURCE
-#[doc(hidden)] pub const WSMAN_INVALID_HOSTNAME_PATTERN : ErrorHResult = ErrorHResult::from_constant(0x8033809F); // ERROR_WSMAN_INVALID_HOSTNAME_PATTERN
-#[doc(hidden)] pub const WSMAN_EVENTING_MISSING_NOTIFYTO : ErrorHResult = ErrorHResult::from_constant(0x803380A0); // ERROR_WSMAN_EVENTING_MISSING_NOTIFYTO
-#[doc(hidden)] pub const WSMAN_EVENTING_MISSING_NOTIFYTO_ADDRESSS : ErrorHResult = ErrorHResult::from_constant(0x803380A1); // ERROR_WSMAN_EVENTING_MISSING_NOTIFYTO_ADDRESSS
-#[doc(hidden)] pub const WSMAN_EVENTING_INVALID_NOTIFYTO_ADDRESSS : ErrorHResult = ErrorHResult::from_constant(0x803380A2); // ERROR_WSMAN_EVENTING_INVALID_NOTIFYTO_ADDRESSS
-#[doc(hidden)] pub const WSMAN_EVENTING_INVALID_LOCALE_IN_DELIVERY : ErrorHResult = ErrorHResult::from_constant(0x803380A3); // ERROR_WSMAN_EVENTING_INVALID_LOCALE_IN_DELIVERY
-#[doc(hidden)] pub const WSMAN_EVENTING_INVALID_HEARTBEAT : ErrorHResult = ErrorHResult::from_constant(0x803380A4); // ERROR_WSMAN_EVENTING_INVALID_HEARTBEAT
-#[doc(hidden)] pub const WSMAN_MACHINE_OPTION_REQUIRED : ErrorHResult = ErrorHResult::from_constant(0x803380A5); // ERROR_WSMAN_MACHINE_OPTION_REQUIRED
-#[doc(hidden)] pub const WSMAN_UNSUPPORTED_FEATURE_OPTIONS : ErrorHResult = ErrorHResult::from_constant(0x803380A6); // ERROR_WSMAN_UNSUPPORTED_FEATURE_OPTIONS
-#[doc(hidden)] pub const WSMAN_BATCHSIZE_TOO_SMALL : ErrorHResult = ErrorHResult::from_constant(0x803380A7); // ERROR_WSMAN_BATCHSIZE_TOO_SMALL
-#[doc(hidden)] pub const WSMAN_EVENTING_DELIVERY_MODE_REQUESTED_INVALID : ErrorHResult = ErrorHResult::from_constant(0x803380A8); // ERROR_WSMAN_EVENTING_DELIVERY_MODE_REQUESTED_INVALID
-#[doc(hidden)] pub const WSMAN_PROVSYS_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x803380A9); // ERROR_WSMAN_PROVSYS_NOT_SUPPORTED
-#[doc(hidden)] pub const WSMAN_PUSH_SUBSCRIPTION_CONFIG_INVALID : ErrorHResult = ErrorHResult::from_constant(0x803380AA); // ERROR_WSMAN_PUSH_SUBSCRIPTION_CONFIG_INVALID
-#[doc(hidden)] pub const WSMAN_CREDS_PASSED_WITH_NO_AUTH_FLAG : ErrorHResult = ErrorHResult::from_constant(0x803380AB); // ERROR_WSMAN_CREDS_PASSED_WITH_NO_AUTH_FLAG
-#[doc(hidden)] pub const WSMAN_CLIENT_INVALID_FLAG : ErrorHResult = ErrorHResult::from_constant(0x803380AC); // ERROR_WSMAN_CLIENT_INVALID_FLAG
-#[doc(hidden)] pub const WSMAN_CLIENT_MULTIPLE_AUTH_FLAGS : ErrorHResult = ErrorHResult::from_constant(0x803380AD); // ERROR_WSMAN_CLIENT_MULTIPLE_AUTH_FLAGS
-#[doc(hidden)] pub const WSMAN_CLIENT_SPN_WRONG_AUTH : ErrorHResult = ErrorHResult::from_constant(0x803380AE); // ERROR_WSMAN_CLIENT_SPN_WRONG_AUTH
-#[doc(hidden)] pub const WSMAN_CLIENT_CERT_UNNEEDED_CREDS : ErrorHResult = ErrorHResult::from_constant(0x803380AF); // ERROR_WSMAN_CLIENT_CERT_UNNEEDED_CREDS
-#[doc(hidden)] pub const WSMAN_CLIENT_USERNAME_PASSWORD_NEEDED : ErrorHResult = ErrorHResult::from_constant(0x803380B0); // ERROR_WSMAN_CLIENT_USERNAME_PASSWORD_NEEDED
-#[doc(hidden)] pub const WSMAN_CLIENT_CERT_UNNEEDED_USERNAME : ErrorHResult = ErrorHResult::from_constant(0x803380B1); // ERROR_WSMAN_CLIENT_CERT_UNNEEDED_USERNAME
-#[doc(hidden)] pub const WSMAN_CLIENT_CREDENTIALS_NEEDED : ErrorHResult = ErrorHResult::from_constant(0x803380B2); // ERROR_WSMAN_CLIENT_CREDENTIALS_NEEDED
-#[doc(hidden)] pub const WSMAN_CLIENT_CREDENTIALS_FLAG_NEEDED : ErrorHResult = ErrorHResult::from_constant(0x803380B3); // ERROR_WSMAN_CLIENT_CREDENTIALS_FLAG_NEEDED
-#[doc(hidden)] pub const WSMAN_CLIENT_CERT_NEEDED : ErrorHResult = ErrorHResult::from_constant(0x803380B4); // ERROR_WSMAN_CLIENT_CERT_NEEDED
-#[doc(hidden)] pub const WSMAN_CLIENT_CERT_UNKNOWN_TYPE : ErrorHResult = ErrorHResult::from_constant(0x803380B5); // ERROR_WSMAN_CLIENT_CERT_UNKNOWN_TYPE
-#[doc(hidden)] pub const WSMAN_CLIENT_CERT_UNKNOWN_LOCATION : ErrorHResult = ErrorHResult::from_constant(0x803380B6); // ERROR_WSMAN_CLIENT_CERT_UNKNOWN_LOCATION
-#[doc(hidden)] pub const WSMAN_CLIENT_INVALID_CERT : ErrorHResult = ErrorHResult::from_constant(0x803380B7); // ERROR_WSMAN_CLIENT_INVALID_CERT
-#[doc(hidden)] pub const WSMAN_CLIENT_LOCAL_INVALID_CREDS : ErrorHResult = ErrorHResult::from_constant(0x803380B8); // ERROR_WSMAN_CLIENT_LOCAL_INVALID_CREDS
-#[doc(hidden)] pub const WSMAN_CLIENT_LOCAL_INVALID_CONNECTION_OPTIONS : ErrorHResult = ErrorHResult::from_constant(0x803380B9); // ERROR_WSMAN_CLIENT_LOCAL_INVALID_CONNECTION_OPTIONS
-#[doc(hidden)] pub const WSMAN_CLIENT_CREATESESSION_NULL_PARAM : ErrorHResult = ErrorHResult::from_constant(0x803380BA); // ERROR_WSMAN_CLIENT_CREATESESSION_NULL_PARAM
-#[doc(hidden)] pub const WSMAN_CLIENT_ENUMERATE_NULL_PARAM : ErrorHResult = ErrorHResult::from_constant(0x803380BB); // ERROR_WSMAN_CLIENT_ENUMERATE_NULL_PARAM
-#[doc(hidden)] pub const WSMAN_CLIENT_SUBSCRIBE_NULL_PARAM : ErrorHResult = ErrorHResult::from_constant(0x803380BC); // ERROR_WSMAN_CLIENT_SUBSCRIBE_NULL_PARAM
-#[doc(hidden)] pub const WSMAN_CLIENT_NULL_RESULT_PARAM : ErrorHResult = ErrorHResult::from_constant(0x803380BD); // ERROR_WSMAN_CLIENT_NULL_RESULT_PARAM
-#[doc(hidden)] pub const WSMAN_CLIENT_NO_HANDLE : ErrorHResult = ErrorHResult::from_constant(0x803380BE); // ERROR_WSMAN_CLIENT_NO_HANDLE
-#[doc(hidden)] pub const WSMAN_CLIENT_BLANK_URI : ErrorHResult = ErrorHResult::from_constant(0x803380BF); // ERROR_WSMAN_CLIENT_BLANK_URI
-#[doc(hidden)] pub const WSMAN_CLIENT_INVALID_RESOURCE_LOCATOR : ErrorHResult = ErrorHResult::from_constant(0x803380C0); // ERROR_WSMAN_CLIENT_INVALID_RESOURCE_LOCATOR
-#[doc(hidden)] pub const WSMAN_CLIENT_BLANK_INPUT_XML : ErrorHResult = ErrorHResult::from_constant(0x803380C1); // ERROR_WSMAN_CLIENT_BLANK_INPUT_XML
-#[doc(hidden)] pub const WSMAN_CLIENT_BATCH_ITEMS_TOO_SMALL : ErrorHResult = ErrorHResult::from_constant(0x803380C2); // ERROR_WSMAN_CLIENT_BATCH_ITEMS_TOO_SMALL
-#[doc(hidden)] pub const WSMAN_CLIENT_MAX_CHARS_TOO_SMALL : ErrorHResult = ErrorHResult::from_constant(0x803380C3); // ERROR_WSMAN_CLIENT_MAX_CHARS_TOO_SMALL
-#[doc(hidden)] pub const WSMAN_CLIENT_BLANK_ACTION_URI : ErrorHResult = ErrorHResult::from_constant(0x803380C4); // ERROR_WSMAN_CLIENT_BLANK_ACTION_URI
-#[doc(hidden)] pub const WSMAN_CLIENT_ZERO_HEARTBEAT : ErrorHResult = ErrorHResult::from_constant(0x803380C5); // ERROR_WSMAN_CLIENT_ZERO_HEARTBEAT
-#[doc(hidden)] pub const WSMAN_CLIENT_MULTIPLE_DELIVERY_MODES : ErrorHResult = ErrorHResult::from_constant(0x803380C6); // ERROR_WSMAN_CLIENT_MULTIPLE_DELIVERY_MODES
-#[doc(hidden)] pub const WSMAN_CLIENT_MULTIPLE_ENVELOPE_POLICIES : ErrorHResult = ErrorHResult::from_constant(0x803380C7); // ERROR_WSMAN_CLIENT_MULTIPLE_ENVELOPE_POLICIES
-#[doc(hidden)] pub const WSMAN_CLIENT_UNKNOWN_EXPIRATION_TYPE : ErrorHResult = ErrorHResult::from_constant(0x803380C8); // ERROR_WSMAN_CLIENT_UNKNOWN_EXPIRATION_TYPE
-#[doc(hidden)] pub const WSMAN_CLIENT_MISSING_EXPIRATION : ErrorHResult = ErrorHResult::from_constant(0x803380C9); // ERROR_WSMAN_CLIENT_MISSING_EXPIRATION
-#[doc(hidden)] pub const WSMAN_CLIENT_PULL_INVALID_FLAGS : ErrorHResult = ErrorHResult::from_constant(0x803380CA); // ERROR_WSMAN_CLIENT_PULL_INVALID_FLAGS
-#[doc(hidden)] pub const WSMAN_CLIENT_PUSH_UNSUPPORTED_TRANSPORT : ErrorHResult = ErrorHResult::from_constant(0x803380CB); // ERROR_WSMAN_CLIENT_PUSH_UNSUPPORTED_TRANSPORT
-#[doc(hidden)] pub const WSMAN_CLIENT_PUSH_HOST_TOO_LONG : ErrorHResult = ErrorHResult::from_constant(0x803380CC); // ERROR_WSMAN_CLIENT_PUSH_HOST_TOO_LONG
-#[doc(hidden)] pub const WSMAN_CLIENT_COMPRESSION_INVALID_OPTION : ErrorHResult = ErrorHResult::from_constant(0x803380CD); // ERROR_WSMAN_CLIENT_COMPRESSION_INVALID_OPTION
-#[doc(hidden)] pub const WSMAN_CLIENT_DELIVERENDSUBSCRIPTION_NULL_PARAM : ErrorHResult = ErrorHResult::from_constant(0x803380CE); // ERROR_WSMAN_CLIENT_DELIVERENDSUBSCRIPTION_NULL_PARAM
-#[doc(hidden)] pub const WSMAN_CLIENT_DELIVEREVENTS_NULL_PARAM : ErrorHResult = ErrorHResult::from_constant(0x803380CF); // ERROR_WSMAN_CLIENT_DELIVEREVENTS_NULL_PARAM
-#[doc(hidden)] pub const WSMAN_CLIENT_GETBOOKMARK_NULL_PARAM : ErrorHResult = ErrorHResult::from_constant(0x803380D0); // ERROR_WSMAN_CLIENT_GETBOOKMARK_NULL_PARAM
-#[doc(hidden)] pub const WSMAN_CLIENT_DECODEOBJECT_NULL_PARAM : ErrorHResult = ErrorHResult::from_constant(0x803380D1); // ERROR_WSMAN_CLIENT_DECODEOBJECT_NULL_PARAM
-#[doc(hidden)] pub const WSMAN_CLIENT_ENCODEOBJECT_NULL_PARAM : ErrorHResult = ErrorHResult::from_constant(0x803380D2); // ERROR_WSMAN_CLIENT_ENCODEOBJECT_NULL_PARAM
-#[doc(hidden)] pub const WSMAN_CLIENT_ENUMERATORADDOBJECT_NULL_PARAM : ErrorHResult = ErrorHResult::from_constant(0x803380D3); // ERROR_WSMAN_CLIENT_ENUMERATORADDOBJECT_NULL_PARAM
-#[doc(hidden)] pub const WSMAN_CLIENT_ENUMERATORNEXTOBJECT_NULL_PARAM : ErrorHResult = ErrorHResult::from_constant(0x803380D4); // ERROR_WSMAN_CLIENT_ENUMERATORNEXTOBJECT_NULL_PARAM
-#[doc(hidden)] pub const WSMAN_CLIENT_CONSTRUCTERROR_NULL_PARAM : ErrorHResult = ErrorHResult::from_constant(0x803380D5); // ERROR_WSMAN_CLIENT_CONSTRUCTERROR_NULL_PARAM
-#[doc(hidden)] pub const WSMAN_SERVER_NONPULLSUBSCRIBE_NULL_PARAM : ErrorHResult = ErrorHResult::from_constant(0x803380D6); // ERROR_WSMAN_SERVER_NONPULLSUBSCRIBE_NULL_PARAM
-#[doc(hidden)] pub const WSMAN_CLIENT_UNENCRYPTED_HTTP_ONLY : ErrorHResult = ErrorHResult::from_constant(0x803380D7); // ERROR_WSMAN_CLIENT_UNENCRYPTED_HTTP_ONLY
-#[doc(hidden)] pub const WSMAN_CANNOT_USE_CERTIFICATES_FOR_HTTP : ErrorHResult = ErrorHResult::from_constant(0x803380D8); // ERROR_WSMAN_CANNOT_USE_CERTIFICATES_FOR_HTTP
-#[doc(hidden)] pub const WSMAN_CONNECTIONSTR_INVALID : ErrorHResult = ErrorHResult::from_constant(0x803380D9); // ERROR_WSMAN_CONNECTIONSTR_INVALID
-#[doc(hidden)] pub const WSMAN_TRANSPORT_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x803380DA); // ERROR_WSMAN_TRANSPORT_NOT_SUPPORTED
-#[doc(hidden)] pub const WSMAN_PORT_INVALID : ErrorHResult = ErrorHResult::from_constant(0x803380DB); // ERROR_WSMAN_PORT_INVALID
-#[doc(hidden)] pub const WSMAN_CONFIG_PORT_INVALID : ErrorHResult = ErrorHResult::from_constant(0x803380DC); // ERROR_WSMAN_CONFIG_PORT_INVALID
-#[doc(hidden)] pub const WSMAN_SENDHEARBEAT_EMPTY_ENUMERATOR : ErrorHResult = ErrorHResult::from_constant(0x803380DD); // ERROR_WSMAN_SENDHEARBEAT_EMPTY_ENUMERATOR
-#[doc(hidden)] pub const WSMAN_CLIENT_UNENCRYPTED_DISABLED : ErrorHResult = ErrorHResult::from_constant(0x803380DE); // ERROR_WSMAN_CLIENT_UNENCRYPTED_DISABLED
-#[doc(hidden)] pub const WSMAN_CLIENT_BASIC_AUTHENTICATION_DISABLED : ErrorHResult = ErrorHResult::from_constant(0x803380DF); // ERROR_WSMAN_CLIENT_BASIC_AUTHENTICATION_DISABLED
-#[doc(hidden)] pub const WSMAN_CLIENT_DIGEST_AUTHENTICATION_DISABLED : ErrorHResult = ErrorHResult::from_constant(0x803380E0); // ERROR_WSMAN_CLIENT_DIGEST_AUTHENTICATION_DISABLED
-#[doc(hidden)] pub const WSMAN_CLIENT_NEGOTIATE_AUTHENTICATION_DISABLED : ErrorHResult = ErrorHResult::from_constant(0x803380E1); // ERROR_WSMAN_CLIENT_NEGOTIATE_AUTHENTICATION_DISABLED
-#[doc(hidden)] pub const WSMAN_CLIENT_KERBEROS_AUTHENTICATION_DISABLED : ErrorHResult = ErrorHResult::from_constant(0x803380E2); // ERROR_WSMAN_CLIENT_KERBEROS_AUTHENTICATION_DISABLED
-#[doc(hidden)] pub const WSMAN_CLIENT_CERTIFICATES_AUTHENTICATION_DISABLED : ErrorHResult = ErrorHResult::from_constant(0x803380E3); // ERROR_WSMAN_CLIENT_CERTIFICATES_AUTHENTICATION_DISABLED
-#[doc(hidden)] pub const WSMAN_SERVER_NOT_TRUSTED : ErrorHResult = ErrorHResult::from_constant(0x803380E4); // ERROR_WSMAN_SERVER_NOT_TRUSTED
-#[doc(hidden)] pub const WSMAN_EXPLICIT_CREDENTIALS_REQUIRED : ErrorHResult = ErrorHResult::from_constant(0x803380E5); // ERROR_WSMAN_EXPLICIT_CREDENTIALS_REQUIRED
-#[doc(hidden)] pub const WSMAN_CERT_THUMBPRINT_NOT_BLANK : ErrorHResult = ErrorHResult::from_constant(0x803380E6); // ERROR_WSMAN_CERT_THUMBPRINT_NOT_BLANK
-#[doc(hidden)] pub const WSMAN_CERT_THUMBPRINT_BLANK : ErrorHResult = ErrorHResult::from_constant(0x803380E7); // ERROR_WSMAN_CERT_THUMBPRINT_BLANK
-#[doc(hidden)] pub const WSMAN_CONFIG_CANNOT_SHARE_SSL_CONFIG : ErrorHResult = ErrorHResult::from_constant(0x803380E8); // ERROR_WSMAN_CONFIG_CANNOT_SHARE_SSL_CONFIG
-#[doc(hidden)] pub const WSMAN_CONFIG_CERT_CN_DOES_NOT_MATCH_HOSTNAME : ErrorHResult = ErrorHResult::from_constant(0x803380E9); // ERROR_WSMAN_CONFIG_CERT_CN_DOES_NOT_MATCH_HOSTNAME
-#[doc(hidden)] pub const WSMAN_CONFIG_HOSTNAME_CHANGE_WITHOUT_CERT : ErrorHResult = ErrorHResult::from_constant(0x803380EA); // ERROR_WSMAN_CONFIG_HOSTNAME_CHANGE_WITHOUT_CERT
-#[doc(hidden)] pub const WSMAN_CONFIG_THUMBPRINT_SHOULD_BE_EMPTY : ErrorHResult = ErrorHResult::from_constant(0x803380EB); // ERROR_WSMAN_CONFIG_THUMBPRINT_SHOULD_BE_EMPTY
-#[doc(hidden)] pub const WSMAN_INVALID_IPFILTER : ErrorHResult = ErrorHResult::from_constant(0x803380EC); // ERROR_WSMAN_INVALID_IPFILTER
-#[doc(hidden)] pub const WSMAN_CANNOT_CHANGE_KEYS : ErrorHResult = ErrorHResult::from_constant(0x803380ED); // ERROR_WSMAN_CANNOT_CHANGE_KEYS
-#[doc(hidden)] pub const WSMAN_CERT_INVALID_USAGE : ErrorHResult = ErrorHResult::from_constant(0x803380EE); // ERROR_WSMAN_CERT_INVALID_USAGE
-#[doc(hidden)] pub const WSMAN_RESPONSE_NO_RESULTS : ErrorHResult = ErrorHResult::from_constant(0x803380EF); // ERROR_WSMAN_RESPONSE_NO_RESULTS
-#[doc(hidden)] pub const WSMAN_CREATE_RESPONSE_NO_EPR : ErrorHResult = ErrorHResult::from_constant(0x803380F0); // ERROR_WSMAN_CREATE_RESPONSE_NO_EPR
-#[doc(hidden)] pub const WSMAN_RESPONSE_INVALID_ENUMERATION_CONTEXT : ErrorHResult = ErrorHResult::from_constant(0x803380F1); // ERROR_WSMAN_RESPONSE_INVALID_ENUMERATION_CONTEXT
-#[doc(hidden)] pub const WSMAN_RESPONSE_NO_XML_FRAGMENT_WRAPPER : ErrorHResult = ErrorHResult::from_constant(0x803380F2); // ERROR_WSMAN_RESPONSE_NO_XML_FRAGMENT_WRAPPER
-#[doc(hidden)] pub const WSMAN_RESPONSE_INVALID_MESSAGE_INFORMATION_HEADER : ErrorHResult = ErrorHResult::from_constant(0x803380F3); // ERROR_WSMAN_RESPONSE_INVALID_MESSAGE_INFORMATION_HEADER
-#[doc(hidden)] pub const WSMAN_RESPONSE_NO_SOAP_HEADER_BODY : ErrorHResult = ErrorHResult::from_constant(0x803380F4); // ERROR_WSMAN_RESPONSE_NO_SOAP_HEADER_BODY
-#[doc(hidden)] pub const WSMAN_HTTP_NO_RESPONSE_DATA : ErrorHResult = ErrorHResult::from_constant(0x803380F5); // ERROR_WSMAN_HTTP_NO_RESPONSE_DATA
-#[doc(hidden)] pub const WSMAN_RESPONSE_INVALID_SOAP_FAULT : ErrorHResult = ErrorHResult::from_constant(0x803380F6); // ERROR_WSMAN_RESPONSE_INVALID_SOAP_FAULT
-#[doc(hidden)] pub const WSMAN_HTTP_INVALID_CONTENT_TYPE_IN_RESPONSE_DATA : ErrorHResult = ErrorHResult::from_constant(0x803380F7); // ERROR_WSMAN_HTTP_INVALID_CONTENT_TYPE_IN_RESPONSE_DATA
-#[doc(hidden)] pub const WSMAN_HTTP_CONTENT_TYPE_MISSMATCH_RESPONSE_DATA : ErrorHResult = ErrorHResult::from_constant(0x803380F8); // ERROR_WSMAN_HTTP_CONTENT_TYPE_MISSMATCH_RESPONSE_DATA
-#[doc(hidden)] pub const WSMAN_CANNOT_DECRYPT : ErrorHResult = ErrorHResult::from_constant(0x803380F9); // ERROR_WSMAN_CANNOT_DECRYPT
-#[doc(hidden)] pub const WSMAN_INVALID_URI_WMI_SINGLETON : ErrorHResult = ErrorHResult::from_constant(0x803380FA); // ERROR_WSMAN_INVALID_URI_WMI_SINGLETON
-#[doc(hidden)] pub const WSMAN_INVALID_URI_WMI_ENUM_WQL : ErrorHResult = ErrorHResult::from_constant(0x803380FB); // ERROR_WSMAN_INVALID_URI_WMI_ENUM_WQL
-#[doc(hidden)] pub const WSMAN_NO_IDENTIFY_FOR_LOCAL_SESSION : ErrorHResult = ErrorHResult::from_constant(0x803380FC); // ERROR_WSMAN_NO_IDENTIFY_FOR_LOCAL_SESSION
-#[doc(hidden)] pub const WSMAN_NO_PUSH_SUBSCRIPTION_FOR_LOCAL_SESSION : ErrorHResult = ErrorHResult::from_constant(0x803380FD); // ERROR_WSMAN_NO_PUSH_SUBSCRIPTION_FOR_LOCAL_SESSION
-#[doc(hidden)] pub const WSMAN_INVALID_SUBSCRIPTION_MANAGER : ErrorHResult = ErrorHResult::from_constant(0x803380FE); // ERROR_WSMAN_INVALID_SUBSCRIPTION_MANAGER
-#[doc(hidden)] pub const WSMAN_NON_PULL_SUBSCRIPTION_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x803380FF); // ERROR_WSMAN_NON_PULL_SUBSCRIPTION_NOT_SUPPORTED
-#[doc(hidden)] pub const WSMAN_WMI_MAX_NESTED : ErrorHResult = ErrorHResult::from_constant(0x80338100); // ERROR_WSMAN_WMI_MAX_NESTED
-#[doc(hidden)] pub const WSMAN_REMOTE_CIMPATH_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x80338101); // ERROR_WSMAN_REMOTE_CIMPATH_NOT_SUPPORTED
-#[doc(hidden)] pub const WSMAN_WMI_PROVIDER_NOT_CAPABLE : ErrorHResult = ErrorHResult::from_constant(0x80338102); // ERROR_WSMAN_WMI_PROVIDER_NOT_CAPABLE
-#[doc(hidden)] pub const WSMAN_WMI_INVALID_VALUE : ErrorHResult = ErrorHResult::from_constant(0x80338103); // ERROR_WSMAN_WMI_INVALID_VALUE
-#[doc(hidden)] pub const WSMAN_WMI_SVC_ACCESS_DENIED : ErrorHResult = ErrorHResult::from_constant(0x80338104); // ERROR_WSMAN_WMI_SVC_ACCESS_DENIED
-#[doc(hidden)] pub const WSMAN_WMI_PROVIDER_ACCESS_DENIED : ErrorHResult = ErrorHResult::from_constant(0x80338105); // ERROR_WSMAN_WMI_PROVIDER_ACCESS_DENIED
-#[doc(hidden)] pub const WSMAN_WMI_CANNOT_CONNECT_ACCESS_DENIED : ErrorHResult = ErrorHResult::from_constant(0x80338106); // ERROR_WSMAN_WMI_CANNOT_CONNECT_ACCESS_DENIED
-#[doc(hidden)] pub const WSMAN_INVALID_FILTER_XML : ErrorHResult = ErrorHResult::from_constant(0x80338107); // ERROR_WSMAN_INVALID_FILTER_XML
-#[doc(hidden)] pub const WSMAN_ENUMERATE_WMI_INVALID_KEY : ErrorHResult = ErrorHResult::from_constant(0x80338108); // ERROR_WSMAN_ENUMERATE_WMI_INVALID_KEY
-#[doc(hidden)] pub const WSMAN_INVALID_FRAGMENT_PATH_BLANK : ErrorHResult = ErrorHResult::from_constant(0x80338109); // ERROR_WSMAN_INVALID_FRAGMENT_PATH_BLANK
-#[doc(hidden)] pub const WSMAN_INVALID_CHARACTERS_IN_RESPONSE : ErrorHResult = ErrorHResult::from_constant(0x8033810A); // ERROR_WSMAN_INVALID_CHARACTERS_IN_RESPONSE
-#[doc(hidden)] pub const WSMAN_KERBEROS_IPADDRESS : ErrorHResult = ErrorHResult::from_constant(0x8033810B); // ERROR_WSMAN_KERBEROS_IPADDRESS
-#[doc(hidden)] pub const WSMAN_CLIENT_WORKGROUP_NO_KERBEROS : ErrorHResult = ErrorHResult::from_constant(0x8033810C); // ERROR_WSMAN_CLIENT_WORKGROUP_NO_KERBEROS
-#[doc(hidden)] pub const WSMAN_INVALID_BATCH_SETTINGS_PARAMETER : ErrorHResult = ErrorHResult::from_constant(0x8033810D); // ERROR_WSMAN_INVALID_BATCH_SETTINGS_PARAMETER
-#[doc(hidden)] pub const WSMAN_SERVER_DESTINATION_LOCALHOST : ErrorHResult = ErrorHResult::from_constant(0x8033810E); // ERROR_WSMAN_SERVER_DESTINATION_LOCALHOST
-#[doc(hidden)] pub const WSMAN_UNKNOWN_HTTP_STATUS_RETURNED : ErrorHResult = ErrorHResult::from_constant(0x8033810F); // ERROR_WSMAN_UNKNOWN_HTTP_STATUS_RETURNED
-#[doc(hidden)] pub const WSMAN_UNSUPPORTED_HTTP_STATUS_REDIRECT : ErrorHResult = ErrorHResult::from_constant(0x80338110); // ERROR_WSMAN_UNSUPPORTED_HTTP_STATUS_REDIRECT
-#[doc(hidden)] pub const WSMAN_HTTP_REQUEST_TOO_LARGE_STATUS : ErrorHResult = ErrorHResult::from_constant(0x80338111); // ERROR_WSMAN_HTTP_REQUEST_TOO_LARGE_STATUS
-#[doc(hidden)] pub const WSMAN_HTTP_SERVICE_UNAVAILABLE_STATUS : ErrorHResult = ErrorHResult::from_constant(0x80338112); // ERROR_WSMAN_HTTP_SERVICE_UNAVAILABLE_STATUS
-#[doc(hidden)] pub const WSMAN_HTTP_NOT_FOUND_STATUS : ErrorHResult = ErrorHResult::from_constant(0x80338113); // ERROR_WSMAN_HTTP_NOT_FOUND_STATUS
-#[doc(hidden)] pub const WSMAN_EVENTING_MISSING_LOCALE_IN_DELIVERY : ErrorHResult = ErrorHResult::from_constant(0x80338114); // ERROR_WSMAN_EVENTING_MISSING_LOCALE_IN_DELIVERY
-#[doc(hidden)] pub const WSMAN_QUICK_CONFIG_FAILED_CERT_REQUIRED : ErrorHResult = ErrorHResult::from_constant(0x80338115); // ERROR_WSMAN_QUICK_CONFIG_FAILED_CERT_REQUIRED
-#[doc(hidden)] pub const WSMAN_QUICK_CONFIG_FIREWALL_EXCEPTIONS_DISALLOWED : ErrorHResult = ErrorHResult::from_constant(0x80338116); // ERROR_WSMAN_QUICK_CONFIG_FIREWALL_EXCEPTIONS_DISALLOWED
-#[doc(hidden)] pub const WSMAN_QUICK_CONFIG_LOCAL_POLICY_CHANGE_DISALLOWED : ErrorHResult = ErrorHResult::from_constant(0x80338117); // ERROR_WSMAN_QUICK_CONFIG_LOCAL_POLICY_CHANGE_DISALLOWED
-#[doc(hidden)] pub const WSMAN_INVALID_SELECTOR_NAME : ErrorHResult = ErrorHResult::from_constant(0x80338118); // ERROR_WSMAN_INVALID_SELECTOR_NAME
-#[doc(hidden)] pub const WSMAN_ENCODING_TYPE : ErrorHResult = ErrorHResult::from_constant(0x80338119); // ERROR_WSMAN_ENCODING_TYPE
-#[doc(hidden)] pub const WSMAN_ENDPOINT_UNAVAILABLE_INVALID_VALUE : ErrorHResult = ErrorHResult::from_constant(0x8033811A); // ERROR_WSMAN_ENDPOINT_UNAVAILABLE_INVALID_VALUE
-#[doc(hidden)] pub const WSMAN_INVALID_HEADER : ErrorHResult = ErrorHResult::from_constant(0x8033811B); // ERROR_WSMAN_INVALID_HEADER
-#[doc(hidden)] pub const WSMAN_ENUMERATE_UNSUPPORTED_EXPIRATION_TYPE : ErrorHResult = ErrorHResult::from_constant(0x8033811C); // ERROR_WSMAN_ENUMERATE_UNSUPPORTED_EXPIRATION_TYPE
-#[doc(hidden)] pub const WSMAN_MAX_ELEMENTS_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x8033811D); // ERROR_WSMAN_MAX_ELEMENTS_NOT_SUPPORTED
-#[doc(hidden)] pub const WSMAN_WMI_PROVIDER_INVALID_PARAMETER : ErrorHResult = ErrorHResult::from_constant(0x8033811E); // ERROR_WSMAN_WMI_PROVIDER_INVALID_PARAMETER
-#[doc(hidden)] pub const WSMAN_CLIENT_MULTIPLE_ENUM_MODE_FLAGS : ErrorHResult = ErrorHResult::from_constant(0x8033811F); // ERROR_WSMAN_CLIENT_MULTIPLE_ENUM_MODE_FLAGS
-#[doc(hidden)] pub const WINRS_CLIENT_INVALID_FLAG : ErrorHResult = ErrorHResult::from_constant(0x80338120); // ERROR_WINRS_CLIENT_INVALID_FLAG
-#[doc(hidden)] pub const WINRS_CLIENT_NULL_PARAM : ErrorHResult = ErrorHResult::from_constant(0x80338121); // ERROR_WINRS_CLIENT_NULL_PARAM
-#[doc(hidden)] pub const WSMAN_CANNOT_PROCESS_FILTER : ErrorHResult = ErrorHResult::from_constant(0x80338122); // ERROR_WSMAN_CANNOT_PROCESS_FILTER
-#[doc(hidden)] pub const WSMAN_CLIENT_ENUMERATORADDEVENT_NULL_PARAM : ErrorHResult = ErrorHResult::from_constant(0x80338123); // ERROR_WSMAN_CLIENT_ENUMERATORADDEVENT_NULL_PARAM
-#[doc(hidden)] pub const WSMAN_ADDOBJECT_MISSING_OBJECT : ErrorHResult = ErrorHResult::from_constant(0x80338124); // ERROR_WSMAN_ADDOBJECT_MISSING_OBJECT
-#[doc(hidden)] pub const WSMAN_ADDOBJECT_MISSING_EPR : ErrorHResult = ErrorHResult::from_constant(0x80338125); // ERROR_WSMAN_ADDOBJECT_MISSING_EPR
-#[doc(hidden)] pub const WSMAN_NETWORK_TIMEDOUT : ErrorHResult = ErrorHResult::from_constant(0x80338126); // ERROR_WSMAN_NETWORK_TIMEDOUT
-#[doc(hidden)] pub const WINRS_RECEIVE_IN_PROGRESS : ErrorHResult = ErrorHResult::from_constant(0x80338127); // ERROR_WINRS_RECEIVE_IN_PROGRESS
-#[doc(hidden)] pub const WINRS_RECEIVE_NO_RESPONSE_DATA : ErrorHResult = ErrorHResult::from_constant(0x80338128); // ERROR_WINRS_RECEIVE_NO_RESPONSE_DATA
-#[doc(hidden)] pub const WINRS_CLIENT_CREATESHELL_NULL_PARAM : ErrorHResult = ErrorHResult::from_constant(0x80338129); // ERROR_WINRS_CLIENT_CREATESHELL_NULL_PARAM
-#[doc(hidden)] pub const WINRS_CLIENT_CLOSESHELL_NULL_PARAM : ErrorHResult = ErrorHResult::from_constant(0x8033812A); // ERROR_WINRS_CLIENT_CLOSESHELL_NULL_PARAM
-#[doc(hidden)] pub const WINRS_CLIENT_FREECREATESHELLRESULT_NULL_PARAM : ErrorHResult = ErrorHResult::from_constant(0x8033812B); // ERROR_WINRS_CLIENT_FREECREATESHELLRESULT_NULL_PARAM
-#[doc(hidden)] pub const WINRS_CLIENT_RUNCOMMAND_NULL_PARAM : ErrorHResult = ErrorHResult::from_constant(0x8033812C); // ERROR_WINRS_CLIENT_RUNCOMMAND_NULL_PARAM
-#[doc(hidden)] pub const WINRS_CLIENT_FREERUNCOMMANDRESULT_NULL_PARAM : ErrorHResult = ErrorHResult::from_constant(0x8033812D); // ERROR_WINRS_CLIENT_FREERUNCOMMANDRESULT_NULL_PARAM
-#[doc(hidden)] pub const WINRS_CLIENT_SIGNAL_NULL_PARAM : ErrorHResult = ErrorHResult::from_constant(0x8033812E); // ERROR_WINRS_CLIENT_SIGNAL_NULL_PARAM
-#[doc(hidden)] pub const WINRS_CLIENT_RECEIVE_NULL_PARAM : ErrorHResult = ErrorHResult::from_constant(0x8033812F); // ERROR_WINRS_CLIENT_RECEIVE_NULL_PARAM
-#[doc(hidden)] pub const WINRS_CLIENT_FREEPULLRESULT_NULL_PARAM : ErrorHResult = ErrorHResult::from_constant(0x80338130); // ERROR_WINRS_CLIENT_FREEPULLRESULT_NULL_PARAM
-#[doc(hidden)] pub const WINRS_CLIENT_PULL_NULL_PARAM : ErrorHResult = ErrorHResult::from_constant(0x80338131); // ERROR_WINRS_CLIENT_PULL_NULL_PARAM
-#[doc(hidden)] pub const WINRS_CLIENT_CLOSERECEIVEHANDLE_NULL_PARAM : ErrorHResult = ErrorHResult::from_constant(0x80338132); // ERROR_WINRS_CLIENT_CLOSERECEIVEHANDLE_NULL_PARAM
-#[doc(hidden)] pub const WINRS_CLIENT_SEND_NULL_PARAM : ErrorHResult = ErrorHResult::from_constant(0x80338133); // ERROR_WINRS_CLIENT_SEND_NULL_PARAM
-#[doc(hidden)] pub const WINRS_CLIENT_PUSH_NULL_PARAM : ErrorHResult = ErrorHResult::from_constant(0x80338134); // ERROR_WINRS_CLIENT_PUSH_NULL_PARAM
-#[doc(hidden)] pub const WINRS_CLIENT_CLOSESENDHANDLE_NULL_PARAM : ErrorHResult = ErrorHResult::from_constant(0x80338135); // ERROR_WINRS_CLIENT_CLOSESENDHANDLE_NULL_PARAM
-#[doc(hidden)] pub const WINRS_CLIENT_GET_NULL_PARAM : ErrorHResult = ErrorHResult::from_constant(0x80338136); // ERROR_WINRS_CLIENT_GET_NULL_PARAM
-#[doc(hidden)] pub const WSMAN_POLYMORPHISM_MODE_UNSUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x80338137); // ERROR_WSMAN_POLYMORPHISM_MODE_UNSUPPORTED
-#[doc(hidden)] pub const WSMAN_REQUEST_NOT_SUPPORTED_AT_SERVICE : ErrorHResult = ErrorHResult::from_constant(0x80338138); // ERROR_WSMAN_REQUEST_NOT_SUPPORTED_AT_SERVICE
-#[doc(hidden)] pub const WSMAN_URI_NON_DMTF_CLASS : ErrorHResult = ErrorHResult::from_constant(0x80338139); // ERROR_WSMAN_URI_NON_DMTF_CLASS
-#[doc(hidden)] pub const WSMAN_URI_WRONG_DMTF_VERSION : ErrorHResult = ErrorHResult::from_constant(0x8033813A); // ERROR_WSMAN_URI_WRONG_DMTF_VERSION
-#[doc(hidden)] pub const WSMAN_DIFFERENT_CIM_SELECTOR : ErrorHResult = ErrorHResult::from_constant(0x8033813B); // ERROR_WSMAN_DIFFERENT_CIM_SELECTOR
-#[doc(hidden)] pub const WSMAN_PUSHSUBSCRIPTION_INVALIDUSERACCOUNT : ErrorHResult = ErrorHResult::from_constant(0x8033813C); // ERROR_WSMAN_PUSHSUBSCRIPTION_INVALIDUSERACCOUNT
-#[doc(hidden)] pub const WSMAN_EVENTING_NONDOMAINJOINED_PUBLISHER : ErrorHResult = ErrorHResult::from_constant(0x8033813D); // ERROR_WSMAN_EVENTING_NONDOMAINJOINED_PUBLISHER
-#[doc(hidden)] pub const WSMAN_EVENTING_NONDOMAINJOINED_COLLECTOR : ErrorHResult = ErrorHResult::from_constant(0x8033813E); // ERROR_WSMAN_EVENTING_NONDOMAINJOINED_COLLECTOR
-#[doc(hidden)] pub const WSMAN_CONFIG_READONLY_PROPERTY : ErrorHResult = ErrorHResult::from_constant(0x8033813F); // ERROR_WSMAN_CONFIG_READONLY_PROPERTY
-#[doc(hidden)] pub const WINRS_CODE_PAGE_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x80338140); // ERROR_WINRS_CODE_PAGE_NOT_SUPPORTED
-#[doc(hidden)] pub const WSMAN_CLIENT_DISABLE_LOOPBACK_WITH_EXPLICIT_CREDENTIALS : ErrorHResult = ErrorHResult::from_constant(0x80338141); // ERROR_WSMAN_CLIENT_DISABLE_LOOPBACK_WITH_EXPLICIT_CREDENTIALS
-#[doc(hidden)] pub const WSMAN_CLIENT_INVALID_DISABLE_LOOPBACK : ErrorHResult = ErrorHResult::from_constant(0x80338142); // ERROR_WSMAN_CLIENT_INVALID_DISABLE_LOOPBACK
-#[doc(hidden)] pub const WSMAN_CLIENT_ENUM_RECEIVED_TOO_MANY_ITEMS : ErrorHResult = ErrorHResult::from_constant(0x80338143); // ERROR_WSMAN_CLIENT_ENUM_RECEIVED_TOO_MANY_ITEMS
-#[doc(hidden)] pub const WSMAN_MULTIPLE_CREDENTIALS : ErrorHResult = ErrorHResult::from_constant(0x80338144); // ERROR_WSMAN_MULTIPLE_CREDENTIALS
-#[doc(hidden)] pub const WSMAN_AUTHENTICATION_INVALID_FLAG : ErrorHResult = ErrorHResult::from_constant(0x80338145); // ERROR_WSMAN_AUTHENTICATION_INVALID_FLAG
-#[doc(hidden)] pub const WSMAN_CLIENT_CREDENTIALS_FOR_DEFAULT_AUTHENTICATION : ErrorHResult = ErrorHResult::from_constant(0x80338146); // ERROR_WSMAN_CLIENT_CREDENTIALS_FOR_DEFAULT_AUTHENTICATION
-#[doc(hidden)] pub const WSMAN_CLIENT_USERNAME_AND_PASSWORD_NEEDED : ErrorHResult = ErrorHResult::from_constant(0x80338147); // ERROR_WSMAN_CLIENT_USERNAME_AND_PASSWORD_NEEDED
-#[doc(hidden)] pub const WSMAN_CLIENT_INVALID_CERT_DNS_OR_UPN : ErrorHResult = ErrorHResult::from_constant(0x80338148); // ERROR_WSMAN_CLIENT_INVALID_CERT_DNS_OR_UPN
-#[doc(hidden)] pub const WSMAN_CREATESHELL_NULL_ENVIRONMENT_VARIABLE_NAME : ErrorHResult = ErrorHResult::from_constant(0x80338149); // ERROR_WSMAN_CREATESHELL_NULL_ENVIRONMENT_VARIABLE_NAME
-#[doc(hidden)] pub const WSMAN_SHELL_ALREADY_CLOSED : ErrorHResult = ErrorHResult::from_constant(0x8033814A); // ERROR_WSMAN_SHELL_ALREADY_CLOSED
-#[doc(hidden)] pub const WSMAN_CREATESHELL_NULL_STREAMID : ErrorHResult = ErrorHResult::from_constant(0x8033814B); // ERROR_WSMAN_CREATESHELL_NULL_STREAMID
-#[doc(hidden)] pub const WSMAN_SHELL_INVALID_SHELL_HANDLE : ErrorHResult = ErrorHResult::from_constant(0x8033814C); // ERROR_WSMAN_SHELL_INVALID_SHELL_HANDLE
-#[doc(hidden)] pub const WSMAN_SHELL_INVALID_COMMAND_HANDLE : ErrorHResult = ErrorHResult::from_constant(0x8033814D); // ERROR_WSMAN_SHELL_INVALID_COMMAND_HANDLE
-#[doc(hidden)] pub const WSMAN_RUNSHELLCOMMAND_NULL_ARGUMENT : ErrorHResult = ErrorHResult::from_constant(0x8033814E); // ERROR_WSMAN_RUNSHELLCOMMAND_NULL_ARGUMENT
-#[doc(hidden)] pub const WSMAN_COMMAND_ALREADY_CLOSED : ErrorHResult = ErrorHResult::from_constant(0x8033814F); // ERROR_WSMAN_COMMAND_ALREADY_CLOSED
-#[doc(hidden)] pub const WSMAN_SENDSHELLINPUT_INVALID_STREAMID_INDEX : ErrorHResult = ErrorHResult::from_constant(0x80338150); // ERROR_WSMAN_SENDSHELLINPUT_INVALID_STREAMID_INDEX
-#[doc(hidden)] pub const WSMAN_SHELL_SYNCHRONOUS_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x80338151); // ERROR_WSMAN_SHELL_SYNCHRONOUS_NOT_SUPPORTED
-#[doc(hidden)] pub const WSMAN_NO_CERTMAPPING_OPERATION_FOR_LOCAL_SESSION : ErrorHResult = ErrorHResult::from_constant(0x80338152); // ERROR_WSMAN_NO_CERTMAPPING_OPERATION_FOR_LOCAL_SESSION
-#[doc(hidden)] pub const WSMAN_CERTMAPPING_CONFIGLIMIT_EXCEEDED : ErrorHResult = ErrorHResult::from_constant(0x80338153); // ERROR_WSMAN_CERTMAPPING_CONFIGLIMIT_EXCEEDED
-#[doc(hidden)] pub const WSMAN_CERTMAPPING_INVALIDUSERCREDENTIALS : ErrorHResult = ErrorHResult::from_constant(0x80338154); // ERROR_WSMAN_CERTMAPPING_INVALIDUSERCREDENTIALS
-#[doc(hidden)] pub const WSMAN_CERT_INVALID_USAGE_CLIENT : ErrorHResult = ErrorHResult::from_constant(0x80338155); // ERROR_WSMAN_CERT_INVALID_USAGE_CLIENT
-#[doc(hidden)] pub const WSMAN_CERT_MISSING_AUTH_FLAG : ErrorHResult = ErrorHResult::from_constant(0x80338156); // ERROR_WSMAN_CERT_MISSING_AUTH_FLAG
-#[doc(hidden)] pub const WSMAN_CERT_MULTIPLE_CREDENTIALS_FLAG : ErrorHResult = ErrorHResult::from_constant(0x80338157); // ERROR_WSMAN_CERT_MULTIPLE_CREDENTIALS_FLAG
-#[doc(hidden)] pub const WSMAN_CONFIG_SHELL_URI_INVALID : ErrorHResult = ErrorHResult::from_constant(0x80338158); // ERROR_WSMAN_CONFIG_SHELL_URI_INVALID
-#[doc(hidden)] pub const WSMAN_CONFIG_SHELL_URI_CMDSHELLURI_NOTPERMITTED : ErrorHResult = ErrorHResult::from_constant(0x80338159); // ERROR_WSMAN_CONFIG_SHELL_URI_CMDSHELLURI_NOTPERMITTED
-#[doc(hidden)] pub const WSMAN_CONFIG_SHELLURI_INVALID_PROCESSPATH : ErrorHResult = ErrorHResult::from_constant(0x8033815A); // ERROR_WSMAN_CONFIG_SHELLURI_INVALID_PROCESSPATH
-#[doc(hidden)] pub const WINRS_SHELL_URI_INVALID : ErrorHResult = ErrorHResult::from_constant(0x8033815B); // ERROR_WINRS_SHELL_URI_INVALID
-#[doc(hidden)] pub const WSMAN_INVALID_SECURITY_DESCRIPTOR : ErrorHResult = ErrorHResult::from_constant(0x8033815C); // ERROR_WSMAN_INVALID_SECURITY_DESCRIPTOR
-#[doc(hidden)] pub const WSMAN_POLICY_TOO_COMPLEX : ErrorHResult = ErrorHResult::from_constant(0x8033815D); // ERROR_WSMAN_POLICY_TOO_COMPLEX
-#[doc(hidden)] pub const WSMAN_POLICY_CANNOT_COMPLY : ErrorHResult = ErrorHResult::from_constant(0x8033815E); // ERROR_WSMAN_POLICY_CANNOT_COMPLY
-#[doc(hidden)] pub const WSMAN_INVALID_CONNECTIONRETRY : ErrorHResult = ErrorHResult::from_constant(0x8033815F); // ERROR_WSMAN_INVALID_CONNECTIONRETRY
-#[doc(hidden)] pub const WSMAN_URISECURITY_INVALIDURIKEY : ErrorHResult = ErrorHResult::from_constant(0x80338160); // ERROR_WSMAN_URISECURITY_INVALIDURIKEY
-#[doc(hidden)] pub const WSMAN_CERTMAPPING_INVALIDSUBJECTKEY : ErrorHResult = ErrorHResult::from_constant(0x80338161); // ERROR_WSMAN_CERTMAPPING_INVALIDSUBJECTKEY
-#[doc(hidden)] pub const WSMAN_CERTMAPPING_INVALIDISSUERKEY : ErrorHResult = ErrorHResult::from_constant(0x80338162); // ERROR_WSMAN_CERTMAPPING_INVALIDISSUERKEY
-#[doc(hidden)] pub const WSMAN_INVALID_PUBLISHERS_TYPE : ErrorHResult = ErrorHResult::from_constant(0x80338163); // ERROR_WSMAN_INVALID_PUBLISHERS_TYPE
-#[doc(hidden)] pub const WSMAN_CLIENT_INVALID_DELIVERY_RETRY : ErrorHResult = ErrorHResult::from_constant(0x80338164); // ERROR_WSMAN_CLIENT_INVALID_DELIVERY_RETRY
-#[doc(hidden)] pub const WSMAN_CLIENT_NULL_PUBLISHERS : ErrorHResult = ErrorHResult::from_constant(0x80338165); // ERROR_WSMAN_CLIENT_NULL_PUBLISHERS
-#[doc(hidden)] pub const WSMAN_CLIENT_NULL_ISSUERS : ErrorHResult = ErrorHResult::from_constant(0x80338166); // ERROR_WSMAN_CLIENT_NULL_ISSUERS
-#[doc(hidden)] pub const WSMAN_CLIENT_NO_SOURCES : ErrorHResult = ErrorHResult::from_constant(0x80338167); // ERROR_WSMAN_CLIENT_NO_SOURCES
-#[doc(hidden)] pub const WSMAN_INVALID_SUBSCRIBE_OBJECT : ErrorHResult = ErrorHResult::from_constant(0x80338168); // ERROR_WSMAN_INVALID_SUBSCRIBE_OBJECT
-#[doc(hidden)] pub const WSMAN_PUBLIC_FIREWALL_PROFILE_ACTIVE : ErrorHResult = ErrorHResult::from_constant(0x80338169); // ERROR_WSMAN_PUBLIC_FIREWALL_PROFILE_ACTIVE
-#[doc(hidden)] pub const WSMAN_CERTMAPPING_PASSWORDTOOLONG : ErrorHResult = ErrorHResult::from_constant(0x8033816A); // ERROR_WSMAN_CERTMAPPING_PASSWORDTOOLONG
-#[doc(hidden)] pub const WSMAN_CERTMAPPING_PASSWORDBLANK : ErrorHResult = ErrorHResult::from_constant(0x8033816B); // ERROR_WSMAN_CERTMAPPING_PASSWORDBLANK
-#[doc(hidden)] pub const WSMAN_CERTMAPPING_PASSWORDUSERTUPLE : ErrorHResult = ErrorHResult::from_constant(0x8033816C); // ERROR_WSMAN_CERTMAPPING_PASSWORDUSERTUPLE
-#[doc(hidden)] pub const WSMAN_INVALID_PROVIDER_RESPONSE : ErrorHResult = ErrorHResult::from_constant(0x8033816D); // ERROR_WSMAN_INVALID_PROVIDER_RESPONSE
-#[doc(hidden)] pub const WSMAN_SHELL_NOT_INITIALIZED : ErrorHResult = ErrorHResult::from_constant(0x8033816E); // ERROR_WSMAN_SHELL_NOT_INITIALIZED
-#[doc(hidden)] pub const WSMAN_CONFIG_SHELLURI_INVALID_OPERATION_ON_KEY : ErrorHResult = ErrorHResult::from_constant(0x8033816F); // ERROR_WSMAN_CONFIG_SHELLURI_INVALID_OPERATION_ON_KEY
-#[doc(hidden)] pub const WSMAN_HTTP_STATUS_SERVER_ERROR : ErrorHResult = ErrorHResult::from_constant(0x80338170); // ERROR_WSMAN_HTTP_STATUS_SERVER_ERROR
-#[doc(hidden)] pub const WSMAN_HTTP_STATUS_BAD_REQUEST : ErrorHResult = ErrorHResult::from_constant(0x80338171); // ERROR_WSMAN_HTTP_STATUS_BAD_REQUEST
-#[doc(hidden)] pub const WSMAN_CONFIG_CANNOT_CHANGE_CERTMAPPING_KEYS : ErrorHResult = ErrorHResult::from_constant(0x80338172); // ERROR_WSMAN_CONFIG_CANNOT_CHANGE_CERTMAPPING_KEYS
-#[doc(hidden)] pub const WSMAN_HTML_ERROR : ErrorHResult = ErrorHResult::from_constant(0x80338173); // ERROR_WSMAN_HTML_ERROR
-#[doc(hidden)] pub const WSMAN_CLIENT_INITIALIZE_NULL_PARAM : ErrorHResult = ErrorHResult::from_constant(0x80338174); // ERROR_WSMAN_CLIENT_INITIALIZE_NULL_PARAM
-#[doc(hidden)] pub const WSMAN_CLIENT_INVALID_INIT_APPLICATION_FLAG : ErrorHResult = ErrorHResult::from_constant(0x80338175); // ERROR_WSMAN_CLIENT_INVALID_INIT_APPLICATION_FLAG
-#[doc(hidden)] pub const WSMAN_CLIENT_INVALID_DEINIT_APPLICATION_FLAG : ErrorHResult = ErrorHResult::from_constant(0x80338176); // ERROR_WSMAN_CLIENT_INVALID_DEINIT_APPLICATION_FLAG
-#[doc(hidden)] pub const WSMAN_CLIENT_SETSESSIONOPTION_NULL_PARAM : ErrorHResult = ErrorHResult::from_constant(0x80338177); // ERROR_WSMAN_CLIENT_SETSESSIONOPTION_NULL_PARAM
-#[doc(hidden)] pub const WSMAN_CLIENT_SETSESSIONOPTION_INVALID_PARAM : ErrorHResult = ErrorHResult::from_constant(0x80338178); // ERROR_WSMAN_CLIENT_SETSESSIONOPTION_INVALID_PARAM
-#[doc(hidden)] pub const WSMAN_CLIENT_GETSESSIONOPTION_INVALID_PARAM : ErrorHResult = ErrorHResult::from_constant(0x80338179); // ERROR_WSMAN_CLIENT_GETSESSIONOPTION_INVALID_PARAM
-#[doc(hidden)] pub const WSMAN_CLIENT_CREATESHELL_NULL_PARAM : ErrorHResult = ErrorHResult::from_constant(0x8033817A); // ERROR_WSMAN_CLIENT_CREATESHELL_NULL_PARAM
-#[doc(hidden)] pub const WSMAN_CLIENT_INVALID_CREATE_SHELL_FLAG : ErrorHResult = ErrorHResult::from_constant(0x8033817B); // ERROR_WSMAN_CLIENT_INVALID_CREATE_SHELL_FLAG
-#[doc(hidden)] pub const WSMAN_CLIENT_INVALID_CLOSE_SHELL_FLAG : ErrorHResult = ErrorHResult::from_constant(0x8033817C); // ERROR_WSMAN_CLIENT_INVALID_CLOSE_SHELL_FLAG
-#[doc(hidden)] pub const WSMAN_CLIENT_INVALID_CLOSE_COMMAND_FLAG : ErrorHResult = ErrorHResult::from_constant(0x8033817D); // ERROR_WSMAN_CLIENT_INVALID_CLOSE_COMMAND_FLAG
-#[doc(hidden)] pub const WSMAN_CLIENT_CLOSESHELL_NULL_PARAM : ErrorHResult = ErrorHResult::from_constant(0x8033817E); // ERROR_WSMAN_CLIENT_CLOSESHELL_NULL_PARAM
-#[doc(hidden)] pub const WSMAN_CLIENT_CLOSECOMMAND_NULL_PARAM : ErrorHResult = ErrorHResult::from_constant(0x8033817F); // ERROR_WSMAN_CLIENT_CLOSECOMMAND_NULL_PARAM
-#[doc(hidden)] pub const WSMAN_CLIENT_RUNCOMMAND_NULL_PARAM : ErrorHResult = ErrorHResult::from_constant(0x80338180); // ERROR_WSMAN_CLIENT_RUNCOMMAND_NULL_PARAM
-#[doc(hidden)] pub const WSMAN_CLIENT_INVALID_RUNCOMMAND_FLAG : ErrorHResult = ErrorHResult::from_constant(0x80338181); // ERROR_WSMAN_CLIENT_INVALID_RUNCOMMAND_FLAG
-#[doc(hidden)] pub const WSMAN_CLIENT_RUNCOMMAND_NOTCOMPLETED : ErrorHResult = ErrorHResult::from_constant(0x80338182); // ERROR_WSMAN_CLIENT_RUNCOMMAND_NOTCOMPLETED
-#[doc(hidden)] pub const WSMAN_NO_COMMAND_RESPONSE : ErrorHResult = ErrorHResult::from_constant(0x80338183); // ERROR_WSMAN_NO_COMMAND_RESPONSE
-#[doc(hidden)] pub const WSMAN_INVALID_OPTIONSET : ErrorHResult = ErrorHResult::from_constant(0x80338184); // ERROR_WSMAN_INVALID_OPTIONSET
-#[doc(hidden)] pub const WSMAN_NO_COMMANDID : ErrorHResult = ErrorHResult::from_constant(0x80338185); // ERROR_WSMAN_NO_COMMANDID
-#[doc(hidden)] pub const WSMAN_CLIENT_SIGNAL_NULL_PARAM : ErrorHResult = ErrorHResult::from_constant(0x80338186); // ERROR_WSMAN_CLIENT_SIGNAL_NULL_PARAM
-#[doc(hidden)] pub const WSMAN_CLIENT_INVALID_SIGNAL_SHELL_FLAG : ErrorHResult = ErrorHResult::from_constant(0x80338187); // ERROR_WSMAN_CLIENT_INVALID_SIGNAL_SHELL_FLAG
-#[doc(hidden)] pub const WSMAN_CLIENT_SEND_NULL_PARAM : ErrorHResult = ErrorHResult::from_constant(0x80338188); // ERROR_WSMAN_CLIENT_SEND_NULL_PARAM
-#[doc(hidden)] pub const WSMAN_CLIENT_INVALID_SEND_SHELL_FLAG : ErrorHResult = ErrorHResult::from_constant(0x80338189); // ERROR_WSMAN_CLIENT_INVALID_SEND_SHELL_FLAG
-#[doc(hidden)] pub const WSMAN_CLIENT_INVALID_SEND_SHELL_PARAMETER : ErrorHResult = ErrorHResult::from_constant(0x8033818A); // ERROR_WSMAN_CLIENT_INVALID_SEND_SHELL_PARAMETER
-#[doc(hidden)] pub const WSMAN_SHELL_INVALID_INPUT_STREAM : ErrorHResult = ErrorHResult::from_constant(0x8033818B); // ERROR_WSMAN_SHELL_INVALID_INPUT_STREAM
-#[doc(hidden)] pub const WSMAN_CLIENT_RECEIVE_NULL_PARAM : ErrorHResult = ErrorHResult::from_constant(0x8033818C); // ERROR_WSMAN_CLIENT_RECEIVE_NULL_PARAM
-#[doc(hidden)] pub const WSMAN_SHELL_INVALID_DESIRED_STREAMS : ErrorHResult = ErrorHResult::from_constant(0x8033818D); // ERROR_WSMAN_SHELL_INVALID_DESIRED_STREAMS
-#[doc(hidden)] pub const WSMAN_CLIENT_INVALID_RECEIVE_SHELL_FLAG : ErrorHResult = ErrorHResult::from_constant(0x8033818E); // ERROR_WSMAN_CLIENT_INVALID_RECEIVE_SHELL_FLAG
-#[doc(hidden)] pub const WSMAN_NO_RECEIVE_RESPONSE : ErrorHResult = ErrorHResult::from_constant(0x8033818F); // ERROR_WSMAN_NO_RECEIVE_RESPONSE
-#[doc(hidden)] pub const WSMAN_PLUGIN_CONFIGURATION_CORRUPTED : ErrorHResult = ErrorHResult::from_constant(0x80338190); // ERROR_WSMAN_PLUGIN_CONFIGURATION_CORRUPTED
-#[doc(hidden)] pub const WSMAN_INVALID_FILEPATH : ErrorHResult = ErrorHResult::from_constant(0x80338191); // ERROR_WSMAN_INVALID_FILEPATH
-#[doc(hidden)] pub const WSMAN_FILE_NOT_PRESENT : ErrorHResult = ErrorHResult::from_constant(0x80338192); // ERROR_WSMAN_FILE_NOT_PRESENT
-#[doc(hidden)] pub const WSMAN_IISCONFIGURATION_READ_FAILED : ErrorHResult = ErrorHResult::from_constant(0x80338193); // ERROR_WSMAN_IISCONFIGURATION_READ_FAILED
-#[doc(hidden)] pub const WSMAN_CLIENT_INVALID_LOCALE : ErrorHResult = ErrorHResult::from_constant(0x80338194); // ERROR_WSMAN_CLIENT_INVALID_LOCALE
-#[doc(hidden)] pub const WSMAN_CLIENT_INVALID_UI_LANGUAGE : ErrorHResult = ErrorHResult::from_constant(0x80338195); // ERROR_WSMAN_CLIENT_INVALID_UI_LANGUAGE
-#[doc(hidden)] pub const WSMAN_CLIENT_GETERRORMESSAGE_NULL_PARAM : ErrorHResult = ErrorHResult::from_constant(0x80338196); // ERROR_WSMAN_CLIENT_GETERRORMESSAGE_NULL_PARAM
-#[doc(hidden)] pub const WSMAN_CLIENT_INVALID_LANGUAGE_CODE : ErrorHResult = ErrorHResult::from_constant(0x80338197); // ERROR_WSMAN_CLIENT_INVALID_LANGUAGE_CODE
-#[doc(hidden)] pub const WSMAN_CLIENT_INVALID_GETERRORMESSAGE_FLAG : ErrorHResult = ErrorHResult::from_constant(0x80338198); // ERROR_WSMAN_CLIENT_INVALID_GETERRORMESSAGE_FLAG
-#[doc(hidden)] pub const WSMAN_REDIRECT_REQUESTED : ErrorHResult = ErrorHResult::from_constant(0x80338199); // ERROR_WSMAN_REDIRECT_REQUESTED
-#[doc(hidden)] pub const WSMAN_PROXY_AUTHENTICATION_INVALID_FLAG : ErrorHResult = ErrorHResult::from_constant(0x8033819A); // ERROR_WSMAN_PROXY_AUTHENTICATION_INVALID_FLAG
-#[doc(hidden)] pub const WSMAN_CLIENT_CREDENTIALS_FOR_PROXY_AUTHENTICATION : ErrorHResult = ErrorHResult::from_constant(0x8033819B); // ERROR_WSMAN_CLIENT_CREDENTIALS_FOR_PROXY_AUTHENTICATION
-#[doc(hidden)] pub const WSMAN_PROXY_ACCESS_TYPE : ErrorHResult = ErrorHResult::from_constant(0x8033819C); // ERROR_WSMAN_PROXY_ACCESS_TYPE
-#[doc(hidden)] pub const WSMAN_INVALID_OPTION_NO_PROXY_SERVER : ErrorHResult = ErrorHResult::from_constant(0x8033819D); // ERROR_WSMAN_INVALID_OPTION_NO_PROXY_SERVER
-#[doc(hidden)] pub const WSMAN_CLIENT_GETSESSIONOPTION_DWORD_NULL_PARAM : ErrorHResult = ErrorHResult::from_constant(0x8033819E); // ERROR_WSMAN_CLIENT_GETSESSIONOPTION_DWORD_NULL_PARAM
-#[doc(hidden)] pub const WSMAN_CLIENT_GETSESSIONOPTION_DWORD_INVALID_PARAM : ErrorHResult = ErrorHResult::from_constant(0x8033819F); // ERROR_WSMAN_CLIENT_GETSESSIONOPTION_DWORD_INVALID_PARAM
-#[doc(hidden)] pub const WSMAN_CLIENT_GETSESSIONOPTION_STRING_INVALID_PARAM : ErrorHResult = ErrorHResult::from_constant(0x803381A0); // ERROR_WSMAN_CLIENT_GETSESSIONOPTION_STRING_INVALID_PARAM
-#[doc(hidden)] pub const WSMAN_CREDSSP_USERNAME_PASSWORD_NEEDED : ErrorHResult = ErrorHResult::from_constant(0x803381A1); // ERROR_WSMAN_CREDSSP_USERNAME_PASSWORD_NEEDED
-#[doc(hidden)] pub const WSMAN_CLIENT_CREDSSP_AUTHENTICATION_DISABLED : ErrorHResult = ErrorHResult::from_constant(0x803381A2); // ERROR_WSMAN_CLIENT_CREDSSP_AUTHENTICATION_DISABLED
-#[doc(hidden)] pub const WSMAN_CLIENT_ALLOWFRESHCREDENTIALS : ErrorHResult = ErrorHResult::from_constant(0x803381A3); // ERROR_WSMAN_CLIENT_ALLOWFRESHCREDENTIALS
-#[doc(hidden)] pub const WSMAN_CLIENT_ALLOWFRESHCREDENTIALS_NTLMONLY : ErrorHResult = ErrorHResult::from_constant(0x803381A4); // ERROR_WSMAN_CLIENT_ALLOWFRESHCREDENTIALS_NTLMONLY
-#[doc(hidden)] pub const WSMAN_QUOTA_MAX_SHELLS : ErrorHResult = ErrorHResult::from_constant(0x803381A5); // ERROR_WSMAN_QUOTA_MAX_SHELLS
-#[doc(hidden)] pub const WSMAN_QUOTA_MAX_OPERATIONS : ErrorHResult = ErrorHResult::from_constant(0x803381A6); // ERROR_WSMAN_QUOTA_MAX_OPERATIONS
-#[doc(hidden)] pub const WSMAN_QUOTA_USER : ErrorHResult = ErrorHResult::from_constant(0x803381A7); // ERROR_WSMAN_QUOTA_USER
-#[doc(hidden)] pub const WSMAN_QUOTA_SYSTEM : ErrorHResult = ErrorHResult::from_constant(0x803381A8); // ERROR_WSMAN_QUOTA_SYSTEM
-#[doc(hidden)] pub const WSMAN_DIFFERENT_AUTHZ_TOKEN : ErrorHResult = ErrorHResult::from_constant(0x803381A9); // ERROR_WSMAN_DIFFERENT_AUTHZ_TOKEN
-#[doc(hidden)] pub const WSMAN_REDIRECT_LOCATION_NOT_AVAILABLE : ErrorHResult = ErrorHResult::from_constant(0x803381AA); // ERROR_WSMAN_REDIRECT_LOCATION_NOT_AVAILABLE
-#[doc(hidden)] pub const WSMAN_QUOTA_MAX_SHELLUSERS : ErrorHResult = ErrorHResult::from_constant(0x803381AB); // ERROR_WSMAN_QUOTA_MAX_SHELLUSERS
-#[doc(hidden)] pub const WSMAN_REMOTESHELLS_NOT_ALLOWED : ErrorHResult = ErrorHResult::from_constant(0x803381AC); // ERROR_WSMAN_REMOTESHELLS_NOT_ALLOWED
-#[doc(hidden)] pub const WSMAN_PULL_PARAMS_NOT_SAME_AS_ENUM : ErrorHResult = ErrorHResult::from_constant(0x803381AD); // ERROR_WSMAN_PULL_PARAMS_NOT_SAME_AS_ENUM
-#[doc(hidden)] pub const WSMAN_DEPRECATED_CONFIG_SETTING : ErrorHResult = ErrorHResult::from_constant(0x803381AE); // ERROR_WSMAN_DEPRECATED_CONFIG_SETTING
-#[doc(hidden)] pub const WSMAN_URI_SECURITY_URI : ErrorHResult = ErrorHResult::from_constant(0x803381AF); // ERROR_WSMAN_URI_SECURITY_URI
-#[doc(hidden)] pub const WSMAN_CANNOT_USE_ALLOW_NEGOTIATE_IMPLICIT_CREDENTIALS_FOR_HTTP : ErrorHResult = ErrorHResult::from_constant(0x803381B0); // ERROR_WSMAN_CANNOT_USE_ALLOW_NEGOTIATE_IMPLICIT_CREDENTIALS_FOR_HTTP
-#[doc(hidden)] pub const WSMAN_CANNOT_USE_PROXY_SETTINGS_FOR_HTTP : ErrorHResult = ErrorHResult::from_constant(0x803381B1); // ERROR_WSMAN_CANNOT_USE_PROXY_SETTINGS_FOR_HTTP
-#[doc(hidden)] pub const WSMAN_CANNOT_USE_PROXY_SETTINGS_FOR_KERBEROS : ErrorHResult = ErrorHResult::from_constant(0x803381B2); // ERROR_WSMAN_CANNOT_USE_PROXY_SETTINGS_FOR_KERBEROS
-#[doc(hidden)] pub const WSMAN_CANNOT_USE_PROXY_SETTINGS_FOR_CREDSSP : ErrorHResult = ErrorHResult::from_constant(0x803381B3); // ERROR_WSMAN_CANNOT_USE_PROXY_SETTINGS_FOR_CREDSSP
-#[doc(hidden)] pub const WSMAN_CLIENT_MULTIPLE_PROXY_AUTH_FLAGS : ErrorHResult = ErrorHResult::from_constant(0x803381B4); // ERROR_WSMAN_CLIENT_MULTIPLE_PROXY_AUTH_FLAGS
-#[doc(hidden)] pub const WSMAN_INVALID_REDIRECT_ERROR : ErrorHResult = ErrorHResult::from_constant(0x803381B5); // ERROR_WSMAN_INVALID_REDIRECT_ERROR
+#[doc(hidden)] pub const WSMAN_RESOURCE_NOT_FOUND : HResultError = HResultError::from_constant(0x80338000); // ERROR_WSMAN_RESOURCE_NOT_FOUND
+#[doc(hidden)] pub const WSMAN_INVALID_ACTIONURI : HResultError = HResultError::from_constant(0x80338001); // ERROR_WSMAN_INVALID_ACTIONURI
+#[doc(hidden)] pub const WSMAN_INVALID_URI : HResultError = HResultError::from_constant(0x80338002); // ERROR_WSMAN_INVALID_URI
+#[doc(hidden)] pub const WSMAN_PROVIDER_FAILURE : HResultError = HResultError::from_constant(0x80338003); // ERROR_WSMAN_PROVIDER_FAILURE
+#[doc(hidden)] pub const WSMAN_BATCH_COMPLETE : HResultError = HResultError::from_constant(0x80338004); // ERROR_WSMAN_BATCH_COMPLETE
+#[doc(hidden)] pub const WSMAN_CONFIG_CORRUPTED : HResultError = HResultError::from_constant(0x80338005); // ERROR_WSMAN_CONFIG_CORRUPTED
+#[doc(hidden)] pub const WSMAN_PULL_IN_PROGRESS : HResultError = HResultError::from_constant(0x80338006); // ERROR_WSMAN_PULL_IN_PROGRESS
+#[doc(hidden)] pub const WSMAN_ENUMERATION_CLOSED : HResultError = HResultError::from_constant(0x80338007); // ERROR_WSMAN_ENUMERATION_CLOSED
+#[doc(hidden)] pub const WSMAN_SUBSCRIPTION_CLOSED : HResultError = HResultError::from_constant(0x80338008); // ERROR_WSMAN_SUBSCRIPTION_CLOSED
+#[doc(hidden)] pub const WSMAN_SUBSCRIPTION_CLOSE_IN_PROGRESS : HResultError = HResultError::from_constant(0x80338009); // ERROR_WSMAN_SUBSCRIPTION_CLOSE_IN_PROGRESS
+#[doc(hidden)] pub const WSMAN_SUBSCRIPTION_CLIENT_DID_NOT_CALL_WITHIN_HEARTBEAT : HResultError = HResultError::from_constant(0x8033800A); // ERROR_WSMAN_SUBSCRIPTION_CLIENT_DID_NOT_CALL_WITHIN_HEARTBEAT
+#[doc(hidden)] pub const WSMAN_SUBSCRIPTION_NO_HEARTBEAT : HResultError = HResultError::from_constant(0x8033800B); // ERROR_WSMAN_SUBSCRIPTION_NO_HEARTBEAT
+#[doc(hidden)] pub const WSMAN_UNSUPPORTED_TIMEOUT : HResultError = HResultError::from_constant(0x8033800C); // ERROR_WSMAN_UNSUPPORTED_TIMEOUT
+#[doc(hidden)] pub const WSMAN_SOAP_VERSION_MISMATCH : HResultError = HResultError::from_constant(0x8033800D); // ERROR_WSMAN_SOAP_VERSION_MISMATCH
+#[doc(hidden)] pub const WSMAN_SOAP_DATA_ENCODING_UNKNOWN : HResultError = HResultError::from_constant(0x8033800E); // ERROR_WSMAN_SOAP_DATA_ENCODING_UNKNOWN
+#[doc(hidden)] pub const WSMAN_INVALID_MESSAGE_INFORMATION_HEADER : HResultError = HResultError::from_constant(0x8033800F); // ERROR_WSMAN_INVALID_MESSAGE_INFORMATION_HEADER
+#[doc(hidden)] pub const WSMAN_SOAP_FAULT_MUST_UNDERSTAND : HResultError = HResultError::from_constant(0x80338010); // ERROR_WSMAN_SOAP_FAULT_MUST_UNDERSTAND
+#[doc(hidden)] pub const WSMAN_MESSAGE_INFORMATION_HEADER_REQUIRED : HResultError = HResultError::from_constant(0x80338011); // ERROR_WSMAN_MESSAGE_INFORMATION_HEADER_REQUIRED
+#[doc(hidden)] pub const WSMAN_DESTINATION_UNREACHABLE : HResultError = HResultError::from_constant(0x80338012); // ERROR_WSMAN_DESTINATION_UNREACHABLE
+#[doc(hidden)] pub const WSMAN_ACTION_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x80338013); // ERROR_WSMAN_ACTION_NOT_SUPPORTED
+#[doc(hidden)] pub const WSMAN_ENDPOINT_UNAVAILABLE : HResultError = HResultError::from_constant(0x80338014); // ERROR_WSMAN_ENDPOINT_UNAVAILABLE
+#[doc(hidden)] pub const WSMAN_INVALID_REPRESENTATION : HResultError = HResultError::from_constant(0x80338015); // ERROR_WSMAN_INVALID_REPRESENTATION
+#[doc(hidden)] pub const WSMAN_ENUMERATE_INVALID_EXPIRATION_TIME : HResultError = HResultError::from_constant(0x80338016); // ERROR_WSMAN_ENUMERATE_INVALID_EXPIRATION_TIME
+#[doc(hidden)] pub const WSMAN_ENUMERATE_UNSUPPORTED_EXPIRATION_TIME : HResultError = HResultError::from_constant(0x80338017); // ERROR_WSMAN_ENUMERATE_UNSUPPORTED_EXPIRATION_TIME
+#[doc(hidden)] pub const WSMAN_ENUMERATE_FILTERING_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x80338018); // ERROR_WSMAN_ENUMERATE_FILTERING_NOT_SUPPORTED
+#[doc(hidden)] pub const WSMAN_ENUMERATE_FILTER_DIALECT_REQUESTED_UNAVAILABLE : HResultError = HResultError::from_constant(0x80338019); // ERROR_WSMAN_ENUMERATE_FILTER_DIALECT_REQUESTED_UNAVAILABLE
+#[doc(hidden)] pub const WSMAN_ENUMERATE_CANNOT_PROCESS_FILTER : HResultError = HResultError::from_constant(0x8033801A); // ERROR_WSMAN_ENUMERATE_CANNOT_PROCESS_FILTER
+#[doc(hidden)] pub const WSMAN_ENUMERATE_INVALID_ENUMERATION_CONTEXT : HResultError = HResultError::from_constant(0x8033801B); // ERROR_WSMAN_ENUMERATE_INVALID_ENUMERATION_CONTEXT
+#[doc(hidden)] pub const WSMAN_ENUMERATE_TIMED_OUT : HResultError = HResultError::from_constant(0x8033801C); // ERROR_WSMAN_ENUMERATE_TIMED_OUT
+#[doc(hidden)] pub const WSMAN_ENUMERATE_UNABLE_TO_RENEW : HResultError = HResultError::from_constant(0x8033801D); // ERROR_WSMAN_ENUMERATE_UNABLE_TO_RENEW
+#[doc(hidden)] pub const WSMAN_EVENTING_DELIVERY_MODE_REQUESTED_UNAVAILABLE : HResultError = HResultError::from_constant(0x8033801E); // ERROR_WSMAN_EVENTING_DELIVERY_MODE_REQUESTED_UNAVAILABLE
+#[doc(hidden)] pub const WSMAN_EVENTING_INVALID_EXPIRATION_TIME : HResultError = HResultError::from_constant(0x8033801F); // ERROR_WSMAN_EVENTING_INVALID_EXPIRATION_TIME
+#[doc(hidden)] pub const WSMAN_EVENTING_UNSUPPORTED_EXPIRATION_TYPE : HResultError = HResultError::from_constant(0x80338020); // ERROR_WSMAN_EVENTING_UNSUPPORTED_EXPIRATION_TYPE
+#[doc(hidden)] pub const WSMAN_EVENTING_FILTERING_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x80338021); // ERROR_WSMAN_EVENTING_FILTERING_NOT_SUPPORTED
+#[doc(hidden)] pub const WSMAN_EVENTING_FILTERING_REQUESTED_UNAVAILABLE : HResultError = HResultError::from_constant(0x80338022); // ERROR_WSMAN_EVENTING_FILTERING_REQUESTED_UNAVAILABLE
+#[doc(hidden)] pub const WSMAN_EVENTING_SOURCE_UNABLE_TO_PROCESS : HResultError = HResultError::from_constant(0x80338023); // ERROR_WSMAN_EVENTING_SOURCE_UNABLE_TO_PROCESS
+#[doc(hidden)] pub const WSMAN_EVENTING_UNABLE_TO_RENEW : HResultError = HResultError::from_constant(0x80338024); // ERROR_WSMAN_EVENTING_UNABLE_TO_RENEW
+#[doc(hidden)] pub const WSMAN_EVENTING_INVALID_MESSAGE : HResultError = HResultError::from_constant(0x80338025); // ERROR_WSMAN_EVENTING_INVALID_MESSAGE
+#[doc(hidden)] pub const WSMAN_ENVELOPE_TOO_LARGE : HResultError = HResultError::from_constant(0x80338026); // ERROR_WSMAN_ENVELOPE_TOO_LARGE
+#[doc(hidden)] pub const WSMAN_INVALID_SOAP_BODY : HResultError = HResultError::from_constant(0x80338027); // ERROR_WSMAN_INVALID_SOAP_BODY
+#[doc(hidden)] pub const WSMAN_INVALID_RESUMPTION_CONTEXT : HResultError = HResultError::from_constant(0x80338028); // ERROR_WSMAN_INVALID_RESUMPTION_CONTEXT
+#[doc(hidden)] pub const WSMAN_OPERATION_TIMEDOUT : HResultError = HResultError::from_constant(0x80338029); // ERROR_WSMAN_OPERATION_TIMEDOUT
+#[doc(hidden)] pub const WSMAN_RESUMPTION_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x8033802A); // ERROR_WSMAN_RESUMPTION_NOT_SUPPORTED
+#[doc(hidden)] pub const WSMAN_RESUMPTION_TYPE_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x8033802B); // ERROR_WSMAN_RESUMPTION_TYPE_NOT_SUPPORTED
+#[doc(hidden)] pub const WSMAN_UNSUPPORTED_ENCODING : HResultError = HResultError::from_constant(0x8033802C); // ERROR_WSMAN_UNSUPPORTED_ENCODING
+#[doc(hidden)] pub const WSMAN_URI_LIMIT : HResultError = HResultError::from_constant(0x8033802D); // ERROR_WSMAN_URI_LIMIT
+#[doc(hidden)] pub const WSMAN_INVALID_PROPOSED_ID : HResultError = HResultError::from_constant(0x8033802E); // ERROR_WSMAN_INVALID_PROPOSED_ID
+#[doc(hidden)] pub const WSMAN_INVALID_BATCH_PARAMETER : HResultError = HResultError::from_constant(0x8033802F); // ERROR_WSMAN_INVALID_BATCH_PARAMETER
+#[doc(hidden)] pub const WSMAN_NO_ACK : HResultError = HResultError::from_constant(0x80338030); // ERROR_WSMAN_NO_ACK
+#[doc(hidden)] pub const WSMAN_ACTION_MISMATCH : HResultError = HResultError::from_constant(0x80338031); // ERROR_WSMAN_ACTION_MISMATCH
+#[doc(hidden)] pub const WSMAN_CONCURRENCY : HResultError = HResultError::from_constant(0x80338032); // ERROR_WSMAN_CONCURRENCY
+#[doc(hidden)] pub const WSMAN_ALREADY_EXISTS : HResultError = HResultError::from_constant(0x80338033); // ERROR_WSMAN_ALREADY_EXISTS
+#[doc(hidden)] pub const WSMAN_DELIVERY_REFUSED : HResultError = HResultError::from_constant(0x80338034); // ERROR_WSMAN_DELIVERY_REFUSED
+#[doc(hidden)] pub const WSMAN_ENCODING_LIMIT : HResultError = HResultError::from_constant(0x80338035); // ERROR_WSMAN_ENCODING_LIMIT
+#[doc(hidden)] pub const WSMAN_FAILED_AUTHENTICATION : HResultError = HResultError::from_constant(0x80338036); // ERROR_WSMAN_FAILED_AUTHENTICATION
+#[doc(hidden)] pub const WSMAN_INCOMPATIBLE_EPR : HResultError = HResultError::from_constant(0x80338037); // ERROR_WSMAN_INCOMPATIBLE_EPR
+#[doc(hidden)] pub const WSMAN_INVALID_BOOKMARK : HResultError = HResultError::from_constant(0x80338038); // ERROR_WSMAN_INVALID_BOOKMARK
+#[doc(hidden)] pub const WSMAN_INVALID_OPTIONS : HResultError = HResultError::from_constant(0x80338039); // ERROR_WSMAN_INVALID_OPTIONS
+#[doc(hidden)] pub const WSMAN_INVALID_PARAMETER : HResultError = HResultError::from_constant(0x8033803A); // ERROR_WSMAN_INVALID_PARAMETER
+#[doc(hidden)] pub const WSMAN_INVALID_RESOURCE_URI : HResultError = HResultError::from_constant(0x8033803B); // ERROR_WSMAN_INVALID_RESOURCE_URI
+#[doc(hidden)] pub const WSMAN_INVALID_SYSTEM : HResultError = HResultError::from_constant(0x8033803C); // ERROR_WSMAN_INVALID_SYSTEM
+#[doc(hidden)] pub const WSMAN_INVALID_SELECTORS : HResultError = HResultError::from_constant(0x8033803D); // ERROR_WSMAN_INVALID_SELECTORS
+#[doc(hidden)] pub const WSMAN_METADATA_REDIRECT : HResultError = HResultError::from_constant(0x8033803E); // ERROR_WSMAN_METADATA_REDIRECT
+#[doc(hidden)] pub const WSMAN_QUOTA_LIMIT : HResultError = HResultError::from_constant(0x8033803F); // ERROR_WSMAN_QUOTA_LIMIT
+#[doc(hidden)] pub const WSMAN_RENAME_FAILURE : HResultError = HResultError::from_constant(0x80338040); // ERROR_WSMAN_RENAME_FAILURE
+#[doc(hidden)] pub const WSMAN_SCHEMA_VALIDATION_ERROR : HResultError = HResultError::from_constant(0x80338041); // ERROR_WSMAN_SCHEMA_VALIDATION_ERROR
+#[doc(hidden)] pub const WSMAN_UNSUPPORTED_FEATURE : HResultError = HResultError::from_constant(0x80338042); // ERROR_WSMAN_UNSUPPORTED_FEATURE
+#[doc(hidden)] pub const WSMAN_INVALID_XML : HResultError = HResultError::from_constant(0x80338043); // ERROR_WSMAN_INVALID_XML
+#[doc(hidden)] pub const WSMAN_INVALID_KEY : HResultError = HResultError::from_constant(0x80338044); // ERROR_WSMAN_INVALID_KEY
+#[doc(hidden)] pub const WSMAN_DELIVER_IN_PROGRESS : HResultError = HResultError::from_constant(0x80338045); // ERROR_WSMAN_DELIVER_IN_PROGRESS
+#[doc(hidden)] pub const WSMAN_SYSTEM_NOT_FOUND : HResultError = HResultError::from_constant(0x80338046); // ERROR_WSMAN_SYSTEM_NOT_FOUND
+#[doc(hidden)] pub const WSMAN_MAX_ENVELOPE_SIZE : HResultError = HResultError::from_constant(0x80338047); // ERROR_WSMAN_MAX_ENVELOPE_SIZE
+#[doc(hidden)] pub const WSMAN_MAX_ENVELOPE_SIZE_EXCEEDED : HResultError = HResultError::from_constant(0x80338048); // ERROR_WSMAN_MAX_ENVELOPE_SIZE_EXCEEDED
+#[doc(hidden)] pub const WSMAN_SERVER_ENVELOPE_LIMIT : HResultError = HResultError::from_constant(0x80338049); // ERROR_WSMAN_SERVER_ENVELOPE_LIMIT
+#[doc(hidden)] pub const WSMAN_SELECTOR_LIMIT : HResultError = HResultError::from_constant(0x8033804A); // ERROR_WSMAN_SELECTOR_LIMIT
+#[doc(hidden)] pub const WSMAN_OPTION_LIMIT : HResultError = HResultError::from_constant(0x8033804B); // ERROR_WSMAN_OPTION_LIMIT
+#[doc(hidden)] pub const WSMAN_CHARACTER_SET : HResultError = HResultError::from_constant(0x8033804C); // ERROR_WSMAN_CHARACTER_SET
+#[doc(hidden)] pub const WSMAN_UNREPORTABLE_SUCCESS : HResultError = HResultError::from_constant(0x8033804D); // ERROR_WSMAN_UNREPORTABLE_SUCCESS
+#[doc(hidden)] pub const WSMAN_WHITESPACE : HResultError = HResultError::from_constant(0x8033804E); // ERROR_WSMAN_WHITESPACE
+#[doc(hidden)] pub const WSMAN_FILTERING_REQUIRED : HResultError = HResultError::from_constant(0x8033804F); // ERROR_WSMAN_FILTERING_REQUIRED
+#[doc(hidden)] pub const WSMAN_BOOKMARK_EXPIRED : HResultError = HResultError::from_constant(0x80338050); // ERROR_WSMAN_BOOKMARK_EXPIRED
+#[doc(hidden)] pub const WSMAN_OPTIONS_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x80338051); // ERROR_WSMAN_OPTIONS_NOT_SUPPORTED
+#[doc(hidden)] pub const WSMAN_OPTIONS_INVALID_NAME : HResultError = HResultError::from_constant(0x80338052); // ERROR_WSMAN_OPTIONS_INVALID_NAME
+#[doc(hidden)] pub const WSMAN_OPTIONS_INVALID_VALUE : HResultError = HResultError::from_constant(0x80338053); // ERROR_WSMAN_OPTIONS_INVALID_VALUE
+#[doc(hidden)] pub const WSMAN_PARAMETER_TYPE_MISMATCH : HResultError = HResultError::from_constant(0x80338054); // ERROR_WSMAN_PARAMETER_TYPE_MISMATCH
+#[doc(hidden)] pub const WSMAN_INVALID_PARAMETER_NAME : HResultError = HResultError::from_constant(0x80338055); // ERROR_WSMAN_INVALID_PARAMETER_NAME
+#[doc(hidden)] pub const WSMAN_INVALID_XML_VALUES : HResultError = HResultError::from_constant(0x80338056); // ERROR_WSMAN_INVALID_XML_VALUES
+#[doc(hidden)] pub const WSMAN_INVALID_XML_MISSING_VALUES : HResultError = HResultError::from_constant(0x80338057); // ERROR_WSMAN_INVALID_XML_MISSING_VALUES
+#[doc(hidden)] pub const WSMAN_INVALID_XML_NAMESPACE : HResultError = HResultError::from_constant(0x80338058); // ERROR_WSMAN_INVALID_XML_NAMESPACE
+#[doc(hidden)] pub const WSMAN_INVALID_XML_FRAGMENT : HResultError = HResultError::from_constant(0x80338059); // ERROR_WSMAN_INVALID_XML_FRAGMENT
+#[doc(hidden)] pub const WSMAN_INSUFFCIENT_SELECTORS : HResultError = HResultError::from_constant(0x8033805A); // ERROR_WSMAN_INSUFFCIENT_SELECTORS
+#[doc(hidden)] pub const WSMAN_UNEXPECTED_SELECTORS : HResultError = HResultError::from_constant(0x8033805B); // ERROR_WSMAN_UNEXPECTED_SELECTORS
+#[doc(hidden)] pub const WSMAN_SELECTOR_TYPEMISMATCH : HResultError = HResultError::from_constant(0x8033805C); // ERROR_WSMAN_SELECTOR_TYPEMISMATCH
+#[doc(hidden)] pub const WSMAN_INVALID_SELECTOR_VALUE : HResultError = HResultError::from_constant(0x8033805D); // ERROR_WSMAN_INVALID_SELECTOR_VALUE
+#[doc(hidden)] pub const WSMAN_AMBIGUOUS_SELECTORS : HResultError = HResultError::from_constant(0x8033805E); // ERROR_WSMAN_AMBIGUOUS_SELECTORS
+#[doc(hidden)] pub const WSMAN_DUPLICATE_SELECTORS : HResultError = HResultError::from_constant(0x8033805F); // ERROR_WSMAN_DUPLICATE_SELECTORS
+#[doc(hidden)] pub const WSMAN_INVALID_TARGET_SELECTORS : HResultError = HResultError::from_constant(0x80338060); // ERROR_WSMAN_INVALID_TARGET_SELECTORS
+#[doc(hidden)] pub const WSMAN_INVALID_TARGET_RESOURCEURI : HResultError = HResultError::from_constant(0x80338061); // ERROR_WSMAN_INVALID_TARGET_RESOURCEURI
+#[doc(hidden)] pub const WSMAN_INVALID_TARGET_SYSTEM : HResultError = HResultError::from_constant(0x80338062); // ERROR_WSMAN_INVALID_TARGET_SYSTEM
+#[doc(hidden)] pub const WSMAN_TARGET_ALREADY_EXISTS : HResultError = HResultError::from_constant(0x80338063); // ERROR_WSMAN_TARGET_ALREADY_EXISTS
+#[doc(hidden)] pub const WSMAN_AUTHORIZATION_MODE_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x80338064); // ERROR_WSMAN_AUTHORIZATION_MODE_NOT_SUPPORTED
+#[doc(hidden)] pub const WSMAN_ACK_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x80338065); // ERROR_WSMAN_ACK_NOT_SUPPORTED
+#[doc(hidden)] pub const WSMAN_OPERATION_TIMEOUT_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x80338066); // ERROR_WSMAN_OPERATION_TIMEOUT_NOT_SUPPORTED
+#[doc(hidden)] pub const WSMAN_LOCALE_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x80338067); // ERROR_WSMAN_LOCALE_NOT_SUPPORTED
+#[doc(hidden)] pub const WSMAN_EXPIRATION_TIME_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x80338068); // ERROR_WSMAN_EXPIRATION_TIME_NOT_SUPPORTED
+#[doc(hidden)] pub const WSMAN_DELIVERY_RETRIES_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x80338069); // ERROR_WSMAN_DELIVERY_RETRIES_NOT_SUPPORTED
+#[doc(hidden)] pub const WSMAN_HEARTBEATS_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x8033806A); // ERROR_WSMAN_HEARTBEATS_NOT_SUPPORTED
+#[doc(hidden)] pub const WSMAN_BOOKMARKS_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x8033806B); // ERROR_WSMAN_BOOKMARKS_NOT_SUPPORTED
+#[doc(hidden)] pub const WSMAN_MAXITEMS_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x8033806C); // ERROR_WSMAN_MAXITEMS_NOT_SUPPORTED
+#[doc(hidden)] pub const WSMAN_MAXTIME_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x8033806D); // ERROR_WSMAN_MAXTIME_NOT_SUPPORTED
+#[doc(hidden)] pub const WSMAN_MAXENVELOPE_SIZE_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x8033806E); // ERROR_WSMAN_MAXENVELOPE_SIZE_NOT_SUPPORTED
+#[doc(hidden)] pub const WSMAN_MAXENVELOPE_POLICY_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x8033806F); // ERROR_WSMAN_MAXENVELOPE_POLICY_NOT_SUPPORTED
+#[doc(hidden)] pub const WSMAN_FILTERING_REQUIRED_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x80338070); // ERROR_WSMAN_FILTERING_REQUIRED_NOT_SUPPORTED
+#[doc(hidden)] pub const WSMAN_INSECURE_ADDRESS_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x80338071); // ERROR_WSMAN_INSECURE_ADDRESS_NOT_SUPPORTED
+#[doc(hidden)] pub const WSMAN_FORMAT_MISMATCH_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x80338072); // ERROR_WSMAN_FORMAT_MISMATCH_NOT_SUPPORTED
+#[doc(hidden)] pub const WSMAN_FORMAT_SECURITY_TOKEN_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x80338073); // ERROR_WSMAN_FORMAT_SECURITY_TOKEN_NOT_SUPPORTED
+#[doc(hidden)] pub const WSMAN_BAD_METHOD : HResultError = HResultError::from_constant(0x80338074); // ERROR_WSMAN_BAD_METHOD
+#[doc(hidden)] pub const WSMAN_UNSUPPORTED_MEDIA : HResultError = HResultError::from_constant(0x80338075); // ERROR_WSMAN_UNSUPPORTED_MEDIA
+#[doc(hidden)] pub const WSMAN_UNSUPPORTED_ADDRESSING_MODE : HResultError = HResultError::from_constant(0x80338076); // ERROR_WSMAN_UNSUPPORTED_ADDRESSING_MODE
+#[doc(hidden)] pub const WSMAN_FRAGMENT_TRANSFER_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x80338077); // ERROR_WSMAN_FRAGMENT_TRANSFER_NOT_SUPPORTED
+#[doc(hidden)] pub const WSMAN_ENUMERATION_INITIALIZING : HResultError = HResultError::from_constant(0x80338078); // ERROR_WSMAN_ENUMERATION_INITIALIZING
+#[doc(hidden)] pub const WSMAN_CONNECTOR_GET : HResultError = HResultError::from_constant(0x80338079); // ERROR_WSMAN_CONNECTOR_GET
+#[doc(hidden)] pub const WSMAN_URI_QUERY_STRING_SYNTAX_ERROR : HResultError = HResultError::from_constant(0x8033807A); // ERROR_WSMAN_URI_QUERY_STRING_SYNTAX_ERROR
+#[doc(hidden)] pub const WSMAN_INEXISTENT_MAC_ADDRESS : HResultError = HResultError::from_constant(0x8033807B); // ERROR_WSMAN_INEXISTENT_MAC_ADDRESS
+#[doc(hidden)] pub const WSMAN_NO_UNICAST_ADDRESSES : HResultError = HResultError::from_constant(0x8033807C); // ERROR_WSMAN_NO_UNICAST_ADDRESSES
+#[doc(hidden)] pub const WSMAN_NO_DHCP_ADDRESSES : HResultError = HResultError::from_constant(0x8033807D); // ERROR_WSMAN_NO_DHCP_ADDRESSES
+#[doc(hidden)] pub const WSMAN_MIN_ENVELOPE_SIZE : HResultError = HResultError::from_constant(0x8033807E); // ERROR_WSMAN_MIN_ENVELOPE_SIZE
+#[doc(hidden)] pub const WSMAN_EPR_NESTING_EXCEEDED : HResultError = HResultError::from_constant(0x8033807F); // ERROR_WSMAN_EPR_NESTING_EXCEEDED
+#[doc(hidden)] pub const WSMAN_REQUEST_INIT_ERROR : HResultError = HResultError::from_constant(0x80338080); // ERROR_WSMAN_REQUEST_INIT_ERROR
+#[doc(hidden)] pub const WSMAN_INVALID_TIMEOUT_HEADER : HResultError = HResultError::from_constant(0x80338081); // ERROR_WSMAN_INVALID_TIMEOUT_HEADER
+#[doc(hidden)] pub const WSMAN_CERT_NOT_FOUND : HResultError = HResultError::from_constant(0x80338082); // ERROR_WSMAN_CERT_NOT_FOUND
+#[doc(hidden)] pub const WSMAN_PLUGIN_FAILED : HResultError = HResultError::from_constant(0x80338083); // ERROR_WSMAN_PLUGIN_FAILED
+#[doc(hidden)] pub const WSMAN_ENUMERATION_INVALID : HResultError = HResultError::from_constant(0x80338084); // ERROR_WSMAN_ENUMERATION_INVALID
+#[doc(hidden)] pub const WSMAN_CONFIG_CANNOT_CHANGE_MUTUAL : HResultError = HResultError::from_constant(0x80338085); // ERROR_WSMAN_CONFIG_CANNOT_CHANGE_MUTUAL
+#[doc(hidden)] pub const WSMAN_ENUMERATION_MODE_UNSUPPORTED : HResultError = HResultError::from_constant(0x80338086); // ERROR_WSMAN_ENUMERATION_MODE_UNSUPPORTED
+#[doc(hidden)] pub const WSMAN_MUSTUNDERSTAND_ON_LOCALE_UNSUPPORTED : HResultError = HResultError::from_constant(0x80338087); // ERROR_WSMAN_MUSTUNDERSTAND_ON_LOCALE_UNSUPPORTED
+#[doc(hidden)] pub const WSMAN_POLICY_CORRUPTED : HResultError = HResultError::from_constant(0x80338088); // ERROR_WSMAN_POLICY_CORRUPTED
+#[doc(hidden)] pub const WSMAN_LISTENER_ADDRESS_INVALID : HResultError = HResultError::from_constant(0x80338089); // ERROR_WSMAN_LISTENER_ADDRESS_INVALID
+#[doc(hidden)] pub const WSMAN_CONFIG_CANNOT_CHANGE_GPO_CONTROLLED_SETTING : HResultError = HResultError::from_constant(0x8033808A); // ERROR_WSMAN_CONFIG_CANNOT_CHANGE_GPO_CONTROLLED_SETTING
+#[doc(hidden)] pub const WSMAN_EVENTING_CONCURRENT_CLIENT_RECEIVE : HResultError = HResultError::from_constant(0x8033808B); // ERROR_WSMAN_EVENTING_CONCURRENT_CLIENT_RECEIVE
+#[doc(hidden)] pub const WSMAN_EVENTING_FAST_SENDER : HResultError = HResultError::from_constant(0x8033808C); // ERROR_WSMAN_EVENTING_FAST_SENDER
+#[doc(hidden)] pub const WSMAN_EVENTING_INSECURE_PUSHSUBSCRIPTION_CONNECTION : HResultError = HResultError::from_constant(0x8033808D); // ERROR_WSMAN_EVENTING_INSECURE_PUSHSUBSCRIPTION_CONNECTION
+#[doc(hidden)] pub const WSMAN_EVENTING_INVALID_EVENTSOURCE : HResultError = HResultError::from_constant(0x8033808E); // ERROR_WSMAN_EVENTING_INVALID_EVENTSOURCE
+#[doc(hidden)] pub const WSMAN_EVENTING_NOMATCHING_LISTENER : HResultError = HResultError::from_constant(0x8033808F); // ERROR_WSMAN_EVENTING_NOMATCHING_LISTENER
+#[doc(hidden)] pub const WSMAN_FRAGMENT_DIALECT_REQUESTED_UNAVAILABLE : HResultError = HResultError::from_constant(0x80338090); // ERROR_WSMAN_FRAGMENT_DIALECT_REQUESTED_UNAVAILABLE
+#[doc(hidden)] pub const WSMAN_MISSING_FRAGMENT_PATH : HResultError = HResultError::from_constant(0x80338091); // ERROR_WSMAN_MISSING_FRAGMENT_PATH
+#[doc(hidden)] pub const WSMAN_INVALID_FRAGMENT_DIALECT : HResultError = HResultError::from_constant(0x80338092); // ERROR_WSMAN_INVALID_FRAGMENT_DIALECT
+#[doc(hidden)] pub const WSMAN_INVALID_FRAGMENT_PATH : HResultError = HResultError::from_constant(0x80338093); // ERROR_WSMAN_INVALID_FRAGMENT_PATH
+#[doc(hidden)] pub const WSMAN_EVENTING_INCOMPATIBLE_BATCHPARAMS_AND_DELIVERYMODE : HResultError = HResultError::from_constant(0x80338094); // ERROR_WSMAN_EVENTING_INCOMPATIBLE_BATCHPARAMS_AND_DELIVERYMODE
+#[doc(hidden)] pub const WSMAN_EVENTING_LOOPBACK_TESTFAILED : HResultError = HResultError::from_constant(0x80338095); // ERROR_WSMAN_EVENTING_LOOPBACK_TESTFAILED
+#[doc(hidden)] pub const WSMAN_EVENTING_INVALID_ENDTO_ADDRESSS : HResultError = HResultError::from_constant(0x80338096); // ERROR_WSMAN_EVENTING_INVALID_ENDTO_ADDRESSS
+#[doc(hidden)] pub const WSMAN_EVENTING_INVALID_INCOMING_EVENT_PACKET_HEADER : HResultError = HResultError::from_constant(0x80338097); // ERROR_WSMAN_EVENTING_INVALID_INCOMING_EVENT_PACKET_HEADER
+#[doc(hidden)] pub const WSMAN_SESSION_ALREADY_CLOSED : HResultError = HResultError::from_constant(0x80338098); // ERROR_WSMAN_SESSION_ALREADY_CLOSED
+#[doc(hidden)] pub const WSMAN_SUBSCRIPTION_LISTENER_NOLONGERVALID : HResultError = HResultError::from_constant(0x80338099); // ERROR_WSMAN_SUBSCRIPTION_LISTENER_NOLONGERVALID
+#[doc(hidden)] pub const WSMAN_PROVIDER_LOAD_FAILED : HResultError = HResultError::from_constant(0x8033809A); // ERROR_WSMAN_PROVIDER_LOAD_FAILED
+#[doc(hidden)] pub const WSMAN_EVENTING_SUBSCRIPTIONCLOSED_BYREMOTESERVICE : HResultError = HResultError::from_constant(0x8033809B); // ERROR_WSMAN_EVENTING_SUBSCRIPTIONCLOSED_BYREMOTESERVICE
+#[doc(hidden)] pub const WSMAN_EVENTING_DELIVERYFAILED_FROMSOURCE : HResultError = HResultError::from_constant(0x8033809C); // ERROR_WSMAN_EVENTING_DELIVERYFAILED_FROMSOURCE
+#[doc(hidden)] pub const WSMAN_SECURITY_UNMAPPED : HResultError = HResultError::from_constant(0x8033809D); // ERROR_WSMAN_SECURITY_UNMAPPED
+#[doc(hidden)] pub const WSMAN_EVENTING_SUBSCRIPTION_CANCELLED_BYSOURCE : HResultError = HResultError::from_constant(0x8033809E); // ERROR_WSMAN_EVENTING_SUBSCRIPTION_CANCELLED_BYSOURCE
+#[doc(hidden)] pub const WSMAN_INVALID_HOSTNAME_PATTERN : HResultError = HResultError::from_constant(0x8033809F); // ERROR_WSMAN_INVALID_HOSTNAME_PATTERN
+#[doc(hidden)] pub const WSMAN_EVENTING_MISSING_NOTIFYTO : HResultError = HResultError::from_constant(0x803380A0); // ERROR_WSMAN_EVENTING_MISSING_NOTIFYTO
+#[doc(hidden)] pub const WSMAN_EVENTING_MISSING_NOTIFYTO_ADDRESSS : HResultError = HResultError::from_constant(0x803380A1); // ERROR_WSMAN_EVENTING_MISSING_NOTIFYTO_ADDRESSS
+#[doc(hidden)] pub const WSMAN_EVENTING_INVALID_NOTIFYTO_ADDRESSS : HResultError = HResultError::from_constant(0x803380A2); // ERROR_WSMAN_EVENTING_INVALID_NOTIFYTO_ADDRESSS
+#[doc(hidden)] pub const WSMAN_EVENTING_INVALID_LOCALE_IN_DELIVERY : HResultError = HResultError::from_constant(0x803380A3); // ERROR_WSMAN_EVENTING_INVALID_LOCALE_IN_DELIVERY
+#[doc(hidden)] pub const WSMAN_EVENTING_INVALID_HEARTBEAT : HResultError = HResultError::from_constant(0x803380A4); // ERROR_WSMAN_EVENTING_INVALID_HEARTBEAT
+#[doc(hidden)] pub const WSMAN_MACHINE_OPTION_REQUIRED : HResultError = HResultError::from_constant(0x803380A5); // ERROR_WSMAN_MACHINE_OPTION_REQUIRED
+#[doc(hidden)] pub const WSMAN_UNSUPPORTED_FEATURE_OPTIONS : HResultError = HResultError::from_constant(0x803380A6); // ERROR_WSMAN_UNSUPPORTED_FEATURE_OPTIONS
+#[doc(hidden)] pub const WSMAN_BATCHSIZE_TOO_SMALL : HResultError = HResultError::from_constant(0x803380A7); // ERROR_WSMAN_BATCHSIZE_TOO_SMALL
+#[doc(hidden)] pub const WSMAN_EVENTING_DELIVERY_MODE_REQUESTED_INVALID : HResultError = HResultError::from_constant(0x803380A8); // ERROR_WSMAN_EVENTING_DELIVERY_MODE_REQUESTED_INVALID
+#[doc(hidden)] pub const WSMAN_PROVSYS_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x803380A9); // ERROR_WSMAN_PROVSYS_NOT_SUPPORTED
+#[doc(hidden)] pub const WSMAN_PUSH_SUBSCRIPTION_CONFIG_INVALID : HResultError = HResultError::from_constant(0x803380AA); // ERROR_WSMAN_PUSH_SUBSCRIPTION_CONFIG_INVALID
+#[doc(hidden)] pub const WSMAN_CREDS_PASSED_WITH_NO_AUTH_FLAG : HResultError = HResultError::from_constant(0x803380AB); // ERROR_WSMAN_CREDS_PASSED_WITH_NO_AUTH_FLAG
+#[doc(hidden)] pub const WSMAN_CLIENT_INVALID_FLAG : HResultError = HResultError::from_constant(0x803380AC); // ERROR_WSMAN_CLIENT_INVALID_FLAG
+#[doc(hidden)] pub const WSMAN_CLIENT_MULTIPLE_AUTH_FLAGS : HResultError = HResultError::from_constant(0x803380AD); // ERROR_WSMAN_CLIENT_MULTIPLE_AUTH_FLAGS
+#[doc(hidden)] pub const WSMAN_CLIENT_SPN_WRONG_AUTH : HResultError = HResultError::from_constant(0x803380AE); // ERROR_WSMAN_CLIENT_SPN_WRONG_AUTH
+#[doc(hidden)] pub const WSMAN_CLIENT_CERT_UNNEEDED_CREDS : HResultError = HResultError::from_constant(0x803380AF); // ERROR_WSMAN_CLIENT_CERT_UNNEEDED_CREDS
+#[doc(hidden)] pub const WSMAN_CLIENT_USERNAME_PASSWORD_NEEDED : HResultError = HResultError::from_constant(0x803380B0); // ERROR_WSMAN_CLIENT_USERNAME_PASSWORD_NEEDED
+#[doc(hidden)] pub const WSMAN_CLIENT_CERT_UNNEEDED_USERNAME : HResultError = HResultError::from_constant(0x803380B1); // ERROR_WSMAN_CLIENT_CERT_UNNEEDED_USERNAME
+#[doc(hidden)] pub const WSMAN_CLIENT_CREDENTIALS_NEEDED : HResultError = HResultError::from_constant(0x803380B2); // ERROR_WSMAN_CLIENT_CREDENTIALS_NEEDED
+#[doc(hidden)] pub const WSMAN_CLIENT_CREDENTIALS_FLAG_NEEDED : HResultError = HResultError::from_constant(0x803380B3); // ERROR_WSMAN_CLIENT_CREDENTIALS_FLAG_NEEDED
+#[doc(hidden)] pub const WSMAN_CLIENT_CERT_NEEDED : HResultError = HResultError::from_constant(0x803380B4); // ERROR_WSMAN_CLIENT_CERT_NEEDED
+#[doc(hidden)] pub const WSMAN_CLIENT_CERT_UNKNOWN_TYPE : HResultError = HResultError::from_constant(0x803380B5); // ERROR_WSMAN_CLIENT_CERT_UNKNOWN_TYPE
+#[doc(hidden)] pub const WSMAN_CLIENT_CERT_UNKNOWN_LOCATION : HResultError = HResultError::from_constant(0x803380B6); // ERROR_WSMAN_CLIENT_CERT_UNKNOWN_LOCATION
+#[doc(hidden)] pub const WSMAN_CLIENT_INVALID_CERT : HResultError = HResultError::from_constant(0x803380B7); // ERROR_WSMAN_CLIENT_INVALID_CERT
+#[doc(hidden)] pub const WSMAN_CLIENT_LOCAL_INVALID_CREDS : HResultError = HResultError::from_constant(0x803380B8); // ERROR_WSMAN_CLIENT_LOCAL_INVALID_CREDS
+#[doc(hidden)] pub const WSMAN_CLIENT_LOCAL_INVALID_CONNECTION_OPTIONS : HResultError = HResultError::from_constant(0x803380B9); // ERROR_WSMAN_CLIENT_LOCAL_INVALID_CONNECTION_OPTIONS
+#[doc(hidden)] pub const WSMAN_CLIENT_CREATESESSION_NULL_PARAM : HResultError = HResultError::from_constant(0x803380BA); // ERROR_WSMAN_CLIENT_CREATESESSION_NULL_PARAM
+#[doc(hidden)] pub const WSMAN_CLIENT_ENUMERATE_NULL_PARAM : HResultError = HResultError::from_constant(0x803380BB); // ERROR_WSMAN_CLIENT_ENUMERATE_NULL_PARAM
+#[doc(hidden)] pub const WSMAN_CLIENT_SUBSCRIBE_NULL_PARAM : HResultError = HResultError::from_constant(0x803380BC); // ERROR_WSMAN_CLIENT_SUBSCRIBE_NULL_PARAM
+#[doc(hidden)] pub const WSMAN_CLIENT_NULL_RESULT_PARAM : HResultError = HResultError::from_constant(0x803380BD); // ERROR_WSMAN_CLIENT_NULL_RESULT_PARAM
+#[doc(hidden)] pub const WSMAN_CLIENT_NO_HANDLE : HResultError = HResultError::from_constant(0x803380BE); // ERROR_WSMAN_CLIENT_NO_HANDLE
+#[doc(hidden)] pub const WSMAN_CLIENT_BLANK_URI : HResultError = HResultError::from_constant(0x803380BF); // ERROR_WSMAN_CLIENT_BLANK_URI
+#[doc(hidden)] pub const WSMAN_CLIENT_INVALID_RESOURCE_LOCATOR : HResultError = HResultError::from_constant(0x803380C0); // ERROR_WSMAN_CLIENT_INVALID_RESOURCE_LOCATOR
+#[doc(hidden)] pub const WSMAN_CLIENT_BLANK_INPUT_XML : HResultError = HResultError::from_constant(0x803380C1); // ERROR_WSMAN_CLIENT_BLANK_INPUT_XML
+#[doc(hidden)] pub const WSMAN_CLIENT_BATCH_ITEMS_TOO_SMALL : HResultError = HResultError::from_constant(0x803380C2); // ERROR_WSMAN_CLIENT_BATCH_ITEMS_TOO_SMALL
+#[doc(hidden)] pub const WSMAN_CLIENT_MAX_CHARS_TOO_SMALL : HResultError = HResultError::from_constant(0x803380C3); // ERROR_WSMAN_CLIENT_MAX_CHARS_TOO_SMALL
+#[doc(hidden)] pub const WSMAN_CLIENT_BLANK_ACTION_URI : HResultError = HResultError::from_constant(0x803380C4); // ERROR_WSMAN_CLIENT_BLANK_ACTION_URI
+#[doc(hidden)] pub const WSMAN_CLIENT_ZERO_HEARTBEAT : HResultError = HResultError::from_constant(0x803380C5); // ERROR_WSMAN_CLIENT_ZERO_HEARTBEAT
+#[doc(hidden)] pub const WSMAN_CLIENT_MULTIPLE_DELIVERY_MODES : HResultError = HResultError::from_constant(0x803380C6); // ERROR_WSMAN_CLIENT_MULTIPLE_DELIVERY_MODES
+#[doc(hidden)] pub const WSMAN_CLIENT_MULTIPLE_ENVELOPE_POLICIES : HResultError = HResultError::from_constant(0x803380C7); // ERROR_WSMAN_CLIENT_MULTIPLE_ENVELOPE_POLICIES
+#[doc(hidden)] pub const WSMAN_CLIENT_UNKNOWN_EXPIRATION_TYPE : HResultError = HResultError::from_constant(0x803380C8); // ERROR_WSMAN_CLIENT_UNKNOWN_EXPIRATION_TYPE
+#[doc(hidden)] pub const WSMAN_CLIENT_MISSING_EXPIRATION : HResultError = HResultError::from_constant(0x803380C9); // ERROR_WSMAN_CLIENT_MISSING_EXPIRATION
+#[doc(hidden)] pub const WSMAN_CLIENT_PULL_INVALID_FLAGS : HResultError = HResultError::from_constant(0x803380CA); // ERROR_WSMAN_CLIENT_PULL_INVALID_FLAGS
+#[doc(hidden)] pub const WSMAN_CLIENT_PUSH_UNSUPPORTED_TRANSPORT : HResultError = HResultError::from_constant(0x803380CB); // ERROR_WSMAN_CLIENT_PUSH_UNSUPPORTED_TRANSPORT
+#[doc(hidden)] pub const WSMAN_CLIENT_PUSH_HOST_TOO_LONG : HResultError = HResultError::from_constant(0x803380CC); // ERROR_WSMAN_CLIENT_PUSH_HOST_TOO_LONG
+#[doc(hidden)] pub const WSMAN_CLIENT_COMPRESSION_INVALID_OPTION : HResultError = HResultError::from_constant(0x803380CD); // ERROR_WSMAN_CLIENT_COMPRESSION_INVALID_OPTION
+#[doc(hidden)] pub const WSMAN_CLIENT_DELIVERENDSUBSCRIPTION_NULL_PARAM : HResultError = HResultError::from_constant(0x803380CE); // ERROR_WSMAN_CLIENT_DELIVERENDSUBSCRIPTION_NULL_PARAM
+#[doc(hidden)] pub const WSMAN_CLIENT_DELIVEREVENTS_NULL_PARAM : HResultError = HResultError::from_constant(0x803380CF); // ERROR_WSMAN_CLIENT_DELIVEREVENTS_NULL_PARAM
+#[doc(hidden)] pub const WSMAN_CLIENT_GETBOOKMARK_NULL_PARAM : HResultError = HResultError::from_constant(0x803380D0); // ERROR_WSMAN_CLIENT_GETBOOKMARK_NULL_PARAM
+#[doc(hidden)] pub const WSMAN_CLIENT_DECODEOBJECT_NULL_PARAM : HResultError = HResultError::from_constant(0x803380D1); // ERROR_WSMAN_CLIENT_DECODEOBJECT_NULL_PARAM
+#[doc(hidden)] pub const WSMAN_CLIENT_ENCODEOBJECT_NULL_PARAM : HResultError = HResultError::from_constant(0x803380D2); // ERROR_WSMAN_CLIENT_ENCODEOBJECT_NULL_PARAM
+#[doc(hidden)] pub const WSMAN_CLIENT_ENUMERATORADDOBJECT_NULL_PARAM : HResultError = HResultError::from_constant(0x803380D3); // ERROR_WSMAN_CLIENT_ENUMERATORADDOBJECT_NULL_PARAM
+#[doc(hidden)] pub const WSMAN_CLIENT_ENUMERATORNEXTOBJECT_NULL_PARAM : HResultError = HResultError::from_constant(0x803380D4); // ERROR_WSMAN_CLIENT_ENUMERATORNEXTOBJECT_NULL_PARAM
+#[doc(hidden)] pub const WSMAN_CLIENT_CONSTRUCTERROR_NULL_PARAM : HResultError = HResultError::from_constant(0x803380D5); // ERROR_WSMAN_CLIENT_CONSTRUCTERROR_NULL_PARAM
+#[doc(hidden)] pub const WSMAN_SERVER_NONPULLSUBSCRIBE_NULL_PARAM : HResultError = HResultError::from_constant(0x803380D6); // ERROR_WSMAN_SERVER_NONPULLSUBSCRIBE_NULL_PARAM
+#[doc(hidden)] pub const WSMAN_CLIENT_UNENCRYPTED_HTTP_ONLY : HResultError = HResultError::from_constant(0x803380D7); // ERROR_WSMAN_CLIENT_UNENCRYPTED_HTTP_ONLY
+#[doc(hidden)] pub const WSMAN_CANNOT_USE_CERTIFICATES_FOR_HTTP : HResultError = HResultError::from_constant(0x803380D8); // ERROR_WSMAN_CANNOT_USE_CERTIFICATES_FOR_HTTP
+#[doc(hidden)] pub const WSMAN_CONNECTIONSTR_INVALID : HResultError = HResultError::from_constant(0x803380D9); // ERROR_WSMAN_CONNECTIONSTR_INVALID
+#[doc(hidden)] pub const WSMAN_TRANSPORT_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x803380DA); // ERROR_WSMAN_TRANSPORT_NOT_SUPPORTED
+#[doc(hidden)] pub const WSMAN_PORT_INVALID : HResultError = HResultError::from_constant(0x803380DB); // ERROR_WSMAN_PORT_INVALID
+#[doc(hidden)] pub const WSMAN_CONFIG_PORT_INVALID : HResultError = HResultError::from_constant(0x803380DC); // ERROR_WSMAN_CONFIG_PORT_INVALID
+#[doc(hidden)] pub const WSMAN_SENDHEARBEAT_EMPTY_ENUMERATOR : HResultError = HResultError::from_constant(0x803380DD); // ERROR_WSMAN_SENDHEARBEAT_EMPTY_ENUMERATOR
+#[doc(hidden)] pub const WSMAN_CLIENT_UNENCRYPTED_DISABLED : HResultError = HResultError::from_constant(0x803380DE); // ERROR_WSMAN_CLIENT_UNENCRYPTED_DISABLED
+#[doc(hidden)] pub const WSMAN_CLIENT_BASIC_AUTHENTICATION_DISABLED : HResultError = HResultError::from_constant(0x803380DF); // ERROR_WSMAN_CLIENT_BASIC_AUTHENTICATION_DISABLED
+#[doc(hidden)] pub const WSMAN_CLIENT_DIGEST_AUTHENTICATION_DISABLED : HResultError = HResultError::from_constant(0x803380E0); // ERROR_WSMAN_CLIENT_DIGEST_AUTHENTICATION_DISABLED
+#[doc(hidden)] pub const WSMAN_CLIENT_NEGOTIATE_AUTHENTICATION_DISABLED : HResultError = HResultError::from_constant(0x803380E1); // ERROR_WSMAN_CLIENT_NEGOTIATE_AUTHENTICATION_DISABLED
+#[doc(hidden)] pub const WSMAN_CLIENT_KERBEROS_AUTHENTICATION_DISABLED : HResultError = HResultError::from_constant(0x803380E2); // ERROR_WSMAN_CLIENT_KERBEROS_AUTHENTICATION_DISABLED
+#[doc(hidden)] pub const WSMAN_CLIENT_CERTIFICATES_AUTHENTICATION_DISABLED : HResultError = HResultError::from_constant(0x803380E3); // ERROR_WSMAN_CLIENT_CERTIFICATES_AUTHENTICATION_DISABLED
+#[doc(hidden)] pub const WSMAN_SERVER_NOT_TRUSTED : HResultError = HResultError::from_constant(0x803380E4); // ERROR_WSMAN_SERVER_NOT_TRUSTED
+#[doc(hidden)] pub const WSMAN_EXPLICIT_CREDENTIALS_REQUIRED : HResultError = HResultError::from_constant(0x803380E5); // ERROR_WSMAN_EXPLICIT_CREDENTIALS_REQUIRED
+#[doc(hidden)] pub const WSMAN_CERT_THUMBPRINT_NOT_BLANK : HResultError = HResultError::from_constant(0x803380E6); // ERROR_WSMAN_CERT_THUMBPRINT_NOT_BLANK
+#[doc(hidden)] pub const WSMAN_CERT_THUMBPRINT_BLANK : HResultError = HResultError::from_constant(0x803380E7); // ERROR_WSMAN_CERT_THUMBPRINT_BLANK
+#[doc(hidden)] pub const WSMAN_CONFIG_CANNOT_SHARE_SSL_CONFIG : HResultError = HResultError::from_constant(0x803380E8); // ERROR_WSMAN_CONFIG_CANNOT_SHARE_SSL_CONFIG
+#[doc(hidden)] pub const WSMAN_CONFIG_CERT_CN_DOES_NOT_MATCH_HOSTNAME : HResultError = HResultError::from_constant(0x803380E9); // ERROR_WSMAN_CONFIG_CERT_CN_DOES_NOT_MATCH_HOSTNAME
+#[doc(hidden)] pub const WSMAN_CONFIG_HOSTNAME_CHANGE_WITHOUT_CERT : HResultError = HResultError::from_constant(0x803380EA); // ERROR_WSMAN_CONFIG_HOSTNAME_CHANGE_WITHOUT_CERT
+#[doc(hidden)] pub const WSMAN_CONFIG_THUMBPRINT_SHOULD_BE_EMPTY : HResultError = HResultError::from_constant(0x803380EB); // ERROR_WSMAN_CONFIG_THUMBPRINT_SHOULD_BE_EMPTY
+#[doc(hidden)] pub const WSMAN_INVALID_IPFILTER : HResultError = HResultError::from_constant(0x803380EC); // ERROR_WSMAN_INVALID_IPFILTER
+#[doc(hidden)] pub const WSMAN_CANNOT_CHANGE_KEYS : HResultError = HResultError::from_constant(0x803380ED); // ERROR_WSMAN_CANNOT_CHANGE_KEYS
+#[doc(hidden)] pub const WSMAN_CERT_INVALID_USAGE : HResultError = HResultError::from_constant(0x803380EE); // ERROR_WSMAN_CERT_INVALID_USAGE
+#[doc(hidden)] pub const WSMAN_RESPONSE_NO_RESULTS : HResultError = HResultError::from_constant(0x803380EF); // ERROR_WSMAN_RESPONSE_NO_RESULTS
+#[doc(hidden)] pub const WSMAN_CREATE_RESPONSE_NO_EPR : HResultError = HResultError::from_constant(0x803380F0); // ERROR_WSMAN_CREATE_RESPONSE_NO_EPR
+#[doc(hidden)] pub const WSMAN_RESPONSE_INVALID_ENUMERATION_CONTEXT : HResultError = HResultError::from_constant(0x803380F1); // ERROR_WSMAN_RESPONSE_INVALID_ENUMERATION_CONTEXT
+#[doc(hidden)] pub const WSMAN_RESPONSE_NO_XML_FRAGMENT_WRAPPER : HResultError = HResultError::from_constant(0x803380F2); // ERROR_WSMAN_RESPONSE_NO_XML_FRAGMENT_WRAPPER
+#[doc(hidden)] pub const WSMAN_RESPONSE_INVALID_MESSAGE_INFORMATION_HEADER : HResultError = HResultError::from_constant(0x803380F3); // ERROR_WSMAN_RESPONSE_INVALID_MESSAGE_INFORMATION_HEADER
+#[doc(hidden)] pub const WSMAN_RESPONSE_NO_SOAP_HEADER_BODY : HResultError = HResultError::from_constant(0x803380F4); // ERROR_WSMAN_RESPONSE_NO_SOAP_HEADER_BODY
+#[doc(hidden)] pub const WSMAN_HTTP_NO_RESPONSE_DATA : HResultError = HResultError::from_constant(0x803380F5); // ERROR_WSMAN_HTTP_NO_RESPONSE_DATA
+#[doc(hidden)] pub const WSMAN_RESPONSE_INVALID_SOAP_FAULT : HResultError = HResultError::from_constant(0x803380F6); // ERROR_WSMAN_RESPONSE_INVALID_SOAP_FAULT
+#[doc(hidden)] pub const WSMAN_HTTP_INVALID_CONTENT_TYPE_IN_RESPONSE_DATA : HResultError = HResultError::from_constant(0x803380F7); // ERROR_WSMAN_HTTP_INVALID_CONTENT_TYPE_IN_RESPONSE_DATA
+#[doc(hidden)] pub const WSMAN_HTTP_CONTENT_TYPE_MISSMATCH_RESPONSE_DATA : HResultError = HResultError::from_constant(0x803380F8); // ERROR_WSMAN_HTTP_CONTENT_TYPE_MISSMATCH_RESPONSE_DATA
+#[doc(hidden)] pub const WSMAN_CANNOT_DECRYPT : HResultError = HResultError::from_constant(0x803380F9); // ERROR_WSMAN_CANNOT_DECRYPT
+#[doc(hidden)] pub const WSMAN_INVALID_URI_WMI_SINGLETON : HResultError = HResultError::from_constant(0x803380FA); // ERROR_WSMAN_INVALID_URI_WMI_SINGLETON
+#[doc(hidden)] pub const WSMAN_INVALID_URI_WMI_ENUM_WQL : HResultError = HResultError::from_constant(0x803380FB); // ERROR_WSMAN_INVALID_URI_WMI_ENUM_WQL
+#[doc(hidden)] pub const WSMAN_NO_IDENTIFY_FOR_LOCAL_SESSION : HResultError = HResultError::from_constant(0x803380FC); // ERROR_WSMAN_NO_IDENTIFY_FOR_LOCAL_SESSION
+#[doc(hidden)] pub const WSMAN_NO_PUSH_SUBSCRIPTION_FOR_LOCAL_SESSION : HResultError = HResultError::from_constant(0x803380FD); // ERROR_WSMAN_NO_PUSH_SUBSCRIPTION_FOR_LOCAL_SESSION
+#[doc(hidden)] pub const WSMAN_INVALID_SUBSCRIPTION_MANAGER : HResultError = HResultError::from_constant(0x803380FE); // ERROR_WSMAN_INVALID_SUBSCRIPTION_MANAGER
+#[doc(hidden)] pub const WSMAN_NON_PULL_SUBSCRIPTION_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x803380FF); // ERROR_WSMAN_NON_PULL_SUBSCRIPTION_NOT_SUPPORTED
+#[doc(hidden)] pub const WSMAN_WMI_MAX_NESTED : HResultError = HResultError::from_constant(0x80338100); // ERROR_WSMAN_WMI_MAX_NESTED
+#[doc(hidden)] pub const WSMAN_REMOTE_CIMPATH_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x80338101); // ERROR_WSMAN_REMOTE_CIMPATH_NOT_SUPPORTED
+#[doc(hidden)] pub const WSMAN_WMI_PROVIDER_NOT_CAPABLE : HResultError = HResultError::from_constant(0x80338102); // ERROR_WSMAN_WMI_PROVIDER_NOT_CAPABLE
+#[doc(hidden)] pub const WSMAN_WMI_INVALID_VALUE : HResultError = HResultError::from_constant(0x80338103); // ERROR_WSMAN_WMI_INVALID_VALUE
+#[doc(hidden)] pub const WSMAN_WMI_SVC_ACCESS_DENIED : HResultError = HResultError::from_constant(0x80338104); // ERROR_WSMAN_WMI_SVC_ACCESS_DENIED
+#[doc(hidden)] pub const WSMAN_WMI_PROVIDER_ACCESS_DENIED : HResultError = HResultError::from_constant(0x80338105); // ERROR_WSMAN_WMI_PROVIDER_ACCESS_DENIED
+#[doc(hidden)] pub const WSMAN_WMI_CANNOT_CONNECT_ACCESS_DENIED : HResultError = HResultError::from_constant(0x80338106); // ERROR_WSMAN_WMI_CANNOT_CONNECT_ACCESS_DENIED
+#[doc(hidden)] pub const WSMAN_INVALID_FILTER_XML : HResultError = HResultError::from_constant(0x80338107); // ERROR_WSMAN_INVALID_FILTER_XML
+#[doc(hidden)] pub const WSMAN_ENUMERATE_WMI_INVALID_KEY : HResultError = HResultError::from_constant(0x80338108); // ERROR_WSMAN_ENUMERATE_WMI_INVALID_KEY
+#[doc(hidden)] pub const WSMAN_INVALID_FRAGMENT_PATH_BLANK : HResultError = HResultError::from_constant(0x80338109); // ERROR_WSMAN_INVALID_FRAGMENT_PATH_BLANK
+#[doc(hidden)] pub const WSMAN_INVALID_CHARACTERS_IN_RESPONSE : HResultError = HResultError::from_constant(0x8033810A); // ERROR_WSMAN_INVALID_CHARACTERS_IN_RESPONSE
+#[doc(hidden)] pub const WSMAN_KERBEROS_IPADDRESS : HResultError = HResultError::from_constant(0x8033810B); // ERROR_WSMAN_KERBEROS_IPADDRESS
+#[doc(hidden)] pub const WSMAN_CLIENT_WORKGROUP_NO_KERBEROS : HResultError = HResultError::from_constant(0x8033810C); // ERROR_WSMAN_CLIENT_WORKGROUP_NO_KERBEROS
+#[doc(hidden)] pub const WSMAN_INVALID_BATCH_SETTINGS_PARAMETER : HResultError = HResultError::from_constant(0x8033810D); // ERROR_WSMAN_INVALID_BATCH_SETTINGS_PARAMETER
+#[doc(hidden)] pub const WSMAN_SERVER_DESTINATION_LOCALHOST : HResultError = HResultError::from_constant(0x8033810E); // ERROR_WSMAN_SERVER_DESTINATION_LOCALHOST
+#[doc(hidden)] pub const WSMAN_UNKNOWN_HTTP_STATUS_RETURNED : HResultError = HResultError::from_constant(0x8033810F); // ERROR_WSMAN_UNKNOWN_HTTP_STATUS_RETURNED
+#[doc(hidden)] pub const WSMAN_UNSUPPORTED_HTTP_STATUS_REDIRECT : HResultError = HResultError::from_constant(0x80338110); // ERROR_WSMAN_UNSUPPORTED_HTTP_STATUS_REDIRECT
+#[doc(hidden)] pub const WSMAN_HTTP_REQUEST_TOO_LARGE_STATUS : HResultError = HResultError::from_constant(0x80338111); // ERROR_WSMAN_HTTP_REQUEST_TOO_LARGE_STATUS
+#[doc(hidden)] pub const WSMAN_HTTP_SERVICE_UNAVAILABLE_STATUS : HResultError = HResultError::from_constant(0x80338112); // ERROR_WSMAN_HTTP_SERVICE_UNAVAILABLE_STATUS
+#[doc(hidden)] pub const WSMAN_HTTP_NOT_FOUND_STATUS : HResultError = HResultError::from_constant(0x80338113); // ERROR_WSMAN_HTTP_NOT_FOUND_STATUS
+#[doc(hidden)] pub const WSMAN_EVENTING_MISSING_LOCALE_IN_DELIVERY : HResultError = HResultError::from_constant(0x80338114); // ERROR_WSMAN_EVENTING_MISSING_LOCALE_IN_DELIVERY
+#[doc(hidden)] pub const WSMAN_QUICK_CONFIG_FAILED_CERT_REQUIRED : HResultError = HResultError::from_constant(0x80338115); // ERROR_WSMAN_QUICK_CONFIG_FAILED_CERT_REQUIRED
+#[doc(hidden)] pub const WSMAN_QUICK_CONFIG_FIREWALL_EXCEPTIONS_DISALLOWED : HResultError = HResultError::from_constant(0x80338116); // ERROR_WSMAN_QUICK_CONFIG_FIREWALL_EXCEPTIONS_DISALLOWED
+#[doc(hidden)] pub const WSMAN_QUICK_CONFIG_LOCAL_POLICY_CHANGE_DISALLOWED : HResultError = HResultError::from_constant(0x80338117); // ERROR_WSMAN_QUICK_CONFIG_LOCAL_POLICY_CHANGE_DISALLOWED
+#[doc(hidden)] pub const WSMAN_INVALID_SELECTOR_NAME : HResultError = HResultError::from_constant(0x80338118); // ERROR_WSMAN_INVALID_SELECTOR_NAME
+#[doc(hidden)] pub const WSMAN_ENCODING_TYPE : HResultError = HResultError::from_constant(0x80338119); // ERROR_WSMAN_ENCODING_TYPE
+#[doc(hidden)] pub const WSMAN_ENDPOINT_UNAVAILABLE_INVALID_VALUE : HResultError = HResultError::from_constant(0x8033811A); // ERROR_WSMAN_ENDPOINT_UNAVAILABLE_INVALID_VALUE
+#[doc(hidden)] pub const WSMAN_INVALID_HEADER : HResultError = HResultError::from_constant(0x8033811B); // ERROR_WSMAN_INVALID_HEADER
+#[doc(hidden)] pub const WSMAN_ENUMERATE_UNSUPPORTED_EXPIRATION_TYPE : HResultError = HResultError::from_constant(0x8033811C); // ERROR_WSMAN_ENUMERATE_UNSUPPORTED_EXPIRATION_TYPE
+#[doc(hidden)] pub const WSMAN_MAX_ELEMENTS_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x8033811D); // ERROR_WSMAN_MAX_ELEMENTS_NOT_SUPPORTED
+#[doc(hidden)] pub const WSMAN_WMI_PROVIDER_INVALID_PARAMETER : HResultError = HResultError::from_constant(0x8033811E); // ERROR_WSMAN_WMI_PROVIDER_INVALID_PARAMETER
+#[doc(hidden)] pub const WSMAN_CLIENT_MULTIPLE_ENUM_MODE_FLAGS : HResultError = HResultError::from_constant(0x8033811F); // ERROR_WSMAN_CLIENT_MULTIPLE_ENUM_MODE_FLAGS
+#[doc(hidden)] pub const WINRS_CLIENT_INVALID_FLAG : HResultError = HResultError::from_constant(0x80338120); // ERROR_WINRS_CLIENT_INVALID_FLAG
+#[doc(hidden)] pub const WINRS_CLIENT_NULL_PARAM : HResultError = HResultError::from_constant(0x80338121); // ERROR_WINRS_CLIENT_NULL_PARAM
+#[doc(hidden)] pub const WSMAN_CANNOT_PROCESS_FILTER : HResultError = HResultError::from_constant(0x80338122); // ERROR_WSMAN_CANNOT_PROCESS_FILTER
+#[doc(hidden)] pub const WSMAN_CLIENT_ENUMERATORADDEVENT_NULL_PARAM : HResultError = HResultError::from_constant(0x80338123); // ERROR_WSMAN_CLIENT_ENUMERATORADDEVENT_NULL_PARAM
+#[doc(hidden)] pub const WSMAN_ADDOBJECT_MISSING_OBJECT : HResultError = HResultError::from_constant(0x80338124); // ERROR_WSMAN_ADDOBJECT_MISSING_OBJECT
+#[doc(hidden)] pub const WSMAN_ADDOBJECT_MISSING_EPR : HResultError = HResultError::from_constant(0x80338125); // ERROR_WSMAN_ADDOBJECT_MISSING_EPR
+#[doc(hidden)] pub const WSMAN_NETWORK_TIMEDOUT : HResultError = HResultError::from_constant(0x80338126); // ERROR_WSMAN_NETWORK_TIMEDOUT
+#[doc(hidden)] pub const WINRS_RECEIVE_IN_PROGRESS : HResultError = HResultError::from_constant(0x80338127); // ERROR_WINRS_RECEIVE_IN_PROGRESS
+#[doc(hidden)] pub const WINRS_RECEIVE_NO_RESPONSE_DATA : HResultError = HResultError::from_constant(0x80338128); // ERROR_WINRS_RECEIVE_NO_RESPONSE_DATA
+#[doc(hidden)] pub const WINRS_CLIENT_CREATESHELL_NULL_PARAM : HResultError = HResultError::from_constant(0x80338129); // ERROR_WINRS_CLIENT_CREATESHELL_NULL_PARAM
+#[doc(hidden)] pub const WINRS_CLIENT_CLOSESHELL_NULL_PARAM : HResultError = HResultError::from_constant(0x8033812A); // ERROR_WINRS_CLIENT_CLOSESHELL_NULL_PARAM
+#[doc(hidden)] pub const WINRS_CLIENT_FREECREATESHELLRESULT_NULL_PARAM : HResultError = HResultError::from_constant(0x8033812B); // ERROR_WINRS_CLIENT_FREECREATESHELLRESULT_NULL_PARAM
+#[doc(hidden)] pub const WINRS_CLIENT_RUNCOMMAND_NULL_PARAM : HResultError = HResultError::from_constant(0x8033812C); // ERROR_WINRS_CLIENT_RUNCOMMAND_NULL_PARAM
+#[doc(hidden)] pub const WINRS_CLIENT_FREERUNCOMMANDRESULT_NULL_PARAM : HResultError = HResultError::from_constant(0x8033812D); // ERROR_WINRS_CLIENT_FREERUNCOMMANDRESULT_NULL_PARAM
+#[doc(hidden)] pub const WINRS_CLIENT_SIGNAL_NULL_PARAM : HResultError = HResultError::from_constant(0x8033812E); // ERROR_WINRS_CLIENT_SIGNAL_NULL_PARAM
+#[doc(hidden)] pub const WINRS_CLIENT_RECEIVE_NULL_PARAM : HResultError = HResultError::from_constant(0x8033812F); // ERROR_WINRS_CLIENT_RECEIVE_NULL_PARAM
+#[doc(hidden)] pub const WINRS_CLIENT_FREEPULLRESULT_NULL_PARAM : HResultError = HResultError::from_constant(0x80338130); // ERROR_WINRS_CLIENT_FREEPULLRESULT_NULL_PARAM
+#[doc(hidden)] pub const WINRS_CLIENT_PULL_NULL_PARAM : HResultError = HResultError::from_constant(0x80338131); // ERROR_WINRS_CLIENT_PULL_NULL_PARAM
+#[doc(hidden)] pub const WINRS_CLIENT_CLOSERECEIVEHANDLE_NULL_PARAM : HResultError = HResultError::from_constant(0x80338132); // ERROR_WINRS_CLIENT_CLOSERECEIVEHANDLE_NULL_PARAM
+#[doc(hidden)] pub const WINRS_CLIENT_SEND_NULL_PARAM : HResultError = HResultError::from_constant(0x80338133); // ERROR_WINRS_CLIENT_SEND_NULL_PARAM
+#[doc(hidden)] pub const WINRS_CLIENT_PUSH_NULL_PARAM : HResultError = HResultError::from_constant(0x80338134); // ERROR_WINRS_CLIENT_PUSH_NULL_PARAM
+#[doc(hidden)] pub const WINRS_CLIENT_CLOSESENDHANDLE_NULL_PARAM : HResultError = HResultError::from_constant(0x80338135); // ERROR_WINRS_CLIENT_CLOSESENDHANDLE_NULL_PARAM
+#[doc(hidden)] pub const WINRS_CLIENT_GET_NULL_PARAM : HResultError = HResultError::from_constant(0x80338136); // ERROR_WINRS_CLIENT_GET_NULL_PARAM
+#[doc(hidden)] pub const WSMAN_POLYMORPHISM_MODE_UNSUPPORTED : HResultError = HResultError::from_constant(0x80338137); // ERROR_WSMAN_POLYMORPHISM_MODE_UNSUPPORTED
+#[doc(hidden)] pub const WSMAN_REQUEST_NOT_SUPPORTED_AT_SERVICE : HResultError = HResultError::from_constant(0x80338138); // ERROR_WSMAN_REQUEST_NOT_SUPPORTED_AT_SERVICE
+#[doc(hidden)] pub const WSMAN_URI_NON_DMTF_CLASS : HResultError = HResultError::from_constant(0x80338139); // ERROR_WSMAN_URI_NON_DMTF_CLASS
+#[doc(hidden)] pub const WSMAN_URI_WRONG_DMTF_VERSION : HResultError = HResultError::from_constant(0x8033813A); // ERROR_WSMAN_URI_WRONG_DMTF_VERSION
+#[doc(hidden)] pub const WSMAN_DIFFERENT_CIM_SELECTOR : HResultError = HResultError::from_constant(0x8033813B); // ERROR_WSMAN_DIFFERENT_CIM_SELECTOR
+#[doc(hidden)] pub const WSMAN_PUSHSUBSCRIPTION_INVALIDUSERACCOUNT : HResultError = HResultError::from_constant(0x8033813C); // ERROR_WSMAN_PUSHSUBSCRIPTION_INVALIDUSERACCOUNT
+#[doc(hidden)] pub const WSMAN_EVENTING_NONDOMAINJOINED_PUBLISHER : HResultError = HResultError::from_constant(0x8033813D); // ERROR_WSMAN_EVENTING_NONDOMAINJOINED_PUBLISHER
+#[doc(hidden)] pub const WSMAN_EVENTING_NONDOMAINJOINED_COLLECTOR : HResultError = HResultError::from_constant(0x8033813E); // ERROR_WSMAN_EVENTING_NONDOMAINJOINED_COLLECTOR
+#[doc(hidden)] pub const WSMAN_CONFIG_READONLY_PROPERTY : HResultError = HResultError::from_constant(0x8033813F); // ERROR_WSMAN_CONFIG_READONLY_PROPERTY
+#[doc(hidden)] pub const WINRS_CODE_PAGE_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x80338140); // ERROR_WINRS_CODE_PAGE_NOT_SUPPORTED
+#[doc(hidden)] pub const WSMAN_CLIENT_DISABLE_LOOPBACK_WITH_EXPLICIT_CREDENTIALS : HResultError = HResultError::from_constant(0x80338141); // ERROR_WSMAN_CLIENT_DISABLE_LOOPBACK_WITH_EXPLICIT_CREDENTIALS
+#[doc(hidden)] pub const WSMAN_CLIENT_INVALID_DISABLE_LOOPBACK : HResultError = HResultError::from_constant(0x80338142); // ERROR_WSMAN_CLIENT_INVALID_DISABLE_LOOPBACK
+#[doc(hidden)] pub const WSMAN_CLIENT_ENUM_RECEIVED_TOO_MANY_ITEMS : HResultError = HResultError::from_constant(0x80338143); // ERROR_WSMAN_CLIENT_ENUM_RECEIVED_TOO_MANY_ITEMS
+#[doc(hidden)] pub const WSMAN_MULTIPLE_CREDENTIALS : HResultError = HResultError::from_constant(0x80338144); // ERROR_WSMAN_MULTIPLE_CREDENTIALS
+#[doc(hidden)] pub const WSMAN_AUTHENTICATION_INVALID_FLAG : HResultError = HResultError::from_constant(0x80338145); // ERROR_WSMAN_AUTHENTICATION_INVALID_FLAG
+#[doc(hidden)] pub const WSMAN_CLIENT_CREDENTIALS_FOR_DEFAULT_AUTHENTICATION : HResultError = HResultError::from_constant(0x80338146); // ERROR_WSMAN_CLIENT_CREDENTIALS_FOR_DEFAULT_AUTHENTICATION
+#[doc(hidden)] pub const WSMAN_CLIENT_USERNAME_AND_PASSWORD_NEEDED : HResultError = HResultError::from_constant(0x80338147); // ERROR_WSMAN_CLIENT_USERNAME_AND_PASSWORD_NEEDED
+#[doc(hidden)] pub const WSMAN_CLIENT_INVALID_CERT_DNS_OR_UPN : HResultError = HResultError::from_constant(0x80338148); // ERROR_WSMAN_CLIENT_INVALID_CERT_DNS_OR_UPN
+#[doc(hidden)] pub const WSMAN_CREATESHELL_NULL_ENVIRONMENT_VARIABLE_NAME : HResultError = HResultError::from_constant(0x80338149); // ERROR_WSMAN_CREATESHELL_NULL_ENVIRONMENT_VARIABLE_NAME
+#[doc(hidden)] pub const WSMAN_SHELL_ALREADY_CLOSED : HResultError = HResultError::from_constant(0x8033814A); // ERROR_WSMAN_SHELL_ALREADY_CLOSED
+#[doc(hidden)] pub const WSMAN_CREATESHELL_NULL_STREAMID : HResultError = HResultError::from_constant(0x8033814B); // ERROR_WSMAN_CREATESHELL_NULL_STREAMID
+#[doc(hidden)] pub const WSMAN_SHELL_INVALID_SHELL_HANDLE : HResultError = HResultError::from_constant(0x8033814C); // ERROR_WSMAN_SHELL_INVALID_SHELL_HANDLE
+#[doc(hidden)] pub const WSMAN_SHELL_INVALID_COMMAND_HANDLE : HResultError = HResultError::from_constant(0x8033814D); // ERROR_WSMAN_SHELL_INVALID_COMMAND_HANDLE
+#[doc(hidden)] pub const WSMAN_RUNSHELLCOMMAND_NULL_ARGUMENT : HResultError = HResultError::from_constant(0x8033814E); // ERROR_WSMAN_RUNSHELLCOMMAND_NULL_ARGUMENT
+#[doc(hidden)] pub const WSMAN_COMMAND_ALREADY_CLOSED : HResultError = HResultError::from_constant(0x8033814F); // ERROR_WSMAN_COMMAND_ALREADY_CLOSED
+#[doc(hidden)] pub const WSMAN_SENDSHELLINPUT_INVALID_STREAMID_INDEX : HResultError = HResultError::from_constant(0x80338150); // ERROR_WSMAN_SENDSHELLINPUT_INVALID_STREAMID_INDEX
+#[doc(hidden)] pub const WSMAN_SHELL_SYNCHRONOUS_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x80338151); // ERROR_WSMAN_SHELL_SYNCHRONOUS_NOT_SUPPORTED
+#[doc(hidden)] pub const WSMAN_NO_CERTMAPPING_OPERATION_FOR_LOCAL_SESSION : HResultError = HResultError::from_constant(0x80338152); // ERROR_WSMAN_NO_CERTMAPPING_OPERATION_FOR_LOCAL_SESSION
+#[doc(hidden)] pub const WSMAN_CERTMAPPING_CONFIGLIMIT_EXCEEDED : HResultError = HResultError::from_constant(0x80338153); // ERROR_WSMAN_CERTMAPPING_CONFIGLIMIT_EXCEEDED
+#[doc(hidden)] pub const WSMAN_CERTMAPPING_INVALIDUSERCREDENTIALS : HResultError = HResultError::from_constant(0x80338154); // ERROR_WSMAN_CERTMAPPING_INVALIDUSERCREDENTIALS
+#[doc(hidden)] pub const WSMAN_CERT_INVALID_USAGE_CLIENT : HResultError = HResultError::from_constant(0x80338155); // ERROR_WSMAN_CERT_INVALID_USAGE_CLIENT
+#[doc(hidden)] pub const WSMAN_CERT_MISSING_AUTH_FLAG : HResultError = HResultError::from_constant(0x80338156); // ERROR_WSMAN_CERT_MISSING_AUTH_FLAG
+#[doc(hidden)] pub const WSMAN_CERT_MULTIPLE_CREDENTIALS_FLAG : HResultError = HResultError::from_constant(0x80338157); // ERROR_WSMAN_CERT_MULTIPLE_CREDENTIALS_FLAG
+#[doc(hidden)] pub const WSMAN_CONFIG_SHELL_URI_INVALID : HResultError = HResultError::from_constant(0x80338158); // ERROR_WSMAN_CONFIG_SHELL_URI_INVALID
+#[doc(hidden)] pub const WSMAN_CONFIG_SHELL_URI_CMDSHELLURI_NOTPERMITTED : HResultError = HResultError::from_constant(0x80338159); // ERROR_WSMAN_CONFIG_SHELL_URI_CMDSHELLURI_NOTPERMITTED
+#[doc(hidden)] pub const WSMAN_CONFIG_SHELLURI_INVALID_PROCESSPATH : HResultError = HResultError::from_constant(0x8033815A); // ERROR_WSMAN_CONFIG_SHELLURI_INVALID_PROCESSPATH
+#[doc(hidden)] pub const WINRS_SHELL_URI_INVALID : HResultError = HResultError::from_constant(0x8033815B); // ERROR_WINRS_SHELL_URI_INVALID
+#[doc(hidden)] pub const WSMAN_INVALID_SECURITY_DESCRIPTOR : HResultError = HResultError::from_constant(0x8033815C); // ERROR_WSMAN_INVALID_SECURITY_DESCRIPTOR
+#[doc(hidden)] pub const WSMAN_POLICY_TOO_COMPLEX : HResultError = HResultError::from_constant(0x8033815D); // ERROR_WSMAN_POLICY_TOO_COMPLEX
+#[doc(hidden)] pub const WSMAN_POLICY_CANNOT_COMPLY : HResultError = HResultError::from_constant(0x8033815E); // ERROR_WSMAN_POLICY_CANNOT_COMPLY
+#[doc(hidden)] pub const WSMAN_INVALID_CONNECTIONRETRY : HResultError = HResultError::from_constant(0x8033815F); // ERROR_WSMAN_INVALID_CONNECTIONRETRY
+#[doc(hidden)] pub const WSMAN_URISECURITY_INVALIDURIKEY : HResultError = HResultError::from_constant(0x80338160); // ERROR_WSMAN_URISECURITY_INVALIDURIKEY
+#[doc(hidden)] pub const WSMAN_CERTMAPPING_INVALIDSUBJECTKEY : HResultError = HResultError::from_constant(0x80338161); // ERROR_WSMAN_CERTMAPPING_INVALIDSUBJECTKEY
+#[doc(hidden)] pub const WSMAN_CERTMAPPING_INVALIDISSUERKEY : HResultError = HResultError::from_constant(0x80338162); // ERROR_WSMAN_CERTMAPPING_INVALIDISSUERKEY
+#[doc(hidden)] pub const WSMAN_INVALID_PUBLISHERS_TYPE : HResultError = HResultError::from_constant(0x80338163); // ERROR_WSMAN_INVALID_PUBLISHERS_TYPE
+#[doc(hidden)] pub const WSMAN_CLIENT_INVALID_DELIVERY_RETRY : HResultError = HResultError::from_constant(0x80338164); // ERROR_WSMAN_CLIENT_INVALID_DELIVERY_RETRY
+#[doc(hidden)] pub const WSMAN_CLIENT_NULL_PUBLISHERS : HResultError = HResultError::from_constant(0x80338165); // ERROR_WSMAN_CLIENT_NULL_PUBLISHERS
+#[doc(hidden)] pub const WSMAN_CLIENT_NULL_ISSUERS : HResultError = HResultError::from_constant(0x80338166); // ERROR_WSMAN_CLIENT_NULL_ISSUERS
+#[doc(hidden)] pub const WSMAN_CLIENT_NO_SOURCES : HResultError = HResultError::from_constant(0x80338167); // ERROR_WSMAN_CLIENT_NO_SOURCES
+#[doc(hidden)] pub const WSMAN_INVALID_SUBSCRIBE_OBJECT : HResultError = HResultError::from_constant(0x80338168); // ERROR_WSMAN_INVALID_SUBSCRIBE_OBJECT
+#[doc(hidden)] pub const WSMAN_PUBLIC_FIREWALL_PROFILE_ACTIVE : HResultError = HResultError::from_constant(0x80338169); // ERROR_WSMAN_PUBLIC_FIREWALL_PROFILE_ACTIVE
+#[doc(hidden)] pub const WSMAN_CERTMAPPING_PASSWORDTOOLONG : HResultError = HResultError::from_constant(0x8033816A); // ERROR_WSMAN_CERTMAPPING_PASSWORDTOOLONG
+#[doc(hidden)] pub const WSMAN_CERTMAPPING_PASSWORDBLANK : HResultError = HResultError::from_constant(0x8033816B); // ERROR_WSMAN_CERTMAPPING_PASSWORDBLANK
+#[doc(hidden)] pub const WSMAN_CERTMAPPING_PASSWORDUSERTUPLE : HResultError = HResultError::from_constant(0x8033816C); // ERROR_WSMAN_CERTMAPPING_PASSWORDUSERTUPLE
+#[doc(hidden)] pub const WSMAN_INVALID_PROVIDER_RESPONSE : HResultError = HResultError::from_constant(0x8033816D); // ERROR_WSMAN_INVALID_PROVIDER_RESPONSE
+#[doc(hidden)] pub const WSMAN_SHELL_NOT_INITIALIZED : HResultError = HResultError::from_constant(0x8033816E); // ERROR_WSMAN_SHELL_NOT_INITIALIZED
+#[doc(hidden)] pub const WSMAN_CONFIG_SHELLURI_INVALID_OPERATION_ON_KEY : HResultError = HResultError::from_constant(0x8033816F); // ERROR_WSMAN_CONFIG_SHELLURI_INVALID_OPERATION_ON_KEY
+#[doc(hidden)] pub const WSMAN_HTTP_STATUS_SERVER_ERROR : HResultError = HResultError::from_constant(0x80338170); // ERROR_WSMAN_HTTP_STATUS_SERVER_ERROR
+#[doc(hidden)] pub const WSMAN_HTTP_STATUS_BAD_REQUEST : HResultError = HResultError::from_constant(0x80338171); // ERROR_WSMAN_HTTP_STATUS_BAD_REQUEST
+#[doc(hidden)] pub const WSMAN_CONFIG_CANNOT_CHANGE_CERTMAPPING_KEYS : HResultError = HResultError::from_constant(0x80338172); // ERROR_WSMAN_CONFIG_CANNOT_CHANGE_CERTMAPPING_KEYS
+#[doc(hidden)] pub const WSMAN_HTML_ERROR : HResultError = HResultError::from_constant(0x80338173); // ERROR_WSMAN_HTML_ERROR
+#[doc(hidden)] pub const WSMAN_CLIENT_INITIALIZE_NULL_PARAM : HResultError = HResultError::from_constant(0x80338174); // ERROR_WSMAN_CLIENT_INITIALIZE_NULL_PARAM
+#[doc(hidden)] pub const WSMAN_CLIENT_INVALID_INIT_APPLICATION_FLAG : HResultError = HResultError::from_constant(0x80338175); // ERROR_WSMAN_CLIENT_INVALID_INIT_APPLICATION_FLAG
+#[doc(hidden)] pub const WSMAN_CLIENT_INVALID_DEINIT_APPLICATION_FLAG : HResultError = HResultError::from_constant(0x80338176); // ERROR_WSMAN_CLIENT_INVALID_DEINIT_APPLICATION_FLAG
+#[doc(hidden)] pub const WSMAN_CLIENT_SETSESSIONOPTION_NULL_PARAM : HResultError = HResultError::from_constant(0x80338177); // ERROR_WSMAN_CLIENT_SETSESSIONOPTION_NULL_PARAM
+#[doc(hidden)] pub const WSMAN_CLIENT_SETSESSIONOPTION_INVALID_PARAM : HResultError = HResultError::from_constant(0x80338178); // ERROR_WSMAN_CLIENT_SETSESSIONOPTION_INVALID_PARAM
+#[doc(hidden)] pub const WSMAN_CLIENT_GETSESSIONOPTION_INVALID_PARAM : HResultError = HResultError::from_constant(0x80338179); // ERROR_WSMAN_CLIENT_GETSESSIONOPTION_INVALID_PARAM
+#[doc(hidden)] pub const WSMAN_CLIENT_CREATESHELL_NULL_PARAM : HResultError = HResultError::from_constant(0x8033817A); // ERROR_WSMAN_CLIENT_CREATESHELL_NULL_PARAM
+#[doc(hidden)] pub const WSMAN_CLIENT_INVALID_CREATE_SHELL_FLAG : HResultError = HResultError::from_constant(0x8033817B); // ERROR_WSMAN_CLIENT_INVALID_CREATE_SHELL_FLAG
+#[doc(hidden)] pub const WSMAN_CLIENT_INVALID_CLOSE_SHELL_FLAG : HResultError = HResultError::from_constant(0x8033817C); // ERROR_WSMAN_CLIENT_INVALID_CLOSE_SHELL_FLAG
+#[doc(hidden)] pub const WSMAN_CLIENT_INVALID_CLOSE_COMMAND_FLAG : HResultError = HResultError::from_constant(0x8033817D); // ERROR_WSMAN_CLIENT_INVALID_CLOSE_COMMAND_FLAG
+#[doc(hidden)] pub const WSMAN_CLIENT_CLOSESHELL_NULL_PARAM : HResultError = HResultError::from_constant(0x8033817E); // ERROR_WSMAN_CLIENT_CLOSESHELL_NULL_PARAM
+#[doc(hidden)] pub const WSMAN_CLIENT_CLOSECOMMAND_NULL_PARAM : HResultError = HResultError::from_constant(0x8033817F); // ERROR_WSMAN_CLIENT_CLOSECOMMAND_NULL_PARAM
+#[doc(hidden)] pub const WSMAN_CLIENT_RUNCOMMAND_NULL_PARAM : HResultError = HResultError::from_constant(0x80338180); // ERROR_WSMAN_CLIENT_RUNCOMMAND_NULL_PARAM
+#[doc(hidden)] pub const WSMAN_CLIENT_INVALID_RUNCOMMAND_FLAG : HResultError = HResultError::from_constant(0x80338181); // ERROR_WSMAN_CLIENT_INVALID_RUNCOMMAND_FLAG
+#[doc(hidden)] pub const WSMAN_CLIENT_RUNCOMMAND_NOTCOMPLETED : HResultError = HResultError::from_constant(0x80338182); // ERROR_WSMAN_CLIENT_RUNCOMMAND_NOTCOMPLETED
+#[doc(hidden)] pub const WSMAN_NO_COMMAND_RESPONSE : HResultError = HResultError::from_constant(0x80338183); // ERROR_WSMAN_NO_COMMAND_RESPONSE
+#[doc(hidden)] pub const WSMAN_INVALID_OPTIONSET : HResultError = HResultError::from_constant(0x80338184); // ERROR_WSMAN_INVALID_OPTIONSET
+#[doc(hidden)] pub const WSMAN_NO_COMMANDID : HResultError = HResultError::from_constant(0x80338185); // ERROR_WSMAN_NO_COMMANDID
+#[doc(hidden)] pub const WSMAN_CLIENT_SIGNAL_NULL_PARAM : HResultError = HResultError::from_constant(0x80338186); // ERROR_WSMAN_CLIENT_SIGNAL_NULL_PARAM
+#[doc(hidden)] pub const WSMAN_CLIENT_INVALID_SIGNAL_SHELL_FLAG : HResultError = HResultError::from_constant(0x80338187); // ERROR_WSMAN_CLIENT_INVALID_SIGNAL_SHELL_FLAG
+#[doc(hidden)] pub const WSMAN_CLIENT_SEND_NULL_PARAM : HResultError = HResultError::from_constant(0x80338188); // ERROR_WSMAN_CLIENT_SEND_NULL_PARAM
+#[doc(hidden)] pub const WSMAN_CLIENT_INVALID_SEND_SHELL_FLAG : HResultError = HResultError::from_constant(0x80338189); // ERROR_WSMAN_CLIENT_INVALID_SEND_SHELL_FLAG
+#[doc(hidden)] pub const WSMAN_CLIENT_INVALID_SEND_SHELL_PARAMETER : HResultError = HResultError::from_constant(0x8033818A); // ERROR_WSMAN_CLIENT_INVALID_SEND_SHELL_PARAMETER
+#[doc(hidden)] pub const WSMAN_SHELL_INVALID_INPUT_STREAM : HResultError = HResultError::from_constant(0x8033818B); // ERROR_WSMAN_SHELL_INVALID_INPUT_STREAM
+#[doc(hidden)] pub const WSMAN_CLIENT_RECEIVE_NULL_PARAM : HResultError = HResultError::from_constant(0x8033818C); // ERROR_WSMAN_CLIENT_RECEIVE_NULL_PARAM
+#[doc(hidden)] pub const WSMAN_SHELL_INVALID_DESIRED_STREAMS : HResultError = HResultError::from_constant(0x8033818D); // ERROR_WSMAN_SHELL_INVALID_DESIRED_STREAMS
+#[doc(hidden)] pub const WSMAN_CLIENT_INVALID_RECEIVE_SHELL_FLAG : HResultError = HResultError::from_constant(0x8033818E); // ERROR_WSMAN_CLIENT_INVALID_RECEIVE_SHELL_FLAG
+#[doc(hidden)] pub const WSMAN_NO_RECEIVE_RESPONSE : HResultError = HResultError::from_constant(0x8033818F); // ERROR_WSMAN_NO_RECEIVE_RESPONSE
+#[doc(hidden)] pub const WSMAN_PLUGIN_CONFIGURATION_CORRUPTED : HResultError = HResultError::from_constant(0x80338190); // ERROR_WSMAN_PLUGIN_CONFIGURATION_CORRUPTED
+#[doc(hidden)] pub const WSMAN_INVALID_FILEPATH : HResultError = HResultError::from_constant(0x80338191); // ERROR_WSMAN_INVALID_FILEPATH
+#[doc(hidden)] pub const WSMAN_FILE_NOT_PRESENT : HResultError = HResultError::from_constant(0x80338192); // ERROR_WSMAN_FILE_NOT_PRESENT
+#[doc(hidden)] pub const WSMAN_IISCONFIGURATION_READ_FAILED : HResultError = HResultError::from_constant(0x80338193); // ERROR_WSMAN_IISCONFIGURATION_READ_FAILED
+#[doc(hidden)] pub const WSMAN_CLIENT_INVALID_LOCALE : HResultError = HResultError::from_constant(0x80338194); // ERROR_WSMAN_CLIENT_INVALID_LOCALE
+#[doc(hidden)] pub const WSMAN_CLIENT_INVALID_UI_LANGUAGE : HResultError = HResultError::from_constant(0x80338195); // ERROR_WSMAN_CLIENT_INVALID_UI_LANGUAGE
+#[doc(hidden)] pub const WSMAN_CLIENT_GETERRORMESSAGE_NULL_PARAM : HResultError = HResultError::from_constant(0x80338196); // ERROR_WSMAN_CLIENT_GETERRORMESSAGE_NULL_PARAM
+#[doc(hidden)] pub const WSMAN_CLIENT_INVALID_LANGUAGE_CODE : HResultError = HResultError::from_constant(0x80338197); // ERROR_WSMAN_CLIENT_INVALID_LANGUAGE_CODE
+#[doc(hidden)] pub const WSMAN_CLIENT_INVALID_GETERRORMESSAGE_FLAG : HResultError = HResultError::from_constant(0x80338198); // ERROR_WSMAN_CLIENT_INVALID_GETERRORMESSAGE_FLAG
+#[doc(hidden)] pub const WSMAN_REDIRECT_REQUESTED : HResultError = HResultError::from_constant(0x80338199); // ERROR_WSMAN_REDIRECT_REQUESTED
+#[doc(hidden)] pub const WSMAN_PROXY_AUTHENTICATION_INVALID_FLAG : HResultError = HResultError::from_constant(0x8033819A); // ERROR_WSMAN_PROXY_AUTHENTICATION_INVALID_FLAG
+#[doc(hidden)] pub const WSMAN_CLIENT_CREDENTIALS_FOR_PROXY_AUTHENTICATION : HResultError = HResultError::from_constant(0x8033819B); // ERROR_WSMAN_CLIENT_CREDENTIALS_FOR_PROXY_AUTHENTICATION
+#[doc(hidden)] pub const WSMAN_PROXY_ACCESS_TYPE : HResultError = HResultError::from_constant(0x8033819C); // ERROR_WSMAN_PROXY_ACCESS_TYPE
+#[doc(hidden)] pub const WSMAN_INVALID_OPTION_NO_PROXY_SERVER : HResultError = HResultError::from_constant(0x8033819D); // ERROR_WSMAN_INVALID_OPTION_NO_PROXY_SERVER
+#[doc(hidden)] pub const WSMAN_CLIENT_GETSESSIONOPTION_DWORD_NULL_PARAM : HResultError = HResultError::from_constant(0x8033819E); // ERROR_WSMAN_CLIENT_GETSESSIONOPTION_DWORD_NULL_PARAM
+#[doc(hidden)] pub const WSMAN_CLIENT_GETSESSIONOPTION_DWORD_INVALID_PARAM : HResultError = HResultError::from_constant(0x8033819F); // ERROR_WSMAN_CLIENT_GETSESSIONOPTION_DWORD_INVALID_PARAM
+#[doc(hidden)] pub const WSMAN_CLIENT_GETSESSIONOPTION_STRING_INVALID_PARAM : HResultError = HResultError::from_constant(0x803381A0); // ERROR_WSMAN_CLIENT_GETSESSIONOPTION_STRING_INVALID_PARAM
+#[doc(hidden)] pub const WSMAN_CREDSSP_USERNAME_PASSWORD_NEEDED : HResultError = HResultError::from_constant(0x803381A1); // ERROR_WSMAN_CREDSSP_USERNAME_PASSWORD_NEEDED
+#[doc(hidden)] pub const WSMAN_CLIENT_CREDSSP_AUTHENTICATION_DISABLED : HResultError = HResultError::from_constant(0x803381A2); // ERROR_WSMAN_CLIENT_CREDSSP_AUTHENTICATION_DISABLED
+#[doc(hidden)] pub const WSMAN_CLIENT_ALLOWFRESHCREDENTIALS : HResultError = HResultError::from_constant(0x803381A3); // ERROR_WSMAN_CLIENT_ALLOWFRESHCREDENTIALS
+#[doc(hidden)] pub const WSMAN_CLIENT_ALLOWFRESHCREDENTIALS_NTLMONLY : HResultError = HResultError::from_constant(0x803381A4); // ERROR_WSMAN_CLIENT_ALLOWFRESHCREDENTIALS_NTLMONLY
+#[doc(hidden)] pub const WSMAN_QUOTA_MAX_SHELLS : HResultError = HResultError::from_constant(0x803381A5); // ERROR_WSMAN_QUOTA_MAX_SHELLS
+#[doc(hidden)] pub const WSMAN_QUOTA_MAX_OPERATIONS : HResultError = HResultError::from_constant(0x803381A6); // ERROR_WSMAN_QUOTA_MAX_OPERATIONS
+#[doc(hidden)] pub const WSMAN_QUOTA_USER : HResultError = HResultError::from_constant(0x803381A7); // ERROR_WSMAN_QUOTA_USER
+#[doc(hidden)] pub const WSMAN_QUOTA_SYSTEM : HResultError = HResultError::from_constant(0x803381A8); // ERROR_WSMAN_QUOTA_SYSTEM
+#[doc(hidden)] pub const WSMAN_DIFFERENT_AUTHZ_TOKEN : HResultError = HResultError::from_constant(0x803381A9); // ERROR_WSMAN_DIFFERENT_AUTHZ_TOKEN
+#[doc(hidden)] pub const WSMAN_REDIRECT_LOCATION_NOT_AVAILABLE : HResultError = HResultError::from_constant(0x803381AA); // ERROR_WSMAN_REDIRECT_LOCATION_NOT_AVAILABLE
+#[doc(hidden)] pub const WSMAN_QUOTA_MAX_SHELLUSERS : HResultError = HResultError::from_constant(0x803381AB); // ERROR_WSMAN_QUOTA_MAX_SHELLUSERS
+#[doc(hidden)] pub const WSMAN_REMOTESHELLS_NOT_ALLOWED : HResultError = HResultError::from_constant(0x803381AC); // ERROR_WSMAN_REMOTESHELLS_NOT_ALLOWED
+#[doc(hidden)] pub const WSMAN_PULL_PARAMS_NOT_SAME_AS_ENUM : HResultError = HResultError::from_constant(0x803381AD); // ERROR_WSMAN_PULL_PARAMS_NOT_SAME_AS_ENUM
+#[doc(hidden)] pub const WSMAN_DEPRECATED_CONFIG_SETTING : HResultError = HResultError::from_constant(0x803381AE); // ERROR_WSMAN_DEPRECATED_CONFIG_SETTING
+#[doc(hidden)] pub const WSMAN_URI_SECURITY_URI : HResultError = HResultError::from_constant(0x803381AF); // ERROR_WSMAN_URI_SECURITY_URI
+#[doc(hidden)] pub const WSMAN_CANNOT_USE_ALLOW_NEGOTIATE_IMPLICIT_CREDENTIALS_FOR_HTTP : HResultError = HResultError::from_constant(0x803381B0); // ERROR_WSMAN_CANNOT_USE_ALLOW_NEGOTIATE_IMPLICIT_CREDENTIALS_FOR_HTTP
+#[doc(hidden)] pub const WSMAN_CANNOT_USE_PROXY_SETTINGS_FOR_HTTP : HResultError = HResultError::from_constant(0x803381B1); // ERROR_WSMAN_CANNOT_USE_PROXY_SETTINGS_FOR_HTTP
+#[doc(hidden)] pub const WSMAN_CANNOT_USE_PROXY_SETTINGS_FOR_KERBEROS : HResultError = HResultError::from_constant(0x803381B2); // ERROR_WSMAN_CANNOT_USE_PROXY_SETTINGS_FOR_KERBEROS
+#[doc(hidden)] pub const WSMAN_CANNOT_USE_PROXY_SETTINGS_FOR_CREDSSP : HResultError = HResultError::from_constant(0x803381B3); // ERROR_WSMAN_CANNOT_USE_PROXY_SETTINGS_FOR_CREDSSP
+#[doc(hidden)] pub const WSMAN_CLIENT_MULTIPLE_PROXY_AUTH_FLAGS : HResultError = HResultError::from_constant(0x803381B4); // ERROR_WSMAN_CLIENT_MULTIPLE_PROXY_AUTH_FLAGS
+#[doc(hidden)] pub const WSMAN_INVALID_REDIRECT_ERROR : HResultError = HResultError::from_constant(0x803381B5); // ERROR_WSMAN_INVALID_REDIRECT_ERROR
 
 /// The WinRM service received a redirect error from an authorization plug-in where the redirect location was too long.
-pub const REDIRECT_LOCATION_TOO_LONG : ErrorHResult = ErrorHResult::from_constant(0x803381B6); // ERROR_REDIRECT_LOCATION_TOO_LONG
+pub const REDIRECT_LOCATION_TOO_LONG : HResultError = HResultError::from_constant(0x803381B6); // ERROR_REDIRECT_LOCATION_TOO_LONG
 
 /// The WinRM service received a HTTP redirect message redirecting the client but the location URL is invalid.
-pub const REDIRECT_LOCATION_INVALID : ErrorHResult = ErrorHResult::from_constant(0x803381B7); // ERROR_REDIRECT_LOCATION_INVALID
+pub const REDIRECT_LOCATION_INVALID : HResultError = HResultError::from_constant(0x803381B7); // ERROR_REDIRECT_LOCATION_INVALID
 
-#[doc(hidden)] pub const SERVICE_CBT_HARDENING_INVALID : ErrorHResult = ErrorHResult::from_constant(0x803381B8); // ERROR_SERVICE_CBT_HARDENING_INVALID
-#[doc(hidden)] pub const WSMAN_NAME_NOT_RESOLVED : ErrorHResult = ErrorHResult::from_constant(0x803381B9); // ERROR_WSMAN_NAME_NOT_RESOLVED
-#[doc(hidden)] pub const WSMAN_SSL_CONNECTION_ABORTED : ErrorHResult = ErrorHResult::from_constant(0x803381BA); // ERROR_WSMAN_SSL_CONNECTION_ABORTED
-#[doc(hidden)] pub const WSMAN_DEFAULTAUTH_IPADDRESS : ErrorHResult = ErrorHResult::from_constant(0x803381BB); // ERROR_WSMAN_DEFAULTAUTH_IPADDRESS
-#[doc(hidden)] pub const WSMAN_CUSTOMREMOTESHELL_DEPRECATED : ErrorHResult = ErrorHResult::from_constant(0x803381BC); // ERROR_WSMAN_CUSTOMREMOTESHELL_DEPRECATED
-#[doc(hidden)] pub const WSMAN_FEATURE_DEPRECATED : ErrorHResult = ErrorHResult::from_constant(0x803381BD); // ERROR_WSMAN_FEATURE_DEPRECATED
-#[doc(hidden)] pub const WSMAN_INVALID_USESSL_PARAM : ErrorHResult = ErrorHResult::from_constant(0x803381BE); // ERROR_WSMAN_INVALID_USESSL_PARAM
-#[doc(hidden)] pub const WSMAN_INVALID_CONFIGSDDL_URL : ErrorHResult = ErrorHResult::from_constant(0x803381BF); // ERROR_WSMAN_INVALID_CONFIGSDDL_URL
-#[doc(hidden)] pub const WSMAN_ENUMERATE_SHELLCOMAMNDS_FILTER_EXPECTED : ErrorHResult = ErrorHResult::from_constant(0x803381C0); // ERROR_WSMAN_ENUMERATE_SHELLCOMAMNDS_FILTER_EXPECTED
-#[doc(hidden)] pub const WSMAN_ENUMERATE_SHELLCOMMANDS_EPRS_NOTSUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x803381C1); // ERROR_WSMAN_ENUMERATE_SHELLCOMMANDS_EPRS_NOTSUPPORTED
-#[doc(hidden)] pub const WSMAN_CLIENT_CREATESHELL_NAME_INVALID : ErrorHResult = ErrorHResult::from_constant(0x803381C2); // ERROR_WSMAN_CLIENT_CREATESHELL_NAME_INVALID
-#[doc(hidden)] pub const WSMAN_RUNAS_INVALIDUSERCREDENTIALS : ErrorHResult = ErrorHResult::from_constant(0x803381C3); // ERROR_WSMAN_RUNAS_INVALIDUSERCREDENTIALS
-#[doc(hidden)] pub const WINRS_SHELL_DISCONNECTED : ErrorHResult = ErrorHResult::from_constant(0x803381C4); // ERROR_WINRS_SHELL_DISCONNECTED
-#[doc(hidden)] pub const WINRS_SHELL_DISCONNECT_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x803381C5); // ERROR_WINRS_SHELL_DISCONNECT_NOT_SUPPORTED
-#[doc(hidden)] pub const WINRS_SHELL_CLIENTSESSIONID_MISMATCH : ErrorHResult = ErrorHResult::from_constant(0x803381C6); // ERROR_WINRS_SHELL_CLIENTSESSIONID_MISMATCH
-#[doc(hidden)] pub const WSMAN_CLIENT_DISCONNECTSHELL_NULL_PARAM : ErrorHResult = ErrorHResult::from_constant(0x803381C7); // ERROR_WSMAN_CLIENT_DISCONNECTSHELL_NULL_PARAM
-#[doc(hidden)] pub const WSMAN_CLIENT_RECONNECTSHELL_NULL_PARAM : ErrorHResult = ErrorHResult::from_constant(0x803381C8); // ERROR_WSMAN_CLIENT_RECONNECTSHELL_NULL_PARAM
-#[doc(hidden)] pub const WSMAN_CLIENT_CONNECTSHELL_NULL_PARAM : ErrorHResult = ErrorHResult::from_constant(0x803381C9); // ERROR_WSMAN_CLIENT_CONNECTSHELL_NULL_PARAM
-#[doc(hidden)] pub const WSMAN_CLIENT_CONNECTCOMMAND_NULL_PARAM : ErrorHResult = ErrorHResult::from_constant(0x803381CA); // ERROR_WSMAN_CLIENT_CONNECTCOMMAND_NULL_PARAM
-#[doc(hidden)] pub const WINRS_CONNECT_RESPONSE_BAD_BODY : ErrorHResult = ErrorHResult::from_constant(0x803381CB); // ERROR_WINRS_CONNECT_RESPONSE_BAD_BODY
-#[doc(hidden)] pub const WSMAN_COMMAND_TERMINATED : ErrorHResult = ErrorHResult::from_constant(0x803381CC); // ERROR_WSMAN_COMMAND_TERMINATED
-#[doc(hidden)] pub const WINRS_SHELL_CONNECTED_TO_DIFFERENT_CLIENT : ErrorHResult = ErrorHResult::from_constant(0x803381CD); // ERROR_WINRS_SHELL_CONNECTED_TO_DIFFERENT_CLIENT
-#[doc(hidden)] pub const WINRS_SHELL_DISCONNECT_OPERATION_NOT_GRACEFUL : ErrorHResult = ErrorHResult::from_constant(0x803381CE); // ERROR_WINRS_SHELL_DISCONNECT_OPERATION_NOT_GRACEFUL
-#[doc(hidden)] pub const WINRS_SHELL_DISCONNECT_OPERATION_NOT_VALID : ErrorHResult = ErrorHResult::from_constant(0x803381CF); // ERROR_WINRS_SHELL_DISCONNECT_OPERATION_NOT_VALID
-#[doc(hidden)] pub const WINRS_SHELL_RECONNECT_OPERATION_NOT_VALID : ErrorHResult = ErrorHResult::from_constant(0x803381D0); // ERROR_WINRS_SHELL_RECONNECT_OPERATION_NOT_VALID
-#[doc(hidden)] pub const WSMAN_CONFIG_GROUP_POLICY_CHANGE_NOTIFICATION_SUBSCRIPTION_FAILED : ErrorHResult = ErrorHResult::from_constant(0x803381D1); // ERROR_WSMAN_CONFIG_GROUP_POLICY_CHANGE_NOTIFICATION_SUBSCRIPTION_FAILED
-#[doc(hidden)] pub const WSMAN_CLIENT_RECONNECTSHELLCOMMAND_NULL_PARAM : ErrorHResult = ErrorHResult::from_constant(0x803381D2); // ERROR_WSMAN_CLIENT_RECONNECTSHELLCOMMAND_NULL_PARAM
-#[doc(hidden)] pub const WINRS_SHELLCOMMAND_RECONNECT_OPERATION_NOT_VALID : ErrorHResult = ErrorHResult::from_constant(0x803381D3); // ERROR_WINRS_SHELLCOMMAND_RECONNECT_OPERATION_NOT_VALID
-#[doc(hidden)] pub const WINRS_SHELLCOMMAND_CLIENTID_NOT_VALID : ErrorHResult = ErrorHResult::from_constant(0x803381D4); // ERROR_WINRS_SHELLCOMMAND_CLIENTID_NOT_VALID
-#[doc(hidden)] pub const WINRS_SHELL_CLIENTID_NOT_VALID : ErrorHResult = ErrorHResult::from_constant(0x803381D5); // ERROR_WINRS_SHELL_CLIENTID_NOT_VALID
-#[doc(hidden)] pub const WINRS_SHELLCOMMAND_CLIENTID_RESOURCE_CONFLICT : ErrorHResult = ErrorHResult::from_constant(0x803381D6); // ERROR_WINRS_SHELLCOMMAND_CLIENTID_RESOURCE_CONFLICT
-#[doc(hidden)] pub const WINRS_SHELL_CLIENTID_RESOURCE_CONFLICT : ErrorHResult = ErrorHResult::from_constant(0x803381D7); // ERROR_WINRS_SHELL_CLIENTID_RESOURCE_CONFLICT
-#[doc(hidden)] pub const WINRS_SHELLCOMMAND_DISCONNECT_OPERATION_NOT_VALID : ErrorHResult = ErrorHResult::from_constant(0x803381D8); // ERROR_WINRS_SHELLCOMMAND_DISCONNECT_OPERATION_NOT_VALID
-#[doc(hidden)] pub const WSMAN_SUBSCRIBE_WMI_INVALID_KEY : ErrorHResult = ErrorHResult::from_constant(0x803381D9); // ERROR_WSMAN_SUBSCRIBE_WMI_INVALID_KEY
-#[doc(hidden)] pub const WSMAN_CLIENT_INVALID_DISCONNECT_SHELL_FLAG : ErrorHResult = ErrorHResult::from_constant(0x803381DA); // ERROR_WSMAN_CLIENT_INVALID_DISCONNECT_SHELL_FLAG
-#[doc(hidden)] pub const WSMAN_CLIENT_INVALID_SHELL_COMMAND_PAIR : ErrorHResult = ErrorHResult::from_constant(0x803381DB); // ERROR_WSMAN_CLIENT_INVALID_SHELL_COMMAND_PAIR
-#[doc(hidden)] pub const WSMAN_SEMANTICCALLBACK_TIMEDOUT : ErrorHResult = ErrorHResult::from_constant(0x803381DC); // ERROR_WSMAN_SEMANTICCALLBACK_TIMEDOUT
-#[doc(hidden)] pub const WSMAN_SERVICE_REMOTE_ACCESS_DISABLED : ErrorHResult = ErrorHResult::from_constant(0x803381DD); // ERROR_WSMAN_SERVICE_REMOTE_ACCESS_DISABLED
-#[doc(hidden)] pub const WSMAN_SERVICE_STREAM_DISCONNECTED : ErrorHResult = ErrorHResult::from_constant(0x803381DE); // ERROR_WSMAN_SERVICE_STREAM_DISCONNECTED
-#[doc(hidden)] pub const WSMAN_CREATESHELL_RUNAS_FAILED : ErrorHResult = ErrorHResult::from_constant(0x803381DF); // ERROR_WSMAN_CREATESHELL_RUNAS_FAILED
-#[doc(hidden)] pub const WSMAN_INVALID_XML_RUNAS_DISABLED : ErrorHResult = ErrorHResult::from_constant(0x803381E0); // ERROR_WSMAN_INVALID_XML_RUNAS_DISABLED
-#[doc(hidden)] pub const WSMAN_WRONG_METADATA : ErrorHResult = ErrorHResult::from_constant(0x803381E1); // ERROR_WSMAN_WRONG_METADATA
-#[doc(hidden)] pub const WSMAN_UNSUPPORTED_TYPE : ErrorHResult = ErrorHResult::from_constant(0x803381E2); // ERROR_WSMAN_UNSUPPORTED_TYPE
-#[doc(hidden)] pub const WSMAN_REMOTE_CONNECTION_NOT_ALLOWED : ErrorHResult = ErrorHResult::from_constant(0x803381E3); // ERROR_WSMAN_REMOTE_CONNECTION_NOT_ALLOWED
-#[doc(hidden)] pub const WSMAN_QUOTA_MAX_SHELLS_PPQ : ErrorHResult = ErrorHResult::from_constant(0x803381E4); // ERROR_WSMAN_QUOTA_MAX_SHELLS_PPQ
-#[doc(hidden)] pub const WSMAN_QUOTA_MAX_USERS_PPQ : ErrorHResult = ErrorHResult::from_constant(0x803381E5); // ERROR_WSMAN_QUOTA_MAX_USERS_PPQ
-#[doc(hidden)] pub const WSMAN_QUOTA_MAX_PLUGINSHELLS_PPQ : ErrorHResult = ErrorHResult::from_constant(0x803381E6); // ERROR_WSMAN_QUOTA_MAX_PLUGINSHELLS_PPQ
-#[doc(hidden)] pub const WSMAN_QUOTA_MAX_PLUGINOPERATIONS_PPQ : ErrorHResult = ErrorHResult::from_constant(0x803381E7); // ERROR_WSMAN_QUOTA_MAX_PLUGINOPERATIONS_PPQ
-#[doc(hidden)] pub const WSMAN_QUOTA_MAX_OPERATIONS_USER_PPQ : ErrorHResult = ErrorHResult::from_constant(0x803381E8); // ERROR_WSMAN_QUOTA_MAX_OPERATIONS_USER_PPQ
-#[doc(hidden)] pub const WSMAN_QUOTA_MAX_COMMANDS_PER_SHELL_PPQ : ErrorHResult = ErrorHResult::from_constant(0x803381E9); // ERROR_WSMAN_QUOTA_MAX_COMMANDS_PER_SHELL_PPQ
-#[doc(hidden)] pub const WSMAN_QUOTA_MIN_REQUIREMENT_NOT_AVAILABLE_PPQ : ErrorHResult = ErrorHResult::from_constant(0x803381EA); // ERROR_WSMAN_QUOTA_MIN_REQUIREMENT_NOT_AVAILABLE_PPQ
-#[doc(hidden)] pub const WSMAN_NEW_DESERIALIZER : ErrorHResult = ErrorHResult::from_constant(0x803381EB); // ERROR_WSMAN_NEW_DESERIALIZER
-#[doc(hidden)] pub const WSMAN_DESERIALIZE_CLASS : ErrorHResult = ErrorHResult::from_constant(0x803381EC); // ERROR_WSMAN_DESERIALIZE_CLASS
-#[doc(hidden)] pub const WSMAN_GETCLASS : ErrorHResult = ErrorHResult::from_constant(0x803381ED); // ERROR_WSMAN_GETCLASS
-#[doc(hidden)] pub const WSMAN_NEW_SESSION : ErrorHResult = ErrorHResult::from_constant(0x803381EE); // ERROR_WSMAN_NEW_SESSION
-#[doc(hidden)] pub const WSMAN_NULL_KEY : ErrorHResult = ErrorHResult::from_constant(0x803381EF); // ERROR_WSMAN_NULL_KEY
-#[doc(hidden)] pub const WSMAN_MUTUAL_AUTH_FAILED : ErrorHResult = ErrorHResult::from_constant(0x803381F0); // ERROR_WSMAN_MUTUAL_AUTH_FAILED
-#[doc(hidden)] pub const WSMAN_UNSUPPORTED_OCTETTYPE : ErrorHResult = ErrorHResult::from_constant(0x803381F1); // ERROR_WSMAN_UNSUPPORTED_OCTETTYPE
-#[doc(hidden)] pub const WINRS_IDLETIMEOUT_OUTOFBOUNDS : ErrorHResult = ErrorHResult::from_constant(0x803381F2); // ERROR_WINRS_IDLETIMEOUT_OUTOFBOUNDS
-#[doc(hidden)] pub const WSMAN_INSUFFICIENT_METADATA_FOR_BASIC : ErrorHResult = ErrorHResult::from_constant(0x803381F3); // ERROR_WSMAN_INSUFFICIENT_METADATA_FOR_BASIC
-#[doc(hidden)] pub const WSMAN_INVALID_LITERAL_URI : ErrorHResult = ErrorHResult::from_constant(0x803381F4); // ERROR_WSMAN_INVALID_LITERAL_URI
-#[doc(hidden)] pub const WSMAN_OBJECTONLY_INVALID : ErrorHResult = ErrorHResult::from_constant(0x803381F5); // ERROR_WSMAN_OBJECTONLY_INVALID
-#[doc(hidden)] pub const WSMAN_MISSING_CLASSNAME : ErrorHResult = ErrorHResult::from_constant(0x803381F6); // ERROR_WSMAN_MISSING_CLASSNAME
-#[doc(hidden)] pub const WSMAN_EVENTING_INVALID_ENCODING_IN_DELIVERY : ErrorHResult = ErrorHResult::from_constant(0x803381F7); // ERROR_WSMAN_EVENTING_INVALID_ENCODING_IN_DELIVERY
-#[doc(hidden)] pub const WSMAN_DESTINATION_INVALID : ErrorHResult = ErrorHResult::from_constant(0x803381F8); // ERROR_WSMAN_DESTINATION_INVALID
-#[doc(hidden)] pub const WSMAN_UNSUPPORTED_FEATURE_IDENTIFY : ErrorHResult = ErrorHResult::from_constant(0x803381F9); // ERROR_WSMAN_UNSUPPORTED_FEATURE_IDENTIFY
-#[doc(hidden)] pub const WSMAN_CLIENT_SESSION_UNUSABLE : ErrorHResult = ErrorHResult::from_constant(0x803381FA); // ERROR_WSMAN_CLIENT_SESSION_UNUSABLE
-#[doc(hidden)] pub const WSMAN_VIRTUALACCOUNT_NOTSUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x803381FB); // ERROR_WSMAN_VIRTUALACCOUNT_NOTSUPPORTED
-#[doc(hidden)] pub const WSMAN_VIRTUALACCOUNT_NOTSUPPORTED_DOWNLEVEL : ErrorHResult = ErrorHResult::from_constant(0x803381FC); // ERROR_WSMAN_VIRTUALACCOUNT_NOTSUPPORTED_DOWNLEVEL
-#[doc(hidden)] pub const WSMAN_RUNASUSER_MANAGEDACCOUNT_LOGON_FAILED : ErrorHResult = ErrorHResult::from_constant(0x803381FD); // ERROR_WSMAN_RUNASUSER_MANAGEDACCOUNT_LOGON_FAILED
-#[doc(hidden)] pub const WSMAN_CERTMAPPING_CREDENTIAL_MANAGEMENT_FAILIED : ErrorHResult = ErrorHResult::from_constant(0x803381FE); // ERROR_WSMAN_CERTMAPPING_CREDENTIAL_MANAGEMENT_FAILIED
+#[doc(hidden)] pub const SERVICE_CBT_HARDENING_INVALID : HResultError = HResultError::from_constant(0x803381B8); // ERROR_SERVICE_CBT_HARDENING_INVALID
+#[doc(hidden)] pub const WSMAN_NAME_NOT_RESOLVED : HResultError = HResultError::from_constant(0x803381B9); // ERROR_WSMAN_NAME_NOT_RESOLVED
+#[doc(hidden)] pub const WSMAN_SSL_CONNECTION_ABORTED : HResultError = HResultError::from_constant(0x803381BA); // ERROR_WSMAN_SSL_CONNECTION_ABORTED
+#[doc(hidden)] pub const WSMAN_DEFAULTAUTH_IPADDRESS : HResultError = HResultError::from_constant(0x803381BB); // ERROR_WSMAN_DEFAULTAUTH_IPADDRESS
+#[doc(hidden)] pub const WSMAN_CUSTOMREMOTESHELL_DEPRECATED : HResultError = HResultError::from_constant(0x803381BC); // ERROR_WSMAN_CUSTOMREMOTESHELL_DEPRECATED
+#[doc(hidden)] pub const WSMAN_FEATURE_DEPRECATED : HResultError = HResultError::from_constant(0x803381BD); // ERROR_WSMAN_FEATURE_DEPRECATED
+#[doc(hidden)] pub const WSMAN_INVALID_USESSL_PARAM : HResultError = HResultError::from_constant(0x803381BE); // ERROR_WSMAN_INVALID_USESSL_PARAM
+#[doc(hidden)] pub const WSMAN_INVALID_CONFIGSDDL_URL : HResultError = HResultError::from_constant(0x803381BF); // ERROR_WSMAN_INVALID_CONFIGSDDL_URL
+#[doc(hidden)] pub const WSMAN_ENUMERATE_SHELLCOMAMNDS_FILTER_EXPECTED : HResultError = HResultError::from_constant(0x803381C0); // ERROR_WSMAN_ENUMERATE_SHELLCOMAMNDS_FILTER_EXPECTED
+#[doc(hidden)] pub const WSMAN_ENUMERATE_SHELLCOMMANDS_EPRS_NOTSUPPORTED : HResultError = HResultError::from_constant(0x803381C1); // ERROR_WSMAN_ENUMERATE_SHELLCOMMANDS_EPRS_NOTSUPPORTED
+#[doc(hidden)] pub const WSMAN_CLIENT_CREATESHELL_NAME_INVALID : HResultError = HResultError::from_constant(0x803381C2); // ERROR_WSMAN_CLIENT_CREATESHELL_NAME_INVALID
+#[doc(hidden)] pub const WSMAN_RUNAS_INVALIDUSERCREDENTIALS : HResultError = HResultError::from_constant(0x803381C3); // ERROR_WSMAN_RUNAS_INVALIDUSERCREDENTIALS
+#[doc(hidden)] pub const WINRS_SHELL_DISCONNECTED : HResultError = HResultError::from_constant(0x803381C4); // ERROR_WINRS_SHELL_DISCONNECTED
+#[doc(hidden)] pub const WINRS_SHELL_DISCONNECT_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x803381C5); // ERROR_WINRS_SHELL_DISCONNECT_NOT_SUPPORTED
+#[doc(hidden)] pub const WINRS_SHELL_CLIENTSESSIONID_MISMATCH : HResultError = HResultError::from_constant(0x803381C6); // ERROR_WINRS_SHELL_CLIENTSESSIONID_MISMATCH
+#[doc(hidden)] pub const WSMAN_CLIENT_DISCONNECTSHELL_NULL_PARAM : HResultError = HResultError::from_constant(0x803381C7); // ERROR_WSMAN_CLIENT_DISCONNECTSHELL_NULL_PARAM
+#[doc(hidden)] pub const WSMAN_CLIENT_RECONNECTSHELL_NULL_PARAM : HResultError = HResultError::from_constant(0x803381C8); // ERROR_WSMAN_CLIENT_RECONNECTSHELL_NULL_PARAM
+#[doc(hidden)] pub const WSMAN_CLIENT_CONNECTSHELL_NULL_PARAM : HResultError = HResultError::from_constant(0x803381C9); // ERROR_WSMAN_CLIENT_CONNECTSHELL_NULL_PARAM
+#[doc(hidden)] pub const WSMAN_CLIENT_CONNECTCOMMAND_NULL_PARAM : HResultError = HResultError::from_constant(0x803381CA); // ERROR_WSMAN_CLIENT_CONNECTCOMMAND_NULL_PARAM
+#[doc(hidden)] pub const WINRS_CONNECT_RESPONSE_BAD_BODY : HResultError = HResultError::from_constant(0x803381CB); // ERROR_WINRS_CONNECT_RESPONSE_BAD_BODY
+#[doc(hidden)] pub const WSMAN_COMMAND_TERMINATED : HResultError = HResultError::from_constant(0x803381CC); // ERROR_WSMAN_COMMAND_TERMINATED
+#[doc(hidden)] pub const WINRS_SHELL_CONNECTED_TO_DIFFERENT_CLIENT : HResultError = HResultError::from_constant(0x803381CD); // ERROR_WINRS_SHELL_CONNECTED_TO_DIFFERENT_CLIENT
+#[doc(hidden)] pub const WINRS_SHELL_DISCONNECT_OPERATION_NOT_GRACEFUL : HResultError = HResultError::from_constant(0x803381CE); // ERROR_WINRS_SHELL_DISCONNECT_OPERATION_NOT_GRACEFUL
+#[doc(hidden)] pub const WINRS_SHELL_DISCONNECT_OPERATION_NOT_VALID : HResultError = HResultError::from_constant(0x803381CF); // ERROR_WINRS_SHELL_DISCONNECT_OPERATION_NOT_VALID
+#[doc(hidden)] pub const WINRS_SHELL_RECONNECT_OPERATION_NOT_VALID : HResultError = HResultError::from_constant(0x803381D0); // ERROR_WINRS_SHELL_RECONNECT_OPERATION_NOT_VALID
+#[doc(hidden)] pub const WSMAN_CONFIG_GROUP_POLICY_CHANGE_NOTIFICATION_SUBSCRIPTION_FAILED : HResultError = HResultError::from_constant(0x803381D1); // ERROR_WSMAN_CONFIG_GROUP_POLICY_CHANGE_NOTIFICATION_SUBSCRIPTION_FAILED
+#[doc(hidden)] pub const WSMAN_CLIENT_RECONNECTSHELLCOMMAND_NULL_PARAM : HResultError = HResultError::from_constant(0x803381D2); // ERROR_WSMAN_CLIENT_RECONNECTSHELLCOMMAND_NULL_PARAM
+#[doc(hidden)] pub const WINRS_SHELLCOMMAND_RECONNECT_OPERATION_NOT_VALID : HResultError = HResultError::from_constant(0x803381D3); // ERROR_WINRS_SHELLCOMMAND_RECONNECT_OPERATION_NOT_VALID
+#[doc(hidden)] pub const WINRS_SHELLCOMMAND_CLIENTID_NOT_VALID : HResultError = HResultError::from_constant(0x803381D4); // ERROR_WINRS_SHELLCOMMAND_CLIENTID_NOT_VALID
+#[doc(hidden)] pub const WINRS_SHELL_CLIENTID_NOT_VALID : HResultError = HResultError::from_constant(0x803381D5); // ERROR_WINRS_SHELL_CLIENTID_NOT_VALID
+#[doc(hidden)] pub const WINRS_SHELLCOMMAND_CLIENTID_RESOURCE_CONFLICT : HResultError = HResultError::from_constant(0x803381D6); // ERROR_WINRS_SHELLCOMMAND_CLIENTID_RESOURCE_CONFLICT
+#[doc(hidden)] pub const WINRS_SHELL_CLIENTID_RESOURCE_CONFLICT : HResultError = HResultError::from_constant(0x803381D7); // ERROR_WINRS_SHELL_CLIENTID_RESOURCE_CONFLICT
+#[doc(hidden)] pub const WINRS_SHELLCOMMAND_DISCONNECT_OPERATION_NOT_VALID : HResultError = HResultError::from_constant(0x803381D8); // ERROR_WINRS_SHELLCOMMAND_DISCONNECT_OPERATION_NOT_VALID
+#[doc(hidden)] pub const WSMAN_SUBSCRIBE_WMI_INVALID_KEY : HResultError = HResultError::from_constant(0x803381D9); // ERROR_WSMAN_SUBSCRIBE_WMI_INVALID_KEY
+#[doc(hidden)] pub const WSMAN_CLIENT_INVALID_DISCONNECT_SHELL_FLAG : HResultError = HResultError::from_constant(0x803381DA); // ERROR_WSMAN_CLIENT_INVALID_DISCONNECT_SHELL_FLAG
+#[doc(hidden)] pub const WSMAN_CLIENT_INVALID_SHELL_COMMAND_PAIR : HResultError = HResultError::from_constant(0x803381DB); // ERROR_WSMAN_CLIENT_INVALID_SHELL_COMMAND_PAIR
+#[doc(hidden)] pub const WSMAN_SEMANTICCALLBACK_TIMEDOUT : HResultError = HResultError::from_constant(0x803381DC); // ERROR_WSMAN_SEMANTICCALLBACK_TIMEDOUT
+#[doc(hidden)] pub const WSMAN_SERVICE_REMOTE_ACCESS_DISABLED : HResultError = HResultError::from_constant(0x803381DD); // ERROR_WSMAN_SERVICE_REMOTE_ACCESS_DISABLED
+#[doc(hidden)] pub const WSMAN_SERVICE_STREAM_DISCONNECTED : HResultError = HResultError::from_constant(0x803381DE); // ERROR_WSMAN_SERVICE_STREAM_DISCONNECTED
+#[doc(hidden)] pub const WSMAN_CREATESHELL_RUNAS_FAILED : HResultError = HResultError::from_constant(0x803381DF); // ERROR_WSMAN_CREATESHELL_RUNAS_FAILED
+#[doc(hidden)] pub const WSMAN_INVALID_XML_RUNAS_DISABLED : HResultError = HResultError::from_constant(0x803381E0); // ERROR_WSMAN_INVALID_XML_RUNAS_DISABLED
+#[doc(hidden)] pub const WSMAN_WRONG_METADATA : HResultError = HResultError::from_constant(0x803381E1); // ERROR_WSMAN_WRONG_METADATA
+#[doc(hidden)] pub const WSMAN_UNSUPPORTED_TYPE : HResultError = HResultError::from_constant(0x803381E2); // ERROR_WSMAN_UNSUPPORTED_TYPE
+#[doc(hidden)] pub const WSMAN_REMOTE_CONNECTION_NOT_ALLOWED : HResultError = HResultError::from_constant(0x803381E3); // ERROR_WSMAN_REMOTE_CONNECTION_NOT_ALLOWED
+#[doc(hidden)] pub const WSMAN_QUOTA_MAX_SHELLS_PPQ : HResultError = HResultError::from_constant(0x803381E4); // ERROR_WSMAN_QUOTA_MAX_SHELLS_PPQ
+#[doc(hidden)] pub const WSMAN_QUOTA_MAX_USERS_PPQ : HResultError = HResultError::from_constant(0x803381E5); // ERROR_WSMAN_QUOTA_MAX_USERS_PPQ
+#[doc(hidden)] pub const WSMAN_QUOTA_MAX_PLUGINSHELLS_PPQ : HResultError = HResultError::from_constant(0x803381E6); // ERROR_WSMAN_QUOTA_MAX_PLUGINSHELLS_PPQ
+#[doc(hidden)] pub const WSMAN_QUOTA_MAX_PLUGINOPERATIONS_PPQ : HResultError = HResultError::from_constant(0x803381E7); // ERROR_WSMAN_QUOTA_MAX_PLUGINOPERATIONS_PPQ
+#[doc(hidden)] pub const WSMAN_QUOTA_MAX_OPERATIONS_USER_PPQ : HResultError = HResultError::from_constant(0x803381E8); // ERROR_WSMAN_QUOTA_MAX_OPERATIONS_USER_PPQ
+#[doc(hidden)] pub const WSMAN_QUOTA_MAX_COMMANDS_PER_SHELL_PPQ : HResultError = HResultError::from_constant(0x803381E9); // ERROR_WSMAN_QUOTA_MAX_COMMANDS_PER_SHELL_PPQ
+#[doc(hidden)] pub const WSMAN_QUOTA_MIN_REQUIREMENT_NOT_AVAILABLE_PPQ : HResultError = HResultError::from_constant(0x803381EA); // ERROR_WSMAN_QUOTA_MIN_REQUIREMENT_NOT_AVAILABLE_PPQ
+#[doc(hidden)] pub const WSMAN_NEW_DESERIALIZER : HResultError = HResultError::from_constant(0x803381EB); // ERROR_WSMAN_NEW_DESERIALIZER
+#[doc(hidden)] pub const WSMAN_DESERIALIZE_CLASS : HResultError = HResultError::from_constant(0x803381EC); // ERROR_WSMAN_DESERIALIZE_CLASS
+#[doc(hidden)] pub const WSMAN_GETCLASS : HResultError = HResultError::from_constant(0x803381ED); // ERROR_WSMAN_GETCLASS
+#[doc(hidden)] pub const WSMAN_NEW_SESSION : HResultError = HResultError::from_constant(0x803381EE); // ERROR_WSMAN_NEW_SESSION
+#[doc(hidden)] pub const WSMAN_NULL_KEY : HResultError = HResultError::from_constant(0x803381EF); // ERROR_WSMAN_NULL_KEY
+#[doc(hidden)] pub const WSMAN_MUTUAL_AUTH_FAILED : HResultError = HResultError::from_constant(0x803381F0); // ERROR_WSMAN_MUTUAL_AUTH_FAILED
+#[doc(hidden)] pub const WSMAN_UNSUPPORTED_OCTETTYPE : HResultError = HResultError::from_constant(0x803381F1); // ERROR_WSMAN_UNSUPPORTED_OCTETTYPE
+#[doc(hidden)] pub const WINRS_IDLETIMEOUT_OUTOFBOUNDS : HResultError = HResultError::from_constant(0x803381F2); // ERROR_WINRS_IDLETIMEOUT_OUTOFBOUNDS
+#[doc(hidden)] pub const WSMAN_INSUFFICIENT_METADATA_FOR_BASIC : HResultError = HResultError::from_constant(0x803381F3); // ERROR_WSMAN_INSUFFICIENT_METADATA_FOR_BASIC
+#[doc(hidden)] pub const WSMAN_INVALID_LITERAL_URI : HResultError = HResultError::from_constant(0x803381F4); // ERROR_WSMAN_INVALID_LITERAL_URI
+#[doc(hidden)] pub const WSMAN_OBJECTONLY_INVALID : HResultError = HResultError::from_constant(0x803381F5); // ERROR_WSMAN_OBJECTONLY_INVALID
+#[doc(hidden)] pub const WSMAN_MISSING_CLASSNAME : HResultError = HResultError::from_constant(0x803381F6); // ERROR_WSMAN_MISSING_CLASSNAME
+#[doc(hidden)] pub const WSMAN_EVENTING_INVALID_ENCODING_IN_DELIVERY : HResultError = HResultError::from_constant(0x803381F7); // ERROR_WSMAN_EVENTING_INVALID_ENCODING_IN_DELIVERY
+#[doc(hidden)] pub const WSMAN_DESTINATION_INVALID : HResultError = HResultError::from_constant(0x803381F8); // ERROR_WSMAN_DESTINATION_INVALID
+#[doc(hidden)] pub const WSMAN_UNSUPPORTED_FEATURE_IDENTIFY : HResultError = HResultError::from_constant(0x803381F9); // ERROR_WSMAN_UNSUPPORTED_FEATURE_IDENTIFY
+#[doc(hidden)] pub const WSMAN_CLIENT_SESSION_UNUSABLE : HResultError = HResultError::from_constant(0x803381FA); // ERROR_WSMAN_CLIENT_SESSION_UNUSABLE
+#[doc(hidden)] pub const WSMAN_VIRTUALACCOUNT_NOTSUPPORTED : HResultError = HResultError::from_constant(0x803381FB); // ERROR_WSMAN_VIRTUALACCOUNT_NOTSUPPORTED
+#[doc(hidden)] pub const WSMAN_VIRTUALACCOUNT_NOTSUPPORTED_DOWNLEVEL : HResultError = HResultError::from_constant(0x803381FC); // ERROR_WSMAN_VIRTUALACCOUNT_NOTSUPPORTED_DOWNLEVEL
+#[doc(hidden)] pub const WSMAN_RUNASUSER_MANAGEDACCOUNT_LOGON_FAILED : HResultError = HResultError::from_constant(0x803381FD); // ERROR_WSMAN_RUNASUSER_MANAGEDACCOUNT_LOGON_FAILED
+#[doc(hidden)] pub const WSMAN_CERTMAPPING_CREDENTIAL_MANAGEMENT_FAILIED : HResultError = HResultError::from_constant(0x803381FE); // ERROR_WSMAN_CERTMAPPING_CREDENTIAL_MANAGEMENT_FAILIED

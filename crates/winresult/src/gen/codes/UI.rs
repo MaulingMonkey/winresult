@@ -4,76 +4,76 @@ use super::*;
 
 
 /// The object could not be created.
-pub const E_CREATE_FAILED : ErrorHResult = ErrorHResult::from_constant(0x802A0001); // UI_E_CREATE_FAILED
+pub const E_CREATE_FAILED : HResultError = HResultError::from_constant(0x802A0001); // UI_E_CREATE_FAILED
 
 /// Shutdown was already called on this object or the object that owns it.
-pub const E_SHUTDOWN_CALLED : ErrorHResult = ErrorHResult::from_constant(0x802A0002); // UI_E_SHUTDOWN_CALLED
+pub const E_SHUTDOWN_CALLED : HResultError = HResultError::from_constant(0x802A0002); // UI_E_SHUTDOWN_CALLED
 
 /// This method cannot be called during this type of callback.
-pub const E_ILLEGAL_REENTRANCY : ErrorHResult = ErrorHResult::from_constant(0x802A0003); // UI_E_ILLEGAL_REENTRANCY
+pub const E_ILLEGAL_REENTRANCY : HResultError = HResultError::from_constant(0x802A0003); // UI_E_ILLEGAL_REENTRANCY
 
 /// This object has been sealed, so this change is no longer allowed.
-pub const E_OBJECT_SEALED : ErrorHResult = ErrorHResult::from_constant(0x802A0004); // UI_E_OBJECT_SEALED
+pub const E_OBJECT_SEALED : HResultError = HResultError::from_constant(0x802A0004); // UI_E_OBJECT_SEALED
 
 /// The requested value was never set.
-pub const E_VALUE_NOT_SET : ErrorHResult = ErrorHResult::from_constant(0x802A0005); // UI_E_VALUE_NOT_SET
+pub const E_VALUE_NOT_SET : HResultError = HResultError::from_constant(0x802A0005); // UI_E_VALUE_NOT_SET
 
 /// The requested value cannot be determined.
-pub const E_VALUE_NOT_DETERMINED : ErrorHResult = ErrorHResult::from_constant(0x802A0006); // UI_E_VALUE_NOT_DETERMINED
+pub const E_VALUE_NOT_DETERMINED : HResultError = HResultError::from_constant(0x802A0006); // UI_E_VALUE_NOT_DETERMINED
 
 /// A callback returned an invalid output parameter.
-pub const E_INVALID_OUTPUT : ErrorHResult = ErrorHResult::from_constant(0x802A0007); // UI_E_INVALID_OUTPUT
+pub const E_INVALID_OUTPUT : HResultError = HResultError::from_constant(0x802A0007); // UI_E_INVALID_OUTPUT
 
 /// A callback returned a success code other than S_OK or S_FALSE.
-pub const E_BOOLEAN_EXPECTED : ErrorHResult = ErrorHResult::from_constant(0x802A0008); // UI_E_BOOLEAN_EXPECTED
+pub const E_BOOLEAN_EXPECTED : HResultError = HResultError::from_constant(0x802A0008); // UI_E_BOOLEAN_EXPECTED
 
 /// A parameter that should be owned by this object is owned by a different object.
-pub const E_DIFFERENT_OWNER : ErrorHResult = ErrorHResult::from_constant(0x802A0009); // UI_E_DIFFERENT_OWNER
+pub const E_DIFFERENT_OWNER : HResultError = HResultError::from_constant(0x802A0009); // UI_E_DIFFERENT_OWNER
 
 /// More than one item matched the search criteria.
-pub const E_AMBIGUOUS_MATCH : ErrorHResult = ErrorHResult::from_constant(0x802A000A); // UI_E_AMBIGUOUS_MATCH
+pub const E_AMBIGUOUS_MATCH : HResultError = HResultError::from_constant(0x802A000A); // UI_E_AMBIGUOUS_MATCH
 
 /// A floating-point overflow occurred.
-pub const E_FP_OVERFLOW : ErrorHResult = ErrorHResult::from_constant(0x802A000B); // UI_E_FP_OVERFLOW
+pub const E_FP_OVERFLOW : HResultError = HResultError::from_constant(0x802A000B); // UI_E_FP_OVERFLOW
 
 /// This method can only be called from the thread that created the object.
-pub const E_WRONG_THREAD : ErrorHResult = ErrorHResult::from_constant(0x802A000C); // UI_E_WRONG_THREAD
+pub const E_WRONG_THREAD : HResultError = HResultError::from_constant(0x802A000C); // UI_E_WRONG_THREAD
 
 /// The storyboard is currently in the schedule.
-pub const E_STORYBOARD_ACTIVE : ErrorHResult = ErrorHResult::from_constant(0x802A0101); // UI_E_STORYBOARD_ACTIVE
+pub const E_STORYBOARD_ACTIVE : HResultError = HResultError::from_constant(0x802A0101); // UI_E_STORYBOARD_ACTIVE
 
 /// The storyboard is not playing.
-pub const E_STORYBOARD_NOT_PLAYING : ErrorHResult = ErrorHResult::from_constant(0x802A0102); // UI_E_STORYBOARD_NOT_PLAYING
+pub const E_STORYBOARD_NOT_PLAYING : HResultError = HResultError::from_constant(0x802A0102); // UI_E_STORYBOARD_NOT_PLAYING
 
 /// The start keyframe might occur after the end keyframe.
-pub const E_START_KEYFRAME_AFTER_END : ErrorHResult = ErrorHResult::from_constant(0x802A0103); // UI_E_START_KEYFRAME_AFTER_END
+pub const E_START_KEYFRAME_AFTER_END : HResultError = HResultError::from_constant(0x802A0103); // UI_E_START_KEYFRAME_AFTER_END
 
 /// It might not be possible to determine the end keyframe time when the start keyframe is reached.
-pub const E_END_KEYFRAME_NOT_DETERMINED : ErrorHResult = ErrorHResult::from_constant(0x802A0104); // UI_E_END_KEYFRAME_NOT_DETERMINED
+pub const E_END_KEYFRAME_NOT_DETERMINED : HResultError = HResultError::from_constant(0x802A0104); // UI_E_END_KEYFRAME_NOT_DETERMINED
 
 /// Two repeated portions of a storyboard might overlap.
-pub const E_LOOPS_OVERLAP : ErrorHResult = ErrorHResult::from_constant(0x802A0105); // UI_E_LOOPS_OVERLAP
+pub const E_LOOPS_OVERLAP : HResultError = HResultError::from_constant(0x802A0105); // UI_E_LOOPS_OVERLAP
 
 /// The transition has already been added to a storyboard.
-pub const E_TRANSITION_ALREADY_USED : ErrorHResult = ErrorHResult::from_constant(0x802A0106); // UI_E_TRANSITION_ALREADY_USED
+pub const E_TRANSITION_ALREADY_USED : HResultError = HResultError::from_constant(0x802A0106); // UI_E_TRANSITION_ALREADY_USED
 
 /// The transition has not been added to a storyboard.
-pub const E_TRANSITION_NOT_IN_STORYBOARD : ErrorHResult = ErrorHResult::from_constant(0x802A0107); // UI_E_TRANSITION_NOT_IN_STORYBOARD
+pub const E_TRANSITION_NOT_IN_STORYBOARD : HResultError = HResultError::from_constant(0x802A0107); // UI_E_TRANSITION_NOT_IN_STORYBOARD
 
 /// The transition might eclipse the beginning of another transition in the storyboard.
-pub const E_TRANSITION_ECLIPSED : ErrorHResult = ErrorHResult::from_constant(0x802A0108); // UI_E_TRANSITION_ECLIPSED
+pub const E_TRANSITION_ECLIPSED : HResultError = HResultError::from_constant(0x802A0108); // UI_E_TRANSITION_ECLIPSED
 
 /// The given time is earlier than the time passed to the last update.
-pub const E_TIME_BEFORE_LAST_UPDATE : ErrorHResult = ErrorHResult::from_constant(0x802A0109); // UI_E_TIME_BEFORE_LAST_UPDATE
+pub const E_TIME_BEFORE_LAST_UPDATE : HResultError = HResultError::from_constant(0x802A0109); // UI_E_TIME_BEFORE_LAST_UPDATE
 
 /// This client is already connected to a timer.
-pub const E_TIMER_CLIENT_ALREADY_CONNECTED : ErrorHResult = ErrorHResult::from_constant(0x802A010A); // UI_E_TIMER_CLIENT_ALREADY_CONNECTED
+pub const E_TIMER_CLIENT_ALREADY_CONNECTED : HResultError = HResultError::from_constant(0x802A010A); // UI_E_TIMER_CLIENT_ALREADY_CONNECTED
 
 /// The passed dimension is invalid or does not match the object's dimension.
-pub const E_INVALID_DIMENSION : ErrorHResult = ErrorHResult::from_constant(0x802A010B); // UI_E_INVALID_DIMENSION
+pub const E_INVALID_DIMENSION : HResultError = HResultError::from_constant(0x802A010B); // UI_E_INVALID_DIMENSION
 
 /// The added primitive begins at or beyond the duration of the interpolator.
-pub const E_PRIMITIVE_OUT_OF_BOUNDS : ErrorHResult = ErrorHResult::from_constant(0x802A010C); // UI_E_PRIMITIVE_OUT_OF_BOUNDS
+pub const E_PRIMITIVE_OUT_OF_BOUNDS : HResultError = HResultError::from_constant(0x802A010C); // UI_E_PRIMITIVE_OUT_OF_BOUNDS
 
 /// The operation cannot be completed because the window is being closed.
-pub const E_WINDOW_CLOSED : ErrorHResult = ErrorHResult::from_constant(0x802A0201); // UI_E_WINDOW_CLOSED
+pub const E_WINDOW_CLOSED : HResultError = HResultError::from_constant(0x802A0201); // UI_E_WINDOW_CLOSED

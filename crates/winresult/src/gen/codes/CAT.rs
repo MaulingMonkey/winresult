@@ -4,7 +4,7 @@ use super::*;
 
 
 /// CATID does not exist
-pub const E_CATIDNOEXIST : ErrorHResult = ErrorHResult::from_constant(0x80040160); // CAT_E_CATIDNOEXIST
+pub const E_CATIDNOEXIST : HResultError = HResultError::from_constant(0x80040160); // CAT_E_CATIDNOEXIST
 
 /// Description not found
-pub const E_NODESCRIPTION : ErrorHResult = ErrorHResult::from_constant(0x80040161); // CAT_E_NODESCRIPTION
+pub const E_NODESCRIPTION : HResultError = HResultError::from_constant(0x80040161); // CAT_E_NODESCRIPTION

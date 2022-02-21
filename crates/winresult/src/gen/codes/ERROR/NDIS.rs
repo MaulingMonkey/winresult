@@ -4,148 +4,148 @@ use super::*;
 
 
 /// The binding to the network interface is being closed.
-pub const INTERFACE_CLOSING : ErrorHResult = ErrorHResult::from_constant(0x80340002); // ERROR_NDIS_INTERFACE_CLOSING
+pub const INTERFACE_CLOSING : HResultError = HResultError::from_constant(0x80340002); // ERROR_NDIS_INTERFACE_CLOSING
 
 /// An invalid version was specified.
-pub const BAD_VERSION : ErrorHResult = ErrorHResult::from_constant(0x80340004); // ERROR_NDIS_BAD_VERSION
+pub const BAD_VERSION : HResultError = HResultError::from_constant(0x80340004); // ERROR_NDIS_BAD_VERSION
 
 /// An invalid characteristics table was used.
-pub const BAD_CHARACTERISTICS : ErrorHResult = ErrorHResult::from_constant(0x80340005); // ERROR_NDIS_BAD_CHARACTERISTICS
+pub const BAD_CHARACTERISTICS : HResultError = HResultError::from_constant(0x80340005); // ERROR_NDIS_BAD_CHARACTERISTICS
 
 /// Failed to find the network interface or network interface is not ready.
-pub const ADAPTER_NOT_FOUND : ErrorHResult = ErrorHResult::from_constant(0x80340006); // ERROR_NDIS_ADAPTER_NOT_FOUND
+pub const ADAPTER_NOT_FOUND : HResultError = HResultError::from_constant(0x80340006); // ERROR_NDIS_ADAPTER_NOT_FOUND
 
 /// Failed to open the network interface.
-pub const OPEN_FAILED : ErrorHResult = ErrorHResult::from_constant(0x80340007); // ERROR_NDIS_OPEN_FAILED
+pub const OPEN_FAILED : HResultError = HResultError::from_constant(0x80340007); // ERROR_NDIS_OPEN_FAILED
 
 /// Network interface has encountered an internal unrecoverable failure.
-pub const DEVICE_FAILED : ErrorHResult = ErrorHResult::from_constant(0x80340008); // ERROR_NDIS_DEVICE_FAILED
+pub const DEVICE_FAILED : HResultError = HResultError::from_constant(0x80340008); // ERROR_NDIS_DEVICE_FAILED
 
 /// The multicast list on the network interface is full.
-pub const MULTICAST_FULL : ErrorHResult = ErrorHResult::from_constant(0x80340009); // ERROR_NDIS_MULTICAST_FULL
+pub const MULTICAST_FULL : HResultError = HResultError::from_constant(0x80340009); // ERROR_NDIS_MULTICAST_FULL
 
 /// An attempt was made to add a duplicate multicast address to the list.
-pub const MULTICAST_EXISTS : ErrorHResult = ErrorHResult::from_constant(0x8034000A); // ERROR_NDIS_MULTICAST_EXISTS
+pub const MULTICAST_EXISTS : HResultError = HResultError::from_constant(0x8034000A); // ERROR_NDIS_MULTICAST_EXISTS
 
 /// At attempt was made to remove a multicast address that was never added.
-pub const MULTICAST_NOT_FOUND : ErrorHResult = ErrorHResult::from_constant(0x8034000B); // ERROR_NDIS_MULTICAST_NOT_FOUND
+pub const MULTICAST_NOT_FOUND : HResultError = HResultError::from_constant(0x8034000B); // ERROR_NDIS_MULTICAST_NOT_FOUND
 
 /// Netowork interface aborted the request.
-pub const REQUEST_ABORTED : ErrorHResult = ErrorHResult::from_constant(0x8034000C); // ERROR_NDIS_REQUEST_ABORTED
+pub const REQUEST_ABORTED : HResultError = HResultError::from_constant(0x8034000C); // ERROR_NDIS_REQUEST_ABORTED
 
 /// Network interface can not process the request because it is being reset.
-pub const RESET_IN_PROGRESS : ErrorHResult = ErrorHResult::from_constant(0x8034000D); // ERROR_NDIS_RESET_IN_PROGRESS
+pub const RESET_IN_PROGRESS : HResultError = HResultError::from_constant(0x8034000D); // ERROR_NDIS_RESET_IN_PROGRESS
 
 /// Netword interface does not support this request.
-pub const NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x803400BB); // ERROR_NDIS_NOT_SUPPORTED
+pub const NOT_SUPPORTED : HResultError = HResultError::from_constant(0x803400BB); // ERROR_NDIS_NOT_SUPPORTED
 
 /// An attempt was made to send an invalid packet on a network interface.
-pub const INVALID_PACKET : ErrorHResult = ErrorHResult::from_constant(0x8034000F); // ERROR_NDIS_INVALID_PACKET
+pub const INVALID_PACKET : HResultError = HResultError::from_constant(0x8034000F); // ERROR_NDIS_INVALID_PACKET
 
 /// Network interface is not ready to complete this operation.
-pub const ADAPTER_NOT_READY : ErrorHResult = ErrorHResult::from_constant(0x80340011); // ERROR_NDIS_ADAPTER_NOT_READY
+pub const ADAPTER_NOT_READY : HResultError = HResultError::from_constant(0x80340011); // ERROR_NDIS_ADAPTER_NOT_READY
 
 /// The length of the buffer submitted for this operation is not valid.
-pub const INVALID_LENGTH : ErrorHResult = ErrorHResult::from_constant(0x80340014); // ERROR_NDIS_INVALID_LENGTH
+pub const INVALID_LENGTH : HResultError = HResultError::from_constant(0x80340014); // ERROR_NDIS_INVALID_LENGTH
 
 /// The data used for this operation is not valid.
-pub const INVALID_DATA : ErrorHResult = ErrorHResult::from_constant(0x80340015); // ERROR_NDIS_INVALID_DATA
+pub const INVALID_DATA : HResultError = HResultError::from_constant(0x80340015); // ERROR_NDIS_INVALID_DATA
 
 /// The length of buffer submitted for this operation is too small.
-pub const BUFFER_TOO_SHORT : ErrorHResult = ErrorHResult::from_constant(0x80340016); // ERROR_NDIS_BUFFER_TOO_SHORT
+pub const BUFFER_TOO_SHORT : HResultError = HResultError::from_constant(0x80340016); // ERROR_NDIS_BUFFER_TOO_SHORT
 
 /// Network interface does not support this OID (Object Identifier)
-pub const INVALID_OID : ErrorHResult = ErrorHResult::from_constant(0x80340017); // ERROR_NDIS_INVALID_OID
+pub const INVALID_OID : HResultError = HResultError::from_constant(0x80340017); // ERROR_NDIS_INVALID_OID
 
 /// The network interface has been removed.
-pub const ADAPTER_REMOVED : ErrorHResult = ErrorHResult::from_constant(0x80340018); // ERROR_NDIS_ADAPTER_REMOVED
+pub const ADAPTER_REMOVED : HResultError = HResultError::from_constant(0x80340018); // ERROR_NDIS_ADAPTER_REMOVED
 
 /// Network interface does not support this media type.
-pub const UNSUPPORTED_MEDIA : ErrorHResult = ErrorHResult::from_constant(0x80340019); // ERROR_NDIS_UNSUPPORTED_MEDIA
+pub const UNSUPPORTED_MEDIA : HResultError = HResultError::from_constant(0x80340019); // ERROR_NDIS_UNSUPPORTED_MEDIA
 
 /// An attempt was made to remove a token ring group address that is in use by other components.
-pub const GROUP_ADDRESS_IN_USE : ErrorHResult = ErrorHResult::from_constant(0x8034001A); // ERROR_NDIS_GROUP_ADDRESS_IN_USE
+pub const GROUP_ADDRESS_IN_USE : HResultError = HResultError::from_constant(0x8034001A); // ERROR_NDIS_GROUP_ADDRESS_IN_USE
 
 /// An attempt was made to map a file that can not be found.
-pub const FILE_NOT_FOUND : ErrorHResult = ErrorHResult::from_constant(0x8034001B); // ERROR_NDIS_FILE_NOT_FOUND
+pub const FILE_NOT_FOUND : HResultError = HResultError::from_constant(0x8034001B); // ERROR_NDIS_FILE_NOT_FOUND
 
 /// An error occurred while NDIS tried to map the file.
-pub const ERROR_READING_FILE : ErrorHResult = ErrorHResult::from_constant(0x8034001C); // ERROR_NDIS_ERROR_READING_FILE
+pub const ERROR_READING_FILE : HResultError = HResultError::from_constant(0x8034001C); // ERROR_NDIS_ERROR_READING_FILE
 
 /// An attempt was made to map a file that is alreay mapped.
-pub const ALREADY_MAPPED : ErrorHResult = ErrorHResult::from_constant(0x8034001D); // ERROR_NDIS_ALREADY_MAPPED
+pub const ALREADY_MAPPED : HResultError = HResultError::from_constant(0x8034001D); // ERROR_NDIS_ALREADY_MAPPED
 
 /// An attempt to allocate a hardware resource failed because the resource is used by another component.
-pub const RESOURCE_CONFLICT : ErrorHResult = ErrorHResult::from_constant(0x8034001E); // ERROR_NDIS_RESOURCE_CONFLICT
+pub const RESOURCE_CONFLICT : HResultError = HResultError::from_constant(0x8034001E); // ERROR_NDIS_RESOURCE_CONFLICT
 
 /// The I/O operation failed because network media is disconnected or wireless access point is out of range.
-pub const MEDIA_DISCONNECTED : ErrorHResult = ErrorHResult::from_constant(0x8034001F); // ERROR_NDIS_MEDIA_DISCONNECTED
+pub const MEDIA_DISCONNECTED : HResultError = HResultError::from_constant(0x8034001F); // ERROR_NDIS_MEDIA_DISCONNECTED
 
 /// The network address used in the request is invalid.
-pub const INVALID_ADDRESS : ErrorHResult = ErrorHResult::from_constant(0x80340022); // ERROR_NDIS_INVALID_ADDRESS
+pub const INVALID_ADDRESS : HResultError = HResultError::from_constant(0x80340022); // ERROR_NDIS_INVALID_ADDRESS
 
 /// The specified request is not a valid operation for the target device.
-pub const INVALID_DEVICE_REQUEST : ErrorHResult = ErrorHResult::from_constant(0x80340010); // ERROR_NDIS_INVALID_DEVICE_REQUEST
+pub const INVALID_DEVICE_REQUEST : HResultError = HResultError::from_constant(0x80340010); // ERROR_NDIS_INVALID_DEVICE_REQUEST
 
 /// The offload operation on the network interface has been paused.
-pub const PAUSED : ErrorHResult = ErrorHResult::from_constant(0x8034002A); // ERROR_NDIS_PAUSED
+pub const PAUSED : HResultError = HResultError::from_constant(0x8034002A); // ERROR_NDIS_PAUSED
 
 /// Network interface was not found.
-pub const INTERFACE_NOT_FOUND : ErrorHResult = ErrorHResult::from_constant(0x8034002B); // ERROR_NDIS_INTERFACE_NOT_FOUND
+pub const INTERFACE_NOT_FOUND : HResultError = HResultError::from_constant(0x8034002B); // ERROR_NDIS_INTERFACE_NOT_FOUND
 
 /// The revision number specified in the structure is not supported.
-pub const UNSUPPORTED_REVISION : ErrorHResult = ErrorHResult::from_constant(0x8034002C); // ERROR_NDIS_UNSUPPORTED_REVISION
+pub const UNSUPPORTED_REVISION : HResultError = HResultError::from_constant(0x8034002C); // ERROR_NDIS_UNSUPPORTED_REVISION
 
 /// The specified port does not exist on this network interface.
-pub const INVALID_PORT : ErrorHResult = ErrorHResult::from_constant(0x8034002D); // ERROR_NDIS_INVALID_PORT
+pub const INVALID_PORT : HResultError = HResultError::from_constant(0x8034002D); // ERROR_NDIS_INVALID_PORT
 
 /// The current state of the specified port on this network interface does not support the requested operation.
-pub const INVALID_PORT_STATE : ErrorHResult = ErrorHResult::from_constant(0x8034002E); // ERROR_NDIS_INVALID_PORT_STATE
+pub const INVALID_PORT_STATE : HResultError = HResultError::from_constant(0x8034002E); // ERROR_NDIS_INVALID_PORT_STATE
 
 /// The miniport adapter is in low power state.
-pub const LOW_POWER_STATE : ErrorHResult = ErrorHResult::from_constant(0x8034002F); // ERROR_NDIS_LOW_POWER_STATE
+pub const LOW_POWER_STATE : HResultError = HResultError::from_constant(0x8034002F); // ERROR_NDIS_LOW_POWER_STATE
 
 /// This operation requires the miniport adapter to be reinitialized.
-pub const REINIT_REQUIRED : ErrorHResult = ErrorHResult::from_constant(0x80340030); // ERROR_NDIS_REINIT_REQUIRED
+pub const REINIT_REQUIRED : HResultError = HResultError::from_constant(0x80340030); // ERROR_NDIS_REINIT_REQUIRED
 
 /// There are not enough queues to complete the operation.
-pub const NO_QUEUES : ErrorHResult = ErrorHResult::from_constant(0x80340031); // ERROR_NDIS_NO_QUEUES
+pub const NO_QUEUES : HResultError = HResultError::from_constant(0x80340031); // ERROR_NDIS_NO_QUEUES
 
 /// The wireless local area network interface is in auto configuration mode and doesn't support the requested parameter change operation.
-pub const DOT11_AUTO_CONFIG_ENABLED : ErrorHResult = ErrorHResult::from_constant(0x80342000); // ERROR_NDIS_DOT11_AUTO_CONFIG_ENABLED
+pub const DOT11_AUTO_CONFIG_ENABLED : HResultError = HResultError::from_constant(0x80342000); // ERROR_NDIS_DOT11_AUTO_CONFIG_ENABLED
 
 /// The wireless local area network interface is busy and can not perform the requested operation.
-pub const DOT11_MEDIA_IN_USE : ErrorHResult = ErrorHResult::from_constant(0x80342001); // ERROR_NDIS_DOT11_MEDIA_IN_USE
+pub const DOT11_MEDIA_IN_USE : HResultError = HResultError::from_constant(0x80342001); // ERROR_NDIS_DOT11_MEDIA_IN_USE
 
 /// The wireless local area network interface is powered down and doesn't support the requested operation.
-pub const DOT11_POWER_STATE_INVALID : ErrorHResult = ErrorHResult::from_constant(0x80342002); // ERROR_NDIS_DOT11_POWER_STATE_INVALID
+pub const DOT11_POWER_STATE_INVALID : HResultError = HResultError::from_constant(0x80342002); // ERROR_NDIS_DOT11_POWER_STATE_INVALID
 
 /// The list of wake on LAN patterns is full.
-pub const PM_WOL_PATTERN_LIST_FULL : ErrorHResult = ErrorHResult::from_constant(0x80342003); // ERROR_NDIS_PM_WOL_PATTERN_LIST_FULL
+pub const PM_WOL_PATTERN_LIST_FULL : HResultError = HResultError::from_constant(0x80342003); // ERROR_NDIS_PM_WOL_PATTERN_LIST_FULL
 
 /// The list of low power protocol offloads is full.
-pub const PM_PROTOCOL_OFFLOAD_LIST_FULL : ErrorHResult = ErrorHResult::from_constant(0x80342004); // ERROR_NDIS_PM_PROTOCOL_OFFLOAD_LIST_FULL
+pub const PM_PROTOCOL_OFFLOAD_LIST_FULL : HResultError = HResultError::from_constant(0x80342004); // ERROR_NDIS_PM_PROTOCOL_OFFLOAD_LIST_FULL
 
 /// The wireless local area network interface cannot start an AP on the specified channel right now.
-pub const DOT11_AP_CHANNEL_CURRENTLY_NOT_AVAILABLE : ErrorHResult = ErrorHResult::from_constant(0x80342005); // ERROR_NDIS_DOT11_AP_CHANNEL_CURRENTLY_NOT_AVAILABLE
+pub const DOT11_AP_CHANNEL_CURRENTLY_NOT_AVAILABLE : HResultError = HResultError::from_constant(0x80342005); // ERROR_NDIS_DOT11_AP_CHANNEL_CURRENTLY_NOT_AVAILABLE
 
 /// The wireless local area network interface cannot start an AP on the specified band right now.
-pub const DOT11_AP_BAND_CURRENTLY_NOT_AVAILABLE : ErrorHResult = ErrorHResult::from_constant(0x80342006); // ERROR_NDIS_DOT11_AP_BAND_CURRENTLY_NOT_AVAILABLE
+pub const DOT11_AP_BAND_CURRENTLY_NOT_AVAILABLE : HResultError = HResultError::from_constant(0x80342006); // ERROR_NDIS_DOT11_AP_BAND_CURRENTLY_NOT_AVAILABLE
 
 /// The wireless local area network interface cannot start an AP on this channel due to regulatory reasons.
-pub const DOT11_AP_CHANNEL_NOT_ALLOWED : ErrorHResult = ErrorHResult::from_constant(0x80342007); // ERROR_NDIS_DOT11_AP_CHANNEL_NOT_ALLOWED
+pub const DOT11_AP_CHANNEL_NOT_ALLOWED : HResultError = HResultError::from_constant(0x80342007); // ERROR_NDIS_DOT11_AP_CHANNEL_NOT_ALLOWED
 
 /// The wireless local area network interface cannot start an AP on this band due to regulatory reasons.
-pub const DOT11_AP_BAND_NOT_ALLOWED : ErrorHResult = ErrorHResult::from_constant(0x80342008); // ERROR_NDIS_DOT11_AP_BAND_NOT_ALLOWED
+pub const DOT11_AP_BAND_NOT_ALLOWED : HResultError = HResultError::from_constant(0x80342008); // ERROR_NDIS_DOT11_AP_BAND_NOT_ALLOWED
 
 /// The request will be completed later by NDIS status indication.
-pub const INDICATION_REQUIRED : SuccessHResult = SuccessHResult::from_constant(0x00340001); // ERROR_NDIS_INDICATION_REQUIRED
+pub const INDICATION_REQUIRED : HResultSuccess = HResultSuccess::from_constant(0x00340001); // ERROR_NDIS_INDICATION_REQUIRED
 
 /// The TCP connection is not offloadable because of a local policy setting.
-pub const OFFLOAD_POLICY : ErrorHResult = ErrorHResult::from_constant(0xC034100F); // ERROR_NDIS_OFFLOAD_POLICY
+pub const OFFLOAD_POLICY : HResultError = HResultError::from_constant(0xC034100F); // ERROR_NDIS_OFFLOAD_POLICY
 
 /// The TCP connection is not offloadable by the Chimney Offload target.
-pub const OFFLOAD_CONNECTION_REJECTED : ErrorHResult = ErrorHResult::from_constant(0xC0341012); // ERROR_NDIS_OFFLOAD_CONNECTION_REJECTED
+pub const OFFLOAD_CONNECTION_REJECTED : HResultError = HResultError::from_constant(0xC0341012); // ERROR_NDIS_OFFLOAD_CONNECTION_REJECTED
 
 /// The IP Path object is not in an offloadable state.
-pub const OFFLOAD_PATH_REJECTED : ErrorHResult = ErrorHResult::from_constant(0xC0341013); // ERROR_NDIS_OFFLOAD_PATH_REJECTED
+pub const OFFLOAD_PATH_REJECTED : HResultError = HResultError::from_constant(0xC0341013); // ERROR_NDIS_OFFLOAD_PATH_REJECTED

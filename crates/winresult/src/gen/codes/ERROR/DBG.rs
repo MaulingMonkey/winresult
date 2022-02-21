@@ -40,13 +40,13 @@ pub const EXCEPTION_HANDLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_cons
 pub const CONTINUE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(767); // ERROR_DBG_CONTINUE
 
 /// Could not create new process from ARM architecture device.
-pub const CREATE_PROCESS_FAILURE_LOCKDOWN : ErrorHResult = ErrorHResult::from_constant(0x80B00001); // ERROR_DBG_CREATE_PROCESS_FAILURE_LOCKDOWN
+pub const CREATE_PROCESS_FAILURE_LOCKDOWN : HResultError = HResultError::from_constant(0x80B00001); // ERROR_DBG_CREATE_PROCESS_FAILURE_LOCKDOWN
 
 /// Could not attach to the application process from ARM architecture device.
-pub const ATTACH_PROCESS_FAILURE_LOCKDOWN : ErrorHResult = ErrorHResult::from_constant(0x80B00002); // ERROR_DBG_ATTACH_PROCESS_FAILURE_LOCKDOWN
+pub const ATTACH_PROCESS_FAILURE_LOCKDOWN : HResultError = HResultError::from_constant(0x80B00002); // ERROR_DBG_ATTACH_PROCESS_FAILURE_LOCKDOWN
 
 /// Could not connect to dbgsrv server from ARM architecture device.
-pub const CONNECT_SERVER_FAILURE_LOCKDOWN : ErrorHResult = ErrorHResult::from_constant(0x80B00003); // ERROR_DBG_CONNECT_SERVER_FAILURE_LOCKDOWN
+pub const CONNECT_SERVER_FAILURE_LOCKDOWN : HResultError = HResultError::from_constant(0x80B00003); // ERROR_DBG_CONNECT_SERVER_FAILURE_LOCKDOWN
 
 /// Could not start dbgsrv server from ARM architecture device.
-pub const START_SERVER_FAILURE_LOCKDOWN : ErrorHResult = ErrorHResult::from_constant(0x80B00004); // ERROR_DBG_START_SERVER_FAILURE_LOCKDOWN
+pub const START_SERVER_FAILURE_LOCKDOWN : HResultError = HResultError::from_constant(0x80B00004); // ERROR_DBG_START_SERVER_FAILURE_LOCKDOWN

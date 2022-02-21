@@ -4,175 +4,175 @@ use super::*;
 
 
 /// Unable to perform requested operation.
-pub const E_INVALIDFUNCTION : ErrorHResult = ErrorHResult::from_constant(0x80030001); // STG_E_INVALIDFUNCTION
+pub const E_INVALIDFUNCTION : HResultError = HResultError::from_constant(0x80030001); // STG_E_INVALIDFUNCTION
 
 /// `%1` could not be found.
-pub const E_FILENOTFOUND : ErrorHResult = ErrorHResult::from_constant(0x80030002); // STG_E_FILENOTFOUND
+pub const E_FILENOTFOUND : HResultError = HResultError::from_constant(0x80030002); // STG_E_FILENOTFOUND
 
 /// The path `%1` could not be found.
-pub const E_PATHNOTFOUND : ErrorHResult = ErrorHResult::from_constant(0x80030003); // STG_E_PATHNOTFOUND
+pub const E_PATHNOTFOUND : HResultError = HResultError::from_constant(0x80030003); // STG_E_PATHNOTFOUND
 
 /// There are insufficient resources to open another file.
-pub const E_TOOMANYOPENFILES : ErrorHResult = ErrorHResult::from_constant(0x80030004); // STG_E_TOOMANYOPENFILES
+pub const E_TOOMANYOPENFILES : HResultError = HResultError::from_constant(0x80030004); // STG_E_TOOMANYOPENFILES
 
 /// Access Denied.
-pub const E_ACCESSDENIED : ErrorHResult = ErrorHResult::from_constant(0x80030005); // STG_E_ACCESSDENIED
+pub const E_ACCESSDENIED : HResultError = HResultError::from_constant(0x80030005); // STG_E_ACCESSDENIED
 
 /// Attempted an operation on an invalid object.
-pub const E_INVALIDHANDLE : ErrorHResult = ErrorHResult::from_constant(0x80030006); // STG_E_INVALIDHANDLE
+pub const E_INVALIDHANDLE : HResultError = HResultError::from_constant(0x80030006); // STG_E_INVALIDHANDLE
 
 /// There is insufficient memory available to complete operation.
-pub const E_INSUFFICIENTMEMORY : ErrorHResult = ErrorHResult::from_constant(0x80030008); // STG_E_INSUFFICIENTMEMORY
+pub const E_INSUFFICIENTMEMORY : HResultError = HResultError::from_constant(0x80030008); // STG_E_INSUFFICIENTMEMORY
 
 /// Invalid pointer error.
-pub const E_INVALIDPOINTER : ErrorHResult = ErrorHResult::from_constant(0x80030009); // STG_E_INVALIDPOINTER
+pub const E_INVALIDPOINTER : HResultError = HResultError::from_constant(0x80030009); // STG_E_INVALIDPOINTER
 
 /// There are no more entries to return.
-pub const E_NOMOREFILES : ErrorHResult = ErrorHResult::from_constant(0x80030012); // STG_E_NOMOREFILES
+pub const E_NOMOREFILES : HResultError = HResultError::from_constant(0x80030012); // STG_E_NOMOREFILES
 
 /// Disk is write-protected.
-pub const E_DISKISWRITEPROTECTED : ErrorHResult = ErrorHResult::from_constant(0x80030013); // STG_E_DISKISWRITEPROTECTED
+pub const E_DISKISWRITEPROTECTED : HResultError = HResultError::from_constant(0x80030013); // STG_E_DISKISWRITEPROTECTED
 
 /// An error occurred during a seek operation.
-pub const E_SEEKERROR : ErrorHResult = ErrorHResult::from_constant(0x80030019); // STG_E_SEEKERROR
+pub const E_SEEKERROR : HResultError = HResultError::from_constant(0x80030019); // STG_E_SEEKERROR
 
 /// A disk error occurred during a write operation.
-pub const E_WRITEFAULT : ErrorHResult = ErrorHResult::from_constant(0x8003001D); // STG_E_WRITEFAULT
+pub const E_WRITEFAULT : HResultError = HResultError::from_constant(0x8003001D); // STG_E_WRITEFAULT
 
 /// A disk error occurred during a read operation.
-pub const E_READFAULT : ErrorHResult = ErrorHResult::from_constant(0x8003001E); // STG_E_READFAULT
+pub const E_READFAULT : HResultError = HResultError::from_constant(0x8003001E); // STG_E_READFAULT
 
 /// A share violation has occurred.
-pub const E_SHAREVIOLATION : ErrorHResult = ErrorHResult::from_constant(0x80030020); // STG_E_SHAREVIOLATION
+pub const E_SHAREVIOLATION : HResultError = HResultError::from_constant(0x80030020); // STG_E_SHAREVIOLATION
 
 /// A lock violation has occurred.
-pub const E_LOCKVIOLATION : ErrorHResult = ErrorHResult::from_constant(0x80030021); // STG_E_LOCKVIOLATION
+pub const E_LOCKVIOLATION : HResultError = HResultError::from_constant(0x80030021); // STG_E_LOCKVIOLATION
 
 /// `%1` already exists.
-pub const E_FILEALREADYEXISTS : ErrorHResult = ErrorHResult::from_constant(0x80030050); // STG_E_FILEALREADYEXISTS
+pub const E_FILEALREADYEXISTS : HResultError = HResultError::from_constant(0x80030050); // STG_E_FILEALREADYEXISTS
 
 /// Invalid parameter error.
-pub const E_INVALIDPARAMETER : ErrorHResult = ErrorHResult::from_constant(0x80030057); // STG_E_INVALIDPARAMETER
+pub const E_INVALIDPARAMETER : HResultError = HResultError::from_constant(0x80030057); // STG_E_INVALIDPARAMETER
 
 /// There is insufficient disk space to complete operation.
-pub const E_MEDIUMFULL : ErrorHResult = ErrorHResult::from_constant(0x80030070); // STG_E_MEDIUMFULL
+pub const E_MEDIUMFULL : HResultError = HResultError::from_constant(0x80030070); // STG_E_MEDIUMFULL
 
 /// Illegal write of non-simple property to simple property set.
-pub const E_PROPSETMISMATCHED : ErrorHResult = ErrorHResult::from_constant(0x800300F0); // STG_E_PROPSETMISMATCHED
+pub const E_PROPSETMISMATCHED : HResultError = HResultError::from_constant(0x800300F0); // STG_E_PROPSETMISMATCHED
 
 /// An API call exited abnormally.
-pub const E_ABNORMALAPIEXIT : ErrorHResult = ErrorHResult::from_constant(0x800300FA); // STG_E_ABNORMALAPIEXIT
+pub const E_ABNORMALAPIEXIT : HResultError = HResultError::from_constant(0x800300FA); // STG_E_ABNORMALAPIEXIT
 
 /// The file `%1` is not a valid compound file.
-pub const E_INVALIDHEADER : ErrorHResult = ErrorHResult::from_constant(0x800300FB); // STG_E_INVALIDHEADER
+pub const E_INVALIDHEADER : HResultError = HResultError::from_constant(0x800300FB); // STG_E_INVALIDHEADER
 
 /// The name `%1` is not valid.
-pub const E_INVALIDNAME : ErrorHResult = ErrorHResult::from_constant(0x800300FC); // STG_E_INVALIDNAME
+pub const E_INVALIDNAME : HResultError = HResultError::from_constant(0x800300FC); // STG_E_INVALIDNAME
 
 /// An unexpected error occurred.
-pub const E_UNKNOWN : ErrorHResult = ErrorHResult::from_constant(0x800300FD); // STG_E_UNKNOWN
+pub const E_UNKNOWN : HResultError = HResultError::from_constant(0x800300FD); // STG_E_UNKNOWN
 
 /// That function is not implemented.
-pub const E_UNIMPLEMENTEDFUNCTION : ErrorHResult = ErrorHResult::from_constant(0x800300FE); // STG_E_UNIMPLEMENTEDFUNCTION
+pub const E_UNIMPLEMENTEDFUNCTION : HResultError = HResultError::from_constant(0x800300FE); // STG_E_UNIMPLEMENTEDFUNCTION
 
 /// Invalid flag error.
-pub const E_INVALIDFLAG : ErrorHResult = ErrorHResult::from_constant(0x800300FF); // STG_E_INVALIDFLAG
+pub const E_INVALIDFLAG : HResultError = HResultError::from_constant(0x800300FF); // STG_E_INVALIDFLAG
 
 /// Attempted to use an object that is busy.
-pub const E_INUSE : ErrorHResult = ErrorHResult::from_constant(0x80030100); // STG_E_INUSE
+pub const E_INUSE : HResultError = HResultError::from_constant(0x80030100); // STG_E_INUSE
 
 /// The storage has been changed since the last commit.
-pub const E_NOTCURRENT : ErrorHResult = ErrorHResult::from_constant(0x80030101); // STG_E_NOTCURRENT
+pub const E_NOTCURRENT : HResultError = HResultError::from_constant(0x80030101); // STG_E_NOTCURRENT
 
 /// Attempted to use an object that has ceased to exist.
-pub const E_REVERTED : ErrorHResult = ErrorHResult::from_constant(0x80030102); // STG_E_REVERTED
+pub const E_REVERTED : HResultError = HResultError::from_constant(0x80030102); // STG_E_REVERTED
 
 /// Can't save.
-pub const E_CANTSAVE : ErrorHResult = ErrorHResult::from_constant(0x80030103); // STG_E_CANTSAVE
+pub const E_CANTSAVE : HResultError = HResultError::from_constant(0x80030103); // STG_E_CANTSAVE
 
 /// The compound file `%1` was produced with an incompatible version of storage.
-pub const E_OLDFORMAT : ErrorHResult = ErrorHResult::from_constant(0x80030104); // STG_E_OLDFORMAT
+pub const E_OLDFORMAT : HResultError = HResultError::from_constant(0x80030104); // STG_E_OLDFORMAT
 
 /// The compound file `%1` was produced with a newer version of storage.
-pub const E_OLDDLL : ErrorHResult = ErrorHResult::from_constant(0x80030105); // STG_E_OLDDLL
+pub const E_OLDDLL : HResultError = HResultError::from_constant(0x80030105); // STG_E_OLDDLL
 
 /// Share.exe or equivalent is required for operation.
-pub const E_SHAREREQUIRED : ErrorHResult = ErrorHResult::from_constant(0x80030106); // STG_E_SHAREREQUIRED
+pub const E_SHAREREQUIRED : HResultError = HResultError::from_constant(0x80030106); // STG_E_SHAREREQUIRED
 
 /// Illegal operation called on non-file based storage.
-pub const E_NOTFILEBASEDSTORAGE : ErrorHResult = ErrorHResult::from_constant(0x80030107); // STG_E_NOTFILEBASEDSTORAGE
+pub const E_NOTFILEBASEDSTORAGE : HResultError = HResultError::from_constant(0x80030107); // STG_E_NOTFILEBASEDSTORAGE
 
 /// Illegal operation called on object with extant marshallings.
-pub const E_EXTANTMARSHALLINGS : ErrorHResult = ErrorHResult::from_constant(0x80030108); // STG_E_EXTANTMARSHALLINGS
+pub const E_EXTANTMARSHALLINGS : HResultError = HResultError::from_constant(0x80030108); // STG_E_EXTANTMARSHALLINGS
 
 /// The docfile has been corrupted.
-pub const E_DOCFILECORRUPT : ErrorHResult = ErrorHResult::from_constant(0x80030109); // STG_E_DOCFILECORRUPT
+pub const E_DOCFILECORRUPT : HResultError = HResultError::from_constant(0x80030109); // STG_E_DOCFILECORRUPT
 
 /// OLE32.DLL has been loaded at the wrong address.
-pub const E_BADBASEADDRESS : ErrorHResult = ErrorHResult::from_constant(0x80030110); // STG_E_BADBASEADDRESS
+pub const E_BADBASEADDRESS : HResultError = HResultError::from_constant(0x80030110); // STG_E_BADBASEADDRESS
 
 /// The compound file is too large for the current implementation
-pub const E_DOCFILETOOLARGE : ErrorHResult = ErrorHResult::from_constant(0x80030111); // STG_E_DOCFILETOOLARGE
+pub const E_DOCFILETOOLARGE : HResultError = HResultError::from_constant(0x80030111); // STG_E_DOCFILETOOLARGE
 
 /// The compound file was not created with the STGM_SIMPLE flag
-pub const E_NOTSIMPLEFORMAT : ErrorHResult = ErrorHResult::from_constant(0x80030112); // STG_E_NOTSIMPLEFORMAT
+pub const E_NOTSIMPLEFORMAT : HResultError = HResultError::from_constant(0x80030112); // STG_E_NOTSIMPLEFORMAT
 
 /// The file download was aborted abnormally. The file is incomplete.
-pub const E_INCOMPLETE : ErrorHResult = ErrorHResult::from_constant(0x80030201); // STG_E_INCOMPLETE
+pub const E_INCOMPLETE : HResultError = HResultError::from_constant(0x80030201); // STG_E_INCOMPLETE
 
 /// The file download has been terminated.
-pub const E_TERMINATED : ErrorHResult = ErrorHResult::from_constant(0x80030202); // STG_E_TERMINATED
+pub const E_TERMINATED : HResultError = HResultError::from_constant(0x80030202); // STG_E_TERMINATED
 
 /// The underlying file was converted to compound file format.
-pub const S_CONVERTED : SuccessHResult = SuccessHResult::from_constant(0x00030200); // STG_S_CONVERTED
+pub const S_CONVERTED : HResultSuccess = HResultSuccess::from_constant(0x00030200); // STG_S_CONVERTED
 
 /// The storage operation should block until more data is available.
-pub const S_BLOCK : SuccessHResult = SuccessHResult::from_constant(0x00030201); // STG_S_BLOCK
+pub const S_BLOCK : HResultSuccess = HResultSuccess::from_constant(0x00030201); // STG_S_BLOCK
 
 /// The storage operation should retry immediately.
-pub const S_RETRYNOW : SuccessHResult = SuccessHResult::from_constant(0x00030202); // STG_S_RETRYNOW
+pub const S_RETRYNOW : HResultSuccess = HResultSuccess::from_constant(0x00030202); // STG_S_RETRYNOW
 
 /// The notified event sink will not influence the storage operation.
-pub const S_MONITORING : SuccessHResult = SuccessHResult::from_constant(0x00030203); // STG_S_MONITORING
+pub const S_MONITORING : HResultSuccess = HResultSuccess::from_constant(0x00030203); // STG_S_MONITORING
 
 /// Multiple opens prevent consolidated. (commit succeeded).
-pub const S_MULTIPLEOPENS : SuccessHResult = SuccessHResult::from_constant(0x00030204); // STG_S_MULTIPLEOPENS
+pub const S_MULTIPLEOPENS : HResultSuccess = HResultSuccess::from_constant(0x00030204); // STG_S_MULTIPLEOPENS
 
 /// Consolidation of the storage file failed. (commit succeeded).
-pub const S_CONSOLIDATIONFAILED : SuccessHResult = SuccessHResult::from_constant(0x00030205); // STG_S_CONSOLIDATIONFAILED
+pub const S_CONSOLIDATIONFAILED : HResultSuccess = HResultSuccess::from_constant(0x00030205); // STG_S_CONSOLIDATIONFAILED
 
 /// Consolidation of the storage file is inappropriate. (commit succeeded).
-pub const S_CANNOTCONSOLIDATE : SuccessHResult = SuccessHResult::from_constant(0x00030206); // STG_S_CANNOTCONSOLIDATE
+pub const S_CANNOTCONSOLIDATE : HResultSuccess = HResultSuccess::from_constant(0x00030206); // STG_S_CANNOTCONSOLIDATE
 
 /// The device needs to be power cycled. (commit succeeded).
-pub const S_POWER_CYCLE_REQUIRED : SuccessHResult = SuccessHResult::from_constant(0x00030207); // STG_S_POWER_CYCLE_REQUIRED
+pub const S_POWER_CYCLE_REQUIRED : HResultSuccess = HResultSuccess::from_constant(0x00030207); // STG_S_POWER_CYCLE_REQUIRED
 
 /// The specified firmware slot is invalid.
-pub const E_FIRMWARE_SLOT_INVALID : ErrorHResult = ErrorHResult::from_constant(0x80030208); // STG_E_FIRMWARE_SLOT_INVALID
+pub const E_FIRMWARE_SLOT_INVALID : HResultError = HResultError::from_constant(0x80030208); // STG_E_FIRMWARE_SLOT_INVALID
 
 /// The specified firmware image is invalid.
-pub const E_FIRMWARE_IMAGE_INVALID : ErrorHResult = ErrorHResult::from_constant(0x80030209); // STG_E_FIRMWARE_IMAGE_INVALID
+pub const E_FIRMWARE_IMAGE_INVALID : HResultError = HResultError::from_constant(0x80030209); // STG_E_FIRMWARE_IMAGE_INVALID
 
 /// The storage device is unresponsive.
-pub const E_DEVICE_UNRESPONSIVE : ErrorHResult = ErrorHResult::from_constant(0x8003020A); // STG_E_DEVICE_UNRESPONSIVE
+pub const E_DEVICE_UNRESPONSIVE : HResultError = HResultError::from_constant(0x8003020A); // STG_E_DEVICE_UNRESPONSIVE
 
 /// Generic Copy Protection Error.
-pub const E_STATUS_COPY_PROTECTION_FAILURE : ErrorHResult = ErrorHResult::from_constant(0x80030305); // STG_E_STATUS_COPY_PROTECTION_FAILURE
+pub const E_STATUS_COPY_PROTECTION_FAILURE : HResultError = HResultError::from_constant(0x80030305); // STG_E_STATUS_COPY_PROTECTION_FAILURE
 
 /// Copy Protection Error - DVD CSS Authentication failed.
-pub const E_CSS_AUTHENTICATION_FAILURE : ErrorHResult = ErrorHResult::from_constant(0x80030306); // STG_E_CSS_AUTHENTICATION_FAILURE
+pub const E_CSS_AUTHENTICATION_FAILURE : HResultError = HResultError::from_constant(0x80030306); // STG_E_CSS_AUTHENTICATION_FAILURE
 
 /// Copy Protection Error - The given sector does not have a valid CSS key.
-pub const E_CSS_KEY_NOT_PRESENT : ErrorHResult = ErrorHResult::from_constant(0x80030307); // STG_E_CSS_KEY_NOT_PRESENT
+pub const E_CSS_KEY_NOT_PRESENT : HResultError = HResultError::from_constant(0x80030307); // STG_E_CSS_KEY_NOT_PRESENT
 
 /// Copy Protection Error - DVD session key not established.
-pub const E_CSS_KEY_NOT_ESTABLISHED : ErrorHResult = ErrorHResult::from_constant(0x80030308); // STG_E_CSS_KEY_NOT_ESTABLISHED
+pub const E_CSS_KEY_NOT_ESTABLISHED : HResultError = HResultError::from_constant(0x80030308); // STG_E_CSS_KEY_NOT_ESTABLISHED
 
 /// Copy Protection Error - The read failed because the sector is encrypted.
-pub const E_CSS_SCRAMBLED_SECTOR : ErrorHResult = ErrorHResult::from_constant(0x80030309); // STG_E_CSS_SCRAMBLED_SECTOR
+pub const E_CSS_SCRAMBLED_SECTOR : HResultError = HResultError::from_constant(0x80030309); // STG_E_CSS_SCRAMBLED_SECTOR
 
 /// Copy Protection Error - The current DVD's region does not correspond to the region setting of the drive.
-pub const E_CSS_REGION_MISMATCH : ErrorHResult = ErrorHResult::from_constant(0x8003030A); // STG_E_CSS_REGION_MISMATCH
+pub const E_CSS_REGION_MISMATCH : HResultError = HResultError::from_constant(0x8003030A); // STG_E_CSS_REGION_MISMATCH
 
 /// Copy Protection Error - The drive's region setting may be permanent or the number of user resets has been exhausted.
-pub const E_RESETS_EXHAUSTED : ErrorHResult = ErrorHResult::from_constant(0x8003030B); // STG_E_RESETS_EXHAUSTED
+pub const E_RESETS_EXHAUSTED : HResultError = HResultError::from_constant(0x8003030B); // STG_E_RESETS_EXHAUSTED

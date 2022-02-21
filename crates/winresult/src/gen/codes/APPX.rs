@@ -4,70 +4,70 @@ use super::*;
 
 
 /// Appx packaging API has encountered an internal error.
-pub const E_PACKAGING_INTERNAL : ErrorHResult = ErrorHResult::from_constant(0x80080200); // APPX_E_PACKAGING_INTERNAL
+pub const E_PACKAGING_INTERNAL : HResultError = HResultError::from_constant(0x80080200); // APPX_E_PACKAGING_INTERNAL
 
 /// The file is not a valid Appx package because its contents are interleaved.
-pub const E_INTERLEAVING_NOT_ALLOWED : ErrorHResult = ErrorHResult::from_constant(0x80080201); // APPX_E_INTERLEAVING_NOT_ALLOWED
+pub const E_INTERLEAVING_NOT_ALLOWED : HResultError = HResultError::from_constant(0x80080201); // APPX_E_INTERLEAVING_NOT_ALLOWED
 
 /// The file is not a valid Appx package because it contains OPC relationships.
-pub const E_RELATIONSHIPS_NOT_ALLOWED : ErrorHResult = ErrorHResult::from_constant(0x80080202); // APPX_E_RELATIONSHIPS_NOT_ALLOWED
+pub const E_RELATIONSHIPS_NOT_ALLOWED : HResultError = HResultError::from_constant(0x80080202); // APPX_E_RELATIONSHIPS_NOT_ALLOWED
 
 /// The file is not a valid Appx package because it is missing a manifest or block map, or missing a signature file when the code integrity file is present.
-pub const E_MISSING_REQUIRED_FILE : ErrorHResult = ErrorHResult::from_constant(0x80080203); // APPX_E_MISSING_REQUIRED_FILE
+pub const E_MISSING_REQUIRED_FILE : HResultError = HResultError::from_constant(0x80080203); // APPX_E_MISSING_REQUIRED_FILE
 
 /// The Appx package's manifest is invalid.
-pub const E_INVALID_MANIFEST : ErrorHResult = ErrorHResult::from_constant(0x80080204); // APPX_E_INVALID_MANIFEST
+pub const E_INVALID_MANIFEST : HResultError = HResultError::from_constant(0x80080204); // APPX_E_INVALID_MANIFEST
 
 /// The Appx package's block map is invalid.
-pub const E_INVALID_BLOCKMAP : ErrorHResult = ErrorHResult::from_constant(0x80080205); // APPX_E_INVALID_BLOCKMAP
+pub const E_INVALID_BLOCKMAP : HResultError = HResultError::from_constant(0x80080205); // APPX_E_INVALID_BLOCKMAP
 
 /// The Appx package's content cannot be read because it is corrupt.
-pub const E_CORRUPT_CONTENT : ErrorHResult = ErrorHResult::from_constant(0x80080206); // APPX_E_CORRUPT_CONTENT
+pub const E_CORRUPT_CONTENT : HResultError = HResultError::from_constant(0x80080206); // APPX_E_CORRUPT_CONTENT
 
 /// The computed hash value of the block does not match the one stored in the block map.
-pub const E_BLOCK_HASH_INVALID : ErrorHResult = ErrorHResult::from_constant(0x80080207); // APPX_E_BLOCK_HASH_INVALID
+pub const E_BLOCK_HASH_INVALID : HResultError = HResultError::from_constant(0x80080207); // APPX_E_BLOCK_HASH_INVALID
 
 /// The requested byte range is over 4GB when translated to byte range of blocks.
-pub const E_REQUESTED_RANGE_TOO_LARGE : ErrorHResult = ErrorHResult::from_constant(0x80080208); // APPX_E_REQUESTED_RANGE_TOO_LARGE
+pub const E_REQUESTED_RANGE_TOO_LARGE : HResultError = HResultError::from_constant(0x80080208); // APPX_E_REQUESTED_RANGE_TOO_LARGE
 
 /// The SIP_SUBJECTINFO structure used to sign the package didn't contain the required data.
-pub const E_INVALID_SIP_CLIENT_DATA : ErrorHResult = ErrorHResult::from_constant(0x80080209); // APPX_E_INVALID_SIP_CLIENT_DATA
+pub const E_INVALID_SIP_CLIENT_DATA : HResultError = HResultError::from_constant(0x80080209); // APPX_E_INVALID_SIP_CLIENT_DATA
 
 /// The APPX_KEY_INFO structure used to encrypt or decrypt the package contains invalid data.
-pub const E_INVALID_KEY_INFO : ErrorHResult = ErrorHResult::from_constant(0x8008020A); // APPX_E_INVALID_KEY_INFO
+pub const E_INVALID_KEY_INFO : HResultError = HResultError::from_constant(0x8008020A); // APPX_E_INVALID_KEY_INFO
 
 /// The Appx package's content group map is invalid.
-pub const E_INVALID_CONTENTGROUPMAP : ErrorHResult = ErrorHResult::from_constant(0x8008020B); // APPX_E_INVALID_CONTENTGROUPMAP
+pub const E_INVALID_CONTENTGROUPMAP : HResultError = HResultError::from_constant(0x8008020B); // APPX_E_INVALID_CONTENTGROUPMAP
 
 /// The .appinstaller file is invalid.
-pub const E_INVALID_APPINSTALLER : ErrorHResult = ErrorHResult::from_constant(0x8008020C); // APPX_E_INVALID_APPINSTALLER
+pub const E_INVALID_APPINSTALLER : HResultError = HResultError::from_constant(0x8008020C); // APPX_E_INVALID_APPINSTALLER
 
 /// The baseline package version in delta package does not match the version in the baseline package to be updated.
-pub const E_DELTA_BASELINE_VERSION_MISMATCH : ErrorHResult = ErrorHResult::from_constant(0x8008020D); // APPX_E_DELTA_BASELINE_VERSION_MISMATCH
+pub const E_DELTA_BASELINE_VERSION_MISMATCH : HResultError = HResultError::from_constant(0x8008020D); // APPX_E_DELTA_BASELINE_VERSION_MISMATCH
 
 /// The delta package is missing a file from the updated package.
-pub const E_DELTA_PACKAGE_MISSING_FILE : ErrorHResult = ErrorHResult::from_constant(0x8008020E); // APPX_E_DELTA_PACKAGE_MISSING_FILE
+pub const E_DELTA_PACKAGE_MISSING_FILE : HResultError = HResultError::from_constant(0x8008020E); // APPX_E_DELTA_PACKAGE_MISSING_FILE
 
 /// The delta package is invalid.
-pub const E_INVALID_DELTA_PACKAGE : ErrorHResult = ErrorHResult::from_constant(0x8008020F); // APPX_E_INVALID_DELTA_PACKAGE
+pub const E_INVALID_DELTA_PACKAGE : HResultError = HResultError::from_constant(0x8008020F); // APPX_E_INVALID_DELTA_PACKAGE
 
 /// The delta appended package is not allowed for the current operation.
-pub const E_DELTA_APPENDED_PACKAGE_NOT_ALLOWED : ErrorHResult = ErrorHResult::from_constant(0x80080210); // APPX_E_DELTA_APPENDED_PACKAGE_NOT_ALLOWED
+pub const E_DELTA_APPENDED_PACKAGE_NOT_ALLOWED : HResultError = HResultError::from_constant(0x80080210); // APPX_E_DELTA_APPENDED_PACKAGE_NOT_ALLOWED
 
 /// The packaging layout file is invalid.
-pub const E_INVALID_PACKAGING_LAYOUT : ErrorHResult = ErrorHResult::from_constant(0x80080211); // APPX_E_INVALID_PACKAGING_LAYOUT
+pub const E_INVALID_PACKAGING_LAYOUT : HResultError = HResultError::from_constant(0x80080211); // APPX_E_INVALID_PACKAGING_LAYOUT
 
 /// The packageSignConfig file is invalid.
-pub const E_INVALID_PACKAGESIGNCONFIG : ErrorHResult = ErrorHResult::from_constant(0x80080212); // APPX_E_INVALID_PACKAGESIGNCONFIG
+pub const E_INVALID_PACKAGESIGNCONFIG : HResultError = HResultError::from_constant(0x80080212); // APPX_E_INVALID_PACKAGESIGNCONFIG
 
 /// The resources.pri file is not allowed when there are no resource elements in the package manifest.
-pub const E_RESOURCESPRI_NOT_ALLOWED : ErrorHResult = ErrorHResult::from_constant(0x80080213); // APPX_E_RESOURCESPRI_NOT_ALLOWED
+pub const E_RESOURCESPRI_NOT_ALLOWED : HResultError = HResultError::from_constant(0x80080213); // APPX_E_RESOURCESPRI_NOT_ALLOWED
 
 /// The compression state of file in baseline and updated package does not match.
-pub const E_FILE_COMPRESSION_MISMATCH : ErrorHResult = ErrorHResult::from_constant(0x80080214); // APPX_E_FILE_COMPRESSION_MISMATCH
+pub const E_FILE_COMPRESSION_MISMATCH : HResultError = HResultError::from_constant(0x80080214); // APPX_E_FILE_COMPRESSION_MISMATCH
 
 /// Non appx extensions are not allowed for payload packages targeting older platforms.
-pub const E_INVALID_PAYLOAD_PACKAGE_EXTENSION : ErrorHResult = ErrorHResult::from_constant(0x80080215); // APPX_E_INVALID_PAYLOAD_PACKAGE_EXTENSION
+pub const E_INVALID_PAYLOAD_PACKAGE_EXTENSION : HResultError = HResultError::from_constant(0x80080215); // APPX_E_INVALID_PAYLOAD_PACKAGE_EXTENSION
 
 /// The encryptionExclusionFileList file is invalid.
-pub const E_INVALID_ENCRYPTION_EXCLUSION_FILE_LIST : ErrorHResult = ErrorHResult::from_constant(0x80080216); // APPX_E_INVALID_ENCRYPTION_EXCLUSION_FILE_LIST
+pub const E_INVALID_ENCRYPTION_EXCLUSION_FILE_LIST : HResultError = HResultError::from_constant(0x80080216); // APPX_E_INVALID_ENCRYPTION_EXCLUSION_FILE_LIST

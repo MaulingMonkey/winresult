@@ -70,4 +70,4 @@ pub const IS_PAUSED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(928
 
 /// The WinRM service cannot process the request. The Channel Binding Token Hardening Level (CbtHardeningLevel) value is invalid.
 /// The valid values are "None", "Relaxed" and "Strict". Change the CbtHardeningLevel value and try again.
-pub const CBT_HARDENING_INVALID : ErrorHResult = ErrorHResult::from_constant(0x803381B8); // ERROR_SERVICE_CBT_HARDENING_INVALID
+pub const CBT_HARDENING_INVALID : HResultError = HResultError::from_constant(0x803381B8); // ERROR_SERVICE_CBT_HARDENING_INVALID

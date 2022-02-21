@@ -4,460 +4,460 @@ use super::*;
 
 
 /// TPM 1.2: Authentication failed.
-pub const E_AUTHFAIL : ErrorHResult = ErrorHResult::from_constant(0x80280001); // TPM_E_AUTHFAIL
+pub const E_AUTHFAIL : HResultError = HResultError::from_constant(0x80280001); // TPM_E_AUTHFAIL
 
 /// TPM 1.2: The index to a PCR, DIR or other register is incorrect.
-pub const E_BADINDEX : ErrorHResult = ErrorHResult::from_constant(0x80280002); // TPM_E_BADINDEX
+pub const E_BADINDEX : HResultError = HResultError::from_constant(0x80280002); // TPM_E_BADINDEX
 
 /// TPM 1.2: One or more parameter is bad.
-pub const E_BAD_PARAMETER : ErrorHResult = ErrorHResult::from_constant(0x80280003); // TPM_E_BAD_PARAMETER
+pub const E_BAD_PARAMETER : HResultError = HResultError::from_constant(0x80280003); // TPM_E_BAD_PARAMETER
 
 /// TPM 1.2: An operation completed successfully but the auditing of that operation failed.
-pub const E_AUDITFAILURE : ErrorHResult = ErrorHResult::from_constant(0x80280004); // TPM_E_AUDITFAILURE
+pub const E_AUDITFAILURE : HResultError = HResultError::from_constant(0x80280004); // TPM_E_AUDITFAILURE
 
 /// TPM 1.2: The clear disable flag is set and all clear operations now require physical access.
-pub const E_CLEAR_DISABLED : ErrorHResult = ErrorHResult::from_constant(0x80280005); // TPM_E_CLEAR_DISABLED
+pub const E_CLEAR_DISABLED : HResultError = HResultError::from_constant(0x80280005); // TPM_E_CLEAR_DISABLED
 
 /// TPM 1.2: Activate the Trusted Platform Module (TPM).
-pub const E_DEACTIVATED : ErrorHResult = ErrorHResult::from_constant(0x80280006); // TPM_E_DEACTIVATED
+pub const E_DEACTIVATED : HResultError = HResultError::from_constant(0x80280006); // TPM_E_DEACTIVATED
 
 /// TPM 1.2: Enable the Trusted Platform Module (TPM).
-pub const E_DISABLED : ErrorHResult = ErrorHResult::from_constant(0x80280007); // TPM_E_DISABLED
+pub const E_DISABLED : HResultError = HResultError::from_constant(0x80280007); // TPM_E_DISABLED
 
 /// TPM 1.2: The target command has been disabled.
-pub const E_DISABLED_CMD : ErrorHResult = ErrorHResult::from_constant(0x80280008); // TPM_E_DISABLED_CMD
+pub const E_DISABLED_CMD : HResultError = HResultError::from_constant(0x80280008); // TPM_E_DISABLED_CMD
 
 /// TPM 1.2: The operation failed.
-pub const E_FAIL : ErrorHResult = ErrorHResult::from_constant(0x80280009); // TPM_E_FAIL
+pub const E_FAIL : HResultError = HResultError::from_constant(0x80280009); // TPM_E_FAIL
 
 /// TPM 1.2: The ordinal was unknown or inconsistent.
-pub const E_BAD_ORDINAL : ErrorHResult = ErrorHResult::from_constant(0x8028000A); // TPM_E_BAD_ORDINAL
+pub const E_BAD_ORDINAL : HResultError = HResultError::from_constant(0x8028000A); // TPM_E_BAD_ORDINAL
 
 /// TPM 1.2: The ability to install an owner is disabled.
-pub const E_INSTALL_DISABLED : ErrorHResult = ErrorHResult::from_constant(0x8028000B); // TPM_E_INSTALL_DISABLED
+pub const E_INSTALL_DISABLED : HResultError = HResultError::from_constant(0x8028000B); // TPM_E_INSTALL_DISABLED
 
 /// TPM 1.2: The key handle cannot be interpreted.
-pub const E_INVALID_KEYHANDLE : ErrorHResult = ErrorHResult::from_constant(0x8028000C); // TPM_E_INVALID_KEYHANDLE
+pub const E_INVALID_KEYHANDLE : HResultError = HResultError::from_constant(0x8028000C); // TPM_E_INVALID_KEYHANDLE
 
 /// TPM 1.2: The key handle points to an invalid key.
-pub const E_KEYNOTFOUND : ErrorHResult = ErrorHResult::from_constant(0x8028000D); // TPM_E_KEYNOTFOUND
+pub const E_KEYNOTFOUND : HResultError = HResultError::from_constant(0x8028000D); // TPM_E_KEYNOTFOUND
 
 /// TPM 1.2: Unacceptable encryption scheme.
-pub const E_INAPPROPRIATE_ENC : ErrorHResult = ErrorHResult::from_constant(0x8028000E); // TPM_E_INAPPROPRIATE_ENC
+pub const E_INAPPROPRIATE_ENC : HResultError = HResultError::from_constant(0x8028000E); // TPM_E_INAPPROPRIATE_ENC
 
 /// TPM 1.2: Migration authorization failed.
-pub const E_MIGRATEFAIL : ErrorHResult = ErrorHResult::from_constant(0x8028000F); // TPM_E_MIGRATEFAIL
+pub const E_MIGRATEFAIL : HResultError = HResultError::from_constant(0x8028000F); // TPM_E_MIGRATEFAIL
 
 /// TPM 1.2: PCR information could not be interpreted.
-pub const E_INVALID_PCR_INFO : ErrorHResult = ErrorHResult::from_constant(0x80280010); // TPM_E_INVALID_PCR_INFO
+pub const E_INVALID_PCR_INFO : HResultError = HResultError::from_constant(0x80280010); // TPM_E_INVALID_PCR_INFO
 
 /// TPM 1.2: No room to load key.
-pub const E_NOSPACE : ErrorHResult = ErrorHResult::from_constant(0x80280011); // TPM_E_NOSPACE
+pub const E_NOSPACE : HResultError = HResultError::from_constant(0x80280011); // TPM_E_NOSPACE
 
 /// TPM 1.2: There is no Storage Root Key (SRK) set.
-pub const E_NOSRK : ErrorHResult = ErrorHResult::from_constant(0x80280012); // TPM_E_NOSRK
+pub const E_NOSRK : HResultError = HResultError::from_constant(0x80280012); // TPM_E_NOSRK
 
 /// TPM 1.2: An encrypted blob is invalid or was not created by this TPM.
-pub const E_NOTSEALED_BLOB : ErrorHResult = ErrorHResult::from_constant(0x80280013); // TPM_E_NOTSEALED_BLOB
+pub const E_NOTSEALED_BLOB : HResultError = HResultError::from_constant(0x80280013); // TPM_E_NOTSEALED_BLOB
 
 /// TPM 1.2: The Trusted Platform Module (TPM) already has an owner.
-pub const E_OWNER_SET : ErrorHResult = ErrorHResult::from_constant(0x80280014); // TPM_E_OWNER_SET
+pub const E_OWNER_SET : HResultError = HResultError::from_constant(0x80280014); // TPM_E_OWNER_SET
 
 /// TPM 1.2: The TPM has insufficient internal resources to perform the requested action.
-pub const E_RESOURCES : ErrorHResult = ErrorHResult::from_constant(0x80280015); // TPM_E_RESOURCES
+pub const E_RESOURCES : HResultError = HResultError::from_constant(0x80280015); // TPM_E_RESOURCES
 
 /// TPM 1.2: A random string was too short.
-pub const E_SHORTRANDOM : ErrorHResult = ErrorHResult::from_constant(0x80280016); // TPM_E_SHORTRANDOM
+pub const E_SHORTRANDOM : HResultError = HResultError::from_constant(0x80280016); // TPM_E_SHORTRANDOM
 
 /// TPM 1.2: The TPM does not have the space to perform the operation.
-pub const E_SIZE : ErrorHResult = ErrorHResult::from_constant(0x80280017); // TPM_E_SIZE
+pub const E_SIZE : HResultError = HResultError::from_constant(0x80280017); // TPM_E_SIZE
 
 /// TPM 1.2: The named PCR value does not match the current PCR value.
-pub const E_WRONGPCRVAL : ErrorHResult = ErrorHResult::from_constant(0x80280018); // TPM_E_WRONGPCRVAL
+pub const E_WRONGPCRVAL : HResultError = HResultError::from_constant(0x80280018); // TPM_E_WRONGPCRVAL
 
 /// TPM 1.2: The paramSize argument to the command has the incorrect value .
-pub const E_BAD_PARAM_SIZE : ErrorHResult = ErrorHResult::from_constant(0x80280019); // TPM_E_BAD_PARAM_SIZE
+pub const E_BAD_PARAM_SIZE : HResultError = HResultError::from_constant(0x80280019); // TPM_E_BAD_PARAM_SIZE
 
 /// TPM 1.2: There is no existing SHA-1 thread.
-pub const E_SHA_THREAD : ErrorHResult = ErrorHResult::from_constant(0x8028001A); // TPM_E_SHA_THREAD
+pub const E_SHA_THREAD : HResultError = HResultError::from_constant(0x8028001A); // TPM_E_SHA_THREAD
 
 /// TPM 1.2: The calculation is unable to proceed because the existing SHA-1 thread has already encountered an error.
-pub const E_SHA_ERROR : ErrorHResult = ErrorHResult::from_constant(0x8028001B); // TPM_E_SHA_ERROR
+pub const E_SHA_ERROR : HResultError = HResultError::from_constant(0x8028001B); // TPM_E_SHA_ERROR
 
 /// TPM 1.2: The TPM hardware device reported a failure during its internal self test. Try restarting the computer to resolve the problem. If the problem continues, check for the latest BIOS or firmware update for your TPM hardware. Consult the computer manufacturer's documentation for instructions.
-pub const E_FAILEDSELFTEST : ErrorHResult = ErrorHResult::from_constant(0x8028001C); // TPM_E_FAILEDSELFTEST
+pub const E_FAILEDSELFTEST : HResultError = HResultError::from_constant(0x8028001C); // TPM_E_FAILEDSELFTEST
 
 /// TPM 1.2: The authorization for the second key in a 2 key function failed authorization.
-pub const E_AUTH2FAIL : ErrorHResult = ErrorHResult::from_constant(0x8028001D); // TPM_E_AUTH2FAIL
+pub const E_AUTH2FAIL : HResultError = HResultError::from_constant(0x8028001D); // TPM_E_AUTH2FAIL
 
 /// TPM 1.2: The tag value sent to for a command is invalid.
-pub const E_BADTAG : ErrorHResult = ErrorHResult::from_constant(0x8028001E); // TPM_E_BADTAG
+pub const E_BADTAG : HResultError = HResultError::from_constant(0x8028001E); // TPM_E_BADTAG
 
 /// TPM 1.2: An IO error occurred transmitting information to the TPM.
-pub const E_IOERROR : ErrorHResult = ErrorHResult::from_constant(0x8028001F); // TPM_E_IOERROR
+pub const E_IOERROR : HResultError = HResultError::from_constant(0x8028001F); // TPM_E_IOERROR
 
 /// TPM 1.2: The encryption process had a problem.
-pub const E_ENCRYPT_ERROR : ErrorHResult = ErrorHResult::from_constant(0x80280020); // TPM_E_ENCRYPT_ERROR
+pub const E_ENCRYPT_ERROR : HResultError = HResultError::from_constant(0x80280020); // TPM_E_ENCRYPT_ERROR
 
 /// TPM 1.2: The decryption process did not complete.
-pub const E_DECRYPT_ERROR : ErrorHResult = ErrorHResult::from_constant(0x80280021); // TPM_E_DECRYPT_ERROR
+pub const E_DECRYPT_ERROR : HResultError = HResultError::from_constant(0x80280021); // TPM_E_DECRYPT_ERROR
 
 /// TPM 1.2: An invalid handle was used.
-pub const E_INVALID_AUTHHANDLE : ErrorHResult = ErrorHResult::from_constant(0x80280022); // TPM_E_INVALID_AUTHHANDLE
+pub const E_INVALID_AUTHHANDLE : HResultError = HResultError::from_constant(0x80280022); // TPM_E_INVALID_AUTHHANDLE
 
 /// TPM 1.2: The TPM does not have an Endorsement Key (EK) installed.
-pub const E_NO_ENDORSEMENT : ErrorHResult = ErrorHResult::from_constant(0x80280023); // TPM_E_NO_ENDORSEMENT
+pub const E_NO_ENDORSEMENT : HResultError = HResultError::from_constant(0x80280023); // TPM_E_NO_ENDORSEMENT
 
 /// TPM 1.2: The usage of a key is not allowed.
-pub const E_INVALID_KEYUSAGE : ErrorHResult = ErrorHResult::from_constant(0x80280024); // TPM_E_INVALID_KEYUSAGE
+pub const E_INVALID_KEYUSAGE : HResultError = HResultError::from_constant(0x80280024); // TPM_E_INVALID_KEYUSAGE
 
 /// TPM 1.2: The submitted entity type is not allowed.
-pub const E_WRONG_ENTITYTYPE : ErrorHResult = ErrorHResult::from_constant(0x80280025); // TPM_E_WRONG_ENTITYTYPE
+pub const E_WRONG_ENTITYTYPE : HResultError = HResultError::from_constant(0x80280025); // TPM_E_WRONG_ENTITYTYPE
 
 /// TPM 1.2: The command was received in the wrong sequence relative to TPM_Init and a subsequent TPM_Startup.
-pub const E_INVALID_POSTINIT : ErrorHResult = ErrorHResult::from_constant(0x80280026); // TPM_E_INVALID_POSTINIT
+pub const E_INVALID_POSTINIT : HResultError = HResultError::from_constant(0x80280026); // TPM_E_INVALID_POSTINIT
 
 /// TPM 1.2: Signed data cannot include additional DER information.
-pub const E_INAPPROPRIATE_SIG : ErrorHResult = ErrorHResult::from_constant(0x80280027); // TPM_E_INAPPROPRIATE_SIG
+pub const E_INAPPROPRIATE_SIG : HResultError = HResultError::from_constant(0x80280027); // TPM_E_INAPPROPRIATE_SIG
 
 /// TPM 1.2: The key properties in TPM_KEY_PARMs are not supported by this TPM.
-pub const E_BAD_KEY_PROPERTY : ErrorHResult = ErrorHResult::from_constant(0x80280028); // TPM_E_BAD_KEY_PROPERTY
+pub const E_BAD_KEY_PROPERTY : HResultError = HResultError::from_constant(0x80280028); // TPM_E_BAD_KEY_PROPERTY
 
 /// TPM 1.2: The migration properties of this key are incorrect.
-pub const E_BAD_MIGRATION : ErrorHResult = ErrorHResult::from_constant(0x80280029); // TPM_E_BAD_MIGRATION
+pub const E_BAD_MIGRATION : HResultError = HResultError::from_constant(0x80280029); // TPM_E_BAD_MIGRATION
 
 /// TPM 1.2: The signature or encryption scheme for this key is incorrect or not permitted in this situation.
-pub const E_BAD_SCHEME : ErrorHResult = ErrorHResult::from_constant(0x8028002A); // TPM_E_BAD_SCHEME
+pub const E_BAD_SCHEME : HResultError = HResultError::from_constant(0x8028002A); // TPM_E_BAD_SCHEME
 
 /// TPM 1.2: The size of the data (or blob) parameter is bad or inconsistent with the referenced key.
-pub const E_BAD_DATASIZE : ErrorHResult = ErrorHResult::from_constant(0x8028002B); // TPM_E_BAD_DATASIZE
+pub const E_BAD_DATASIZE : HResultError = HResultError::from_constant(0x8028002B); // TPM_E_BAD_DATASIZE
 
 /// TPM 1.2: A mode parameter is bad, such as capArea or subCapArea for TPM_GetCapability, phsicalPresence parameter for TPM_PhysicalPresence, or migrationType for TPM_CreateMigrationBlob.
-pub const E_BAD_MODE : ErrorHResult = ErrorHResult::from_constant(0x8028002C); // TPM_E_BAD_MODE
+pub const E_BAD_MODE : HResultError = HResultError::from_constant(0x8028002C); // TPM_E_BAD_MODE
 
 /// TPM 1.2: Either the physicalPresence or physicalPresenceLock bits have the wrong value.
-pub const E_BAD_PRESENCE : ErrorHResult = ErrorHResult::from_constant(0x8028002D); // TPM_E_BAD_PRESENCE
+pub const E_BAD_PRESENCE : HResultError = HResultError::from_constant(0x8028002D); // TPM_E_BAD_PRESENCE
 
 /// TPM 1.2: The TPM cannot perform this version of the capability.
-pub const E_BAD_VERSION : ErrorHResult = ErrorHResult::from_constant(0x8028002E); // TPM_E_BAD_VERSION
+pub const E_BAD_VERSION : HResultError = HResultError::from_constant(0x8028002E); // TPM_E_BAD_VERSION
 
 /// TPM 1.2: The TPM does not allow for wrapped transport sessions.
-pub const E_NO_WRAP_TRANSPORT : ErrorHResult = ErrorHResult::from_constant(0x8028002F); // TPM_E_NO_WRAP_TRANSPORT
+pub const E_NO_WRAP_TRANSPORT : HResultError = HResultError::from_constant(0x8028002F); // TPM_E_NO_WRAP_TRANSPORT
 
 /// TPM 1.2: TPM audit construction failed and the underlying command was returning a failure code also.
-pub const E_AUDITFAIL_UNSUCCESSFUL : ErrorHResult = ErrorHResult::from_constant(0x80280030); // TPM_E_AUDITFAIL_UNSUCCESSFUL
+pub const E_AUDITFAIL_UNSUCCESSFUL : HResultError = HResultError::from_constant(0x80280030); // TPM_E_AUDITFAIL_UNSUCCESSFUL
 
 /// TPM 1.2: TPM audit construction failed and the underlying command was returning success.
-pub const E_AUDITFAIL_SUCCESSFUL : ErrorHResult = ErrorHResult::from_constant(0x80280031); // TPM_E_AUDITFAIL_SUCCESSFUL
+pub const E_AUDITFAIL_SUCCESSFUL : HResultError = HResultError::from_constant(0x80280031); // TPM_E_AUDITFAIL_SUCCESSFUL
 
 /// TPM 1.2: Attempt to reset a PCR register that does not have the resettable attribute.
-pub const E_NOTRESETABLE : ErrorHResult = ErrorHResult::from_constant(0x80280032); // TPM_E_NOTRESETABLE
+pub const E_NOTRESETABLE : HResultError = HResultError::from_constant(0x80280032); // TPM_E_NOTRESETABLE
 
 /// TPM 1.2: Attempt to reset a PCR register that requires locality and locality modifier not part of command transport.
-pub const E_NOTLOCAL : ErrorHResult = ErrorHResult::from_constant(0x80280033); // TPM_E_NOTLOCAL
+pub const E_NOTLOCAL : HResultError = HResultError::from_constant(0x80280033); // TPM_E_NOTLOCAL
 
 /// TPM 1.2: Make identity blob not properly typed.
-pub const E_BAD_TYPE : ErrorHResult = ErrorHResult::from_constant(0x80280034); // TPM_E_BAD_TYPE
+pub const E_BAD_TYPE : HResultError = HResultError::from_constant(0x80280034); // TPM_E_BAD_TYPE
 
 /// TPM 1.2: When saving context identified resource type does not match actual resource.
-pub const E_INVALID_RESOURCE : ErrorHResult = ErrorHResult::from_constant(0x80280035); // TPM_E_INVALID_RESOURCE
+pub const E_INVALID_RESOURCE : HResultError = HResultError::from_constant(0x80280035); // TPM_E_INVALID_RESOURCE
 
 /// TPM 1.2: The TPM is attempting to execute a command only available when in FIPS mode.
-pub const E_NOTFIPS : ErrorHResult = ErrorHResult::from_constant(0x80280036); // TPM_E_NOTFIPS
+pub const E_NOTFIPS : HResultError = HResultError::from_constant(0x80280036); // TPM_E_NOTFIPS
 
 /// TPM 1.2: The command is attempting to use an invalid family ID.
-pub const E_INVALID_FAMILY : ErrorHResult = ErrorHResult::from_constant(0x80280037); // TPM_E_INVALID_FAMILY
+pub const E_INVALID_FAMILY : HResultError = HResultError::from_constant(0x80280037); // TPM_E_INVALID_FAMILY
 
 /// TPM 1.2: The permission to manipulate the NV storage is not available.
-pub const E_NO_NV_PERMISSION : ErrorHResult = ErrorHResult::from_constant(0x80280038); // TPM_E_NO_NV_PERMISSION
+pub const E_NO_NV_PERMISSION : HResultError = HResultError::from_constant(0x80280038); // TPM_E_NO_NV_PERMISSION
 
 /// TPM 1.2: The operation requires a signed command.
-pub const E_REQUIRES_SIGN : ErrorHResult = ErrorHResult::from_constant(0x80280039); // TPM_E_REQUIRES_SIGN
+pub const E_REQUIRES_SIGN : HResultError = HResultError::from_constant(0x80280039); // TPM_E_REQUIRES_SIGN
 
 /// TPM 1.2: Wrong operation to load an NV key.
-pub const E_KEY_NOTSUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x8028003A); // TPM_E_KEY_NOTSUPPORTED
+pub const E_KEY_NOTSUPPORTED : HResultError = HResultError::from_constant(0x8028003A); // TPM_E_KEY_NOTSUPPORTED
 
 /// TPM 1.2: NV_LoadKey blob requires both owner and blob authorization.
-pub const E_AUTH_CONFLICT : ErrorHResult = ErrorHResult::from_constant(0x8028003B); // TPM_E_AUTH_CONFLICT
+pub const E_AUTH_CONFLICT : HResultError = HResultError::from_constant(0x8028003B); // TPM_E_AUTH_CONFLICT
 
 /// TPM 1.2: The NV area is locked and not writable.
-pub const E_AREA_LOCKED : ErrorHResult = ErrorHResult::from_constant(0x8028003C); // TPM_E_AREA_LOCKED
+pub const E_AREA_LOCKED : HResultError = HResultError::from_constant(0x8028003C); // TPM_E_AREA_LOCKED
 
 /// TPM 1.2: The locality is incorrect for the attempted operation.
-pub const E_BAD_LOCALITY : ErrorHResult = ErrorHResult::from_constant(0x8028003D); // TPM_E_BAD_LOCALITY
+pub const E_BAD_LOCALITY : HResultError = HResultError::from_constant(0x8028003D); // TPM_E_BAD_LOCALITY
 
 /// TPM 1.2: The NV area is read only and can't be written to.
-pub const E_READ_ONLY : ErrorHResult = ErrorHResult::from_constant(0x8028003E); // TPM_E_READ_ONLY
+pub const E_READ_ONLY : HResultError = HResultError::from_constant(0x8028003E); // TPM_E_READ_ONLY
 
 /// TPM 1.2: There is no protection on the write to the NV area.
-pub const E_PER_NOWRITE : ErrorHResult = ErrorHResult::from_constant(0x8028003F); // TPM_E_PER_NOWRITE
+pub const E_PER_NOWRITE : HResultError = HResultError::from_constant(0x8028003F); // TPM_E_PER_NOWRITE
 
 /// TPM 1.2: The family count value does not match.
-pub const E_FAMILYCOUNT : ErrorHResult = ErrorHResult::from_constant(0x80280040); // TPM_E_FAMILYCOUNT
+pub const E_FAMILYCOUNT : HResultError = HResultError::from_constant(0x80280040); // TPM_E_FAMILYCOUNT
 
 /// TPM 1.2: The NV area has already been written to.
-pub const E_WRITE_LOCKED : ErrorHResult = ErrorHResult::from_constant(0x80280041); // TPM_E_WRITE_LOCKED
+pub const E_WRITE_LOCKED : HResultError = HResultError::from_constant(0x80280041); // TPM_E_WRITE_LOCKED
 
 /// TPM 1.2: The NV area attributes conflict.
-pub const E_BAD_ATTRIBUTES : ErrorHResult = ErrorHResult::from_constant(0x80280042); // TPM_E_BAD_ATTRIBUTES
+pub const E_BAD_ATTRIBUTES : HResultError = HResultError::from_constant(0x80280042); // TPM_E_BAD_ATTRIBUTES
 
 /// TPM 1.2: The structure tag and version are invalid or inconsistent.
-pub const E_INVALID_STRUCTURE : ErrorHResult = ErrorHResult::from_constant(0x80280043); // TPM_E_INVALID_STRUCTURE
+pub const E_INVALID_STRUCTURE : HResultError = HResultError::from_constant(0x80280043); // TPM_E_INVALID_STRUCTURE
 
 /// TPM 1.2: The key is under control of the TPM Owner and can only be evicted by the TPM Owner.
-pub const E_KEY_OWNER_CONTROL : ErrorHResult = ErrorHResult::from_constant(0x80280044); // TPM_E_KEY_OWNER_CONTROL
+pub const E_KEY_OWNER_CONTROL : HResultError = HResultError::from_constant(0x80280044); // TPM_E_KEY_OWNER_CONTROL
 
 /// TPM 1.2: The counter handle is incorrect.
-pub const E_BAD_COUNTER : ErrorHResult = ErrorHResult::from_constant(0x80280045); // TPM_E_BAD_COUNTER
+pub const E_BAD_COUNTER : HResultError = HResultError::from_constant(0x80280045); // TPM_E_BAD_COUNTER
 
 /// TPM 1.2: The write is not a complete write of the area.
-pub const E_NOT_FULLWRITE : ErrorHResult = ErrorHResult::from_constant(0x80280046); // TPM_E_NOT_FULLWRITE
+pub const E_NOT_FULLWRITE : HResultError = HResultError::from_constant(0x80280046); // TPM_E_NOT_FULLWRITE
 
 /// TPM 1.2: The gap between saved context counts is too large.
-pub const E_CONTEXT_GAP : ErrorHResult = ErrorHResult::from_constant(0x80280047); // TPM_E_CONTEXT_GAP
+pub const E_CONTEXT_GAP : HResultError = HResultError::from_constant(0x80280047); // TPM_E_CONTEXT_GAP
 
 /// TPM 1.2: The maximum number of NV writes without an owner has been exceeded.
-pub const E_MAXNVWRITES : ErrorHResult = ErrorHResult::from_constant(0x80280048); // TPM_E_MAXNVWRITES
+pub const E_MAXNVWRITES : HResultError = HResultError::from_constant(0x80280048); // TPM_E_MAXNVWRITES
 
 /// TPM 1.2: No operator AuthData value is set.
-pub const E_NOOPERATOR : ErrorHResult = ErrorHResult::from_constant(0x80280049); // TPM_E_NOOPERATOR
+pub const E_NOOPERATOR : HResultError = HResultError::from_constant(0x80280049); // TPM_E_NOOPERATOR
 
 /// TPM 1.2: The resource pointed to by context is not loaded.
-pub const E_RESOURCEMISSING : ErrorHResult = ErrorHResult::from_constant(0x8028004A); // TPM_E_RESOURCEMISSING
+pub const E_RESOURCEMISSING : HResultError = HResultError::from_constant(0x8028004A); // TPM_E_RESOURCEMISSING
 
 /// TPM 1.2: The delegate administration is locked.
-pub const E_DELEGATE_LOCK : ErrorHResult = ErrorHResult::from_constant(0x8028004B); // TPM_E_DELEGATE_LOCK
+pub const E_DELEGATE_LOCK : HResultError = HResultError::from_constant(0x8028004B); // TPM_E_DELEGATE_LOCK
 
 /// TPM 1.2: Attempt to manage a family other then the delegated family.
-pub const E_DELEGATE_FAMILY : ErrorHResult = ErrorHResult::from_constant(0x8028004C); // TPM_E_DELEGATE_FAMILY
+pub const E_DELEGATE_FAMILY : HResultError = HResultError::from_constant(0x8028004C); // TPM_E_DELEGATE_FAMILY
 
 /// TPM 1.2: Delegation table management not enabled.
-pub const E_DELEGATE_ADMIN : ErrorHResult = ErrorHResult::from_constant(0x8028004D); // TPM_E_DELEGATE_ADMIN
+pub const E_DELEGATE_ADMIN : HResultError = HResultError::from_constant(0x8028004D); // TPM_E_DELEGATE_ADMIN
 
 /// TPM 1.2: There was a command executed outside of an exclusive transport session.
-pub const E_TRANSPORT_NOTEXCLUSIVE : ErrorHResult = ErrorHResult::from_constant(0x8028004E); // TPM_E_TRANSPORT_NOTEXCLUSIVE
+pub const E_TRANSPORT_NOTEXCLUSIVE : HResultError = HResultError::from_constant(0x8028004E); // TPM_E_TRANSPORT_NOTEXCLUSIVE
 
 /// TPM 1.2: Attempt to context save a owner evict controlled key.
-pub const E_OWNER_CONTROL : ErrorHResult = ErrorHResult::from_constant(0x8028004F); // TPM_E_OWNER_CONTROL
+pub const E_OWNER_CONTROL : HResultError = HResultError::from_constant(0x8028004F); // TPM_E_OWNER_CONTROL
 
 /// TPM 1.2: The DAA command has no resources available to execute the command.
-pub const E_DAA_RESOURCES : ErrorHResult = ErrorHResult::from_constant(0x80280050); // TPM_E_DAA_RESOURCES
+pub const E_DAA_RESOURCES : HResultError = HResultError::from_constant(0x80280050); // TPM_E_DAA_RESOURCES
 
 /// TPM 1.2: The consistency check on DAA parameter inputData0 has failed.
-pub const E_DAA_INPUT_DATA0 : ErrorHResult = ErrorHResult::from_constant(0x80280051); // TPM_E_DAA_INPUT_DATA0
+pub const E_DAA_INPUT_DATA0 : HResultError = HResultError::from_constant(0x80280051); // TPM_E_DAA_INPUT_DATA0
 
 /// TPM 1.2: The consistency check on DAA parameter inputData1 has failed.
-pub const E_DAA_INPUT_DATA1 : ErrorHResult = ErrorHResult::from_constant(0x80280052); // TPM_E_DAA_INPUT_DATA1
+pub const E_DAA_INPUT_DATA1 : HResultError = HResultError::from_constant(0x80280052); // TPM_E_DAA_INPUT_DATA1
 
 /// TPM 1.2: The consistency check on DAA_issuerSettings has failed.
-pub const E_DAA_ISSUER_SETTINGS : ErrorHResult = ErrorHResult::from_constant(0x80280053); // TPM_E_DAA_ISSUER_SETTINGS
+pub const E_DAA_ISSUER_SETTINGS : HResultError = HResultError::from_constant(0x80280053); // TPM_E_DAA_ISSUER_SETTINGS
 
 /// TPM 1.2: The consistency check on DAA_tpmSpecific has failed.
-pub const E_DAA_TPM_SETTINGS : ErrorHResult = ErrorHResult::from_constant(0x80280054); // TPM_E_DAA_TPM_SETTINGS
+pub const E_DAA_TPM_SETTINGS : HResultError = HResultError::from_constant(0x80280054); // TPM_E_DAA_TPM_SETTINGS
 
 /// TPM 1.2: The atomic process indicated by the submitted DAA command is not the expected process.
-pub const E_DAA_STAGE : ErrorHResult = ErrorHResult::from_constant(0x80280055); // TPM_E_DAA_STAGE
+pub const E_DAA_STAGE : HResultError = HResultError::from_constant(0x80280055); // TPM_E_DAA_STAGE
 
 /// TPM 1.2: The issuer's validity check has detected an inconsistency.
-pub const E_DAA_ISSUER_VALIDITY : ErrorHResult = ErrorHResult::from_constant(0x80280056); // TPM_E_DAA_ISSUER_VALIDITY
+pub const E_DAA_ISSUER_VALIDITY : HResultError = HResultError::from_constant(0x80280056); // TPM_E_DAA_ISSUER_VALIDITY
 
 /// TPM 1.2: The consistency check on w has failed.
-pub const E_DAA_WRONG_W : ErrorHResult = ErrorHResult::from_constant(0x80280057); // TPM_E_DAA_WRONG_W
+pub const E_DAA_WRONG_W : HResultError = HResultError::from_constant(0x80280057); // TPM_E_DAA_WRONG_W
 
 /// TPM 1.2: The handle is incorrect.
-pub const E_BAD_HANDLE : ErrorHResult = ErrorHResult::from_constant(0x80280058); // TPM_E_BAD_HANDLE
+pub const E_BAD_HANDLE : HResultError = HResultError::from_constant(0x80280058); // TPM_E_BAD_HANDLE
 
 /// TPM 1.2: Delegation is not correct.
-pub const E_BAD_DELEGATE : ErrorHResult = ErrorHResult::from_constant(0x80280059); // TPM_E_BAD_DELEGATE
+pub const E_BAD_DELEGATE : HResultError = HResultError::from_constant(0x80280059); // TPM_E_BAD_DELEGATE
 
 /// TPM 1.2: The context blob is invalid.
-pub const E_BADCONTEXT : ErrorHResult = ErrorHResult::from_constant(0x8028005A); // TPM_E_BADCONTEXT
+pub const E_BADCONTEXT : HResultError = HResultError::from_constant(0x8028005A); // TPM_E_BADCONTEXT
 
 /// TPM 1.2: Too many contexts held by the TPM.
-pub const E_TOOMANYCONTEXTS : ErrorHResult = ErrorHResult::from_constant(0x8028005B); // TPM_E_TOOMANYCONTEXTS
+pub const E_TOOMANYCONTEXTS : HResultError = HResultError::from_constant(0x8028005B); // TPM_E_TOOMANYCONTEXTS
 
 /// TPM 1.2: Migration authority signature validation failure.
-pub const E_MA_TICKET_SIGNATURE : ErrorHResult = ErrorHResult::from_constant(0x8028005C); // TPM_E_MA_TICKET_SIGNATURE
+pub const E_MA_TICKET_SIGNATURE : HResultError = HResultError::from_constant(0x8028005C); // TPM_E_MA_TICKET_SIGNATURE
 
 /// TPM 1.2: Migration destination not authenticated.
-pub const E_MA_DESTINATION : ErrorHResult = ErrorHResult::from_constant(0x8028005D); // TPM_E_MA_DESTINATION
+pub const E_MA_DESTINATION : HResultError = HResultError::from_constant(0x8028005D); // TPM_E_MA_DESTINATION
 
 /// TPM 1.2: Migration source incorrect.
-pub const E_MA_SOURCE : ErrorHResult = ErrorHResult::from_constant(0x8028005E); // TPM_E_MA_SOURCE
+pub const E_MA_SOURCE : HResultError = HResultError::from_constant(0x8028005E); // TPM_E_MA_SOURCE
 
 /// TPM 1.2: Incorrect migration authority.
-pub const E_MA_AUTHORITY : ErrorHResult = ErrorHResult::from_constant(0x8028005F); // TPM_E_MA_AUTHORITY
+pub const E_MA_AUTHORITY : HResultError = HResultError::from_constant(0x8028005F); // TPM_E_MA_AUTHORITY
 
 /// TPM 1.2: Attempt to revoke the EK and the EK is not revocable.
-pub const E_PERMANENTEK : ErrorHResult = ErrorHResult::from_constant(0x80280061); // TPM_E_PERMANENTEK
+pub const E_PERMANENTEK : HResultError = HResultError::from_constant(0x80280061); // TPM_E_PERMANENTEK
 
 /// TPM 1.2: Bad signature of CMK ticket.
-pub const E_BAD_SIGNATURE : ErrorHResult = ErrorHResult::from_constant(0x80280062); // TPM_E_BAD_SIGNATURE
+pub const E_BAD_SIGNATURE : HResultError = HResultError::from_constant(0x80280062); // TPM_E_BAD_SIGNATURE
 
 /// TPM 1.2: There is no room in the context list for additional contexts.
-pub const E_NOCONTEXTSPACE : ErrorHResult = ErrorHResult::from_constant(0x80280063); // TPM_E_NOCONTEXTSPACE
+pub const E_NOCONTEXTSPACE : HResultError = HResultError::from_constant(0x80280063); // TPM_E_NOCONTEXTSPACE
 
 /// The command was blocked.
-pub const E_COMMAND_BLOCKED : ErrorHResult = ErrorHResult::from_constant(0x80280400); // TPM_E_COMMAND_BLOCKED
+pub const E_COMMAND_BLOCKED : HResultError = HResultError::from_constant(0x80280400); // TPM_E_COMMAND_BLOCKED
 
 /// The specified handle was not found.
-pub const E_INVALID_HANDLE : ErrorHResult = ErrorHResult::from_constant(0x80280401); // TPM_E_INVALID_HANDLE
+pub const E_INVALID_HANDLE : HResultError = HResultError::from_constant(0x80280401); // TPM_E_INVALID_HANDLE
 
 /// The TPM returned a duplicate handle and the command needs to be resubmitted.
-pub const E_DUPLICATE_VHANDLE : ErrorHResult = ErrorHResult::from_constant(0x80280402); // TPM_E_DUPLICATE_VHANDLE
+pub const E_DUPLICATE_VHANDLE : HResultError = HResultError::from_constant(0x80280402); // TPM_E_DUPLICATE_VHANDLE
 
 /// The command within the transport was blocked.
-pub const E_EMBEDDED_COMMAND_BLOCKED : ErrorHResult = ErrorHResult::from_constant(0x80280403); // TPM_E_EMBEDDED_COMMAND_BLOCKED
+pub const E_EMBEDDED_COMMAND_BLOCKED : HResultError = HResultError::from_constant(0x80280403); // TPM_E_EMBEDDED_COMMAND_BLOCKED
 
 /// The command within the transport is not supported.
-pub const E_EMBEDDED_COMMAND_UNSUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x80280404); // TPM_E_EMBEDDED_COMMAND_UNSUPPORTED
+pub const E_EMBEDDED_COMMAND_UNSUPPORTED : HResultError = HResultError::from_constant(0x80280404); // TPM_E_EMBEDDED_COMMAND_UNSUPPORTED
 
 /// The TPM is too busy to respond to the command immediately, but the command could be resubmitted at a later time.
-pub const E_RETRY : ErrorHResult = ErrorHResult::from_constant(0x80280800); // TPM_E_RETRY
+pub const E_RETRY : HResultError = HResultError::from_constant(0x80280800); // TPM_E_RETRY
 
 /// SelfTestFull has not been run.
-pub const E_NEEDS_SELFTEST : ErrorHResult = ErrorHResult::from_constant(0x80280801); // TPM_E_NEEDS_SELFTEST
+pub const E_NEEDS_SELFTEST : HResultError = HResultError::from_constant(0x80280801); // TPM_E_NEEDS_SELFTEST
 
 /// The TPM is currently executing a full selftest.
-pub const E_DOING_SELFTEST : ErrorHResult = ErrorHResult::from_constant(0x80280802); // TPM_E_DOING_SELFTEST
+pub const E_DOING_SELFTEST : HResultError = HResultError::from_constant(0x80280802); // TPM_E_DOING_SELFTEST
 
 /// The TPM is defending against dictionary attacks and is in a time-out period.
-pub const E_DEFEND_LOCK_RUNNING : ErrorHResult = ErrorHResult::from_constant(0x80280803); // TPM_E_DEFEND_LOCK_RUNNING
+pub const E_DEFEND_LOCK_RUNNING : HResultError = HResultError::from_constant(0x80280803); // TPM_E_DEFEND_LOCK_RUNNING
 
 /// A general error was detected when attempting to acquire the BIOS's response to a Physical Presence command.
-pub const E_PPI_ACPI_FAILURE : ErrorHResult = ErrorHResult::from_constant(0x80290300); // TPM_E_PPI_ACPI_FAILURE
+pub const E_PPI_ACPI_FAILURE : HResultError = HResultError::from_constant(0x80290300); // TPM_E_PPI_ACPI_FAILURE
 
 /// The user failed to confirm the TPM operation request.
-pub const E_PPI_USER_ABORT : ErrorHResult = ErrorHResult::from_constant(0x80290301); // TPM_E_PPI_USER_ABORT
+pub const E_PPI_USER_ABORT : HResultError = HResultError::from_constant(0x80290301); // TPM_E_PPI_USER_ABORT
 
 /// The BIOS failure prevented the successful execution of the requested TPM operation (e.g. invalid TPM operation request, BIOS communication error with the TPM).
-pub const E_PPI_BIOS_FAILURE : ErrorHResult = ErrorHResult::from_constant(0x80290302); // TPM_E_PPI_BIOS_FAILURE
+pub const E_PPI_BIOS_FAILURE : HResultError = HResultError::from_constant(0x80290302); // TPM_E_PPI_BIOS_FAILURE
 
 /// The BIOS does not support the physical presence interface.
-pub const E_PPI_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x80290303); // TPM_E_PPI_NOT_SUPPORTED
+pub const E_PPI_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x80290303); // TPM_E_PPI_NOT_SUPPORTED
 
 /// The Physical Presence command was blocked by current BIOS settings. The system owner may be able to reconfigure the BIOS settings to allow the command.
-pub const E_PPI_BLOCKED_IN_BIOS : ErrorHResult = ErrorHResult::from_constant(0x80290304); // TPM_E_PPI_BLOCKED_IN_BIOS
+pub const E_PPI_BLOCKED_IN_BIOS : HResultError = HResultError::from_constant(0x80290304); // TPM_E_PPI_BLOCKED_IN_BIOS
 
 /// The Platform Crypto Device is currently not ready. It needs to be fully provisioned to be operational.
-pub const E_PCP_DEVICE_NOT_READY : ErrorHResult = ErrorHResult::from_constant(0x80290401); // TPM_E_PCP_DEVICE_NOT_READY
+pub const E_PCP_DEVICE_NOT_READY : HResultError = HResultError::from_constant(0x80290401); // TPM_E_PCP_DEVICE_NOT_READY
 
 /// The handle provided to the Platform Crypto Provider is invalid.
-pub const E_PCP_INVALID_HANDLE : ErrorHResult = ErrorHResult::from_constant(0x80290402); // TPM_E_PCP_INVALID_HANDLE
+pub const E_PCP_INVALID_HANDLE : HResultError = HResultError::from_constant(0x80290402); // TPM_E_PCP_INVALID_HANDLE
 
 /// A parameter provided to the Platform Crypto Provider is invalid.
-pub const E_PCP_INVALID_PARAMETER : ErrorHResult = ErrorHResult::from_constant(0x80290403); // TPM_E_PCP_INVALID_PARAMETER
+pub const E_PCP_INVALID_PARAMETER : HResultError = HResultError::from_constant(0x80290403); // TPM_E_PCP_INVALID_PARAMETER
 
 /// A provided flag to the Platform Crypto Provider is not supported.
-pub const E_PCP_FLAG_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x80290404); // TPM_E_PCP_FLAG_NOT_SUPPORTED
+pub const E_PCP_FLAG_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x80290404); // TPM_E_PCP_FLAG_NOT_SUPPORTED
 
 /// The requested operation is not supported by this Platform Crypto Provider.
-pub const E_PCP_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x80290405); // TPM_E_PCP_NOT_SUPPORTED
+pub const E_PCP_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x80290405); // TPM_E_PCP_NOT_SUPPORTED
 
 /// The buffer is too small to contain all data. No information has been written to the buffer.
-pub const E_PCP_BUFFER_TOO_SMALL : ErrorHResult = ErrorHResult::from_constant(0x80290406); // TPM_E_PCP_BUFFER_TOO_SMALL
+pub const E_PCP_BUFFER_TOO_SMALL : HResultError = HResultError::from_constant(0x80290406); // TPM_E_PCP_BUFFER_TOO_SMALL
 
 /// An unexpected internal error has occurred in the Platform Crypto Provider.
-pub const E_PCP_INTERNAL_ERROR : ErrorHResult = ErrorHResult::from_constant(0x80290407); // TPM_E_PCP_INTERNAL_ERROR
+pub const E_PCP_INTERNAL_ERROR : HResultError = HResultError::from_constant(0x80290407); // TPM_E_PCP_INTERNAL_ERROR
 
 /// The authorization to use a provider object has failed.
-pub const E_PCP_AUTHENTICATION_FAILED : ErrorHResult = ErrorHResult::from_constant(0x80290408); // TPM_E_PCP_AUTHENTICATION_FAILED
+pub const E_PCP_AUTHENTICATION_FAILED : HResultError = HResultError::from_constant(0x80290408); // TPM_E_PCP_AUTHENTICATION_FAILED
 
 /// The Platform Crypto Device has ignored the authorization for the provider object, to mitigate against a dictionary attack.
-pub const E_PCP_AUTHENTICATION_IGNORED : ErrorHResult = ErrorHResult::from_constant(0x80290409); // TPM_E_PCP_AUTHENTICATION_IGNORED
+pub const E_PCP_AUTHENTICATION_IGNORED : HResultError = HResultError::from_constant(0x80290409); // TPM_E_PCP_AUTHENTICATION_IGNORED
 
 /// The referenced policy was not found.
-pub const E_PCP_POLICY_NOT_FOUND : ErrorHResult = ErrorHResult::from_constant(0x8029040A); // TPM_E_PCP_POLICY_NOT_FOUND
+pub const E_PCP_POLICY_NOT_FOUND : HResultError = HResultError::from_constant(0x8029040A); // TPM_E_PCP_POLICY_NOT_FOUND
 
 /// The referenced profile was not found.
-pub const E_PCP_PROFILE_NOT_FOUND : ErrorHResult = ErrorHResult::from_constant(0x8029040B); // TPM_E_PCP_PROFILE_NOT_FOUND
+pub const E_PCP_PROFILE_NOT_FOUND : HResultError = HResultError::from_constant(0x8029040B); // TPM_E_PCP_PROFILE_NOT_FOUND
 
 /// The validation was not succesful.
-pub const E_PCP_VALIDATION_FAILED : ErrorHResult = ErrorHResult::from_constant(0x8029040C); // TPM_E_PCP_VALIDATION_FAILED
+pub const E_PCP_VALIDATION_FAILED : HResultError = HResultError::from_constant(0x8029040C); // TPM_E_PCP_VALIDATION_FAILED
 
 /// An attempt was made to import or load a key under an incorrect storage parent.
-pub const E_PCP_WRONG_PARENT : ErrorHResult = ErrorHResult::from_constant(0x8029040E); // TPM_E_PCP_WRONG_PARENT
+pub const E_PCP_WRONG_PARENT : HResultError = HResultError::from_constant(0x8029040E); // TPM_E_PCP_WRONG_PARENT
 
 /// The TPM key is not loaded.
-pub const E_KEY_NOT_LOADED : ErrorHResult = ErrorHResult::from_constant(0x8029040F); // TPM_E_KEY_NOT_LOADED
+pub const E_KEY_NOT_LOADED : HResultError = HResultError::from_constant(0x8029040F); // TPM_E_KEY_NOT_LOADED
 
 /// The TPM key certification has not been generated.
-pub const E_NO_KEY_CERTIFICATION : ErrorHResult = ErrorHResult::from_constant(0x80290410); // TPM_E_NO_KEY_CERTIFICATION
+pub const E_NO_KEY_CERTIFICATION : HResultError = HResultError::from_constant(0x80290410); // TPM_E_NO_KEY_CERTIFICATION
 
 /// The TPM key is not yet finalized.
-pub const E_KEY_NOT_FINALIZED : ErrorHResult = ErrorHResult::from_constant(0x80290411); // TPM_E_KEY_NOT_FINALIZED
+pub const E_KEY_NOT_FINALIZED : HResultError = HResultError::from_constant(0x80290411); // TPM_E_KEY_NOT_FINALIZED
 
 /// The TPM attestation challenge is not set.
-pub const E_ATTESTATION_CHALLENGE_NOT_SET : ErrorHResult = ErrorHResult::from_constant(0x80290412); // TPM_E_ATTESTATION_CHALLENGE_NOT_SET
+pub const E_ATTESTATION_CHALLENGE_NOT_SET : HResultError = HResultError::from_constant(0x80290412); // TPM_E_ATTESTATION_CHALLENGE_NOT_SET
 
 /// The TPM PCR info is not available.
-pub const E_NOT_PCR_BOUND : ErrorHResult = ErrorHResult::from_constant(0x80290413); // TPM_E_NOT_PCR_BOUND
+pub const E_NOT_PCR_BOUND : HResultError = HResultError::from_constant(0x80290413); // TPM_E_NOT_PCR_BOUND
 
 /// The TPM key is already finalized.
-pub const E_KEY_ALREADY_FINALIZED : ErrorHResult = ErrorHResult::from_constant(0x80290414); // TPM_E_KEY_ALREADY_FINALIZED
+pub const E_KEY_ALREADY_FINALIZED : HResultError = HResultError::from_constant(0x80290414); // TPM_E_KEY_ALREADY_FINALIZED
 
 /// The TPM key usage policy is not supported.
-pub const E_KEY_USAGE_POLICY_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x80290415); // TPM_E_KEY_USAGE_POLICY_NOT_SUPPORTED
+pub const E_KEY_USAGE_POLICY_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x80290415); // TPM_E_KEY_USAGE_POLICY_NOT_SUPPORTED
 
 /// The TPM key usage policy is invalid.
-pub const E_KEY_USAGE_POLICY_INVALID : ErrorHResult = ErrorHResult::from_constant(0x80290416); // TPM_E_KEY_USAGE_POLICY_INVALID
+pub const E_KEY_USAGE_POLICY_INVALID : HResultError = HResultError::from_constant(0x80290416); // TPM_E_KEY_USAGE_POLICY_INVALID
 
 /// There was a problem with the software key being imported into the TPM.
-pub const E_SOFT_KEY_ERROR : ErrorHResult = ErrorHResult::from_constant(0x80290417); // TPM_E_SOFT_KEY_ERROR
+pub const E_SOFT_KEY_ERROR : HResultError = HResultError::from_constant(0x80290417); // TPM_E_SOFT_KEY_ERROR
 
 /// The TPM key is not authenticated.
-pub const E_KEY_NOT_AUTHENTICATED : ErrorHResult = ErrorHResult::from_constant(0x80290418); // TPM_E_KEY_NOT_AUTHENTICATED
+pub const E_KEY_NOT_AUTHENTICATED : HResultError = HResultError::from_constant(0x80290418); // TPM_E_KEY_NOT_AUTHENTICATED
 
 /// The TPM key is not an AIK.
-pub const E_PCP_KEY_NOT_AIK : ErrorHResult = ErrorHResult::from_constant(0x80290419); // TPM_E_PCP_KEY_NOT_AIK
+pub const E_PCP_KEY_NOT_AIK : HResultError = HResultError::from_constant(0x80290419); // TPM_E_PCP_KEY_NOT_AIK
 
 /// The TPM key is not a signing key.
-pub const E_KEY_NOT_SIGNING_KEY : ErrorHResult = ErrorHResult::from_constant(0x8029041A); // TPM_E_KEY_NOT_SIGNING_KEY
+pub const E_KEY_NOT_SIGNING_KEY : HResultError = HResultError::from_constant(0x8029041A); // TPM_E_KEY_NOT_SIGNING_KEY
 
 /// The TPM is locked out.
-pub const E_LOCKED_OUT : ErrorHResult = ErrorHResult::from_constant(0x8029041B); // TPM_E_LOCKED_OUT
+pub const E_LOCKED_OUT : HResultError = HResultError::from_constant(0x8029041B); // TPM_E_LOCKED_OUT
 
 /// The claim type requested is not supported.
-pub const E_CLAIM_TYPE_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x8029041C); // TPM_E_CLAIM_TYPE_NOT_SUPPORTED
+pub const E_CLAIM_TYPE_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x8029041C); // TPM_E_CLAIM_TYPE_NOT_SUPPORTED
 
 /// TPM version is not supported.
-pub const E_VERSION_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x8029041D); // TPM_E_VERSION_NOT_SUPPORTED
+pub const E_VERSION_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x8029041D); // TPM_E_VERSION_NOT_SUPPORTED
 
 /// The buffer lengths do not match.
-pub const E_BUFFER_LENGTH_MISMATCH : ErrorHResult = ErrorHResult::from_constant(0x8029041E); // TPM_E_BUFFER_LENGTH_MISMATCH
+pub const E_BUFFER_LENGTH_MISMATCH : HResultError = HResultError::from_constant(0x8029041E); // TPM_E_BUFFER_LENGTH_MISMATCH
 
 /// The RSA key creation is blocked on this TPM due to known security vulnerabilities.
-pub const E_PCP_IFX_RSA_KEY_CREATION_BLOCKED : ErrorHResult = ErrorHResult::from_constant(0x8029041F); // TPM_E_PCP_IFX_RSA_KEY_CREATION_BLOCKED
+pub const E_PCP_IFX_RSA_KEY_CREATION_BLOCKED : HResultError = HResultError::from_constant(0x8029041F); // TPM_E_PCP_IFX_RSA_KEY_CREATION_BLOCKED
 
 /// A ticket required to use a key was not provided.
-pub const E_PCP_TICKET_MISSING : ErrorHResult = ErrorHResult::from_constant(0x80290420); // TPM_E_PCP_TICKET_MISSING
+pub const E_PCP_TICKET_MISSING : HResultError = HResultError::from_constant(0x80290420); // TPM_E_PCP_TICKET_MISSING
 
 /// This key has a raw policy so the KSP can't authenticate against it.
-pub const E_PCP_RAW_POLICY_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x80290421); // TPM_E_PCP_RAW_POLICY_NOT_SUPPORTED
+pub const E_PCP_RAW_POLICY_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x80290421); // TPM_E_PCP_RAW_POLICY_NOT_SUPPORTED
 
 /// The TPM key's handle was unexpectedly invalidated due to a hardware or firmware issue.
-pub const E_PCP_KEY_HANDLE_INVALIDATED : ErrorHResult = ErrorHResult::from_constant(0x80290422); // TPM_E_PCP_KEY_HANDLE_INVALIDATED
+pub const E_PCP_KEY_HANDLE_INVALIDATED : HResultError = HResultError::from_constant(0x80290422); // TPM_E_PCP_KEY_HANDLE_INVALIDATED
 
 /// The requested salt size for signing with RSAPSS does not match what the TPM uses.
-pub const E_PCP_UNSUPPORTED_PSS_SALT : SuccessHResult = SuccessHResult::from_constant(0x40290423); // TPM_E_PCP_UNSUPPORTED_PSS_SALT
+pub const E_PCP_UNSUPPORTED_PSS_SALT : HResultSuccess = HResultSuccess::from_constant(0x40290423); // TPM_E_PCP_UNSUPPORTED_PSS_SALT
 
 /// Validation of the platform claim failed.
-pub const E_PCP_PLATFORM_CLAIM_MAY_BE_OUTDATED : SuccessHResult = SuccessHResult::from_constant(0x40290424); // TPM_E_PCP_PLATFORM_CLAIM_MAY_BE_OUTDATED
+pub const E_PCP_PLATFORM_CLAIM_MAY_BE_OUTDATED : HResultSuccess = HResultSuccess::from_constant(0x40290424); // TPM_E_PCP_PLATFORM_CLAIM_MAY_BE_OUTDATED
 
 /// The requested platform claim is for a previous boot.
-pub const E_PCP_PLATFORM_CLAIM_OUTDATED : SuccessHResult = SuccessHResult::from_constant(0x40290425); // TPM_E_PCP_PLATFORM_CLAIM_OUTDATED
+pub const E_PCP_PLATFORM_CLAIM_OUTDATED : HResultSuccess = HResultSuccess::from_constant(0x40290425); // TPM_E_PCP_PLATFORM_CLAIM_OUTDATED
 
 /// The platform claim is for a previous boot, and cannot be created without reboot.
-pub const E_PCP_PLATFORM_CLAIM_REBOOT : SuccessHResult = SuccessHResult::from_constant(0x40290426); // TPM_E_PCP_PLATFORM_CLAIM_REBOOT
+pub const E_PCP_PLATFORM_CLAIM_REBOOT : HResultSuccess = HResultSuccess::from_constant(0x40290426); // TPM_E_PCP_PLATFORM_CLAIM_REBOOT
 
 /// TPM related network operations are blocked as Zero Exhaust mode is enabled on client.
-pub const E_ZERO_EXHAUST_ENABLED : ErrorHResult = ErrorHResult::from_constant(0x80290500); // TPM_E_ZERO_EXHAUST_ENABLED
+pub const E_ZERO_EXHAUST_ENABLED : HResultError = HResultError::from_constant(0x80290500); // TPM_E_ZERO_EXHAUST_ENABLED
 
 /// TPM provisioning did not run to completion.
-pub const E_PROVISIONING_INCOMPLETE : ErrorHResult = ErrorHResult::from_constant(0x80290600); // TPM_E_PROVISIONING_INCOMPLETE
+pub const E_PROVISIONING_INCOMPLETE : HResultError = HResultError::from_constant(0x80290600); // TPM_E_PROVISIONING_INCOMPLETE
 
 /// An invalid owner authorization value was specified.
-pub const E_INVALID_OWNER_AUTH : ErrorHResult = ErrorHResult::from_constant(0x80290601); // TPM_E_INVALID_OWNER_AUTH
+pub const E_INVALID_OWNER_AUTH : HResultError = HResultError::from_constant(0x80290601); // TPM_E_INVALID_OWNER_AUTH
 
 /// TPM command returned too much data.
-pub const E_TOO_MUCH_DATA : ErrorHResult = ErrorHResult::from_constant(0x80290602); // TPM_E_TOO_MUCH_DATA
+pub const E_TOO_MUCH_DATA : HResultError = HResultError::from_constant(0x80290602); // TPM_E_TOO_MUCH_DATA

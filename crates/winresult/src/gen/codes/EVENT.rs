@@ -4,52 +4,52 @@ use super::*;
 
 
 /// An event was able to invoke some but not all of the subscribers
-pub const S_SOME_SUBSCRIBERS_FAILED : SuccessHResult = SuccessHResult::from_constant(0x00040200); // EVENT_S_SOME_SUBSCRIBERS_FAILED
+pub const S_SOME_SUBSCRIBERS_FAILED : HResultSuccess = HResultSuccess::from_constant(0x00040200); // EVENT_S_SOME_SUBSCRIBERS_FAILED
 
 /// An event was unable to invoke any of the subscribers
-pub const E_ALL_SUBSCRIBERS_FAILED : ErrorHResult = ErrorHResult::from_constant(0x80040201); // EVENT_E_ALL_SUBSCRIBERS_FAILED
+pub const E_ALL_SUBSCRIBERS_FAILED : HResultError = HResultError::from_constant(0x80040201); // EVENT_E_ALL_SUBSCRIBERS_FAILED
 
 /// An event was delivered but there were no subscribers
-pub const S_NOSUBSCRIBERS : SuccessHResult = SuccessHResult::from_constant(0x00040202); // EVENT_S_NOSUBSCRIBERS
+pub const S_NOSUBSCRIBERS : HResultSuccess = HResultSuccess::from_constant(0x00040202); // EVENT_S_NOSUBSCRIBERS
 
 /// A syntax error occurred trying to evaluate a query string
-pub const E_QUERYSYNTAX : ErrorHResult = ErrorHResult::from_constant(0x80040203); // EVENT_E_QUERYSYNTAX
+pub const E_QUERYSYNTAX : HResultError = HResultError::from_constant(0x80040203); // EVENT_E_QUERYSYNTAX
 
 /// An invalid field name was used in a query string
-pub const E_QUERYFIELD : ErrorHResult = ErrorHResult::from_constant(0x80040204); // EVENT_E_QUERYFIELD
+pub const E_QUERYFIELD : HResultError = HResultError::from_constant(0x80040204); // EVENT_E_QUERYFIELD
 
 /// An unexpected exception was raised
-pub const E_INTERNALEXCEPTION : ErrorHResult = ErrorHResult::from_constant(0x80040205); // EVENT_E_INTERNALEXCEPTION
+pub const E_INTERNALEXCEPTION : HResultError = HResultError::from_constant(0x80040205); // EVENT_E_INTERNALEXCEPTION
 
 /// An unexpected internal error was detected
-pub const E_INTERNALERROR : ErrorHResult = ErrorHResult::from_constant(0x80040206); // EVENT_E_INTERNALERROR
+pub const E_INTERNALERROR : HResultError = HResultError::from_constant(0x80040206); // EVENT_E_INTERNALERROR
 
 /// The owner SID on a per-user subscription doesn't exist
-pub const E_INVALID_PER_USER_SID : ErrorHResult = ErrorHResult::from_constant(0x80040207); // EVENT_E_INVALID_PER_USER_SID
+pub const E_INVALID_PER_USER_SID : HResultError = HResultError::from_constant(0x80040207); // EVENT_E_INVALID_PER_USER_SID
 
 /// A user-supplied component or subscriber raised an exception
-pub const E_USER_EXCEPTION : ErrorHResult = ErrorHResult::from_constant(0x80040208); // EVENT_E_USER_EXCEPTION
+pub const E_USER_EXCEPTION : HResultError = HResultError::from_constant(0x80040208); // EVENT_E_USER_EXCEPTION
 
 /// An interface has too many methods to fire events from
-pub const E_TOO_MANY_METHODS : ErrorHResult = ErrorHResult::from_constant(0x80040209); // EVENT_E_TOO_MANY_METHODS
+pub const E_TOO_MANY_METHODS : HResultError = HResultError::from_constant(0x80040209); // EVENT_E_TOO_MANY_METHODS
 
 /// A subscription cannot be stored unless its event class already exists
-pub const E_MISSING_EVENTCLASS : ErrorHResult = ErrorHResult::from_constant(0x8004020A); // EVENT_E_MISSING_EVENTCLASS
+pub const E_MISSING_EVENTCLASS : HResultError = HResultError::from_constant(0x8004020A); // EVENT_E_MISSING_EVENTCLASS
 
 /// Not all the objects requested could be removed
-pub const E_NOT_ALL_REMOVED : ErrorHResult = ErrorHResult::from_constant(0x8004020B); // EVENT_E_NOT_ALL_REMOVED
+pub const E_NOT_ALL_REMOVED : HResultError = HResultError::from_constant(0x8004020B); // EVENT_E_NOT_ALL_REMOVED
 
 /// COM+ is required for this operation, but is not installed
-pub const E_COMPLUS_NOT_INSTALLED : ErrorHResult = ErrorHResult::from_constant(0x8004020C); // EVENT_E_COMPLUS_NOT_INSTALLED
+pub const E_COMPLUS_NOT_INSTALLED : HResultError = HResultError::from_constant(0x8004020C); // EVENT_E_COMPLUS_NOT_INSTALLED
 
 /// Cannot modify or delete an object that was not added using the COM+ Admin SDK
-pub const E_CANT_MODIFY_OR_DELETE_UNCONFIGURED_OBJECT : ErrorHResult = ErrorHResult::from_constant(0x8004020D); // EVENT_E_CANT_MODIFY_OR_DELETE_UNCONFIGURED_OBJECT
+pub const E_CANT_MODIFY_OR_DELETE_UNCONFIGURED_OBJECT : HResultError = HResultError::from_constant(0x8004020D); // EVENT_E_CANT_MODIFY_OR_DELETE_UNCONFIGURED_OBJECT
 
 /// Cannot modify or delete an object that was added using the COM+ Admin SDK
-pub const E_CANT_MODIFY_OR_DELETE_CONFIGURED_OBJECT : ErrorHResult = ErrorHResult::from_constant(0x8004020E); // EVENT_E_CANT_MODIFY_OR_DELETE_CONFIGURED_OBJECT
+pub const E_CANT_MODIFY_OR_DELETE_CONFIGURED_OBJECT : HResultError = HResultError::from_constant(0x8004020E); // EVENT_E_CANT_MODIFY_OR_DELETE_CONFIGURED_OBJECT
 
 /// The event class for this subscription is in an invalid partition
-pub const E_INVALID_EVENT_CLASS_PARTITION : ErrorHResult = ErrorHResult::from_constant(0x8004020F); // EVENT_E_INVALID_EVENT_CLASS_PARTITION
+pub const E_INVALID_EVENT_CLASS_PARTITION : HResultError = HResultError::from_constant(0x8004020F); // EVENT_E_INVALID_EVENT_CLASS_PARTITION
 
 /// The owner of the PerUser subscription is not logged on to the system specified
-pub const E_PER_USER_SID_NOT_LOGGED_ON : ErrorHResult = ErrorHResult::from_constant(0x80040210); // EVENT_E_PER_USER_SID_NOT_LOGGED_ON
+pub const E_PER_USER_SID_NOT_LOGGED_ON : HResultError = HResultError::from_constant(0x80040210); // EVENT_E_PER_USER_SID_NOT_LOGGED_ON

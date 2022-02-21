@@ -4,4 +4,4 @@ use super::*;
 
 
 /// The background task activation is spurious.
-pub const E_SPURIOUS_ACTIVATION : ErrorHResult = ErrorHResult::from_constant(0x80080300); // BT_E_SPURIOUS_ACTIVATION
+pub const E_SPURIOUS_ACTIVATION : HResultError = HResultError::from_constant(0x80080300); // BT_E_SPURIOUS_ACTIVATION

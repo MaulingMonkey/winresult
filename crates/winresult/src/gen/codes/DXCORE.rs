@@ -4,4 +4,4 @@ use super::*;
 
 
 /// The application failed to unregister from an event it registered for.
-pub const ERROR_EVENT_NOT_UNREGISTERED : ErrorHResult = ErrorHResult::from_constant(0x88800001); // DXCORE_ERROR_EVENT_NOT_UNREGISTERED
+pub const ERROR_EVENT_NOT_UNREGISTERED : HResultError = HResultError::from_constant(0x88800001); // DXCORE_ERROR_EVENT_NOT_UNREGISTERED

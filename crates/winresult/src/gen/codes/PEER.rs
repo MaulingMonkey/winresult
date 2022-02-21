@@ -4,253 +4,253 @@ use super::*;
 
 
 /// The IPv6 protocol is not installed.
-pub const E_IPV6_NOT_INSTALLED : ErrorHResult = ErrorHResult::from_constant(0x80630001); // PEER_E_IPV6_NOT_INSTALLED
+pub const E_IPV6_NOT_INSTALLED : HResultError = HResultError::from_constant(0x80630001); // PEER_E_IPV6_NOT_INSTALLED
 
 /// The component has not been initialized.
-pub const E_NOT_INITIALIZED : ErrorHResult = ErrorHResult::from_constant(0x80630002); // PEER_E_NOT_INITIALIZED
+pub const E_NOT_INITIALIZED : HResultError = HResultError::from_constant(0x80630002); // PEER_E_NOT_INITIALIZED
 
 /// The required service cannot be started.
-pub const E_CANNOT_START_SERVICE : ErrorHResult = ErrorHResult::from_constant(0x80630003); // PEER_E_CANNOT_START_SERVICE
+pub const E_CANNOT_START_SERVICE : HResultError = HResultError::from_constant(0x80630003); // PEER_E_CANNOT_START_SERVICE
 
 /// The P2P protocol is not licensed to run on this OS.
-pub const E_NOT_LICENSED : ErrorHResult = ErrorHResult::from_constant(0x80630004); // PEER_E_NOT_LICENSED
+pub const E_NOT_LICENSED : HResultError = HResultError::from_constant(0x80630004); // PEER_E_NOT_LICENSED
 
 /// The graph handle is invalid.
-pub const E_INVALID_GRAPH : ErrorHResult = ErrorHResult::from_constant(0x80630010); // PEER_E_INVALID_GRAPH
+pub const E_INVALID_GRAPH : HResultError = HResultError::from_constant(0x80630010); // PEER_E_INVALID_GRAPH
 
 /// The graph database name has changed.
-pub const E_DBNAME_CHANGED : ErrorHResult = ErrorHResult::from_constant(0x80630011); // PEER_E_DBNAME_CHANGED
+pub const E_DBNAME_CHANGED : HResultError = HResultError::from_constant(0x80630011); // PEER_E_DBNAME_CHANGED
 
 /// A graph with the same ID already exists.
-pub const E_DUPLICATE_GRAPH : ErrorHResult = ErrorHResult::from_constant(0x80630012); // PEER_E_DUPLICATE_GRAPH
+pub const E_DUPLICATE_GRAPH : HResultError = HResultError::from_constant(0x80630012); // PEER_E_DUPLICATE_GRAPH
 
 /// The graph is not ready.
-pub const E_GRAPH_NOT_READY : ErrorHResult = ErrorHResult::from_constant(0x80630013); // PEER_E_GRAPH_NOT_READY
+pub const E_GRAPH_NOT_READY : HResultError = HResultError::from_constant(0x80630013); // PEER_E_GRAPH_NOT_READY
 
 /// The graph is shutting down.
-pub const E_GRAPH_SHUTTING_DOWN : ErrorHResult = ErrorHResult::from_constant(0x80630014); // PEER_E_GRAPH_SHUTTING_DOWN
+pub const E_GRAPH_SHUTTING_DOWN : HResultError = HResultError::from_constant(0x80630014); // PEER_E_GRAPH_SHUTTING_DOWN
 
 /// The graph is still in use.
-pub const E_GRAPH_IN_USE : ErrorHResult = ErrorHResult::from_constant(0x80630015); // PEER_E_GRAPH_IN_USE
+pub const E_GRAPH_IN_USE : HResultError = HResultError::from_constant(0x80630015); // PEER_E_GRAPH_IN_USE
 
 /// The graph database is corrupt.
-pub const E_INVALID_DATABASE : ErrorHResult = ErrorHResult::from_constant(0x80630016); // PEER_E_INVALID_DATABASE
+pub const E_INVALID_DATABASE : HResultError = HResultError::from_constant(0x80630016); // PEER_E_INVALID_DATABASE
 
 /// Too many attributes have been used.
-pub const E_TOO_MANY_ATTRIBUTES : ErrorHResult = ErrorHResult::from_constant(0x80630017); // PEER_E_TOO_MANY_ATTRIBUTES
+pub const E_TOO_MANY_ATTRIBUTES : HResultError = HResultError::from_constant(0x80630017); // PEER_E_TOO_MANY_ATTRIBUTES
 
 /// The connection can not be found.
-pub const E_CONNECTION_NOT_FOUND : ErrorHResult = ErrorHResult::from_constant(0x80630103); // PEER_E_CONNECTION_NOT_FOUND
+pub const E_CONNECTION_NOT_FOUND : HResultError = HResultError::from_constant(0x80630103); // PEER_E_CONNECTION_NOT_FOUND
 
 /// The peer attempted to connect to itself.
-pub const E_CONNECT_SELF : ErrorHResult = ErrorHResult::from_constant(0x80630106); // PEER_E_CONNECT_SELF
+pub const E_CONNECT_SELF : HResultError = HResultError::from_constant(0x80630106); // PEER_E_CONNECT_SELF
 
 /// The peer is already listening for connections.
-pub const E_ALREADY_LISTENING : ErrorHResult = ErrorHResult::from_constant(0x80630107); // PEER_E_ALREADY_LISTENING
+pub const E_ALREADY_LISTENING : HResultError = HResultError::from_constant(0x80630107); // PEER_E_ALREADY_LISTENING
 
 /// The node was not found.
-pub const E_NODE_NOT_FOUND : ErrorHResult = ErrorHResult::from_constant(0x80630108); // PEER_E_NODE_NOT_FOUND
+pub const E_NODE_NOT_FOUND : HResultError = HResultError::from_constant(0x80630108); // PEER_E_NODE_NOT_FOUND
 
 /// The Connection attempt failed.
-pub const E_CONNECTION_FAILED : ErrorHResult = ErrorHResult::from_constant(0x80630109); // PEER_E_CONNECTION_FAILED
+pub const E_CONNECTION_FAILED : HResultError = HResultError::from_constant(0x80630109); // PEER_E_CONNECTION_FAILED
 
 /// The peer connection could not be authenticated.
-pub const E_CONNECTION_NOT_AUTHENTICATED : ErrorHResult = ErrorHResult::from_constant(0x8063010A); // PEER_E_CONNECTION_NOT_AUTHENTICATED
+pub const E_CONNECTION_NOT_AUTHENTICATED : HResultError = HResultError::from_constant(0x8063010A); // PEER_E_CONNECTION_NOT_AUTHENTICATED
 
 /// The connection was refused.
-pub const E_CONNECTION_REFUSED : ErrorHResult = ErrorHResult::from_constant(0x8063010B); // PEER_E_CONNECTION_REFUSED
+pub const E_CONNECTION_REFUSED : HResultError = HResultError::from_constant(0x8063010B); // PEER_E_CONNECTION_REFUSED
 
 /// The peer name classifier is too long.
-pub const E_CLASSIFIER_TOO_LONG : ErrorHResult = ErrorHResult::from_constant(0x80630201); // PEER_E_CLASSIFIER_TOO_LONG
+pub const E_CLASSIFIER_TOO_LONG : HResultError = HResultError::from_constant(0x80630201); // PEER_E_CLASSIFIER_TOO_LONG
 
 /// The maximum number of identities have been created.
-pub const E_TOO_MANY_IDENTITIES : ErrorHResult = ErrorHResult::from_constant(0x80630202); // PEER_E_TOO_MANY_IDENTITIES
+pub const E_TOO_MANY_IDENTITIES : HResultError = HResultError::from_constant(0x80630202); // PEER_E_TOO_MANY_IDENTITIES
 
 /// Unable to access a key.
-pub const E_NO_KEY_ACCESS : ErrorHResult = ErrorHResult::from_constant(0x80630203); // PEER_E_NO_KEY_ACCESS
+pub const E_NO_KEY_ACCESS : HResultError = HResultError::from_constant(0x80630203); // PEER_E_NO_KEY_ACCESS
 
 /// The group already exists.
-pub const E_GROUPS_EXIST : ErrorHResult = ErrorHResult::from_constant(0x80630204); // PEER_E_GROUPS_EXIST
+pub const E_GROUPS_EXIST : HResultError = HResultError::from_constant(0x80630204); // PEER_E_GROUPS_EXIST
 
 /// The requested record could not be found.
-pub const E_RECORD_NOT_FOUND : ErrorHResult = ErrorHResult::from_constant(0x80630301); // PEER_E_RECORD_NOT_FOUND
+pub const E_RECORD_NOT_FOUND : HResultError = HResultError::from_constant(0x80630301); // PEER_E_RECORD_NOT_FOUND
 
 /// Access to the database was denied.
-pub const E_DATABASE_ACCESSDENIED : ErrorHResult = ErrorHResult::from_constant(0x80630302); // PEER_E_DATABASE_ACCESSDENIED
+pub const E_DATABASE_ACCESSDENIED : HResultError = HResultError::from_constant(0x80630302); // PEER_E_DATABASE_ACCESSDENIED
 
 /// The Database could not be initialized.
-pub const E_DBINITIALIZATION_FAILED : ErrorHResult = ErrorHResult::from_constant(0x80630303); // PEER_E_DBINITIALIZATION_FAILED
+pub const E_DBINITIALIZATION_FAILED : HResultError = HResultError::from_constant(0x80630303); // PEER_E_DBINITIALIZATION_FAILED
 
 /// The record is too big.
-pub const E_MAX_RECORD_SIZE_EXCEEDED : ErrorHResult = ErrorHResult::from_constant(0x80630304); // PEER_E_MAX_RECORD_SIZE_EXCEEDED
+pub const E_MAX_RECORD_SIZE_EXCEEDED : HResultError = HResultError::from_constant(0x80630304); // PEER_E_MAX_RECORD_SIZE_EXCEEDED
 
 /// The database already exists.
-pub const E_DATABASE_ALREADY_PRESENT : ErrorHResult = ErrorHResult::from_constant(0x80630305); // PEER_E_DATABASE_ALREADY_PRESENT
+pub const E_DATABASE_ALREADY_PRESENT : HResultError = HResultError::from_constant(0x80630305); // PEER_E_DATABASE_ALREADY_PRESENT
 
 /// The database could not be found.
-pub const E_DATABASE_NOT_PRESENT : ErrorHResult = ErrorHResult::from_constant(0x80630306); // PEER_E_DATABASE_NOT_PRESENT
+pub const E_DATABASE_NOT_PRESENT : HResultError = HResultError::from_constant(0x80630306); // PEER_E_DATABASE_NOT_PRESENT
 
 /// The identity could not be found.
-pub const E_IDENTITY_NOT_FOUND : ErrorHResult = ErrorHResult::from_constant(0x80630401); // PEER_E_IDENTITY_NOT_FOUND
+pub const E_IDENTITY_NOT_FOUND : HResultError = HResultError::from_constant(0x80630401); // PEER_E_IDENTITY_NOT_FOUND
 
 /// The event handle could not be found.
-pub const E_EVENT_HANDLE_NOT_FOUND : ErrorHResult = ErrorHResult::from_constant(0x80630501); // PEER_E_EVENT_HANDLE_NOT_FOUND
+pub const E_EVENT_HANDLE_NOT_FOUND : HResultError = HResultError::from_constant(0x80630501); // PEER_E_EVENT_HANDLE_NOT_FOUND
 
 /// Invalid search.
-pub const E_INVALID_SEARCH : ErrorHResult = ErrorHResult::from_constant(0x80630601); // PEER_E_INVALID_SEARCH
+pub const E_INVALID_SEARCH : HResultError = HResultError::from_constant(0x80630601); // PEER_E_INVALID_SEARCH
 
 /// The search attributes are invalid.
-pub const E_INVALID_ATTRIBUTES : ErrorHResult = ErrorHResult::from_constant(0x80630602); // PEER_E_INVALID_ATTRIBUTES
+pub const E_INVALID_ATTRIBUTES : HResultError = HResultError::from_constant(0x80630602); // PEER_E_INVALID_ATTRIBUTES
 
 /// The invitation is not trusted.
-pub const E_INVITATION_NOT_TRUSTED : ErrorHResult = ErrorHResult::from_constant(0x80630701); // PEER_E_INVITATION_NOT_TRUSTED
+pub const E_INVITATION_NOT_TRUSTED : HResultError = HResultError::from_constant(0x80630701); // PEER_E_INVITATION_NOT_TRUSTED
 
 /// The certchain is too long.
-pub const E_CHAIN_TOO_LONG : ErrorHResult = ErrorHResult::from_constant(0x80630703); // PEER_E_CHAIN_TOO_LONG
+pub const E_CHAIN_TOO_LONG : HResultError = HResultError::from_constant(0x80630703); // PEER_E_CHAIN_TOO_LONG
 
 /// The time period is invalid.
-pub const E_INVALID_TIME_PERIOD : ErrorHResult = ErrorHResult::from_constant(0x80630705); // PEER_E_INVALID_TIME_PERIOD
+pub const E_INVALID_TIME_PERIOD : HResultError = HResultError::from_constant(0x80630705); // PEER_E_INVALID_TIME_PERIOD
 
 /// A circular cert chain was detected.
-pub const E_CIRCULAR_CHAIN_DETECTED : ErrorHResult = ErrorHResult::from_constant(0x80630706); // PEER_E_CIRCULAR_CHAIN_DETECTED
+pub const E_CIRCULAR_CHAIN_DETECTED : HResultError = HResultError::from_constant(0x80630706); // PEER_E_CIRCULAR_CHAIN_DETECTED
 
 /// The certstore is corrupted.
-pub const E_CERT_STORE_CORRUPTED : ErrorHResult = ErrorHResult::from_constant(0x80630801); // PEER_E_CERT_STORE_CORRUPTED
+pub const E_CERT_STORE_CORRUPTED : HResultError = HResultError::from_constant(0x80630801); // PEER_E_CERT_STORE_CORRUPTED
 
 /// The specified PNRP cloud does not exist.
-pub const E_NO_CLOUD : ErrorHResult = ErrorHResult::from_constant(0x80631001); // PEER_E_NO_CLOUD
+pub const E_NO_CLOUD : HResultError = HResultError::from_constant(0x80631001); // PEER_E_NO_CLOUD
 
 /// The cloud name is ambiguous.
-pub const E_CLOUD_NAME_AMBIGUOUS : ErrorHResult = ErrorHResult::from_constant(0x80631005); // PEER_E_CLOUD_NAME_AMBIGUOUS
+pub const E_CLOUD_NAME_AMBIGUOUS : HResultError = HResultError::from_constant(0x80631005); // PEER_E_CLOUD_NAME_AMBIGUOUS
 
 /// The record is invalid.
-pub const E_INVALID_RECORD : ErrorHResult = ErrorHResult::from_constant(0x80632010); // PEER_E_INVALID_RECORD
+pub const E_INVALID_RECORD : HResultError = HResultError::from_constant(0x80632010); // PEER_E_INVALID_RECORD
 
 /// Not authorized.
-pub const E_NOT_AUTHORIZED : ErrorHResult = ErrorHResult::from_constant(0x80632020); // PEER_E_NOT_AUTHORIZED
+pub const E_NOT_AUTHORIZED : HResultError = HResultError::from_constant(0x80632020); // PEER_E_NOT_AUTHORIZED
 
 /// The password does not meet policy requirements.
-pub const E_PASSWORD_DOES_NOT_MEET_POLICY : ErrorHResult = ErrorHResult::from_constant(0x80632021); // PEER_E_PASSWORD_DOES_NOT_MEET_POLICY
+pub const E_PASSWORD_DOES_NOT_MEET_POLICY : HResultError = HResultError::from_constant(0x80632021); // PEER_E_PASSWORD_DOES_NOT_MEET_POLICY
 
 /// The record validation has been deferred.
-pub const E_DEFERRED_VALIDATION : ErrorHResult = ErrorHResult::from_constant(0x80632030); // PEER_E_DEFERRED_VALIDATION
+pub const E_DEFERRED_VALIDATION : HResultError = HResultError::from_constant(0x80632030); // PEER_E_DEFERRED_VALIDATION
 
 /// The group properties are invalid.
-pub const E_INVALID_GROUP_PROPERTIES : ErrorHResult = ErrorHResult::from_constant(0x80632040); // PEER_E_INVALID_GROUP_PROPERTIES
+pub const E_INVALID_GROUP_PROPERTIES : HResultError = HResultError::from_constant(0x80632040); // PEER_E_INVALID_GROUP_PROPERTIES
 
 /// The peername is invalid.
-pub const E_INVALID_PEER_NAME : ErrorHResult = ErrorHResult::from_constant(0x80632050); // PEER_E_INVALID_PEER_NAME
+pub const E_INVALID_PEER_NAME : HResultError = HResultError::from_constant(0x80632050); // PEER_E_INVALID_PEER_NAME
 
 /// The classifier is invalid.
-pub const E_INVALID_CLASSIFIER : ErrorHResult = ErrorHResult::from_constant(0x80632060); // PEER_E_INVALID_CLASSIFIER
+pub const E_INVALID_CLASSIFIER : HResultError = HResultError::from_constant(0x80632060); // PEER_E_INVALID_CLASSIFIER
 
 /// The friendly name is invalid.
-pub const E_INVALID_FRIENDLY_NAME : ErrorHResult = ErrorHResult::from_constant(0x80632070); // PEER_E_INVALID_FRIENDLY_NAME
+pub const E_INVALID_FRIENDLY_NAME : HResultError = HResultError::from_constant(0x80632070); // PEER_E_INVALID_FRIENDLY_NAME
 
 /// Invalid role property.
-pub const E_INVALID_ROLE_PROPERTY : ErrorHResult = ErrorHResult::from_constant(0x80632071); // PEER_E_INVALID_ROLE_PROPERTY
+pub const E_INVALID_ROLE_PROPERTY : HResultError = HResultError::from_constant(0x80632071); // PEER_E_INVALID_ROLE_PROPERTY
 
 /// Invalid classifier property.
-pub const E_INVALID_CLASSIFIER_PROPERTY : ErrorHResult = ErrorHResult::from_constant(0x80632072); // PEER_E_INVALID_CLASSIFIER_PROPERTY
+pub const E_INVALID_CLASSIFIER_PROPERTY : HResultError = HResultError::from_constant(0x80632072); // PEER_E_INVALID_CLASSIFIER_PROPERTY
 
 /// Invalid record expiration.
-pub const E_INVALID_RECORD_EXPIRATION : ErrorHResult = ErrorHResult::from_constant(0x80632080); // PEER_E_INVALID_RECORD_EXPIRATION
+pub const E_INVALID_RECORD_EXPIRATION : HResultError = HResultError::from_constant(0x80632080); // PEER_E_INVALID_RECORD_EXPIRATION
 
 /// Invalid credential info.
-pub const E_INVALID_CREDENTIAL_INFO : ErrorHResult = ErrorHResult::from_constant(0x80632081); // PEER_E_INVALID_CREDENTIAL_INFO
+pub const E_INVALID_CREDENTIAL_INFO : HResultError = HResultError::from_constant(0x80632081); // PEER_E_INVALID_CREDENTIAL_INFO
 
 /// Invalid credential.
-pub const E_INVALID_CREDENTIAL : ErrorHResult = ErrorHResult::from_constant(0x80632082); // PEER_E_INVALID_CREDENTIAL
+pub const E_INVALID_CREDENTIAL : HResultError = HResultError::from_constant(0x80632082); // PEER_E_INVALID_CREDENTIAL
 
 /// Invalid record size.
-pub const E_INVALID_RECORD_SIZE : ErrorHResult = ErrorHResult::from_constant(0x80632083); // PEER_E_INVALID_RECORD_SIZE
+pub const E_INVALID_RECORD_SIZE : HResultError = HResultError::from_constant(0x80632083); // PEER_E_INVALID_RECORD_SIZE
 
 /// Unsupported version.
-pub const E_UNSUPPORTED_VERSION : ErrorHResult = ErrorHResult::from_constant(0x80632090); // PEER_E_UNSUPPORTED_VERSION
+pub const E_UNSUPPORTED_VERSION : HResultError = HResultError::from_constant(0x80632090); // PEER_E_UNSUPPORTED_VERSION
 
 /// The group is not ready.
-pub const E_GROUP_NOT_READY : ErrorHResult = ErrorHResult::from_constant(0x80632091); // PEER_E_GROUP_NOT_READY
+pub const E_GROUP_NOT_READY : HResultError = HResultError::from_constant(0x80632091); // PEER_E_GROUP_NOT_READY
 
 /// The group is still in use.
-pub const E_GROUP_IN_USE : ErrorHResult = ErrorHResult::from_constant(0x80632092); // PEER_E_GROUP_IN_USE
+pub const E_GROUP_IN_USE : HResultError = HResultError::from_constant(0x80632092); // PEER_E_GROUP_IN_USE
 
 /// The group is invalid.
-pub const E_INVALID_GROUP : ErrorHResult = ErrorHResult::from_constant(0x80632093); // PEER_E_INVALID_GROUP
+pub const E_INVALID_GROUP : HResultError = HResultError::from_constant(0x80632093); // PEER_E_INVALID_GROUP
 
 /// No members were found.
-pub const E_NO_MEMBERS_FOUND : ErrorHResult = ErrorHResult::from_constant(0x80632094); // PEER_E_NO_MEMBERS_FOUND
+pub const E_NO_MEMBERS_FOUND : HResultError = HResultError::from_constant(0x80632094); // PEER_E_NO_MEMBERS_FOUND
 
 /// There are no member connections.
-pub const E_NO_MEMBER_CONNECTIONS : ErrorHResult = ErrorHResult::from_constant(0x80632095); // PEER_E_NO_MEMBER_CONNECTIONS
+pub const E_NO_MEMBER_CONNECTIONS : HResultError = HResultError::from_constant(0x80632095); // PEER_E_NO_MEMBER_CONNECTIONS
 
 /// Unable to listen.
-pub const E_UNABLE_TO_LISTEN : ErrorHResult = ErrorHResult::from_constant(0x80632096); // PEER_E_UNABLE_TO_LISTEN
+pub const E_UNABLE_TO_LISTEN : HResultError = HResultError::from_constant(0x80632096); // PEER_E_UNABLE_TO_LISTEN
 
 /// The identity does not exist.
-pub const E_IDENTITY_DELETED : ErrorHResult = ErrorHResult::from_constant(0x806320A0); // PEER_E_IDENTITY_DELETED
+pub const E_IDENTITY_DELETED : HResultError = HResultError::from_constant(0x806320A0); // PEER_E_IDENTITY_DELETED
 
 /// The service is not available.
-pub const E_SERVICE_NOT_AVAILABLE : ErrorHResult = ErrorHResult::from_constant(0x806320A1); // PEER_E_SERVICE_NOT_AVAILABLE
+pub const E_SERVICE_NOT_AVAILABLE : HResultError = HResultError::from_constant(0x806320A1); // PEER_E_SERVICE_NOT_AVAILABLE
 
 /// THe contact could not be found.
-pub const E_CONTACT_NOT_FOUND : ErrorHResult = ErrorHResult::from_constant(0x80636001); // PEER_E_CONTACT_NOT_FOUND
+pub const E_CONTACT_NOT_FOUND : HResultError = HResultError::from_constant(0x80636001); // PEER_E_CONTACT_NOT_FOUND
 
 /// The graph data was created.
-pub const S_GRAPH_DATA_CREATED : SuccessHResult = SuccessHResult::from_constant(0x00630001); // PEER_S_GRAPH_DATA_CREATED
+pub const S_GRAPH_DATA_CREATED : HResultSuccess = HResultSuccess::from_constant(0x00630001); // PEER_S_GRAPH_DATA_CREATED
 
 /// There is not more event data.
-pub const S_NO_EVENT_DATA : SuccessHResult = SuccessHResult::from_constant(0x00630002); // PEER_S_NO_EVENT_DATA
+pub const S_NO_EVENT_DATA : HResultSuccess = HResultSuccess::from_constant(0x00630002); // PEER_S_NO_EVENT_DATA
 
 /// The graph is already connect.
-pub const S_ALREADY_CONNECTED : SuccessHResult = SuccessHResult::from_constant(0x00632000); // PEER_S_ALREADY_CONNECTED
+pub const S_ALREADY_CONNECTED : HResultSuccess = HResultSuccess::from_constant(0x00632000); // PEER_S_ALREADY_CONNECTED
 
 /// The subscription already exists.
-pub const S_SUBSCRIPTION_EXISTS : SuccessHResult = SuccessHResult::from_constant(0x00636000); // PEER_S_SUBSCRIPTION_EXISTS
+pub const S_SUBSCRIPTION_EXISTS : HResultSuccess = HResultSuccess::from_constant(0x00636000); // PEER_S_SUBSCRIPTION_EXISTS
 
 /// No connectivity.
-pub const S_NO_CONNECTIVITY : SuccessHResult = SuccessHResult::from_constant(0x00630005); // PEER_S_NO_CONNECTIVITY
+pub const S_NO_CONNECTIVITY : HResultSuccess = HResultSuccess::from_constant(0x00630005); // PEER_S_NO_CONNECTIVITY
 
 /// Already a member.
-pub const S_ALREADY_A_MEMBER : SuccessHResult = SuccessHResult::from_constant(0x00630006); // PEER_S_ALREADY_A_MEMBER
+pub const S_ALREADY_A_MEMBER : HResultSuccess = HResultSuccess::from_constant(0x00630006); // PEER_S_ALREADY_A_MEMBER
 
 /// The peername could not be converted to a DNS pnrp name.
-pub const E_CANNOT_CONVERT_PEER_NAME : ErrorHResult = ErrorHResult::from_constant(0x80634001); // PEER_E_CANNOT_CONVERT_PEER_NAME
+pub const E_CANNOT_CONVERT_PEER_NAME : HResultError = HResultError::from_constant(0x80634001); // PEER_E_CANNOT_CONVERT_PEER_NAME
 
 /// Invalid peer host name.
-pub const E_INVALID_PEER_HOST_NAME : ErrorHResult = ErrorHResult::from_constant(0x80634002); // PEER_E_INVALID_PEER_HOST_NAME
+pub const E_INVALID_PEER_HOST_NAME : HResultError = HResultError::from_constant(0x80634002); // PEER_E_INVALID_PEER_HOST_NAME
 
 /// No more data could be found.
-pub const E_NO_MORE : ErrorHResult = ErrorHResult::from_constant(0x80634003); // PEER_E_NO_MORE
+pub const E_NO_MORE : HResultError = HResultError::from_constant(0x80634003); // PEER_E_NO_MORE
 
 /// The existing peer name is already registered.
-pub const E_PNRP_DUPLICATE_PEER_NAME : ErrorHResult = ErrorHResult::from_constant(0x80634005); // PEER_E_PNRP_DUPLICATE_PEER_NAME
+pub const E_PNRP_DUPLICATE_PEER_NAME : HResultError = HResultError::from_constant(0x80634005); // PEER_E_PNRP_DUPLICATE_PEER_NAME
 
 /// The app invite request was cancelled by the user.
-pub const E_INVITE_CANCELLED : ErrorHResult = ErrorHResult::from_constant(0x80637000); // PEER_E_INVITE_CANCELLED
+pub const E_INVITE_CANCELLED : HResultError = HResultError::from_constant(0x80637000); // PEER_E_INVITE_CANCELLED
 
 /// No response of the invite was received.
-pub const E_INVITE_RESPONSE_NOT_AVAILABLE : ErrorHResult = ErrorHResult::from_constant(0x80637001); // PEER_E_INVITE_RESPONSE_NOT_AVAILABLE
+pub const E_INVITE_RESPONSE_NOT_AVAILABLE : HResultError = HResultError::from_constant(0x80637001); // PEER_E_INVITE_RESPONSE_NOT_AVAILABLE
 
 /// User is not signed into serverless presence.
-pub const E_NOT_SIGNED_IN : ErrorHResult = ErrorHResult::from_constant(0x80637003); // PEER_E_NOT_SIGNED_IN
+pub const E_NOT_SIGNED_IN : HResultError = HResultError::from_constant(0x80637003); // PEER_E_NOT_SIGNED_IN
 
 /// The user declined the privacy policy prompt.
-pub const E_PRIVACY_DECLINED : ErrorHResult = ErrorHResult::from_constant(0x80637004); // PEER_E_PRIVACY_DECLINED
+pub const E_PRIVACY_DECLINED : HResultError = HResultError::from_constant(0x80637004); // PEER_E_PRIVACY_DECLINED
 
 /// A timeout occurred.
-pub const E_TIMEOUT : ErrorHResult = ErrorHResult::from_constant(0x80637005); // PEER_E_TIMEOUT
+pub const E_TIMEOUT : HResultError = HResultError::from_constant(0x80637005); // PEER_E_TIMEOUT
 
 /// The address is invalid.
-pub const E_INVALID_ADDRESS : ErrorHResult = ErrorHResult::from_constant(0x80637007); // PEER_E_INVALID_ADDRESS
+pub const E_INVALID_ADDRESS : HResultError = HResultError::from_constant(0x80637007); // PEER_E_INVALID_ADDRESS
 
 /// A required firewall exception is disabled.
-pub const E_FW_EXCEPTION_DISABLED : ErrorHResult = ErrorHResult::from_constant(0x80637008); // PEER_E_FW_EXCEPTION_DISABLED
+pub const E_FW_EXCEPTION_DISABLED : HResultError = HResultError::from_constant(0x80637008); // PEER_E_FW_EXCEPTION_DISABLED
 
 /// The service is blocked by a firewall policy.
-pub const E_FW_BLOCKED_BY_POLICY : ErrorHResult = ErrorHResult::from_constant(0x80637009); // PEER_E_FW_BLOCKED_BY_POLICY
+pub const E_FW_BLOCKED_BY_POLICY : HResultError = HResultError::from_constant(0x80637009); // PEER_E_FW_BLOCKED_BY_POLICY
 
 /// Firewall exceptions are disabled.
-pub const E_FW_BLOCKED_BY_SHIELDS_UP : ErrorHResult = ErrorHResult::from_constant(0x8063700A); // PEER_E_FW_BLOCKED_BY_SHIELDS_UP
+pub const E_FW_BLOCKED_BY_SHIELDS_UP : HResultError = HResultError::from_constant(0x8063700A); // PEER_E_FW_BLOCKED_BY_SHIELDS_UP
 
 /// The user declined to enable the firewall exceptions.
-pub const E_FW_DECLINED : ErrorHResult = ErrorHResult::from_constant(0x8063700B); // PEER_E_FW_DECLINED
+pub const E_FW_DECLINED : HResultError = HResultError::from_constant(0x8063700B); // PEER_E_FW_DECLINED

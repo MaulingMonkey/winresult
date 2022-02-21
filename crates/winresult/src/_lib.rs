@@ -6,25 +6,25 @@
 //! | ----------:| ----------:| ----------------------- | -------- |
 //! |          0 |     0xFFFF | [`SuccessCodeMicrosoft`]
 //! |          0 |     0xFFFF | [`ErrorCodeMicrosoft`]
-//! |          0 | 0x7FFFFFFF | [`SuccessHResult`]
-//! | 0x80000000 | 0xFFFFFFFF | [`ErrorHResult`]
-//! |          0 | 0xFFFFFFFF | [`HResult`]             | [`SuccessHResult`] \| [`ErrorHResult`]
+//! |          0 | 0x7FFFFFFF | [`HResultSuccess`]
+//! | 0x80000000 | 0xFFFFFFFF | [`HResultError`]
+//! |          0 | 0xFFFFFFFF | [`HResult`]             | [`HResultSuccess`] \| [`HResultError`]
 //! |          0 | 0xFFFFFFFF | [`NtStatus`]            | ~~`SuccessNtStatus` \| `ErrorNtStatus`~~
 //!
 //! ### Buggy Bitwise Comparisons to Forbid
 //!
 //! | left                      | right                 | why |
 //! | ------------------------- | --------------------- | --- |
-//! | [`ErrorCodeMicrosoft`]    | [`ErrorHResult`]      | never `true`, non-overlapping ranges, need to add or remove facility
-//! | [`ErrorCodeMicrosoft`]    | [`SuccessHResult`]    | `ERROR_INVALID_FUNCTION == S_FALSE`, need to add or remove facility
+//! | [`ErrorCodeMicrosoft`]    | [`HResultError`]      | never `true`, non-overlapping ranges, need to add or remove facility
+//! | [`ErrorCodeMicrosoft`]    | [`HResultSuccess`]    | `ERROR_INVALID_FUNCTION == S_FALSE`, need to add or remove facility
 //! | [`ErrorCodeMicrosoft`]    | [`HResult`]           | `ERROR_INVALID_FUNCTION == S_FALSE`, need to add or remove facility
 //! | [`ErrorCodeMicrosoft`]    | [`WaitCode`]          | `ERROR_INVALID_FUNCTION == WAIT_OBJECT_0+1`
 //! | Success\*                 | Error\*               | never `true` except by accident
 //!
 //! ### Conversions
 //!
-//! *   ([FacilityHrMicrosoft], [SuccessCodeMicrosoft]) → [SuccessHResult] → [HResult]
-//! *   ([FacilityHrMicrosoft], [ErrorCodeMicrosoft]) → [ErrorHResult] → [HResult]
+//! *   ([HResultFacilityMicrosoft], [SuccessCodeMicrosoft]) → [HResultSuccess] → [HResult]
+//! *   ([HResultFacilityMicrosoft], [ErrorCodeMicrosoft]) → [HResultError] → [HResult]
 
 #![no_std]
 
@@ -33,14 +33,14 @@
 extern crate winresult_types as types;
 
 pub use types::{
-    FacilityHrMicrosoft,
-    FacilityNtStatusMicrosoft,
     SuccessCodeMicrosoft,
     ErrorCodeMicrosoft,
-    SuccessHResult,
-    ErrorHResult,
     HResult,
+    HResultFacilityMicrosoft,
+    HResultSuccess,
+    HResultError,
     NtStatus,
+    NtStatusFacilityMicrosoft,
     NtStatusSeverity,
     WaitCode,
     WAIT,
@@ -59,12 +59,12 @@ pub use gen::codes::{*, STATUS};
 pub mod FACILITY {
     /// HRESULT facilities
     pub mod HRESULT {
-        use crate::FacilityHrMicrosoft;
+        use crate::HResultFacilityMicrosoft;
         macro_rules! microsoft_hresult_facilities {($(
             #define FACILITY_ $f:ident $value:literal
         )*) => {$(
             #[doc = concat!("`", stringify!($value), "` (HRESULT)")]
-            pub const $f : FacilityHrMicrosoft = FacilityHrMicrosoft::from_constant($value);
+            pub const $f : HResultFacilityMicrosoft = HResultFacilityMicrosoft::from_constant($value);
         )*}}
         include!("hresult/extra.facilities.rs");
         include!("hresult/winerror.facilities.rs");
@@ -72,12 +72,12 @@ pub mod FACILITY {
 
     /// NTSTATUS facilities
     pub mod NTSTATUS {
-        use crate::FacilityNtStatusMicrosoft;
+        use crate::NtStatusFacilityMicrosoft;
         macro_rules! microsoft_ntstatus_facilities {($(
             #define $prefix:ident $f:ident $value:literal
         )*) => {$(
             #[doc = concat!("`", stringify!($value), "` (NTSTATUS)")]
-            pub const $f : FacilityNtStatusMicrosoft = FacilityNtStatusMicrosoft::from_constant($value);
+            pub const $f : NtStatusFacilityMicrosoft = NtStatusFacilityMicrosoft::from_constant($value);
         )*}}
         include!("ntstatus/facilities.rs");
     }
@@ -92,7 +92,7 @@ mod gen {
     pub mod codes {
         #![allow(non_snake_case)]
         #![allow(non_upper_case_globals)]
-        use types::{ErrorCodeMicrosoft, SuccessHResult, ErrorHResult};
+        use types::{ErrorCodeMicrosoft, HResultSuccess, HResultError};
 
 
 
@@ -157,7 +157,7 @@ mod gen {
         pub mod CS;
 
         /// [Direct3D](https://docs.microsoft.com/en-us/windows/win32/direct3d)
-        pub mod D3D { use super::*; pub const OK : SuccessHResult = SuccessHResult::from_constant(0); }
+        pub mod D3D { use super::*; pub const OK : HResultSuccess = HResultSuccess::from_constant(0); }
 
         /// [Direct3D](https://docs.microsoft.com/en-us/windows/win32/direct3d) 10+
         pub mod D3D10;
@@ -207,7 +207,7 @@ mod gen {
         /// [DXGI](https://docs.microsoft.com/en-us/windows/win32/direct3ddxgi/dx-graphics-dxgi)
         pub mod DXGI;
 
-        /// **Errors Codes**.  Typically [ErrorHResult]s.
+        /// **Errors Codes**.  Typically [HResultError]s.
         pub mod E;
 
         /// Exchange ActiveSync
@@ -218,7 +218,7 @@ mod gen {
         /// **E**ntry **P**oin**t** for Remote Procedure Calls
         #[allow(dead_code)] mod EPT {}
 
-        /// **Error Codes**.  Mostly a mixture of [ErrorHResult]s and [ErrorCodeMicrosoft]s.
+        /// **Error Codes**.  Mostly a mixture of [HResultError]s and [ErrorCodeMicrosoft]s.
         /// submodules:
         /// [CLOUD_FILE](Self::CLOUD_FILE),
         /// [CLUSTER](Self::CLUSTER),
@@ -242,7 +242,7 @@ mod gen {
         /// Note that `ERROR::SUBCATEGORY::CODE` is also generally exported as `ERROR::SUBCATEGORY_CODE`, although the latter is hidden from the docs to reduce clutter.
         /// <br><br>
         pub mod ERROR {
-            use types::{ErrorCodeMicrosoft, SuccessCodeMicrosoft, SuccessHResult, ErrorHResult};
+            use types::{ErrorCodeMicrosoft, SuccessCodeMicrosoft, HResultSuccess, HResultError};
 
             // TODO: SUCCESS = 0 ?
 

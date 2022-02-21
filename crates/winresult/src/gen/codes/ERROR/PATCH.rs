@@ -30,15 +30,15 @@ pub const REMOVAL_DISALLOWED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_con
 /// Windows Installer does not permit updating of managed advertised products. At least one feature of the product must be installed before applying the update.
 pub const MANAGED_ADVERTISED_PRODUCT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1651); // ERROR_PATCH_MANAGED_ADVERTISED_PRODUCT
 
-pub const ENCODE_FAILURE : ErrorHResult = ErrorHResult::from_constant(0xC00E3101); // ERROR_PATCH_ENCODE_FAILURE
-pub const INVALID_OPTIONS : ErrorHResult = ErrorHResult::from_constant(0xC00E3102); // ERROR_PATCH_INVALID_OPTIONS
-pub const SAME_FILE : ErrorHResult = ErrorHResult::from_constant(0xC00E3103); // ERROR_PATCH_SAME_FILE
-pub const RETAIN_RANGES_DIFFER : ErrorHResult = ErrorHResult::from_constant(0xC00E3104); // ERROR_PATCH_RETAIN_RANGES_DIFFER
-pub const BIGGER_THAN_COMPRESSED : ErrorHResult = ErrorHResult::from_constant(0xC00E3105); // ERROR_PATCH_BIGGER_THAN_COMPRESSED
-pub const IMAGEHLP_FAILURE : ErrorHResult = ErrorHResult::from_constant(0xC00E3106); // ERROR_PATCH_IMAGEHLP_FAILURE
-pub const DECODE_FAILURE : ErrorHResult = ErrorHResult::from_constant(0xC00E4101); // ERROR_PATCH_DECODE_FAILURE
-pub const CORRUPT : ErrorHResult = ErrorHResult::from_constant(0xC00E4102); // ERROR_PATCH_CORRUPT
-pub const NEWER_FORMAT : ErrorHResult = ErrorHResult::from_constant(0xC00E4103); // ERROR_PATCH_NEWER_FORMAT
-pub const WRONG_FILE : ErrorHResult = ErrorHResult::from_constant(0xC00E4104); // ERROR_PATCH_WRONG_FILE
-pub const NOT_NECESSARY : ErrorHResult = ErrorHResult::from_constant(0xC00E4105); // ERROR_PATCH_NOT_NECESSARY
-pub const NOT_AVAILABLE : ErrorHResult = ErrorHResult::from_constant(0xC00E4106); // ERROR_PATCH_NOT_AVAILABLE
+pub const ENCODE_FAILURE : HResultError = HResultError::from_constant(0xC00E3101); // ERROR_PATCH_ENCODE_FAILURE
+pub const INVALID_OPTIONS : HResultError = HResultError::from_constant(0xC00E3102); // ERROR_PATCH_INVALID_OPTIONS
+pub const SAME_FILE : HResultError = HResultError::from_constant(0xC00E3103); // ERROR_PATCH_SAME_FILE
+pub const RETAIN_RANGES_DIFFER : HResultError = HResultError::from_constant(0xC00E3104); // ERROR_PATCH_RETAIN_RANGES_DIFFER
+pub const BIGGER_THAN_COMPRESSED : HResultError = HResultError::from_constant(0xC00E3105); // ERROR_PATCH_BIGGER_THAN_COMPRESSED
+pub const IMAGEHLP_FAILURE : HResultError = HResultError::from_constant(0xC00E3106); // ERROR_PATCH_IMAGEHLP_FAILURE
+pub const DECODE_FAILURE : HResultError = HResultError::from_constant(0xC00E4101); // ERROR_PATCH_DECODE_FAILURE
+pub const CORRUPT : HResultError = HResultError::from_constant(0xC00E4102); // ERROR_PATCH_CORRUPT
+pub const NEWER_FORMAT : HResultError = HResultError::from_constant(0xC00E4103); // ERROR_PATCH_NEWER_FORMAT
+pub const WRONG_FILE : HResultError = HResultError::from_constant(0xC00E4104); // ERROR_PATCH_WRONG_FILE
+pub const NOT_NECESSARY : HResultError = HResultError::from_constant(0xC00E4105); // ERROR_PATCH_NOT_NECESSARY
+pub const NOT_AVAILABLE : HResultError = HResultError::from_constant(0xC00E4106); // ERROR_PATCH_NOT_AVAILABLE

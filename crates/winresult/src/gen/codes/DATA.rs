@@ -4,4 +4,4 @@ use super::*;
 
 
 /// Data has same FORMATETC
-pub const S_SAMEFORMATETC : SuccessHResult = SuccessHResult::from_constant(0x00040130); // DATA_S_SAMEFORMATETC
+pub const S_SAMEFORMATETC : HResultSuccess = HResultSuccess::from_constant(0x00040130); // DATA_S_SAMEFORMATETC

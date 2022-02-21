@@ -4,205 +4,205 @@ use super::*;
 
 
 /// The callout does not exist.
-pub const E_CALLOUT_NOT_FOUND : ErrorHResult = ErrorHResult::from_constant(0x80320001); // FWP_E_CALLOUT_NOT_FOUND
+pub const E_CALLOUT_NOT_FOUND : HResultError = HResultError::from_constant(0x80320001); // FWP_E_CALLOUT_NOT_FOUND
 
 /// The filter condition does not exist.
-pub const E_CONDITION_NOT_FOUND : ErrorHResult = ErrorHResult::from_constant(0x80320002); // FWP_E_CONDITION_NOT_FOUND
+pub const E_CONDITION_NOT_FOUND : HResultError = HResultError::from_constant(0x80320002); // FWP_E_CONDITION_NOT_FOUND
 
 /// The filter does not exist.
-pub const E_FILTER_NOT_FOUND : ErrorHResult = ErrorHResult::from_constant(0x80320003); // FWP_E_FILTER_NOT_FOUND
+pub const E_FILTER_NOT_FOUND : HResultError = HResultError::from_constant(0x80320003); // FWP_E_FILTER_NOT_FOUND
 
 /// The layer does not exist.
-pub const E_LAYER_NOT_FOUND : ErrorHResult = ErrorHResult::from_constant(0x80320004); // FWP_E_LAYER_NOT_FOUND
+pub const E_LAYER_NOT_FOUND : HResultError = HResultError::from_constant(0x80320004); // FWP_E_LAYER_NOT_FOUND
 
 /// The provider does not exist.
-pub const E_PROVIDER_NOT_FOUND : ErrorHResult = ErrorHResult::from_constant(0x80320005); // FWP_E_PROVIDER_NOT_FOUND
+pub const E_PROVIDER_NOT_FOUND : HResultError = HResultError::from_constant(0x80320005); // FWP_E_PROVIDER_NOT_FOUND
 
 /// The provider context does not exist.
-pub const E_PROVIDER_CONTEXT_NOT_FOUND : ErrorHResult = ErrorHResult::from_constant(0x80320006); // FWP_E_PROVIDER_CONTEXT_NOT_FOUND
+pub const E_PROVIDER_CONTEXT_NOT_FOUND : HResultError = HResultError::from_constant(0x80320006); // FWP_E_PROVIDER_CONTEXT_NOT_FOUND
 
 /// The sublayer does not exist.
-pub const E_SUBLAYER_NOT_FOUND : ErrorHResult = ErrorHResult::from_constant(0x80320007); // FWP_E_SUBLAYER_NOT_FOUND
+pub const E_SUBLAYER_NOT_FOUND : HResultError = HResultError::from_constant(0x80320007); // FWP_E_SUBLAYER_NOT_FOUND
 
 /// The object does not exist.
-pub const E_NOT_FOUND : ErrorHResult = ErrorHResult::from_constant(0x80320008); // FWP_E_NOT_FOUND
+pub const E_NOT_FOUND : HResultError = HResultError::from_constant(0x80320008); // FWP_E_NOT_FOUND
 
 /// An object with that GUID or LUID already exists.
-pub const E_ALREADY_EXISTS : ErrorHResult = ErrorHResult::from_constant(0x80320009); // FWP_E_ALREADY_EXISTS
+pub const E_ALREADY_EXISTS : HResultError = HResultError::from_constant(0x80320009); // FWP_E_ALREADY_EXISTS
 
 /// The object is referenced by other objects so cannot be deleted.
-pub const E_IN_USE : ErrorHResult = ErrorHResult::from_constant(0x8032000A); // FWP_E_IN_USE
+pub const E_IN_USE : HResultError = HResultError::from_constant(0x8032000A); // FWP_E_IN_USE
 
 /// The call is not allowed from within a dynamic session.
-pub const E_DYNAMIC_SESSION_IN_PROGRESS : ErrorHResult = ErrorHResult::from_constant(0x8032000B); // FWP_E_DYNAMIC_SESSION_IN_PROGRESS
+pub const E_DYNAMIC_SESSION_IN_PROGRESS : HResultError = HResultError::from_constant(0x8032000B); // FWP_E_DYNAMIC_SESSION_IN_PROGRESS
 
 /// The call was made from the wrong session so cannot be completed.
-pub const E_WRONG_SESSION : ErrorHResult = ErrorHResult::from_constant(0x8032000C); // FWP_E_WRONG_SESSION
+pub const E_WRONG_SESSION : HResultError = HResultError::from_constant(0x8032000C); // FWP_E_WRONG_SESSION
 
 /// The call must be made from within an explicit transaction.
-pub const E_NO_TXN_IN_PROGRESS : ErrorHResult = ErrorHResult::from_constant(0x8032000D); // FWP_E_NO_TXN_IN_PROGRESS
+pub const E_NO_TXN_IN_PROGRESS : HResultError = HResultError::from_constant(0x8032000D); // FWP_E_NO_TXN_IN_PROGRESS
 
 /// The call is not allowed from within an explicit transaction.
-pub const E_TXN_IN_PROGRESS : ErrorHResult = ErrorHResult::from_constant(0x8032000E); // FWP_E_TXN_IN_PROGRESS
+pub const E_TXN_IN_PROGRESS : HResultError = HResultError::from_constant(0x8032000E); // FWP_E_TXN_IN_PROGRESS
 
 /// The explicit transaction has been forcibly cancelled.
-pub const E_TXN_ABORTED : ErrorHResult = ErrorHResult::from_constant(0x8032000F); // FWP_E_TXN_ABORTED
+pub const E_TXN_ABORTED : HResultError = HResultError::from_constant(0x8032000F); // FWP_E_TXN_ABORTED
 
 /// The session has been cancelled.
-pub const E_SESSION_ABORTED : ErrorHResult = ErrorHResult::from_constant(0x80320010); // FWP_E_SESSION_ABORTED
+pub const E_SESSION_ABORTED : HResultError = HResultError::from_constant(0x80320010); // FWP_E_SESSION_ABORTED
 
 /// The call is not allowed from within a read-only transaction.
-pub const E_INCOMPATIBLE_TXN : ErrorHResult = ErrorHResult::from_constant(0x80320011); // FWP_E_INCOMPATIBLE_TXN
+pub const E_INCOMPATIBLE_TXN : HResultError = HResultError::from_constant(0x80320011); // FWP_E_INCOMPATIBLE_TXN
 
 /// The call timed out while waiting to acquire the transaction lock.
-pub const E_TIMEOUT : ErrorHResult = ErrorHResult::from_constant(0x80320012); // FWP_E_TIMEOUT
+pub const E_TIMEOUT : HResultError = HResultError::from_constant(0x80320012); // FWP_E_TIMEOUT
 
 /// Collection of network diagnostic events is disabled.
-pub const E_NET_EVENTS_DISABLED : ErrorHResult = ErrorHResult::from_constant(0x80320013); // FWP_E_NET_EVENTS_DISABLED
+pub const E_NET_EVENTS_DISABLED : HResultError = HResultError::from_constant(0x80320013); // FWP_E_NET_EVENTS_DISABLED
 
 /// The operation is not supported by the specified layer.
-pub const E_INCOMPATIBLE_LAYER : ErrorHResult = ErrorHResult::from_constant(0x80320014); // FWP_E_INCOMPATIBLE_LAYER
+pub const E_INCOMPATIBLE_LAYER : HResultError = HResultError::from_constant(0x80320014); // FWP_E_INCOMPATIBLE_LAYER
 
 /// The call is allowed for kernel-mode callers only.
-pub const E_KM_CLIENTS_ONLY : ErrorHResult = ErrorHResult::from_constant(0x80320015); // FWP_E_KM_CLIENTS_ONLY
+pub const E_KM_CLIENTS_ONLY : HResultError = HResultError::from_constant(0x80320015); // FWP_E_KM_CLIENTS_ONLY
 
 /// The call tried to associate two objects with incompatible lifetimes.
-pub const E_LIFETIME_MISMATCH : ErrorHResult = ErrorHResult::from_constant(0x80320016); // FWP_E_LIFETIME_MISMATCH
+pub const E_LIFETIME_MISMATCH : HResultError = HResultError::from_constant(0x80320016); // FWP_E_LIFETIME_MISMATCH
 
 /// The object is built in so cannot be deleted.
-pub const E_BUILTIN_OBJECT : ErrorHResult = ErrorHResult::from_constant(0x80320017); // FWP_E_BUILTIN_OBJECT
+pub const E_BUILTIN_OBJECT : HResultError = HResultError::from_constant(0x80320017); // FWP_E_BUILTIN_OBJECT
 
 /// The maximum number of callouts has been reached.
-pub const E_TOO_MANY_CALLOUTS : ErrorHResult = ErrorHResult::from_constant(0x80320018); // FWP_E_TOO_MANY_CALLOUTS
+pub const E_TOO_MANY_CALLOUTS : HResultError = HResultError::from_constant(0x80320018); // FWP_E_TOO_MANY_CALLOUTS
 
 /// A notification could not be delivered because a message queue is at its maximum capacity.
-pub const E_NOTIFICATION_DROPPED : ErrorHResult = ErrorHResult::from_constant(0x80320019); // FWP_E_NOTIFICATION_DROPPED
+pub const E_NOTIFICATION_DROPPED : HResultError = HResultError::from_constant(0x80320019); // FWP_E_NOTIFICATION_DROPPED
 
 /// The traffic parameters do not match those for the security association context.
-pub const E_TRAFFIC_MISMATCH : ErrorHResult = ErrorHResult::from_constant(0x8032001A); // FWP_E_TRAFFIC_MISMATCH
+pub const E_TRAFFIC_MISMATCH : HResultError = HResultError::from_constant(0x8032001A); // FWP_E_TRAFFIC_MISMATCH
 
 /// The call is not allowed for the current security association state.
-pub const E_INCOMPATIBLE_SA_STATE : ErrorHResult = ErrorHResult::from_constant(0x8032001B); // FWP_E_INCOMPATIBLE_SA_STATE
+pub const E_INCOMPATIBLE_SA_STATE : HResultError = HResultError::from_constant(0x8032001B); // FWP_E_INCOMPATIBLE_SA_STATE
 
 /// A required pointer is null.
-pub const E_NULL_POINTER : ErrorHResult = ErrorHResult::from_constant(0x8032001C); // FWP_E_NULL_POINTER
+pub const E_NULL_POINTER : HResultError = HResultError::from_constant(0x8032001C); // FWP_E_NULL_POINTER
 
 /// An enumerator is not valid.
-pub const E_INVALID_ENUMERATOR : ErrorHResult = ErrorHResult::from_constant(0x8032001D); // FWP_E_INVALID_ENUMERATOR
+pub const E_INVALID_ENUMERATOR : HResultError = HResultError::from_constant(0x8032001D); // FWP_E_INVALID_ENUMERATOR
 
 /// The flags field contains an invalid value.
-pub const E_INVALID_FLAGS : ErrorHResult = ErrorHResult::from_constant(0x8032001E); // FWP_E_INVALID_FLAGS
+pub const E_INVALID_FLAGS : HResultError = HResultError::from_constant(0x8032001E); // FWP_E_INVALID_FLAGS
 
 /// An FWP_RANGE is not valid.
-pub const E_INVALID_RANGE : ErrorHResult = ErrorHResult::from_constant(0x80320020); // FWP_E_INVALID_RANGE
+pub const E_INVALID_RANGE : HResultError = HResultError::from_constant(0x80320020); // FWP_E_INVALID_RANGE
 
 /// The time interval is not valid.
-pub const E_INVALID_INTERVAL : ErrorHResult = ErrorHResult::from_constant(0x80320021); // FWP_E_INVALID_INTERVAL
+pub const E_INVALID_INTERVAL : HResultError = HResultError::from_constant(0x80320021); // FWP_E_INVALID_INTERVAL
 
 /// An array that must contain at least one element is zero length.
-pub const E_ZERO_LENGTH_ARRAY : ErrorHResult = ErrorHResult::from_constant(0x80320022); // FWP_E_ZERO_LENGTH_ARRAY
+pub const E_ZERO_LENGTH_ARRAY : HResultError = HResultError::from_constant(0x80320022); // FWP_E_ZERO_LENGTH_ARRAY
 
 /// The displayData.name field cannot be null.
-pub const E_NULL_DISPLAY_NAME : ErrorHResult = ErrorHResult::from_constant(0x80320023); // FWP_E_NULL_DISPLAY_NAME
+pub const E_NULL_DISPLAY_NAME : HResultError = HResultError::from_constant(0x80320023); // FWP_E_NULL_DISPLAY_NAME
 
 /// The action type is not one of the allowed action types for a filter.
-pub const E_INVALID_ACTION_TYPE : ErrorHResult = ErrorHResult::from_constant(0x80320024); // FWP_E_INVALID_ACTION_TYPE
+pub const E_INVALID_ACTION_TYPE : HResultError = HResultError::from_constant(0x80320024); // FWP_E_INVALID_ACTION_TYPE
 
 /// The filter weight is not valid.
-pub const E_INVALID_WEIGHT : ErrorHResult = ErrorHResult::from_constant(0x80320025); // FWP_E_INVALID_WEIGHT
+pub const E_INVALID_WEIGHT : HResultError = HResultError::from_constant(0x80320025); // FWP_E_INVALID_WEIGHT
 
 /// A filter condition contains a match type that is not compatible with the operands.
-pub const E_MATCH_TYPE_MISMATCH : ErrorHResult = ErrorHResult::from_constant(0x80320026); // FWP_E_MATCH_TYPE_MISMATCH
+pub const E_MATCH_TYPE_MISMATCH : HResultError = HResultError::from_constant(0x80320026); // FWP_E_MATCH_TYPE_MISMATCH
 
 /// An FWP_VALUE or FWPM_CONDITION_VALUE is of the wrong type.
-pub const E_TYPE_MISMATCH : ErrorHResult = ErrorHResult::from_constant(0x80320027); // FWP_E_TYPE_MISMATCH
+pub const E_TYPE_MISMATCH : HResultError = HResultError::from_constant(0x80320027); // FWP_E_TYPE_MISMATCH
 
 /// An integer value is outside the allowed range.
-pub const E_OUT_OF_BOUNDS : ErrorHResult = ErrorHResult::from_constant(0x80320028); // FWP_E_OUT_OF_BOUNDS
+pub const E_OUT_OF_BOUNDS : HResultError = HResultError::from_constant(0x80320028); // FWP_E_OUT_OF_BOUNDS
 
 /// A reserved field is non-zero.
-pub const E_RESERVED : ErrorHResult = ErrorHResult::from_constant(0x80320029); // FWP_E_RESERVED
+pub const E_RESERVED : HResultError = HResultError::from_constant(0x80320029); // FWP_E_RESERVED
 
 /// A filter cannot contain multiple conditions operating on a single field.
-pub const E_DUPLICATE_CONDITION : ErrorHResult = ErrorHResult::from_constant(0x8032002A); // FWP_E_DUPLICATE_CONDITION
+pub const E_DUPLICATE_CONDITION : HResultError = HResultError::from_constant(0x8032002A); // FWP_E_DUPLICATE_CONDITION
 
 /// A policy cannot contain the same keying module more than once.
-pub const E_DUPLICATE_KEYMOD : ErrorHResult = ErrorHResult::from_constant(0x8032002B); // FWP_E_DUPLICATE_KEYMOD
+pub const E_DUPLICATE_KEYMOD : HResultError = HResultError::from_constant(0x8032002B); // FWP_E_DUPLICATE_KEYMOD
 
 /// The action type is not compatible with the layer.
-pub const E_ACTION_INCOMPATIBLE_WITH_LAYER : ErrorHResult = ErrorHResult::from_constant(0x8032002C); // FWP_E_ACTION_INCOMPATIBLE_WITH_LAYER
+pub const E_ACTION_INCOMPATIBLE_WITH_LAYER : HResultError = HResultError::from_constant(0x8032002C); // FWP_E_ACTION_INCOMPATIBLE_WITH_LAYER
 
 /// The action type is not compatible with the sublayer.
-pub const E_ACTION_INCOMPATIBLE_WITH_SUBLAYER : ErrorHResult = ErrorHResult::from_constant(0x8032002D); // FWP_E_ACTION_INCOMPATIBLE_WITH_SUBLAYER
+pub const E_ACTION_INCOMPATIBLE_WITH_SUBLAYER : HResultError = HResultError::from_constant(0x8032002D); // FWP_E_ACTION_INCOMPATIBLE_WITH_SUBLAYER
 
 /// The raw context or the provider context is not compatible with the layer.
-pub const E_CONTEXT_INCOMPATIBLE_WITH_LAYER : ErrorHResult = ErrorHResult::from_constant(0x8032002E); // FWP_E_CONTEXT_INCOMPATIBLE_WITH_LAYER
+pub const E_CONTEXT_INCOMPATIBLE_WITH_LAYER : HResultError = HResultError::from_constant(0x8032002E); // FWP_E_CONTEXT_INCOMPATIBLE_WITH_LAYER
 
 /// The raw context or the provider context is not compatible with the callout.
-pub const E_CONTEXT_INCOMPATIBLE_WITH_CALLOUT : ErrorHResult = ErrorHResult::from_constant(0x8032002F); // FWP_E_CONTEXT_INCOMPATIBLE_WITH_CALLOUT
+pub const E_CONTEXT_INCOMPATIBLE_WITH_CALLOUT : HResultError = HResultError::from_constant(0x8032002F); // FWP_E_CONTEXT_INCOMPATIBLE_WITH_CALLOUT
 
 /// The authentication method is not compatible with the policy type.
-pub const E_INCOMPATIBLE_AUTH_METHOD : ErrorHResult = ErrorHResult::from_constant(0x80320030); // FWP_E_INCOMPATIBLE_AUTH_METHOD
+pub const E_INCOMPATIBLE_AUTH_METHOD : HResultError = HResultError::from_constant(0x80320030); // FWP_E_INCOMPATIBLE_AUTH_METHOD
 
 /// The Diffie-Hellman group is not compatible with the policy type.
-pub const E_INCOMPATIBLE_DH_GROUP : ErrorHResult = ErrorHResult::from_constant(0x80320031); // FWP_E_INCOMPATIBLE_DH_GROUP
+pub const E_INCOMPATIBLE_DH_GROUP : HResultError = HResultError::from_constant(0x80320031); // FWP_E_INCOMPATIBLE_DH_GROUP
 
 /// An IKE policy cannot contain an Extended Mode policy.
-pub const E_EM_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x80320032); // FWP_E_EM_NOT_SUPPORTED
+pub const E_EM_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x80320032); // FWP_E_EM_NOT_SUPPORTED
 
 /// The enumeration template or subscription will never match any objects.
-pub const E_NEVER_MATCH : ErrorHResult = ErrorHResult::from_constant(0x80320033); // FWP_E_NEVER_MATCH
+pub const E_NEVER_MATCH : HResultError = HResultError::from_constant(0x80320033); // FWP_E_NEVER_MATCH
 
 /// The provider context is of the wrong type.
-pub const E_PROVIDER_CONTEXT_MISMATCH : ErrorHResult = ErrorHResult::from_constant(0x80320034); // FWP_E_PROVIDER_CONTEXT_MISMATCH
+pub const E_PROVIDER_CONTEXT_MISMATCH : HResultError = HResultError::from_constant(0x80320034); // FWP_E_PROVIDER_CONTEXT_MISMATCH
 
 /// The parameter is incorrect.
-pub const E_INVALID_PARAMETER : ErrorHResult = ErrorHResult::from_constant(0x80320035); // FWP_E_INVALID_PARAMETER
+pub const E_INVALID_PARAMETER : HResultError = HResultError::from_constant(0x80320035); // FWP_E_INVALID_PARAMETER
 
 /// The maximum number of sublayers has been reached.
-pub const E_TOO_MANY_SUBLAYERS : ErrorHResult = ErrorHResult::from_constant(0x80320036); // FWP_E_TOO_MANY_SUBLAYERS
+pub const E_TOO_MANY_SUBLAYERS : HResultError = HResultError::from_constant(0x80320036); // FWP_E_TOO_MANY_SUBLAYERS
 
 /// The notification function for a callout returned an error.
-pub const E_CALLOUT_NOTIFICATION_FAILED : ErrorHResult = ErrorHResult::from_constant(0x80320037); // FWP_E_CALLOUT_NOTIFICATION_FAILED
+pub const E_CALLOUT_NOTIFICATION_FAILED : HResultError = HResultError::from_constant(0x80320037); // FWP_E_CALLOUT_NOTIFICATION_FAILED
 
 /// The IPsec authentication transform is not valid.
-pub const E_INVALID_AUTH_TRANSFORM : ErrorHResult = ErrorHResult::from_constant(0x80320038); // FWP_E_INVALID_AUTH_TRANSFORM
+pub const E_INVALID_AUTH_TRANSFORM : HResultError = HResultError::from_constant(0x80320038); // FWP_E_INVALID_AUTH_TRANSFORM
 
 /// The IPsec cipher transform is not valid.
-pub const E_INVALID_CIPHER_TRANSFORM : ErrorHResult = ErrorHResult::from_constant(0x80320039); // FWP_E_INVALID_CIPHER_TRANSFORM
+pub const E_INVALID_CIPHER_TRANSFORM : HResultError = HResultError::from_constant(0x80320039); // FWP_E_INVALID_CIPHER_TRANSFORM
 
 /// The IPsec cipher transform is not compatible with the policy.
-pub const E_INCOMPATIBLE_CIPHER_TRANSFORM : ErrorHResult = ErrorHResult::from_constant(0x8032003A); // FWP_E_INCOMPATIBLE_CIPHER_TRANSFORM
+pub const E_INCOMPATIBLE_CIPHER_TRANSFORM : HResultError = HResultError::from_constant(0x8032003A); // FWP_E_INCOMPATIBLE_CIPHER_TRANSFORM
 
 /// The combination of IPsec transform types is not valid.
-pub const E_INVALID_TRANSFORM_COMBINATION : ErrorHResult = ErrorHResult::from_constant(0x8032003B); // FWP_E_INVALID_TRANSFORM_COMBINATION
+pub const E_INVALID_TRANSFORM_COMBINATION : HResultError = HResultError::from_constant(0x8032003B); // FWP_E_INVALID_TRANSFORM_COMBINATION
 
 /// A policy cannot contain the same auth method more than once.
-pub const E_DUPLICATE_AUTH_METHOD : ErrorHResult = ErrorHResult::from_constant(0x8032003C); // FWP_E_DUPLICATE_AUTH_METHOD
+pub const E_DUPLICATE_AUTH_METHOD : HResultError = HResultError::from_constant(0x8032003C); // FWP_E_DUPLICATE_AUTH_METHOD
 
 /// A tunnel endpoint configuration is invalid.
-pub const E_INVALID_TUNNEL_ENDPOINT : ErrorHResult = ErrorHResult::from_constant(0x8032003D); // FWP_E_INVALID_TUNNEL_ENDPOINT
+pub const E_INVALID_TUNNEL_ENDPOINT : HResultError = HResultError::from_constant(0x8032003D); // FWP_E_INVALID_TUNNEL_ENDPOINT
 
 /// The WFP MAC Layers are not ready.
-pub const E_L2_DRIVER_NOT_READY : ErrorHResult = ErrorHResult::from_constant(0x8032003E); // FWP_E_L2_DRIVER_NOT_READY
+pub const E_L2_DRIVER_NOT_READY : HResultError = HResultError::from_constant(0x8032003E); // FWP_E_L2_DRIVER_NOT_READY
 
 /// A key manager capable of key dictation is already registered
-pub const E_KEY_DICTATOR_ALREADY_REGISTERED : ErrorHResult = ErrorHResult::from_constant(0x8032003F); // FWP_E_KEY_DICTATOR_ALREADY_REGISTERED
+pub const E_KEY_DICTATOR_ALREADY_REGISTERED : HResultError = HResultError::from_constant(0x8032003F); // FWP_E_KEY_DICTATOR_ALREADY_REGISTERED
 
 /// A key manager dictated invalid keys
-pub const E_KEY_DICTATION_INVALID_KEYING_MATERIAL : ErrorHResult = ErrorHResult::from_constant(0x80320040); // FWP_E_KEY_DICTATION_INVALID_KEYING_MATERIAL
+pub const E_KEY_DICTATION_INVALID_KEYING_MATERIAL : HResultError = HResultError::from_constant(0x80320040); // FWP_E_KEY_DICTATION_INVALID_KEYING_MATERIAL
 
 /// The BFE IPsec Connection Tracking is disabled.
-pub const E_CONNECTIONS_DISABLED : ErrorHResult = ErrorHResult::from_constant(0x80320041); // FWP_E_CONNECTIONS_DISABLED
+pub const E_CONNECTIONS_DISABLED : HResultError = HResultError::from_constant(0x80320041); // FWP_E_CONNECTIONS_DISABLED
 
 /// The DNS name is invalid.
-pub const E_INVALID_DNS_NAME : ErrorHResult = ErrorHResult::from_constant(0x80320042); // FWP_E_INVALID_DNS_NAME
+pub const E_INVALID_DNS_NAME : HResultError = HResultError::from_constant(0x80320042); // FWP_E_INVALID_DNS_NAME
 
 /// The engine option is still enabled due to other configuration settings.
-pub const E_STILL_ON : ErrorHResult = ErrorHResult::from_constant(0x80320043); // FWP_E_STILL_ON
+pub const E_STILL_ON : HResultError = HResultError::from_constant(0x80320043); // FWP_E_STILL_ON
 
 /// The IKEEXT service is not running.  This service only runs when there is IPsec policy applied to the machine.
-pub const E_IKEEXT_NOT_RUNNING : ErrorHResult = ErrorHResult::from_constant(0x80320044); // FWP_E_IKEEXT_NOT_RUNNING
+pub const E_IKEEXT_NOT_RUNNING : HResultError = HResultError::from_constant(0x80320044); // FWP_E_IKEEXT_NOT_RUNNING
 
 /// The packet should be dropped, no ICMP should be sent.
-pub const E_DROP_NOICMP : ErrorHResult = ErrorHResult::from_constant(0x80320104); // FWP_E_DROP_NOICMP
+pub const E_DROP_NOICMP : HResultError = HResultError::from_constant(0x80320104); // FWP_E_DROP_NOICMP

@@ -4,16 +4,16 @@ use super::*;
 
 
 /// No verbs for OLE object
-pub const E_NOVERBS : ErrorHResult = ErrorHResult::from_constant(0x80040180); // OLEOBJ_E_NOVERBS
+pub const E_NOVERBS : HResultError = HResultError::from_constant(0x80040180); // OLEOBJ_E_NOVERBS
 
 /// Invalid verb for OLE object
-pub const E_INVALIDVERB : ErrorHResult = ErrorHResult::from_constant(0x80040181); // OLEOBJ_E_INVALIDVERB
+pub const E_INVALIDVERB : HResultError = HResultError::from_constant(0x80040181); // OLEOBJ_E_INVALIDVERB
 
 /// Invalid verb for OLE object
-pub const S_INVALIDVERB : SuccessHResult = SuccessHResult::from_constant(0x00040180); // OLEOBJ_S_INVALIDVERB
+pub const S_INVALIDVERB : HResultSuccess = HResultSuccess::from_constant(0x00040180); // OLEOBJ_S_INVALIDVERB
 
 /// Verb number is valid but verb cannot be done now
-pub const S_CANNOT_DOVERB_NOW : SuccessHResult = SuccessHResult::from_constant(0x00040181); // OLEOBJ_S_CANNOT_DOVERB_NOW
+pub const S_CANNOT_DOVERB_NOW : HResultSuccess = HResultSuccess::from_constant(0x00040181); // OLEOBJ_S_CANNOT_DOVERB_NOW
 
 /// Invalid window handle passed
-pub const S_INVALIDHWND : SuccessHResult = SuccessHResult::from_constant(0x00040182); // OLEOBJ_S_INVALIDHWND
+pub const S_INVALIDHWND : HResultSuccess = HResultSuccess::from_constant(0x00040182); // OLEOBJ_S_INVALIDHWND

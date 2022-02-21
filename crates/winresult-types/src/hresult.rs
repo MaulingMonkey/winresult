@@ -7,9 +7,9 @@ use bytemuck::*;
 /// FACILITY_\* values corresponding to Microsoft (non-customer) `HRSEULT`s.
 ///
 /// Note that NTSTATUS facilities, despite also being prefixed with FACILITY_\*, are incompatible (overlapping values interpreted differently!)
-#[derive(Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash)] pub struct FacilityHrMicrosoft(pub(crate) u16);
+#[derive(Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash)] pub struct HResultFacilityMicrosoft(pub(crate) u16);
 
-impl FacilityHrMicrosoft {
+impl HResultFacilityMicrosoft {
     // Microsofts specs list facilities as only having 11 bits: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/0642cb2f-2075-4469-918c-4441e69c548a
     // However, DirectDraw and Direct3D9 uses 0x876, which sets a 12th bit.
     // Additionally, Direct3D 10, Direct3D 11, etc. also get up into the 12 bits area.
@@ -20,19 +20,19 @@ impl FacilityHrMicrosoft {
     pub const fn to_u32(self) -> u32 { self.0 as _ }
 }
 
-impl From<FacilityHrMicrosoft> for u16 { fn from(f: FacilityHrMicrosoft) -> Self { f.0 } }
-impl From<FacilityHrMicrosoft> for u32 { fn from(f: FacilityHrMicrosoft) -> Self { f.0.into() } }
+impl From<HResultFacilityMicrosoft> for u16 { fn from(f: HResultFacilityMicrosoft) -> Self { f.0 } }
+impl From<HResultFacilityMicrosoft> for u32 { fn from(f: HResultFacilityMicrosoft) -> Self { f.0.into() } }
 
 
 
 /// \[[docs.microsoft.com](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/0642cb2f-2075-4469-918c-4441e69c548a)\]
 /// Success HRESULT
-#[derive(Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash, Default, Zeroable)] #[repr(transparent)] pub struct SuccessHResult(pub(crate) u32);
+#[derive(Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash, Default, Zeroable)] #[repr(transparent)] pub struct HResultSuccess(pub(crate) u32);
 // DO NOT IMPLEMENT:
 //  Pod (error bit patterns are forbidden)
 
-impl SuccessHResult {
-    #[doc(hidden)] pub const fn from_constant(value: u32) -> Self { assert!(value & 0x8000_0000 == 0, "SuccessHResult::from_constant: HRESULT is an error (high bit set)"); Self(value) }
+impl HResultSuccess {
+    #[doc(hidden)] pub const fn from_constant(value: u32) -> Self { assert!(value & 0x8000_0000 == 0, "HResultSuccess::from_constant: HRESULT is an error (high bit set)"); Self(value) }
 
     //  const fn is_reserved(self) -> bool { self.0 & 0x40000000 != 0 }
     pub const fn is_customer(self) -> bool { self.0 & 0x20000000 != 0 }
@@ -43,22 +43,22 @@ impl SuccessHResult {
     pub const fn to_u32     (self) -> u32  { self.0 }
 }
 
-impl From<SuccessHResult> for u32 { fn from(hr: SuccessHResult) -> Self { hr.0 } }
-impl From<u32> for SuccessHResult { fn from(hr: u32) -> Self { Self(hr) } }
-impl From<(FacilityHrMicrosoft, SuccessCodeMicrosoft)> for SuccessHResult { fn from((fac, code): (FacilityHrMicrosoft, SuccessCodeMicrosoft)) -> Self { Self((fac.to_u32()<<16) | code.to_u32()) } }
+impl From<HResultSuccess> for u32 { fn from(hr: HResultSuccess) -> Self { hr.0 } }
+impl From<u32> for HResultSuccess { fn from(hr: u32) -> Self { Self(hr) } }
+impl From<(HResultFacilityMicrosoft, SuccessCodeMicrosoft)> for HResultSuccess { fn from((fac, code): (HResultFacilityMicrosoft, SuccessCodeMicrosoft)) -> Self { Self((fac.to_u32()<<16) | code.to_u32()) } }
 
 
 
 /// \[[docs.microsoft.com](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/0642cb2f-2075-4469-918c-4441e69c548a)\]
 /// Error HRESULT
-#[derive(Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash)] #[repr(transparent)] pub struct ErrorHResult(pub(crate) u32);
+#[derive(Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash)] #[repr(transparent)] pub struct HResultError(pub(crate) u32);
 // DO NOT IMPLEMENT:
 //  Pod         (success bit patterns are forbidden)
 //  Default     (0 is success)
 //  Zeroable    (0 is success)
 
-impl ErrorHResult {
-    #[doc(hidden)] pub const fn from_constant(value: u32) -> Self { assert!(value & 0x8000_0000 != 0, "ErrorHResult::from_constant: HRESULT is a success (high bit not set)"); Self(value) }
+impl HResultError {
+    #[doc(hidden)] pub const fn from_constant(value: u32) -> Self { assert!(value & 0x8000_0000 != 0, "HResultError::from_constant: HRESULT is a success (high bit not set)"); Self(value) }
 
     //  const fn is_reserved(self) -> bool { self.0 & 0x40000000 != 0 }
     pub const fn is_customer(self) -> bool { self.0 & 0x20000000 != 0 }
@@ -69,9 +69,9 @@ impl ErrorHResult {
     pub const fn to_u32     (self) -> u32  { self.0 }
 }
 
-impl From<ErrorHResult> for u32 { fn from(hr: ErrorHResult) -> Self { hr.0 } }
-impl From<u32> for ErrorHResult { fn from(hr: u32) -> Self { Self(hr) } }
-impl From<(FacilityHrMicrosoft, ErrorCodeMicrosoft)> for ErrorHResult { fn from((fac, code): (FacilityHrMicrosoft, ErrorCodeMicrosoft)) -> Self { Self(0x8000_0000 | (fac.to_u32()<<16) | code.to_u32()) } }
+impl From<HResultError> for u32 { fn from(hr: HResultError) -> Self { hr.0 } }
+impl From<u32> for HResultError { fn from(hr: u32) -> Self { Self(hr) } }
+impl From<(HResultFacilityMicrosoft, ErrorCodeMicrosoft)> for HResultError { fn from((fac, code): (HResultFacilityMicrosoft, ErrorCodeMicrosoft)) -> Self { Self(0x8000_0000 | (fac.to_u32()<<16) | code.to_u32()) } }
 
 
 
@@ -91,18 +91,18 @@ impl HResult {
     pub const fn code       (self) -> u16  { self.0 as _ }
     pub const fn to_u32     (self) -> u32  { self.0 }
 
-    pub const fn succeeded(self) -> Result<SuccessHResult, ErrorHResult> {
+    pub const fn succeeded(self) -> Result<HResultSuccess, HResultError> {
         if self.is_error() {
-            Err(ErrorHResult(self.0))
+            Err(HResultError(self.0))
         } else {
-            Ok(SuccessHResult(self.0))
+            Ok(HResultSuccess(self.0))
         }
     }
 }
 
 impl From<HResult>          for u32     { fn from(hr: HResult       ) -> Self { hr.0 } }
 impl From<u32>              for HResult { fn from(hr: u32           ) -> Self { Self(hr) } }
-impl From<SuccessHResult>   for HResult { fn from(hr: SuccessHResult) -> Self { Self(hr.0) } }
-impl From<ErrorHResult>     for HResult { fn from(hr: ErrorHResult  ) -> Self { Self(hr.0) } }
-impl From<(FacilityHrMicrosoft, ErrorCodeMicrosoft  )> for HResult { fn from((fac, code): (FacilityHrMicrosoft, ErrorCodeMicrosoft  )) -> Self { Self(0x8000_0000 | (fac.to_u32()<<16) | code.to_u32()) } }
-impl From<(FacilityHrMicrosoft, SuccessCodeMicrosoft)> for HResult { fn from((fac, code): (FacilityHrMicrosoft, SuccessCodeMicrosoft)) -> Self { Self(              (fac.to_u32()<<16) | code.to_u32()) } }
+impl From<HResultSuccess>   for HResult { fn from(hr: HResultSuccess) -> Self { Self(hr.0) } }
+impl From<HResultError>     for HResult { fn from(hr: HResultError  ) -> Self { Self(hr.0) } }
+impl From<(HResultFacilityMicrosoft, ErrorCodeMicrosoft  )> for HResult { fn from((fac, code): (HResultFacilityMicrosoft, ErrorCodeMicrosoft  )) -> Self { Self(0x8000_0000 | (fac.to_u32()<<16) | code.to_u32()) } }
+impl From<(HResultFacilityMicrosoft, SuccessCodeMicrosoft)> for HResult { fn from((fac, code): (HResultFacilityMicrosoft, SuccessCodeMicrosoft)) -> Self { Self(              (fac.to_u32()<<16) | code.to_u32()) } }

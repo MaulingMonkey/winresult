@@ -2,238 +2,238 @@
 
 use super::*;
 
-pub const E_OK : SuccessHResult = SuccessHResult::from_constant(0x00000000); // SEC_E_OK
+pub const E_OK : HResultSuccess = HResultSuccess::from_constant(0x00000000); // SEC_E_OK
 
 /// Not enough memory is available to complete this request
-pub const E_INSUFFICIENT_MEMORY : ErrorHResult = ErrorHResult::from_constant(0x80090300); // SEC_E_INSUFFICIENT_MEMORY
+pub const E_INSUFFICIENT_MEMORY : HResultError = HResultError::from_constant(0x80090300); // SEC_E_INSUFFICIENT_MEMORY
 
 /// The handle specified is invalid
-pub const E_INVALID_HANDLE : ErrorHResult = ErrorHResult::from_constant(0x80090301); // SEC_E_INVALID_HANDLE
+pub const E_INVALID_HANDLE : HResultError = HResultError::from_constant(0x80090301); // SEC_E_INVALID_HANDLE
 
 /// The function requested is not supported
-pub const E_UNSUPPORTED_FUNCTION : ErrorHResult = ErrorHResult::from_constant(0x80090302); // SEC_E_UNSUPPORTED_FUNCTION
+pub const E_UNSUPPORTED_FUNCTION : HResultError = HResultError::from_constant(0x80090302); // SEC_E_UNSUPPORTED_FUNCTION
 
 /// The specified target is unknown or unreachable
-pub const E_TARGET_UNKNOWN : ErrorHResult = ErrorHResult::from_constant(0x80090303); // SEC_E_TARGET_UNKNOWN
+pub const E_TARGET_UNKNOWN : HResultError = HResultError::from_constant(0x80090303); // SEC_E_TARGET_UNKNOWN
 
 /// The Local Security Authority cannot be contacted
-pub const E_INTERNAL_ERROR : ErrorHResult = ErrorHResult::from_constant(0x80090304); // SEC_E_INTERNAL_ERROR
+pub const E_INTERNAL_ERROR : HResultError = HResultError::from_constant(0x80090304); // SEC_E_INTERNAL_ERROR
 
 /// The requested security package does not exist
-pub const E_SECPKG_NOT_FOUND : ErrorHResult = ErrorHResult::from_constant(0x80090305); // SEC_E_SECPKG_NOT_FOUND
+pub const E_SECPKG_NOT_FOUND : HResultError = HResultError::from_constant(0x80090305); // SEC_E_SECPKG_NOT_FOUND
 
 /// The caller is not the owner of the desired credentials
-pub const E_NOT_OWNER : ErrorHResult = ErrorHResult::from_constant(0x80090306); // SEC_E_NOT_OWNER
+pub const E_NOT_OWNER : HResultError = HResultError::from_constant(0x80090306); // SEC_E_NOT_OWNER
 
 /// The security package failed to initialize, and cannot be installed
-pub const E_CANNOT_INSTALL : ErrorHResult = ErrorHResult::from_constant(0x80090307); // SEC_E_CANNOT_INSTALL
+pub const E_CANNOT_INSTALL : HResultError = HResultError::from_constant(0x80090307); // SEC_E_CANNOT_INSTALL
 
 /// The token supplied to the function is invalid
-pub const E_INVALID_TOKEN : ErrorHResult = ErrorHResult::from_constant(0x80090308); // SEC_E_INVALID_TOKEN
+pub const E_INVALID_TOKEN : HResultError = HResultError::from_constant(0x80090308); // SEC_E_INVALID_TOKEN
 
 /// The security package is not able to marshall the logon buffer, so the logon attempt has failed
-pub const E_CANNOT_PACK : ErrorHResult = ErrorHResult::from_constant(0x80090309); // SEC_E_CANNOT_PACK
+pub const E_CANNOT_PACK : HResultError = HResultError::from_constant(0x80090309); // SEC_E_CANNOT_PACK
 
 /// The per-message Quality of Protection is not supported by the security package
-pub const E_QOP_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x8009030A); // SEC_E_QOP_NOT_SUPPORTED
+pub const E_QOP_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x8009030A); // SEC_E_QOP_NOT_SUPPORTED
 
 /// The security context does not allow impersonation of the client
-pub const E_NO_IMPERSONATION : ErrorHResult = ErrorHResult::from_constant(0x8009030B); // SEC_E_NO_IMPERSONATION
+pub const E_NO_IMPERSONATION : HResultError = HResultError::from_constant(0x8009030B); // SEC_E_NO_IMPERSONATION
 
 /// The logon attempt failed
-pub const E_LOGON_DENIED : ErrorHResult = ErrorHResult::from_constant(0x8009030C); // SEC_E_LOGON_DENIED
+pub const E_LOGON_DENIED : HResultError = HResultError::from_constant(0x8009030C); // SEC_E_LOGON_DENIED
 
 /// The credentials supplied to the package were not recognized
-pub const E_UNKNOWN_CREDENTIALS : ErrorHResult = ErrorHResult::from_constant(0x8009030D); // SEC_E_UNKNOWN_CREDENTIALS
+pub const E_UNKNOWN_CREDENTIALS : HResultError = HResultError::from_constant(0x8009030D); // SEC_E_UNKNOWN_CREDENTIALS
 
 /// No credentials are available in the security package
-pub const E_NO_CREDENTIALS : ErrorHResult = ErrorHResult::from_constant(0x8009030E); // SEC_E_NO_CREDENTIALS
+pub const E_NO_CREDENTIALS : HResultError = HResultError::from_constant(0x8009030E); // SEC_E_NO_CREDENTIALS
 
 /// The message or signature supplied for verification has been altered
-pub const E_MESSAGE_ALTERED : ErrorHResult = ErrorHResult::from_constant(0x8009030F); // SEC_E_MESSAGE_ALTERED
+pub const E_MESSAGE_ALTERED : HResultError = HResultError::from_constant(0x8009030F); // SEC_E_MESSAGE_ALTERED
 
 /// The message supplied for verification is out of sequence
-pub const E_OUT_OF_SEQUENCE : ErrorHResult = ErrorHResult::from_constant(0x80090310); // SEC_E_OUT_OF_SEQUENCE
+pub const E_OUT_OF_SEQUENCE : HResultError = HResultError::from_constant(0x80090310); // SEC_E_OUT_OF_SEQUENCE
 
 /// No authority could be contacted for authentication.
-pub const E_NO_AUTHENTICATING_AUTHORITY : ErrorHResult = ErrorHResult::from_constant(0x80090311); // SEC_E_NO_AUTHENTICATING_AUTHORITY
+pub const E_NO_AUTHENTICATING_AUTHORITY : HResultError = HResultError::from_constant(0x80090311); // SEC_E_NO_AUTHENTICATING_AUTHORITY
 
 /// The requested security package does not exist
-pub const E_BAD_PKGID : ErrorHResult = ErrorHResult::from_constant(0x80090316); // SEC_E_BAD_PKGID
+pub const E_BAD_PKGID : HResultError = HResultError::from_constant(0x80090316); // SEC_E_BAD_PKGID
 
 /// The context has expired and can no longer be used.
-pub const E_CONTEXT_EXPIRED : ErrorHResult = ErrorHResult::from_constant(0x80090317); // SEC_E_CONTEXT_EXPIRED
+pub const E_CONTEXT_EXPIRED : HResultError = HResultError::from_constant(0x80090317); // SEC_E_CONTEXT_EXPIRED
 
 /// The supplied message is incomplete. The signature was not verified.
-pub const E_INCOMPLETE_MESSAGE : ErrorHResult = ErrorHResult::from_constant(0x80090318); // SEC_E_INCOMPLETE_MESSAGE
+pub const E_INCOMPLETE_MESSAGE : HResultError = HResultError::from_constant(0x80090318); // SEC_E_INCOMPLETE_MESSAGE
 
 /// The credentials supplied were not complete, and could not be verified. The context could not be initialized.
-pub const E_INCOMPLETE_CREDENTIALS : ErrorHResult = ErrorHResult::from_constant(0x80090320); // SEC_E_INCOMPLETE_CREDENTIALS
+pub const E_INCOMPLETE_CREDENTIALS : HResultError = HResultError::from_constant(0x80090320); // SEC_E_INCOMPLETE_CREDENTIALS
 
 /// The buffers supplied to a function was too small.
-pub const E_BUFFER_TOO_SMALL : ErrorHResult = ErrorHResult::from_constant(0x80090321); // SEC_E_BUFFER_TOO_SMALL
+pub const E_BUFFER_TOO_SMALL : HResultError = HResultError::from_constant(0x80090321); // SEC_E_BUFFER_TOO_SMALL
 
 /// The target principal name is incorrect.
-pub const E_WRONG_PRINCIPAL : ErrorHResult = ErrorHResult::from_constant(0x80090322); // SEC_E_WRONG_PRINCIPAL
+pub const E_WRONG_PRINCIPAL : HResultError = HResultError::from_constant(0x80090322); // SEC_E_WRONG_PRINCIPAL
 
 /// The clocks on the client and server machines are skewed.
-pub const E_TIME_SKEW : ErrorHResult = ErrorHResult::from_constant(0x80090324); // SEC_E_TIME_SKEW
+pub const E_TIME_SKEW : HResultError = HResultError::from_constant(0x80090324); // SEC_E_TIME_SKEW
 
 /// The certificate chain was issued by an authority that is not trusted.
-pub const E_UNTRUSTED_ROOT : ErrorHResult = ErrorHResult::from_constant(0x80090325); // SEC_E_UNTRUSTED_ROOT
+pub const E_UNTRUSTED_ROOT : HResultError = HResultError::from_constant(0x80090325); // SEC_E_UNTRUSTED_ROOT
 
 /// The message received was unexpected or badly formatted.
-pub const E_ILLEGAL_MESSAGE : ErrorHResult = ErrorHResult::from_constant(0x80090326); // SEC_E_ILLEGAL_MESSAGE
+pub const E_ILLEGAL_MESSAGE : HResultError = HResultError::from_constant(0x80090326); // SEC_E_ILLEGAL_MESSAGE
 
 /// An unknown error occurred while processing the certificate.
-pub const E_CERT_UNKNOWN : ErrorHResult = ErrorHResult::from_constant(0x80090327); // SEC_E_CERT_UNKNOWN
+pub const E_CERT_UNKNOWN : HResultError = HResultError::from_constant(0x80090327); // SEC_E_CERT_UNKNOWN
 
 /// The received certificate has expired.
-pub const E_CERT_EXPIRED : ErrorHResult = ErrorHResult::from_constant(0x80090328); // SEC_E_CERT_EXPIRED
+pub const E_CERT_EXPIRED : HResultError = HResultError::from_constant(0x80090328); // SEC_E_CERT_EXPIRED
 
 /// The specified data could not be encrypted.
-pub const E_ENCRYPT_FAILURE : ErrorHResult = ErrorHResult::from_constant(0x80090329); // SEC_E_ENCRYPT_FAILURE
+pub const E_ENCRYPT_FAILURE : HResultError = HResultError::from_constant(0x80090329); // SEC_E_ENCRYPT_FAILURE
 
 /// The specified data could not be decrypted.
-pub const E_DECRYPT_FAILURE : ErrorHResult = ErrorHResult::from_constant(0x80090330); // SEC_E_DECRYPT_FAILURE
+pub const E_DECRYPT_FAILURE : HResultError = HResultError::from_constant(0x80090330); // SEC_E_DECRYPT_FAILURE
 
 /// The client and server cannot communicate, because they do not possess a common algorithm.
-pub const E_ALGORITHM_MISMATCH : ErrorHResult = ErrorHResult::from_constant(0x80090331); // SEC_E_ALGORITHM_MISMATCH
+pub const E_ALGORITHM_MISMATCH : HResultError = HResultError::from_constant(0x80090331); // SEC_E_ALGORITHM_MISMATCH
 
 /// The security context could not be established due to a failure in the requested quality of service (e.g. mutual authentication or delegation).
-pub const E_SECURITY_QOS_FAILED : ErrorHResult = ErrorHResult::from_constant(0x80090332); // SEC_E_SECURITY_QOS_FAILED
+pub const E_SECURITY_QOS_FAILED : HResultError = HResultError::from_constant(0x80090332); // SEC_E_SECURITY_QOS_FAILED
 
 /// A security context was deleted before the context was completed. This is considered a logon failure.
-pub const E_UNFINISHED_CONTEXT_DELETED : ErrorHResult = ErrorHResult::from_constant(0x80090333); // SEC_E_UNFINISHED_CONTEXT_DELETED
+pub const E_UNFINISHED_CONTEXT_DELETED : HResultError = HResultError::from_constant(0x80090333); // SEC_E_UNFINISHED_CONTEXT_DELETED
 
 /// The client is trying to negotiate a context and the server requires user-to-user but didn't send a TGT reply.
-pub const E_NO_TGT_REPLY : ErrorHResult = ErrorHResult::from_constant(0x80090334); // SEC_E_NO_TGT_REPLY
+pub const E_NO_TGT_REPLY : HResultError = HResultError::from_constant(0x80090334); // SEC_E_NO_TGT_REPLY
 
 /// Unable to accomplish the requested task because the local machine does not have any IP addresses.
-pub const E_NO_IP_ADDRESSES : ErrorHResult = ErrorHResult::from_constant(0x80090335); // SEC_E_NO_IP_ADDRESSES
+pub const E_NO_IP_ADDRESSES : HResultError = HResultError::from_constant(0x80090335); // SEC_E_NO_IP_ADDRESSES
 
 /// The supplied credential handle does not match the credential associated with the security context.
-pub const E_WRONG_CREDENTIAL_HANDLE : ErrorHResult = ErrorHResult::from_constant(0x80090336); // SEC_E_WRONG_CREDENTIAL_HANDLE
+pub const E_WRONG_CREDENTIAL_HANDLE : HResultError = HResultError::from_constant(0x80090336); // SEC_E_WRONG_CREDENTIAL_HANDLE
 
 /// The crypto system or checksum function is invalid because a required function is unavailable.
-pub const E_CRYPTO_SYSTEM_INVALID : ErrorHResult = ErrorHResult::from_constant(0x80090337); // SEC_E_CRYPTO_SYSTEM_INVALID
+pub const E_CRYPTO_SYSTEM_INVALID : HResultError = HResultError::from_constant(0x80090337); // SEC_E_CRYPTO_SYSTEM_INVALID
 
 /// The number of maximum ticket referrals has been exceeded.
-pub const E_MAX_REFERRALS_EXCEEDED : ErrorHResult = ErrorHResult::from_constant(0x80090338); // SEC_E_MAX_REFERRALS_EXCEEDED
+pub const E_MAX_REFERRALS_EXCEEDED : HResultError = HResultError::from_constant(0x80090338); // SEC_E_MAX_REFERRALS_EXCEEDED
 
 /// The local machine must be a Kerberos KDC (domain controller) and it is not.
-pub const E_MUST_BE_KDC : ErrorHResult = ErrorHResult::from_constant(0x80090339); // SEC_E_MUST_BE_KDC
+pub const E_MUST_BE_KDC : HResultError = HResultError::from_constant(0x80090339); // SEC_E_MUST_BE_KDC
 
 /// The other end of the security negotiation is requires strong crypto but it is not supported on the local machine.
-pub const E_STRONG_CRYPTO_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x8009033A); // SEC_E_STRONG_CRYPTO_NOT_SUPPORTED
+pub const E_STRONG_CRYPTO_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x8009033A); // SEC_E_STRONG_CRYPTO_NOT_SUPPORTED
 
 /// The KDC reply contained more than one principal name.
-pub const E_TOO_MANY_PRINCIPALS : ErrorHResult = ErrorHResult::from_constant(0x8009033B); // SEC_E_TOO_MANY_PRINCIPALS
+pub const E_TOO_MANY_PRINCIPALS : HResultError = HResultError::from_constant(0x8009033B); // SEC_E_TOO_MANY_PRINCIPALS
 
 /// Expected to find PA data for a hint of what etype to use, but it was not found.
-pub const E_NO_PA_DATA : ErrorHResult = ErrorHResult::from_constant(0x8009033C); // SEC_E_NO_PA_DATA
+pub const E_NO_PA_DATA : HResultError = HResultError::from_constant(0x8009033C); // SEC_E_NO_PA_DATA
 
 /// The client certificate does not contain a valid UPN, or does not match the client name in the logon request. Please contact your administrator.
-pub const E_PKINIT_NAME_MISMATCH : ErrorHResult = ErrorHResult::from_constant(0x8009033D); // SEC_E_PKINIT_NAME_MISMATCH
+pub const E_PKINIT_NAME_MISMATCH : HResultError = HResultError::from_constant(0x8009033D); // SEC_E_PKINIT_NAME_MISMATCH
 
 /// Smartcard logon is required and was not used.
-pub const E_SMARTCARD_LOGON_REQUIRED : ErrorHResult = ErrorHResult::from_constant(0x8009033E); // SEC_E_SMARTCARD_LOGON_REQUIRED
+pub const E_SMARTCARD_LOGON_REQUIRED : HResultError = HResultError::from_constant(0x8009033E); // SEC_E_SMARTCARD_LOGON_REQUIRED
 
 /// A system shutdown is in progress.
-pub const E_SHUTDOWN_IN_PROGRESS : ErrorHResult = ErrorHResult::from_constant(0x8009033F); // SEC_E_SHUTDOWN_IN_PROGRESS
+pub const E_SHUTDOWN_IN_PROGRESS : HResultError = HResultError::from_constant(0x8009033F); // SEC_E_SHUTDOWN_IN_PROGRESS
 
 /// An invalid request was sent to the KDC.
-pub const E_KDC_INVALID_REQUEST : ErrorHResult = ErrorHResult::from_constant(0x80090340); // SEC_E_KDC_INVALID_REQUEST
+pub const E_KDC_INVALID_REQUEST : HResultError = HResultError::from_constant(0x80090340); // SEC_E_KDC_INVALID_REQUEST
 
 /// The KDC was unable to generate a referral for the service requested.
-pub const E_KDC_UNABLE_TO_REFER : ErrorHResult = ErrorHResult::from_constant(0x80090341); // SEC_E_KDC_UNABLE_TO_REFER
+pub const E_KDC_UNABLE_TO_REFER : HResultError = HResultError::from_constant(0x80090341); // SEC_E_KDC_UNABLE_TO_REFER
 
 /// The encryption type requested is not supported by the KDC.
-pub const E_KDC_UNKNOWN_ETYPE : ErrorHResult = ErrorHResult::from_constant(0x80090342); // SEC_E_KDC_UNKNOWN_ETYPE
+pub const E_KDC_UNKNOWN_ETYPE : HResultError = HResultError::from_constant(0x80090342); // SEC_E_KDC_UNKNOWN_ETYPE
 
 /// An unsupported preauthentication mechanism was presented to the Kerberos package.
-pub const E_UNSUPPORTED_PREAUTH : ErrorHResult = ErrorHResult::from_constant(0x80090343); // SEC_E_UNSUPPORTED_PREAUTH
+pub const E_UNSUPPORTED_PREAUTH : HResultError = HResultError::from_constant(0x80090343); // SEC_E_UNSUPPORTED_PREAUTH
 
 /// The requested operation cannot be completed. The computer must be trusted for delegation and the current user account must be configured to allow delegation.
-pub const E_DELEGATION_REQUIRED : ErrorHResult = ErrorHResult::from_constant(0x80090345); // SEC_E_DELEGATION_REQUIRED
+pub const E_DELEGATION_REQUIRED : HResultError = HResultError::from_constant(0x80090345); // SEC_E_DELEGATION_REQUIRED
 
 /// Client's supplied SSPI channel bindings were incorrect.
-pub const E_BAD_BINDINGS : ErrorHResult = ErrorHResult::from_constant(0x80090346); // SEC_E_BAD_BINDINGS
+pub const E_BAD_BINDINGS : HResultError = HResultError::from_constant(0x80090346); // SEC_E_BAD_BINDINGS
 
 /// The received certificate was mapped to multiple accounts.
-pub const E_MULTIPLE_ACCOUNTS : ErrorHResult = ErrorHResult::from_constant(0x80090347); // SEC_E_MULTIPLE_ACCOUNTS
+pub const E_MULTIPLE_ACCOUNTS : HResultError = HResultError::from_constant(0x80090347); // SEC_E_MULTIPLE_ACCOUNTS
 
 /// SEC_E_NO_KERB_KEY
-pub const E_NO_KERB_KEY : ErrorHResult = ErrorHResult::from_constant(0x80090348); // SEC_E_NO_KERB_KEY
+pub const E_NO_KERB_KEY : HResultError = HResultError::from_constant(0x80090348); // SEC_E_NO_KERB_KEY
 
 /// The certificate is not valid for the requested usage.
-pub const E_CERT_WRONG_USAGE : ErrorHResult = ErrorHResult::from_constant(0x80090349); // SEC_E_CERT_WRONG_USAGE
+pub const E_CERT_WRONG_USAGE : HResultError = HResultError::from_constant(0x80090349); // SEC_E_CERT_WRONG_USAGE
 
 /// The system cannot contact a domain controller to service the authentication request. Please try again later.
-pub const E_DOWNGRADE_DETECTED : ErrorHResult = ErrorHResult::from_constant(0x80090350); // SEC_E_DOWNGRADE_DETECTED
+pub const E_DOWNGRADE_DETECTED : HResultError = HResultError::from_constant(0x80090350); // SEC_E_DOWNGRADE_DETECTED
 
 /// The smartcard certificate used for authentication has been revoked. Please contact your system administrator. There may be additional information in the event log.
-pub const E_SMARTCARD_CERT_REVOKED : ErrorHResult = ErrorHResult::from_constant(0x80090351); // SEC_E_SMARTCARD_CERT_REVOKED
+pub const E_SMARTCARD_CERT_REVOKED : HResultError = HResultError::from_constant(0x80090351); // SEC_E_SMARTCARD_CERT_REVOKED
 
 /// An untrusted certificate authority was detected while processing the smartcard certificate used for authentication. Please contact your system administrator.
-pub const E_ISSUING_CA_UNTRUSTED : ErrorHResult = ErrorHResult::from_constant(0x80090352); // SEC_E_ISSUING_CA_UNTRUSTED
+pub const E_ISSUING_CA_UNTRUSTED : HResultError = HResultError::from_constant(0x80090352); // SEC_E_ISSUING_CA_UNTRUSTED
 
 /// The revocation status of the smartcard certificate used for authentication could not be determined. Please contact your system administrator.
-pub const E_REVOCATION_OFFLINE_C : ErrorHResult = ErrorHResult::from_constant(0x80090353); // SEC_E_REVOCATION_OFFLINE_C
+pub const E_REVOCATION_OFFLINE_C : HResultError = HResultError::from_constant(0x80090353); // SEC_E_REVOCATION_OFFLINE_C
 
 /// The smartcard certificate used for authentication was not trusted. Please contact your system administrator.
-pub const E_PKINIT_CLIENT_FAILURE : ErrorHResult = ErrorHResult::from_constant(0x80090354); // SEC_E_PKINIT_CLIENT_FAILURE
+pub const E_PKINIT_CLIENT_FAILURE : HResultError = HResultError::from_constant(0x80090354); // SEC_E_PKINIT_CLIENT_FAILURE
 
 /// The smartcard certificate used for authentication has expired. Please contact your system administrator.
-pub const E_SMARTCARD_CERT_EXPIRED : ErrorHResult = ErrorHResult::from_constant(0x80090355); // SEC_E_SMARTCARD_CERT_EXPIRED
+pub const E_SMARTCARD_CERT_EXPIRED : HResultError = HResultError::from_constant(0x80090355); // SEC_E_SMARTCARD_CERT_EXPIRED
 
 /// The Kerberos subsystem encountered an error. A service for user protocol request was made against a domain controller which does not support service for user.
-pub const E_NO_S4U_PROT_SUPPORT : ErrorHResult = ErrorHResult::from_constant(0x80090356); // SEC_E_NO_S4U_PROT_SUPPORT
+pub const E_NO_S4U_PROT_SUPPORT : HResultError = HResultError::from_constant(0x80090356); // SEC_E_NO_S4U_PROT_SUPPORT
 
 /// An attempt was made by this server to make a Kerberos constrained delegation request for a target outside of the server's realm. This is not supported, and indicates a misconfiguration on this server's allowed to delegate to list. Please contact your administrator.
-pub const E_CROSSREALM_DELEGATION_FAILURE : ErrorHResult = ErrorHResult::from_constant(0x80090357); // SEC_E_CROSSREALM_DELEGATION_FAILURE
+pub const E_CROSSREALM_DELEGATION_FAILURE : HResultError = HResultError::from_constant(0x80090357); // SEC_E_CROSSREALM_DELEGATION_FAILURE
 
 /// The revocation status of the domain controller certificate used for smartcard authentication could not be determined. There is additional information in the system event log. Please contact your system administrator.
-pub const E_REVOCATION_OFFLINE_KDC : ErrorHResult = ErrorHResult::from_constant(0x80090358); // SEC_E_REVOCATION_OFFLINE_KDC
+pub const E_REVOCATION_OFFLINE_KDC : HResultError = HResultError::from_constant(0x80090358); // SEC_E_REVOCATION_OFFLINE_KDC
 
 /// An untrusted certificate authority was detected while processing the domain controller certificate used for authentication. There is additional information in the system event log. Please contact your system administrator.
-pub const E_ISSUING_CA_UNTRUSTED_KDC : ErrorHResult = ErrorHResult::from_constant(0x80090359); // SEC_E_ISSUING_CA_UNTRUSTED_KDC
+pub const E_ISSUING_CA_UNTRUSTED_KDC : HResultError = HResultError::from_constant(0x80090359); // SEC_E_ISSUING_CA_UNTRUSTED_KDC
 
 /// The domain controller certificate used for smartcard logon has expired. Please contact your system administrator with the contents of your system event log.
-pub const E_KDC_CERT_EXPIRED : ErrorHResult = ErrorHResult::from_constant(0x8009035A); // SEC_E_KDC_CERT_EXPIRED
+pub const E_KDC_CERT_EXPIRED : HResultError = HResultError::from_constant(0x8009035A); // SEC_E_KDC_CERT_EXPIRED
 
 /// The domain controller certificate used for smartcard logon has been revoked. Please contact your system administrator with the contents of your system event log.
-pub const E_KDC_CERT_REVOKED : ErrorHResult = ErrorHResult::from_constant(0x8009035B); // SEC_E_KDC_CERT_REVOKED
+pub const E_KDC_CERT_REVOKED : HResultError = HResultError::from_constant(0x8009035B); // SEC_E_KDC_CERT_REVOKED
 
 /// One or more of the parameters passed to the function was invalid.
-pub const E_INVALID_PARAMETER : ErrorHResult = ErrorHResult::from_constant(0x8009035D); // SEC_E_INVALID_PARAMETER
+pub const E_INVALID_PARAMETER : HResultError = HResultError::from_constant(0x8009035D); // SEC_E_INVALID_PARAMETER
 
 /// Client policy does not allow credential delegation to target server.
-pub const E_DELEGATION_POLICY : ErrorHResult = ErrorHResult::from_constant(0x8009035E); // SEC_E_DELEGATION_POLICY
+pub const E_DELEGATION_POLICY : HResultError = HResultError::from_constant(0x8009035E); // SEC_E_DELEGATION_POLICY
 
 /// Client policy does not allow credential delegation to target server with NLTM only authentication.
-pub const E_POLICY_NLTM_ONLY : ErrorHResult = ErrorHResult::from_constant(0x8009035F); // SEC_E_POLICY_NLTM_ONLY
+pub const E_POLICY_NLTM_ONLY : HResultError = HResultError::from_constant(0x8009035F); // SEC_E_POLICY_NLTM_ONLY
 
 /// The required security context does not exist.
-pub const E_NO_CONTEXT : ErrorHResult = ErrorHResult::from_constant(0x80090361); // SEC_E_NO_CONTEXT
+pub const E_NO_CONTEXT : HResultError = HResultError::from_constant(0x80090361); // SEC_E_NO_CONTEXT
 
 /// The PKU2U protocol encountered an error while attempting to utilize the associated certificates.
-pub const E_PKU2U_CERT_FAILURE : ErrorHResult = ErrorHResult::from_constant(0x80090362); // SEC_E_PKU2U_CERT_FAILURE
+pub const E_PKU2U_CERT_FAILURE : HResultError = HResultError::from_constant(0x80090362); // SEC_E_PKU2U_CERT_FAILURE
 
 /// The identity of the server computer could not be verified.
-pub const E_MUTUAL_AUTH_FAILED : ErrorHResult = ErrorHResult::from_constant(0x80090363); // SEC_E_MUTUAL_AUTH_FAILED
+pub const E_MUTUAL_AUTH_FAILED : HResultError = HResultError::from_constant(0x80090363); // SEC_E_MUTUAL_AUTH_FAILED
 
 /// Only https scheme is allowed.
-pub const E_ONLY_HTTPS_ALLOWED : ErrorHResult = ErrorHResult::from_constant(0x80090365); // SEC_E_ONLY_HTTPS_ALLOWED
+pub const E_ONLY_HTTPS_ALLOWED : HResultError = HResultError::from_constant(0x80090365); // SEC_E_ONLY_HTTPS_ALLOWED
 
 /// No common application protocol exists between the client and the server. Application protocol negotiation failed.
-pub const E_APPLICATION_PROTOCOL_MISMATCH : ErrorHResult = ErrorHResult::from_constant(0x80090367); // SEC_E_APPLICATION_PROTOCOL_MISMATCH
+pub const E_APPLICATION_PROTOCOL_MISMATCH : HResultError = HResultError::from_constant(0x80090367); // SEC_E_APPLICATION_PROTOCOL_MISMATCH
 
 /// You can't sign in with a user ID in this format. Try using your email address instead.
-pub const E_INVALID_UPN_NAME : ErrorHResult = ErrorHResult::from_constant(0x80090369); // SEC_E_INVALID_UPN_NAME
+pub const E_INVALID_UPN_NAME : HResultError = HResultError::from_constant(0x80090369); // SEC_E_INVALID_UPN_NAME
 
 /// The buffer supplied by the SSPI caller to receive generic extensions is too small.
-pub const E_EXT_BUFFER_TOO_SMALL : ErrorHResult = ErrorHResult::from_constant(0x8009036A); // SEC_E_EXT_BUFFER_TOO_SMALL
+pub const E_EXT_BUFFER_TOO_SMALL : HResultError = HResultError::from_constant(0x8009036A); // SEC_E_EXT_BUFFER_TOO_SMALL
 
 /// Not enough secbuffers were supplied to generate a token.
-pub const E_INSUFFICIENT_BUFFERS : ErrorHResult = ErrorHResult::from_constant(0x8009036B); // SEC_E_INSUFFICIENT_BUFFERS
+pub const E_INSUFFICIENT_BUFFERS : HResultError = HResultError::from_constant(0x8009036B); // SEC_E_INSUFFICIENT_BUFFERS

@@ -4,31 +4,31 @@ use super::*;
 
 
 /// Invalid FORMATETC structure
-pub const E_FORMATETC : ErrorHResult = ErrorHResult::from_constant(0x80040064); // DV_E_FORMATETC
+pub const E_FORMATETC : HResultError = HResultError::from_constant(0x80040064); // DV_E_FORMATETC
 
 /// Invalid DVTARGETDEVICE structure
-pub const E_DVTARGETDEVICE : ErrorHResult = ErrorHResult::from_constant(0x80040065); // DV_E_DVTARGETDEVICE
+pub const E_DVTARGETDEVICE : HResultError = HResultError::from_constant(0x80040065); // DV_E_DVTARGETDEVICE
 
 /// Invalid STDGMEDIUM structure
-pub const E_STGMEDIUM : ErrorHResult = ErrorHResult::from_constant(0x80040066); // DV_E_STGMEDIUM
+pub const E_STGMEDIUM : HResultError = HResultError::from_constant(0x80040066); // DV_E_STGMEDIUM
 
 /// Invalid STATDATA structure
-pub const E_STATDATA : ErrorHResult = ErrorHResult::from_constant(0x80040067); // DV_E_STATDATA
+pub const E_STATDATA : HResultError = HResultError::from_constant(0x80040067); // DV_E_STATDATA
 
 /// Invalid lindex
-pub const E_LINDEX : ErrorHResult = ErrorHResult::from_constant(0x80040068); // DV_E_LINDEX
+pub const E_LINDEX : HResultError = HResultError::from_constant(0x80040068); // DV_E_LINDEX
 
 /// Invalid tymed
-pub const E_TYMED : ErrorHResult = ErrorHResult::from_constant(0x80040069); // DV_E_TYMED
+pub const E_TYMED : HResultError = HResultError::from_constant(0x80040069); // DV_E_TYMED
 
 /// Invalid clipboard format
-pub const E_CLIPFORMAT : ErrorHResult = ErrorHResult::from_constant(0x8004006A); // DV_E_CLIPFORMAT
+pub const E_CLIPFORMAT : HResultError = HResultError::from_constant(0x8004006A); // DV_E_CLIPFORMAT
 
 /// Invalid aspect(s)
-pub const E_DVASPECT : ErrorHResult = ErrorHResult::from_constant(0x8004006B); // DV_E_DVASPECT
+pub const E_DVASPECT : HResultError = HResultError::from_constant(0x8004006B); // DV_E_DVASPECT
 
 /// tdSize parameter of the DVTARGETDEVICE structure is invalid
-pub const E_DVTARGETDEVICE_SIZE : ErrorHResult = ErrorHResult::from_constant(0x8004006C); // DV_E_DVTARGETDEVICE_SIZE
+pub const E_DVTARGETDEVICE_SIZE : HResultError = HResultError::from_constant(0x8004006C); // DV_E_DVTARGETDEVICE_SIZE
 
 /// Object doesn't support IViewObject interface
-pub const E_NOIVIEWOBJECT : ErrorHResult = ErrorHResult::from_constant(0x8004006D); // DV_E_NOIVIEWOBJECT
+pub const E_NOIVIEWOBJECT : HResultError = HResultError::from_constant(0x8004006D); // DV_E_NOIVIEWOBJECT

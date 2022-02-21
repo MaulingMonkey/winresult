@@ -4,67 +4,67 @@ use super::*;
 
 
 /// Tried to reference a part of the file outside the proper range.
-pub const E_OUTOFMEMRANGE : ErrorHResult = ErrorHResult::from_constant(0x80097001); // MSSIPOTF_E_OUTOFMEMRANGE
+pub const E_OUTOFMEMRANGE : HResultError = HResultError::from_constant(0x80097001); // MSSIPOTF_E_OUTOFMEMRANGE
 
 /// Could not retrieve an object from the file.
-pub const E_CANTGETOBJECT : ErrorHResult = ErrorHResult::from_constant(0x80097002); // MSSIPOTF_E_CANTGETOBJECT
+pub const E_CANTGETOBJECT : HResultError = HResultError::from_constant(0x80097002); // MSSIPOTF_E_CANTGETOBJECT
 
 /// Could not find the head table in the file.
-pub const E_NOHEADTABLE : ErrorHResult = ErrorHResult::from_constant(0x80097003); // MSSIPOTF_E_NOHEADTABLE
+pub const E_NOHEADTABLE : HResultError = HResultError::from_constant(0x80097003); // MSSIPOTF_E_NOHEADTABLE
 
 /// The magic number in the head table is incorrect.
-pub const E_BAD_MAGICNUMBER : ErrorHResult = ErrorHResult::from_constant(0x80097004); // MSSIPOTF_E_BAD_MAGICNUMBER
+pub const E_BAD_MAGICNUMBER : HResultError = HResultError::from_constant(0x80097004); // MSSIPOTF_E_BAD_MAGICNUMBER
 
 /// The offset table has incorrect values.
-pub const E_BAD_OFFSET_TABLE : ErrorHResult = ErrorHResult::from_constant(0x80097005); // MSSIPOTF_E_BAD_OFFSET_TABLE
+pub const E_BAD_OFFSET_TABLE : HResultError = HResultError::from_constant(0x80097005); // MSSIPOTF_E_BAD_OFFSET_TABLE
 
 /// Duplicate table tags or tags out of alphabetical order.
-pub const E_TABLE_TAGORDER : ErrorHResult = ErrorHResult::from_constant(0x80097006); // MSSIPOTF_E_TABLE_TAGORDER
+pub const E_TABLE_TAGORDER : HResultError = HResultError::from_constant(0x80097006); // MSSIPOTF_E_TABLE_TAGORDER
 
 /// A table does not start on a long word boundary.
-pub const E_TABLE_LONGWORD : ErrorHResult = ErrorHResult::from_constant(0x80097007); // MSSIPOTF_E_TABLE_LONGWORD
+pub const E_TABLE_LONGWORD : HResultError = HResultError::from_constant(0x80097007); // MSSIPOTF_E_TABLE_LONGWORD
 
 /// First table does not appear after header information.
-pub const E_BAD_FIRST_TABLE_PLACEMENT : ErrorHResult = ErrorHResult::from_constant(0x80097008); // MSSIPOTF_E_BAD_FIRST_TABLE_PLACEMENT
+pub const E_BAD_FIRST_TABLE_PLACEMENT : HResultError = HResultError::from_constant(0x80097008); // MSSIPOTF_E_BAD_FIRST_TABLE_PLACEMENT
 
 /// Two or more tables overlap.
-pub const E_TABLES_OVERLAP : ErrorHResult = ErrorHResult::from_constant(0x80097009); // MSSIPOTF_E_TABLES_OVERLAP
+pub const E_TABLES_OVERLAP : HResultError = HResultError::from_constant(0x80097009); // MSSIPOTF_E_TABLES_OVERLAP
 
 /// Too many pad bytes between tables or pad bytes are not 0.
-pub const E_TABLE_PADBYTES : ErrorHResult = ErrorHResult::from_constant(0x8009700A); // MSSIPOTF_E_TABLE_PADBYTES
+pub const E_TABLE_PADBYTES : HResultError = HResultError::from_constant(0x8009700A); // MSSIPOTF_E_TABLE_PADBYTES
 
 /// File is too small to contain the last table.
-pub const E_FILETOOSMALL : ErrorHResult = ErrorHResult::from_constant(0x8009700B); // MSSIPOTF_E_FILETOOSMALL
+pub const E_FILETOOSMALL : HResultError = HResultError::from_constant(0x8009700B); // MSSIPOTF_E_FILETOOSMALL
 
 /// A table checksum is incorrect.
-pub const E_TABLE_CHECKSUM : ErrorHResult = ErrorHResult::from_constant(0x8009700C); // MSSIPOTF_E_TABLE_CHECKSUM
+pub const E_TABLE_CHECKSUM : HResultError = HResultError::from_constant(0x8009700C); // MSSIPOTF_E_TABLE_CHECKSUM
 
 /// The file checksum is incorrect.
-pub const E_FILE_CHECKSUM : ErrorHResult = ErrorHResult::from_constant(0x8009700D); // MSSIPOTF_E_FILE_CHECKSUM
+pub const E_FILE_CHECKSUM : HResultError = HResultError::from_constant(0x8009700D); // MSSIPOTF_E_FILE_CHECKSUM
 
 /// The signature does not have the correct attributes for the policy.
-pub const E_FAILED_POLICY : ErrorHResult = ErrorHResult::from_constant(0x80097010); // MSSIPOTF_E_FAILED_POLICY
+pub const E_FAILED_POLICY : HResultError = HResultError::from_constant(0x80097010); // MSSIPOTF_E_FAILED_POLICY
 
 /// The file did not pass the hints check.
-pub const E_FAILED_HINTS_CHECK : ErrorHResult = ErrorHResult::from_constant(0x80097011); // MSSIPOTF_E_FAILED_HINTS_CHECK
+pub const E_FAILED_HINTS_CHECK : HResultError = HResultError::from_constant(0x80097011); // MSSIPOTF_E_FAILED_HINTS_CHECK
 
 /// The file is not an OpenType file.
-pub const E_NOT_OPENTYPE : ErrorHResult = ErrorHResult::from_constant(0x80097012); // MSSIPOTF_E_NOT_OPENTYPE
+pub const E_NOT_OPENTYPE : HResultError = HResultError::from_constant(0x80097012); // MSSIPOTF_E_NOT_OPENTYPE
 
 /// Failed on a file operation (open, map, read, write).
-pub const E_FILE : ErrorHResult = ErrorHResult::from_constant(0x80097013); // MSSIPOTF_E_FILE
+pub const E_FILE : HResultError = HResultError::from_constant(0x80097013); // MSSIPOTF_E_FILE
 
 /// A call to a CryptoAPI function failed.
-pub const E_CRYPT : ErrorHResult = ErrorHResult::from_constant(0x80097014); // MSSIPOTF_E_CRYPT
+pub const E_CRYPT : HResultError = HResultError::from_constant(0x80097014); // MSSIPOTF_E_CRYPT
 
 /// There is a bad version number in the file.
-pub const E_BADVERSION : ErrorHResult = ErrorHResult::from_constant(0x80097015); // MSSIPOTF_E_BADVERSION
+pub const E_BADVERSION : HResultError = HResultError::from_constant(0x80097015); // MSSIPOTF_E_BADVERSION
 
 /// The structure of the DSIG table is incorrect.
-pub const E_DSIG_STRUCTURE : ErrorHResult = ErrorHResult::from_constant(0x80097016); // MSSIPOTF_E_DSIG_STRUCTURE
+pub const E_DSIG_STRUCTURE : HResultError = HResultError::from_constant(0x80097016); // MSSIPOTF_E_DSIG_STRUCTURE
 
 /// A check failed in a partially constant table.
-pub const E_PCONST_CHECK : ErrorHResult = ErrorHResult::from_constant(0x80097017); // MSSIPOTF_E_PCONST_CHECK
+pub const E_PCONST_CHECK : HResultError = HResultError::from_constant(0x80097017); // MSSIPOTF_E_PCONST_CHECK
 
 /// Some kind of structural error.
-pub const E_STRUCTURE : ErrorHResult = ErrorHResult::from_constant(0x80097018); // MSSIPOTF_E_STRUCTURE
+pub const E_STRUCTURE : HResultError = HResultError::from_constant(0x80097018); // MSSIPOTF_E_STRUCTURE

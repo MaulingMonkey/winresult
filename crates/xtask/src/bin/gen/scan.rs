@@ -103,9 +103,9 @@ pub struct Code<'s> {
 impl Code<'_> {
     pub(crate) fn matches_ty(&self, ty: &str) -> bool {
         match (self.rs_ty,          ty,                     ) {
-            ("SuccessHResult",      "HResult",              ) => true,
-            ("ErrorHResult",        "HResult",              ) => true,
-            ("ErrorHResult",        "ErrorHResultOrCode",   ) => true,
+            ("HResultSuccess",      "HResult",              ) => true,
+            ("HResultError",        "HResult",              ) => true,
+            ("HResultError",        "ErrorHResultOrCode",   ) => true,
             ("ErrorCodeMicrosoft",  "ErrorHResultOrCode",   ) => true,
             (x,                     y,                      ) => x == y,
         }
@@ -229,15 +229,15 @@ pub(crate) fn winerror_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) 
                 ("(ERROR_BIDI_ERROR_BASE + ",                       ")",    "ErrorCodeMicrosoft",   true,        13000, "winspool.h",   ), // conflicts: with ipsec
                 ("(INTERNET_INTERNAL_ERROR_BASE + ",                ")",    "ErrorCodeMicrosoft",   true,  900 + 12000, "Winineti.h"    ),
                 ("(NETSH_ERROR_BASE + ",                            ")",    "ErrorCodeMicrosoft",   true,        15000, "NetSh.h",      ), // conflicts: ERROR_EVT_INVALID_CHANNEL_PATH 15000 (winerror.h)
-                ("(ERROR_PCW_BASE + ",                              ")",    "ErrorHResult",         false,  0xC00E5101, "PatchWiz.h",   ),
-                ("(APPLICATION_ERROR_MASK|ERROR_SEVERITY_ERROR|",   ")",    "ErrorHResult",         false,  0xE0000000, "",             ),
+                ("(ERROR_PCW_BASE + ",                              ")",    "HResultError",         false,  0xC00E5101, "PatchWiz.h",   ),
+                ("(APPLICATION_ERROR_MASK|ERROR_SEVERITY_ERROR|",   ")",    "HResultError",         false,  0xE0000000, "",             ),
             ].iter().copied() {
                 if !pattern_header.is_empty() && !header.path.ends_with(pattern_header) { continue }
                 if let Some(value) = value.strip_prefix_suffix(pre, post).and_then(|v| v.try_parse_u32()) {
                     let value = value + base;
                     rs_ty = ty;
                     rs_value = match ty {
-                        "HResult" | "ErrorHResult"  => format!("0x{:08X}", value),
+                        "HResult" | "HResultError"  => format!("0x{:08X}", value),
                         _                           => format!("{}", value),
                     }.into();
                     redundant |= p_redundant;
@@ -265,9 +265,9 @@ pub(crate) fn winerror_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) 
             let ty = if ty == "HResult" {
                 if let Some(value) = rs_value.try_parse_u32() {
                     if value >= 0x8000_0000 {
-                        "ErrorHResult"
+                        "HResultError"
                     } else {
-                        "SuccessHResult"
+                        "HResultSuccess"
                     }
                 } else {
                     mmrbi::error!(at: &header.path, line: line.no(), "unable to parse integer value for `{}`: `{}`", error, value);
@@ -278,7 +278,7 @@ pub(crate) fn winerror_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) 
             };
 
             let ty = match error {
-                "S_OK" | "S_FALSE" => "SuccessHResult",
+                "S_OK" | "S_FALSE" => "HResultSuccess",
                 "ERROR_SUCCESS"    => "SuccessCodeMicrosoft",
                 _ => ty,
             };
@@ -408,7 +408,7 @@ pub(crate) fn d3d<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) {
                 continue // Ok
             } else if let Some(value) = value.strip_prefix_suffix("MAKE_D3DSTATUS(", ")") {
                 match value.parse::<u16>() {
-                    Ok(value)   => ("SuccessHResult", format!("{}", u32::from(value)+0x08760000)),
+                    Ok(value)   => ("HResultSuccess", format!("{}", u32::from(value)+0x08760000)),
                     Err(_) => {
                         mmrbi::error!(at: &header.path, line: line.no(), "unexpected value for {}", error);
                         continue
@@ -416,7 +416,7 @@ pub(crate) fn d3d<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) {
                 }
             } else if let Some(value) = value.strip_prefix_suffix("MAKE_DDSTATUS(", ")") {
                 match value.parse::<u16>() {
-                    Ok(value)   => ("SuccessHResult", format!("{}", u32::from(value)+0x08760000)),
+                    Ok(value)   => ("HResultSuccess", format!("{}", u32::from(value)+0x08760000)),
                     Err(_) => {
                         mmrbi::error!(at: &header.path, line: line.no(), "unexpected value for {}", error);
                         continue
@@ -424,7 +424,7 @@ pub(crate) fn d3d<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) {
                 }
             } else if let Some(value) = value.strip_prefix_suffix("MAKE_D3DHRESULT(", ")") {
                 match value.parse::<u16>() {
-                    Ok(value)   => ("ErrorHResult", format!("{}", u32::from(value)+0x88760000)),
+                    Ok(value)   => ("HResultError", format!("{}", u32::from(value)+0x88760000)),
                     Err(_) => {
                         mmrbi::error!(at: &header.path, line: line.no(), "unexpected value for {}", error);
                         continue
@@ -432,7 +432,7 @@ pub(crate) fn d3d<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) {
                 }
             } else if let Some(value) = value.strip_prefix_suffix("MAKE_DDHRESULT(", ")") {
                 match value.parse::<u16>() {
-                    Ok(value)   => ("ErrorHResult", format!("{}", u32::from(value)+0x88760000)),
+                    Ok(value)   => ("HResultError", format!("{}", u32::from(value)+0x88760000)),
                     Err(_) => {
                         mmrbi::error!(at: &header.path, line: line.no(), "unexpected value for {}", error);
                         continue

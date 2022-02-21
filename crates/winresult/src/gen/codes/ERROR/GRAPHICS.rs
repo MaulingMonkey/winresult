@@ -4,610 +4,610 @@ use super::*;
 
 
 /// Exclusive mode ownership is needed to create unmanaged primary allocation.
-pub const NOT_EXCLUSIVE_MODE_OWNER : ErrorHResult = ErrorHResult::from_constant(0xC0262000); // ERROR_GRAPHICS_NOT_EXCLUSIVE_MODE_OWNER
+pub const NOT_EXCLUSIVE_MODE_OWNER : HResultError = HResultError::from_constant(0xC0262000); // ERROR_GRAPHICS_NOT_EXCLUSIVE_MODE_OWNER
 
 /// The driver needs more DMA buffer space in order to complete the requested operation.
-pub const INSUFFICIENT_DMA_BUFFER : ErrorHResult = ErrorHResult::from_constant(0xC0262001); // ERROR_GRAPHICS_INSUFFICIENT_DMA_BUFFER
+pub const INSUFFICIENT_DMA_BUFFER : HResultError = HResultError::from_constant(0xC0262001); // ERROR_GRAPHICS_INSUFFICIENT_DMA_BUFFER
 
 /// Specified display adapter handle is invalid.
-pub const INVALID_DISPLAY_ADAPTER : ErrorHResult = ErrorHResult::from_constant(0xC0262002); // ERROR_GRAPHICS_INVALID_DISPLAY_ADAPTER
+pub const INVALID_DISPLAY_ADAPTER : HResultError = HResultError::from_constant(0xC0262002); // ERROR_GRAPHICS_INVALID_DISPLAY_ADAPTER
 
 /// Specified display adapter and all of its state has been reset.
-pub const ADAPTER_WAS_RESET : ErrorHResult = ErrorHResult::from_constant(0xC0262003); // ERROR_GRAPHICS_ADAPTER_WAS_RESET
+pub const ADAPTER_WAS_RESET : HResultError = HResultError::from_constant(0xC0262003); // ERROR_GRAPHICS_ADAPTER_WAS_RESET
 
 /// The driver stack doesn't match the expected driver model.
-pub const INVALID_DRIVER_MODEL : ErrorHResult = ErrorHResult::from_constant(0xC0262004); // ERROR_GRAPHICS_INVALID_DRIVER_MODEL
+pub const INVALID_DRIVER_MODEL : HResultError = HResultError::from_constant(0xC0262004); // ERROR_GRAPHICS_INVALID_DRIVER_MODEL
 
 /// Present happened but ended up into the changed desktop mode
-pub const PRESENT_MODE_CHANGED : ErrorHResult = ErrorHResult::from_constant(0xC0262005); // ERROR_GRAPHICS_PRESENT_MODE_CHANGED
+pub const PRESENT_MODE_CHANGED : HResultError = HResultError::from_constant(0xC0262005); // ERROR_GRAPHICS_PRESENT_MODE_CHANGED
 
 /// Nothing to present due to desktop occlusion
-pub const PRESENT_OCCLUDED : ErrorHResult = ErrorHResult::from_constant(0xC0262006); // ERROR_GRAPHICS_PRESENT_OCCLUDED
+pub const PRESENT_OCCLUDED : HResultError = HResultError::from_constant(0xC0262006); // ERROR_GRAPHICS_PRESENT_OCCLUDED
 
 /// Not able to present due to denial of desktop access
-pub const PRESENT_DENIED : ErrorHResult = ErrorHResult::from_constant(0xC0262007); // ERROR_GRAPHICS_PRESENT_DENIED
+pub const PRESENT_DENIED : HResultError = HResultError::from_constant(0xC0262007); // ERROR_GRAPHICS_PRESENT_DENIED
 
 /// Not able to present with color conversion
-pub const CANNOTCOLORCONVERT : ErrorHResult = ErrorHResult::from_constant(0xC0262008); // ERROR_GRAPHICS_CANNOTCOLORCONVERT
+pub const CANNOTCOLORCONVERT : HResultError = HResultError::from_constant(0xC0262008); // ERROR_GRAPHICS_CANNOTCOLORCONVERT
 
 /// The kernel driver detected a version mismatch between it and the user mode driver.
-pub const DRIVER_MISMATCH : ErrorHResult = ErrorHResult::from_constant(0xC0262009); // ERROR_GRAPHICS_DRIVER_MISMATCH
+pub const DRIVER_MISMATCH : HResultError = HResultError::from_constant(0xC0262009); // ERROR_GRAPHICS_DRIVER_MISMATCH
 
 /// Specified buffer is not big enough to contain entire requested dataset. Partial data populated up to the size of the buffer. Caller needs to provide buffer of size as specified in the partially populated buffer's content (interface specific).
-pub const PARTIAL_DATA_POPULATED : SuccessHResult = SuccessHResult::from_constant(0x4026200A); // ERROR_GRAPHICS_PARTIAL_DATA_POPULATED
+pub const PARTIAL_DATA_POPULATED : HResultSuccess = HResultSuccess::from_constant(0x4026200A); // ERROR_GRAPHICS_PARTIAL_DATA_POPULATED
 
 /// Present redirection is disabled (desktop windowing management subsystem is off).
-pub const PRESENT_REDIRECTION_DISABLED : ErrorHResult = ErrorHResult::from_constant(0xC026200B); // ERROR_GRAPHICS_PRESENT_REDIRECTION_DISABLED
+pub const PRESENT_REDIRECTION_DISABLED : HResultError = HResultError::from_constant(0xC026200B); // ERROR_GRAPHICS_PRESENT_REDIRECTION_DISABLED
 
 /// Previous exclusive VidPn source owner has released its ownership
-pub const PRESENT_UNOCCLUDED : ErrorHResult = ErrorHResult::from_constant(0xC026200C); // ERROR_GRAPHICS_PRESENT_UNOCCLUDED
+pub const PRESENT_UNOCCLUDED : HResultError = HResultError::from_constant(0xC026200C); // ERROR_GRAPHICS_PRESENT_UNOCCLUDED
 
 /// Window DC is not available for presentation
-pub const WINDOWDC_NOT_AVAILABLE : ErrorHResult = ErrorHResult::from_constant(0xC026200D); // ERROR_GRAPHICS_WINDOWDC_NOT_AVAILABLE
+pub const WINDOWDC_NOT_AVAILABLE : HResultError = HResultError::from_constant(0xC026200D); // ERROR_GRAPHICS_WINDOWDC_NOT_AVAILABLE
 
 /// Windowless present is disabled (desktop windowing management subsystem is off).
-pub const WINDOWLESS_PRESENT_DISABLED : ErrorHResult = ErrorHResult::from_constant(0xC026200E); // ERROR_GRAPHICS_WINDOWLESS_PRESENT_DISABLED
+pub const WINDOWLESS_PRESENT_DISABLED : HResultError = HResultError::from_constant(0xC026200E); // ERROR_GRAPHICS_WINDOWLESS_PRESENT_DISABLED
 
 /// Window handle is invalid
-pub const PRESENT_INVALID_WINDOW : ErrorHResult = ErrorHResult::from_constant(0xC026200F); // ERROR_GRAPHICS_PRESENT_INVALID_WINDOW
+pub const PRESENT_INVALID_WINDOW : HResultError = HResultError::from_constant(0xC026200F); // ERROR_GRAPHICS_PRESENT_INVALID_WINDOW
 
 /// No buffer is bound to composition surface
-pub const PRESENT_BUFFER_NOT_BOUND : ErrorHResult = ErrorHResult::from_constant(0xC0262010); // ERROR_GRAPHICS_PRESENT_BUFFER_NOT_BOUND
+pub const PRESENT_BUFFER_NOT_BOUND : HResultError = HResultError::from_constant(0xC0262010); // ERROR_GRAPHICS_PRESENT_BUFFER_NOT_BOUND
 
 /// Vail state has been changed
-pub const VAIL_STATE_CHANGED : ErrorHResult = ErrorHResult::from_constant(0xC0262011); // ERROR_GRAPHICS_VAIL_STATE_CHANGED
+pub const VAIL_STATE_CHANGED : HResultError = HResultError::from_constant(0xC0262011); // ERROR_GRAPHICS_VAIL_STATE_CHANGED
 
 /// Notifying indirect display UMDF class driver to abandon current swapchain.
-pub const INDIRECT_DISPLAY_ABANDON_SWAPCHAIN : ErrorHResult = ErrorHResult::from_constant(0xC0262012); // ERROR_GRAPHICS_INDIRECT_DISPLAY_ABANDON_SWAPCHAIN
+pub const INDIRECT_DISPLAY_ABANDON_SWAPCHAIN : HResultError = HResultError::from_constant(0xC0262012); // ERROR_GRAPHICS_INDIRECT_DISPLAY_ABANDON_SWAPCHAIN
 
 /// Notifying indirect display UMDF class driver that indirect display device has been stopped.
-pub const INDIRECT_DISPLAY_DEVICE_STOPPED : ErrorHResult = ErrorHResult::from_constant(0xC0262013); // ERROR_GRAPHICS_INDIRECT_DISPLAY_DEVICE_STOPPED
+pub const INDIRECT_DISPLAY_DEVICE_STOPPED : HResultError = HResultError::from_constant(0xC0262013); // ERROR_GRAPHICS_INDIRECT_DISPLAY_DEVICE_STOPPED
 
 /// Failed to send Create Vail Super Wet Ink message.
-pub const VAIL_FAILED_TO_SEND_CREATE_SUPERWETINK_MESSAGE : ErrorHResult = ErrorHResult::from_constant(0xC0262014); // ERROR_GRAPHICS_VAIL_FAILED_TO_SEND_CREATE_SUPERWETINK_MESSAGE
+pub const VAIL_FAILED_TO_SEND_CREATE_SUPERWETINK_MESSAGE : HResultError = HResultError::from_constant(0xC0262014); // ERROR_GRAPHICS_VAIL_FAILED_TO_SEND_CREATE_SUPERWETINK_MESSAGE
 
 /// Failed to send Destroy Vail Super Wet Ink message.
-pub const VAIL_FAILED_TO_SEND_DESTROY_SUPERWETINK_MESSAGE : ErrorHResult = ErrorHResult::from_constant(0xC0262015); // ERROR_GRAPHICS_VAIL_FAILED_TO_SEND_DESTROY_SUPERWETINK_MESSAGE
+pub const VAIL_FAILED_TO_SEND_DESTROY_SUPERWETINK_MESSAGE : HResultError = HResultError::from_constant(0xC0262015); // ERROR_GRAPHICS_VAIL_FAILED_TO_SEND_DESTROY_SUPERWETINK_MESSAGE
 
 /// Not enough video memory available to complete the operation.
-pub const NO_VIDEO_MEMORY : ErrorHResult = ErrorHResult::from_constant(0xC0262100); // ERROR_GRAPHICS_NO_VIDEO_MEMORY
+pub const NO_VIDEO_MEMORY : HResultError = HResultError::from_constant(0xC0262100); // ERROR_GRAPHICS_NO_VIDEO_MEMORY
 
 /// Couldn't probe and lock the underlying memory of an allocation.
-pub const CANT_LOCK_MEMORY : ErrorHResult = ErrorHResult::from_constant(0xC0262101); // ERROR_GRAPHICS_CANT_LOCK_MEMORY
+pub const CANT_LOCK_MEMORY : HResultError = HResultError::from_constant(0xC0262101); // ERROR_GRAPHICS_CANT_LOCK_MEMORY
 
 /// The allocation is currently busy.
-pub const ALLOCATION_BUSY : ErrorHResult = ErrorHResult::from_constant(0xC0262102); // ERROR_GRAPHICS_ALLOCATION_BUSY
+pub const ALLOCATION_BUSY : HResultError = HResultError::from_constant(0xC0262102); // ERROR_GRAPHICS_ALLOCATION_BUSY
 
 /// An object being referenced has reach the maximum reference count already and can't be reference further.
-pub const TOO_MANY_REFERENCES : ErrorHResult = ErrorHResult::from_constant(0xC0262103); // ERROR_GRAPHICS_TOO_MANY_REFERENCES
+pub const TOO_MANY_REFERENCES : HResultError = HResultError::from_constant(0xC0262103); // ERROR_GRAPHICS_TOO_MANY_REFERENCES
 
 /// A problem couldn't be solved due to some currently existing condition. The problem should be tried again later.
-pub const TRY_AGAIN_LATER : ErrorHResult = ErrorHResult::from_constant(0xC0262104); // ERROR_GRAPHICS_TRY_AGAIN_LATER
+pub const TRY_AGAIN_LATER : HResultError = HResultError::from_constant(0xC0262104); // ERROR_GRAPHICS_TRY_AGAIN_LATER
 
 /// A problem couldn't be solved due to some currently existing condition. The problem should be tried again immediately.
-pub const TRY_AGAIN_NOW : ErrorHResult = ErrorHResult::from_constant(0xC0262105); // ERROR_GRAPHICS_TRY_AGAIN_NOW
+pub const TRY_AGAIN_NOW : HResultError = HResultError::from_constant(0xC0262105); // ERROR_GRAPHICS_TRY_AGAIN_NOW
 
 /// The allocation is invalid.
-pub const ALLOCATION_INVALID : ErrorHResult = ErrorHResult::from_constant(0xC0262106); // ERROR_GRAPHICS_ALLOCATION_INVALID
+pub const ALLOCATION_INVALID : HResultError = HResultError::from_constant(0xC0262106); // ERROR_GRAPHICS_ALLOCATION_INVALID
 
 /// No more unswizzling aperture are currently available.
-pub const UNSWIZZLING_APERTURE_UNAVAILABLE : ErrorHResult = ErrorHResult::from_constant(0xC0262107); // ERROR_GRAPHICS_UNSWIZZLING_APERTURE_UNAVAILABLE
+pub const UNSWIZZLING_APERTURE_UNAVAILABLE : HResultError = HResultError::from_constant(0xC0262107); // ERROR_GRAPHICS_UNSWIZZLING_APERTURE_UNAVAILABLE
 
 /// The current allocation can't be unswizzled by an aperture.
-pub const UNSWIZZLING_APERTURE_UNSUPPORTED : ErrorHResult = ErrorHResult::from_constant(0xC0262108); // ERROR_GRAPHICS_UNSWIZZLING_APERTURE_UNSUPPORTED
+pub const UNSWIZZLING_APERTURE_UNSUPPORTED : HResultError = HResultError::from_constant(0xC0262108); // ERROR_GRAPHICS_UNSWIZZLING_APERTURE_UNSUPPORTED
 
 /// The request failed because a pinned allocation can't be evicted.
-pub const CANT_EVICT_PINNED_ALLOCATION : ErrorHResult = ErrorHResult::from_constant(0xC0262109); // ERROR_GRAPHICS_CANT_EVICT_PINNED_ALLOCATION
+pub const CANT_EVICT_PINNED_ALLOCATION : HResultError = HResultError::from_constant(0xC0262109); // ERROR_GRAPHICS_CANT_EVICT_PINNED_ALLOCATION
 
 /// The allocation can't be used from its current segment location for the specified operation.
-pub const INVALID_ALLOCATION_USAGE : ErrorHResult = ErrorHResult::from_constant(0xC0262110); // ERROR_GRAPHICS_INVALID_ALLOCATION_USAGE
+pub const INVALID_ALLOCATION_USAGE : HResultError = HResultError::from_constant(0xC0262110); // ERROR_GRAPHICS_INVALID_ALLOCATION_USAGE
 
 /// A locked allocation can't be used in the current command buffer.
-pub const CANT_RENDER_LOCKED_ALLOCATION : ErrorHResult = ErrorHResult::from_constant(0xC0262111); // ERROR_GRAPHICS_CANT_RENDER_LOCKED_ALLOCATION
+pub const CANT_RENDER_LOCKED_ALLOCATION : HResultError = HResultError::from_constant(0xC0262111); // ERROR_GRAPHICS_CANT_RENDER_LOCKED_ALLOCATION
 
 /// The allocation being referenced has been closed permanently.
-pub const ALLOCATION_CLOSED : ErrorHResult = ErrorHResult::from_constant(0xC0262112); // ERROR_GRAPHICS_ALLOCATION_CLOSED
+pub const ALLOCATION_CLOSED : HResultError = HResultError::from_constant(0xC0262112); // ERROR_GRAPHICS_ALLOCATION_CLOSED
 
 /// An invalid allocation instance is being referenced.
-pub const INVALID_ALLOCATION_INSTANCE : ErrorHResult = ErrorHResult::from_constant(0xC0262113); // ERROR_GRAPHICS_INVALID_ALLOCATION_INSTANCE
+pub const INVALID_ALLOCATION_INSTANCE : HResultError = HResultError::from_constant(0xC0262113); // ERROR_GRAPHICS_INVALID_ALLOCATION_INSTANCE
 
 /// An invalid allocation handle is being referenced.
-pub const INVALID_ALLOCATION_HANDLE : ErrorHResult = ErrorHResult::from_constant(0xC0262114); // ERROR_GRAPHICS_INVALID_ALLOCATION_HANDLE
+pub const INVALID_ALLOCATION_HANDLE : HResultError = HResultError::from_constant(0xC0262114); // ERROR_GRAPHICS_INVALID_ALLOCATION_HANDLE
 
 /// The allocation being referenced doesn't belong to the current device.
-pub const WRONG_ALLOCATION_DEVICE : ErrorHResult = ErrorHResult::from_constant(0xC0262115); // ERROR_GRAPHICS_WRONG_ALLOCATION_DEVICE
+pub const WRONG_ALLOCATION_DEVICE : HResultError = HResultError::from_constant(0xC0262115); // ERROR_GRAPHICS_WRONG_ALLOCATION_DEVICE
 
 /// The specified allocation lost its content.
-pub const ALLOCATION_CONTENT_LOST : ErrorHResult = ErrorHResult::from_constant(0xC0262116); // ERROR_GRAPHICS_ALLOCATION_CONTENT_LOST
+pub const ALLOCATION_CONTENT_LOST : HResultError = HResultError::from_constant(0xC0262116); // ERROR_GRAPHICS_ALLOCATION_CONTENT_LOST
 
 /// GPU exception is detected on the given device. The device is not able to be scheduled.
-pub const GPU_EXCEPTION_ON_DEVICE : ErrorHResult = ErrorHResult::from_constant(0xC0262200); // ERROR_GRAPHICS_GPU_EXCEPTION_ON_DEVICE
+pub const GPU_EXCEPTION_ON_DEVICE : HResultError = HResultError::from_constant(0xC0262200); // ERROR_GRAPHICS_GPU_EXCEPTION_ON_DEVICE
 
 /// Skip preparation of allocations referenced by the DMA buffer.
-pub const SKIP_ALLOCATION_PREPARATION : SuccessHResult = SuccessHResult::from_constant(0x40262201); // ERROR_GRAPHICS_SKIP_ALLOCATION_PREPARATION
+pub const SKIP_ALLOCATION_PREPARATION : HResultSuccess = HResultSuccess::from_constant(0x40262201); // ERROR_GRAPHICS_SKIP_ALLOCATION_PREPARATION
 
 /// Specified VidPN topology is invalid.
-pub const INVALID_VIDPN_TOPOLOGY : ErrorHResult = ErrorHResult::from_constant(0xC0262300); // ERROR_GRAPHICS_INVALID_VIDPN_TOPOLOGY
+pub const INVALID_VIDPN_TOPOLOGY : HResultError = HResultError::from_constant(0xC0262300); // ERROR_GRAPHICS_INVALID_VIDPN_TOPOLOGY
 
 /// Specified VidPN topology is valid but is not supported by this model of the display adapter.
-pub const VIDPN_TOPOLOGY_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0xC0262301); // ERROR_GRAPHICS_VIDPN_TOPOLOGY_NOT_SUPPORTED
+pub const VIDPN_TOPOLOGY_NOT_SUPPORTED : HResultError = HResultError::from_constant(0xC0262301); // ERROR_GRAPHICS_VIDPN_TOPOLOGY_NOT_SUPPORTED
 
 /// Specified VidPN topology is valid but is not supported by the display adapter at this time, due to current allocation of its resources.
-pub const VIDPN_TOPOLOGY_CURRENTLY_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0xC0262302); // ERROR_GRAPHICS_VIDPN_TOPOLOGY_CURRENTLY_NOT_SUPPORTED
+pub const VIDPN_TOPOLOGY_CURRENTLY_NOT_SUPPORTED : HResultError = HResultError::from_constant(0xC0262302); // ERROR_GRAPHICS_VIDPN_TOPOLOGY_CURRENTLY_NOT_SUPPORTED
 
 /// Specified VidPN handle is invalid.
-pub const INVALID_VIDPN : ErrorHResult = ErrorHResult::from_constant(0xC0262303); // ERROR_GRAPHICS_INVALID_VIDPN
+pub const INVALID_VIDPN : HResultError = HResultError::from_constant(0xC0262303); // ERROR_GRAPHICS_INVALID_VIDPN
 
 /// Specified video present source is invalid.
-pub const INVALID_VIDEO_PRESENT_SOURCE : ErrorHResult = ErrorHResult::from_constant(0xC0262304); // ERROR_GRAPHICS_INVALID_VIDEO_PRESENT_SOURCE
+pub const INVALID_VIDEO_PRESENT_SOURCE : HResultError = HResultError::from_constant(0xC0262304); // ERROR_GRAPHICS_INVALID_VIDEO_PRESENT_SOURCE
 
 /// Specified video present target is invalid.
-pub const INVALID_VIDEO_PRESENT_TARGET : ErrorHResult = ErrorHResult::from_constant(0xC0262305); // ERROR_GRAPHICS_INVALID_VIDEO_PRESENT_TARGET
+pub const INVALID_VIDEO_PRESENT_TARGET : HResultError = HResultError::from_constant(0xC0262305); // ERROR_GRAPHICS_INVALID_VIDEO_PRESENT_TARGET
 
 /// Specified VidPN modality is not supported (e.g. at least two of the pinned modes are not cofunctional).
-pub const VIDPN_MODALITY_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0xC0262306); // ERROR_GRAPHICS_VIDPN_MODALITY_NOT_SUPPORTED
+pub const VIDPN_MODALITY_NOT_SUPPORTED : HResultError = HResultError::from_constant(0xC0262306); // ERROR_GRAPHICS_VIDPN_MODALITY_NOT_SUPPORTED
 
 /// No mode is pinned on the specified VidPN source/target.
-pub const MODE_NOT_PINNED : SuccessHResult = SuccessHResult::from_constant(0x00262307); // ERROR_GRAPHICS_MODE_NOT_PINNED
+pub const MODE_NOT_PINNED : HResultSuccess = HResultSuccess::from_constant(0x00262307); // ERROR_GRAPHICS_MODE_NOT_PINNED
 
 /// Specified VidPN source mode set is invalid.
-pub const INVALID_VIDPN_SOURCEMODESET : ErrorHResult = ErrorHResult::from_constant(0xC0262308); // ERROR_GRAPHICS_INVALID_VIDPN_SOURCEMODESET
+pub const INVALID_VIDPN_SOURCEMODESET : HResultError = HResultError::from_constant(0xC0262308); // ERROR_GRAPHICS_INVALID_VIDPN_SOURCEMODESET
 
 /// Specified VidPN target mode set is invalid.
-pub const INVALID_VIDPN_TARGETMODESET : ErrorHResult = ErrorHResult::from_constant(0xC0262309); // ERROR_GRAPHICS_INVALID_VIDPN_TARGETMODESET
+pub const INVALID_VIDPN_TARGETMODESET : HResultError = HResultError::from_constant(0xC0262309); // ERROR_GRAPHICS_INVALID_VIDPN_TARGETMODESET
 
 /// Specified video signal frequency is invalid.
-pub const INVALID_FREQUENCY : ErrorHResult = ErrorHResult::from_constant(0xC026230A); // ERROR_GRAPHICS_INVALID_FREQUENCY
+pub const INVALID_FREQUENCY : HResultError = HResultError::from_constant(0xC026230A); // ERROR_GRAPHICS_INVALID_FREQUENCY
 
 /// Specified video signal active region is invalid.
-pub const INVALID_ACTIVE_REGION : ErrorHResult = ErrorHResult::from_constant(0xC026230B); // ERROR_GRAPHICS_INVALID_ACTIVE_REGION
+pub const INVALID_ACTIVE_REGION : HResultError = HResultError::from_constant(0xC026230B); // ERROR_GRAPHICS_INVALID_ACTIVE_REGION
 
 /// Specified video signal total region is invalid.
-pub const INVALID_TOTAL_REGION : ErrorHResult = ErrorHResult::from_constant(0xC026230C); // ERROR_GRAPHICS_INVALID_TOTAL_REGION
+pub const INVALID_TOTAL_REGION : HResultError = HResultError::from_constant(0xC026230C); // ERROR_GRAPHICS_INVALID_TOTAL_REGION
 
 /// Specified video present source mode is invalid.
-pub const INVALID_VIDEO_PRESENT_SOURCE_MODE : ErrorHResult = ErrorHResult::from_constant(0xC0262310); // ERROR_GRAPHICS_INVALID_VIDEO_PRESENT_SOURCE_MODE
+pub const INVALID_VIDEO_PRESENT_SOURCE_MODE : HResultError = HResultError::from_constant(0xC0262310); // ERROR_GRAPHICS_INVALID_VIDEO_PRESENT_SOURCE_MODE
 
 /// Specified video present target mode is invalid.
-pub const INVALID_VIDEO_PRESENT_TARGET_MODE : ErrorHResult = ErrorHResult::from_constant(0xC0262311); // ERROR_GRAPHICS_INVALID_VIDEO_PRESENT_TARGET_MODE
+pub const INVALID_VIDEO_PRESENT_TARGET_MODE : HResultError = HResultError::from_constant(0xC0262311); // ERROR_GRAPHICS_INVALID_VIDEO_PRESENT_TARGET_MODE
 
 /// Pinned mode must remain in the set on VidPN's cofunctional modality enumeration.
-pub const PINNED_MODE_MUST_REMAIN_IN_SET : ErrorHResult = ErrorHResult::from_constant(0xC0262312); // ERROR_GRAPHICS_PINNED_MODE_MUST_REMAIN_IN_SET
+pub const PINNED_MODE_MUST_REMAIN_IN_SET : HResultError = HResultError::from_constant(0xC0262312); // ERROR_GRAPHICS_PINNED_MODE_MUST_REMAIN_IN_SET
 
 /// Specified video present path is already in VidPN's topology.
-pub const PATH_ALREADY_IN_TOPOLOGY : ErrorHResult = ErrorHResult::from_constant(0xC0262313); // ERROR_GRAPHICS_PATH_ALREADY_IN_TOPOLOGY
+pub const PATH_ALREADY_IN_TOPOLOGY : HResultError = HResultError::from_constant(0xC0262313); // ERROR_GRAPHICS_PATH_ALREADY_IN_TOPOLOGY
 
 /// Specified mode is already in the mode set.
-pub const MODE_ALREADY_IN_MODESET : ErrorHResult = ErrorHResult::from_constant(0xC0262314); // ERROR_GRAPHICS_MODE_ALREADY_IN_MODESET
+pub const MODE_ALREADY_IN_MODESET : HResultError = HResultError::from_constant(0xC0262314); // ERROR_GRAPHICS_MODE_ALREADY_IN_MODESET
 
 /// Specified video present source set is invalid.
-pub const INVALID_VIDEOPRESENTSOURCESET : ErrorHResult = ErrorHResult::from_constant(0xC0262315); // ERROR_GRAPHICS_INVALID_VIDEOPRESENTSOURCESET
+pub const INVALID_VIDEOPRESENTSOURCESET : HResultError = HResultError::from_constant(0xC0262315); // ERROR_GRAPHICS_INVALID_VIDEOPRESENTSOURCESET
 
 /// Specified video present target set is invalid.
-pub const INVALID_VIDEOPRESENTTARGETSET : ErrorHResult = ErrorHResult::from_constant(0xC0262316); // ERROR_GRAPHICS_INVALID_VIDEOPRESENTTARGETSET
+pub const INVALID_VIDEOPRESENTTARGETSET : HResultError = HResultError::from_constant(0xC0262316); // ERROR_GRAPHICS_INVALID_VIDEOPRESENTTARGETSET
 
 /// Specified video present source is already in the video present source set.
-pub const SOURCE_ALREADY_IN_SET : ErrorHResult = ErrorHResult::from_constant(0xC0262317); // ERROR_GRAPHICS_SOURCE_ALREADY_IN_SET
+pub const SOURCE_ALREADY_IN_SET : HResultError = HResultError::from_constant(0xC0262317); // ERROR_GRAPHICS_SOURCE_ALREADY_IN_SET
 
 /// Specified video present target is already in the video present target set.
-pub const TARGET_ALREADY_IN_SET : ErrorHResult = ErrorHResult::from_constant(0xC0262318); // ERROR_GRAPHICS_TARGET_ALREADY_IN_SET
+pub const TARGET_ALREADY_IN_SET : HResultError = HResultError::from_constant(0xC0262318); // ERROR_GRAPHICS_TARGET_ALREADY_IN_SET
 
 /// Specified VidPN present path is invalid.
-pub const INVALID_VIDPN_PRESENT_PATH : ErrorHResult = ErrorHResult::from_constant(0xC0262319); // ERROR_GRAPHICS_INVALID_VIDPN_PRESENT_PATH
+pub const INVALID_VIDPN_PRESENT_PATH : HResultError = HResultError::from_constant(0xC0262319); // ERROR_GRAPHICS_INVALID_VIDPN_PRESENT_PATH
 
 /// Miniport has no recommendation for augmentation of the specified VidPN's topology.
-pub const NO_RECOMMENDED_VIDPN_TOPOLOGY : ErrorHResult = ErrorHResult::from_constant(0xC026231A); // ERROR_GRAPHICS_NO_RECOMMENDED_VIDPN_TOPOLOGY
+pub const NO_RECOMMENDED_VIDPN_TOPOLOGY : HResultError = HResultError::from_constant(0xC026231A); // ERROR_GRAPHICS_NO_RECOMMENDED_VIDPN_TOPOLOGY
 
 /// Specified monitor frequency range set is invalid.
-pub const INVALID_MONITOR_FREQUENCYRANGESET : ErrorHResult = ErrorHResult::from_constant(0xC026231B); // ERROR_GRAPHICS_INVALID_MONITOR_FREQUENCYRANGESET
+pub const INVALID_MONITOR_FREQUENCYRANGESET : HResultError = HResultError::from_constant(0xC026231B); // ERROR_GRAPHICS_INVALID_MONITOR_FREQUENCYRANGESET
 
 /// Specified monitor frequency range is invalid.
-pub const INVALID_MONITOR_FREQUENCYRANGE : ErrorHResult = ErrorHResult::from_constant(0xC026231C); // ERROR_GRAPHICS_INVALID_MONITOR_FREQUENCYRANGE
+pub const INVALID_MONITOR_FREQUENCYRANGE : HResultError = HResultError::from_constant(0xC026231C); // ERROR_GRAPHICS_INVALID_MONITOR_FREQUENCYRANGE
 
 /// Specified frequency range is not in the specified monitor frequency range set.
-pub const FREQUENCYRANGE_NOT_IN_SET : ErrorHResult = ErrorHResult::from_constant(0xC026231D); // ERROR_GRAPHICS_FREQUENCYRANGE_NOT_IN_SET
+pub const FREQUENCYRANGE_NOT_IN_SET : HResultError = HResultError::from_constant(0xC026231D); // ERROR_GRAPHICS_FREQUENCYRANGE_NOT_IN_SET
 
 /// Specified mode set does not specify preference for one of its modes.
-pub const NO_PREFERRED_MODE : SuccessHResult = SuccessHResult::from_constant(0x0026231E); // ERROR_GRAPHICS_NO_PREFERRED_MODE
+pub const NO_PREFERRED_MODE : HResultSuccess = HResultSuccess::from_constant(0x0026231E); // ERROR_GRAPHICS_NO_PREFERRED_MODE
 
 /// Specified frequency range is already in the specified monitor frequency range set.
-pub const FREQUENCYRANGE_ALREADY_IN_SET : ErrorHResult = ErrorHResult::from_constant(0xC026231F); // ERROR_GRAPHICS_FREQUENCYRANGE_ALREADY_IN_SET
+pub const FREQUENCYRANGE_ALREADY_IN_SET : HResultError = HResultError::from_constant(0xC026231F); // ERROR_GRAPHICS_FREQUENCYRANGE_ALREADY_IN_SET
 
 /// Specified mode set is stale. Please reacquire the new mode set.
-pub const STALE_MODESET : ErrorHResult = ErrorHResult::from_constant(0xC0262320); // ERROR_GRAPHICS_STALE_MODESET
+pub const STALE_MODESET : HResultError = HResultError::from_constant(0xC0262320); // ERROR_GRAPHICS_STALE_MODESET
 
 /// Specified monitor source mode set is invalid.
-pub const INVALID_MONITOR_SOURCEMODESET : ErrorHResult = ErrorHResult::from_constant(0xC0262321); // ERROR_GRAPHICS_INVALID_MONITOR_SOURCEMODESET
+pub const INVALID_MONITOR_SOURCEMODESET : HResultError = HResultError::from_constant(0xC0262321); // ERROR_GRAPHICS_INVALID_MONITOR_SOURCEMODESET
 
 /// Specified monitor source mode is invalid.
-pub const INVALID_MONITOR_SOURCE_MODE : ErrorHResult = ErrorHResult::from_constant(0xC0262322); // ERROR_GRAPHICS_INVALID_MONITOR_SOURCE_MODE
+pub const INVALID_MONITOR_SOURCE_MODE : HResultError = HResultError::from_constant(0xC0262322); // ERROR_GRAPHICS_INVALID_MONITOR_SOURCE_MODE
 
 /// Miniport does not have any recommendation regarding the request to provide a functional VidPN given the current display adapter configuration.
-pub const NO_RECOMMENDED_FUNCTIONAL_VIDPN : ErrorHResult = ErrorHResult::from_constant(0xC0262323); // ERROR_GRAPHICS_NO_RECOMMENDED_FUNCTIONAL_VIDPN
+pub const NO_RECOMMENDED_FUNCTIONAL_VIDPN : HResultError = HResultError::from_constant(0xC0262323); // ERROR_GRAPHICS_NO_RECOMMENDED_FUNCTIONAL_VIDPN
 
 /// ID of the specified mode is already used by another mode in the set.
-pub const MODE_ID_MUST_BE_UNIQUE : ErrorHResult = ErrorHResult::from_constant(0xC0262324); // ERROR_GRAPHICS_MODE_ID_MUST_BE_UNIQUE
+pub const MODE_ID_MUST_BE_UNIQUE : HResultError = HResultError::from_constant(0xC0262324); // ERROR_GRAPHICS_MODE_ID_MUST_BE_UNIQUE
 
 /// System failed to determine a mode that is supported by both the display adapter and the monitor connected to it.
-pub const EMPTY_ADAPTER_MONITOR_MODE_SUPPORT_INTERSECTION : ErrorHResult = ErrorHResult::from_constant(0xC0262325); // ERROR_GRAPHICS_EMPTY_ADAPTER_MONITOR_MODE_SUPPORT_INTERSECTION
+pub const EMPTY_ADAPTER_MONITOR_MODE_SUPPORT_INTERSECTION : HResultError = HResultError::from_constant(0xC0262325); // ERROR_GRAPHICS_EMPTY_ADAPTER_MONITOR_MODE_SUPPORT_INTERSECTION
 
 /// Number of video present targets must be greater than or equal to the number of video present sources.
-pub const VIDEO_PRESENT_TARGETS_LESS_THAN_SOURCES : ErrorHResult = ErrorHResult::from_constant(0xC0262326); // ERROR_GRAPHICS_VIDEO_PRESENT_TARGETS_LESS_THAN_SOURCES
+pub const VIDEO_PRESENT_TARGETS_LESS_THAN_SOURCES : HResultError = HResultError::from_constant(0xC0262326); // ERROR_GRAPHICS_VIDEO_PRESENT_TARGETS_LESS_THAN_SOURCES
 
 /// Specified present path is not in VidPN's topology.
-pub const PATH_NOT_IN_TOPOLOGY : ErrorHResult = ErrorHResult::from_constant(0xC0262327); // ERROR_GRAPHICS_PATH_NOT_IN_TOPOLOGY
+pub const PATH_NOT_IN_TOPOLOGY : HResultError = HResultError::from_constant(0xC0262327); // ERROR_GRAPHICS_PATH_NOT_IN_TOPOLOGY
 
 /// Display adapter must have at least one video present source.
-pub const ADAPTER_MUST_HAVE_AT_LEAST_ONE_SOURCE : ErrorHResult = ErrorHResult::from_constant(0xC0262328); // ERROR_GRAPHICS_ADAPTER_MUST_HAVE_AT_LEAST_ONE_SOURCE
+pub const ADAPTER_MUST_HAVE_AT_LEAST_ONE_SOURCE : HResultError = HResultError::from_constant(0xC0262328); // ERROR_GRAPHICS_ADAPTER_MUST_HAVE_AT_LEAST_ONE_SOURCE
 
 /// Display adapter must have at least one video present target.
-pub const ADAPTER_MUST_HAVE_AT_LEAST_ONE_TARGET : ErrorHResult = ErrorHResult::from_constant(0xC0262329); // ERROR_GRAPHICS_ADAPTER_MUST_HAVE_AT_LEAST_ONE_TARGET
+pub const ADAPTER_MUST_HAVE_AT_LEAST_ONE_TARGET : HResultError = HResultError::from_constant(0xC0262329); // ERROR_GRAPHICS_ADAPTER_MUST_HAVE_AT_LEAST_ONE_TARGET
 
 /// Specified monitor descriptor set is invalid.
-pub const INVALID_MONITORDESCRIPTORSET : ErrorHResult = ErrorHResult::from_constant(0xC026232A); // ERROR_GRAPHICS_INVALID_MONITORDESCRIPTORSET
+pub const INVALID_MONITORDESCRIPTORSET : HResultError = HResultError::from_constant(0xC026232A); // ERROR_GRAPHICS_INVALID_MONITORDESCRIPTORSET
 
 /// Specified monitor descriptor is invalid.
-pub const INVALID_MONITORDESCRIPTOR : ErrorHResult = ErrorHResult::from_constant(0xC026232B); // ERROR_GRAPHICS_INVALID_MONITORDESCRIPTOR
+pub const INVALID_MONITORDESCRIPTOR : HResultError = HResultError::from_constant(0xC026232B); // ERROR_GRAPHICS_INVALID_MONITORDESCRIPTOR
 
 /// Specified descriptor is not in the specified monitor descriptor set.
-pub const MONITORDESCRIPTOR_NOT_IN_SET : ErrorHResult = ErrorHResult::from_constant(0xC026232C); // ERROR_GRAPHICS_MONITORDESCRIPTOR_NOT_IN_SET
+pub const MONITORDESCRIPTOR_NOT_IN_SET : HResultError = HResultError::from_constant(0xC026232C); // ERROR_GRAPHICS_MONITORDESCRIPTOR_NOT_IN_SET
 
 /// Specified descriptor is already in the specified monitor descriptor set.
-pub const MONITORDESCRIPTOR_ALREADY_IN_SET : ErrorHResult = ErrorHResult::from_constant(0xC026232D); // ERROR_GRAPHICS_MONITORDESCRIPTOR_ALREADY_IN_SET
+pub const MONITORDESCRIPTOR_ALREADY_IN_SET : HResultError = HResultError::from_constant(0xC026232D); // ERROR_GRAPHICS_MONITORDESCRIPTOR_ALREADY_IN_SET
 
 /// ID of the specified monitor descriptor is already used by another descriptor in the set.
-pub const MONITORDESCRIPTOR_ID_MUST_BE_UNIQUE : ErrorHResult = ErrorHResult::from_constant(0xC026232E); // ERROR_GRAPHICS_MONITORDESCRIPTOR_ID_MUST_BE_UNIQUE
+pub const MONITORDESCRIPTOR_ID_MUST_BE_UNIQUE : HResultError = HResultError::from_constant(0xC026232E); // ERROR_GRAPHICS_MONITORDESCRIPTOR_ID_MUST_BE_UNIQUE
 
 /// Specified video present target subset type is invalid.
-pub const INVALID_VIDPN_TARGET_SUBSET_TYPE : ErrorHResult = ErrorHResult::from_constant(0xC026232F); // ERROR_GRAPHICS_INVALID_VIDPN_TARGET_SUBSET_TYPE
+pub const INVALID_VIDPN_TARGET_SUBSET_TYPE : HResultError = HResultError::from_constant(0xC026232F); // ERROR_GRAPHICS_INVALID_VIDPN_TARGET_SUBSET_TYPE
 
 /// Two or more of the specified resources are not related to each other, as defined by the interface semantics.
-pub const RESOURCES_NOT_RELATED : ErrorHResult = ErrorHResult::from_constant(0xC0262330); // ERROR_GRAPHICS_RESOURCES_NOT_RELATED
+pub const RESOURCES_NOT_RELATED : HResultError = HResultError::from_constant(0xC0262330); // ERROR_GRAPHICS_RESOURCES_NOT_RELATED
 
 /// ID of the specified video present source is already used by another source in the set.
-pub const SOURCE_ID_MUST_BE_UNIQUE : ErrorHResult = ErrorHResult::from_constant(0xC0262331); // ERROR_GRAPHICS_SOURCE_ID_MUST_BE_UNIQUE
+pub const SOURCE_ID_MUST_BE_UNIQUE : HResultError = HResultError::from_constant(0xC0262331); // ERROR_GRAPHICS_SOURCE_ID_MUST_BE_UNIQUE
 
 /// ID of the specified video present target is already used by another target in the set.
-pub const TARGET_ID_MUST_BE_UNIQUE : ErrorHResult = ErrorHResult::from_constant(0xC0262332); // ERROR_GRAPHICS_TARGET_ID_MUST_BE_UNIQUE
+pub const TARGET_ID_MUST_BE_UNIQUE : HResultError = HResultError::from_constant(0xC0262332); // ERROR_GRAPHICS_TARGET_ID_MUST_BE_UNIQUE
 
 /// Specified VidPN source cannot be used because there is no available VidPN target to connect it to.
-pub const NO_AVAILABLE_VIDPN_TARGET : ErrorHResult = ErrorHResult::from_constant(0xC0262333); // ERROR_GRAPHICS_NO_AVAILABLE_VIDPN_TARGET
+pub const NO_AVAILABLE_VIDPN_TARGET : HResultError = HResultError::from_constant(0xC0262333); // ERROR_GRAPHICS_NO_AVAILABLE_VIDPN_TARGET
 
 /// Newly arrived monitor could not be associated with a display adapter.
-pub const MONITOR_COULD_NOT_BE_ASSOCIATED_WITH_ADAPTER : ErrorHResult = ErrorHResult::from_constant(0xC0262334); // ERROR_GRAPHICS_MONITOR_COULD_NOT_BE_ASSOCIATED_WITH_ADAPTER
+pub const MONITOR_COULD_NOT_BE_ASSOCIATED_WITH_ADAPTER : HResultError = HResultError::from_constant(0xC0262334); // ERROR_GRAPHICS_MONITOR_COULD_NOT_BE_ASSOCIATED_WITH_ADAPTER
 
 /// Display adapter in question does not have an associated VidPN manager.
-pub const NO_VIDPNMGR : ErrorHResult = ErrorHResult::from_constant(0xC0262335); // ERROR_GRAPHICS_NO_VIDPNMGR
+pub const NO_VIDPNMGR : HResultError = HResultError::from_constant(0xC0262335); // ERROR_GRAPHICS_NO_VIDPNMGR
 
 /// VidPN manager of the display adapter in question does not have an active VidPN.
-pub const NO_ACTIVE_VIDPN : ErrorHResult = ErrorHResult::from_constant(0xC0262336); // ERROR_GRAPHICS_NO_ACTIVE_VIDPN
+pub const NO_ACTIVE_VIDPN : HResultError = HResultError::from_constant(0xC0262336); // ERROR_GRAPHICS_NO_ACTIVE_VIDPN
 
 /// Specified VidPN topology is stale. Please reacquire the new topology.
-pub const STALE_VIDPN_TOPOLOGY : ErrorHResult = ErrorHResult::from_constant(0xC0262337); // ERROR_GRAPHICS_STALE_VIDPN_TOPOLOGY
+pub const STALE_VIDPN_TOPOLOGY : HResultError = HResultError::from_constant(0xC0262337); // ERROR_GRAPHICS_STALE_VIDPN_TOPOLOGY
 
 /// There is no monitor connected on the specified video present target.
-pub const MONITOR_NOT_CONNECTED : ErrorHResult = ErrorHResult::from_constant(0xC0262338); // ERROR_GRAPHICS_MONITOR_NOT_CONNECTED
+pub const MONITOR_NOT_CONNECTED : HResultError = HResultError::from_constant(0xC0262338); // ERROR_GRAPHICS_MONITOR_NOT_CONNECTED
 
 /// Specified source is not part of the specified VidPN's topology.
-pub const SOURCE_NOT_IN_TOPOLOGY : ErrorHResult = ErrorHResult::from_constant(0xC0262339); // ERROR_GRAPHICS_SOURCE_NOT_IN_TOPOLOGY
+pub const SOURCE_NOT_IN_TOPOLOGY : HResultError = HResultError::from_constant(0xC0262339); // ERROR_GRAPHICS_SOURCE_NOT_IN_TOPOLOGY
 
 /// Specified primary surface size is invalid.
-pub const INVALID_PRIMARYSURFACE_SIZE : ErrorHResult = ErrorHResult::from_constant(0xC026233A); // ERROR_GRAPHICS_INVALID_PRIMARYSURFACE_SIZE
+pub const INVALID_PRIMARYSURFACE_SIZE : HResultError = HResultError::from_constant(0xC026233A); // ERROR_GRAPHICS_INVALID_PRIMARYSURFACE_SIZE
 
 /// Specified visible region size is invalid.
-pub const INVALID_VISIBLEREGION_SIZE : ErrorHResult = ErrorHResult::from_constant(0xC026233B); // ERROR_GRAPHICS_INVALID_VISIBLEREGION_SIZE
+pub const INVALID_VISIBLEREGION_SIZE : HResultError = HResultError::from_constant(0xC026233B); // ERROR_GRAPHICS_INVALID_VISIBLEREGION_SIZE
 
 /// Specified stride is invalid.
-pub const INVALID_STRIDE : ErrorHResult = ErrorHResult::from_constant(0xC026233C); // ERROR_GRAPHICS_INVALID_STRIDE
+pub const INVALID_STRIDE : HResultError = HResultError::from_constant(0xC026233C); // ERROR_GRAPHICS_INVALID_STRIDE
 
 /// Specified pixel format is invalid.
-pub const INVALID_PIXELFORMAT : ErrorHResult = ErrorHResult::from_constant(0xC026233D); // ERROR_GRAPHICS_INVALID_PIXELFORMAT
+pub const INVALID_PIXELFORMAT : HResultError = HResultError::from_constant(0xC026233D); // ERROR_GRAPHICS_INVALID_PIXELFORMAT
 
 /// Specified color basis is invalid.
-pub const INVALID_COLORBASIS : ErrorHResult = ErrorHResult::from_constant(0xC026233E); // ERROR_GRAPHICS_INVALID_COLORBASIS
+pub const INVALID_COLORBASIS : HResultError = HResultError::from_constant(0xC026233E); // ERROR_GRAPHICS_INVALID_COLORBASIS
 
 /// Specified pixel value access mode is invalid.
-pub const INVALID_PIXELVALUEACCESSMODE : ErrorHResult = ErrorHResult::from_constant(0xC026233F); // ERROR_GRAPHICS_INVALID_PIXELVALUEACCESSMODE
+pub const INVALID_PIXELVALUEACCESSMODE : HResultError = HResultError::from_constant(0xC026233F); // ERROR_GRAPHICS_INVALID_PIXELVALUEACCESSMODE
 
 /// Specified target is not part of the specified VidPN's topology.
-pub const TARGET_NOT_IN_TOPOLOGY : ErrorHResult = ErrorHResult::from_constant(0xC0262340); // ERROR_GRAPHICS_TARGET_NOT_IN_TOPOLOGY
+pub const TARGET_NOT_IN_TOPOLOGY : HResultError = HResultError::from_constant(0xC0262340); // ERROR_GRAPHICS_TARGET_NOT_IN_TOPOLOGY
 
 /// Failed to acquire display mode management interface.
-pub const NO_DISPLAY_MODE_MANAGEMENT_SUPPORT : ErrorHResult = ErrorHResult::from_constant(0xC0262341); // ERROR_GRAPHICS_NO_DISPLAY_MODE_MANAGEMENT_SUPPORT
+pub const NO_DISPLAY_MODE_MANAGEMENT_SUPPORT : HResultError = HResultError::from_constant(0xC0262341); // ERROR_GRAPHICS_NO_DISPLAY_MODE_MANAGEMENT_SUPPORT
 
 /// Specified VidPN source is already owned by a DMM client and cannot be used until that client releases it.
-pub const VIDPN_SOURCE_IN_USE : ErrorHResult = ErrorHResult::from_constant(0xC0262342); // ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE
+pub const VIDPN_SOURCE_IN_USE : HResultError = HResultError::from_constant(0xC0262342); // ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE
 
 /// Specified VidPN is active and cannot be accessed.
-pub const CANT_ACCESS_ACTIVE_VIDPN : ErrorHResult = ErrorHResult::from_constant(0xC0262343); // ERROR_GRAPHICS_CANT_ACCESS_ACTIVE_VIDPN
+pub const CANT_ACCESS_ACTIVE_VIDPN : HResultError = HResultError::from_constant(0xC0262343); // ERROR_GRAPHICS_CANT_ACCESS_ACTIVE_VIDPN
 
 /// Specified VidPN present path importance ordinal is invalid.
-pub const INVALID_PATH_IMPORTANCE_ORDINAL : ErrorHResult = ErrorHResult::from_constant(0xC0262344); // ERROR_GRAPHICS_INVALID_PATH_IMPORTANCE_ORDINAL
+pub const INVALID_PATH_IMPORTANCE_ORDINAL : HResultError = HResultError::from_constant(0xC0262344); // ERROR_GRAPHICS_INVALID_PATH_IMPORTANCE_ORDINAL
 
 /// Specified VidPN present path content geometry transformation is invalid.
-pub const INVALID_PATH_CONTENT_GEOMETRY_TRANSFORMATION : ErrorHResult = ErrorHResult::from_constant(0xC0262345); // ERROR_GRAPHICS_INVALID_PATH_CONTENT_GEOMETRY_TRANSFORMATION
+pub const INVALID_PATH_CONTENT_GEOMETRY_TRANSFORMATION : HResultError = HResultError::from_constant(0xC0262345); // ERROR_GRAPHICS_INVALID_PATH_CONTENT_GEOMETRY_TRANSFORMATION
 
 /// Specified content geometry transformation is not supported on the respective VidPN present path.
-pub const PATH_CONTENT_GEOMETRY_TRANSFORMATION_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0xC0262346); // ERROR_GRAPHICS_PATH_CONTENT_GEOMETRY_TRANSFORMATION_NOT_SUPPORTED
+pub const PATH_CONTENT_GEOMETRY_TRANSFORMATION_NOT_SUPPORTED : HResultError = HResultError::from_constant(0xC0262346); // ERROR_GRAPHICS_PATH_CONTENT_GEOMETRY_TRANSFORMATION_NOT_SUPPORTED
 
 /// Specified gamma ramp is invalid.
-pub const INVALID_GAMMA_RAMP : ErrorHResult = ErrorHResult::from_constant(0xC0262347); // ERROR_GRAPHICS_INVALID_GAMMA_RAMP
+pub const INVALID_GAMMA_RAMP : HResultError = HResultError::from_constant(0xC0262347); // ERROR_GRAPHICS_INVALID_GAMMA_RAMP
 
 /// Specified gamma ramp is not supported on the respective VidPN present path.
-pub const GAMMA_RAMP_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0xC0262348); // ERROR_GRAPHICS_GAMMA_RAMP_NOT_SUPPORTED
+pub const GAMMA_RAMP_NOT_SUPPORTED : HResultError = HResultError::from_constant(0xC0262348); // ERROR_GRAPHICS_GAMMA_RAMP_NOT_SUPPORTED
 
 /// Multi-sampling is not supported on the respective VidPN present path.
-pub const MULTISAMPLING_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0xC0262349); // ERROR_GRAPHICS_MULTISAMPLING_NOT_SUPPORTED
+pub const MULTISAMPLING_NOT_SUPPORTED : HResultError = HResultError::from_constant(0xC0262349); // ERROR_GRAPHICS_MULTISAMPLING_NOT_SUPPORTED
 
 /// Specified mode is not in the specified mode set.
-pub const MODE_NOT_IN_MODESET : ErrorHResult = ErrorHResult::from_constant(0xC026234A); // ERROR_GRAPHICS_MODE_NOT_IN_MODESET
+pub const MODE_NOT_IN_MODESET : HResultError = HResultError::from_constant(0xC026234A); // ERROR_GRAPHICS_MODE_NOT_IN_MODESET
 
 /// Specified data set (e.g. mode set, frequency range set, descriptor set, topology, etc.) is empty.
-pub const DATASET_IS_EMPTY : SuccessHResult = SuccessHResult::from_constant(0x0026234B); // ERROR_GRAPHICS_DATASET_IS_EMPTY
+pub const DATASET_IS_EMPTY : HResultSuccess = HResultSuccess::from_constant(0x0026234B); // ERROR_GRAPHICS_DATASET_IS_EMPTY
 
 /// Specified data set (e.g. mode set, frequency range set, descriptor set, topology, etc.) does not contain any more elements.
-pub const NO_MORE_ELEMENTS_IN_DATASET : SuccessHResult = SuccessHResult::from_constant(0x0026234C); // ERROR_GRAPHICS_NO_MORE_ELEMENTS_IN_DATASET
+pub const NO_MORE_ELEMENTS_IN_DATASET : HResultSuccess = HResultSuccess::from_constant(0x0026234C); // ERROR_GRAPHICS_NO_MORE_ELEMENTS_IN_DATASET
 
 /// Specified VidPN topology recommendation reason is invalid.
-pub const INVALID_VIDPN_TOPOLOGY_RECOMMENDATION_REASON : ErrorHResult = ErrorHResult::from_constant(0xC026234D); // ERROR_GRAPHICS_INVALID_VIDPN_TOPOLOGY_RECOMMENDATION_REASON
+pub const INVALID_VIDPN_TOPOLOGY_RECOMMENDATION_REASON : HResultError = HResultError::from_constant(0xC026234D); // ERROR_GRAPHICS_INVALID_VIDPN_TOPOLOGY_RECOMMENDATION_REASON
 
 /// Specified VidPN present path content type is invalid.
-pub const INVALID_PATH_CONTENT_TYPE : ErrorHResult = ErrorHResult::from_constant(0xC026234E); // ERROR_GRAPHICS_INVALID_PATH_CONTENT_TYPE
+pub const INVALID_PATH_CONTENT_TYPE : HResultError = HResultError::from_constant(0xC026234E); // ERROR_GRAPHICS_INVALID_PATH_CONTENT_TYPE
 
 /// Specified VidPN present path copy protection type is invalid.
-pub const INVALID_COPYPROTECTION_TYPE : ErrorHResult = ErrorHResult::from_constant(0xC026234F); // ERROR_GRAPHICS_INVALID_COPYPROTECTION_TYPE
+pub const INVALID_COPYPROTECTION_TYPE : HResultError = HResultError::from_constant(0xC026234F); // ERROR_GRAPHICS_INVALID_COPYPROTECTION_TYPE
 
 /// No more than one unassigned mode set can exist at any given time for a given VidPN source/target.
-pub const UNASSIGNED_MODESET_ALREADY_EXISTS : ErrorHResult = ErrorHResult::from_constant(0xC0262350); // ERROR_GRAPHICS_UNASSIGNED_MODESET_ALREADY_EXISTS
+pub const UNASSIGNED_MODESET_ALREADY_EXISTS : HResultError = HResultError::from_constant(0xC0262350); // ERROR_GRAPHICS_UNASSIGNED_MODESET_ALREADY_EXISTS
 
 /// Specified content transformation is not pinned on the specified VidPN present path.
-pub const PATH_CONTENT_GEOMETRY_TRANSFORMATION_NOT_PINNED : SuccessHResult = SuccessHResult::from_constant(0x00262351); // ERROR_GRAPHICS_PATH_CONTENT_GEOMETRY_TRANSFORMATION_NOT_PINNED
+pub const PATH_CONTENT_GEOMETRY_TRANSFORMATION_NOT_PINNED : HResultSuccess = HResultSuccess::from_constant(0x00262351); // ERROR_GRAPHICS_PATH_CONTENT_GEOMETRY_TRANSFORMATION_NOT_PINNED
 
 /// Specified scanline ordering type is invalid.
-pub const INVALID_SCANLINE_ORDERING : ErrorHResult = ErrorHResult::from_constant(0xC0262352); // ERROR_GRAPHICS_INVALID_SCANLINE_ORDERING
+pub const INVALID_SCANLINE_ORDERING : HResultError = HResultError::from_constant(0xC0262352); // ERROR_GRAPHICS_INVALID_SCANLINE_ORDERING
 
 /// Topology changes are not allowed for the specified VidPN.
-pub const TOPOLOGY_CHANGES_NOT_ALLOWED : ErrorHResult = ErrorHResult::from_constant(0xC0262353); // ERROR_GRAPHICS_TOPOLOGY_CHANGES_NOT_ALLOWED
+pub const TOPOLOGY_CHANGES_NOT_ALLOWED : HResultError = HResultError::from_constant(0xC0262353); // ERROR_GRAPHICS_TOPOLOGY_CHANGES_NOT_ALLOWED
 
 /// All available importance ordinals are already used in specified topology.
-pub const NO_AVAILABLE_IMPORTANCE_ORDINALS : ErrorHResult = ErrorHResult::from_constant(0xC0262354); // ERROR_GRAPHICS_NO_AVAILABLE_IMPORTANCE_ORDINALS
+pub const NO_AVAILABLE_IMPORTANCE_ORDINALS : HResultError = HResultError::from_constant(0xC0262354); // ERROR_GRAPHICS_NO_AVAILABLE_IMPORTANCE_ORDINALS
 
 /// Specified primary surface has a different private format attribute than the current primary surface
-pub const INCOMPATIBLE_PRIVATE_FORMAT : ErrorHResult = ErrorHResult::from_constant(0xC0262355); // ERROR_GRAPHICS_INCOMPATIBLE_PRIVATE_FORMAT
+pub const INCOMPATIBLE_PRIVATE_FORMAT : HResultError = HResultError::from_constant(0xC0262355); // ERROR_GRAPHICS_INCOMPATIBLE_PRIVATE_FORMAT
 
 /// Specified mode pruning algorithm is invalid
-pub const INVALID_MODE_PRUNING_ALGORITHM : ErrorHResult = ErrorHResult::from_constant(0xC0262356); // ERROR_GRAPHICS_INVALID_MODE_PRUNING_ALGORITHM
+pub const INVALID_MODE_PRUNING_ALGORITHM : HResultError = HResultError::from_constant(0xC0262356); // ERROR_GRAPHICS_INVALID_MODE_PRUNING_ALGORITHM
 
 /// Specified monitor capability origin is invalid.
-pub const INVALID_MONITOR_CAPABILITY_ORIGIN : ErrorHResult = ErrorHResult::from_constant(0xC0262357); // ERROR_GRAPHICS_INVALID_MONITOR_CAPABILITY_ORIGIN
+pub const INVALID_MONITOR_CAPABILITY_ORIGIN : HResultError = HResultError::from_constant(0xC0262357); // ERROR_GRAPHICS_INVALID_MONITOR_CAPABILITY_ORIGIN
 
 /// Specified monitor frequency range constraint is invalid.
-pub const INVALID_MONITOR_FREQUENCYRANGE_CONSTRAINT : ErrorHResult = ErrorHResult::from_constant(0xC0262358); // ERROR_GRAPHICS_INVALID_MONITOR_FREQUENCYRANGE_CONSTRAINT
+pub const INVALID_MONITOR_FREQUENCYRANGE_CONSTRAINT : HResultError = HResultError::from_constant(0xC0262358); // ERROR_GRAPHICS_INVALID_MONITOR_FREQUENCYRANGE_CONSTRAINT
 
 /// Maximum supported number of present paths has been reached.
-pub const MAX_NUM_PATHS_REACHED : ErrorHResult = ErrorHResult::from_constant(0xC0262359); // ERROR_GRAPHICS_MAX_NUM_PATHS_REACHED
+pub const MAX_NUM_PATHS_REACHED : HResultError = HResultError::from_constant(0xC0262359); // ERROR_GRAPHICS_MAX_NUM_PATHS_REACHED
 
 /// Miniport requested that augmentation be cancelled for the specified source of the specified VidPN's topology.
-pub const CANCEL_VIDPN_TOPOLOGY_AUGMENTATION : ErrorHResult = ErrorHResult::from_constant(0xC026235A); // ERROR_GRAPHICS_CANCEL_VIDPN_TOPOLOGY_AUGMENTATION
+pub const CANCEL_VIDPN_TOPOLOGY_AUGMENTATION : HResultError = HResultError::from_constant(0xC026235A); // ERROR_GRAPHICS_CANCEL_VIDPN_TOPOLOGY_AUGMENTATION
 
 /// Specified client type was not recognized.
-pub const INVALID_CLIENT_TYPE : ErrorHResult = ErrorHResult::from_constant(0xC026235B); // ERROR_GRAPHICS_INVALID_CLIENT_TYPE
+pub const INVALID_CLIENT_TYPE : HResultError = HResultError::from_constant(0xC026235B); // ERROR_GRAPHICS_INVALID_CLIENT_TYPE
 
 /// Client VidPN is not set on this adapter (e.g. no user mode initiated mode changes took place on this adapter yet).
-pub const CLIENTVIDPN_NOT_SET : ErrorHResult = ErrorHResult::from_constant(0xC026235C); // ERROR_GRAPHICS_CLIENTVIDPN_NOT_SET
+pub const CLIENTVIDPN_NOT_SET : HResultError = HResultError::from_constant(0xC026235C); // ERROR_GRAPHICS_CLIENTVIDPN_NOT_SET
 
 /// Specified display adapter child device already has an external device connected to it.
-pub const SPECIFIED_CHILD_ALREADY_CONNECTED : ErrorHResult = ErrorHResult::from_constant(0xC0262400); // ERROR_GRAPHICS_SPECIFIED_CHILD_ALREADY_CONNECTED
+pub const SPECIFIED_CHILD_ALREADY_CONNECTED : HResultError = HResultError::from_constant(0xC0262400); // ERROR_GRAPHICS_SPECIFIED_CHILD_ALREADY_CONNECTED
 
 /// Specified display adapter child device does not support descriptor exposure.
-pub const CHILD_DESCRIPTOR_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0xC0262401); // ERROR_GRAPHICS_CHILD_DESCRIPTOR_NOT_SUPPORTED
+pub const CHILD_DESCRIPTOR_NOT_SUPPORTED : HResultError = HResultError::from_constant(0xC0262401); // ERROR_GRAPHICS_CHILD_DESCRIPTOR_NOT_SUPPORTED
 
 /// Child device presence was not reliably detected.
-pub const UNKNOWN_CHILD_STATUS : SuccessHResult = SuccessHResult::from_constant(0x4026242F); // ERROR_GRAPHICS_UNKNOWN_CHILD_STATUS
+pub const UNKNOWN_CHILD_STATUS : HResultSuccess = HResultSuccess::from_constant(0x4026242F); // ERROR_GRAPHICS_UNKNOWN_CHILD_STATUS
 
 /// The display adapter is not linked to any other adapters.
-pub const NOT_A_LINKED_ADAPTER : ErrorHResult = ErrorHResult::from_constant(0xC0262430); // ERROR_GRAPHICS_NOT_A_LINKED_ADAPTER
+pub const NOT_A_LINKED_ADAPTER : HResultError = HResultError::from_constant(0xC0262430); // ERROR_GRAPHICS_NOT_A_LINKED_ADAPTER
 
 /// Lead adapter in a linked configuration was not enumerated yet.
-pub const LEADLINK_NOT_ENUMERATED : ErrorHResult = ErrorHResult::from_constant(0xC0262431); // ERROR_GRAPHICS_LEADLINK_NOT_ENUMERATED
+pub const LEADLINK_NOT_ENUMERATED : HResultError = HResultError::from_constant(0xC0262431); // ERROR_GRAPHICS_LEADLINK_NOT_ENUMERATED
 
 /// Some chain adapters in a linked configuration were not enumerated yet.
-pub const CHAINLINKS_NOT_ENUMERATED : ErrorHResult = ErrorHResult::from_constant(0xC0262432); // ERROR_GRAPHICS_CHAINLINKS_NOT_ENUMERATED
+pub const CHAINLINKS_NOT_ENUMERATED : HResultError = HResultError::from_constant(0xC0262432); // ERROR_GRAPHICS_CHAINLINKS_NOT_ENUMERATED
 
 /// The chain of linked adapters is not ready to start because of an unknown failure.
-pub const ADAPTER_CHAIN_NOT_READY : ErrorHResult = ErrorHResult::from_constant(0xC0262433); // ERROR_GRAPHICS_ADAPTER_CHAIN_NOT_READY
+pub const ADAPTER_CHAIN_NOT_READY : HResultError = HResultError::from_constant(0xC0262433); // ERROR_GRAPHICS_ADAPTER_CHAIN_NOT_READY
 
 /// An attempt was made to start a lead link display adapter when the chain links were not started yet.
-pub const CHAINLINKS_NOT_STARTED : ErrorHResult = ErrorHResult::from_constant(0xC0262434); // ERROR_GRAPHICS_CHAINLINKS_NOT_STARTED
+pub const CHAINLINKS_NOT_STARTED : HResultError = HResultError::from_constant(0xC0262434); // ERROR_GRAPHICS_CHAINLINKS_NOT_STARTED
 
 /// An attempt was made to power up a lead link display adapter when the chain links were powered down.
-pub const CHAINLINKS_NOT_POWERED_ON : ErrorHResult = ErrorHResult::from_constant(0xC0262435); // ERROR_GRAPHICS_CHAINLINKS_NOT_POWERED_ON
+pub const CHAINLINKS_NOT_POWERED_ON : HResultError = HResultError::from_constant(0xC0262435); // ERROR_GRAPHICS_CHAINLINKS_NOT_POWERED_ON
 
 /// The adapter link was found to be in an inconsistent state. Not all adapters are in an expected PNP/Power state.
-pub const INCONSISTENT_DEVICE_LINK_STATE : ErrorHResult = ErrorHResult::from_constant(0xC0262436); // ERROR_GRAPHICS_INCONSISTENT_DEVICE_LINK_STATE
+pub const INCONSISTENT_DEVICE_LINK_STATE : HResultError = HResultError::from_constant(0xC0262436); // ERROR_GRAPHICS_INCONSISTENT_DEVICE_LINK_STATE
 
 /// Starting the leadlink adapter has been deferred temporarily.
-pub const LEADLINK_START_DEFERRED : SuccessHResult = SuccessHResult::from_constant(0x40262437); // ERROR_GRAPHICS_LEADLINK_START_DEFERRED
+pub const LEADLINK_START_DEFERRED : HResultSuccess = HResultSuccess::from_constant(0x40262437); // ERROR_GRAPHICS_LEADLINK_START_DEFERRED
 
 /// The driver trying to start is not the same as the driver for the POSTed display adapter.
-pub const NOT_POST_DEVICE_DRIVER : ErrorHResult = ErrorHResult::from_constant(0xC0262438); // ERROR_GRAPHICS_NOT_POST_DEVICE_DRIVER
+pub const NOT_POST_DEVICE_DRIVER : HResultError = HResultError::from_constant(0xC0262438); // ERROR_GRAPHICS_NOT_POST_DEVICE_DRIVER
 
 /// The display adapter is being polled for children too frequently at the same polling level.
-pub const POLLING_TOO_FREQUENTLY : SuccessHResult = SuccessHResult::from_constant(0x40262439); // ERROR_GRAPHICS_POLLING_TOO_FREQUENTLY
+pub const POLLING_TOO_FREQUENTLY : HResultSuccess = HResultSuccess::from_constant(0x40262439); // ERROR_GRAPHICS_POLLING_TOO_FREQUENTLY
 
 /// Starting the adapter has been deferred temporarily.
-pub const START_DEFERRED : SuccessHResult = SuccessHResult::from_constant(0x4026243A); // ERROR_GRAPHICS_START_DEFERRED
+pub const START_DEFERRED : HResultSuccess = HResultSuccess::from_constant(0x4026243A); // ERROR_GRAPHICS_START_DEFERRED
 
 /// An operation is being attempted that requires the display adapter to be in a quiescent state.
-pub const ADAPTER_ACCESS_NOT_EXCLUDED : ErrorHResult = ErrorHResult::from_constant(0xC026243B); // ERROR_GRAPHICS_ADAPTER_ACCESS_NOT_EXCLUDED
+pub const ADAPTER_ACCESS_NOT_EXCLUDED : HResultError = HResultError::from_constant(0xC026243B); // ERROR_GRAPHICS_ADAPTER_ACCESS_NOT_EXCLUDED
 
 /// We can depend on the child device presence returned by the driver.
-pub const DEPENDABLE_CHILD_STATUS : SuccessHResult = SuccessHResult::from_constant(0x4026243C); // ERROR_GRAPHICS_DEPENDABLE_CHILD_STATUS
+pub const DEPENDABLE_CHILD_STATUS : HResultSuccess = HResultSuccess::from_constant(0x4026243C); // ERROR_GRAPHICS_DEPENDABLE_CHILD_STATUS
 
 /// The driver does not support OPM.
-pub const OPM_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0xC0262500); // ERROR_GRAPHICS_OPM_NOT_SUPPORTED
+pub const OPM_NOT_SUPPORTED : HResultError = HResultError::from_constant(0xC0262500); // ERROR_GRAPHICS_OPM_NOT_SUPPORTED
 
 /// The driver does not support COPP.
-pub const COPP_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0xC0262501); // ERROR_GRAPHICS_COPP_NOT_SUPPORTED
+pub const COPP_NOT_SUPPORTED : HResultError = HResultError::from_constant(0xC0262501); // ERROR_GRAPHICS_COPP_NOT_SUPPORTED
 
 /// The driver does not support UAB.
-pub const UAB_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0xC0262502); // ERROR_GRAPHICS_UAB_NOT_SUPPORTED
+pub const UAB_NOT_SUPPORTED : HResultError = HResultError::from_constant(0xC0262502); // ERROR_GRAPHICS_UAB_NOT_SUPPORTED
 
 /// The specified encrypted parameters are invalid.
-pub const OPM_INVALID_ENCRYPTED_PARAMETERS : ErrorHResult = ErrorHResult::from_constant(0xC0262503); // ERROR_GRAPHICS_OPM_INVALID_ENCRYPTED_PARAMETERS
+pub const OPM_INVALID_ENCRYPTED_PARAMETERS : HResultError = HResultError::from_constant(0xC0262503); // ERROR_GRAPHICS_OPM_INVALID_ENCRYPTED_PARAMETERS
 
 /// The GDI display device passed to this function does not have any active video outputs.
-pub const OPM_NO_VIDEO_OUTPUTS_EXIST : ErrorHResult = ErrorHResult::from_constant(0xC0262505); // ERROR_GRAPHICS_OPM_NO_VIDEO_OUTPUTS_EXIST
+pub const OPM_NO_VIDEO_OUTPUTS_EXIST : HResultError = HResultError::from_constant(0xC0262505); // ERROR_GRAPHICS_OPM_NO_VIDEO_OUTPUTS_EXIST
 
 /// An internal error caused this operation to fail.
-pub const OPM_INTERNAL_ERROR : ErrorHResult = ErrorHResult::from_constant(0xC026250B); // ERROR_GRAPHICS_OPM_INTERNAL_ERROR
+pub const OPM_INTERNAL_ERROR : HResultError = HResultError::from_constant(0xC026250B); // ERROR_GRAPHICS_OPM_INTERNAL_ERROR
 
 /// The function failed because the caller passed in an invalid OPM user mode handle.
-pub const OPM_INVALID_HANDLE : ErrorHResult = ErrorHResult::from_constant(0xC026250C); // ERROR_GRAPHICS_OPM_INVALID_HANDLE
+pub const OPM_INVALID_HANDLE : HResultError = HResultError::from_constant(0xC026250C); // ERROR_GRAPHICS_OPM_INVALID_HANDLE
 
 /// A certificate could not be returned because the certificate buffer passed to the function was too small.
-pub const PVP_INVALID_CERTIFICATE_LENGTH : ErrorHResult = ErrorHResult::from_constant(0xC026250E); // ERROR_GRAPHICS_PVP_INVALID_CERTIFICATE_LENGTH
+pub const PVP_INVALID_CERTIFICATE_LENGTH : HResultError = HResultError::from_constant(0xC026250E); // ERROR_GRAPHICS_PVP_INVALID_CERTIFICATE_LENGTH
 
 /// A video output could not be created because the frame buffer is in spanning mode.
-pub const OPM_SPANNING_MODE_ENABLED : ErrorHResult = ErrorHResult::from_constant(0xC026250F); // ERROR_GRAPHICS_OPM_SPANNING_MODE_ENABLED
+pub const OPM_SPANNING_MODE_ENABLED : HResultError = HResultError::from_constant(0xC026250F); // ERROR_GRAPHICS_OPM_SPANNING_MODE_ENABLED
 
 /// A video output could not be created because the frame buffer is in theater mode.
-pub const OPM_THEATER_MODE_ENABLED : ErrorHResult = ErrorHResult::from_constant(0xC0262510); // ERROR_GRAPHICS_OPM_THEATER_MODE_ENABLED
+pub const OPM_THEATER_MODE_ENABLED : HResultError = HResultError::from_constant(0xC0262510); // ERROR_GRAPHICS_OPM_THEATER_MODE_ENABLED
 
 /// The function failed because the display adapter's Hardware Functionality Scan failed to validate the graphics hardware.
-pub const PVP_HFS_FAILED : ErrorHResult = ErrorHResult::from_constant(0xC0262511); // ERROR_GRAPHICS_PVP_HFS_FAILED
+pub const PVP_HFS_FAILED : HResultError = HResultError::from_constant(0xC0262511); // ERROR_GRAPHICS_PVP_HFS_FAILED
 
 /// The HDCP System Renewability Message passed to this function did not comply with section 5 of the HDCP 1.1 specification.
-pub const OPM_INVALID_SRM : ErrorHResult = ErrorHResult::from_constant(0xC0262512); // ERROR_GRAPHICS_OPM_INVALID_SRM
+pub const OPM_INVALID_SRM : HResultError = HResultError::from_constant(0xC0262512); // ERROR_GRAPHICS_OPM_INVALID_SRM
 
 /// The video output cannot enable the High-bandwidth Digital Content Protection (HDCP) System because it does not support HDCP.
-pub const OPM_OUTPUT_DOES_NOT_SUPPORT_HDCP : ErrorHResult = ErrorHResult::from_constant(0xC0262513); // ERROR_GRAPHICS_OPM_OUTPUT_DOES_NOT_SUPPORT_HDCP
+pub const OPM_OUTPUT_DOES_NOT_SUPPORT_HDCP : HResultError = HResultError::from_constant(0xC0262513); // ERROR_GRAPHICS_OPM_OUTPUT_DOES_NOT_SUPPORT_HDCP
 
 /// The video output cannot enable Analogue Copy Protection (ACP) because it does not support ACP.
-pub const OPM_OUTPUT_DOES_NOT_SUPPORT_ACP : ErrorHResult = ErrorHResult::from_constant(0xC0262514); // ERROR_GRAPHICS_OPM_OUTPUT_DOES_NOT_SUPPORT_ACP
+pub const OPM_OUTPUT_DOES_NOT_SUPPORT_ACP : HResultError = HResultError::from_constant(0xC0262514); // ERROR_GRAPHICS_OPM_OUTPUT_DOES_NOT_SUPPORT_ACP
 
 /// The video output cannot enable the Content Generation Management System Analogue (CGMS-A) protection technology because it does not support CGMS-A.
-pub const OPM_OUTPUT_DOES_NOT_SUPPORT_CGMSA : ErrorHResult = ErrorHResult::from_constant(0xC0262515); // ERROR_GRAPHICS_OPM_OUTPUT_DOES_NOT_SUPPORT_CGMSA
+pub const OPM_OUTPUT_DOES_NOT_SUPPORT_CGMSA : HResultError = HResultError::from_constant(0xC0262515); // ERROR_GRAPHICS_OPM_OUTPUT_DOES_NOT_SUPPORT_CGMSA
 
 /// The IOPMVideoOutput::GetInformation method cannot return the version of the SRM being used because the application never successfully passed an SRM to the video output.
-pub const OPM_HDCP_SRM_NEVER_SET : ErrorHResult = ErrorHResult::from_constant(0xC0262516); // ERROR_GRAPHICS_OPM_HDCP_SRM_NEVER_SET
+pub const OPM_HDCP_SRM_NEVER_SET : HResultError = HResultError::from_constant(0xC0262516); // ERROR_GRAPHICS_OPM_HDCP_SRM_NEVER_SET
 
 /// The IOPMVideoOutput::Configure method cannot enable the specified output protection technology because the output's screen resolution is too high.
-pub const OPM_RESOLUTION_TOO_HIGH : ErrorHResult = ErrorHResult::from_constant(0xC0262517); // ERROR_GRAPHICS_OPM_RESOLUTION_TOO_HIGH
+pub const OPM_RESOLUTION_TOO_HIGH : HResultError = HResultError::from_constant(0xC0262517); // ERROR_GRAPHICS_OPM_RESOLUTION_TOO_HIGH
 
 /// The IOPMVideoOutput::Configure method cannot enable HDCP because the display adapter's HDCP hardware is already being used by other physical outputs.
-pub const OPM_ALL_HDCP_HARDWARE_ALREADY_IN_USE : ErrorHResult = ErrorHResult::from_constant(0xC0262518); // ERROR_GRAPHICS_OPM_ALL_HDCP_HARDWARE_ALREADY_IN_USE
+pub const OPM_ALL_HDCP_HARDWARE_ALREADY_IN_USE : HResultError = HResultError::from_constant(0xC0262518); // ERROR_GRAPHICS_OPM_ALL_HDCP_HARDWARE_ALREADY_IN_USE
 
 /// The operating system asynchronously destroyed this OPM video output because the operating system's state changed. This error typically occurs because the monitor PDO associated with this video output was removed, the monitor PDO associated with this video output was stopped, the video output's session became a non-console session or the video output's desktop became an inactive desktop.
-pub const OPM_VIDEO_OUTPUT_NO_LONGER_EXISTS : ErrorHResult = ErrorHResult::from_constant(0xC026251A); // ERROR_GRAPHICS_OPM_VIDEO_OUTPUT_NO_LONGER_EXISTS
+pub const OPM_VIDEO_OUTPUT_NO_LONGER_EXISTS : HResultError = HResultError::from_constant(0xC026251A); // ERROR_GRAPHICS_OPM_VIDEO_OUTPUT_NO_LONGER_EXISTS
 
 /// The method failed because the session is changing its type. No IOPMVideoOutput methods can be called when a session is changing its type. There are currently three types of sessions: console, disconnected and remote.
-pub const OPM_SESSION_TYPE_CHANGE_IN_PROGRESS : ErrorHResult = ErrorHResult::from_constant(0xC026251B); // ERROR_GRAPHICS_OPM_SESSION_TYPE_CHANGE_IN_PROGRESS
+pub const OPM_SESSION_TYPE_CHANGE_IN_PROGRESS : HResultError = HResultError::from_constant(0xC026251B); // ERROR_GRAPHICS_OPM_SESSION_TYPE_CHANGE_IN_PROGRESS
 
 /// Either the IOPMVideoOutput::COPPCompatibleGetInformation, IOPMVideoOutput::GetInformation, or IOPMVideoOutput::Configure method failed. This error is returned when the caller tries to use a COPP specific command while the video output has OPM semantics only.
-pub const OPM_VIDEO_OUTPUT_DOES_NOT_HAVE_COPP_SEMANTICS : ErrorHResult = ErrorHResult::from_constant(0xC026251C); // ERROR_GRAPHICS_OPM_VIDEO_OUTPUT_DOES_NOT_HAVE_COPP_SEMANTICS
+pub const OPM_VIDEO_OUTPUT_DOES_NOT_HAVE_COPP_SEMANTICS : HResultError = HResultError::from_constant(0xC026251C); // ERROR_GRAPHICS_OPM_VIDEO_OUTPUT_DOES_NOT_HAVE_COPP_SEMANTICS
 
 /// The IOPMVideoOutput::GetInformation and IOPMVideoOutput::COPPCompatibleGetInformation methods return this error if the passed in sequence number is not the expected sequence number or the passed in OMAC value is invalid.
-pub const OPM_INVALID_INFORMATION_REQUEST : ErrorHResult = ErrorHResult::from_constant(0xC026251D); // ERROR_GRAPHICS_OPM_INVALID_INFORMATION_REQUEST
+pub const OPM_INVALID_INFORMATION_REQUEST : HResultError = HResultError::from_constant(0xC026251D); // ERROR_GRAPHICS_OPM_INVALID_INFORMATION_REQUEST
 
 /// The method failed because an unexpected error occurred inside of a display driver.
-pub const OPM_DRIVER_INTERNAL_ERROR : ErrorHResult = ErrorHResult::from_constant(0xC026251E); // ERROR_GRAPHICS_OPM_DRIVER_INTERNAL_ERROR
+pub const OPM_DRIVER_INTERNAL_ERROR : HResultError = HResultError::from_constant(0xC026251E); // ERROR_GRAPHICS_OPM_DRIVER_INTERNAL_ERROR
 
 /// Either the IOPMVideoOutput::COPPCompatibleGetInformation, IOPMVideoOutput::GetInformation, or IOPMVideoOutput::Configure method failed. This error is returned when the caller tries to use an OPM specific command while the video output has COPP semantics only.
-pub const OPM_VIDEO_OUTPUT_DOES_NOT_HAVE_OPM_SEMANTICS : ErrorHResult = ErrorHResult::from_constant(0xC026251F); // ERROR_GRAPHICS_OPM_VIDEO_OUTPUT_DOES_NOT_HAVE_OPM_SEMANTICS
+pub const OPM_VIDEO_OUTPUT_DOES_NOT_HAVE_OPM_SEMANTICS : HResultError = HResultError::from_constant(0xC026251F); // ERROR_GRAPHICS_OPM_VIDEO_OUTPUT_DOES_NOT_HAVE_OPM_SEMANTICS
 
 /// The IOPMVideoOutput::COPPCompatibleGetInformation or IOPMVideoOutput::Configure method failed because the display driver does not support the OPM_GET_ACP_AND_CGMSA_SIGNALING and OPM_SET_ACP_AND_CGMSA_SIGNALING GUIDs.
-pub const OPM_SIGNALING_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0xC0262520); // ERROR_GRAPHICS_OPM_SIGNALING_NOT_SUPPORTED
+pub const OPM_SIGNALING_NOT_SUPPORTED : HResultError = HResultError::from_constant(0xC0262520); // ERROR_GRAPHICS_OPM_SIGNALING_NOT_SUPPORTED
 
 /// The IOPMVideoOutput::Configure function returns this error code if the passed in sequence number is not the expected sequence number or the passed in OMAC value is invalid.
-pub const OPM_INVALID_CONFIGURATION_REQUEST : ErrorHResult = ErrorHResult::from_constant(0xC0262521); // ERROR_GRAPHICS_OPM_INVALID_CONFIGURATION_REQUEST
+pub const OPM_INVALID_CONFIGURATION_REQUEST : HResultError = HResultError::from_constant(0xC0262521); // ERROR_GRAPHICS_OPM_INVALID_CONFIGURATION_REQUEST
 
 /// The monitor connected to the specified video output does not have an I2C bus.
-pub const I2C_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0xC0262580); // ERROR_GRAPHICS_I2C_NOT_SUPPORTED
+pub const I2C_NOT_SUPPORTED : HResultError = HResultError::from_constant(0xC0262580); // ERROR_GRAPHICS_I2C_NOT_SUPPORTED
 
 /// No device on the I2C bus has the specified address.
-pub const I2C_DEVICE_DOES_NOT_EXIST : ErrorHResult = ErrorHResult::from_constant(0xC0262581); // ERROR_GRAPHICS_I2C_DEVICE_DOES_NOT_EXIST
+pub const I2C_DEVICE_DOES_NOT_EXIST : HResultError = HResultError::from_constant(0xC0262581); // ERROR_GRAPHICS_I2C_DEVICE_DOES_NOT_EXIST
 
 /// An error occurred while transmitting data to the device on the I2C bus.
-pub const I2C_ERROR_TRANSMITTING_DATA : ErrorHResult = ErrorHResult::from_constant(0xC0262582); // ERROR_GRAPHICS_I2C_ERROR_TRANSMITTING_DATA
+pub const I2C_ERROR_TRANSMITTING_DATA : HResultError = HResultError::from_constant(0xC0262582); // ERROR_GRAPHICS_I2C_ERROR_TRANSMITTING_DATA
 
 /// An error occurred while receiving data from the device on the I2C bus.
-pub const I2C_ERROR_RECEIVING_DATA : ErrorHResult = ErrorHResult::from_constant(0xC0262583); // ERROR_GRAPHICS_I2C_ERROR_RECEIVING_DATA
+pub const I2C_ERROR_RECEIVING_DATA : HResultError = HResultError::from_constant(0xC0262583); // ERROR_GRAPHICS_I2C_ERROR_RECEIVING_DATA
 
 /// The monitor does not support the specified VCP code.
-pub const DDCCI_VCP_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0xC0262584); // ERROR_GRAPHICS_DDCCI_VCP_NOT_SUPPORTED
+pub const DDCCI_VCP_NOT_SUPPORTED : HResultError = HResultError::from_constant(0xC0262584); // ERROR_GRAPHICS_DDCCI_VCP_NOT_SUPPORTED
 
 /// The data received from the monitor is invalid.
-pub const DDCCI_INVALID_DATA : ErrorHResult = ErrorHResult::from_constant(0xC0262585); // ERROR_GRAPHICS_DDCCI_INVALID_DATA
+pub const DDCCI_INVALID_DATA : HResultError = HResultError::from_constant(0xC0262585); // ERROR_GRAPHICS_DDCCI_INVALID_DATA
 
 /// The function failed because a monitor returned an invalid Timing Status byte when the operating system used the DDC/CI Get Timing Report & Timing Message command to get a timing report from a monitor.
-pub const DDCCI_MONITOR_RETURNED_INVALID_TIMING_STATUS_BYTE : ErrorHResult = ErrorHResult::from_constant(0xC0262586); // ERROR_GRAPHICS_DDCCI_MONITOR_RETURNED_INVALID_TIMING_STATUS_BYTE
+pub const DDCCI_MONITOR_RETURNED_INVALID_TIMING_STATUS_BYTE : HResultError = HResultError::from_constant(0xC0262586); // ERROR_GRAPHICS_DDCCI_MONITOR_RETURNED_INVALID_TIMING_STATUS_BYTE
 
 /// The monitor returned a DDC/CI capabilities string which did not comply with the ACCESS.bus 3.0, DDC/CI 1.1, or MCCS 2 Revision 1 specification.
-pub const MCA_INVALID_CAPABILITIES_STRING : ErrorHResult = ErrorHResult::from_constant(0xC0262587); // ERROR_GRAPHICS_MCA_INVALID_CAPABILITIES_STRING
+pub const MCA_INVALID_CAPABILITIES_STRING : HResultError = HResultError::from_constant(0xC0262587); // ERROR_GRAPHICS_MCA_INVALID_CAPABILITIES_STRING
 
 /// An internal Monitor Configuration API error occurred.
-pub const MCA_INTERNAL_ERROR : ErrorHResult = ErrorHResult::from_constant(0xC0262588); // ERROR_GRAPHICS_MCA_INTERNAL_ERROR
+pub const MCA_INTERNAL_ERROR : HResultError = HResultError::from_constant(0xC0262588); // ERROR_GRAPHICS_MCA_INTERNAL_ERROR
 
 /// An operation failed because a DDC/CI message had an invalid value in its command field.
-pub const DDCCI_INVALID_MESSAGE_COMMAND : ErrorHResult = ErrorHResult::from_constant(0xC0262589); // ERROR_GRAPHICS_DDCCI_INVALID_MESSAGE_COMMAND
+pub const DDCCI_INVALID_MESSAGE_COMMAND : HResultError = HResultError::from_constant(0xC0262589); // ERROR_GRAPHICS_DDCCI_INVALID_MESSAGE_COMMAND
 
 /// An error occurred because the field length of a DDC/CI message contained an invalid value.
-pub const DDCCI_INVALID_MESSAGE_LENGTH : ErrorHResult = ErrorHResult::from_constant(0xC026258A); // ERROR_GRAPHICS_DDCCI_INVALID_MESSAGE_LENGTH
+pub const DDCCI_INVALID_MESSAGE_LENGTH : HResultError = HResultError::from_constant(0xC026258A); // ERROR_GRAPHICS_DDCCI_INVALID_MESSAGE_LENGTH
 
 /// An error occurred because the checksum field in a DDC/CI message did not match the message's computed checksum value. This error implies that the data was corrupted while it was being transmitted from a monitor to a computer.
-pub const DDCCI_INVALID_MESSAGE_CHECKSUM : ErrorHResult = ErrorHResult::from_constant(0xC026258B); // ERROR_GRAPHICS_DDCCI_INVALID_MESSAGE_CHECKSUM
+pub const DDCCI_INVALID_MESSAGE_CHECKSUM : HResultError = HResultError::from_constant(0xC026258B); // ERROR_GRAPHICS_DDCCI_INVALID_MESSAGE_CHECKSUM
 
 /// This function failed because an invalid monitor handle was passed to it.
-pub const INVALID_PHYSICAL_MONITOR_HANDLE : ErrorHResult = ErrorHResult::from_constant(0xC026258C); // ERROR_GRAPHICS_INVALID_PHYSICAL_MONITOR_HANDLE
+pub const INVALID_PHYSICAL_MONITOR_HANDLE : HResultError = HResultError::from_constant(0xC026258C); // ERROR_GRAPHICS_INVALID_PHYSICAL_MONITOR_HANDLE
 
 /// The operating system asynchronously destroyed the monitor which corresponds to this handle because the operating system's state changed. This error typically occurs because the monitor PDO associated with this handle was removed, the monitor PDO associated with this handle was stopped, or a display mode change occurred. A display mode change occurs when windows sends a WM_DISPLAYCHANGE windows message to applications.
-pub const MONITOR_NO_LONGER_EXISTS : ErrorHResult = ErrorHResult::from_constant(0xC026258D); // ERROR_GRAPHICS_MONITOR_NO_LONGER_EXISTS
+pub const MONITOR_NO_LONGER_EXISTS : HResultError = HResultError::from_constant(0xC026258D); // ERROR_GRAPHICS_MONITOR_NO_LONGER_EXISTS
 
 /// A continuous VCP code's current value is greater than its maximum value. This error code indicates that a monitor returned an invalid value.
-pub const DDCCI_CURRENT_CURRENT_VALUE_GREATER_THAN_MAXIMUM_VALUE : ErrorHResult = ErrorHResult::from_constant(0xC02625D8); // ERROR_GRAPHICS_DDCCI_CURRENT_CURRENT_VALUE_GREATER_THAN_MAXIMUM_VALUE
+pub const DDCCI_CURRENT_CURRENT_VALUE_GREATER_THAN_MAXIMUM_VALUE : HResultError = HResultError::from_constant(0xC02625D8); // ERROR_GRAPHICS_DDCCI_CURRENT_CURRENT_VALUE_GREATER_THAN_MAXIMUM_VALUE
 
 /// The monitor's VCP Version (0xDF) VCP code returned an invalid version value.
-pub const MCA_INVALID_VCP_VERSION : ErrorHResult = ErrorHResult::from_constant(0xC02625D9); // ERROR_GRAPHICS_MCA_INVALID_VCP_VERSION
+pub const MCA_INVALID_VCP_VERSION : HResultError = HResultError::from_constant(0xC02625D9); // ERROR_GRAPHICS_MCA_INVALID_VCP_VERSION
 
 /// The monitor does not comply with the MCCS specification it claims to support.
-pub const MCA_MONITOR_VIOLATES_MCCS_SPECIFICATION : ErrorHResult = ErrorHResult::from_constant(0xC02625DA); // ERROR_GRAPHICS_MCA_MONITOR_VIOLATES_MCCS_SPECIFICATION
+pub const MCA_MONITOR_VIOLATES_MCCS_SPECIFICATION : HResultError = HResultError::from_constant(0xC02625DA); // ERROR_GRAPHICS_MCA_MONITOR_VIOLATES_MCCS_SPECIFICATION
 
 /// The MCCS version in a monitor's mccs_ver capability does not match the MCCS version the monitor reports when the VCP Version (0xDF) VCP code is used.
-pub const MCA_MCCS_VERSION_MISMATCH : ErrorHResult = ErrorHResult::from_constant(0xC02625DB); // ERROR_GRAPHICS_MCA_MCCS_VERSION_MISMATCH
+pub const MCA_MCCS_VERSION_MISMATCH : HResultError = HResultError::from_constant(0xC02625DB); // ERROR_GRAPHICS_MCA_MCCS_VERSION_MISMATCH
 
 /// The Monitor Configuration API only works with monitors which support the MCCS 1.0 specification, MCCS 2.0 specification or the MCCS 2.0 Revision 1 specification.
-pub const MCA_UNSUPPORTED_MCCS_VERSION : ErrorHResult = ErrorHResult::from_constant(0xC02625DC); // ERROR_GRAPHICS_MCA_UNSUPPORTED_MCCS_VERSION
+pub const MCA_UNSUPPORTED_MCCS_VERSION : HResultError = HResultError::from_constant(0xC02625DC); // ERROR_GRAPHICS_MCA_UNSUPPORTED_MCCS_VERSION
 
 /// The monitor returned an invalid monitor technology type. CRT, Plasma and LCD (TFT) are examples of monitor technology types. This error implies that the monitor violated the MCCS 2.0 or MCCS 2.0 Revision 1 specification.
-pub const MCA_INVALID_TECHNOLOGY_TYPE_RETURNED : ErrorHResult = ErrorHResult::from_constant(0xC02625DE); // ERROR_GRAPHICS_MCA_INVALID_TECHNOLOGY_TYPE_RETURNED
+pub const MCA_INVALID_TECHNOLOGY_TYPE_RETURNED : HResultError = HResultError::from_constant(0xC02625DE); // ERROR_GRAPHICS_MCA_INVALID_TECHNOLOGY_TYPE_RETURNED
 
 /// SetMonitorColorTemperature()'s caller passed a color temperature to it which the current monitor did not support. This error implies that the monitor violated the MCCS 2.0 or MCCS 2.0 Revision 1 specification.
-pub const MCA_UNSUPPORTED_COLOR_TEMPERATURE : ErrorHResult = ErrorHResult::from_constant(0xC02625DF); // ERROR_GRAPHICS_MCA_UNSUPPORTED_COLOR_TEMPERATURE
+pub const MCA_UNSUPPORTED_COLOR_TEMPERATURE : HResultError = HResultError::from_constant(0xC02625DF); // ERROR_GRAPHICS_MCA_UNSUPPORTED_COLOR_TEMPERATURE
 
 /// This function can only be used if a program is running in the local console session. It cannot be used if the program is running on a remote desktop session or on a terminal server session.
-pub const ONLY_CONSOLE_SESSION_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0xC02625E0); // ERROR_GRAPHICS_ONLY_CONSOLE_SESSION_SUPPORTED
+pub const ONLY_CONSOLE_SESSION_SUPPORTED : HResultError = HResultError::from_constant(0xC02625E0); // ERROR_GRAPHICS_ONLY_CONSOLE_SESSION_SUPPORTED
 
 /// This function cannot find an actual GDI display device which corresponds to the specified GDI display device name.
-pub const NO_DISPLAY_DEVICE_CORRESPONDS_TO_NAME : ErrorHResult = ErrorHResult::from_constant(0xC02625E1); // ERROR_GRAPHICS_NO_DISPLAY_DEVICE_CORRESPONDS_TO_NAME
+pub const NO_DISPLAY_DEVICE_CORRESPONDS_TO_NAME : HResultError = HResultError::from_constant(0xC02625E1); // ERROR_GRAPHICS_NO_DISPLAY_DEVICE_CORRESPONDS_TO_NAME
 
 /// The function failed because the specified GDI display device was not attached to the Windows desktop.
-pub const DISPLAY_DEVICE_NOT_ATTACHED_TO_DESKTOP : ErrorHResult = ErrorHResult::from_constant(0xC02625E2); // ERROR_GRAPHICS_DISPLAY_DEVICE_NOT_ATTACHED_TO_DESKTOP
+pub const DISPLAY_DEVICE_NOT_ATTACHED_TO_DESKTOP : HResultError = HResultError::from_constant(0xC02625E2); // ERROR_GRAPHICS_DISPLAY_DEVICE_NOT_ATTACHED_TO_DESKTOP
 
 /// This function does not support GDI mirroring display devices because GDI mirroring display devices do not have any physical monitors associated with them.
-pub const MIRRORING_DEVICES_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0xC02625E3); // ERROR_GRAPHICS_MIRRORING_DEVICES_NOT_SUPPORTED
+pub const MIRRORING_DEVICES_NOT_SUPPORTED : HResultError = HResultError::from_constant(0xC02625E3); // ERROR_GRAPHICS_MIRRORING_DEVICES_NOT_SUPPORTED
 
 /// The function failed because an invalid pointer parameter was passed to it. A pointer parameter is invalid if it is NULL, points to an invalid address, points to a kernel mode address, or is not correctly aligned.
-pub const INVALID_POINTER : ErrorHResult = ErrorHResult::from_constant(0xC02625E4); // ERROR_GRAPHICS_INVALID_POINTER
+pub const INVALID_POINTER : HResultError = HResultError::from_constant(0xC02625E4); // ERROR_GRAPHICS_INVALID_POINTER
 
 /// The function failed because the specified GDI device did not have any monitors associated with it.
-pub const NO_MONITORS_CORRESPOND_TO_DISPLAY_DEVICE : ErrorHResult = ErrorHResult::from_constant(0xC02625E5); // ERROR_GRAPHICS_NO_MONITORS_CORRESPOND_TO_DISPLAY_DEVICE
+pub const NO_MONITORS_CORRESPOND_TO_DISPLAY_DEVICE : HResultError = HResultError::from_constant(0xC02625E5); // ERROR_GRAPHICS_NO_MONITORS_CORRESPOND_TO_DISPLAY_DEVICE
 
 /// An array passed to the function cannot hold all of the data that the function must copy into the array.
-pub const PARAMETER_ARRAY_TOO_SMALL : ErrorHResult = ErrorHResult::from_constant(0xC02625E6); // ERROR_GRAPHICS_PARAMETER_ARRAY_TOO_SMALL
+pub const PARAMETER_ARRAY_TOO_SMALL : HResultError = HResultError::from_constant(0xC02625E6); // ERROR_GRAPHICS_PARAMETER_ARRAY_TOO_SMALL
 
 /// An internal error caused an operation to fail.
-pub const INTERNAL_ERROR : ErrorHResult = ErrorHResult::from_constant(0xC02625E7); // ERROR_GRAPHICS_INTERNAL_ERROR
+pub const INTERNAL_ERROR : HResultError = HResultError::from_constant(0xC02625E7); // ERROR_GRAPHICS_INTERNAL_ERROR
 
 /// The function failed because the current session is changing its type. This function cannot be called when the current session is changing its type. There are currently three types of sessions: console, disconnected and remote.
-pub const SESSION_TYPE_CHANGE_IN_PROGRESS : ErrorHResult = ErrorHResult::from_constant(0xC02605E8); // ERROR_GRAPHICS_SESSION_TYPE_CHANGE_IN_PROGRESS
+pub const SESSION_TYPE_CHANGE_IN_PROGRESS : HResultError = HResultError::from_constant(0xC02605E8); // ERROR_GRAPHICS_SESSION_TYPE_CHANGE_IN_PROGRESS

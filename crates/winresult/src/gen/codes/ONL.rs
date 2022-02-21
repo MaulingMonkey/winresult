@@ -4,46 +4,46 @@ use super::*;
 
 
 /// Authentication target is invalid or not configured correctly.
-pub const E_INVALID_AUTHENTICATION_TARGET : ErrorHResult = ErrorHResult::from_constant(0x80860001); // ONL_E_INVALID_AUTHENTICATION_TARGET
+pub const E_INVALID_AUTHENTICATION_TARGET : HResultError = HResultError::from_constant(0x80860001); // ONL_E_INVALID_AUTHENTICATION_TARGET
 
 /// Your application cannot get the Online Id properties due to the Terms of Use accepted by the user.
-pub const E_ACCESS_DENIED_BY_TOU : ErrorHResult = ErrorHResult::from_constant(0x80860002); // ONL_E_ACCESS_DENIED_BY_TOU
+pub const E_ACCESS_DENIED_BY_TOU : HResultError = HResultError::from_constant(0x80860002); // ONL_E_ACCESS_DENIED_BY_TOU
 
 /// The application requesting authentication tokens is either disabled or incorrectly configured.
-pub const E_INVALID_APPLICATION : ErrorHResult = ErrorHResult::from_constant(0x80860003); // ONL_E_INVALID_APPLICATION
+pub const E_INVALID_APPLICATION : HResultError = HResultError::from_constant(0x80860003); // ONL_E_INVALID_APPLICATION
 
 /// Online Id password must be updated before signin.
-pub const E_PASSWORD_UPDATE_REQUIRED : ErrorHResult = ErrorHResult::from_constant(0x80860004); // ONL_E_PASSWORD_UPDATE_REQUIRED
+pub const E_PASSWORD_UPDATE_REQUIRED : HResultError = HResultError::from_constant(0x80860004); // ONL_E_PASSWORD_UPDATE_REQUIRED
 
 /// Online Id account properties must be updated before signin.
-pub const E_ACCOUNT_UPDATE_REQUIRED : ErrorHResult = ErrorHResult::from_constant(0x80860005); // ONL_E_ACCOUNT_UPDATE_REQUIRED
+pub const E_ACCOUNT_UPDATE_REQUIRED : HResultError = HResultError::from_constant(0x80860005); // ONL_E_ACCOUNT_UPDATE_REQUIRED
 
 /// To help protect your Online Id account you must signin again.
-pub const E_FORCESIGNIN : ErrorHResult = ErrorHResult::from_constant(0x80860006); // ONL_E_FORCESIGNIN
+pub const E_FORCESIGNIN : HResultError = HResultError::from_constant(0x80860006); // ONL_E_FORCESIGNIN
 
 /// Online Id account was locked because there have been too many attempts to sign in.
-pub const E_ACCOUNT_LOCKED : ErrorHResult = ErrorHResult::from_constant(0x80860007); // ONL_E_ACCOUNT_LOCKED
+pub const E_ACCOUNT_LOCKED : HResultError = HResultError::from_constant(0x80860007); // ONL_E_ACCOUNT_LOCKED
 
 /// Online Id account requires parental consent before proceeding.
-pub const E_PARENTAL_CONSENT_REQUIRED : ErrorHResult = ErrorHResult::from_constant(0x80860008); // ONL_E_PARENTAL_CONSENT_REQUIRED
+pub const E_PARENTAL_CONSENT_REQUIRED : HResultError = HResultError::from_constant(0x80860008); // ONL_E_PARENTAL_CONSENT_REQUIRED
 
 /// Online Id signin name is not yet verified. Email verification is required before signin.
-pub const E_EMAIL_VERIFICATION_REQUIRED : ErrorHResult = ErrorHResult::from_constant(0x80860009); // ONL_E_EMAIL_VERIFICATION_REQUIRED
+pub const E_EMAIL_VERIFICATION_REQUIRED : HResultError = HResultError::from_constant(0x80860009); // ONL_E_EMAIL_VERIFICATION_REQUIRED
 
 /// We have noticed some unusual activity in your Online Id account. Your action is needed to make sure no one else is using your account.
-pub const E_ACCOUNT_SUSPENDED_COMPROIMISE : ErrorHResult = ErrorHResult::from_constant(0x8086000A); // ONL_E_ACCOUNT_SUSPENDED_COMPROIMISE
+pub const E_ACCOUNT_SUSPENDED_COMPROIMISE : HResultError = HResultError::from_constant(0x8086000A); // ONL_E_ACCOUNT_SUSPENDED_COMPROIMISE
 
 /// We detected some suspicious activity with your Online Id account. To help protect you, we've temporarily blocked your account.
-pub const E_ACCOUNT_SUSPENDED_ABUSE : ErrorHResult = ErrorHResult::from_constant(0x8086000B); // ONL_E_ACCOUNT_SUSPENDED_ABUSE
+pub const E_ACCOUNT_SUSPENDED_ABUSE : HResultError = HResultError::from_constant(0x8086000B); // ONL_E_ACCOUNT_SUSPENDED_ABUSE
 
 /// User interaction is required for authentication.
-pub const E_ACTION_REQUIRED : ErrorHResult = ErrorHResult::from_constant(0x8086000C); // ONL_E_ACTION_REQUIRED
+pub const E_ACTION_REQUIRED : HResultError = HResultError::from_constant(0x8086000C); // ONL_E_ACTION_REQUIRED
 
 /// Cannot sign out from the application since the user account is connected.
-pub const E_CONNECTED_ACCOUNT_CAN_NOT_SIGNOUT : ErrorHResult = ErrorHResult::from_constant(0x8086000E); // ONL_E_CONNECTED_ACCOUNT_CAN_NOT_SIGNOUT
+pub const E_CONNECTED_ACCOUNT_CAN_NOT_SIGNOUT : HResultError = HResultError::from_constant(0x8086000E); // ONL_E_CONNECTED_ACCOUNT_CAN_NOT_SIGNOUT
 
 /// User authentication is required for this operation.
-pub const E_USER_AUTHENTICATION_REQUIRED : ErrorHResult = ErrorHResult::from_constant(0x8086000F); // ONL_E_USER_AUTHENTICATION_REQUIRED
+pub const E_USER_AUTHENTICATION_REQUIRED : HResultError = HResultError::from_constant(0x8086000F); // ONL_E_USER_AUTHENTICATION_REQUIRED
 
 /// We want to make sure this is you. User interaction is required for authentication.
-pub const E_REQUEST_THROTTLED : ErrorHResult = ErrorHResult::from_constant(0x80860010); // ONL_E_REQUEST_THROTTLED
+pub const E_REQUEST_THROTTLED : HResultError = HResultError::from_constant(0x80860010); // ONL_E_REQUEST_THROTTLED

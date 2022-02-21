@@ -4,106 +4,106 @@ use super::*;
 
 
 /// Unexpected HTTP status code.
-pub const E_STATUS_UNEXPECTED : ErrorHResult = ErrorHResult::from_constant(0x80190001); // HTTP_E_STATUS_UNEXPECTED
+pub const E_STATUS_UNEXPECTED : HResultError = HResultError::from_constant(0x80190001); // HTTP_E_STATUS_UNEXPECTED
 
 /// Unexpected redirection status code (3xx).
-pub const E_STATUS_UNEXPECTED_REDIRECTION : ErrorHResult = ErrorHResult::from_constant(0x80190003); // HTTP_E_STATUS_UNEXPECTED_REDIRECTION
+pub const E_STATUS_UNEXPECTED_REDIRECTION : HResultError = HResultError::from_constant(0x80190003); // HTTP_E_STATUS_UNEXPECTED_REDIRECTION
 
 /// Unexpected client error status code (4xx).
-pub const E_STATUS_UNEXPECTED_CLIENT_ERROR : ErrorHResult = ErrorHResult::from_constant(0x80190004); // HTTP_E_STATUS_UNEXPECTED_CLIENT_ERROR
+pub const E_STATUS_UNEXPECTED_CLIENT_ERROR : HResultError = HResultError::from_constant(0x80190004); // HTTP_E_STATUS_UNEXPECTED_CLIENT_ERROR
 
 /// Unexpected server error status code (5xx).
-pub const E_STATUS_UNEXPECTED_SERVER_ERROR : ErrorHResult = ErrorHResult::from_constant(0x80190005); // HTTP_E_STATUS_UNEXPECTED_SERVER_ERROR
+pub const E_STATUS_UNEXPECTED_SERVER_ERROR : HResultError = HResultError::from_constant(0x80190005); // HTTP_E_STATUS_UNEXPECTED_SERVER_ERROR
 
 /// Multiple choices (300).
-pub const E_STATUS_AMBIGUOUS : ErrorHResult = ErrorHResult::from_constant(0x8019012C); // HTTP_E_STATUS_AMBIGUOUS
+pub const E_STATUS_AMBIGUOUS : HResultError = HResultError::from_constant(0x8019012C); // HTTP_E_STATUS_AMBIGUOUS
 
 /// Moved permanently (301).
-pub const E_STATUS_MOVED : ErrorHResult = ErrorHResult::from_constant(0x8019012D); // HTTP_E_STATUS_MOVED
+pub const E_STATUS_MOVED : HResultError = HResultError::from_constant(0x8019012D); // HTTP_E_STATUS_MOVED
 
 /// Found (302).
-pub const E_STATUS_REDIRECT : ErrorHResult = ErrorHResult::from_constant(0x8019012E); // HTTP_E_STATUS_REDIRECT
+pub const E_STATUS_REDIRECT : HResultError = HResultError::from_constant(0x8019012E); // HTTP_E_STATUS_REDIRECT
 
 /// See Other (303).
-pub const E_STATUS_REDIRECT_METHOD : ErrorHResult = ErrorHResult::from_constant(0x8019012F); // HTTP_E_STATUS_REDIRECT_METHOD
+pub const E_STATUS_REDIRECT_METHOD : HResultError = HResultError::from_constant(0x8019012F); // HTTP_E_STATUS_REDIRECT_METHOD
 
 /// Not modified (304).
-pub const E_STATUS_NOT_MODIFIED : ErrorHResult = ErrorHResult::from_constant(0x80190130); // HTTP_E_STATUS_NOT_MODIFIED
+pub const E_STATUS_NOT_MODIFIED : HResultError = HResultError::from_constant(0x80190130); // HTTP_E_STATUS_NOT_MODIFIED
 
 /// Use proxy (305).
-pub const E_STATUS_USE_PROXY : ErrorHResult = ErrorHResult::from_constant(0x80190131); // HTTP_E_STATUS_USE_PROXY
+pub const E_STATUS_USE_PROXY : HResultError = HResultError::from_constant(0x80190131); // HTTP_E_STATUS_USE_PROXY
 
 /// Temporary redirect (307).
-pub const E_STATUS_REDIRECT_KEEP_VERB : ErrorHResult = ErrorHResult::from_constant(0x80190133); // HTTP_E_STATUS_REDIRECT_KEEP_VERB
+pub const E_STATUS_REDIRECT_KEEP_VERB : HResultError = HResultError::from_constant(0x80190133); // HTTP_E_STATUS_REDIRECT_KEEP_VERB
 
 /// Bad request (400).
-pub const E_STATUS_BAD_REQUEST : ErrorHResult = ErrorHResult::from_constant(0x80190190); // HTTP_E_STATUS_BAD_REQUEST
+pub const E_STATUS_BAD_REQUEST : HResultError = HResultError::from_constant(0x80190190); // HTTP_E_STATUS_BAD_REQUEST
 
 /// Unauthorized (401).
-pub const E_STATUS_DENIED : ErrorHResult = ErrorHResult::from_constant(0x80190191); // HTTP_E_STATUS_DENIED
+pub const E_STATUS_DENIED : HResultError = HResultError::from_constant(0x80190191); // HTTP_E_STATUS_DENIED
 
 /// Payment required (402).
-pub const E_STATUS_PAYMENT_REQ : ErrorHResult = ErrorHResult::from_constant(0x80190192); // HTTP_E_STATUS_PAYMENT_REQ
+pub const E_STATUS_PAYMENT_REQ : HResultError = HResultError::from_constant(0x80190192); // HTTP_E_STATUS_PAYMENT_REQ
 
 /// Forbidden (403).
-pub const E_STATUS_FORBIDDEN : ErrorHResult = ErrorHResult::from_constant(0x80190193); // HTTP_E_STATUS_FORBIDDEN
+pub const E_STATUS_FORBIDDEN : HResultError = HResultError::from_constant(0x80190193); // HTTP_E_STATUS_FORBIDDEN
 
 /// Not found (404).
-pub const E_STATUS_NOT_FOUND : ErrorHResult = ErrorHResult::from_constant(0x80190194); // HTTP_E_STATUS_NOT_FOUND
+pub const E_STATUS_NOT_FOUND : HResultError = HResultError::from_constant(0x80190194); // HTTP_E_STATUS_NOT_FOUND
 
 /// Method not allowed (405).
-pub const E_STATUS_BAD_METHOD : ErrorHResult = ErrorHResult::from_constant(0x80190195); // HTTP_E_STATUS_BAD_METHOD
+pub const E_STATUS_BAD_METHOD : HResultError = HResultError::from_constant(0x80190195); // HTTP_E_STATUS_BAD_METHOD
 
 /// Not acceptable (406).
-pub const E_STATUS_NONE_ACCEPTABLE : ErrorHResult = ErrorHResult::from_constant(0x80190196); // HTTP_E_STATUS_NONE_ACCEPTABLE
+pub const E_STATUS_NONE_ACCEPTABLE : HResultError = HResultError::from_constant(0x80190196); // HTTP_E_STATUS_NONE_ACCEPTABLE
 
 /// Proxy authentication required (407).
-pub const E_STATUS_PROXY_AUTH_REQ : ErrorHResult = ErrorHResult::from_constant(0x80190197); // HTTP_E_STATUS_PROXY_AUTH_REQ
+pub const E_STATUS_PROXY_AUTH_REQ : HResultError = HResultError::from_constant(0x80190197); // HTTP_E_STATUS_PROXY_AUTH_REQ
 
 /// Request timeout (408).
-pub const E_STATUS_REQUEST_TIMEOUT : ErrorHResult = ErrorHResult::from_constant(0x80190198); // HTTP_E_STATUS_REQUEST_TIMEOUT
+pub const E_STATUS_REQUEST_TIMEOUT : HResultError = HResultError::from_constant(0x80190198); // HTTP_E_STATUS_REQUEST_TIMEOUT
 
 /// Conflict (409).
-pub const E_STATUS_CONFLICT : ErrorHResult = ErrorHResult::from_constant(0x80190199); // HTTP_E_STATUS_CONFLICT
+pub const E_STATUS_CONFLICT : HResultError = HResultError::from_constant(0x80190199); // HTTP_E_STATUS_CONFLICT
 
 /// Gone (410).
-pub const E_STATUS_GONE : ErrorHResult = ErrorHResult::from_constant(0x8019019A); // HTTP_E_STATUS_GONE
+pub const E_STATUS_GONE : HResultError = HResultError::from_constant(0x8019019A); // HTTP_E_STATUS_GONE
 
 /// Length required (411).
-pub const E_STATUS_LENGTH_REQUIRED : ErrorHResult = ErrorHResult::from_constant(0x8019019B); // HTTP_E_STATUS_LENGTH_REQUIRED
+pub const E_STATUS_LENGTH_REQUIRED : HResultError = HResultError::from_constant(0x8019019B); // HTTP_E_STATUS_LENGTH_REQUIRED
 
 /// Precondition failed (412).
-pub const E_STATUS_PRECOND_FAILED : ErrorHResult = ErrorHResult::from_constant(0x8019019C); // HTTP_E_STATUS_PRECOND_FAILED
+pub const E_STATUS_PRECOND_FAILED : HResultError = HResultError::from_constant(0x8019019C); // HTTP_E_STATUS_PRECOND_FAILED
 
 /// Request entity too large (413).
-pub const E_STATUS_REQUEST_TOO_LARGE : ErrorHResult = ErrorHResult::from_constant(0x8019019D); // HTTP_E_STATUS_REQUEST_TOO_LARGE
+pub const E_STATUS_REQUEST_TOO_LARGE : HResultError = HResultError::from_constant(0x8019019D); // HTTP_E_STATUS_REQUEST_TOO_LARGE
 
 /// Request-URI too long (414).
-pub const E_STATUS_URI_TOO_LONG : ErrorHResult = ErrorHResult::from_constant(0x8019019E); // HTTP_E_STATUS_URI_TOO_LONG
+pub const E_STATUS_URI_TOO_LONG : HResultError = HResultError::from_constant(0x8019019E); // HTTP_E_STATUS_URI_TOO_LONG
 
 /// Unsupported media type (415).
-pub const E_STATUS_UNSUPPORTED_MEDIA : ErrorHResult = ErrorHResult::from_constant(0x8019019F); // HTTP_E_STATUS_UNSUPPORTED_MEDIA
+pub const E_STATUS_UNSUPPORTED_MEDIA : HResultError = HResultError::from_constant(0x8019019F); // HTTP_E_STATUS_UNSUPPORTED_MEDIA
 
 /// Requested range not satisfiable (416).
-pub const E_STATUS_RANGE_NOT_SATISFIABLE : ErrorHResult = ErrorHResult::from_constant(0x801901A0); // HTTP_E_STATUS_RANGE_NOT_SATISFIABLE
+pub const E_STATUS_RANGE_NOT_SATISFIABLE : HResultError = HResultError::from_constant(0x801901A0); // HTTP_E_STATUS_RANGE_NOT_SATISFIABLE
 
 /// Expectation failed (417).
-pub const E_STATUS_EXPECTATION_FAILED : ErrorHResult = ErrorHResult::from_constant(0x801901A1); // HTTP_E_STATUS_EXPECTATION_FAILED
+pub const E_STATUS_EXPECTATION_FAILED : HResultError = HResultError::from_constant(0x801901A1); // HTTP_E_STATUS_EXPECTATION_FAILED
 
 /// Internal server error (500).
-pub const E_STATUS_SERVER_ERROR : ErrorHResult = ErrorHResult::from_constant(0x801901F4); // HTTP_E_STATUS_SERVER_ERROR
+pub const E_STATUS_SERVER_ERROR : HResultError = HResultError::from_constant(0x801901F4); // HTTP_E_STATUS_SERVER_ERROR
 
 /// Not implemented (501).
-pub const E_STATUS_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x801901F5); // HTTP_E_STATUS_NOT_SUPPORTED
+pub const E_STATUS_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x801901F5); // HTTP_E_STATUS_NOT_SUPPORTED
 
 /// Bad gateway (502).
-pub const E_STATUS_BAD_GATEWAY : ErrorHResult = ErrorHResult::from_constant(0x801901F6); // HTTP_E_STATUS_BAD_GATEWAY
+pub const E_STATUS_BAD_GATEWAY : HResultError = HResultError::from_constant(0x801901F6); // HTTP_E_STATUS_BAD_GATEWAY
 
 /// Service unavailable (503).
-pub const E_STATUS_SERVICE_UNAVAIL : ErrorHResult = ErrorHResult::from_constant(0x801901F7); // HTTP_E_STATUS_SERVICE_UNAVAIL
+pub const E_STATUS_SERVICE_UNAVAIL : HResultError = HResultError::from_constant(0x801901F7); // HTTP_E_STATUS_SERVICE_UNAVAIL
 
 /// Gateway timeout (504).
-pub const E_STATUS_GATEWAY_TIMEOUT : ErrorHResult = ErrorHResult::from_constant(0x801901F8); // HTTP_E_STATUS_GATEWAY_TIMEOUT
+pub const E_STATUS_GATEWAY_TIMEOUT : HResultError = HResultError::from_constant(0x801901F8); // HTTP_E_STATUS_GATEWAY_TIMEOUT
 
 /// Version not supported (505).
-pub const E_STATUS_VERSION_NOT_SUP : ErrorHResult = ErrorHResult::from_constant(0x801901F9); // HTTP_E_STATUS_VERSION_NOT_SUP
+pub const E_STATUS_VERSION_NOT_SUP : HResultError = HResultError::from_constant(0x801901F9); // HTTP_E_STATUS_VERSION_NOT_SUP

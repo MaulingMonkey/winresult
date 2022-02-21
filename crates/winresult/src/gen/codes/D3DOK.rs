@@ -2,4 +2,4 @@
 
 use super::*;
 
-pub const NOAUTOGEN : SuccessHResult = SuccessHResult::from_constant(141953135); // D3DOK_NOAUTOGEN
+pub const NOAUTOGEN : HResultSuccess = HResultSuccess::from_constant(141953135); // D3DOK_NOAUTOGEN

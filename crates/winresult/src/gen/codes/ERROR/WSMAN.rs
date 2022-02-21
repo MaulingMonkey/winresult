@@ -4,849 +4,849 @@ use super::*;
 
 
 /// The WS-Management service cannot process the request. The service cannot find the resource identified by the resource URI and selectors.
-pub const RESOURCE_NOT_FOUND : ErrorHResult = ErrorHResult::from_constant(0x80338000); // ERROR_WSMAN_RESOURCE_NOT_FOUND
+pub const RESOURCE_NOT_FOUND : HResultError = HResultError::from_constant(0x80338000); // ERROR_WSMAN_RESOURCE_NOT_FOUND
 
 /// The WS-Management service cannot process the request. The WS-Addressing action URI is invalid. Check the documentation for information on how to construct an action URI.
-pub const INVALID_ACTIONURI : ErrorHResult = ErrorHResult::from_constant(0x80338001); // ERROR_WSMAN_INVALID_ACTIONURI
+pub const INVALID_ACTIONURI : HResultError = HResultError::from_constant(0x80338001); // ERROR_WSMAN_INVALID_ACTIONURI
 
 /// The WS-Management service cannot process the request. The resource URI is missing or it has an incorrect format.
 /// Check the documentation or use the following command for information on how to construct a resource URI: "winrm help uris".
-pub const INVALID_URI : ErrorHResult = ErrorHResult::from_constant(0x80338002); // ERROR_WSMAN_INVALID_URI
+pub const INVALID_URI : HResultError = HResultError::from_constant(0x80338002); // ERROR_WSMAN_INVALID_URI
 
 /// An error was encountered inside the plugin.
-pub const PROVIDER_FAILURE : ErrorHResult = ErrorHResult::from_constant(0x80338003); // ERROR_WSMAN_PROVIDER_FAILURE
+pub const PROVIDER_FAILURE : HResultError = HResultError::from_constant(0x80338003); // ERROR_WSMAN_PROVIDER_FAILURE
 
 /// The WS-Management service cannot complete the request. The WSManEnumerator object is full and no more items can be added.
-pub const BATCH_COMPLETE : ErrorHResult = ErrorHResult::from_constant(0x80338004); // ERROR_WSMAN_BATCH_COMPLETE
+pub const BATCH_COMPLETE : HResultError = HResultError::from_constant(0x80338004); // ERROR_WSMAN_BATCH_COMPLETE
 
 /// The WS-Management configuration is corrupted. Use the following command to restore defaults:
 /// `%n``%n`
 /// winrm invoke Restore <http://schemas.microsoft.com/wbem/wsman/1/config> @{}
 /// `%n``%n`
 /// Then add any custom configuration settings.
-pub const CONFIG_CORRUPTED : ErrorHResult = ErrorHResult::from_constant(0x80338005); // ERROR_WSMAN_CONFIG_CORRUPTED
+pub const CONFIG_CORRUPTED : HResultError = HResultError::from_constant(0x80338005); // ERROR_WSMAN_CONFIG_CORRUPTED
 
 /// The WS-Management service cannot process a pull request because a pull operation is already in progress.
-pub const PULL_IN_PROGRESS : ErrorHResult = ErrorHResult::from_constant(0x80338006); // ERROR_WSMAN_PULL_IN_PROGRESS
+pub const PULL_IN_PROGRESS : HResultError = HResultError::from_constant(0x80338006); // ERROR_WSMAN_PULL_IN_PROGRESS
 
 /// The WS-Management enumeration session is finished or cancelled and cannot be used. Start a new enumeration.
-pub const ENUMERATION_CLOSED : ErrorHResult = ErrorHResult::from_constant(0x80338007); // ERROR_WSMAN_ENUMERATION_CLOSED
+pub const ENUMERATION_CLOSED : HResultError = HResultError::from_constant(0x80338007); // ERROR_WSMAN_ENUMERATION_CLOSED
 
 /// The event subscription is already closed and cannot be used. Start a new subscription.
-pub const SUBSCRIPTION_CLOSED : ErrorHResult = ErrorHResult::from_constant(0x80338008); // ERROR_WSMAN_SUBSCRIPTION_CLOSED
+pub const SUBSCRIPTION_CLOSED : HResultError = HResultError::from_constant(0x80338008); // ERROR_WSMAN_SUBSCRIPTION_CLOSED
 
 /// The event subscription session is closing and cannot be used. Start a new subscription.
-pub const SUBSCRIPTION_CLOSE_IN_PROGRESS : ErrorHResult = ErrorHResult::from_constant(0x80338009); // ERROR_WSMAN_SUBSCRIPTION_CLOSE_IN_PROGRESS
+pub const SUBSCRIPTION_CLOSE_IN_PROGRESS : HResultError = HResultError::from_constant(0x80338009); // ERROR_WSMAN_SUBSCRIPTION_CLOSE_IN_PROGRESS
 
 /// The application or script that has an event subscription did not request a pull operation within the heartbeat interval.
 /// The subscription session was closed. Start a new subscription.
-pub const SUBSCRIPTION_CLIENT_DID_NOT_CALL_WITHIN_HEARTBEAT : ErrorHResult = ErrorHResult::from_constant(0x8033800A); // ERROR_WSMAN_SUBSCRIPTION_CLIENT_DID_NOT_CALL_WITHIN_HEARTBEAT
+pub const SUBSCRIPTION_CLIENT_DID_NOT_CALL_WITHIN_HEARTBEAT : HResultError = HResultError::from_constant(0x8033800A); // ERROR_WSMAN_SUBSCRIPTION_CLIENT_DID_NOT_CALL_WITHIN_HEARTBEAT
 
 /// The event source did not return events within the heartbeat interval.
 /// The subscription session was closed. Start a new subscription.
-pub const SUBSCRIPTION_NO_HEARTBEAT : ErrorHResult = ErrorHResult::from_constant(0x8033800B); // ERROR_WSMAN_SUBSCRIPTION_NO_HEARTBEAT
+pub const SUBSCRIPTION_NO_HEARTBEAT : HResultError = HResultError::from_constant(0x8033800B); // ERROR_WSMAN_SUBSCRIPTION_NO_HEARTBEAT
 
 /// The WS-Management service does not support the specified timeout.
 /// The value specified is smaller than the minimum allowed value for this setting.
 /// Change the timeout value and try the request again.
-pub const UNSUPPORTED_TIMEOUT : ErrorHResult = ErrorHResult::from_constant(0x8033800C); // ERROR_WSMAN_UNSUPPORTED_TIMEOUT
+pub const UNSUPPORTED_TIMEOUT : HResultError = HResultError::from_constant(0x8033800C); // ERROR_WSMAN_UNSUPPORTED_TIMEOUT
 
 /// The WS-Management service does not support the SOAP version specified in the request.
-pub const SOAP_VERSION_MISMATCH : ErrorHResult = ErrorHResult::from_constant(0x8033800D); // ERROR_WSMAN_SOAP_VERSION_MISMATCH
+pub const SOAP_VERSION_MISMATCH : HResultError = HResultError::from_constant(0x8033800D); // ERROR_WSMAN_SOAP_VERSION_MISMATCH
 
 /// The WS-Management service does not support the encoding specified in the request.
-pub const SOAP_DATA_ENCODING_UNKNOWN : ErrorHResult = ErrorHResult::from_constant(0x8033800E); // ERROR_WSMAN_SOAP_DATA_ENCODING_UNKNOWN
+pub const SOAP_DATA_ENCODING_UNKNOWN : HResultError = HResultError::from_constant(0x8033800E); // ERROR_WSMAN_SOAP_DATA_ENCODING_UNKNOWN
 
 /// The WS-Management service cannot process the request. The request contains one or more invalid SOAP headers.
-pub const INVALID_MESSAGE_INFORMATION_HEADER : ErrorHResult = ErrorHResult::from_constant(0x8033800F); // ERROR_WSMAN_INVALID_MESSAGE_INFORMATION_HEADER
+pub const INVALID_MESSAGE_INFORMATION_HEADER : HResultError = HResultError::from_constant(0x8033800F); // ERROR_WSMAN_INVALID_MESSAGE_INFORMATION_HEADER
 
 /// The WS-Management service cannot process a SOAP header in the request that is marked as mustUnderstand by the client.
 /// This could be caused by the use of a version of the protocol which is not supported, or may be an incompatibility
 /// between the client and server implementations.
-pub const SOAP_FAULT_MUST_UNDERSTAND : ErrorHResult = ErrorHResult::from_constant(0x80338010); // ERROR_WSMAN_SOAP_FAULT_MUST_UNDERSTAND
+pub const SOAP_FAULT_MUST_UNDERSTAND : HResultError = HResultError::from_constant(0x80338010); // ERROR_WSMAN_SOAP_FAULT_MUST_UNDERSTAND
 
 /// The WS-Management service cannot process the request. The request does not have all the expected SOAP headers.
-pub const MESSAGE_INFORMATION_HEADER_REQUIRED : ErrorHResult = ErrorHResult::from_constant(0x80338011); // ERROR_WSMAN_MESSAGE_INFORMATION_HEADER_REQUIRED
+pub const MESSAGE_INFORMATION_HEADER_REQUIRED : HResultError = HResultError::from_constant(0x80338011); // ERROR_WSMAN_MESSAGE_INFORMATION_HEADER_REQUIRED
 
 /// The client cannot connect to the destination specified in the request.
 /// Verify that the service on the destination is running and is accepting requests.
 /// Consult the logs and documentation for the WS-Management service running on the destination, most commonly IIS or WinRM.
 /// If the destination is the WinRM service, run the following command on the destination to analyze and configure the WinRM service: "winrm quickconfig".
-pub const DESTINATION_UNREACHABLE : ErrorHResult = ErrorHResult::from_constant(0x80338012); // ERROR_WSMAN_DESTINATION_UNREACHABLE
+pub const DESTINATION_UNREACHABLE : HResultError = HResultError::from_constant(0x80338012); // ERROR_WSMAN_DESTINATION_UNREACHABLE
 
 /// The WS-Management service does not support the action specified in the request.
-pub const ACTION_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x80338013); // ERROR_WSMAN_ACTION_NOT_SUPPORTED
+pub const ACTION_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x80338013); // ERROR_WSMAN_ACTION_NOT_SUPPORTED
 
 /// The WS-Management service cannot process the request because the resource is offline. Retry the request
 /// later when the resource is online.
-pub const ENDPOINT_UNAVAILABLE : ErrorHResult = ErrorHResult::from_constant(0x80338014); // ERROR_WSMAN_ENDPOINT_UNAVAILABLE
+pub const ENDPOINT_UNAVAILABLE : HResultError = HResultError::from_constant(0x80338014); // ERROR_WSMAN_ENDPOINT_UNAVAILABLE
 
 /// The WS-Management service cannot identify the format of the object passed to a Put or Create method.
 /// The input XML may not be appropriate for the resource or uses the wrong schema for the resource.
 /// Change the input XML in the request.
-pub const INVALID_REPRESENTATION : ErrorHResult = ErrorHResult::from_constant(0x80338015); // ERROR_WSMAN_INVALID_REPRESENTATION
+pub const INVALID_REPRESENTATION : HResultError = HResultError::from_constant(0x80338015); // ERROR_WSMAN_INVALID_REPRESENTATION
 
 /// The expiration time passed to the WS-Management Enumerate method is not valid. The time value may be zero
 /// or refer to a time in the past. Change the expiration time and try the request again.
-pub const ENUMERATE_INVALID_EXPIRATION_TIME : ErrorHResult = ErrorHResult::from_constant(0x80338016); // ERROR_WSMAN_ENUMERATE_INVALID_EXPIRATION_TIME
+pub const ENUMERATE_INVALID_EXPIRATION_TIME : HResultError = HResultError::from_constant(0x80338016); // ERROR_WSMAN_ENUMERATE_INVALID_EXPIRATION_TIME
 
 /// The data source does not support expiration time. Remove the expiration time from the request and try the request again.
-pub const ENUMERATE_UNSUPPORTED_EXPIRATION_TIME : ErrorHResult = ErrorHResult::from_constant(0x80338017); // ERROR_WSMAN_ENUMERATE_UNSUPPORTED_EXPIRATION_TIME
+pub const ENUMERATE_UNSUPPORTED_EXPIRATION_TIME : HResultError = HResultError::from_constant(0x80338017); // ERROR_WSMAN_ENUMERATE_UNSUPPORTED_EXPIRATION_TIME
 
 /// The data source does not support filtering. Remove the filter from the request and try the request again.
-pub const ENUMERATE_FILTERING_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x80338018); // ERROR_WSMAN_ENUMERATE_FILTERING_NOT_SUPPORTED
+pub const ENUMERATE_FILTERING_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x80338018); // ERROR_WSMAN_ENUMERATE_FILTERING_NOT_SUPPORTED
 
 /// The filter dialect (the type associated with the filter) was not supported for this resource.
 /// Change the filter dialect or remove it from the request and try the request again.
-pub const ENUMERATE_FILTER_DIALECT_REQUESTED_UNAVAILABLE : ErrorHResult = ErrorHResult::from_constant(0x80338019); // ERROR_WSMAN_ENUMERATE_FILTER_DIALECT_REQUESTED_UNAVAILABLE
+pub const ENUMERATE_FILTER_DIALECT_REQUESTED_UNAVAILABLE : HResultError = HResultError::from_constant(0x80338019); // ERROR_WSMAN_ENUMERATE_FILTER_DIALECT_REQUESTED_UNAVAILABLE
 
 /// The data source could not process the filter. The filter might be missing or it might be invalid.
 /// Change the filter and try the request again.
-pub const ENUMERATE_CANNOT_PROCESS_FILTER : ErrorHResult = ErrorHResult::from_constant(0x8033801A); // ERROR_WSMAN_ENUMERATE_CANNOT_PROCESS_FILTER
+pub const ENUMERATE_CANNOT_PROCESS_FILTER : HResultError = HResultError::from_constant(0x8033801A); // ERROR_WSMAN_ENUMERATE_CANNOT_PROCESS_FILTER
 
 /// The WS-Enumeration context in the enumeration is not valid. Enumeration may have been completed or canceled.
 /// You cannot use this enumeration context anymore. Start a new enumeration.
-pub const ENUMERATE_INVALID_ENUMERATION_CONTEXT : ErrorHResult = ErrorHResult::from_constant(0x8033801B); // ERROR_WSMAN_ENUMERATE_INVALID_ENUMERATION_CONTEXT
+pub const ENUMERATE_INVALID_ENUMERATION_CONTEXT : HResultError = HResultError::from_constant(0x8033801B); // ERROR_WSMAN_ENUMERATE_INVALID_ENUMERATION_CONTEXT
 
 /// The pull operation did not get any data in the MaxTime duration. But the enumeration is still valid.
 /// The client can attempt to do another pull request to retrieve data.
-pub const ENUMERATE_TIMED_OUT : ErrorHResult = ErrorHResult::from_constant(0x8033801C); // ERROR_WSMAN_ENUMERATE_TIMED_OUT
+pub const ENUMERATE_TIMED_OUT : HResultError = HResultError::from_constant(0x8033801C); // ERROR_WSMAN_ENUMERATE_TIMED_OUT
 
 /// The WS-Management service cannot renew the enumeration. Start a new enumeration.
-pub const ENUMERATE_UNABLE_TO_RENEW : ErrorHResult = ErrorHResult::from_constant(0x8033801D); // ERROR_WSMAN_ENUMERATE_UNABLE_TO_RENEW
+pub const ENUMERATE_UNABLE_TO_RENEW : HResultError = HResultError::from_constant(0x8033801D); // ERROR_WSMAN_ENUMERATE_UNABLE_TO_RENEW
 
 /// The WS-Management service does not support the delivery mode for the specified resource. The client should change the
 /// subscription to use one of the supported delivery modes.
-pub const EVENTING_DELIVERY_MODE_REQUESTED_UNAVAILABLE : ErrorHResult = ErrorHResult::from_constant(0x8033801E); // ERROR_WSMAN_EVENTING_DELIVERY_MODE_REQUESTED_UNAVAILABLE
+pub const EVENTING_DELIVERY_MODE_REQUESTED_UNAVAILABLE : HResultError = HResultError::from_constant(0x8033801E); // ERROR_WSMAN_EVENTING_DELIVERY_MODE_REQUESTED_UNAVAILABLE
 
 /// The expiration time of the subscription is invalid. The time is either not supported, zero or a time that happened in the past.
 /// Change the expiration time and try the request again.
-pub const EVENTING_INVALID_EXPIRATION_TIME : ErrorHResult = ErrorHResult::from_constant(0x8033801F); // ERROR_WSMAN_EVENTING_INVALID_EXPIRATION_TIME
+pub const EVENTING_INVALID_EXPIRATION_TIME : HResultError = HResultError::from_constant(0x8033801F); // ERROR_WSMAN_EVENTING_INVALID_EXPIRATION_TIME
 
 /// The expiration time specified for subscription was invalid. Specify the expiration time as a duration.
-pub const EVENTING_UNSUPPORTED_EXPIRATION_TYPE : ErrorHResult = ErrorHResult::from_constant(0x80338020); // ERROR_WSMAN_EVENTING_UNSUPPORTED_EXPIRATION_TYPE
+pub const EVENTING_UNSUPPORTED_EXPIRATION_TYPE : HResultError = HResultError::from_constant(0x80338020); // ERROR_WSMAN_EVENTING_UNSUPPORTED_EXPIRATION_TYPE
 
 /// The event source does not support filtering. Remove the filter from the request and try the request again.
-pub const EVENTING_FILTERING_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x80338021); // ERROR_WSMAN_EVENTING_FILTERING_NOT_SUPPORTED
+pub const EVENTING_FILTERING_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x80338021); // ERROR_WSMAN_EVENTING_FILTERING_NOT_SUPPORTED
 
 /// The event source cannot process the specified filter.
 /// Change the filter or remove it from the request and try the request again.
-pub const EVENTING_FILTERING_REQUESTED_UNAVAILABLE : ErrorHResult = ErrorHResult::from_constant(0x80338022); // ERROR_WSMAN_EVENTING_FILTERING_REQUESTED_UNAVAILABLE
+pub const EVENTING_FILTERING_REQUESTED_UNAVAILABLE : HResultError = HResultError::from_constant(0x80338022); // ERROR_WSMAN_EVENTING_FILTERING_REQUESTED_UNAVAILABLE
 
 /// The event source cannot process the subscription.
-pub const EVENTING_SOURCE_UNABLE_TO_PROCESS : ErrorHResult = ErrorHResult::from_constant(0x80338023); // ERROR_WSMAN_EVENTING_SOURCE_UNABLE_TO_PROCESS
+pub const EVENTING_SOURCE_UNABLE_TO_PROCESS : HResultError = HResultError::from_constant(0x80338023); // ERROR_WSMAN_EVENTING_SOURCE_UNABLE_TO_PROCESS
 
 /// The WS-Management service cannot renew the event subscription. Create a new subscription.
-pub const EVENTING_UNABLE_TO_RENEW : ErrorHResult = ErrorHResult::from_constant(0x80338024); // ERROR_WSMAN_EVENTING_UNABLE_TO_RENEW
+pub const EVENTING_UNABLE_TO_RENEW : HResultError = HResultError::from_constant(0x80338024); // ERROR_WSMAN_EVENTING_UNABLE_TO_RENEW
 
 /// The WS-Management service cannot complete the WS-Eventing request because the request had some unknown or invalid content and could
 /// not be processed.
-pub const EVENTING_INVALID_MESSAGE : ErrorHResult = ErrorHResult::from_constant(0x80338025); // ERROR_WSMAN_EVENTING_INVALID_MESSAGE
+pub const EVENTING_INVALID_MESSAGE : HResultError = HResultError::from_constant(0x80338025); // ERROR_WSMAN_EVENTING_INVALID_MESSAGE
 
 /// The WS-Management service cannot process the response because it is larger than the maximum size allowed.
-pub const ENVELOPE_TOO_LARGE : ErrorHResult = ErrorHResult::from_constant(0x80338026); // ERROR_WSMAN_ENVELOPE_TOO_LARGE
+pub const ENVELOPE_TOO_LARGE : HResultError = HResultError::from_constant(0x80338026); // ERROR_WSMAN_ENVELOPE_TOO_LARGE
 
 /// The WS-Management service cannot process the request because the request packet does not have a valid SOAP body.
-pub const INVALID_SOAP_BODY : ErrorHResult = ErrorHResult::from_constant(0x80338027); // ERROR_WSMAN_INVALID_SOAP_BODY
+pub const INVALID_SOAP_BODY : HResultError = HResultError::from_constant(0x80338027); // ERROR_WSMAN_INVALID_SOAP_BODY
 
 /// The resumption context specified in the subscription is invalid. It may have expired, or be in the wrong format.
-pub const INVALID_RESUMPTION_CONTEXT : ErrorHResult = ErrorHResult::from_constant(0x80338028); // ERROR_WSMAN_INVALID_RESUMPTION_CONTEXT
+pub const INVALID_RESUMPTION_CONTEXT : HResultError = HResultError::from_constant(0x80338028); // ERROR_WSMAN_INVALID_RESUMPTION_CONTEXT
 
 /// The WS-Management service cannot complete the operation within the time specified in OperationTimeout.
-pub const OPERATION_TIMEDOUT : ErrorHResult = ErrorHResult::from_constant(0x80338029); // ERROR_WSMAN_OPERATION_TIMEDOUT
+pub const OPERATION_TIMEDOUT : HResultError = HResultError::from_constant(0x80338029); // ERROR_WSMAN_OPERATION_TIMEDOUT
 
 /// The event source does not support subscriptions that can be resumed.
-pub const RESUMPTION_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x8033802A); // ERROR_WSMAN_RESUMPTION_NOT_SUPPORTED
+pub const RESUMPTION_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x8033802A); // ERROR_WSMAN_RESUMPTION_NOT_SUPPORTED
 
 /// The WS-Management service does not support the type of resumption requested by the subscription.
-pub const RESUMPTION_TYPE_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x8033802B); // ERROR_WSMAN_RESUMPTION_TYPE_NOT_SUPPORTED
+pub const RESUMPTION_TYPE_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x8033802B); // ERROR_WSMAN_RESUMPTION_TYPE_NOT_SUPPORTED
 
 /// The request contains character encoding that is unsupported. WS-Management only supports requests that are
 /// encoded in UTF-8 or UTF-16. Change the character encoding in the request and try the request again.
-pub const UNSUPPORTED_ENCODING : ErrorHResult = ErrorHResult::from_constant(0x8033802C); // ERROR_WSMAN_UNSUPPORTED_ENCODING
+pub const UNSUPPORTED_ENCODING : HResultError = HResultError::from_constant(0x8033802C); // ERROR_WSMAN_UNSUPPORTED_ENCODING
 
 /// The URI is longer than the maximum length allowed.
-pub const URI_LIMIT : ErrorHResult = ErrorHResult::from_constant(0x8033802D); // ERROR_WSMAN_URI_LIMIT
+pub const URI_LIMIT : HResultError = HResultError::from_constant(0x8033802D); // ERROR_WSMAN_URI_LIMIT
 
 /// The WS-Management service cannot process the request because the subscription ID is invalid.
-pub const INVALID_PROPOSED_ID : ErrorHResult = ErrorHResult::from_constant(0x8033802E); // ERROR_WSMAN_INVALID_PROPOSED_ID
+pub const INVALID_PROPOSED_ID : HResultError = HResultError::from_constant(0x8033802E); // ERROR_WSMAN_INVALID_PROPOSED_ID
 
 /// The WS-Management service cannot process the batch request. The request must specify either MaxItems, MaxCharacters,
 /// or MaxTime.
-pub const INVALID_BATCH_PARAMETER : ErrorHResult = ErrorHResult::from_constant(0x8033802F); // ERROR_WSMAN_INVALID_BATCH_PARAMETER
+pub const INVALID_BATCH_PARAMETER : HResultError = HResultError::from_constant(0x8033802F); // ERROR_WSMAN_INVALID_BATCH_PARAMETER
 
 /// The receiver of the event did not acknowledge the event delivery.
 /// Submit the subscription again without the acknowledgement option.
-pub const NO_ACK : ErrorHResult = ErrorHResult::from_constant(0x80338030); // ERROR_WSMAN_NO_ACK
+pub const NO_ACK : HResultError = HResultError::from_constant(0x80338030); // ERROR_WSMAN_NO_ACK
 
 /// The WS-Management service cannot process the request because the WS-Addressing Action URI in the request is not
 /// compatible with the resource.
-pub const ACTION_MISMATCH : ErrorHResult = ErrorHResult::from_constant(0x80338031); // ERROR_WSMAN_ACTION_MISMATCH
+pub const ACTION_MISMATCH : HResultError = HResultError::from_constant(0x80338031); // ERROR_WSMAN_ACTION_MISMATCH
 
 /// The WS-Management service cannot complete the WS-Addressing Action URI in the request because the resource
 /// was already in use.
-pub const CONCURRENCY : ErrorHResult = ErrorHResult::from_constant(0x80338032); // ERROR_WSMAN_CONCURRENCY
+pub const CONCURRENCY : HResultError = HResultError::from_constant(0x80338032); // ERROR_WSMAN_CONCURRENCY
 
 /// The WS-Management service cannot create the resource because it already exists.
-pub const ALREADY_EXISTS : ErrorHResult = ErrorHResult::from_constant(0x80338033); // ERROR_WSMAN_ALREADY_EXISTS
+pub const ALREADY_EXISTS : HResultError = HResultError::from_constant(0x80338033); // ERROR_WSMAN_ALREADY_EXISTS
 
 /// The WS-Management service cannot complete the request because the receiver does not accept the delivery of events.
 /// The receiver requests that the subscription be cancelled. Event receivers return this message to force the
 /// cancellation of a subscription.
-pub const DELIVERY_REFUSED : ErrorHResult = ErrorHResult::from_constant(0x80338034); // ERROR_WSMAN_DELIVERY_REFUSED
+pub const DELIVERY_REFUSED : HResultError = HResultError::from_constant(0x80338034); // ERROR_WSMAN_DELIVERY_REFUSED
 
 /// The WS-Management service cannot process the request because the encoding of the request exceeds an internal
 /// encoding limit. Reconfigure the client to send messages which fit the encoding limits of the service.
-pub const ENCODING_LIMIT : ErrorHResult = ErrorHResult::from_constant(0x80338035); // ERROR_WSMAN_ENCODING_LIMIT
+pub const ENCODING_LIMIT : HResultError = HResultError::from_constant(0x80338035); // ERROR_WSMAN_ENCODING_LIMIT
 
 /// The WS-Management service cannot authenticate the sender.
-pub const FAILED_AUTHENTICATION : ErrorHResult = ErrorHResult::from_constant(0x80338036); // ERROR_WSMAN_FAILED_AUTHENTICATION
+pub const FAILED_AUTHENTICATION : HResultError = HResultError::from_constant(0x80338036); // ERROR_WSMAN_FAILED_AUTHENTICATION
 
 /// The WS-Management service does not support the format of the WS-Addressing Endpoint Reference.
-pub const INCOMPATIBLE_EPR : ErrorHResult = ErrorHResult::from_constant(0x80338037); // ERROR_WSMAN_INCOMPATIBLE_EPR
+pub const INCOMPATIBLE_EPR : HResultError = HResultError::from_constant(0x80338037); // ERROR_WSMAN_INCOMPATIBLE_EPR
 
 /// The bookmark in the subscription is invalid. The bookmark may be expired or corrupted. Issue a new subscription
 /// without any bookmarks or locate the correct bookmark.
-pub const INVALID_BOOKMARK : ErrorHResult = ErrorHResult::from_constant(0x80338038); // ERROR_WSMAN_INVALID_BOOKMARK
+pub const INVALID_BOOKMARK : HResultError = HResultError::from_constant(0x80338038); // ERROR_WSMAN_INVALID_BOOKMARK
 
 /// The WS-Management service cannot process the request because one or more options are not valid. The option names or
 /// values may not be valid or they are used in incorrect combinations. Retrieve the catalog entry for the resource and
 /// determine how to correct the invalid option values.
-pub const INVALID_OPTIONS : ErrorHResult = ErrorHResult::from_constant(0x80338039); // ERROR_WSMAN_INVALID_OPTIONS
+pub const INVALID_OPTIONS : HResultError = HResultError::from_constant(0x80338039); // ERROR_WSMAN_INVALID_OPTIONS
 
 /// The WS-Management service cannot process the request because a parameter for the operation is not valid.
-pub const INVALID_PARAMETER : ErrorHResult = ErrorHResult::from_constant(0x8033803A); // ERROR_WSMAN_INVALID_PARAMETER
+pub const INVALID_PARAMETER : HResultError = HResultError::from_constant(0x8033803A); // ERROR_WSMAN_INVALID_PARAMETER
 
 /// The WS-Management service cannot process the request. The resource URI is missing or it has an incorrect format.
 /// Check the documentation or use the following command for information on how to construct a resource URI: "winrm help uris".
-pub const INVALID_RESOURCE_URI : ErrorHResult = ErrorHResult::from_constant(0x8033803B); // ERROR_WSMAN_INVALID_RESOURCE_URI
+pub const INVALID_RESOURCE_URI : HResultError = HResultError::from_constant(0x8033803B); // ERROR_WSMAN_INVALID_RESOURCE_URI
 
 /// The WS-Management service requires a valid System URI to process the request.
-pub const INVALID_SYSTEM : ErrorHResult = ErrorHResult::from_constant(0x8033803C); // ERROR_WSMAN_INVALID_SYSTEM
+pub const INVALID_SYSTEM : HResultError = HResultError::from_constant(0x8033803C); // ERROR_WSMAN_INVALID_SYSTEM
 
 /// The WS-Management service cannot process the request because the selectors for the resource are not valid.
-pub const INVALID_SELECTORS : ErrorHResult = ErrorHResult::from_constant(0x8033803D); // ERROR_WSMAN_INVALID_SELECTORS
+pub const INVALID_SELECTORS : HResultError = HResultError::from_constant(0x8033803D); // ERROR_WSMAN_INVALID_SELECTORS
 
 /// The requested metadata is not available at the current address. Retry the request with a new address.
-pub const METADATA_REDIRECT : ErrorHResult = ErrorHResult::from_constant(0x8033803E); // ERROR_WSMAN_METADATA_REDIRECT
+pub const METADATA_REDIRECT : HResultError = HResultError::from_constant(0x8033803E); // ERROR_WSMAN_METADATA_REDIRECT
 
 /// The WS-Management service is busy servicing other requests. Retry later.
-pub const QUOTA_LIMIT : ErrorHResult = ErrorHResult::from_constant(0x8033803F); // ERROR_WSMAN_QUOTA_LIMIT
+pub const QUOTA_LIMIT : HResultError = HResultError::from_constant(0x8033803F); // ERROR_WSMAN_QUOTA_LIMIT
 
 /// The WS-Management service cannot rename the resource. The selectors for the resource are not correct. The
 /// resource may exist already, the address may be incorrect, or the resource URI may be invalid. Change the
 /// request and retry.
-pub const RENAME_FAILURE : ErrorHResult = ErrorHResult::from_constant(0x80338040); // ERROR_WSMAN_RENAME_FAILURE
+pub const RENAME_FAILURE : HResultError = HResultError::from_constant(0x80338040); // ERROR_WSMAN_RENAME_FAILURE
 
 /// The SOAP XML in the message does not match the corresponding XML schema definition. Change the XML and retry.
-pub const SCHEMA_VALIDATION_ERROR : ErrorHResult = ErrorHResult::from_constant(0x80338041); // ERROR_WSMAN_SCHEMA_VALIDATION_ERROR
+pub const SCHEMA_VALIDATION_ERROR : HResultError = HResultError::from_constant(0x80338041); // ERROR_WSMAN_SCHEMA_VALIDATION_ERROR
 
 /// The WS-Management service does not support the specified feature. Remove the unsupported feature from the request and retry.
-pub const UNSUPPORTED_FEATURE : ErrorHResult = ErrorHResult::from_constant(0x80338042); // ERROR_WSMAN_UNSUPPORTED_FEATURE
+pub const UNSUPPORTED_FEATURE : HResultError = HResultError::from_constant(0x80338042); // ERROR_WSMAN_UNSUPPORTED_FEATURE
 
 /// The WS-Management service cannot process the request because the XML is invalid.
-pub const INVALID_XML : ErrorHResult = ErrorHResult::from_constant(0x80338043); // ERROR_WSMAN_INVALID_XML
+pub const INVALID_XML : HResultError = HResultError::from_constant(0x80338043); // ERROR_WSMAN_INVALID_XML
 
 /// The WS-Management service cannot process the request because the URI contains an unexpected selector.
-pub const INVALID_KEY : ErrorHResult = ErrorHResult::from_constant(0x80338044); // ERROR_WSMAN_INVALID_KEY
+pub const INVALID_KEY : HResultError = HResultError::from_constant(0x80338044); // ERROR_WSMAN_INVALID_KEY
 
 /// The event source is attempting to deliver an event when a delivery is in progress already.
-pub const DELIVER_IN_PROGRESS : ErrorHResult = ErrorHResult::from_constant(0x80338045); // ERROR_WSMAN_DELIVER_IN_PROGRESS
+pub const DELIVER_IN_PROGRESS : HResultError = HResultError::from_constant(0x80338045); // ERROR_WSMAN_DELIVER_IN_PROGRESS
 
 /// The WS-Management service cannot locate the system.
-pub const SYSTEM_NOT_FOUND : ErrorHResult = ErrorHResult::from_constant(0x80338046); // ERROR_WSMAN_SYSTEM_NOT_FOUND
+pub const SYSTEM_NOT_FOUND : HResultError = HResultError::from_constant(0x80338046); // ERROR_WSMAN_SYSTEM_NOT_FOUND
 
 /// The maximum envelope size in the request is too large.
 /// Change the maximum envelope size and try the request again.
-pub const MAX_ENVELOPE_SIZE : ErrorHResult = ErrorHResult::from_constant(0x80338047); // ERROR_WSMAN_MAX_ENVELOPE_SIZE
+pub const MAX_ENVELOPE_SIZE : HResultError = HResultError::from_constant(0x80338047); // ERROR_WSMAN_MAX_ENVELOPE_SIZE
 
 /// The response that the WS-Management service computed exceeds the maximum envelope size in the request.
-pub const MAX_ENVELOPE_SIZE_EXCEEDED : ErrorHResult = ErrorHResult::from_constant(0x80338048); // ERROR_WSMAN_MAX_ENVELOPE_SIZE_EXCEEDED
+pub const MAX_ENVELOPE_SIZE_EXCEEDED : HResultError = HResultError::from_constant(0x80338048); // ERROR_WSMAN_MAX_ENVELOPE_SIZE_EXCEEDED
 
 /// The response that the WS-Management service computed exceed the internal limit for envelope size.
-pub const SERVER_ENVELOPE_LIMIT : ErrorHResult = ErrorHResult::from_constant(0x80338049); // ERROR_WSMAN_SERVER_ENVELOPE_LIMIT
+pub const SERVER_ENVELOPE_LIMIT : HResultError = HResultError::from_constant(0x80338049); // ERROR_WSMAN_SERVER_ENVELOPE_LIMIT
 
 /// The WS-Management service cannot process the request because the URI contains too many selectors.
-pub const SELECTOR_LIMIT : ErrorHResult = ErrorHResult::from_constant(0x8033804A); // ERROR_WSMAN_SELECTOR_LIMIT
+pub const SELECTOR_LIMIT : HResultError = HResultError::from_constant(0x8033804A); // ERROR_WSMAN_SELECTOR_LIMIT
 
 /// The WS-Management service cannot process the request because it contains too many options.
-pub const OPTION_LIMIT : ErrorHResult = ErrorHResult::from_constant(0x8033804B); // ERROR_WSMAN_OPTION_LIMIT
+pub const OPTION_LIMIT : HResultError = HResultError::from_constant(0x8033804B); // ERROR_WSMAN_OPTION_LIMIT
 
 /// The WS-Management service does not support the character set used in the request. Change the request to use UTF-8 or UTF-16.
-pub const CHARACTER_SET : ErrorHResult = ErrorHResult::from_constant(0x8033804C); // ERROR_WSMAN_CHARACTER_SET
+pub const CHARACTER_SET : HResultError = HResultError::from_constant(0x8033804C); // ERROR_WSMAN_CHARACTER_SET
 
 /// The operation succeeded and cannot be reversed but the result is too large to send.
-pub const UNREPORTABLE_SUCCESS : ErrorHResult = ErrorHResult::from_constant(0x8033804D); // ERROR_WSMAN_UNREPORTABLE_SUCCESS
+pub const UNREPORTABLE_SUCCESS : HResultError = HResultError::from_constant(0x8033804D); // ERROR_WSMAN_UNREPORTABLE_SUCCESS
 
 /// The WS-Management service does not support white space in the request XML.
-pub const WHITESPACE : ErrorHResult = ErrorHResult::from_constant(0x8033804E); // ERROR_WSMAN_WHITESPACE
+pub const WHITESPACE : HResultError = HResultError::from_constant(0x8033804E); // ERROR_WSMAN_WHITESPACE
 
 /// The WS-Management service does not support the filter dialect in the request. The filter dialect is the type of filter, such
 /// as XPath or WQL.
-pub const FILTERING_REQUIRED : ErrorHResult = ErrorHResult::from_constant(0x8033804F); // ERROR_WSMAN_FILTERING_REQUIRED
+pub const FILTERING_REQUIRED : HResultError = HResultError::from_constant(0x8033804F); // ERROR_WSMAN_FILTERING_REQUIRED
 
 /// The WS-Management service cannot process the request because it contains a bookmark that is expired.
-pub const BOOKMARK_EXPIRED : ErrorHResult = ErrorHResult::from_constant(0x80338050); // ERROR_WSMAN_BOOKMARK_EXPIRED
+pub const BOOKMARK_EXPIRED : HResultError = HResultError::from_constant(0x80338050); // ERROR_WSMAN_BOOKMARK_EXPIRED
 
 /// The WS-Management provider does not support the specified option set because mustComply for one of the options is set to true.
 /// Change mustComply for one of the options to false.
-pub const OPTIONS_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x80338051); // ERROR_WSMAN_OPTIONS_NOT_SUPPORTED
+pub const OPTIONS_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x80338051); // ERROR_WSMAN_OPTIONS_NOT_SUPPORTED
 
 /// The WS-Management service cannot process the request because one or more of the options has an invalid name.
-pub const OPTIONS_INVALID_NAME : ErrorHResult = ErrorHResult::from_constant(0x80338052); // ERROR_WSMAN_OPTIONS_INVALID_NAME
+pub const OPTIONS_INVALID_NAME : HResultError = HResultError::from_constant(0x80338052); // ERROR_WSMAN_OPTIONS_INVALID_NAME
 
 /// The WS-Management service cannot process the request because one or more of the options has an invalid value.
-pub const OPTIONS_INVALID_VALUE : ErrorHResult = ErrorHResult::from_constant(0x80338053); // ERROR_WSMAN_OPTIONS_INVALID_VALUE
+pub const OPTIONS_INVALID_VALUE : HResultError = HResultError::from_constant(0x80338053); // ERROR_WSMAN_OPTIONS_INVALID_VALUE
 
 /// The WS-Management service cannot process the request. A parameter that is required for the operation is not the
 /// correct type.
-pub const PARAMETER_TYPE_MISMATCH : ErrorHResult = ErrorHResult::from_constant(0x80338054); // ERROR_WSMAN_PARAMETER_TYPE_MISMATCH
+pub const PARAMETER_TYPE_MISMATCH : HResultError = HResultError::from_constant(0x80338054); // ERROR_WSMAN_PARAMETER_TYPE_MISMATCH
 
 /// The WS-Management service cannot process the request. A parameter name is invalid.
-pub const INVALID_PARAMETER_NAME : ErrorHResult = ErrorHResult::from_constant(0x80338055); // ERROR_WSMAN_INVALID_PARAMETER_NAME
+pub const INVALID_PARAMETER_NAME : HResultError = HResultError::from_constant(0x80338055); // ERROR_WSMAN_INVALID_PARAMETER_NAME
 
 /// The WS-Management service cannot process the request because the XML content has invalid values.
-pub const INVALID_XML_VALUES : ErrorHResult = ErrorHResult::from_constant(0x80338056); // ERROR_WSMAN_INVALID_XML_VALUES
+pub const INVALID_XML_VALUES : HResultError = HResultError::from_constant(0x80338056); // ERROR_WSMAN_INVALID_XML_VALUES
 
 /// The WS-Management service cannot process the request because the XML content has missing values.
-pub const INVALID_XML_MISSING_VALUES : ErrorHResult = ErrorHResult::from_constant(0x80338057); // ERROR_WSMAN_INVALID_XML_MISSING_VALUES
+pub const INVALID_XML_MISSING_VALUES : HResultError = HResultError::from_constant(0x80338057); // ERROR_WSMAN_INVALID_XML_MISSING_VALUES
 
 /// The WS-Management service cannot identify the format of the object passed to a Put or Create method.
 /// The XML namespace for the input XML is invalid. Change the XML namespace for the input XML in the request.
-pub const INVALID_XML_NAMESPACE : ErrorHResult = ErrorHResult::from_constant(0x80338058); // ERROR_WSMAN_INVALID_XML_NAMESPACE
+pub const INVALID_XML_NAMESPACE : HResultError = HResultError::from_constant(0x80338058); // ERROR_WSMAN_INVALID_XML_NAMESPACE
 
 /// The WS-Management service cannot process the request because an XML fragment in the URI is invalid.
-pub const INVALID_XML_FRAGMENT : ErrorHResult = ErrorHResult::from_constant(0x80338059); // ERROR_WSMAN_INVALID_XML_FRAGMENT
+pub const INVALID_XML_FRAGMENT : HResultError = HResultError::from_constant(0x80338059); // ERROR_WSMAN_INVALID_XML_FRAGMENT
 
 /// The WS-Management service cannot process the request because the request did not contain all required selectors.
-pub const INSUFFCIENT_SELECTORS : ErrorHResult = ErrorHResult::from_constant(0x8033805A); // ERROR_WSMAN_INSUFFCIENT_SELECTORS
+pub const INSUFFCIENT_SELECTORS : HResultError = HResultError::from_constant(0x8033805A); // ERROR_WSMAN_INSUFFCIENT_SELECTORS
 
 /// The WS-Management service cannot process the request because the request contained invalid selectors for the resource.
-pub const UNEXPECTED_SELECTORS : ErrorHResult = ErrorHResult::from_constant(0x8033805B); // ERROR_WSMAN_UNEXPECTED_SELECTORS
+pub const UNEXPECTED_SELECTORS : HResultError = HResultError::from_constant(0x8033805B); // ERROR_WSMAN_UNEXPECTED_SELECTORS
 
 /// The WS-Management service cannot process the request because a value for a selector is of the wrong type.
-pub const SELECTOR_TYPEMISMATCH : ErrorHResult = ErrorHResult::from_constant(0x8033805C); // ERROR_WSMAN_SELECTOR_TYPEMISMATCH
+pub const SELECTOR_TYPEMISMATCH : HResultError = HResultError::from_constant(0x8033805C); // ERROR_WSMAN_SELECTOR_TYPEMISMATCH
 
 /// The WS-Management service cannot process the request because a value for the selector is invalid.
-pub const INVALID_SELECTOR_VALUE : ErrorHResult = ErrorHResult::from_constant(0x8033805D); // ERROR_WSMAN_INVALID_SELECTOR_VALUE
+pub const INVALID_SELECTOR_VALUE : HResultError = HResultError::from_constant(0x8033805D); // ERROR_WSMAN_INVALID_SELECTOR_VALUE
 
 /// The WS-Management service cannot process the request because the selectors for the resource are ambiguous.
-pub const AMBIGUOUS_SELECTORS : ErrorHResult = ErrorHResult::from_constant(0x8033805E); // ERROR_WSMAN_AMBIGUOUS_SELECTORS
+pub const AMBIGUOUS_SELECTORS : HResultError = HResultError::from_constant(0x8033805E); // ERROR_WSMAN_AMBIGUOUS_SELECTORS
 
 /// The WS-Management service cannot process the request because the request contains duplicate selectors.
-pub const DUPLICATE_SELECTORS : ErrorHResult = ErrorHResult::from_constant(0x8033805F); // ERROR_WSMAN_DUPLICATE_SELECTORS
+pub const DUPLICATE_SELECTORS : HResultError = HResultError::from_constant(0x8033805F); // ERROR_WSMAN_DUPLICATE_SELECTORS
 
 /// The WS-Management service cannot process the request because the request contains invalid selectors for the target resource.
-pub const INVALID_TARGET_SELECTORS : ErrorHResult = ErrorHResult::from_constant(0x80338060); // ERROR_WSMAN_INVALID_TARGET_SELECTORS
+pub const INVALID_TARGET_SELECTORS : HResultError = HResultError::from_constant(0x80338060); // ERROR_WSMAN_INVALID_TARGET_SELECTORS
 
 /// The WS-Management service cannot process the request because the request contains an invalid URI for the target resource.
-pub const INVALID_TARGET_RESOURCEURI : ErrorHResult = ErrorHResult::from_constant(0x80338061); // ERROR_WSMAN_INVALID_TARGET_RESOURCEURI
+pub const INVALID_TARGET_RESOURCEURI : HResultError = HResultError::from_constant(0x80338061); // ERROR_WSMAN_INVALID_TARGET_RESOURCEURI
 
 /// The WS-Management service cannot process the request because the request contains an invalid target system.
-pub const INVALID_TARGET_SYSTEM : ErrorHResult = ErrorHResult::from_constant(0x80338062); // ERROR_WSMAN_INVALID_TARGET_SYSTEM
+pub const INVALID_TARGET_SYSTEM : HResultError = HResultError::from_constant(0x80338062); // ERROR_WSMAN_INVALID_TARGET_SYSTEM
 
 /// The WS-Management service cannot process a Create request because the target already exists.
-pub const TARGET_ALREADY_EXISTS : ErrorHResult = ErrorHResult::from_constant(0x80338063); // ERROR_WSMAN_TARGET_ALREADY_EXISTS
+pub const TARGET_ALREADY_EXISTS : HResultError = HResultError::from_constant(0x80338063); // ERROR_WSMAN_TARGET_ALREADY_EXISTS
 
 /// The WS-Management service does not support the mode of authorization.
-pub const AUTHORIZATION_MODE_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x80338064); // ERROR_WSMAN_AUTHORIZATION_MODE_NOT_SUPPORTED
+pub const AUTHORIZATION_MODE_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x80338064); // ERROR_WSMAN_AUTHORIZATION_MODE_NOT_SUPPORTED
 
 /// The client does not support acknowledgment.
-pub const ACK_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x80338065); // ERROR_WSMAN_ACK_NOT_SUPPORTED
+pub const ACK_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x80338065); // ERROR_WSMAN_ACK_NOT_SUPPORTED
 
 /// The data source does not support timeouts for the operation.
-pub const OPERATION_TIMEOUT_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x80338066); // ERROR_WSMAN_OPERATION_TIMEOUT_NOT_SUPPORTED
+pub const OPERATION_TIMEOUT_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x80338066); // ERROR_WSMAN_OPERATION_TIMEOUT_NOT_SUPPORTED
 
 /// The WS-Management service does not support the locale.
-pub const LOCALE_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x80338067); // ERROR_WSMAN_LOCALE_NOT_SUPPORTED
+pub const LOCALE_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x80338067); // ERROR_WSMAN_LOCALE_NOT_SUPPORTED
 
 /// The WS-Management service does not support the expiration time.
-pub const EXPIRATION_TIME_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x80338068); // ERROR_WSMAN_EXPIRATION_TIME_NOT_SUPPORTED
+pub const EXPIRATION_TIME_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x80338068); // ERROR_WSMAN_EXPIRATION_TIME_NOT_SUPPORTED
 
 /// The WS-Management service does not retry deliveries.
-pub const DELIVERY_RETRIES_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x80338069); // ERROR_WSMAN_DELIVERY_RETRIES_NOT_SUPPORTED
+pub const DELIVERY_RETRIES_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x80338069); // ERROR_WSMAN_DELIVERY_RETRIES_NOT_SUPPORTED
 
 /// The event source does not support heartbeats.
-pub const HEARTBEATS_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x8033806A); // ERROR_WSMAN_HEARTBEATS_NOT_SUPPORTED
+pub const HEARTBEATS_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x8033806A); // ERROR_WSMAN_HEARTBEATS_NOT_SUPPORTED
 
 /// The event source does not support bookmarks.
-pub const BOOKMARKS_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x8033806B); // ERROR_WSMAN_BOOKMARKS_NOT_SUPPORTED
+pub const BOOKMARKS_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x8033806B); // ERROR_WSMAN_BOOKMARKS_NOT_SUPPORTED
 
 /// The WS-Management service does not support the configuration for MaxItems.
-pub const MAXITEMS_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x8033806C); // ERROR_WSMAN_MAXITEMS_NOT_SUPPORTED
+pub const MAXITEMS_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x8033806C); // ERROR_WSMAN_MAXITEMS_NOT_SUPPORTED
 
 /// The WS-Management service does not support the configuration for MaxTime.
-pub const MAXTIME_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x8033806D); // ERROR_WSMAN_MAXTIME_NOT_SUPPORTED
+pub const MAXTIME_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x8033806D); // ERROR_WSMAN_MAXTIME_NOT_SUPPORTED
 
 /// The WS-Management service does not support the value in the configuration for MaxEnvelopeSize.
-pub const MAXENVELOPE_SIZE_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x8033806E); // ERROR_WSMAN_MAXENVELOPE_SIZE_NOT_SUPPORTED
+pub const MAXENVELOPE_SIZE_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x8033806E); // ERROR_WSMAN_MAXENVELOPE_SIZE_NOT_SUPPORTED
 
 /// The event source does not support the MaxEnvelopePolicy.
-pub const MAXENVELOPE_POLICY_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x8033806F); // ERROR_WSMAN_MAXENVELOPE_POLICY_NOT_SUPPORTED
+pub const MAXENVELOPE_POLICY_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x8033806F); // ERROR_WSMAN_MAXENVELOPE_POLICY_NOT_SUPPORTED
 
 /// The WS-Management service does not support unfiltered enumeration.
-pub const FILTERING_REQUIRED_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x80338070); // ERROR_WSMAN_FILTERING_REQUIRED_NOT_SUPPORTED
+pub const FILTERING_REQUIRED_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x80338070); // ERROR_WSMAN_FILTERING_REQUIRED_NOT_SUPPORTED
 
 /// The WS-Management service does not support insecure addresses.
-pub const INSECURE_ADDRESS_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x80338071); // ERROR_WSMAN_INSECURE_ADDRESS_NOT_SUPPORTED
+pub const INSECURE_ADDRESS_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x80338071); // ERROR_WSMAN_INSECURE_ADDRESS_NOT_SUPPORTED
 
 /// The WS-Management service does not support format mismatch.
-pub const FORMAT_MISMATCH_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x80338072); // ERROR_WSMAN_FORMAT_MISMATCH_NOT_SUPPORTED
+pub const FORMAT_MISMATCH_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x80338072); // ERROR_WSMAN_FORMAT_MISMATCH_NOT_SUPPORTED
 
 /// The WS-Management service does not support the format of the security token.
-pub const FORMAT_SECURITY_TOKEN_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x80338073); // ERROR_WSMAN_FORMAT_SECURITY_TOKEN_NOT_SUPPORTED
+pub const FORMAT_SECURITY_TOKEN_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x80338073); // ERROR_WSMAN_FORMAT_SECURITY_TOKEN_NOT_SUPPORTED
 
 /// The service returned a response that indicates that the method is unsupported.
-pub const BAD_METHOD : ErrorHResult = ErrorHResult::from_constant(0x80338074); // ERROR_WSMAN_BAD_METHOD
+pub const BAD_METHOD : HResultError = HResultError::from_constant(0x80338074); // ERROR_WSMAN_BAD_METHOD
 
 /// The WS-Management service does not support the specified media type.
-pub const UNSUPPORTED_MEDIA : ErrorHResult = ErrorHResult::from_constant(0x80338075); // ERROR_WSMAN_UNSUPPORTED_MEDIA
+pub const UNSUPPORTED_MEDIA : HResultError = HResultError::from_constant(0x80338075); // ERROR_WSMAN_UNSUPPORTED_MEDIA
 
 /// The WS-Management service does not support the addressing mode.
-pub const UNSUPPORTED_ADDRESSING_MODE : ErrorHResult = ErrorHResult::from_constant(0x80338076); // ERROR_WSMAN_UNSUPPORTED_ADDRESSING_MODE
+pub const UNSUPPORTED_ADDRESSING_MODE : HResultError = HResultError::from_constant(0x80338076); // ERROR_WSMAN_UNSUPPORTED_ADDRESSING_MODE
 
 /// The WS-Management service does not support fragment transfer.
-pub const FRAGMENT_TRANSFER_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x80338077); // ERROR_WSMAN_FRAGMENT_TRANSFER_NOT_SUPPORTED
+pub const FRAGMENT_TRANSFER_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x80338077); // ERROR_WSMAN_FRAGMENT_TRANSFER_NOT_SUPPORTED
 
 /// The client sent a request before the enumeration was initialized.
-pub const ENUMERATION_INITIALIZING : ErrorHResult = ErrorHResult::from_constant(0x80338078); // ERROR_WSMAN_ENUMERATION_INITIALIZING
+pub const ENUMERATION_INITIALIZING : HResultError = HResultError::from_constant(0x80338078); // ERROR_WSMAN_ENUMERATION_INITIALIZING
 
 /// The WS-Management service failed to locate the component that can process the request.
-pub const CONNECTOR_GET : ErrorHResult = ErrorHResult::from_constant(0x80338079); // ERROR_WSMAN_CONNECTOR_GET
+pub const CONNECTOR_GET : HResultError = HResultError::from_constant(0x80338079); // ERROR_WSMAN_CONNECTOR_GET
 
 /// A syntax error occurred in the query string for the resource URI.
-pub const URI_QUERY_STRING_SYNTAX_ERROR : ErrorHResult = ErrorHResult::from_constant(0x8033807A); // ERROR_WSMAN_URI_QUERY_STRING_SYNTAX_ERROR
+pub const URI_QUERY_STRING_SYNTAX_ERROR : HResultError = HResultError::from_constant(0x8033807A); // ERROR_WSMAN_URI_QUERY_STRING_SYNTAX_ERROR
 
 /// The MAC that is configured is not in the list of enabled DHCP adapters on the computer.
-pub const INEXISTENT_MAC_ADDRESS : ErrorHResult = ErrorHResult::from_constant(0x8033807B); // ERROR_WSMAN_INEXISTENT_MAC_ADDRESS
+pub const INEXISTENT_MAC_ADDRESS : HResultError = HResultError::from_constant(0x8033807B); // ERROR_WSMAN_INEXISTENT_MAC_ADDRESS
 
 /// The MAC address that is configured does not have any unicast addresses.
-pub const NO_UNICAST_ADDRESSES : ErrorHResult = ErrorHResult::from_constant(0x8033807C); // ERROR_WSMAN_NO_UNICAST_ADDRESSES
+pub const NO_UNICAST_ADDRESSES : HResultError = HResultError::from_constant(0x8033807C); // ERROR_WSMAN_NO_UNICAST_ADDRESSES
 
 /// The WS-Management service cannot find the dynamic IP address on the adapter with the configured MAC address.
-pub const NO_DHCP_ADDRESSES : ErrorHResult = ErrorHResult::from_constant(0x8033807D); // ERROR_WSMAN_NO_DHCP_ADDRESSES
+pub const NO_DHCP_ADDRESSES : HResultError = HResultError::from_constant(0x8033807D); // ERROR_WSMAN_NO_DHCP_ADDRESSES
 
 /// The WS-Management service cannot process the request because the envelope size in the request is too small.
-pub const MIN_ENVELOPE_SIZE : ErrorHResult = ErrorHResult::from_constant(0x8033807E); // ERROR_WSMAN_MIN_ENVELOPE_SIZE
+pub const MIN_ENVELOPE_SIZE : HResultError = HResultError::from_constant(0x8033807E); // ERROR_WSMAN_MIN_ENVELOPE_SIZE
 
 /// The WS-Management service cannot process the request. The EndPointReference contains more nested EndPointReferences
 /// than WS-Management supports.
-pub const EPR_NESTING_EXCEEDED : ErrorHResult = ErrorHResult::from_constant(0x8033807F); // ERROR_WSMAN_EPR_NESTING_EXCEEDED
+pub const EPR_NESTING_EXCEEDED : HResultError = HResultError::from_constant(0x8033807F); // ERROR_WSMAN_EPR_NESTING_EXCEEDED
 
 /// The WS-Management service cannot initialize the request.
-pub const REQUEST_INIT_ERROR : ErrorHResult = ErrorHResult::from_constant(0x80338080); // ERROR_WSMAN_REQUEST_INIT_ERROR
+pub const REQUEST_INIT_ERROR : HResultError = HResultError::from_constant(0x80338080); // ERROR_WSMAN_REQUEST_INIT_ERROR
 
 /// The WS-Management service cannot process the request because the timeout header in the request is invalid.
-pub const INVALID_TIMEOUT_HEADER : ErrorHResult = ErrorHResult::from_constant(0x80338081); // ERROR_WSMAN_INVALID_TIMEOUT_HEADER
+pub const INVALID_TIMEOUT_HEADER : HResultError = HResultError::from_constant(0x80338081); // ERROR_WSMAN_INVALID_TIMEOUT_HEADER
 
 /// The WS-Management service cannot find the certificate that was requested.
-pub const CERT_NOT_FOUND : ErrorHResult = ErrorHResult::from_constant(0x80338082); // ERROR_WSMAN_CERT_NOT_FOUND
+pub const CERT_NOT_FOUND : HResultError = HResultError::from_constant(0x80338082); // ERROR_WSMAN_CERT_NOT_FOUND
 
 /// The WS-Management service cannot process the request. The data source failed to return results for the request.
-pub const PLUGIN_FAILED : ErrorHResult = ErrorHResult::from_constant(0x80338083); // ERROR_WSMAN_PLUGIN_FAILED
+pub const PLUGIN_FAILED : HResultError = HResultError::from_constant(0x80338083); // ERROR_WSMAN_PLUGIN_FAILED
 
 /// The enumeration is invalid because previous Pull request failed.
-pub const ENUMERATION_INVALID : ErrorHResult = ErrorHResult::from_constant(0x80338084); // ERROR_WSMAN_ENUMERATION_INVALID
+pub const ENUMERATION_INVALID : HResultError = HResultError::from_constant(0x80338084); // ERROR_WSMAN_ENUMERATION_INVALID
 
 /// The WS-Management service cannot change a mutual configuration.
-pub const CONFIG_CANNOT_CHANGE_MUTUAL : ErrorHResult = ErrorHResult::from_constant(0x80338085); // ERROR_WSMAN_CONFIG_CANNOT_CHANGE_MUTUAL
+pub const CONFIG_CANNOT_CHANGE_MUTUAL : HResultError = HResultError::from_constant(0x80338085); // ERROR_WSMAN_CONFIG_CANNOT_CHANGE_MUTUAL
 
 /// The WS-Management service does not support the specified enumeration mode.
-pub const ENUMERATION_MODE_UNSUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x80338086); // ERROR_WSMAN_ENUMERATION_MODE_UNSUPPORTED
+pub const ENUMERATION_MODE_UNSUPPORTED : HResultError = HResultError::from_constant(0x80338086); // ERROR_WSMAN_ENUMERATION_MODE_UNSUPPORTED
 
 /// The WS-Management service cannot guarantee that all data is returned in the requested locale as some
 /// data sources may not be able to comply. Resend the remote request with locale as a hint (the SOAP
 /// header should have mustUnderstand="false")
-pub const MUSTUNDERSTAND_ON_LOCALE_UNSUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x80338087); // ERROR_WSMAN_MUSTUNDERSTAND_ON_LOCALE_UNSUPPORTED
+pub const MUSTUNDERSTAND_ON_LOCALE_UNSUPPORTED : HResultError = HResultError::from_constant(0x80338087); // ERROR_WSMAN_MUSTUNDERSTAND_ON_LOCALE_UNSUPPORTED
 
 /// The WSMan group policy configuration is corrupted.
-pub const POLICY_CORRUPTED : ErrorHResult = ErrorHResult::from_constant(0x80338088); // ERROR_WSMAN_POLICY_CORRUPTED
+pub const POLICY_CORRUPTED : HResultError = HResultError::from_constant(0x80338088); // ERROR_WSMAN_POLICY_CORRUPTED
 
 /// The listener address specified is invalid. The address can be specified in one of the following formats: \*, IP:<ip_address>, MAC:<mac_address>.
 /// Change the listener address and try the request again.
-pub const LISTENER_ADDRESS_INVALID : ErrorHResult = ErrorHResult::from_constant(0x80338089); // ERROR_WSMAN_LISTENER_ADDRESS_INVALID
+pub const LISTENER_ADDRESS_INVALID : HResultError = HResultError::from_constant(0x80338089); // ERROR_WSMAN_LISTENER_ADDRESS_INVALID
 
 /// Cannot change GPO controlled setting.
-pub const CONFIG_CANNOT_CHANGE_GPO_CONTROLLED_SETTING : ErrorHResult = ErrorHResult::from_constant(0x8033808A); // ERROR_WSMAN_CONFIG_CANNOT_CHANGE_GPO_CONTROLLED_SETTING
+pub const CONFIG_CANNOT_CHANGE_GPO_CONTROLLED_SETTING : HResultError = HResultError::from_constant(0x8033808A); // ERROR_WSMAN_CONFIG_CANNOT_CHANGE_GPO_CONTROLLED_SETTING
 
 /// The client is attempting to concurrently receive events from a single subscription session.This is not supported.
-pub const EVENTING_CONCURRENT_CLIENT_RECEIVE : ErrorHResult = ErrorHResult::from_constant(0x8033808B); // ERROR_WSMAN_EVENTING_CONCURRENT_CLIENT_RECEIVE
+pub const EVENTING_CONCURRENT_CLIENT_RECEIVE : HResultError = HResultError::from_constant(0x8033808B); // ERROR_WSMAN_EVENTING_CONCURRENT_CLIENT_RECEIVE
 
 /// The source is sending event batches faster than the subscriber can consume.
 /// This can happen if acknowledgments are not specified for the subscription and
 /// new events are arriving from the source before the client has consumed them.
-pub const EVENTING_FAST_SENDER : ErrorHResult = ErrorHResult::from_constant(0x8033808C); // ERROR_WSMAN_EVENTING_FAST_SENDER
+pub const EVENTING_FAST_SENDER : HResultError = HResultError::from_constant(0x8033808C); // ERROR_WSMAN_EVENTING_FAST_SENDER
 
 /// The source is sending events in a connection that did not match the security restrictions imposed by the client.
-pub const EVENTING_INSECURE_PUSHSUBSCRIPTION_CONNECTION : ErrorHResult = ErrorHResult::from_constant(0x8033808D); // ERROR_WSMAN_EVENTING_INSECURE_PUSHSUBSCRIPTION_CONNECTION
+pub const EVENTING_INSECURE_PUSHSUBSCRIPTION_CONNECTION : HResultError = HResultError::from_constant(0x8033808D); // ERROR_WSMAN_EVENTING_INSECURE_PUSHSUBSCRIPTION_CONNECTION
 
 /// The WS-Management client cannot process the request. The event source identity does not match the identity of the machine that the client subscribed to.
-pub const EVENTING_INVALID_EVENTSOURCE : ErrorHResult = ErrorHResult::from_constant(0x8033808E); // ERROR_WSMAN_EVENTING_INVALID_EVENTSOURCE
+pub const EVENTING_INVALID_EVENTSOURCE : HResultError = HResultError::from_constant(0x8033808E); // ERROR_WSMAN_EVENTING_INVALID_EVENTSOURCE
 
 /// The client could not start a valid listener to receive subscription events based on the specified input settings.
-pub const EVENTING_NOMATCHING_LISTENER : ErrorHResult = ErrorHResult::from_constant(0x8033808F); // ERROR_WSMAN_EVENTING_NOMATCHING_LISTENER
+pub const EVENTING_NOMATCHING_LISTENER : HResultError = HResultError::from_constant(0x8033808F); // ERROR_WSMAN_EVENTING_NOMATCHING_LISTENER
 
 /// The fragment path dialect is not supported for this resource.
-pub const FRAGMENT_DIALECT_REQUESTED_UNAVAILABLE : ErrorHResult = ErrorHResult::from_constant(0x80338090); // ERROR_WSMAN_FRAGMENT_DIALECT_REQUESTED_UNAVAILABLE
+pub const FRAGMENT_DIALECT_REQUESTED_UNAVAILABLE : HResultError = HResultError::from_constant(0x80338090); // ERROR_WSMAN_FRAGMENT_DIALECT_REQUESTED_UNAVAILABLE
 
 /// Cannot execute the Fragment-Level operation. The fragment path cannot be missing if the fragment dialect is specified.
-pub const MISSING_FRAGMENT_PATH : ErrorHResult = ErrorHResult::from_constant(0x80338091); // ERROR_WSMAN_MISSING_FRAGMENT_PATH
+pub const MISSING_FRAGMENT_PATH : HResultError = HResultError::from_constant(0x80338091); // ERROR_WSMAN_MISSING_FRAGMENT_PATH
 
 /// Cannot execute the Fragment-Level operation because of invalid value for the fragment dialect.
-pub const INVALID_FRAGMENT_DIALECT : ErrorHResult = ErrorHResult::from_constant(0x80338092); // ERROR_WSMAN_INVALID_FRAGMENT_DIALECT
+pub const INVALID_FRAGMENT_DIALECT : HResultError = HResultError::from_constant(0x80338092); // ERROR_WSMAN_INVALID_FRAGMENT_DIALECT
 
 /// Cannot execute the Fragment-Level operation because the fragment path is invalid. Check the syntax of the fragment path string.
 /// Also check the spelling and the case of the property names in the fragment path string: they have to match the spelling and the case of the resource properties.
-pub const INVALID_FRAGMENT_PATH : ErrorHResult = ErrorHResult::from_constant(0x80338093); // ERROR_WSMAN_INVALID_FRAGMENT_PATH
+pub const INVALID_FRAGMENT_PATH : HResultError = HResultError::from_constant(0x80338093); // ERROR_WSMAN_INVALID_FRAGMENT_PATH
 
 /// The specified batch parameter is incompatible with the specified event delivery mode. This can happen if batchSettings for a specific mode are
 /// passed for a different mode. For example, batchSettings like "MaxItems" and
 /// "MaxLatency" are not compatible with single event push mode or pull mode.
-pub const EVENTING_INCOMPATIBLE_BATCHPARAMS_AND_DELIVERYMODE : ErrorHResult = ErrorHResult::from_constant(0x80338094); // ERROR_WSMAN_EVENTING_INCOMPATIBLE_BATCHPARAMS_AND_DELIVERYMODE
+pub const EVENTING_INCOMPATIBLE_BATCHPARAMS_AND_DELIVERYMODE : HResultError = HResultError::from_constant(0x80338094); // ERROR_WSMAN_EVENTING_INCOMPATIBLE_BATCHPARAMS_AND_DELIVERYMODE
 
 /// The connectivity test from the push subscription source to the client failed. This can happen if the client machine initiating the push subscription
 /// is unreachable from the server machine where the event source is located. Possible reasons include firewall or some other network boundary.
 /// Modify subscription to use Pull based subscription.
-pub const EVENTING_LOOPBACK_TESTFAILED : ErrorHResult = ErrorHResult::from_constant(0x80338095); // ERROR_WSMAN_EVENTING_LOOPBACK_TESTFAILED
+pub const EVENTING_LOOPBACK_TESTFAILED : HResultError = HResultError::from_constant(0x80338095); // ERROR_WSMAN_EVENTING_LOOPBACK_TESTFAILED
 
 /// The subscribe packet had an EndTo element address that does not match the NotifyTo element address or it was invalid. For subscription the EndTo element
 /// need not be present in the subscription request. If it exists then it's address should match the address specified in NotifyTo element.
-pub const EVENTING_INVALID_ENDTO_ADDRESSS : ErrorHResult = ErrorHResult::from_constant(0x80338096); // ERROR_WSMAN_EVENTING_INVALID_ENDTO_ADDRESSS
+pub const EVENTING_INVALID_ENDTO_ADDRESSS : HResultError = HResultError::from_constant(0x80338096); // ERROR_WSMAN_EVENTING_INVALID_ENDTO_ADDRESSS
 
 /// The event source sent an event packet whose header could not be processed by the client. This can happen if it was malformed
 /// or if the header had a mustUnderstand attribute that could not be understood by the client.
-pub const EVENTING_INVALID_INCOMING_EVENT_PACKET_HEADER : ErrorHResult = ErrorHResult::from_constant(0x80338097); // ERROR_WSMAN_EVENTING_INVALID_INCOMING_EVENT_PACKET_HEADER
+pub const EVENTING_INVALID_INCOMING_EVENT_PACKET_HEADER : HResultError = HResultError::from_constant(0x80338097); // ERROR_WSMAN_EVENTING_INVALID_INCOMING_EVENT_PACKET_HEADER
 
 /// An operation is being attempted on a session that is being closed.This can happen if the session that is being used is also being closed
 /// by another thread.
-pub const SESSION_ALREADY_CLOSED : ErrorHResult = ErrorHResult::from_constant(0x80338098); // ERROR_WSMAN_SESSION_ALREADY_CLOSED
+pub const SESSION_ALREADY_CLOSED : HResultError = HResultError::from_constant(0x80338098); // ERROR_WSMAN_SESSION_ALREADY_CLOSED
 
 /// The listener on which the subscription session was established is no longer valid. This can happen if the WSMAN service listener configuration has been changed
 /// and a subscription was already active and using one of the configurations that was deleted.
-pub const SUBSCRIPTION_LISTENER_NOLONGERVALID : ErrorHResult = ErrorHResult::from_constant(0x80338099); // ERROR_WSMAN_SUBSCRIPTION_LISTENER_NOLONGERVALID
+pub const SUBSCRIPTION_LISTENER_NOLONGERVALID : HResultError = HResultError::from_constant(0x80338099); // ERROR_WSMAN_SUBSCRIPTION_LISTENER_NOLONGERVALID
 
 /// The system failed to load the plugin.
-pub const PROVIDER_LOAD_FAILED : ErrorHResult = ErrorHResult::from_constant(0x8033809A); // ERROR_WSMAN_PROVIDER_LOAD_FAILED
+pub const PROVIDER_LOAD_FAILED : HResultError = HResultError::from_constant(0x8033809A); // ERROR_WSMAN_PROVIDER_LOAD_FAILED
 
 /// The WS-Management service on the remote machine with which this subscription had been set up has requested that the subscription be closed.
 /// This can happen if the WS-Management service on the remote machine was being shutdown.
 /// To correct this problem restart the WS-Management service on the remote machine and re-create the subscription.
-pub const EVENTING_SUBSCRIPTIONCLOSED_BYREMOTESERVICE : ErrorHResult = ErrorHResult::from_constant(0x8033809B); // ERROR_WSMAN_EVENTING_SUBSCRIPTIONCLOSED_BYREMOTESERVICE
+pub const EVENTING_SUBSCRIPTIONCLOSED_BYREMOTESERVICE : HResultError = HResultError::from_constant(0x8033809B); // ERROR_WSMAN_EVENTING_SUBSCRIPTIONCLOSED_BYREMOTESERVICE
 
 /// The event source was unable to deliver events to the client.This can happen due to network issues preventing the source from connecting
 /// to the client.
-pub const EVENTING_DELIVERYFAILED_FROMSOURCE : ErrorHResult = ErrorHResult::from_constant(0x8033809C); // ERROR_WSMAN_EVENTING_DELIVERYFAILED_FROMSOURCE
+pub const EVENTING_DELIVERYFAILED_FROMSOURCE : HResultError = HResultError::from_constant(0x8033809C); // ERROR_WSMAN_EVENTING_DELIVERYFAILED_FROMSOURCE
 
 /// An unknown security error occurred.
-pub const SECURITY_UNMAPPED : ErrorHResult = ErrorHResult::from_constant(0x8033809D); // ERROR_WSMAN_SECURITY_UNMAPPED
+pub const SECURITY_UNMAPPED : HResultError = HResultError::from_constant(0x8033809D); // ERROR_WSMAN_SECURITY_UNMAPPED
 
 /// The event source cancelled the subscription session.
-pub const EVENTING_SUBSCRIPTION_CANCELLED_BYSOURCE : ErrorHResult = ErrorHResult::from_constant(0x8033809E); // ERROR_WSMAN_EVENTING_SUBSCRIPTION_CANCELLED_BYSOURCE
+pub const EVENTING_SUBSCRIPTION_CANCELLED_BYSOURCE : HResultError = HResultError::from_constant(0x8033809E); // ERROR_WSMAN_EVENTING_SUBSCRIPTION_CANCELLED_BYSOURCE
 
 /// TrustedHosts list contains an invalid hostname or hostname pattern.
-pub const INVALID_HOSTNAME_PATTERN : ErrorHResult = ErrorHResult::from_constant(0x8033809F); // ERROR_WSMAN_INVALID_HOSTNAME_PATTERN
+pub const INVALID_HOSTNAME_PATTERN : HResultError = HResultError::from_constant(0x8033809F); // ERROR_WSMAN_INVALID_HOSTNAME_PATTERN
 
 /// The subscribe packet does not have NotifyTo element in the delivery section.
-pub const EVENTING_MISSING_NOTIFYTO : ErrorHResult = ErrorHResult::from_constant(0x803380A0); // ERROR_WSMAN_EVENTING_MISSING_NOTIFYTO
+pub const EVENTING_MISSING_NOTIFYTO : HResultError = HResultError::from_constant(0x803380A0); // ERROR_WSMAN_EVENTING_MISSING_NOTIFYTO
 
 /// The subscribe packet does not have Address element in the NotifyTo section.
-pub const EVENTING_MISSING_NOTIFYTO_ADDRESSS : ErrorHResult = ErrorHResult::from_constant(0x803380A1); // ERROR_WSMAN_EVENTING_MISSING_NOTIFYTO_ADDRESSS
+pub const EVENTING_MISSING_NOTIFYTO_ADDRESSS : HResultError = HResultError::from_constant(0x803380A1); // ERROR_WSMAN_EVENTING_MISSING_NOTIFYTO_ADDRESSS
 
 /// The subscribe packet contains invalid Address in the NotifyTo section.
-pub const EVENTING_INVALID_NOTIFYTO_ADDRESSS : ErrorHResult = ErrorHResult::from_constant(0x803380A2); // ERROR_WSMAN_EVENTING_INVALID_NOTIFYTO_ADDRESSS
+pub const EVENTING_INVALID_NOTIFYTO_ADDRESSS : HResultError = HResultError::from_constant(0x803380A2); // ERROR_WSMAN_EVENTING_INVALID_NOTIFYTO_ADDRESSS
 
 /// The subscribe packet contains invalid Locale value in the delivery section.
-pub const EVENTING_INVALID_LOCALE_IN_DELIVERY : ErrorHResult = ErrorHResult::from_constant(0x803380A3); // ERROR_WSMAN_EVENTING_INVALID_LOCALE_IN_DELIVERY
+pub const EVENTING_INVALID_LOCALE_IN_DELIVERY : HResultError = HResultError::from_constant(0x803380A3); // ERROR_WSMAN_EVENTING_INVALID_LOCALE_IN_DELIVERY
 
 /// The subscribe packet contains invalid heartbeat value.
-pub const EVENTING_INVALID_HEARTBEAT : ErrorHResult = ErrorHResult::from_constant(0x803380A4); // ERROR_WSMAN_EVENTING_INVALID_HEARTBEAT
+pub const EVENTING_INVALID_HEARTBEAT : HResultError = HResultError::from_constant(0x803380A4); // ERROR_WSMAN_EVENTING_INVALID_HEARTBEAT
 
 /// The WS-Management service cannot process the request. This request is valid only when the -remote option is specified.
-pub const MACHINE_OPTION_REQUIRED : ErrorHResult = ErrorHResult::from_constant(0x803380A5); // ERROR_WSMAN_MACHINE_OPTION_REQUIRED
+pub const MACHINE_OPTION_REQUIRED : HResultError = HResultError::from_constant(0x803380A5); // ERROR_WSMAN_MACHINE_OPTION_REQUIRED
 
 /// The WS-Management service does not support the options feature for the specified resource. Remove the options from the request and retry.
-pub const UNSUPPORTED_FEATURE_OPTIONS : ErrorHResult = ErrorHResult::from_constant(0x803380A6); // ERROR_WSMAN_UNSUPPORTED_FEATURE_OPTIONS
+pub const UNSUPPORTED_FEATURE_OPTIONS : HResultError = HResultError::from_constant(0x803380A6); // ERROR_WSMAN_UNSUPPORTED_FEATURE_OPTIONS
 
 /// The subscribe packet contains batch size value which is smaller than supported value.
-pub const BATCHSIZE_TOO_SMALL : ErrorHResult = ErrorHResult::from_constant(0x803380A7); // ERROR_WSMAN_BATCHSIZE_TOO_SMALL
+pub const BATCHSIZE_TOO_SMALL : HResultError = HResultError::from_constant(0x803380A7); // ERROR_WSMAN_BATCHSIZE_TOO_SMALL
 
 /// The WS-Management service cannot process the subscribe request. The delivery mode is either invalid or missing.
-pub const EVENTING_DELIVERY_MODE_REQUESTED_INVALID : ErrorHResult = ErrorHResult::from_constant(0x803380A8); // ERROR_WSMAN_EVENTING_DELIVERY_MODE_REQUESTED_INVALID
+pub const EVENTING_DELIVERY_MODE_REQUESTED_INVALID : HResultError = HResultError::from_constant(0x803380A8); // ERROR_WSMAN_EVENTING_DELIVERY_MODE_REQUESTED_INVALID
 
 /// The WS-Management service cannot process the request. The provider method was not found.
-pub const PROVSYS_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x803380A9); // ERROR_WSMAN_PROVSYS_NOT_SUPPORTED
+pub const PROVSYS_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x803380A9); // ERROR_WSMAN_PROVSYS_NOT_SUPPORTED
 
 /// The WinRM client could not create a push subscription because there are no listeners configured that match the specified hostname and transport, or because there is no enabled firewall exception on the port used by the selected listener.
 /// Change the hostname and transport, create an appropriate firewall exception, or run winrm quickconfig.
-pub const PUSH_SUBSCRIPTION_CONFIG_INVALID : ErrorHResult = ErrorHResult::from_constant(0x803380AA); // ERROR_WSMAN_PUSH_SUBSCRIPTION_CONFIG_INVALID
+pub const PUSH_SUBSCRIPTION_CONFIG_INVALID : HResultError = HResultError::from_constant(0x803380AA); // ERROR_WSMAN_PUSH_SUBSCRIPTION_CONFIG_INVALID
 
 /// The WinRM client could not process the request because credentials were specified along with the 'no authentication' flag.
 /// No user name, password or client certificate should be specified with the 'no authentication' option.
-pub const CREDS_PASSED_WITH_NO_AUTH_FLAG : ErrorHResult = ErrorHResult::from_constant(0x803380AB); // ERROR_WSMAN_CREDS_PASSED_WITH_NO_AUTH_FLAG
+pub const CREDS_PASSED_WITH_NO_AUTH_FLAG : HResultError = HResultError::from_constant(0x803380AB); // ERROR_WSMAN_CREDS_PASSED_WITH_NO_AUTH_FLAG
 
 /// The WinRM client cannot process the request. An invalid flag was specified for this request.
 /// Remove or change the invalid flag and try the request again.
-pub const CLIENT_INVALID_FLAG : ErrorHResult = ErrorHResult::from_constant(0x803380AC); // ERROR_WSMAN_CLIENT_INVALID_FLAG
+pub const CLIENT_INVALID_FLAG : HResultError = HResultError::from_constant(0x803380AC); // ERROR_WSMAN_CLIENT_INVALID_FLAG
 
 /// The WinRM client cannot process the request. The request must specify only one authentication mechanism.
 /// If the No Authentication flag is set, no authentication mechanism should be specified.
 /// Change the request to specify only one authentication mechanism or 'no authentication' and try again.
-pub const CLIENT_MULTIPLE_AUTH_FLAGS : ErrorHResult = ErrorHResult::from_constant(0x803380AD); // ERROR_WSMAN_CLIENT_MULTIPLE_AUTH_FLAGS
+pub const CLIENT_MULTIPLE_AUTH_FLAGS : HResultError = HResultError::from_constant(0x803380AD); // ERROR_WSMAN_CLIENT_MULTIPLE_AUTH_FLAGS
 
 /// The WinRM client cannot process the request. The SPN Server Port can only be used when the authentication mechanism is Negotiate or Kerberos.
 /// Remove the SPN Server Port or change the authentication mechanism and try the request again.
-pub const CLIENT_SPN_WRONG_AUTH : ErrorHResult = ErrorHResult::from_constant(0x803380AE); // ERROR_WSMAN_CLIENT_SPN_WRONG_AUTH
+pub const CLIENT_SPN_WRONG_AUTH : HResultError = HResultError::from_constant(0x803380AE); // ERROR_WSMAN_CLIENT_SPN_WRONG_AUTH
 
 /// The WinRM client cannot process the request. The request must not include credentials when using a smart card or default certificate.
 /// Remove the credentials or change the authentication mechanism and try the request again.
-pub const CLIENT_CERT_UNNEEDED_CREDS : ErrorHResult = ErrorHResult::from_constant(0x803380AF); // ERROR_WSMAN_CLIENT_CERT_UNNEEDED_CREDS
+pub const CLIENT_CERT_UNNEEDED_CREDS : HResultError = HResultError::from_constant(0x803380AF); // ERROR_WSMAN_CLIENT_CERT_UNNEEDED_CREDS
 
 /// The WinRM client cannot process the request. Requests must include user name and password when Basic or Digest authentication mechanism is used.
 /// Add the user name and password or change the authentication mechanism and try the request again.
-pub const CLIENT_USERNAME_PASSWORD_NEEDED : ErrorHResult = ErrorHResult::from_constant(0x803380B0); // ERROR_WSMAN_CLIENT_USERNAME_PASSWORD_NEEDED
+pub const CLIENT_USERNAME_PASSWORD_NEEDED : HResultError = HResultError::from_constant(0x803380B0); // ERROR_WSMAN_CLIENT_USERNAME_PASSWORD_NEEDED
 
 /// The WinRM client cannot process the request. Requests must not include user name and password when a certificate is used for authentication.
 /// Remove the user name and password or change the authentication mechanism and try the request again.
-pub const CLIENT_CERT_UNNEEDED_USERNAME : ErrorHResult = ErrorHResult::from_constant(0x803380B1); // ERROR_WSMAN_CLIENT_CERT_UNNEEDED_USERNAME
+pub const CLIENT_CERT_UNNEEDED_USERNAME : HResultError = HResultError::from_constant(0x803380B1); // ERROR_WSMAN_CLIENT_CERT_UNNEEDED_USERNAME
 
 /// The WinRM client cannot process the request. Requests must include credentials if they specify the following flag: WSManFlagCredUsernamePassword.
 /// Add the credentials or remove the WSManFlagCredUsernamePassword flag and try the request again.
-pub const CLIENT_CREDENTIALS_NEEDED : ErrorHResult = ErrorHResult::from_constant(0x803380B2); // ERROR_WSMAN_CLIENT_CREDENTIALS_NEEDED
+pub const CLIENT_CREDENTIALS_NEEDED : HResultError = HResultError::from_constant(0x803380B2); // ERROR_WSMAN_CLIENT_CREDENTIALS_NEEDED
 
 /// The WinRM client cannot process the request. Requests with credentials must include the following flag: WSManFlagCredUsernamePassword.
 /// Add the flag or remove the credentials and try the request again.
-pub const CLIENT_CREDENTIALS_FLAG_NEEDED : ErrorHResult = ErrorHResult::from_constant(0x803380B3); // ERROR_WSMAN_CLIENT_CREDENTIALS_FLAG_NEEDED
+pub const CLIENT_CREDENTIALS_FLAG_NEEDED : HResultError = HResultError::from_constant(0x803380B3); // ERROR_WSMAN_CLIENT_CREDENTIALS_FLAG_NEEDED
 
 /// The WinRM client cannot process the request. Requests must include the certificate thumbprint when a certificate is used for authentication.
 /// Change the request to include the certificate thumbprint and try again.
-pub const CLIENT_CERT_NEEDED : ErrorHResult = ErrorHResult::from_constant(0x803380B4); // ERROR_WSMAN_CLIENT_CERT_NEEDED
+pub const CLIENT_CERT_NEEDED : HResultError = HResultError::from_constant(0x803380B4); // ERROR_WSMAN_CLIENT_CERT_NEEDED
 
 /// The WinRM client cannot process the request. Requests must include the type of certificate to use for authentication.
 /// Change the request to include the type of the certificate and try again.
-pub const CLIENT_CERT_UNKNOWN_TYPE : ErrorHResult = ErrorHResult::from_constant(0x803380B5); // ERROR_WSMAN_CLIENT_CERT_UNKNOWN_TYPE
+pub const CLIENT_CERT_UNKNOWN_TYPE : HResultError = HResultError::from_constant(0x803380B5); // ERROR_WSMAN_CLIENT_CERT_UNKNOWN_TYPE
 
 /// The WinRM client cannot process the request. Requests must include the location (machine or user certificate store) of the certificate used for authentication.
 /// Change the request to include the location of the certificate and try again.
-pub const CLIENT_CERT_UNKNOWN_LOCATION : ErrorHResult = ErrorHResult::from_constant(0x803380B6); // ERROR_WSMAN_CLIENT_CERT_UNKNOWN_LOCATION
+pub const CLIENT_CERT_UNKNOWN_LOCATION : HResultError = HResultError::from_constant(0x803380B6); // ERROR_WSMAN_CLIENT_CERT_UNKNOWN_LOCATION
 
 /// The WinRM client cannot process the request. The certificate structure was incomplete.
 /// Change the certificate structure and try the request again.
-pub const CLIENT_INVALID_CERT : ErrorHResult = ErrorHResult::from_constant(0x803380B7); // ERROR_WSMAN_CLIENT_INVALID_CERT
+pub const CLIENT_INVALID_CERT : HResultError = HResultError::from_constant(0x803380B7); // ERROR_WSMAN_CLIENT_INVALID_CERT
 
 /// The WinRM client cannot process the request. Credentials must not be provided for local requests.
 /// Remove the credentials and try the request again.
-pub const CLIENT_LOCAL_INVALID_CREDS : ErrorHResult = ErrorHResult::from_constant(0x803380B8); // ERROR_WSMAN_CLIENT_LOCAL_INVALID_CREDS
+pub const CLIENT_LOCAL_INVALID_CREDS : HResultError = HResultError::from_constant(0x803380B8); // ERROR_WSMAN_CLIENT_LOCAL_INVALID_CREDS
 
 /// The WinRM client cannot process the request. Connection options must not be provided for local requests.
 /// Remove the connection options and try the request again.
-pub const CLIENT_LOCAL_INVALID_CONNECTION_OPTIONS : ErrorHResult = ErrorHResult::from_constant(0x803380B9); // ERROR_WSMAN_CLIENT_LOCAL_INVALID_CONNECTION_OPTIONS
+pub const CLIENT_LOCAL_INVALID_CONNECTION_OPTIONS : HResultError = HResultError::from_constant(0x803380B9); // ERROR_WSMAN_CLIENT_LOCAL_INVALID_CONNECTION_OPTIONS
 
 /// The WinRM client cannot process the request. One of the parameters required for the WSManCreateSession function is null or zero.
 /// Change the request to include the missing parameter and try again.
-pub const CLIENT_CREATESESSION_NULL_PARAM : ErrorHResult = ErrorHResult::from_constant(0x803380BA); // ERROR_WSMAN_CLIENT_CREATESESSION_NULL_PARAM
+pub const CLIENT_CREATESESSION_NULL_PARAM : HResultError = HResultError::from_constant(0x803380BA); // ERROR_WSMAN_CLIENT_CREATESESSION_NULL_PARAM
 
 /// The WinRM client cannot process the request. One of the parameters required for the WSManEnumerate function is null or zero.
 /// Change the request to include the missing parameter and try again.
-pub const CLIENT_ENUMERATE_NULL_PARAM : ErrorHResult = ErrorHResult::from_constant(0x803380BB); // ERROR_WSMAN_CLIENT_ENUMERATE_NULL_PARAM
+pub const CLIENT_ENUMERATE_NULL_PARAM : HResultError = HResultError::from_constant(0x803380BB); // ERROR_WSMAN_CLIENT_ENUMERATE_NULL_PARAM
 
 /// The WinRM client cannot process the request. One of the parameters required for the WSManSubscribe function is null or zero.
 /// Change the request to include the missing parameter and try again.
-pub const CLIENT_SUBSCRIBE_NULL_PARAM : ErrorHResult = ErrorHResult::from_constant(0x803380BC); // ERROR_WSMAN_CLIENT_SUBSCRIBE_NULL_PARAM
+pub const CLIENT_SUBSCRIBE_NULL_PARAM : HResultError = HResultError::from_constant(0x803380BC); // ERROR_WSMAN_CLIENT_SUBSCRIBE_NULL_PARAM
 
 /// The WinRM client cannot process the request. The parameter that should contain the result of the request is null.
 /// Change the request to include the missing parameter and try again.
-pub const CLIENT_NULL_RESULT_PARAM : ErrorHResult = ErrorHResult::from_constant(0x803380BD); // ERROR_WSMAN_CLIENT_NULL_RESULT_PARAM
+pub const CLIENT_NULL_RESULT_PARAM : HResultError = HResultError::from_constant(0x803380BD); // ERROR_WSMAN_CLIENT_NULL_RESULT_PARAM
 
 /// The WinRM client cannot process the request. The request is missing the session or enumeration handle.
 /// Change the request to include the missing parameter and try again.
-pub const CLIENT_NO_HANDLE : ErrorHResult = ErrorHResult::from_constant(0x803380BE); // ERROR_WSMAN_CLIENT_NO_HANDLE
+pub const CLIENT_NO_HANDLE : HResultError = HResultError::from_constant(0x803380BE); // ERROR_WSMAN_CLIENT_NO_HANDLE
 
 /// The WinRM client cannot process the request. The resource URI must not be "" (blank or empty string) or NULL.
 /// Change the resource URI and try the request again.
-pub const CLIENT_BLANK_URI : ErrorHResult = ErrorHResult::from_constant(0x803380BF); // ERROR_WSMAN_CLIENT_BLANK_URI
+pub const CLIENT_BLANK_URI : HResultError = HResultError::from_constant(0x803380BF); // ERROR_WSMAN_CLIENT_BLANK_URI
 
 /// The WinRM client cannot process the request. The resource locator was invalid.
 /// Change the resource locator and try the request again.
-pub const CLIENT_INVALID_RESOURCE_LOCATOR : ErrorHResult = ErrorHResult::from_constant(0x803380C0); // ERROR_WSMAN_CLIENT_INVALID_RESOURCE_LOCATOR
+pub const CLIENT_INVALID_RESOURCE_LOCATOR : HResultError = HResultError::from_constant(0x803380C0); // ERROR_WSMAN_CLIENT_INVALID_RESOURCE_LOCATOR
 
 /// The WinRM client cannot process the request. The input XML must not be "" (blank or empty string) or NULL.
 /// Change the input XML and try the request again.
-pub const CLIENT_BLANK_INPUT_XML : ErrorHResult = ErrorHResult::from_constant(0x803380C1); // ERROR_WSMAN_CLIENT_BLANK_INPUT_XML
+pub const CLIENT_BLANK_INPUT_XML : HResultError = HResultError::from_constant(0x803380C1); // ERROR_WSMAN_CLIENT_BLANK_INPUT_XML
 
 /// The WinRM client cannot process the request. The maximum number of elements to be retrieved in a batch is too small.
 /// Change the value for the maximum number of elements in a batch and try the request again.
-pub const CLIENT_BATCH_ITEMS_TOO_SMALL : ErrorHResult = ErrorHResult::from_constant(0x803380C2); // ERROR_WSMAN_CLIENT_BATCH_ITEMS_TOO_SMALL
+pub const CLIENT_BATCH_ITEMS_TOO_SMALL : HResultError = HResultError::from_constant(0x803380C2); // ERROR_WSMAN_CLIENT_BATCH_ITEMS_TOO_SMALL
 
 /// The WinRM client cannot process the request. The maximum number of characters to be retrieved in a batch is too small.
 /// Change the value for the maximum number of characters in a batch and try the request again.
-pub const CLIENT_MAX_CHARS_TOO_SMALL : ErrorHResult = ErrorHResult::from_constant(0x803380C3); // ERROR_WSMAN_CLIENT_MAX_CHARS_TOO_SMALL
+pub const CLIENT_MAX_CHARS_TOO_SMALL : HResultError = HResultError::from_constant(0x803380C3); // ERROR_WSMAN_CLIENT_MAX_CHARS_TOO_SMALL
 
 /// The WinRM client cannot process the request. The action URI must not be "" (blank or empty string) or NULL.
 /// Change the action URI and try the request again.
-pub const CLIENT_BLANK_ACTION_URI : ErrorHResult = ErrorHResult::from_constant(0x803380C4); // ERROR_WSMAN_CLIENT_BLANK_ACTION_URI
+pub const CLIENT_BLANK_ACTION_URI : HResultError = HResultError::from_constant(0x803380C4); // ERROR_WSMAN_CLIENT_BLANK_ACTION_URI
 
 /// The WinRM client cannot process the request. The heartbeat interval must be greater than 0.
 /// Change the heartbeat interval and try the request again.
-pub const CLIENT_ZERO_HEARTBEAT : ErrorHResult = ErrorHResult::from_constant(0x803380C5); // ERROR_WSMAN_CLIENT_ZERO_HEARTBEAT
+pub const CLIENT_ZERO_HEARTBEAT : HResultError = HResultError::from_constant(0x803380C5); // ERROR_WSMAN_CLIENT_ZERO_HEARTBEAT
 
 /// The WinRM client cannot process the request. The request must contain one and only one delivery mode.
 /// Change the request to contain only one delivery mode and try again.
-pub const CLIENT_MULTIPLE_DELIVERY_MODES : ErrorHResult = ErrorHResult::from_constant(0x803380C6); // ERROR_WSMAN_CLIENT_MULTIPLE_DELIVERY_MODES
+pub const CLIENT_MULTIPLE_DELIVERY_MODES : HResultError = HResultError::from_constant(0x803380C6); // ERROR_WSMAN_CLIENT_MULTIPLE_DELIVERY_MODES
 
 /// The WinRM client cannot process the request. The request contained multiple settings for the policy regarding the maximum envelope size.
 /// Change the request to contain only one setting for the policy and try again.
-pub const CLIENT_MULTIPLE_ENVELOPE_POLICIES : ErrorHResult = ErrorHResult::from_constant(0x803380C7); // ERROR_WSMAN_CLIENT_MULTIPLE_ENVELOPE_POLICIES
+pub const CLIENT_MULTIPLE_ENVELOPE_POLICIES : HResultError = HResultError::from_constant(0x803380C7); // ERROR_WSMAN_CLIENT_MULTIPLE_ENVELOPE_POLICIES
 
 /// The WinRM client cannot process the request. The request contained an expiration time, but did not specify if it was absolute or relative.
 /// Change the request to specify the type of the expiration time (absolute or relative) and try again.
-pub const CLIENT_UNKNOWN_EXPIRATION_TYPE : ErrorHResult = ErrorHResult::from_constant(0x803380C8); // ERROR_WSMAN_CLIENT_UNKNOWN_EXPIRATION_TYPE
+pub const CLIENT_UNKNOWN_EXPIRATION_TYPE : HResultError = HResultError::from_constant(0x803380C8); // ERROR_WSMAN_CLIENT_UNKNOWN_EXPIRATION_TYPE
 
 /// The WinRM client cannot process the request. The request specified the type of the expiration time (absolute or relative) but it did not contain an expiration time.
 /// Change the request to include the expiration time and try again.
-pub const CLIENT_MISSING_EXPIRATION : ErrorHResult = ErrorHResult::from_constant(0x803380C9); // ERROR_WSMAN_CLIENT_MISSING_EXPIRATION
+pub const CLIENT_MISSING_EXPIRATION : HResultError = HResultError::from_constant(0x803380C9); // ERROR_WSMAN_CLIENT_MISSING_EXPIRATION
 
 /// The WinRM client cannot process the request. The pull subscription request contained flags related to a push subscription.
 /// Change the flags and try the request again.
-pub const CLIENT_PULL_INVALID_FLAGS : ErrorHResult = ErrorHResult::from_constant(0x803380CA); // ERROR_WSMAN_CLIENT_PULL_INVALID_FLAGS
+pub const CLIENT_PULL_INVALID_FLAGS : HResultError = HResultError::from_constant(0x803380CA); // ERROR_WSMAN_CLIENT_PULL_INVALID_FLAGS
 
 /// The WinRM client cannot process the request because the push subscription request contained an unsupported delivery transport. HTTP and HTTPS are the only currently supported transports.
 /// Change the delivery transport and try the request again.
-pub const CLIENT_PUSH_UNSUPPORTED_TRANSPORT : ErrorHResult = ErrorHResult::from_constant(0x803380CB); // ERROR_WSMAN_CLIENT_PUSH_UNSUPPORTED_TRANSPORT
+pub const CLIENT_PUSH_UNSUPPORTED_TRANSPORT : HResultError = HResultError::from_constant(0x803380CB); // ERROR_WSMAN_CLIENT_PUSH_UNSUPPORTED_TRANSPORT
 
 /// The WinRM client cannot process the request. The delivery address for push subscriptions was too long.
 /// Change the delivery address and try the request again.
-pub const CLIENT_PUSH_HOST_TOO_LONG : ErrorHResult = ErrorHResult::from_constant(0x803380CC); // ERROR_WSMAN_CLIENT_PUSH_HOST_TOO_LONG
+pub const CLIENT_PUSH_HOST_TOO_LONG : HResultError = HResultError::from_constant(0x803380CC); // ERROR_WSMAN_CLIENT_PUSH_HOST_TOO_LONG
 
 /// The WinRM client cannot process the request. The request contained the compression option but contained an unrecognized value.
 /// Change the value for the compression option and try the request again.
-pub const CLIENT_COMPRESSION_INVALID_OPTION : ErrorHResult = ErrorHResult::from_constant(0x803380CD); // ERROR_WSMAN_CLIENT_COMPRESSION_INVALID_OPTION
+pub const CLIENT_COMPRESSION_INVALID_OPTION : HResultError = HResultError::from_constant(0x803380CD); // ERROR_WSMAN_CLIENT_COMPRESSION_INVALID_OPTION
 
 /// The WinRM client cannot process the request. One of the parameters required for the WSManDeliverEndSubscriptionNotification function is null or zero.
 /// Change the request to include the missing parameter and try again.
-pub const CLIENT_DELIVERENDSUBSCRIPTION_NULL_PARAM : ErrorHResult = ErrorHResult::from_constant(0x803380CE); // ERROR_WSMAN_CLIENT_DELIVERENDSUBSCRIPTION_NULL_PARAM
+pub const CLIENT_DELIVERENDSUBSCRIPTION_NULL_PARAM : HResultError = HResultError::from_constant(0x803380CE); // ERROR_WSMAN_CLIENT_DELIVERENDSUBSCRIPTION_NULL_PARAM
 
 /// The WinRM client cannot process the request. One of the parameters required for the WSManDeliverEvents function is null or zero.
 /// Change the request to include the missing parameter and try again.
-pub const CLIENT_DELIVEREVENTS_NULL_PARAM : ErrorHResult = ErrorHResult::from_constant(0x803380CF); // ERROR_WSMAN_CLIENT_DELIVEREVENTS_NULL_PARAM
+pub const CLIENT_DELIVEREVENTS_NULL_PARAM : HResultError = HResultError::from_constant(0x803380CF); // ERROR_WSMAN_CLIENT_DELIVEREVENTS_NULL_PARAM
 
 /// The WinRM client cannot process the request. One of the parameters required for the WSManGetBookmark function is null or zero.
 /// Change the request to include the missing parameter and try again.
-pub const CLIENT_GETBOOKMARK_NULL_PARAM : ErrorHResult = ErrorHResult::from_constant(0x803380D0); // ERROR_WSMAN_CLIENT_GETBOOKMARK_NULL_PARAM
+pub const CLIENT_GETBOOKMARK_NULL_PARAM : HResultError = HResultError::from_constant(0x803380D0); // ERROR_WSMAN_CLIENT_GETBOOKMARK_NULL_PARAM
 
 /// The WinRM client cannot process the request. One of the parameters required for the WSManDecodeObject function is null or zero.
 /// Change the request to include the missing parameter and try again.
-pub const CLIENT_DECODEOBJECT_NULL_PARAM : ErrorHResult = ErrorHResult::from_constant(0x803380D1); // ERROR_WSMAN_CLIENT_DECODEOBJECT_NULL_PARAM
+pub const CLIENT_DECODEOBJECT_NULL_PARAM : HResultError = HResultError::from_constant(0x803380D1); // ERROR_WSMAN_CLIENT_DECODEOBJECT_NULL_PARAM
 
 /// The WinRM client cannot process the request. One of the parameters required for the WSManEncodeObject(Ex) function is null or zero.
 /// Change the request to include the missing parameter and try again.
-pub const CLIENT_ENCODEOBJECT_NULL_PARAM : ErrorHResult = ErrorHResult::from_constant(0x803380D2); // ERROR_WSMAN_CLIENT_ENCODEOBJECT_NULL_PARAM
+pub const CLIENT_ENCODEOBJECT_NULL_PARAM : HResultError = HResultError::from_constant(0x803380D2); // ERROR_WSMAN_CLIENT_ENCODEOBJECT_NULL_PARAM
 
 /// The WinRM client cannot process the request. One of the parameters required for the WSManEnumeratorAddObject function is null or zero.
 /// Change the request to include the missing parameter and try again.
-pub const CLIENT_ENUMERATORADDOBJECT_NULL_PARAM : ErrorHResult = ErrorHResult::from_constant(0x803380D3); // ERROR_WSMAN_CLIENT_ENUMERATORADDOBJECT_NULL_PARAM
+pub const CLIENT_ENUMERATORADDOBJECT_NULL_PARAM : HResultError = HResultError::from_constant(0x803380D3); // ERROR_WSMAN_CLIENT_ENUMERATORADDOBJECT_NULL_PARAM
 
 /// The WinRM client cannot process the request. One of the parameters required for the WSManEnumeratorNextObject function is null or zero.
 /// Change the request to include the missing parameter and try again.
-pub const CLIENT_ENUMERATORNEXTOBJECT_NULL_PARAM : ErrorHResult = ErrorHResult::from_constant(0x803380D4); // ERROR_WSMAN_CLIENT_ENUMERATORNEXTOBJECT_NULL_PARAM
+pub const CLIENT_ENUMERATORNEXTOBJECT_NULL_PARAM : HResultError = HResultError::from_constant(0x803380D4); // ERROR_WSMAN_CLIENT_ENUMERATORNEXTOBJECT_NULL_PARAM
 
 /// The WinRM client cannot process the request. One of the parameters required for the WSManConstructError function is null or zero.
 /// Change the request to include the missing parameter and try again.
-pub const CLIENT_CONSTRUCTERROR_NULL_PARAM : ErrorHResult = ErrorHResult::from_constant(0x803380D5); // ERROR_WSMAN_CLIENT_CONSTRUCTERROR_NULL_PARAM
+pub const CLIENT_CONSTRUCTERROR_NULL_PARAM : HResultError = HResultError::from_constant(0x803380D5); // ERROR_WSMAN_CLIENT_CONSTRUCTERROR_NULL_PARAM
 
 /// The WinRM service cannot process the request. Push subscriptions are not supported for local session. Change subscription type to Pull and try again.
-pub const SERVER_NONPULLSUBSCRIBE_NULL_PARAM : ErrorHResult = ErrorHResult::from_constant(0x803380D6); // ERROR_WSMAN_SERVER_NONPULLSUBSCRIBE_NULL_PARAM
+pub const SERVER_NONPULLSUBSCRIBE_NULL_PARAM : HResultError = HResultError::from_constant(0x803380D6); // ERROR_WSMAN_SERVER_NONPULLSUBSCRIBE_NULL_PARAM
 
 /// The WinRM client cannot process the request. The unencrypted flag only applies to the HTTP transport.
 /// Remove the unencrypted flag or change the transport and try again the request.
-pub const CLIENT_UNENCRYPTED_HTTP_ONLY : ErrorHResult = ErrorHResult::from_constant(0x803380D7); // ERROR_WSMAN_CLIENT_UNENCRYPTED_HTTP_ONLY
+pub const CLIENT_UNENCRYPTED_HTTP_ONLY : HResultError = HResultError::from_constant(0x803380D7); // ERROR_WSMAN_CLIENT_UNENCRYPTED_HTTP_ONLY
 
 /// The WinRM client cannot process the request. Certificate parameters are not valid when the HTTP transport is also specified.
 /// Remove the certificate parameters or change the transport and try again the request.
-pub const CANNOT_USE_CERTIFICATES_FOR_HTTP : ErrorHResult = ErrorHResult::from_constant(0x803380D8); // ERROR_WSMAN_CANNOT_USE_CERTIFICATES_FOR_HTTP
+pub const CANNOT_USE_CERTIFICATES_FOR_HTTP : HResultError = HResultError::from_constant(0x803380D8); // ERROR_WSMAN_CANNOT_USE_CERTIFICATES_FOR_HTTP
 
 /// The WinRM client cannot process the request. The connection string should be of the form \[<transport>://\]<host>\[:<port>\]\[/<suffix>\] where transport is one of "http" or "https".
 /// Transport, port and suffix are optional. The host may be a hostname or an IP address.
 /// For IPv6 addresses, enclose the address in brackets - e.g. "<http://\[1::2\]:80/wsman>".
 /// Change the connection string and try the request again.
-pub const CONNECTIONSTR_INVALID : ErrorHResult = ErrorHResult::from_constant(0x803380D9); // ERROR_WSMAN_CONNECTIONSTR_INVALID
+pub const CONNECTIONSTR_INVALID : HResultError = HResultError::from_constant(0x803380D9); // ERROR_WSMAN_CONNECTIONSTR_INVALID
 
 /// The WinRM client cannot process the request. The connection string contains an unsupported transport.
 /// Valid transports are "http" or "https".
 /// Change the connection string and try the request again.
-pub const TRANSPORT_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x803380DA); // ERROR_WSMAN_TRANSPORT_NOT_SUPPORTED
+pub const TRANSPORT_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x803380DA); // ERROR_WSMAN_TRANSPORT_NOT_SUPPORTED
 
 /// The WinRM client cannot process the request because the port specified in the connection string is not valid.
 /// Verify the port and retry the request.
 /// Valid values are between 1 and 65535.
 /// Change the value for port and try the request again.
-pub const PORT_INVALID : ErrorHResult = ErrorHResult::from_constant(0x803380DB); // ERROR_WSMAN_PORT_INVALID
+pub const PORT_INVALID : HResultError = HResultError::from_constant(0x803380DB); // ERROR_WSMAN_PORT_INVALID
 
 /// The WinRM client cannot process the request. The port specified in the configuration is invalid.
 /// Valid values are between 1 and 65535.
 /// Change the value for port and try the request again.
-pub const CONFIG_PORT_INVALID : ErrorHResult = ErrorHResult::from_constant(0x803380DC); // ERROR_WSMAN_CONFIG_PORT_INVALID
+pub const CONFIG_PORT_INVALID : HResultError = HResultError::from_constant(0x803380DC); // ERROR_WSMAN_CONFIG_PORT_INVALID
 
 /// The WinRM service cannot process the request. WSMAN_FLAG_SEND_HEARTBEAT flag requires the event enumerator to be empty.
 /// Change the flag or change the event enumerator and try the request again.
-pub const SENDHEARBEAT_EMPTY_ENUMERATOR : ErrorHResult = ErrorHResult::from_constant(0x803380DD); // ERROR_WSMAN_SENDHEARBEAT_EMPTY_ENUMERATOR
+pub const SENDHEARBEAT_EMPTY_ENUMERATOR : HResultError = HResultError::from_constant(0x803380DD); // ERROR_WSMAN_SENDHEARBEAT_EMPTY_ENUMERATOR
 
 /// The WinRM client cannot process the request. Unencrypted traffic is currently disabled in the client configuration.
 /// Change the client configuration and try the request again.
-pub const CLIENT_UNENCRYPTED_DISABLED : ErrorHResult = ErrorHResult::from_constant(0x803380DE); // ERROR_WSMAN_CLIENT_UNENCRYPTED_DISABLED
+pub const CLIENT_UNENCRYPTED_DISABLED : HResultError = HResultError::from_constant(0x803380DE); // ERROR_WSMAN_CLIENT_UNENCRYPTED_DISABLED
 
 /// The WinRM client cannot process the request. Basic authentication is currently disabled in the client configuration.
 /// Change the client configuration and try the request again.
-pub const CLIENT_BASIC_AUTHENTICATION_DISABLED : ErrorHResult = ErrorHResult::from_constant(0x803380DF); // ERROR_WSMAN_CLIENT_BASIC_AUTHENTICATION_DISABLED
+pub const CLIENT_BASIC_AUTHENTICATION_DISABLED : HResultError = HResultError::from_constant(0x803380DF); // ERROR_WSMAN_CLIENT_BASIC_AUTHENTICATION_DISABLED
 
 /// The WinRM client cannot process the request. Digest authentication is currently disabled in the client configuration.
 /// Change the client configuration and try the request again.
-pub const CLIENT_DIGEST_AUTHENTICATION_DISABLED : ErrorHResult = ErrorHResult::from_constant(0x803380E0); // ERROR_WSMAN_CLIENT_DIGEST_AUTHENTICATION_DISABLED
+pub const CLIENT_DIGEST_AUTHENTICATION_DISABLED : HResultError = HResultError::from_constant(0x803380E0); // ERROR_WSMAN_CLIENT_DIGEST_AUTHENTICATION_DISABLED
 
 /// The WinRM client cannot process the request. Negotiate authentication is currently disabled in the client configuration.
 /// Change the client configuration and try the request again.
 /// If this is a request for the local configuration, use one of the enabled authentication mechanisms still enabled.
 /// To use Kerberos, specify the local computer name as the remote destination.
 /// To use Basic, specify the local computer name as the remote destination, specify Basic authentication and provide user name and password.
-pub const CLIENT_NEGOTIATE_AUTHENTICATION_DISABLED : ErrorHResult = ErrorHResult::from_constant(0x803380E1); // ERROR_WSMAN_CLIENT_NEGOTIATE_AUTHENTICATION_DISABLED
+pub const CLIENT_NEGOTIATE_AUTHENTICATION_DISABLED : HResultError = HResultError::from_constant(0x803380E1); // ERROR_WSMAN_CLIENT_NEGOTIATE_AUTHENTICATION_DISABLED
 
 /// The WinRM client cannot process the request. Kerberos authentication is currently disabled in the client configuration.
 /// Change the client configuration and try the request again.
-pub const CLIENT_KERBEROS_AUTHENTICATION_DISABLED : ErrorHResult = ErrorHResult::from_constant(0x803380E2); // ERROR_WSMAN_CLIENT_KERBEROS_AUTHENTICATION_DISABLED
+pub const CLIENT_KERBEROS_AUTHENTICATION_DISABLED : HResultError = HResultError::from_constant(0x803380E2); // ERROR_WSMAN_CLIENT_KERBEROS_AUTHENTICATION_DISABLED
 
 /// The WinRM client cannot process the request. Certificate authentication is currently disabled in the client configuration.
 /// Change the client configuration and try the request again.
-pub const CLIENT_CERTIFICATES_AUTHENTICATION_DISABLED : ErrorHResult = ErrorHResult::from_constant(0x803380E3); // ERROR_WSMAN_CLIENT_CERTIFICATES_AUTHENTICATION_DISABLED
+pub const CLIENT_CERTIFICATES_AUTHENTICATION_DISABLED : HResultError = HResultError::from_constant(0x803380E3); // ERROR_WSMAN_CLIENT_CERTIFICATES_AUTHENTICATION_DISABLED
 
 /// The WinRM client cannot process the request. If the authentication scheme is different from Kerberos, or if the client computer is not joined to a domain,
 /// then HTTPS transport must be used or the destination machine must be added to the TrustedHosts configuration setting.
 /// Use winrm.cmd to configure TrustedHosts. Note that computers in the TrustedHosts list might not be authenticated.
 /// You can get more information about that by running the following command: winrm help config.
-pub const SERVER_NOT_TRUSTED : ErrorHResult = ErrorHResult::from_constant(0x803380E4); // ERROR_WSMAN_SERVER_NOT_TRUSTED
+pub const SERVER_NOT_TRUSTED : HResultError = HResultError::from_constant(0x803380E4); // ERROR_WSMAN_SERVER_NOT_TRUSTED
 
 /// The WinRM client cannot process the request.
 /// Default credentials with Negotiate over HTTP can be used only if the target machine is part of the TrustedHosts list or the Allow implicit credentials for Negotiate option is specified.
-pub const EXPLICIT_CREDENTIALS_REQUIRED : ErrorHResult = ErrorHResult::from_constant(0x803380E5); // ERROR_WSMAN_EXPLICIT_CREDENTIALS_REQUIRED
+pub const EXPLICIT_CREDENTIALS_REQUIRED : HResultError = HResultError::from_constant(0x803380E5); // ERROR_WSMAN_EXPLICIT_CREDENTIALS_REQUIRED
 
 /// The WinRM client cannot process the request. The CertificateThumbprint property must be empty when the SSL configuration will be shared with another service.
-pub const CERT_THUMBPRINT_NOT_BLANK : ErrorHResult = ErrorHResult::from_constant(0x803380E6); // ERROR_WSMAN_CERT_THUMBPRINT_NOT_BLANK
+pub const CERT_THUMBPRINT_NOT_BLANK : HResultError = HResultError::from_constant(0x803380E6); // ERROR_WSMAN_CERT_THUMBPRINT_NOT_BLANK
 
 /// The WinRM client cannot process the request. The CertificateThumbprint property must not be "" (blank or empty string) or NULL.
-pub const CERT_THUMBPRINT_BLANK : ErrorHResult = ErrorHResult::from_constant(0x803380E7); // ERROR_WSMAN_CERT_THUMBPRINT_BLANK
+pub const CERT_THUMBPRINT_BLANK : HResultError = HResultError::from_constant(0x803380E7); // ERROR_WSMAN_CERT_THUMBPRINT_BLANK
 
 /// The WinRM client cannot process the request. The WinRM client tried to create an SSL configuration for a pair of IP address and port according to the request,
 /// but the SSL configuration for that pair is owned by another service and cannot be shared.
 /// Use a different IP address and port combination and try the request again.
-pub const CONFIG_CANNOT_SHARE_SSL_CONFIG : ErrorHResult = ErrorHResult::from_constant(0x803380E8); // ERROR_WSMAN_CONFIG_CANNOT_SHARE_SSL_CONFIG
+pub const CONFIG_CANNOT_SHARE_SSL_CONFIG : HResultError = HResultError::from_constant(0x803380E8); // ERROR_WSMAN_CONFIG_CANNOT_SHARE_SSL_CONFIG
 
 /// The WinRM client cannot process the request. The certificate CN and the hostname that were provided do not match.
-pub const CONFIG_CERT_CN_DOES_NOT_MATCH_HOSTNAME : ErrorHResult = ErrorHResult::from_constant(0x803380E9); // ERROR_WSMAN_CONFIG_CERT_CN_DOES_NOT_MATCH_HOSTNAME
+pub const CONFIG_CERT_CN_DOES_NOT_MATCH_HOSTNAME : HResultError = HResultError::from_constant(0x803380E9); // ERROR_WSMAN_CONFIG_CERT_CN_DOES_NOT_MATCH_HOSTNAME
 
 /// <not used>
-pub const CONFIG_HOSTNAME_CHANGE_WITHOUT_CERT : ErrorHResult = ErrorHResult::from_constant(0x803380EA); // ERROR_WSMAN_CONFIG_HOSTNAME_CHANGE_WITHOUT_CERT
+pub const CONFIG_HOSTNAME_CHANGE_WITHOUT_CERT : HResultError = HResultError::from_constant(0x803380EA); // ERROR_WSMAN_CONFIG_HOSTNAME_CHANGE_WITHOUT_CERT
 
 /// The WinRM client cannot process the request. When HTTP is the transport, the Certificate thumbprint must be blank.
 /// HTTP does not use the Certificate thumbprint.
-pub const CONFIG_THUMBPRINT_SHOULD_BE_EMPTY : ErrorHResult = ErrorHResult::from_constant(0x803380EB); // ERROR_WSMAN_CONFIG_THUMBPRINT_SHOULD_BE_EMPTY
+pub const CONFIG_THUMBPRINT_SHOULD_BE_EMPTY : HResultError = HResultError::from_constant(0x803380EB); // ERROR_WSMAN_CONFIG_THUMBPRINT_SHOULD_BE_EMPTY
 
 /// The WinRM client cannot process the request. The IP Filter is invalid.
 /// Ranges are specified using the syntax IP1-IP2. Multiple ranges are separated using , as delimiter.
@@ -857,347 +857,347 @@ pub const CONFIG_THUMBPRINT_SHOULD_BE_EMPTY : ErrorHResult = ErrorHResult::from_
 /// 2.0.0.1-2.0.0.20, 24.0.0.1-24.0.0.22
 /// `%n` Example IPv6 filters:
 /// 3FFE:FFFF:7654:FEDA:1245:BA98:0000:0000-3FFE:FFFF:7654:FEDA:1245:BA98:3210:4562
-pub const INVALID_IPFILTER : ErrorHResult = ErrorHResult::from_constant(0x803380EC); // ERROR_WSMAN_INVALID_IPFILTER
+pub const INVALID_IPFILTER : HResultError = HResultError::from_constant(0x803380EC); // ERROR_WSMAN_INVALID_IPFILTER
 
 /// The WinRM client cannot process the request. The input XML modifies selectors or keys for the instance.
 /// You cannot create a new instance or change the identity of an instance by changing the keys.
 /// Change the input XML and try the request again.
-pub const CANNOT_CHANGE_KEYS : ErrorHResult = ErrorHResult::from_constant(0x803380ED); // ERROR_WSMAN_CANNOT_CHANGE_KEYS
+pub const CANNOT_CHANGE_KEYS : HResultError = HResultError::from_constant(0x803380ED); // ERROR_WSMAN_CANNOT_CHANGE_KEYS
 
 /// The WinRM client cannot process the request. The Enhanced Key Usage (EKU) field of the certificate is not set to "Server Authentication".
 /// Retry the request with a certificate that has the correct EKU.
-pub const CERT_INVALID_USAGE : ErrorHResult = ErrorHResult::from_constant(0x803380EE); // ERROR_WSMAN_CERT_INVALID_USAGE
+pub const CERT_INVALID_USAGE : HResultError = HResultError::from_constant(0x803380EE); // ERROR_WSMAN_CERT_INVALID_USAGE
 
 /// The WinRM client cannot process the request. The response from the destination computer does not include any results.
-pub const RESPONSE_NO_RESULTS : ErrorHResult = ErrorHResult::from_constant(0x803380EF); // ERROR_WSMAN_RESPONSE_NO_RESULTS
+pub const RESPONSE_NO_RESULTS : HResultError = HResultError::from_constant(0x803380EF); // ERROR_WSMAN_RESPONSE_NO_RESULTS
 
 /// The WinRM client cannot process the request. The response to a create request did not contain a valid end point reference.
 /// The ResourceCreated element was not found or did not contain valid content.
-pub const CREATE_RESPONSE_NO_EPR : ErrorHResult = ErrorHResult::from_constant(0x803380F0); // ERROR_WSMAN_CREATE_RESPONSE_NO_EPR
+pub const CREATE_RESPONSE_NO_EPR : HResultError = HResultError::from_constant(0x803380F0); // ERROR_WSMAN_CREATE_RESPONSE_NO_EPR
 
 /// The WinRM client cannot process the request. The response from the destination computer does not contain a valid SOAP enumeration context.
-pub const RESPONSE_INVALID_ENUMERATION_CONTEXT : ErrorHResult = ErrorHResult::from_constant(0x803380F1); // ERROR_WSMAN_RESPONSE_INVALID_ENUMERATION_CONTEXT
+pub const RESPONSE_INVALID_ENUMERATION_CONTEXT : HResultError = HResultError::from_constant(0x803380F1); // ERROR_WSMAN_RESPONSE_INVALID_ENUMERATION_CONTEXT
 
 /// The WinRM client cannot process the request. The response from the destination computer contains a WS-Management FragmentTransfer header but the content of the body is not wrapped by the WS-Management XmlFragment wrapper.
-pub const RESPONSE_NO_XML_FRAGMENT_WRAPPER : ErrorHResult = ErrorHResult::from_constant(0x803380F2); // ERROR_WSMAN_RESPONSE_NO_XML_FRAGMENT_WRAPPER
+pub const RESPONSE_NO_XML_FRAGMENT_WRAPPER : HResultError = HResultError::from_constant(0x803380F2); // ERROR_WSMAN_RESPONSE_NO_XML_FRAGMENT_WRAPPER
 
 /// The WinRM client cannot process the request. The response from the destination computer contains one or more invalid SOAP headers.
-pub const RESPONSE_INVALID_MESSAGE_INFORMATION_HEADER : ErrorHResult = ErrorHResult::from_constant(0x803380F3); // ERROR_WSMAN_RESPONSE_INVALID_MESSAGE_INFORMATION_HEADER
+pub const RESPONSE_INVALID_MESSAGE_INFORMATION_HEADER : HResultError = HResultError::from_constant(0x803380F3); // ERROR_WSMAN_RESPONSE_INVALID_MESSAGE_INFORMATION_HEADER
 
 /// The WinRM client cannot process the request. It cannot find any SOAP Headers or Body elements in the response from the destination computer.
-pub const RESPONSE_NO_SOAP_HEADER_BODY : ErrorHResult = ErrorHResult::from_constant(0x803380F4); // ERROR_WSMAN_RESPONSE_NO_SOAP_HEADER_BODY
+pub const RESPONSE_NO_SOAP_HEADER_BODY : HResultError = HResultError::from_constant(0x803380F4); // ERROR_WSMAN_RESPONSE_NO_SOAP_HEADER_BODY
 
 /// The WinRM client cannot process the request. The destination computer returned an empty response to the request.
-pub const HTTP_NO_RESPONSE_DATA : ErrorHResult = ErrorHResult::from_constant(0x803380F5); // ERROR_WSMAN_HTTP_NO_RESPONSE_DATA
+pub const HTTP_NO_RESPONSE_DATA : HResultError = HResultError::from_constant(0x803380F5); // ERROR_WSMAN_HTTP_NO_RESPONSE_DATA
 
 /// The WinRM client cannot process the request. The destination computer returned an invalid SOAP fault.
-pub const RESPONSE_INVALID_SOAP_FAULT : ErrorHResult = ErrorHResult::from_constant(0x803380F6); // ERROR_WSMAN_RESPONSE_INVALID_SOAP_FAULT
+pub const RESPONSE_INVALID_SOAP_FAULT : HResultError = HResultError::from_constant(0x803380F6); // ERROR_WSMAN_RESPONSE_INVALID_SOAP_FAULT
 
 /// The WinRM client cannot process the request. It cannot determine the content type of the HTTP response from the destination computer. The content type is absent or invalid.
-pub const HTTP_INVALID_CONTENT_TYPE_IN_RESPONSE_DATA : ErrorHResult = ErrorHResult::from_constant(0x803380F7); // ERROR_WSMAN_HTTP_INVALID_CONTENT_TYPE_IN_RESPONSE_DATA
+pub const HTTP_INVALID_CONTENT_TYPE_IN_RESPONSE_DATA : HResultError = HResultError::from_constant(0x803380F7); // ERROR_WSMAN_HTTP_INVALID_CONTENT_TYPE_IN_RESPONSE_DATA
 
 /// The WinRM client cannot process the request. The HTTP response from the destination computer was not in the same format as the request. A Unicode request packet may have been sent and an ANSI packet received.
-pub const HTTP_CONTENT_TYPE_MISSMATCH_RESPONSE_DATA : ErrorHResult = ErrorHResult::from_constant(0x803380F8); // ERROR_WSMAN_HTTP_CONTENT_TYPE_MISSMATCH_RESPONSE_DATA
+pub const HTTP_CONTENT_TYPE_MISSMATCH_RESPONSE_DATA : HResultError = HResultError::from_constant(0x803380F8); // ERROR_WSMAN_HTTP_CONTENT_TYPE_MISSMATCH_RESPONSE_DATA
 
 /// The WinRM client cannot process the request. The encrypted message body has an invalid format and cannot be decrypted. Ensure that the service is encrypting the message body according to the specifications.
-pub const CANNOT_DECRYPT : ErrorHResult = ErrorHResult::from_constant(0x803380F9); // ERROR_WSMAN_CANNOT_DECRYPT
+pub const CANNOT_DECRYPT : HResultError = HResultError::from_constant(0x803380F9); // ERROR_WSMAN_CANNOT_DECRYPT
 
 /// The WinRM client cannot process the request. The resource URI is not valid: it does not contain keys, but the class selected is not a singleton.
 /// To access an instance which is not a singleton, keys must be provided.
 /// Use the following command to get more information in how to construct a resource URI: "winrm help uris".
-pub const INVALID_URI_WMI_SINGLETON : ErrorHResult = ErrorHResult::from_constant(0x803380FA); // ERROR_WSMAN_INVALID_URI_WMI_SINGLETON
+pub const INVALID_URI_WMI_SINGLETON : HResultError = HResultError::from_constant(0x803380FA); // ERROR_WSMAN_INVALID_URI_WMI_SINGLETON
 
 /// The WinRM client cannot process the request. The resource URI for an enumeration operation with WQL filter must not contain keys and the class name must be '\*' (star).
 /// Use the following command to get more information in how to construct a resource URI: "winrm help uris".
-pub const INVALID_URI_WMI_ENUM_WQL : ErrorHResult = ErrorHResult::from_constant(0x803380FB); // ERROR_WSMAN_INVALID_URI_WMI_ENUM_WQL
+pub const INVALID_URI_WMI_ENUM_WQL : HResultError = HResultError::from_constant(0x803380FB); // ERROR_WSMAN_INVALID_URI_WMI_ENUM_WQL
 
 /// The WS-Management identification operation is only available on remote sessions.
-pub const NO_IDENTIFY_FOR_LOCAL_SESSION : ErrorHResult = ErrorHResult::from_constant(0x803380FC); // ERROR_WSMAN_NO_IDENTIFY_FOR_LOCAL_SESSION
+pub const NO_IDENTIFY_FOR_LOCAL_SESSION : HResultError = HResultError::from_constant(0x803380FC); // ERROR_WSMAN_NO_IDENTIFY_FOR_LOCAL_SESSION
 
 /// Subscribe operation with Push delivery mode is only available on remote sessions.
-pub const NO_PUSH_SUBSCRIPTION_FOR_LOCAL_SESSION : ErrorHResult = ErrorHResult::from_constant(0x803380FD); // ERROR_WSMAN_NO_PUSH_SUBSCRIPTION_FOR_LOCAL_SESSION
+pub const NO_PUSH_SUBSCRIPTION_FOR_LOCAL_SESSION : HResultError = HResultError::from_constant(0x803380FD); // ERROR_WSMAN_NO_PUSH_SUBSCRIPTION_FOR_LOCAL_SESSION
 
 /// The subscription manager address is invalid. The response was not received from the address to which the subscription request was sent.
-pub const INVALID_SUBSCRIPTION_MANAGER : ErrorHResult = ErrorHResult::from_constant(0x803380FE); // ERROR_WSMAN_INVALID_SUBSCRIPTION_MANAGER
+pub const INVALID_SUBSCRIPTION_MANAGER : HResultError = HResultError::from_constant(0x803380FE); // ERROR_WSMAN_INVALID_SUBSCRIPTION_MANAGER
 
 /// Only subscriptions with Pull delivery mode are supported by the plugin.
-pub const NON_PULL_SUBSCRIPTION_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x803380FF); // ERROR_WSMAN_NON_PULL_SUBSCRIPTION_NOT_SUPPORTED
+pub const NON_PULL_SUBSCRIPTION_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x803380FF); // ERROR_WSMAN_NON_PULL_SUBSCRIPTION_NOT_SUPPORTED
 
 /// WinRM cannot process the request because the WMI object contains too many levels of nested embedded objects.
-pub const WMI_MAX_NESTED : ErrorHResult = ErrorHResult::from_constant(0x80338100); // ERROR_WSMAN_WMI_MAX_NESTED
+pub const WMI_MAX_NESTED : HResultError = HResultError::from_constant(0x80338100); // ERROR_WSMAN_WMI_MAX_NESTED
 
 /// The WS-Management service cannot process the request.
 /// It does not support retrieving a WMI object that contains a property of type CIM_REFERENCE and the value of that property contains a remote machine name.
-pub const REMOTE_CIMPATH_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x80338101); // ERROR_WSMAN_REMOTE_CIMPATH_NOT_SUPPORTED
+pub const REMOTE_CIMPATH_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x80338101); // ERROR_WSMAN_REMOTE_CIMPATH_NOT_SUPPORTED
 
 /// The WS-Management service cannot process the request. The WMI service reported that the WMI provider could not perform the requested operation.
-pub const WMI_PROVIDER_NOT_CAPABLE : ErrorHResult = ErrorHResult::from_constant(0x80338102); // ERROR_WSMAN_WMI_PROVIDER_NOT_CAPABLE
+pub const WMI_PROVIDER_NOT_CAPABLE : HResultError = HResultError::from_constant(0x80338102); // ERROR_WSMAN_WMI_PROVIDER_NOT_CAPABLE
 
 /// The WS-Management service cannot process the request. A value retrieved from the WMI service or the WMI provider is invalid.
-pub const WMI_INVALID_VALUE : ErrorHResult = ErrorHResult::from_constant(0x80338103); // ERROR_WSMAN_WMI_INVALID_VALUE
+pub const WMI_INVALID_VALUE : HResultError = HResultError::from_constant(0x80338103); // ERROR_WSMAN_WMI_INVALID_VALUE
 
 /// The WS-Management service cannot process the request. The WMI service returned an 'access denied' error.
-pub const WMI_SVC_ACCESS_DENIED : ErrorHResult = ErrorHResult::from_constant(0x80338104); // ERROR_WSMAN_WMI_SVC_ACCESS_DENIED
+pub const WMI_SVC_ACCESS_DENIED : HResultError = HResultError::from_constant(0x80338104); // ERROR_WSMAN_WMI_SVC_ACCESS_DENIED
 
 /// The WS-Management service cannot process the request. The WMI provider returned an 'access denied' error.
-pub const WMI_PROVIDER_ACCESS_DENIED : ErrorHResult = ErrorHResult::from_constant(0x80338105); // ERROR_WSMAN_WMI_PROVIDER_ACCESS_DENIED
+pub const WMI_PROVIDER_ACCESS_DENIED : HResultError = HResultError::from_constant(0x80338105); // ERROR_WSMAN_WMI_PROVIDER_ACCESS_DENIED
 
 /// The WS-Management service cannot process the request. An 'access denied' error was received when connecting to the WMI service on the computer specified.
-pub const WMI_CANNOT_CONNECT_ACCESS_DENIED : ErrorHResult = ErrorHResult::from_constant(0x80338106); // ERROR_WSMAN_WMI_CANNOT_CONNECT_ACCESS_DENIED
+pub const WMI_CANNOT_CONNECT_ACCESS_DENIED : HResultError = HResultError::from_constant(0x80338106); // ERROR_WSMAN_WMI_CANNOT_CONNECT_ACCESS_DENIED
 
 /// The WS-Management service cannot process the request because the filter XML is invalid.
-pub const INVALID_FILTER_XML : ErrorHResult = ErrorHResult::from_constant(0x80338107); // ERROR_WSMAN_INVALID_FILTER_XML
+pub const INVALID_FILTER_XML : HResultError = HResultError::from_constant(0x80338107); // ERROR_WSMAN_INVALID_FILTER_XML
 
 /// The WS-Management service cannot process the request. The resource URI for an Enumerate operation must not contain keys.
-pub const ENUMERATE_WMI_INVALID_KEY : ErrorHResult = ErrorHResult::from_constant(0x80338108); // ERROR_WSMAN_ENUMERATE_WMI_INVALID_KEY
+pub const ENUMERATE_WMI_INVALID_KEY : HResultError = HResultError::from_constant(0x80338108); // ERROR_WSMAN_ENUMERATE_WMI_INVALID_KEY
 
 /// Cannot execute the Fragment-Level operation because the fragment path contains either "" (blank or empty string) or NULL.
 /// Change the value of the fragment path and try the request again.
-pub const INVALID_FRAGMENT_PATH_BLANK : ErrorHResult = ErrorHResult::from_constant(0x80338109); // ERROR_WSMAN_INVALID_FRAGMENT_PATH_BLANK
+pub const INVALID_FRAGMENT_PATH_BLANK : HResultError = HResultError::from_constant(0x80338109); // ERROR_WSMAN_INVALID_FRAGMENT_PATH_BLANK
 
 /// The WinRM client cannot process the request. The response received from the destination machine contains invalid characters and cannot be processed.
-pub const INVALID_CHARACTERS_IN_RESPONSE : ErrorHResult = ErrorHResult::from_constant(0x8033810A); // ERROR_WSMAN_INVALID_CHARACTERS_IN_RESPONSE
+pub const INVALID_CHARACTERS_IN_RESPONSE : HResultError = HResultError::from_constant(0x8033810A); // ERROR_WSMAN_INVALID_CHARACTERS_IN_RESPONSE
 
 /// The WinRM client cannot process the request.
 /// Kerberos authentication cannot be used when the destination is an IP address.
 /// Specify a DNS or NetBIOS destination or specify Basic or Negotiate authentication.
-pub const KERBEROS_IPADDRESS : ErrorHResult = ErrorHResult::from_constant(0x8033810B); // ERROR_WSMAN_KERBEROS_IPADDRESS
+pub const KERBEROS_IPADDRESS : HResultError = HResultError::from_constant(0x8033810B); // ERROR_WSMAN_KERBEROS_IPADDRESS
 
 /// The WinRM client cannot process the request. Kerberos authentication cannot be used with implicit credentials if the client computer is not joined to a domain.
 /// Use explicit credentials or specify a different authentication mechanism than Kerberos.
-pub const CLIENT_WORKGROUP_NO_KERBEROS : ErrorHResult = ErrorHResult::from_constant(0x8033810C); // ERROR_WSMAN_CLIENT_WORKGROUP_NO_KERBEROS
+pub const CLIENT_WORKGROUP_NO_KERBEROS : HResultError = HResultError::from_constant(0x8033810C); // ERROR_WSMAN_CLIENT_WORKGROUP_NO_KERBEROS
 
 /// The WinRM client cannot process the request. The batch settings parameter is invalid.
-pub const INVALID_BATCH_SETTINGS_PARAMETER : ErrorHResult = ErrorHResult::from_constant(0x8033810D); // ERROR_WSMAN_INVALID_BATCH_SETTINGS_PARAMETER
+pub const INVALID_BATCH_SETTINGS_PARAMETER : HResultError = HResultError::from_constant(0x8033810D); // ERROR_WSMAN_INVALID_BATCH_SETTINGS_PARAMETER
 
 /// The WinRM client cannot process the request. If you do not specify an authentication mechanism or you specify Kerberos, then you cannot use "localhost" or "127.0.0.1" or "\[::1\]" for the remote host name.
 /// You can explicitly specify a different authentication mechanism than Kerberos or specify the remote host as a DNS name or NetBIOS name.
-pub const SERVER_DESTINATION_LOCALHOST : ErrorHResult = ErrorHResult::from_constant(0x8033810E); // ERROR_WSMAN_SERVER_DESTINATION_LOCALHOST
+pub const SERVER_DESTINATION_LOCALHOST : HResultError = HResultError::from_constant(0x8033810E); // ERROR_WSMAN_SERVER_DESTINATION_LOCALHOST
 
 /// The WinRM client received an unknown HTTP status code from the remote WS-Management service.
-pub const UNKNOWN_HTTP_STATUS_RETURNED : ErrorHResult = ErrorHResult::from_constant(0x8033810F); // ERROR_WSMAN_UNKNOWN_HTTP_STATUS_RETURNED
+pub const UNKNOWN_HTTP_STATUS_RETURNED : HResultError = HResultError::from_constant(0x8033810F); // ERROR_WSMAN_UNKNOWN_HTTP_STATUS_RETURNED
 
 /// The WinRM client received a HTTP redirect status code from the remote WS-Management service. WinRM does not support redirects.
-pub const UNSUPPORTED_HTTP_STATUS_REDIRECT : ErrorHResult = ErrorHResult::from_constant(0x80338110); // ERROR_WSMAN_UNSUPPORTED_HTTP_STATUS_REDIRECT
+pub const UNSUPPORTED_HTTP_STATUS_REDIRECT : HResultError = HResultError::from_constant(0x80338110); // ERROR_WSMAN_UNSUPPORTED_HTTP_STATUS_REDIRECT
 
 /// The WinRM client sent a request to the remote WS-Management service and was notified that the request size exceeded the configured MaxEnvelopeSize quota.
-pub const HTTP_REQUEST_TOO_LARGE_STATUS : ErrorHResult = ErrorHResult::from_constant(0x80338111); // ERROR_WSMAN_HTTP_REQUEST_TOO_LARGE_STATUS
+pub const HTTP_REQUEST_TOO_LARGE_STATUS : HResultError = HResultError::from_constant(0x80338111); // ERROR_WSMAN_HTTP_REQUEST_TOO_LARGE_STATUS
 
 /// The connection to the specified remote host was refused.
 /// Verify that the WS-Management service is running on the remote host and configured to listen for requests on the correct port and HTTP URL.
-pub const HTTP_SERVICE_UNAVAILABLE_STATUS : ErrorHResult = ErrorHResult::from_constant(0x80338112); // ERROR_WSMAN_HTTP_SERVICE_UNAVAILABLE_STATUS
+pub const HTTP_SERVICE_UNAVAILABLE_STATUS : HResultError = HResultError::from_constant(0x80338112); // ERROR_WSMAN_HTTP_SERVICE_UNAVAILABLE_STATUS
 
 /// The WinRM client sent a request to an HTTP server and got a response saying the requested HTTP URL was not available.
 /// This is usually returned by a HTTP server that does not support the WS-Management protocol.
-pub const HTTP_NOT_FOUND_STATUS : ErrorHResult = ErrorHResult::from_constant(0x80338113); // ERROR_WSMAN_HTTP_NOT_FOUND_STATUS
+pub const HTTP_NOT_FOUND_STATUS : HResultError = HResultError::from_constant(0x80338113); // ERROR_WSMAN_HTTP_NOT_FOUND_STATUS
 
 /// The subscribe packet had a Locale element with missing lang attribute. The lang attribute is required for the Locale element.
-pub const EVENTING_MISSING_LOCALE_IN_DELIVERY : ErrorHResult = ErrorHResult::from_constant(0x80338114); // ERROR_WSMAN_EVENTING_MISSING_LOCALE_IN_DELIVERY
+pub const EVENTING_MISSING_LOCALE_IN_DELIVERY : HResultError = HResultError::from_constant(0x80338114); // ERROR_WSMAN_EVENTING_MISSING_LOCALE_IN_DELIVERY
 
 /// Cannot create a WinRM listener on HTTPS because this machine does not have an appropriate certificate. To be used for SSL, a certificate must have a CN matching the hostname, be appropriate for Server Authentication, and not be expired, revoked, or self-signed.
-pub const QUICK_CONFIG_FAILED_CERT_REQUIRED : ErrorHResult = ErrorHResult::from_constant(0x80338115); // ERROR_WSMAN_QUICK_CONFIG_FAILED_CERT_REQUIRED
+pub const QUICK_CONFIG_FAILED_CERT_REQUIRED : HResultError = HResultError::from_constant(0x80338115); // ERROR_WSMAN_QUICK_CONFIG_FAILED_CERT_REQUIRED
 
 /// Firewall does not allow exceptions; WinRM cannot be setup for remote access.
-pub const QUICK_CONFIG_FIREWALL_EXCEPTIONS_DISALLOWED : ErrorHResult = ErrorHResult::from_constant(0x80338116); // ERROR_WSMAN_QUICK_CONFIG_FIREWALL_EXCEPTIONS_DISALLOWED
+pub const QUICK_CONFIG_FIREWALL_EXCEPTIONS_DISALLOWED : HResultError = HResultError::from_constant(0x80338116); // ERROR_WSMAN_QUICK_CONFIG_FIREWALL_EXCEPTIONS_DISALLOWED
 
 /// The Windows Remote Management (WinRM) service cannot be configured for remote access because Group Policy does not allow local firewall changes. Check the Group Policy settings to allow local firewall exceptions and add WinRM to the firewall exceptions.
-pub const QUICK_CONFIG_LOCAL_POLICY_CHANGE_DISALLOWED : ErrorHResult = ErrorHResult::from_constant(0x80338117); // ERROR_WSMAN_QUICK_CONFIG_LOCAL_POLICY_CHANGE_DISALLOWED
+pub const QUICK_CONFIG_LOCAL_POLICY_CHANGE_DISALLOWED : HResultError = HResultError::from_constant(0x80338117); // ERROR_WSMAN_QUICK_CONFIG_LOCAL_POLICY_CHANGE_DISALLOWED
 
 /// The WinRM client cannot process the request because the selector name is not valid. Change the selector name and retry the request.
-pub const INVALID_SELECTOR_NAME : ErrorHResult = ErrorHResult::from_constant(0x80338118); // ERROR_WSMAN_INVALID_SELECTOR_NAME
+pub const INVALID_SELECTOR_NAME : HResultError = HResultError::from_constant(0x80338118); // ERROR_WSMAN_INVALID_SELECTOR_NAME
 
 /// The WS-Management service does not support the encoding type specified.
-pub const ENCODING_TYPE : ErrorHResult = ErrorHResult::from_constant(0x80338119); // ERROR_WSMAN_ENCODING_TYPE
+pub const ENCODING_TYPE : HResultError = HResultError::from_constant(0x80338119); // ERROR_WSMAN_ENCODING_TYPE
 
 /// The WS-Management service cannot process the request because the selector values do not match a known resource, or the resource is offline.
 /// Retry the request later when the resource is online, or try a different selector.
-pub const ENDPOINT_UNAVAILABLE_INVALID_VALUE : ErrorHResult = ErrorHResult::from_constant(0x8033811A); // ERROR_WSMAN_ENDPOINT_UNAVAILABLE_INVALID_VALUE
+pub const ENDPOINT_UNAVAILABLE_INVALID_VALUE : HResultError = HResultError::from_constant(0x8033811A); // ERROR_WSMAN_ENDPOINT_UNAVAILABLE_INVALID_VALUE
 
 /// The WS-Management service cannot process the request because the a header in the request is invalid.
-pub const INVALID_HEADER : ErrorHResult = ErrorHResult::from_constant(0x8033811B); // ERROR_WSMAN_INVALID_HEADER
+pub const INVALID_HEADER : HResultError = HResultError::from_constant(0x8033811B); // ERROR_WSMAN_INVALID_HEADER
 
 /// The expiration time specified for enumeration was invalid. Specify the expiration time as a duration.
-pub const ENUMERATE_UNSUPPORTED_EXPIRATION_TYPE : ErrorHResult = ErrorHResult::from_constant(0x8033811C); // ERROR_WSMAN_ENUMERATE_UNSUPPORTED_EXPIRATION_TYPE
+pub const ENUMERATE_UNSUPPORTED_EXPIRATION_TYPE : HResultError = HResultError::from_constant(0x8033811C); // ERROR_WSMAN_ENUMERATE_UNSUPPORTED_EXPIRATION_TYPE
 
 /// The WS-Management service received a request which specified a maximum number of elements, but the service does not support this feature.
 /// Retry the request without this element specified.
-pub const MAX_ELEMENTS_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x8033811D); // ERROR_WSMAN_MAX_ELEMENTS_NOT_SUPPORTED
+pub const MAX_ELEMENTS_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x8033811D); // ERROR_WSMAN_MAX_ELEMENTS_NOT_SUPPORTED
 
 /// The WS-Management service cannot process the request. The WMI provider returned an 'invalid parameter' error.
-pub const WMI_PROVIDER_INVALID_PARAMETER : ErrorHResult = ErrorHResult::from_constant(0x8033811E); // ERROR_WSMAN_WMI_PROVIDER_INVALID_PARAMETER
+pub const WMI_PROVIDER_INVALID_PARAMETER : HResultError = HResultError::from_constant(0x8033811E); // ERROR_WSMAN_WMI_PROVIDER_INVALID_PARAMETER
 
 /// The WinRM client cannot process the request. The request must contain one and only one enumeration mode.
 /// Change the request to contain only one enumeration mode and try again.
-pub const CLIENT_MULTIPLE_ENUM_MODE_FLAGS : ErrorHResult = ErrorHResult::from_constant(0x8033811F); // ERROR_WSMAN_CLIENT_MULTIPLE_ENUM_MODE_FLAGS
+pub const CLIENT_MULTIPLE_ENUM_MODE_FLAGS : HResultError = HResultError::from_constant(0x8033811F); // ERROR_WSMAN_CLIENT_MULTIPLE_ENUM_MODE_FLAGS
 
 /// The data source could not process the filter. The filter might be missing, invalid or too complex to process.
 /// If a service only supports a subset of a filter dialect (such as XPath level 1), it may return this fault for valid
 /// filter expressions outside of the supported subset.
 /// Change the filter and try the request again.
-pub const CANNOT_PROCESS_FILTER : ErrorHResult = ErrorHResult::from_constant(0x80338122); // ERROR_WSMAN_CANNOT_PROCESS_FILTER
+pub const CANNOT_PROCESS_FILTER : HResultError = HResultError::from_constant(0x80338122); // ERROR_WSMAN_CANNOT_PROCESS_FILTER
 
 /// The WinRM client cannot process the request. One of the parameters required for the WSManEnumeratorAddEvent function is null or zero. Change the request to include the missing parameter and try again.
-pub const CLIENT_ENUMERATORADDEVENT_NULL_PARAM : ErrorHResult = ErrorHResult::from_constant(0x80338123); // ERROR_WSMAN_CLIENT_ENUMERATORADDEVENT_NULL_PARAM
+pub const CLIENT_ENUMERATORADDEVENT_NULL_PARAM : HResultError = HResultError::from_constant(0x80338123); // ERROR_WSMAN_CLIENT_ENUMERATORADDEVENT_NULL_PARAM
 
 /// The WinRM client cannot process the request. The object parameter for the WSManEnumeratorAddObject function is null or zero, but the enumeration mode is Object or ObjectAndEPR.
-pub const ADDOBJECT_MISSING_OBJECT : ErrorHResult = ErrorHResult::from_constant(0x80338124); // ERROR_WSMAN_ADDOBJECT_MISSING_OBJECT
+pub const ADDOBJECT_MISSING_OBJECT : HResultError = HResultError::from_constant(0x80338124); // ERROR_WSMAN_ADDOBJECT_MISSING_OBJECT
 
 /// The WinRM client cannot process the request. The EPR parameter for the WSManEnumeratorAddObject function is null or zero, but the enumeration mode is EPR or ObjectAndEPR.
-pub const ADDOBJECT_MISSING_EPR : ErrorHResult = ErrorHResult::from_constant(0x80338125); // ERROR_WSMAN_ADDOBJECT_MISSING_EPR
+pub const ADDOBJECT_MISSING_EPR : HResultError = HResultError::from_constant(0x80338125); // ERROR_WSMAN_ADDOBJECT_MISSING_EPR
 
 /// WinRM cannot complete the operation.
 /// Verify that the specified computer name is valid, that the computer is accessible over the network, and that a firewall exception for the WinRM service is enabled and allows access from this computer.
 /// By default, the WinRM firewall exception for public profiles limits access to remote computers within the same local subnet.
-pub const NETWORK_TIMEDOUT : ErrorHResult = ErrorHResult::from_constant(0x80338126); // ERROR_WSMAN_NETWORK_TIMEDOUT
+pub const NETWORK_TIMEDOUT : HResultError = HResultError::from_constant(0x80338126); // ERROR_WSMAN_NETWORK_TIMEDOUT
 
 /// The WS-Management service does not support the specified polymorphism mode. Try changing the polymorphism mode specified, and try again.
-pub const POLYMORPHISM_MODE_UNSUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x80338137); // ERROR_WSMAN_POLYMORPHISM_MODE_UNSUPPORTED
+pub const POLYMORPHISM_MODE_UNSUPPORTED : HResultError = HResultError::from_constant(0x80338137); // ERROR_WSMAN_POLYMORPHISM_MODE_UNSUPPORTED
 
 /// The WS-Management service cannot process the request because the specified URI is not supported on the service side. Retry the request with local session.
-pub const REQUEST_NOT_SUPPORTED_AT_SERVICE : ErrorHResult = ErrorHResult::from_constant(0x80338138); // ERROR_WSMAN_REQUEST_NOT_SUPPORTED_AT_SERVICE
+pub const REQUEST_NOT_SUPPORTED_AT_SERVICE : HResultError = HResultError::from_constant(0x80338138); // ERROR_WSMAN_REQUEST_NOT_SUPPORTED_AT_SERVICE
 
 /// The WS-Management service cannot process the request. A DMTF resource URI was used to access a non-DMTF class. Try again using a non-DMTF resource URI.
-pub const URI_NON_DMTF_CLASS : ErrorHResult = ErrorHResult::from_constant(0x80338139); // ERROR_WSMAN_URI_NON_DMTF_CLASS
+pub const URI_NON_DMTF_CLASS : HResultError = HResultError::from_constant(0x80338139); // ERROR_WSMAN_URI_NON_DMTF_CLASS
 
 /// The WS-Management service cannot process the request. The DMTF class in the repository uses a different major version number from the requested class. This class can be accessed using a non-DMTF resource URI.
-pub const URI_WRONG_DMTF_VERSION : ErrorHResult = ErrorHResult::from_constant(0x8033813A); // ERROR_WSMAN_URI_WRONG_DMTF_VERSION
+pub const URI_WRONG_DMTF_VERSION : HResultError = HResultError::from_constant(0x8033813A); // ERROR_WSMAN_URI_WRONG_DMTF_VERSION
 
 /// The WS-Management service cannot process the request. The resource URI and __cimnamespace selector attempted to use different namespaces. Try removing the __cimnamespace selector or using a DMTF resource URI. If a non-DMTF resource URI is used with a __cimnamespace selector, the namespaces must match.
-pub const DIFFERENT_CIM_SELECTOR : ErrorHResult = ErrorHResult::from_constant(0x8033813B); // ERROR_WSMAN_DIFFERENT_CIM_SELECTOR
+pub const DIFFERENT_CIM_SELECTOR : HResultError = HResultError::from_constant(0x8033813B); // ERROR_WSMAN_DIFFERENT_CIM_SELECTOR
 
 /// The WS-Management client cannot process the request. To use the WSManSubscribe API the user has to be running under Network Service account. No other account is supported currently for push subscriptions.
-pub const PUSHSUBSCRIPTION_INVALIDUSERACCOUNT : ErrorHResult = ErrorHResult::from_constant(0x8033813C); // ERROR_WSMAN_PUSHSUBSCRIPTION_INVALIDUSERACCOUNT
+pub const PUSHSUBSCRIPTION_INVALIDUSERACCOUNT : HResultError = HResultError::from_constant(0x8033813C); // ERROR_WSMAN_PUSHSUBSCRIPTION_INVALIDUSERACCOUNT
 
 /// The WS-Management client cannot process the request. The event source machine is not joined to a domain.
 /// To set up a push subscription session to an event source the source has to be connected to a domain.
 /// To fix this problem either join the event source machine to a domain or use PULL as the delivery mode for the subscription.
-pub const EVENTING_NONDOMAINJOINED_PUBLISHER : ErrorHResult = ErrorHResult::from_constant(0x8033813D); // ERROR_WSMAN_EVENTING_NONDOMAINJOINED_PUBLISHER
+pub const EVENTING_NONDOMAINJOINED_PUBLISHER : HResultError = HResultError::from_constant(0x8033813D); // ERROR_WSMAN_EVENTING_NONDOMAINJOINED_PUBLISHER
 
 /// The WS-Management client cannot process the request. The subscriber machine is not joined to a domain.
 /// To set up a push subscription session to an event source, the subscriber machine has to be connected to a domain.
 /// To fix this problem either join the subscriber machine to a domain or use PULL as the delivery mode for the subscription.
-pub const EVENTING_NONDOMAINJOINED_COLLECTOR : ErrorHResult = ErrorHResult::from_constant(0x8033813E); // ERROR_WSMAN_EVENTING_NONDOMAINJOINED_COLLECTOR
+pub const EVENTING_NONDOMAINJOINED_COLLECTOR : HResultError = HResultError::from_constant(0x8033813E); // ERROR_WSMAN_EVENTING_NONDOMAINJOINED_COLLECTOR
 
 /// The WinRM client cannot process the request because it is trying to update a read-only setting.
 /// Remove this setting from the command and try again.
-pub const CONFIG_READONLY_PROPERTY : ErrorHResult = ErrorHResult::from_constant(0x8033813F); // ERROR_WSMAN_CONFIG_READONLY_PROPERTY
+pub const CONFIG_READONLY_PROPERTY : HResultError = HResultError::from_constant(0x8033813F); // ERROR_WSMAN_CONFIG_READONLY_PROPERTY
 
 /// Not used. To be removed.
-pub const CLIENT_DISABLE_LOOPBACK_WITH_EXPLICIT_CREDENTIALS : ErrorHResult = ErrorHResult::from_constant(0x80338141); // ERROR_WSMAN_CLIENT_DISABLE_LOOPBACK_WITH_EXPLICIT_CREDENTIALS
+pub const CLIENT_DISABLE_LOOPBACK_WITH_EXPLICIT_CREDENTIALS : HResultError = HResultError::from_constant(0x80338141); // ERROR_WSMAN_CLIENT_DISABLE_LOOPBACK_WITH_EXPLICIT_CREDENTIALS
 
 /// Not used. To be removed.
-pub const CLIENT_INVALID_DISABLE_LOOPBACK : ErrorHResult = ErrorHResult::from_constant(0x80338142); // ERROR_WSMAN_CLIENT_INVALID_DISABLE_LOOPBACK
+pub const CLIENT_INVALID_DISABLE_LOOPBACK : HResultError = HResultError::from_constant(0x80338142); // ERROR_WSMAN_CLIENT_INVALID_DISABLE_LOOPBACK
 
 /// The WS-Management client received too many results from the server.
 /// The server implementation should never return more items than are specified by the client.
-pub const CLIENT_ENUM_RECEIVED_TOO_MANY_ITEMS : ErrorHResult = ErrorHResult::from_constant(0x80338143); // ERROR_WSMAN_CLIENT_ENUM_RECEIVED_TOO_MANY_ITEMS
+pub const CLIENT_ENUM_RECEIVED_TOO_MANY_ITEMS : HResultError = HResultError::from_constant(0x80338143); // ERROR_WSMAN_CLIENT_ENUM_RECEIVED_TOO_MANY_ITEMS
 
 /// The WinRM client cannot process the request. A certificate thumbprint was specified together with a user name or password.
 /// Only one credentials type can be specified. Remove the credentials type that does not correspond to the intended authentication mechanism and retry the request.
-pub const MULTIPLE_CREDENTIALS : ErrorHResult = ErrorHResult::from_constant(0x80338144); // ERROR_WSMAN_MULTIPLE_CREDENTIALS
+pub const MULTIPLE_CREDENTIALS : HResultError = HResultError::from_constant(0x80338144); // ERROR_WSMAN_MULTIPLE_CREDENTIALS
 
 /// The WinRM client cannot process the request. The flag that specifies the authentication mechanism to use is incorrect.
 /// Remove or change the invalid flag and try the request again.
-pub const AUTHENTICATION_INVALID_FLAG : ErrorHResult = ErrorHResult::from_constant(0x80338145); // ERROR_WSMAN_AUTHENTICATION_INVALID_FLAG
+pub const AUTHENTICATION_INVALID_FLAG : HResultError = HResultError::from_constant(0x80338145); // ERROR_WSMAN_AUTHENTICATION_INVALID_FLAG
 
 /// The WinRM client cannot process the request. When an authentication mechanism is not specified, only user name and password credentials are allowed.
 /// If you want to use a different type of credentials then you need to specify the authentication mechanism.
 /// Specify the authentication mechanism or the correct credentials and try the request again.
-pub const CLIENT_CREDENTIALS_FOR_DEFAULT_AUTHENTICATION : ErrorHResult = ErrorHResult::from_constant(0x80338146); // ERROR_WSMAN_CLIENT_CREDENTIALS_FOR_DEFAULT_AUTHENTICATION
+pub const CLIENT_CREDENTIALS_FOR_DEFAULT_AUTHENTICATION : HResultError = HResultError::from_constant(0x80338146); // ERROR_WSMAN_CLIENT_CREDENTIALS_FOR_DEFAULT_AUTHENTICATION
 
 /// The WinRM client cannot process the request. For authentication mechanisms that require the credentials of an user account, both user name and password must be specified.
 /// Specify the missing user name or password and try the request again.
-pub const CLIENT_USERNAME_AND_PASSWORD_NEEDED : ErrorHResult = ErrorHResult::from_constant(0x80338147); // ERROR_WSMAN_CLIENT_USERNAME_AND_PASSWORD_NEEDED
+pub const CLIENT_USERNAME_AND_PASSWORD_NEEDED : HResultError = HResultError::from_constant(0x80338147); // ERROR_WSMAN_CLIENT_USERNAME_AND_PASSWORD_NEEDED
 
 /// The WinRM client cannot process the request. If you are using a machine certificate, it must contain a DNS name in the Subject Alternative Name extension or in the Subject Name field, and no UPN name.
 /// If you are using a user certificate, the Subject Alternative Name extension must contain a UPN name and must not contain a DNS name.
 /// Change the certificate structure and try the request again.
-pub const CLIENT_INVALID_CERT_DNS_OR_UPN : ErrorHResult = ErrorHResult::from_constant(0x80338148); // ERROR_WSMAN_CLIENT_INVALID_CERT_DNS_OR_UPN
+pub const CLIENT_INVALID_CERT_DNS_OR_UPN : HResultError = HResultError::from_constant(0x80338148); // ERROR_WSMAN_CLIENT_INVALID_CERT_DNS_OR_UPN
 
 /// The WinRM Shell client cannot process the request. One of the environment variable name passed to the WSManCreateShell function is null or zero.
 /// Change the request to include the missing parameter and try again.
-pub const CREATESHELL_NULL_ENVIRONMENT_VARIABLE_NAME : ErrorHResult = ErrorHResult::from_constant(0x80338149); // ERROR_WSMAN_CREATESHELL_NULL_ENVIRONMENT_VARIABLE_NAME
+pub const CREATESHELL_NULL_ENVIRONMENT_VARIABLE_NAME : HResultError = HResultError::from_constant(0x80338149); // ERROR_WSMAN_CREATESHELL_NULL_ENVIRONMENT_VARIABLE_NAME
 
 /// An operation is being attempted on a shell that is being closed. This can happen if the shell that is being used is also being closed by another thread.
-pub const SHELL_ALREADY_CLOSED : ErrorHResult = ErrorHResult::from_constant(0x8033814A); // ERROR_WSMAN_SHELL_ALREADY_CLOSED
+pub const SHELL_ALREADY_CLOSED : HResultError = HResultError::from_constant(0x8033814A); // ERROR_WSMAN_SHELL_ALREADY_CLOSED
 
 /// The WinRM Shell client cannot process the request. One of the stream id name passed to the WSManCreateShell function is null or zero.
 /// Change the request to include the missing parameter and try again.
-pub const CREATESHELL_NULL_STREAMID : ErrorHResult = ErrorHResult::from_constant(0x8033814B); // ERROR_WSMAN_CREATESHELL_NULL_STREAMID
+pub const CREATESHELL_NULL_STREAMID : HResultError = HResultError::from_constant(0x8033814B); // ERROR_WSMAN_CREATESHELL_NULL_STREAMID
 
 /// The WinRM Shell client cannot process the request. The shell handle passed to the WSMan Shell function is not valid.
 /// The shell handle is valid only when WSManCreateShell function completes successfully. Change the request including a valid shell handle and try again.
-pub const SHELL_INVALID_SHELL_HANDLE : ErrorHResult = ErrorHResult::from_constant(0x8033814C); // ERROR_WSMAN_SHELL_INVALID_SHELL_HANDLE
+pub const SHELL_INVALID_SHELL_HANDLE : HResultError = HResultError::from_constant(0x8033814C); // ERROR_WSMAN_SHELL_INVALID_SHELL_HANDLE
 
 /// The WinRM Shell client cannot process the request. The command handle passed to the WSMan Shell function is not valid.
 /// The command handle is valid only when WSManRunShellCommand function completes successfully. Change the request including a valid shell handle and try again.
-pub const SHELL_INVALID_COMMAND_HANDLE : ErrorHResult = ErrorHResult::from_constant(0x8033814D); // ERROR_WSMAN_SHELL_INVALID_COMMAND_HANDLE
+pub const SHELL_INVALID_COMMAND_HANDLE : HResultError = HResultError::from_constant(0x8033814D); // ERROR_WSMAN_SHELL_INVALID_COMMAND_HANDLE
 
 /// The WinRM Shell client cannot process the request. One of the argument value passed to the WSManRunShellCommand function is null or zero.
 /// Change the request to include the missing parameter and try again.
-pub const RUNSHELLCOMMAND_NULL_ARGUMENT : ErrorHResult = ErrorHResult::from_constant(0x8033814E); // ERROR_WSMAN_RUNSHELLCOMMAND_NULL_ARGUMENT
+pub const RUNSHELLCOMMAND_NULL_ARGUMENT : HResultError = HResultError::from_constant(0x8033814E); // ERROR_WSMAN_RUNSHELLCOMMAND_NULL_ARGUMENT
 
 /// An operation is being attempted on a command that is being closed. This can happen if the command handle that is being used is also being freed
 /// by another thread.
-pub const COMMAND_ALREADY_CLOSED : ErrorHResult = ErrorHResult::from_constant(0x8033814F); // ERROR_WSMAN_COMMAND_ALREADY_CLOSED
+pub const COMMAND_ALREADY_CLOSED : HResultError = HResultError::from_constant(0x8033814F); // ERROR_WSMAN_COMMAND_ALREADY_CLOSED
 
 /// The WinRM Shell client cannot process the request. The stream id index from within WSMAN_STREAM_ELEMENT passed to the WSManSendShellInput function is invalid.
 /// The stream id index should be an index from within inputStreamSet array passed to the WSManCreateShell function.
 /// Change the request with a valid index and try again.
-pub const SENDSHELLINPUT_INVALID_STREAMID_INDEX : ErrorHResult = ErrorHResult::from_constant(0x80338150); // ERROR_WSMAN_SENDSHELLINPUT_INVALID_STREAMID_INDEX
+pub const SENDSHELLINPUT_INVALID_STREAMID_INDEX : HResultError = HResultError::from_constant(0x80338150); // ERROR_WSMAN_SENDSHELLINPUT_INVALID_STREAMID_INDEX
 
 /// Not used. To be removed.
-pub const SHELL_SYNCHRONOUS_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x80338151); // ERROR_WSMAN_SHELL_SYNCHRONOUS_NOT_SUPPORTED
+pub const SHELL_SYNCHRONOUS_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x80338151); // ERROR_WSMAN_SHELL_SYNCHRONOUS_NOT_SUPPORTED
 
 /// The WS-Management operations to update the certificate mapping store of the WINRM service config can only be done remotely.
-pub const NO_CERTMAPPING_OPERATION_FOR_LOCAL_SESSION : ErrorHResult = ErrorHResult::from_constant(0x80338152); // ERROR_WSMAN_NO_CERTMAPPING_OPERATION_FOR_LOCAL_SESSION
+pub const NO_CERTMAPPING_OPERATION_FOR_LOCAL_SESSION : HResultError = HResultError::from_constant(0x80338152); // ERROR_WSMAN_NO_CERTMAPPING_OPERATION_FOR_LOCAL_SESSION
 
 /// The WINRM certificate mapping configuration store has reached an internal limit and cannot create any more entries. Remove some entries and try again.
-pub const CERTMAPPING_CONFIGLIMIT_EXCEEDED : ErrorHResult = ErrorHResult::from_constant(0x80338153); // ERROR_WSMAN_CERTMAPPING_CONFIGLIMIT_EXCEEDED
+pub const CERTMAPPING_CONFIGLIMIT_EXCEEDED : HResultError = HResultError::from_constant(0x80338153); // ERROR_WSMAN_CERTMAPPING_CONFIGLIMIT_EXCEEDED
 
 /// The WINRM certificate mapping configuration operation cannot be completed because the user credentials could not be verified.
 /// Please check the username and password used for mapping this certificate and verify that it is a non-domain account and try again.
-pub const CERTMAPPING_INVALIDUSERCREDENTIALS : ErrorHResult = ErrorHResult::from_constant(0x80338154); // ERROR_WSMAN_CERTMAPPING_INVALIDUSERCREDENTIALS
+pub const CERTMAPPING_INVALIDUSERCREDENTIALS : HResultError = HResultError::from_constant(0x80338154); // ERROR_WSMAN_CERTMAPPING_INVALIDUSERCREDENTIALS
 
 /// The WinRM client cannot process the request. The Enhanced Key Usage (EKU) field of the certificate is not set to "Client Authentication".
 /// Retry the request with a certificate that has the correct EKU.
-pub const CERT_INVALID_USAGE_CLIENT : ErrorHResult = ErrorHResult::from_constant(0x80338155); // ERROR_WSMAN_CERT_INVALID_USAGE_CLIENT
+pub const CERT_INVALID_USAGE_CLIENT : HResultError = HResultError::from_constant(0x80338155); // ERROR_WSMAN_CERT_INVALID_USAGE_CLIENT
 
 /// The WinRM client cannot process the request. A certificate thumbprint was specified, but the following flag is missing: WSManFlagUseClientCertificate.
 /// Add the flag and try the request again.
-pub const CERT_MISSING_AUTH_FLAG : ErrorHResult = ErrorHResult::from_constant(0x80338156); // ERROR_WSMAN_CERT_MISSING_AUTH_FLAG
+pub const CERT_MISSING_AUTH_FLAG : HResultError = HResultError::from_constant(0x80338156); // ERROR_WSMAN_CERT_MISSING_AUTH_FLAG
 
 /// The WinRM client cannot process the request. The following flags cannot be specified together: WSManFlagUseClientCertificate and WSManFlagCredUsernamePassword.
 /// Remove one of the flags and try the request again.
-pub const CERT_MULTIPLE_CREDENTIALS_FLAG : ErrorHResult = ErrorHResult::from_constant(0x80338157); // ERROR_WSMAN_CERT_MULTIPLE_CREDENTIALS_FLAG
+pub const CERT_MULTIPLE_CREDENTIALS_FLAG : HResultError = HResultError::from_constant(0x80338157); // ERROR_WSMAN_CERT_MULTIPLE_CREDENTIALS_FLAG
 
 /// The WinRM client cannot process the request because the CustomRemoteShell URI specified is invalid.
 /// CustomRemoteShell URI should start with WinRM shell resource URI prefix: "<http://schemas.microsoft.com/wbem/wsman/1/windows/shell>".
 /// The URI should not contain invalid characters including '\*', '?', white spaces and tabs.
 /// The CustomRemoteShell URI cannot be longer than 1023 characters.
-pub const CONFIG_SHELL_URI_INVALID : ErrorHResult = ErrorHResult::from_constant(0x80338158); // ERROR_WSMAN_CONFIG_SHELL_URI_INVALID
+pub const CONFIG_SHELL_URI_INVALID : HResultError = HResultError::from_constant(0x80338158); // ERROR_WSMAN_CONFIG_SHELL_URI_INVALID
 
 /// The WinRM client cannot process the request because the CustomRemoteShell URI specified is invalid.
 /// Windows command shell URI ("<http://schemas.microsoft.com/wbem/wsman/1/windows/shell/cmd>") cannot be a CustomRemoteShell URI.
-pub const CONFIG_SHELL_URI_CMDSHELLURI_NOTPERMITTED : ErrorHResult = ErrorHResult::from_constant(0x80338159); // ERROR_WSMAN_CONFIG_SHELL_URI_CMDSHELLURI_NOTPERMITTED
+pub const CONFIG_SHELL_URI_CMDSHELLURI_NOTPERMITTED : HResultError = HResultError::from_constant(0x80338159); // ERROR_WSMAN_CONFIG_SHELL_URI_CMDSHELLURI_NOTPERMITTED
 
 /// The WinRM client cannot process the request because the process path specified for the CustomRemoteShell table entry is invalid.
 /// The process path should be absolute and should point to an existing executable.
-pub const CONFIG_SHELLURI_INVALID_PROCESSPATH : ErrorHResult = ErrorHResult::from_constant(0x8033815A); // ERROR_WSMAN_CONFIG_SHELLURI_INVALID_PROCESSPATH
+pub const CONFIG_SHELLURI_INVALID_PROCESSPATH : HResultError = HResultError::from_constant(0x8033815A); // ERROR_WSMAN_CONFIG_SHELLURI_INVALID_PROCESSPATH
 
 /// The WinRM client cannot process the request because the provided security descriptor is invalid.
-pub const INVALID_SECURITY_DESCRIPTOR : ErrorHResult = ErrorHResult::from_constant(0x8033815C); // ERROR_WSMAN_INVALID_SECURITY_DESCRIPTOR
+pub const INVALID_SECURITY_DESCRIPTOR : HResultError = HResultError::from_constant(0x8033815C); // ERROR_WSMAN_INVALID_SECURITY_DESCRIPTOR
 
 /// The WinRM service cannot process the request because the WS-Policy contained in the DeliverTo is too complex or uses a structure not understood by the service.
 /// The WinRM service supports a single layer of policy assertions underneath a wsp:ExactlyOne element.
-pub const POLICY_TOO_COMPLEX : ErrorHResult = ErrorHResult::from_constant(0x8033815D); // ERROR_WSMAN_POLICY_TOO_COMPLEX
+pub const POLICY_TOO_COMPLEX : HResultError = HResultError::from_constant(0x8033815D); // ERROR_WSMAN_POLICY_TOO_COMPLEX
 
 /// The WinRM service cannot process the request because the WS-Policy contained in the DeliverTo does not contain any options that the service can comply with.
 /// The WinRM service supports the following profiles: Negotiate or Kerberos over HTTP, Negotiate or Kerberos over HTTPS, and mutual certificate authentication over HTTPS using issuer thumbprints.
-pub const POLICY_CANNOT_COMPLY : ErrorHResult = ErrorHResult::from_constant(0x8033815E); // ERROR_WSMAN_POLICY_CANNOT_COMPLY
+pub const POLICY_CANNOT_COMPLY : HResultError = HResultError::from_constant(0x8033815E); // ERROR_WSMAN_POLICY_CANNOT_COMPLY
 
 /// The WinRM service cannot process the request because the wsman:ConnectionRetry element in the DeliverTo is invalid.
-pub const INVALID_CONNECTIONRETRY : ErrorHResult = ErrorHResult::from_constant(0x8033815F); // ERROR_WSMAN_INVALID_CONNECTIONRETRY
+pub const INVALID_CONNECTIONRETRY : HResultError = HResultError::from_constant(0x8033815F); // ERROR_WSMAN_INVALID_CONNECTIONRETRY
 
 /// WinRM cannot make the configuration change.
 /// The URI supplied for the certificate mapping operation is not valid.
@@ -1206,7 +1206,7 @@ pub const INVALID_CONNECTIONRETRY : ErrorHResult = ErrorHResult::from_constant(0
 /// It must not contain '?' character.
 /// A prefix may be specified by using "\*" as the last character.
 /// The URI cannot be longer than 1023 characters.
-pub const URISECURITY_INVALIDURIKEY : ErrorHResult = ErrorHResult::from_constant(0x80338160); // ERROR_WSMAN_URISECURITY_INVALIDURIKEY
+pub const URISECURITY_INVALIDURIKEY : HResultError = HResultError::from_constant(0x80338160); // ERROR_WSMAN_URISECURITY_INVALIDURIKEY
 
 /// WinRM cannot make the configuration change.
 /// The Subject used for the certificate mapping operation is not valid.
@@ -1214,264 +1214,264 @@ pub const URISECURITY_INVALIDURIKEY : ErrorHResult = ErrorHResult::from_constant
 /// It must contain at most one "\*" character which should be the first character.
 /// (This may be the only character in which case it matches all subjects).
 /// The Subject cannot be longer than 1023 characters.
-pub const CERTMAPPING_INVALIDSUBJECTKEY : ErrorHResult = ErrorHResult::from_constant(0x80338161); // ERROR_WSMAN_CERTMAPPING_INVALIDSUBJECTKEY
+pub const CERTMAPPING_INVALIDSUBJECTKEY : HResultError = HResultError::from_constant(0x80338161); // ERROR_WSMAN_CERTMAPPING_INVALIDSUBJECTKEY
 
 /// WinRM cannot make the configuration change because the Issuer used for the certificate mapping operation is not valid.
 /// The certificate identified by the issuer thumbprint must be present in the machine "Trusted Root Certification Authorities" or "Intermediate Certification Authorities" store.
 /// The certificate must have key usage that allows it to sign other certificates.
-pub const CERTMAPPING_INVALIDISSUERKEY : ErrorHResult = ErrorHResult::from_constant(0x80338162); // ERROR_WSMAN_CERTMAPPING_INVALIDISSUERKEY
+pub const CERTMAPPING_INVALIDISSUERKEY : HResultError = HResultError::from_constant(0x80338162); // ERROR_WSMAN_CERTMAPPING_INVALIDISSUERKEY
 
 /// The WinRM client cannot process the request because the type field in the WSMAN_ALLOWED_PUBLISHERS argument is invalid.
 /// Collector-initiated subscriptions must use WSMAN_SINGLE_PUBLISHER and Source-initiated subscriptions must use WSMAN_MULTIPLE_PUBLISHERS.
-pub const INVALID_PUBLISHERS_TYPE : ErrorHResult = ErrorHResult::from_constant(0x80338163); // ERROR_WSMAN_INVALID_PUBLISHERS_TYPE
+pub const INVALID_PUBLISHERS_TYPE : HResultError = HResultError::from_constant(0x80338163); // ERROR_WSMAN_INVALID_PUBLISHERS_TYPE
 
 /// The WinRM client cannot process the request because the delivery retry parameters are invalid.
 /// If delivery retry is requested, the deliveryRetryInterval and deliveryRetryAttempts fields must both be nonzero.
-pub const CLIENT_INVALID_DELIVERY_RETRY : ErrorHResult = ErrorHResult::from_constant(0x80338164); // ERROR_WSMAN_CLIENT_INVALID_DELIVERY_RETRY
+pub const CLIENT_INVALID_DELIVERY_RETRY : HResultError = HResultError::from_constant(0x80338164); // ERROR_WSMAN_CLIENT_INVALID_DELIVERY_RETRY
 
 /// The WinRM client cannot process the request.
 /// The required WSMAN_ALLOWED_PUBLISHERS settings is null or zero.
 /// Change the request to include the missing parameter and try again.
-pub const CLIENT_NULL_PUBLISHERS : ErrorHResult = ErrorHResult::from_constant(0x80338165); // ERROR_WSMAN_CLIENT_NULL_PUBLISHERS
+pub const CLIENT_NULL_PUBLISHERS : HResultError = HResultError::from_constant(0x80338165); // ERROR_WSMAN_CLIENT_NULL_PUBLISHERS
 
 /// The WinRM client cannot process the request because client certificate subject filters were specified without any issuers.
 /// When using client certificate authentication, specify at least one issuer thumbprint.
-pub const CLIENT_NULL_ISSUERS : ErrorHResult = ErrorHResult::from_constant(0x80338166); // ERROR_WSMAN_CLIENT_NULL_ISSUERS
+pub const CLIENT_NULL_ISSUERS : HResultError = HResultError::from_constant(0x80338166); // ERROR_WSMAN_CLIENT_NULL_ISSUERS
 
 /// The WinRM client cannot process the request because the subscription contains no domain or non-domain sources.
 /// Subscriptions using WSMAN_MULTIPLE_PUBLISHERS must specify either a security descriptor or an issuer list or both.
-pub const CLIENT_NO_SOURCES : ErrorHResult = ErrorHResult::from_constant(0x80338167); // ERROR_WSMAN_CLIENT_NO_SOURCES
+pub const CLIENT_NO_SOURCES : HResultError = HResultError::from_constant(0x80338167); // ERROR_WSMAN_CLIENT_NO_SOURCES
 
 /// The WinRM service cannot process the request because the subscription manager returned invalid enumeration results.
 /// The m:Subscription XML object or m:Version element is missing or invalid.
-pub const INVALID_SUBSCRIBE_OBJECT : ErrorHResult = ErrorHResult::from_constant(0x80338168); // ERROR_WSMAN_INVALID_SUBSCRIBE_OBJECT
+pub const INVALID_SUBSCRIBE_OBJECT : HResultError = HResultError::from_constant(0x80338168); // ERROR_WSMAN_INVALID_SUBSCRIBE_OBJECT
 
 /// WinRM firewall exception will not work since one of the network connection types on this machine is set to Public.
 /// Change the network connection type to either Domain or Private and try again.
-pub const PUBLIC_FIREWALL_PROFILE_ACTIVE : ErrorHResult = ErrorHResult::from_constant(0x80338169); // ERROR_WSMAN_PUBLIC_FIREWALL_PROFILE_ACTIVE
+pub const PUBLIC_FIREWALL_PROFILE_ACTIVE : HResultError = HResultError::from_constant(0x80338169); // ERROR_WSMAN_PUBLIC_FIREWALL_PROFILE_ACTIVE
 
 /// WinRM cannot make the configuration change.
 /// The Password used for updating the certificate mapping configuration is not valid.
 /// It cannot be longer than 255 characters.
-pub const CERTMAPPING_PASSWORDTOOLONG : ErrorHResult = ErrorHResult::from_constant(0x8033816A); // ERROR_WSMAN_CERTMAPPING_PASSWORDTOOLONG
+pub const CERTMAPPING_PASSWORDTOOLONG : HResultError = HResultError::from_constant(0x8033816A); // ERROR_WSMAN_CERTMAPPING_PASSWORDTOOLONG
 
 /// WinRM cannot make the configuration change.
 /// The Password used for updating the certificate mapping configuration is not valid.
 /// A user account used for configuring a certificate mapping cannot have a blank password.
-pub const CERTMAPPING_PASSWORDBLANK : ErrorHResult = ErrorHResult::from_constant(0x8033816B); // ERROR_WSMAN_CERTMAPPING_PASSWORDBLANK
+pub const CERTMAPPING_PASSWORDBLANK : HResultError = HResultError::from_constant(0x8033816B); // ERROR_WSMAN_CERTMAPPING_PASSWORDBLANK
 
 /// WinRM cannot make the configuration change.
 /// The credential used for updating or creating the certificate mapping configuration is not valid.
 /// The credential consists of both Password and UserName being supplied together in a pair.
-pub const CERTMAPPING_PASSWORDUSERTUPLE : ErrorHResult = ErrorHResult::from_constant(0x8033816C); // ERROR_WSMAN_CERTMAPPING_PASSWORDUSERTUPLE
+pub const CERTMAPPING_PASSWORDUSERTUPLE : HResultError = HResultError::from_constant(0x8033816C); // ERROR_WSMAN_CERTMAPPING_PASSWORDUSERTUPLE
 
 /// The WinRM service executed an operation and the provider returned inconclusive information regarding success or failure of the operation.
 /// The status was marked as failed, but no error code was given.
-pub const INVALID_PROVIDER_RESPONSE : ErrorHResult = ErrorHResult::from_constant(0x8033816D); // ERROR_WSMAN_INVALID_PROVIDER_RESPONSE
+pub const INVALID_PROVIDER_RESPONSE : HResultError = HResultError::from_constant(0x8033816D); // ERROR_WSMAN_INVALID_PROVIDER_RESPONSE
 
 /// The WS-Management service on the remote machine cannot process the shell request.
 /// This can happen if the WS-Management service on the remote machine was being shutdown.
 /// To correct this problem restart the WS-Management service on the remote machine and re-send the shell request.
-pub const SHELL_NOT_INITIALIZED : ErrorHResult = ErrorHResult::from_constant(0x8033816E); // ERROR_WSMAN_SHELL_NOT_INITIALIZED
+pub const SHELL_NOT_INITIALIZED : HResultError = HResultError::from_constant(0x8033816E); // ERROR_WSMAN_SHELL_NOT_INITIALIZED
 
 /// The WinRM service cannot process the request.
 /// The URI parameter is the key to CustomRemoteShell table and cannot be modified.
-pub const CONFIG_SHELLURI_INVALID_OPERATION_ON_KEY : ErrorHResult = ErrorHResult::from_constant(0x8033816F); // ERROR_WSMAN_CONFIG_SHELLURI_INVALID_OPERATION_ON_KEY
+pub const CONFIG_SHELLURI_INVALID_OPERATION_ON_KEY : HResultError = HResultError::from_constant(0x8033816F); // ERROR_WSMAN_CONFIG_SHELLURI_INVALID_OPERATION_ON_KEY
 
 /// The WinRM client received an HTTP server error status (500), but the remote service did not include any other information about the cause of the failure.
-pub const HTTP_STATUS_SERVER_ERROR : ErrorHResult = ErrorHResult::from_constant(0x80338170); // ERROR_WSMAN_HTTP_STATUS_SERVER_ERROR
+pub const HTTP_STATUS_SERVER_ERROR : HResultError = HResultError::from_constant(0x80338170); // ERROR_WSMAN_HTTP_STATUS_SERVER_ERROR
 
 /// The WinRM client received an HTTP bad request status (400), but the remote service did not include any other information about the cause of the failure.
-pub const HTTP_STATUS_BAD_REQUEST : ErrorHResult = ErrorHResult::from_constant(0x80338171); // ERROR_WSMAN_HTTP_STATUS_BAD_REQUEST
+pub const HTTP_STATUS_BAD_REQUEST : HResultError = HResultError::from_constant(0x80338171); // ERROR_WSMAN_HTTP_STATUS_BAD_REQUEST
 
 /// The WinRM service cannot make the configuration change.
 /// The selector keys of Subject, URI or Issuer cannot be changed by overriding the selector key value in the body.
-pub const CONFIG_CANNOT_CHANGE_CERTMAPPING_KEYS : ErrorHResult = ErrorHResult::from_constant(0x80338172); // ERROR_WSMAN_CONFIG_CANNOT_CHANGE_CERTMAPPING_KEYS
+pub const CONFIG_CANNOT_CHANGE_CERTMAPPING_KEYS : HResultError = HResultError::from_constant(0x80338172); // ERROR_WSMAN_CONFIG_CANNOT_CHANGE_CERTMAPPING_KEYS
 
 /// The WinRM client cannot process the request because it received an HTML error packet.
-pub const HTML_ERROR : ErrorHResult = ErrorHResult::from_constant(0x80338173); // ERROR_WSMAN_HTML_ERROR
+pub const HTML_ERROR : HResultError = HResultError::from_constant(0x80338173); // ERROR_WSMAN_HTML_ERROR
 
 /// The WinRM client cannot process the request. One of the parameters required for the WSManInitialize function is null or zero.
 /// Change the request to include the missing parameter and try again.
-pub const CLIENT_INITIALIZE_NULL_PARAM : ErrorHResult = ErrorHResult::from_constant(0x80338174); // ERROR_WSMAN_CLIENT_INITIALIZE_NULL_PARAM
+pub const CLIENT_INITIALIZE_NULL_PARAM : HResultError = HResultError::from_constant(0x80338174); // ERROR_WSMAN_CLIENT_INITIALIZE_NULL_PARAM
 
 /// The WinRM client cannot process the request. An invalid flag was specified for the WSManInitialize API call.
 /// Remove or change the invalid flag and try the call again.
-pub const CLIENT_INVALID_INIT_APPLICATION_FLAG : ErrorHResult = ErrorHResult::from_constant(0x80338175); // ERROR_WSMAN_CLIENT_INVALID_INIT_APPLICATION_FLAG
+pub const CLIENT_INVALID_INIT_APPLICATION_FLAG : HResultError = HResultError::from_constant(0x80338175); // ERROR_WSMAN_CLIENT_INVALID_INIT_APPLICATION_FLAG
 
 /// The WinRM client cannot process the request. An invalid flag was specified for the WSManDeinitialize API call.
 /// Remove or change the invalid flag and try the call again.
-pub const CLIENT_INVALID_DEINIT_APPLICATION_FLAG : ErrorHResult = ErrorHResult::from_constant(0x80338176); // ERROR_WSMAN_CLIENT_INVALID_DEINIT_APPLICATION_FLAG
+pub const CLIENT_INVALID_DEINIT_APPLICATION_FLAG : HResultError = HResultError::from_constant(0x80338176); // ERROR_WSMAN_CLIENT_INVALID_DEINIT_APPLICATION_FLAG
 
 /// The WinRM client cannot process the request. One of the parameters required for the WSManSetSessionOption function is null or zero.
 /// Change the request to include the missing parameter and try again.
-pub const CLIENT_SETSESSIONOPTION_NULL_PARAM : ErrorHResult = ErrorHResult::from_constant(0x80338177); // ERROR_WSMAN_CLIENT_SETSESSIONOPTION_NULL_PARAM
+pub const CLIENT_SETSESSIONOPTION_NULL_PARAM : HResultError = HResultError::from_constant(0x80338177); // ERROR_WSMAN_CLIENT_SETSESSIONOPTION_NULL_PARAM
 
 /// The WinRM client cannot process the request. One of the parameters required for the WSManSetSessionOption function is invalid.
 /// Change the invalid parameter and try again.
-pub const CLIENT_SETSESSIONOPTION_INVALID_PARAM : ErrorHResult = ErrorHResult::from_constant(0x80338178); // ERROR_WSMAN_CLIENT_SETSESSIONOPTION_INVALID_PARAM
+pub const CLIENT_SETSESSIONOPTION_INVALID_PARAM : HResultError = HResultError::from_constant(0x80338178); // ERROR_WSMAN_CLIENT_SETSESSIONOPTION_INVALID_PARAM
 
 /// The WinRM client cannot process the request. One of the parameters required to get a session option is invalid.
 /// Change the invalid parameter and try again.
-pub const CLIENT_GETSESSIONOPTION_INVALID_PARAM : ErrorHResult = ErrorHResult::from_constant(0x80338179); // ERROR_WSMAN_CLIENT_GETSESSIONOPTION_INVALID_PARAM
+pub const CLIENT_GETSESSIONOPTION_INVALID_PARAM : HResultError = HResultError::from_constant(0x80338179); // ERROR_WSMAN_CLIENT_GETSESSIONOPTION_INVALID_PARAM
 
 /// The WinRM Shell client cannot process the request. One of the parameters required for the WSManCreateShell function is null or zero.
 /// Change the request to include the missing parameter and try again.
-pub const CLIENT_CREATESHELL_NULL_PARAM : ErrorHResult = ErrorHResult::from_constant(0x8033817A); // ERROR_WSMAN_CLIENT_CREATESHELL_NULL_PARAM
+pub const CLIENT_CREATESHELL_NULL_PARAM : HResultError = HResultError::from_constant(0x8033817A); // ERROR_WSMAN_CLIENT_CREATESHELL_NULL_PARAM
 
 /// The WinRM client cannot process the request. An invalid flag was specified for the WSManCreateShell API call.
 /// Remove or change the invalid flag and try the call again.
-pub const CLIENT_INVALID_CREATE_SHELL_FLAG : ErrorHResult = ErrorHResult::from_constant(0x8033817B); // ERROR_WSMAN_CLIENT_INVALID_CREATE_SHELL_FLAG
+pub const CLIENT_INVALID_CREATE_SHELL_FLAG : HResultError = HResultError::from_constant(0x8033817B); // ERROR_WSMAN_CLIENT_INVALID_CREATE_SHELL_FLAG
 
 /// The WinRM client cannot process the request. An invalid flag was specified for the WSManCloseShell API call.
 /// Remove or change the invalid flag and try the call again.
-pub const CLIENT_INVALID_CLOSE_SHELL_FLAG : ErrorHResult = ErrorHResult::from_constant(0x8033817C); // ERROR_WSMAN_CLIENT_INVALID_CLOSE_SHELL_FLAG
+pub const CLIENT_INVALID_CLOSE_SHELL_FLAG : HResultError = HResultError::from_constant(0x8033817C); // ERROR_WSMAN_CLIENT_INVALID_CLOSE_SHELL_FLAG
 
 /// The WinRM client cannot process the request. An invalid flag was specified for the WSManCloseCommand API call.
 /// Remove or change the invalid flag and try the call again.
-pub const CLIENT_INVALID_CLOSE_COMMAND_FLAG : ErrorHResult = ErrorHResult::from_constant(0x8033817D); // ERROR_WSMAN_CLIENT_INVALID_CLOSE_COMMAND_FLAG
+pub const CLIENT_INVALID_CLOSE_COMMAND_FLAG : HResultError = HResultError::from_constant(0x8033817D); // ERROR_WSMAN_CLIENT_INVALID_CLOSE_COMMAND_FLAG
 
 /// The WinRM Shell client cannot process the request. One of the parameters required for the WSManCloseShell function is null or zero.
 /// Change the request to include the missing parameter and try again.
-pub const CLIENT_CLOSESHELL_NULL_PARAM : ErrorHResult = ErrorHResult::from_constant(0x8033817E); // ERROR_WSMAN_CLIENT_CLOSESHELL_NULL_PARAM
+pub const CLIENT_CLOSESHELL_NULL_PARAM : HResultError = HResultError::from_constant(0x8033817E); // ERROR_WSMAN_CLIENT_CLOSESHELL_NULL_PARAM
 
 /// The WinRM Shell client cannot process the request. One of the parameters required for the WSManCloseCommand function is null or zero.
 /// Change the request to include the missing parameter and try again.
-pub const CLIENT_CLOSECOMMAND_NULL_PARAM : ErrorHResult = ErrorHResult::from_constant(0x8033817F); // ERROR_WSMAN_CLIENT_CLOSECOMMAND_NULL_PARAM
+pub const CLIENT_CLOSECOMMAND_NULL_PARAM : HResultError = HResultError::from_constant(0x8033817F); // ERROR_WSMAN_CLIENT_CLOSECOMMAND_NULL_PARAM
 
 /// The WinRM Shell client cannot process the request. One of the parameters required for the WSManRunShellCommand function is null or zero.
 /// Change the request to include the missing parameter and try again.
-pub const CLIENT_RUNCOMMAND_NULL_PARAM : ErrorHResult = ErrorHResult::from_constant(0x80338180); // ERROR_WSMAN_CLIENT_RUNCOMMAND_NULL_PARAM
+pub const CLIENT_RUNCOMMAND_NULL_PARAM : HResultError = HResultError::from_constant(0x80338180); // ERROR_WSMAN_CLIENT_RUNCOMMAND_NULL_PARAM
 
 /// The WinRM client cannot process the request. An invalid flag was specified for the WSManRunShellCommand API call.
 /// Remove or change the invalid flag and try the call again.
-pub const CLIENT_INVALID_RUNCOMMAND_FLAG : ErrorHResult = ErrorHResult::from_constant(0x80338181); // ERROR_WSMAN_CLIENT_INVALID_RUNCOMMAND_FLAG
+pub const CLIENT_INVALID_RUNCOMMAND_FLAG : HResultError = HResultError::from_constant(0x80338181); // ERROR_WSMAN_CLIENT_INVALID_RUNCOMMAND_FLAG
 
 /// The WinRM client cannot process the request. You must wait for the WSManRunShellCommand API call to complete before calling WSManCloseShellOperationEx API.
-pub const CLIENT_RUNCOMMAND_NOTCOMPLETED : ErrorHResult = ErrorHResult::from_constant(0x80338182); // ERROR_WSMAN_CLIENT_RUNCOMMAND_NOTCOMPLETED
+pub const CLIENT_RUNCOMMAND_NOTCOMPLETED : HResultError = HResultError::from_constant(0x80338182); // ERROR_WSMAN_CLIENT_RUNCOMMAND_NOTCOMPLETED
 
 /// The WinRM client cannot process the request. The response to a Command request did not contain a valid CommandResponse element.
 /// The CommandResponse element was not found or did not contain valid content.
-pub const NO_COMMAND_RESPONSE : ErrorHResult = ErrorHResult::from_constant(0x80338183); // ERROR_WSMAN_NO_COMMAND_RESPONSE
+pub const NO_COMMAND_RESPONSE : HResultError = HResultError::from_constant(0x80338183); // ERROR_WSMAN_NO_COMMAND_RESPONSE
 
 /// The WinRM client cannot process the request. The OptionSet element is invalid.
 /// Change the request to include a valid OptionSet element and try again.
-pub const INVALID_OPTIONSET : ErrorHResult = ErrorHResult::from_constant(0x80338184); // ERROR_WSMAN_INVALID_OPTIONSET
+pub const INVALID_OPTIONSET : HResultError = HResultError::from_constant(0x80338184); // ERROR_WSMAN_INVALID_OPTIONSET
 
 /// The WinRM client cannot process the request. The response to a Command request did not contain a valid CommandResponse element.
 /// The CommandId element was not found or did not contain valid content.
-pub const NO_COMMANDID : ErrorHResult = ErrorHResult::from_constant(0x80338185); // ERROR_WSMAN_NO_COMMANDID
+pub const NO_COMMANDID : HResultError = HResultError::from_constant(0x80338185); // ERROR_WSMAN_NO_COMMANDID
 
 /// The WinRM Shell client cannot process the request. One of the parameters required for the WSManSignalShell function is null or zero.
 /// Change the request to include the missing parameter and try again.
-pub const CLIENT_SIGNAL_NULL_PARAM : ErrorHResult = ErrorHResult::from_constant(0x80338186); // ERROR_WSMAN_CLIENT_SIGNAL_NULL_PARAM
+pub const CLIENT_SIGNAL_NULL_PARAM : HResultError = HResultError::from_constant(0x80338186); // ERROR_WSMAN_CLIENT_SIGNAL_NULL_PARAM
 
 /// The WinRM client cannot process the request. An invalid flag was specified for the WSManSignalShell API call.
 /// Remove or change the invalid flag and try the call again.
-pub const CLIENT_INVALID_SIGNAL_SHELL_FLAG : ErrorHResult = ErrorHResult::from_constant(0x80338187); // ERROR_WSMAN_CLIENT_INVALID_SIGNAL_SHELL_FLAG
+pub const CLIENT_INVALID_SIGNAL_SHELL_FLAG : HResultError = HResultError::from_constant(0x80338187); // ERROR_WSMAN_CLIENT_INVALID_SIGNAL_SHELL_FLAG
 
 /// The WinRM Shell client cannot process the request. One of the parameters required for the WSManSendShellInput function is null or zero.
 /// Change the request to include the missing parameter and try again.
-pub const CLIENT_SEND_NULL_PARAM : ErrorHResult = ErrorHResult::from_constant(0x80338188); // ERROR_WSMAN_CLIENT_SEND_NULL_PARAM
+pub const CLIENT_SEND_NULL_PARAM : HResultError = HResultError::from_constant(0x80338188); // ERROR_WSMAN_CLIENT_SEND_NULL_PARAM
 
 /// The WinRM client cannot process the request. An invalid flag was specified for the WSManSendShellInput API call.
 /// Remove or change the invalid flag and try the call again.
-pub const CLIENT_INVALID_SEND_SHELL_FLAG : ErrorHResult = ErrorHResult::from_constant(0x80338189); // ERROR_WSMAN_CLIENT_INVALID_SEND_SHELL_FLAG
+pub const CLIENT_INVALID_SEND_SHELL_FLAG : HResultError = HResultError::from_constant(0x80338189); // ERROR_WSMAN_CLIENT_INVALID_SEND_SHELL_FLAG
 
 /// The WinRM client cannot process the request. An invalid parameter was specified for the WSManSendShellInput API call.
 /// streamData parameter should be specified in binary format using WSMAN_DATA_TYPE_BINARY type.
 /// Change the invalid parameter and try the call again.
-pub const CLIENT_INVALID_SEND_SHELL_PARAMETER : ErrorHResult = ErrorHResult::from_constant(0x8033818A); // ERROR_WSMAN_CLIENT_INVALID_SEND_SHELL_PARAMETER
+pub const CLIENT_INVALID_SEND_SHELL_PARAMETER : HResultError = HResultError::from_constant(0x8033818A); // ERROR_WSMAN_CLIENT_INVALID_SEND_SHELL_PARAMETER
 
 /// The WinRM Shell client cannot process the request. The stream name passed to the WSManSendShellInput function is not valid.
 /// The input stream name should be specified as part of the input streams during shell creation using WSManCreateShell function.
 /// Change the request including a valid input stream name and try again.
-pub const SHELL_INVALID_INPUT_STREAM : ErrorHResult = ErrorHResult::from_constant(0x8033818B); // ERROR_WSMAN_SHELL_INVALID_INPUT_STREAM
+pub const SHELL_INVALID_INPUT_STREAM : HResultError = HResultError::from_constant(0x8033818B); // ERROR_WSMAN_SHELL_INVALID_INPUT_STREAM
 
 /// The WinRM Shell client cannot process the request. One of the parameters required for the WSManReceiveShellOutput function is null or zero.
 /// Change the request to include the missing parameter and try again.
-pub const CLIENT_RECEIVE_NULL_PARAM : ErrorHResult = ErrorHResult::from_constant(0x8033818C); // ERROR_WSMAN_CLIENT_RECEIVE_NULL_PARAM
+pub const CLIENT_RECEIVE_NULL_PARAM : HResultError = HResultError::from_constant(0x8033818C); // ERROR_WSMAN_CLIENT_RECEIVE_NULL_PARAM
 
 /// The WinRM Shell client cannot process the request. The stream or list of streams passed to the WSManReceiveShellOutput function is not valid.
 /// The desired stream names should be specified as part of the output streams during shell creation using WSManCreateShell function.
 /// Change the request including valid desired streams and try again.
-pub const SHELL_INVALID_DESIRED_STREAMS : ErrorHResult = ErrorHResult::from_constant(0x8033818D); // ERROR_WSMAN_SHELL_INVALID_DESIRED_STREAMS
+pub const SHELL_INVALID_DESIRED_STREAMS : HResultError = HResultError::from_constant(0x8033818D); // ERROR_WSMAN_SHELL_INVALID_DESIRED_STREAMS
 
 /// The WinRM client cannot process the request. An invalid flag was specified for the WSManReceiveShellOutput API call.
 /// Remove or change the invalid flag and try the call again.
-pub const CLIENT_INVALID_RECEIVE_SHELL_FLAG : ErrorHResult = ErrorHResult::from_constant(0x8033818E); // ERROR_WSMAN_CLIENT_INVALID_RECEIVE_SHELL_FLAG
+pub const CLIENT_INVALID_RECEIVE_SHELL_FLAG : HResultError = HResultError::from_constant(0x8033818E); // ERROR_WSMAN_CLIENT_INVALID_RECEIVE_SHELL_FLAG
 
 /// The WinRM client cannot process the request. The response to a Receive request did not contain a valid ReceiveResponse element.
 /// The ReceiveResponse element was not found or did not contain valid content.
-pub const NO_RECEIVE_RESPONSE : ErrorHResult = ErrorHResult::from_constant(0x8033818F); // ERROR_WSMAN_NO_RECEIVE_RESPONSE
+pub const NO_RECEIVE_RESPONSE : HResultError = HResultError::from_constant(0x8033818F); // ERROR_WSMAN_NO_RECEIVE_RESPONSE
 
 /// The WSMan plugin configuration is corrupted.
-pub const PLUGIN_CONFIGURATION_CORRUPTED : ErrorHResult = ErrorHResult::from_constant(0x80338190); // ERROR_WSMAN_PLUGIN_CONFIGURATION_CORRUPTED
+pub const PLUGIN_CONFIGURATION_CORRUPTED : HResultError = HResultError::from_constant(0x80338190); // ERROR_WSMAN_PLUGIN_CONFIGURATION_CORRUPTED
 
 /// The file path specified is either not absolute, not in the system32 directory, or not valid.
-pub const INVALID_FILEPATH : ErrorHResult = ErrorHResult::from_constant(0x80338191); // ERROR_WSMAN_INVALID_FILEPATH
+pub const INVALID_FILEPATH : HResultError = HResultError::from_constant(0x80338191); // ERROR_WSMAN_INVALID_FILEPATH
 
 /// The file specified does not exist.
-pub const FILE_NOT_PRESENT : ErrorHResult = ErrorHResult::from_constant(0x80338192); // ERROR_WSMAN_FILE_NOT_PRESENT
+pub const FILE_NOT_PRESENT : HResultError = HResultError::from_constant(0x80338192); // ERROR_WSMAN_FILE_NOT_PRESENT
 
 /// The WSMan extension failed to read IIS configuration.
-pub const IISCONFIGURATION_READ_FAILED : ErrorHResult = ErrorHResult::from_constant(0x80338193); // ERROR_WSMAN_IISCONFIGURATION_READ_FAILED
+pub const IISCONFIGURATION_READ_FAILED : HResultError = HResultError::from_constant(0x80338193); // ERROR_WSMAN_IISCONFIGURATION_READ_FAILED
 
 /// The WinRM client cannot process the request. The locale option is invalid.
 /// Change the locale and try again.
-pub const CLIENT_INVALID_LOCALE : ErrorHResult = ErrorHResult::from_constant(0x80338194); // ERROR_WSMAN_CLIENT_INVALID_LOCALE
+pub const CLIENT_INVALID_LOCALE : HResultError = HResultError::from_constant(0x80338194); // ERROR_WSMAN_CLIENT_INVALID_LOCALE
 
 /// The WinRM client cannot process the request. The UI language option is invalid.
 /// Change the UI language and try again.
-pub const CLIENT_INVALID_UI_LANGUAGE : ErrorHResult = ErrorHResult::from_constant(0x80338195); // ERROR_WSMAN_CLIENT_INVALID_UI_LANGUAGE
+pub const CLIENT_INVALID_UI_LANGUAGE : HResultError = HResultError::from_constant(0x80338195); // ERROR_WSMAN_CLIENT_INVALID_UI_LANGUAGE
 
 /// The WinRM client cannot process the request. One of the parameters required for the WSManGetErrorMessage function is null or zero.
 /// Change the request to include the missing parameter and try again.
-pub const CLIENT_GETERRORMESSAGE_NULL_PARAM : ErrorHResult = ErrorHResult::from_constant(0x80338196); // ERROR_WSMAN_CLIENT_GETERRORMESSAGE_NULL_PARAM
+pub const CLIENT_GETERRORMESSAGE_NULL_PARAM : HResultError = HResultError::from_constant(0x80338196); // ERROR_WSMAN_CLIENT_GETERRORMESSAGE_NULL_PARAM
 
 /// The WinRM client cannot process the request. The language code parameter is invalid. The language code parameter should be either NULL or a valid RFC 3066 language code.
 /// Change the language code and try the request again.
-pub const CLIENT_INVALID_LANGUAGE_CODE : ErrorHResult = ErrorHResult::from_constant(0x80338197); // ERROR_WSMAN_CLIENT_INVALID_LANGUAGE_CODE
+pub const CLIENT_INVALID_LANGUAGE_CODE : HResultError = HResultError::from_constant(0x80338197); // ERROR_WSMAN_CLIENT_INVALID_LANGUAGE_CODE
 
 /// The WinRM client cannot process the request. An invalid flag was specified for the WSManGetErrorMessage API call.
 /// Remove or change the invalid flag and try the call again.
-pub const CLIENT_INVALID_GETERRORMESSAGE_FLAG : ErrorHResult = ErrorHResult::from_constant(0x80338198); // ERROR_WSMAN_CLIENT_INVALID_GETERRORMESSAGE_FLAG
+pub const CLIENT_INVALID_GETERRORMESSAGE_FLAG : HResultError = HResultError::from_constant(0x80338198); // ERROR_WSMAN_CLIENT_INVALID_GETERRORMESSAGE_FLAG
 
 /// The WinRM service cannot process the request because the request needs to be sent to a different machine.
 /// Use the redirect information to send the request to a new machine.
-pub const REDIRECT_REQUESTED : ErrorHResult = ErrorHResult::from_constant(0x80338199); // ERROR_WSMAN_REDIRECT_REQUESTED
+pub const REDIRECT_REQUESTED : HResultError = HResultError::from_constant(0x80338199); // ERROR_WSMAN_REDIRECT_REQUESTED
 
 /// The WinRM client cannot process the request. The flag that specifies the proxy authentication mechanism to use is incorrect.
 /// Remove or change the invalid flag and try the request again.
-pub const PROXY_AUTHENTICATION_INVALID_FLAG : ErrorHResult = ErrorHResult::from_constant(0x8033819A); // ERROR_WSMAN_PROXY_AUTHENTICATION_INVALID_FLAG
+pub const PROXY_AUTHENTICATION_INVALID_FLAG : HResultError = HResultError::from_constant(0x8033819A); // ERROR_WSMAN_PROXY_AUTHENTICATION_INVALID_FLAG
 
 /// The WinRM client cannot process the request. The credentials for proxy authentication are not specified correctly. Both user name and password credentials must be valid.
 /// Specify the correct credentials and try the request again.
-pub const CLIENT_CREDENTIALS_FOR_PROXY_AUTHENTICATION : ErrorHResult = ErrorHResult::from_constant(0x8033819B); // ERROR_WSMAN_CLIENT_CREDENTIALS_FOR_PROXY_AUTHENTICATION
+pub const CLIENT_CREDENTIALS_FOR_PROXY_AUTHENTICATION : HResultError = HResultError::from_constant(0x8033819B); // ERROR_WSMAN_CLIENT_CREDENTIALS_FOR_PROXY_AUTHENTICATION
 
 /// The WinRM client cannot process the request. The proxy access type is incorrect. Use one of the proxy access type flags; the flags cannot be combined.
 /// Change the invalid proxy access type and try the request again.
-pub const PROXY_ACCESS_TYPE : ErrorHResult = ErrorHResult::from_constant(0x8033819C); // ERROR_WSMAN_PROXY_ACCESS_TYPE
+pub const PROXY_ACCESS_TYPE : HResultError = HResultError::from_constant(0x8033819C); // ERROR_WSMAN_PROXY_ACCESS_TYPE
 
 /// The WinRM client cannot process the request. The direct connection to the server option cannot be used with non empty proxy authentication data.
 /// Change the invalid proxy access type or use empty proxy authentication data and try the request again.
-pub const INVALID_OPTION_NO_PROXY_SERVER : ErrorHResult = ErrorHResult::from_constant(0x8033819D); // ERROR_WSMAN_INVALID_OPTION_NO_PROXY_SERVER
+pub const INVALID_OPTION_NO_PROXY_SERVER : HResultError = HResultError::from_constant(0x8033819D); // ERROR_WSMAN_INVALID_OPTION_NO_PROXY_SERVER
 
 /// The WinRM client cannot process the request. One of the parameters required for the WSManGetSessionOptionAsDword function is null or zero.
 /// Change the request to include the missing parameter and try again.
-pub const CLIENT_GETSESSIONOPTION_DWORD_NULL_PARAM : ErrorHResult = ErrorHResult::from_constant(0x8033819E); // ERROR_WSMAN_CLIENT_GETSESSIONOPTION_DWORD_NULL_PARAM
+pub const CLIENT_GETSESSIONOPTION_DWORD_NULL_PARAM : HResultError = HResultError::from_constant(0x8033819E); // ERROR_WSMAN_CLIENT_GETSESSIONOPTION_DWORD_NULL_PARAM
 
 /// The WinRM client cannot process the request. One of the parameters required for the WSManGetSessionOptionAsDword function is invalid.
 /// Change the invalid parameter and try again.
-pub const CLIENT_GETSESSIONOPTION_DWORD_INVALID_PARAM : ErrorHResult = ErrorHResult::from_constant(0x8033819F); // ERROR_WSMAN_CLIENT_GETSESSIONOPTION_DWORD_INVALID_PARAM
+pub const CLIENT_GETSESSIONOPTION_DWORD_INVALID_PARAM : HResultError = HResultError::from_constant(0x8033819F); // ERROR_WSMAN_CLIENT_GETSESSIONOPTION_DWORD_INVALID_PARAM
 
 /// The WinRM client cannot process the request. One of the parameters required for the WSManGetSessionOptionAsString function is invalid.
 /// Change the invalid parameter and try again.
-pub const CLIENT_GETSESSIONOPTION_STRING_INVALID_PARAM : ErrorHResult = ErrorHResult::from_constant(0x803381A0); // ERROR_WSMAN_CLIENT_GETSESSIONOPTION_STRING_INVALID_PARAM
+pub const CLIENT_GETSESSIONOPTION_STRING_INVALID_PARAM : HResultError = HResultError::from_constant(0x803381A0); // ERROR_WSMAN_CLIENT_GETSESSIONOPTION_STRING_INVALID_PARAM
 
 /// The WinRM client cannot process the request. Requests must include user name and password when CredSSP authentication mechanism is used.
 /// Add the user name and password or change the authentication mechanism and try the request again.
-pub const CREDSSP_USERNAME_PASSWORD_NEEDED : ErrorHResult = ErrorHResult::from_constant(0x803381A1); // ERROR_WSMAN_CREDSSP_USERNAME_PASSWORD_NEEDED
+pub const CREDSSP_USERNAME_PASSWORD_NEEDED : HResultError = HResultError::from_constant(0x803381A1); // ERROR_WSMAN_CREDSSP_USERNAME_PASSWORD_NEEDED
 
 /// The WinRM client cannot process the request.
 /// CredSSP authentication is currently disabled in the client configuration.
@@ -1481,13 +1481,13 @@ pub const CREDSSP_USERNAME_PASSWORD_NEEDED : ErrorHResult = ErrorHResult::from_c
 /// Use gpedit.msc and look at the following policy: Computer Configuration -> Administrative Templates -> System -> Credentials Delegation -> Allow Delegating Fresh Credentials.
 /// Verify that it is enabled and configured with an SPN appropriate for the target computer.
 /// For example, for a target computer name "myserver.domain.com", the SPN can be one of the following: WSMAN/myserver.domain.com or WSMAN/\*.domain.com
-pub const CLIENT_CREDSSP_AUTHENTICATION_DISABLED : ErrorHResult = ErrorHResult::from_constant(0x803381A2); // ERROR_WSMAN_CLIENT_CREDSSP_AUTHENTICATION_DISABLED
+pub const CLIENT_CREDSSP_AUTHENTICATION_DISABLED : HResultError = HResultError::from_constant(0x803381A2); // ERROR_WSMAN_CLIENT_CREDSSP_AUTHENTICATION_DISABLED
 
 /// The WinRM client cannot process the request. A computer policy does not allow the delegation of the user credentials to the target computer.
 /// Use gpedit.msc and look at the following policy: Computer Configuration -> Administrative Templates -> System -> Credentials Delegation -> Allow Delegating Fresh Credentials.
 /// Verify that it is enabled and configured with an SPN appropriate for the target computer.
 /// For example, for a target computer name "myserver.domain.com", the SPN can be one of the following: WSMAN/myserver.domain.com or WSMAN/\*.domain.com.
-pub const CLIENT_ALLOWFRESHCREDENTIALS : ErrorHResult = ErrorHResult::from_constant(0x803381A3); // ERROR_WSMAN_CLIENT_ALLOWFRESHCREDENTIALS
+pub const CLIENT_ALLOWFRESHCREDENTIALS : HResultError = HResultError::from_constant(0x803381A3); // ERROR_WSMAN_CLIENT_ALLOWFRESHCREDENTIALS
 
 /// The WinRM client cannot process the request. A computer policy does not allow the delegation of the user credentials to the target computer because the computer is not trusted.
 /// The identity of the target computer can be verified if you configure the WSMAN service to use a valid certificate using the following command: winrm set winrm/config/service @{CertificateThumbprint="<thumbprint>"}
@@ -1496,285 +1496,285 @@ pub const CLIENT_ALLOWFRESHCREDENTIALS : ErrorHResult = ErrorHResult::from_const
 /// Verify that it is enabled and configured with an SPN appropriate for the target computer.
 /// For example, for a target computer name "myserver.domain.com", the SPN can be one of the following: WSMAN/myserver.domain.com or WSMAN/\*.domain.com.
 /// Try the request again after these changes.
-pub const CLIENT_ALLOWFRESHCREDENTIALS_NTLMONLY : ErrorHResult = ErrorHResult::from_constant(0x803381A4); // ERROR_WSMAN_CLIENT_ALLOWFRESHCREDENTIALS_NTLMONLY
+pub const CLIENT_ALLOWFRESHCREDENTIALS_NTLMONLY : HResultError = HResultError::from_constant(0x803381A4); // ERROR_WSMAN_CLIENT_ALLOWFRESHCREDENTIALS_NTLMONLY
 
 /// The WS-Management service cannot process the request.
 /// The maximum number of concurrent shells for this user has been exceeded.
 /// Close existing shells or raise the quota for this user.
-pub const QUOTA_MAX_SHELLS : ErrorHResult = ErrorHResult::from_constant(0x803381A5); // ERROR_WSMAN_QUOTA_MAX_SHELLS
+pub const QUOTA_MAX_SHELLS : HResultError = HResultError::from_constant(0x803381A5); // ERROR_WSMAN_QUOTA_MAX_SHELLS
 
 /// The WS-Management service cannot process the request.
 /// The maximum number of concurrent operations for this user has been exceeded.
 /// Close existing operations for this user, or raise the quota for this user.
-pub const QUOTA_MAX_OPERATIONS : ErrorHResult = ErrorHResult::from_constant(0x803381A6); // ERROR_WSMAN_QUOTA_MAX_OPERATIONS
+pub const QUOTA_MAX_OPERATIONS : HResultError = HResultError::from_constant(0x803381A6); // ERROR_WSMAN_QUOTA_MAX_OPERATIONS
 
 /// The WS-Management service cannot process the request.
 /// The load quota for this user has been exceeded.
 /// Send future requests at a slower rate or raise the quota for this user.
-pub const QUOTA_USER : ErrorHResult = ErrorHResult::from_constant(0x803381A7); // ERROR_WSMAN_QUOTA_USER
+pub const QUOTA_USER : HResultError = HResultError::from_constant(0x803381A7); // ERROR_WSMAN_QUOTA_USER
 
 /// The WS-Management service cannot process the request.
 /// The load quota for the system has been exceeded.
 /// Send future requests at a slower rate or raise the system quota.
-pub const QUOTA_SYSTEM : ErrorHResult = ErrorHResult::from_constant(0x803381A8); // ERROR_WSMAN_QUOTA_SYSTEM
+pub const QUOTA_SYSTEM : HResultError = HResultError::from_constant(0x803381A8); // ERROR_WSMAN_QUOTA_SYSTEM
 
 /// The WS-Management service cannot complete the authorization under the given token.
 /// A previous authorization attempt for the same user resulted in a different token.
 /// The user record will be revoked and the next request will reauthorize.
-pub const DIFFERENT_AUTHZ_TOKEN : ErrorHResult = ErrorHResult::from_constant(0x803381A9); // ERROR_WSMAN_DIFFERENT_AUTHZ_TOKEN
+pub const DIFFERENT_AUTHZ_TOKEN : HResultError = HResultError::from_constant(0x803381A9); // ERROR_WSMAN_DIFFERENT_AUTHZ_TOKEN
 
 /// An application tried to retrieve the HTTP Redirect location from the session when no redirect error (ERROR_WSMAN_REDIRECT_REQUESTED) was returned.
 /// The application needs to be updated so as to only retrieve the location after this error is returned.
-pub const REDIRECT_LOCATION_NOT_AVAILABLE : ErrorHResult = ErrorHResult::from_constant(0x803381AA); // ERROR_WSMAN_REDIRECT_LOCATION_NOT_AVAILABLE
+pub const REDIRECT_LOCATION_NOT_AVAILABLE : HResultError = HResultError::from_constant(0x803381AA); // ERROR_WSMAN_REDIRECT_LOCATION_NOT_AVAILABLE
 
 /// The WS-Management service cannot process the request.
 /// The maximum number of users executing shell operations has been exceeded.
 /// Retry after some time or raise the quota for concurrent shell users.
-pub const QUOTA_MAX_SHELLUSERS : ErrorHResult = ErrorHResult::from_constant(0x803381AB); // ERROR_WSMAN_QUOTA_MAX_SHELLUSERS
+pub const QUOTA_MAX_SHELLUSERS : HResultError = HResultError::from_constant(0x803381AB); // ERROR_WSMAN_QUOTA_MAX_SHELLUSERS
 
 /// The WS-Management service cannot process the request.
 /// The service is configured to not accept any remote shell requests.
-pub const REMOTESHELLS_NOT_ALLOWED : ErrorHResult = ErrorHResult::from_constant(0x803381AC); // ERROR_WSMAN_REMOTESHELLS_NOT_ALLOWED
+pub const REMOTESHELLS_NOT_ALLOWED : HResultError = HResultError::from_constant(0x803381AC); // ERROR_WSMAN_REMOTESHELLS_NOT_ALLOWED
 
 /// The WS-Management service cannot complete the Pull operation for the enumeration because the wsman:MaxEnvelopeSize, wsen:MaxCharacters or wsen:MaxElements parameters differ from those specified to the enumeration.
 /// The application needs to specify the same parameters for Pull as were specified for the enumeration.
-pub const PULL_PARAMS_NOT_SAME_AS_ENUM : ErrorHResult = ErrorHResult::from_constant(0x803381AD); // ERROR_WSMAN_PULL_PARAMS_NOT_SAME_AS_ENUM
+pub const PULL_PARAMS_NOT_SAME_AS_ENUM : HResultError = HResultError::from_constant(0x803381AD); // ERROR_WSMAN_PULL_PARAMS_NOT_SAME_AS_ENUM
 
 /// The WinRM service cannot process the request because it is trying to update a deprecated setting.
 /// Remove this setting from the command and try again.
-pub const DEPRECATED_CONFIG_SETTING : ErrorHResult = ErrorHResult::from_constant(0x803381AE); // ERROR_WSMAN_DEPRECATED_CONFIG_SETTING
+pub const DEPRECATED_CONFIG_SETTING : HResultError = HResultError::from_constant(0x803381AE); // ERROR_WSMAN_DEPRECATED_CONFIG_SETTING
 
 /// The WS-Management service cannot process the configuration settings.
 /// A Security element contains a URI that does not match its parent Resource element.
-pub const URI_SECURITY_URI : ErrorHResult = ErrorHResult::from_constant(0x803381AF); // ERROR_WSMAN_URI_SECURITY_URI
+pub const URI_SECURITY_URI : HResultError = HResultError::from_constant(0x803381AF); // ERROR_WSMAN_URI_SECURITY_URI
 
 /// The WinRM client cannot process the request. Allow implicit credentials for Negotiate authentication option is only valid for HTTPS transport.
 /// Remove the allow implicit credentials for Negotiate authentication option and try the request again.
-pub const CANNOT_USE_ALLOW_NEGOTIATE_IMPLICIT_CREDENTIALS_FOR_HTTP : ErrorHResult = ErrorHResult::from_constant(0x803381B0); // ERROR_WSMAN_CANNOT_USE_ALLOW_NEGOTIATE_IMPLICIT_CREDENTIALS_FOR_HTTP
+pub const CANNOT_USE_ALLOW_NEGOTIATE_IMPLICIT_CREDENTIALS_FOR_HTTP : HResultError = HResultError::from_constant(0x803381B0); // ERROR_WSMAN_CANNOT_USE_ALLOW_NEGOTIATE_IMPLICIT_CREDENTIALS_FOR_HTTP
 
 /// The WinRM client cannot process the request. Setting proxy information is not valid when the HTTP transport is specified.
 /// Remove the proxy information or change the transport and try the request again.
-pub const CANNOT_USE_PROXY_SETTINGS_FOR_HTTP : ErrorHResult = ErrorHResult::from_constant(0x803381B1); // ERROR_WSMAN_CANNOT_USE_PROXY_SETTINGS_FOR_HTTP
+pub const CANNOT_USE_PROXY_SETTINGS_FOR_HTTP : HResultError = HResultError::from_constant(0x803381B1); // ERROR_WSMAN_CANNOT_USE_PROXY_SETTINGS_FOR_HTTP
 
 /// The WinRM client cannot process the request. Setting proxy information is not valid when the authentication mechanism with the remote machine is Kerberos.
 /// Remove the proxy information or change the authentication mechanism and try the request again.
-pub const CANNOT_USE_PROXY_SETTINGS_FOR_KERBEROS : ErrorHResult = ErrorHResult::from_constant(0x803381B2); // ERROR_WSMAN_CANNOT_USE_PROXY_SETTINGS_FOR_KERBEROS
+pub const CANNOT_USE_PROXY_SETTINGS_FOR_KERBEROS : HResultError = HResultError::from_constant(0x803381B2); // ERROR_WSMAN_CANNOT_USE_PROXY_SETTINGS_FOR_KERBEROS
 
 /// The WinRM client cannot process the request. Setting proxy information is not valid when the authentication mechanism with the remote machine is CredSSP.
 /// Remove the proxy information or change the authentication mechanism and try the request again.
-pub const CANNOT_USE_PROXY_SETTINGS_FOR_CREDSSP : ErrorHResult = ErrorHResult::from_constant(0x803381B3); // ERROR_WSMAN_CANNOT_USE_PROXY_SETTINGS_FOR_CREDSSP
+pub const CANNOT_USE_PROXY_SETTINGS_FOR_CREDSSP : HResultError = HResultError::from_constant(0x803381B3); // ERROR_WSMAN_CANNOT_USE_PROXY_SETTINGS_FOR_CREDSSP
 
 /// The WinRM client cannot process the request. The request must specify only one authentication mechanism for proxy.
 /// Change the request to specify only one authentication mechanism and try again.
-pub const CLIENT_MULTIPLE_PROXY_AUTH_FLAGS : ErrorHResult = ErrorHResult::from_constant(0x803381B4); // ERROR_WSMAN_CLIENT_MULTIPLE_PROXY_AUTH_FLAGS
+pub const CLIENT_MULTIPLE_PROXY_AUTH_FLAGS : HResultError = HResultError::from_constant(0x803381B4); // ERROR_WSMAN_CLIENT_MULTIPLE_PROXY_AUTH_FLAGS
 
 /// The WinRM client received a redirect error from the server when it is not appropriate.
 /// The only time a redirect error can be reported correctly is during the authorization of a user.
 /// This would result in a properly formatted redirect response from the server that includes the redirect endpoint.
-pub const INVALID_REDIRECT_ERROR : ErrorHResult = ErrorHResult::from_constant(0x803381B5); // ERROR_WSMAN_INVALID_REDIRECT_ERROR
+pub const INVALID_REDIRECT_ERROR : HResultError = HResultError::from_constant(0x803381B5); // ERROR_WSMAN_INVALID_REDIRECT_ERROR
 
 /// The WinRM client cannot process the request because the server name cannot be resolved.
-pub const NAME_NOT_RESOLVED : ErrorHResult = ErrorHResult::from_constant(0x803381B9); // ERROR_WSMAN_NAME_NOT_RESOLVED
+pub const NAME_NOT_RESOLVED : HResultError = HResultError::from_constant(0x803381B9); // ERROR_WSMAN_NAME_NOT_RESOLVED
 
 /// The SSL connection cannot be established.
 /// Verify that the service on the remote host is properly configured to listen for HTTPS requests.
 /// Consult the logs and documentation for the WS-Management service running on the destination, most commonly IIS or WinRM.
 /// If the destination is the WinRM service, run the following command on the destination to analyze and configure the WinRM service: "winrm quickconfig -transport:https".
-pub const SSL_CONNECTION_ABORTED : ErrorHResult = ErrorHResult::from_constant(0x803381BA); // ERROR_WSMAN_SSL_CONNECTION_ABORTED
+pub const SSL_CONNECTION_ABORTED : HResultError = HResultError::from_constant(0x803381BA); // ERROR_WSMAN_SSL_CONNECTION_ABORTED
 
 /// The WinRM client cannot process the request.
 /// Default authentication may be used with an IP address under the following conditions: the transport is HTTPS or the destination is in the TrustedHosts list, and explicit credentials are provided.
 /// Use winrm.cmd to configure TrustedHosts. Note that computers in the TrustedHosts list might not be authenticated.
 /// For more information on how to set TrustedHosts run the following command: winrm help config.
-pub const DEFAULTAUTH_IPADDRESS : ErrorHResult = ErrorHResult::from_constant(0x803381BB); // ERROR_WSMAN_DEFAULTAUTH_IPADDRESS
+pub const DEFAULTAUTH_IPADDRESS : HResultError = HResultError::from_constant(0x803381BB); // ERROR_WSMAN_DEFAULTAUTH_IPADDRESS
 
 /// The WinRM client cannot process the request.
 /// Custom Remote Shell has been deprecated and cannot be used.
-pub const CUSTOMREMOTESHELL_DEPRECATED : ErrorHResult = ErrorHResult::from_constant(0x803381BC); // ERROR_WSMAN_CUSTOMREMOTESHELL_DEPRECATED
+pub const CUSTOMREMOTESHELL_DEPRECATED : HResultError = HResultError::from_constant(0x803381BC); // ERROR_WSMAN_CUSTOMREMOTESHELL_DEPRECATED
 
 /// The WinRM client cannot process the request.
 /// The feature in use has been deprecated and cannot be used.
-pub const FEATURE_DEPRECATED : ErrorHResult = ErrorHResult::from_constant(0x803381BD); // ERROR_WSMAN_FEATURE_DEPRECATED
+pub const FEATURE_DEPRECATED : HResultError = HResultError::from_constant(0x803381BD); // ERROR_WSMAN_FEATURE_DEPRECATED
 
 /// The WinRM client used a parameter to specify the use of SSL while specifying http in the connection string.
-pub const INVALID_USESSL_PARAM : ErrorHResult = ErrorHResult::from_constant(0x803381BE); // ERROR_WSMAN_INVALID_USESSL_PARAM
+pub const INVALID_USESSL_PARAM : HResultError = HResultError::from_constant(0x803381BE); // ERROR_WSMAN_INVALID_USESSL_PARAM
 
 /// The WinRM service cannot process the request because the security for this resource URI cannot be changed.
-pub const INVALID_CONFIGSDDL_URL : ErrorHResult = ErrorHResult::from_constant(0x803381BF); // ERROR_WSMAN_INVALID_CONFIGSDDL_URL
+pub const INVALID_CONFIGSDDL_URL : HResultError = HResultError::from_constant(0x803381BF); // ERROR_WSMAN_INVALID_CONFIGSDDL_URL
 
 /// The WinRM service cannot process the request. The enumeration request expects a selector based filter to specify the shell identifier.
-pub const ENUMERATE_SHELLCOMAMNDS_FILTER_EXPECTED : ErrorHResult = ErrorHResult::from_constant(0x803381C0); // ERROR_WSMAN_ENUMERATE_SHELLCOMAMNDS_FILTER_EXPECTED
+pub const ENUMERATE_SHELLCOMAMNDS_FILTER_EXPECTED : HResultError = HResultError::from_constant(0x803381C0); // ERROR_WSMAN_ENUMERATE_SHELLCOMAMNDS_FILTER_EXPECTED
 
 /// The WinRM service cannot process the request. The enumeration of end point resources for shell commands is not supported.
-pub const ENUMERATE_SHELLCOMMANDS_EPRS_NOTSUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x803381C1); // ERROR_WSMAN_ENUMERATE_SHELLCOMMANDS_EPRS_NOTSUPPORTED
+pub const ENUMERATE_SHELLCOMMANDS_EPRS_NOTSUPPORTED : HResultError = HResultError::from_constant(0x803381C1); // ERROR_WSMAN_ENUMERATE_SHELLCOMMANDS_EPRS_NOTSUPPORTED
 
 /// The WinRM Shell client cannot process the request because the shell name has exceeded 255 characters in length.
-pub const CLIENT_CREATESHELL_NAME_INVALID : ErrorHResult = ErrorHResult::from_constant(0x803381C2); // ERROR_WSMAN_CLIENT_CREATESHELL_NAME_INVALID
+pub const CLIENT_CREATESHELL_NAME_INVALID : HResultError = HResultError::from_constant(0x803381C2); // ERROR_WSMAN_CLIENT_CREATESHELL_NAME_INVALID
 
 /// The WinRM runAs configuration operation cannot be completed because the user credentials could not be verified.
 /// Verify that the username and password used for configuration are valid and retry the operation.
-pub const RUNAS_INVALIDUSERCREDENTIALS : ErrorHResult = ErrorHResult::from_constant(0x803381C3); // ERROR_WSMAN_RUNAS_INVALIDUSERCREDENTIALS
+pub const RUNAS_INVALIDUSERCREDENTIALS : HResultError = HResultError::from_constant(0x803381C3); // ERROR_WSMAN_RUNAS_INVALIDUSERCREDENTIALS
 
 /// The WinRM Shell client cannot process the request. One of the parameters required for the WSManDisconnectShell function is null or zero.
 /// Change the request to include the missing parameter and try again.
-pub const CLIENT_DISCONNECTSHELL_NULL_PARAM : ErrorHResult = ErrorHResult::from_constant(0x803381C7); // ERROR_WSMAN_CLIENT_DISCONNECTSHELL_NULL_PARAM
+pub const CLIENT_DISCONNECTSHELL_NULL_PARAM : HResultError = HResultError::from_constant(0x803381C7); // ERROR_WSMAN_CLIENT_DISCONNECTSHELL_NULL_PARAM
 
 /// The WinRM Shell client cannot process the request. One of the parameters required for the WSManReconnectShell function is null or zero.
 /// Change the request to include the missing parameter and try again.
-pub const CLIENT_RECONNECTSHELL_NULL_PARAM : ErrorHResult = ErrorHResult::from_constant(0x803381C8); // ERROR_WSMAN_CLIENT_RECONNECTSHELL_NULL_PARAM
+pub const CLIENT_RECONNECTSHELL_NULL_PARAM : HResultError = HResultError::from_constant(0x803381C8); // ERROR_WSMAN_CLIENT_RECONNECTSHELL_NULL_PARAM
 
 /// The WinRM Shell client cannot process the request. One of the parameters required for the WSManConnectShell function is null or zero.
 /// Change the request to include the missing parameter and try again.
-pub const CLIENT_CONNECTSHELL_NULL_PARAM : ErrorHResult = ErrorHResult::from_constant(0x803381C9); // ERROR_WSMAN_CLIENT_CONNECTSHELL_NULL_PARAM
+pub const CLIENT_CONNECTSHELL_NULL_PARAM : HResultError = HResultError::from_constant(0x803381C9); // ERROR_WSMAN_CLIENT_CONNECTSHELL_NULL_PARAM
 
 /// The WinRM Shell client cannot process the request. One of the parameters required for the WSManConnectShellCommand function is null or zero.
 /// Change the request to include the missing parameter and try again.
-pub const CLIENT_CONNECTCOMMAND_NULL_PARAM : ErrorHResult = ErrorHResult::from_constant(0x803381CA); // ERROR_WSMAN_CLIENT_CONNECTCOMMAND_NULL_PARAM
+pub const CLIENT_CONNECTCOMMAND_NULL_PARAM : HResultError = HResultError::from_constant(0x803381CA); // ERROR_WSMAN_CLIENT_CONNECTCOMMAND_NULL_PARAM
 
 /// The WinRM Shell client cannot process the request. The command is currently terminating or was terminated.
-pub const COMMAND_TERMINATED : ErrorHResult = ErrorHResult::from_constant(0x803381CC); // ERROR_WSMAN_COMMAND_TERMINATED
+pub const COMMAND_TERMINATED : HResultError = HResultError::from_constant(0x803381CC); // ERROR_WSMAN_COMMAND_TERMINATED
 
 /// An error was encountered while subscribing to the Group Policy change notification.
-pub const CONFIG_GROUP_POLICY_CHANGE_NOTIFICATION_SUBSCRIPTION_FAILED : ErrorHResult = ErrorHResult::from_constant(0x803381D1); // ERROR_WSMAN_CONFIG_GROUP_POLICY_CHANGE_NOTIFICATION_SUBSCRIPTION_FAILED
+pub const CONFIG_GROUP_POLICY_CHANGE_NOTIFICATION_SUBSCRIPTION_FAILED : HResultError = HResultError::from_constant(0x803381D1); // ERROR_WSMAN_CONFIG_GROUP_POLICY_CHANGE_NOTIFICATION_SUBSCRIPTION_FAILED
 
 /// The WinRM Shell client cannot process the request. One of the parameters required for the WSManReconnectShellCommand function is null or zero.
 /// Change the request to include the missing parameter and try again.
-pub const CLIENT_RECONNECTSHELLCOMMAND_NULL_PARAM : ErrorHResult = ErrorHResult::from_constant(0x803381D2); // ERROR_WSMAN_CLIENT_RECONNECTSHELLCOMMAND_NULL_PARAM
+pub const CLIENT_RECONNECTSHELLCOMMAND_NULL_PARAM : HResultError = HResultError::from_constant(0x803381D2); // ERROR_WSMAN_CLIENT_RECONNECTSHELLCOMMAND_NULL_PARAM
 
 /// The WS-Management service cannot process the request. The resource URI for the Subscribe operation must not contain keys.
-pub const SUBSCRIBE_WMI_INVALID_KEY : ErrorHResult = ErrorHResult::from_constant(0x803381D9); // ERROR_WSMAN_SUBSCRIBE_WMI_INVALID_KEY
+pub const SUBSCRIBE_WMI_INVALID_KEY : HResultError = HResultError::from_constant(0x803381D9); // ERROR_WSMAN_SUBSCRIBE_WMI_INVALID_KEY
 
 /// The WinRM client cannot process the request.
 /// A flag that is not valid was specified for the WSManDisconnectShell method.
 /// Remove or change the flag and retry the operation.
-pub const CLIENT_INVALID_DISCONNECT_SHELL_FLAG : ErrorHResult = ErrorHResult::from_constant(0x803381DA); // ERROR_WSMAN_CLIENT_INVALID_DISCONNECT_SHELL_FLAG
+pub const CLIENT_INVALID_DISCONNECT_SHELL_FLAG : HResultError = HResultError::from_constant(0x803381DA); // ERROR_WSMAN_CLIENT_INVALID_DISCONNECT_SHELL_FLAG
 
 /// The WinRM client cannot process the request
 /// because the command handle is not associated with the provided shell handle.
-pub const CLIENT_INVALID_SHELL_COMMAND_PAIR : ErrorHResult = ErrorHResult::from_constant(0x803381DB); // ERROR_WSMAN_CLIENT_INVALID_SHELL_COMMAND_PAIR
+pub const CLIENT_INVALID_SHELL_COMMAND_PAIR : HResultError = HResultError::from_constant(0x803381DB); // ERROR_WSMAN_CLIENT_INVALID_SHELL_COMMAND_PAIR
 
 /// The WS-Management service did not receive a response for an extended semantics operation within the timeframe specified in the OperationTimeout setting.
-pub const SEMANTICCALLBACK_TIMEDOUT : ErrorHResult = ErrorHResult::from_constant(0x803381DC); // ERROR_WSMAN_SEMANTICCALLBACK_TIMEDOUT
+pub const SEMANTICCALLBACK_TIMEDOUT : HResultError = HResultError::from_constant(0x803381DC); // ERROR_WSMAN_SEMANTICCALLBACK_TIMEDOUT
 
 /// The WS-Management service is configured to not allow remote requests.
-pub const SERVICE_REMOTE_ACCESS_DISABLED : ErrorHResult = ErrorHResult::from_constant(0x803381DD); // ERROR_WSMAN_SERVICE_REMOTE_ACCESS_DISABLED
+pub const SERVICE_REMOTE_ACCESS_DISABLED : HResultError = HResultError::from_constant(0x803381DD); // ERROR_WSMAN_SERVICE_REMOTE_ACCESS_DISABLED
 
 /// The WS-Management service cannot process the request because the stream is currently disconnected.
-pub const SERVICE_STREAM_DISCONNECTED : ErrorHResult = ErrorHResult::from_constant(0x803381DE); // ERROR_WSMAN_SERVICE_STREAM_DISCONNECTED
+pub const SERVICE_STREAM_DISCONNECTED : HResultError = HResultError::from_constant(0x803381DE); // ERROR_WSMAN_SERVICE_STREAM_DISCONNECTED
 
 /// The creation of a new Shell failed. Verify that the RunAsPassword value is correctly configured and that the Group Policy setting "Disallow WinRM from storing RunAs credentials" is Disabled or Not Configured.
 /// To enable WinRM to store RunAs credentials, change this Group Policy setting to Disabled.
-pub const CREATESHELL_RUNAS_FAILED : ErrorHResult = ErrorHResult::from_constant(0x803381DF); // ERROR_WSMAN_CREATESHELL_RUNAS_FAILED
+pub const CREATESHELL_RUNAS_FAILED : HResultError = HResultError::from_constant(0x803381DF); // ERROR_WSMAN_CREATESHELL_RUNAS_FAILED
 
 /// The supplied plugin configuration XML is not valid.
 /// To enable WinRM to store RunAs credentials, change the "Disallow WinRM from storing RunAs credentials" Group Policy setting to Disabled.
-pub const INVALID_XML_RUNAS_DISABLED : ErrorHResult = ErrorHResult::from_constant(0x803381E0); // ERROR_WSMAN_INVALID_XML_RUNAS_DISABLED
+pub const INVALID_XML_RUNAS_DISABLED : HResultError = HResultError::from_constant(0x803381E0); // ERROR_WSMAN_INVALID_XML_RUNAS_DISABLED
 
 /// The WinRM client cannot process the request because the XML instance does not match the class schema provided by the server.
-pub const WRONG_METADATA : ErrorHResult = ErrorHResult::from_constant(0x803381E1); // ERROR_WSMAN_WRONG_METADATA
+pub const WRONG_METADATA : HResultError = HResultError::from_constant(0x803381E1); // ERROR_WSMAN_WRONG_METADATA
 
 /// The WinRM client cannot process the request because the XML contains an unsupported type. Verify the XML and retry the operation.
-pub const UNSUPPORTED_TYPE : ErrorHResult = ErrorHResult::from_constant(0x803381E2); // ERROR_WSMAN_UNSUPPORTED_TYPE
+pub const UNSUPPORTED_TYPE : HResultError = HResultError::from_constant(0x803381E2); // ERROR_WSMAN_UNSUPPORTED_TYPE
 
 /// The WS-Management service cannot process the request.
 /// The service is configured to reject remote connection requests for this plugin.
-pub const REMOTE_CONNECTION_NOT_ALLOWED : ErrorHResult = ErrorHResult::from_constant(0x803381E3); // ERROR_WSMAN_REMOTE_CONNECTION_NOT_ALLOWED
+pub const REMOTE_CONNECTION_NOT_ALLOWED : HResultError = HResultError::from_constant(0x803381E3); // ERROR_WSMAN_REMOTE_CONNECTION_NOT_ALLOWED
 
 /// The WS-Management service cannot process the request. This user has exceeded the maximum number of concurrent shells allowed for this plugin.
 /// Close at least one open shell or raise the plugin quota for this user.
-pub const QUOTA_MAX_SHELLS_PPQ : ErrorHResult = ErrorHResult::from_constant(0x803381E4); // ERROR_WSMAN_QUOTA_MAX_SHELLS_PPQ
+pub const QUOTA_MAX_SHELLS_PPQ : HResultError = HResultError::from_constant(0x803381E4); // ERROR_WSMAN_QUOTA_MAX_SHELLS_PPQ
 
 /// The WS-Management service cannot process the request. The maximum number of users executing remote operations has been exceeded for this plugin.
 /// Retry the request later or raise the quota for concurrent users.
-pub const QUOTA_MAX_USERS_PPQ : ErrorHResult = ErrorHResult::from_constant(0x803381E5); // ERROR_WSMAN_QUOTA_MAX_USERS_PPQ
+pub const QUOTA_MAX_USERS_PPQ : HResultError = HResultError::from_constant(0x803381E5); // ERROR_WSMAN_QUOTA_MAX_USERS_PPQ
 
 /// The WS-Management service cannot process the request. The maximum number of concurrent shells allowed for this plugin has been exceeded.
 /// Retry the request later or raise the Maximum Shells per Plugin quota.
-pub const QUOTA_MAX_PLUGINSHELLS_PPQ : ErrorHResult = ErrorHResult::from_constant(0x803381E6); // ERROR_WSMAN_QUOTA_MAX_PLUGINSHELLS_PPQ
+pub const QUOTA_MAX_PLUGINSHELLS_PPQ : HResultError = HResultError::from_constant(0x803381E6); // ERROR_WSMAN_QUOTA_MAX_PLUGINSHELLS_PPQ
 
 /// The WS-Management service cannot process the request. The maximum number of concurrent operations allowed for this plugin has been exceeded.
 /// Retry the request later or raise the Maximum Operations per Plugin quota.
-pub const QUOTA_MAX_PLUGINOPERATIONS_PPQ : ErrorHResult = ErrorHResult::from_constant(0x803381E7); // ERROR_WSMAN_QUOTA_MAX_PLUGINOPERATIONS_PPQ
+pub const QUOTA_MAX_PLUGINOPERATIONS_PPQ : HResultError = HResultError::from_constant(0x803381E7); // ERROR_WSMAN_QUOTA_MAX_PLUGINOPERATIONS_PPQ
 
 /// The WS-Management service cannot process the request. This user has exceeded the maximum number of allowed concurrent operations.
 /// Retry the request later or raise the Maximum Operations per User quota.
-pub const QUOTA_MAX_OPERATIONS_USER_PPQ : ErrorHResult = ErrorHResult::from_constant(0x803381E8); // ERROR_WSMAN_QUOTA_MAX_OPERATIONS_USER_PPQ
+pub const QUOTA_MAX_OPERATIONS_USER_PPQ : HResultError = HResultError::from_constant(0x803381E8); // ERROR_WSMAN_QUOTA_MAX_OPERATIONS_USER_PPQ
 
 /// The WS-Management service cannot process the request. The maximum number of concurrent commands per shell has been exceeded.
 /// Retry the request later or raise the Maximum Commands per Shell quota.
-pub const QUOTA_MAX_COMMANDS_PER_SHELL_PPQ : ErrorHResult = ErrorHResult::from_constant(0x803381E9); // ERROR_WSMAN_QUOTA_MAX_COMMANDS_PER_SHELL_PPQ
+pub const QUOTA_MAX_COMMANDS_PER_SHELL_PPQ : HResultError = HResultError::from_constant(0x803381E9); // ERROR_WSMAN_QUOTA_MAX_COMMANDS_PER_SHELL_PPQ
 
 /// The WS-Management service cannot process the request.
 /// There are not enough resources available to process this operation.
 /// Retry the operation later or close one or more of the currently running operations.
-pub const QUOTA_MIN_REQUIREMENT_NOT_AVAILABLE_PPQ : ErrorHResult = ErrorHResult::from_constant(0x803381EA); // ERROR_WSMAN_QUOTA_MIN_REQUIREMENT_NOT_AVAILABLE_PPQ
+pub const QUOTA_MIN_REQUIREMENT_NOT_AVAILABLE_PPQ : HResultError = HResultError::from_constant(0x803381EA); // ERROR_WSMAN_QUOTA_MIN_REQUIREMENT_NOT_AVAILABLE_PPQ
 
 /// The WinRM client cannot process the request because the MI Deserializer cannot be created.
-pub const NEW_DESERIALIZER : ErrorHResult = ErrorHResult::from_constant(0x803381EB); // ERROR_WSMAN_NEW_DESERIALIZER
+pub const NEW_DESERIALIZER : HResultError = HResultError::from_constant(0x803381EB); // ERROR_WSMAN_NEW_DESERIALIZER
 
 /// The WinRM client cannot process the request because the metadata could not be deserialized.
-pub const DESERIALIZE_CLASS : ErrorHResult = ErrorHResult::from_constant(0x803381EC); // ERROR_WSMAN_DESERIALIZE_CLASS
+pub const DESERIALIZE_CLASS : HResultError = HResultError::from_constant(0x803381EC); // ERROR_WSMAN_DESERIALIZE_CLASS
 
 /// The WinRM client cannot process the request because the metadata failed to be retrieved from the server.
-pub const GETCLASS : ErrorHResult = ErrorHResult::from_constant(0x803381ED); // ERROR_WSMAN_GETCLASS
+pub const GETCLASS : HResultError = HResultError::from_constant(0x803381ED); // ERROR_WSMAN_GETCLASS
 
 /// The WinRM client cannot process the request because a WinRM session could not be created.
-pub const NEW_SESSION : ErrorHResult = ErrorHResult::from_constant(0x803381EE); // ERROR_WSMAN_NEW_SESSION
+pub const NEW_SESSION : HResultError = HResultError::from_constant(0x803381EE); // ERROR_WSMAN_NEW_SESSION
 
 /// The WinRM client cannot process the request because the target object has a key property set to NULL.
 /// Incomplete objects cannot be used as the target of an operation.
-pub const NULL_KEY : ErrorHResult = ErrorHResult::from_constant(0x803381EF); // ERROR_WSMAN_NULL_KEY
+pub const NULL_KEY : HResultError = HResultError::from_constant(0x803381EF); // ERROR_WSMAN_NULL_KEY
 
 /// The WinRM client cannot process the request as the server identity could not be verified. If the identity of the server is trusted, add it to the TrustedHosts list and retry the request.
 /// Use winrm.cmd to configure TrustedHosts. Note that computers in the TrustedHosts list might not be authenticated.
 /// For more information on how to set TrustedHosts, run the following command: winrm help config
-pub const MUTUAL_AUTH_FAILED : ErrorHResult = ErrorHResult::from_constant(0x803381F0); // ERROR_WSMAN_MUTUAL_AUTH_FAILED
+pub const MUTUAL_AUTH_FAILED : HResultError = HResultError::from_constant(0x803381F0); // ERROR_WSMAN_MUTUAL_AUTH_FAILED
 
 /// The WinRM client cannot process the request because the octet string array type is not supported.
-pub const UNSUPPORTED_OCTETTYPE : ErrorHResult = ErrorHResult::from_constant(0x803381F1); // ERROR_WSMAN_UNSUPPORTED_OCTETTYPE
+pub const UNSUPPORTED_OCTETTYPE : HResultError = HResultError::from_constant(0x803381F1); // ERROR_WSMAN_UNSUPPORTED_OCTETTYPE
 
 /// The WinRM client cannot process the request because insufficient metadata is available.
 /// The application does not allow all properties to be returned as strings, but the server does not support correctly typing the properties.
 /// Change the request to allow all properties to be returned as strings and retry the request.
-pub const INSUFFICIENT_METADATA_FOR_BASIC : ErrorHResult = ErrorHResult::from_constant(0x803381F3); // ERROR_WSMAN_INSUFFICIENT_METADATA_FOR_BASIC
+pub const INSUFFICIENT_METADATA_FOR_BASIC : HResultError = HResultError::from_constant(0x803381F3); // ERROR_WSMAN_INSUFFICIENT_METADATA_FOR_BASIC
 
 /// The WinRM client cannot process the request because the MI_OperationOptions contained both a Resource URI and a Resource URI Prefix. Specify only one of these two options and try again.
-pub const INVALID_LITERAL_URI : ErrorHResult = ErrorHResult::from_constant(0x803381F4); // ERROR_WSMAN_INVALID_LITERAL_URI
+pub const INVALID_LITERAL_URI : HResultError = HResultError::from_constant(0x803381F4); // ERROR_WSMAN_INVALID_LITERAL_URI
 
 /// The WinRM client cannot process the request because keysOnly and WSMAN_ENUMERATIONMODE_OBJECTONLY were specified at the same time.
 /// These two settings are incompatible.
 /// Remove the WSMAN_ENUMERATIONMODE_OBJECTONLY option, or set keysOnly to MI_FALSE, and retry the request.
-pub const OBJECTONLY_INVALID : ErrorHResult = ErrorHResult::from_constant(0x803381F5); // ERROR_WSMAN_OBJECTONLY_INVALID
+pub const OBJECTONLY_INVALID : HResultError = HResultError::from_constant(0x803381F5); // ERROR_WSMAN_OBJECTONLY_INVALID
 
 /// The WinRM client cannot process the request because the class name is not valid.
 /// Supply a valid class name or set the Resource URI option and retry the request.
-pub const MISSING_CLASSNAME : ErrorHResult = ErrorHResult::from_constant(0x803381F6); // ERROR_WSMAN_MISSING_CLASSNAME
+pub const MISSING_CLASSNAME : HResultError = HResultError::from_constant(0x803381F6); // ERROR_WSMAN_MISSING_CLASSNAME
 
 /// The subscribe packet contains an Encoding value that is not valid in the delivery section.
-pub const EVENTING_INVALID_ENCODING_IN_DELIVERY : ErrorHResult = ErrorHResult::from_constant(0x803381F7); // ERROR_WSMAN_EVENTING_INVALID_ENCODING_IN_DELIVERY
+pub const EVENTING_INVALID_ENCODING_IN_DELIVERY : HResultError = HResultError::from_constant(0x803381F7); // ERROR_WSMAN_EVENTING_INVALID_ENCODING_IN_DELIVERY
 
 /// The WinRM client cannot process the request.
 /// The destination computer name must be a hostname or an IP address, and must not be a URL.
 /// To use an IPv6 address, enclose the address in brackets, like the following: "\[::1\]".
 /// The transport, port number, and URL prefix may be controlled by setting the appropriate destination options.
 /// Change the destination computer name string and retry the operation.
-pub const DESTINATION_INVALID : ErrorHResult = ErrorHResult::from_constant(0x803381F8); // ERROR_WSMAN_DESTINATION_INVALID
+pub const DESTINATION_INVALID : HResultError = HResultError::from_constant(0x803381F8); // ERROR_WSMAN_DESTINATION_INVALID
 
 /// The server does not support WS-Management Identify operations. Skip the TestConnection part of the request and try again.
-pub const UNSUPPORTED_FEATURE_IDENTIFY : ErrorHResult = ErrorHResult::from_constant(0x803381F9); // ERROR_WSMAN_UNSUPPORTED_FEATURE_IDENTIFY
+pub const UNSUPPORTED_FEATURE_IDENTIFY : HResultError = HResultError::from_constant(0x803381F9); // ERROR_WSMAN_UNSUPPORTED_FEATURE_IDENTIFY
 
 /// The WS-Management service cannot process the operation. The operation is being attempted on a client session that is unusable.
 /// This may be related to a recent restart of the WS-Management service. Please create a new client session and retry the operation if re-executing the operation does not have undesired behavior.
-pub const CLIENT_SESSION_UNUSABLE : ErrorHResult = ErrorHResult::from_constant(0x803381FA); // ERROR_WSMAN_CLIENT_SESSION_UNUSABLE
+pub const CLIENT_SESSION_UNUSABLE : HResultError = HResultError::from_constant(0x803381FA); // ERROR_WSMAN_CLIENT_SESSION_UNUSABLE
 
 /// The WS-Management service cannot process the operation. An attempt to create a virtual account failed. Ensure that WinRM service is running as Local System and that it has TCB privilege enabled.
-pub const VIRTUALACCOUNT_NOTSUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x803381FB); // ERROR_WSMAN_VIRTUALACCOUNT_NOTSUPPORTED
+pub const VIRTUALACCOUNT_NOTSUPPORTED : HResultError = HResultError::from_constant(0x803381FB); // ERROR_WSMAN_VIRTUALACCOUNT_NOTSUPPORTED
 
 /// The WS-Management service cannot process the operation. Virtual account feature is only available in Windows 7, Server 2008 R2 and above.
-pub const VIRTUALACCOUNT_NOTSUPPORTED_DOWNLEVEL : ErrorHResult = ErrorHResult::from_constant(0x803381FC); // ERROR_WSMAN_VIRTUALACCOUNT_NOTSUPPORTED_DOWNLEVEL
+pub const VIRTUALACCOUNT_NOTSUPPORTED_DOWNLEVEL : HResultError = HResultError::from_constant(0x803381FC); // ERROR_WSMAN_VIRTUALACCOUNT_NOTSUPPORTED_DOWNLEVEL
 
 /// The WS-Management service cannot process the operation. An attempt to logon using the configured RunAs Managed Service Account failed.
-pub const RUNASUSER_MANAGEDACCOUNT_LOGON_FAILED : ErrorHResult = ErrorHResult::from_constant(0x803381FD); // ERROR_WSMAN_RUNASUSER_MANAGEDACCOUNT_LOGON_FAILED
+pub const RUNASUSER_MANAGEDACCOUNT_LOGON_FAILED : HResultError = HResultError::from_constant(0x803381FD); // ERROR_WSMAN_RUNASUSER_MANAGEDACCOUNT_LOGON_FAILED
 
 /// The WS-Management service cannot process the operation. An attempt to query mapped credential failed. This will happen if the security context associated with WinRM service has changed since the credential was originally mapped.
-pub const CERTMAPPING_CREDENTIAL_MANAGEMENT_FAILIED : ErrorHResult = ErrorHResult::from_constant(0x803381FE); // ERROR_WSMAN_CERTMAPPING_CREDENTIAL_MANAGEMENT_FAILIED
+pub const CERTMAPPING_CREDENTIAL_MANAGEMENT_FAILIED : HResultError = HResultError::from_constant(0x803381FE); // ERROR_WSMAN_CERTMAPPING_CREDENTIAL_MANAGEMENT_FAILIED

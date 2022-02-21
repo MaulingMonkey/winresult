@@ -4,190 +4,190 @@ use super::*;
 
 
 /// Another single phase resource manager has already been enlisted in this transaction.
-pub const E_ALREADYOTHERSINGLEPHASE : ErrorHResult = ErrorHResult::from_constant(0x8004D000); // XACT_E_ALREADYOTHERSINGLEPHASE
+pub const E_ALREADYOTHERSINGLEPHASE : HResultError = HResultError::from_constant(0x8004D000); // XACT_E_ALREADYOTHERSINGLEPHASE
 
 /// A retaining commit or abort is not supported
-pub const E_CANTRETAIN : ErrorHResult = ErrorHResult::from_constant(0x8004D001); // XACT_E_CANTRETAIN
+pub const E_CANTRETAIN : HResultError = HResultError::from_constant(0x8004D001); // XACT_E_CANTRETAIN
 
 /// The transaction failed to commit for an unknown reason. The transaction was aborted.
-pub const E_COMMITFAILED : ErrorHResult = ErrorHResult::from_constant(0x8004D002); // XACT_E_COMMITFAILED
+pub const E_COMMITFAILED : HResultError = HResultError::from_constant(0x8004D002); // XACT_E_COMMITFAILED
 
 /// Cannot call commit on this transaction object because the calling application did not initiate the transaction.
-pub const E_COMMITPREVENTED : ErrorHResult = ErrorHResult::from_constant(0x8004D003); // XACT_E_COMMITPREVENTED
+pub const E_COMMITPREVENTED : HResultError = HResultError::from_constant(0x8004D003); // XACT_E_COMMITPREVENTED
 
 /// Instead of committing, the resource heuristically aborted.
-pub const E_HEURISTICABORT : ErrorHResult = ErrorHResult::from_constant(0x8004D004); // XACT_E_HEURISTICABORT
+pub const E_HEURISTICABORT : HResultError = HResultError::from_constant(0x8004D004); // XACT_E_HEURISTICABORT
 
 /// Instead of aborting, the resource heuristically committed.
-pub const E_HEURISTICCOMMIT : ErrorHResult = ErrorHResult::from_constant(0x8004D005); // XACT_E_HEURISTICCOMMIT
+pub const E_HEURISTICCOMMIT : HResultError = HResultError::from_constant(0x8004D005); // XACT_E_HEURISTICCOMMIT
 
 /// Some of the states of the resource were committed while others were aborted, likely because of heuristic decisions.
-pub const E_HEURISTICDAMAGE : ErrorHResult = ErrorHResult::from_constant(0x8004D006); // XACT_E_HEURISTICDAMAGE
+pub const E_HEURISTICDAMAGE : HResultError = HResultError::from_constant(0x8004D006); // XACT_E_HEURISTICDAMAGE
 
 /// Some of the states of the resource may have been committed while others may have been aborted, likely because of heuristic decisions.
-pub const E_HEURISTICDANGER : ErrorHResult = ErrorHResult::from_constant(0x8004D007); // XACT_E_HEURISTICDANGER
+pub const E_HEURISTICDANGER : HResultError = HResultError::from_constant(0x8004D007); // XACT_E_HEURISTICDANGER
 
 /// The requested isolation level is not valid or supported.
-pub const E_ISOLATIONLEVEL : ErrorHResult = ErrorHResult::from_constant(0x8004D008); // XACT_E_ISOLATIONLEVEL
+pub const E_ISOLATIONLEVEL : HResultError = HResultError::from_constant(0x8004D008); // XACT_E_ISOLATIONLEVEL
 
 /// The transaction manager doesn't support an asynchronous operation for this method.
-pub const E_NOASYNC : ErrorHResult = ErrorHResult::from_constant(0x8004D009); // XACT_E_NOASYNC
+pub const E_NOASYNC : HResultError = HResultError::from_constant(0x8004D009); // XACT_E_NOASYNC
 
 /// Unable to enlist in the transaction.
-pub const E_NOENLIST : ErrorHResult = ErrorHResult::from_constant(0x8004D00A); // XACT_E_NOENLIST
+pub const E_NOENLIST : HResultError = HResultError::from_constant(0x8004D00A); // XACT_E_NOENLIST
 
 /// The requested semantics of retention of isolation across retaining commit and abort boundaries cannot be supported by this transaction implementation, or isoFlags was not equal to zero.
-pub const E_NOISORETAIN : ErrorHResult = ErrorHResult::from_constant(0x8004D00B); // XACT_E_NOISORETAIN
+pub const E_NOISORETAIN : HResultError = HResultError::from_constant(0x8004D00B); // XACT_E_NOISORETAIN
 
 /// There is no resource presently associated with this enlistment
-pub const E_NORESOURCE : ErrorHResult = ErrorHResult::from_constant(0x8004D00C); // XACT_E_NORESOURCE
+pub const E_NORESOURCE : HResultError = HResultError::from_constant(0x8004D00C); // XACT_E_NORESOURCE
 
 /// The transaction failed to commit due to the failure of optimistic concurrency control in at least one of the resource managers.
-pub const E_NOTCURRENT : ErrorHResult = ErrorHResult::from_constant(0x8004D00D); // XACT_E_NOTCURRENT
+pub const E_NOTCURRENT : HResultError = HResultError::from_constant(0x8004D00D); // XACT_E_NOTCURRENT
 
 /// The transaction has already been implicitly or explicitly committed or aborted
-pub const E_NOTRANSACTION : ErrorHResult = ErrorHResult::from_constant(0x8004D00E); // XACT_E_NOTRANSACTION
+pub const E_NOTRANSACTION : HResultError = HResultError::from_constant(0x8004D00E); // XACT_E_NOTRANSACTION
 
 /// An invalid combination of flags was specified
-pub const E_NOTSUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x8004D00F); // XACT_E_NOTSUPPORTED
+pub const E_NOTSUPPORTED : HResultError = HResultError::from_constant(0x8004D00F); // XACT_E_NOTSUPPORTED
 
 /// The resource manager id is not associated with this transaction or the transaction manager.
-pub const E_UNKNOWNRMGRID : ErrorHResult = ErrorHResult::from_constant(0x8004D010); // XACT_E_UNKNOWNRMGRID
+pub const E_UNKNOWNRMGRID : HResultError = HResultError::from_constant(0x8004D010); // XACT_E_UNKNOWNRMGRID
 
 /// This method was called in the wrong state
-pub const E_WRONGSTATE : ErrorHResult = ErrorHResult::from_constant(0x8004D011); // XACT_E_WRONGSTATE
+pub const E_WRONGSTATE : HResultError = HResultError::from_constant(0x8004D011); // XACT_E_WRONGSTATE
 
 /// The indicated unit of work does not match the unit of work expected by the resource manager.
-pub const E_WRONGUOW : ErrorHResult = ErrorHResult::from_constant(0x8004D012); // XACT_E_WRONGUOW
+pub const E_WRONGUOW : HResultError = HResultError::from_constant(0x8004D012); // XACT_E_WRONGUOW
 
 /// An enlistment in a transaction already exists.
-pub const E_XTIONEXISTS : ErrorHResult = ErrorHResult::from_constant(0x8004D013); // XACT_E_XTIONEXISTS
+pub const E_XTIONEXISTS : HResultError = HResultError::from_constant(0x8004D013); // XACT_E_XTIONEXISTS
 
 /// An import object for the transaction could not be found.
-pub const E_NOIMPORTOBJECT : ErrorHResult = ErrorHResult::from_constant(0x8004D014); // XACT_E_NOIMPORTOBJECT
+pub const E_NOIMPORTOBJECT : HResultError = HResultError::from_constant(0x8004D014); // XACT_E_NOIMPORTOBJECT
 
 /// The transaction cookie is invalid.
-pub const E_INVALIDCOOKIE : ErrorHResult = ErrorHResult::from_constant(0x8004D015); // XACT_E_INVALIDCOOKIE
+pub const E_INVALIDCOOKIE : HResultError = HResultError::from_constant(0x8004D015); // XACT_E_INVALIDCOOKIE
 
 /// The transaction status is in doubt. A communication failure occurred, or a transaction manager or resource manager has failed
-pub const E_INDOUBT : ErrorHResult = ErrorHResult::from_constant(0x8004D016); // XACT_E_INDOUBT
+pub const E_INDOUBT : HResultError = HResultError::from_constant(0x8004D016); // XACT_E_INDOUBT
 
 /// A time-out was specified, but time-outs are not supported.
-pub const E_NOTIMEOUT : ErrorHResult = ErrorHResult::from_constant(0x8004D017); // XACT_E_NOTIMEOUT
+pub const E_NOTIMEOUT : HResultError = HResultError::from_constant(0x8004D017); // XACT_E_NOTIMEOUT
 
 /// The requested operation is already in progress for the transaction.
-pub const E_ALREADYINPROGRESS : ErrorHResult = ErrorHResult::from_constant(0x8004D018); // XACT_E_ALREADYINPROGRESS
+pub const E_ALREADYINPROGRESS : HResultError = HResultError::from_constant(0x8004D018); // XACT_E_ALREADYINPROGRESS
 
 /// The transaction has already been aborted.
-pub const E_ABORTED : ErrorHResult = ErrorHResult::from_constant(0x8004D019); // XACT_E_ABORTED
+pub const E_ABORTED : HResultError = HResultError::from_constant(0x8004D019); // XACT_E_ABORTED
 
 /// The Transaction Manager returned a log full error.
-pub const E_LOGFULL : ErrorHResult = ErrorHResult::from_constant(0x8004D01A); // XACT_E_LOGFULL
+pub const E_LOGFULL : HResultError = HResultError::from_constant(0x8004D01A); // XACT_E_LOGFULL
 
 /// The Transaction Manager is not available.
-pub const E_TMNOTAVAILABLE : ErrorHResult = ErrorHResult::from_constant(0x8004D01B); // XACT_E_TMNOTAVAILABLE
+pub const E_TMNOTAVAILABLE : HResultError = HResultError::from_constant(0x8004D01B); // XACT_E_TMNOTAVAILABLE
 
 /// A connection with the transaction manager was lost.
-pub const E_CONNECTION_DOWN : ErrorHResult = ErrorHResult::from_constant(0x8004D01C); // XACT_E_CONNECTION_DOWN
+pub const E_CONNECTION_DOWN : HResultError = HResultError::from_constant(0x8004D01C); // XACT_E_CONNECTION_DOWN
 
 /// A request to establish a connection with the transaction manager was denied.
-pub const E_CONNECTION_DENIED : ErrorHResult = ErrorHResult::from_constant(0x8004D01D); // XACT_E_CONNECTION_DENIED
+pub const E_CONNECTION_DENIED : HResultError = HResultError::from_constant(0x8004D01D); // XACT_E_CONNECTION_DENIED
 
 /// Resource manager reenlistment to determine transaction status timed out.
-pub const E_REENLISTTIMEOUT : ErrorHResult = ErrorHResult::from_constant(0x8004D01E); // XACT_E_REENLISTTIMEOUT
+pub const E_REENLISTTIMEOUT : HResultError = HResultError::from_constant(0x8004D01E); // XACT_E_REENLISTTIMEOUT
 
 /// This transaction manager failed to establish a connection with another TIP transaction manager.
-pub const E_TIP_CONNECT_FAILED : ErrorHResult = ErrorHResult::from_constant(0x8004D01F); // XACT_E_TIP_CONNECT_FAILED
+pub const E_TIP_CONNECT_FAILED : HResultError = HResultError::from_constant(0x8004D01F); // XACT_E_TIP_CONNECT_FAILED
 
 /// This transaction manager encountered a protocol error with another TIP transaction manager.
-pub const E_TIP_PROTOCOL_ERROR : ErrorHResult = ErrorHResult::from_constant(0x8004D020); // XACT_E_TIP_PROTOCOL_ERROR
+pub const E_TIP_PROTOCOL_ERROR : HResultError = HResultError::from_constant(0x8004D020); // XACT_E_TIP_PROTOCOL_ERROR
 
 /// This transaction manager could not propagate a transaction from another TIP transaction manager.
-pub const E_TIP_PULL_FAILED : ErrorHResult = ErrorHResult::from_constant(0x8004D021); // XACT_E_TIP_PULL_FAILED
+pub const E_TIP_PULL_FAILED : HResultError = HResultError::from_constant(0x8004D021); // XACT_E_TIP_PULL_FAILED
 
 /// The Transaction Manager on the destination machine is not available.
-pub const E_DEST_TMNOTAVAILABLE : ErrorHResult = ErrorHResult::from_constant(0x8004D022); // XACT_E_DEST_TMNOTAVAILABLE
+pub const E_DEST_TMNOTAVAILABLE : HResultError = HResultError::from_constant(0x8004D022); // XACT_E_DEST_TMNOTAVAILABLE
 
 /// The Transaction Manager has disabled its support for TIP.
-pub const E_TIP_DISABLED : ErrorHResult = ErrorHResult::from_constant(0x8004D023); // XACT_E_TIP_DISABLED
+pub const E_TIP_DISABLED : HResultError = HResultError::from_constant(0x8004D023); // XACT_E_TIP_DISABLED
 
 /// The transaction manager has disabled its support for remote/network transactions.
-pub const E_NETWORK_TX_DISABLED : ErrorHResult = ErrorHResult::from_constant(0x8004D024); // XACT_E_NETWORK_TX_DISABLED
+pub const E_NETWORK_TX_DISABLED : HResultError = HResultError::from_constant(0x8004D024); // XACT_E_NETWORK_TX_DISABLED
 
 /// The partner transaction manager has disabled its support for remote/network transactions.
-pub const E_PARTNER_NETWORK_TX_DISABLED : ErrorHResult = ErrorHResult::from_constant(0x8004D025); // XACT_E_PARTNER_NETWORK_TX_DISABLED
+pub const E_PARTNER_NETWORK_TX_DISABLED : HResultError = HResultError::from_constant(0x8004D025); // XACT_E_PARTNER_NETWORK_TX_DISABLED
 
 /// The transaction manager has disabled its support for XA transactions.
-pub const E_XA_TX_DISABLED : ErrorHResult = ErrorHResult::from_constant(0x8004D026); // XACT_E_XA_TX_DISABLED
+pub const E_XA_TX_DISABLED : HResultError = HResultError::from_constant(0x8004D026); // XACT_E_XA_TX_DISABLED
 
 /// MSDTC was unable to read its configuration information.
-pub const E_UNABLE_TO_READ_DTC_CONFIG : ErrorHResult = ErrorHResult::from_constant(0x8004D027); // XACT_E_UNABLE_TO_READ_DTC_CONFIG
+pub const E_UNABLE_TO_READ_DTC_CONFIG : HResultError = HResultError::from_constant(0x8004D027); // XACT_E_UNABLE_TO_READ_DTC_CONFIG
 
 /// MSDTC was unable to load the dtc proxy dll.
-pub const E_UNABLE_TO_LOAD_DTC_PROXY : ErrorHResult = ErrorHResult::from_constant(0x8004D028); // XACT_E_UNABLE_TO_LOAD_DTC_PROXY
+pub const E_UNABLE_TO_LOAD_DTC_PROXY : HResultError = HResultError::from_constant(0x8004D028); // XACT_E_UNABLE_TO_LOAD_DTC_PROXY
 
 /// The local transaction has aborted.
-pub const E_ABORTING : ErrorHResult = ErrorHResult::from_constant(0x8004D029); // XACT_E_ABORTING
+pub const E_ABORTING : HResultError = HResultError::from_constant(0x8004D029); // XACT_E_ABORTING
 
 /// The MSDTC transaction manager was unable to push the transaction to the destination transaction manager due to communication problems. Possible causes are: a firewall is present and it doesn't have an exception for the MSDTC process, the two machines cannot find each other by their NetBIOS names, or the support for network transactions is not enabled for one of the two transaction managers.
-pub const E_PUSH_COMM_FAILURE : ErrorHResult = ErrorHResult::from_constant(0x8004D02A); // XACT_E_PUSH_COMM_FAILURE
+pub const E_PUSH_COMM_FAILURE : HResultError = HResultError::from_constant(0x8004D02A); // XACT_E_PUSH_COMM_FAILURE
 
 /// The MSDTC transaction manager was unable to pull the transaction from the source transaction manager due to communication problems. Possible causes are: a firewall is present and it doesn't have an exception for the MSDTC process, the two machines cannot find each other by their NetBIOS names, or the support for network transactions is not enabled for one of the two transaction managers.
-pub const E_PULL_COMM_FAILURE : ErrorHResult = ErrorHResult::from_constant(0x8004D02B); // XACT_E_PULL_COMM_FAILURE
+pub const E_PULL_COMM_FAILURE : HResultError = HResultError::from_constant(0x8004D02B); // XACT_E_PULL_COMM_FAILURE
 
 /// The MSDTC transaction manager has disabled its support for SNA LU 6.2 transactions.
-pub const E_LU_TX_DISABLED : ErrorHResult = ErrorHResult::from_constant(0x8004D02C); // XACT_E_LU_TX_DISABLED
+pub const E_LU_TX_DISABLED : HResultError = HResultError::from_constant(0x8004D02C); // XACT_E_LU_TX_DISABLED
 
 /// XACT_E_CLERKNOTFOUND
-pub const E_CLERKNOTFOUND : ErrorHResult = ErrorHResult::from_constant(0x8004D080); // XACT_E_CLERKNOTFOUND
+pub const E_CLERKNOTFOUND : HResultError = HResultError::from_constant(0x8004D080); // XACT_E_CLERKNOTFOUND
 
 /// XACT_E_CLERKEXISTS
-pub const E_CLERKEXISTS : ErrorHResult = ErrorHResult::from_constant(0x8004D081); // XACT_E_CLERKEXISTS
+pub const E_CLERKEXISTS : HResultError = HResultError::from_constant(0x8004D081); // XACT_E_CLERKEXISTS
 
 /// XACT_E_RECOVERYINPROGRESS
-pub const E_RECOVERYINPROGRESS : ErrorHResult = ErrorHResult::from_constant(0x8004D082); // XACT_E_RECOVERYINPROGRESS
+pub const E_RECOVERYINPROGRESS : HResultError = HResultError::from_constant(0x8004D082); // XACT_E_RECOVERYINPROGRESS
 
 /// XACT_E_TRANSACTIONCLOSED
-pub const E_TRANSACTIONCLOSED : ErrorHResult = ErrorHResult::from_constant(0x8004D083); // XACT_E_TRANSACTIONCLOSED
+pub const E_TRANSACTIONCLOSED : HResultError = HResultError::from_constant(0x8004D083); // XACT_E_TRANSACTIONCLOSED
 
 /// XACT_E_INVALIDLSN
-pub const E_INVALIDLSN : ErrorHResult = ErrorHResult::from_constant(0x8004D084); // XACT_E_INVALIDLSN
+pub const E_INVALIDLSN : HResultError = HResultError::from_constant(0x8004D084); // XACT_E_INVALIDLSN
 
 /// XACT_E_REPLAYREQUEST
-pub const E_REPLAYREQUEST : ErrorHResult = ErrorHResult::from_constant(0x8004D085); // XACT_E_REPLAYREQUEST
+pub const E_REPLAYREQUEST : HResultError = HResultError::from_constant(0x8004D085); // XACT_E_REPLAYREQUEST
 
 /// An asynchronous operation was specified. The operation has begun, but its outcome is not known yet.
-pub const S_ASYNC : SuccessHResult = SuccessHResult::from_constant(0x0004D000); // XACT_S_ASYNC
+pub const S_ASYNC : HResultSuccess = HResultSuccess::from_constant(0x0004D000); // XACT_S_ASYNC
 
 /// XACT_S_DEFECT
-pub const S_DEFECT : SuccessHResult = SuccessHResult::from_constant(0x0004D001); // XACT_S_DEFECT
+pub const S_DEFECT : HResultSuccess = HResultSuccess::from_constant(0x0004D001); // XACT_S_DEFECT
 
 /// The method call succeeded because the transaction was read-only.
-pub const S_READONLY : SuccessHResult = SuccessHResult::from_constant(0x0004D002); // XACT_S_READONLY
+pub const S_READONLY : HResultSuccess = HResultSuccess::from_constant(0x0004D002); // XACT_S_READONLY
 
 /// The transaction was successfully aborted. However, this is a coordinated transaction, and some number of enlisted resources were aborted outright because they could not support abort-retaining semantics
-pub const S_SOMENORETAIN : SuccessHResult = SuccessHResult::from_constant(0x0004D003); // XACT_S_SOMENORETAIN
+pub const S_SOMENORETAIN : HResultSuccess = HResultSuccess::from_constant(0x0004D003); // XACT_S_SOMENORETAIN
 
 /// No changes were made during this call, but the sink wants another chance to look if any other sinks make further changes.
-pub const S_OKINFORM : SuccessHResult = SuccessHResult::from_constant(0x0004D004); // XACT_S_OKINFORM
+pub const S_OKINFORM : HResultSuccess = HResultSuccess::from_constant(0x0004D004); // XACT_S_OKINFORM
 
 /// The sink is content and wishes the transaction to proceed. Changes were made to one or more resources during this call.
-pub const S_MADECHANGESCONTENT : SuccessHResult = SuccessHResult::from_constant(0x0004D005); // XACT_S_MADECHANGESCONTENT
+pub const S_MADECHANGESCONTENT : HResultSuccess = HResultSuccess::from_constant(0x0004D005); // XACT_S_MADECHANGESCONTENT
 
 /// The sink is for the moment and wishes the transaction to proceed, but if other changes are made following this return by other event sinks then this sink wants another chance to look
-pub const S_MADECHANGESINFORM : SuccessHResult = SuccessHResult::from_constant(0x0004D006); // XACT_S_MADECHANGESINFORM
+pub const S_MADECHANGESINFORM : HResultSuccess = HResultSuccess::from_constant(0x0004D006); // XACT_S_MADECHANGESINFORM
 
 /// The transaction was successfully aborted. However, the abort was non-retaining.
-pub const S_ALLNORETAIN : SuccessHResult = SuccessHResult::from_constant(0x0004D007); // XACT_S_ALLNORETAIN
+pub const S_ALLNORETAIN : HResultSuccess = HResultSuccess::from_constant(0x0004D007); // XACT_S_ALLNORETAIN
 
 /// An abort operation was already in progress.
-pub const S_ABORTING : SuccessHResult = SuccessHResult::from_constant(0x0004D008); // XACT_S_ABORTING
+pub const S_ABORTING : HResultSuccess = HResultSuccess::from_constant(0x0004D008); // XACT_S_ABORTING
 
 /// The resource manager has performed a single-phase commit of the transaction.
-pub const S_SINGLEPHASE : SuccessHResult = SuccessHResult::from_constant(0x0004D009); // XACT_S_SINGLEPHASE
+pub const S_SINGLEPHASE : HResultSuccess = HResultSuccess::from_constant(0x0004D009); // XACT_S_SINGLEPHASE
 
 /// The local transaction has not aborted.
-pub const S_LOCALLY_OK : SuccessHResult = SuccessHResult::from_constant(0x0004D00A); // XACT_S_LOCALLY_OK
+pub const S_LOCALLY_OK : HResultSuccess = HResultSuccess::from_constant(0x0004D00A); // XACT_S_LOCALLY_OK
 
 /// The resource manager has requested to be the coordinator (last resource manager) for the transaction.
-pub const S_LASTRESOURCEMANAGER : SuccessHResult = SuccessHResult::from_constant(0x0004D010); // XACT_S_LASTRESOURCEMANAGER
+pub const S_LASTRESOURCEMANAGER : HResultSuccess = HResultSuccess::from_constant(0x0004D010); // XACT_S_LASTRESOURCEMANAGER

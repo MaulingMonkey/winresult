@@ -4,256 +4,256 @@ use super::*;
 
 
 /// Toggle (alternative) trace started
-pub const E_TOGGLE_TRACE_STARTED : ErrorHResult = ErrorHResult::from_constant(0x87C51001); // UTC_E_TOGGLE_TRACE_STARTED
+pub const E_TOGGLE_TRACE_STARTED : HResultError = HResultError::from_constant(0x87C51001); // UTC_E_TOGGLE_TRACE_STARTED
 
 /// Cannot pre-empt running trace: The current trace has a higher priority
-pub const E_ALTERNATIVE_TRACE_CANNOT_PREEMPT : ErrorHResult = ErrorHResult::from_constant(0x87C51002); // UTC_E_ALTERNATIVE_TRACE_CANNOT_PREEMPT
+pub const E_ALTERNATIVE_TRACE_CANNOT_PREEMPT : HResultError = HResultError::from_constant(0x87C51002); // UTC_E_ALTERNATIVE_TRACE_CANNOT_PREEMPT
 
 /// The always-on-trace is not running
-pub const E_AOT_NOT_RUNNING : ErrorHResult = ErrorHResult::from_constant(0x87C51003); // UTC_E_AOT_NOT_RUNNING
+pub const E_AOT_NOT_RUNNING : HResultError = HResultError::from_constant(0x87C51003); // UTC_E_AOT_NOT_RUNNING
 
 /// RunScriptAction contains an invalid script type
-pub const E_SCRIPT_TYPE_INVALID : ErrorHResult = ErrorHResult::from_constant(0x87C51004); // UTC_E_SCRIPT_TYPE_INVALID
+pub const E_SCRIPT_TYPE_INVALID : HResultError = HResultError::from_constant(0x87C51004); // UTC_E_SCRIPT_TYPE_INVALID
 
 /// Requested scenario definition cannot be found
-pub const E_SCENARIODEF_NOT_FOUND : ErrorHResult = ErrorHResult::from_constant(0x87C51005); // UTC_E_SCENARIODEF_NOT_FOUND
+pub const E_SCENARIODEF_NOT_FOUND : HResultError = HResultError::from_constant(0x87C51005); // UTC_E_SCENARIODEF_NOT_FOUND
 
 /// Requested trace profile cannot be found
-pub const E_TRACEPROFILE_NOT_FOUND : ErrorHResult = ErrorHResult::from_constant(0x87C51006); // UTC_E_TRACEPROFILE_NOT_FOUND
+pub const E_TRACEPROFILE_NOT_FOUND : HResultError = HResultError::from_constant(0x87C51006); // UTC_E_TRACEPROFILE_NOT_FOUND
 
 /// Trigger forwarder is already enabled
-pub const E_FORWARDER_ALREADY_ENABLED : ErrorHResult = ErrorHResult::from_constant(0x87C51007); // UTC_E_FORWARDER_ALREADY_ENABLED
+pub const E_FORWARDER_ALREADY_ENABLED : HResultError = HResultError::from_constant(0x87C51007); // UTC_E_FORWARDER_ALREADY_ENABLED
 
 /// Trigger forwarder is already disabled
-pub const E_FORWARDER_ALREADY_DISABLED : ErrorHResult = ErrorHResult::from_constant(0x87C51008); // UTC_E_FORWARDER_ALREADY_DISABLED
+pub const E_FORWARDER_ALREADY_DISABLED : HResultError = HResultError::from_constant(0x87C51008); // UTC_E_FORWARDER_ALREADY_DISABLED
 
 /// Cannot parse EventLog XML: The entry is malformed
-pub const E_EVENTLOG_ENTRY_MALFORMED : ErrorHResult = ErrorHResult::from_constant(0x87C51009); // UTC_E_EVENTLOG_ENTRY_MALFORMED
+pub const E_EVENTLOG_ENTRY_MALFORMED : HResultError = HResultError::from_constant(0x87C51009); // UTC_E_EVENTLOG_ENTRY_MALFORMED
 
 /// <diagrules> node contains a schemaversion which is not compatible with this client
-pub const E_DIAGRULES_SCHEMAVERSION_MISMATCH : ErrorHResult = ErrorHResult::from_constant(0x87C5100A); // UTC_E_DIAGRULES_SCHEMAVERSION_MISMATCH
+pub const E_DIAGRULES_SCHEMAVERSION_MISMATCH : HResultError = HResultError::from_constant(0x87C5100A); // UTC_E_DIAGRULES_SCHEMAVERSION_MISMATCH
 
 /// RunScriptAction was forced to terminate a script
-pub const E_SCRIPT_TERMINATED : ErrorHResult = ErrorHResult::from_constant(0x87C5100B); // UTC_E_SCRIPT_TERMINATED
+pub const E_SCRIPT_TERMINATED : HResultError = HResultError::from_constant(0x87C5100B); // UTC_E_SCRIPT_TERMINATED
 
 /// ToggleTraceWithCustomFilterAction contains an invalid custom filter
-pub const E_INVALID_CUSTOM_FILTER : ErrorHResult = ErrorHResult::from_constant(0x87C5100C); // UTC_E_INVALID_CUSTOM_FILTER
+pub const E_INVALID_CUSTOM_FILTER : HResultError = HResultError::from_constant(0x87C5100C); // UTC_E_INVALID_CUSTOM_FILTER
 
 /// The trace is not running
-pub const E_TRACE_NOT_RUNNING : ErrorHResult = ErrorHResult::from_constant(0x87C5100D); // UTC_E_TRACE_NOT_RUNNING
+pub const E_TRACE_NOT_RUNNING : HResultError = HResultError::from_constant(0x87C5100D); // UTC_E_TRACE_NOT_RUNNING
 
 /// A scenario failed to escalate: This scenario has escalated too recently
-pub const E_REESCALATED_TOO_QUICKLY : ErrorHResult = ErrorHResult::from_constant(0x87C5100E); // UTC_E_REESCALATED_TOO_QUICKLY
+pub const E_REESCALATED_TOO_QUICKLY : HResultError = HResultError::from_constant(0x87C5100E); // UTC_E_REESCALATED_TOO_QUICKLY
 
 /// A scenario failed to escalate: This scenario is already running an escalation
-pub const E_ESCALATION_ALREADY_RUNNING : ErrorHResult = ErrorHResult::from_constant(0x87C5100F); // UTC_E_ESCALATION_ALREADY_RUNNING
+pub const E_ESCALATION_ALREADY_RUNNING : HResultError = HResultError::from_constant(0x87C5100F); // UTC_E_ESCALATION_ALREADY_RUNNING
 
 /// Cannot start tracing: PerfTrack component is already tracing
-pub const E_PERFTRACK_ALREADY_TRACING : ErrorHResult = ErrorHResult::from_constant(0x87C51010); // UTC_E_PERFTRACK_ALREADY_TRACING
+pub const E_PERFTRACK_ALREADY_TRACING : HResultError = HResultError::from_constant(0x87C51010); // UTC_E_PERFTRACK_ALREADY_TRACING
 
 /// A scenario failed to escalate: This scenario has reached max escalations for this escalation type
-pub const E_REACHED_MAX_ESCALATIONS : ErrorHResult = ErrorHResult::from_constant(0x87C51011); // UTC_E_REACHED_MAX_ESCALATIONS
+pub const E_REACHED_MAX_ESCALATIONS : HResultError = HResultError::from_constant(0x87C51011); // UTC_E_REACHED_MAX_ESCALATIONS
 
 /// Cannot update forwarder: The forwarder passed to the function is of a different type
-pub const E_FORWARDER_PRODUCER_MISMATCH : ErrorHResult = ErrorHResult::from_constant(0x87C51012); // UTC_E_FORWARDER_PRODUCER_MISMATCH
+pub const E_FORWARDER_PRODUCER_MISMATCH : HResultError = HResultError::from_constant(0x87C51012); // UTC_E_FORWARDER_PRODUCER_MISMATCH
 
 /// RunScriptAction failed intentionally to force this escalation to terminate
-pub const E_INTENTIONAL_SCRIPT_FAILURE : ErrorHResult = ErrorHResult::from_constant(0x87C51013); // UTC_E_INTENTIONAL_SCRIPT_FAILURE
+pub const E_INTENTIONAL_SCRIPT_FAILURE : HResultError = HResultError::from_constant(0x87C51013); // UTC_E_INTENTIONAL_SCRIPT_FAILURE
 
 /// Failed to initialize SQM logger
-pub const E_SQM_INIT_FAILED : ErrorHResult = ErrorHResult::from_constant(0x87C51014); // UTC_E_SQM_INIT_FAILED
+pub const E_SQM_INIT_FAILED : HResultError = HResultError::from_constant(0x87C51014); // UTC_E_SQM_INIT_FAILED
 
 /// Failed to initialize WER logger: This system does not support WER for UTC
-pub const E_NO_WER_LOGGER_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x87C51015); // UTC_E_NO_WER_LOGGER_SUPPORTED
+pub const E_NO_WER_LOGGER_SUPPORTED : HResultError = HResultError::from_constant(0x87C51015); // UTC_E_NO_WER_LOGGER_SUPPORTED
 
 /// The TraceManager has attempted to take a tracing action without initializing tracers
-pub const E_TRACERS_DONT_EXIST : ErrorHResult = ErrorHResult::from_constant(0x87C51016); // UTC_E_TRACERS_DONT_EXIST
+pub const E_TRACERS_DONT_EXIST : HResultError = HResultError::from_constant(0x87C51016); // UTC_E_TRACERS_DONT_EXIST
 
 /// WinRT initialization failed
-pub const E_WINRT_INIT_FAILED : ErrorHResult = ErrorHResult::from_constant(0x87C51017); // UTC_E_WINRT_INIT_FAILED
+pub const E_WINRT_INIT_FAILED : HResultError = HResultError::from_constant(0x87C51017); // UTC_E_WINRT_INIT_FAILED
 
 /// <scenario> node contains a schemaversion that is not compatible with this client
-pub const E_SCENARIODEF_SCHEMAVERSION_MISMATCH : ErrorHResult = ErrorHResult::from_constant(0x87C51018); // UTC_E_SCENARIODEF_SCHEMAVERSION_MISMATCH
+pub const E_SCENARIODEF_SCHEMAVERSION_MISMATCH : HResultError = HResultError::from_constant(0x87C51018); // UTC_E_SCENARIODEF_SCHEMAVERSION_MISMATCH
 
 /// Scenario contains an invalid filter that can never be satisfied
-pub const E_INVALID_FILTER : ErrorHResult = ErrorHResult::from_constant(0x87C51019); // UTC_E_INVALID_FILTER
+pub const E_INVALID_FILTER : HResultError = HResultError::from_constant(0x87C51019); // UTC_E_INVALID_FILTER
 
 /// RunExeWithArgsAction was forced to terminate a running executable
-pub const E_EXE_TERMINATED : ErrorHResult = ErrorHResult::from_constant(0x87C5101A); // UTC_E_EXE_TERMINATED
+pub const E_EXE_TERMINATED : HResultError = HResultError::from_constant(0x87C5101A); // UTC_E_EXE_TERMINATED
 
 /// Escalation for scenario failed due to insufficient permissions
-pub const E_ESCALATION_NOT_AUTHORIZED : ErrorHResult = ErrorHResult::from_constant(0x87C5101B); // UTC_E_ESCALATION_NOT_AUTHORIZED
+pub const E_ESCALATION_NOT_AUTHORIZED : HResultError = HResultError::from_constant(0x87C5101B); // UTC_E_ESCALATION_NOT_AUTHORIZED
 
 /// Setup for scenario failed due to insufficient permissions
-pub const E_SETUP_NOT_AUTHORIZED : ErrorHResult = ErrorHResult::from_constant(0x87C5101C); // UTC_E_SETUP_NOT_AUTHORIZED
+pub const E_SETUP_NOT_AUTHORIZED : HResultError = HResultError::from_constant(0x87C5101C); // UTC_E_SETUP_NOT_AUTHORIZED
 
 /// A process launched by UTC failed with a non-zero exit code.
-pub const E_CHILD_PROCESS_FAILED : ErrorHResult = ErrorHResult::from_constant(0x87C5101D); // UTC_E_CHILD_PROCESS_FAILED
+pub const E_CHILD_PROCESS_FAILED : HResultError = HResultError::from_constant(0x87C5101D); // UTC_E_CHILD_PROCESS_FAILED
 
 /// A RunExeWithArgs action contains an unauthorized command line.
-pub const E_COMMAND_LINE_NOT_AUTHORIZED : ErrorHResult = ErrorHResult::from_constant(0x87C5101E); // UTC_E_COMMAND_LINE_NOT_AUTHORIZED
+pub const E_COMMAND_LINE_NOT_AUTHORIZED : HResultError = HResultError::from_constant(0x87C5101E); // UTC_E_COMMAND_LINE_NOT_AUTHORIZED
 
 /// UTC cannot load Scenario Editor XML. Convert the scenario file to a DiagTrack XML using the editor.
-pub const E_CANNOT_LOAD_SCENARIO_EDITOR_XML : ErrorHResult = ErrorHResult::from_constant(0x87C5101F); // UTC_E_CANNOT_LOAD_SCENARIO_EDITOR_XML
+pub const E_CANNOT_LOAD_SCENARIO_EDITOR_XML : HResultError = HResultError::from_constant(0x87C5101F); // UTC_E_CANNOT_LOAD_SCENARIO_EDITOR_XML
 
 /// Escalation for scenario has timed out
-pub const E_ESCALATION_TIMED_OUT : ErrorHResult = ErrorHResult::from_constant(0x87C51020); // UTC_E_ESCALATION_TIMED_OUT
+pub const E_ESCALATION_TIMED_OUT : HResultError = HResultError::from_constant(0x87C51020); // UTC_E_ESCALATION_TIMED_OUT
 
 /// Setup for scenario has timed out
-pub const E_SETUP_TIMED_OUT : ErrorHResult = ErrorHResult::from_constant(0x87C51021); // UTC_E_SETUP_TIMED_OUT
+pub const E_SETUP_TIMED_OUT : HResultError = HResultError::from_constant(0x87C51021); // UTC_E_SETUP_TIMED_OUT
 
 /// The given trigger does not match the expected trigger type
-pub const E_TRIGGER_MISMATCH : ErrorHResult = ErrorHResult::from_constant(0x87C51022); // UTC_E_TRIGGER_MISMATCH
+pub const E_TRIGGER_MISMATCH : HResultError = HResultError::from_constant(0x87C51022); // UTC_E_TRIGGER_MISMATCH
 
 /// Requested trigger cannot be found
-pub const E_TRIGGER_NOT_FOUND : ErrorHResult = ErrorHResult::from_constant(0x87C51023); // UTC_E_TRIGGER_NOT_FOUND
+pub const E_TRIGGER_NOT_FOUND : HResultError = HResultError::from_constant(0x87C51023); // UTC_E_TRIGGER_NOT_FOUND
 
 /// SIF is not supported on the machine
-pub const E_SIF_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x87C51024); // UTC_E_SIF_NOT_SUPPORTED
+pub const E_SIF_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x87C51024); // UTC_E_SIF_NOT_SUPPORTED
 
 /// The delay action was terminated
-pub const E_DELAY_TERMINATED : ErrorHResult = ErrorHResult::from_constant(0x87C51025); // UTC_E_DELAY_TERMINATED
+pub const E_DELAY_TERMINATED : HResultError = HResultError::from_constant(0x87C51025); // UTC_E_DELAY_TERMINATED
 
 /// The device ticket was not obtained
-pub const E_DEVICE_TICKET_ERROR : ErrorHResult = ErrorHResult::from_constant(0x87C51026); // UTC_E_DEVICE_TICKET_ERROR
+pub const E_DEVICE_TICKET_ERROR : HResultError = HResultError::from_constant(0x87C51026); // UTC_E_DEVICE_TICKET_ERROR
 
 /// The trace profile needs more memory than is available for tracing
-pub const E_TRACE_BUFFER_LIMIT_EXCEEDED : ErrorHResult = ErrorHResult::from_constant(0x87C51027); // UTC_E_TRACE_BUFFER_LIMIT_EXCEEDED
+pub const E_TRACE_BUFFER_LIMIT_EXCEEDED : HResultError = HResultError::from_constant(0x87C51027); // UTC_E_TRACE_BUFFER_LIMIT_EXCEEDED
 
 /// The API was not completed successfully so the result is unavailable
-pub const E_API_RESULT_UNAVAILABLE : ErrorHResult = ErrorHResult::from_constant(0x87C51028); // UTC_E_API_RESULT_UNAVAILABLE
+pub const E_API_RESULT_UNAVAILABLE : HResultError = HResultError::from_constant(0x87C51028); // UTC_E_API_RESULT_UNAVAILABLE
 
 /// The requested API encountered a timeout in the API manager
-pub const E_RPC_TIMEOUT : ErrorHResult = ErrorHResult::from_constant(0x87C51029); // UTC_E_RPC_TIMEOUT
+pub const E_RPC_TIMEOUT : HResultError = HResultError::from_constant(0x87C51029); // UTC_E_RPC_TIMEOUT
 
 /// The synchronous API encountered a wait failure
-pub const E_RPC_WAIT_FAILED : ErrorHResult = ErrorHResult::from_constant(0x87C5102A); // UTC_E_RPC_WAIT_FAILED
+pub const E_RPC_WAIT_FAILED : HResultError = HResultError::from_constant(0x87C5102A); // UTC_E_RPC_WAIT_FAILED
 
 /// The UTC API is busy with another request
-pub const E_API_BUSY : ErrorHResult = ErrorHResult::from_constant(0x87C5102B); // UTC_E_API_BUSY
+pub const E_API_BUSY : HResultError = HResultError::from_constant(0x87C5102B); // UTC_E_API_BUSY
 
 /// The running trace profile does not have a sufficient runtime to fulfill the escalation request
-pub const E_TRACE_MIN_DURATION_REQUIREMENT_NOT_MET : ErrorHResult = ErrorHResult::from_constant(0x87C5102C); // UTC_E_TRACE_MIN_DURATION_REQUIREMENT_NOT_MET
+pub const E_TRACE_MIN_DURATION_REQUIREMENT_NOT_MET : HResultError = HResultError::from_constant(0x87C5102C); // UTC_E_TRACE_MIN_DURATION_REQUIREMENT_NOT_MET
 
 /// The trace profile could not be started because it requires exclusivity and another higher priority trace is already running
-pub const E_EXCLUSIVITY_NOT_AVAILABLE : ErrorHResult = ErrorHResult::from_constant(0x87C5102D); // UTC_E_EXCLUSIVITY_NOT_AVAILABLE
+pub const E_EXCLUSIVITY_NOT_AVAILABLE : HResultError = HResultError::from_constant(0x87C5102D); // UTC_E_EXCLUSIVITY_NOT_AVAILABLE
 
 /// The file path is not approved for the GetFile escalation action
-pub const E_GETFILE_FILE_PATH_NOT_APPROVED : ErrorHResult = ErrorHResult::from_constant(0x87C5102E); // UTC_E_GETFILE_FILE_PATH_NOT_APPROVED
+pub const E_GETFILE_FILE_PATH_NOT_APPROVED : HResultError = HResultError::from_constant(0x87C5102E); // UTC_E_GETFILE_FILE_PATH_NOT_APPROVED
 
 /// The escalation working directory for the requested escalation could not be created because it already exists
-pub const E_ESCALATION_DIRECTORY_ALREADY_EXISTS : ErrorHResult = ErrorHResult::from_constant(0x87C5102F); // UTC_E_ESCALATION_DIRECTORY_ALREADY_EXISTS
+pub const E_ESCALATION_DIRECTORY_ALREADY_EXISTS : HResultError = HResultError::from_constant(0x87C5102F); // UTC_E_ESCALATION_DIRECTORY_ALREADY_EXISTS
 
 /// Time triggers cannot be used on a transition originating from the "_start" state
-pub const E_TIME_TRIGGER_ON_START_INVALID : ErrorHResult = ErrorHResult::from_constant(0x87C51030); // UTC_E_TIME_TRIGGER_ON_START_INVALID
+pub const E_TIME_TRIGGER_ON_START_INVALID : HResultError = HResultError::from_constant(0x87C51030); // UTC_E_TIME_TRIGGER_ON_START_INVALID
 
 /// Time triggers can only be attached to a single transition
-pub const E_TIME_TRIGGER_ONLY_VALID_ON_SINGLE_TRANSITION : ErrorHResult = ErrorHResult::from_constant(0x87C51031); // UTC_E_TIME_TRIGGER_ONLY_VALID_ON_SINGLE_TRANSITION
+pub const E_TIME_TRIGGER_ONLY_VALID_ON_SINGLE_TRANSITION : HResultError = HResultError::from_constant(0x87C51031); // UTC_E_TIME_TRIGGER_ONLY_VALID_ON_SINGLE_TRANSITION
 
 /// Time trigger duration must fall within an inclusive range of one second and 15 minutes
-pub const E_TIME_TRIGGER_INVALID_TIME_RANGE : ErrorHResult = ErrorHResult::from_constant(0x87C51032); // UTC_E_TIME_TRIGGER_INVALID_TIME_RANGE
+pub const E_TIME_TRIGGER_INVALID_TIME_RANGE : HResultError = HResultError::from_constant(0x87C51032); // UTC_E_TIME_TRIGGER_INVALID_TIME_RANGE
 
 /// Only one Time Trigger is allowed per state
-pub const E_MULTIPLE_TIME_TRIGGER_ON_SINGLE_STATE : ErrorHResult = ErrorHResult::from_constant(0x87C51033); // UTC_E_MULTIPLE_TIME_TRIGGER_ON_SINGLE_STATE
+pub const E_MULTIPLE_TIME_TRIGGER_ON_SINGLE_STATE : HResultError = HResultError::from_constant(0x87C51033); // UTC_E_MULTIPLE_TIME_TRIGGER_ON_SINGLE_STATE
 
 /// A RunExeWithArgs action contains a binary which is not present on the targeted device.
-pub const E_BINARY_MISSING : ErrorHResult = ErrorHResult::from_constant(0x87C51034); // UTC_E_BINARY_MISSING
+pub const E_BINARY_MISSING : HResultError = HResultError::from_constant(0x87C51034); // UTC_E_BINARY_MISSING
 
 /// UTC failed to identify the container id to use for a scenario escalation action.
-pub const E_FAILED_TO_RESOLVE_CONTAINER_ID : ErrorHResult = ErrorHResult::from_constant(0x87C51036); // UTC_E_FAILED_TO_RESOLVE_CONTAINER_ID
+pub const E_FAILED_TO_RESOLVE_CONTAINER_ID : HResultError = HResultError::from_constant(0x87C51036); // UTC_E_FAILED_TO_RESOLVE_CONTAINER_ID
 
 /// Failed to resolve session ID during API invocation.
-pub const E_UNABLE_TO_RESOLVE_SESSION : ErrorHResult = ErrorHResult::from_constant(0x87C51037); // UTC_E_UNABLE_TO_RESOLVE_SESSION
+pub const E_UNABLE_TO_RESOLVE_SESSION : HResultError = HResultError::from_constant(0x87C51037); // UTC_E_UNABLE_TO_RESOLVE_SESSION
 
 /// UTC has throttled the event for firing too often.
-pub const E_THROTTLED : ErrorHResult = ErrorHResult::from_constant(0x87C51038); // UTC_E_THROTTLED
+pub const E_THROTTLED : HResultError = HResultError::from_constant(0x87C51038); // UTC_E_THROTTLED
 
 /// The script is not approved to run as part of DiagTrack scenario.
-pub const E_UNAPPROVED_SCRIPT : ErrorHResult = ErrorHResult::from_constant(0x87C51039); // UTC_E_UNAPPROVED_SCRIPT
+pub const E_UNAPPROVED_SCRIPT : HResultError = HResultError::from_constant(0x87C51039); // UTC_E_UNAPPROVED_SCRIPT
 
 /// The script referenced in DiagTrack scenario is not present on the system.
-pub const E_SCRIPT_MISSING : ErrorHResult = ErrorHResult::from_constant(0x87C5103A); // UTC_E_SCRIPT_MISSING
+pub const E_SCRIPT_MISSING : HResultError = HResultError::from_constant(0x87C5103A); // UTC_E_SCRIPT_MISSING
 
 /// A trigger in this scenario is throttled, blocking the scenario from being loaded.
-pub const E_SCENARIO_THROTTLED : ErrorHResult = ErrorHResult::from_constant(0x87C5103B); // UTC_E_SCENARIO_THROTTLED
+pub const E_SCENARIO_THROTTLED : HResultError = HResultError::from_constant(0x87C5103B); // UTC_E_SCENARIO_THROTTLED
 
 /// The requested UTC API call is not supported on this device.
-pub const E_API_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x87C5103C); // UTC_E_API_NOT_SUPPORTED
+pub const E_API_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x87C5103C); // UTC_E_API_NOT_SUPPORTED
 
 /// The file path is not approved for collection on external rings for the GetFile escalation action.
-pub const E_GETFILE_EXTERNAL_PATH_NOT_APPROVED : ErrorHResult = ErrorHResult::from_constant(0x87C5103D); // UTC_E_GETFILE_EXTERNAL_PATH_NOT_APPROVED
+pub const E_GETFILE_EXTERNAL_PATH_NOT_APPROVED : HResultError = HResultError::from_constant(0x87C5103D); // UTC_E_GETFILE_EXTERNAL_PATH_NOT_APPROVED
 
 /// Querying a scenario definition exceeded the specified maximum timeout.
-pub const E_TRY_GET_SCENARIO_TIMEOUT_EXCEEDED : ErrorHResult = ErrorHResult::from_constant(0x87C5103E); // UTC_E_TRY_GET_SCENARIO_TIMEOUT_EXCEEDED
+pub const E_TRY_GET_SCENARIO_TIMEOUT_EXCEEDED : HResultError = HResultError::from_constant(0x87C5103E); // UTC_E_TRY_GET_SCENARIO_TIMEOUT_EXCEEDED
 
 /// Certification revocation checking has been enabled, but the revocation check failed to verify whether a certificate has been revoked. The server used to check for revocation might be unreachable.
-pub const E_CERT_REV_FAILED : ErrorHResult = ErrorHResult::from_constant(0x87C5103F); // UTC_E_CERT_REV_FAILED
+pub const E_CERT_REV_FAILED : HResultError = HResultError::from_constant(0x87C5103F); // UTC_E_CERT_REV_FAILED
 
 /// Failed to start NDISCAP service for network packet capture trace.
-pub const E_FAILED_TO_START_NDISCAP : ErrorHResult = ErrorHResult::from_constant(0x87C51040); // UTC_E_FAILED_TO_START_NDISCAP
+pub const E_FAILED_TO_START_NDISCAP : HResultError = HResultError::from_constant(0x87C51040); // UTC_E_FAILED_TO_START_NDISCAP
 
 /// UTC can perform no more than one KernelDump action on a device every 24 hours.
-pub const E_KERNELDUMP_LIMIT_REACHED : ErrorHResult = ErrorHResult::from_constant(0x87C51041); // UTC_E_KERNELDUMP_LIMIT_REACHED
+pub const E_KERNELDUMP_LIMIT_REACHED : HResultError = HResultError::from_constant(0x87C51041); // UTC_E_KERNELDUMP_LIMIT_REACHED
 
 /// The event contained an aggregation or differential privacy structure, but did not specify MICROSOFT_EVENTTAG_AGGREGATE.
-pub const E_MISSING_AGGREGATE_EVENT_TAG : ErrorHResult = ErrorHResult::from_constant(0x87C51042); // UTC_E_MISSING_AGGREGATE_EVENT_TAG
+pub const E_MISSING_AGGREGATE_EVENT_TAG : HResultError = HResultError::from_constant(0x87C51042); // UTC_E_MISSING_AGGREGATE_EVENT_TAG
 
 /// The event contained an invalid aggregation or differential privacy structure.
-pub const E_INVALID_AGGREGATION_STRUCT : ErrorHResult = ErrorHResult::from_constant(0x87C51043); // UTC_E_INVALID_AGGREGATION_STRUCT
+pub const E_INVALID_AGGREGATION_STRUCT : HResultError = HResultError::from_constant(0x87C51043); // UTC_E_INVALID_AGGREGATION_STRUCT
 
 /// The action cannot be completed in the specified destination.
-pub const E_ACTION_NOT_SUPPORTED_IN_DESTINATION : ErrorHResult = ErrorHResult::from_constant(0x87C51044); // UTC_E_ACTION_NOT_SUPPORTED_IN_DESTINATION
+pub const E_ACTION_NOT_SUPPORTED_IN_DESTINATION : HResultError = HResultError::from_constant(0x87C51044); // UTC_E_ACTION_NOT_SUPPORTED_IN_DESTINATION
 
 /// Filter command is missing a required attribute.
-pub const E_FILTER_MISSING_ATTRIBUTE : ErrorHResult = ErrorHResult::from_constant(0x87C51045); // UTC_E_FILTER_MISSING_ATTRIBUTE
+pub const E_FILTER_MISSING_ATTRIBUTE : HResultError = HResultError::from_constant(0x87C51045); // UTC_E_FILTER_MISSING_ATTRIBUTE
 
 /// Filter command contains an unsupported type.
-pub const E_FILTER_INVALID_TYPE : ErrorHResult = ErrorHResult::from_constant(0x87C51046); // UTC_E_FILTER_INVALID_TYPE
+pub const E_FILTER_INVALID_TYPE : HResultError = HResultError::from_constant(0x87C51046); // UTC_E_FILTER_INVALID_TYPE
 
 /// Filter variable does not exist at point of evaluation.
-pub const E_FILTER_VARIABLE_NOT_FOUND : ErrorHResult = ErrorHResult::from_constant(0x87C51047); // UTC_E_FILTER_VARIABLE_NOT_FOUND
+pub const E_FILTER_VARIABLE_NOT_FOUND : HResultError = HResultError::from_constant(0x87C51047); // UTC_E_FILTER_VARIABLE_NOT_FOUND
 
 /// Filter command is not allowed in the current context.
-pub const E_FILTER_FUNCTION_RESTRICTED : ErrorHResult = ErrorHResult::from_constant(0x87C51048); // UTC_E_FILTER_FUNCTION_RESTRICTED
+pub const E_FILTER_FUNCTION_RESTRICTED : HResultError = HResultError::from_constant(0x87C51048); // UTC_E_FILTER_FUNCTION_RESTRICTED
 
 /// Requested filter version is incompatible with available version.
-pub const E_FILTER_VERSION_MISMATCH : ErrorHResult = ErrorHResult::from_constant(0x87C51049); // UTC_E_FILTER_VERSION_MISMATCH
+pub const E_FILTER_VERSION_MISMATCH : HResultError = HResultError::from_constant(0x87C51049); // UTC_E_FILTER_VERSION_MISMATCH
 
 /// Filter does not support this function.
-pub const E_FILTER_INVALID_FUNCTION : ErrorHResult = ErrorHResult::from_constant(0x87C51050); // UTC_E_FILTER_INVALID_FUNCTION
+pub const E_FILTER_INVALID_FUNCTION : HResultError = HResultError::from_constant(0x87C51050); // UTC_E_FILTER_INVALID_FUNCTION
 
 /// Filter function does not accept the provided parameter types and/or count.
-pub const E_FILTER_INVALID_FUNCTION_PARAMS : ErrorHResult = ErrorHResult::from_constant(0x87C51051); // UTC_E_FILTER_INVALID_FUNCTION_PARAMS
+pub const E_FILTER_INVALID_FUNCTION_PARAMS : HResultError = HResultError::from_constant(0x87C51051); // UTC_E_FILTER_INVALID_FUNCTION_PARAMS
 
 /// Filter command does not exist or is incorrectly formatted.
-pub const E_FILTER_INVALID_COMMAND : ErrorHResult = ErrorHResult::from_constant(0x87C51052); // UTC_E_FILTER_INVALID_COMMAND
+pub const E_FILTER_INVALID_COMMAND : HResultError = HResultError::from_constant(0x87C51052); // UTC_E_FILTER_INVALID_COMMAND
 
 /// Filter types can not be compared to each other.
-pub const E_FILTER_ILLEGAL_EVAL : ErrorHResult = ErrorHResult::from_constant(0x87C51053); // UTC_E_FILTER_ILLEGAL_EVAL
+pub const E_FILTER_ILLEGAL_EVAL : HResultError = HResultError::from_constant(0x87C51053); // UTC_E_FILTER_ILLEGAL_EVAL
 
 /// TTTracer executable returned a code other than ERROR_SUCCESS.
-pub const E_TTTRACER_RETURNED_ERROR : ErrorHResult = ErrorHResult::from_constant(0x87C51054); // UTC_E_TTTRACER_RETURNED_ERROR
+pub const E_TTTRACER_RETURNED_ERROR : HResultError = HResultError::from_constant(0x87C51054); // UTC_E_TTTRACER_RETURNED_ERROR
 
 /// The total size of the compressed escalation data payload exceeded the allowable limit.
-pub const E_AGENT_DIAGNOSTICS_TOO_LARGE : ErrorHResult = ErrorHResult::from_constant(0x87C51055); // UTC_E_AGENT_DIAGNOSTICS_TOO_LARGE
+pub const E_AGENT_DIAGNOSTICS_TOO_LARGE : HResultError = HResultError::from_constant(0x87C51055); // UTC_E_AGENT_DIAGNOSTICS_TOO_LARGE
 
 /// Escalation data was not completely transferred from agent to host.
-pub const E_FAILED_TO_RECEIVE_AGENT_DIAGNOSTICS : ErrorHResult = ErrorHResult::from_constant(0x87C51056); // UTC_E_FAILED_TO_RECEIVE_AGENT_DIAGNOSTICS
+pub const E_FAILED_TO_RECEIVE_AGENT_DIAGNOSTICS : HResultError = HResultError::from_constant(0x87C51056); // UTC_E_FAILED_TO_RECEIVE_AGENT_DIAGNOSTICS
 
 /// An escalation was requested for a scenario which has no actions for the passed type.
-pub const E_SCENARIO_HAS_NO_ACTIONS : ErrorHResult = ErrorHResult::from_constant(0x87C51057); // UTC_E_SCENARIO_HAS_NO_ACTIONS
+pub const E_SCENARIO_HAS_NO_ACTIONS : HResultError = HResultError::from_constant(0x87C51057); // UTC_E_SCENARIO_HAS_NO_ACTIONS
 
 /// UTC allocated space for TTTracer escalations is full.
-pub const E_TTTRACER_STORAGE_FULL : ErrorHResult = ErrorHResult::from_constant(0x87C51058); // UTC_E_TTTRACER_STORAGE_FULL
+pub const E_TTTRACER_STORAGE_FULL : HResultError = HResultError::from_constant(0x87C51058); // UTC_E_TTTRACER_STORAGE_FULL
 
 /// Disk needs minimum of 15GB to start TTD recording session.
-pub const E_INSUFFICIENT_SPACE_TO_START_TRACE : ErrorHResult = ErrorHResult::from_constant(0x87C51059); // UTC_E_INSUFFICIENT_SPACE_TO_START_TRACE
+pub const E_INSUFFICIENT_SPACE_TO_START_TRACE : HResultError = HResultError::from_constant(0x87C51059); // UTC_E_INSUFFICIENT_SPACE_TO_START_TRACE
 
 /// Escalation was cancelled due to component shutdown.
-pub const E_ESCALATION_CANCELLED_AT_SHUTDOWN : ErrorHResult = ErrorHResult::from_constant(0x87C5105A); // UTC_E_ESCALATION_CANCELLED_AT_SHUTDOWN
+pub const E_ESCALATION_CANCELLED_AT_SHUTDOWN : HResultError = HResultError::from_constant(0x87C5105A); // UTC_E_ESCALATION_CANCELLED_AT_SHUTDOWN
 
 /// The file for the GetFileInfo action must be under the \Windows, \Program Files, or \Program Files (x86) directories.
-pub const E_GETFILEINFOACTION_FILE_NOT_APPROVED : ErrorHResult = ErrorHResult::from_constant(0x87C5105B); // UTC_E_GETFILEINFOACTION_FILE_NOT_APPROVED
+pub const E_GETFILEINFOACTION_FILE_NOT_APPROVED : HResultError = HResultError::from_constant(0x87C5105B); // UTC_E_GETFILEINFOACTION_FILE_NOT_APPROVED
 
 /// The registry value type for SetRegKey action must be REG_SZ, REG_MULTI_SZ, REG_EXPAND_SZ, REG_BINARY, REG_DWORD, or REG_QWORD.
-pub const E_SETREGKEYACTION_TYPE_NOT_APPROVED : ErrorHResult = ErrorHResult::from_constant(0x87C5105C); // UTC_E_SETREGKEYACTION_TYPE_NOT_APPROVED
+pub const E_SETREGKEYACTION_TYPE_NOT_APPROVED : HResultError = HResultError::from_constant(0x87C5105C); // UTC_E_SETREGKEYACTION_TYPE_NOT_APPROVED

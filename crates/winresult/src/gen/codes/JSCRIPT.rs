@@ -4,4 +4,4 @@ use super::*;
 
 
 /// Function could not execute because it was deleted or garbage collected.
-pub const E_CANTEXECUTE : ErrorHResult = ErrorHResult::from_constant(0x89020001); // JSCRIPT_E_CANTEXECUTE
+pub const E_CANTEXECUTE : HResultError = HResultError::from_constant(0x89020001); // JSCRIPT_E_CANTEXECUTE

@@ -4,349 +4,349 @@ use super::*;
 
 
 /// Thread local storage failure
-pub const E_INIT_TLS : ErrorHResult = ErrorHResult::from_constant(0x80004006); // CO_E_INIT_TLS
+pub const E_INIT_TLS : HResultError = HResultError::from_constant(0x80004006); // CO_E_INIT_TLS
 
 /// Get shared memory allocator failure
-pub const E_INIT_SHARED_ALLOCATOR : ErrorHResult = ErrorHResult::from_constant(0x80004007); // CO_E_INIT_SHARED_ALLOCATOR
+pub const E_INIT_SHARED_ALLOCATOR : HResultError = HResultError::from_constant(0x80004007); // CO_E_INIT_SHARED_ALLOCATOR
 
 /// Get memory allocator failure
-pub const E_INIT_MEMORY_ALLOCATOR : ErrorHResult = ErrorHResult::from_constant(0x80004008); // CO_E_INIT_MEMORY_ALLOCATOR
+pub const E_INIT_MEMORY_ALLOCATOR : HResultError = HResultError::from_constant(0x80004008); // CO_E_INIT_MEMORY_ALLOCATOR
 
 /// Unable to initialize class cache
-pub const E_INIT_CLASS_CACHE : ErrorHResult = ErrorHResult::from_constant(0x80004009); // CO_E_INIT_CLASS_CACHE
+pub const E_INIT_CLASS_CACHE : HResultError = HResultError::from_constant(0x80004009); // CO_E_INIT_CLASS_CACHE
 
 /// Unable to initialize RPC services
-pub const E_INIT_RPC_CHANNEL : ErrorHResult = ErrorHResult::from_constant(0x8000400A); // CO_E_INIT_RPC_CHANNEL
+pub const E_INIT_RPC_CHANNEL : HResultError = HResultError::from_constant(0x8000400A); // CO_E_INIT_RPC_CHANNEL
 
 /// Cannot set thread local storage channel control
-pub const E_INIT_TLS_SET_CHANNEL_CONTROL : ErrorHResult = ErrorHResult::from_constant(0x8000400B); // CO_E_INIT_TLS_SET_CHANNEL_CONTROL
+pub const E_INIT_TLS_SET_CHANNEL_CONTROL : HResultError = HResultError::from_constant(0x8000400B); // CO_E_INIT_TLS_SET_CHANNEL_CONTROL
 
 /// Could not allocate thread local storage channel control
-pub const E_INIT_TLS_CHANNEL_CONTROL : ErrorHResult = ErrorHResult::from_constant(0x8000400C); // CO_E_INIT_TLS_CHANNEL_CONTROL
+pub const E_INIT_TLS_CHANNEL_CONTROL : HResultError = HResultError::from_constant(0x8000400C); // CO_E_INIT_TLS_CHANNEL_CONTROL
 
 /// The user supplied memory allocator is unacceptable
-pub const E_INIT_UNACCEPTED_USER_ALLOCATOR : ErrorHResult = ErrorHResult::from_constant(0x8000400D); // CO_E_INIT_UNACCEPTED_USER_ALLOCATOR
+pub const E_INIT_UNACCEPTED_USER_ALLOCATOR : HResultError = HResultError::from_constant(0x8000400D); // CO_E_INIT_UNACCEPTED_USER_ALLOCATOR
 
 /// The OLE service mutex already exists
-pub const E_INIT_SCM_MUTEX_EXISTS : ErrorHResult = ErrorHResult::from_constant(0x8000400E); // CO_E_INIT_SCM_MUTEX_EXISTS
+pub const E_INIT_SCM_MUTEX_EXISTS : HResultError = HResultError::from_constant(0x8000400E); // CO_E_INIT_SCM_MUTEX_EXISTS
 
 /// The OLE service file mapping already exists
-pub const E_INIT_SCM_FILE_MAPPING_EXISTS : ErrorHResult = ErrorHResult::from_constant(0x8000400F); // CO_E_INIT_SCM_FILE_MAPPING_EXISTS
+pub const E_INIT_SCM_FILE_MAPPING_EXISTS : HResultError = HResultError::from_constant(0x8000400F); // CO_E_INIT_SCM_FILE_MAPPING_EXISTS
 
 /// Unable to map view of file for OLE service
-pub const E_INIT_SCM_MAP_VIEW_OF_FILE : ErrorHResult = ErrorHResult::from_constant(0x80004010); // CO_E_INIT_SCM_MAP_VIEW_OF_FILE
+pub const E_INIT_SCM_MAP_VIEW_OF_FILE : HResultError = HResultError::from_constant(0x80004010); // CO_E_INIT_SCM_MAP_VIEW_OF_FILE
 
 /// Failure attempting to launch OLE service
-pub const E_INIT_SCM_EXEC_FAILURE : ErrorHResult = ErrorHResult::from_constant(0x80004011); // CO_E_INIT_SCM_EXEC_FAILURE
+pub const E_INIT_SCM_EXEC_FAILURE : HResultError = HResultError::from_constant(0x80004011); // CO_E_INIT_SCM_EXEC_FAILURE
 
 /// There was an attempt to call CoInitialize a second time while single threaded
-pub const E_INIT_ONLY_SINGLE_THREADED : ErrorHResult = ErrorHResult::from_constant(0x80004012); // CO_E_INIT_ONLY_SINGLE_THREADED
+pub const E_INIT_ONLY_SINGLE_THREADED : HResultError = HResultError::from_constant(0x80004012); // CO_E_INIT_ONLY_SINGLE_THREADED
 
 /// A Remote activation was necessary but was not allowed
-pub const E_CANT_REMOTE : ErrorHResult = ErrorHResult::from_constant(0x80004013); // CO_E_CANT_REMOTE
+pub const E_CANT_REMOTE : HResultError = HResultError::from_constant(0x80004013); // CO_E_CANT_REMOTE
 
 /// A Remote activation was necessary but the server name provided was invalid
-pub const E_BAD_SERVER_NAME : ErrorHResult = ErrorHResult::from_constant(0x80004014); // CO_E_BAD_SERVER_NAME
+pub const E_BAD_SERVER_NAME : HResultError = HResultError::from_constant(0x80004014); // CO_E_BAD_SERVER_NAME
 
 /// The class is configured to run as a security id different from the caller
-pub const E_WRONG_SERVER_IDENTITY : ErrorHResult = ErrorHResult::from_constant(0x80004015); // CO_E_WRONG_SERVER_IDENTITY
+pub const E_WRONG_SERVER_IDENTITY : HResultError = HResultError::from_constant(0x80004015); // CO_E_WRONG_SERVER_IDENTITY
 
 /// Use of Ole1 services requiring DDE windows is disabled
-pub const E_OLE1DDE_DISABLED : ErrorHResult = ErrorHResult::from_constant(0x80004016); // CO_E_OLE1DDE_DISABLED
+pub const E_OLE1DDE_DISABLED : HResultError = HResultError::from_constant(0x80004016); // CO_E_OLE1DDE_DISABLED
 
 /// A RunAs specification must be <domain name>\<user name> or simply <user name>
-pub const E_RUNAS_SYNTAX : ErrorHResult = ErrorHResult::from_constant(0x80004017); // CO_E_RUNAS_SYNTAX
+pub const E_RUNAS_SYNTAX : HResultError = HResultError::from_constant(0x80004017); // CO_E_RUNAS_SYNTAX
 
 /// The server process could not be started. The pathname may be incorrect.
-pub const E_CREATEPROCESS_FAILURE : ErrorHResult = ErrorHResult::from_constant(0x80004018); // CO_E_CREATEPROCESS_FAILURE
+pub const E_CREATEPROCESS_FAILURE : HResultError = HResultError::from_constant(0x80004018); // CO_E_CREATEPROCESS_FAILURE
 
 /// The server process could not be started as the configured identity. The pathname may be incorrect or unavailable.
-pub const E_RUNAS_CREATEPROCESS_FAILURE : ErrorHResult = ErrorHResult::from_constant(0x80004019); // CO_E_RUNAS_CREATEPROCESS_FAILURE
+pub const E_RUNAS_CREATEPROCESS_FAILURE : HResultError = HResultError::from_constant(0x80004019); // CO_E_RUNAS_CREATEPROCESS_FAILURE
 
 /// The server process could not be started because the configured identity is incorrect. Check the username and password.
-pub const E_RUNAS_LOGON_FAILURE : ErrorHResult = ErrorHResult::from_constant(0x8000401A); // CO_E_RUNAS_LOGON_FAILURE
+pub const E_RUNAS_LOGON_FAILURE : HResultError = HResultError::from_constant(0x8000401A); // CO_E_RUNAS_LOGON_FAILURE
 
 /// The client is not allowed to launch this server.
-pub const E_LAUNCH_PERMSSION_DENIED : ErrorHResult = ErrorHResult::from_constant(0x8000401B); // CO_E_LAUNCH_PERMSSION_DENIED
+pub const E_LAUNCH_PERMSSION_DENIED : HResultError = HResultError::from_constant(0x8000401B); // CO_E_LAUNCH_PERMSSION_DENIED
 
 /// The service providing this server could not be started.
-pub const E_START_SERVICE_FAILURE : ErrorHResult = ErrorHResult::from_constant(0x8000401C); // CO_E_START_SERVICE_FAILURE
+pub const E_START_SERVICE_FAILURE : HResultError = HResultError::from_constant(0x8000401C); // CO_E_START_SERVICE_FAILURE
 
 /// This computer was unable to communicate with the computer providing the server.
-pub const E_REMOTE_COMMUNICATION_FAILURE : ErrorHResult = ErrorHResult::from_constant(0x8000401D); // CO_E_REMOTE_COMMUNICATION_FAILURE
+pub const E_REMOTE_COMMUNICATION_FAILURE : HResultError = HResultError::from_constant(0x8000401D); // CO_E_REMOTE_COMMUNICATION_FAILURE
 
 /// The server did not respond after being launched.
-pub const E_SERVER_START_TIMEOUT : ErrorHResult = ErrorHResult::from_constant(0x8000401E); // CO_E_SERVER_START_TIMEOUT
+pub const E_SERVER_START_TIMEOUT : HResultError = HResultError::from_constant(0x8000401E); // CO_E_SERVER_START_TIMEOUT
 
 /// The registration information for this server is inconsistent or incomplete.
-pub const E_CLSREG_INCONSISTENT : ErrorHResult = ErrorHResult::from_constant(0x8000401F); // CO_E_CLSREG_INCONSISTENT
+pub const E_CLSREG_INCONSISTENT : HResultError = HResultError::from_constant(0x8000401F); // CO_E_CLSREG_INCONSISTENT
 
 /// The registration information for this interface is inconsistent or incomplete.
-pub const E_IIDREG_INCONSISTENT : ErrorHResult = ErrorHResult::from_constant(0x80004020); // CO_E_IIDREG_INCONSISTENT
+pub const E_IIDREG_INCONSISTENT : HResultError = HResultError::from_constant(0x80004020); // CO_E_IIDREG_INCONSISTENT
 
 /// The operation attempted is not supported.
-pub const E_NOT_SUPPORTED : ErrorHResult = ErrorHResult::from_constant(0x80004021); // CO_E_NOT_SUPPORTED
+pub const E_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x80004021); // CO_E_NOT_SUPPORTED
 
 /// A dll must be loaded.
-pub const E_RELOAD_DLL : ErrorHResult = ErrorHResult::from_constant(0x80004022); // CO_E_RELOAD_DLL
+pub const E_RELOAD_DLL : HResultError = HResultError::from_constant(0x80004022); // CO_E_RELOAD_DLL
 
 /// A Microsoft Software Installer error was encountered.
-pub const E_MSI_ERROR : ErrorHResult = ErrorHResult::from_constant(0x80004023); // CO_E_MSI_ERROR
+pub const E_MSI_ERROR : HResultError = HResultError::from_constant(0x80004023); // CO_E_MSI_ERROR
 
 /// The specified activation could not occur in the client context as specified.
-pub const E_ATTEMPT_TO_CREATE_OUTSIDE_CLIENT_CONTEXT : ErrorHResult = ErrorHResult::from_constant(0x80004024); // CO_E_ATTEMPT_TO_CREATE_OUTSIDE_CLIENT_CONTEXT
+pub const E_ATTEMPT_TO_CREATE_OUTSIDE_CLIENT_CONTEXT : HResultError = HResultError::from_constant(0x80004024); // CO_E_ATTEMPT_TO_CREATE_OUTSIDE_CLIENT_CONTEXT
 
 /// Activations on the server are paused.
-pub const E_SERVER_PAUSED : ErrorHResult = ErrorHResult::from_constant(0x80004025); // CO_E_SERVER_PAUSED
+pub const E_SERVER_PAUSED : HResultError = HResultError::from_constant(0x80004025); // CO_E_SERVER_PAUSED
 
 /// Activations on the server are not paused.
-pub const E_SERVER_NOT_PAUSED : ErrorHResult = ErrorHResult::from_constant(0x80004026); // CO_E_SERVER_NOT_PAUSED
+pub const E_SERVER_NOT_PAUSED : HResultError = HResultError::from_constant(0x80004026); // CO_E_SERVER_NOT_PAUSED
 
 /// The component or application containing the component has been disabled.
-pub const E_CLASS_DISABLED : ErrorHResult = ErrorHResult::from_constant(0x80004027); // CO_E_CLASS_DISABLED
+pub const E_CLASS_DISABLED : HResultError = HResultError::from_constant(0x80004027); // CO_E_CLASS_DISABLED
 
 /// The common language runtime is not available
-pub const E_CLRNOTAVAILABLE : ErrorHResult = ErrorHResult::from_constant(0x80004028); // CO_E_CLRNOTAVAILABLE
+pub const E_CLRNOTAVAILABLE : HResultError = HResultError::from_constant(0x80004028); // CO_E_CLRNOTAVAILABLE
 
 /// The thread-pool rejected the submitted asynchronous work.
-pub const E_ASYNC_WORK_REJECTED : ErrorHResult = ErrorHResult::from_constant(0x80004029); // CO_E_ASYNC_WORK_REJECTED
+pub const E_ASYNC_WORK_REJECTED : HResultError = HResultError::from_constant(0x80004029); // CO_E_ASYNC_WORK_REJECTED
 
 /// The server started, but did not finish initializing in a timely fashion.
-pub const E_SERVER_INIT_TIMEOUT : ErrorHResult = ErrorHResult::from_constant(0x8000402A); // CO_E_SERVER_INIT_TIMEOUT
+pub const E_SERVER_INIT_TIMEOUT : HResultError = HResultError::from_constant(0x8000402A); // CO_E_SERVER_INIT_TIMEOUT
 
 /// Unable to complete the call since there is no COM+ security context inside IObjectControl.Activate.
-pub const E_NO_SECCTX_IN_ACTIVATE : ErrorHResult = ErrorHResult::from_constant(0x8000402B); // CO_E_NO_SECCTX_IN_ACTIVATE
+pub const E_NO_SECCTX_IN_ACTIVATE : HResultError = HResultError::from_constant(0x8000402B); // CO_E_NO_SECCTX_IN_ACTIVATE
 
 /// The provided tracker configuration is invalid
-pub const E_TRACKER_CONFIG : ErrorHResult = ErrorHResult::from_constant(0x80004030); // CO_E_TRACKER_CONFIG
+pub const E_TRACKER_CONFIG : HResultError = HResultError::from_constant(0x80004030); // CO_E_TRACKER_CONFIG
 
 /// The provided thread pool configuration is invalid
-pub const E_THREADPOOL_CONFIG : ErrorHResult = ErrorHResult::from_constant(0x80004031); // CO_E_THREADPOOL_CONFIG
+pub const E_THREADPOOL_CONFIG : HResultError = HResultError::from_constant(0x80004031); // CO_E_THREADPOOL_CONFIG
 
 /// The provided side-by-side configuration is invalid
-pub const E_SXS_CONFIG : ErrorHResult = ErrorHResult::from_constant(0x80004032); // CO_E_SXS_CONFIG
+pub const E_SXS_CONFIG : HResultError = HResultError::from_constant(0x80004032); // CO_E_SXS_CONFIG
 
 /// The server principal name (SPN) obtained during security negotiation is malformed.
-pub const E_MALFORMED_SPN : ErrorHResult = ErrorHResult::from_constant(0x80004033); // CO_E_MALFORMED_SPN
+pub const E_MALFORMED_SPN : HResultError = HResultError::from_constant(0x80004033); // CO_E_MALFORMED_SPN
 
 /// The caller failed to revoke a per-apartment registration before apartment shutdown.
-pub const E_UNREVOKED_REGISTRATION_ON_APARTMENT_SHUTDOWN : ErrorHResult = ErrorHResult::from_constant(0x80004034); // CO_E_UNREVOKED_REGISTRATION_ON_APARTMENT_SHUTDOWN
+pub const E_UNREVOKED_REGISTRATION_ON_APARTMENT_SHUTDOWN : HResultError = HResultError::from_constant(0x80004034); // CO_E_UNREVOKED_REGISTRATION_ON_APARTMENT_SHUTDOWN
 
 /// The object has been rundown by the stub manager while there are external clients.
-pub const E_PREMATURE_STUB_RUNDOWN : ErrorHResult = ErrorHResult::from_constant(0x80004035); // CO_E_PREMATURE_STUB_RUNDOWN
+pub const E_PREMATURE_STUB_RUNDOWN : HResultError = HResultError::from_constant(0x80004035); // CO_E_PREMATURE_STUB_RUNDOWN
 
 /// CoInitialize has not been called.
-pub const E_NOTINITIALIZED : ErrorHResult = ErrorHResult::from_constant(0x800401F0); // CO_E_NOTINITIALIZED
+pub const E_NOTINITIALIZED : HResultError = HResultError::from_constant(0x800401F0); // CO_E_NOTINITIALIZED
 
 /// CoInitialize has already been called.
-pub const E_ALREADYINITIALIZED : ErrorHResult = ErrorHResult::from_constant(0x800401F1); // CO_E_ALREADYINITIALIZED
+pub const E_ALREADYINITIALIZED : HResultError = HResultError::from_constant(0x800401F1); // CO_E_ALREADYINITIALIZED
 
 /// Class of object cannot be determined
-pub const E_CANTDETERMINECLASS : ErrorHResult = ErrorHResult::from_constant(0x800401F2); // CO_E_CANTDETERMINECLASS
+pub const E_CANTDETERMINECLASS : HResultError = HResultError::from_constant(0x800401F2); // CO_E_CANTDETERMINECLASS
 
 /// Invalid class string
-pub const E_CLASSSTRING : ErrorHResult = ErrorHResult::from_constant(0x800401F3); // CO_E_CLASSSTRING
+pub const E_CLASSSTRING : HResultError = HResultError::from_constant(0x800401F3); // CO_E_CLASSSTRING
 
 /// Invalid interface string
-pub const E_IIDSTRING : ErrorHResult = ErrorHResult::from_constant(0x800401F4); // CO_E_IIDSTRING
+pub const E_IIDSTRING : HResultError = HResultError::from_constant(0x800401F4); // CO_E_IIDSTRING
 
 /// Application not found
-pub const E_APPNOTFOUND : ErrorHResult = ErrorHResult::from_constant(0x800401F5); // CO_E_APPNOTFOUND
+pub const E_APPNOTFOUND : HResultError = HResultError::from_constant(0x800401F5); // CO_E_APPNOTFOUND
 
 /// Application cannot be run more than once
-pub const E_APPSINGLEUSE : ErrorHResult = ErrorHResult::from_constant(0x800401F6); // CO_E_APPSINGLEUSE
+pub const E_APPSINGLEUSE : HResultError = HResultError::from_constant(0x800401F6); // CO_E_APPSINGLEUSE
 
 /// Some error in application program
-pub const E_ERRORINAPP : ErrorHResult = ErrorHResult::from_constant(0x800401F7); // CO_E_ERRORINAPP
+pub const E_ERRORINAPP : HResultError = HResultError::from_constant(0x800401F7); // CO_E_ERRORINAPP
 
 /// DLL for class not found
-pub const E_DLLNOTFOUND : ErrorHResult = ErrorHResult::from_constant(0x800401F8); // CO_E_DLLNOTFOUND
+pub const E_DLLNOTFOUND : HResultError = HResultError::from_constant(0x800401F8); // CO_E_DLLNOTFOUND
 
 /// Error in the DLL
-pub const E_ERRORINDLL : ErrorHResult = ErrorHResult::from_constant(0x800401F9); // CO_E_ERRORINDLL
+pub const E_ERRORINDLL : HResultError = HResultError::from_constant(0x800401F9); // CO_E_ERRORINDLL
 
 /// Wrong OS or OS version for application
-pub const E_WRONGOSFORAPP : ErrorHResult = ErrorHResult::from_constant(0x800401FA); // CO_E_WRONGOSFORAPP
+pub const E_WRONGOSFORAPP : HResultError = HResultError::from_constant(0x800401FA); // CO_E_WRONGOSFORAPP
 
 /// Object is not registered
-pub const E_OBJNOTREG : ErrorHResult = ErrorHResult::from_constant(0x800401FB); // CO_E_OBJNOTREG
+pub const E_OBJNOTREG : HResultError = HResultError::from_constant(0x800401FB); // CO_E_OBJNOTREG
 
 /// Object is already registered
-pub const E_OBJISREG : ErrorHResult = ErrorHResult::from_constant(0x800401FC); // CO_E_OBJISREG
+pub const E_OBJISREG : HResultError = HResultError::from_constant(0x800401FC); // CO_E_OBJISREG
 
 /// Object is not connected to server
-pub const E_OBJNOTCONNECTED : ErrorHResult = ErrorHResult::from_constant(0x800401FD); // CO_E_OBJNOTCONNECTED
+pub const E_OBJNOTCONNECTED : HResultError = HResultError::from_constant(0x800401FD); // CO_E_OBJNOTCONNECTED
 
 /// Application was launched but it didn't register a class factory
-pub const E_APPDIDNTREG : ErrorHResult = ErrorHResult::from_constant(0x800401FE); // CO_E_APPDIDNTREG
+pub const E_APPDIDNTREG : HResultError = HResultError::from_constant(0x800401FE); // CO_E_APPDIDNTREG
 
 /// Object has been released
-pub const E_RELEASED : ErrorHResult = ErrorHResult::from_constant(0x800401FF); // CO_E_RELEASED
+pub const E_RELEASED : HResultError = HResultError::from_constant(0x800401FF); // CO_E_RELEASED
 
 /// An unexpected error occurred during COM+ Activation.
-pub const E_ACTIVATIONFAILED : ErrorHResult = ErrorHResult::from_constant(0x8004E021); // CO_E_ACTIVATIONFAILED
+pub const E_ACTIVATIONFAILED : HResultError = HResultError::from_constant(0x8004E021); // CO_E_ACTIVATIONFAILED
 
 /// COM+ Activation failed. Check the event log for more information
-pub const E_ACTIVATIONFAILED_EVENTLOGGED : ErrorHResult = ErrorHResult::from_constant(0x8004E022); // CO_E_ACTIVATIONFAILED_EVENTLOGGED
+pub const E_ACTIVATIONFAILED_EVENTLOGGED : HResultError = HResultError::from_constant(0x8004E022); // CO_E_ACTIVATIONFAILED_EVENTLOGGED
 
 /// COM+ Activation failed due to a catalog or configuration error.
-pub const E_ACTIVATIONFAILED_CATALOGERROR : ErrorHResult = ErrorHResult::from_constant(0x8004E023); // CO_E_ACTIVATIONFAILED_CATALOGERROR
+pub const E_ACTIVATIONFAILED_CATALOGERROR : HResultError = HResultError::from_constant(0x8004E023); // CO_E_ACTIVATIONFAILED_CATALOGERROR
 
 /// COM+ activation failed because the activation could not be completed in the specified amount of time.
-pub const E_ACTIVATIONFAILED_TIMEOUT : ErrorHResult = ErrorHResult::from_constant(0x8004E024); // CO_E_ACTIVATIONFAILED_TIMEOUT
+pub const E_ACTIVATIONFAILED_TIMEOUT : HResultError = HResultError::from_constant(0x8004E024); // CO_E_ACTIVATIONFAILED_TIMEOUT
 
 /// COM+ Activation failed because an initialization function failed. Check the event log for more information.
-pub const E_INITIALIZATIONFAILED : ErrorHResult = ErrorHResult::from_constant(0x8004E025); // CO_E_INITIALIZATIONFAILED
+pub const E_INITIALIZATIONFAILED : HResultError = HResultError::from_constant(0x8004E025); // CO_E_INITIALIZATIONFAILED
 
 /// The components threading model has changed after install into a COM+ Application. Please re-install component.
-pub const E_THREADINGMODEL_CHANGED : ErrorHResult = ErrorHResult::from_constant(0x8004E028); // CO_E_THREADINGMODEL_CHANGED
+pub const E_THREADINGMODEL_CHANGED : HResultError = HResultError::from_constant(0x8004E028); // CO_E_THREADINGMODEL_CHANGED
 
 /// IIS intrinsics not available. Start your work with IIS.
-pub const E_NOIISINTRINSICS : ErrorHResult = ErrorHResult::from_constant(0x8004E029); // CO_E_NOIISINTRINSICS
+pub const E_NOIISINTRINSICS : HResultError = HResultError::from_constant(0x8004E029); // CO_E_NOIISINTRINSICS
 
 /// An attempt to write a cookie failed.
-pub const E_NOCOOKIES : ErrorHResult = ErrorHResult::from_constant(0x8004E02A); // CO_E_NOCOOKIES
+pub const E_NOCOOKIES : HResultError = HResultError::from_constant(0x8004E02A); // CO_E_NOCOOKIES
 
 /// An attempt to use a database generated a database specific error.
-pub const E_DBERROR : ErrorHResult = ErrorHResult::from_constant(0x8004E02B); // CO_E_DBERROR
+pub const E_DBERROR : HResultError = HResultError::from_constant(0x8004E02B); // CO_E_DBERROR
 
 /// The COM+ component you created must use object pooling to work.
-pub const E_NOTPOOLED : ErrorHResult = ErrorHResult::from_constant(0x8004E02C); // CO_E_NOTPOOLED
+pub const E_NOTPOOLED : HResultError = HResultError::from_constant(0x8004E02C); // CO_E_NOTPOOLED
 
 /// The COM+ component you created must use object construction to work correctly.
-pub const E_NOTCONSTRUCTED : ErrorHResult = ErrorHResult::from_constant(0x8004E02D); // CO_E_NOTCONSTRUCTED
+pub const E_NOTCONSTRUCTED : HResultError = HResultError::from_constant(0x8004E02D); // CO_E_NOTCONSTRUCTED
 
 /// The COM+ component requires synchronization, and it is not configured for it.
-pub const E_NOSYNCHRONIZATION : ErrorHResult = ErrorHResult::from_constant(0x8004E02E); // CO_E_NOSYNCHRONIZATION
+pub const E_NOSYNCHRONIZATION : HResultError = HResultError::from_constant(0x8004E02E); // CO_E_NOSYNCHRONIZATION
 
 /// The TxIsolation Level property for the COM+ component being created is stronger than the TxIsolationLevel for the "root" component for the transaction. The creation failed.
-pub const E_ISOLEVELMISMATCH : ErrorHResult = ErrorHResult::from_constant(0x8004E02F); // CO_E_ISOLEVELMISMATCH
+pub const E_ISOLEVELMISMATCH : HResultError = HResultError::from_constant(0x8004E02F); // CO_E_ISOLEVELMISMATCH
 
 /// The component attempted to make a cross-context call between invocations of EnterTransactionScopeand ExitTransactionScope. This is not allowed. Cross-context calls cannot be made while inside of a transaction scope.
-pub const E_CALL_OUT_OF_TX_SCOPE_NOT_ALLOWED : ErrorHResult = ErrorHResult::from_constant(0x8004E030); // CO_E_CALL_OUT_OF_TX_SCOPE_NOT_ALLOWED
+pub const E_CALL_OUT_OF_TX_SCOPE_NOT_ALLOWED : HResultError = HResultError::from_constant(0x8004E030); // CO_E_CALL_OUT_OF_TX_SCOPE_NOT_ALLOWED
 
 /// The component made a call to EnterTransactionScope, but did not make a corresponding call to ExitTransactionScope before returning.
-pub const E_EXIT_TRANSACTION_SCOPE_NOT_CALLED : ErrorHResult = ErrorHResult::from_constant(0x8004E031); // CO_E_EXIT_TRANSACTION_SCOPE_NOT_CALLED
+pub const E_EXIT_TRANSACTION_SCOPE_NOT_CALLED : HResultError = HResultError::from_constant(0x8004E031); // CO_E_EXIT_TRANSACTION_SCOPE_NOT_CALLED
 
 /// Attempt to create a class object failed
-pub const E_CLASS_CREATE_FAILED : ErrorHResult = ErrorHResult::from_constant(0x80080001); // CO_E_CLASS_CREATE_FAILED
+pub const E_CLASS_CREATE_FAILED : HResultError = HResultError::from_constant(0x80080001); // CO_E_CLASS_CREATE_FAILED
 
 /// OLE service could not bind object
-pub const E_SCM_ERROR : ErrorHResult = ErrorHResult::from_constant(0x80080002); // CO_E_SCM_ERROR
+pub const E_SCM_ERROR : HResultError = HResultError::from_constant(0x80080002); // CO_E_SCM_ERROR
 
 /// RPC communication failed with OLE service
-pub const E_SCM_RPC_FAILURE : ErrorHResult = ErrorHResult::from_constant(0x80080003); // CO_E_SCM_RPC_FAILURE
+pub const E_SCM_RPC_FAILURE : HResultError = HResultError::from_constant(0x80080003); // CO_E_SCM_RPC_FAILURE
 
 /// Bad path to object
-pub const E_BAD_PATH : ErrorHResult = ErrorHResult::from_constant(0x80080004); // CO_E_BAD_PATH
+pub const E_BAD_PATH : HResultError = HResultError::from_constant(0x80080004); // CO_E_BAD_PATH
 
 /// Server execution failed
-pub const E_SERVER_EXEC_FAILURE : ErrorHResult = ErrorHResult::from_constant(0x80080005); // CO_E_SERVER_EXEC_FAILURE
+pub const E_SERVER_EXEC_FAILURE : HResultError = HResultError::from_constant(0x80080005); // CO_E_SERVER_EXEC_FAILURE
 
 /// OLE service could not communicate with the object server
-pub const E_OBJSRV_RPC_FAILURE : ErrorHResult = ErrorHResult::from_constant(0x80080006); // CO_E_OBJSRV_RPC_FAILURE
+pub const E_OBJSRV_RPC_FAILURE : HResultError = HResultError::from_constant(0x80080006); // CO_E_OBJSRV_RPC_FAILURE
 
 /// Object server is stopping when OLE service contacts it
-pub const E_SERVER_STOPPING : ErrorHResult = ErrorHResult::from_constant(0x80080008); // CO_E_SERVER_STOPPING
+pub const E_SERVER_STOPPING : HResultError = HResultError::from_constant(0x80080008); // CO_E_SERVER_STOPPING
 
 /// Not all the requested interfaces were available
-pub const S_NOTALLINTERFACES : SuccessHResult = SuccessHResult::from_constant(0x00080012); // CO_S_NOTALLINTERFACES
+pub const S_NOTALLINTERFACES : HResultSuccess = HResultSuccess::from_constant(0x00080012); // CO_S_NOTALLINTERFACES
 
 /// The specified machine name was not found in the cache.
-pub const S_MACHINENAMENOTFOUND : SuccessHResult = SuccessHResult::from_constant(0x00080013); // CO_S_MACHINENAMENOTFOUND
+pub const S_MACHINENAMENOTFOUND : HResultSuccess = HResultSuccess::from_constant(0x00080013); // CO_S_MACHINENAMENOTFOUND
 
 /// The activation requires a display name to be present under the CLSID key.
-pub const E_MISSING_DISPLAYNAME : ErrorHResult = ErrorHResult::from_constant(0x80080015); // CO_E_MISSING_DISPLAYNAME
+pub const E_MISSING_DISPLAYNAME : HResultError = HResultError::from_constant(0x80080015); // CO_E_MISSING_DISPLAYNAME
 
 /// The activation requires that the RunAs value for the application is Activate As Activator.
-pub const E_RUNAS_VALUE_MUST_BE_AAA : ErrorHResult = ErrorHResult::from_constant(0x80080016); // CO_E_RUNAS_VALUE_MUST_BE_AAA
+pub const E_RUNAS_VALUE_MUST_BE_AAA : HResultError = HResultError::from_constant(0x80080016); // CO_E_RUNAS_VALUE_MUST_BE_AAA
 
 /// The class is not configured to support Elevated activation.
-pub const E_ELEVATION_DISABLED : ErrorHResult = ErrorHResult::from_constant(0x80080017); // CO_E_ELEVATION_DISABLED
+pub const E_ELEVATION_DISABLED : HResultError = HResultError::from_constant(0x80080017); // CO_E_ELEVATION_DISABLED
 
 /// Unable to impersonate DCOM client
-pub const E_FAILEDTOIMPERSONATE : ErrorHResult = ErrorHResult::from_constant(0x80010123); // CO_E_FAILEDTOIMPERSONATE
+pub const E_FAILEDTOIMPERSONATE : HResultError = HResultError::from_constant(0x80010123); // CO_E_FAILEDTOIMPERSONATE
 
 /// Unable to obtain server's security context
-pub const E_FAILEDTOGETSECCTX : ErrorHResult = ErrorHResult::from_constant(0x80010124); // CO_E_FAILEDTOGETSECCTX
+pub const E_FAILEDTOGETSECCTX : HResultError = HResultError::from_constant(0x80010124); // CO_E_FAILEDTOGETSECCTX
 
 /// Unable to open the access token of the current thread
-pub const E_FAILEDTOOPENTHREADTOKEN : ErrorHResult = ErrorHResult::from_constant(0x80010125); // CO_E_FAILEDTOOPENTHREADTOKEN
+pub const E_FAILEDTOOPENTHREADTOKEN : HResultError = HResultError::from_constant(0x80010125); // CO_E_FAILEDTOOPENTHREADTOKEN
 
 /// Unable to obtain user info from an access token
-pub const E_FAILEDTOGETTOKENINFO : ErrorHResult = ErrorHResult::from_constant(0x80010126); // CO_E_FAILEDTOGETTOKENINFO
+pub const E_FAILEDTOGETTOKENINFO : HResultError = HResultError::from_constant(0x80010126); // CO_E_FAILEDTOGETTOKENINFO
 
 /// The client who called IAccessControl::IsAccessPermitted was not the trustee provided to the method
-pub const E_TRUSTEEDOESNTMATCHCLIENT : ErrorHResult = ErrorHResult::from_constant(0x80010127); // CO_E_TRUSTEEDOESNTMATCHCLIENT
+pub const E_TRUSTEEDOESNTMATCHCLIENT : HResultError = HResultError::from_constant(0x80010127); // CO_E_TRUSTEEDOESNTMATCHCLIENT
 
 /// Unable to obtain the client's security blanket
-pub const E_FAILEDTOQUERYCLIENTBLANKET : ErrorHResult = ErrorHResult::from_constant(0x80010128); // CO_E_FAILEDTOQUERYCLIENTBLANKET
+pub const E_FAILEDTOQUERYCLIENTBLANKET : HResultError = HResultError::from_constant(0x80010128); // CO_E_FAILEDTOQUERYCLIENTBLANKET
 
 /// Unable to set a discretionary ACL into a security descriptor
-pub const E_FAILEDTOSETDACL : ErrorHResult = ErrorHResult::from_constant(0x80010129); // CO_E_FAILEDTOSETDACL
+pub const E_FAILEDTOSETDACL : HResultError = HResultError::from_constant(0x80010129); // CO_E_FAILEDTOSETDACL
 
 /// The system function, AccessCheck, returned false
-pub const E_ACCESSCHECKFAILED : ErrorHResult = ErrorHResult::from_constant(0x8001012A); // CO_E_ACCESSCHECKFAILED
+pub const E_ACCESSCHECKFAILED : HResultError = HResultError::from_constant(0x8001012A); // CO_E_ACCESSCHECKFAILED
 
 /// Either NetAccessDel or NetAccessAdd returned an error code.
-pub const E_NETACCESSAPIFAILED : ErrorHResult = ErrorHResult::from_constant(0x8001012B); // CO_E_NETACCESSAPIFAILED
+pub const E_NETACCESSAPIFAILED : HResultError = HResultError::from_constant(0x8001012B); // CO_E_NETACCESSAPIFAILED
 
 /// One of the trustee strings provided by the user did not conform to the <Domain>\<Name> syntax and it was not the "\*" string
-pub const E_WRONGTRUSTEENAMESYNTAX : ErrorHResult = ErrorHResult::from_constant(0x8001012C); // CO_E_WRONGTRUSTEENAMESYNTAX
+pub const E_WRONGTRUSTEENAMESYNTAX : HResultError = HResultError::from_constant(0x8001012C); // CO_E_WRONGTRUSTEENAMESYNTAX
 
 /// One of the security identifiers provided by the user was invalid
-pub const E_INVALIDSID : ErrorHResult = ErrorHResult::from_constant(0x8001012D); // CO_E_INVALIDSID
+pub const E_INVALIDSID : HResultError = HResultError::from_constant(0x8001012D); // CO_E_INVALIDSID
 
 /// Unable to convert a wide character trustee string to a multibyte trustee string
-pub const E_CONVERSIONFAILED : ErrorHResult = ErrorHResult::from_constant(0x8001012E); // CO_E_CONVERSIONFAILED
+pub const E_CONVERSIONFAILED : HResultError = HResultError::from_constant(0x8001012E); // CO_E_CONVERSIONFAILED
 
 /// Unable to find a security identifier that corresponds to a trustee string provided by the user
-pub const E_NOMATCHINGSIDFOUND : ErrorHResult = ErrorHResult::from_constant(0x8001012F); // CO_E_NOMATCHINGSIDFOUND
+pub const E_NOMATCHINGSIDFOUND : HResultError = HResultError::from_constant(0x8001012F); // CO_E_NOMATCHINGSIDFOUND
 
 /// The system function, LookupAccountSID, failed
-pub const E_LOOKUPACCSIDFAILED : ErrorHResult = ErrorHResult::from_constant(0x80010130); // CO_E_LOOKUPACCSIDFAILED
+pub const E_LOOKUPACCSIDFAILED : HResultError = HResultError::from_constant(0x80010130); // CO_E_LOOKUPACCSIDFAILED
 
 /// Unable to find a trustee name that corresponds to a security identifier provided by the user
-pub const E_NOMATCHINGNAMEFOUND : ErrorHResult = ErrorHResult::from_constant(0x80010131); // CO_E_NOMATCHINGNAMEFOUND
+pub const E_NOMATCHINGNAMEFOUND : HResultError = HResultError::from_constant(0x80010131); // CO_E_NOMATCHINGNAMEFOUND
 
 /// The system function, LookupAccountName, failed
-pub const E_LOOKUPACCNAMEFAILED : ErrorHResult = ErrorHResult::from_constant(0x80010132); // CO_E_LOOKUPACCNAMEFAILED
+pub const E_LOOKUPACCNAMEFAILED : HResultError = HResultError::from_constant(0x80010132); // CO_E_LOOKUPACCNAMEFAILED
 
 /// Unable to set or reset a serialization handle
-pub const E_SETSERLHNDLFAILED : ErrorHResult = ErrorHResult::from_constant(0x80010133); // CO_E_SETSERLHNDLFAILED
+pub const E_SETSERLHNDLFAILED : HResultError = HResultError::from_constant(0x80010133); // CO_E_SETSERLHNDLFAILED
 
 /// Unable to obtain the Windows directory
-pub const E_FAILEDTOGETWINDIR : ErrorHResult = ErrorHResult::from_constant(0x80010134); // CO_E_FAILEDTOGETWINDIR
+pub const E_FAILEDTOGETWINDIR : HResultError = HResultError::from_constant(0x80010134); // CO_E_FAILEDTOGETWINDIR
 
 /// Path too long
-pub const E_PATHTOOLONG : ErrorHResult = ErrorHResult::from_constant(0x80010135); // CO_E_PATHTOOLONG
+pub const E_PATHTOOLONG : HResultError = HResultError::from_constant(0x80010135); // CO_E_PATHTOOLONG
 
 /// Unable to generate a uuid.
-pub const E_FAILEDTOGENUUID : ErrorHResult = ErrorHResult::from_constant(0x80010136); // CO_E_FAILEDTOGENUUID
+pub const E_FAILEDTOGENUUID : HResultError = HResultError::from_constant(0x80010136); // CO_E_FAILEDTOGENUUID
 
 /// Unable to create file
-pub const E_FAILEDTOCREATEFILE : ErrorHResult = ErrorHResult::from_constant(0x80010137); // CO_E_FAILEDTOCREATEFILE
+pub const E_FAILEDTOCREATEFILE : HResultError = HResultError::from_constant(0x80010137); // CO_E_FAILEDTOCREATEFILE
 
 /// Unable to close a serialization handle or a file handle.
-pub const E_FAILEDTOCLOSEHANDLE : ErrorHResult = ErrorHResult::from_constant(0x80010138); // CO_E_FAILEDTOCLOSEHANDLE
+pub const E_FAILEDTOCLOSEHANDLE : HResultError = HResultError::from_constant(0x80010138); // CO_E_FAILEDTOCLOSEHANDLE
 
 /// The number of ACEs in an ACL exceeds the system limit.
-pub const E_EXCEEDSYSACLLIMIT : ErrorHResult = ErrorHResult::from_constant(0x80010139); // CO_E_EXCEEDSYSACLLIMIT
+pub const E_EXCEEDSYSACLLIMIT : HResultError = HResultError::from_constant(0x80010139); // CO_E_EXCEEDSYSACLLIMIT
 
 /// Not all the DENY_ACCESS ACEs are arranged in front of the GRANT_ACCESS ACEs in the stream.
-pub const E_ACESINWRONGORDER : ErrorHResult = ErrorHResult::from_constant(0x8001013A); // CO_E_ACESINWRONGORDER
+pub const E_ACESINWRONGORDER : HResultError = HResultError::from_constant(0x8001013A); // CO_E_ACESINWRONGORDER
 
 /// The version of ACL format in the stream is not supported by this implementation of IAccessControl
-pub const E_INCOMPATIBLESTREAMVERSION : ErrorHResult = ErrorHResult::from_constant(0x8001013B); // CO_E_INCOMPATIBLESTREAMVERSION
+pub const E_INCOMPATIBLESTREAMVERSION : HResultError = HResultError::from_constant(0x8001013B); // CO_E_INCOMPATIBLESTREAMVERSION
 
 /// Unable to open the access token of the server process
-pub const E_FAILEDTOOPENPROCESSTOKEN : ErrorHResult = ErrorHResult::from_constant(0x8001013C); // CO_E_FAILEDTOOPENPROCESSTOKEN
+pub const E_FAILEDTOOPENPROCESSTOKEN : HResultError = HResultError::from_constant(0x8001013C); // CO_E_FAILEDTOOPENPROCESSTOKEN
 
 /// Unable to decode the ACL in the stream provided by the user
-pub const E_DECODEFAILED : ErrorHResult = ErrorHResult::from_constant(0x8001013D); // CO_E_DECODEFAILED
+pub const E_DECODEFAILED : HResultError = HResultError::from_constant(0x8001013D); // CO_E_DECODEFAILED
 
 /// The COM IAccessControl object is not initialized
-pub const E_ACNOTINITIALIZED : ErrorHResult = ErrorHResult::from_constant(0x8001013F); // CO_E_ACNOTINITIALIZED
+pub const E_ACNOTINITIALIZED : HResultError = HResultError::from_constant(0x8001013F); // CO_E_ACNOTINITIALIZED
 
 /// Call Cancellation is disabled
-pub const E_CANCEL_DISABLED : ErrorHResult = ErrorHResult::from_constant(0x80010140); // CO_E_CANCEL_DISABLED
+pub const E_CANCEL_DISABLED : HResultError = HResultError::from_constant(0x80010140); // CO_E_CANCEL_DISABLED
