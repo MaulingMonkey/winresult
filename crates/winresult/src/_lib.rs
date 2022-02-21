@@ -13,6 +13,7 @@
 //! |          0 |      0xFFF | &nbsp; &nbsp; [`NtStatusFacilityMicrosoft`] |
 //! |          0 |          4 | &nbsp; &nbsp; [`NtStatusSeverity`]          |
 //! |          0 | 0xFFFFFFFF | [`WaitCode`]                                | mostly <= 0x102
+//! |          0 | 0xFFFFFFFF | [`ErrorHResultOrCode`]                      | [`ErrorCode`] \| [`HResultError`]
 //!
 //! ### Modules of Note
 //!
