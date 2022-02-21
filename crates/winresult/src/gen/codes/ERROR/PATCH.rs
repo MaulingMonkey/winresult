@@ -4,31 +4,31 @@ use super::*;
 
 
 /// This update package could not be opened. Verify that the update package exists and that you can access it, or contact the application vendor to verify that this is a valid Windows Installer update package.
-pub const PACKAGE_OPEN_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1635); // ERROR_PATCH_PACKAGE_OPEN_FAILED
+pub const PACKAGE_OPEN_FAILED : ErrorCode = ErrorCode::from_constant(1635); // ERROR_PATCH_PACKAGE_OPEN_FAILED
 
 /// This update package could not be opened. Contact the application vendor to verify that this is a valid Windows Installer update package.
-pub const PACKAGE_INVALID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1636); // ERROR_PATCH_PACKAGE_INVALID
+pub const PACKAGE_INVALID : ErrorCode = ErrorCode::from_constant(1636); // ERROR_PATCH_PACKAGE_INVALID
 
 /// This update package cannot be processed by the Windows Installer service. You must install a Windows service pack that contains a newer version of the Windows Installer service.
-pub const PACKAGE_UNSUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1637); // ERROR_PATCH_PACKAGE_UNSUPPORTED
+pub const PACKAGE_UNSUPPORTED : ErrorCode = ErrorCode::from_constant(1637); // ERROR_PATCH_PACKAGE_UNSUPPORTED
 
 /// The upgrade cannot be installed by the Windows Installer service because the program to be upgraded may be missing, or the upgrade may update a different version of the program. Verify that the program to be upgraded exists on your computer and that you have the correct upgrade.
-pub const TARGET_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1642); // ERROR_PATCH_TARGET_NOT_FOUND
+pub const TARGET_NOT_FOUND : ErrorCode = ErrorCode::from_constant(1642); // ERROR_PATCH_TARGET_NOT_FOUND
 
 /// The update package is not permitted by software restriction policy.
-pub const PACKAGE_REJECTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1643); // ERROR_PATCH_PACKAGE_REJECTED
+pub const PACKAGE_REJECTED : ErrorCode = ErrorCode::from_constant(1643); // ERROR_PATCH_PACKAGE_REJECTED
 
 /// Uninstallation of the update package is not supported.
-pub const REMOVAL_UNSUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1646); // ERROR_PATCH_REMOVAL_UNSUPPORTED
+pub const REMOVAL_UNSUPPORTED : ErrorCode = ErrorCode::from_constant(1646); // ERROR_PATCH_REMOVAL_UNSUPPORTED
 
 /// No valid sequence could be found for the set of updates.
-pub const NO_SEQUENCE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1648); // ERROR_PATCH_NO_SEQUENCE
+pub const NO_SEQUENCE : ErrorCode = ErrorCode::from_constant(1648); // ERROR_PATCH_NO_SEQUENCE
 
 /// Update removal was disallowed by policy.
-pub const REMOVAL_DISALLOWED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1649); // ERROR_PATCH_REMOVAL_DISALLOWED
+pub const REMOVAL_DISALLOWED : ErrorCode = ErrorCode::from_constant(1649); // ERROR_PATCH_REMOVAL_DISALLOWED
 
 /// Windows Installer does not permit updating of managed advertised products. At least one feature of the product must be installed before applying the update.
-pub const MANAGED_ADVERTISED_PRODUCT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1651); // ERROR_PATCH_MANAGED_ADVERTISED_PRODUCT
+pub const MANAGED_ADVERTISED_PRODUCT : ErrorCode = ErrorCode::from_constant(1651); // ERROR_PATCH_MANAGED_ADVERTISED_PRODUCT
 
 pub const ENCODE_FAILURE : HResultError = HResultError::from_constant(0xC00E3101); // ERROR_PATCH_ENCODE_FAILURE
 pub const INVALID_OPTIONS : HResultError = HResultError::from_constant(0xC00E3102); // ERROR_PATCH_INVALID_OPTIONS

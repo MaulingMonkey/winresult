@@ -58,7 +58,7 @@ impl From<u32> for HResultSuccess { fn from(hr: u32) -> Self { Self(hr) } }
 
 impl HResultError {
     /// HRESULT_FROM_WIN32, but for errors specifically
-    pub const fn from_win32(value: ErrorCodeMicrosoft) -> Self { Self(0x80070000 | (value.0 as u32)) }
+    pub const fn from_win32(value: ErrorCode) -> Self { Self(0x80070000 | (value.0 as u32)) }
 
     #[doc(hidden)] pub const fn from_constant(value: u32) -> Self { assert!(value & 0x8000_0000 != 0, "HResultError::from_constant: HRESULT is a success (high bit not set)"); Self(value) }
 
@@ -73,7 +73,7 @@ impl HResultError {
 
 impl From<HResultError> for u32 { fn from(hr: HResultError) -> Self { hr.0 } }
 impl From<u32> for HResultError { fn from(hr: u32) -> Self { Self(hr) } }
-impl From<(HResultFacilityMicrosoft, ErrorCodeMicrosoft)> for HResultError { fn from((fac, code): (HResultFacilityMicrosoft, ErrorCodeMicrosoft)) -> Self { Self(0x8000_0000 | (fac.to_u32()<<16) | code.to_u32()) } }
+impl From<(HResultFacilityMicrosoft, ErrorCode)> for HResultError { fn from((fac, code): (HResultFacilityMicrosoft, ErrorCode)) -> Self { Self(0x8000_0000 | (fac.to_u32()<<16) | code.to_u32()) } }
 
 
 
@@ -106,4 +106,4 @@ impl From<HResult>          for u32     { fn from(hr: HResult       ) -> Self { 
 impl From<u32>              for HResult { fn from(hr: u32           ) -> Self { Self(hr) } }
 impl From<HResultSuccess>   for HResult { fn from(hr: HResultSuccess) -> Self { Self(hr.0) } }
 impl From<HResultError>     for HResult { fn from(hr: HResultError  ) -> Self { Self(hr.0) } }
-impl From<(HResultFacilityMicrosoft, ErrorCodeMicrosoft  )> for HResult { fn from((fac, code): (HResultFacilityMicrosoft, ErrorCodeMicrosoft  )) -> Self { Self(0x8000_0000 | (fac.to_u32()<<16) | code.to_u32()) } }
+impl From<(HResultFacilityMicrosoft, ErrorCode)> for HResult { fn from((fac, code): (HResultFacilityMicrosoft, ErrorCode)) -> Self { Self(0x8000_0000 | (fac.to_u32()<<16) | code.to_u32()) } }

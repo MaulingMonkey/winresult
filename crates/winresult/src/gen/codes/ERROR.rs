@@ -4,6054 +4,6054 @@ use super::*;
 
 
 /// The operation completed successfully.
-pub const SUCCESS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0); // ERROR_SUCCESS
+pub const SUCCESS : ErrorCode = ErrorCode::from_constant(0); // ERROR_SUCCESS
 
 /// Incorrect function.
-pub const INVALID_FUNCTION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1); // ERROR_INVALID_FUNCTION
+pub const INVALID_FUNCTION : ErrorCode = ErrorCode::from_constant(1); // ERROR_INVALID_FUNCTION
 
 /// The system cannot find the file specified.
-pub const FILE_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(2); // ERROR_FILE_NOT_FOUND
+pub const FILE_NOT_FOUND : ErrorCode = ErrorCode::from_constant(2); // ERROR_FILE_NOT_FOUND
 
 /// The system cannot find the path specified.
-pub const PATH_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(3); // ERROR_PATH_NOT_FOUND
+pub const PATH_NOT_FOUND : ErrorCode = ErrorCode::from_constant(3); // ERROR_PATH_NOT_FOUND
 
 /// The system cannot open the file.
-pub const TOO_MANY_OPEN_FILES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4); // ERROR_TOO_MANY_OPEN_FILES
+pub const TOO_MANY_OPEN_FILES : ErrorCode = ErrorCode::from_constant(4); // ERROR_TOO_MANY_OPEN_FILES
 
 /// Access is denied.
-pub const ACCESS_DENIED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5); // ERROR_ACCESS_DENIED
+pub const ACCESS_DENIED : ErrorCode = ErrorCode::from_constant(5); // ERROR_ACCESS_DENIED
 
 /// The handle is invalid.
-pub const INVALID_HANDLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6); // ERROR_INVALID_HANDLE
+pub const INVALID_HANDLE : ErrorCode = ErrorCode::from_constant(6); // ERROR_INVALID_HANDLE
 
 /// The storage control blocks were destroyed.
-pub const ARENA_TRASHED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7); // ERROR_ARENA_TRASHED
+pub const ARENA_TRASHED : ErrorCode = ErrorCode::from_constant(7); // ERROR_ARENA_TRASHED
 
 /// Not enough memory resources are available to process this command.
-pub const NOT_ENOUGH_MEMORY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8); // ERROR_NOT_ENOUGH_MEMORY
+pub const NOT_ENOUGH_MEMORY : ErrorCode = ErrorCode::from_constant(8); // ERROR_NOT_ENOUGH_MEMORY
 
 /// The storage control block address is invalid.
-pub const INVALID_BLOCK : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(9); // ERROR_INVALID_BLOCK
+pub const INVALID_BLOCK : ErrorCode = ErrorCode::from_constant(9); // ERROR_INVALID_BLOCK
 
 /// The environment is incorrect.
-pub const BAD_ENVIRONMENT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(10); // ERROR_BAD_ENVIRONMENT
+pub const BAD_ENVIRONMENT : ErrorCode = ErrorCode::from_constant(10); // ERROR_BAD_ENVIRONMENT
 
 /// An attempt was made to load a program with an incorrect format.
-pub const BAD_FORMAT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(11); // ERROR_BAD_FORMAT
+pub const BAD_FORMAT : ErrorCode = ErrorCode::from_constant(11); // ERROR_BAD_FORMAT
 
 /// The access code is invalid.
-pub const INVALID_ACCESS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12); // ERROR_INVALID_ACCESS
+pub const INVALID_ACCESS : ErrorCode = ErrorCode::from_constant(12); // ERROR_INVALID_ACCESS
 
 /// The data is invalid.
-pub const INVALID_DATA : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13); // ERROR_INVALID_DATA
+pub const INVALID_DATA : ErrorCode = ErrorCode::from_constant(13); // ERROR_INVALID_DATA
 
 /// Not enough memory resources are available to complete this operation.
-pub const OUTOFMEMORY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(14); // ERROR_OUTOFMEMORY
+pub const OUTOFMEMORY : ErrorCode = ErrorCode::from_constant(14); // ERROR_OUTOFMEMORY
 
 /// The system cannot find the drive specified.
-pub const INVALID_DRIVE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15); // ERROR_INVALID_DRIVE
+pub const INVALID_DRIVE : ErrorCode = ErrorCode::from_constant(15); // ERROR_INVALID_DRIVE
 
 /// The directory cannot be removed.
-pub const CURRENT_DIRECTORY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(16); // ERROR_CURRENT_DIRECTORY
+pub const CURRENT_DIRECTORY : ErrorCode = ErrorCode::from_constant(16); // ERROR_CURRENT_DIRECTORY
 
 /// The system cannot move the file to a different disk drive.
-pub const NOT_SAME_DEVICE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(17); // ERROR_NOT_SAME_DEVICE
+pub const NOT_SAME_DEVICE : ErrorCode = ErrorCode::from_constant(17); // ERROR_NOT_SAME_DEVICE
 
 /// There are no more files.
-pub const NO_MORE_FILES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(18); // ERROR_NO_MORE_FILES
+pub const NO_MORE_FILES : ErrorCode = ErrorCode::from_constant(18); // ERROR_NO_MORE_FILES
 
 /// The media is write protected.
-pub const WRITE_PROTECT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(19); // ERROR_WRITE_PROTECT
+pub const WRITE_PROTECT : ErrorCode = ErrorCode::from_constant(19); // ERROR_WRITE_PROTECT
 
 /// The system cannot find the device specified.
-pub const BAD_UNIT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(20); // ERROR_BAD_UNIT
+pub const BAD_UNIT : ErrorCode = ErrorCode::from_constant(20); // ERROR_BAD_UNIT
 
 /// The device is not ready.
-pub const NOT_READY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(21); // ERROR_NOT_READY
+pub const NOT_READY : ErrorCode = ErrorCode::from_constant(21); // ERROR_NOT_READY
 
 /// The device does not recognize the command.
-pub const BAD_COMMAND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(22); // ERROR_BAD_COMMAND
+pub const BAD_COMMAND : ErrorCode = ErrorCode::from_constant(22); // ERROR_BAD_COMMAND
 
 /// Data error (cyclic redundancy check).
-pub const CRC : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(23); // ERROR_CRC
+pub const CRC : ErrorCode = ErrorCode::from_constant(23); // ERROR_CRC
 
 /// The program issued a command but the command length is incorrect.
-pub const BAD_LENGTH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(24); // ERROR_BAD_LENGTH
+pub const BAD_LENGTH : ErrorCode = ErrorCode::from_constant(24); // ERROR_BAD_LENGTH
 
 /// The drive cannot locate a specific area or track on the disk.
-pub const SEEK : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(25); // ERROR_SEEK
+pub const SEEK : ErrorCode = ErrorCode::from_constant(25); // ERROR_SEEK
 
 /// The specified disk or diskette cannot be accessed.
-pub const NOT_DOS_DISK : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(26); // ERROR_NOT_DOS_DISK
+pub const NOT_DOS_DISK : ErrorCode = ErrorCode::from_constant(26); // ERROR_NOT_DOS_DISK
 
 /// The drive cannot find the sector requested.
-pub const SECTOR_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(27); // ERROR_SECTOR_NOT_FOUND
+pub const SECTOR_NOT_FOUND : ErrorCode = ErrorCode::from_constant(27); // ERROR_SECTOR_NOT_FOUND
 
 /// The printer is out of paper.
-pub const OUT_OF_PAPER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(28); // ERROR_OUT_OF_PAPER
+pub const OUT_OF_PAPER : ErrorCode = ErrorCode::from_constant(28); // ERROR_OUT_OF_PAPER
 
 /// The system cannot write to the specified device.
-pub const WRITE_FAULT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(29); // ERROR_WRITE_FAULT
+pub const WRITE_FAULT : ErrorCode = ErrorCode::from_constant(29); // ERROR_WRITE_FAULT
 
 /// The system cannot read from the specified device.
-pub const READ_FAULT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(30); // ERROR_READ_FAULT
+pub const READ_FAULT : ErrorCode = ErrorCode::from_constant(30); // ERROR_READ_FAULT
 
 /// A device attached to the system is not functioning.
-pub const GEN_FAILURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(31); // ERROR_GEN_FAILURE
+pub const GEN_FAILURE : ErrorCode = ErrorCode::from_constant(31); // ERROR_GEN_FAILURE
 
 /// The process cannot access the file because it is being used by another process.
-pub const SHARING_VIOLATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(32); // ERROR_SHARING_VIOLATION
+pub const SHARING_VIOLATION : ErrorCode = ErrorCode::from_constant(32); // ERROR_SHARING_VIOLATION
 
 /// The process cannot access the file because another process has locked a portion of the file.
-pub const LOCK_VIOLATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(33); // ERROR_LOCK_VIOLATION
+pub const LOCK_VIOLATION : ErrorCode = ErrorCode::from_constant(33); // ERROR_LOCK_VIOLATION
 
 /// The wrong diskette is in the drive.
 /// Insert `%2` (Volume Serial Number: `%3`) into drive `%1`.
-pub const WRONG_DISK : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(34); // ERROR_WRONG_DISK
+pub const WRONG_DISK : ErrorCode = ErrorCode::from_constant(34); // ERROR_WRONG_DISK
 
 /// Too many files opened for sharing.
-pub const SHARING_BUFFER_EXCEEDED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(36); // ERROR_SHARING_BUFFER_EXCEEDED
+pub const SHARING_BUFFER_EXCEEDED : ErrorCode = ErrorCode::from_constant(36); // ERROR_SHARING_BUFFER_EXCEEDED
 
 /// Reached the end of the file.
-pub const HANDLE_EOF : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(38); // ERROR_HANDLE_EOF
+pub const HANDLE_EOF : ErrorCode = ErrorCode::from_constant(38); // ERROR_HANDLE_EOF
 
 /// The disk is full.
-pub const HANDLE_DISK_FULL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(39); // ERROR_HANDLE_DISK_FULL
+pub const HANDLE_DISK_FULL : ErrorCode = ErrorCode::from_constant(39); // ERROR_HANDLE_DISK_FULL
 
 /// The request is not supported.
-pub const NOT_SUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(50); // ERROR_NOT_SUPPORTED
+pub const NOT_SUPPORTED : ErrorCode = ErrorCode::from_constant(50); // ERROR_NOT_SUPPORTED
 
 /// Windows cannot find the network path. Verify that the network path is correct and the destination computer is not busy or turned off. If Windows still cannot find the network path, contact your network administrator.
-pub const REM_NOT_LIST : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(51); // ERROR_REM_NOT_LIST
+pub const REM_NOT_LIST : ErrorCode = ErrorCode::from_constant(51); // ERROR_REM_NOT_LIST
 
 /// You were not connected because a duplicate name exists on the network. If joining a domain, go to System in Control Panel to change the computer name and try again. If joining a workgroup, choose another workgroup name.
-pub const DUP_NAME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(52); // ERROR_DUP_NAME
+pub const DUP_NAME : ErrorCode = ErrorCode::from_constant(52); // ERROR_DUP_NAME
 
 /// The network path was not found.
-pub const BAD_NETPATH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(53); // ERROR_BAD_NETPATH
+pub const BAD_NETPATH : ErrorCode = ErrorCode::from_constant(53); // ERROR_BAD_NETPATH
 
 /// The network is busy.
-pub const NETWORK_BUSY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(54); // ERROR_NETWORK_BUSY
+pub const NETWORK_BUSY : ErrorCode = ErrorCode::from_constant(54); // ERROR_NETWORK_BUSY
 
 /// The specified network resource or device is no longer available.
-pub const DEV_NOT_EXIST : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(55); // ERROR_DEV_NOT_EXIST
+pub const DEV_NOT_EXIST : ErrorCode = ErrorCode::from_constant(55); // ERROR_DEV_NOT_EXIST
 
 /// The network BIOS command limit has been reached.
-pub const TOO_MANY_CMDS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(56); // ERROR_TOO_MANY_CMDS
+pub const TOO_MANY_CMDS : ErrorCode = ErrorCode::from_constant(56); // ERROR_TOO_MANY_CMDS
 
 /// A network adapter hardware error occurred.
-pub const ADAP_HDW_ERR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(57); // ERROR_ADAP_HDW_ERR
+pub const ADAP_HDW_ERR : ErrorCode = ErrorCode::from_constant(57); // ERROR_ADAP_HDW_ERR
 
 /// The specified server cannot perform the requested operation.
-pub const BAD_NET_RESP : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(58); // ERROR_BAD_NET_RESP
+pub const BAD_NET_RESP : ErrorCode = ErrorCode::from_constant(58); // ERROR_BAD_NET_RESP
 
 /// An unexpected network error occurred.
-pub const UNEXP_NET_ERR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(59); // ERROR_UNEXP_NET_ERR
+pub const UNEXP_NET_ERR : ErrorCode = ErrorCode::from_constant(59); // ERROR_UNEXP_NET_ERR
 
 /// The remote adapter is not compatible.
-pub const BAD_REM_ADAP : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(60); // ERROR_BAD_REM_ADAP
+pub const BAD_REM_ADAP : ErrorCode = ErrorCode::from_constant(60); // ERROR_BAD_REM_ADAP
 
 /// The printer queue is full.
-pub const PRINTQ_FULL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(61); // ERROR_PRINTQ_FULL
+pub const PRINTQ_FULL : ErrorCode = ErrorCode::from_constant(61); // ERROR_PRINTQ_FULL
 
 /// Space to store the file waiting to be printed is not available on the server.
-pub const NO_SPOOL_SPACE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(62); // ERROR_NO_SPOOL_SPACE
+pub const NO_SPOOL_SPACE : ErrorCode = ErrorCode::from_constant(62); // ERROR_NO_SPOOL_SPACE
 
 /// Your file waiting to be printed was deleted.
-pub const PRINT_CANCELLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(63); // ERROR_PRINT_CANCELLED
+pub const PRINT_CANCELLED : ErrorCode = ErrorCode::from_constant(63); // ERROR_PRINT_CANCELLED
 
 /// The specified network name is no longer available.
-pub const NETNAME_DELETED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(64); // ERROR_NETNAME_DELETED
+pub const NETNAME_DELETED : ErrorCode = ErrorCode::from_constant(64); // ERROR_NETNAME_DELETED
 
 /// Network access is denied.
-pub const NETWORK_ACCESS_DENIED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(65); // ERROR_NETWORK_ACCESS_DENIED
+pub const NETWORK_ACCESS_DENIED : ErrorCode = ErrorCode::from_constant(65); // ERROR_NETWORK_ACCESS_DENIED
 
 /// The network resource type is not correct.
-pub const BAD_DEV_TYPE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(66); // ERROR_BAD_DEV_TYPE
+pub const BAD_DEV_TYPE : ErrorCode = ErrorCode::from_constant(66); // ERROR_BAD_DEV_TYPE
 
 /// The network name cannot be found.
-pub const BAD_NET_NAME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(67); // ERROR_BAD_NET_NAME
+pub const BAD_NET_NAME : ErrorCode = ErrorCode::from_constant(67); // ERROR_BAD_NET_NAME
 
 /// The name limit for the local computer network adapter card was exceeded.
-pub const TOO_MANY_NAMES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(68); // ERROR_TOO_MANY_NAMES
+pub const TOO_MANY_NAMES : ErrorCode = ErrorCode::from_constant(68); // ERROR_TOO_MANY_NAMES
 
 /// The network BIOS session limit was exceeded.
-pub const TOO_MANY_SESS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(69); // ERROR_TOO_MANY_SESS
+pub const TOO_MANY_SESS : ErrorCode = ErrorCode::from_constant(69); // ERROR_TOO_MANY_SESS
 
 /// The remote server has been paused or is in the process of being started.
-pub const SHARING_PAUSED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(70); // ERROR_SHARING_PAUSED
+pub const SHARING_PAUSED : ErrorCode = ErrorCode::from_constant(70); // ERROR_SHARING_PAUSED
 
 /// No more connections can be made to this remote computer at this time because there are already as many connections as the computer can accept.
-pub const REQ_NOT_ACCEP : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(71); // ERROR_REQ_NOT_ACCEP
+pub const REQ_NOT_ACCEP : ErrorCode = ErrorCode::from_constant(71); // ERROR_REQ_NOT_ACCEP
 
 /// The specified printer or disk device has been paused.
-pub const REDIR_PAUSED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(72); // ERROR_REDIR_PAUSED
+pub const REDIR_PAUSED : ErrorCode = ErrorCode::from_constant(72); // ERROR_REDIR_PAUSED
 
 /// The file exists.
-pub const FILE_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(80); // ERROR_FILE_EXISTS
+pub const FILE_EXISTS : ErrorCode = ErrorCode::from_constant(80); // ERROR_FILE_EXISTS
 
 /// The directory or file cannot be created.
-pub const CANNOT_MAKE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(82); // ERROR_CANNOT_MAKE
+pub const CANNOT_MAKE : ErrorCode = ErrorCode::from_constant(82); // ERROR_CANNOT_MAKE
 
 /// Fail on INT 24.
-pub const FAIL_I24 : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(83); // ERROR_FAIL_I24
+pub const FAIL_I24 : ErrorCode = ErrorCode::from_constant(83); // ERROR_FAIL_I24
 
 /// Storage to process this request is not available.
-pub const OUT_OF_STRUCTURES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(84); // ERROR_OUT_OF_STRUCTURES
+pub const OUT_OF_STRUCTURES : ErrorCode = ErrorCode::from_constant(84); // ERROR_OUT_OF_STRUCTURES
 
 /// The local device name is already in use.
-pub const ALREADY_ASSIGNED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(85); // ERROR_ALREADY_ASSIGNED
+pub const ALREADY_ASSIGNED : ErrorCode = ErrorCode::from_constant(85); // ERROR_ALREADY_ASSIGNED
 
 /// The specified network password is not correct.
-pub const INVALID_PASSWORD : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(86); // ERROR_INVALID_PASSWORD
+pub const INVALID_PASSWORD : ErrorCode = ErrorCode::from_constant(86); // ERROR_INVALID_PASSWORD
 
 /// The parameter is incorrect.
-pub const INVALID_PARAMETER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(87); // ERROR_INVALID_PARAMETER
+pub const INVALID_PARAMETER : ErrorCode = ErrorCode::from_constant(87); // ERROR_INVALID_PARAMETER
 
 /// A write fault occurred on the network.
-pub const NET_WRITE_FAULT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(88); // ERROR_NET_WRITE_FAULT
+pub const NET_WRITE_FAULT : ErrorCode = ErrorCode::from_constant(88); // ERROR_NET_WRITE_FAULT
 
 /// The system cannot start another process at this time.
-pub const NO_PROC_SLOTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(89); // ERROR_NO_PROC_SLOTS
+pub const NO_PROC_SLOTS : ErrorCode = ErrorCode::from_constant(89); // ERROR_NO_PROC_SLOTS
 
 /// Cannot create another system semaphore.
-pub const TOO_MANY_SEMAPHORES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(100); // ERROR_TOO_MANY_SEMAPHORES
+pub const TOO_MANY_SEMAPHORES : ErrorCode = ErrorCode::from_constant(100); // ERROR_TOO_MANY_SEMAPHORES
 
 /// The exclusive semaphore is owned by another process.
-pub const EXCL_SEM_ALREADY_OWNED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(101); // ERROR_EXCL_SEM_ALREADY_OWNED
+pub const EXCL_SEM_ALREADY_OWNED : ErrorCode = ErrorCode::from_constant(101); // ERROR_EXCL_SEM_ALREADY_OWNED
 
 /// The semaphore is set and cannot be closed.
-pub const SEM_IS_SET : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(102); // ERROR_SEM_IS_SET
+pub const SEM_IS_SET : ErrorCode = ErrorCode::from_constant(102); // ERROR_SEM_IS_SET
 
 /// The semaphore cannot be set again.
-pub const TOO_MANY_SEM_REQUESTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(103); // ERROR_TOO_MANY_SEM_REQUESTS
+pub const TOO_MANY_SEM_REQUESTS : ErrorCode = ErrorCode::from_constant(103); // ERROR_TOO_MANY_SEM_REQUESTS
 
 /// Cannot request exclusive semaphores at interrupt time.
-pub const INVALID_AT_INTERRUPT_TIME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(104); // ERROR_INVALID_AT_INTERRUPT_TIME
+pub const INVALID_AT_INTERRUPT_TIME : ErrorCode = ErrorCode::from_constant(104); // ERROR_INVALID_AT_INTERRUPT_TIME
 
 /// The previous ownership of this semaphore has ended.
-pub const SEM_OWNER_DIED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(105); // ERROR_SEM_OWNER_DIED
+pub const SEM_OWNER_DIED : ErrorCode = ErrorCode::from_constant(105); // ERROR_SEM_OWNER_DIED
 
 /// Insert the diskette for drive `%1`.
-pub const SEM_USER_LIMIT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(106); // ERROR_SEM_USER_LIMIT
+pub const SEM_USER_LIMIT : ErrorCode = ErrorCode::from_constant(106); // ERROR_SEM_USER_LIMIT
 
 /// The program stopped because an alternate diskette was not inserted.
-pub const DISK_CHANGE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(107); // ERROR_DISK_CHANGE
+pub const DISK_CHANGE : ErrorCode = ErrorCode::from_constant(107); // ERROR_DISK_CHANGE
 
 /// The disk is in use or locked by another process.
-pub const DRIVE_LOCKED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(108); // ERROR_DRIVE_LOCKED
+pub const DRIVE_LOCKED : ErrorCode = ErrorCode::from_constant(108); // ERROR_DRIVE_LOCKED
 
 /// The pipe has been ended.
-pub const BROKEN_PIPE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(109); // ERROR_BROKEN_PIPE
+pub const BROKEN_PIPE : ErrorCode = ErrorCode::from_constant(109); // ERROR_BROKEN_PIPE
 
 /// The system cannot open the device or file specified.
-pub const OPEN_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(110); // ERROR_OPEN_FAILED
+pub const OPEN_FAILED : ErrorCode = ErrorCode::from_constant(110); // ERROR_OPEN_FAILED
 
 /// The file name is too long.
-pub const BUFFER_OVERFLOW : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(111); // ERROR_BUFFER_OVERFLOW
+pub const BUFFER_OVERFLOW : ErrorCode = ErrorCode::from_constant(111); // ERROR_BUFFER_OVERFLOW
 
 /// There is not enough space on the disk.
-pub const DISK_FULL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(112); // ERROR_DISK_FULL
+pub const DISK_FULL : ErrorCode = ErrorCode::from_constant(112); // ERROR_DISK_FULL
 
 /// No more internal file identifiers available.
-pub const NO_MORE_SEARCH_HANDLES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(113); // ERROR_NO_MORE_SEARCH_HANDLES
+pub const NO_MORE_SEARCH_HANDLES : ErrorCode = ErrorCode::from_constant(113); // ERROR_NO_MORE_SEARCH_HANDLES
 
 /// The target internal file identifier is incorrect.
-pub const INVALID_TARGET_HANDLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(114); // ERROR_INVALID_TARGET_HANDLE
+pub const INVALID_TARGET_HANDLE : ErrorCode = ErrorCode::from_constant(114); // ERROR_INVALID_TARGET_HANDLE
 
 /// The IOCTL call made by the application program is not correct.
-pub const INVALID_CATEGORY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(117); // ERROR_INVALID_CATEGORY
+pub const INVALID_CATEGORY : ErrorCode = ErrorCode::from_constant(117); // ERROR_INVALID_CATEGORY
 
 /// The verify-on-write switch parameter value is not correct.
-pub const INVALID_VERIFY_SWITCH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(118); // ERROR_INVALID_VERIFY_SWITCH
+pub const INVALID_VERIFY_SWITCH : ErrorCode = ErrorCode::from_constant(118); // ERROR_INVALID_VERIFY_SWITCH
 
 /// The system does not support the command requested.
-pub const BAD_DRIVER_LEVEL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(119); // ERROR_BAD_DRIVER_LEVEL
+pub const BAD_DRIVER_LEVEL : ErrorCode = ErrorCode::from_constant(119); // ERROR_BAD_DRIVER_LEVEL
 
 /// This function is not supported on this system.
-pub const CALL_NOT_IMPLEMENTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(120); // ERROR_CALL_NOT_IMPLEMENTED
+pub const CALL_NOT_IMPLEMENTED : ErrorCode = ErrorCode::from_constant(120); // ERROR_CALL_NOT_IMPLEMENTED
 
 /// The semaphore timeout period has expired.
-pub const SEM_TIMEOUT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(121); // ERROR_SEM_TIMEOUT
+pub const SEM_TIMEOUT : ErrorCode = ErrorCode::from_constant(121); // ERROR_SEM_TIMEOUT
 
 /// The data area passed to a system call is too small.
-pub const INSUFFICIENT_BUFFER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(122); // ERROR_INSUFFICIENT_BUFFER
+pub const INSUFFICIENT_BUFFER : ErrorCode = ErrorCode::from_constant(122); // ERROR_INSUFFICIENT_BUFFER
 
 /// The filename, directory name, or volume label syntax is incorrect.
-pub const INVALID_NAME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(123); // ERROR_INVALID_NAME
+pub const INVALID_NAME : ErrorCode = ErrorCode::from_constant(123); // ERROR_INVALID_NAME
 
 /// The system call level is not correct.
-pub const INVALID_LEVEL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(124); // ERROR_INVALID_LEVEL
+pub const INVALID_LEVEL : ErrorCode = ErrorCode::from_constant(124); // ERROR_INVALID_LEVEL
 
 /// The disk has no volume label.
-pub const NO_VOLUME_LABEL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(125); // ERROR_NO_VOLUME_LABEL
+pub const NO_VOLUME_LABEL : ErrorCode = ErrorCode::from_constant(125); // ERROR_NO_VOLUME_LABEL
 
 /// The specified module could not be found.
-pub const MOD_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(126); // ERROR_MOD_NOT_FOUND
+pub const MOD_NOT_FOUND : ErrorCode = ErrorCode::from_constant(126); // ERROR_MOD_NOT_FOUND
 
 /// The specified procedure could not be found.
-pub const PROC_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(127); // ERROR_PROC_NOT_FOUND
+pub const PROC_NOT_FOUND : ErrorCode = ErrorCode::from_constant(127); // ERROR_PROC_NOT_FOUND
 
 /// There are no child processes to wait for.
-pub const WAIT_NO_CHILDREN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(128); // ERROR_WAIT_NO_CHILDREN
+pub const WAIT_NO_CHILDREN : ErrorCode = ErrorCode::from_constant(128); // ERROR_WAIT_NO_CHILDREN
 
 /// The `%1` application cannot be run in Win32 mode.
-pub const CHILD_NOT_COMPLETE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(129); // ERROR_CHILD_NOT_COMPLETE
+pub const CHILD_NOT_COMPLETE : ErrorCode = ErrorCode::from_constant(129); // ERROR_CHILD_NOT_COMPLETE
 
 /// Attempt to use a file handle to an open disk partition for an operation other than raw disk I/O.
-pub const DIRECT_ACCESS_HANDLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(130); // ERROR_DIRECT_ACCESS_HANDLE
+pub const DIRECT_ACCESS_HANDLE : ErrorCode = ErrorCode::from_constant(130); // ERROR_DIRECT_ACCESS_HANDLE
 
 /// An attempt was made to move the file pointer before the beginning of the file.
-pub const NEGATIVE_SEEK : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(131); // ERROR_NEGATIVE_SEEK
+pub const NEGATIVE_SEEK : ErrorCode = ErrorCode::from_constant(131); // ERROR_NEGATIVE_SEEK
 
 /// The file pointer cannot be set on the specified device or file.
-pub const SEEK_ON_DEVICE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(132); // ERROR_SEEK_ON_DEVICE
+pub const SEEK_ON_DEVICE : ErrorCode = ErrorCode::from_constant(132); // ERROR_SEEK_ON_DEVICE
 
 /// A JOIN or SUBST command cannot be used for a drive that contains previously joined drives.
-pub const IS_JOIN_TARGET : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(133); // ERROR_IS_JOIN_TARGET
+pub const IS_JOIN_TARGET : ErrorCode = ErrorCode::from_constant(133); // ERROR_IS_JOIN_TARGET
 
 /// An attempt was made to use a JOIN or SUBST command on a drive that has already been joined.
-pub const IS_JOINED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(134); // ERROR_IS_JOINED
+pub const IS_JOINED : ErrorCode = ErrorCode::from_constant(134); // ERROR_IS_JOINED
 
 /// An attempt was made to use a JOIN or SUBST command on a drive that has already been substituted.
-pub const IS_SUBSTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(135); // ERROR_IS_SUBSTED
+pub const IS_SUBSTED : ErrorCode = ErrorCode::from_constant(135); // ERROR_IS_SUBSTED
 
 /// The system tried to delete the JOIN of a drive that is not joined.
-pub const NOT_JOINED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(136); // ERROR_NOT_JOINED
+pub const NOT_JOINED : ErrorCode = ErrorCode::from_constant(136); // ERROR_NOT_JOINED
 
 /// The system tried to delete the substitution of a drive that is not substituted.
-pub const NOT_SUBSTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(137); // ERROR_NOT_SUBSTED
+pub const NOT_SUBSTED : ErrorCode = ErrorCode::from_constant(137); // ERROR_NOT_SUBSTED
 
 /// The system tried to join a drive to a directory on a joined drive.
-pub const JOIN_TO_JOIN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(138); // ERROR_JOIN_TO_JOIN
+pub const JOIN_TO_JOIN : ErrorCode = ErrorCode::from_constant(138); // ERROR_JOIN_TO_JOIN
 
 /// The system tried to substitute a drive to a directory on a substituted drive.
-pub const SUBST_TO_SUBST : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(139); // ERROR_SUBST_TO_SUBST
+pub const SUBST_TO_SUBST : ErrorCode = ErrorCode::from_constant(139); // ERROR_SUBST_TO_SUBST
 
 /// The system tried to join a drive to a directory on a substituted drive.
-pub const JOIN_TO_SUBST : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(140); // ERROR_JOIN_TO_SUBST
+pub const JOIN_TO_SUBST : ErrorCode = ErrorCode::from_constant(140); // ERROR_JOIN_TO_SUBST
 
 /// The system tried to SUBST a drive to a directory on a joined drive.
-pub const SUBST_TO_JOIN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(141); // ERROR_SUBST_TO_JOIN
+pub const SUBST_TO_JOIN : ErrorCode = ErrorCode::from_constant(141); // ERROR_SUBST_TO_JOIN
 
 /// The system cannot perform a JOIN or SUBST at this time.
-pub const BUSY_DRIVE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(142); // ERROR_BUSY_DRIVE
+pub const BUSY_DRIVE : ErrorCode = ErrorCode::from_constant(142); // ERROR_BUSY_DRIVE
 
 /// The system cannot join or substitute a drive to or for a directory on the same drive.
-pub const SAME_DRIVE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(143); // ERROR_SAME_DRIVE
+pub const SAME_DRIVE : ErrorCode = ErrorCode::from_constant(143); // ERROR_SAME_DRIVE
 
 /// The directory is not a subdirectory of the root directory.
-pub const DIR_NOT_ROOT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(144); // ERROR_DIR_NOT_ROOT
+pub const DIR_NOT_ROOT : ErrorCode = ErrorCode::from_constant(144); // ERROR_DIR_NOT_ROOT
 
 /// The directory is not empty.
-pub const DIR_NOT_EMPTY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(145); // ERROR_DIR_NOT_EMPTY
+pub const DIR_NOT_EMPTY : ErrorCode = ErrorCode::from_constant(145); // ERROR_DIR_NOT_EMPTY
 
 /// The path specified is being used in a substitute.
-pub const IS_SUBST_PATH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(146); // ERROR_IS_SUBST_PATH
+pub const IS_SUBST_PATH : ErrorCode = ErrorCode::from_constant(146); // ERROR_IS_SUBST_PATH
 
 /// Not enough resources are available to process this command.
-pub const IS_JOIN_PATH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(147); // ERROR_IS_JOIN_PATH
+pub const IS_JOIN_PATH : ErrorCode = ErrorCode::from_constant(147); // ERROR_IS_JOIN_PATH
 
 /// The path specified cannot be used at this time.
-pub const PATH_BUSY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(148); // ERROR_PATH_BUSY
+pub const PATH_BUSY : ErrorCode = ErrorCode::from_constant(148); // ERROR_PATH_BUSY
 
 /// An attempt was made to join or substitute a drive for which a directory on the drive is the target of a previous substitute.
-pub const IS_SUBST_TARGET : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(149); // ERROR_IS_SUBST_TARGET
+pub const IS_SUBST_TARGET : ErrorCode = ErrorCode::from_constant(149); // ERROR_IS_SUBST_TARGET
 
 /// System trace information was not specified in your CONFIG.SYS file, or tracing is disallowed.
-pub const SYSTEM_TRACE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(150); // ERROR_SYSTEM_TRACE
+pub const SYSTEM_TRACE : ErrorCode = ErrorCode::from_constant(150); // ERROR_SYSTEM_TRACE
 
 /// The number of specified semaphore events for DosMuxSemWait is not correct.
-pub const INVALID_EVENT_COUNT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(151); // ERROR_INVALID_EVENT_COUNT
+pub const INVALID_EVENT_COUNT : ErrorCode = ErrorCode::from_constant(151); // ERROR_INVALID_EVENT_COUNT
 
 /// DosMuxSemWait did not execute; too many semaphores are already set.
-pub const TOO_MANY_MUXWAITERS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(152); // ERROR_TOO_MANY_MUXWAITERS
+pub const TOO_MANY_MUXWAITERS : ErrorCode = ErrorCode::from_constant(152); // ERROR_TOO_MANY_MUXWAITERS
 
 /// The DosMuxSemWait list is not correct.
-pub const INVALID_LIST_FORMAT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(153); // ERROR_INVALID_LIST_FORMAT
+pub const INVALID_LIST_FORMAT : ErrorCode = ErrorCode::from_constant(153); // ERROR_INVALID_LIST_FORMAT
 
 /// The volume label you entered exceeds the label character limit of the target file system.
-pub const LABEL_TOO_LONG : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(154); // ERROR_LABEL_TOO_LONG
+pub const LABEL_TOO_LONG : ErrorCode = ErrorCode::from_constant(154); // ERROR_LABEL_TOO_LONG
 
 /// Cannot create another thread.
-pub const TOO_MANY_TCBS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(155); // ERROR_TOO_MANY_TCBS
+pub const TOO_MANY_TCBS : ErrorCode = ErrorCode::from_constant(155); // ERROR_TOO_MANY_TCBS
 
 /// The recipient process has refused the signal.
-pub const SIGNAL_REFUSED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(156); // ERROR_SIGNAL_REFUSED
+pub const SIGNAL_REFUSED : ErrorCode = ErrorCode::from_constant(156); // ERROR_SIGNAL_REFUSED
 
 /// The segment is already discarded and cannot be locked.
-pub const DISCARDED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(157); // ERROR_DISCARDED
+pub const DISCARDED : ErrorCode = ErrorCode::from_constant(157); // ERROR_DISCARDED
 
 /// The segment is already unlocked.
-pub const NOT_LOCKED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(158); // ERROR_NOT_LOCKED
+pub const NOT_LOCKED : ErrorCode = ErrorCode::from_constant(158); // ERROR_NOT_LOCKED
 
 /// The address for the thread ID is not correct.
-pub const BAD_THREADID_ADDR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(159); // ERROR_BAD_THREADID_ADDR
+pub const BAD_THREADID_ADDR : ErrorCode = ErrorCode::from_constant(159); // ERROR_BAD_THREADID_ADDR
 
 /// One or more arguments are not correct.
-pub const BAD_ARGUMENTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(160); // ERROR_BAD_ARGUMENTS
+pub const BAD_ARGUMENTS : ErrorCode = ErrorCode::from_constant(160); // ERROR_BAD_ARGUMENTS
 
 /// The specified path is invalid.
-pub const BAD_PATHNAME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(161); // ERROR_BAD_PATHNAME
+pub const BAD_PATHNAME : ErrorCode = ErrorCode::from_constant(161); // ERROR_BAD_PATHNAME
 
 /// A signal is already pending.
-pub const SIGNAL_PENDING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(162); // ERROR_SIGNAL_PENDING
+pub const SIGNAL_PENDING : ErrorCode = ErrorCode::from_constant(162); // ERROR_SIGNAL_PENDING
 
 /// No more threads can be created in the system.
-pub const MAX_THRDS_REACHED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(164); // ERROR_MAX_THRDS_REACHED
+pub const MAX_THRDS_REACHED : ErrorCode = ErrorCode::from_constant(164); // ERROR_MAX_THRDS_REACHED
 
 /// Unable to lock a region of a file.
-pub const LOCK_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(167); // ERROR_LOCK_FAILED
+pub const LOCK_FAILED : ErrorCode = ErrorCode::from_constant(167); // ERROR_LOCK_FAILED
 
 /// The requested resource is in use.
-pub const BUSY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(170); // ERROR_BUSY
+pub const BUSY : ErrorCode = ErrorCode::from_constant(170); // ERROR_BUSY
 
 /// Device's command support detection is in progress.
-pub const DEVICE_SUPPORT_IN_PROGRESS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(171); // ERROR_DEVICE_SUPPORT_IN_PROGRESS
+pub const DEVICE_SUPPORT_IN_PROGRESS : ErrorCode = ErrorCode::from_constant(171); // ERROR_DEVICE_SUPPORT_IN_PROGRESS
 
 /// A lock request was not outstanding for the supplied cancel region.
-pub const CANCEL_VIOLATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(173); // ERROR_CANCEL_VIOLATION
+pub const CANCEL_VIOLATION : ErrorCode = ErrorCode::from_constant(173); // ERROR_CANCEL_VIOLATION
 
 /// The file system does not support atomic changes to the lock type.
-pub const ATOMIC_LOCKS_NOT_SUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(174); // ERROR_ATOMIC_LOCKS_NOT_SUPPORTED
+pub const ATOMIC_LOCKS_NOT_SUPPORTED : ErrorCode = ErrorCode::from_constant(174); // ERROR_ATOMIC_LOCKS_NOT_SUPPORTED
 
 /// The system detected a segment number that was not correct.
-pub const INVALID_SEGMENT_NUMBER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(180); // ERROR_INVALID_SEGMENT_NUMBER
+pub const INVALID_SEGMENT_NUMBER : ErrorCode = ErrorCode::from_constant(180); // ERROR_INVALID_SEGMENT_NUMBER
 
 /// The operating system cannot run `%1`.
-pub const INVALID_ORDINAL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(182); // ERROR_INVALID_ORDINAL
+pub const INVALID_ORDINAL : ErrorCode = ErrorCode::from_constant(182); // ERROR_INVALID_ORDINAL
 
 /// Cannot create a file when that file already exists.
-pub const ALREADY_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(183); // ERROR_ALREADY_EXISTS
+pub const ALREADY_EXISTS : ErrorCode = ErrorCode::from_constant(183); // ERROR_ALREADY_EXISTS
 
 /// The flag passed is not correct.
-pub const INVALID_FLAG_NUMBER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(186); // ERROR_INVALID_FLAG_NUMBER
+pub const INVALID_FLAG_NUMBER : ErrorCode = ErrorCode::from_constant(186); // ERROR_INVALID_FLAG_NUMBER
 
 /// The specified system semaphore name was not found.
-pub const SEM_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(187); // ERROR_SEM_NOT_FOUND
+pub const SEM_NOT_FOUND : ErrorCode = ErrorCode::from_constant(187); // ERROR_SEM_NOT_FOUND
 
 /// The operating system cannot run `%1`.
-pub const INVALID_STARTING_CODESEG : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(188); // ERROR_INVALID_STARTING_CODESEG
+pub const INVALID_STARTING_CODESEG : ErrorCode = ErrorCode::from_constant(188); // ERROR_INVALID_STARTING_CODESEG
 
 /// The operating system cannot run `%1`.
-pub const INVALID_STACKSEG : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(189); // ERROR_INVALID_STACKSEG
+pub const INVALID_STACKSEG : ErrorCode = ErrorCode::from_constant(189); // ERROR_INVALID_STACKSEG
 
 /// The operating system cannot run `%1`.
-pub const INVALID_MODULETYPE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(190); // ERROR_INVALID_MODULETYPE
+pub const INVALID_MODULETYPE : ErrorCode = ErrorCode::from_constant(190); // ERROR_INVALID_MODULETYPE
 
 /// Cannot run `%1` in Win32 mode.
-pub const INVALID_EXE_SIGNATURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(191); // ERROR_INVALID_EXE_SIGNATURE
+pub const INVALID_EXE_SIGNATURE : ErrorCode = ErrorCode::from_constant(191); // ERROR_INVALID_EXE_SIGNATURE
 
 /// The operating system cannot run `%1`.
-pub const EXE_MARKED_INVALID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(192); // ERROR_EXE_MARKED_INVALID
+pub const EXE_MARKED_INVALID : ErrorCode = ErrorCode::from_constant(192); // ERROR_EXE_MARKED_INVALID
 
 /// `%1` is not a valid Win32 application.
-pub const BAD_EXE_FORMAT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(193); // ERROR_BAD_EXE_FORMAT
+pub const BAD_EXE_FORMAT : ErrorCode = ErrorCode::from_constant(193); // ERROR_BAD_EXE_FORMAT
 
 /// The operating system cannot run `%1`.
-pub const ITERATED_DATA_EXCEEDS_64k : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(194); // ERROR_ITERATED_DATA_EXCEEDS_64k
+pub const ITERATED_DATA_EXCEEDS_64k : ErrorCode = ErrorCode::from_constant(194); // ERROR_ITERATED_DATA_EXCEEDS_64k
 
 /// The operating system cannot run `%1`.
-pub const INVALID_MINALLOCSIZE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(195); // ERROR_INVALID_MINALLOCSIZE
+pub const INVALID_MINALLOCSIZE : ErrorCode = ErrorCode::from_constant(195); // ERROR_INVALID_MINALLOCSIZE
 
 /// The operating system cannot run this application program.
-pub const DYNLINK_FROM_INVALID_RING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(196); // ERROR_DYNLINK_FROM_INVALID_RING
+pub const DYNLINK_FROM_INVALID_RING : ErrorCode = ErrorCode::from_constant(196); // ERROR_DYNLINK_FROM_INVALID_RING
 
 /// The operating system is not presently configured to run this application.
-pub const IOPL_NOT_ENABLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(197); // ERROR_IOPL_NOT_ENABLED
+pub const IOPL_NOT_ENABLED : ErrorCode = ErrorCode::from_constant(197); // ERROR_IOPL_NOT_ENABLED
 
 /// The operating system cannot run `%1`.
-pub const INVALID_SEGDPL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(198); // ERROR_INVALID_SEGDPL
+pub const INVALID_SEGDPL : ErrorCode = ErrorCode::from_constant(198); // ERROR_INVALID_SEGDPL
 
 /// The operating system cannot run this application program.
-pub const AUTODATASEG_EXCEEDS_64k : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(199); // ERROR_AUTODATASEG_EXCEEDS_64k
+pub const AUTODATASEG_EXCEEDS_64k : ErrorCode = ErrorCode::from_constant(199); // ERROR_AUTODATASEG_EXCEEDS_64k
 
 /// The code segment cannot be greater than or equal to 64K.
-pub const RING2SEG_MUST_BE_MOVABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(200); // ERROR_RING2SEG_MUST_BE_MOVABLE
+pub const RING2SEG_MUST_BE_MOVABLE : ErrorCode = ErrorCode::from_constant(200); // ERROR_RING2SEG_MUST_BE_MOVABLE
 
 /// The operating system cannot run `%1`.
-pub const RELOC_CHAIN_XEEDS_SEGLIM : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(201); // ERROR_RELOC_CHAIN_XEEDS_SEGLIM
+pub const RELOC_CHAIN_XEEDS_SEGLIM : ErrorCode = ErrorCode::from_constant(201); // ERROR_RELOC_CHAIN_XEEDS_SEGLIM
 
 /// The operating system cannot run `%1`.
-pub const INFLOOP_IN_RELOC_CHAIN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(202); // ERROR_INFLOOP_IN_RELOC_CHAIN
+pub const INFLOOP_IN_RELOC_CHAIN : ErrorCode = ErrorCode::from_constant(202); // ERROR_INFLOOP_IN_RELOC_CHAIN
 
 /// The system could not find the environment option that was entered.
-pub const ENVVAR_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(203); // ERROR_ENVVAR_NOT_FOUND
+pub const ENVVAR_NOT_FOUND : ErrorCode = ErrorCode::from_constant(203); // ERROR_ENVVAR_NOT_FOUND
 
 /// No process in the command subtree has a signal handler.
-pub const NO_SIGNAL_SENT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(205); // ERROR_NO_SIGNAL_SENT
+pub const NO_SIGNAL_SENT : ErrorCode = ErrorCode::from_constant(205); // ERROR_NO_SIGNAL_SENT
 
 /// The filename or extension is too long.
-pub const FILENAME_EXCED_RANGE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(206); // ERROR_FILENAME_EXCED_RANGE
+pub const FILENAME_EXCED_RANGE : ErrorCode = ErrorCode::from_constant(206); // ERROR_FILENAME_EXCED_RANGE
 
 /// The ring 2 stack is in use.
-pub const RING2_STACK_IN_USE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(207); // ERROR_RING2_STACK_IN_USE
+pub const RING2_STACK_IN_USE : ErrorCode = ErrorCode::from_constant(207); // ERROR_RING2_STACK_IN_USE
 
 /// The global filename characters, \* or ?, are entered incorrectly or too many global filename characters are specified.
-pub const META_EXPANSION_TOO_LONG : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(208); // ERROR_META_EXPANSION_TOO_LONG
+pub const META_EXPANSION_TOO_LONG : ErrorCode = ErrorCode::from_constant(208); // ERROR_META_EXPANSION_TOO_LONG
 
 /// The signal being posted is not correct.
-pub const INVALID_SIGNAL_NUMBER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(209); // ERROR_INVALID_SIGNAL_NUMBER
+pub const INVALID_SIGNAL_NUMBER : ErrorCode = ErrorCode::from_constant(209); // ERROR_INVALID_SIGNAL_NUMBER
 
 /// The signal handler cannot be set.
-pub const THREAD_1_INACTIVE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(210); // ERROR_THREAD_1_INACTIVE
+pub const THREAD_1_INACTIVE : ErrorCode = ErrorCode::from_constant(210); // ERROR_THREAD_1_INACTIVE
 
 /// The segment is locked and cannot be reallocated.
-pub const LOCKED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(212); // ERROR_LOCKED
+pub const LOCKED : ErrorCode = ErrorCode::from_constant(212); // ERROR_LOCKED
 
 /// Too many dynamic-link modules are attached to this program or dynamic-link module.
-pub const TOO_MANY_MODULES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(214); // ERROR_TOO_MANY_MODULES
+pub const TOO_MANY_MODULES : ErrorCode = ErrorCode::from_constant(214); // ERROR_TOO_MANY_MODULES
 
 /// Cannot nest calls to LoadModule.
-pub const NESTING_NOT_ALLOWED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(215); // ERROR_NESTING_NOT_ALLOWED
+pub const NESTING_NOT_ALLOWED : ErrorCode = ErrorCode::from_constant(215); // ERROR_NESTING_NOT_ALLOWED
 
 /// This version of `%1` is not compatible with the version of Windows you're running. Check your computer's system information and then contact the software publisher.
-pub const EXE_MACHINE_TYPE_MISMATCH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(216); // ERROR_EXE_MACHINE_TYPE_MISMATCH
+pub const EXE_MACHINE_TYPE_MISMATCH : ErrorCode = ErrorCode::from_constant(216); // ERROR_EXE_MACHINE_TYPE_MISMATCH
 
 /// The image file `%1` is signed, unable to modify.
-pub const EXE_CANNOT_MODIFY_SIGNED_BINARY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(217); // ERROR_EXE_CANNOT_MODIFY_SIGNED_BINARY
+pub const EXE_CANNOT_MODIFY_SIGNED_BINARY : ErrorCode = ErrorCode::from_constant(217); // ERROR_EXE_CANNOT_MODIFY_SIGNED_BINARY
 
 /// The image file `%1` is strong signed, unable to modify.
-pub const EXE_CANNOT_MODIFY_STRONG_SIGNED_BINARY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(218); // ERROR_EXE_CANNOT_MODIFY_STRONG_SIGNED_BINARY
+pub const EXE_CANNOT_MODIFY_STRONG_SIGNED_BINARY : ErrorCode = ErrorCode::from_constant(218); // ERROR_EXE_CANNOT_MODIFY_STRONG_SIGNED_BINARY
 
 /// This file is checked out or locked for editing by another user.
-pub const FILE_CHECKED_OUT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(220); // ERROR_FILE_CHECKED_OUT
+pub const FILE_CHECKED_OUT : ErrorCode = ErrorCode::from_constant(220); // ERROR_FILE_CHECKED_OUT
 
 /// The file must be checked out before saving changes.
-pub const CHECKOUT_REQUIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(221); // ERROR_CHECKOUT_REQUIRED
+pub const CHECKOUT_REQUIRED : ErrorCode = ErrorCode::from_constant(221); // ERROR_CHECKOUT_REQUIRED
 
 /// The file type being saved or retrieved has been blocked.
-pub const BAD_FILE_TYPE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(222); // ERROR_BAD_FILE_TYPE
+pub const BAD_FILE_TYPE : ErrorCode = ErrorCode::from_constant(222); // ERROR_BAD_FILE_TYPE
 
 /// The file size exceeds the limit allowed and cannot be saved.
-pub const FILE_TOO_LARGE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(223); // ERROR_FILE_TOO_LARGE
+pub const FILE_TOO_LARGE : ErrorCode = ErrorCode::from_constant(223); // ERROR_FILE_TOO_LARGE
 
 /// Access Denied. Before opening files in this location, you must first add the web site to your trusted sites list, browse to the web site, and select the option to login automatically.
-pub const FORMS_AUTH_REQUIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(224); // ERROR_FORMS_AUTH_REQUIRED
+pub const FORMS_AUTH_REQUIRED : ErrorCode = ErrorCode::from_constant(224); // ERROR_FORMS_AUTH_REQUIRED
 
 /// Operation did not complete successfully because the file contains a virus or potentially unwanted software.
-pub const VIRUS_INFECTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(225); // ERROR_VIRUS_INFECTED
+pub const VIRUS_INFECTED : ErrorCode = ErrorCode::from_constant(225); // ERROR_VIRUS_INFECTED
 
 /// This file contains a virus or potentially unwanted software and cannot be opened. Due to the nature of this virus or potentially unwanted software, the file has been removed from this location.
-pub const VIRUS_DELETED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(226); // ERROR_VIRUS_DELETED
+pub const VIRUS_DELETED : ErrorCode = ErrorCode::from_constant(226); // ERROR_VIRUS_DELETED
 
 /// The pipe is local.
-pub const PIPE_LOCAL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(229); // ERROR_PIPE_LOCAL
+pub const PIPE_LOCAL : ErrorCode = ErrorCode::from_constant(229); // ERROR_PIPE_LOCAL
 
 /// The pipe state is invalid.
-pub const BAD_PIPE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(230); // ERROR_BAD_PIPE
+pub const BAD_PIPE : ErrorCode = ErrorCode::from_constant(230); // ERROR_BAD_PIPE
 
 /// All pipe instances are busy.
-pub const PIPE_BUSY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(231); // ERROR_PIPE_BUSY
+pub const PIPE_BUSY : ErrorCode = ErrorCode::from_constant(231); // ERROR_PIPE_BUSY
 
 /// The pipe is being closed.
-pub const NO_DATA : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(232); // ERROR_NO_DATA
+pub const NO_DATA : ErrorCode = ErrorCode::from_constant(232); // ERROR_NO_DATA
 
 /// No process is on the other end of the pipe.
-pub const PIPE_NOT_CONNECTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(233); // ERROR_PIPE_NOT_CONNECTED
+pub const PIPE_NOT_CONNECTED : ErrorCode = ErrorCode::from_constant(233); // ERROR_PIPE_NOT_CONNECTED
 
 /// More data is available.
-pub const MORE_DATA : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(234); // ERROR_MORE_DATA
+pub const MORE_DATA : ErrorCode = ErrorCode::from_constant(234); // ERROR_MORE_DATA
 
 /// The action requested resulted in no work being done. Error-style clean-up has been performed.
-pub const NO_WORK_DONE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(235); // ERROR_NO_WORK_DONE
+pub const NO_WORK_DONE : ErrorCode = ErrorCode::from_constant(235); // ERROR_NO_WORK_DONE
 
 /// The session was canceled.
-pub const VC_DISCONNECTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(240); // ERROR_VC_DISCONNECTED
+pub const VC_DISCONNECTED : ErrorCode = ErrorCode::from_constant(240); // ERROR_VC_DISCONNECTED
 
 /// The specified extended attribute name was invalid.
-pub const INVALID_EA_NAME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(254); // ERROR_INVALID_EA_NAME
+pub const INVALID_EA_NAME : ErrorCode = ErrorCode::from_constant(254); // ERROR_INVALID_EA_NAME
 
 /// The extended attributes are inconsistent.
-pub const EA_LIST_INCONSISTENT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(255); // ERROR_EA_LIST_INCONSISTENT
+pub const EA_LIST_INCONSISTENT : ErrorCode = ErrorCode::from_constant(255); // ERROR_EA_LIST_INCONSISTENT
 
 /// No more data is available.
-pub const NO_MORE_ITEMS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(259); // ERROR_NO_MORE_ITEMS
+pub const NO_MORE_ITEMS : ErrorCode = ErrorCode::from_constant(259); // ERROR_NO_MORE_ITEMS
 
 /// The copy functions cannot be used.
-pub const CANNOT_COPY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(266); // ERROR_CANNOT_COPY
+pub const CANNOT_COPY : ErrorCode = ErrorCode::from_constant(266); // ERROR_CANNOT_COPY
 
 /// The directory name is invalid.
-pub const DIRECTORY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(267); // ERROR_DIRECTORY
+pub const DIRECTORY : ErrorCode = ErrorCode::from_constant(267); // ERROR_DIRECTORY
 
 /// The extended attributes did not fit in the buffer.
-pub const EAS_DIDNT_FIT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(275); // ERROR_EAS_DIDNT_FIT
+pub const EAS_DIDNT_FIT : ErrorCode = ErrorCode::from_constant(275); // ERROR_EAS_DIDNT_FIT
 
 /// The extended attribute file on the mounted file system is corrupt.
-pub const EA_FILE_CORRUPT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(276); // ERROR_EA_FILE_CORRUPT
+pub const EA_FILE_CORRUPT : ErrorCode = ErrorCode::from_constant(276); // ERROR_EA_FILE_CORRUPT
 
 /// The extended attribute table file is full.
-pub const EA_TABLE_FULL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(277); // ERROR_EA_TABLE_FULL
+pub const EA_TABLE_FULL : ErrorCode = ErrorCode::from_constant(277); // ERROR_EA_TABLE_FULL
 
 /// The specified extended attribute handle is invalid.
-pub const INVALID_EA_HANDLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(278); // ERROR_INVALID_EA_HANDLE
+pub const INVALID_EA_HANDLE : ErrorCode = ErrorCode::from_constant(278); // ERROR_INVALID_EA_HANDLE
 
 /// The mounted file system does not support extended attributes.
-pub const EAS_NOT_SUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(282); // ERROR_EAS_NOT_SUPPORTED
+pub const EAS_NOT_SUPPORTED : ErrorCode = ErrorCode::from_constant(282); // ERROR_EAS_NOT_SUPPORTED
 
 /// Attempt to release mutex not owned by caller.
-pub const NOT_OWNER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(288); // ERROR_NOT_OWNER
+pub const NOT_OWNER : ErrorCode = ErrorCode::from_constant(288); // ERROR_NOT_OWNER
 
 /// Too many posts were made to a semaphore.
-pub const TOO_MANY_POSTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(298); // ERROR_TOO_MANY_POSTS
+pub const TOO_MANY_POSTS : ErrorCode = ErrorCode::from_constant(298); // ERROR_TOO_MANY_POSTS
 
 /// Only part of a ReadProcessMemory or WriteProcessMemory request was completed.
-pub const PARTIAL_COPY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(299); // ERROR_PARTIAL_COPY
+pub const PARTIAL_COPY : ErrorCode = ErrorCode::from_constant(299); // ERROR_PARTIAL_COPY
 
 /// The oplock request is denied.
-pub const OPLOCK_NOT_GRANTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(300); // ERROR_OPLOCK_NOT_GRANTED
+pub const OPLOCK_NOT_GRANTED : ErrorCode = ErrorCode::from_constant(300); // ERROR_OPLOCK_NOT_GRANTED
 
 /// An invalid oplock acknowledgment was received by the system.
-pub const INVALID_OPLOCK_PROTOCOL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(301); // ERROR_INVALID_OPLOCK_PROTOCOL
+pub const INVALID_OPLOCK_PROTOCOL : ErrorCode = ErrorCode::from_constant(301); // ERROR_INVALID_OPLOCK_PROTOCOL
 
 /// The volume is too fragmented to complete this operation.
-pub const DISK_TOO_FRAGMENTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(302); // ERROR_DISK_TOO_FRAGMENTED
+pub const DISK_TOO_FRAGMENTED : ErrorCode = ErrorCode::from_constant(302); // ERROR_DISK_TOO_FRAGMENTED
 
 /// The file cannot be opened because it is in the process of being deleted.
-pub const DELETE_PENDING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(303); // ERROR_DELETE_PENDING
+pub const DELETE_PENDING : ErrorCode = ErrorCode::from_constant(303); // ERROR_DELETE_PENDING
 
 /// Short name settings may not be changed on this volume due to the global registry setting.
-pub const INCOMPATIBLE_WITH_GLOBAL_SHORT_NAME_REGISTRY_SETTING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(304); // ERROR_INCOMPATIBLE_WITH_GLOBAL_SHORT_NAME_REGISTRY_SETTING
+pub const INCOMPATIBLE_WITH_GLOBAL_SHORT_NAME_REGISTRY_SETTING : ErrorCode = ErrorCode::from_constant(304); // ERROR_INCOMPATIBLE_WITH_GLOBAL_SHORT_NAME_REGISTRY_SETTING
 
 /// Short names are not enabled on this volume.
-pub const SHORT_NAMES_NOT_ENABLED_ON_VOLUME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(305); // ERROR_SHORT_NAMES_NOT_ENABLED_ON_VOLUME
+pub const SHORT_NAMES_NOT_ENABLED_ON_VOLUME : ErrorCode = ErrorCode::from_constant(305); // ERROR_SHORT_NAMES_NOT_ENABLED_ON_VOLUME
 
 /// The security stream for the given volume is in an inconsistent state.
 /// Please run CHKDSK on the volume.
-pub const SECURITY_STREAM_IS_INCONSISTENT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(306); // ERROR_SECURITY_STREAM_IS_INCONSISTENT
+pub const SECURITY_STREAM_IS_INCONSISTENT : ErrorCode = ErrorCode::from_constant(306); // ERROR_SECURITY_STREAM_IS_INCONSISTENT
 
 /// A requested file lock operation cannot be processed due to an invalid byte range.
-pub const INVALID_LOCK_RANGE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(307); // ERROR_INVALID_LOCK_RANGE
+pub const INVALID_LOCK_RANGE : ErrorCode = ErrorCode::from_constant(307); // ERROR_INVALID_LOCK_RANGE
 
 /// The subsystem needed to support the image type is not present.
-pub const IMAGE_SUBSYSTEM_NOT_PRESENT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(308); // ERROR_IMAGE_SUBSYSTEM_NOT_PRESENT
+pub const IMAGE_SUBSYSTEM_NOT_PRESENT : ErrorCode = ErrorCode::from_constant(308); // ERROR_IMAGE_SUBSYSTEM_NOT_PRESENT
 
 /// The specified file already has a notification GUID associated with it.
-pub const NOTIFICATION_GUID_ALREADY_DEFINED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(309); // ERROR_NOTIFICATION_GUID_ALREADY_DEFINED
+pub const NOTIFICATION_GUID_ALREADY_DEFINED : ErrorCode = ErrorCode::from_constant(309); // ERROR_NOTIFICATION_GUID_ALREADY_DEFINED
 
 /// An invalid exception handler routine has been detected.
-pub const INVALID_EXCEPTION_HANDLER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(310); // ERROR_INVALID_EXCEPTION_HANDLER
+pub const INVALID_EXCEPTION_HANDLER : ErrorCode = ErrorCode::from_constant(310); // ERROR_INVALID_EXCEPTION_HANDLER
 
 /// Duplicate privileges were specified for the token.
-pub const DUPLICATE_PRIVILEGES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(311); // ERROR_DUPLICATE_PRIVILEGES
+pub const DUPLICATE_PRIVILEGES : ErrorCode = ErrorCode::from_constant(311); // ERROR_DUPLICATE_PRIVILEGES
 
 /// No ranges for the specified operation were able to be processed.
-pub const NO_RANGES_PROCESSED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(312); // ERROR_NO_RANGES_PROCESSED
+pub const NO_RANGES_PROCESSED : ErrorCode = ErrorCode::from_constant(312); // ERROR_NO_RANGES_PROCESSED
 
 /// Operation is not allowed on a file system internal file.
-pub const NOT_ALLOWED_ON_SYSTEM_FILE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(313); // ERROR_NOT_ALLOWED_ON_SYSTEM_FILE
+pub const NOT_ALLOWED_ON_SYSTEM_FILE : ErrorCode = ErrorCode::from_constant(313); // ERROR_NOT_ALLOWED_ON_SYSTEM_FILE
 
 /// The physical resources of this disk have been exhausted.
-pub const DISK_RESOURCES_EXHAUSTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(314); // ERROR_DISK_RESOURCES_EXHAUSTED
+pub const DISK_RESOURCES_EXHAUSTED : ErrorCode = ErrorCode::from_constant(314); // ERROR_DISK_RESOURCES_EXHAUSTED
 
 /// The token representing the data is invalid.
-pub const INVALID_TOKEN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(315); // ERROR_INVALID_TOKEN
+pub const INVALID_TOKEN : ErrorCode = ErrorCode::from_constant(315); // ERROR_INVALID_TOKEN
 
 /// The device does not support the command feature.
-pub const DEVICE_FEATURE_NOT_SUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(316); // ERROR_DEVICE_FEATURE_NOT_SUPPORTED
+pub const DEVICE_FEATURE_NOT_SUPPORTED : ErrorCode = ErrorCode::from_constant(316); // ERROR_DEVICE_FEATURE_NOT_SUPPORTED
 
 /// The system cannot find message text for message number `0x%1` in the message file for `%2`.
-pub const MR_MID_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(317); // ERROR_MR_MID_NOT_FOUND
+pub const MR_MID_NOT_FOUND : ErrorCode = ErrorCode::from_constant(317); // ERROR_MR_MID_NOT_FOUND
 
 /// The scope specified was not found.
-pub const SCOPE_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(318); // ERROR_SCOPE_NOT_FOUND
+pub const SCOPE_NOT_FOUND : ErrorCode = ErrorCode::from_constant(318); // ERROR_SCOPE_NOT_FOUND
 
 /// The Central Access Policy specified is not defined on the target machine.
-pub const UNDEFINED_SCOPE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(319); // ERROR_UNDEFINED_SCOPE
+pub const UNDEFINED_SCOPE : ErrorCode = ErrorCode::from_constant(319); // ERROR_UNDEFINED_SCOPE
 
 /// The Central Access Policy obtained from Active Directory is invalid.
-pub const INVALID_CAP : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(320); // ERROR_INVALID_CAP
+pub const INVALID_CAP : ErrorCode = ErrorCode::from_constant(320); // ERROR_INVALID_CAP
 
 /// The device is unreachable.
-pub const DEVICE_UNREACHABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(321); // ERROR_DEVICE_UNREACHABLE
+pub const DEVICE_UNREACHABLE : ErrorCode = ErrorCode::from_constant(321); // ERROR_DEVICE_UNREACHABLE
 
 /// The target device has insufficient resources to complete the operation.
-pub const DEVICE_NO_RESOURCES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(322); // ERROR_DEVICE_NO_RESOURCES
+pub const DEVICE_NO_RESOURCES : ErrorCode = ErrorCode::from_constant(322); // ERROR_DEVICE_NO_RESOURCES
 
 /// A data integrity checksum error occurred. Data in the file stream is corrupt.
-pub const DATA_CHECKSUM_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(323); // ERROR_DATA_CHECKSUM_ERROR
+pub const DATA_CHECKSUM_ERROR : ErrorCode = ErrorCode::from_constant(323); // ERROR_DATA_CHECKSUM_ERROR
 
 /// An attempt was made to modify both a KERNEL and normal Extended Attribute (EA) in the same operation.
-pub const INTERMIXED_KERNEL_EA_OPERATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(324); // ERROR_INTERMIXED_KERNEL_EA_OPERATION
+pub const INTERMIXED_KERNEL_EA_OPERATION : ErrorCode = ErrorCode::from_constant(324); // ERROR_INTERMIXED_KERNEL_EA_OPERATION
 
 /// Device does not support file-level TRIM.
-pub const FILE_LEVEL_TRIM_NOT_SUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(326); // ERROR_FILE_LEVEL_TRIM_NOT_SUPPORTED
+pub const FILE_LEVEL_TRIM_NOT_SUPPORTED : ErrorCode = ErrorCode::from_constant(326); // ERROR_FILE_LEVEL_TRIM_NOT_SUPPORTED
 
 /// The command specified a data offset that does not align to the device's granularity/alignment.
-pub const OFFSET_ALIGNMENT_VIOLATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(327); // ERROR_OFFSET_ALIGNMENT_VIOLATION
+pub const OFFSET_ALIGNMENT_VIOLATION : ErrorCode = ErrorCode::from_constant(327); // ERROR_OFFSET_ALIGNMENT_VIOLATION
 
 /// The command specified an invalid field in its parameter list.
-pub const INVALID_FIELD_IN_PARAMETER_LIST : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(328); // ERROR_INVALID_FIELD_IN_PARAMETER_LIST
+pub const INVALID_FIELD_IN_PARAMETER_LIST : ErrorCode = ErrorCode::from_constant(328); // ERROR_INVALID_FIELD_IN_PARAMETER_LIST
 
 /// An operation is currently in progress with the device.
-pub const OPERATION_IN_PROGRESS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(329); // ERROR_OPERATION_IN_PROGRESS
+pub const OPERATION_IN_PROGRESS : ErrorCode = ErrorCode::from_constant(329); // ERROR_OPERATION_IN_PROGRESS
 
 /// An attempt was made to send down the command via an invalid path to the target device.
-pub const BAD_DEVICE_PATH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(330); // ERROR_BAD_DEVICE_PATH
+pub const BAD_DEVICE_PATH : ErrorCode = ErrorCode::from_constant(330); // ERROR_BAD_DEVICE_PATH
 
 /// The command specified a number of descriptors that exceeded the maximum supported by the device.
-pub const TOO_MANY_DESCRIPTORS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(331); // ERROR_TOO_MANY_DESCRIPTORS
+pub const TOO_MANY_DESCRIPTORS : ErrorCode = ErrorCode::from_constant(331); // ERROR_TOO_MANY_DESCRIPTORS
 
 /// Scrub is disabled on the specified file.
-pub const SCRUB_DATA_DISABLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(332); // ERROR_SCRUB_DATA_DISABLED
+pub const SCRUB_DATA_DISABLED : ErrorCode = ErrorCode::from_constant(332); // ERROR_SCRUB_DATA_DISABLED
 
 /// The storage device does not provide redundancy.
-pub const NOT_REDUNDANT_STORAGE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(333); // ERROR_NOT_REDUNDANT_STORAGE
+pub const NOT_REDUNDANT_STORAGE : ErrorCode = ErrorCode::from_constant(333); // ERROR_NOT_REDUNDANT_STORAGE
 
 /// An operation is not supported on a resident file.
-pub const RESIDENT_FILE_NOT_SUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(334); // ERROR_RESIDENT_FILE_NOT_SUPPORTED
+pub const RESIDENT_FILE_NOT_SUPPORTED : ErrorCode = ErrorCode::from_constant(334); // ERROR_RESIDENT_FILE_NOT_SUPPORTED
 
 /// An operation is not supported on a compressed file.
-pub const COMPRESSED_FILE_NOT_SUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(335); // ERROR_COMPRESSED_FILE_NOT_SUPPORTED
+pub const COMPRESSED_FILE_NOT_SUPPORTED : ErrorCode = ErrorCode::from_constant(335); // ERROR_COMPRESSED_FILE_NOT_SUPPORTED
 
 /// An operation is not supported on a directory.
-pub const DIRECTORY_NOT_SUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(336); // ERROR_DIRECTORY_NOT_SUPPORTED
+pub const DIRECTORY_NOT_SUPPORTED : ErrorCode = ErrorCode::from_constant(336); // ERROR_DIRECTORY_NOT_SUPPORTED
 
 /// The specified copy of the requested data could not be read.
-pub const NOT_READ_FROM_COPY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(337); // ERROR_NOT_READ_FROM_COPY
+pub const NOT_READ_FROM_COPY : ErrorCode = ErrorCode::from_constant(337); // ERROR_NOT_READ_FROM_COPY
 
 /// The specified data could not be written to any of the copies.
-pub const FT_WRITE_FAILURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(338); // ERROR_FT_WRITE_FAILURE
+pub const FT_WRITE_FAILURE : ErrorCode = ErrorCode::from_constant(338); // ERROR_FT_WRITE_FAILURE
 
 /// One or more copies of data on this device may be out of sync. No writes may be performed until a data integrity scan is completed.
-pub const FT_DI_SCAN_REQUIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(339); // ERROR_FT_DI_SCAN_REQUIRED
+pub const FT_DI_SCAN_REQUIRED : ErrorCode = ErrorCode::from_constant(339); // ERROR_FT_DI_SCAN_REQUIRED
 
 /// The supplied kernel information version is invalid.
-pub const INVALID_KERNEL_INFO_VERSION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(340); // ERROR_INVALID_KERNEL_INFO_VERSION
+pub const INVALID_KERNEL_INFO_VERSION : ErrorCode = ErrorCode::from_constant(340); // ERROR_INVALID_KERNEL_INFO_VERSION
 
 /// The supplied PEP information version is invalid.
-pub const INVALID_PEP_INFO_VERSION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(341); // ERROR_INVALID_PEP_INFO_VERSION
+pub const INVALID_PEP_INFO_VERSION : ErrorCode = ErrorCode::from_constant(341); // ERROR_INVALID_PEP_INFO_VERSION
 
 /// This object is not externally backed by any provider.
-pub const OBJECT_NOT_EXTERNALLY_BACKED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(342); // ERROR_OBJECT_NOT_EXTERNALLY_BACKED
+pub const OBJECT_NOT_EXTERNALLY_BACKED : ErrorCode = ErrorCode::from_constant(342); // ERROR_OBJECT_NOT_EXTERNALLY_BACKED
 
 /// The external backing provider is not recognized.
-pub const EXTERNAL_BACKING_PROVIDER_UNKNOWN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(343); // ERROR_EXTERNAL_BACKING_PROVIDER_UNKNOWN
+pub const EXTERNAL_BACKING_PROVIDER_UNKNOWN : ErrorCode = ErrorCode::from_constant(343); // ERROR_EXTERNAL_BACKING_PROVIDER_UNKNOWN
 
 /// Compressing this object would not save space.
-pub const COMPRESSION_NOT_BENEFICIAL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(344); // ERROR_COMPRESSION_NOT_BENEFICIAL
+pub const COMPRESSION_NOT_BENEFICIAL : ErrorCode = ErrorCode::from_constant(344); // ERROR_COMPRESSION_NOT_BENEFICIAL
 
 /// The request failed due to a storage topology ID mismatch.
-pub const STORAGE_TOPOLOGY_ID_MISMATCH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(345); // ERROR_STORAGE_TOPOLOGY_ID_MISMATCH
+pub const STORAGE_TOPOLOGY_ID_MISMATCH : ErrorCode = ErrorCode::from_constant(345); // ERROR_STORAGE_TOPOLOGY_ID_MISMATCH
 
 /// The operation was blocked by parental controls.
-pub const BLOCKED_BY_PARENTAL_CONTROLS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(346); // ERROR_BLOCKED_BY_PARENTAL_CONTROLS
+pub const BLOCKED_BY_PARENTAL_CONTROLS : ErrorCode = ErrorCode::from_constant(346); // ERROR_BLOCKED_BY_PARENTAL_CONTROLS
 
 /// A file system block being referenced has already reached the maximum reference count and can't be referenced any further.
-pub const BLOCK_TOO_MANY_REFERENCES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(347); // ERROR_BLOCK_TOO_MANY_REFERENCES
+pub const BLOCK_TOO_MANY_REFERENCES : ErrorCode = ErrorCode::from_constant(347); // ERROR_BLOCK_TOO_MANY_REFERENCES
 
 /// The requested operation failed because the file stream is marked to disallow writes.
-pub const MARKED_TO_DISALLOW_WRITES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(348); // ERROR_MARKED_TO_DISALLOW_WRITES
+pub const MARKED_TO_DISALLOW_WRITES : ErrorCode = ErrorCode::from_constant(348); // ERROR_MARKED_TO_DISALLOW_WRITES
 
 /// The requested operation failed with an architecture-specific failure code.
-pub const ENCLAVE_FAILURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(349); // ERROR_ENCLAVE_FAILURE
+pub const ENCLAVE_FAILURE : ErrorCode = ErrorCode::from_constant(349); // ERROR_ENCLAVE_FAILURE
 
 /// No action was taken as a system reboot is required.
-pub const FAIL_NOACTION_REBOOT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(350); // ERROR_FAIL_NOACTION_REBOOT
+pub const FAIL_NOACTION_REBOOT : ErrorCode = ErrorCode::from_constant(350); // ERROR_FAIL_NOACTION_REBOOT
 
 /// The shutdown operation failed.
-pub const FAIL_SHUTDOWN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(351); // ERROR_FAIL_SHUTDOWN
+pub const FAIL_SHUTDOWN : ErrorCode = ErrorCode::from_constant(351); // ERROR_FAIL_SHUTDOWN
 
 /// The restart operation failed.
-pub const FAIL_RESTART : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(352); // ERROR_FAIL_RESTART
+pub const FAIL_RESTART : ErrorCode = ErrorCode::from_constant(352); // ERROR_FAIL_RESTART
 
 /// The maximum number of sessions has been reached.
-pub const MAX_SESSIONS_REACHED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(353); // ERROR_MAX_SESSIONS_REACHED
+pub const MAX_SESSIONS_REACHED : ErrorCode = ErrorCode::from_constant(353); // ERROR_MAX_SESSIONS_REACHED
 
 /// Windows Information Protection policy does not allow access to this network resource.
-pub const NETWORK_ACCESS_DENIED_EDP : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(354); // ERROR_NETWORK_ACCESS_DENIED_EDP
+pub const NETWORK_ACCESS_DENIED_EDP : ErrorCode = ErrorCode::from_constant(354); // ERROR_NETWORK_ACCESS_DENIED_EDP
 
 /// The device hint name buffer is too small to receive the remaining name.
-pub const DEVICE_HINT_NAME_BUFFER_TOO_SMALL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(355); // ERROR_DEVICE_HINT_NAME_BUFFER_TOO_SMALL
+pub const DEVICE_HINT_NAME_BUFFER_TOO_SMALL : ErrorCode = ErrorCode::from_constant(355); // ERROR_DEVICE_HINT_NAME_BUFFER_TOO_SMALL
 
 /// The requested operation was blocked by Windows Information Protection policy. For more information, contact your system administrator.
-pub const EDP_POLICY_DENIES_OPERATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(356); // ERROR_EDP_POLICY_DENIES_OPERATION
+pub const EDP_POLICY_DENIES_OPERATION : ErrorCode = ErrorCode::from_constant(356); // ERROR_EDP_POLICY_DENIES_OPERATION
 
 /// The requested operation cannot be performed because hardware or software configuration of the device does not comply with Windows Information Protection under Lock policy. Please, verify that user PIN has been created. For more information, contact your system administrator.
-pub const EDP_DPL_POLICY_CANT_BE_SATISFIED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(357); // ERROR_EDP_DPL_POLICY_CANT_BE_SATISFIED
+pub const EDP_DPL_POLICY_CANT_BE_SATISFIED : ErrorCode = ErrorCode::from_constant(357); // ERROR_EDP_DPL_POLICY_CANT_BE_SATISFIED
 
-#[doc(hidden)] pub const CLOUD_FILE_SYNC_ROOT_METADATA_CORRUPT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(358); // ERROR_CLOUD_FILE_SYNC_ROOT_METADATA_CORRUPT
+#[doc(hidden)] pub const CLOUD_FILE_SYNC_ROOT_METADATA_CORRUPT : ErrorCode = ErrorCode::from_constant(358); // ERROR_CLOUD_FILE_SYNC_ROOT_METADATA_CORRUPT
 
 /// The device is in maintenance mode.
-pub const DEVICE_IN_MAINTENANCE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(359); // ERROR_DEVICE_IN_MAINTENANCE
+pub const DEVICE_IN_MAINTENANCE : ErrorCode = ErrorCode::from_constant(359); // ERROR_DEVICE_IN_MAINTENANCE
 
 /// This operation is not supported on a DAX volume.
-pub const NOT_SUPPORTED_ON_DAX : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(360); // ERROR_NOT_SUPPORTED_ON_DAX
+pub const NOT_SUPPORTED_ON_DAX : ErrorCode = ErrorCode::from_constant(360); // ERROR_NOT_SUPPORTED_ON_DAX
 
 /// The volume has active DAX mappings.
-pub const DAX_MAPPING_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(361); // ERROR_DAX_MAPPING_EXISTS
+pub const DAX_MAPPING_EXISTS : ErrorCode = ErrorCode::from_constant(361); // ERROR_DAX_MAPPING_EXISTS
 
-#[doc(hidden)] pub const CLOUD_FILE_PROVIDER_NOT_RUNNING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(362); // ERROR_CLOUD_FILE_PROVIDER_NOT_RUNNING
-#[doc(hidden)] pub const CLOUD_FILE_METADATA_CORRUPT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(363); // ERROR_CLOUD_FILE_METADATA_CORRUPT
-#[doc(hidden)] pub const CLOUD_FILE_METADATA_TOO_LARGE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(364); // ERROR_CLOUD_FILE_METADATA_TOO_LARGE
-#[doc(hidden)] pub const CLOUD_FILE_PROPERTY_BLOB_TOO_LARGE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(365); // ERROR_CLOUD_FILE_PROPERTY_BLOB_TOO_LARGE
-#[doc(hidden)] pub const CLOUD_FILE_PROPERTY_BLOB_CHECKSUM_MISMATCH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(366); // ERROR_CLOUD_FILE_PROPERTY_BLOB_CHECKSUM_MISMATCH
+#[doc(hidden)] pub const CLOUD_FILE_PROVIDER_NOT_RUNNING : ErrorCode = ErrorCode::from_constant(362); // ERROR_CLOUD_FILE_PROVIDER_NOT_RUNNING
+#[doc(hidden)] pub const CLOUD_FILE_METADATA_CORRUPT : ErrorCode = ErrorCode::from_constant(363); // ERROR_CLOUD_FILE_METADATA_CORRUPT
+#[doc(hidden)] pub const CLOUD_FILE_METADATA_TOO_LARGE : ErrorCode = ErrorCode::from_constant(364); // ERROR_CLOUD_FILE_METADATA_TOO_LARGE
+#[doc(hidden)] pub const CLOUD_FILE_PROPERTY_BLOB_TOO_LARGE : ErrorCode = ErrorCode::from_constant(365); // ERROR_CLOUD_FILE_PROPERTY_BLOB_TOO_LARGE
+#[doc(hidden)] pub const CLOUD_FILE_PROPERTY_BLOB_CHECKSUM_MISMATCH : ErrorCode = ErrorCode::from_constant(366); // ERROR_CLOUD_FILE_PROPERTY_BLOB_CHECKSUM_MISMATCH
 
 /// The process creation has been blocked.
-pub const CHILD_PROCESS_BLOCKED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(367); // ERROR_CHILD_PROCESS_BLOCKED
+pub const CHILD_PROCESS_BLOCKED : ErrorCode = ErrorCode::from_constant(367); // ERROR_CHILD_PROCESS_BLOCKED
 
 /// The storage device has lost data or persistence.
-pub const STORAGE_LOST_DATA_PERSISTENCE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(368); // ERROR_STORAGE_LOST_DATA_PERSISTENCE
+pub const STORAGE_LOST_DATA_PERSISTENCE : ErrorCode = ErrorCode::from_constant(368); // ERROR_STORAGE_LOST_DATA_PERSISTENCE
 
 /// The provider that supports file system virtualization is temporarily unavailable.
-pub const FILE_SYSTEM_VIRTUALIZATION_UNAVAILABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(369); // ERROR_FILE_SYSTEM_VIRTUALIZATION_UNAVAILABLE
+pub const FILE_SYSTEM_VIRTUALIZATION_UNAVAILABLE : ErrorCode = ErrorCode::from_constant(369); // ERROR_FILE_SYSTEM_VIRTUALIZATION_UNAVAILABLE
 
 /// The metadata for file system virtualization is corrupt and unreadable.
-pub const FILE_SYSTEM_VIRTUALIZATION_METADATA_CORRUPT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(370); // ERROR_FILE_SYSTEM_VIRTUALIZATION_METADATA_CORRUPT
+pub const FILE_SYSTEM_VIRTUALIZATION_METADATA_CORRUPT : ErrorCode = ErrorCode::from_constant(370); // ERROR_FILE_SYSTEM_VIRTUALIZATION_METADATA_CORRUPT
 
 /// The provider that supports file system virtualization is too busy to complete this operation.
-pub const FILE_SYSTEM_VIRTUALIZATION_BUSY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(371); // ERROR_FILE_SYSTEM_VIRTUALIZATION_BUSY
+pub const FILE_SYSTEM_VIRTUALIZATION_BUSY : ErrorCode = ErrorCode::from_constant(371); // ERROR_FILE_SYSTEM_VIRTUALIZATION_BUSY
 
 /// The provider that supports file system virtualization is unknown.
-pub const FILE_SYSTEM_VIRTUALIZATION_PROVIDER_UNKNOWN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(372); // ERROR_FILE_SYSTEM_VIRTUALIZATION_PROVIDER_UNKNOWN
+pub const FILE_SYSTEM_VIRTUALIZATION_PROVIDER_UNKNOWN : ErrorCode = ErrorCode::from_constant(372); // ERROR_FILE_SYSTEM_VIRTUALIZATION_PROVIDER_UNKNOWN
 
 /// GDI handles were potentially leaked by the application.
-pub const GDI_HANDLE_LEAK : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(373); // ERROR_GDI_HANDLE_LEAK
+pub const GDI_HANDLE_LEAK : ErrorCode = ErrorCode::from_constant(373); // ERROR_GDI_HANDLE_LEAK
 
-#[doc(hidden)] pub const CLOUD_FILE_TOO_MANY_PROPERTY_BLOBS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(374); // ERROR_CLOUD_FILE_TOO_MANY_PROPERTY_BLOBS
-#[doc(hidden)] pub const CLOUD_FILE_PROPERTY_VERSION_NOT_SUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(375); // ERROR_CLOUD_FILE_PROPERTY_VERSION_NOT_SUPPORTED
+#[doc(hidden)] pub const CLOUD_FILE_TOO_MANY_PROPERTY_BLOBS : ErrorCode = ErrorCode::from_constant(374); // ERROR_CLOUD_FILE_TOO_MANY_PROPERTY_BLOBS
+#[doc(hidden)] pub const CLOUD_FILE_PROPERTY_VERSION_NOT_SUPPORTED : ErrorCode = ErrorCode::from_constant(375); // ERROR_CLOUD_FILE_PROPERTY_VERSION_NOT_SUPPORTED
 
 /// The file is not a cloud file.
-pub const NOT_A_CLOUD_FILE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(376); // ERROR_NOT_A_CLOUD_FILE
+pub const NOT_A_CLOUD_FILE : ErrorCode = ErrorCode::from_constant(376); // ERROR_NOT_A_CLOUD_FILE
 
-#[doc(hidden)] pub const CLOUD_FILE_NOT_IN_SYNC : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(377); // ERROR_CLOUD_FILE_NOT_IN_SYNC
-#[doc(hidden)] pub const CLOUD_FILE_ALREADY_CONNECTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(378); // ERROR_CLOUD_FILE_ALREADY_CONNECTED
-#[doc(hidden)] pub const CLOUD_FILE_NOT_SUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(379); // ERROR_CLOUD_FILE_NOT_SUPPORTED
-#[doc(hidden)] pub const CLOUD_FILE_INVALID_REQUEST : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(380); // ERROR_CLOUD_FILE_INVALID_REQUEST
-#[doc(hidden)] pub const CLOUD_FILE_READ_ONLY_VOLUME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(381); // ERROR_CLOUD_FILE_READ_ONLY_VOLUME
-#[doc(hidden)] pub const CLOUD_FILE_CONNECTED_PROVIDER_ONLY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(382); // ERROR_CLOUD_FILE_CONNECTED_PROVIDER_ONLY
-#[doc(hidden)] pub const CLOUD_FILE_VALIDATION_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(383); // ERROR_CLOUD_FILE_VALIDATION_FAILED
+#[doc(hidden)] pub const CLOUD_FILE_NOT_IN_SYNC : ErrorCode = ErrorCode::from_constant(377); // ERROR_CLOUD_FILE_NOT_IN_SYNC
+#[doc(hidden)] pub const CLOUD_FILE_ALREADY_CONNECTED : ErrorCode = ErrorCode::from_constant(378); // ERROR_CLOUD_FILE_ALREADY_CONNECTED
+#[doc(hidden)] pub const CLOUD_FILE_NOT_SUPPORTED : ErrorCode = ErrorCode::from_constant(379); // ERROR_CLOUD_FILE_NOT_SUPPORTED
+#[doc(hidden)] pub const CLOUD_FILE_INVALID_REQUEST : ErrorCode = ErrorCode::from_constant(380); // ERROR_CLOUD_FILE_INVALID_REQUEST
+#[doc(hidden)] pub const CLOUD_FILE_READ_ONLY_VOLUME : ErrorCode = ErrorCode::from_constant(381); // ERROR_CLOUD_FILE_READ_ONLY_VOLUME
+#[doc(hidden)] pub const CLOUD_FILE_CONNECTED_PROVIDER_ONLY : ErrorCode = ErrorCode::from_constant(382); // ERROR_CLOUD_FILE_CONNECTED_PROVIDER_ONLY
+#[doc(hidden)] pub const CLOUD_FILE_VALIDATION_FAILED : ErrorCode = ErrorCode::from_constant(383); // ERROR_CLOUD_FILE_VALIDATION_FAILED
 
 /// You can't connect to the file share because it's not secure. This share requires the obsolete SMB1 protocol, which is unsafe and could expose your system to attack.
 /// Your system requires SMB2 or higher. For more info on resolving this issue, see: <https://go.microsoft.com/fwlink/?linkid=852747>
-pub const SMB1_NOT_AVAILABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(384); // ERROR_SMB1_NOT_AVAILABLE
+pub const SMB1_NOT_AVAILABLE : ErrorCode = ErrorCode::from_constant(384); // ERROR_SMB1_NOT_AVAILABLE
 
 /// The virtualization operation is not allowed on the file in its current state.
-pub const FILE_SYSTEM_VIRTUALIZATION_INVALID_OPERATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(385); // ERROR_FILE_SYSTEM_VIRTUALIZATION_INVALID_OPERATION
+pub const FILE_SYSTEM_VIRTUALIZATION_INVALID_OPERATION : ErrorCode = ErrorCode::from_constant(385); // ERROR_FILE_SYSTEM_VIRTUALIZATION_INVALID_OPERATION
 
-#[doc(hidden)] pub const CLOUD_FILE_AUTHENTICATION_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(386); // ERROR_CLOUD_FILE_AUTHENTICATION_FAILED
-#[doc(hidden)] pub const CLOUD_FILE_INSUFFICIENT_RESOURCES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(387); // ERROR_CLOUD_FILE_INSUFFICIENT_RESOURCES
-#[doc(hidden)] pub const CLOUD_FILE_NETWORK_UNAVAILABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(388); // ERROR_CLOUD_FILE_NETWORK_UNAVAILABLE
-#[doc(hidden)] pub const CLOUD_FILE_UNSUCCESSFUL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(389); // ERROR_CLOUD_FILE_UNSUCCESSFUL
-#[doc(hidden)] pub const CLOUD_FILE_NOT_UNDER_SYNC_ROOT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(390); // ERROR_CLOUD_FILE_NOT_UNDER_SYNC_ROOT
-#[doc(hidden)] pub const CLOUD_FILE_IN_USE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(391); // ERROR_CLOUD_FILE_IN_USE
-#[doc(hidden)] pub const CLOUD_FILE_PINNED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(392); // ERROR_CLOUD_FILE_PINNED
-#[doc(hidden)] pub const CLOUD_FILE_REQUEST_ABORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(393); // ERROR_CLOUD_FILE_REQUEST_ABORTED
-#[doc(hidden)] pub const CLOUD_FILE_PROPERTY_CORRUPT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(394); // ERROR_CLOUD_FILE_PROPERTY_CORRUPT
-#[doc(hidden)] pub const CLOUD_FILE_ACCESS_DENIED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(395); // ERROR_CLOUD_FILE_ACCESS_DENIED
-#[doc(hidden)] pub const CLOUD_FILE_INCOMPATIBLE_HARDLINKS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(396); // ERROR_CLOUD_FILE_INCOMPATIBLE_HARDLINKS
-#[doc(hidden)] pub const CLOUD_FILE_PROPERTY_LOCK_CONFLICT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(397); // ERROR_CLOUD_FILE_PROPERTY_LOCK_CONFLICT
-#[doc(hidden)] pub const CLOUD_FILE_REQUEST_CANCELED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(398); // ERROR_CLOUD_FILE_REQUEST_CANCELED
+#[doc(hidden)] pub const CLOUD_FILE_AUTHENTICATION_FAILED : ErrorCode = ErrorCode::from_constant(386); // ERROR_CLOUD_FILE_AUTHENTICATION_FAILED
+#[doc(hidden)] pub const CLOUD_FILE_INSUFFICIENT_RESOURCES : ErrorCode = ErrorCode::from_constant(387); // ERROR_CLOUD_FILE_INSUFFICIENT_RESOURCES
+#[doc(hidden)] pub const CLOUD_FILE_NETWORK_UNAVAILABLE : ErrorCode = ErrorCode::from_constant(388); // ERROR_CLOUD_FILE_NETWORK_UNAVAILABLE
+#[doc(hidden)] pub const CLOUD_FILE_UNSUCCESSFUL : ErrorCode = ErrorCode::from_constant(389); // ERROR_CLOUD_FILE_UNSUCCESSFUL
+#[doc(hidden)] pub const CLOUD_FILE_NOT_UNDER_SYNC_ROOT : ErrorCode = ErrorCode::from_constant(390); // ERROR_CLOUD_FILE_NOT_UNDER_SYNC_ROOT
+#[doc(hidden)] pub const CLOUD_FILE_IN_USE : ErrorCode = ErrorCode::from_constant(391); // ERROR_CLOUD_FILE_IN_USE
+#[doc(hidden)] pub const CLOUD_FILE_PINNED : ErrorCode = ErrorCode::from_constant(392); // ERROR_CLOUD_FILE_PINNED
+#[doc(hidden)] pub const CLOUD_FILE_REQUEST_ABORTED : ErrorCode = ErrorCode::from_constant(393); // ERROR_CLOUD_FILE_REQUEST_ABORTED
+#[doc(hidden)] pub const CLOUD_FILE_PROPERTY_CORRUPT : ErrorCode = ErrorCode::from_constant(394); // ERROR_CLOUD_FILE_PROPERTY_CORRUPT
+#[doc(hidden)] pub const CLOUD_FILE_ACCESS_DENIED : ErrorCode = ErrorCode::from_constant(395); // ERROR_CLOUD_FILE_ACCESS_DENIED
+#[doc(hidden)] pub const CLOUD_FILE_INCOMPATIBLE_HARDLINKS : ErrorCode = ErrorCode::from_constant(396); // ERROR_CLOUD_FILE_INCOMPATIBLE_HARDLINKS
+#[doc(hidden)] pub const CLOUD_FILE_PROPERTY_LOCK_CONFLICT : ErrorCode = ErrorCode::from_constant(397); // ERROR_CLOUD_FILE_PROPERTY_LOCK_CONFLICT
+#[doc(hidden)] pub const CLOUD_FILE_REQUEST_CANCELED : ErrorCode = ErrorCode::from_constant(398); // ERROR_CLOUD_FILE_REQUEST_CANCELED
 
 /// An externally encrypted syskey has been configured, but the system no longer supports this feature.  Please see <https://go.microsoft.com/fwlink/?linkid=851152> for more information.
-pub const EXTERNAL_SYSKEY_NOT_SUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(399); // ERROR_EXTERNAL_SYSKEY_NOT_SUPPORTED
+pub const EXTERNAL_SYSKEY_NOT_SUPPORTED : ErrorCode = ErrorCode::from_constant(399); // ERROR_EXTERNAL_SYSKEY_NOT_SUPPORTED
 
 /// The thread is already in background processing mode.
-pub const THREAD_MODE_ALREADY_BACKGROUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(400); // ERROR_THREAD_MODE_ALREADY_BACKGROUND
+pub const THREAD_MODE_ALREADY_BACKGROUND : ErrorCode = ErrorCode::from_constant(400); // ERROR_THREAD_MODE_ALREADY_BACKGROUND
 
 /// The thread is not in background processing mode.
-pub const THREAD_MODE_NOT_BACKGROUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(401); // ERROR_THREAD_MODE_NOT_BACKGROUND
+pub const THREAD_MODE_NOT_BACKGROUND : ErrorCode = ErrorCode::from_constant(401); // ERROR_THREAD_MODE_NOT_BACKGROUND
 
 /// The process is already in background processing mode.
-pub const PROCESS_MODE_ALREADY_BACKGROUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(402); // ERROR_PROCESS_MODE_ALREADY_BACKGROUND
+pub const PROCESS_MODE_ALREADY_BACKGROUND : ErrorCode = ErrorCode::from_constant(402); // ERROR_PROCESS_MODE_ALREADY_BACKGROUND
 
 /// The process is not in background processing mode.
-pub const PROCESS_MODE_NOT_BACKGROUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(403); // ERROR_PROCESS_MODE_NOT_BACKGROUND
+pub const PROCESS_MODE_NOT_BACKGROUND : ErrorCode = ErrorCode::from_constant(403); // ERROR_PROCESS_MODE_NOT_BACKGROUND
 
-#[doc(hidden)] pub const CLOUD_FILE_PROVIDER_TERMINATED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(404); // ERROR_CLOUD_FILE_PROVIDER_TERMINATED
+#[doc(hidden)] pub const CLOUD_FILE_PROVIDER_TERMINATED : ErrorCode = ErrorCode::from_constant(404); // ERROR_CLOUD_FILE_PROVIDER_TERMINATED
 
 /// The file is not a cloud sync root.
-pub const NOT_A_CLOUD_SYNC_ROOT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(405); // ERROR_NOT_A_CLOUD_SYNC_ROOT
+pub const NOT_A_CLOUD_SYNC_ROOT : ErrorCode = ErrorCode::from_constant(405); // ERROR_NOT_A_CLOUD_SYNC_ROOT
 
 /// The read or write operation to an encrypted file could not be completed because the file can only be accessed when the device is unlocked.
-pub const FILE_PROTECTED_UNDER_DPL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(406); // ERROR_FILE_PROTECTED_UNDER_DPL
+pub const FILE_PROTECTED_UNDER_DPL : ErrorCode = ErrorCode::from_constant(406); // ERROR_FILE_PROTECTED_UNDER_DPL
 
 /// The volume is not cluster aligned on the disk.
-pub const VOLUME_NOT_CLUSTER_ALIGNED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(407); // ERROR_VOLUME_NOT_CLUSTER_ALIGNED
+pub const VOLUME_NOT_CLUSTER_ALIGNED : ErrorCode = ErrorCode::from_constant(407); // ERROR_VOLUME_NOT_CLUSTER_ALIGNED
 
 /// No physically aligned free space was found on the volume.
-pub const NO_PHYSICALLY_ALIGNED_FREE_SPACE_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(408); // ERROR_NO_PHYSICALLY_ALIGNED_FREE_SPACE_FOUND
+pub const NO_PHYSICALLY_ALIGNED_FREE_SPACE_FOUND : ErrorCode = ErrorCode::from_constant(408); // ERROR_NO_PHYSICALLY_ALIGNED_FREE_SPACE_FOUND
 
 /// The APPX file can not be accessed because it is not encrypted as expected.
-pub const APPX_FILE_NOT_ENCRYPTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(409); // ERROR_APPX_FILE_NOT_ENCRYPTED
+pub const APPX_FILE_NOT_ENCRYPTED : ErrorCode = ErrorCode::from_constant(409); // ERROR_APPX_FILE_NOT_ENCRYPTED
 
 /// A read or write of raw encrypted data cannot be performed because the file is not encrypted.
-pub const RWRAW_ENCRYPTED_FILE_NOT_ENCRYPTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(410); // ERROR_RWRAW_ENCRYPTED_FILE_NOT_ENCRYPTED
+pub const RWRAW_ENCRYPTED_FILE_NOT_ENCRYPTED : ErrorCode = ErrorCode::from_constant(410); // ERROR_RWRAW_ENCRYPTED_FILE_NOT_ENCRYPTED
 
 /// An invalid file offset in the encrypted data info block was passed for read or write operation of file's raw encrypted data.
-pub const RWRAW_ENCRYPTED_INVALID_EDATAINFO_FILEOFFSET : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(411); // ERROR_RWRAW_ENCRYPTED_INVALID_EDATAINFO_FILEOFFSET
+pub const RWRAW_ENCRYPTED_INVALID_EDATAINFO_FILEOFFSET : ErrorCode = ErrorCode::from_constant(411); // ERROR_RWRAW_ENCRYPTED_INVALID_EDATAINFO_FILEOFFSET
 
 /// An invalid offset and length combination in the encrypted data info block was passed for read or write operation of file's raw encrypted data.
-pub const RWRAW_ENCRYPTED_INVALID_EDATAINFO_FILERANGE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(412); // ERROR_RWRAW_ENCRYPTED_INVALID_EDATAINFO_FILERANGE
+pub const RWRAW_ENCRYPTED_INVALID_EDATAINFO_FILERANGE : ErrorCode = ErrorCode::from_constant(412); // ERROR_RWRAW_ENCRYPTED_INVALID_EDATAINFO_FILERANGE
 
 /// An invalid parameter in the encrypted data info block was passed for read or write operation of file's raw encrypted data.
-pub const RWRAW_ENCRYPTED_INVALID_EDATAINFO_PARAMETER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(413); // ERROR_RWRAW_ENCRYPTED_INVALID_EDATAINFO_PARAMETER
+pub const RWRAW_ENCRYPTED_INVALID_EDATAINFO_PARAMETER : ErrorCode = ErrorCode::from_constant(413); // ERROR_RWRAW_ENCRYPTED_INVALID_EDATAINFO_PARAMETER
 
 /// The Windows Subsystem for Linux has not been enabled.
-pub const LINUX_SUBSYSTEM_NOT_PRESENT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(414); // ERROR_LINUX_SUBSYSTEM_NOT_PRESENT
+pub const LINUX_SUBSYSTEM_NOT_PRESENT : ErrorCode = ErrorCode::from_constant(414); // ERROR_LINUX_SUBSYSTEM_NOT_PRESENT
 
 /// The specified data could not be read from any of the copies.
-pub const FT_READ_FAILURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(415); // ERROR_FT_READ_FAILURE
+pub const FT_READ_FAILURE : ErrorCode = ErrorCode::from_constant(415); // ERROR_FT_READ_FAILURE
 
 /// The specified storage reserve ID is invalid.
-pub const STORAGE_RESERVE_ID_INVALID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(416); // ERROR_STORAGE_RESERVE_ID_INVALID
+pub const STORAGE_RESERVE_ID_INVALID : ErrorCode = ErrorCode::from_constant(416); // ERROR_STORAGE_RESERVE_ID_INVALID
 
 /// The specified storage reserve does not exist.
-pub const STORAGE_RESERVE_DOES_NOT_EXIST : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(417); // ERROR_STORAGE_RESERVE_DOES_NOT_EXIST
+pub const STORAGE_RESERVE_DOES_NOT_EXIST : ErrorCode = ErrorCode::from_constant(417); // ERROR_STORAGE_RESERVE_DOES_NOT_EXIST
 
 /// The specified storage reserve already exists.
-pub const STORAGE_RESERVE_ALREADY_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(418); // ERROR_STORAGE_RESERVE_ALREADY_EXISTS
+pub const STORAGE_RESERVE_ALREADY_EXISTS : ErrorCode = ErrorCode::from_constant(418); // ERROR_STORAGE_RESERVE_ALREADY_EXISTS
 
 /// The specified storage reserve is not empty.
-pub const STORAGE_RESERVE_NOT_EMPTY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(419); // ERROR_STORAGE_RESERVE_NOT_EMPTY
+pub const STORAGE_RESERVE_NOT_EMPTY : ErrorCode = ErrorCode::from_constant(419); // ERROR_STORAGE_RESERVE_NOT_EMPTY
 
 /// This operation requires a DAX volume.
-pub const NOT_A_DAX_VOLUME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(420); // ERROR_NOT_A_DAX_VOLUME
+pub const NOT_A_DAX_VOLUME : ErrorCode = ErrorCode::from_constant(420); // ERROR_NOT_A_DAX_VOLUME
 
 /// This stream is not DAX mappable.
-pub const NOT_DAX_MAPPABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(421); // ERROR_NOT_DAX_MAPPABLE
+pub const NOT_DAX_MAPPABLE : ErrorCode = ErrorCode::from_constant(421); // ERROR_NOT_DAX_MAPPABLE
 
 /// Operation cannot be performed on a time critical thread.
-pub const TIME_SENSITIVE_THREAD : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(422); // ERROR_TIME_SENSITIVE_THREAD
+pub const TIME_SENSITIVE_THREAD : ErrorCode = ErrorCode::from_constant(422); // ERROR_TIME_SENSITIVE_THREAD
 
 /// User data protection is not supported for the current or provided user.
-pub const DPL_NOT_SUPPORTED_FOR_USER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(423); // ERROR_DPL_NOT_SUPPORTED_FOR_USER
+pub const DPL_NOT_SUPPORTED_FOR_USER : ErrorCode = ErrorCode::from_constant(423); // ERROR_DPL_NOT_SUPPORTED_FOR_USER
 
 /// This directory contains entries whose names differ only in case.
-pub const CASE_DIFFERING_NAMES_IN_DIR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(424); // ERROR_CASE_DIFFERING_NAMES_IN_DIR
+pub const CASE_DIFFERING_NAMES_IN_DIR : ErrorCode = ErrorCode::from_constant(424); // ERROR_CASE_DIFFERING_NAMES_IN_DIR
 
 /// The file cannot be safely opened because it is not supported by this version of Windows.
-pub const FILE_NOT_SUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(425); // ERROR_FILE_NOT_SUPPORTED
+pub const FILE_NOT_SUPPORTED : ErrorCode = ErrorCode::from_constant(425); // ERROR_FILE_NOT_SUPPORTED
 
-#[doc(hidden)] pub const CLOUD_FILE_REQUEST_TIMEOUT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(426); // ERROR_CLOUD_FILE_REQUEST_TIMEOUT
+#[doc(hidden)] pub const CLOUD_FILE_REQUEST_TIMEOUT : ErrorCode = ErrorCode::from_constant(426); // ERROR_CLOUD_FILE_REQUEST_TIMEOUT
 
 /// A task queue is required for this operation but none is available.
-pub const NO_TASK_QUEUE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(427); // ERROR_NO_TASK_QUEUE
+pub const NO_TASK_QUEUE : ErrorCode = ErrorCode::from_constant(427); // ERROR_NO_TASK_QUEUE
 
 /// Failed loading a valid version of srcsrv.dll.
-pub const SRC_SRV_DLL_LOAD_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(428); // ERROR_SRC_SRV_DLL_LOAD_FAILED
+pub const SRC_SRV_DLL_LOAD_FAILED : ErrorCode = ErrorCode::from_constant(428); // ERROR_SRC_SRV_DLL_LOAD_FAILED
 
 /// This operation is not supported with BTT enabled.
-pub const NOT_SUPPORTED_WITH_BTT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(429); // ERROR_NOT_SUPPORTED_WITH_BTT
+pub const NOT_SUPPORTED_WITH_BTT : ErrorCode = ErrorCode::from_constant(429); // ERROR_NOT_SUPPORTED_WITH_BTT
 
 /// This operation cannot be performed because encryption is currently disabled.
-pub const ENCRYPTION_DISABLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(430); // ERROR_ENCRYPTION_DISABLED
+pub const ENCRYPTION_DISABLED : ErrorCode = ErrorCode::from_constant(430); // ERROR_ENCRYPTION_DISABLED
 
 /// This encryption operation cannot be performed on filesystem metadata.
-pub const ENCRYPTING_METADATA_DISALLOWED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(431); // ERROR_ENCRYPTING_METADATA_DISALLOWED
+pub const ENCRYPTING_METADATA_DISALLOWED : ErrorCode = ErrorCode::from_constant(431); // ERROR_ENCRYPTING_METADATA_DISALLOWED
 
 /// Encryption cannot be cleared on this file/directory because it still has an encrypted attribute.
-pub const CANT_CLEAR_ENCRYPTION_FLAG : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(432); // ERROR_CANT_CLEAR_ENCRYPTION_FLAG
+pub const CANT_CLEAR_ENCRYPTION_FLAG : ErrorCode = ErrorCode::from_constant(432); // ERROR_CANT_CLEAR_ENCRYPTION_FLAG
 
 /// A device which does not exist was specified.
-pub const NO_SUCH_DEVICE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(433); // ERROR_NO_SUCH_DEVICE
+pub const NO_SUCH_DEVICE : ErrorCode = ErrorCode::from_constant(433); // ERROR_NO_SUCH_DEVICE
 
-#[doc(hidden)] pub const CLOUD_FILE_DEHYDRATION_DISALLOWED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(434); // ERROR_CLOUD_FILE_DEHYDRATION_DISALLOWED
+#[doc(hidden)] pub const CLOUD_FILE_DEHYDRATION_DISALLOWED : ErrorCode = ErrorCode::from_constant(434); // ERROR_CLOUD_FILE_DEHYDRATION_DISALLOWED
 
 /// A file snapshot operation was attempted when one is already in progress.
-pub const FILE_SNAP_IN_PROGRESS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(435); // ERROR_FILE_SNAP_IN_PROGRESS
+pub const FILE_SNAP_IN_PROGRESS : ErrorCode = ErrorCode::from_constant(435); // ERROR_FILE_SNAP_IN_PROGRESS
 
 /// A snapshot of the file cannot be taken because a user-mapped section is present.
-pub const FILE_SNAP_USER_SECTION_NOT_SUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(436); // ERROR_FILE_SNAP_USER_SECTION_NOT_SUPPORTED
+pub const FILE_SNAP_USER_SECTION_NOT_SUPPORTED : ErrorCode = ErrorCode::from_constant(436); // ERROR_FILE_SNAP_USER_SECTION_NOT_SUPPORTED
 
 /// The file snapshot operation was terminated because one of the files was modified in a way incompatible with a snapshot operation.  Please try again.
-pub const FILE_SNAP_MODIFY_NOT_SUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(437); // ERROR_FILE_SNAP_MODIFY_NOT_SUPPORTED
+pub const FILE_SNAP_MODIFY_NOT_SUPPORTED : ErrorCode = ErrorCode::from_constant(437); // ERROR_FILE_SNAP_MODIFY_NOT_SUPPORTED
 
 /// An I/O request could not be coordinated with a file snapshot operation.
-pub const FILE_SNAP_IO_NOT_COORDINATED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(438); // ERROR_FILE_SNAP_IO_NOT_COORDINATED
+pub const FILE_SNAP_IO_NOT_COORDINATED : ErrorCode = ErrorCode::from_constant(438); // ERROR_FILE_SNAP_IO_NOT_COORDINATED
 
 /// An unexpected error occurred while processing a file snapshot operation.
-pub const FILE_SNAP_UNEXPECTED_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(439); // ERROR_FILE_SNAP_UNEXPECTED_ERROR
+pub const FILE_SNAP_UNEXPECTED_ERROR : ErrorCode = ErrorCode::from_constant(439); // ERROR_FILE_SNAP_UNEXPECTED_ERROR
 
 /// A file snapshot operation received an invalid parameter.
-pub const FILE_SNAP_INVALID_PARAMETER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(440); // ERROR_FILE_SNAP_INVALID_PARAMETER
+pub const FILE_SNAP_INVALID_PARAMETER : ErrorCode = ErrorCode::from_constant(440); // ERROR_FILE_SNAP_INVALID_PARAMETER
 
 /// The operation could not be completed due to one or more unsatisfied dependencies.
-pub const UNSATISFIED_DEPENDENCIES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(441); // ERROR_UNSATISFIED_DEPENDENCIES
+pub const UNSATISFIED_DEPENDENCIES : ErrorCode = ErrorCode::from_constant(441); // ERROR_UNSATISFIED_DEPENDENCIES
 
 /// The file cannot be opened because the path has a case-sensitive directory.
-pub const CASE_SENSITIVE_PATH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(442); // ERROR_CASE_SENSITIVE_PATH
+pub const CASE_SENSITIVE_PATH : ErrorCode = ErrorCode::from_constant(442); // ERROR_CASE_SENSITIVE_PATH
 
 /// The filesystem couldn't handle one of the CacheManager's callback error codes.
-pub const UNEXPECTED_NTCACHEMANAGER_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(443); // ERROR_UNEXPECTED_NTCACHEMANAGER_ERROR
+pub const UNEXPECTED_NTCACHEMANAGER_ERROR : ErrorCode = ErrorCode::from_constant(443); // ERROR_UNEXPECTED_NTCACHEMANAGER_ERROR
 
 /// WSL 2 requires an update to its kernel component. For information please visit <https://aka.ms/wsl2kernel>
-pub const LINUX_SUBSYSTEM_UPDATE_REQUIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(444); // ERROR_LINUX_SUBSYSTEM_UPDATE_REQUIRED
+pub const LINUX_SUBSYSTEM_UPDATE_REQUIRED : ErrorCode = ErrorCode::from_constant(444); // ERROR_LINUX_SUBSYSTEM_UPDATE_REQUIRED
 
 /// This action is blocked, but you can choose to allow it. Please refer to the data loss prevention notification for further information.
-pub const DLP_POLICY_WARNS_AGAINST_OPERATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(445); // ERROR_DLP_POLICY_WARNS_AGAINST_OPERATION
+pub const DLP_POLICY_WARNS_AGAINST_OPERATION : ErrorCode = ErrorCode::from_constant(445); // ERROR_DLP_POLICY_WARNS_AGAINST_OPERATION
 
 /// This action is blocked. Please refer to the data loss prevention notification for further information.
-pub const DLP_POLICY_DENIES_OPERATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(446); // ERROR_DLP_POLICY_DENIES_OPERATION
+pub const DLP_POLICY_DENIES_OPERATION : ErrorCode = ErrorCode::from_constant(446); // ERROR_DLP_POLICY_DENIES_OPERATION
 
 /// This action is blocked. Please refer to the data loss prevention notification for further information.
-pub const DLP_POLICY_SILENTLY_FAIL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(449); // ERROR_DLP_POLICY_SILENTLY_FAIL
+pub const DLP_POLICY_SILENTLY_FAIL : ErrorCode = ErrorCode::from_constant(449); // ERROR_DLP_POLICY_SILENTLY_FAIL
 
 /// Neither developer unlocked mode nor side loading mode is enabled on the device.
-pub const CAPAUTHZ_NOT_DEVUNLOCKED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(450); // ERROR_CAPAUTHZ_NOT_DEVUNLOCKED
+pub const CAPAUTHZ_NOT_DEVUNLOCKED : ErrorCode = ErrorCode::from_constant(450); // ERROR_CAPAUTHZ_NOT_DEVUNLOCKED
 
 /// Can not change application type during upgrade or re-provision.
-pub const CAPAUTHZ_CHANGE_TYPE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(451); // ERROR_CAPAUTHZ_CHANGE_TYPE
+pub const CAPAUTHZ_CHANGE_TYPE : ErrorCode = ErrorCode::from_constant(451); // ERROR_CAPAUTHZ_CHANGE_TYPE
 
 /// The application has not been provisioned.
-pub const CAPAUTHZ_NOT_PROVISIONED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(452); // ERROR_CAPAUTHZ_NOT_PROVISIONED
+pub const CAPAUTHZ_NOT_PROVISIONED : ErrorCode = ErrorCode::from_constant(452); // ERROR_CAPAUTHZ_NOT_PROVISIONED
 
 /// The requested capability can not be authorized for this application.
-pub const CAPAUTHZ_NOT_AUTHORIZED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(453); // ERROR_CAPAUTHZ_NOT_AUTHORIZED
+pub const CAPAUTHZ_NOT_AUTHORIZED : ErrorCode = ErrorCode::from_constant(453); // ERROR_CAPAUTHZ_NOT_AUTHORIZED
 
 /// There is no capability authorization policy on the device.
-pub const CAPAUTHZ_NO_POLICY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(454); // ERROR_CAPAUTHZ_NO_POLICY
+pub const CAPAUTHZ_NO_POLICY : ErrorCode = ErrorCode::from_constant(454); // ERROR_CAPAUTHZ_NO_POLICY
 
 /// The capability authorization database has been corrupted.
-pub const CAPAUTHZ_DB_CORRUPTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(455); // ERROR_CAPAUTHZ_DB_CORRUPTED
+pub const CAPAUTHZ_DB_CORRUPTED : ErrorCode = ErrorCode::from_constant(455); // ERROR_CAPAUTHZ_DB_CORRUPTED
 
 /// The custom capability's SCCD has an invalid catalog.
-pub const CAPAUTHZ_SCCD_INVALID_CATALOG : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(456); // ERROR_CAPAUTHZ_SCCD_INVALID_CATALOG
+pub const CAPAUTHZ_SCCD_INVALID_CATALOG : ErrorCode = ErrorCode::from_constant(456); // ERROR_CAPAUTHZ_SCCD_INVALID_CATALOG
 
 /// None of the authorized entity elements in the SCCD matched the app being installed; either the PFNs don't match, or the element's signature hash doesn't validate.
-pub const CAPAUTHZ_SCCD_NO_AUTH_ENTITY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(457); // ERROR_CAPAUTHZ_SCCD_NO_AUTH_ENTITY
+pub const CAPAUTHZ_SCCD_NO_AUTH_ENTITY : ErrorCode = ErrorCode::from_constant(457); // ERROR_CAPAUTHZ_SCCD_NO_AUTH_ENTITY
 
 /// The custom capability's SCCD failed to parse.
-pub const CAPAUTHZ_SCCD_PARSE_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(458); // ERROR_CAPAUTHZ_SCCD_PARSE_ERROR
+pub const CAPAUTHZ_SCCD_PARSE_ERROR : ErrorCode = ErrorCode::from_constant(458); // ERROR_CAPAUTHZ_SCCD_PARSE_ERROR
 
 /// The custom capability's SCCD requires developer mode.
-pub const CAPAUTHZ_SCCD_DEV_MODE_REQUIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(459); // ERROR_CAPAUTHZ_SCCD_DEV_MODE_REQUIRED
+pub const CAPAUTHZ_SCCD_DEV_MODE_REQUIRED : ErrorCode = ErrorCode::from_constant(459); // ERROR_CAPAUTHZ_SCCD_DEV_MODE_REQUIRED
 
 /// There not all declared custom capabilities are found in the SCCD.
-pub const CAPAUTHZ_SCCD_NO_CAPABILITY_MATCH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(460); // ERROR_CAPAUTHZ_SCCD_NO_CAPABILITY_MATCH
+pub const CAPAUTHZ_SCCD_NO_CAPABILITY_MATCH : ErrorCode = ErrorCode::from_constant(460); // ERROR_CAPAUTHZ_SCCD_NO_CAPABILITY_MATCH
 
 /// The CimFS image is corrupt.
-pub const CIMFS_IMAGE_CORRUPT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(470); // ERROR_CIMFS_IMAGE_CORRUPT
+pub const CIMFS_IMAGE_CORRUPT : ErrorCode = ErrorCode::from_constant(470); // ERROR_CIMFS_IMAGE_CORRUPT
 
 /// The operation timed out waiting for this device to complete a PnP query-remove request due to a potential hang in its device stack. The system may need to be rebooted to complete the request.
-pub const PNP_QUERY_REMOVE_DEVICE_TIMEOUT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(480); // ERROR_PNP_QUERY_REMOVE_DEVICE_TIMEOUT
+pub const PNP_QUERY_REMOVE_DEVICE_TIMEOUT : ErrorCode = ErrorCode::from_constant(480); // ERROR_PNP_QUERY_REMOVE_DEVICE_TIMEOUT
 
 /// The operation timed out waiting for this device to complete a PnP query-remove request due to a potential hang in the device stack of a related device. The system may need to be rebooted to complete the operation.
-pub const PNP_QUERY_REMOVE_RELATED_DEVICE_TIMEOUT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(481); // ERROR_PNP_QUERY_REMOVE_RELATED_DEVICE_TIMEOUT
+pub const PNP_QUERY_REMOVE_RELATED_DEVICE_TIMEOUT : ErrorCode = ErrorCode::from_constant(481); // ERROR_PNP_QUERY_REMOVE_RELATED_DEVICE_TIMEOUT
 
 /// The operation timed out waiting for this device to complete a PnP query-remove request due to a potential hang in the device stack of an unrelated device. The system may need to be rebooted to complete the operation.
-pub const PNP_QUERY_REMOVE_UNRELATED_DEVICE_TIMEOUT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(482); // ERROR_PNP_QUERY_REMOVE_UNRELATED_DEVICE_TIMEOUT
+pub const PNP_QUERY_REMOVE_UNRELATED_DEVICE_TIMEOUT : ErrorCode = ErrorCode::from_constant(482); // ERROR_PNP_QUERY_REMOVE_UNRELATED_DEVICE_TIMEOUT
 
 /// The request failed due to a fatal device hardware error.
-pub const DEVICE_HARDWARE_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(483); // ERROR_DEVICE_HARDWARE_ERROR
+pub const DEVICE_HARDWARE_ERROR : ErrorCode = ErrorCode::from_constant(483); // ERROR_DEVICE_HARDWARE_ERROR
 
 /// Attempt to access invalid address.
-pub const INVALID_ADDRESS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(487); // ERROR_INVALID_ADDRESS
+pub const INVALID_ADDRESS : ErrorCode = ErrorCode::from_constant(487); // ERROR_INVALID_ADDRESS
 
 /// The volume contains paging, crash dump or other system critical files.
-pub const HAS_SYSTEM_CRITICAL_FILES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(488); // ERROR_HAS_SYSTEM_CRITICAL_FILES
+pub const HAS_SYSTEM_CRITICAL_FILES : ErrorCode = ErrorCode::from_constant(488); // ERROR_HAS_SYSTEM_CRITICAL_FILES
 
 /// Driver Verifier Volatile settings cannot be set when CFG and IO are enabled.
-pub const VRF_CFG_AND_IO_ENABLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1183); // ERROR_VRF_CFG_AND_IO_ENABLED
+pub const VRF_CFG_AND_IO_ENABLED : ErrorCode = ErrorCode::from_constant(1183); // ERROR_VRF_CFG_AND_IO_ENABLED
 
 /// An attempt was made to access a partition that has begun termination.
-pub const PARTITION_TERMINATING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1184); // ERROR_PARTITION_TERMINATING
+pub const PARTITION_TERMINATING : ErrorCode = ErrorCode::from_constant(1184); // ERROR_PARTITION_TERMINATING
 
 /// User profile cannot be loaded.
-pub const USER_PROFILE_LOAD : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(500); // ERROR_USER_PROFILE_LOAD
+pub const USER_PROFILE_LOAD : ErrorCode = ErrorCode::from_constant(500); // ERROR_USER_PROFILE_LOAD
 
 /// Arithmetic result exceeded 32 bits.
-pub const ARITHMETIC_OVERFLOW : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(534); // ERROR_ARITHMETIC_OVERFLOW
+pub const ARITHMETIC_OVERFLOW : ErrorCode = ErrorCode::from_constant(534); // ERROR_ARITHMETIC_OVERFLOW
 
 /// There is a process on other end of the pipe.
-pub const PIPE_CONNECTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(535); // ERROR_PIPE_CONNECTED
+pub const PIPE_CONNECTED : ErrorCode = ErrorCode::from_constant(535); // ERROR_PIPE_CONNECTED
 
 /// Waiting for a process to open the other end of the pipe.
-pub const PIPE_LISTENING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(536); // ERROR_PIPE_LISTENING
+pub const PIPE_LISTENING : ErrorCode = ErrorCode::from_constant(536); // ERROR_PIPE_LISTENING
 
 /// Application verifier has found an error in the current process.
-pub const VERIFIER_STOP : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(537); // ERROR_VERIFIER_STOP
+pub const VERIFIER_STOP : ErrorCode = ErrorCode::from_constant(537); // ERROR_VERIFIER_STOP
 
 /// An error occurred in the ABIOS subsystem.
-pub const ABIOS_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(538); // ERROR_ABIOS_ERROR
+pub const ABIOS_ERROR : ErrorCode = ErrorCode::from_constant(538); // ERROR_ABIOS_ERROR
 
 /// A warning occurred in the WX86 subsystem.
-pub const WX86_WARNING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(539); // ERROR_WX86_WARNING
+pub const WX86_WARNING : ErrorCode = ErrorCode::from_constant(539); // ERROR_WX86_WARNING
 
 /// An error occurred in the WX86 subsystem.
-pub const WX86_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(540); // ERROR_WX86_ERROR
+pub const WX86_ERROR : ErrorCode = ErrorCode::from_constant(540); // ERROR_WX86_ERROR
 
 /// An attempt was made to cancel or set a timer that has an associated APC and the subject thread is not the thread that originally set the timer with an associated APC routine.
-pub const TIMER_NOT_CANCELED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(541); // ERROR_TIMER_NOT_CANCELED
+pub const TIMER_NOT_CANCELED : ErrorCode = ErrorCode::from_constant(541); // ERROR_TIMER_NOT_CANCELED
 
 /// Unwind exception code.
-pub const UNWIND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(542); // ERROR_UNWIND
+pub const UNWIND : ErrorCode = ErrorCode::from_constant(542); // ERROR_UNWIND
 
 /// An invalid or unaligned stack was encountered during an unwind operation.
-pub const BAD_STACK : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(543); // ERROR_BAD_STACK
+pub const BAD_STACK : ErrorCode = ErrorCode::from_constant(543); // ERROR_BAD_STACK
 
 /// An invalid unwind target was encountered during an unwind operation.
-pub const INVALID_UNWIND_TARGET : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(544); // ERROR_INVALID_UNWIND_TARGET
+pub const INVALID_UNWIND_TARGET : ErrorCode = ErrorCode::from_constant(544); // ERROR_INVALID_UNWIND_TARGET
 
 /// Invalid Object Attributes specified to NtCreatePort or invalid Port Attributes specified to NtConnectPort
-pub const INVALID_PORT_ATTRIBUTES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(545); // ERROR_INVALID_PORT_ATTRIBUTES
+pub const INVALID_PORT_ATTRIBUTES : ErrorCode = ErrorCode::from_constant(545); // ERROR_INVALID_PORT_ATTRIBUTES
 
 /// Length of message passed to NtRequestPort or NtRequestWaitReplyPort was longer than the maximum message allowed by the port.
-pub const PORT_MESSAGE_TOO_LONG : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(546); // ERROR_PORT_MESSAGE_TOO_LONG
+pub const PORT_MESSAGE_TOO_LONG : ErrorCode = ErrorCode::from_constant(546); // ERROR_PORT_MESSAGE_TOO_LONG
 
 /// An attempt was made to lower a quota limit below the current usage.
-pub const INVALID_QUOTA_LOWER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(547); // ERROR_INVALID_QUOTA_LOWER
+pub const INVALID_QUOTA_LOWER : ErrorCode = ErrorCode::from_constant(547); // ERROR_INVALID_QUOTA_LOWER
 
 /// An attempt was made to attach to a device that was already attached to another device.
-pub const DEVICE_ALREADY_ATTACHED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(548); // ERROR_DEVICE_ALREADY_ATTACHED
+pub const DEVICE_ALREADY_ATTACHED : ErrorCode = ErrorCode::from_constant(548); // ERROR_DEVICE_ALREADY_ATTACHED
 
 /// An attempt was made to execute an instruction at an unaligned address and the host system does not support unaligned instruction references.
-pub const INSTRUCTION_MISALIGNMENT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(549); // ERROR_INSTRUCTION_MISALIGNMENT
+pub const INSTRUCTION_MISALIGNMENT : ErrorCode = ErrorCode::from_constant(549); // ERROR_INSTRUCTION_MISALIGNMENT
 
 /// Profiling not started.
-pub const PROFILING_NOT_STARTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(550); // ERROR_PROFILING_NOT_STARTED
+pub const PROFILING_NOT_STARTED : ErrorCode = ErrorCode::from_constant(550); // ERROR_PROFILING_NOT_STARTED
 
 /// Profiling not stopped.
-pub const PROFILING_NOT_STOPPED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(551); // ERROR_PROFILING_NOT_STOPPED
+pub const PROFILING_NOT_STOPPED : ErrorCode = ErrorCode::from_constant(551); // ERROR_PROFILING_NOT_STOPPED
 
 /// The passed ACL did not contain the minimum required information.
-pub const COULD_NOT_INTERPRET : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(552); // ERROR_COULD_NOT_INTERPRET
+pub const COULD_NOT_INTERPRET : ErrorCode = ErrorCode::from_constant(552); // ERROR_COULD_NOT_INTERPRET
 
 /// The number of active profiling objects is at the maximum and no more may be started.
-pub const PROFILING_AT_LIMIT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(553); // ERROR_PROFILING_AT_LIMIT
+pub const PROFILING_AT_LIMIT : ErrorCode = ErrorCode::from_constant(553); // ERROR_PROFILING_AT_LIMIT
 
 /// Used to indicate that an operation cannot continue without blocking for I/O.
-pub const CANT_WAIT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(554); // ERROR_CANT_WAIT
+pub const CANT_WAIT : ErrorCode = ErrorCode::from_constant(554); // ERROR_CANT_WAIT
 
 /// Indicates that a thread attempted to terminate itself by default (called NtTerminateThread with NULL) and it was the last thread in the current process.
-pub const CANT_TERMINATE_SELF : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(555); // ERROR_CANT_TERMINATE_SELF
+pub const CANT_TERMINATE_SELF : ErrorCode = ErrorCode::from_constant(555); // ERROR_CANT_TERMINATE_SELF
 
 /// If an MM error is returned which is not defined in the standard FsRtl filter, it is converted to one of the following errors which is guaranteed to be in the filter.
 /// In this case information is lost, however, the filter correctly handles the exception.
-pub const UNEXPECTED_MM_CREATE_ERR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(556); // ERROR_UNEXPECTED_MM_CREATE_ERR
+pub const UNEXPECTED_MM_CREATE_ERR : ErrorCode = ErrorCode::from_constant(556); // ERROR_UNEXPECTED_MM_CREATE_ERR
 
 /// If an MM error is returned which is not defined in the standard FsRtl filter, it is converted to one of the following errors which is guaranteed to be in the filter.
 /// In this case information is lost, however, the filter correctly handles the exception.
-pub const UNEXPECTED_MM_MAP_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(557); // ERROR_UNEXPECTED_MM_MAP_ERROR
+pub const UNEXPECTED_MM_MAP_ERROR : ErrorCode = ErrorCode::from_constant(557); // ERROR_UNEXPECTED_MM_MAP_ERROR
 
 /// If an MM error is returned which is not defined in the standard FsRtl filter, it is converted to one of the following errors which is guaranteed to be in the filter.
 /// In this case information is lost, however, the filter correctly handles the exception.
-pub const UNEXPECTED_MM_EXTEND_ERR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(558); // ERROR_UNEXPECTED_MM_EXTEND_ERR
+pub const UNEXPECTED_MM_EXTEND_ERR : ErrorCode = ErrorCode::from_constant(558); // ERROR_UNEXPECTED_MM_EXTEND_ERR
 
 /// A malformed function table was encountered during an unwind operation.
-pub const BAD_FUNCTION_TABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(559); // ERROR_BAD_FUNCTION_TABLE
+pub const BAD_FUNCTION_TABLE : ErrorCode = ErrorCode::from_constant(559); // ERROR_BAD_FUNCTION_TABLE
 
 /// Indicates that an attempt was made to assign protection to a file system file or directory and one of the SIDs in the security descriptor could not be translated into a GUID that could be stored by the file system.
 /// This causes the protection attempt to fail, which may cause a file creation attempt to fail.
-pub const NO_GUID_TRANSLATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(560); // ERROR_NO_GUID_TRANSLATION
+pub const NO_GUID_TRANSLATION : ErrorCode = ErrorCode::from_constant(560); // ERROR_NO_GUID_TRANSLATION
 
 /// Indicates that an attempt was made to grow an LDT by setting its size, or that the size was not an even number of selectors.
-pub const INVALID_LDT_SIZE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(561); // ERROR_INVALID_LDT_SIZE
+pub const INVALID_LDT_SIZE : ErrorCode = ErrorCode::from_constant(561); // ERROR_INVALID_LDT_SIZE
 
 /// Indicates that the starting value for the LDT information was not an integral multiple of the selector size.
-pub const INVALID_LDT_OFFSET : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(563); // ERROR_INVALID_LDT_OFFSET
+pub const INVALID_LDT_OFFSET : ErrorCode = ErrorCode::from_constant(563); // ERROR_INVALID_LDT_OFFSET
 
 /// Indicates that the user supplied an invalid descriptor when trying to set up Ldt descriptors.
-pub const INVALID_LDT_DESCRIPTOR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(564); // ERROR_INVALID_LDT_DESCRIPTOR
+pub const INVALID_LDT_DESCRIPTOR : ErrorCode = ErrorCode::from_constant(564); // ERROR_INVALID_LDT_DESCRIPTOR
 
 /// Indicates a process has too many threads to perform the requested action. For example, assignment of a primary token may only be performed when a process has zero or one threads.
-pub const TOO_MANY_THREADS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(565); // ERROR_TOO_MANY_THREADS
+pub const TOO_MANY_THREADS : ErrorCode = ErrorCode::from_constant(565); // ERROR_TOO_MANY_THREADS
 
 /// An attempt was made to operate on a thread within a specific process, but the thread specified is not in the process specified.
-pub const THREAD_NOT_IN_PROCESS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(566); // ERROR_THREAD_NOT_IN_PROCESS
+pub const THREAD_NOT_IN_PROCESS : ErrorCode = ErrorCode::from_constant(566); // ERROR_THREAD_NOT_IN_PROCESS
 
 /// Page file quota was exceeded.
-pub const PAGEFILE_QUOTA_EXCEEDED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(567); // ERROR_PAGEFILE_QUOTA_EXCEEDED
+pub const PAGEFILE_QUOTA_EXCEEDED : ErrorCode = ErrorCode::from_constant(567); // ERROR_PAGEFILE_QUOTA_EXCEEDED
 
 /// The Netlogon service cannot start because another Netlogon service running in the domain conflicts with the specified role.
-pub const LOGON_SERVER_CONFLICT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(568); // ERROR_LOGON_SERVER_CONFLICT
+pub const LOGON_SERVER_CONFLICT : ErrorCode = ErrorCode::from_constant(568); // ERROR_LOGON_SERVER_CONFLICT
 
 /// The SAM database on a Windows Server is significantly out of synchronization with the copy on the Domain Controller. A complete synchronization is required.
-pub const SYNCHRONIZATION_REQUIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(569); // ERROR_SYNCHRONIZATION_REQUIRED
+pub const SYNCHRONIZATION_REQUIRED : ErrorCode = ErrorCode::from_constant(569); // ERROR_SYNCHRONIZATION_REQUIRED
 
 /// The NtCreateFile API failed. This error should never be returned to an application, it is a place holder for the Windows Lan Manager Redirector to use in its internal error mapping routines.
-pub const NET_OPEN_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(570); // ERROR_NET_OPEN_FAILED
+pub const NET_OPEN_FAILED : ErrorCode = ErrorCode::from_constant(570); // ERROR_NET_OPEN_FAILED
 
 /// ### Privilege Failed
 /// The I/O permissions for the process could not be changed.
-pub const IO_PRIVILEGE_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(571); // ERROR_IO_PRIVILEGE_FAILED
+pub const IO_PRIVILEGE_FAILED : ErrorCode = ErrorCode::from_constant(571); // ERROR_IO_PRIVILEGE_FAILED
 
 /// ### Application Exit by CTRL+C
 /// The application terminated as a result of a CTRL+C.
-pub const CONTROL_C_EXIT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(572); // ERROR_CONTROL_C_EXIT
+pub const CONTROL_C_EXIT : ErrorCode = ErrorCode::from_constant(572); // ERROR_CONTROL_C_EXIT
 
 /// ### Missing System File
 /// The required system file `%hs` is bad or missing.
-pub const MISSING_SYSTEMFILE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(573); // ERROR_MISSING_SYSTEMFILE
+pub const MISSING_SYSTEMFILE : ErrorCode = ErrorCode::from_constant(573); // ERROR_MISSING_SYSTEMFILE
 
 /// ### Application Error
 /// The exception `%s` (`0x%08lx`) occurred in the application at location `0x%08lx`.
-pub const UNHANDLED_EXCEPTION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(574); // ERROR_UNHANDLED_EXCEPTION
+pub const UNHANDLED_EXCEPTION : ErrorCode = ErrorCode::from_constant(574); // ERROR_UNHANDLED_EXCEPTION
 
 /// ### Application Error
 /// The application was unable to start correctly (`0x%lx`). Click OK to close the application.
-pub const APP_INIT_FAILURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(575); // ERROR_APP_INIT_FAILURE
+pub const APP_INIT_FAILURE : ErrorCode = ErrorCode::from_constant(575); // ERROR_APP_INIT_FAILURE
 
 /// ### Unable to Create Paging File
 /// The creation of the paging file `%hs` failed (`%lx`). The requested size was `%ld`.
-pub const PAGEFILE_CREATE_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(576); // ERROR_PAGEFILE_CREATE_FAILED
+pub const PAGEFILE_CREATE_FAILED : ErrorCode = ErrorCode::from_constant(576); // ERROR_PAGEFILE_CREATE_FAILED
 
 /// Windows cannot verify the digital signature for this file. A recent hardware or software change might have installed a file that is signed incorrectly or damaged, or that might be malicious software from an unknown source.
-pub const INVALID_IMAGE_HASH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(577); // ERROR_INVALID_IMAGE_HASH
+pub const INVALID_IMAGE_HASH : ErrorCode = ErrorCode::from_constant(577); // ERROR_INVALID_IMAGE_HASH
 
 /// ### No Paging File Specified
 /// No paging file was specified in the system configuration.
-pub const NO_PAGEFILE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(578); // ERROR_NO_PAGEFILE
+pub const NO_PAGEFILE : ErrorCode = ErrorCode::from_constant(578); // ERROR_NO_PAGEFILE
 
 /// ### EXCEPTION
 /// A real-mode application issued a floating-point instruction and floating-point hardware is not present.
-pub const ILLEGAL_FLOAT_CONTEXT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(579); // ERROR_ILLEGAL_FLOAT_CONTEXT
+pub const ILLEGAL_FLOAT_CONTEXT : ErrorCode = ErrorCode::from_constant(579); // ERROR_ILLEGAL_FLOAT_CONTEXT
 
 /// An event pair synchronization operation was performed using the thread specific client/server event pair object, but no event pair object was associated with the thread.
-pub const NO_EVENT_PAIR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(580); // ERROR_NO_EVENT_PAIR
+pub const NO_EVENT_PAIR : ErrorCode = ErrorCode::from_constant(580); // ERROR_NO_EVENT_PAIR
 
 /// A Windows Server has an incorrect configuration.
-pub const DOMAIN_CTRLR_CONFIG_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(581); // ERROR_DOMAIN_CTRLR_CONFIG_ERROR
+pub const DOMAIN_CTRLR_CONFIG_ERROR : ErrorCode = ErrorCode::from_constant(581); // ERROR_DOMAIN_CTRLR_CONFIG_ERROR
 
 /// An illegal character was encountered. For a multi-byte character set this includes a lead byte without a succeeding trail byte. For the Unicode character set this includes the characters 0xFFFF and 0xFFFE.
-pub const ILLEGAL_CHARACTER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(582); // ERROR_ILLEGAL_CHARACTER
+pub const ILLEGAL_CHARACTER : ErrorCode = ErrorCode::from_constant(582); // ERROR_ILLEGAL_CHARACTER
 
 /// The Unicode character is not defined in the Unicode character set installed on the system.
-pub const UNDEFINED_CHARACTER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(583); // ERROR_UNDEFINED_CHARACTER
+pub const UNDEFINED_CHARACTER : ErrorCode = ErrorCode::from_constant(583); // ERROR_UNDEFINED_CHARACTER
 
 /// The paging file cannot be created on a floppy diskette.
-pub const FLOPPY_VOLUME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(584); // ERROR_FLOPPY_VOLUME
+pub const FLOPPY_VOLUME : ErrorCode = ErrorCode::from_constant(584); // ERROR_FLOPPY_VOLUME
 
 /// The system BIOS failed to connect a system interrupt to the device or bus for which the device is connected.
-pub const BIOS_FAILED_TO_CONNECT_INTERRUPT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(585); // ERROR_BIOS_FAILED_TO_CONNECT_INTERRUPT
+pub const BIOS_FAILED_TO_CONNECT_INTERRUPT : ErrorCode = ErrorCode::from_constant(585); // ERROR_BIOS_FAILED_TO_CONNECT_INTERRUPT
 
 /// This operation is only allowed for the Primary Domain Controller of the domain.
-pub const BACKUP_CONTROLLER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(586); // ERROR_BACKUP_CONTROLLER
+pub const BACKUP_CONTROLLER : ErrorCode = ErrorCode::from_constant(586); // ERROR_BACKUP_CONTROLLER
 
 /// An attempt was made to acquire a mutant such that its maximum count would have been exceeded.
-pub const MUTANT_LIMIT_EXCEEDED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(587); // ERROR_MUTANT_LIMIT_EXCEEDED
+pub const MUTANT_LIMIT_EXCEEDED : ErrorCode = ErrorCode::from_constant(587); // ERROR_MUTANT_LIMIT_EXCEEDED
 
 /// A volume has been accessed for which a file system driver is required that has not yet been loaded.
-pub const FS_DRIVER_REQUIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(588); // ERROR_FS_DRIVER_REQUIRED
+pub const FS_DRIVER_REQUIRED : ErrorCode = ErrorCode::from_constant(588); // ERROR_FS_DRIVER_REQUIRED
 
 /// ### Registry File Failure
 /// The registry cannot load the hive (file):
 /// `%hs`
 /// or its log or alternate.
 /// It is corrupt, absent, or not writable.
-pub const CANNOT_LOAD_REGISTRY_FILE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(589); // ERROR_CANNOT_LOAD_REGISTRY_FILE
+pub const CANNOT_LOAD_REGISTRY_FILE : ErrorCode = ErrorCode::from_constant(589); // ERROR_CANNOT_LOAD_REGISTRY_FILE
 
 /// ### Unexpected Failure in DebugActiveProcess
 /// An unexpected failure occurred while processing a DebugActiveProcess API request. You may choose OK to terminate the process, or Cancel to ignore the error.
-pub const DEBUG_ATTACH_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(590); // ERROR_DEBUG_ATTACH_FAILED
+pub const DEBUG_ATTACH_FAILED : ErrorCode = ErrorCode::from_constant(590); // ERROR_DEBUG_ATTACH_FAILED
 
 /// ### Fatal System Error
 /// The `%hs` system process terminated unexpectedly with a status of `0x%08x` (`0x%08x` `0x%08x`).
 /// The system has been shut down.
-pub const SYSTEM_PROCESS_TERMINATED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(591); // ERROR_SYSTEM_PROCESS_TERMINATED
+pub const SYSTEM_PROCESS_TERMINATED : ErrorCode = ErrorCode::from_constant(591); // ERROR_SYSTEM_PROCESS_TERMINATED
 
 /// ### Data Not Accepted
 /// The TDI client could not handle the data received during an indication.
-pub const DATA_NOT_ACCEPTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(592); // ERROR_DATA_NOT_ACCEPTED
+pub const DATA_NOT_ACCEPTED : ErrorCode = ErrorCode::from_constant(592); // ERROR_DATA_NOT_ACCEPTED
 
 /// NTVDM encountered a hard error.
-pub const VDM_HARD_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(593); // ERROR_VDM_HARD_ERROR
+pub const VDM_HARD_ERROR : ErrorCode = ErrorCode::from_constant(593); // ERROR_VDM_HARD_ERROR
 
 /// ### Cancel Timeout
 /// The driver `%hs` failed to complete a cancelled I/O request in the allotted time.
-pub const DRIVER_CANCEL_TIMEOUT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(594); // ERROR_DRIVER_CANCEL_TIMEOUT
+pub const DRIVER_CANCEL_TIMEOUT : ErrorCode = ErrorCode::from_constant(594); // ERROR_DRIVER_CANCEL_TIMEOUT
 
 /// ### Reply Message Mismatch
 /// An attempt was made to reply to an LPC message, but the thread specified by the client ID in the message was not waiting on that message.
-pub const REPLY_MESSAGE_MISMATCH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(595); // ERROR_REPLY_MESSAGE_MISMATCH
+pub const REPLY_MESSAGE_MISMATCH : ErrorCode = ErrorCode::from_constant(595); // ERROR_REPLY_MESSAGE_MISMATCH
 
 /// ### Delayed Write Failed
 /// Windows was unable to save all the data for the file `%hs`. The data has been lost.
 /// This error may be caused by a failure of your computer hardware or network connection. Please try to save this file elsewhere.
-pub const LOST_WRITEBEHIND_DATA : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(596); // ERROR_LOST_WRITEBEHIND_DATA
+pub const LOST_WRITEBEHIND_DATA : ErrorCode = ErrorCode::from_constant(596); // ERROR_LOST_WRITEBEHIND_DATA
 
 /// The parameter(s) passed to the server in the client/server shared memory window were invalid. Too much data may have been put in the shared memory window.
-pub const CLIENT_SERVER_PARAMETERS_INVALID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(597); // ERROR_CLIENT_SERVER_PARAMETERS_INVALID
+pub const CLIENT_SERVER_PARAMETERS_INVALID : ErrorCode = ErrorCode::from_constant(597); // ERROR_CLIENT_SERVER_PARAMETERS_INVALID
 
 /// The stream is not a tiny stream.
-pub const NOT_TINY_STREAM : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(598); // ERROR_NOT_TINY_STREAM
+pub const NOT_TINY_STREAM : ErrorCode = ErrorCode::from_constant(598); // ERROR_NOT_TINY_STREAM
 
 /// The request must be handled by the stack overflow code.
-pub const STACK_OVERFLOW_READ : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(599); // ERROR_STACK_OVERFLOW_READ
+pub const STACK_OVERFLOW_READ : ErrorCode = ErrorCode::from_constant(599); // ERROR_STACK_OVERFLOW_READ
 
 /// Internal OFS status codes indicating how an allocation operation is handled. Either it is retried after the containing onode is moved or the extent stream is converted to a large stream.
-pub const CONVERT_TO_LARGE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(600); // ERROR_CONVERT_TO_LARGE
+pub const CONVERT_TO_LARGE : ErrorCode = ErrorCode::from_constant(600); // ERROR_CONVERT_TO_LARGE
 
 /// The attempt to find the object found an object matching by ID on the volume but it is out of the scope of the handle used for the operation.
-pub const FOUND_OUT_OF_SCOPE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(601); // ERROR_FOUND_OUT_OF_SCOPE
+pub const FOUND_OUT_OF_SCOPE : ErrorCode = ErrorCode::from_constant(601); // ERROR_FOUND_OUT_OF_SCOPE
 
 /// The bucket array must be grown. Retry transaction after doing so.
-pub const ALLOCATE_BUCKET : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(602); // ERROR_ALLOCATE_BUCKET
+pub const ALLOCATE_BUCKET : ErrorCode = ErrorCode::from_constant(602); // ERROR_ALLOCATE_BUCKET
 
 /// The user/kernel marshalling buffer has overflowed.
-pub const MARSHALL_OVERFLOW : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(603); // ERROR_MARSHALL_OVERFLOW
+pub const MARSHALL_OVERFLOW : ErrorCode = ErrorCode::from_constant(603); // ERROR_MARSHALL_OVERFLOW
 
 /// The supplied variant structure contains invalid data.
-pub const INVALID_VARIANT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(604); // ERROR_INVALID_VARIANT
+pub const INVALID_VARIANT : ErrorCode = ErrorCode::from_constant(604); // ERROR_INVALID_VARIANT
 
 /// The specified buffer contains ill-formed data.
-pub const BAD_COMPRESSION_BUFFER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(605); // ERROR_BAD_COMPRESSION_BUFFER
+pub const BAD_COMPRESSION_BUFFER : ErrorCode = ErrorCode::from_constant(605); // ERROR_BAD_COMPRESSION_BUFFER
 
 /// ### Audit Failed
 /// An attempt to generate a security audit failed.
-pub const AUDIT_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(606); // ERROR_AUDIT_FAILED
+pub const AUDIT_FAILED : ErrorCode = ErrorCode::from_constant(606); // ERROR_AUDIT_FAILED
 
 /// The timer resolution was not previously set by the current process.
-pub const TIMER_RESOLUTION_NOT_SET : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(607); // ERROR_TIMER_RESOLUTION_NOT_SET
+pub const TIMER_RESOLUTION_NOT_SET : ErrorCode = ErrorCode::from_constant(607); // ERROR_TIMER_RESOLUTION_NOT_SET
 
 /// There is insufficient account information to log you on.
-pub const INSUFFICIENT_LOGON_INFO : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(608); // ERROR_INSUFFICIENT_LOGON_INFO
+pub const INSUFFICIENT_LOGON_INFO : ErrorCode = ErrorCode::from_constant(608); // ERROR_INSUFFICIENT_LOGON_INFO
 
 /// ### Invalid DLL Entrypoint
 /// The dynamic link library `%hs` is not written correctly. The stack pointer has been left in an inconsistent state.
 /// The entrypoint should be declared as WINAPI or STDCALL. Select YES to fail the DLL load. Select NO to continue execution. Selecting NO may cause the application to operate incorrectly.
-pub const BAD_DLL_ENTRYPOINT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(609); // ERROR_BAD_DLL_ENTRYPOINT
+pub const BAD_DLL_ENTRYPOINT : ErrorCode = ErrorCode::from_constant(609); // ERROR_BAD_DLL_ENTRYPOINT
 
 /// ### Invalid Service Callback Entrypoint
 /// The `%hs` service is not written correctly. The stack pointer has been left in an inconsistent state.
 /// The callback entrypoint should be declared as WINAPI or STDCALL. Selecting OK will cause the service to continue operation. However, the service process may operate incorrectly.
-pub const BAD_SERVICE_ENTRYPOINT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(610); // ERROR_BAD_SERVICE_ENTRYPOINT
+pub const BAD_SERVICE_ENTRYPOINT : ErrorCode = ErrorCode::from_constant(610); // ERROR_BAD_SERVICE_ENTRYPOINT
 
 /// There is an IP address conflict with another system on the network
-pub const IP_ADDRESS_CONFLICT1 : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(611); // ERROR_IP_ADDRESS_CONFLICT1
+pub const IP_ADDRESS_CONFLICT1 : ErrorCode = ErrorCode::from_constant(611); // ERROR_IP_ADDRESS_CONFLICT1
 
 /// There is an IP address conflict with another system on the network
-pub const IP_ADDRESS_CONFLICT2 : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(612); // ERROR_IP_ADDRESS_CONFLICT2
+pub const IP_ADDRESS_CONFLICT2 : ErrorCode = ErrorCode::from_constant(612); // ERROR_IP_ADDRESS_CONFLICT2
 
 /// ### Low On Registry Space
 /// The system has reached the maximum size allowed for the system part of the registry. Additional storage requests will be ignored.
-pub const REGISTRY_QUOTA_LIMIT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(613); // ERROR_REGISTRY_QUOTA_LIMIT
+pub const REGISTRY_QUOTA_LIMIT : ErrorCode = ErrorCode::from_constant(613); // ERROR_REGISTRY_QUOTA_LIMIT
 
 /// A callback return system service cannot be executed when no callback is active.
-pub const NO_CALLBACK_ACTIVE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(614); // ERROR_NO_CALLBACK_ACTIVE
+pub const NO_CALLBACK_ACTIVE : ErrorCode = ErrorCode::from_constant(614); // ERROR_NO_CALLBACK_ACTIVE
 
 /// The password provided is too short to meet the policy of your user account.
 /// Please choose a longer password.
-pub const PWD_TOO_SHORT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(615); // ERROR_PWD_TOO_SHORT
+pub const PWD_TOO_SHORT : ErrorCode = ErrorCode::from_constant(615); // ERROR_PWD_TOO_SHORT
 
 /// The policy of your user account does not allow you to change passwords too frequently.
 /// This is done to prevent users from changing back to a familiar, but potentially discovered, password.
 /// If you feel your password has been compromised then please contact your administrator immediately to have a new one assigned.
-pub const PWD_TOO_RECENT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(616); // ERROR_PWD_TOO_RECENT
+pub const PWD_TOO_RECENT : ErrorCode = ErrorCode::from_constant(616); // ERROR_PWD_TOO_RECENT
 
 /// You have attempted to change your password to one that you have used in the past.
 /// The policy of your user account does not allow this. Please select a password that you have not previously used.
-pub const PWD_HISTORY_CONFLICT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(617); // ERROR_PWD_HISTORY_CONFLICT
+pub const PWD_HISTORY_CONFLICT : ErrorCode = ErrorCode::from_constant(617); // ERROR_PWD_HISTORY_CONFLICT
 
 /// The specified compression format is unsupported.
-pub const UNSUPPORTED_COMPRESSION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(618); // ERROR_UNSUPPORTED_COMPRESSION
+pub const UNSUPPORTED_COMPRESSION : ErrorCode = ErrorCode::from_constant(618); // ERROR_UNSUPPORTED_COMPRESSION
 
 /// The specified hardware profile configuration is invalid.
-pub const INVALID_HW_PROFILE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(619); // ERROR_INVALID_HW_PROFILE
+pub const INVALID_HW_PROFILE : ErrorCode = ErrorCode::from_constant(619); // ERROR_INVALID_HW_PROFILE
 
 /// The specified Plug and Play registry device path is invalid.
-pub const INVALID_PLUGPLAY_DEVICE_PATH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(620); // ERROR_INVALID_PLUGPLAY_DEVICE_PATH
+pub const INVALID_PLUGPLAY_DEVICE_PATH : ErrorCode = ErrorCode::from_constant(620); // ERROR_INVALID_PLUGPLAY_DEVICE_PATH
 
 /// The specified quota list is internally inconsistent with its descriptor.
-pub const QUOTA_LIST_INCONSISTENT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(621); // ERROR_QUOTA_LIST_INCONSISTENT
+pub const QUOTA_LIST_INCONSISTENT : ErrorCode = ErrorCode::from_constant(621); // ERROR_QUOTA_LIST_INCONSISTENT
 
 /// ### Windows Evaluation Notification
 /// The evaluation period for this installation of Windows has expired. This system will shutdown in 1 hour. To restore access to this installation of Windows, please upgrade this installation using a licensed distribution of this product.
-pub const EVALUATION_EXPIRATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(622); // ERROR_EVALUATION_EXPIRATION
+pub const EVALUATION_EXPIRATION : ErrorCode = ErrorCode::from_constant(622); // ERROR_EVALUATION_EXPIRATION
 
 /// ### Illegal System DLL Relocation
 /// The system DLL `%hs` was relocated in memory. The application will not run properly.
 /// The relocation occurred because the DLL `%hs` occupied an address range reserved for Windows system DLLs. The vendor supplying the DLL should be contacted for a new DLL.
-pub const ILLEGAL_DLL_RELOCATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(623); // ERROR_ILLEGAL_DLL_RELOCATION
+pub const ILLEGAL_DLL_RELOCATION : ErrorCode = ErrorCode::from_constant(623); // ERROR_ILLEGAL_DLL_RELOCATION
 
 /// ### DLL Initialization Failed
 /// The application failed to initialize because the window station is shutting down.
-pub const DLL_INIT_FAILED_LOGOFF : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(624); // ERROR_DLL_INIT_FAILED_LOGOFF
+pub const DLL_INIT_FAILED_LOGOFF : ErrorCode = ErrorCode::from_constant(624); // ERROR_DLL_INIT_FAILED_LOGOFF
 
 /// The validation process needs to continue on to the next step.
-pub const VALIDATE_CONTINUE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(625); // ERROR_VALIDATE_CONTINUE
+pub const VALIDATE_CONTINUE : ErrorCode = ErrorCode::from_constant(625); // ERROR_VALIDATE_CONTINUE
 
 /// There are no more matches for the current index enumeration.
-pub const NO_MORE_MATCHES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(626); // ERROR_NO_MORE_MATCHES
+pub const NO_MORE_MATCHES : ErrorCode = ErrorCode::from_constant(626); // ERROR_NO_MORE_MATCHES
 
 /// The range could not be added to the range list because of a conflict.
-pub const RANGE_LIST_CONFLICT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(627); // ERROR_RANGE_LIST_CONFLICT
+pub const RANGE_LIST_CONFLICT : ErrorCode = ErrorCode::from_constant(627); // ERROR_RANGE_LIST_CONFLICT
 
-#[doc(hidden)] pub const SERVER_SID_MISMATCH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(628); // ERROR_SERVER_SID_MISMATCH
+#[doc(hidden)] pub const SERVER_SID_MISMATCH : ErrorCode = ErrorCode::from_constant(628); // ERROR_SERVER_SID_MISMATCH
 
 /// A group marked use for deny only cannot be enabled.
-pub const CANT_ENABLE_DENY_ONLY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(629); // ERROR_CANT_ENABLE_DENY_ONLY
+pub const CANT_ENABLE_DENY_ONLY : ErrorCode = ErrorCode::from_constant(629); // ERROR_CANT_ENABLE_DENY_ONLY
 
 /// ### EXCEPTION
 /// Multiple floating point faults.
-pub const FLOAT_MULTIPLE_FAULTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(630); // ERROR_FLOAT_MULTIPLE_FAULTS
+pub const FLOAT_MULTIPLE_FAULTS : ErrorCode = ErrorCode::from_constant(630); // ERROR_FLOAT_MULTIPLE_FAULTS
 
 /// ### EXCEPTION
 /// Multiple floating point traps.
-pub const FLOAT_MULTIPLE_TRAPS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(631); // ERROR_FLOAT_MULTIPLE_TRAPS
+pub const FLOAT_MULTIPLE_TRAPS : ErrorCode = ErrorCode::from_constant(631); // ERROR_FLOAT_MULTIPLE_TRAPS
 
 /// The requested interface is not supported.
-pub const NOINTERFACE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(632); // ERROR_NOINTERFACE
+pub const NOINTERFACE : ErrorCode = ErrorCode::from_constant(632); // ERROR_NOINTERFACE
 
 /// ### System Standby Failed
 /// The driver `%hs` does not support standby mode. Updating this driver may allow the system to go to standby mode.
-pub const DRIVER_FAILED_SLEEP : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(633); // ERROR_DRIVER_FAILED_SLEEP
+pub const DRIVER_FAILED_SLEEP : ErrorCode = ErrorCode::from_constant(633); // ERROR_DRIVER_FAILED_SLEEP
 
 /// The system file `%1` has become corrupt and has been replaced.
-pub const CORRUPT_SYSTEM_FILE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(634); // ERROR_CORRUPT_SYSTEM_FILE
+pub const CORRUPT_SYSTEM_FILE : ErrorCode = ErrorCode::from_constant(634); // ERROR_CORRUPT_SYSTEM_FILE
 
 /// ### Virtual Memory Minimum Too Low
 /// Your system is low on virtual memory. Windows is increasing the size of your virtual memory paging file.
 /// During this process, memory requests for some applications may be denied. For more information, see Help.
-pub const COMMITMENT_MINIMUM : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(635); // ERROR_COMMITMENT_MINIMUM
+pub const COMMITMENT_MINIMUM : ErrorCode = ErrorCode::from_constant(635); // ERROR_COMMITMENT_MINIMUM
 
 /// A device was removed so enumeration must be restarted.
-pub const PNP_RESTART_ENUMERATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(636); // ERROR_PNP_RESTART_ENUMERATION
+pub const PNP_RESTART_ENUMERATION : ErrorCode = ErrorCode::from_constant(636); // ERROR_PNP_RESTART_ENUMERATION
 
 /// ### Fatal System Error
 /// The system image `%s` is not properly signed.
 /// The file has been replaced with the signed file.
 /// The system has been shut down.
-pub const SYSTEM_IMAGE_BAD_SIGNATURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(637); // ERROR_SYSTEM_IMAGE_BAD_SIGNATURE
+pub const SYSTEM_IMAGE_BAD_SIGNATURE : ErrorCode = ErrorCode::from_constant(637); // ERROR_SYSTEM_IMAGE_BAD_SIGNATURE
 
 /// Device will not start without a reboot.
-pub const PNP_REBOOT_REQUIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(638); // ERROR_PNP_REBOOT_REQUIRED
+pub const PNP_REBOOT_REQUIRED : ErrorCode = ErrorCode::from_constant(638); // ERROR_PNP_REBOOT_REQUIRED
 
 /// There is not enough power to complete the requested operation.
-pub const INSUFFICIENT_POWER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(639); // ERROR_INSUFFICIENT_POWER
+pub const INSUFFICIENT_POWER : ErrorCode = ErrorCode::from_constant(639); // ERROR_INSUFFICIENT_POWER
 
 /// ERROR_MULTIPLE_FAULT_VIOLATION
-pub const MULTIPLE_FAULT_VIOLATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(640); // ERROR_MULTIPLE_FAULT_VIOLATION
+pub const MULTIPLE_FAULT_VIOLATION : ErrorCode = ErrorCode::from_constant(640); // ERROR_MULTIPLE_FAULT_VIOLATION
 
 /// The system is in the process of shutting down.
-pub const SYSTEM_SHUTDOWN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(641); // ERROR_SYSTEM_SHUTDOWN
+pub const SYSTEM_SHUTDOWN : ErrorCode = ErrorCode::from_constant(641); // ERROR_SYSTEM_SHUTDOWN
 
 /// An attempt to remove a processes DebugPort was made, but a port was not already associated with the process.
-pub const PORT_NOT_SET : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(642); // ERROR_PORT_NOT_SET
+pub const PORT_NOT_SET : ErrorCode = ErrorCode::from_constant(642); // ERROR_PORT_NOT_SET
 
-#[doc(hidden)] pub const DS_VERSION_CHECK_FAILURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(643); // ERROR_DS_VERSION_CHECK_FAILURE
+#[doc(hidden)] pub const DS_VERSION_CHECK_FAILURE : ErrorCode = ErrorCode::from_constant(643); // ERROR_DS_VERSION_CHECK_FAILURE
 
 /// The specified range could not be found in the range list.
-pub const RANGE_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(644); // ERROR_RANGE_NOT_FOUND
+pub const RANGE_NOT_FOUND : ErrorCode = ErrorCode::from_constant(644); // ERROR_RANGE_NOT_FOUND
 
 /// The driver was not loaded because the system is booting into safe mode.
-pub const NOT_SAFE_MODE_DRIVER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(646); // ERROR_NOT_SAFE_MODE_DRIVER
+pub const NOT_SAFE_MODE_DRIVER : ErrorCode = ErrorCode::from_constant(646); // ERROR_NOT_SAFE_MODE_DRIVER
 
 /// The driver was not loaded because it failed its initialization call.
-pub const FAILED_DRIVER_ENTRY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(647); // ERROR_FAILED_DRIVER_ENTRY
+pub const FAILED_DRIVER_ENTRY : ErrorCode = ErrorCode::from_constant(647); // ERROR_FAILED_DRIVER_ENTRY
 
 /// The "`%hs`" encountered an error while applying power or reading the device configuration.
 /// This may be caused by a failure of your hardware or by a poor connection.
-pub const DEVICE_ENUMERATION_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(648); // ERROR_DEVICE_ENUMERATION_ERROR
+pub const DEVICE_ENUMERATION_ERROR : ErrorCode = ErrorCode::from_constant(648); // ERROR_DEVICE_ENUMERATION_ERROR
 
 /// The create operation failed because the name contained at least one mount point which resolves to a volume to which the specified device object is not attached.
-pub const MOUNT_POINT_NOT_RESOLVED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(649); // ERROR_MOUNT_POINT_NOT_RESOLVED
+pub const MOUNT_POINT_NOT_RESOLVED : ErrorCode = ErrorCode::from_constant(649); // ERROR_MOUNT_POINT_NOT_RESOLVED
 
 /// The device object parameter is either not a valid device object or is not attached to the volume specified by the file name.
-pub const INVALID_DEVICE_OBJECT_PARAMETER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(650); // ERROR_INVALID_DEVICE_OBJECT_PARAMETER
+pub const INVALID_DEVICE_OBJECT_PARAMETER : ErrorCode = ErrorCode::from_constant(650); // ERROR_INVALID_DEVICE_OBJECT_PARAMETER
 
 /// A Machine Check Error has occurred. Please check the system eventlog for additional information.
-pub const MCA_OCCURED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(651); // ERROR_MCA_OCCURED
+pub const MCA_OCCURED : ErrorCode = ErrorCode::from_constant(651); // ERROR_MCA_OCCURED
 
 /// There was error \[`%2`\] processing the driver database.
-pub const DRIVER_DATABASE_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(652); // ERROR_DRIVER_DATABASE_ERROR
+pub const DRIVER_DATABASE_ERROR : ErrorCode = ErrorCode::from_constant(652); // ERROR_DRIVER_DATABASE_ERROR
 
 /// System hive size has exceeded its limit.
-pub const SYSTEM_HIVE_TOO_LARGE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(653); // ERROR_SYSTEM_HIVE_TOO_LARGE
+pub const SYSTEM_HIVE_TOO_LARGE : ErrorCode = ErrorCode::from_constant(653); // ERROR_SYSTEM_HIVE_TOO_LARGE
 
 /// The driver could not be loaded because a previous version of the driver is still in memory.
-pub const DRIVER_FAILED_PRIOR_UNLOAD : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(654); // ERROR_DRIVER_FAILED_PRIOR_UNLOAD
+pub const DRIVER_FAILED_PRIOR_UNLOAD : ErrorCode = ErrorCode::from_constant(654); // ERROR_DRIVER_FAILED_PRIOR_UNLOAD
 
 /// ### Volume Shadow Copy Service
 /// Please wait while the Volume Shadow Copy Service prepares volume `%hs` for hibernation.
-pub const VOLSNAP_PREPARE_HIBERNATE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(655); // ERROR_VOLSNAP_PREPARE_HIBERNATE
+pub const VOLSNAP_PREPARE_HIBERNATE : ErrorCode = ErrorCode::from_constant(655); // ERROR_VOLSNAP_PREPARE_HIBERNATE
 
 /// The system has failed to hibernate (The error code is `%hs`). Hibernation will be disabled until the system is restarted.
-pub const HIBERNATION_FAILURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(656); // ERROR_HIBERNATION_FAILURE
+pub const HIBERNATION_FAILURE : ErrorCode = ErrorCode::from_constant(656); // ERROR_HIBERNATION_FAILURE
 
 /// The password provided is too long to meet the policy of your user account.
 /// Please choose a shorter password.
-pub const PWD_TOO_LONG : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(657); // ERROR_PWD_TOO_LONG
+pub const PWD_TOO_LONG : ErrorCode = ErrorCode::from_constant(657); // ERROR_PWD_TOO_LONG
 
 /// The requested operation could not be completed due to a file system limitation
-pub const FILE_SYSTEM_LIMITATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(665); // ERROR_FILE_SYSTEM_LIMITATION
+pub const FILE_SYSTEM_LIMITATION : ErrorCode = ErrorCode::from_constant(665); // ERROR_FILE_SYSTEM_LIMITATION
 
 /// An assertion failure has occurred.
-pub const ASSERTION_FAILURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(668); // ERROR_ASSERTION_FAILURE
+pub const ASSERTION_FAILURE : ErrorCode = ErrorCode::from_constant(668); // ERROR_ASSERTION_FAILURE
 
 /// An error occurred in the ACPI subsystem.
-pub const ACPI_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(669); // ERROR_ACPI_ERROR
+pub const ACPI_ERROR : ErrorCode = ErrorCode::from_constant(669); // ERROR_ACPI_ERROR
 
 /// WOW Assertion Error.
-pub const WOW_ASSERTION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(670); // ERROR_WOW_ASSERTION
+pub const WOW_ASSERTION : ErrorCode = ErrorCode::from_constant(670); // ERROR_WOW_ASSERTION
 
 /// A device is missing in the system BIOS MPS table. This device will not be used.
 /// Please contact your system vendor for system BIOS update.
-pub const PNP_BAD_MPS_TABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(671); // ERROR_PNP_BAD_MPS_TABLE
+pub const PNP_BAD_MPS_TABLE : ErrorCode = ErrorCode::from_constant(671); // ERROR_PNP_BAD_MPS_TABLE
 
 /// A translator failed to translate resources.
-pub const PNP_TRANSLATION_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(672); // ERROR_PNP_TRANSLATION_FAILED
+pub const PNP_TRANSLATION_FAILED : ErrorCode = ErrorCode::from_constant(672); // ERROR_PNP_TRANSLATION_FAILED
 
 /// A IRQ translator failed to translate resources.
-pub const PNP_IRQ_TRANSLATION_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(673); // ERROR_PNP_IRQ_TRANSLATION_FAILED
+pub const PNP_IRQ_TRANSLATION_FAILED : ErrorCode = ErrorCode::from_constant(673); // ERROR_PNP_IRQ_TRANSLATION_FAILED
 
 /// Driver `%2` returned invalid ID for a child device (`%3`).
-pub const PNP_INVALID_ID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(674); // ERROR_PNP_INVALID_ID
+pub const PNP_INVALID_ID : ErrorCode = ErrorCode::from_constant(674); // ERROR_PNP_INVALID_ID
 
 /// ### Kernel Debugger Awakened
 /// the system debugger was awakened by an interrupt.
-pub const WAKE_SYSTEM_DEBUGGER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(675); // ERROR_WAKE_SYSTEM_DEBUGGER
+pub const WAKE_SYSTEM_DEBUGGER : ErrorCode = ErrorCode::from_constant(675); // ERROR_WAKE_SYSTEM_DEBUGGER
 
 /// ### Handles Closed
 /// Handles to objects have been automatically closed as a result of the requested operation.
-pub const HANDLES_CLOSED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(676); // ERROR_HANDLES_CLOSED
+pub const HANDLES_CLOSED : ErrorCode = ErrorCode::from_constant(676); // ERROR_HANDLES_CLOSED
 
 /// ### Too Much Information
 /// The specified access control list (ACL) contained more information than was expected.
-pub const EXTRANEOUS_INFORMATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(677); // ERROR_EXTRANEOUS_INFORMATION
+pub const EXTRANEOUS_INFORMATION : ErrorCode = ErrorCode::from_constant(677); // ERROR_EXTRANEOUS_INFORMATION
 
 /// This warning level status indicates that the transaction state already exists for the registry sub-tree, but that a transaction commit was previously aborted.
 /// The commit has NOT been completed, but has not been rolled back either (so it may still be committed if desired).
-pub const RXACT_COMMIT_NECESSARY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(678); // ERROR_RXACT_COMMIT_NECESSARY
+pub const RXACT_COMMIT_NECESSARY : ErrorCode = ErrorCode::from_constant(678); // ERROR_RXACT_COMMIT_NECESSARY
 
 /// ### Media Changed
 /// The media may have changed.
-pub const MEDIA_CHECK : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(679); // ERROR_MEDIA_CHECK
+pub const MEDIA_CHECK : ErrorCode = ErrorCode::from_constant(679); // ERROR_MEDIA_CHECK
 
 /// ### GUID Substitution
 /// During the translation of a global identifier (GUID) to a Windows security ID (SID), no administratively-defined GUID prefix was found.
 /// A substitute prefix was used, which will not compromise system security. However, this may provide a more restrictive access than intended.
-pub const GUID_SUBSTITUTION_MADE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(680); // ERROR_GUID_SUBSTITUTION_MADE
+pub const GUID_SUBSTITUTION_MADE : ErrorCode = ErrorCode::from_constant(680); // ERROR_GUID_SUBSTITUTION_MADE
 
 /// The create operation stopped after reaching a symbolic link
-pub const STOPPED_ON_SYMLINK : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(681); // ERROR_STOPPED_ON_SYMLINK
+pub const STOPPED_ON_SYMLINK : ErrorCode = ErrorCode::from_constant(681); // ERROR_STOPPED_ON_SYMLINK
 
 /// A long jump has been executed.
-pub const LONGJUMP : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(682); // ERROR_LONGJUMP
+pub const LONGJUMP : ErrorCode = ErrorCode::from_constant(682); // ERROR_LONGJUMP
 
 /// The Plug and Play query operation was not successful.
-pub const PLUGPLAY_QUERY_VETOED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(683); // ERROR_PLUGPLAY_QUERY_VETOED
+pub const PLUGPLAY_QUERY_VETOED : ErrorCode = ErrorCode::from_constant(683); // ERROR_PLUGPLAY_QUERY_VETOED
 
 /// A frame consolidation has been executed.
-pub const UNWIND_CONSOLIDATE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(684); // ERROR_UNWIND_CONSOLIDATE
+pub const UNWIND_CONSOLIDATE : ErrorCode = ErrorCode::from_constant(684); // ERROR_UNWIND_CONSOLIDATE
 
 /// ### Registry Hive Recovered
 /// Registry hive (file):
 /// `%hs`
 /// was corrupted and it has been recovered. Some data might have been lost.
-pub const REGISTRY_HIVE_RECOVERED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(685); // ERROR_REGISTRY_HIVE_RECOVERED
+pub const REGISTRY_HIVE_RECOVERED : ErrorCode = ErrorCode::from_constant(685); // ERROR_REGISTRY_HIVE_RECOVERED
 
 /// The application is attempting to run executable code from the module `%hs`. This may be insecure. An alternative, `%hs`, is available. Should the application use the secure module `%hs`?
-pub const DLL_MIGHT_BE_INSECURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(686); // ERROR_DLL_MIGHT_BE_INSECURE
+pub const DLL_MIGHT_BE_INSECURE : ErrorCode = ErrorCode::from_constant(686); // ERROR_DLL_MIGHT_BE_INSECURE
 
 /// The application is loading executable code from the module `%hs`. This is secure, but may be incompatible with previous releases of the operating system. An alternative, `%hs`, is available. Should the application use the secure module `%hs`?
-pub const DLL_MIGHT_BE_INCOMPATIBLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(687); // ERROR_DLL_MIGHT_BE_INCOMPATIBLE
+pub const DLL_MIGHT_BE_INCOMPATIBLE : ErrorCode = ErrorCode::from_constant(687); // ERROR_DLL_MIGHT_BE_INCOMPATIBLE
 
-#[doc(hidden)] pub const DBG_EXCEPTION_NOT_HANDLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(688); // ERROR_DBG_EXCEPTION_NOT_HANDLED
-#[doc(hidden)] pub const DBG_REPLY_LATER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(689); // ERROR_DBG_REPLY_LATER
-#[doc(hidden)] pub const DBG_UNABLE_TO_PROVIDE_HANDLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(690); // ERROR_DBG_UNABLE_TO_PROVIDE_HANDLE
-#[doc(hidden)] pub const DBG_TERMINATE_THREAD : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(691); // ERROR_DBG_TERMINATE_THREAD
-#[doc(hidden)] pub const DBG_TERMINATE_PROCESS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(692); // ERROR_DBG_TERMINATE_PROCESS
-#[doc(hidden)] pub const DBG_CONTROL_C : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(693); // ERROR_DBG_CONTROL_C
-#[doc(hidden)] pub const DBG_PRINTEXCEPTION_C : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(694); // ERROR_DBG_PRINTEXCEPTION_C
-#[doc(hidden)] pub const DBG_RIPEXCEPTION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(695); // ERROR_DBG_RIPEXCEPTION
-#[doc(hidden)] pub const DBG_CONTROL_BREAK : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(696); // ERROR_DBG_CONTROL_BREAK
-#[doc(hidden)] pub const DBG_COMMAND_EXCEPTION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(697); // ERROR_DBG_COMMAND_EXCEPTION
+#[doc(hidden)] pub const DBG_EXCEPTION_NOT_HANDLED : ErrorCode = ErrorCode::from_constant(688); // ERROR_DBG_EXCEPTION_NOT_HANDLED
+#[doc(hidden)] pub const DBG_REPLY_LATER : ErrorCode = ErrorCode::from_constant(689); // ERROR_DBG_REPLY_LATER
+#[doc(hidden)] pub const DBG_UNABLE_TO_PROVIDE_HANDLE : ErrorCode = ErrorCode::from_constant(690); // ERROR_DBG_UNABLE_TO_PROVIDE_HANDLE
+#[doc(hidden)] pub const DBG_TERMINATE_THREAD : ErrorCode = ErrorCode::from_constant(691); // ERROR_DBG_TERMINATE_THREAD
+#[doc(hidden)] pub const DBG_TERMINATE_PROCESS : ErrorCode = ErrorCode::from_constant(692); // ERROR_DBG_TERMINATE_PROCESS
+#[doc(hidden)] pub const DBG_CONTROL_C : ErrorCode = ErrorCode::from_constant(693); // ERROR_DBG_CONTROL_C
+#[doc(hidden)] pub const DBG_PRINTEXCEPTION_C : ErrorCode = ErrorCode::from_constant(694); // ERROR_DBG_PRINTEXCEPTION_C
+#[doc(hidden)] pub const DBG_RIPEXCEPTION : ErrorCode = ErrorCode::from_constant(695); // ERROR_DBG_RIPEXCEPTION
+#[doc(hidden)] pub const DBG_CONTROL_BREAK : ErrorCode = ErrorCode::from_constant(696); // ERROR_DBG_CONTROL_BREAK
+#[doc(hidden)] pub const DBG_COMMAND_EXCEPTION : ErrorCode = ErrorCode::from_constant(697); // ERROR_DBG_COMMAND_EXCEPTION
 
 /// ### Object Exists
 /// An attempt was made to create an object and the object name already existed.
-pub const OBJECT_NAME_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(698); // ERROR_OBJECT_NAME_EXISTS
+pub const OBJECT_NAME_EXISTS : ErrorCode = ErrorCode::from_constant(698); // ERROR_OBJECT_NAME_EXISTS
 
 /// ### Thread Suspended
 /// A thread termination occurred while the thread was suspended. The thread was resumed, and termination proceeded.
-pub const THREAD_WAS_SUSPENDED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(699); // ERROR_THREAD_WAS_SUSPENDED
+pub const THREAD_WAS_SUSPENDED : ErrorCode = ErrorCode::from_constant(699); // ERROR_THREAD_WAS_SUSPENDED
 
 /// ### Image Relocated
 /// An image file could not be mapped at the address specified in the image file. Local fixups must be performed on this image.
-pub const IMAGE_NOT_AT_BASE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(700); // ERROR_IMAGE_NOT_AT_BASE
+pub const IMAGE_NOT_AT_BASE : ErrorCode = ErrorCode::from_constant(700); // ERROR_IMAGE_NOT_AT_BASE
 
 /// This informational level status indicates that a specified registry sub-tree transaction state did not yet exist and had to be created.
-pub const RXACT_STATE_CREATED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(701); // ERROR_RXACT_STATE_CREATED
+pub const RXACT_STATE_CREATED : ErrorCode = ErrorCode::from_constant(701); // ERROR_RXACT_STATE_CREATED
 
 /// ### Segment Load
 /// A virtual DOS machine (VDM) is loading, unloading, or moving an MS-DOS or Win16 program segment image.
 /// An exception is raised so a debugger can load, unload or track symbols and breakpoints within these 16-bit segments.
-pub const SEGMENT_NOTIFICATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(702); // ERROR_SEGMENT_NOTIFICATION
+pub const SEGMENT_NOTIFICATION : ErrorCode = ErrorCode::from_constant(702); // ERROR_SEGMENT_NOTIFICATION
 
 /// ### Invalid Current Directory
 /// The process cannot switch to the startup current directory `%hs`.
 /// Select OK to set current directory to `%hs`, or select CANCEL to exit.
-pub const BAD_CURRENT_DIRECTORY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(703); // ERROR_BAD_CURRENT_DIRECTORY
+pub const BAD_CURRENT_DIRECTORY : ErrorCode = ErrorCode::from_constant(703); // ERROR_BAD_CURRENT_DIRECTORY
 
 /// ### Redundant Read
 /// To satisfy a read request, the NT fault-tolerant file system successfully read the requested data from a redundant copy.
 /// This was done because the file system encountered a failure on a member of the fault-tolerant volume, but was unable to reassign the failing area of the device.
-pub const FT_READ_RECOVERY_FROM_BACKUP : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(704); // ERROR_FT_READ_RECOVERY_FROM_BACKUP
+pub const FT_READ_RECOVERY_FROM_BACKUP : ErrorCode = ErrorCode::from_constant(704); // ERROR_FT_READ_RECOVERY_FROM_BACKUP
 
 /// ### Redundant Write
 /// To satisfy a write request, the NT fault-tolerant file system successfully wrote a redundant copy of the information.
 /// This was done because the file system encountered a failure on a member of the fault-tolerant volume, but was not able to reassign the failing area of the device.
-pub const FT_WRITE_RECOVERY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(705); // ERROR_FT_WRITE_RECOVERY
+pub const FT_WRITE_RECOVERY : ErrorCode = ErrorCode::from_constant(705); // ERROR_FT_WRITE_RECOVERY
 
 /// ### Machine Type Mismatch
 /// The image file `%hs` is valid, but is for a machine type other than the current machine. Select OK to continue, or CANCEL to fail the DLL load.
-pub const IMAGE_MACHINE_TYPE_MISMATCH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(706); // ERROR_IMAGE_MACHINE_TYPE_MISMATCH
+pub const IMAGE_MACHINE_TYPE_MISMATCH : ErrorCode = ErrorCode::from_constant(706); // ERROR_IMAGE_MACHINE_TYPE_MISMATCH
 
 /// ### Partial Data Received
 /// The network transport returned partial data to its client. The remaining data will be sent later.
-pub const RECEIVE_PARTIAL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(707); // ERROR_RECEIVE_PARTIAL
+pub const RECEIVE_PARTIAL : ErrorCode = ErrorCode::from_constant(707); // ERROR_RECEIVE_PARTIAL
 
 /// ### Expedited Data Received
 /// The network transport returned data to its client that was marked as expedited by the remote system.
-pub const RECEIVE_EXPEDITED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(708); // ERROR_RECEIVE_EXPEDITED
+pub const RECEIVE_EXPEDITED : ErrorCode = ErrorCode::from_constant(708); // ERROR_RECEIVE_EXPEDITED
 
 /// ### Partial Expedited Data Received
 /// The network transport returned partial data to its client and this data was marked as expedited by the remote system. The remaining data will be sent later.
-pub const RECEIVE_PARTIAL_EXPEDITED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(709); // ERROR_RECEIVE_PARTIAL_EXPEDITED
+pub const RECEIVE_PARTIAL_EXPEDITED : ErrorCode = ErrorCode::from_constant(709); // ERROR_RECEIVE_PARTIAL_EXPEDITED
 
 /// ### TDI Event Done
 /// The TDI indication has completed successfully.
-pub const EVENT_DONE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(710); // ERROR_EVENT_DONE
+pub const EVENT_DONE : ErrorCode = ErrorCode::from_constant(710); // ERROR_EVENT_DONE
 
 /// ### TDI Event Pending
 /// The TDI indication has entered the pending state.
-pub const EVENT_PENDING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(711); // ERROR_EVENT_PENDING
+pub const EVENT_PENDING : ErrorCode = ErrorCode::from_constant(711); // ERROR_EVENT_PENDING
 
 /// Checking file system on `%wZ`
-pub const CHECKING_FILE_SYSTEM : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(712); // ERROR_CHECKING_FILE_SYSTEM
+pub const CHECKING_FILE_SYSTEM : ErrorCode = ErrorCode::from_constant(712); // ERROR_CHECKING_FILE_SYSTEM
 
 /// ### Fatal Application Exit
 /// `%hs`
-pub const FATAL_APP_EXIT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(713); // ERROR_FATAL_APP_EXIT
+pub const FATAL_APP_EXIT : ErrorCode = ErrorCode::from_constant(713); // ERROR_FATAL_APP_EXIT
 
 /// The specified registry key is referenced by a predefined handle.
-pub const PREDEFINED_HANDLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(714); // ERROR_PREDEFINED_HANDLE
+pub const PREDEFINED_HANDLE : ErrorCode = ErrorCode::from_constant(714); // ERROR_PREDEFINED_HANDLE
 
 /// ### Page Unlocked
 /// The page protection of a locked page was changed to 'No Access' and the page was unlocked from memory and from the process.
-pub const WAS_UNLOCKED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(715); // ERROR_WAS_UNLOCKED
+pub const WAS_UNLOCKED : ErrorCode = ErrorCode::from_constant(715); // ERROR_WAS_UNLOCKED
 
-#[doc(hidden)] pub const SERVICE_NOTIFICATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(716); // ERROR_SERVICE_NOTIFICATION
+#[doc(hidden)] pub const SERVICE_NOTIFICATION : ErrorCode = ErrorCode::from_constant(716); // ERROR_SERVICE_NOTIFICATION
 
 /// ### Page Locked
 /// One of the pages to lock was already locked.
-pub const WAS_LOCKED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(717); // ERROR_WAS_LOCKED
+pub const WAS_LOCKED : ErrorCode = ErrorCode::from_constant(717); // ERROR_WAS_LOCKED
 
 /// Application popup: `%1` : `%2`
-pub const LOG_HARD_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(718); // ERROR_LOG_HARD_ERROR
+pub const LOG_HARD_ERROR : ErrorCode = ErrorCode::from_constant(718); // ERROR_LOG_HARD_ERROR
 
 /// ERROR_ALREADY_WIN32
-pub const ALREADY_WIN32 : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(719); // ERROR_ALREADY_WIN32
+pub const ALREADY_WIN32 : ErrorCode = ErrorCode::from_constant(719); // ERROR_ALREADY_WIN32
 
 /// ### Machine Type Mismatch
 /// The image file `%hs` is valid, but is for a machine type other than the current machine.
-pub const IMAGE_MACHINE_TYPE_MISMATCH_EXE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(720); // ERROR_IMAGE_MACHINE_TYPE_MISMATCH_EXE
+pub const IMAGE_MACHINE_TYPE_MISMATCH_EXE : ErrorCode = ErrorCode::from_constant(720); // ERROR_IMAGE_MACHINE_TYPE_MISMATCH_EXE
 
 /// A yield execution was performed and no thread was available to run.
-pub const NO_YIELD_PERFORMED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(721); // ERROR_NO_YIELD_PERFORMED
+pub const NO_YIELD_PERFORMED : ErrorCode = ErrorCode::from_constant(721); // ERROR_NO_YIELD_PERFORMED
 
 /// The resumable flag to a timer API was ignored.
-pub const TIMER_RESUME_IGNORED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(722); // ERROR_TIMER_RESUME_IGNORED
+pub const TIMER_RESUME_IGNORED : ErrorCode = ErrorCode::from_constant(722); // ERROR_TIMER_RESUME_IGNORED
 
 /// The arbiter has deferred arbitration of these resources to its parent
-pub const ARBITRATION_UNHANDLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(723); // ERROR_ARBITRATION_UNHANDLED
+pub const ARBITRATION_UNHANDLED : ErrorCode = ErrorCode::from_constant(723); // ERROR_ARBITRATION_UNHANDLED
 
 /// The inserted CardBus device cannot be started because of a configuration error on "`%hs`".
-pub const CARDBUS_NOT_SUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(724); // ERROR_CARDBUS_NOT_SUPPORTED
+pub const CARDBUS_NOT_SUPPORTED : ErrorCode = ErrorCode::from_constant(724); // ERROR_CARDBUS_NOT_SUPPORTED
 
 /// The CPUs in this multiprocessor system are not all the same revision level. To use all processors the operating system restricts itself to the features of the least capable processor in the system. Should problems occur with this system, contact the CPU manufacturer to see if this mix of processors is supported.
-pub const MP_PROCESSOR_MISMATCH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(725); // ERROR_MP_PROCESSOR_MISMATCH
+pub const MP_PROCESSOR_MISMATCH : ErrorCode = ErrorCode::from_constant(725); // ERROR_MP_PROCESSOR_MISMATCH
 
 /// The system was put into hibernation.
-pub const HIBERNATED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(726); // ERROR_HIBERNATED
+pub const HIBERNATED : ErrorCode = ErrorCode::from_constant(726); // ERROR_HIBERNATED
 
 /// The system was resumed from hibernation.
-pub const RESUME_HIBERNATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(727); // ERROR_RESUME_HIBERNATION
+pub const RESUME_HIBERNATION : ErrorCode = ErrorCode::from_constant(727); // ERROR_RESUME_HIBERNATION
 
 /// Windows has detected that the system firmware (BIOS) was updated \[previous firmware date = `%2`, current firmware date `%3`\].
-pub const FIRMWARE_UPDATED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(728); // ERROR_FIRMWARE_UPDATED
+pub const FIRMWARE_UPDATED : ErrorCode = ErrorCode::from_constant(728); // ERROR_FIRMWARE_UPDATED
 
 /// A device driver is leaking locked I/O pages causing system degradation. The system has automatically enabled tracking code in order to try and catch the culprit.
-pub const DRIVERS_LEAKING_LOCKED_PAGES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(729); // ERROR_DRIVERS_LEAKING_LOCKED_PAGES
+pub const DRIVERS_LEAKING_LOCKED_PAGES : ErrorCode = ErrorCode::from_constant(729); // ERROR_DRIVERS_LEAKING_LOCKED_PAGES
 
 /// The system has awoken
-pub const WAKE_SYSTEM : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(730); // ERROR_WAKE_SYSTEM
+pub const WAKE_SYSTEM : ErrorCode = ErrorCode::from_constant(730); // ERROR_WAKE_SYSTEM
 
 /// ERROR_WAIT_1
-pub const WAIT_1 : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(731); // ERROR_WAIT_1
+pub const WAIT_1 : ErrorCode = ErrorCode::from_constant(731); // ERROR_WAIT_1
 
 /// ERROR_WAIT_2
-pub const WAIT_2 : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(732); // ERROR_WAIT_2
+pub const WAIT_2 : ErrorCode = ErrorCode::from_constant(732); // ERROR_WAIT_2
 
 /// ERROR_WAIT_3
-pub const WAIT_3 : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(733); // ERROR_WAIT_3
+pub const WAIT_3 : ErrorCode = ErrorCode::from_constant(733); // ERROR_WAIT_3
 
 /// ERROR_WAIT_63
-pub const WAIT_63 : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(734); // ERROR_WAIT_63
+pub const WAIT_63 : ErrorCode = ErrorCode::from_constant(734); // ERROR_WAIT_63
 
 /// ERROR_ABANDONED_WAIT_0
-pub const ABANDONED_WAIT_0 : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(735); // ERROR_ABANDONED_WAIT_0
+pub const ABANDONED_WAIT_0 : ErrorCode = ErrorCode::from_constant(735); // ERROR_ABANDONED_WAIT_0
 
 /// ERROR_ABANDONED_WAIT_63
-pub const ABANDONED_WAIT_63 : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(736); // ERROR_ABANDONED_WAIT_63
+pub const ABANDONED_WAIT_63 : ErrorCode = ErrorCode::from_constant(736); // ERROR_ABANDONED_WAIT_63
 
 /// ERROR_USER_APC
-pub const USER_APC : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(737); // ERROR_USER_APC
+pub const USER_APC : ErrorCode = ErrorCode::from_constant(737); // ERROR_USER_APC
 
 /// ERROR_KERNEL_APC
-pub const KERNEL_APC : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(738); // ERROR_KERNEL_APC
+pub const KERNEL_APC : ErrorCode = ErrorCode::from_constant(738); // ERROR_KERNEL_APC
 
 /// ERROR_ALERTED
-pub const ALERTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(739); // ERROR_ALERTED
+pub const ALERTED : ErrorCode = ErrorCode::from_constant(739); // ERROR_ALERTED
 
 /// The requested operation requires elevation.
-pub const ELEVATION_REQUIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(740); // ERROR_ELEVATION_REQUIRED
+pub const ELEVATION_REQUIRED : ErrorCode = ErrorCode::from_constant(740); // ERROR_ELEVATION_REQUIRED
 
 /// A reparse should be performed by the Object Manager since the name of the file resulted in a symbolic link.
-pub const REPARSE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(741); // ERROR_REPARSE
+pub const REPARSE : ErrorCode = ErrorCode::from_constant(741); // ERROR_REPARSE
 
 /// An open/create operation completed while an oplock break is underway.
-pub const OPLOCK_BREAK_IN_PROGRESS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(742); // ERROR_OPLOCK_BREAK_IN_PROGRESS
+pub const OPLOCK_BREAK_IN_PROGRESS : ErrorCode = ErrorCode::from_constant(742); // ERROR_OPLOCK_BREAK_IN_PROGRESS
 
 /// A new volume has been mounted by a file system.
-pub const VOLUME_MOUNTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(743); // ERROR_VOLUME_MOUNTED
+pub const VOLUME_MOUNTED : ErrorCode = ErrorCode::from_constant(743); // ERROR_VOLUME_MOUNTED
 
 /// This success level status indicates that the transaction state already exists for the registry sub-tree, but that a transaction commit was previously aborted.
 /// The commit has now been completed.
-pub const RXACT_COMMITTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(744); // ERROR_RXACT_COMMITTED
+pub const RXACT_COMMITTED : ErrorCode = ErrorCode::from_constant(744); // ERROR_RXACT_COMMITTED
 
 /// This indicates that a notify change request has been completed due to closing the handle which made the notify change request.
-pub const NOTIFY_CLEANUP : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(745); // ERROR_NOTIFY_CLEANUP
+pub const NOTIFY_CLEANUP : ErrorCode = ErrorCode::from_constant(745); // ERROR_NOTIFY_CLEANUP
 
 /// ### Connect Failure on Primary Transport
 /// An attempt was made to connect to the remote server `%hs` on the primary transport, but the connection failed.
 /// The computer WAS able to connect on a secondary transport.
-pub const PRIMARY_TRANSPORT_CONNECT_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(746); // ERROR_PRIMARY_TRANSPORT_CONNECT_FAILED
+pub const PRIMARY_TRANSPORT_CONNECT_FAILED : ErrorCode = ErrorCode::from_constant(746); // ERROR_PRIMARY_TRANSPORT_CONNECT_FAILED
 
 /// Page fault was a transition fault.
-pub const PAGE_FAULT_TRANSITION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(747); // ERROR_PAGE_FAULT_TRANSITION
+pub const PAGE_FAULT_TRANSITION : ErrorCode = ErrorCode::from_constant(747); // ERROR_PAGE_FAULT_TRANSITION
 
 /// Page fault was a demand zero fault.
-pub const PAGE_FAULT_DEMAND_ZERO : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(748); // ERROR_PAGE_FAULT_DEMAND_ZERO
+pub const PAGE_FAULT_DEMAND_ZERO : ErrorCode = ErrorCode::from_constant(748); // ERROR_PAGE_FAULT_DEMAND_ZERO
 
 /// Page fault was a demand zero fault.
-pub const PAGE_FAULT_COPY_ON_WRITE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(749); // ERROR_PAGE_FAULT_COPY_ON_WRITE
+pub const PAGE_FAULT_COPY_ON_WRITE : ErrorCode = ErrorCode::from_constant(749); // ERROR_PAGE_FAULT_COPY_ON_WRITE
 
 /// Page fault was a demand zero fault.
-pub const PAGE_FAULT_GUARD_PAGE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(750); // ERROR_PAGE_FAULT_GUARD_PAGE
+pub const PAGE_FAULT_GUARD_PAGE : ErrorCode = ErrorCode::from_constant(750); // ERROR_PAGE_FAULT_GUARD_PAGE
 
 /// Page fault was satisfied by reading from a secondary storage device.
-pub const PAGE_FAULT_PAGING_FILE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(751); // ERROR_PAGE_FAULT_PAGING_FILE
+pub const PAGE_FAULT_PAGING_FILE : ErrorCode = ErrorCode::from_constant(751); // ERROR_PAGE_FAULT_PAGING_FILE
 
 /// Cached page was locked during operation.
-pub const CACHE_PAGE_LOCKED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(752); // ERROR_CACHE_PAGE_LOCKED
+pub const CACHE_PAGE_LOCKED : ErrorCode = ErrorCode::from_constant(752); // ERROR_CACHE_PAGE_LOCKED
 
 /// Crash dump exists in paging file.
-pub const CRASH_DUMP : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(753); // ERROR_CRASH_DUMP
+pub const CRASH_DUMP : ErrorCode = ErrorCode::from_constant(753); // ERROR_CRASH_DUMP
 
 /// Specified buffer contains all zeros.
-pub const BUFFER_ALL_ZEROS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(754); // ERROR_BUFFER_ALL_ZEROS
+pub const BUFFER_ALL_ZEROS : ErrorCode = ErrorCode::from_constant(754); // ERROR_BUFFER_ALL_ZEROS
 
 /// A reparse should be performed by the Object Manager since the name of the file resulted in a symbolic link.
-pub const REPARSE_OBJECT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(755); // ERROR_REPARSE_OBJECT
+pub const REPARSE_OBJECT : ErrorCode = ErrorCode::from_constant(755); // ERROR_REPARSE_OBJECT
 
 /// The device has succeeded a query-stop and its resource requirements have changed.
-pub const RESOURCE_REQUIREMENTS_CHANGED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(756); // ERROR_RESOURCE_REQUIREMENTS_CHANGED
+pub const RESOURCE_REQUIREMENTS_CHANGED : ErrorCode = ErrorCode::from_constant(756); // ERROR_RESOURCE_REQUIREMENTS_CHANGED
 
 /// The translator has translated these resources into the global space and no further translations should be performed.
-pub const TRANSLATION_COMPLETE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(757); // ERROR_TRANSLATION_COMPLETE
+pub const TRANSLATION_COMPLETE : ErrorCode = ErrorCode::from_constant(757); // ERROR_TRANSLATION_COMPLETE
 
 /// A process being terminated has no threads to terminate.
-pub const NOTHING_TO_TERMINATE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(758); // ERROR_NOTHING_TO_TERMINATE
+pub const NOTHING_TO_TERMINATE : ErrorCode = ErrorCode::from_constant(758); // ERROR_NOTHING_TO_TERMINATE
 
 /// The specified process is not part of a job.
-pub const PROCESS_NOT_IN_JOB : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(759); // ERROR_PROCESS_NOT_IN_JOB
+pub const PROCESS_NOT_IN_JOB : ErrorCode = ErrorCode::from_constant(759); // ERROR_PROCESS_NOT_IN_JOB
 
 /// The specified process is part of a job.
-pub const PROCESS_IN_JOB : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(760); // ERROR_PROCESS_IN_JOB
+pub const PROCESS_IN_JOB : ErrorCode = ErrorCode::from_constant(760); // ERROR_PROCESS_IN_JOB
 
 /// ### Volume Shadow Copy Service
 /// The system is now ready for hibernation.
-pub const VOLSNAP_HIBERNATE_READY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(761); // ERROR_VOLSNAP_HIBERNATE_READY
+pub const VOLSNAP_HIBERNATE_READY : ErrorCode = ErrorCode::from_constant(761); // ERROR_VOLSNAP_HIBERNATE_READY
 
 /// A file system or file system filter driver has successfully completed an FsFilter operation.
-pub const FSFILTER_OP_COMPLETED_SUCCESSFULLY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(762); // ERROR_FSFILTER_OP_COMPLETED_SUCCESSFULLY
+pub const FSFILTER_OP_COMPLETED_SUCCESSFULLY : ErrorCode = ErrorCode::from_constant(762); // ERROR_FSFILTER_OP_COMPLETED_SUCCESSFULLY
 
 /// The specified interrupt vector was already connected.
-pub const INTERRUPT_VECTOR_ALREADY_CONNECTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(763); // ERROR_INTERRUPT_VECTOR_ALREADY_CONNECTED
+pub const INTERRUPT_VECTOR_ALREADY_CONNECTED : ErrorCode = ErrorCode::from_constant(763); // ERROR_INTERRUPT_VECTOR_ALREADY_CONNECTED
 
 /// The specified interrupt vector is still connected.
-pub const INTERRUPT_STILL_CONNECTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(764); // ERROR_INTERRUPT_STILL_CONNECTED
+pub const INTERRUPT_STILL_CONNECTED : ErrorCode = ErrorCode::from_constant(764); // ERROR_INTERRUPT_STILL_CONNECTED
 
 /// An operation is blocked waiting for an oplock.
-pub const WAIT_FOR_OPLOCK : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(765); // ERROR_WAIT_FOR_OPLOCK
+pub const WAIT_FOR_OPLOCK : ErrorCode = ErrorCode::from_constant(765); // ERROR_WAIT_FOR_OPLOCK
 
-#[doc(hidden)] pub const DBG_EXCEPTION_HANDLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(766); // ERROR_DBG_EXCEPTION_HANDLED
-#[doc(hidden)] pub const DBG_CONTINUE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(767); // ERROR_DBG_CONTINUE
+#[doc(hidden)] pub const DBG_EXCEPTION_HANDLED : ErrorCode = ErrorCode::from_constant(766); // ERROR_DBG_EXCEPTION_HANDLED
+#[doc(hidden)] pub const DBG_CONTINUE : ErrorCode = ErrorCode::from_constant(767); // ERROR_DBG_CONTINUE
 
 /// An exception occurred in a user mode callback and the kernel callback frame should be removed.
-pub const CALLBACK_POP_STACK : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(768); // ERROR_CALLBACK_POP_STACK
+pub const CALLBACK_POP_STACK : ErrorCode = ErrorCode::from_constant(768); // ERROR_CALLBACK_POP_STACK
 
 /// Compression is disabled for this volume.
-pub const COMPRESSION_DISABLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(769); // ERROR_COMPRESSION_DISABLED
+pub const COMPRESSION_DISABLED : ErrorCode = ErrorCode::from_constant(769); // ERROR_COMPRESSION_DISABLED
 
 /// The data provider cannot fetch backwards through a result set.
-pub const CANTFETCHBACKWARDS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(770); // ERROR_CANTFETCHBACKWARDS
+pub const CANTFETCHBACKWARDS : ErrorCode = ErrorCode::from_constant(770); // ERROR_CANTFETCHBACKWARDS
 
 /// The data provider cannot scroll backwards through a result set.
-pub const CANTSCROLLBACKWARDS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(771); // ERROR_CANTSCROLLBACKWARDS
+pub const CANTSCROLLBACKWARDS : ErrorCode = ErrorCode::from_constant(771); // ERROR_CANTSCROLLBACKWARDS
 
 /// The data provider requires that previously fetched data is released before asking for more data.
-pub const ROWSNOTRELEASED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(772); // ERROR_ROWSNOTRELEASED
+pub const ROWSNOTRELEASED : ErrorCode = ErrorCode::from_constant(772); // ERROR_ROWSNOTRELEASED
 
 /// The data provider was not able to interpret the flags set for a column binding in an accessor.
-pub const BAD_ACCESSOR_FLAGS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(773); // ERROR_BAD_ACCESSOR_FLAGS
+pub const BAD_ACCESSOR_FLAGS : ErrorCode = ErrorCode::from_constant(773); // ERROR_BAD_ACCESSOR_FLAGS
 
 /// One or more errors occurred while processing the request.
-pub const ERRORS_ENCOUNTERED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(774); // ERROR_ERRORS_ENCOUNTERED
+pub const ERRORS_ENCOUNTERED : ErrorCode = ErrorCode::from_constant(774); // ERROR_ERRORS_ENCOUNTERED
 
 /// The implementation is not capable of performing the request.
-pub const NOT_CAPABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(775); // ERROR_NOT_CAPABLE
+pub const NOT_CAPABLE : ErrorCode = ErrorCode::from_constant(775); // ERROR_NOT_CAPABLE
 
 /// The client of a component requested an operation which is not valid given the state of the component instance.
-pub const REQUEST_OUT_OF_SEQUENCE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(776); // ERROR_REQUEST_OUT_OF_SEQUENCE
+pub const REQUEST_OUT_OF_SEQUENCE : ErrorCode = ErrorCode::from_constant(776); // ERROR_REQUEST_OUT_OF_SEQUENCE
 
 /// A version number could not be parsed.
-pub const VERSION_PARSE_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(777); // ERROR_VERSION_PARSE_ERROR
+pub const VERSION_PARSE_ERROR : ErrorCode = ErrorCode::from_constant(777); // ERROR_VERSION_PARSE_ERROR
 
 /// The iterator's start position is invalid.
-pub const BADSTARTPOSITION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(778); // ERROR_BADSTARTPOSITION
+pub const BADSTARTPOSITION : ErrorCode = ErrorCode::from_constant(778); // ERROR_BADSTARTPOSITION
 
 /// The hardware has reported an uncorrectable memory error.
-pub const MEMORY_HARDWARE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(779); // ERROR_MEMORY_HARDWARE
+pub const MEMORY_HARDWARE : ErrorCode = ErrorCode::from_constant(779); // ERROR_MEMORY_HARDWARE
 
 /// The attempted operation required self healing to be enabled.
-pub const DISK_REPAIR_DISABLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(780); // ERROR_DISK_REPAIR_DISABLED
+pub const DISK_REPAIR_DISABLED : ErrorCode = ErrorCode::from_constant(780); // ERROR_DISK_REPAIR_DISABLED
 
 /// The Desktop heap encountered an error while allocating session memory. There is more information in the system event log.
-pub const INSUFFICIENT_RESOURCE_FOR_SPECIFIED_SHARED_SECTION_SIZE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(781); // ERROR_INSUFFICIENT_RESOURCE_FOR_SPECIFIED_SHARED_SECTION_SIZE
+pub const INSUFFICIENT_RESOURCE_FOR_SPECIFIED_SHARED_SECTION_SIZE : ErrorCode = ErrorCode::from_constant(781); // ERROR_INSUFFICIENT_RESOURCE_FOR_SPECIFIED_SHARED_SECTION_SIZE
 
 /// The system power state is transitioning from `%2` to `%3`.
-pub const SYSTEM_POWERSTATE_TRANSITION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(782); // ERROR_SYSTEM_POWERSTATE_TRANSITION
+pub const SYSTEM_POWERSTATE_TRANSITION : ErrorCode = ErrorCode::from_constant(782); // ERROR_SYSTEM_POWERSTATE_TRANSITION
 
 /// The system power state is transitioning from `%2` to `%3` but could enter `%4`.
-pub const SYSTEM_POWERSTATE_COMPLEX_TRANSITION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(783); // ERROR_SYSTEM_POWERSTATE_COMPLEX_TRANSITION
+pub const SYSTEM_POWERSTATE_COMPLEX_TRANSITION : ErrorCode = ErrorCode::from_constant(783); // ERROR_SYSTEM_POWERSTATE_COMPLEX_TRANSITION
 
 /// A thread is getting dispatched with MCA EXCEPTION because of MCA.
-pub const MCA_EXCEPTION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(784); // ERROR_MCA_EXCEPTION
+pub const MCA_EXCEPTION : ErrorCode = ErrorCode::from_constant(784); // ERROR_MCA_EXCEPTION
 
 /// Access to `%1` is monitored by policy rule `%2`.
-pub const ACCESS_AUDIT_BY_POLICY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(785); // ERROR_ACCESS_AUDIT_BY_POLICY
+pub const ACCESS_AUDIT_BY_POLICY : ErrorCode = ErrorCode::from_constant(785); // ERROR_ACCESS_AUDIT_BY_POLICY
 
 /// Access to `%1` has been restricted by your Administrator by policy rule `%2`.
-pub const ACCESS_DISABLED_NO_SAFER_UI_BY_POLICY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(786); // ERROR_ACCESS_DISABLED_NO_SAFER_UI_BY_POLICY
+pub const ACCESS_DISABLED_NO_SAFER_UI_BY_POLICY : ErrorCode = ErrorCode::from_constant(786); // ERROR_ACCESS_DISABLED_NO_SAFER_UI_BY_POLICY
 
 /// A valid hibernation file has been invalidated and should be abandoned.
-pub const ABANDON_HIBERFILE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(787); // ERROR_ABANDON_HIBERFILE
+pub const ABANDON_HIBERFILE : ErrorCode = ErrorCode::from_constant(787); // ERROR_ABANDON_HIBERFILE
 
 /// ### Delayed Write Failed
 /// Windows was unable to save all the data for the file `%hs`; the data has been lost.
 /// This error may be caused by network connectivity issues. Please try to save this file elsewhere.
-pub const LOST_WRITEBEHIND_DATA_NETWORK_DISCONNECTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(788); // ERROR_LOST_WRITEBEHIND_DATA_NETWORK_DISCONNECTED
+pub const LOST_WRITEBEHIND_DATA_NETWORK_DISCONNECTED : ErrorCode = ErrorCode::from_constant(788); // ERROR_LOST_WRITEBEHIND_DATA_NETWORK_DISCONNECTED
 
 /// ### Delayed Write Failed
 /// Windows was unable to save all the data for the file `%hs`; the data has been lost.
 /// This error was returned by the server on which the file exists. Please try to save this file elsewhere.
-pub const LOST_WRITEBEHIND_DATA_NETWORK_SERVER_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(789); // ERROR_LOST_WRITEBEHIND_DATA_NETWORK_SERVER_ERROR
+pub const LOST_WRITEBEHIND_DATA_NETWORK_SERVER_ERROR : ErrorCode = ErrorCode::from_constant(789); // ERROR_LOST_WRITEBEHIND_DATA_NETWORK_SERVER_ERROR
 
 /// ### Delayed Write Failed
 /// Windows was unable to save all the data for the file `%hs`; the data has been lost.
 /// This error may be caused if the device has been removed or the media is write-protected.
-pub const LOST_WRITEBEHIND_DATA_LOCAL_DISK_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(790); // ERROR_LOST_WRITEBEHIND_DATA_LOCAL_DISK_ERROR
+pub const LOST_WRITEBEHIND_DATA_LOCAL_DISK_ERROR : ErrorCode = ErrorCode::from_constant(790); // ERROR_LOST_WRITEBEHIND_DATA_LOCAL_DISK_ERROR
 
 /// The resources required for this device conflict with the MCFG table.
-pub const BAD_MCFG_TABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(791); // ERROR_BAD_MCFG_TABLE
+pub const BAD_MCFG_TABLE : ErrorCode = ErrorCode::from_constant(791); // ERROR_BAD_MCFG_TABLE
 
 /// The volume repair could not be performed while it is online.
 /// Please schedule to take the volume offline so that it can be repaired.
-pub const DISK_REPAIR_REDIRECTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(792); // ERROR_DISK_REPAIR_REDIRECTED
+pub const DISK_REPAIR_REDIRECTED : ErrorCode = ErrorCode::from_constant(792); // ERROR_DISK_REPAIR_REDIRECTED
 
 /// The volume repair was not successful.
-pub const DISK_REPAIR_UNSUCCESSFUL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(793); // ERROR_DISK_REPAIR_UNSUCCESSFUL
+pub const DISK_REPAIR_UNSUCCESSFUL : ErrorCode = ErrorCode::from_constant(793); // ERROR_DISK_REPAIR_UNSUCCESSFUL
 
 /// One of the volume corruption logs is full. Further corruptions that may be detected won't be logged.
-pub const CORRUPT_LOG_OVERFULL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(794); // ERROR_CORRUPT_LOG_OVERFULL
+pub const CORRUPT_LOG_OVERFULL : ErrorCode = ErrorCode::from_constant(794); // ERROR_CORRUPT_LOG_OVERFULL
 
 /// One of the volume corruption logs is internally corrupted and needs to be recreated. The volume may contain undetected corruptions and must be scanned.
-pub const CORRUPT_LOG_CORRUPTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(795); // ERROR_CORRUPT_LOG_CORRUPTED
+pub const CORRUPT_LOG_CORRUPTED : ErrorCode = ErrorCode::from_constant(795); // ERROR_CORRUPT_LOG_CORRUPTED
 
 /// One of the volume corruption logs is unavailable for being operated on.
-pub const CORRUPT_LOG_UNAVAILABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(796); // ERROR_CORRUPT_LOG_UNAVAILABLE
+pub const CORRUPT_LOG_UNAVAILABLE : ErrorCode = ErrorCode::from_constant(796); // ERROR_CORRUPT_LOG_UNAVAILABLE
 
 /// One of the volume corruption logs was deleted while still having corruption records in them. The volume contains detected corruptions and must be scanned.
-pub const CORRUPT_LOG_DELETED_FULL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(797); // ERROR_CORRUPT_LOG_DELETED_FULL
+pub const CORRUPT_LOG_DELETED_FULL : ErrorCode = ErrorCode::from_constant(797); // ERROR_CORRUPT_LOG_DELETED_FULL
 
 /// One of the volume corruption logs was cleared by chkdsk and no longer contains real corruptions.
-pub const CORRUPT_LOG_CLEARED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(798); // ERROR_CORRUPT_LOG_CLEARED
+pub const CORRUPT_LOG_CLEARED : ErrorCode = ErrorCode::from_constant(798); // ERROR_CORRUPT_LOG_CLEARED
 
 /// Orphaned files exist on the volume but could not be recovered because no more new names could be created in the recovery directory. Files must be moved from the recovery directory.
-pub const ORPHAN_NAME_EXHAUSTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(799); // ERROR_ORPHAN_NAME_EXHAUSTED
+pub const ORPHAN_NAME_EXHAUSTED : ErrorCode = ErrorCode::from_constant(799); // ERROR_ORPHAN_NAME_EXHAUSTED
 
 /// The oplock that was associated with this handle is now associated with a different handle.
-pub const OPLOCK_SWITCHED_TO_NEW_HANDLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(800); // ERROR_OPLOCK_SWITCHED_TO_NEW_HANDLE
+pub const OPLOCK_SWITCHED_TO_NEW_HANDLE : ErrorCode = ErrorCode::from_constant(800); // ERROR_OPLOCK_SWITCHED_TO_NEW_HANDLE
 
 /// An oplock of the requested level cannot be granted.  An oplock of a lower level may be available.
-pub const CANNOT_GRANT_REQUESTED_OPLOCK : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(801); // ERROR_CANNOT_GRANT_REQUESTED_OPLOCK
+pub const CANNOT_GRANT_REQUESTED_OPLOCK : ErrorCode = ErrorCode::from_constant(801); // ERROR_CANNOT_GRANT_REQUESTED_OPLOCK
 
 /// The operation did not complete successfully because it would cause an oplock to be broken. The caller has requested that existing oplocks not be broken.
-pub const CANNOT_BREAK_OPLOCK : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(802); // ERROR_CANNOT_BREAK_OPLOCK
+pub const CANNOT_BREAK_OPLOCK : ErrorCode = ErrorCode::from_constant(802); // ERROR_CANNOT_BREAK_OPLOCK
 
 /// The handle with which this oplock was associated has been closed.  The oplock is now broken.
-pub const OPLOCK_HANDLE_CLOSED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(803); // ERROR_OPLOCK_HANDLE_CLOSED
+pub const OPLOCK_HANDLE_CLOSED : ErrorCode = ErrorCode::from_constant(803); // ERROR_OPLOCK_HANDLE_CLOSED
 
 /// The specified access control entry (ACE) does not contain a condition.
-pub const NO_ACE_CONDITION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(804); // ERROR_NO_ACE_CONDITION
+pub const NO_ACE_CONDITION : ErrorCode = ErrorCode::from_constant(804); // ERROR_NO_ACE_CONDITION
 
 /// The specified access control entry (ACE) contains an invalid condition.
-pub const INVALID_ACE_CONDITION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(805); // ERROR_INVALID_ACE_CONDITION
+pub const INVALID_ACE_CONDITION : ErrorCode = ErrorCode::from_constant(805); // ERROR_INVALID_ACE_CONDITION
 
 /// Access to the specified file handle has been revoked.
-pub const FILE_HANDLE_REVOKED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(806); // ERROR_FILE_HANDLE_REVOKED
+pub const FILE_HANDLE_REVOKED : ErrorCode = ErrorCode::from_constant(806); // ERROR_FILE_HANDLE_REVOKED
 
 /// ### Image Relocated
 /// An image file was mapped at a different address from the one specified in the image file but fixups will still be automatically performed on the image.
-pub const IMAGE_AT_DIFFERENT_BASE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(807); // ERROR_IMAGE_AT_DIFFERENT_BASE
+pub const IMAGE_AT_DIFFERENT_BASE : ErrorCode = ErrorCode::from_constant(807); // ERROR_IMAGE_AT_DIFFERENT_BASE
 
 /// The read or write operation to an encrypted file could not be completed because the file has not been opened for data access.
-pub const ENCRYPTED_IO_NOT_POSSIBLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(808); // ERROR_ENCRYPTED_IO_NOT_POSSIBLE
+pub const ENCRYPTED_IO_NOT_POSSIBLE : ErrorCode = ErrorCode::from_constant(808); // ERROR_ENCRYPTED_IO_NOT_POSSIBLE
 
 /// File metadata optimization is already in progress.
-pub const FILE_METADATA_OPTIMIZATION_IN_PROGRESS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(809); // ERROR_FILE_METADATA_OPTIMIZATION_IN_PROGRESS
+pub const FILE_METADATA_OPTIMIZATION_IN_PROGRESS : ErrorCode = ErrorCode::from_constant(809); // ERROR_FILE_METADATA_OPTIMIZATION_IN_PROGRESS
 
 /// The requested operation failed due to quota operation is still in progress.
-pub const QUOTA_ACTIVITY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(810); // ERROR_QUOTA_ACTIVITY
+pub const QUOTA_ACTIVITY : ErrorCode = ErrorCode::from_constant(810); // ERROR_QUOTA_ACTIVITY
 
 /// Access to the specified handle has been revoked.
-pub const HANDLE_REVOKED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(811); // ERROR_HANDLE_REVOKED
+pub const HANDLE_REVOKED : ErrorCode = ErrorCode::from_constant(811); // ERROR_HANDLE_REVOKED
 
 /// The callback function must be invoked inline.
-pub const CALLBACK_INVOKE_INLINE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(812); // ERROR_CALLBACK_INVOKE_INLINE
+pub const CALLBACK_INVOKE_INLINE : ErrorCode = ErrorCode::from_constant(812); // ERROR_CALLBACK_INVOKE_INLINE
 
 /// The specified CPU Set IDs are invalid.
-pub const CPU_SET_INVALID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(813); // ERROR_CPU_SET_INVALID
+pub const CPU_SET_INVALID : ErrorCode = ErrorCode::from_constant(813); // ERROR_CPU_SET_INVALID
 
 /// The specified enclave has not yet been terminated.
-pub const ENCLAVE_NOT_TERMINATED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(814); // ERROR_ENCLAVE_NOT_TERMINATED
+pub const ENCLAVE_NOT_TERMINATED : ErrorCode = ErrorCode::from_constant(814); // ERROR_ENCLAVE_NOT_TERMINATED
 
 /// An attempt was made to access protected memory in violation of its secure access policy.
-pub const ENCLAVE_VIOLATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(815); // ERROR_ENCLAVE_VIOLATION
+pub const ENCLAVE_VIOLATION : ErrorCode = ErrorCode::from_constant(815); // ERROR_ENCLAVE_VIOLATION
 
 /// Access to the extended attribute was denied.
-pub const EA_ACCESS_DENIED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(994); // ERROR_EA_ACCESS_DENIED
+pub const EA_ACCESS_DENIED : ErrorCode = ErrorCode::from_constant(994); // ERROR_EA_ACCESS_DENIED
 
 /// The I/O operation has been aborted because of either a thread exit or an application request.
-pub const OPERATION_ABORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(995); // ERROR_OPERATION_ABORTED
+pub const OPERATION_ABORTED : ErrorCode = ErrorCode::from_constant(995); // ERROR_OPERATION_ABORTED
 
 /// Overlapped I/O event is not in a signaled state.
-pub const IO_INCOMPLETE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(996); // ERROR_IO_INCOMPLETE
+pub const IO_INCOMPLETE : ErrorCode = ErrorCode::from_constant(996); // ERROR_IO_INCOMPLETE
 
 /// Overlapped I/O operation is in progress.
-pub const IO_PENDING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(997); // ERROR_IO_PENDING
+pub const IO_PENDING : ErrorCode = ErrorCode::from_constant(997); // ERROR_IO_PENDING
 
 /// Invalid access to memory location.
-pub const NOACCESS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(998); // ERROR_NOACCESS
+pub const NOACCESS : ErrorCode = ErrorCode::from_constant(998); // ERROR_NOACCESS
 
 /// Error performing inpage operation.
-pub const SWAPERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(999); // ERROR_SWAPERROR
+pub const SWAPERROR : ErrorCode = ErrorCode::from_constant(999); // ERROR_SWAPERROR
 
 /// Recursion too deep; the stack overflowed.
-pub const STACK_OVERFLOW : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1001); // ERROR_STACK_OVERFLOW
+pub const STACK_OVERFLOW : ErrorCode = ErrorCode::from_constant(1001); // ERROR_STACK_OVERFLOW
 
 /// The window cannot act on the sent message.
-pub const INVALID_MESSAGE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1002); // ERROR_INVALID_MESSAGE
+pub const INVALID_MESSAGE : ErrorCode = ErrorCode::from_constant(1002); // ERROR_INVALID_MESSAGE
 
 /// Cannot complete this function.
-pub const CAN_NOT_COMPLETE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1003); // ERROR_CAN_NOT_COMPLETE
+pub const CAN_NOT_COMPLETE : ErrorCode = ErrorCode::from_constant(1003); // ERROR_CAN_NOT_COMPLETE
 
 /// Invalid flags.
-pub const INVALID_FLAGS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1004); // ERROR_INVALID_FLAGS
+pub const INVALID_FLAGS : ErrorCode = ErrorCode::from_constant(1004); // ERROR_INVALID_FLAGS
 
 /// The volume does not contain a recognized file system.
 /// Please make sure that all required file system drivers are loaded and that the volume is not corrupted.
-pub const UNRECOGNIZED_VOLUME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1005); // ERROR_UNRECOGNIZED_VOLUME
+pub const UNRECOGNIZED_VOLUME : ErrorCode = ErrorCode::from_constant(1005); // ERROR_UNRECOGNIZED_VOLUME
 
 /// The volume for a file has been externally altered so that the opened file is no longer valid.
-pub const FILE_INVALID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1006); // ERROR_FILE_INVALID
+pub const FILE_INVALID : ErrorCode = ErrorCode::from_constant(1006); // ERROR_FILE_INVALID
 
 /// The requested operation cannot be performed in full-screen mode.
-pub const FULLSCREEN_MODE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1007); // ERROR_FULLSCREEN_MODE
+pub const FULLSCREEN_MODE : ErrorCode = ErrorCode::from_constant(1007); // ERROR_FULLSCREEN_MODE
 
 /// An attempt was made to reference a token that does not exist.
-pub const NO_TOKEN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1008); // ERROR_NO_TOKEN
+pub const NO_TOKEN : ErrorCode = ErrorCode::from_constant(1008); // ERROR_NO_TOKEN
 
 /// The configuration registry database is corrupt.
-pub const BADDB : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1009); // ERROR_BADDB
+pub const BADDB : ErrorCode = ErrorCode::from_constant(1009); // ERROR_BADDB
 
 /// The configuration registry key is invalid.
-pub const BADKEY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1010); // ERROR_BADKEY
+pub const BADKEY : ErrorCode = ErrorCode::from_constant(1010); // ERROR_BADKEY
 
 /// The configuration registry key could not be opened.
-pub const CANTOPEN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1011); // ERROR_CANTOPEN
+pub const CANTOPEN : ErrorCode = ErrorCode::from_constant(1011); // ERROR_CANTOPEN
 
 /// The configuration registry key could not be read.
-pub const CANTREAD : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1012); // ERROR_CANTREAD
+pub const CANTREAD : ErrorCode = ErrorCode::from_constant(1012); // ERROR_CANTREAD
 
 /// The configuration registry key could not be written.
-pub const CANTWRITE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1013); // ERROR_CANTWRITE
+pub const CANTWRITE : ErrorCode = ErrorCode::from_constant(1013); // ERROR_CANTWRITE
 
 /// One of the files in the registry database had to be recovered by use of a log or alternate copy. The recovery was successful.
-pub const REGISTRY_RECOVERED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1014); // ERROR_REGISTRY_RECOVERED
+pub const REGISTRY_RECOVERED : ErrorCode = ErrorCode::from_constant(1014); // ERROR_REGISTRY_RECOVERED
 
 /// The registry is corrupted. The structure of one of the files containing registry data is corrupted, or the system's memory image of the file is corrupted, or the file could not be recovered because the alternate copy or log was absent or corrupted.
-pub const REGISTRY_CORRUPT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1015); // ERROR_REGISTRY_CORRUPT
+pub const REGISTRY_CORRUPT : ErrorCode = ErrorCode::from_constant(1015); // ERROR_REGISTRY_CORRUPT
 
 /// An I/O operation initiated by the registry failed unrecoverably. The registry could not read in, or write out, or flush, one of the files that contain the system's image of the registry.
-pub const REGISTRY_IO_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1016); // ERROR_REGISTRY_IO_FAILED
+pub const REGISTRY_IO_FAILED : ErrorCode = ErrorCode::from_constant(1016); // ERROR_REGISTRY_IO_FAILED
 
 /// The system has attempted to load or restore a file into the registry, but the specified file is not in a registry file format.
-pub const NOT_REGISTRY_FILE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1017); // ERROR_NOT_REGISTRY_FILE
+pub const NOT_REGISTRY_FILE : ErrorCode = ErrorCode::from_constant(1017); // ERROR_NOT_REGISTRY_FILE
 
 /// Illegal operation attempted on a registry key that has been marked for deletion.
-pub const KEY_DELETED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1018); // ERROR_KEY_DELETED
+pub const KEY_DELETED : ErrorCode = ErrorCode::from_constant(1018); // ERROR_KEY_DELETED
 
 /// System could not allocate the required space in a registry log.
-pub const NO_LOG_SPACE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1019); // ERROR_NO_LOG_SPACE
+pub const NO_LOG_SPACE : ErrorCode = ErrorCode::from_constant(1019); // ERROR_NO_LOG_SPACE
 
 /// Cannot create a symbolic link in a registry key that already has subkeys or values.
-pub const KEY_HAS_CHILDREN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1020); // ERROR_KEY_HAS_CHILDREN
+pub const KEY_HAS_CHILDREN : ErrorCode = ErrorCode::from_constant(1020); // ERROR_KEY_HAS_CHILDREN
 
 /// Cannot create a stable subkey under a volatile parent key.
-pub const CHILD_MUST_BE_VOLATILE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1021); // ERROR_CHILD_MUST_BE_VOLATILE
+pub const CHILD_MUST_BE_VOLATILE : ErrorCode = ErrorCode::from_constant(1021); // ERROR_CHILD_MUST_BE_VOLATILE
 
 /// A notify change request is being completed and the information is not being returned in the caller's buffer. The caller now needs to enumerate the files to find the changes.
-pub const NOTIFY_ENUM_DIR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1022); // ERROR_NOTIFY_ENUM_DIR
+pub const NOTIFY_ENUM_DIR : ErrorCode = ErrorCode::from_constant(1022); // ERROR_NOTIFY_ENUM_DIR
 
 /// A stop control has been sent to a service that other running services are dependent on.
-pub const DEPENDENT_SERVICES_RUNNING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1051); // ERROR_DEPENDENT_SERVICES_RUNNING
+pub const DEPENDENT_SERVICES_RUNNING : ErrorCode = ErrorCode::from_constant(1051); // ERROR_DEPENDENT_SERVICES_RUNNING
 
 /// The requested control is not valid for this service.
-pub const INVALID_SERVICE_CONTROL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1052); // ERROR_INVALID_SERVICE_CONTROL
+pub const INVALID_SERVICE_CONTROL : ErrorCode = ErrorCode::from_constant(1052); // ERROR_INVALID_SERVICE_CONTROL
 
-#[doc(hidden)] pub const SERVICE_REQUEST_TIMEOUT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1053); // ERROR_SERVICE_REQUEST_TIMEOUT
-#[doc(hidden)] pub const SERVICE_NO_THREAD : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1054); // ERROR_SERVICE_NO_THREAD
-#[doc(hidden)] pub const SERVICE_DATABASE_LOCKED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1055); // ERROR_SERVICE_DATABASE_LOCKED
-#[doc(hidden)] pub const SERVICE_ALREADY_RUNNING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1056); // ERROR_SERVICE_ALREADY_RUNNING
+#[doc(hidden)] pub const SERVICE_REQUEST_TIMEOUT : ErrorCode = ErrorCode::from_constant(1053); // ERROR_SERVICE_REQUEST_TIMEOUT
+#[doc(hidden)] pub const SERVICE_NO_THREAD : ErrorCode = ErrorCode::from_constant(1054); // ERROR_SERVICE_NO_THREAD
+#[doc(hidden)] pub const SERVICE_DATABASE_LOCKED : ErrorCode = ErrorCode::from_constant(1055); // ERROR_SERVICE_DATABASE_LOCKED
+#[doc(hidden)] pub const SERVICE_ALREADY_RUNNING : ErrorCode = ErrorCode::from_constant(1056); // ERROR_SERVICE_ALREADY_RUNNING
 
 /// The account name is invalid or does not exist, or the password is invalid for the account name specified.
-pub const INVALID_SERVICE_ACCOUNT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1057); // ERROR_INVALID_SERVICE_ACCOUNT
+pub const INVALID_SERVICE_ACCOUNT : ErrorCode = ErrorCode::from_constant(1057); // ERROR_INVALID_SERVICE_ACCOUNT
 
-#[doc(hidden)] pub const SERVICE_DISABLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1058); // ERROR_SERVICE_DISABLED
+#[doc(hidden)] pub const SERVICE_DISABLED : ErrorCode = ErrorCode::from_constant(1058); // ERROR_SERVICE_DISABLED
 
 /// Circular service dependency was specified.
-pub const CIRCULAR_DEPENDENCY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1059); // ERROR_CIRCULAR_DEPENDENCY
+pub const CIRCULAR_DEPENDENCY : ErrorCode = ErrorCode::from_constant(1059); // ERROR_CIRCULAR_DEPENDENCY
 
-#[doc(hidden)] pub const SERVICE_DOES_NOT_EXIST : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1060); // ERROR_SERVICE_DOES_NOT_EXIST
-#[doc(hidden)] pub const SERVICE_CANNOT_ACCEPT_CTRL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1061); // ERROR_SERVICE_CANNOT_ACCEPT_CTRL
-#[doc(hidden)] pub const SERVICE_NOT_ACTIVE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1062); // ERROR_SERVICE_NOT_ACTIVE
+#[doc(hidden)] pub const SERVICE_DOES_NOT_EXIST : ErrorCode = ErrorCode::from_constant(1060); // ERROR_SERVICE_DOES_NOT_EXIST
+#[doc(hidden)] pub const SERVICE_CANNOT_ACCEPT_CTRL : ErrorCode = ErrorCode::from_constant(1061); // ERROR_SERVICE_CANNOT_ACCEPT_CTRL
+#[doc(hidden)] pub const SERVICE_NOT_ACTIVE : ErrorCode = ErrorCode::from_constant(1062); // ERROR_SERVICE_NOT_ACTIVE
 
 /// The service process could not connect to the service controller.
-pub const FAILED_SERVICE_CONTROLLER_CONNECT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1063); // ERROR_FAILED_SERVICE_CONTROLLER_CONNECT
+pub const FAILED_SERVICE_CONTROLLER_CONNECT : ErrorCode = ErrorCode::from_constant(1063); // ERROR_FAILED_SERVICE_CONTROLLER_CONNECT
 
 /// An exception occurred in the service when handling the control request.
-pub const EXCEPTION_IN_SERVICE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1064); // ERROR_EXCEPTION_IN_SERVICE
+pub const EXCEPTION_IN_SERVICE : ErrorCode = ErrorCode::from_constant(1064); // ERROR_EXCEPTION_IN_SERVICE
 
 /// The database specified does not exist.
-pub const DATABASE_DOES_NOT_EXIST : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1065); // ERROR_DATABASE_DOES_NOT_EXIST
+pub const DATABASE_DOES_NOT_EXIST : ErrorCode = ErrorCode::from_constant(1065); // ERROR_DATABASE_DOES_NOT_EXIST
 
-#[doc(hidden)] pub const SERVICE_SPECIFIC_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1066); // ERROR_SERVICE_SPECIFIC_ERROR
+#[doc(hidden)] pub const SERVICE_SPECIFIC_ERROR : ErrorCode = ErrorCode::from_constant(1066); // ERROR_SERVICE_SPECIFIC_ERROR
 
 /// The process terminated unexpectedly.
-pub const PROCESS_ABORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1067); // ERROR_PROCESS_ABORTED
+pub const PROCESS_ABORTED : ErrorCode = ErrorCode::from_constant(1067); // ERROR_PROCESS_ABORTED
 
-#[doc(hidden)] pub const SERVICE_DEPENDENCY_FAIL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1068); // ERROR_SERVICE_DEPENDENCY_FAIL
-#[doc(hidden)] pub const SERVICE_LOGON_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1069); // ERROR_SERVICE_LOGON_FAILED
-#[doc(hidden)] pub const SERVICE_START_HANG : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1070); // ERROR_SERVICE_START_HANG
+#[doc(hidden)] pub const SERVICE_DEPENDENCY_FAIL : ErrorCode = ErrorCode::from_constant(1068); // ERROR_SERVICE_DEPENDENCY_FAIL
+#[doc(hidden)] pub const SERVICE_LOGON_FAILED : ErrorCode = ErrorCode::from_constant(1069); // ERROR_SERVICE_LOGON_FAILED
+#[doc(hidden)] pub const SERVICE_START_HANG : ErrorCode = ErrorCode::from_constant(1070); // ERROR_SERVICE_START_HANG
 
 /// The specified service database lock is invalid.
-pub const INVALID_SERVICE_LOCK : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1071); // ERROR_INVALID_SERVICE_LOCK
+pub const INVALID_SERVICE_LOCK : ErrorCode = ErrorCode::from_constant(1071); // ERROR_INVALID_SERVICE_LOCK
 
-#[doc(hidden)] pub const SERVICE_MARKED_FOR_DELETE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1072); // ERROR_SERVICE_MARKED_FOR_DELETE
-#[doc(hidden)] pub const SERVICE_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1073); // ERROR_SERVICE_EXISTS
+#[doc(hidden)] pub const SERVICE_MARKED_FOR_DELETE : ErrorCode = ErrorCode::from_constant(1072); // ERROR_SERVICE_MARKED_FOR_DELETE
+#[doc(hidden)] pub const SERVICE_EXISTS : ErrorCode = ErrorCode::from_constant(1073); // ERROR_SERVICE_EXISTS
 
 /// The system is currently running with the last-known-good configuration.
-pub const ALREADY_RUNNING_LKG : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1074); // ERROR_ALREADY_RUNNING_LKG
+pub const ALREADY_RUNNING_LKG : ErrorCode = ErrorCode::from_constant(1074); // ERROR_ALREADY_RUNNING_LKG
 
-#[doc(hidden)] pub const SERVICE_DEPENDENCY_DELETED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1075); // ERROR_SERVICE_DEPENDENCY_DELETED
+#[doc(hidden)] pub const SERVICE_DEPENDENCY_DELETED : ErrorCode = ErrorCode::from_constant(1075); // ERROR_SERVICE_DEPENDENCY_DELETED
 
 /// The current boot has already been accepted for use as the last-known-good control set.
-pub const BOOT_ALREADY_ACCEPTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1076); // ERROR_BOOT_ALREADY_ACCEPTED
+pub const BOOT_ALREADY_ACCEPTED : ErrorCode = ErrorCode::from_constant(1076); // ERROR_BOOT_ALREADY_ACCEPTED
 
-#[doc(hidden)] pub const SERVICE_NEVER_STARTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1077); // ERROR_SERVICE_NEVER_STARTED
+#[doc(hidden)] pub const SERVICE_NEVER_STARTED : ErrorCode = ErrorCode::from_constant(1077); // ERROR_SERVICE_NEVER_STARTED
 
 /// The name is already in use as either a service name or a service display name.
-pub const DUPLICATE_SERVICE_NAME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1078); // ERROR_DUPLICATE_SERVICE_NAME
+pub const DUPLICATE_SERVICE_NAME : ErrorCode = ErrorCode::from_constant(1078); // ERROR_DUPLICATE_SERVICE_NAME
 
 /// The account specified for this service is different from the account specified for other services running in the same process.
-pub const DIFFERENT_SERVICE_ACCOUNT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1079); // ERROR_DIFFERENT_SERVICE_ACCOUNT
+pub const DIFFERENT_SERVICE_ACCOUNT : ErrorCode = ErrorCode::from_constant(1079); // ERROR_DIFFERENT_SERVICE_ACCOUNT
 
 /// Failure actions can only be set for Win32 services, not for drivers.
-pub const CANNOT_DETECT_DRIVER_FAILURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1080); // ERROR_CANNOT_DETECT_DRIVER_FAILURE
+pub const CANNOT_DETECT_DRIVER_FAILURE : ErrorCode = ErrorCode::from_constant(1080); // ERROR_CANNOT_DETECT_DRIVER_FAILURE
 
 /// This service runs in the same process as the service control manager.
 /// Therefore, the service control manager cannot take action if this service's process terminates unexpectedly.
-pub const CANNOT_DETECT_PROCESS_ABORT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1081); // ERROR_CANNOT_DETECT_PROCESS_ABORT
+pub const CANNOT_DETECT_PROCESS_ABORT : ErrorCode = ErrorCode::from_constant(1081); // ERROR_CANNOT_DETECT_PROCESS_ABORT
 
 /// No recovery program has been configured for this service.
-pub const NO_RECOVERY_PROGRAM : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1082); // ERROR_NO_RECOVERY_PROGRAM
+pub const NO_RECOVERY_PROGRAM : ErrorCode = ErrorCode::from_constant(1082); // ERROR_NO_RECOVERY_PROGRAM
 
-#[doc(hidden)] pub const SERVICE_NOT_IN_EXE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1083); // ERROR_SERVICE_NOT_IN_EXE
+#[doc(hidden)] pub const SERVICE_NOT_IN_EXE : ErrorCode = ErrorCode::from_constant(1083); // ERROR_SERVICE_NOT_IN_EXE
 
 /// This service cannot be started in Safe Mode
-pub const NOT_SAFEBOOT_SERVICE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1084); // ERROR_NOT_SAFEBOOT_SERVICE
+pub const NOT_SAFEBOOT_SERVICE : ErrorCode = ErrorCode::from_constant(1084); // ERROR_NOT_SAFEBOOT_SERVICE
 
 /// The physical end of the tape has been reached.
-pub const END_OF_MEDIA : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1100); // ERROR_END_OF_MEDIA
+pub const END_OF_MEDIA : ErrorCode = ErrorCode::from_constant(1100); // ERROR_END_OF_MEDIA
 
 /// A tape access reached a filemark.
-pub const FILEMARK_DETECTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1101); // ERROR_FILEMARK_DETECTED
+pub const FILEMARK_DETECTED : ErrorCode = ErrorCode::from_constant(1101); // ERROR_FILEMARK_DETECTED
 
 /// The beginning of the tape or a partition was encountered.
-pub const BEGINNING_OF_MEDIA : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1102); // ERROR_BEGINNING_OF_MEDIA
+pub const BEGINNING_OF_MEDIA : ErrorCode = ErrorCode::from_constant(1102); // ERROR_BEGINNING_OF_MEDIA
 
 /// A tape access reached the end of a set of files.
-pub const SETMARK_DETECTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1103); // ERROR_SETMARK_DETECTED
+pub const SETMARK_DETECTED : ErrorCode = ErrorCode::from_constant(1103); // ERROR_SETMARK_DETECTED
 
 /// No more data is on the tape.
-pub const NO_DATA_DETECTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1104); // ERROR_NO_DATA_DETECTED
+pub const NO_DATA_DETECTED : ErrorCode = ErrorCode::from_constant(1104); // ERROR_NO_DATA_DETECTED
 
 /// Tape could not be partitioned.
-pub const PARTITION_FAILURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1105); // ERROR_PARTITION_FAILURE
+pub const PARTITION_FAILURE : ErrorCode = ErrorCode::from_constant(1105); // ERROR_PARTITION_FAILURE
 
 /// When accessing a new tape of a multivolume partition, the current block size is incorrect.
-pub const INVALID_BLOCK_LENGTH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1106); // ERROR_INVALID_BLOCK_LENGTH
+pub const INVALID_BLOCK_LENGTH : ErrorCode = ErrorCode::from_constant(1106); // ERROR_INVALID_BLOCK_LENGTH
 
 /// Tape partition information could not be found when loading a tape.
-pub const DEVICE_NOT_PARTITIONED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1107); // ERROR_DEVICE_NOT_PARTITIONED
+pub const DEVICE_NOT_PARTITIONED : ErrorCode = ErrorCode::from_constant(1107); // ERROR_DEVICE_NOT_PARTITIONED
 
 /// Unable to lock the media eject mechanism.
-pub const UNABLE_TO_LOCK_MEDIA : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1108); // ERROR_UNABLE_TO_LOCK_MEDIA
+pub const UNABLE_TO_LOCK_MEDIA : ErrorCode = ErrorCode::from_constant(1108); // ERROR_UNABLE_TO_LOCK_MEDIA
 
 /// Unable to unload the media.
-pub const UNABLE_TO_UNLOAD_MEDIA : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1109); // ERROR_UNABLE_TO_UNLOAD_MEDIA
+pub const UNABLE_TO_UNLOAD_MEDIA : ErrorCode = ErrorCode::from_constant(1109); // ERROR_UNABLE_TO_UNLOAD_MEDIA
 
 /// The media in the drive may have changed.
-pub const MEDIA_CHANGED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1110); // ERROR_MEDIA_CHANGED
+pub const MEDIA_CHANGED : ErrorCode = ErrorCode::from_constant(1110); // ERROR_MEDIA_CHANGED
 
 /// The I/O bus was reset.
-pub const BUS_RESET : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1111); // ERROR_BUS_RESET
+pub const BUS_RESET : ErrorCode = ErrorCode::from_constant(1111); // ERROR_BUS_RESET
 
 /// No media in drive.
-pub const NO_MEDIA_IN_DRIVE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1112); // ERROR_NO_MEDIA_IN_DRIVE
+pub const NO_MEDIA_IN_DRIVE : ErrorCode = ErrorCode::from_constant(1112); // ERROR_NO_MEDIA_IN_DRIVE
 
 /// No mapping for the Unicode character exists in the target multi-byte code page.
-pub const NO_UNICODE_TRANSLATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1113); // ERROR_NO_UNICODE_TRANSLATION
+pub const NO_UNICODE_TRANSLATION : ErrorCode = ErrorCode::from_constant(1113); // ERROR_NO_UNICODE_TRANSLATION
 
 /// A dynamic link library (DLL) initialization routine failed.
-pub const DLL_INIT_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1114); // ERROR_DLL_INIT_FAILED
+pub const DLL_INIT_FAILED : ErrorCode = ErrorCode::from_constant(1114); // ERROR_DLL_INIT_FAILED
 
 /// A system shutdown is in progress.
-pub const SHUTDOWN_IN_PROGRESS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1115); // ERROR_SHUTDOWN_IN_PROGRESS
+pub const SHUTDOWN_IN_PROGRESS : ErrorCode = ErrorCode::from_constant(1115); // ERROR_SHUTDOWN_IN_PROGRESS
 
 /// Unable to abort the system shutdown because no shutdown was in progress.
-pub const NO_SHUTDOWN_IN_PROGRESS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1116); // ERROR_NO_SHUTDOWN_IN_PROGRESS
+pub const NO_SHUTDOWN_IN_PROGRESS : ErrorCode = ErrorCode::from_constant(1116); // ERROR_NO_SHUTDOWN_IN_PROGRESS
 
 /// The request could not be performed because of an I/O device error.
-pub const IO_DEVICE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1117); // ERROR_IO_DEVICE
+pub const IO_DEVICE : ErrorCode = ErrorCode::from_constant(1117); // ERROR_IO_DEVICE
 
 /// No serial device was successfully initialized. The serial driver will unload.
-pub const SERIAL_NO_DEVICE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1118); // ERROR_SERIAL_NO_DEVICE
+pub const SERIAL_NO_DEVICE : ErrorCode = ErrorCode::from_constant(1118); // ERROR_SERIAL_NO_DEVICE
 
 /// Unable to open a device that was sharing an interrupt request (IRQ) with other devices. At least one other device that uses that IRQ was already opened.
-pub const IRQ_BUSY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1119); // ERROR_IRQ_BUSY
+pub const IRQ_BUSY : ErrorCode = ErrorCode::from_constant(1119); // ERROR_IRQ_BUSY
 
 /// A serial I/O operation was completed by another write to the serial port.
 /// (The IOCTL_SERIAL_XOFF_COUNTER reached zero.)
-pub const MORE_WRITES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1120); // ERROR_MORE_WRITES
+pub const MORE_WRITES : ErrorCode = ErrorCode::from_constant(1120); // ERROR_MORE_WRITES
 
 /// A serial I/O operation completed because the timeout period expired.
 /// (The IOCTL_SERIAL_XOFF_COUNTER did not reach zero.)
-pub const COUNTER_TIMEOUT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1121); // ERROR_COUNTER_TIMEOUT
+pub const COUNTER_TIMEOUT : ErrorCode = ErrorCode::from_constant(1121); // ERROR_COUNTER_TIMEOUT
 
 /// No ID address mark was found on the floppy disk.
-pub const FLOPPY_ID_MARK_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1122); // ERROR_FLOPPY_ID_MARK_NOT_FOUND
+pub const FLOPPY_ID_MARK_NOT_FOUND : ErrorCode = ErrorCode::from_constant(1122); // ERROR_FLOPPY_ID_MARK_NOT_FOUND
 
 /// Mismatch between the floppy disk sector ID field and the floppy disk controller track address.
-pub const FLOPPY_WRONG_CYLINDER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1123); // ERROR_FLOPPY_WRONG_CYLINDER
+pub const FLOPPY_WRONG_CYLINDER : ErrorCode = ErrorCode::from_constant(1123); // ERROR_FLOPPY_WRONG_CYLINDER
 
 /// The floppy disk controller reported an error that is not recognized by the floppy disk driver.
-pub const FLOPPY_UNKNOWN_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1124); // ERROR_FLOPPY_UNKNOWN_ERROR
+pub const FLOPPY_UNKNOWN_ERROR : ErrorCode = ErrorCode::from_constant(1124); // ERROR_FLOPPY_UNKNOWN_ERROR
 
 /// The floppy disk controller returned inconsistent results in its registers.
-pub const FLOPPY_BAD_REGISTERS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1125); // ERROR_FLOPPY_BAD_REGISTERS
+pub const FLOPPY_BAD_REGISTERS : ErrorCode = ErrorCode::from_constant(1125); // ERROR_FLOPPY_BAD_REGISTERS
 
 /// While accessing the hard disk, a recalibrate operation failed, even after retries.
-pub const DISK_RECALIBRATE_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1126); // ERROR_DISK_RECALIBRATE_FAILED
+pub const DISK_RECALIBRATE_FAILED : ErrorCode = ErrorCode::from_constant(1126); // ERROR_DISK_RECALIBRATE_FAILED
 
 /// While accessing the hard disk, a disk operation failed even after retries.
-pub const DISK_OPERATION_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1127); // ERROR_DISK_OPERATION_FAILED
+pub const DISK_OPERATION_FAILED : ErrorCode = ErrorCode::from_constant(1127); // ERROR_DISK_OPERATION_FAILED
 
 /// While accessing the hard disk, a disk controller reset was needed, but even that failed.
-pub const DISK_RESET_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1128); // ERROR_DISK_RESET_FAILED
+pub const DISK_RESET_FAILED : ErrorCode = ErrorCode::from_constant(1128); // ERROR_DISK_RESET_FAILED
 
 /// Physical end of tape encountered.
-pub const EOM_OVERFLOW : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1129); // ERROR_EOM_OVERFLOW
+pub const EOM_OVERFLOW : ErrorCode = ErrorCode::from_constant(1129); // ERROR_EOM_OVERFLOW
 
 /// Not enough server memory resources are available to process this command.
-pub const NOT_ENOUGH_SERVER_MEMORY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1130); // ERROR_NOT_ENOUGH_SERVER_MEMORY
+pub const NOT_ENOUGH_SERVER_MEMORY : ErrorCode = ErrorCode::from_constant(1130); // ERROR_NOT_ENOUGH_SERVER_MEMORY
 
 /// A potential deadlock condition has been detected.
-pub const POSSIBLE_DEADLOCK : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1131); // ERROR_POSSIBLE_DEADLOCK
+pub const POSSIBLE_DEADLOCK : ErrorCode = ErrorCode::from_constant(1131); // ERROR_POSSIBLE_DEADLOCK
 
 /// The base address or the file offset specified does not have the proper alignment.
-pub const MAPPED_ALIGNMENT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1132); // ERROR_MAPPED_ALIGNMENT
+pub const MAPPED_ALIGNMENT : ErrorCode = ErrorCode::from_constant(1132); // ERROR_MAPPED_ALIGNMENT
 
 /// An attempt to change the system power state was vetoed by another application or driver.
-pub const SET_POWER_STATE_VETOED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1140); // ERROR_SET_POWER_STATE_VETOED
+pub const SET_POWER_STATE_VETOED : ErrorCode = ErrorCode::from_constant(1140); // ERROR_SET_POWER_STATE_VETOED
 
 /// The system BIOS failed an attempt to change the system power state.
-pub const SET_POWER_STATE_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1141); // ERROR_SET_POWER_STATE_FAILED
+pub const SET_POWER_STATE_FAILED : ErrorCode = ErrorCode::from_constant(1141); // ERROR_SET_POWER_STATE_FAILED
 
 /// An attempt was made to create more links on a file than the file system supports.
-pub const TOO_MANY_LINKS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1142); // ERROR_TOO_MANY_LINKS
+pub const TOO_MANY_LINKS : ErrorCode = ErrorCode::from_constant(1142); // ERROR_TOO_MANY_LINKS
 
 /// The specified program requires a newer version of Windows.
-pub const OLD_WIN_VERSION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1150); // ERROR_OLD_WIN_VERSION
+pub const OLD_WIN_VERSION : ErrorCode = ErrorCode::from_constant(1150); // ERROR_OLD_WIN_VERSION
 
 /// The specified program is not a Windows or MS-DOS program.
-pub const APP_WRONG_OS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1151); // ERROR_APP_WRONG_OS
+pub const APP_WRONG_OS : ErrorCode = ErrorCode::from_constant(1151); // ERROR_APP_WRONG_OS
 
 /// Cannot start more than one instance of the specified program.
-pub const SINGLE_INSTANCE_APP : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1152); // ERROR_SINGLE_INSTANCE_APP
+pub const SINGLE_INSTANCE_APP : ErrorCode = ErrorCode::from_constant(1152); // ERROR_SINGLE_INSTANCE_APP
 
 /// The specified program was written for an earlier version of Windows.
-pub const RMODE_APP : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1153); // ERROR_RMODE_APP
+pub const RMODE_APP : ErrorCode = ErrorCode::from_constant(1153); // ERROR_RMODE_APP
 
 /// One of the library files needed to run this application is damaged.
-pub const INVALID_DLL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1154); // ERROR_INVALID_DLL
+pub const INVALID_DLL : ErrorCode = ErrorCode::from_constant(1154); // ERROR_INVALID_DLL
 
 /// No application is associated with the specified file for this operation.
-pub const NO_ASSOCIATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1155); // ERROR_NO_ASSOCIATION
+pub const NO_ASSOCIATION : ErrorCode = ErrorCode::from_constant(1155); // ERROR_NO_ASSOCIATION
 
 /// An error occurred in sending the command to the application.
-pub const DDE_FAIL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1156); // ERROR_DDE_FAIL
+pub const DDE_FAIL : ErrorCode = ErrorCode::from_constant(1156); // ERROR_DDE_FAIL
 
 /// One of the library files needed to run this application cannot be found.
-pub const DLL_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1157); // ERROR_DLL_NOT_FOUND
+pub const DLL_NOT_FOUND : ErrorCode = ErrorCode::from_constant(1157); // ERROR_DLL_NOT_FOUND
 
 /// The current process has used all of its system allowance of handles for Window Manager objects.
-pub const NO_MORE_USER_HANDLES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1158); // ERROR_NO_MORE_USER_HANDLES
+pub const NO_MORE_USER_HANDLES : ErrorCode = ErrorCode::from_constant(1158); // ERROR_NO_MORE_USER_HANDLES
 
 /// The message can be used only with synchronous operations.
-pub const MESSAGE_SYNC_ONLY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1159); // ERROR_MESSAGE_SYNC_ONLY
+pub const MESSAGE_SYNC_ONLY : ErrorCode = ErrorCode::from_constant(1159); // ERROR_MESSAGE_SYNC_ONLY
 
 /// The indicated source element has no media.
-pub const SOURCE_ELEMENT_EMPTY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1160); // ERROR_SOURCE_ELEMENT_EMPTY
+pub const SOURCE_ELEMENT_EMPTY : ErrorCode = ErrorCode::from_constant(1160); // ERROR_SOURCE_ELEMENT_EMPTY
 
 /// The indicated destination element already contains media.
-pub const DESTINATION_ELEMENT_FULL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1161); // ERROR_DESTINATION_ELEMENT_FULL
+pub const DESTINATION_ELEMENT_FULL : ErrorCode = ErrorCode::from_constant(1161); // ERROR_DESTINATION_ELEMENT_FULL
 
 /// The indicated element does not exist.
-pub const ILLEGAL_ELEMENT_ADDRESS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1162); // ERROR_ILLEGAL_ELEMENT_ADDRESS
+pub const ILLEGAL_ELEMENT_ADDRESS : ErrorCode = ErrorCode::from_constant(1162); // ERROR_ILLEGAL_ELEMENT_ADDRESS
 
 /// The indicated element is part of a magazine that is not present.
-pub const MAGAZINE_NOT_PRESENT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1163); // ERROR_MAGAZINE_NOT_PRESENT
+pub const MAGAZINE_NOT_PRESENT : ErrorCode = ErrorCode::from_constant(1163); // ERROR_MAGAZINE_NOT_PRESENT
 
 /// The indicated device requires reinitialization due to hardware errors.
-pub const DEVICE_REINITIALIZATION_NEEDED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1164); // ERROR_DEVICE_REINITIALIZATION_NEEDED
+pub const DEVICE_REINITIALIZATION_NEEDED : ErrorCode = ErrorCode::from_constant(1164); // ERROR_DEVICE_REINITIALIZATION_NEEDED
 
 /// The device has indicated that cleaning is required before further operations are attempted.
-pub const DEVICE_REQUIRES_CLEANING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1165); // ERROR_DEVICE_REQUIRES_CLEANING
+pub const DEVICE_REQUIRES_CLEANING : ErrorCode = ErrorCode::from_constant(1165); // ERROR_DEVICE_REQUIRES_CLEANING
 
 /// The device has indicated that its door is open.
-pub const DEVICE_DOOR_OPEN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1166); // ERROR_DEVICE_DOOR_OPEN
+pub const DEVICE_DOOR_OPEN : ErrorCode = ErrorCode::from_constant(1166); // ERROR_DEVICE_DOOR_OPEN
 
 /// The device is not connected.
-pub const DEVICE_NOT_CONNECTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1167); // ERROR_DEVICE_NOT_CONNECTED
+pub const DEVICE_NOT_CONNECTED : ErrorCode = ErrorCode::from_constant(1167); // ERROR_DEVICE_NOT_CONNECTED
 
 /// Element not found.
-pub const NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1168); // ERROR_NOT_FOUND
+pub const NOT_FOUND : ErrorCode = ErrorCode::from_constant(1168); // ERROR_NOT_FOUND
 
 /// There was no match for the specified key in the index.
-pub const NO_MATCH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1169); // ERROR_NO_MATCH
+pub const NO_MATCH : ErrorCode = ErrorCode::from_constant(1169); // ERROR_NO_MATCH
 
 /// The property set specified does not exist on the object.
-pub const SET_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1170); // ERROR_SET_NOT_FOUND
+pub const SET_NOT_FOUND : ErrorCode = ErrorCode::from_constant(1170); // ERROR_SET_NOT_FOUND
 
 /// The point passed to GetMouseMovePoints is not in the buffer.
-pub const POINT_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1171); // ERROR_POINT_NOT_FOUND
+pub const POINT_NOT_FOUND : ErrorCode = ErrorCode::from_constant(1171); // ERROR_POINT_NOT_FOUND
 
 /// The tracking (workstation) service is not running.
-pub const NO_TRACKING_SERVICE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1172); // ERROR_NO_TRACKING_SERVICE
+pub const NO_TRACKING_SERVICE : ErrorCode = ErrorCode::from_constant(1172); // ERROR_NO_TRACKING_SERVICE
 
 /// The Volume ID could not be found.
-pub const NO_VOLUME_ID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1173); // ERROR_NO_VOLUME_ID
+pub const NO_VOLUME_ID : ErrorCode = ErrorCode::from_constant(1173); // ERROR_NO_VOLUME_ID
 
 /// Unable to remove the file to be replaced.
-pub const UNABLE_TO_REMOVE_REPLACED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1175); // ERROR_UNABLE_TO_REMOVE_REPLACED
+pub const UNABLE_TO_REMOVE_REPLACED : ErrorCode = ErrorCode::from_constant(1175); // ERROR_UNABLE_TO_REMOVE_REPLACED
 
 /// Unable to move the replacement file to the file to be replaced. The file to be replaced has retained its original name.
-pub const UNABLE_TO_MOVE_REPLACEMENT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1176); // ERROR_UNABLE_TO_MOVE_REPLACEMENT
+pub const UNABLE_TO_MOVE_REPLACEMENT : ErrorCode = ErrorCode::from_constant(1176); // ERROR_UNABLE_TO_MOVE_REPLACEMENT
 
 /// Unable to move the replacement file to the file to be replaced. The file to be replaced has been renamed using the backup name.
-pub const UNABLE_TO_MOVE_REPLACEMENT_2 : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1177); // ERROR_UNABLE_TO_MOVE_REPLACEMENT_2
+pub const UNABLE_TO_MOVE_REPLACEMENT_2 : ErrorCode = ErrorCode::from_constant(1177); // ERROR_UNABLE_TO_MOVE_REPLACEMENT_2
 
 /// The volume change journal is being deleted.
-pub const JOURNAL_DELETE_IN_PROGRESS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1178); // ERROR_JOURNAL_DELETE_IN_PROGRESS
+pub const JOURNAL_DELETE_IN_PROGRESS : ErrorCode = ErrorCode::from_constant(1178); // ERROR_JOURNAL_DELETE_IN_PROGRESS
 
 /// The volume change journal is not active.
-pub const JOURNAL_NOT_ACTIVE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1179); // ERROR_JOURNAL_NOT_ACTIVE
+pub const JOURNAL_NOT_ACTIVE : ErrorCode = ErrorCode::from_constant(1179); // ERROR_JOURNAL_NOT_ACTIVE
 
 /// A file was found, but it may not be the correct file.
-pub const POTENTIAL_FILE_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1180); // ERROR_POTENTIAL_FILE_FOUND
+pub const POTENTIAL_FILE_FOUND : ErrorCode = ErrorCode::from_constant(1180); // ERROR_POTENTIAL_FILE_FOUND
 
 /// The journal entry has been deleted from the journal.
-pub const JOURNAL_ENTRY_DELETED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1181); // ERROR_JOURNAL_ENTRY_DELETED
+pub const JOURNAL_ENTRY_DELETED : ErrorCode = ErrorCode::from_constant(1181); // ERROR_JOURNAL_ENTRY_DELETED
 
 /// A system shutdown has already been scheduled.
-pub const SHUTDOWN_IS_SCHEDULED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1190); // ERROR_SHUTDOWN_IS_SCHEDULED
+pub const SHUTDOWN_IS_SCHEDULED : ErrorCode = ErrorCode::from_constant(1190); // ERROR_SHUTDOWN_IS_SCHEDULED
 
 /// The system shutdown cannot be initiated because there are other users logged on to the computer.
-pub const SHUTDOWN_USERS_LOGGED_ON : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1191); // ERROR_SHUTDOWN_USERS_LOGGED_ON
+pub const SHUTDOWN_USERS_LOGGED_ON : ErrorCode = ErrorCode::from_constant(1191); // ERROR_SHUTDOWN_USERS_LOGGED_ON
 
 /// The specified device name is invalid.
-pub const BAD_DEVICE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1200); // ERROR_BAD_DEVICE
+pub const BAD_DEVICE : ErrorCode = ErrorCode::from_constant(1200); // ERROR_BAD_DEVICE
 
 /// The device is not currently connected but it is a remembered connection.
-pub const CONNECTION_UNAVAIL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1201); // ERROR_CONNECTION_UNAVAIL
+pub const CONNECTION_UNAVAIL : ErrorCode = ErrorCode::from_constant(1201); // ERROR_CONNECTION_UNAVAIL
 
 /// The local device name has a remembered connection to another network resource.
-pub const DEVICE_ALREADY_REMEMBERED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1202); // ERROR_DEVICE_ALREADY_REMEMBERED
+pub const DEVICE_ALREADY_REMEMBERED : ErrorCode = ErrorCode::from_constant(1202); // ERROR_DEVICE_ALREADY_REMEMBERED
 
 /// The network path was either typed incorrectly, does not exist, or the network provider is not currently available. Please try retyping the path or contact your network administrator.
-pub const NO_NET_OR_BAD_PATH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1203); // ERROR_NO_NET_OR_BAD_PATH
+pub const NO_NET_OR_BAD_PATH : ErrorCode = ErrorCode::from_constant(1203); // ERROR_NO_NET_OR_BAD_PATH
 
 /// The specified network provider name is invalid.
-pub const BAD_PROVIDER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1204); // ERROR_BAD_PROVIDER
+pub const BAD_PROVIDER : ErrorCode = ErrorCode::from_constant(1204); // ERROR_BAD_PROVIDER
 
 /// Unable to open the network connection profile.
-pub const CANNOT_OPEN_PROFILE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1205); // ERROR_CANNOT_OPEN_PROFILE
+pub const CANNOT_OPEN_PROFILE : ErrorCode = ErrorCode::from_constant(1205); // ERROR_CANNOT_OPEN_PROFILE
 
 /// The network connection profile is corrupted.
-pub const BAD_PROFILE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1206); // ERROR_BAD_PROFILE
+pub const BAD_PROFILE : ErrorCode = ErrorCode::from_constant(1206); // ERROR_BAD_PROFILE
 
 /// Cannot enumerate a noncontainer.
-pub const NOT_CONTAINER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1207); // ERROR_NOT_CONTAINER
+pub const NOT_CONTAINER : ErrorCode = ErrorCode::from_constant(1207); // ERROR_NOT_CONTAINER
 
 /// An extended error has occurred.
-pub const EXTENDED_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1208); // ERROR_EXTENDED_ERROR
+pub const EXTENDED_ERROR : ErrorCode = ErrorCode::from_constant(1208); // ERROR_EXTENDED_ERROR
 
 /// The format of the specified group name is invalid.
-pub const INVALID_GROUPNAME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1209); // ERROR_INVALID_GROUPNAME
+pub const INVALID_GROUPNAME : ErrorCode = ErrorCode::from_constant(1209); // ERROR_INVALID_GROUPNAME
 
 /// The format of the specified computer name is invalid.
-pub const INVALID_COMPUTERNAME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1210); // ERROR_INVALID_COMPUTERNAME
+pub const INVALID_COMPUTERNAME : ErrorCode = ErrorCode::from_constant(1210); // ERROR_INVALID_COMPUTERNAME
 
 /// The format of the specified event name is invalid.
-pub const INVALID_EVENTNAME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1211); // ERROR_INVALID_EVENTNAME
+pub const INVALID_EVENTNAME : ErrorCode = ErrorCode::from_constant(1211); // ERROR_INVALID_EVENTNAME
 
 /// The format of the specified domain name is invalid.
-pub const INVALID_DOMAINNAME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1212); // ERROR_INVALID_DOMAINNAME
+pub const INVALID_DOMAINNAME : ErrorCode = ErrorCode::from_constant(1212); // ERROR_INVALID_DOMAINNAME
 
 /// The format of the specified service name is invalid.
-pub const INVALID_SERVICENAME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1213); // ERROR_INVALID_SERVICENAME
+pub const INVALID_SERVICENAME : ErrorCode = ErrorCode::from_constant(1213); // ERROR_INVALID_SERVICENAME
 
 /// The format of the specified network name is invalid.
-pub const INVALID_NETNAME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1214); // ERROR_INVALID_NETNAME
+pub const INVALID_NETNAME : ErrorCode = ErrorCode::from_constant(1214); // ERROR_INVALID_NETNAME
 
 /// The format of the specified share name is invalid.
-pub const INVALID_SHARENAME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1215); // ERROR_INVALID_SHARENAME
+pub const INVALID_SHARENAME : ErrorCode = ErrorCode::from_constant(1215); // ERROR_INVALID_SHARENAME
 
 /// The format of the specified password is invalid.
-pub const INVALID_PASSWORDNAME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1216); // ERROR_INVALID_PASSWORDNAME
+pub const INVALID_PASSWORDNAME : ErrorCode = ErrorCode::from_constant(1216); // ERROR_INVALID_PASSWORDNAME
 
 /// The format of the specified message name is invalid.
-pub const INVALID_MESSAGENAME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1217); // ERROR_INVALID_MESSAGENAME
+pub const INVALID_MESSAGENAME : ErrorCode = ErrorCode::from_constant(1217); // ERROR_INVALID_MESSAGENAME
 
 /// The format of the specified message destination is invalid.
-pub const INVALID_MESSAGEDEST : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1218); // ERROR_INVALID_MESSAGEDEST
+pub const INVALID_MESSAGEDEST : ErrorCode = ErrorCode::from_constant(1218); // ERROR_INVALID_MESSAGEDEST
 
 /// Multiple connections to a server or shared resource by the same user, using more than one user name, are not allowed. Disconnect all previous connections to the server or shared resource and try again.
-pub const SESSION_CREDENTIAL_CONFLICT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1219); // ERROR_SESSION_CREDENTIAL_CONFLICT
+pub const SESSION_CREDENTIAL_CONFLICT : ErrorCode = ErrorCode::from_constant(1219); // ERROR_SESSION_CREDENTIAL_CONFLICT
 
 /// An attempt was made to establish a session to a network server, but there are already too many sessions established to that server.
-pub const REMOTE_SESSION_LIMIT_EXCEEDED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1220); // ERROR_REMOTE_SESSION_LIMIT_EXCEEDED
+pub const REMOTE_SESSION_LIMIT_EXCEEDED : ErrorCode = ErrorCode::from_constant(1220); // ERROR_REMOTE_SESSION_LIMIT_EXCEEDED
 
 /// The workgroup or domain name is already in use by another computer on the network.
-pub const DUP_DOMAINNAME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1221); // ERROR_DUP_DOMAINNAME
+pub const DUP_DOMAINNAME : ErrorCode = ErrorCode::from_constant(1221); // ERROR_DUP_DOMAINNAME
 
 /// The network is not present or not started.
-pub const NO_NETWORK : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1222); // ERROR_NO_NETWORK
+pub const NO_NETWORK : ErrorCode = ErrorCode::from_constant(1222); // ERROR_NO_NETWORK
 
 /// The operation was canceled by the user.
-pub const CANCELLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1223); // ERROR_CANCELLED
+pub const CANCELLED : ErrorCode = ErrorCode::from_constant(1223); // ERROR_CANCELLED
 
 /// The requested operation cannot be performed on a file with a user-mapped section open.
-pub const USER_MAPPED_FILE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1224); // ERROR_USER_MAPPED_FILE
+pub const USER_MAPPED_FILE : ErrorCode = ErrorCode::from_constant(1224); // ERROR_USER_MAPPED_FILE
 
 /// The remote computer refused the network connection.
-pub const CONNECTION_REFUSED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1225); // ERROR_CONNECTION_REFUSED
+pub const CONNECTION_REFUSED : ErrorCode = ErrorCode::from_constant(1225); // ERROR_CONNECTION_REFUSED
 
 /// The network connection was gracefully closed.
-pub const GRACEFUL_DISCONNECT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1226); // ERROR_GRACEFUL_DISCONNECT
+pub const GRACEFUL_DISCONNECT : ErrorCode = ErrorCode::from_constant(1226); // ERROR_GRACEFUL_DISCONNECT
 
 /// The network transport endpoint already has an address associated with it.
-pub const ADDRESS_ALREADY_ASSOCIATED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1227); // ERROR_ADDRESS_ALREADY_ASSOCIATED
+pub const ADDRESS_ALREADY_ASSOCIATED : ErrorCode = ErrorCode::from_constant(1227); // ERROR_ADDRESS_ALREADY_ASSOCIATED
 
 /// An address has not yet been associated with the network endpoint.
-pub const ADDRESS_NOT_ASSOCIATED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1228); // ERROR_ADDRESS_NOT_ASSOCIATED
+pub const ADDRESS_NOT_ASSOCIATED : ErrorCode = ErrorCode::from_constant(1228); // ERROR_ADDRESS_NOT_ASSOCIATED
 
 /// An operation was attempted on a nonexistent network connection.
-pub const CONNECTION_INVALID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1229); // ERROR_CONNECTION_INVALID
+pub const CONNECTION_INVALID : ErrorCode = ErrorCode::from_constant(1229); // ERROR_CONNECTION_INVALID
 
 /// An invalid operation was attempted on an active network connection.
-pub const CONNECTION_ACTIVE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1230); // ERROR_CONNECTION_ACTIVE
+pub const CONNECTION_ACTIVE : ErrorCode = ErrorCode::from_constant(1230); // ERROR_CONNECTION_ACTIVE
 
 /// The network location cannot be reached. For information about network troubleshooting, see Windows Help.
-pub const NETWORK_UNREACHABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1231); // ERROR_NETWORK_UNREACHABLE
+pub const NETWORK_UNREACHABLE : ErrorCode = ErrorCode::from_constant(1231); // ERROR_NETWORK_UNREACHABLE
 
 /// The network location cannot be reached. For information about network troubleshooting, see Windows Help.
-pub const HOST_UNREACHABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1232); // ERROR_HOST_UNREACHABLE
+pub const HOST_UNREACHABLE : ErrorCode = ErrorCode::from_constant(1232); // ERROR_HOST_UNREACHABLE
 
 /// The network location cannot be reached. For information about network troubleshooting, see Windows Help.
-pub const PROTOCOL_UNREACHABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1233); // ERROR_PROTOCOL_UNREACHABLE
+pub const PROTOCOL_UNREACHABLE : ErrorCode = ErrorCode::from_constant(1233); // ERROR_PROTOCOL_UNREACHABLE
 
 /// No service is operating at the destination network endpoint on the remote system.
-pub const PORT_UNREACHABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1234); // ERROR_PORT_UNREACHABLE
+pub const PORT_UNREACHABLE : ErrorCode = ErrorCode::from_constant(1234); // ERROR_PORT_UNREACHABLE
 
 /// The request was aborted.
-pub const REQUEST_ABORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1235); // ERROR_REQUEST_ABORTED
+pub const REQUEST_ABORTED : ErrorCode = ErrorCode::from_constant(1235); // ERROR_REQUEST_ABORTED
 
 /// The network connection was aborted by the local system.
-pub const CONNECTION_ABORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1236); // ERROR_CONNECTION_ABORTED
+pub const CONNECTION_ABORTED : ErrorCode = ErrorCode::from_constant(1236); // ERROR_CONNECTION_ABORTED
 
 /// The operation could not be completed. A retry should be performed.
-pub const RETRY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1237); // ERROR_RETRY
+pub const RETRY : ErrorCode = ErrorCode::from_constant(1237); // ERROR_RETRY
 
 /// A connection to the server could not be made because the limit on the number of concurrent connections for this account has been reached.
-pub const CONNECTION_COUNT_LIMIT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1238); // ERROR_CONNECTION_COUNT_LIMIT
+pub const CONNECTION_COUNT_LIMIT : ErrorCode = ErrorCode::from_constant(1238); // ERROR_CONNECTION_COUNT_LIMIT
 
 /// Attempting to log in during an unauthorized time of day for this account.
-pub const LOGIN_TIME_RESTRICTION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1239); // ERROR_LOGIN_TIME_RESTRICTION
+pub const LOGIN_TIME_RESTRICTION : ErrorCode = ErrorCode::from_constant(1239); // ERROR_LOGIN_TIME_RESTRICTION
 
 /// The account is not authorized to log in from this station.
-pub const LOGIN_WKSTA_RESTRICTION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1240); // ERROR_LOGIN_WKSTA_RESTRICTION
+pub const LOGIN_WKSTA_RESTRICTION : ErrorCode = ErrorCode::from_constant(1240); // ERROR_LOGIN_WKSTA_RESTRICTION
 
 /// The network address could not be used for the operation requested.
-pub const INCORRECT_ADDRESS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1241); // ERROR_INCORRECT_ADDRESS
+pub const INCORRECT_ADDRESS : ErrorCode = ErrorCode::from_constant(1241); // ERROR_INCORRECT_ADDRESS
 
 /// The service is already registered.
-pub const ALREADY_REGISTERED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1242); // ERROR_ALREADY_REGISTERED
+pub const ALREADY_REGISTERED : ErrorCode = ErrorCode::from_constant(1242); // ERROR_ALREADY_REGISTERED
 
-#[doc(hidden)] pub const SERVICE_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1243); // ERROR_SERVICE_NOT_FOUND
+#[doc(hidden)] pub const SERVICE_NOT_FOUND : ErrorCode = ErrorCode::from_constant(1243); // ERROR_SERVICE_NOT_FOUND
 
 /// The operation being requested was not performed because the user has not been authenticated.
-pub const NOT_AUTHENTICATED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1244); // ERROR_NOT_AUTHENTICATED
+pub const NOT_AUTHENTICATED : ErrorCode = ErrorCode::from_constant(1244); // ERROR_NOT_AUTHENTICATED
 
 /// The operation being requested was not performed because the user has not logged on to the network. The specified service does not exist.
-pub const NOT_LOGGED_ON : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1245); // ERROR_NOT_LOGGED_ON
+pub const NOT_LOGGED_ON : ErrorCode = ErrorCode::from_constant(1245); // ERROR_NOT_LOGGED_ON
 
 /// Continue with work in progress.
-pub const CONTINUE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1246); // ERROR_CONTINUE
+pub const CONTINUE : ErrorCode = ErrorCode::from_constant(1246); // ERROR_CONTINUE
 
 /// An attempt was made to perform an initialization operation when initialization has already been completed.
-pub const ALREADY_INITIALIZED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1247); // ERROR_ALREADY_INITIALIZED
+pub const ALREADY_INITIALIZED : ErrorCode = ErrorCode::from_constant(1247); // ERROR_ALREADY_INITIALIZED
 
 /// No more local devices.
-pub const NO_MORE_DEVICES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1248); // ERROR_NO_MORE_DEVICES
+pub const NO_MORE_DEVICES : ErrorCode = ErrorCode::from_constant(1248); // ERROR_NO_MORE_DEVICES
 
 /// The specified site does not exist.
-pub const NO_SUCH_SITE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1249); // ERROR_NO_SUCH_SITE
+pub const NO_SUCH_SITE : ErrorCode = ErrorCode::from_constant(1249); // ERROR_NO_SUCH_SITE
 
 /// A domain controller with the specified name already exists.
-pub const DOMAIN_CONTROLLER_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1250); // ERROR_DOMAIN_CONTROLLER_EXISTS
+pub const DOMAIN_CONTROLLER_EXISTS : ErrorCode = ErrorCode::from_constant(1250); // ERROR_DOMAIN_CONTROLLER_EXISTS
 
 /// This operation is supported only when you are connected to the server.
-pub const ONLY_IF_CONNECTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1251); // ERROR_ONLY_IF_CONNECTED
+pub const ONLY_IF_CONNECTED : ErrorCode = ErrorCode::from_constant(1251); // ERROR_ONLY_IF_CONNECTED
 
 /// The group policy framework should call the extension even if there are no changes.
-pub const OVERRIDE_NOCHANGES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1252); // ERROR_OVERRIDE_NOCHANGES
+pub const OVERRIDE_NOCHANGES : ErrorCode = ErrorCode::from_constant(1252); // ERROR_OVERRIDE_NOCHANGES
 
 /// The specified user does not have a valid profile.
-pub const BAD_USER_PROFILE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1253); // ERROR_BAD_USER_PROFILE
+pub const BAD_USER_PROFILE : ErrorCode = ErrorCode::from_constant(1253); // ERROR_BAD_USER_PROFILE
 
 /// This operation is not supported on a computer running Windows Server 2003 for Small Business Server
-pub const NOT_SUPPORTED_ON_SBS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1254); // ERROR_NOT_SUPPORTED_ON_SBS
+pub const NOT_SUPPORTED_ON_SBS : ErrorCode = ErrorCode::from_constant(1254); // ERROR_NOT_SUPPORTED_ON_SBS
 
-#[doc(hidden)] pub const SERVER_SHUTDOWN_IN_PROGRESS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1255); // ERROR_SERVER_SHUTDOWN_IN_PROGRESS
+#[doc(hidden)] pub const SERVER_SHUTDOWN_IN_PROGRESS : ErrorCode = ErrorCode::from_constant(1255); // ERROR_SERVER_SHUTDOWN_IN_PROGRESS
 
 /// The remote system is not available. For information about network troubleshooting, see Windows Help.
-pub const HOST_DOWN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1256); // ERROR_HOST_DOWN
+pub const HOST_DOWN : ErrorCode = ErrorCode::from_constant(1256); // ERROR_HOST_DOWN
 
 /// The security identifier provided is not from an account domain.
-pub const NON_ACCOUNT_SID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1257); // ERROR_NON_ACCOUNT_SID
+pub const NON_ACCOUNT_SID : ErrorCode = ErrorCode::from_constant(1257); // ERROR_NON_ACCOUNT_SID
 
 /// The security identifier provided does not have a domain component.
-pub const NON_DOMAIN_SID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1258); // ERROR_NON_DOMAIN_SID
+pub const NON_DOMAIN_SID : ErrorCode = ErrorCode::from_constant(1258); // ERROR_NON_DOMAIN_SID
 
 /// AppHelp dialog canceled thus preventing the application from starting.
-pub const APPHELP_BLOCK : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1259); // ERROR_APPHELP_BLOCK
+pub const APPHELP_BLOCK : ErrorCode = ErrorCode::from_constant(1259); // ERROR_APPHELP_BLOCK
 
 /// This program is blocked by group policy. For more information, contact your system administrator.
-pub const ACCESS_DISABLED_BY_POLICY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1260); // ERROR_ACCESS_DISABLED_BY_POLICY
+pub const ACCESS_DISABLED_BY_POLICY : ErrorCode = ErrorCode::from_constant(1260); // ERROR_ACCESS_DISABLED_BY_POLICY
 
 /// A program attempt to use an invalid register value. Normally caused by an uninitialized register. This error is Itanium specific.
-pub const REG_NAT_CONSUMPTION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1261); // ERROR_REG_NAT_CONSUMPTION
+pub const REG_NAT_CONSUMPTION : ErrorCode = ErrorCode::from_constant(1261); // ERROR_REG_NAT_CONSUMPTION
 
 /// The share is currently offline or does not exist.
-pub const CSCSHARE_OFFLINE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1262); // ERROR_CSCSHARE_OFFLINE
+pub const CSCSHARE_OFFLINE : ErrorCode = ErrorCode::from_constant(1262); // ERROR_CSCSHARE_OFFLINE
 
 /// The Kerberos protocol encountered an error while validating the KDC certificate during smartcard logon. There is more information in the system event log.
-pub const PKINIT_FAILURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1263); // ERROR_PKINIT_FAILURE
+pub const PKINIT_FAILURE : ErrorCode = ErrorCode::from_constant(1263); // ERROR_PKINIT_FAILURE
 
 /// The Kerberos protocol encountered an error while attempting to utilize the smartcard subsystem.
-pub const SMARTCARD_SUBSYSTEM_FAILURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1264); // ERROR_SMARTCARD_SUBSYSTEM_FAILURE
+pub const SMARTCARD_SUBSYSTEM_FAILURE : ErrorCode = ErrorCode::from_constant(1264); // ERROR_SMARTCARD_SUBSYSTEM_FAILURE
 
 /// The system cannot contact a domain controller to service the authentication request. Please try again later.
-pub const DOWNGRADE_DETECTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1265); // ERROR_DOWNGRADE_DETECTED
+pub const DOWNGRADE_DETECTED : ErrorCode = ErrorCode::from_constant(1265); // ERROR_DOWNGRADE_DETECTED
 
 /// The machine is locked and cannot be shut down without the force option.
-pub const MACHINE_LOCKED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1271); // ERROR_MACHINE_LOCKED
+pub const MACHINE_LOCKED : ErrorCode = ErrorCode::from_constant(1271); // ERROR_MACHINE_LOCKED
 
 /// You can't access this shared folder because your organization's security policies block unauthenticated guest access. These policies help protect your PC from unsafe or malicious devices on the network.
-pub const SMB_GUEST_LOGON_BLOCKED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1272); // ERROR_SMB_GUEST_LOGON_BLOCKED
+pub const SMB_GUEST_LOGON_BLOCKED : ErrorCode = ErrorCode::from_constant(1272); // ERROR_SMB_GUEST_LOGON_BLOCKED
 
 /// An application-defined callback gave invalid data when called.
-pub const CALLBACK_SUPPLIED_INVALID_DATA : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1273); // ERROR_CALLBACK_SUPPLIED_INVALID_DATA
+pub const CALLBACK_SUPPLIED_INVALID_DATA : ErrorCode = ErrorCode::from_constant(1273); // ERROR_CALLBACK_SUPPLIED_INVALID_DATA
 
 /// The group policy framework should call the extension in the synchronous foreground policy refresh.
-pub const SYNC_FOREGROUND_REFRESH_REQUIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1274); // ERROR_SYNC_FOREGROUND_REFRESH_REQUIRED
+pub const SYNC_FOREGROUND_REFRESH_REQUIRED : ErrorCode = ErrorCode::from_constant(1274); // ERROR_SYNC_FOREGROUND_REFRESH_REQUIRED
 
 /// This driver has been blocked from loading
-pub const DRIVER_BLOCKED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1275); // ERROR_DRIVER_BLOCKED
+pub const DRIVER_BLOCKED : ErrorCode = ErrorCode::from_constant(1275); // ERROR_DRIVER_BLOCKED
 
 /// A dynamic link library (DLL) referenced a module that was neither a DLL nor the process's executable image.
-pub const INVALID_IMPORT_OF_NON_DLL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1276); // ERROR_INVALID_IMPORT_OF_NON_DLL
+pub const INVALID_IMPORT_OF_NON_DLL : ErrorCode = ErrorCode::from_constant(1276); // ERROR_INVALID_IMPORT_OF_NON_DLL
 
 /// Windows cannot open this program since it has been disabled.
-pub const ACCESS_DISABLED_WEBBLADE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1277); // ERROR_ACCESS_DISABLED_WEBBLADE
+pub const ACCESS_DISABLED_WEBBLADE : ErrorCode = ErrorCode::from_constant(1277); // ERROR_ACCESS_DISABLED_WEBBLADE
 
 /// Windows cannot open this program because the license enforcement system has been tampered with or become corrupted.
-pub const ACCESS_DISABLED_WEBBLADE_TAMPER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1278); // ERROR_ACCESS_DISABLED_WEBBLADE_TAMPER
+pub const ACCESS_DISABLED_WEBBLADE_TAMPER : ErrorCode = ErrorCode::from_constant(1278); // ERROR_ACCESS_DISABLED_WEBBLADE_TAMPER
 
 /// A transaction recover failed.
-pub const RECOVERY_FAILURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1279); // ERROR_RECOVERY_FAILURE
+pub const RECOVERY_FAILURE : ErrorCode = ErrorCode::from_constant(1279); // ERROR_RECOVERY_FAILURE
 
 /// The current thread has already been converted to a fiber.
-pub const ALREADY_FIBER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1280); // ERROR_ALREADY_FIBER
+pub const ALREADY_FIBER : ErrorCode = ErrorCode::from_constant(1280); // ERROR_ALREADY_FIBER
 
 /// The current thread has already been converted from a fiber.
-pub const ALREADY_THREAD : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1281); // ERROR_ALREADY_THREAD
+pub const ALREADY_THREAD : ErrorCode = ErrorCode::from_constant(1281); // ERROR_ALREADY_THREAD
 
 /// The system detected an overrun of a stack-based buffer in this application. This overrun could potentially allow a malicious user to gain control of this application.
-pub const STACK_BUFFER_OVERRUN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1282); // ERROR_STACK_BUFFER_OVERRUN
+pub const STACK_BUFFER_OVERRUN : ErrorCode = ErrorCode::from_constant(1282); // ERROR_STACK_BUFFER_OVERRUN
 
 /// Data present in one of the parameters is more than the function can operate on.
-pub const PARAMETER_QUOTA_EXCEEDED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1283); // ERROR_PARAMETER_QUOTA_EXCEEDED
+pub const PARAMETER_QUOTA_EXCEEDED : ErrorCode = ErrorCode::from_constant(1283); // ERROR_PARAMETER_QUOTA_EXCEEDED
 
 /// An attempt to do an operation on a debug object failed because the object is in the process of being deleted.
-pub const DEBUGGER_INACTIVE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1284); // ERROR_DEBUGGER_INACTIVE
+pub const DEBUGGER_INACTIVE : ErrorCode = ErrorCode::from_constant(1284); // ERROR_DEBUGGER_INACTIVE
 
 /// An attempt to delay-load a .dll or get a function address in a delay-loaded .dll failed.
-pub const DELAY_LOAD_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1285); // ERROR_DELAY_LOAD_FAILED
+pub const DELAY_LOAD_FAILED : ErrorCode = ErrorCode::from_constant(1285); // ERROR_DELAY_LOAD_FAILED
 
 /// `%1` is a 16-bit application. You do not have permissions to execute 16-bit applications. Check your permissions with your system administrator.
-pub const VDM_DISALLOWED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1286); // ERROR_VDM_DISALLOWED
+pub const VDM_DISALLOWED : ErrorCode = ErrorCode::from_constant(1286); // ERROR_VDM_DISALLOWED
 
 /// Insufficient information exists to identify the cause of failure.
-pub const UNIDENTIFIED_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1287); // ERROR_UNIDENTIFIED_ERROR
+pub const UNIDENTIFIED_ERROR : ErrorCode = ErrorCode::from_constant(1287); // ERROR_UNIDENTIFIED_ERROR
 
 /// The parameter passed to a C runtime function is incorrect.
-pub const INVALID_CRUNTIME_PARAMETER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1288); // ERROR_INVALID_CRUNTIME_PARAMETER
+pub const INVALID_CRUNTIME_PARAMETER : ErrorCode = ErrorCode::from_constant(1288); // ERROR_INVALID_CRUNTIME_PARAMETER
 
 /// The operation occurred beyond the valid data length of the file.
-pub const BEYOND_VDL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1289); // ERROR_BEYOND_VDL
+pub const BEYOND_VDL : ErrorCode = ErrorCode::from_constant(1289); // ERROR_BEYOND_VDL
 
 /// The service start failed since one or more services in the same process have an incompatible service SID type setting. A service with restricted service SID type can only coexist in the same process with other services with a restricted SID type. If the service SID type for this service was just configured, the hosting process must be restarted in order to start this service.
-pub const INCOMPATIBLE_SERVICE_SID_TYPE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1290); // ERROR_INCOMPATIBLE_SERVICE_SID_TYPE
+pub const INCOMPATIBLE_SERVICE_SID_TYPE : ErrorCode = ErrorCode::from_constant(1290); // ERROR_INCOMPATIBLE_SERVICE_SID_TYPE
 
 /// The process hosting the driver for this device has been terminated.
-pub const DRIVER_PROCESS_TERMINATED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1291); // ERROR_DRIVER_PROCESS_TERMINATED
+pub const DRIVER_PROCESS_TERMINATED : ErrorCode = ErrorCode::from_constant(1291); // ERROR_DRIVER_PROCESS_TERMINATED
 
 /// An operation attempted to exceed an implementation-defined limit.
-pub const IMPLEMENTATION_LIMIT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1292); // ERROR_IMPLEMENTATION_LIMIT
+pub const IMPLEMENTATION_LIMIT : ErrorCode = ErrorCode::from_constant(1292); // ERROR_IMPLEMENTATION_LIMIT
 
 /// Either the target process, or the target thread's containing process, is a protected process.
-pub const PROCESS_IS_PROTECTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1293); // ERROR_PROCESS_IS_PROTECTED
+pub const PROCESS_IS_PROTECTED : ErrorCode = ErrorCode::from_constant(1293); // ERROR_PROCESS_IS_PROTECTED
 
-#[doc(hidden)] pub const SERVICE_NOTIFY_CLIENT_LAGGING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1294); // ERROR_SERVICE_NOTIFY_CLIENT_LAGGING
+#[doc(hidden)] pub const SERVICE_NOTIFY_CLIENT_LAGGING : ErrorCode = ErrorCode::from_constant(1294); // ERROR_SERVICE_NOTIFY_CLIENT_LAGGING
 
 /// The requested file operation failed because the storage quota was exceeded.
 /// To free up disk space, move files to a different location or delete unnecessary files. For more information, contact your system administrator.
-pub const DISK_QUOTA_EXCEEDED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1295); // ERROR_DISK_QUOTA_EXCEEDED
+pub const DISK_QUOTA_EXCEEDED : ErrorCode = ErrorCode::from_constant(1295); // ERROR_DISK_QUOTA_EXCEEDED
 
 /// The requested file operation failed because the storage policy blocks that type of file. For more information, contact your system administrator.
-pub const CONTENT_BLOCKED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1296); // ERROR_CONTENT_BLOCKED
+pub const CONTENT_BLOCKED : ErrorCode = ErrorCode::from_constant(1296); // ERROR_CONTENT_BLOCKED
 
 /// A privilege that the service requires to function properly does not exist in the service account configuration.
 /// You may use the Services Microsoft Management Console (MMC) snap-in (services.msc) and the Local Security Settings MMC snap-in (secpol.msc) to view the service configuration and the account configuration.
-pub const INCOMPATIBLE_SERVICE_PRIVILEGE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1297); // ERROR_INCOMPATIBLE_SERVICE_PRIVILEGE
+pub const INCOMPATIBLE_SERVICE_PRIVILEGE : ErrorCode = ErrorCode::from_constant(1297); // ERROR_INCOMPATIBLE_SERVICE_PRIVILEGE
 
 /// A thread involved in this operation appears to be unresponsive.
-pub const APP_HANG : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1298); // ERROR_APP_HANG
+pub const APP_HANG : ErrorCode = ErrorCode::from_constant(1298); // ERROR_APP_HANG
 
 /// Indicates a particular Security ID may not be assigned as the label of an object.
-pub const INVALID_LABEL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1299); // ERROR_INVALID_LABEL
+pub const INVALID_LABEL : ErrorCode = ErrorCode::from_constant(1299); // ERROR_INVALID_LABEL
 
 /// Not all privileges or groups referenced are assigned to the caller.
-pub const NOT_ALL_ASSIGNED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1300); // ERROR_NOT_ALL_ASSIGNED
+pub const NOT_ALL_ASSIGNED : ErrorCode = ErrorCode::from_constant(1300); // ERROR_NOT_ALL_ASSIGNED
 
 /// Some mapping between account names and security IDs was not done.
-pub const SOME_NOT_MAPPED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1301); // ERROR_SOME_NOT_MAPPED
+pub const SOME_NOT_MAPPED : ErrorCode = ErrorCode::from_constant(1301); // ERROR_SOME_NOT_MAPPED
 
 /// No system quota limits are specifically set for this account.
-pub const NO_QUOTAS_FOR_ACCOUNT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1302); // ERROR_NO_QUOTAS_FOR_ACCOUNT
+pub const NO_QUOTAS_FOR_ACCOUNT : ErrorCode = ErrorCode::from_constant(1302); // ERROR_NO_QUOTAS_FOR_ACCOUNT
 
 /// No encryption key is available. A well-known encryption key was returned.
-pub const LOCAL_USER_SESSION_KEY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1303); // ERROR_LOCAL_USER_SESSION_KEY
+pub const LOCAL_USER_SESSION_KEY : ErrorCode = ErrorCode::from_constant(1303); // ERROR_LOCAL_USER_SESSION_KEY
 
 /// The password is too complex to be converted to a LAN Manager password. The LAN Manager password returned is a NULL string.
-pub const NULL_LM_PASSWORD : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1304); // ERROR_NULL_LM_PASSWORD
+pub const NULL_LM_PASSWORD : ErrorCode = ErrorCode::from_constant(1304); // ERROR_NULL_LM_PASSWORD
 
 /// The revision level is unknown.
-pub const UNKNOWN_REVISION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1305); // ERROR_UNKNOWN_REVISION
+pub const UNKNOWN_REVISION : ErrorCode = ErrorCode::from_constant(1305); // ERROR_UNKNOWN_REVISION
 
 /// Indicates two revision levels are incompatible.
-pub const REVISION_MISMATCH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1306); // ERROR_REVISION_MISMATCH
+pub const REVISION_MISMATCH : ErrorCode = ErrorCode::from_constant(1306); // ERROR_REVISION_MISMATCH
 
 /// This security ID may not be assigned as the owner of this object.
-pub const INVALID_OWNER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1307); // ERROR_INVALID_OWNER
+pub const INVALID_OWNER : ErrorCode = ErrorCode::from_constant(1307); // ERROR_INVALID_OWNER
 
 /// This security ID may not be assigned as the primary group of an object.
-pub const INVALID_PRIMARY_GROUP : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1308); // ERROR_INVALID_PRIMARY_GROUP
+pub const INVALID_PRIMARY_GROUP : ErrorCode = ErrorCode::from_constant(1308); // ERROR_INVALID_PRIMARY_GROUP
 
 /// An attempt has been made to operate on an impersonation token by a thread that is not currently impersonating a client.
-pub const NO_IMPERSONATION_TOKEN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1309); // ERROR_NO_IMPERSONATION_TOKEN
+pub const NO_IMPERSONATION_TOKEN : ErrorCode = ErrorCode::from_constant(1309); // ERROR_NO_IMPERSONATION_TOKEN
 
 /// The group may not be disabled.
-pub const CANT_DISABLE_MANDATORY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1310); // ERROR_CANT_DISABLE_MANDATORY
+pub const CANT_DISABLE_MANDATORY : ErrorCode = ErrorCode::from_constant(1310); // ERROR_CANT_DISABLE_MANDATORY
 
 /// We can't sign you in with this credential because your domain isn't available. Make sure your device is connected to your organization's network and try again. If you previously signed in on this device with another credential, you can sign in with that credential.
-pub const NO_LOGON_SERVERS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1311); // ERROR_NO_LOGON_SERVERS
+pub const NO_LOGON_SERVERS : ErrorCode = ErrorCode::from_constant(1311); // ERROR_NO_LOGON_SERVERS
 
 /// A specified logon session does not exist. It may already have been terminated.
-pub const NO_SUCH_LOGON_SESSION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1312); // ERROR_NO_SUCH_LOGON_SESSION
+pub const NO_SUCH_LOGON_SESSION : ErrorCode = ErrorCode::from_constant(1312); // ERROR_NO_SUCH_LOGON_SESSION
 
 /// A specified privilege does not exist.
-pub const NO_SUCH_PRIVILEGE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1313); // ERROR_NO_SUCH_PRIVILEGE
+pub const NO_SUCH_PRIVILEGE : ErrorCode = ErrorCode::from_constant(1313); // ERROR_NO_SUCH_PRIVILEGE
 
 /// A required privilege is not held by the client.
-pub const PRIVILEGE_NOT_HELD : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1314); // ERROR_PRIVILEGE_NOT_HELD
+pub const PRIVILEGE_NOT_HELD : ErrorCode = ErrorCode::from_constant(1314); // ERROR_PRIVILEGE_NOT_HELD
 
 /// The name provided is not a properly formed account name.
-pub const INVALID_ACCOUNT_NAME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1315); // ERROR_INVALID_ACCOUNT_NAME
+pub const INVALID_ACCOUNT_NAME : ErrorCode = ErrorCode::from_constant(1315); // ERROR_INVALID_ACCOUNT_NAME
 
 /// The specified account already exists.
-pub const USER_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1316); // ERROR_USER_EXISTS
+pub const USER_EXISTS : ErrorCode = ErrorCode::from_constant(1316); // ERROR_USER_EXISTS
 
 /// The specified account does not exist.
-pub const NO_SUCH_USER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1317); // ERROR_NO_SUCH_USER
+pub const NO_SUCH_USER : ErrorCode = ErrorCode::from_constant(1317); // ERROR_NO_SUCH_USER
 
 /// The specified group already exists.
-pub const GROUP_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1318); // ERROR_GROUP_EXISTS
+pub const GROUP_EXISTS : ErrorCode = ErrorCode::from_constant(1318); // ERROR_GROUP_EXISTS
 
 /// The specified group does not exist.
-pub const NO_SUCH_GROUP : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1319); // ERROR_NO_SUCH_GROUP
+pub const NO_SUCH_GROUP : ErrorCode = ErrorCode::from_constant(1319); // ERROR_NO_SUCH_GROUP
 
 /// Either the specified user account is already a member of the specified group, or the specified group cannot be deleted because it contains a member.
-pub const MEMBER_IN_GROUP : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1320); // ERROR_MEMBER_IN_GROUP
+pub const MEMBER_IN_GROUP : ErrorCode = ErrorCode::from_constant(1320); // ERROR_MEMBER_IN_GROUP
 
 /// The specified user account is not a member of the specified group account.
-pub const MEMBER_NOT_IN_GROUP : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1321); // ERROR_MEMBER_NOT_IN_GROUP
+pub const MEMBER_NOT_IN_GROUP : ErrorCode = ErrorCode::from_constant(1321); // ERROR_MEMBER_NOT_IN_GROUP
 
 /// This operation is disallowed as it could result in an administration account being disabled, deleted or unable to logon.
-pub const LAST_ADMIN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1322); // ERROR_LAST_ADMIN
+pub const LAST_ADMIN : ErrorCode = ErrorCode::from_constant(1322); // ERROR_LAST_ADMIN
 
 /// Unable to update the password. The value provided as the current password is incorrect.
-pub const WRONG_PASSWORD : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1323); // ERROR_WRONG_PASSWORD
+pub const WRONG_PASSWORD : ErrorCode = ErrorCode::from_constant(1323); // ERROR_WRONG_PASSWORD
 
 /// Unable to update the password. The value provided for the new password contains values that are not allowed in passwords.
-pub const ILL_FORMED_PASSWORD : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1324); // ERROR_ILL_FORMED_PASSWORD
+pub const ILL_FORMED_PASSWORD : ErrorCode = ErrorCode::from_constant(1324); // ERROR_ILL_FORMED_PASSWORD
 
 /// Unable to update the password. The value provided for the new password does not meet the length, complexity, or history requirements of the domain.
-pub const PASSWORD_RESTRICTION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1325); // ERROR_PASSWORD_RESTRICTION
+pub const PASSWORD_RESTRICTION : ErrorCode = ErrorCode::from_constant(1325); // ERROR_PASSWORD_RESTRICTION
 
 /// The user name or password is incorrect.
-pub const LOGON_FAILURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1326); // ERROR_LOGON_FAILURE
+pub const LOGON_FAILURE : ErrorCode = ErrorCode::from_constant(1326); // ERROR_LOGON_FAILURE
 
 /// Account restrictions are preventing this user from signing in. For example: blank passwords aren't allowed, sign-in times are limited, or a policy restriction has been enforced.
-pub const ACCOUNT_RESTRICTION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1327); // ERROR_ACCOUNT_RESTRICTION
+pub const ACCOUNT_RESTRICTION : ErrorCode = ErrorCode::from_constant(1327); // ERROR_ACCOUNT_RESTRICTION
 
 /// Your account has time restrictions that keep you from signing in right now.
-pub const INVALID_LOGON_HOURS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1328); // ERROR_INVALID_LOGON_HOURS
+pub const INVALID_LOGON_HOURS : ErrorCode = ErrorCode::from_constant(1328); // ERROR_INVALID_LOGON_HOURS
 
 /// This user isn't allowed to sign in to this computer.
-pub const INVALID_WORKSTATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1329); // ERROR_INVALID_WORKSTATION
+pub const INVALID_WORKSTATION : ErrorCode = ErrorCode::from_constant(1329); // ERROR_INVALID_WORKSTATION
 
 /// The password for this account has expired.
-pub const PASSWORD_EXPIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1330); // ERROR_PASSWORD_EXPIRED
+pub const PASSWORD_EXPIRED : ErrorCode = ErrorCode::from_constant(1330); // ERROR_PASSWORD_EXPIRED
 
 /// This user can't sign in because this account is currently disabled.
-pub const ACCOUNT_DISABLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1331); // ERROR_ACCOUNT_DISABLED
+pub const ACCOUNT_DISABLED : ErrorCode = ErrorCode::from_constant(1331); // ERROR_ACCOUNT_DISABLED
 
 /// No mapping between account names and security IDs was done.
-pub const NONE_MAPPED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1332); // ERROR_NONE_MAPPED
+pub const NONE_MAPPED : ErrorCode = ErrorCode::from_constant(1332); // ERROR_NONE_MAPPED
 
 /// Too many local user identifiers (LUIDs) were requested at one time.
-pub const TOO_MANY_LUIDS_REQUESTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1333); // ERROR_TOO_MANY_LUIDS_REQUESTED
+pub const TOO_MANY_LUIDS_REQUESTED : ErrorCode = ErrorCode::from_constant(1333); // ERROR_TOO_MANY_LUIDS_REQUESTED
 
 /// No more local user identifiers (LUIDs) are available.
-pub const LUIDS_EXHAUSTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1334); // ERROR_LUIDS_EXHAUSTED
+pub const LUIDS_EXHAUSTED : ErrorCode = ErrorCode::from_constant(1334); // ERROR_LUIDS_EXHAUSTED
 
 /// The subauthority part of a security ID is invalid for this particular use.
-pub const INVALID_SUB_AUTHORITY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1335); // ERROR_INVALID_SUB_AUTHORITY
+pub const INVALID_SUB_AUTHORITY : ErrorCode = ErrorCode::from_constant(1335); // ERROR_INVALID_SUB_AUTHORITY
 
 /// The access control list (ACL) structure is invalid.
-pub const INVALID_ACL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1336); // ERROR_INVALID_ACL
+pub const INVALID_ACL : ErrorCode = ErrorCode::from_constant(1336); // ERROR_INVALID_ACL
 
 /// The security ID structure is invalid.
-pub const INVALID_SID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1337); // ERROR_INVALID_SID
+pub const INVALID_SID : ErrorCode = ErrorCode::from_constant(1337); // ERROR_INVALID_SID
 
 /// The security descriptor structure is invalid.
-pub const INVALID_SECURITY_DESCR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1338); // ERROR_INVALID_SECURITY_DESCR
+pub const INVALID_SECURITY_DESCR : ErrorCode = ErrorCode::from_constant(1338); // ERROR_INVALID_SECURITY_DESCR
 
 /// The inherited access control list (ACL) or access control entry (ACE) could not be built.
-pub const BAD_INHERITANCE_ACL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1340); // ERROR_BAD_INHERITANCE_ACL
+pub const BAD_INHERITANCE_ACL : ErrorCode = ErrorCode::from_constant(1340); // ERROR_BAD_INHERITANCE_ACL
 
-#[doc(hidden)] pub const SERVER_DISABLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1341); // ERROR_SERVER_DISABLED
-#[doc(hidden)] pub const SERVER_NOT_DISABLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1342); // ERROR_SERVER_NOT_DISABLED
+#[doc(hidden)] pub const SERVER_DISABLED : ErrorCode = ErrorCode::from_constant(1341); // ERROR_SERVER_DISABLED
+#[doc(hidden)] pub const SERVER_NOT_DISABLED : ErrorCode = ErrorCode::from_constant(1342); // ERROR_SERVER_NOT_DISABLED
 
 /// The value provided was an invalid value for an identifier authority.
-pub const INVALID_ID_AUTHORITY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1343); // ERROR_INVALID_ID_AUTHORITY
+pub const INVALID_ID_AUTHORITY : ErrorCode = ErrorCode::from_constant(1343); // ERROR_INVALID_ID_AUTHORITY
 
 /// No more memory is available for security information updates.
-pub const ALLOTTED_SPACE_EXCEEDED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1344); // ERROR_ALLOTTED_SPACE_EXCEEDED
+pub const ALLOTTED_SPACE_EXCEEDED : ErrorCode = ErrorCode::from_constant(1344); // ERROR_ALLOTTED_SPACE_EXCEEDED
 
 /// The specified attributes are invalid, or incompatible with the attributes for the group as a whole.
-pub const INVALID_GROUP_ATTRIBUTES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1345); // ERROR_INVALID_GROUP_ATTRIBUTES
+pub const INVALID_GROUP_ATTRIBUTES : ErrorCode = ErrorCode::from_constant(1345); // ERROR_INVALID_GROUP_ATTRIBUTES
 
 /// Either a required impersonation level was not provided, or the provided impersonation level is invalid.
-pub const BAD_IMPERSONATION_LEVEL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1346); // ERROR_BAD_IMPERSONATION_LEVEL
+pub const BAD_IMPERSONATION_LEVEL : ErrorCode = ErrorCode::from_constant(1346); // ERROR_BAD_IMPERSONATION_LEVEL
 
 /// Cannot open an anonymous level security token.
-pub const CANT_OPEN_ANONYMOUS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1347); // ERROR_CANT_OPEN_ANONYMOUS
+pub const CANT_OPEN_ANONYMOUS : ErrorCode = ErrorCode::from_constant(1347); // ERROR_CANT_OPEN_ANONYMOUS
 
 /// The validation information class requested was invalid.
-pub const BAD_VALIDATION_CLASS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1348); // ERROR_BAD_VALIDATION_CLASS
+pub const BAD_VALIDATION_CLASS : ErrorCode = ErrorCode::from_constant(1348); // ERROR_BAD_VALIDATION_CLASS
 
 /// The type of the token is inappropriate for its attempted use.
-pub const BAD_TOKEN_TYPE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1349); // ERROR_BAD_TOKEN_TYPE
+pub const BAD_TOKEN_TYPE : ErrorCode = ErrorCode::from_constant(1349); // ERROR_BAD_TOKEN_TYPE
 
 /// Unable to perform a security operation on an object that has no associated security.
-pub const NO_SECURITY_ON_OBJECT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1350); // ERROR_NO_SECURITY_ON_OBJECT
+pub const NO_SECURITY_ON_OBJECT : ErrorCode = ErrorCode::from_constant(1350); // ERROR_NO_SECURITY_ON_OBJECT
 
 /// Configuration information could not be read from the domain controller, either because the machine is unavailable, or access has been denied.
-pub const CANT_ACCESS_DOMAIN_INFO : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1351); // ERROR_CANT_ACCESS_DOMAIN_INFO
+pub const CANT_ACCESS_DOMAIN_INFO : ErrorCode = ErrorCode::from_constant(1351); // ERROR_CANT_ACCESS_DOMAIN_INFO
 
 /// The security account manager (SAM) or local security authority (LSA) server was in the wrong state to perform the security operation.
-pub const INVALID_SERVER_STATE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1352); // ERROR_INVALID_SERVER_STATE
+pub const INVALID_SERVER_STATE : ErrorCode = ErrorCode::from_constant(1352); // ERROR_INVALID_SERVER_STATE
 
 /// The domain was in the wrong state to perform the security operation.
-pub const INVALID_DOMAIN_STATE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1353); // ERROR_INVALID_DOMAIN_STATE
+pub const INVALID_DOMAIN_STATE : ErrorCode = ErrorCode::from_constant(1353); // ERROR_INVALID_DOMAIN_STATE
 
 /// This operation is only allowed for the Primary Domain Controller of the domain.
-pub const INVALID_DOMAIN_ROLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1354); // ERROR_INVALID_DOMAIN_ROLE
+pub const INVALID_DOMAIN_ROLE : ErrorCode = ErrorCode::from_constant(1354); // ERROR_INVALID_DOMAIN_ROLE
 
 /// The specified domain either does not exist or could not be contacted.
-pub const NO_SUCH_DOMAIN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1355); // ERROR_NO_SUCH_DOMAIN
+pub const NO_SUCH_DOMAIN : ErrorCode = ErrorCode::from_constant(1355); // ERROR_NO_SUCH_DOMAIN
 
 /// The specified domain already exists.
-pub const DOMAIN_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1356); // ERROR_DOMAIN_EXISTS
+pub const DOMAIN_EXISTS : ErrorCode = ErrorCode::from_constant(1356); // ERROR_DOMAIN_EXISTS
 
 /// An attempt was made to exceed the limit on the number of domains per server.
-pub const DOMAIN_LIMIT_EXCEEDED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1357); // ERROR_DOMAIN_LIMIT_EXCEEDED
+pub const DOMAIN_LIMIT_EXCEEDED : ErrorCode = ErrorCode::from_constant(1357); // ERROR_DOMAIN_LIMIT_EXCEEDED
 
 /// Unable to complete the requested operation because of either a catastrophic media failure or a data structure corruption on the disk.
-pub const INTERNAL_DB_CORRUPTION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1358); // ERROR_INTERNAL_DB_CORRUPTION
+pub const INTERNAL_DB_CORRUPTION : ErrorCode = ErrorCode::from_constant(1358); // ERROR_INTERNAL_DB_CORRUPTION
 
 /// An internal error occurred.
-pub const INTERNAL_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1359); // ERROR_INTERNAL_ERROR
+pub const INTERNAL_ERROR : ErrorCode = ErrorCode::from_constant(1359); // ERROR_INTERNAL_ERROR
 
 /// Generic access types were contained in an access mask which should already be mapped to nongeneric types.
-pub const GENERIC_NOT_MAPPED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1360); // ERROR_GENERIC_NOT_MAPPED
+pub const GENERIC_NOT_MAPPED : ErrorCode = ErrorCode::from_constant(1360); // ERROR_GENERIC_NOT_MAPPED
 
 /// A security descriptor is not in the right format (absolute or self-relative).
-pub const BAD_DESCRIPTOR_FORMAT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1361); // ERROR_BAD_DESCRIPTOR_FORMAT
+pub const BAD_DESCRIPTOR_FORMAT : ErrorCode = ErrorCode::from_constant(1361); // ERROR_BAD_DESCRIPTOR_FORMAT
 
 /// The requested action is restricted for use by logon processes only. The calling process has not registered as a logon process.
-pub const NOT_LOGON_PROCESS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1362); // ERROR_NOT_LOGON_PROCESS
+pub const NOT_LOGON_PROCESS : ErrorCode = ErrorCode::from_constant(1362); // ERROR_NOT_LOGON_PROCESS
 
 /// Cannot start a new logon session with an ID that is already in use.
-pub const LOGON_SESSION_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1363); // ERROR_LOGON_SESSION_EXISTS
+pub const LOGON_SESSION_EXISTS : ErrorCode = ErrorCode::from_constant(1363); // ERROR_LOGON_SESSION_EXISTS
 
 /// A specified authentication package is unknown.
-pub const NO_SUCH_PACKAGE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1364); // ERROR_NO_SUCH_PACKAGE
+pub const NO_SUCH_PACKAGE : ErrorCode = ErrorCode::from_constant(1364); // ERROR_NO_SUCH_PACKAGE
 
 /// The logon session is not in a state that is consistent with the requested operation.
-pub const BAD_LOGON_SESSION_STATE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1365); // ERROR_BAD_LOGON_SESSION_STATE
+pub const BAD_LOGON_SESSION_STATE : ErrorCode = ErrorCode::from_constant(1365); // ERROR_BAD_LOGON_SESSION_STATE
 
 /// The logon session ID is already in use.
-pub const LOGON_SESSION_COLLISION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1366); // ERROR_LOGON_SESSION_COLLISION
+pub const LOGON_SESSION_COLLISION : ErrorCode = ErrorCode::from_constant(1366); // ERROR_LOGON_SESSION_COLLISION
 
 /// A logon request contained an invalid logon type value.
-pub const INVALID_LOGON_TYPE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1367); // ERROR_INVALID_LOGON_TYPE
+pub const INVALID_LOGON_TYPE : ErrorCode = ErrorCode::from_constant(1367); // ERROR_INVALID_LOGON_TYPE
 
 /// Unable to impersonate using a named pipe until data has been read from that pipe.
-pub const CANNOT_IMPERSONATE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1368); // ERROR_CANNOT_IMPERSONATE
+pub const CANNOT_IMPERSONATE : ErrorCode = ErrorCode::from_constant(1368); // ERROR_CANNOT_IMPERSONATE
 
 /// The transaction state of a registry subtree is incompatible with the requested operation.
-pub const RXACT_INVALID_STATE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1369); // ERROR_RXACT_INVALID_STATE
+pub const RXACT_INVALID_STATE : ErrorCode = ErrorCode::from_constant(1369); // ERROR_RXACT_INVALID_STATE
 
 /// An internal security database corruption has been encountered.
-pub const RXACT_COMMIT_FAILURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1370); // ERROR_RXACT_COMMIT_FAILURE
+pub const RXACT_COMMIT_FAILURE : ErrorCode = ErrorCode::from_constant(1370); // ERROR_RXACT_COMMIT_FAILURE
 
 /// Cannot perform this operation on built-in accounts.
-pub const SPECIAL_ACCOUNT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1371); // ERROR_SPECIAL_ACCOUNT
+pub const SPECIAL_ACCOUNT : ErrorCode = ErrorCode::from_constant(1371); // ERROR_SPECIAL_ACCOUNT
 
 /// Cannot perform this operation on this built-in special group.
-pub const SPECIAL_GROUP : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1372); // ERROR_SPECIAL_GROUP
+pub const SPECIAL_GROUP : ErrorCode = ErrorCode::from_constant(1372); // ERROR_SPECIAL_GROUP
 
 /// Cannot perform this operation on this built-in special user.
-pub const SPECIAL_USER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1373); // ERROR_SPECIAL_USER
+pub const SPECIAL_USER : ErrorCode = ErrorCode::from_constant(1373); // ERROR_SPECIAL_USER
 
 /// The user cannot be removed from a group because the group is currently the user's primary group.
-pub const MEMBERS_PRIMARY_GROUP : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1374); // ERROR_MEMBERS_PRIMARY_GROUP
+pub const MEMBERS_PRIMARY_GROUP : ErrorCode = ErrorCode::from_constant(1374); // ERROR_MEMBERS_PRIMARY_GROUP
 
 /// The token is already in use as a primary token.
-pub const TOKEN_ALREADY_IN_USE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1375); // ERROR_TOKEN_ALREADY_IN_USE
+pub const TOKEN_ALREADY_IN_USE : ErrorCode = ErrorCode::from_constant(1375); // ERROR_TOKEN_ALREADY_IN_USE
 
 /// The specified local group does not exist.
-pub const NO_SUCH_ALIAS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1376); // ERROR_NO_SUCH_ALIAS
+pub const NO_SUCH_ALIAS : ErrorCode = ErrorCode::from_constant(1376); // ERROR_NO_SUCH_ALIAS
 
 /// The specified account name is not a member of the group.
-pub const MEMBER_NOT_IN_ALIAS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1377); // ERROR_MEMBER_NOT_IN_ALIAS
+pub const MEMBER_NOT_IN_ALIAS : ErrorCode = ErrorCode::from_constant(1377); // ERROR_MEMBER_NOT_IN_ALIAS
 
 /// The specified account name is already a member of the group.
-pub const MEMBER_IN_ALIAS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1378); // ERROR_MEMBER_IN_ALIAS
+pub const MEMBER_IN_ALIAS : ErrorCode = ErrorCode::from_constant(1378); // ERROR_MEMBER_IN_ALIAS
 
 /// The specified local group already exists.
-pub const ALIAS_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1379); // ERROR_ALIAS_EXISTS
+pub const ALIAS_EXISTS : ErrorCode = ErrorCode::from_constant(1379); // ERROR_ALIAS_EXISTS
 
 /// Logon failure: the user has not been granted the requested logon type at this computer.
-pub const LOGON_NOT_GRANTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1380); // ERROR_LOGON_NOT_GRANTED
+pub const LOGON_NOT_GRANTED : ErrorCode = ErrorCode::from_constant(1380); // ERROR_LOGON_NOT_GRANTED
 
 /// The maximum number of secrets that may be stored in a single system has been exceeded.
-pub const TOO_MANY_SECRETS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1381); // ERROR_TOO_MANY_SECRETS
+pub const TOO_MANY_SECRETS : ErrorCode = ErrorCode::from_constant(1381); // ERROR_TOO_MANY_SECRETS
 
 /// The length of a secret exceeds the maximum length allowed.
-pub const SECRET_TOO_LONG : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1382); // ERROR_SECRET_TOO_LONG
+pub const SECRET_TOO_LONG : ErrorCode = ErrorCode::from_constant(1382); // ERROR_SECRET_TOO_LONG
 
 /// The local security authority database contains an internal inconsistency.
-pub const INTERNAL_DB_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1383); // ERROR_INTERNAL_DB_ERROR
+pub const INTERNAL_DB_ERROR : ErrorCode = ErrorCode::from_constant(1383); // ERROR_INTERNAL_DB_ERROR
 
 /// During a logon attempt, the user's security context accumulated too many security IDs.
-pub const TOO_MANY_CONTEXT_IDS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1384); // ERROR_TOO_MANY_CONTEXT_IDS
+pub const TOO_MANY_CONTEXT_IDS : ErrorCode = ErrorCode::from_constant(1384); // ERROR_TOO_MANY_CONTEXT_IDS
 
 /// Logon failure: the user has not been granted the requested logon type at this computer.
-pub const LOGON_TYPE_NOT_GRANTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1385); // ERROR_LOGON_TYPE_NOT_GRANTED
+pub const LOGON_TYPE_NOT_GRANTED : ErrorCode = ErrorCode::from_constant(1385); // ERROR_LOGON_TYPE_NOT_GRANTED
 
 /// A cross-encrypted password is necessary to change a user password.
-pub const NT_CROSS_ENCRYPTION_REQUIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1386); // ERROR_NT_CROSS_ENCRYPTION_REQUIRED
+pub const NT_CROSS_ENCRYPTION_REQUIRED : ErrorCode = ErrorCode::from_constant(1386); // ERROR_NT_CROSS_ENCRYPTION_REQUIRED
 
 /// A member could not be added to or removed from the local group because the member does not exist.
-pub const NO_SUCH_MEMBER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1387); // ERROR_NO_SUCH_MEMBER
+pub const NO_SUCH_MEMBER : ErrorCode = ErrorCode::from_constant(1387); // ERROR_NO_SUCH_MEMBER
 
 /// A new member could not be added to a local group because the member has the wrong account type.
-pub const INVALID_MEMBER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1388); // ERROR_INVALID_MEMBER
+pub const INVALID_MEMBER : ErrorCode = ErrorCode::from_constant(1388); // ERROR_INVALID_MEMBER
 
 /// Too many security IDs have been specified.
-pub const TOO_MANY_SIDS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1389); // ERROR_TOO_MANY_SIDS
+pub const TOO_MANY_SIDS : ErrorCode = ErrorCode::from_constant(1389); // ERROR_TOO_MANY_SIDS
 
 /// A cross-encrypted password is necessary to change this user password.
-pub const LM_CROSS_ENCRYPTION_REQUIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1390); // ERROR_LM_CROSS_ENCRYPTION_REQUIRED
+pub const LM_CROSS_ENCRYPTION_REQUIRED : ErrorCode = ErrorCode::from_constant(1390); // ERROR_LM_CROSS_ENCRYPTION_REQUIRED
 
 /// Indicates an ACL contains no inheritable components.
-pub const NO_INHERITANCE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1391); // ERROR_NO_INHERITANCE
+pub const NO_INHERITANCE : ErrorCode = ErrorCode::from_constant(1391); // ERROR_NO_INHERITANCE
 
 /// The file or directory is corrupted and unreadable.
-pub const FILE_CORRUPT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1392); // ERROR_FILE_CORRUPT
+pub const FILE_CORRUPT : ErrorCode = ErrorCode::from_constant(1392); // ERROR_FILE_CORRUPT
 
 /// The disk structure is corrupted and unreadable.
-pub const DISK_CORRUPT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1393); // ERROR_DISK_CORRUPT
+pub const DISK_CORRUPT : ErrorCode = ErrorCode::from_constant(1393); // ERROR_DISK_CORRUPT
 
 /// There is no user session key for the specified logon session.
-pub const NO_USER_SESSION_KEY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1394); // ERROR_NO_USER_SESSION_KEY
+pub const NO_USER_SESSION_KEY : ErrorCode = ErrorCode::from_constant(1394); // ERROR_NO_USER_SESSION_KEY
 
 /// The service being accessed is licensed for a particular number of connections. No more connections can be made to the service at this time because there are already as many connections as the service can accept.
-pub const LICENSE_QUOTA_EXCEEDED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1395); // ERROR_LICENSE_QUOTA_EXCEEDED
+pub const LICENSE_QUOTA_EXCEEDED : ErrorCode = ErrorCode::from_constant(1395); // ERROR_LICENSE_QUOTA_EXCEEDED
 
 /// The target account name is incorrect.
-pub const WRONG_TARGET_NAME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1396); // ERROR_WRONG_TARGET_NAME
+pub const WRONG_TARGET_NAME : ErrorCode = ErrorCode::from_constant(1396); // ERROR_WRONG_TARGET_NAME
 
 /// Mutual Authentication failed. The server's password is out of date at the domain controller.
-pub const MUTUAL_AUTH_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1397); // ERROR_MUTUAL_AUTH_FAILED
+pub const MUTUAL_AUTH_FAILED : ErrorCode = ErrorCode::from_constant(1397); // ERROR_MUTUAL_AUTH_FAILED
 
 /// There is a time and/or date difference between the client and server.
-pub const TIME_SKEW : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1398); // ERROR_TIME_SKEW
+pub const TIME_SKEW : ErrorCode = ErrorCode::from_constant(1398); // ERROR_TIME_SKEW
 
 /// This operation cannot be performed on the current domain.
-pub const CURRENT_DOMAIN_NOT_ALLOWED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1399); // ERROR_CURRENT_DOMAIN_NOT_ALLOWED
+pub const CURRENT_DOMAIN_NOT_ALLOWED : ErrorCode = ErrorCode::from_constant(1399); // ERROR_CURRENT_DOMAIN_NOT_ALLOWED
 
 /// Invalid window handle.
-pub const INVALID_WINDOW_HANDLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1400); // ERROR_INVALID_WINDOW_HANDLE
+pub const INVALID_WINDOW_HANDLE : ErrorCode = ErrorCode::from_constant(1400); // ERROR_INVALID_WINDOW_HANDLE
 
 /// Invalid menu handle.
-pub const INVALID_MENU_HANDLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1401); // ERROR_INVALID_MENU_HANDLE
+pub const INVALID_MENU_HANDLE : ErrorCode = ErrorCode::from_constant(1401); // ERROR_INVALID_MENU_HANDLE
 
 /// Invalid cursor handle.
-pub const INVALID_CURSOR_HANDLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1402); // ERROR_INVALID_CURSOR_HANDLE
+pub const INVALID_CURSOR_HANDLE : ErrorCode = ErrorCode::from_constant(1402); // ERROR_INVALID_CURSOR_HANDLE
 
 /// Invalid accelerator table handle.
-pub const INVALID_ACCEL_HANDLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1403); // ERROR_INVALID_ACCEL_HANDLE
+pub const INVALID_ACCEL_HANDLE : ErrorCode = ErrorCode::from_constant(1403); // ERROR_INVALID_ACCEL_HANDLE
 
 /// Invalid hook handle.
-pub const INVALID_HOOK_HANDLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1404); // ERROR_INVALID_HOOK_HANDLE
+pub const INVALID_HOOK_HANDLE : ErrorCode = ErrorCode::from_constant(1404); // ERROR_INVALID_HOOK_HANDLE
 
 /// Invalid handle to a multiple-window position structure.
-pub const INVALID_DWP_HANDLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1405); // ERROR_INVALID_DWP_HANDLE
+pub const INVALID_DWP_HANDLE : ErrorCode = ErrorCode::from_constant(1405); // ERROR_INVALID_DWP_HANDLE
 
 /// Cannot create a top-level child window.
-pub const TLW_WITH_WSCHILD : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1406); // ERROR_TLW_WITH_WSCHILD
+pub const TLW_WITH_WSCHILD : ErrorCode = ErrorCode::from_constant(1406); // ERROR_TLW_WITH_WSCHILD
 
 /// Cannot find window class.
-pub const CANNOT_FIND_WND_CLASS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1407); // ERROR_CANNOT_FIND_WND_CLASS
+pub const CANNOT_FIND_WND_CLASS : ErrorCode = ErrorCode::from_constant(1407); // ERROR_CANNOT_FIND_WND_CLASS
 
 /// Invalid window; it belongs to other thread.
-pub const WINDOW_OF_OTHER_THREAD : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1408); // ERROR_WINDOW_OF_OTHER_THREAD
+pub const WINDOW_OF_OTHER_THREAD : ErrorCode = ErrorCode::from_constant(1408); // ERROR_WINDOW_OF_OTHER_THREAD
 
 /// Hot key is already registered.
-pub const HOTKEY_ALREADY_REGISTERED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1409); // ERROR_HOTKEY_ALREADY_REGISTERED
+pub const HOTKEY_ALREADY_REGISTERED : ErrorCode = ErrorCode::from_constant(1409); // ERROR_HOTKEY_ALREADY_REGISTERED
 
 /// Class already exists.
-pub const CLASS_ALREADY_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1410); // ERROR_CLASS_ALREADY_EXISTS
+pub const CLASS_ALREADY_EXISTS : ErrorCode = ErrorCode::from_constant(1410); // ERROR_CLASS_ALREADY_EXISTS
 
 /// Class does not exist.
-pub const CLASS_DOES_NOT_EXIST : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1411); // ERROR_CLASS_DOES_NOT_EXIST
+pub const CLASS_DOES_NOT_EXIST : ErrorCode = ErrorCode::from_constant(1411); // ERROR_CLASS_DOES_NOT_EXIST
 
 /// Class still has open windows.
-pub const CLASS_HAS_WINDOWS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1412); // ERROR_CLASS_HAS_WINDOWS
+pub const CLASS_HAS_WINDOWS : ErrorCode = ErrorCode::from_constant(1412); // ERROR_CLASS_HAS_WINDOWS
 
 /// Invalid index.
-pub const INVALID_INDEX : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1413); // ERROR_INVALID_INDEX
+pub const INVALID_INDEX : ErrorCode = ErrorCode::from_constant(1413); // ERROR_INVALID_INDEX
 
 /// Invalid icon handle.
-pub const INVALID_ICON_HANDLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1414); // ERROR_INVALID_ICON_HANDLE
+pub const INVALID_ICON_HANDLE : ErrorCode = ErrorCode::from_constant(1414); // ERROR_INVALID_ICON_HANDLE
 
 /// Using private DIALOG window words.
-pub const PRIVATE_DIALOG_INDEX : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1415); // ERROR_PRIVATE_DIALOG_INDEX
+pub const PRIVATE_DIALOG_INDEX : ErrorCode = ErrorCode::from_constant(1415); // ERROR_PRIVATE_DIALOG_INDEX
 
 /// The list box identifier was not found.
-pub const LISTBOX_ID_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1416); // ERROR_LISTBOX_ID_NOT_FOUND
+pub const LISTBOX_ID_NOT_FOUND : ErrorCode = ErrorCode::from_constant(1416); // ERROR_LISTBOX_ID_NOT_FOUND
 
 /// No wildcards were found.
-pub const NO_WILDCARD_CHARACTERS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1417); // ERROR_NO_WILDCARD_CHARACTERS
+pub const NO_WILDCARD_CHARACTERS : ErrorCode = ErrorCode::from_constant(1417); // ERROR_NO_WILDCARD_CHARACTERS
 
 /// Thread does not have a clipboard open.
-pub const CLIPBOARD_NOT_OPEN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1418); // ERROR_CLIPBOARD_NOT_OPEN
+pub const CLIPBOARD_NOT_OPEN : ErrorCode = ErrorCode::from_constant(1418); // ERROR_CLIPBOARD_NOT_OPEN
 
 /// Hot key is not registered.
-pub const HOTKEY_NOT_REGISTERED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1419); // ERROR_HOTKEY_NOT_REGISTERED
+pub const HOTKEY_NOT_REGISTERED : ErrorCode = ErrorCode::from_constant(1419); // ERROR_HOTKEY_NOT_REGISTERED
 
 /// The window is not a valid dialog window.
-pub const WINDOW_NOT_DIALOG : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1420); // ERROR_WINDOW_NOT_DIALOG
+pub const WINDOW_NOT_DIALOG : ErrorCode = ErrorCode::from_constant(1420); // ERROR_WINDOW_NOT_DIALOG
 
 /// Control ID not found.
-pub const CONTROL_ID_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1421); // ERROR_CONTROL_ID_NOT_FOUND
+pub const CONTROL_ID_NOT_FOUND : ErrorCode = ErrorCode::from_constant(1421); // ERROR_CONTROL_ID_NOT_FOUND
 
 /// Invalid message for a combo box because it does not have an edit control.
-pub const INVALID_COMBOBOX_MESSAGE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1422); // ERROR_INVALID_COMBOBOX_MESSAGE
+pub const INVALID_COMBOBOX_MESSAGE : ErrorCode = ErrorCode::from_constant(1422); // ERROR_INVALID_COMBOBOX_MESSAGE
 
 /// The window is not a combo box.
-pub const WINDOW_NOT_COMBOBOX : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1423); // ERROR_WINDOW_NOT_COMBOBOX
+pub const WINDOW_NOT_COMBOBOX : ErrorCode = ErrorCode::from_constant(1423); // ERROR_WINDOW_NOT_COMBOBOX
 
 /// Height must be less than 256.
-pub const INVALID_EDIT_HEIGHT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1424); // ERROR_INVALID_EDIT_HEIGHT
+pub const INVALID_EDIT_HEIGHT : ErrorCode = ErrorCode::from_constant(1424); // ERROR_INVALID_EDIT_HEIGHT
 
 /// Invalid device context (DC) handle.
-pub const DC_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1425); // ERROR_DC_NOT_FOUND
+pub const DC_NOT_FOUND : ErrorCode = ErrorCode::from_constant(1425); // ERROR_DC_NOT_FOUND
 
 /// Invalid hook procedure type.
-pub const INVALID_HOOK_FILTER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1426); // ERROR_INVALID_HOOK_FILTER
+pub const INVALID_HOOK_FILTER : ErrorCode = ErrorCode::from_constant(1426); // ERROR_INVALID_HOOK_FILTER
 
 /// Invalid hook procedure.
-pub const INVALID_FILTER_PROC : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1427); // ERROR_INVALID_FILTER_PROC
+pub const INVALID_FILTER_PROC : ErrorCode = ErrorCode::from_constant(1427); // ERROR_INVALID_FILTER_PROC
 
 /// Cannot set nonlocal hook without a module handle.
-pub const HOOK_NEEDS_HMOD : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1428); // ERROR_HOOK_NEEDS_HMOD
+pub const HOOK_NEEDS_HMOD : ErrorCode = ErrorCode::from_constant(1428); // ERROR_HOOK_NEEDS_HMOD
 
 /// This hook procedure can only be set globally.
-pub const GLOBAL_ONLY_HOOK : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1429); // ERROR_GLOBAL_ONLY_HOOK
+pub const GLOBAL_ONLY_HOOK : ErrorCode = ErrorCode::from_constant(1429); // ERROR_GLOBAL_ONLY_HOOK
 
 /// The journal hook procedure is already installed.
-pub const JOURNAL_HOOK_SET : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1430); // ERROR_JOURNAL_HOOK_SET
+pub const JOURNAL_HOOK_SET : ErrorCode = ErrorCode::from_constant(1430); // ERROR_JOURNAL_HOOK_SET
 
 /// The hook procedure is not installed.
-pub const HOOK_NOT_INSTALLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1431); // ERROR_HOOK_NOT_INSTALLED
+pub const HOOK_NOT_INSTALLED : ErrorCode = ErrorCode::from_constant(1431); // ERROR_HOOK_NOT_INSTALLED
 
 /// Invalid message for single-selection list box.
-pub const INVALID_LB_MESSAGE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1432); // ERROR_INVALID_LB_MESSAGE
+pub const INVALID_LB_MESSAGE : ErrorCode = ErrorCode::from_constant(1432); // ERROR_INVALID_LB_MESSAGE
 
 /// LB_SETCOUNT sent to non-lazy list box.
-pub const SETCOUNT_ON_BAD_LB : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1433); // ERROR_SETCOUNT_ON_BAD_LB
+pub const SETCOUNT_ON_BAD_LB : ErrorCode = ErrorCode::from_constant(1433); // ERROR_SETCOUNT_ON_BAD_LB
 
 /// This list box does not support tab stops.
-pub const LB_WITHOUT_TABSTOPS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1434); // ERROR_LB_WITHOUT_TABSTOPS
+pub const LB_WITHOUT_TABSTOPS : ErrorCode = ErrorCode::from_constant(1434); // ERROR_LB_WITHOUT_TABSTOPS
 
 /// Cannot destroy object created by another thread.
-pub const DESTROY_OBJECT_OF_OTHER_THREAD : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1435); // ERROR_DESTROY_OBJECT_OF_OTHER_THREAD
+pub const DESTROY_OBJECT_OF_OTHER_THREAD : ErrorCode = ErrorCode::from_constant(1435); // ERROR_DESTROY_OBJECT_OF_OTHER_THREAD
 
 /// Child windows cannot have menus.
-pub const CHILD_WINDOW_MENU : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1436); // ERROR_CHILD_WINDOW_MENU
+pub const CHILD_WINDOW_MENU : ErrorCode = ErrorCode::from_constant(1436); // ERROR_CHILD_WINDOW_MENU
 
 /// The window does not have a system menu.
-pub const NO_SYSTEM_MENU : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1437); // ERROR_NO_SYSTEM_MENU
+pub const NO_SYSTEM_MENU : ErrorCode = ErrorCode::from_constant(1437); // ERROR_NO_SYSTEM_MENU
 
 /// Invalid message box style.
-pub const INVALID_MSGBOX_STYLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1438); // ERROR_INVALID_MSGBOX_STYLE
+pub const INVALID_MSGBOX_STYLE : ErrorCode = ErrorCode::from_constant(1438); // ERROR_INVALID_MSGBOX_STYLE
 
 /// Invalid system-wide (SPI_\*) parameter.
-pub const INVALID_SPI_VALUE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1439); // ERROR_INVALID_SPI_VALUE
+pub const INVALID_SPI_VALUE : ErrorCode = ErrorCode::from_constant(1439); // ERROR_INVALID_SPI_VALUE
 
 /// Screen already locked.
-pub const SCREEN_ALREADY_LOCKED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1440); // ERROR_SCREEN_ALREADY_LOCKED
+pub const SCREEN_ALREADY_LOCKED : ErrorCode = ErrorCode::from_constant(1440); // ERROR_SCREEN_ALREADY_LOCKED
 
 /// All handles to windows in a multiple-window position structure must have the same parent.
-pub const HWNDS_HAVE_DIFF_PARENT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1441); // ERROR_HWNDS_HAVE_DIFF_PARENT
+pub const HWNDS_HAVE_DIFF_PARENT : ErrorCode = ErrorCode::from_constant(1441); // ERROR_HWNDS_HAVE_DIFF_PARENT
 
 /// The window is not a child window.
-pub const NOT_CHILD_WINDOW : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1442); // ERROR_NOT_CHILD_WINDOW
+pub const NOT_CHILD_WINDOW : ErrorCode = ErrorCode::from_constant(1442); // ERROR_NOT_CHILD_WINDOW
 
 /// Invalid GW_\* command.
-pub const INVALID_GW_COMMAND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1443); // ERROR_INVALID_GW_COMMAND
+pub const INVALID_GW_COMMAND : ErrorCode = ErrorCode::from_constant(1443); // ERROR_INVALID_GW_COMMAND
 
 /// Invalid thread identifier.
-pub const INVALID_THREAD_ID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1444); // ERROR_INVALID_THREAD_ID
+pub const INVALID_THREAD_ID : ErrorCode = ErrorCode::from_constant(1444); // ERROR_INVALID_THREAD_ID
 
 /// Cannot process a message from a window that is not a multiple document interface (MDI) window.
-pub const NON_MDICHILD_WINDOW : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1445); // ERROR_NON_MDICHILD_WINDOW
+pub const NON_MDICHILD_WINDOW : ErrorCode = ErrorCode::from_constant(1445); // ERROR_NON_MDICHILD_WINDOW
 
 /// Popup menu already active.
-pub const POPUP_ALREADY_ACTIVE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1446); // ERROR_POPUP_ALREADY_ACTIVE
+pub const POPUP_ALREADY_ACTIVE : ErrorCode = ErrorCode::from_constant(1446); // ERROR_POPUP_ALREADY_ACTIVE
 
 /// The window does not have scroll bars.
-pub const NO_SCROLLBARS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1447); // ERROR_NO_SCROLLBARS
+pub const NO_SCROLLBARS : ErrorCode = ErrorCode::from_constant(1447); // ERROR_NO_SCROLLBARS
 
 /// Scroll bar range cannot be greater than MAXLONG.
-pub const INVALID_SCROLLBAR_RANGE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1448); // ERROR_INVALID_SCROLLBAR_RANGE
+pub const INVALID_SCROLLBAR_RANGE : ErrorCode = ErrorCode::from_constant(1448); // ERROR_INVALID_SCROLLBAR_RANGE
 
 /// Cannot show or remove the window in the way specified.
-pub const INVALID_SHOWWIN_COMMAND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1449); // ERROR_INVALID_SHOWWIN_COMMAND
+pub const INVALID_SHOWWIN_COMMAND : ErrorCode = ErrorCode::from_constant(1449); // ERROR_INVALID_SHOWWIN_COMMAND
 
 /// Insufficient system resources exist to complete the requested service.
-pub const NO_SYSTEM_RESOURCES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1450); // ERROR_NO_SYSTEM_RESOURCES
+pub const NO_SYSTEM_RESOURCES : ErrorCode = ErrorCode::from_constant(1450); // ERROR_NO_SYSTEM_RESOURCES
 
 /// Insufficient system resources exist to complete the requested service.
-pub const NONPAGED_SYSTEM_RESOURCES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1451); // ERROR_NONPAGED_SYSTEM_RESOURCES
+pub const NONPAGED_SYSTEM_RESOURCES : ErrorCode = ErrorCode::from_constant(1451); // ERROR_NONPAGED_SYSTEM_RESOURCES
 
 /// Insufficient system resources exist to complete the requested service.
-pub const PAGED_SYSTEM_RESOURCES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1452); // ERROR_PAGED_SYSTEM_RESOURCES
+pub const PAGED_SYSTEM_RESOURCES : ErrorCode = ErrorCode::from_constant(1452); // ERROR_PAGED_SYSTEM_RESOURCES
 
 /// Insufficient quota to complete the requested service.
-pub const WORKING_SET_QUOTA : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1453); // ERROR_WORKING_SET_QUOTA
+pub const WORKING_SET_QUOTA : ErrorCode = ErrorCode::from_constant(1453); // ERROR_WORKING_SET_QUOTA
 
 /// Insufficient quota to complete the requested service.
-pub const PAGEFILE_QUOTA : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1454); // ERROR_PAGEFILE_QUOTA
+pub const PAGEFILE_QUOTA : ErrorCode = ErrorCode::from_constant(1454); // ERROR_PAGEFILE_QUOTA
 
 /// The paging file is too small for this operation to complete.
-pub const COMMITMENT_LIMIT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1455); // ERROR_COMMITMENT_LIMIT
+pub const COMMITMENT_LIMIT : ErrorCode = ErrorCode::from_constant(1455); // ERROR_COMMITMENT_LIMIT
 
 /// A menu item was not found.
-pub const MENU_ITEM_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1456); // ERROR_MENU_ITEM_NOT_FOUND
+pub const MENU_ITEM_NOT_FOUND : ErrorCode = ErrorCode::from_constant(1456); // ERROR_MENU_ITEM_NOT_FOUND
 
 /// Invalid keyboard layout handle.
-pub const INVALID_KEYBOARD_HANDLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1457); // ERROR_INVALID_KEYBOARD_HANDLE
+pub const INVALID_KEYBOARD_HANDLE : ErrorCode = ErrorCode::from_constant(1457); // ERROR_INVALID_KEYBOARD_HANDLE
 
 /// Hook type not allowed.
-pub const HOOK_TYPE_NOT_ALLOWED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1458); // ERROR_HOOK_TYPE_NOT_ALLOWED
+pub const HOOK_TYPE_NOT_ALLOWED : ErrorCode = ErrorCode::from_constant(1458); // ERROR_HOOK_TYPE_NOT_ALLOWED
 
 /// This operation requires an interactive window station.
-pub const REQUIRES_INTERACTIVE_WINDOWSTATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1459); // ERROR_REQUIRES_INTERACTIVE_WINDOWSTATION
+pub const REQUIRES_INTERACTIVE_WINDOWSTATION : ErrorCode = ErrorCode::from_constant(1459); // ERROR_REQUIRES_INTERACTIVE_WINDOWSTATION
 
 /// This operation returned because the timeout period expired.
-pub const TIMEOUT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1460); // ERROR_TIMEOUT
+pub const TIMEOUT : ErrorCode = ErrorCode::from_constant(1460); // ERROR_TIMEOUT
 
 /// Invalid monitor handle.
-pub const INVALID_MONITOR_HANDLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1461); // ERROR_INVALID_MONITOR_HANDLE
+pub const INVALID_MONITOR_HANDLE : ErrorCode = ErrorCode::from_constant(1461); // ERROR_INVALID_MONITOR_HANDLE
 
 /// Incorrect size argument.
-pub const INCORRECT_SIZE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1462); // ERROR_INCORRECT_SIZE
+pub const INCORRECT_SIZE : ErrorCode = ErrorCode::from_constant(1462); // ERROR_INCORRECT_SIZE
 
 /// The symbolic link cannot be followed because its type is disabled.
-pub const SYMLINK_CLASS_DISABLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1463); // ERROR_SYMLINK_CLASS_DISABLED
+pub const SYMLINK_CLASS_DISABLED : ErrorCode = ErrorCode::from_constant(1463); // ERROR_SYMLINK_CLASS_DISABLED
 
 /// This application does not support the current operation on symbolic links.
-pub const SYMLINK_NOT_SUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1464); // ERROR_SYMLINK_NOT_SUPPORTED
+pub const SYMLINK_NOT_SUPPORTED : ErrorCode = ErrorCode::from_constant(1464); // ERROR_SYMLINK_NOT_SUPPORTED
 
 /// Windows was unable to parse the requested XML data.
-pub const XML_PARSE_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1465); // ERROR_XML_PARSE_ERROR
+pub const XML_PARSE_ERROR : ErrorCode = ErrorCode::from_constant(1465); // ERROR_XML_PARSE_ERROR
 
 /// An error was encountered while processing an XML digital signature.
-pub const XMLDSIG_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1466); // ERROR_XMLDSIG_ERROR
+pub const XMLDSIG_ERROR : ErrorCode = ErrorCode::from_constant(1466); // ERROR_XMLDSIG_ERROR
 
 /// This application must be restarted.
-pub const RESTART_APPLICATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1467); // ERROR_RESTART_APPLICATION
+pub const RESTART_APPLICATION : ErrorCode = ErrorCode::from_constant(1467); // ERROR_RESTART_APPLICATION
 
 /// The caller made the connection request in the wrong routing compartment.
-pub const WRONG_COMPARTMENT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1468); // ERROR_WRONG_COMPARTMENT
+pub const WRONG_COMPARTMENT : ErrorCode = ErrorCode::from_constant(1468); // ERROR_WRONG_COMPARTMENT
 
 /// There was an AuthIP failure when attempting to connect to the remote host.
-pub const AUTHIP_FAILURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1469); // ERROR_AUTHIP_FAILURE
+pub const AUTHIP_FAILURE : ErrorCode = ErrorCode::from_constant(1469); // ERROR_AUTHIP_FAILURE
 
 /// Insufficient NVRAM resources exist to complete the requested service. A reboot might be required.
-pub const NO_NVRAM_RESOURCES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1470); // ERROR_NO_NVRAM_RESOURCES
+pub const NO_NVRAM_RESOURCES : ErrorCode = ErrorCode::from_constant(1470); // ERROR_NO_NVRAM_RESOURCES
 
 /// Unable to finish the requested operation because the specified process is not a GUI process.
-pub const NOT_GUI_PROCESS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1471); // ERROR_NOT_GUI_PROCESS
+pub const NOT_GUI_PROCESS : ErrorCode = ErrorCode::from_constant(1471); // ERROR_NOT_GUI_PROCESS
 
 /// The event log file is corrupted.
-pub const EVENTLOG_FILE_CORRUPT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1500); // ERROR_EVENTLOG_FILE_CORRUPT
+pub const EVENTLOG_FILE_CORRUPT : ErrorCode = ErrorCode::from_constant(1500); // ERROR_EVENTLOG_FILE_CORRUPT
 
 /// No event log file could be opened, so the event logging service did not start.
-pub const EVENTLOG_CANT_START : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1501); // ERROR_EVENTLOG_CANT_START
+pub const EVENTLOG_CANT_START : ErrorCode = ErrorCode::from_constant(1501); // ERROR_EVENTLOG_CANT_START
 
 /// The event log file is full.
-pub const LOG_FILE_FULL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1502); // ERROR_LOG_FILE_FULL
+pub const LOG_FILE_FULL : ErrorCode = ErrorCode::from_constant(1502); // ERROR_LOG_FILE_FULL
 
 /// The event log file has changed between read operations.
-pub const EVENTLOG_FILE_CHANGED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1503); // ERROR_EVENTLOG_FILE_CHANGED
+pub const EVENTLOG_FILE_CHANGED : ErrorCode = ErrorCode::from_constant(1503); // ERROR_EVENTLOG_FILE_CHANGED
 
 /// The specified Job already has a container assigned to it.
-pub const CONTAINER_ASSIGNED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1504); // ERROR_CONTAINER_ASSIGNED
+pub const CONTAINER_ASSIGNED : ErrorCode = ErrorCode::from_constant(1504); // ERROR_CONTAINER_ASSIGNED
 
 /// The specified Job does not have a container assigned to it.
-pub const JOB_NO_CONTAINER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1505); // ERROR_JOB_NO_CONTAINER
+pub const JOB_NO_CONTAINER : ErrorCode = ErrorCode::from_constant(1505); // ERROR_JOB_NO_CONTAINER
 
 /// The specified task name is invalid.
-pub const INVALID_TASK_NAME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1550); // ERROR_INVALID_TASK_NAME
+pub const INVALID_TASK_NAME : ErrorCode = ErrorCode::from_constant(1550); // ERROR_INVALID_TASK_NAME
 
 /// The specified task index is invalid.
-pub const INVALID_TASK_INDEX : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1551); // ERROR_INVALID_TASK_INDEX
+pub const INVALID_TASK_INDEX : ErrorCode = ErrorCode::from_constant(1551); // ERROR_INVALID_TASK_INDEX
 
 /// The specified thread is already joining a task.
-pub const THREAD_ALREADY_IN_TASK : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1552); // ERROR_THREAD_ALREADY_IN_TASK
+pub const THREAD_ALREADY_IN_TASK : ErrorCode = ErrorCode::from_constant(1552); // ERROR_THREAD_ALREADY_IN_TASK
 
 /// The Windows Installer Service could not be accessed. This can occur if the Windows Installer is not correctly installed. Contact your support personnel for assistance.
-pub const INSTALL_SERVICE_FAILURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1601); // ERROR_INSTALL_SERVICE_FAILURE
+pub const INSTALL_SERVICE_FAILURE : ErrorCode = ErrorCode::from_constant(1601); // ERROR_INSTALL_SERVICE_FAILURE
 
 /// User cancelled installation.
-pub const INSTALL_USEREXIT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1602); // ERROR_INSTALL_USEREXIT
+pub const INSTALL_USEREXIT : ErrorCode = ErrorCode::from_constant(1602); // ERROR_INSTALL_USEREXIT
 
 /// Fatal error during installation.
-pub const INSTALL_FAILURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1603); // ERROR_INSTALL_FAILURE
+pub const INSTALL_FAILURE : ErrorCode = ErrorCode::from_constant(1603); // ERROR_INSTALL_FAILURE
 
 /// Installation suspended, incomplete.
-pub const INSTALL_SUSPEND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1604); // ERROR_INSTALL_SUSPEND
+pub const INSTALL_SUSPEND : ErrorCode = ErrorCode::from_constant(1604); // ERROR_INSTALL_SUSPEND
 
 /// This action is only valid for products that are currently installed.
-pub const UNKNOWN_PRODUCT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1605); // ERROR_UNKNOWN_PRODUCT
+pub const UNKNOWN_PRODUCT : ErrorCode = ErrorCode::from_constant(1605); // ERROR_UNKNOWN_PRODUCT
 
 /// Feature ID not registered.
-pub const UNKNOWN_FEATURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1606); // ERROR_UNKNOWN_FEATURE
+pub const UNKNOWN_FEATURE : ErrorCode = ErrorCode::from_constant(1606); // ERROR_UNKNOWN_FEATURE
 
 /// Component ID not registered.
-pub const UNKNOWN_COMPONENT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1607); // ERROR_UNKNOWN_COMPONENT
+pub const UNKNOWN_COMPONENT : ErrorCode = ErrorCode::from_constant(1607); // ERROR_UNKNOWN_COMPONENT
 
 /// Unknown property.
-pub const UNKNOWN_PROPERTY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1608); // ERROR_UNKNOWN_PROPERTY
+pub const UNKNOWN_PROPERTY : ErrorCode = ErrorCode::from_constant(1608); // ERROR_UNKNOWN_PROPERTY
 
 /// Handle is in an invalid state.
-pub const INVALID_HANDLE_STATE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1609); // ERROR_INVALID_HANDLE_STATE
+pub const INVALID_HANDLE_STATE : ErrorCode = ErrorCode::from_constant(1609); // ERROR_INVALID_HANDLE_STATE
 
 /// The configuration data for this product is corrupt. Contact your support personnel.
-pub const BAD_CONFIGURATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1610); // ERROR_BAD_CONFIGURATION
+pub const BAD_CONFIGURATION : ErrorCode = ErrorCode::from_constant(1610); // ERROR_BAD_CONFIGURATION
 
 /// Component qualifier not present.
-pub const INDEX_ABSENT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1611); // ERROR_INDEX_ABSENT
+pub const INDEX_ABSENT : ErrorCode = ErrorCode::from_constant(1611); // ERROR_INDEX_ABSENT
 
 /// The installation source for this product is not available. Verify that the source exists and that you can access it.
-pub const INSTALL_SOURCE_ABSENT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1612); // ERROR_INSTALL_SOURCE_ABSENT
+pub const INSTALL_SOURCE_ABSENT : ErrorCode = ErrorCode::from_constant(1612); // ERROR_INSTALL_SOURCE_ABSENT
 
 /// This installation package cannot be installed by the Windows Installer service. You must install a Windows service pack that contains a newer version of the Windows Installer service.
-pub const INSTALL_PACKAGE_VERSION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1613); // ERROR_INSTALL_PACKAGE_VERSION
+pub const INSTALL_PACKAGE_VERSION : ErrorCode = ErrorCode::from_constant(1613); // ERROR_INSTALL_PACKAGE_VERSION
 
 /// Product is uninstalled.
-pub const PRODUCT_UNINSTALLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1614); // ERROR_PRODUCT_UNINSTALLED
+pub const PRODUCT_UNINSTALLED : ErrorCode = ErrorCode::from_constant(1614); // ERROR_PRODUCT_UNINSTALLED
 
 /// SQL query syntax invalid or unsupported.
-pub const BAD_QUERY_SYNTAX : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1615); // ERROR_BAD_QUERY_SYNTAX
+pub const BAD_QUERY_SYNTAX : ErrorCode = ErrorCode::from_constant(1615); // ERROR_BAD_QUERY_SYNTAX
 
 /// Record field does not exist.
-pub const INVALID_FIELD : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1616); // ERROR_INVALID_FIELD
+pub const INVALID_FIELD : ErrorCode = ErrorCode::from_constant(1616); // ERROR_INVALID_FIELD
 
 /// The device has been removed.
-pub const DEVICE_REMOVED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1617); // ERROR_DEVICE_REMOVED
+pub const DEVICE_REMOVED : ErrorCode = ErrorCode::from_constant(1617); // ERROR_DEVICE_REMOVED
 
 /// Another installation is already in progress. Complete that installation before proceeding with this install.
-pub const INSTALL_ALREADY_RUNNING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1618); // ERROR_INSTALL_ALREADY_RUNNING
+pub const INSTALL_ALREADY_RUNNING : ErrorCode = ErrorCode::from_constant(1618); // ERROR_INSTALL_ALREADY_RUNNING
 
 /// This installation package could not be opened. Verify that the package exists and that you can access it, or contact the application vendor to verify that this is a valid Windows Installer package.
-pub const INSTALL_PACKAGE_OPEN_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1619); // ERROR_INSTALL_PACKAGE_OPEN_FAILED
+pub const INSTALL_PACKAGE_OPEN_FAILED : ErrorCode = ErrorCode::from_constant(1619); // ERROR_INSTALL_PACKAGE_OPEN_FAILED
 
 /// This installation package could not be opened. Contact the application vendor to verify that this is a valid Windows Installer package.
-pub const INSTALL_PACKAGE_INVALID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1620); // ERROR_INSTALL_PACKAGE_INVALID
+pub const INSTALL_PACKAGE_INVALID : ErrorCode = ErrorCode::from_constant(1620); // ERROR_INSTALL_PACKAGE_INVALID
 
 /// There was an error starting the Windows Installer service user interface. Contact your support personnel.
-pub const INSTALL_UI_FAILURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1621); // ERROR_INSTALL_UI_FAILURE
+pub const INSTALL_UI_FAILURE : ErrorCode = ErrorCode::from_constant(1621); // ERROR_INSTALL_UI_FAILURE
 
 /// Error opening installation log file. Verify that the specified log file location exists and that you can write to it.
-pub const INSTALL_LOG_FAILURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1622); // ERROR_INSTALL_LOG_FAILURE
+pub const INSTALL_LOG_FAILURE : ErrorCode = ErrorCode::from_constant(1622); // ERROR_INSTALL_LOG_FAILURE
 
 /// The language of this installation package is not supported by your system.
-pub const INSTALL_LANGUAGE_UNSUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1623); // ERROR_INSTALL_LANGUAGE_UNSUPPORTED
+pub const INSTALL_LANGUAGE_UNSUPPORTED : ErrorCode = ErrorCode::from_constant(1623); // ERROR_INSTALL_LANGUAGE_UNSUPPORTED
 
 /// Error applying transforms. Verify that the specified transform paths are valid.
-pub const INSTALL_TRANSFORM_FAILURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1624); // ERROR_INSTALL_TRANSFORM_FAILURE
+pub const INSTALL_TRANSFORM_FAILURE : ErrorCode = ErrorCode::from_constant(1624); // ERROR_INSTALL_TRANSFORM_FAILURE
 
 /// This installation is forbidden by system policy. Contact your system administrator.
-pub const INSTALL_PACKAGE_REJECTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1625); // ERROR_INSTALL_PACKAGE_REJECTED
+pub const INSTALL_PACKAGE_REJECTED : ErrorCode = ErrorCode::from_constant(1625); // ERROR_INSTALL_PACKAGE_REJECTED
 
 /// Function could not be executed.
-pub const FUNCTION_NOT_CALLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1626); // ERROR_FUNCTION_NOT_CALLED
+pub const FUNCTION_NOT_CALLED : ErrorCode = ErrorCode::from_constant(1626); // ERROR_FUNCTION_NOT_CALLED
 
 /// Function failed during execution.
-pub const FUNCTION_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1627); // ERROR_FUNCTION_FAILED
+pub const FUNCTION_FAILED : ErrorCode = ErrorCode::from_constant(1627); // ERROR_FUNCTION_FAILED
 
 /// Invalid or unknown table specified.
-pub const INVALID_TABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1628); // ERROR_INVALID_TABLE
+pub const INVALID_TABLE : ErrorCode = ErrorCode::from_constant(1628); // ERROR_INVALID_TABLE
 
 /// Data supplied is of wrong type.
-pub const DATATYPE_MISMATCH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1629); // ERROR_DATATYPE_MISMATCH
+pub const DATATYPE_MISMATCH : ErrorCode = ErrorCode::from_constant(1629); // ERROR_DATATYPE_MISMATCH
 
 /// Data of this type is not supported.
-pub const UNSUPPORTED_TYPE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1630); // ERROR_UNSUPPORTED_TYPE
+pub const UNSUPPORTED_TYPE : ErrorCode = ErrorCode::from_constant(1630); // ERROR_UNSUPPORTED_TYPE
 
 /// The Windows Installer service failed to start. Contact your support personnel.
-pub const CREATE_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1631); // ERROR_CREATE_FAILED
+pub const CREATE_FAILED : ErrorCode = ErrorCode::from_constant(1631); // ERROR_CREATE_FAILED
 
 /// The Temp folder is on a drive that is full or is inaccessible. Free up space on the drive or verify that you have write permission on the Temp folder.
-pub const INSTALL_TEMP_UNWRITABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1632); // ERROR_INSTALL_TEMP_UNWRITABLE
+pub const INSTALL_TEMP_UNWRITABLE : ErrorCode = ErrorCode::from_constant(1632); // ERROR_INSTALL_TEMP_UNWRITABLE
 
 /// This installation package is not supported by this processor type. Contact your product vendor.
-pub const INSTALL_PLATFORM_UNSUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1633); // ERROR_INSTALL_PLATFORM_UNSUPPORTED
+pub const INSTALL_PLATFORM_UNSUPPORTED : ErrorCode = ErrorCode::from_constant(1633); // ERROR_INSTALL_PLATFORM_UNSUPPORTED
 
 /// Component not used on this computer.
-pub const INSTALL_NOTUSED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1634); // ERROR_INSTALL_NOTUSED
+pub const INSTALL_NOTUSED : ErrorCode = ErrorCode::from_constant(1634); // ERROR_INSTALL_NOTUSED
 
-#[doc(hidden)] pub const PATCH_PACKAGE_OPEN_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1635); // ERROR_PATCH_PACKAGE_OPEN_FAILED
-#[doc(hidden)] pub const PATCH_PACKAGE_INVALID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1636); // ERROR_PATCH_PACKAGE_INVALID
-#[doc(hidden)] pub const PATCH_PACKAGE_UNSUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1637); // ERROR_PATCH_PACKAGE_UNSUPPORTED
+#[doc(hidden)] pub const PATCH_PACKAGE_OPEN_FAILED : ErrorCode = ErrorCode::from_constant(1635); // ERROR_PATCH_PACKAGE_OPEN_FAILED
+#[doc(hidden)] pub const PATCH_PACKAGE_INVALID : ErrorCode = ErrorCode::from_constant(1636); // ERROR_PATCH_PACKAGE_INVALID
+#[doc(hidden)] pub const PATCH_PACKAGE_UNSUPPORTED : ErrorCode = ErrorCode::from_constant(1637); // ERROR_PATCH_PACKAGE_UNSUPPORTED
 
 /// Another version of this product is already installed. Installation of this version cannot continue. To configure or remove the existing version of this product, use Add/Remove Programs on the Control Panel.
-pub const PRODUCT_VERSION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1638); // ERROR_PRODUCT_VERSION
+pub const PRODUCT_VERSION : ErrorCode = ErrorCode::from_constant(1638); // ERROR_PRODUCT_VERSION
 
 /// Invalid command line argument. Consult the Windows Installer SDK for detailed command line help.
-pub const INVALID_COMMAND_LINE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1639); // ERROR_INVALID_COMMAND_LINE
+pub const INVALID_COMMAND_LINE : ErrorCode = ErrorCode::from_constant(1639); // ERROR_INVALID_COMMAND_LINE
 
 /// Only administrators have permission to add, remove, or configure server software during a Terminal services remote session. If you want to install or configure software on the server, contact your network administrator.
-pub const INSTALL_REMOTE_DISALLOWED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1640); // ERROR_INSTALL_REMOTE_DISALLOWED
+pub const INSTALL_REMOTE_DISALLOWED : ErrorCode = ErrorCode::from_constant(1640); // ERROR_INSTALL_REMOTE_DISALLOWED
 
 /// The requested operation completed successfully. The system will be restarted so the changes can take effect.
-pub const SUCCESS_REBOOT_INITIATED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1641); // ERROR_SUCCESS_REBOOT_INITIATED
+pub const SUCCESS_REBOOT_INITIATED : ErrorCode = ErrorCode::from_constant(1641); // ERROR_SUCCESS_REBOOT_INITIATED
 
-#[doc(hidden)] pub const PATCH_TARGET_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1642); // ERROR_PATCH_TARGET_NOT_FOUND
-#[doc(hidden)] pub const PATCH_PACKAGE_REJECTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1643); // ERROR_PATCH_PACKAGE_REJECTED
+#[doc(hidden)] pub const PATCH_TARGET_NOT_FOUND : ErrorCode = ErrorCode::from_constant(1642); // ERROR_PATCH_TARGET_NOT_FOUND
+#[doc(hidden)] pub const PATCH_PACKAGE_REJECTED : ErrorCode = ErrorCode::from_constant(1643); // ERROR_PATCH_PACKAGE_REJECTED
 
 /// One or more customizations are not permitted by software restriction policy.
-pub const INSTALL_TRANSFORM_REJECTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1644); // ERROR_INSTALL_TRANSFORM_REJECTED
+pub const INSTALL_TRANSFORM_REJECTED : ErrorCode = ErrorCode::from_constant(1644); // ERROR_INSTALL_TRANSFORM_REJECTED
 
 /// The Windows Installer does not permit installation from a Remote Desktop Connection.
-pub const INSTALL_REMOTE_PROHIBITED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1645); // ERROR_INSTALL_REMOTE_PROHIBITED
+pub const INSTALL_REMOTE_PROHIBITED : ErrorCode = ErrorCode::from_constant(1645); // ERROR_INSTALL_REMOTE_PROHIBITED
 
-#[doc(hidden)] pub const PATCH_REMOVAL_UNSUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1646); // ERROR_PATCH_REMOVAL_UNSUPPORTED
+#[doc(hidden)] pub const PATCH_REMOVAL_UNSUPPORTED : ErrorCode = ErrorCode::from_constant(1646); // ERROR_PATCH_REMOVAL_UNSUPPORTED
 
 /// The update is not applied to this product.
-pub const UNKNOWN_PATCH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1647); // ERROR_UNKNOWN_PATCH
+pub const UNKNOWN_PATCH : ErrorCode = ErrorCode::from_constant(1647); // ERROR_UNKNOWN_PATCH
 
-#[doc(hidden)] pub const PATCH_NO_SEQUENCE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1648); // ERROR_PATCH_NO_SEQUENCE
-#[doc(hidden)] pub const PATCH_REMOVAL_DISALLOWED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1649); // ERROR_PATCH_REMOVAL_DISALLOWED
+#[doc(hidden)] pub const PATCH_NO_SEQUENCE : ErrorCode = ErrorCode::from_constant(1648); // ERROR_PATCH_NO_SEQUENCE
+#[doc(hidden)] pub const PATCH_REMOVAL_DISALLOWED : ErrorCode = ErrorCode::from_constant(1649); // ERROR_PATCH_REMOVAL_DISALLOWED
 
 /// The XML update data is invalid.
-pub const INVALID_PATCH_XML : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1650); // ERROR_INVALID_PATCH_XML
+pub const INVALID_PATCH_XML : ErrorCode = ErrorCode::from_constant(1650); // ERROR_INVALID_PATCH_XML
 
-#[doc(hidden)] pub const PATCH_MANAGED_ADVERTISED_PRODUCT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1651); // ERROR_PATCH_MANAGED_ADVERTISED_PRODUCT
+#[doc(hidden)] pub const PATCH_MANAGED_ADVERTISED_PRODUCT : ErrorCode = ErrorCode::from_constant(1651); // ERROR_PATCH_MANAGED_ADVERTISED_PRODUCT
 
 /// The Windows Installer service is not accessible in Safe Mode. Please try again when your computer is not in Safe Mode or you can use System Restore to return your machine to a previous good state.
-pub const INSTALL_SERVICE_SAFEBOOT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1652); // ERROR_INSTALL_SERVICE_SAFEBOOT
+pub const INSTALL_SERVICE_SAFEBOOT : ErrorCode = ErrorCode::from_constant(1652); // ERROR_INSTALL_SERVICE_SAFEBOOT
 
 /// A fail fast exception occurred. Exception handlers will not be invoked and the process will be terminated immediately.
-pub const FAIL_FAST_EXCEPTION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1653); // ERROR_FAIL_FAST_EXCEPTION
+pub const FAIL_FAST_EXCEPTION : ErrorCode = ErrorCode::from_constant(1653); // ERROR_FAIL_FAST_EXCEPTION
 
 /// The app that you are trying to run is not supported on this version of Windows.
-pub const INSTALL_REJECTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1654); // ERROR_INSTALL_REJECTED
+pub const INSTALL_REJECTED : ErrorCode = ErrorCode::from_constant(1654); // ERROR_INSTALL_REJECTED
 
 /// The operation was blocked as the process prohibits dynamic code generation.
-pub const DYNAMIC_CODE_BLOCKED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1655); // ERROR_DYNAMIC_CODE_BLOCKED
+pub const DYNAMIC_CODE_BLOCKED : ErrorCode = ErrorCode::from_constant(1655); // ERROR_DYNAMIC_CODE_BLOCKED
 
 /// The objects are not identical.
-pub const NOT_SAME_OBJECT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1656); // ERROR_NOT_SAME_OBJECT
+pub const NOT_SAME_OBJECT : ErrorCode = ErrorCode::from_constant(1656); // ERROR_NOT_SAME_OBJECT
 
 /// The specified image file was blocked from loading because it does not enable a feature required by the process: Control Flow Guard.
-pub const STRICT_CFG_VIOLATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1657); // ERROR_STRICT_CFG_VIOLATION
+pub const STRICT_CFG_VIOLATION : ErrorCode = ErrorCode::from_constant(1657); // ERROR_STRICT_CFG_VIOLATION
 
 /// The thread context could not be updated because this has been restricted for the process.
-pub const SET_CONTEXT_DENIED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1660); // ERROR_SET_CONTEXT_DENIED
+pub const SET_CONTEXT_DENIED : ErrorCode = ErrorCode::from_constant(1660); // ERROR_SET_CONTEXT_DENIED
 
 /// An invalid cross-partition private file/section access was attempted.
-pub const CROSS_PARTITION_VIOLATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1661); // ERROR_CROSS_PARTITION_VIOLATION
+pub const CROSS_PARTITION_VIOLATION : ErrorCode = ErrorCode::from_constant(1661); // ERROR_CROSS_PARTITION_VIOLATION
 
 /// A return address hijack is being attempted. This is supported by the operating system when user-mode shadow stacks are enabled.
-pub const RETURN_ADDRESS_HIJACK_ATTEMPT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1662); // ERROR_RETURN_ADDRESS_HIJACK_ATTEMPT
+pub const RETURN_ADDRESS_HIJACK_ATTEMPT : ErrorCode = ErrorCode::from_constant(1662); // ERROR_RETURN_ADDRESS_HIJACK_ATTEMPT
 
 /// The supplied user buffer is not valid for the requested operation.
-pub const INVALID_USER_BUFFER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1784); // ERROR_INVALID_USER_BUFFER
+pub const INVALID_USER_BUFFER : ErrorCode = ErrorCode::from_constant(1784); // ERROR_INVALID_USER_BUFFER
 
 /// The disk media is not recognized. It may not be formatted.
-pub const UNRECOGNIZED_MEDIA : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1785); // ERROR_UNRECOGNIZED_MEDIA
+pub const UNRECOGNIZED_MEDIA : ErrorCode = ErrorCode::from_constant(1785); // ERROR_UNRECOGNIZED_MEDIA
 
 /// The workstation does not have a trust secret.
-pub const NO_TRUST_LSA_SECRET : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1786); // ERROR_NO_TRUST_LSA_SECRET
+pub const NO_TRUST_LSA_SECRET : ErrorCode = ErrorCode::from_constant(1786); // ERROR_NO_TRUST_LSA_SECRET
 
 /// The security database on the server does not have a computer account for this workstation trust relationship.
-pub const NO_TRUST_SAM_ACCOUNT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1787); // ERROR_NO_TRUST_SAM_ACCOUNT
+pub const NO_TRUST_SAM_ACCOUNT : ErrorCode = ErrorCode::from_constant(1787); // ERROR_NO_TRUST_SAM_ACCOUNT
 
 /// The trust relationship between the primary domain and the trusted domain failed.
-pub const TRUSTED_DOMAIN_FAILURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1788); // ERROR_TRUSTED_DOMAIN_FAILURE
+pub const TRUSTED_DOMAIN_FAILURE : ErrorCode = ErrorCode::from_constant(1788); // ERROR_TRUSTED_DOMAIN_FAILURE
 
 /// The trust relationship between this workstation and the primary domain failed.
-pub const TRUSTED_RELATIONSHIP_FAILURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1789); // ERROR_TRUSTED_RELATIONSHIP_FAILURE
+pub const TRUSTED_RELATIONSHIP_FAILURE : ErrorCode = ErrorCode::from_constant(1789); // ERROR_TRUSTED_RELATIONSHIP_FAILURE
 
 /// The network logon failed.
-pub const TRUST_FAILURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1790); // ERROR_TRUST_FAILURE
+pub const TRUST_FAILURE : ErrorCode = ErrorCode::from_constant(1790); // ERROR_TRUST_FAILURE
 
 /// An attempt was made to logon, but the network logon service was not started.
-pub const NETLOGON_NOT_STARTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1792); // ERROR_NETLOGON_NOT_STARTED
+pub const NETLOGON_NOT_STARTED : ErrorCode = ErrorCode::from_constant(1792); // ERROR_NETLOGON_NOT_STARTED
 
 /// The user's account has expired.
-pub const ACCOUNT_EXPIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1793); // ERROR_ACCOUNT_EXPIRED
+pub const ACCOUNT_EXPIRED : ErrorCode = ErrorCode::from_constant(1793); // ERROR_ACCOUNT_EXPIRED
 
 /// The redirector is in use and cannot be unloaded.
-pub const REDIRECTOR_HAS_OPEN_HANDLES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1794); // ERROR_REDIRECTOR_HAS_OPEN_HANDLES
+pub const REDIRECTOR_HAS_OPEN_HANDLES : ErrorCode = ErrorCode::from_constant(1794); // ERROR_REDIRECTOR_HAS_OPEN_HANDLES
 
 /// The specified printer driver is already installed.
-pub const PRINTER_DRIVER_ALREADY_INSTALLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1795); // ERROR_PRINTER_DRIVER_ALREADY_INSTALLED
+pub const PRINTER_DRIVER_ALREADY_INSTALLED : ErrorCode = ErrorCode::from_constant(1795); // ERROR_PRINTER_DRIVER_ALREADY_INSTALLED
 
 /// The specified port is unknown.
-pub const UNKNOWN_PORT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1796); // ERROR_UNKNOWN_PORT
+pub const UNKNOWN_PORT : ErrorCode = ErrorCode::from_constant(1796); // ERROR_UNKNOWN_PORT
 
 /// The printer driver is unknown.
-pub const UNKNOWN_PRINTER_DRIVER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1797); // ERROR_UNKNOWN_PRINTER_DRIVER
+pub const UNKNOWN_PRINTER_DRIVER : ErrorCode = ErrorCode::from_constant(1797); // ERROR_UNKNOWN_PRINTER_DRIVER
 
 /// The print processor is unknown.
-pub const UNKNOWN_PRINTPROCESSOR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1798); // ERROR_UNKNOWN_PRINTPROCESSOR
+pub const UNKNOWN_PRINTPROCESSOR : ErrorCode = ErrorCode::from_constant(1798); // ERROR_UNKNOWN_PRINTPROCESSOR
 
 /// The specified separator file is invalid.
-pub const INVALID_SEPARATOR_FILE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1799); // ERROR_INVALID_SEPARATOR_FILE
+pub const INVALID_SEPARATOR_FILE : ErrorCode = ErrorCode::from_constant(1799); // ERROR_INVALID_SEPARATOR_FILE
 
 /// The specified priority is invalid.
-pub const INVALID_PRIORITY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1800); // ERROR_INVALID_PRIORITY
+pub const INVALID_PRIORITY : ErrorCode = ErrorCode::from_constant(1800); // ERROR_INVALID_PRIORITY
 
 /// The printer name is invalid.
-pub const INVALID_PRINTER_NAME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1801); // ERROR_INVALID_PRINTER_NAME
+pub const INVALID_PRINTER_NAME : ErrorCode = ErrorCode::from_constant(1801); // ERROR_INVALID_PRINTER_NAME
 
 /// The printer already exists.
-pub const PRINTER_ALREADY_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1802); // ERROR_PRINTER_ALREADY_EXISTS
+pub const PRINTER_ALREADY_EXISTS : ErrorCode = ErrorCode::from_constant(1802); // ERROR_PRINTER_ALREADY_EXISTS
 
 /// The printer command is invalid.
-pub const INVALID_PRINTER_COMMAND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1803); // ERROR_INVALID_PRINTER_COMMAND
+pub const INVALID_PRINTER_COMMAND : ErrorCode = ErrorCode::from_constant(1803); // ERROR_INVALID_PRINTER_COMMAND
 
 /// The specified datatype is invalid.
-pub const INVALID_DATATYPE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1804); // ERROR_INVALID_DATATYPE
+pub const INVALID_DATATYPE : ErrorCode = ErrorCode::from_constant(1804); // ERROR_INVALID_DATATYPE
 
 /// The environment specified is invalid.
-pub const INVALID_ENVIRONMENT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1805); // ERROR_INVALID_ENVIRONMENT
+pub const INVALID_ENVIRONMENT : ErrorCode = ErrorCode::from_constant(1805); // ERROR_INVALID_ENVIRONMENT
 
 /// The account used is an interdomain trust account. Use your global user account or local user account to access this server.
-pub const NOLOGON_INTERDOMAIN_TRUST_ACCOUNT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1807); // ERROR_NOLOGON_INTERDOMAIN_TRUST_ACCOUNT
+pub const NOLOGON_INTERDOMAIN_TRUST_ACCOUNT : ErrorCode = ErrorCode::from_constant(1807); // ERROR_NOLOGON_INTERDOMAIN_TRUST_ACCOUNT
 
 /// The account used is a computer account. Use your global user account or local user account to access this server.
-pub const NOLOGON_WORKSTATION_TRUST_ACCOUNT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1808); // ERROR_NOLOGON_WORKSTATION_TRUST_ACCOUNT
+pub const NOLOGON_WORKSTATION_TRUST_ACCOUNT : ErrorCode = ErrorCode::from_constant(1808); // ERROR_NOLOGON_WORKSTATION_TRUST_ACCOUNT
 
 /// The account used is a server trust account. Use your global user account or local user account to access this server.
-pub const NOLOGON_SERVER_TRUST_ACCOUNT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1809); // ERROR_NOLOGON_SERVER_TRUST_ACCOUNT
+pub const NOLOGON_SERVER_TRUST_ACCOUNT : ErrorCode = ErrorCode::from_constant(1809); // ERROR_NOLOGON_SERVER_TRUST_ACCOUNT
 
 /// The name or security ID (SID) of the domain specified is inconsistent with the trust information for that domain.
-pub const DOMAIN_TRUST_INCONSISTENT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1810); // ERROR_DOMAIN_TRUST_INCONSISTENT
+pub const DOMAIN_TRUST_INCONSISTENT : ErrorCode = ErrorCode::from_constant(1810); // ERROR_DOMAIN_TRUST_INCONSISTENT
 
-#[doc(hidden)] pub const SERVER_HAS_OPEN_HANDLES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1811); // ERROR_SERVER_HAS_OPEN_HANDLES
+#[doc(hidden)] pub const SERVER_HAS_OPEN_HANDLES : ErrorCode = ErrorCode::from_constant(1811); // ERROR_SERVER_HAS_OPEN_HANDLES
 
 /// The specified image file did not contain a resource section.
-pub const RESOURCE_DATA_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1812); // ERROR_RESOURCE_DATA_NOT_FOUND
+pub const RESOURCE_DATA_NOT_FOUND : ErrorCode = ErrorCode::from_constant(1812); // ERROR_RESOURCE_DATA_NOT_FOUND
 
 /// The specified resource type cannot be found in the image file.
-pub const RESOURCE_TYPE_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1813); // ERROR_RESOURCE_TYPE_NOT_FOUND
+pub const RESOURCE_TYPE_NOT_FOUND : ErrorCode = ErrorCode::from_constant(1813); // ERROR_RESOURCE_TYPE_NOT_FOUND
 
 /// The specified resource name cannot be found in the image file.
-pub const RESOURCE_NAME_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1814); // ERROR_RESOURCE_NAME_NOT_FOUND
+pub const RESOURCE_NAME_NOT_FOUND : ErrorCode = ErrorCode::from_constant(1814); // ERROR_RESOURCE_NAME_NOT_FOUND
 
 /// The specified resource language ID cannot be found in the image file.
-pub const RESOURCE_LANG_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1815); // ERROR_RESOURCE_LANG_NOT_FOUND
+pub const RESOURCE_LANG_NOT_FOUND : ErrorCode = ErrorCode::from_constant(1815); // ERROR_RESOURCE_LANG_NOT_FOUND
 
 /// Not enough quota is available to process this command.
-pub const NOT_ENOUGH_QUOTA : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1816); // ERROR_NOT_ENOUGH_QUOTA
+pub const NOT_ENOUGH_QUOTA : ErrorCode = ErrorCode::from_constant(1816); // ERROR_NOT_ENOUGH_QUOTA
 
 /// The specified time is invalid.
-pub const INVALID_TIME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1901); // ERROR_INVALID_TIME
+pub const INVALID_TIME : ErrorCode = ErrorCode::from_constant(1901); // ERROR_INVALID_TIME
 
 /// The specified form name is invalid.
-pub const INVALID_FORM_NAME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1902); // ERROR_INVALID_FORM_NAME
+pub const INVALID_FORM_NAME : ErrorCode = ErrorCode::from_constant(1902); // ERROR_INVALID_FORM_NAME
 
 /// The specified form size is invalid.
-pub const INVALID_FORM_SIZE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1903); // ERROR_INVALID_FORM_SIZE
+pub const INVALID_FORM_SIZE : ErrorCode = ErrorCode::from_constant(1903); // ERROR_INVALID_FORM_SIZE
 
 /// The specified printer handle is already being waited on
-pub const ALREADY_WAITING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1904); // ERROR_ALREADY_WAITING
+pub const ALREADY_WAITING : ErrorCode = ErrorCode::from_constant(1904); // ERROR_ALREADY_WAITING
 
 /// The specified printer has been deleted.
-pub const PRINTER_DELETED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1905); // ERROR_PRINTER_DELETED
+pub const PRINTER_DELETED : ErrorCode = ErrorCode::from_constant(1905); // ERROR_PRINTER_DELETED
 
 /// The state of the printer is invalid.
-pub const INVALID_PRINTER_STATE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1906); // ERROR_INVALID_PRINTER_STATE
+pub const INVALID_PRINTER_STATE : ErrorCode = ErrorCode::from_constant(1906); // ERROR_INVALID_PRINTER_STATE
 
 /// The user's password must be changed before signing in.
-pub const PASSWORD_MUST_CHANGE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1907); // ERROR_PASSWORD_MUST_CHANGE
+pub const PASSWORD_MUST_CHANGE : ErrorCode = ErrorCode::from_constant(1907); // ERROR_PASSWORD_MUST_CHANGE
 
 /// Could not find the domain controller for this domain.
-pub const DOMAIN_CONTROLLER_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1908); // ERROR_DOMAIN_CONTROLLER_NOT_FOUND
+pub const DOMAIN_CONTROLLER_NOT_FOUND : ErrorCode = ErrorCode::from_constant(1908); // ERROR_DOMAIN_CONTROLLER_NOT_FOUND
 
 /// The referenced account is currently locked out and may not be logged on to.
-pub const ACCOUNT_LOCKED_OUT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1909); // ERROR_ACCOUNT_LOCKED_OUT
+pub const ACCOUNT_LOCKED_OUT : ErrorCode = ErrorCode::from_constant(1909); // ERROR_ACCOUNT_LOCKED_OUT
 
 /// No site name is available for this machine.
-pub const NO_SITENAME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1919); // ERROR_NO_SITENAME
+pub const NO_SITENAME : ErrorCode = ErrorCode::from_constant(1919); // ERROR_NO_SITENAME
 
 /// The file cannot be accessed by the system.
-pub const CANT_ACCESS_FILE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1920); // ERROR_CANT_ACCESS_FILE
+pub const CANT_ACCESS_FILE : ErrorCode = ErrorCode::from_constant(1920); // ERROR_CANT_ACCESS_FILE
 
 /// The name of the file cannot be resolved by the system.
-pub const CANT_RESOLVE_FILENAME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1921); // ERROR_CANT_RESOLVE_FILENAME
+pub const CANT_RESOLVE_FILENAME : ErrorCode = ErrorCode::from_constant(1921); // ERROR_CANT_RESOLVE_FILENAME
 
 /// The printer driver is not compatible with a policy enabled on your computer that blocks NT 4.0 drivers.
-pub const KM_DRIVER_BLOCKED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1930); // ERROR_KM_DRIVER_BLOCKED
+pub const KM_DRIVER_BLOCKED : ErrorCode = ErrorCode::from_constant(1930); // ERROR_KM_DRIVER_BLOCKED
 
 /// The context has expired and can no longer be used.
-pub const CONTEXT_EXPIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1931); // ERROR_CONTEXT_EXPIRED
+pub const CONTEXT_EXPIRED : ErrorCode = ErrorCode::from_constant(1931); // ERROR_CONTEXT_EXPIRED
 
 /// The current user's delegated trust creation quota has been exceeded.
-pub const PER_USER_TRUST_QUOTA_EXCEEDED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1932); // ERROR_PER_USER_TRUST_QUOTA_EXCEEDED
+pub const PER_USER_TRUST_QUOTA_EXCEEDED : ErrorCode = ErrorCode::from_constant(1932); // ERROR_PER_USER_TRUST_QUOTA_EXCEEDED
 
 /// The total delegated trust creation quota has been exceeded.
-pub const ALL_USER_TRUST_QUOTA_EXCEEDED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1933); // ERROR_ALL_USER_TRUST_QUOTA_EXCEEDED
+pub const ALL_USER_TRUST_QUOTA_EXCEEDED : ErrorCode = ErrorCode::from_constant(1933); // ERROR_ALL_USER_TRUST_QUOTA_EXCEEDED
 
 /// The current user's delegated trust deletion quota has been exceeded.
-pub const USER_DELETE_TRUST_QUOTA_EXCEEDED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1934); // ERROR_USER_DELETE_TRUST_QUOTA_EXCEEDED
+pub const USER_DELETE_TRUST_QUOTA_EXCEEDED : ErrorCode = ErrorCode::from_constant(1934); // ERROR_USER_DELETE_TRUST_QUOTA_EXCEEDED
 
 /// The computer you are signing into is protected by an authentication firewall. The specified account is not allowed to authenticate to the computer.
-pub const AUTHENTICATION_FIREWALL_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1935); // ERROR_AUTHENTICATION_FIREWALL_FAILED
+pub const AUTHENTICATION_FIREWALL_FAILED : ErrorCode = ErrorCode::from_constant(1935); // ERROR_AUTHENTICATION_FIREWALL_FAILED
 
 /// Remote connections to the Print Spooler are blocked by a policy set on your machine.
-pub const REMOTE_PRINT_CONNECTIONS_BLOCKED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1936); // ERROR_REMOTE_PRINT_CONNECTIONS_BLOCKED
+pub const REMOTE_PRINT_CONNECTIONS_BLOCKED : ErrorCode = ErrorCode::from_constant(1936); // ERROR_REMOTE_PRINT_CONNECTIONS_BLOCKED
 
 /// Authentication failed because NTLM authentication has been disabled.
-pub const NTLM_BLOCKED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1937); // ERROR_NTLM_BLOCKED
+pub const NTLM_BLOCKED : ErrorCode = ErrorCode::from_constant(1937); // ERROR_NTLM_BLOCKED
 
 /// Logon Failure: EAS policy requires that the user change their password before this operation can be performed.
-pub const PASSWORD_CHANGE_REQUIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1938); // ERROR_PASSWORD_CHANGE_REQUIRED
+pub const PASSWORD_CHANGE_REQUIRED : ErrorCode = ErrorCode::from_constant(1938); // ERROR_PASSWORD_CHANGE_REQUIRED
 
 /// An administrator has restricted sign in. To sign in, make sure your device is connected to the Internet, and have your administrator sign in first.
-pub const LOST_MODE_LOGON_RESTRICTION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1939); // ERROR_LOST_MODE_LOGON_RESTRICTION
+pub const LOST_MODE_LOGON_RESTRICTION : ErrorCode = ErrorCode::from_constant(1939); // ERROR_LOST_MODE_LOGON_RESTRICTION
 
 /// The pixel format is invalid.
-pub const INVALID_PIXEL_FORMAT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(2000); // ERROR_INVALID_PIXEL_FORMAT
+pub const INVALID_PIXEL_FORMAT : ErrorCode = ErrorCode::from_constant(2000); // ERROR_INVALID_PIXEL_FORMAT
 
 /// The specified driver is invalid.
-pub const BAD_DRIVER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(2001); // ERROR_BAD_DRIVER
+pub const BAD_DRIVER : ErrorCode = ErrorCode::from_constant(2001); // ERROR_BAD_DRIVER
 
 /// The window style or class attribute is invalid for this operation.
-pub const INVALID_WINDOW_STYLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(2002); // ERROR_INVALID_WINDOW_STYLE
+pub const INVALID_WINDOW_STYLE : ErrorCode = ErrorCode::from_constant(2002); // ERROR_INVALID_WINDOW_STYLE
 
 /// The requested metafile operation is not supported.
-pub const METAFILE_NOT_SUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(2003); // ERROR_METAFILE_NOT_SUPPORTED
+pub const METAFILE_NOT_SUPPORTED : ErrorCode = ErrorCode::from_constant(2003); // ERROR_METAFILE_NOT_SUPPORTED
 
 /// The requested transformation operation is not supported.
-pub const TRANSFORM_NOT_SUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(2004); // ERROR_TRANSFORM_NOT_SUPPORTED
+pub const TRANSFORM_NOT_SUPPORTED : ErrorCode = ErrorCode::from_constant(2004); // ERROR_TRANSFORM_NOT_SUPPORTED
 
 /// The requested clipping operation is not supported.
-pub const CLIPPING_NOT_SUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(2005); // ERROR_CLIPPING_NOT_SUPPORTED
+pub const CLIPPING_NOT_SUPPORTED : ErrorCode = ErrorCode::from_constant(2005); // ERROR_CLIPPING_NOT_SUPPORTED
 
 /// The specified color management module is invalid.
-pub const INVALID_CMM : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(2010); // ERROR_INVALID_CMM
+pub const INVALID_CMM : ErrorCode = ErrorCode::from_constant(2010); // ERROR_INVALID_CMM
 
 /// The specified color profile is invalid.
-pub const INVALID_PROFILE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(2011); // ERROR_INVALID_PROFILE
+pub const INVALID_PROFILE : ErrorCode = ErrorCode::from_constant(2011); // ERROR_INVALID_PROFILE
 
 /// The specified tag was not found.
-pub const TAG_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(2012); // ERROR_TAG_NOT_FOUND
+pub const TAG_NOT_FOUND : ErrorCode = ErrorCode::from_constant(2012); // ERROR_TAG_NOT_FOUND
 
 /// A required tag is not present.
-pub const TAG_NOT_PRESENT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(2013); // ERROR_TAG_NOT_PRESENT
+pub const TAG_NOT_PRESENT : ErrorCode = ErrorCode::from_constant(2013); // ERROR_TAG_NOT_PRESENT
 
 /// The specified tag is already present.
-pub const DUPLICATE_TAG : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(2014); // ERROR_DUPLICATE_TAG
+pub const DUPLICATE_TAG : ErrorCode = ErrorCode::from_constant(2014); // ERROR_DUPLICATE_TAG
 
 /// The specified color profile is not associated with the specified device.
-pub const PROFILE_NOT_ASSOCIATED_WITH_DEVICE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(2015); // ERROR_PROFILE_NOT_ASSOCIATED_WITH_DEVICE
+pub const PROFILE_NOT_ASSOCIATED_WITH_DEVICE : ErrorCode = ErrorCode::from_constant(2015); // ERROR_PROFILE_NOT_ASSOCIATED_WITH_DEVICE
 
 /// The specified color profile was not found.
-pub const PROFILE_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(2016); // ERROR_PROFILE_NOT_FOUND
+pub const PROFILE_NOT_FOUND : ErrorCode = ErrorCode::from_constant(2016); // ERROR_PROFILE_NOT_FOUND
 
 /// The specified color space is invalid.
-pub const INVALID_COLORSPACE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(2017); // ERROR_INVALID_COLORSPACE
+pub const INVALID_COLORSPACE : ErrorCode = ErrorCode::from_constant(2017); // ERROR_INVALID_COLORSPACE
 
 /// Image Color Management is not enabled.
-pub const ICM_NOT_ENABLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(2018); // ERROR_ICM_NOT_ENABLED
+pub const ICM_NOT_ENABLED : ErrorCode = ErrorCode::from_constant(2018); // ERROR_ICM_NOT_ENABLED
 
 /// There was an error while deleting the color transform.
-pub const DELETING_ICM_XFORM : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(2019); // ERROR_DELETING_ICM_XFORM
+pub const DELETING_ICM_XFORM : ErrorCode = ErrorCode::from_constant(2019); // ERROR_DELETING_ICM_XFORM
 
 /// The specified color transform is invalid.
-pub const INVALID_TRANSFORM : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(2020); // ERROR_INVALID_TRANSFORM
+pub const INVALID_TRANSFORM : ErrorCode = ErrorCode::from_constant(2020); // ERROR_INVALID_TRANSFORM
 
 /// The specified transform does not match the bitmap's color space.
-pub const COLORSPACE_MISMATCH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(2021); // ERROR_COLORSPACE_MISMATCH
+pub const COLORSPACE_MISMATCH : ErrorCode = ErrorCode::from_constant(2021); // ERROR_COLORSPACE_MISMATCH
 
 /// The specified named color index is not present in the profile.
-pub const INVALID_COLORINDEX : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(2022); // ERROR_INVALID_COLORINDEX
+pub const INVALID_COLORINDEX : ErrorCode = ErrorCode::from_constant(2022); // ERROR_INVALID_COLORINDEX
 
 /// The specified profile is intended for a device of a different type than the specified device.
-pub const PROFILE_DOES_NOT_MATCH_DEVICE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(2023); // ERROR_PROFILE_DOES_NOT_MATCH_DEVICE
+pub const PROFILE_DOES_NOT_MATCH_DEVICE : ErrorCode = ErrorCode::from_constant(2023); // ERROR_PROFILE_DOES_NOT_MATCH_DEVICE
 
 /// The network connection was made successfully, but the user had to be prompted for a password other than the one originally specified.
-pub const CONNECTED_OTHER_PASSWORD : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(2108); // ERROR_CONNECTED_OTHER_PASSWORD
+pub const CONNECTED_OTHER_PASSWORD : ErrorCode = ErrorCode::from_constant(2108); // ERROR_CONNECTED_OTHER_PASSWORD
 
 /// The network connection was made successfully using default credentials.
-pub const CONNECTED_OTHER_PASSWORD_DEFAULT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(2109); // ERROR_CONNECTED_OTHER_PASSWORD_DEFAULT
+pub const CONNECTED_OTHER_PASSWORD_DEFAULT : ErrorCode = ErrorCode::from_constant(2109); // ERROR_CONNECTED_OTHER_PASSWORD_DEFAULT
 
 /// The specified username is invalid.
-pub const BAD_USERNAME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(2202); // ERROR_BAD_USERNAME
+pub const BAD_USERNAME : ErrorCode = ErrorCode::from_constant(2202); // ERROR_BAD_USERNAME
 
 /// This network connection does not exist.
-pub const NOT_CONNECTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(2250); // ERROR_NOT_CONNECTED
+pub const NOT_CONNECTED : ErrorCode = ErrorCode::from_constant(2250); // ERROR_NOT_CONNECTED
 
 /// This network connection has files open or requests pending.
-pub const OPEN_FILES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(2401); // ERROR_OPEN_FILES
+pub const OPEN_FILES : ErrorCode = ErrorCode::from_constant(2401); // ERROR_OPEN_FILES
 
 /// Active connections still exist.
-pub const ACTIVE_CONNECTIONS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(2402); // ERROR_ACTIVE_CONNECTIONS
+pub const ACTIVE_CONNECTIONS : ErrorCode = ErrorCode::from_constant(2402); // ERROR_ACTIVE_CONNECTIONS
 
 /// The device is in use by an active process and cannot be disconnected.
-pub const DEVICE_IN_USE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(2404); // ERROR_DEVICE_IN_USE
+pub const DEVICE_IN_USE : ErrorCode = ErrorCode::from_constant(2404); // ERROR_DEVICE_IN_USE
 
 /// The specified print monitor is unknown.
-pub const UNKNOWN_PRINT_MONITOR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(3000); // ERROR_UNKNOWN_PRINT_MONITOR
+pub const UNKNOWN_PRINT_MONITOR : ErrorCode = ErrorCode::from_constant(3000); // ERROR_UNKNOWN_PRINT_MONITOR
 
 /// The specified printer driver is currently in use.
-pub const PRINTER_DRIVER_IN_USE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(3001); // ERROR_PRINTER_DRIVER_IN_USE
+pub const PRINTER_DRIVER_IN_USE : ErrorCode = ErrorCode::from_constant(3001); // ERROR_PRINTER_DRIVER_IN_USE
 
 /// The spool file was not found.
-pub const SPOOL_FILE_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(3002); // ERROR_SPOOL_FILE_NOT_FOUND
+pub const SPOOL_FILE_NOT_FOUND : ErrorCode = ErrorCode::from_constant(3002); // ERROR_SPOOL_FILE_NOT_FOUND
 
 /// A StartDocPrinter call was not issued.
-pub const SPL_NO_STARTDOC : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(3003); // ERROR_SPL_NO_STARTDOC
+pub const SPL_NO_STARTDOC : ErrorCode = ErrorCode::from_constant(3003); // ERROR_SPL_NO_STARTDOC
 
 /// An AddJob call was not issued.
-pub const SPL_NO_ADDJOB : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(3004); // ERROR_SPL_NO_ADDJOB
+pub const SPL_NO_ADDJOB : ErrorCode = ErrorCode::from_constant(3004); // ERROR_SPL_NO_ADDJOB
 
 /// The specified print processor has already been installed.
-pub const PRINT_PROCESSOR_ALREADY_INSTALLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(3005); // ERROR_PRINT_PROCESSOR_ALREADY_INSTALLED
+pub const PRINT_PROCESSOR_ALREADY_INSTALLED : ErrorCode = ErrorCode::from_constant(3005); // ERROR_PRINT_PROCESSOR_ALREADY_INSTALLED
 
 /// The specified print monitor has already been installed.
-pub const PRINT_MONITOR_ALREADY_INSTALLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(3006); // ERROR_PRINT_MONITOR_ALREADY_INSTALLED
+pub const PRINT_MONITOR_ALREADY_INSTALLED : ErrorCode = ErrorCode::from_constant(3006); // ERROR_PRINT_MONITOR_ALREADY_INSTALLED
 
 /// The specified print monitor does not have the required functions.
-pub const INVALID_PRINT_MONITOR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(3007); // ERROR_INVALID_PRINT_MONITOR
+pub const INVALID_PRINT_MONITOR : ErrorCode = ErrorCode::from_constant(3007); // ERROR_INVALID_PRINT_MONITOR
 
 /// The specified print monitor is currently in use.
-pub const PRINT_MONITOR_IN_USE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(3008); // ERROR_PRINT_MONITOR_IN_USE
+pub const PRINT_MONITOR_IN_USE : ErrorCode = ErrorCode::from_constant(3008); // ERROR_PRINT_MONITOR_IN_USE
 
 /// The requested operation is not allowed when there are jobs queued to the printer.
-pub const PRINTER_HAS_JOBS_QUEUED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(3009); // ERROR_PRINTER_HAS_JOBS_QUEUED
+pub const PRINTER_HAS_JOBS_QUEUED : ErrorCode = ErrorCode::from_constant(3009); // ERROR_PRINTER_HAS_JOBS_QUEUED
 
 /// The requested operation is successful. Changes will not be effective until the system is rebooted.
-pub const SUCCESS_REBOOT_REQUIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(3010); // ERROR_SUCCESS_REBOOT_REQUIRED
+pub const SUCCESS_REBOOT_REQUIRED : ErrorCode = ErrorCode::from_constant(3010); // ERROR_SUCCESS_REBOOT_REQUIRED
 
 /// The requested operation is successful. Changes will not be effective until the service is restarted.
-pub const SUCCESS_RESTART_REQUIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(3011); // ERROR_SUCCESS_RESTART_REQUIRED
+pub const SUCCESS_RESTART_REQUIRED : ErrorCode = ErrorCode::from_constant(3011); // ERROR_SUCCESS_RESTART_REQUIRED
 
 /// No printers were found.
-pub const PRINTER_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(3012); // ERROR_PRINTER_NOT_FOUND
+pub const PRINTER_NOT_FOUND : ErrorCode = ErrorCode::from_constant(3012); // ERROR_PRINTER_NOT_FOUND
 
 /// The printer driver is known to be unreliable.
-pub const PRINTER_DRIVER_WARNED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(3013); // ERROR_PRINTER_DRIVER_WARNED
+pub const PRINTER_DRIVER_WARNED : ErrorCode = ErrorCode::from_constant(3013); // ERROR_PRINTER_DRIVER_WARNED
 
 /// The printer driver is known to harm the system.
-pub const PRINTER_DRIVER_BLOCKED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(3014); // ERROR_PRINTER_DRIVER_BLOCKED
+pub const PRINTER_DRIVER_BLOCKED : ErrorCode = ErrorCode::from_constant(3014); // ERROR_PRINTER_DRIVER_BLOCKED
 
 /// The specified printer driver package is currently in use.
-pub const PRINTER_DRIVER_PACKAGE_IN_USE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(3015); // ERROR_PRINTER_DRIVER_PACKAGE_IN_USE
+pub const PRINTER_DRIVER_PACKAGE_IN_USE : ErrorCode = ErrorCode::from_constant(3015); // ERROR_PRINTER_DRIVER_PACKAGE_IN_USE
 
 /// Unable to find a core driver package that is required by the printer driver package.
-pub const CORE_DRIVER_PACKAGE_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(3016); // ERROR_CORE_DRIVER_PACKAGE_NOT_FOUND
+pub const CORE_DRIVER_PACKAGE_NOT_FOUND : ErrorCode = ErrorCode::from_constant(3016); // ERROR_CORE_DRIVER_PACKAGE_NOT_FOUND
 
 /// The requested operation failed. A system reboot is required to roll back changes made.
-pub const FAIL_REBOOT_REQUIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(3017); // ERROR_FAIL_REBOOT_REQUIRED
+pub const FAIL_REBOOT_REQUIRED : ErrorCode = ErrorCode::from_constant(3017); // ERROR_FAIL_REBOOT_REQUIRED
 
 /// The requested operation failed. A system reboot has been initiated to roll back changes made.
-pub const FAIL_REBOOT_INITIATED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(3018); // ERROR_FAIL_REBOOT_INITIATED
+pub const FAIL_REBOOT_INITIATED : ErrorCode = ErrorCode::from_constant(3018); // ERROR_FAIL_REBOOT_INITIATED
 
 /// The specified printer driver was not found on the system and needs to be downloaded.
-pub const PRINTER_DRIVER_DOWNLOAD_NEEDED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(3019); // ERROR_PRINTER_DRIVER_DOWNLOAD_NEEDED
+pub const PRINTER_DRIVER_DOWNLOAD_NEEDED : ErrorCode = ErrorCode::from_constant(3019); // ERROR_PRINTER_DRIVER_DOWNLOAD_NEEDED
 
 /// The requested print job has failed to print. A print system update requires the job to be resubmitted.
-pub const PRINT_JOB_RESTART_REQUIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(3020); // ERROR_PRINT_JOB_RESTART_REQUIRED
+pub const PRINT_JOB_RESTART_REQUIRED : ErrorCode = ErrorCode::from_constant(3020); // ERROR_PRINT_JOB_RESTART_REQUIRED
 
 /// The printer driver does not contain a valid manifest, or contains too many manifests.
-pub const INVALID_PRINTER_DRIVER_MANIFEST : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(3021); // ERROR_INVALID_PRINTER_DRIVER_MANIFEST
+pub const INVALID_PRINTER_DRIVER_MANIFEST : ErrorCode = ErrorCode::from_constant(3021); // ERROR_INVALID_PRINTER_DRIVER_MANIFEST
 
 /// The specified printer cannot be shared.
-pub const PRINTER_NOT_SHAREABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(3022); // ERROR_PRINTER_NOT_SHAREABLE
+pub const PRINTER_NOT_SHAREABLE : ErrorCode = ErrorCode::from_constant(3022); // ERROR_PRINTER_NOT_SHAREABLE
 
 /// The operation was paused.
-pub const REQUEST_PAUSED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(3050); // ERROR_REQUEST_PAUSED
+pub const REQUEST_PAUSED : ErrorCode = ErrorCode::from_constant(3050); // ERROR_REQUEST_PAUSED
 
 /// The condition supplied for the app execution request was not satisfied, so the request was not performed.
-pub const APPEXEC_CONDITION_NOT_SATISFIED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(3060); // ERROR_APPEXEC_CONDITION_NOT_SATISFIED
+pub const APPEXEC_CONDITION_NOT_SATISFIED : ErrorCode = ErrorCode::from_constant(3060); // ERROR_APPEXEC_CONDITION_NOT_SATISFIED
 
 /// The supplied handle has been invalidated and may not be used for the requested operation.
-pub const APPEXEC_HANDLE_INVALIDATED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(3061); // ERROR_APPEXEC_HANDLE_INVALIDATED
+pub const APPEXEC_HANDLE_INVALIDATED : ErrorCode = ErrorCode::from_constant(3061); // ERROR_APPEXEC_HANDLE_INVALIDATED
 
 /// The supplied host generation has been invalidated and may not be used for the requested operation.
-pub const APPEXEC_INVALID_HOST_GENERATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(3062); // ERROR_APPEXEC_INVALID_HOST_GENERATION
+pub const APPEXEC_INVALID_HOST_GENERATION : ErrorCode = ErrorCode::from_constant(3062); // ERROR_APPEXEC_INVALID_HOST_GENERATION
 
 /// An attempt to register a process failed because the target host was not in a valid state to receive process registrations.
-pub const APPEXEC_UNEXPECTED_PROCESS_REGISTRATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(3063); // ERROR_APPEXEC_UNEXPECTED_PROCESS_REGISTRATION
+pub const APPEXEC_UNEXPECTED_PROCESS_REGISTRATION : ErrorCode = ErrorCode::from_constant(3063); // ERROR_APPEXEC_UNEXPECTED_PROCESS_REGISTRATION
 
 /// The host is not in a valid state to support the execution request.
-pub const APPEXEC_INVALID_HOST_STATE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(3064); // ERROR_APPEXEC_INVALID_HOST_STATE
+pub const APPEXEC_INVALID_HOST_STATE : ErrorCode = ErrorCode::from_constant(3064); // ERROR_APPEXEC_INVALID_HOST_STATE
 
 /// The operation was not completed because a required resource donor was not found for the host.
-pub const APPEXEC_NO_DONOR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(3065); // ERROR_APPEXEC_NO_DONOR
+pub const APPEXEC_NO_DONOR : ErrorCode = ErrorCode::from_constant(3065); // ERROR_APPEXEC_NO_DONOR
 
 /// The operation was not completed because an unexpected host ID was encountered.
-pub const APPEXEC_HOST_ID_MISMATCH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(3066); // ERROR_APPEXEC_HOST_ID_MISMATCH
+pub const APPEXEC_HOST_ID_MISMATCH : ErrorCode = ErrorCode::from_constant(3066); // ERROR_APPEXEC_HOST_ID_MISMATCH
 
 /// The operation was not completed because the specified user was not known to the service.
-pub const APPEXEC_UNKNOWN_USER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(3067); // ERROR_APPEXEC_UNKNOWN_USER
+pub const APPEXEC_UNKNOWN_USER : ErrorCode = ErrorCode::from_constant(3067); // ERROR_APPEXEC_UNKNOWN_USER
 
 /// Reissue the given operation as a cached IO operation
-pub const IO_REISSUE_AS_CACHED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(3950); // ERROR_IO_REISSUE_AS_CACHED
+pub const IO_REISSUE_AS_CACHED : ErrorCode = ErrorCode::from_constant(3950); // ERROR_IO_REISSUE_AS_CACHED
 
 /// WINS encountered an error while processing the command.
-pub const WINS_INTERNAL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4000); // ERROR_WINS_INTERNAL
+pub const WINS_INTERNAL : ErrorCode = ErrorCode::from_constant(4000); // ERROR_WINS_INTERNAL
 
 /// The local WINS cannot be deleted.
-pub const CAN_NOT_DEL_LOCAL_WINS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4001); // ERROR_CAN_NOT_DEL_LOCAL_WINS
+pub const CAN_NOT_DEL_LOCAL_WINS : ErrorCode = ErrorCode::from_constant(4001); // ERROR_CAN_NOT_DEL_LOCAL_WINS
 
 /// The importation from the file failed.
-pub const STATIC_INIT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4002); // ERROR_STATIC_INIT
+pub const STATIC_INIT : ErrorCode = ErrorCode::from_constant(4002); // ERROR_STATIC_INIT
 
 /// The backup failed. Was a full backup done before?
-pub const INC_BACKUP : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4003); // ERROR_INC_BACKUP
+pub const INC_BACKUP : ErrorCode = ErrorCode::from_constant(4003); // ERROR_INC_BACKUP
 
 /// The backup failed. Check the directory to which you are backing the database.
-pub const FULL_BACKUP : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4004); // ERROR_FULL_BACKUP
+pub const FULL_BACKUP : ErrorCode = ErrorCode::from_constant(4004); // ERROR_FULL_BACKUP
 
 /// The name does not exist in the WINS database.
-pub const REC_NON_EXISTENT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4005); // ERROR_REC_NON_EXISTENT
+pub const REC_NON_EXISTENT : ErrorCode = ErrorCode::from_constant(4005); // ERROR_REC_NON_EXISTENT
 
 /// Replication with a nonconfigured partner is not allowed.
-pub const RPL_NOT_ALLOWED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4006); // ERROR_RPL_NOT_ALLOWED
+pub const RPL_NOT_ALLOWED : ErrorCode = ErrorCode::from_constant(4006); // ERROR_RPL_NOT_ALLOWED
 
-#[doc(hidden)] pub const DHCP_ADDRESS_CONFLICT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4100); // ERROR_DHCP_ADDRESS_CONFLICT
-#[doc(hidden)] pub const WMI_GUID_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4200); // ERROR_WMI_GUID_NOT_FOUND
-#[doc(hidden)] pub const WMI_INSTANCE_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4201); // ERROR_WMI_INSTANCE_NOT_FOUND
-#[doc(hidden)] pub const WMI_ITEMID_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4202); // ERROR_WMI_ITEMID_NOT_FOUND
-#[doc(hidden)] pub const WMI_TRY_AGAIN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4203); // ERROR_WMI_TRY_AGAIN
-#[doc(hidden)] pub const WMI_DP_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4204); // ERROR_WMI_DP_NOT_FOUND
-#[doc(hidden)] pub const WMI_UNRESOLVED_INSTANCE_REF : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4205); // ERROR_WMI_UNRESOLVED_INSTANCE_REF
-#[doc(hidden)] pub const WMI_ALREADY_ENABLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4206); // ERROR_WMI_ALREADY_ENABLED
-#[doc(hidden)] pub const WMI_GUID_DISCONNECTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4207); // ERROR_WMI_GUID_DISCONNECTED
-#[doc(hidden)] pub const WMI_SERVER_UNAVAILABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4208); // ERROR_WMI_SERVER_UNAVAILABLE
-#[doc(hidden)] pub const WMI_DP_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4209); // ERROR_WMI_DP_FAILED
-#[doc(hidden)] pub const WMI_INVALID_MOF : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4210); // ERROR_WMI_INVALID_MOF
-#[doc(hidden)] pub const WMI_INVALID_REGINFO : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4211); // ERROR_WMI_INVALID_REGINFO
-#[doc(hidden)] pub const WMI_ALREADY_DISABLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4212); // ERROR_WMI_ALREADY_DISABLED
-#[doc(hidden)] pub const WMI_READ_ONLY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4213); // ERROR_WMI_READ_ONLY
-#[doc(hidden)] pub const WMI_SET_FAILURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4214); // ERROR_WMI_SET_FAILURE
+#[doc(hidden)] pub const DHCP_ADDRESS_CONFLICT : ErrorCode = ErrorCode::from_constant(4100); // ERROR_DHCP_ADDRESS_CONFLICT
+#[doc(hidden)] pub const WMI_GUID_NOT_FOUND : ErrorCode = ErrorCode::from_constant(4200); // ERROR_WMI_GUID_NOT_FOUND
+#[doc(hidden)] pub const WMI_INSTANCE_NOT_FOUND : ErrorCode = ErrorCode::from_constant(4201); // ERROR_WMI_INSTANCE_NOT_FOUND
+#[doc(hidden)] pub const WMI_ITEMID_NOT_FOUND : ErrorCode = ErrorCode::from_constant(4202); // ERROR_WMI_ITEMID_NOT_FOUND
+#[doc(hidden)] pub const WMI_TRY_AGAIN : ErrorCode = ErrorCode::from_constant(4203); // ERROR_WMI_TRY_AGAIN
+#[doc(hidden)] pub const WMI_DP_NOT_FOUND : ErrorCode = ErrorCode::from_constant(4204); // ERROR_WMI_DP_NOT_FOUND
+#[doc(hidden)] pub const WMI_UNRESOLVED_INSTANCE_REF : ErrorCode = ErrorCode::from_constant(4205); // ERROR_WMI_UNRESOLVED_INSTANCE_REF
+#[doc(hidden)] pub const WMI_ALREADY_ENABLED : ErrorCode = ErrorCode::from_constant(4206); // ERROR_WMI_ALREADY_ENABLED
+#[doc(hidden)] pub const WMI_GUID_DISCONNECTED : ErrorCode = ErrorCode::from_constant(4207); // ERROR_WMI_GUID_DISCONNECTED
+#[doc(hidden)] pub const WMI_SERVER_UNAVAILABLE : ErrorCode = ErrorCode::from_constant(4208); // ERROR_WMI_SERVER_UNAVAILABLE
+#[doc(hidden)] pub const WMI_DP_FAILED : ErrorCode = ErrorCode::from_constant(4209); // ERROR_WMI_DP_FAILED
+#[doc(hidden)] pub const WMI_INVALID_MOF : ErrorCode = ErrorCode::from_constant(4210); // ERROR_WMI_INVALID_MOF
+#[doc(hidden)] pub const WMI_INVALID_REGINFO : ErrorCode = ErrorCode::from_constant(4211); // ERROR_WMI_INVALID_REGINFO
+#[doc(hidden)] pub const WMI_ALREADY_DISABLED : ErrorCode = ErrorCode::from_constant(4212); // ERROR_WMI_ALREADY_DISABLED
+#[doc(hidden)] pub const WMI_READ_ONLY : ErrorCode = ErrorCode::from_constant(4213); // ERROR_WMI_READ_ONLY
+#[doc(hidden)] pub const WMI_SET_FAILURE : ErrorCode = ErrorCode::from_constant(4214); // ERROR_WMI_SET_FAILURE
 
 /// This operation is only valid in the context of an app container.
-pub const NOT_APPCONTAINER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4250); // ERROR_NOT_APPCONTAINER
+pub const NOT_APPCONTAINER : ErrorCode = ErrorCode::from_constant(4250); // ERROR_NOT_APPCONTAINER
 
 /// This application can only run in the context of an app container.
-pub const APPCONTAINER_REQUIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4251); // ERROR_APPCONTAINER_REQUIRED
+pub const APPCONTAINER_REQUIRED : ErrorCode = ErrorCode::from_constant(4251); // ERROR_APPCONTAINER_REQUIRED
 
 /// This functionality is not supported in the context of an app container.
-pub const NOT_SUPPORTED_IN_APPCONTAINER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4252); // ERROR_NOT_SUPPORTED_IN_APPCONTAINER
+pub const NOT_SUPPORTED_IN_APPCONTAINER : ErrorCode = ErrorCode::from_constant(4252); // ERROR_NOT_SUPPORTED_IN_APPCONTAINER
 
 /// The length of the SID supplied is not a valid length for app container SIDs.
-pub const INVALID_PACKAGE_SID_LENGTH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4253); // ERROR_INVALID_PACKAGE_SID_LENGTH
+pub const INVALID_PACKAGE_SID_LENGTH : ErrorCode = ErrorCode::from_constant(4253); // ERROR_INVALID_PACKAGE_SID_LENGTH
 
 /// The media identifier does not represent a valid medium.
-pub const INVALID_MEDIA : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4300); // ERROR_INVALID_MEDIA
+pub const INVALID_MEDIA : ErrorCode = ErrorCode::from_constant(4300); // ERROR_INVALID_MEDIA
 
 /// The library identifier does not represent a valid library.
-pub const INVALID_LIBRARY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4301); // ERROR_INVALID_LIBRARY
+pub const INVALID_LIBRARY : ErrorCode = ErrorCode::from_constant(4301); // ERROR_INVALID_LIBRARY
 
 /// The media pool identifier does not represent a valid media pool.
-pub const INVALID_MEDIA_POOL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4302); // ERROR_INVALID_MEDIA_POOL
+pub const INVALID_MEDIA_POOL : ErrorCode = ErrorCode::from_constant(4302); // ERROR_INVALID_MEDIA_POOL
 
 /// The drive and medium are not compatible or exist in different libraries.
-pub const DRIVE_MEDIA_MISMATCH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4303); // ERROR_DRIVE_MEDIA_MISMATCH
+pub const DRIVE_MEDIA_MISMATCH : ErrorCode = ErrorCode::from_constant(4303); // ERROR_DRIVE_MEDIA_MISMATCH
 
 /// The medium currently exists in an offline library and must be online to perform this operation.
-pub const MEDIA_OFFLINE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4304); // ERROR_MEDIA_OFFLINE
+pub const MEDIA_OFFLINE : ErrorCode = ErrorCode::from_constant(4304); // ERROR_MEDIA_OFFLINE
 
 /// The operation cannot be performed on an offline library.
-pub const LIBRARY_OFFLINE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4305); // ERROR_LIBRARY_OFFLINE
+pub const LIBRARY_OFFLINE : ErrorCode = ErrorCode::from_constant(4305); // ERROR_LIBRARY_OFFLINE
 
 /// The library, drive, or media pool is empty.
-pub const EMPTY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4306); // ERROR_EMPTY
+pub const EMPTY : ErrorCode = ErrorCode::from_constant(4306); // ERROR_EMPTY
 
 /// The library, drive, or media pool must be empty to perform this operation.
-pub const NOT_EMPTY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4307); // ERROR_NOT_EMPTY
+pub const NOT_EMPTY : ErrorCode = ErrorCode::from_constant(4307); // ERROR_NOT_EMPTY
 
 /// No media is currently available in this media pool or library.
-pub const MEDIA_UNAVAILABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4308); // ERROR_MEDIA_UNAVAILABLE
+pub const MEDIA_UNAVAILABLE : ErrorCode = ErrorCode::from_constant(4308); // ERROR_MEDIA_UNAVAILABLE
 
 /// A resource required for this operation is disabled.
-pub const RESOURCE_DISABLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4309); // ERROR_RESOURCE_DISABLED
+pub const RESOURCE_DISABLED : ErrorCode = ErrorCode::from_constant(4309); // ERROR_RESOURCE_DISABLED
 
 /// The media identifier does not represent a valid cleaner.
-pub const INVALID_CLEANER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4310); // ERROR_INVALID_CLEANER
+pub const INVALID_CLEANER : ErrorCode = ErrorCode::from_constant(4310); // ERROR_INVALID_CLEANER
 
 /// The drive cannot be cleaned or does not support cleaning.
-pub const UNABLE_TO_CLEAN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4311); // ERROR_UNABLE_TO_CLEAN
+pub const UNABLE_TO_CLEAN : ErrorCode = ErrorCode::from_constant(4311); // ERROR_UNABLE_TO_CLEAN
 
 /// The object identifier does not represent a valid object.
-pub const OBJECT_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4312); // ERROR_OBJECT_NOT_FOUND
+pub const OBJECT_NOT_FOUND : ErrorCode = ErrorCode::from_constant(4312); // ERROR_OBJECT_NOT_FOUND
 
 /// Unable to read from or write to the database.
-pub const DATABASE_FAILURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4313); // ERROR_DATABASE_FAILURE
+pub const DATABASE_FAILURE : ErrorCode = ErrorCode::from_constant(4313); // ERROR_DATABASE_FAILURE
 
 /// The database is full.
-pub const DATABASE_FULL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4314); // ERROR_DATABASE_FULL
+pub const DATABASE_FULL : ErrorCode = ErrorCode::from_constant(4314); // ERROR_DATABASE_FULL
 
 /// The medium is not compatible with the device or media pool.
-pub const MEDIA_INCOMPATIBLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4315); // ERROR_MEDIA_INCOMPATIBLE
+pub const MEDIA_INCOMPATIBLE : ErrorCode = ErrorCode::from_constant(4315); // ERROR_MEDIA_INCOMPATIBLE
 
 /// The resource required for this operation does not exist.
-pub const RESOURCE_NOT_PRESENT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4316); // ERROR_RESOURCE_NOT_PRESENT
+pub const RESOURCE_NOT_PRESENT : ErrorCode = ErrorCode::from_constant(4316); // ERROR_RESOURCE_NOT_PRESENT
 
 /// The operation identifier is not valid.
-pub const INVALID_OPERATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4317); // ERROR_INVALID_OPERATION
+pub const INVALID_OPERATION : ErrorCode = ErrorCode::from_constant(4317); // ERROR_INVALID_OPERATION
 
 /// The media is not mounted or ready for use.
-pub const MEDIA_NOT_AVAILABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4318); // ERROR_MEDIA_NOT_AVAILABLE
+pub const MEDIA_NOT_AVAILABLE : ErrorCode = ErrorCode::from_constant(4318); // ERROR_MEDIA_NOT_AVAILABLE
 
 /// The device is not ready for use.
-pub const DEVICE_NOT_AVAILABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4319); // ERROR_DEVICE_NOT_AVAILABLE
+pub const DEVICE_NOT_AVAILABLE : ErrorCode = ErrorCode::from_constant(4319); // ERROR_DEVICE_NOT_AVAILABLE
 
 /// The operator or administrator has refused the request.
-pub const REQUEST_REFUSED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4320); // ERROR_REQUEST_REFUSED
+pub const REQUEST_REFUSED : ErrorCode = ErrorCode::from_constant(4320); // ERROR_REQUEST_REFUSED
 
 /// The drive identifier does not represent a valid drive.
-pub const INVALID_DRIVE_OBJECT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4321); // ERROR_INVALID_DRIVE_OBJECT
+pub const INVALID_DRIVE_OBJECT : ErrorCode = ErrorCode::from_constant(4321); // ERROR_INVALID_DRIVE_OBJECT
 
 /// Library is full. No slot is available for use.
-pub const LIBRARY_FULL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4322); // ERROR_LIBRARY_FULL
+pub const LIBRARY_FULL : ErrorCode = ErrorCode::from_constant(4322); // ERROR_LIBRARY_FULL
 
 /// The transport cannot access the medium.
-pub const MEDIUM_NOT_ACCESSIBLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4323); // ERROR_MEDIUM_NOT_ACCESSIBLE
+pub const MEDIUM_NOT_ACCESSIBLE : ErrorCode = ErrorCode::from_constant(4323); // ERROR_MEDIUM_NOT_ACCESSIBLE
 
 /// Unable to load the medium into the drive.
-pub const UNABLE_TO_LOAD_MEDIUM : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4324); // ERROR_UNABLE_TO_LOAD_MEDIUM
+pub const UNABLE_TO_LOAD_MEDIUM : ErrorCode = ErrorCode::from_constant(4324); // ERROR_UNABLE_TO_LOAD_MEDIUM
 
 /// Unable to retrieve the drive status.
-pub const UNABLE_TO_INVENTORY_DRIVE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4325); // ERROR_UNABLE_TO_INVENTORY_DRIVE
+pub const UNABLE_TO_INVENTORY_DRIVE : ErrorCode = ErrorCode::from_constant(4325); // ERROR_UNABLE_TO_INVENTORY_DRIVE
 
 /// Unable to retrieve the slot status.
-pub const UNABLE_TO_INVENTORY_SLOT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4326); // ERROR_UNABLE_TO_INVENTORY_SLOT
+pub const UNABLE_TO_INVENTORY_SLOT : ErrorCode = ErrorCode::from_constant(4326); // ERROR_UNABLE_TO_INVENTORY_SLOT
 
 /// Unable to retrieve status about the transport.
-pub const UNABLE_TO_INVENTORY_TRANSPORT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4327); // ERROR_UNABLE_TO_INVENTORY_TRANSPORT
+pub const UNABLE_TO_INVENTORY_TRANSPORT : ErrorCode = ErrorCode::from_constant(4327); // ERROR_UNABLE_TO_INVENTORY_TRANSPORT
 
 /// Cannot use the transport because it is already in use.
-pub const TRANSPORT_FULL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4328); // ERROR_TRANSPORT_FULL
+pub const TRANSPORT_FULL : ErrorCode = ErrorCode::from_constant(4328); // ERROR_TRANSPORT_FULL
 
 /// Unable to open or close the inject/eject port.
-pub const CONTROLLING_IEPORT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4329); // ERROR_CONTROLLING_IEPORT
+pub const CONTROLLING_IEPORT : ErrorCode = ErrorCode::from_constant(4329); // ERROR_CONTROLLING_IEPORT
 
 /// Unable to eject the medium because it is in a drive.
-pub const UNABLE_TO_EJECT_MOUNTED_MEDIA : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4330); // ERROR_UNABLE_TO_EJECT_MOUNTED_MEDIA
+pub const UNABLE_TO_EJECT_MOUNTED_MEDIA : ErrorCode = ErrorCode::from_constant(4330); // ERROR_UNABLE_TO_EJECT_MOUNTED_MEDIA
 
 /// A cleaner slot is already reserved.
-pub const CLEANER_SLOT_SET : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4331); // ERROR_CLEANER_SLOT_SET
+pub const CLEANER_SLOT_SET : ErrorCode = ErrorCode::from_constant(4331); // ERROR_CLEANER_SLOT_SET
 
 /// A cleaner slot is not reserved.
-pub const CLEANER_SLOT_NOT_SET : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4332); // ERROR_CLEANER_SLOT_NOT_SET
+pub const CLEANER_SLOT_NOT_SET : ErrorCode = ErrorCode::from_constant(4332); // ERROR_CLEANER_SLOT_NOT_SET
 
 /// The cleaner cartridge has performed the maximum number of drive cleanings.
-pub const CLEANER_CARTRIDGE_SPENT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4333); // ERROR_CLEANER_CARTRIDGE_SPENT
+pub const CLEANER_CARTRIDGE_SPENT : ErrorCode = ErrorCode::from_constant(4333); // ERROR_CLEANER_CARTRIDGE_SPENT
 
 /// Unexpected on-medium identifier.
-pub const UNEXPECTED_OMID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4334); // ERROR_UNEXPECTED_OMID
+pub const UNEXPECTED_OMID : ErrorCode = ErrorCode::from_constant(4334); // ERROR_UNEXPECTED_OMID
 
 /// The last remaining item in this group or resource cannot be deleted.
-pub const CANT_DELETE_LAST_ITEM : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4335); // ERROR_CANT_DELETE_LAST_ITEM
+pub const CANT_DELETE_LAST_ITEM : ErrorCode = ErrorCode::from_constant(4335); // ERROR_CANT_DELETE_LAST_ITEM
 
 /// The message provided exceeds the maximum size allowed for this parameter.
-pub const MESSAGE_EXCEEDS_MAX_SIZE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4336); // ERROR_MESSAGE_EXCEEDS_MAX_SIZE
+pub const MESSAGE_EXCEEDS_MAX_SIZE : ErrorCode = ErrorCode::from_constant(4336); // ERROR_MESSAGE_EXCEEDS_MAX_SIZE
 
 /// The volume contains system or paging files.
-pub const VOLUME_CONTAINS_SYS_FILES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4337); // ERROR_VOLUME_CONTAINS_SYS_FILES
+pub const VOLUME_CONTAINS_SYS_FILES : ErrorCode = ErrorCode::from_constant(4337); // ERROR_VOLUME_CONTAINS_SYS_FILES
 
 /// The media type cannot be removed from this library since at least one drive in the library reports it can support this media type.
-pub const INDIGENOUS_TYPE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4338); // ERROR_INDIGENOUS_TYPE
+pub const INDIGENOUS_TYPE : ErrorCode = ErrorCode::from_constant(4338); // ERROR_INDIGENOUS_TYPE
 
 /// This offline media cannot be mounted on this system since no enabled drives are present which can be used.
-pub const NO_SUPPORTING_DRIVES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4339); // ERROR_NO_SUPPORTING_DRIVES
+pub const NO_SUPPORTING_DRIVES : ErrorCode = ErrorCode::from_constant(4339); // ERROR_NO_SUPPORTING_DRIVES
 
 /// A cleaner cartridge is present in the tape library.
-pub const CLEANER_CARTRIDGE_INSTALLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4340); // ERROR_CLEANER_CARTRIDGE_INSTALLED
+pub const CLEANER_CARTRIDGE_INSTALLED : ErrorCode = ErrorCode::from_constant(4340); // ERROR_CLEANER_CARTRIDGE_INSTALLED
 
 /// Cannot use the inject/eject port because it is not empty.
-pub const IEPORT_FULL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4341); // ERROR_IEPORT_FULL
+pub const IEPORT_FULL : ErrorCode = ErrorCode::from_constant(4341); // ERROR_IEPORT_FULL
 
 /// This file is currently not available for use on this computer.
-pub const FILE_OFFLINE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4350); // ERROR_FILE_OFFLINE
+pub const FILE_OFFLINE : ErrorCode = ErrorCode::from_constant(4350); // ERROR_FILE_OFFLINE
 
 /// The remote storage service is not operational at this time.
-pub const REMOTE_STORAGE_NOT_ACTIVE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4351); // ERROR_REMOTE_STORAGE_NOT_ACTIVE
+pub const REMOTE_STORAGE_NOT_ACTIVE : ErrorCode = ErrorCode::from_constant(4351); // ERROR_REMOTE_STORAGE_NOT_ACTIVE
 
 /// The remote storage service encountered a media error.
-pub const REMOTE_STORAGE_MEDIA_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4352); // ERROR_REMOTE_STORAGE_MEDIA_ERROR
+pub const REMOTE_STORAGE_MEDIA_ERROR : ErrorCode = ErrorCode::from_constant(4352); // ERROR_REMOTE_STORAGE_MEDIA_ERROR
 
 /// The file or directory is not a reparse point.
-pub const NOT_A_REPARSE_POINT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4390); // ERROR_NOT_A_REPARSE_POINT
+pub const NOT_A_REPARSE_POINT : ErrorCode = ErrorCode::from_constant(4390); // ERROR_NOT_A_REPARSE_POINT
 
 /// The reparse point attribute cannot be set because it conflicts with an existing attribute.
-pub const REPARSE_ATTRIBUTE_CONFLICT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4391); // ERROR_REPARSE_ATTRIBUTE_CONFLICT
+pub const REPARSE_ATTRIBUTE_CONFLICT : ErrorCode = ErrorCode::from_constant(4391); // ERROR_REPARSE_ATTRIBUTE_CONFLICT
 
 /// The data present in the reparse point buffer is invalid.
-pub const INVALID_REPARSE_DATA : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4392); // ERROR_INVALID_REPARSE_DATA
+pub const INVALID_REPARSE_DATA : ErrorCode = ErrorCode::from_constant(4392); // ERROR_INVALID_REPARSE_DATA
 
 /// The tag present in the reparse point buffer is invalid.
-pub const REPARSE_TAG_INVALID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4393); // ERROR_REPARSE_TAG_INVALID
+pub const REPARSE_TAG_INVALID : ErrorCode = ErrorCode::from_constant(4393); // ERROR_REPARSE_TAG_INVALID
 
 /// There is a mismatch between the tag specified in the request and the tag present in the reparse point.
-pub const REPARSE_TAG_MISMATCH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4394); // ERROR_REPARSE_TAG_MISMATCH
+pub const REPARSE_TAG_MISMATCH : ErrorCode = ErrorCode::from_constant(4394); // ERROR_REPARSE_TAG_MISMATCH
 
 /// The object manager encountered a reparse point while retrieving an object.
-pub const REPARSE_POINT_ENCOUNTERED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4395); // ERROR_REPARSE_POINT_ENCOUNTERED
+pub const REPARSE_POINT_ENCOUNTERED : ErrorCode = ErrorCode::from_constant(4395); // ERROR_REPARSE_POINT_ENCOUNTERED
 
 /// Fast Cache data not found.
-pub const APP_DATA_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4400); // ERROR_APP_DATA_NOT_FOUND
+pub const APP_DATA_NOT_FOUND : ErrorCode = ErrorCode::from_constant(4400); // ERROR_APP_DATA_NOT_FOUND
 
 /// Fast Cache data expired.
-pub const APP_DATA_EXPIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4401); // ERROR_APP_DATA_EXPIRED
+pub const APP_DATA_EXPIRED : ErrorCode = ErrorCode::from_constant(4401); // ERROR_APP_DATA_EXPIRED
 
 /// Fast Cache data corrupt.
-pub const APP_DATA_CORRUPT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4402); // ERROR_APP_DATA_CORRUPT
+pub const APP_DATA_CORRUPT : ErrorCode = ErrorCode::from_constant(4402); // ERROR_APP_DATA_CORRUPT
 
 /// Fast Cache data has exceeded its max size and cannot be updated.
-pub const APP_DATA_LIMIT_EXCEEDED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4403); // ERROR_APP_DATA_LIMIT_EXCEEDED
+pub const APP_DATA_LIMIT_EXCEEDED : ErrorCode = ErrorCode::from_constant(4403); // ERROR_APP_DATA_LIMIT_EXCEEDED
 
 /// Fast Cache has been ReArmed and requires a reboot until it can be updated.
-pub const APP_DATA_REBOOT_REQUIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4404); // ERROR_APP_DATA_REBOOT_REQUIRED
+pub const APP_DATA_REBOOT_REQUIRED : ErrorCode = ErrorCode::from_constant(4404); // ERROR_APP_DATA_REBOOT_REQUIRED
 
-#[doc(hidden)] pub const SECUREBOOT_ROLLBACK_DETECTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4420); // ERROR_SECUREBOOT_ROLLBACK_DETECTED
-#[doc(hidden)] pub const SECUREBOOT_POLICY_VIOLATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4421); // ERROR_SECUREBOOT_POLICY_VIOLATION
-#[doc(hidden)] pub const SECUREBOOT_INVALID_POLICY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4422); // ERROR_SECUREBOOT_INVALID_POLICY
-#[doc(hidden)] pub const SECUREBOOT_POLICY_PUBLISHER_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4423); // ERROR_SECUREBOOT_POLICY_PUBLISHER_NOT_FOUND
-#[doc(hidden)] pub const SECUREBOOT_POLICY_NOT_SIGNED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4424); // ERROR_SECUREBOOT_POLICY_NOT_SIGNED
-#[doc(hidden)] pub const SECUREBOOT_NOT_ENABLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4425); // ERROR_SECUREBOOT_NOT_ENABLED
-#[doc(hidden)] pub const SECUREBOOT_FILE_REPLACED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4426); // ERROR_SECUREBOOT_FILE_REPLACED
-#[doc(hidden)] pub const SECUREBOOT_POLICY_NOT_AUTHORIZED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4427); // ERROR_SECUREBOOT_POLICY_NOT_AUTHORIZED
-#[doc(hidden)] pub const SECUREBOOT_POLICY_UNKNOWN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4428); // ERROR_SECUREBOOT_POLICY_UNKNOWN
-#[doc(hidden)] pub const SECUREBOOT_POLICY_MISSING_ANTIROLLBACKVERSION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4429); // ERROR_SECUREBOOT_POLICY_MISSING_ANTIROLLBACKVERSION
-#[doc(hidden)] pub const SECUREBOOT_PLATFORM_ID_MISMATCH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4430); // ERROR_SECUREBOOT_PLATFORM_ID_MISMATCH
-#[doc(hidden)] pub const SECUREBOOT_POLICY_ROLLBACK_DETECTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4431); // ERROR_SECUREBOOT_POLICY_ROLLBACK_DETECTED
-#[doc(hidden)] pub const SECUREBOOT_POLICY_UPGRADE_MISMATCH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4432); // ERROR_SECUREBOOT_POLICY_UPGRADE_MISMATCH
-#[doc(hidden)] pub const SECUREBOOT_REQUIRED_POLICY_FILE_MISSING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4433); // ERROR_SECUREBOOT_REQUIRED_POLICY_FILE_MISSING
-#[doc(hidden)] pub const SECUREBOOT_NOT_BASE_POLICY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4434); // ERROR_SECUREBOOT_NOT_BASE_POLICY
-#[doc(hidden)] pub const SECUREBOOT_NOT_SUPPLEMENTAL_POLICY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4435); // ERROR_SECUREBOOT_NOT_SUPPLEMENTAL_POLICY
+#[doc(hidden)] pub const SECUREBOOT_ROLLBACK_DETECTED : ErrorCode = ErrorCode::from_constant(4420); // ERROR_SECUREBOOT_ROLLBACK_DETECTED
+#[doc(hidden)] pub const SECUREBOOT_POLICY_VIOLATION : ErrorCode = ErrorCode::from_constant(4421); // ERROR_SECUREBOOT_POLICY_VIOLATION
+#[doc(hidden)] pub const SECUREBOOT_INVALID_POLICY : ErrorCode = ErrorCode::from_constant(4422); // ERROR_SECUREBOOT_INVALID_POLICY
+#[doc(hidden)] pub const SECUREBOOT_POLICY_PUBLISHER_NOT_FOUND : ErrorCode = ErrorCode::from_constant(4423); // ERROR_SECUREBOOT_POLICY_PUBLISHER_NOT_FOUND
+#[doc(hidden)] pub const SECUREBOOT_POLICY_NOT_SIGNED : ErrorCode = ErrorCode::from_constant(4424); // ERROR_SECUREBOOT_POLICY_NOT_SIGNED
+#[doc(hidden)] pub const SECUREBOOT_NOT_ENABLED : ErrorCode = ErrorCode::from_constant(4425); // ERROR_SECUREBOOT_NOT_ENABLED
+#[doc(hidden)] pub const SECUREBOOT_FILE_REPLACED : ErrorCode = ErrorCode::from_constant(4426); // ERROR_SECUREBOOT_FILE_REPLACED
+#[doc(hidden)] pub const SECUREBOOT_POLICY_NOT_AUTHORIZED : ErrorCode = ErrorCode::from_constant(4427); // ERROR_SECUREBOOT_POLICY_NOT_AUTHORIZED
+#[doc(hidden)] pub const SECUREBOOT_POLICY_UNKNOWN : ErrorCode = ErrorCode::from_constant(4428); // ERROR_SECUREBOOT_POLICY_UNKNOWN
+#[doc(hidden)] pub const SECUREBOOT_POLICY_MISSING_ANTIROLLBACKVERSION : ErrorCode = ErrorCode::from_constant(4429); // ERROR_SECUREBOOT_POLICY_MISSING_ANTIROLLBACKVERSION
+#[doc(hidden)] pub const SECUREBOOT_PLATFORM_ID_MISMATCH : ErrorCode = ErrorCode::from_constant(4430); // ERROR_SECUREBOOT_PLATFORM_ID_MISMATCH
+#[doc(hidden)] pub const SECUREBOOT_POLICY_ROLLBACK_DETECTED : ErrorCode = ErrorCode::from_constant(4431); // ERROR_SECUREBOOT_POLICY_ROLLBACK_DETECTED
+#[doc(hidden)] pub const SECUREBOOT_POLICY_UPGRADE_MISMATCH : ErrorCode = ErrorCode::from_constant(4432); // ERROR_SECUREBOOT_POLICY_UPGRADE_MISMATCH
+#[doc(hidden)] pub const SECUREBOOT_REQUIRED_POLICY_FILE_MISSING : ErrorCode = ErrorCode::from_constant(4433); // ERROR_SECUREBOOT_REQUIRED_POLICY_FILE_MISSING
+#[doc(hidden)] pub const SECUREBOOT_NOT_BASE_POLICY : ErrorCode = ErrorCode::from_constant(4434); // ERROR_SECUREBOOT_NOT_BASE_POLICY
+#[doc(hidden)] pub const SECUREBOOT_NOT_SUPPLEMENTAL_POLICY : ErrorCode = ErrorCode::from_constant(4435); // ERROR_SECUREBOOT_NOT_SUPPLEMENTAL_POLICY
 
 /// The copy offload read operation is not supported by a filter.
-pub const OFFLOAD_READ_FLT_NOT_SUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4440); // ERROR_OFFLOAD_READ_FLT_NOT_SUPPORTED
+pub const OFFLOAD_READ_FLT_NOT_SUPPORTED : ErrorCode = ErrorCode::from_constant(4440); // ERROR_OFFLOAD_READ_FLT_NOT_SUPPORTED
 
 /// The copy offload write operation is not supported by a filter.
-pub const OFFLOAD_WRITE_FLT_NOT_SUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4441); // ERROR_OFFLOAD_WRITE_FLT_NOT_SUPPORTED
+pub const OFFLOAD_WRITE_FLT_NOT_SUPPORTED : ErrorCode = ErrorCode::from_constant(4441); // ERROR_OFFLOAD_WRITE_FLT_NOT_SUPPORTED
 
 /// The copy offload read operation is not supported for the file.
-pub const OFFLOAD_READ_FILE_NOT_SUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4442); // ERROR_OFFLOAD_READ_FILE_NOT_SUPPORTED
+pub const OFFLOAD_READ_FILE_NOT_SUPPORTED : ErrorCode = ErrorCode::from_constant(4442); // ERROR_OFFLOAD_READ_FILE_NOT_SUPPORTED
 
 /// The copy offload write operation is not supported for the file.
-pub const OFFLOAD_WRITE_FILE_NOT_SUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4443); // ERROR_OFFLOAD_WRITE_FILE_NOT_SUPPORTED
+pub const OFFLOAD_WRITE_FILE_NOT_SUPPORTED : ErrorCode = ErrorCode::from_constant(4443); // ERROR_OFFLOAD_WRITE_FILE_NOT_SUPPORTED
 
 /// This file is currently associated with a different stream id.
-pub const ALREADY_HAS_STREAM_ID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4444); // ERROR_ALREADY_HAS_STREAM_ID
+pub const ALREADY_HAS_STREAM_ID : ErrorCode = ErrorCode::from_constant(4444); // ERROR_ALREADY_HAS_STREAM_ID
 
 /// The volume must undergo garbage collection.
-pub const SMR_GARBAGE_COLLECTION_REQUIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4445); // ERROR_SMR_GARBAGE_COLLECTION_REQUIRED
+pub const SMR_GARBAGE_COLLECTION_REQUIRED : ErrorCode = ErrorCode::from_constant(4445); // ERROR_SMR_GARBAGE_COLLECTION_REQUIRED
 
 /// The WOF driver encountered a corruption in WIM image's Header.
-pub const WOF_WIM_HEADER_CORRUPT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4446); // ERROR_WOF_WIM_HEADER_CORRUPT
+pub const WOF_WIM_HEADER_CORRUPT : ErrorCode = ErrorCode::from_constant(4446); // ERROR_WOF_WIM_HEADER_CORRUPT
 
 /// The WOF driver encountered a corruption in WIM image's Resource Table.
-pub const WOF_WIM_RESOURCE_TABLE_CORRUPT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4447); // ERROR_WOF_WIM_RESOURCE_TABLE_CORRUPT
+pub const WOF_WIM_RESOURCE_TABLE_CORRUPT : ErrorCode = ErrorCode::from_constant(4447); // ERROR_WOF_WIM_RESOURCE_TABLE_CORRUPT
 
 /// The WOF driver encountered a corruption in the compressed file's Resource Table.
-pub const WOF_FILE_RESOURCE_TABLE_CORRUPT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4448); // ERROR_WOF_FILE_RESOURCE_TABLE_CORRUPT
+pub const WOF_FILE_RESOURCE_TABLE_CORRUPT : ErrorCode = ErrorCode::from_constant(4448); // ERROR_WOF_FILE_RESOURCE_TABLE_CORRUPT
 
 /// Single Instance Storage is not available on this volume.
-pub const VOLUME_NOT_SIS_ENABLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4500); // ERROR_VOLUME_NOT_SIS_ENABLED
+pub const VOLUME_NOT_SIS_ENABLED : ErrorCode = ErrorCode::from_constant(4500); // ERROR_VOLUME_NOT_SIS_ENABLED
 
 /// System Integrity detected that policy rollback has been attempted.
-pub const SYSTEM_INTEGRITY_ROLLBACK_DETECTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4550); // ERROR_SYSTEM_INTEGRITY_ROLLBACK_DETECTED
+pub const SYSTEM_INTEGRITY_ROLLBACK_DETECTED : ErrorCode = ErrorCode::from_constant(4550); // ERROR_SYSTEM_INTEGRITY_ROLLBACK_DETECTED
 
 /// Your organization used Device Guard to block this app. Contact your support person for more info.
-pub const SYSTEM_INTEGRITY_POLICY_VIOLATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4551); // ERROR_SYSTEM_INTEGRITY_POLICY_VIOLATION
+pub const SYSTEM_INTEGRITY_POLICY_VIOLATION : ErrorCode = ErrorCode::from_constant(4551); // ERROR_SYSTEM_INTEGRITY_POLICY_VIOLATION
 
 /// The System Integrity policy is invalid.
-pub const SYSTEM_INTEGRITY_INVALID_POLICY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4552); // ERROR_SYSTEM_INTEGRITY_INVALID_POLICY
+pub const SYSTEM_INTEGRITY_INVALID_POLICY : ErrorCode = ErrorCode::from_constant(4552); // ERROR_SYSTEM_INTEGRITY_INVALID_POLICY
 
 /// The System Integrity policy is either not signed or is signed by a non-trusted signer.
-pub const SYSTEM_INTEGRITY_POLICY_NOT_SIGNED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4553); // ERROR_SYSTEM_INTEGRITY_POLICY_NOT_SIGNED
+pub const SYSTEM_INTEGRITY_POLICY_NOT_SIGNED : ErrorCode = ErrorCode::from_constant(4553); // ERROR_SYSTEM_INTEGRITY_POLICY_NOT_SIGNED
 
 /// The number of System Integrity policies is out of limit.
-pub const SYSTEM_INTEGRITY_TOO_MANY_POLICIES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4554); // ERROR_SYSTEM_INTEGRITY_TOO_MANY_POLICIES
+pub const SYSTEM_INTEGRITY_TOO_MANY_POLICIES : ErrorCode = ErrorCode::from_constant(4554); // ERROR_SYSTEM_INTEGRITY_TOO_MANY_POLICIES
 
 /// The Code Integrity supplemental policy is not authorized by a Code Integrity base policy.
-pub const SYSTEM_INTEGRITY_SUPPLEMENTAL_POLICY_NOT_AUTHORIZED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4555); // ERROR_SYSTEM_INTEGRITY_SUPPLEMENTAL_POLICY_NOT_AUTHORIZED
+pub const SYSTEM_INTEGRITY_SUPPLEMENTAL_POLICY_NOT_AUTHORIZED : ErrorCode = ErrorCode::from_constant(4555); // ERROR_SYSTEM_INTEGRITY_SUPPLEMENTAL_POLICY_NOT_AUTHORIZED
 
 /// Virtual Secure Mode (VSM) is not initialized. The hypervisor or VSM may not be present or enabled.
-pub const VSM_NOT_INITIALIZED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4560); // ERROR_VSM_NOT_INITIALIZED
+pub const VSM_NOT_INITIALIZED : ErrorCode = ErrorCode::from_constant(4560); // ERROR_VSM_NOT_INITIALIZED
 
 /// The hypervisor is not protecting DMA because an IOMMU is not present or not enabled in the BIOS.
-pub const VSM_DMA_PROTECTION_NOT_IN_USE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4561); // ERROR_VSM_DMA_PROTECTION_NOT_IN_USE
+pub const VSM_DMA_PROTECTION_NOT_IN_USE : ErrorCode = ErrorCode::from_constant(4561); // ERROR_VSM_DMA_PROTECTION_NOT_IN_USE
 
 /// The Platform Manifest file was not authorized on this machine.
-pub const PLATFORM_MANIFEST_NOT_AUTHORIZED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4570); // ERROR_PLATFORM_MANIFEST_NOT_AUTHORIZED
+pub const PLATFORM_MANIFEST_NOT_AUTHORIZED : ErrorCode = ErrorCode::from_constant(4570); // ERROR_PLATFORM_MANIFEST_NOT_AUTHORIZED
 
 /// The Platform Manifest file was not valid.
-pub const PLATFORM_MANIFEST_INVALID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4571); // ERROR_PLATFORM_MANIFEST_INVALID
+pub const PLATFORM_MANIFEST_INVALID : ErrorCode = ErrorCode::from_constant(4571); // ERROR_PLATFORM_MANIFEST_INVALID
 
 /// The file is not authorized on this platform because an entry was not found in the Platform Manifest.
-pub const PLATFORM_MANIFEST_FILE_NOT_AUTHORIZED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4572); // ERROR_PLATFORM_MANIFEST_FILE_NOT_AUTHORIZED
+pub const PLATFORM_MANIFEST_FILE_NOT_AUTHORIZED : ErrorCode = ErrorCode::from_constant(4572); // ERROR_PLATFORM_MANIFEST_FILE_NOT_AUTHORIZED
 
 /// The catalog is not authorized on this platform because an entry was not found in the Platform Manifest.
-pub const PLATFORM_MANIFEST_CATALOG_NOT_AUTHORIZED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4573); // ERROR_PLATFORM_MANIFEST_CATALOG_NOT_AUTHORIZED
+pub const PLATFORM_MANIFEST_CATALOG_NOT_AUTHORIZED : ErrorCode = ErrorCode::from_constant(4573); // ERROR_PLATFORM_MANIFEST_CATALOG_NOT_AUTHORIZED
 
 /// The file is not authorized on this platform because a Binary ID was not found in the embedded signature.
-pub const PLATFORM_MANIFEST_BINARY_ID_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4574); // ERROR_PLATFORM_MANIFEST_BINARY_ID_NOT_FOUND
+pub const PLATFORM_MANIFEST_BINARY_ID_NOT_FOUND : ErrorCode = ErrorCode::from_constant(4574); // ERROR_PLATFORM_MANIFEST_BINARY_ID_NOT_FOUND
 
 /// No active Platform Manifest exists on this system.
-pub const PLATFORM_MANIFEST_NOT_ACTIVE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4575); // ERROR_PLATFORM_MANIFEST_NOT_ACTIVE
+pub const PLATFORM_MANIFEST_NOT_ACTIVE : ErrorCode = ErrorCode::from_constant(4575); // ERROR_PLATFORM_MANIFEST_NOT_ACTIVE
 
 /// The Platform Manifest file was not properly signed.
-pub const PLATFORM_MANIFEST_NOT_SIGNED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(4576); // ERROR_PLATFORM_MANIFEST_NOT_SIGNED
+pub const PLATFORM_MANIFEST_NOT_SIGNED : ErrorCode = ErrorCode::from_constant(4576); // ERROR_PLATFORM_MANIFEST_NOT_SIGNED
 
 /// The operation cannot be completed because other resources are dependent on this resource.
-pub const DEPENDENT_RESOURCE_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5001); // ERROR_DEPENDENT_RESOURCE_EXISTS
+pub const DEPENDENT_RESOURCE_EXISTS : ErrorCode = ErrorCode::from_constant(5001); // ERROR_DEPENDENT_RESOURCE_EXISTS
 
 /// The cluster resource dependency cannot be found.
-pub const DEPENDENCY_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5002); // ERROR_DEPENDENCY_NOT_FOUND
+pub const DEPENDENCY_NOT_FOUND : ErrorCode = ErrorCode::from_constant(5002); // ERROR_DEPENDENCY_NOT_FOUND
 
 /// The cluster resource cannot be made dependent on the specified resource because it is already dependent.
-pub const DEPENDENCY_ALREADY_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5003); // ERROR_DEPENDENCY_ALREADY_EXISTS
+pub const DEPENDENCY_ALREADY_EXISTS : ErrorCode = ErrorCode::from_constant(5003); // ERROR_DEPENDENCY_ALREADY_EXISTS
 
 /// The cluster resource is not online.
-pub const RESOURCE_NOT_ONLINE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5004); // ERROR_RESOURCE_NOT_ONLINE
+pub const RESOURCE_NOT_ONLINE : ErrorCode = ErrorCode::from_constant(5004); // ERROR_RESOURCE_NOT_ONLINE
 
 /// A cluster node is not available for this operation.
-pub const HOST_NODE_NOT_AVAILABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5005); // ERROR_HOST_NODE_NOT_AVAILABLE
+pub const HOST_NODE_NOT_AVAILABLE : ErrorCode = ErrorCode::from_constant(5005); // ERROR_HOST_NODE_NOT_AVAILABLE
 
 /// The cluster resource is not available.
-pub const RESOURCE_NOT_AVAILABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5006); // ERROR_RESOURCE_NOT_AVAILABLE
+pub const RESOURCE_NOT_AVAILABLE : ErrorCode = ErrorCode::from_constant(5006); // ERROR_RESOURCE_NOT_AVAILABLE
 
 /// The cluster resource could not be found.
-pub const RESOURCE_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5007); // ERROR_RESOURCE_NOT_FOUND
+pub const RESOURCE_NOT_FOUND : ErrorCode = ErrorCode::from_constant(5007); // ERROR_RESOURCE_NOT_FOUND
 
 /// The cluster is being shut down.
-pub const SHUTDOWN_CLUSTER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5008); // ERROR_SHUTDOWN_CLUSTER
+pub const SHUTDOWN_CLUSTER : ErrorCode = ErrorCode::from_constant(5008); // ERROR_SHUTDOWN_CLUSTER
 
 /// A cluster node cannot be evicted from the cluster unless the node is down or it is the last node.
-pub const CANT_EVICT_ACTIVE_NODE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5009); // ERROR_CANT_EVICT_ACTIVE_NODE
+pub const CANT_EVICT_ACTIVE_NODE : ErrorCode = ErrorCode::from_constant(5009); // ERROR_CANT_EVICT_ACTIVE_NODE
 
 /// The object already exists.
-pub const OBJECT_ALREADY_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5010); // ERROR_OBJECT_ALREADY_EXISTS
+pub const OBJECT_ALREADY_EXISTS : ErrorCode = ErrorCode::from_constant(5010); // ERROR_OBJECT_ALREADY_EXISTS
 
 /// The object is already in the list.
-pub const OBJECT_IN_LIST : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5011); // ERROR_OBJECT_IN_LIST
+pub const OBJECT_IN_LIST : ErrorCode = ErrorCode::from_constant(5011); // ERROR_OBJECT_IN_LIST
 
 /// The cluster group is not available for any new requests.
-pub const GROUP_NOT_AVAILABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5012); // ERROR_GROUP_NOT_AVAILABLE
+pub const GROUP_NOT_AVAILABLE : ErrorCode = ErrorCode::from_constant(5012); // ERROR_GROUP_NOT_AVAILABLE
 
 /// The cluster group could not be found.
-pub const GROUP_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5013); // ERROR_GROUP_NOT_FOUND
+pub const GROUP_NOT_FOUND : ErrorCode = ErrorCode::from_constant(5013); // ERROR_GROUP_NOT_FOUND
 
 /// The operation could not be completed because the cluster group is not online.
-pub const GROUP_NOT_ONLINE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5014); // ERROR_GROUP_NOT_ONLINE
+pub const GROUP_NOT_ONLINE : ErrorCode = ErrorCode::from_constant(5014); // ERROR_GROUP_NOT_ONLINE
 
 /// The operation failed because either the specified cluster node is not the owner of the resource, or the node is not a possible owner of the resource.
-pub const HOST_NODE_NOT_RESOURCE_OWNER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5015); // ERROR_HOST_NODE_NOT_RESOURCE_OWNER
+pub const HOST_NODE_NOT_RESOURCE_OWNER : ErrorCode = ErrorCode::from_constant(5015); // ERROR_HOST_NODE_NOT_RESOURCE_OWNER
 
 /// The operation failed because either the specified cluster node is not the owner of the group, or the node is not a possible owner of the group.
-pub const HOST_NODE_NOT_GROUP_OWNER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5016); // ERROR_HOST_NODE_NOT_GROUP_OWNER
+pub const HOST_NODE_NOT_GROUP_OWNER : ErrorCode = ErrorCode::from_constant(5016); // ERROR_HOST_NODE_NOT_GROUP_OWNER
 
 /// The cluster resource could not be created in the specified resource monitor.
-pub const RESMON_CREATE_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5017); // ERROR_RESMON_CREATE_FAILED
+pub const RESMON_CREATE_FAILED : ErrorCode = ErrorCode::from_constant(5017); // ERROR_RESMON_CREATE_FAILED
 
 /// The cluster resource could not be brought online by the resource monitor.
-pub const RESMON_ONLINE_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5018); // ERROR_RESMON_ONLINE_FAILED
+pub const RESMON_ONLINE_FAILED : ErrorCode = ErrorCode::from_constant(5018); // ERROR_RESMON_ONLINE_FAILED
 
 /// The operation could not be completed because the cluster resource is online.
-pub const RESOURCE_ONLINE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5019); // ERROR_RESOURCE_ONLINE
+pub const RESOURCE_ONLINE : ErrorCode = ErrorCode::from_constant(5019); // ERROR_RESOURCE_ONLINE
 
 /// The cluster resource could not be deleted or brought offline because it is the quorum resource.
-pub const QUORUM_RESOURCE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5020); // ERROR_QUORUM_RESOURCE
+pub const QUORUM_RESOURCE : ErrorCode = ErrorCode::from_constant(5020); // ERROR_QUORUM_RESOURCE
 
 /// The cluster could not make the specified resource a quorum resource because it is not capable of being a quorum resource.
-pub const NOT_QUORUM_CAPABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5021); // ERROR_NOT_QUORUM_CAPABLE
+pub const NOT_QUORUM_CAPABLE : ErrorCode = ErrorCode::from_constant(5021); // ERROR_NOT_QUORUM_CAPABLE
 
-#[doc(hidden)] pub const CLUSTER_SHUTTING_DOWN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5022); // ERROR_CLUSTER_SHUTTING_DOWN
+#[doc(hidden)] pub const CLUSTER_SHUTTING_DOWN : ErrorCode = ErrorCode::from_constant(5022); // ERROR_CLUSTER_SHUTTING_DOWN
 
 /// The group or resource is not in the correct state to perform the requested operation.
-pub const INVALID_STATE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5023); // ERROR_INVALID_STATE
+pub const INVALID_STATE : ErrorCode = ErrorCode::from_constant(5023); // ERROR_INVALID_STATE
 
 /// The properties were stored but not all changes will take effect until the next time the resource is brought online.
-pub const RESOURCE_PROPERTIES_STORED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5024); // ERROR_RESOURCE_PROPERTIES_STORED
+pub const RESOURCE_PROPERTIES_STORED : ErrorCode = ErrorCode::from_constant(5024); // ERROR_RESOURCE_PROPERTIES_STORED
 
 /// The cluster could not make the specified resource a quorum resource because it does not belong to a shared storage class.
-pub const NOT_QUORUM_CLASS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5025); // ERROR_NOT_QUORUM_CLASS
+pub const NOT_QUORUM_CLASS : ErrorCode = ErrorCode::from_constant(5025); // ERROR_NOT_QUORUM_CLASS
 
 /// The cluster resource could not be deleted since it is a core resource.
-pub const CORE_RESOURCE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5026); // ERROR_CORE_RESOURCE
+pub const CORE_RESOURCE : ErrorCode = ErrorCode::from_constant(5026); // ERROR_CORE_RESOURCE
 
 /// The quorum resource failed to come online.
-pub const QUORUM_RESOURCE_ONLINE_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5027); // ERROR_QUORUM_RESOURCE_ONLINE_FAILED
+pub const QUORUM_RESOURCE_ONLINE_FAILED : ErrorCode = ErrorCode::from_constant(5027); // ERROR_QUORUM_RESOURCE_ONLINE_FAILED
 
 /// The quorum log could not be created or mounted successfully.
-pub const QUORUMLOG_OPEN_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5028); // ERROR_QUORUMLOG_OPEN_FAILED
+pub const QUORUMLOG_OPEN_FAILED : ErrorCode = ErrorCode::from_constant(5028); // ERROR_QUORUMLOG_OPEN_FAILED
 
 /// The cluster log is corrupt.
-pub const CLUSTERLOG_CORRUPT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5029); // ERROR_CLUSTERLOG_CORRUPT
+pub const CLUSTERLOG_CORRUPT : ErrorCode = ErrorCode::from_constant(5029); // ERROR_CLUSTERLOG_CORRUPT
 
 /// The record could not be written to the cluster log since it exceeds the maximum size.
-pub const CLUSTERLOG_RECORD_EXCEEDS_MAXSIZE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5030); // ERROR_CLUSTERLOG_RECORD_EXCEEDS_MAXSIZE
+pub const CLUSTERLOG_RECORD_EXCEEDS_MAXSIZE : ErrorCode = ErrorCode::from_constant(5030); // ERROR_CLUSTERLOG_RECORD_EXCEEDS_MAXSIZE
 
 /// The cluster log exceeds its maximum size.
-pub const CLUSTERLOG_EXCEEDS_MAXSIZE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5031); // ERROR_CLUSTERLOG_EXCEEDS_MAXSIZE
+pub const CLUSTERLOG_EXCEEDS_MAXSIZE : ErrorCode = ErrorCode::from_constant(5031); // ERROR_CLUSTERLOG_EXCEEDS_MAXSIZE
 
 /// No checkpoint record was found in the cluster log.
-pub const CLUSTERLOG_CHKPOINT_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5032); // ERROR_CLUSTERLOG_CHKPOINT_NOT_FOUND
+pub const CLUSTERLOG_CHKPOINT_NOT_FOUND : ErrorCode = ErrorCode::from_constant(5032); // ERROR_CLUSTERLOG_CHKPOINT_NOT_FOUND
 
 /// The minimum required disk space needed for logging is not available.
-pub const CLUSTERLOG_NOT_ENOUGH_SPACE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5033); // ERROR_CLUSTERLOG_NOT_ENOUGH_SPACE
+pub const CLUSTERLOG_NOT_ENOUGH_SPACE : ErrorCode = ErrorCode::from_constant(5033); // ERROR_CLUSTERLOG_NOT_ENOUGH_SPACE
 
 /// The cluster node failed to take control of the quorum resource because the resource is owned by another active node.
-pub const QUORUM_OWNER_ALIVE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5034); // ERROR_QUORUM_OWNER_ALIVE
+pub const QUORUM_OWNER_ALIVE : ErrorCode = ErrorCode::from_constant(5034); // ERROR_QUORUM_OWNER_ALIVE
 
 /// A cluster network is not available for this operation.
-pub const NETWORK_NOT_AVAILABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5035); // ERROR_NETWORK_NOT_AVAILABLE
+pub const NETWORK_NOT_AVAILABLE : ErrorCode = ErrorCode::from_constant(5035); // ERROR_NETWORK_NOT_AVAILABLE
 
 /// A cluster node is not available for this operation.
-pub const NODE_NOT_AVAILABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5036); // ERROR_NODE_NOT_AVAILABLE
+pub const NODE_NOT_AVAILABLE : ErrorCode = ErrorCode::from_constant(5036); // ERROR_NODE_NOT_AVAILABLE
 
 /// All cluster nodes must be running to perform this operation.
-pub const ALL_NODES_NOT_AVAILABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5037); // ERROR_ALL_NODES_NOT_AVAILABLE
+pub const ALL_NODES_NOT_AVAILABLE : ErrorCode = ErrorCode::from_constant(5037); // ERROR_ALL_NODES_NOT_AVAILABLE
 
 /// A cluster resource failed.
-pub const RESOURCE_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5038); // ERROR_RESOURCE_FAILED
+pub const RESOURCE_FAILED : ErrorCode = ErrorCode::from_constant(5038); // ERROR_RESOURCE_FAILED
 
-#[doc(hidden)] pub const CLUSTER_INVALID_NODE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5039); // ERROR_CLUSTER_INVALID_NODE
-#[doc(hidden)] pub const CLUSTER_NODE_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5040); // ERROR_CLUSTER_NODE_EXISTS
-#[doc(hidden)] pub const CLUSTER_JOIN_IN_PROGRESS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5041); // ERROR_CLUSTER_JOIN_IN_PROGRESS
-#[doc(hidden)] pub const CLUSTER_NODE_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5042); // ERROR_CLUSTER_NODE_NOT_FOUND
-#[doc(hidden)] pub const CLUSTER_LOCAL_NODE_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5043); // ERROR_CLUSTER_LOCAL_NODE_NOT_FOUND
-#[doc(hidden)] pub const CLUSTER_NETWORK_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5044); // ERROR_CLUSTER_NETWORK_EXISTS
-#[doc(hidden)] pub const CLUSTER_NETWORK_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5045); // ERROR_CLUSTER_NETWORK_NOT_FOUND
-#[doc(hidden)] pub const CLUSTER_NETINTERFACE_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5046); // ERROR_CLUSTER_NETINTERFACE_EXISTS
-#[doc(hidden)] pub const CLUSTER_NETINTERFACE_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5047); // ERROR_CLUSTER_NETINTERFACE_NOT_FOUND
-#[doc(hidden)] pub const CLUSTER_INVALID_REQUEST : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5048); // ERROR_CLUSTER_INVALID_REQUEST
-#[doc(hidden)] pub const CLUSTER_INVALID_NETWORK_PROVIDER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5049); // ERROR_CLUSTER_INVALID_NETWORK_PROVIDER
-#[doc(hidden)] pub const CLUSTER_NODE_DOWN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5050); // ERROR_CLUSTER_NODE_DOWN
-#[doc(hidden)] pub const CLUSTER_NODE_UNREACHABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5051); // ERROR_CLUSTER_NODE_UNREACHABLE
-#[doc(hidden)] pub const CLUSTER_NODE_NOT_MEMBER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5052); // ERROR_CLUSTER_NODE_NOT_MEMBER
-#[doc(hidden)] pub const CLUSTER_JOIN_NOT_IN_PROGRESS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5053); // ERROR_CLUSTER_JOIN_NOT_IN_PROGRESS
-#[doc(hidden)] pub const CLUSTER_INVALID_NETWORK : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5054); // ERROR_CLUSTER_INVALID_NETWORK
-#[doc(hidden)] pub const CLUSTER_NODE_UP : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5056); // ERROR_CLUSTER_NODE_UP
-#[doc(hidden)] pub const CLUSTER_IPADDR_IN_USE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5057); // ERROR_CLUSTER_IPADDR_IN_USE
-#[doc(hidden)] pub const CLUSTER_NODE_NOT_PAUSED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5058); // ERROR_CLUSTER_NODE_NOT_PAUSED
-#[doc(hidden)] pub const CLUSTER_NO_SECURITY_CONTEXT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5059); // ERROR_CLUSTER_NO_SECURITY_CONTEXT
-#[doc(hidden)] pub const CLUSTER_NETWORK_NOT_INTERNAL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5060); // ERROR_CLUSTER_NETWORK_NOT_INTERNAL
-#[doc(hidden)] pub const CLUSTER_NODE_ALREADY_UP : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5061); // ERROR_CLUSTER_NODE_ALREADY_UP
-#[doc(hidden)] pub const CLUSTER_NODE_ALREADY_DOWN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5062); // ERROR_CLUSTER_NODE_ALREADY_DOWN
-#[doc(hidden)] pub const CLUSTER_NETWORK_ALREADY_ONLINE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5063); // ERROR_CLUSTER_NETWORK_ALREADY_ONLINE
-#[doc(hidden)] pub const CLUSTER_NETWORK_ALREADY_OFFLINE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5064); // ERROR_CLUSTER_NETWORK_ALREADY_OFFLINE
-#[doc(hidden)] pub const CLUSTER_NODE_ALREADY_MEMBER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5065); // ERROR_CLUSTER_NODE_ALREADY_MEMBER
-#[doc(hidden)] pub const CLUSTER_LAST_INTERNAL_NETWORK : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5066); // ERROR_CLUSTER_LAST_INTERNAL_NETWORK
-#[doc(hidden)] pub const CLUSTER_NETWORK_HAS_DEPENDENTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5067); // ERROR_CLUSTER_NETWORK_HAS_DEPENDENTS
+#[doc(hidden)] pub const CLUSTER_INVALID_NODE : ErrorCode = ErrorCode::from_constant(5039); // ERROR_CLUSTER_INVALID_NODE
+#[doc(hidden)] pub const CLUSTER_NODE_EXISTS : ErrorCode = ErrorCode::from_constant(5040); // ERROR_CLUSTER_NODE_EXISTS
+#[doc(hidden)] pub const CLUSTER_JOIN_IN_PROGRESS : ErrorCode = ErrorCode::from_constant(5041); // ERROR_CLUSTER_JOIN_IN_PROGRESS
+#[doc(hidden)] pub const CLUSTER_NODE_NOT_FOUND : ErrorCode = ErrorCode::from_constant(5042); // ERROR_CLUSTER_NODE_NOT_FOUND
+#[doc(hidden)] pub const CLUSTER_LOCAL_NODE_NOT_FOUND : ErrorCode = ErrorCode::from_constant(5043); // ERROR_CLUSTER_LOCAL_NODE_NOT_FOUND
+#[doc(hidden)] pub const CLUSTER_NETWORK_EXISTS : ErrorCode = ErrorCode::from_constant(5044); // ERROR_CLUSTER_NETWORK_EXISTS
+#[doc(hidden)] pub const CLUSTER_NETWORK_NOT_FOUND : ErrorCode = ErrorCode::from_constant(5045); // ERROR_CLUSTER_NETWORK_NOT_FOUND
+#[doc(hidden)] pub const CLUSTER_NETINTERFACE_EXISTS : ErrorCode = ErrorCode::from_constant(5046); // ERROR_CLUSTER_NETINTERFACE_EXISTS
+#[doc(hidden)] pub const CLUSTER_NETINTERFACE_NOT_FOUND : ErrorCode = ErrorCode::from_constant(5047); // ERROR_CLUSTER_NETINTERFACE_NOT_FOUND
+#[doc(hidden)] pub const CLUSTER_INVALID_REQUEST : ErrorCode = ErrorCode::from_constant(5048); // ERROR_CLUSTER_INVALID_REQUEST
+#[doc(hidden)] pub const CLUSTER_INVALID_NETWORK_PROVIDER : ErrorCode = ErrorCode::from_constant(5049); // ERROR_CLUSTER_INVALID_NETWORK_PROVIDER
+#[doc(hidden)] pub const CLUSTER_NODE_DOWN : ErrorCode = ErrorCode::from_constant(5050); // ERROR_CLUSTER_NODE_DOWN
+#[doc(hidden)] pub const CLUSTER_NODE_UNREACHABLE : ErrorCode = ErrorCode::from_constant(5051); // ERROR_CLUSTER_NODE_UNREACHABLE
+#[doc(hidden)] pub const CLUSTER_NODE_NOT_MEMBER : ErrorCode = ErrorCode::from_constant(5052); // ERROR_CLUSTER_NODE_NOT_MEMBER
+#[doc(hidden)] pub const CLUSTER_JOIN_NOT_IN_PROGRESS : ErrorCode = ErrorCode::from_constant(5053); // ERROR_CLUSTER_JOIN_NOT_IN_PROGRESS
+#[doc(hidden)] pub const CLUSTER_INVALID_NETWORK : ErrorCode = ErrorCode::from_constant(5054); // ERROR_CLUSTER_INVALID_NETWORK
+#[doc(hidden)] pub const CLUSTER_NODE_UP : ErrorCode = ErrorCode::from_constant(5056); // ERROR_CLUSTER_NODE_UP
+#[doc(hidden)] pub const CLUSTER_IPADDR_IN_USE : ErrorCode = ErrorCode::from_constant(5057); // ERROR_CLUSTER_IPADDR_IN_USE
+#[doc(hidden)] pub const CLUSTER_NODE_NOT_PAUSED : ErrorCode = ErrorCode::from_constant(5058); // ERROR_CLUSTER_NODE_NOT_PAUSED
+#[doc(hidden)] pub const CLUSTER_NO_SECURITY_CONTEXT : ErrorCode = ErrorCode::from_constant(5059); // ERROR_CLUSTER_NO_SECURITY_CONTEXT
+#[doc(hidden)] pub const CLUSTER_NETWORK_NOT_INTERNAL : ErrorCode = ErrorCode::from_constant(5060); // ERROR_CLUSTER_NETWORK_NOT_INTERNAL
+#[doc(hidden)] pub const CLUSTER_NODE_ALREADY_UP : ErrorCode = ErrorCode::from_constant(5061); // ERROR_CLUSTER_NODE_ALREADY_UP
+#[doc(hidden)] pub const CLUSTER_NODE_ALREADY_DOWN : ErrorCode = ErrorCode::from_constant(5062); // ERROR_CLUSTER_NODE_ALREADY_DOWN
+#[doc(hidden)] pub const CLUSTER_NETWORK_ALREADY_ONLINE : ErrorCode = ErrorCode::from_constant(5063); // ERROR_CLUSTER_NETWORK_ALREADY_ONLINE
+#[doc(hidden)] pub const CLUSTER_NETWORK_ALREADY_OFFLINE : ErrorCode = ErrorCode::from_constant(5064); // ERROR_CLUSTER_NETWORK_ALREADY_OFFLINE
+#[doc(hidden)] pub const CLUSTER_NODE_ALREADY_MEMBER : ErrorCode = ErrorCode::from_constant(5065); // ERROR_CLUSTER_NODE_ALREADY_MEMBER
+#[doc(hidden)] pub const CLUSTER_LAST_INTERNAL_NETWORK : ErrorCode = ErrorCode::from_constant(5066); // ERROR_CLUSTER_LAST_INTERNAL_NETWORK
+#[doc(hidden)] pub const CLUSTER_NETWORK_HAS_DEPENDENTS : ErrorCode = ErrorCode::from_constant(5067); // ERROR_CLUSTER_NETWORK_HAS_DEPENDENTS
 
 /// This operation cannot currently be performed on the cluster group containing the quorum resource.
-pub const INVALID_OPERATION_ON_QUORUM : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5068); // ERROR_INVALID_OPERATION_ON_QUORUM
+pub const INVALID_OPERATION_ON_QUORUM : ErrorCode = ErrorCode::from_constant(5068); // ERROR_INVALID_OPERATION_ON_QUORUM
 
 /// The cluster quorum resource is not allowed to have any dependencies.
-pub const DEPENDENCY_NOT_ALLOWED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5069); // ERROR_DEPENDENCY_NOT_ALLOWED
+pub const DEPENDENCY_NOT_ALLOWED : ErrorCode = ErrorCode::from_constant(5069); // ERROR_DEPENDENCY_NOT_ALLOWED
 
-#[doc(hidden)] pub const CLUSTER_NODE_PAUSED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5070); // ERROR_CLUSTER_NODE_PAUSED
+#[doc(hidden)] pub const CLUSTER_NODE_PAUSED : ErrorCode = ErrorCode::from_constant(5070); // ERROR_CLUSTER_NODE_PAUSED
 
 /// The cluster resource cannot be brought online. The owner node cannot run this resource.
-pub const NODE_CANT_HOST_RESOURCE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5071); // ERROR_NODE_CANT_HOST_RESOURCE
+pub const NODE_CANT_HOST_RESOURCE : ErrorCode = ErrorCode::from_constant(5071); // ERROR_NODE_CANT_HOST_RESOURCE
 
-#[doc(hidden)] pub const CLUSTER_NODE_NOT_READY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5072); // ERROR_CLUSTER_NODE_NOT_READY
-#[doc(hidden)] pub const CLUSTER_NODE_SHUTTING_DOWN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5073); // ERROR_CLUSTER_NODE_SHUTTING_DOWN
-#[doc(hidden)] pub const CLUSTER_JOIN_ABORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5074); // ERROR_CLUSTER_JOIN_ABORTED
-#[doc(hidden)] pub const CLUSTER_INCOMPATIBLE_VERSIONS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5075); // ERROR_CLUSTER_INCOMPATIBLE_VERSIONS
-#[doc(hidden)] pub const CLUSTER_MAXNUM_OF_RESOURCES_EXCEEDED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5076); // ERROR_CLUSTER_MAXNUM_OF_RESOURCES_EXCEEDED
-#[doc(hidden)] pub const CLUSTER_SYSTEM_CONFIG_CHANGED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5077); // ERROR_CLUSTER_SYSTEM_CONFIG_CHANGED
-#[doc(hidden)] pub const CLUSTER_RESOURCE_TYPE_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5078); // ERROR_CLUSTER_RESOURCE_TYPE_NOT_FOUND
-#[doc(hidden)] pub const CLUSTER_RESTYPE_NOT_SUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5079); // ERROR_CLUSTER_RESTYPE_NOT_SUPPORTED
-#[doc(hidden)] pub const CLUSTER_RESNAME_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5080); // ERROR_CLUSTER_RESNAME_NOT_FOUND
-#[doc(hidden)] pub const CLUSTER_NO_RPC_PACKAGES_REGISTERED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5081); // ERROR_CLUSTER_NO_RPC_PACKAGES_REGISTERED
-#[doc(hidden)] pub const CLUSTER_OWNER_NOT_IN_PREFLIST : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5082); // ERROR_CLUSTER_OWNER_NOT_IN_PREFLIST
-#[doc(hidden)] pub const CLUSTER_DATABASE_SEQMISMATCH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5083); // ERROR_CLUSTER_DATABASE_SEQMISMATCH
+#[doc(hidden)] pub const CLUSTER_NODE_NOT_READY : ErrorCode = ErrorCode::from_constant(5072); // ERROR_CLUSTER_NODE_NOT_READY
+#[doc(hidden)] pub const CLUSTER_NODE_SHUTTING_DOWN : ErrorCode = ErrorCode::from_constant(5073); // ERROR_CLUSTER_NODE_SHUTTING_DOWN
+#[doc(hidden)] pub const CLUSTER_JOIN_ABORTED : ErrorCode = ErrorCode::from_constant(5074); // ERROR_CLUSTER_JOIN_ABORTED
+#[doc(hidden)] pub const CLUSTER_INCOMPATIBLE_VERSIONS : ErrorCode = ErrorCode::from_constant(5075); // ERROR_CLUSTER_INCOMPATIBLE_VERSIONS
+#[doc(hidden)] pub const CLUSTER_MAXNUM_OF_RESOURCES_EXCEEDED : ErrorCode = ErrorCode::from_constant(5076); // ERROR_CLUSTER_MAXNUM_OF_RESOURCES_EXCEEDED
+#[doc(hidden)] pub const CLUSTER_SYSTEM_CONFIG_CHANGED : ErrorCode = ErrorCode::from_constant(5077); // ERROR_CLUSTER_SYSTEM_CONFIG_CHANGED
+#[doc(hidden)] pub const CLUSTER_RESOURCE_TYPE_NOT_FOUND : ErrorCode = ErrorCode::from_constant(5078); // ERROR_CLUSTER_RESOURCE_TYPE_NOT_FOUND
+#[doc(hidden)] pub const CLUSTER_RESTYPE_NOT_SUPPORTED : ErrorCode = ErrorCode::from_constant(5079); // ERROR_CLUSTER_RESTYPE_NOT_SUPPORTED
+#[doc(hidden)] pub const CLUSTER_RESNAME_NOT_FOUND : ErrorCode = ErrorCode::from_constant(5080); // ERROR_CLUSTER_RESNAME_NOT_FOUND
+#[doc(hidden)] pub const CLUSTER_NO_RPC_PACKAGES_REGISTERED : ErrorCode = ErrorCode::from_constant(5081); // ERROR_CLUSTER_NO_RPC_PACKAGES_REGISTERED
+#[doc(hidden)] pub const CLUSTER_OWNER_NOT_IN_PREFLIST : ErrorCode = ErrorCode::from_constant(5082); // ERROR_CLUSTER_OWNER_NOT_IN_PREFLIST
+#[doc(hidden)] pub const CLUSTER_DATABASE_SEQMISMATCH : ErrorCode = ErrorCode::from_constant(5083); // ERROR_CLUSTER_DATABASE_SEQMISMATCH
 
 /// The resource monitor will not allow the fail operation to be performed while the resource is in its current state. This may happen if the resource is in a pending state.
-pub const RESMON_INVALID_STATE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5084); // ERROR_RESMON_INVALID_STATE
+pub const RESMON_INVALID_STATE : ErrorCode = ErrorCode::from_constant(5084); // ERROR_RESMON_INVALID_STATE
 
-#[doc(hidden)] pub const CLUSTER_GUM_NOT_LOCKER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5085); // ERROR_CLUSTER_GUM_NOT_LOCKER
+#[doc(hidden)] pub const CLUSTER_GUM_NOT_LOCKER : ErrorCode = ErrorCode::from_constant(5085); // ERROR_CLUSTER_GUM_NOT_LOCKER
 
 /// The quorum disk could not be located by the cluster service.
-pub const QUORUM_DISK_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5086); // ERROR_QUORUM_DISK_NOT_FOUND
+pub const QUORUM_DISK_NOT_FOUND : ErrorCode = ErrorCode::from_constant(5086); // ERROR_QUORUM_DISK_NOT_FOUND
 
 /// The backed up cluster database is possibly corrupt.
-pub const DATABASE_BACKUP_CORRUPT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5087); // ERROR_DATABASE_BACKUP_CORRUPT
+pub const DATABASE_BACKUP_CORRUPT : ErrorCode = ErrorCode::from_constant(5087); // ERROR_DATABASE_BACKUP_CORRUPT
 
-#[doc(hidden)] pub const CLUSTER_NODE_ALREADY_HAS_DFS_ROOT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5088); // ERROR_CLUSTER_NODE_ALREADY_HAS_DFS_ROOT
+#[doc(hidden)] pub const CLUSTER_NODE_ALREADY_HAS_DFS_ROOT : ErrorCode = ErrorCode::from_constant(5088); // ERROR_CLUSTER_NODE_ALREADY_HAS_DFS_ROOT
 
 /// An attempt to modify a resource property failed because it conflicts with another existing property.
-pub const RESOURCE_PROPERTY_UNCHANGEABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5089); // ERROR_RESOURCE_PROPERTY_UNCHANGEABLE
+pub const RESOURCE_PROPERTY_UNCHANGEABLE : ErrorCode = ErrorCode::from_constant(5089); // ERROR_RESOURCE_PROPERTY_UNCHANGEABLE
 
 /// This operation is not supported on a cluster without an Administrator Access Point.
-pub const NO_ADMIN_ACCESS_POINT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5090); // ERROR_NO_ADMIN_ACCESS_POINT
+pub const NO_ADMIN_ACCESS_POINT : ErrorCode = ErrorCode::from_constant(5090); // ERROR_NO_ADMIN_ACCESS_POINT
 
-#[doc(hidden)] pub const CLUSTER_MEMBERSHIP_INVALID_STATE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5890); // ERROR_CLUSTER_MEMBERSHIP_INVALID_STATE
-#[doc(hidden)] pub const CLUSTER_QUORUMLOG_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5891); // ERROR_CLUSTER_QUORUMLOG_NOT_FOUND
-#[doc(hidden)] pub const CLUSTER_MEMBERSHIP_HALT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5892); // ERROR_CLUSTER_MEMBERSHIP_HALT
-#[doc(hidden)] pub const CLUSTER_INSTANCE_ID_MISMATCH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5893); // ERROR_CLUSTER_INSTANCE_ID_MISMATCH
-#[doc(hidden)] pub const CLUSTER_NETWORK_NOT_FOUND_FOR_IP : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5894); // ERROR_CLUSTER_NETWORK_NOT_FOUND_FOR_IP
-#[doc(hidden)] pub const CLUSTER_PROPERTY_DATA_TYPE_MISMATCH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5895); // ERROR_CLUSTER_PROPERTY_DATA_TYPE_MISMATCH
-#[doc(hidden)] pub const CLUSTER_EVICT_WITHOUT_CLEANUP : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5896); // ERROR_CLUSTER_EVICT_WITHOUT_CLEANUP
-#[doc(hidden)] pub const CLUSTER_PARAMETER_MISMATCH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5897); // ERROR_CLUSTER_PARAMETER_MISMATCH
+#[doc(hidden)] pub const CLUSTER_MEMBERSHIP_INVALID_STATE : ErrorCode = ErrorCode::from_constant(5890); // ERROR_CLUSTER_MEMBERSHIP_INVALID_STATE
+#[doc(hidden)] pub const CLUSTER_QUORUMLOG_NOT_FOUND : ErrorCode = ErrorCode::from_constant(5891); // ERROR_CLUSTER_QUORUMLOG_NOT_FOUND
+#[doc(hidden)] pub const CLUSTER_MEMBERSHIP_HALT : ErrorCode = ErrorCode::from_constant(5892); // ERROR_CLUSTER_MEMBERSHIP_HALT
+#[doc(hidden)] pub const CLUSTER_INSTANCE_ID_MISMATCH : ErrorCode = ErrorCode::from_constant(5893); // ERROR_CLUSTER_INSTANCE_ID_MISMATCH
+#[doc(hidden)] pub const CLUSTER_NETWORK_NOT_FOUND_FOR_IP : ErrorCode = ErrorCode::from_constant(5894); // ERROR_CLUSTER_NETWORK_NOT_FOUND_FOR_IP
+#[doc(hidden)] pub const CLUSTER_PROPERTY_DATA_TYPE_MISMATCH : ErrorCode = ErrorCode::from_constant(5895); // ERROR_CLUSTER_PROPERTY_DATA_TYPE_MISMATCH
+#[doc(hidden)] pub const CLUSTER_EVICT_WITHOUT_CLEANUP : ErrorCode = ErrorCode::from_constant(5896); // ERROR_CLUSTER_EVICT_WITHOUT_CLEANUP
+#[doc(hidden)] pub const CLUSTER_PARAMETER_MISMATCH : ErrorCode = ErrorCode::from_constant(5897); // ERROR_CLUSTER_PARAMETER_MISMATCH
 
 /// This computer cannot be made a member of a cluster.
-pub const NODE_CANNOT_BE_CLUSTERED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5898); // ERROR_NODE_CANNOT_BE_CLUSTERED
+pub const NODE_CANNOT_BE_CLUSTERED : ErrorCode = ErrorCode::from_constant(5898); // ERROR_NODE_CANNOT_BE_CLUSTERED
 
-#[doc(hidden)] pub const CLUSTER_WRONG_OS_VERSION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5899); // ERROR_CLUSTER_WRONG_OS_VERSION
-#[doc(hidden)] pub const CLUSTER_CANT_CREATE_DUP_CLUSTER_NAME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5900); // ERROR_CLUSTER_CANT_CREATE_DUP_CLUSTER_NAME
+#[doc(hidden)] pub const CLUSTER_WRONG_OS_VERSION : ErrorCode = ErrorCode::from_constant(5899); // ERROR_CLUSTER_WRONG_OS_VERSION
+#[doc(hidden)] pub const CLUSTER_CANT_CREATE_DUP_CLUSTER_NAME : ErrorCode = ErrorCode::from_constant(5900); // ERROR_CLUSTER_CANT_CREATE_DUP_CLUSTER_NAME
 
 /// The cluster configuration action has already been committed.
-pub const CLUSCFG_ALREADY_COMMITTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5901); // ERROR_CLUSCFG_ALREADY_COMMITTED
+pub const CLUSCFG_ALREADY_COMMITTED : ErrorCode = ErrorCode::from_constant(5901); // ERROR_CLUSCFG_ALREADY_COMMITTED
 
 /// The cluster configuration action could not be rolled back.
-pub const CLUSCFG_ROLLBACK_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5902); // ERROR_CLUSCFG_ROLLBACK_FAILED
+pub const CLUSCFG_ROLLBACK_FAILED : ErrorCode = ErrorCode::from_constant(5902); // ERROR_CLUSCFG_ROLLBACK_FAILED
 
 /// The drive letter assigned to a system disk on one node conflicted with the drive letter assigned to a disk on another node.
-pub const CLUSCFG_SYSTEM_DISK_DRIVE_LETTER_CONFLICT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5903); // ERROR_CLUSCFG_SYSTEM_DISK_DRIVE_LETTER_CONFLICT
+pub const CLUSCFG_SYSTEM_DISK_DRIVE_LETTER_CONFLICT : ErrorCode = ErrorCode::from_constant(5903); // ERROR_CLUSCFG_SYSTEM_DISK_DRIVE_LETTER_CONFLICT
 
-#[doc(hidden)] pub const CLUSTER_OLD_VERSION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5904); // ERROR_CLUSTER_OLD_VERSION
-#[doc(hidden)] pub const CLUSTER_MISMATCHED_COMPUTER_ACCT_NAME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5905); // ERROR_CLUSTER_MISMATCHED_COMPUTER_ACCT_NAME
-#[doc(hidden)] pub const CLUSTER_NO_NET_ADAPTERS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5906); // ERROR_CLUSTER_NO_NET_ADAPTERS
-#[doc(hidden)] pub const CLUSTER_POISONED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5907); // ERROR_CLUSTER_POISONED
-#[doc(hidden)] pub const CLUSTER_GROUP_MOVING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5908); // ERROR_CLUSTER_GROUP_MOVING
-#[doc(hidden)] pub const CLUSTER_RESOURCE_TYPE_BUSY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5909); // ERROR_CLUSTER_RESOURCE_TYPE_BUSY
+#[doc(hidden)] pub const CLUSTER_OLD_VERSION : ErrorCode = ErrorCode::from_constant(5904); // ERROR_CLUSTER_OLD_VERSION
+#[doc(hidden)] pub const CLUSTER_MISMATCHED_COMPUTER_ACCT_NAME : ErrorCode = ErrorCode::from_constant(5905); // ERROR_CLUSTER_MISMATCHED_COMPUTER_ACCT_NAME
+#[doc(hidden)] pub const CLUSTER_NO_NET_ADAPTERS : ErrorCode = ErrorCode::from_constant(5906); // ERROR_CLUSTER_NO_NET_ADAPTERS
+#[doc(hidden)] pub const CLUSTER_POISONED : ErrorCode = ErrorCode::from_constant(5907); // ERROR_CLUSTER_POISONED
+#[doc(hidden)] pub const CLUSTER_GROUP_MOVING : ErrorCode = ErrorCode::from_constant(5908); // ERROR_CLUSTER_GROUP_MOVING
+#[doc(hidden)] pub const CLUSTER_RESOURCE_TYPE_BUSY : ErrorCode = ErrorCode::from_constant(5909); // ERROR_CLUSTER_RESOURCE_TYPE_BUSY
 
 /// The call to the cluster resource DLL timed out.
-pub const RESOURCE_CALL_TIMED_OUT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5910); // ERROR_RESOURCE_CALL_TIMED_OUT
+pub const RESOURCE_CALL_TIMED_OUT : ErrorCode = ErrorCode::from_constant(5910); // ERROR_RESOURCE_CALL_TIMED_OUT
 
 /// The address is not valid for an IPv6 Address resource. A global IPv6 address is required, and it must match a cluster network. Compatibility addresses are not permitted.
-pub const INVALID_CLUSTER_IPV6_ADDRESS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5911); // ERROR_INVALID_CLUSTER_IPV6_ADDRESS
+pub const INVALID_CLUSTER_IPV6_ADDRESS : ErrorCode = ErrorCode::from_constant(5911); // ERROR_INVALID_CLUSTER_IPV6_ADDRESS
 
-#[doc(hidden)] pub const CLUSTER_INTERNAL_INVALID_FUNCTION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5912); // ERROR_CLUSTER_INTERNAL_INVALID_FUNCTION
-#[doc(hidden)] pub const CLUSTER_PARAMETER_OUT_OF_BOUNDS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5913); // ERROR_CLUSTER_PARAMETER_OUT_OF_BOUNDS
-#[doc(hidden)] pub const CLUSTER_PARTIAL_SEND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5914); // ERROR_CLUSTER_PARTIAL_SEND
-#[doc(hidden)] pub const CLUSTER_REGISTRY_INVALID_FUNCTION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5915); // ERROR_CLUSTER_REGISTRY_INVALID_FUNCTION
-#[doc(hidden)] pub const CLUSTER_INVALID_STRING_TERMINATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5916); // ERROR_CLUSTER_INVALID_STRING_TERMINATION
-#[doc(hidden)] pub const CLUSTER_INVALID_STRING_FORMAT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5917); // ERROR_CLUSTER_INVALID_STRING_FORMAT
-#[doc(hidden)] pub const CLUSTER_DATABASE_TRANSACTION_IN_PROGRESS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5918); // ERROR_CLUSTER_DATABASE_TRANSACTION_IN_PROGRESS
-#[doc(hidden)] pub const CLUSTER_DATABASE_TRANSACTION_NOT_IN_PROGRESS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5919); // ERROR_CLUSTER_DATABASE_TRANSACTION_NOT_IN_PROGRESS
-#[doc(hidden)] pub const CLUSTER_NULL_DATA : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5920); // ERROR_CLUSTER_NULL_DATA
-#[doc(hidden)] pub const CLUSTER_PARTIAL_READ : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5921); // ERROR_CLUSTER_PARTIAL_READ
-#[doc(hidden)] pub const CLUSTER_PARTIAL_WRITE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5922); // ERROR_CLUSTER_PARTIAL_WRITE
-#[doc(hidden)] pub const CLUSTER_CANT_DESERIALIZE_DATA : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5923); // ERROR_CLUSTER_CANT_DESERIALIZE_DATA
+#[doc(hidden)] pub const CLUSTER_INTERNAL_INVALID_FUNCTION : ErrorCode = ErrorCode::from_constant(5912); // ERROR_CLUSTER_INTERNAL_INVALID_FUNCTION
+#[doc(hidden)] pub const CLUSTER_PARAMETER_OUT_OF_BOUNDS : ErrorCode = ErrorCode::from_constant(5913); // ERROR_CLUSTER_PARAMETER_OUT_OF_BOUNDS
+#[doc(hidden)] pub const CLUSTER_PARTIAL_SEND : ErrorCode = ErrorCode::from_constant(5914); // ERROR_CLUSTER_PARTIAL_SEND
+#[doc(hidden)] pub const CLUSTER_REGISTRY_INVALID_FUNCTION : ErrorCode = ErrorCode::from_constant(5915); // ERROR_CLUSTER_REGISTRY_INVALID_FUNCTION
+#[doc(hidden)] pub const CLUSTER_INVALID_STRING_TERMINATION : ErrorCode = ErrorCode::from_constant(5916); // ERROR_CLUSTER_INVALID_STRING_TERMINATION
+#[doc(hidden)] pub const CLUSTER_INVALID_STRING_FORMAT : ErrorCode = ErrorCode::from_constant(5917); // ERROR_CLUSTER_INVALID_STRING_FORMAT
+#[doc(hidden)] pub const CLUSTER_DATABASE_TRANSACTION_IN_PROGRESS : ErrorCode = ErrorCode::from_constant(5918); // ERROR_CLUSTER_DATABASE_TRANSACTION_IN_PROGRESS
+#[doc(hidden)] pub const CLUSTER_DATABASE_TRANSACTION_NOT_IN_PROGRESS : ErrorCode = ErrorCode::from_constant(5919); // ERROR_CLUSTER_DATABASE_TRANSACTION_NOT_IN_PROGRESS
+#[doc(hidden)] pub const CLUSTER_NULL_DATA : ErrorCode = ErrorCode::from_constant(5920); // ERROR_CLUSTER_NULL_DATA
+#[doc(hidden)] pub const CLUSTER_PARTIAL_READ : ErrorCode = ErrorCode::from_constant(5921); // ERROR_CLUSTER_PARTIAL_READ
+#[doc(hidden)] pub const CLUSTER_PARTIAL_WRITE : ErrorCode = ErrorCode::from_constant(5922); // ERROR_CLUSTER_PARTIAL_WRITE
+#[doc(hidden)] pub const CLUSTER_CANT_DESERIALIZE_DATA : ErrorCode = ErrorCode::from_constant(5923); // ERROR_CLUSTER_CANT_DESERIALIZE_DATA
 
 /// One or more property values for this resource are in conflict with one or more property values associated with its dependent resource(s).
-pub const DEPENDENT_RESOURCE_PROPERTY_CONFLICT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5924); // ERROR_DEPENDENT_RESOURCE_PROPERTY_CONFLICT
+pub const DEPENDENT_RESOURCE_PROPERTY_CONFLICT : ErrorCode = ErrorCode::from_constant(5924); // ERROR_DEPENDENT_RESOURCE_PROPERTY_CONFLICT
 
-#[doc(hidden)] pub const CLUSTER_NO_QUORUM : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5925); // ERROR_CLUSTER_NO_QUORUM
-#[doc(hidden)] pub const CLUSTER_INVALID_IPV6_NETWORK : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5926); // ERROR_CLUSTER_INVALID_IPV6_NETWORK
-#[doc(hidden)] pub const CLUSTER_INVALID_IPV6_TUNNEL_NETWORK : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5927); // ERROR_CLUSTER_INVALID_IPV6_TUNNEL_NETWORK
+#[doc(hidden)] pub const CLUSTER_NO_QUORUM : ErrorCode = ErrorCode::from_constant(5925); // ERROR_CLUSTER_NO_QUORUM
+#[doc(hidden)] pub const CLUSTER_INVALID_IPV6_NETWORK : ErrorCode = ErrorCode::from_constant(5926); // ERROR_CLUSTER_INVALID_IPV6_NETWORK
+#[doc(hidden)] pub const CLUSTER_INVALID_IPV6_TUNNEL_NETWORK : ErrorCode = ErrorCode::from_constant(5927); // ERROR_CLUSTER_INVALID_IPV6_TUNNEL_NETWORK
 
 /// Quorum resource cannot reside in the Available Storage group.
-pub const QUORUM_NOT_ALLOWED_IN_THIS_GROUP : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5928); // ERROR_QUORUM_NOT_ALLOWED_IN_THIS_GROUP
+pub const QUORUM_NOT_ALLOWED_IN_THIS_GROUP : ErrorCode = ErrorCode::from_constant(5928); // ERROR_QUORUM_NOT_ALLOWED_IN_THIS_GROUP
 
 /// The dependencies for this resource are nested too deeply.
-pub const DEPENDENCY_TREE_TOO_COMPLEX : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5929); // ERROR_DEPENDENCY_TREE_TOO_COMPLEX
+pub const DEPENDENCY_TREE_TOO_COMPLEX : ErrorCode = ErrorCode::from_constant(5929); // ERROR_DEPENDENCY_TREE_TOO_COMPLEX
 
 /// The call into the resource DLL raised an unhandled exception.
-pub const EXCEPTION_IN_RESOURCE_CALL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5930); // ERROR_EXCEPTION_IN_RESOURCE_CALL
+pub const EXCEPTION_IN_RESOURCE_CALL : ErrorCode = ErrorCode::from_constant(5930); // ERROR_EXCEPTION_IN_RESOURCE_CALL
 
-#[doc(hidden)] pub const CLUSTER_RHS_FAILED_INITIALIZATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5931); // ERROR_CLUSTER_RHS_FAILED_INITIALIZATION
-#[doc(hidden)] pub const CLUSTER_NOT_INSTALLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5932); // ERROR_CLUSTER_NOT_INSTALLED
-#[doc(hidden)] pub const CLUSTER_RESOURCES_MUST_BE_ONLINE_ON_THE_SAME_NODE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5933); // ERROR_CLUSTER_RESOURCES_MUST_BE_ONLINE_ON_THE_SAME_NODE
-#[doc(hidden)] pub const CLUSTER_MAX_NODES_IN_CLUSTER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5934); // ERROR_CLUSTER_MAX_NODES_IN_CLUSTER
-#[doc(hidden)] pub const CLUSTER_TOO_MANY_NODES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5935); // ERROR_CLUSTER_TOO_MANY_NODES
-#[doc(hidden)] pub const CLUSTER_OBJECT_ALREADY_USED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5936); // ERROR_CLUSTER_OBJECT_ALREADY_USED
+#[doc(hidden)] pub const CLUSTER_RHS_FAILED_INITIALIZATION : ErrorCode = ErrorCode::from_constant(5931); // ERROR_CLUSTER_RHS_FAILED_INITIALIZATION
+#[doc(hidden)] pub const CLUSTER_NOT_INSTALLED : ErrorCode = ErrorCode::from_constant(5932); // ERROR_CLUSTER_NOT_INSTALLED
+#[doc(hidden)] pub const CLUSTER_RESOURCES_MUST_BE_ONLINE_ON_THE_SAME_NODE : ErrorCode = ErrorCode::from_constant(5933); // ERROR_CLUSTER_RESOURCES_MUST_BE_ONLINE_ON_THE_SAME_NODE
+#[doc(hidden)] pub const CLUSTER_MAX_NODES_IN_CLUSTER : ErrorCode = ErrorCode::from_constant(5934); // ERROR_CLUSTER_MAX_NODES_IN_CLUSTER
+#[doc(hidden)] pub const CLUSTER_TOO_MANY_NODES : ErrorCode = ErrorCode::from_constant(5935); // ERROR_CLUSTER_TOO_MANY_NODES
+#[doc(hidden)] pub const CLUSTER_OBJECT_ALREADY_USED : ErrorCode = ErrorCode::from_constant(5936); // ERROR_CLUSTER_OBJECT_ALREADY_USED
 
 /// This cluster cannot be destroyed. It has non-core application groups which must be deleted before the cluster can be destroyed.
-pub const NONCORE_GROUPS_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5937); // ERROR_NONCORE_GROUPS_FOUND
+pub const NONCORE_GROUPS_FOUND : ErrorCode = ErrorCode::from_constant(5937); // ERROR_NONCORE_GROUPS_FOUND
 
 /// File share associated with file share witness resource cannot be hosted by this cluster or any of its nodes.
-pub const FILE_SHARE_RESOURCE_CONFLICT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5938); // ERROR_FILE_SHARE_RESOURCE_CONFLICT
+pub const FILE_SHARE_RESOURCE_CONFLICT : ErrorCode = ErrorCode::from_constant(5938); // ERROR_FILE_SHARE_RESOURCE_CONFLICT
 
-#[doc(hidden)] pub const CLUSTER_EVICT_INVALID_REQUEST : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5939); // ERROR_CLUSTER_EVICT_INVALID_REQUEST
-#[doc(hidden)] pub const CLUSTER_SINGLETON_RESOURCE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5940); // ERROR_CLUSTER_SINGLETON_RESOURCE
-#[doc(hidden)] pub const CLUSTER_GROUP_SINGLETON_RESOURCE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5941); // ERROR_CLUSTER_GROUP_SINGLETON_RESOURCE
-#[doc(hidden)] pub const CLUSTER_RESOURCE_PROVIDER_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5942); // ERROR_CLUSTER_RESOURCE_PROVIDER_FAILED
-#[doc(hidden)] pub const CLUSTER_RESOURCE_CONFIGURATION_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5943); // ERROR_CLUSTER_RESOURCE_CONFIGURATION_ERROR
-#[doc(hidden)] pub const CLUSTER_GROUP_BUSY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5944); // ERROR_CLUSTER_GROUP_BUSY
-#[doc(hidden)] pub const CLUSTER_NOT_SHARED_VOLUME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5945); // ERROR_CLUSTER_NOT_SHARED_VOLUME
-#[doc(hidden)] pub const CLUSTER_INVALID_SECURITY_DESCRIPTOR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5946); // ERROR_CLUSTER_INVALID_SECURITY_DESCRIPTOR
-#[doc(hidden)] pub const CLUSTER_SHARED_VOLUMES_IN_USE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5947); // ERROR_CLUSTER_SHARED_VOLUMES_IN_USE
-#[doc(hidden)] pub const CLUSTER_USE_SHARED_VOLUMES_API : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5948); // ERROR_CLUSTER_USE_SHARED_VOLUMES_API
-#[doc(hidden)] pub const CLUSTER_BACKUP_IN_PROGRESS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5949); // ERROR_CLUSTER_BACKUP_IN_PROGRESS
+#[doc(hidden)] pub const CLUSTER_EVICT_INVALID_REQUEST : ErrorCode = ErrorCode::from_constant(5939); // ERROR_CLUSTER_EVICT_INVALID_REQUEST
+#[doc(hidden)] pub const CLUSTER_SINGLETON_RESOURCE : ErrorCode = ErrorCode::from_constant(5940); // ERROR_CLUSTER_SINGLETON_RESOURCE
+#[doc(hidden)] pub const CLUSTER_GROUP_SINGLETON_RESOURCE : ErrorCode = ErrorCode::from_constant(5941); // ERROR_CLUSTER_GROUP_SINGLETON_RESOURCE
+#[doc(hidden)] pub const CLUSTER_RESOURCE_PROVIDER_FAILED : ErrorCode = ErrorCode::from_constant(5942); // ERROR_CLUSTER_RESOURCE_PROVIDER_FAILED
+#[doc(hidden)] pub const CLUSTER_RESOURCE_CONFIGURATION_ERROR : ErrorCode = ErrorCode::from_constant(5943); // ERROR_CLUSTER_RESOURCE_CONFIGURATION_ERROR
+#[doc(hidden)] pub const CLUSTER_GROUP_BUSY : ErrorCode = ErrorCode::from_constant(5944); // ERROR_CLUSTER_GROUP_BUSY
+#[doc(hidden)] pub const CLUSTER_NOT_SHARED_VOLUME : ErrorCode = ErrorCode::from_constant(5945); // ERROR_CLUSTER_NOT_SHARED_VOLUME
+#[doc(hidden)] pub const CLUSTER_INVALID_SECURITY_DESCRIPTOR : ErrorCode = ErrorCode::from_constant(5946); // ERROR_CLUSTER_INVALID_SECURITY_DESCRIPTOR
+#[doc(hidden)] pub const CLUSTER_SHARED_VOLUMES_IN_USE : ErrorCode = ErrorCode::from_constant(5947); // ERROR_CLUSTER_SHARED_VOLUMES_IN_USE
+#[doc(hidden)] pub const CLUSTER_USE_SHARED_VOLUMES_API : ErrorCode = ErrorCode::from_constant(5948); // ERROR_CLUSTER_USE_SHARED_VOLUMES_API
+#[doc(hidden)] pub const CLUSTER_BACKUP_IN_PROGRESS : ErrorCode = ErrorCode::from_constant(5949); // ERROR_CLUSTER_BACKUP_IN_PROGRESS
 
 /// The path does not belong to a cluster shared volume.
-pub const NON_CSV_PATH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5950); // ERROR_NON_CSV_PATH
+pub const NON_CSV_PATH : ErrorCode = ErrorCode::from_constant(5950); // ERROR_NON_CSV_PATH
 
 /// The cluster shared volume is not locally mounted on this node.
-pub const CSV_VOLUME_NOT_LOCAL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5951); // ERROR_CSV_VOLUME_NOT_LOCAL
+pub const CSV_VOLUME_NOT_LOCAL : ErrorCode = ErrorCode::from_constant(5951); // ERROR_CSV_VOLUME_NOT_LOCAL
 
-#[doc(hidden)] pub const CLUSTER_WATCHDOG_TERMINATING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5952); // ERROR_CLUSTER_WATCHDOG_TERMINATING
-#[doc(hidden)] pub const CLUSTER_RESOURCE_VETOED_MOVE_INCOMPATIBLE_NODES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5953); // ERROR_CLUSTER_RESOURCE_VETOED_MOVE_INCOMPATIBLE_NODES
-#[doc(hidden)] pub const CLUSTER_INVALID_NODE_WEIGHT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5954); // ERROR_CLUSTER_INVALID_NODE_WEIGHT
-#[doc(hidden)] pub const CLUSTER_RESOURCE_VETOED_CALL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5955); // ERROR_CLUSTER_RESOURCE_VETOED_CALL
+#[doc(hidden)] pub const CLUSTER_WATCHDOG_TERMINATING : ErrorCode = ErrorCode::from_constant(5952); // ERROR_CLUSTER_WATCHDOG_TERMINATING
+#[doc(hidden)] pub const CLUSTER_RESOURCE_VETOED_MOVE_INCOMPATIBLE_NODES : ErrorCode = ErrorCode::from_constant(5953); // ERROR_CLUSTER_RESOURCE_VETOED_MOVE_INCOMPATIBLE_NODES
+#[doc(hidden)] pub const CLUSTER_INVALID_NODE_WEIGHT : ErrorCode = ErrorCode::from_constant(5954); // ERROR_CLUSTER_INVALID_NODE_WEIGHT
+#[doc(hidden)] pub const CLUSTER_RESOURCE_VETOED_CALL : ErrorCode = ErrorCode::from_constant(5955); // ERROR_CLUSTER_RESOURCE_VETOED_CALL
 
 /// Resource could not start or run because it could not reserve sufficient system resources.
-pub const RESMON_SYSTEM_RESOURCES_LACKING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5956); // ERROR_RESMON_SYSTEM_RESOURCES_LACKING
+pub const RESMON_SYSTEM_RESOURCES_LACKING : ErrorCode = ErrorCode::from_constant(5956); // ERROR_RESMON_SYSTEM_RESOURCES_LACKING
 
-#[doc(hidden)] pub const CLUSTER_RESOURCE_VETOED_MOVE_NOT_ENOUGH_RESOURCES_ON_DESTINATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5957); // ERROR_CLUSTER_RESOURCE_VETOED_MOVE_NOT_ENOUGH_RESOURCES_ON_DESTINATION
-#[doc(hidden)] pub const CLUSTER_RESOURCE_VETOED_MOVE_NOT_ENOUGH_RESOURCES_ON_SOURCE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5958); // ERROR_CLUSTER_RESOURCE_VETOED_MOVE_NOT_ENOUGH_RESOURCES_ON_SOURCE
-#[doc(hidden)] pub const CLUSTER_GROUP_QUEUED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5959); // ERROR_CLUSTER_GROUP_QUEUED
-#[doc(hidden)] pub const CLUSTER_RESOURCE_LOCKED_STATUS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5960); // ERROR_CLUSTER_RESOURCE_LOCKED_STATUS
-#[doc(hidden)] pub const CLUSTER_SHARED_VOLUME_FAILOVER_NOT_ALLOWED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5961); // ERROR_CLUSTER_SHARED_VOLUME_FAILOVER_NOT_ALLOWED
-#[doc(hidden)] pub const CLUSTER_NODE_DRAIN_IN_PROGRESS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5962); // ERROR_CLUSTER_NODE_DRAIN_IN_PROGRESS
-#[doc(hidden)] pub const CLUSTER_DISK_NOT_CONNECTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5963); // ERROR_CLUSTER_DISK_NOT_CONNECTED
+#[doc(hidden)] pub const CLUSTER_RESOURCE_VETOED_MOVE_NOT_ENOUGH_RESOURCES_ON_DESTINATION : ErrorCode = ErrorCode::from_constant(5957); // ERROR_CLUSTER_RESOURCE_VETOED_MOVE_NOT_ENOUGH_RESOURCES_ON_DESTINATION
+#[doc(hidden)] pub const CLUSTER_RESOURCE_VETOED_MOVE_NOT_ENOUGH_RESOURCES_ON_SOURCE : ErrorCode = ErrorCode::from_constant(5958); // ERROR_CLUSTER_RESOURCE_VETOED_MOVE_NOT_ENOUGH_RESOURCES_ON_SOURCE
+#[doc(hidden)] pub const CLUSTER_GROUP_QUEUED : ErrorCode = ErrorCode::from_constant(5959); // ERROR_CLUSTER_GROUP_QUEUED
+#[doc(hidden)] pub const CLUSTER_RESOURCE_LOCKED_STATUS : ErrorCode = ErrorCode::from_constant(5960); // ERROR_CLUSTER_RESOURCE_LOCKED_STATUS
+#[doc(hidden)] pub const CLUSTER_SHARED_VOLUME_FAILOVER_NOT_ALLOWED : ErrorCode = ErrorCode::from_constant(5961); // ERROR_CLUSTER_SHARED_VOLUME_FAILOVER_NOT_ALLOWED
+#[doc(hidden)] pub const CLUSTER_NODE_DRAIN_IN_PROGRESS : ErrorCode = ErrorCode::from_constant(5962); // ERROR_CLUSTER_NODE_DRAIN_IN_PROGRESS
+#[doc(hidden)] pub const CLUSTER_DISK_NOT_CONNECTED : ErrorCode = ErrorCode::from_constant(5963); // ERROR_CLUSTER_DISK_NOT_CONNECTED
 
 /// The disk is not configured in a way to be used with CSV. CSV disks must have at least one partition that is formatted with NTFS or REFS.
-pub const DISK_NOT_CSV_CAPABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5964); // ERROR_DISK_NOT_CSV_CAPABLE
+pub const DISK_NOT_CSV_CAPABLE : ErrorCode = ErrorCode::from_constant(5964); // ERROR_DISK_NOT_CSV_CAPABLE
 
 /// The resource must be part of the Available Storage group to complete this action.
-pub const RESOURCE_NOT_IN_AVAILABLE_STORAGE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5965); // ERROR_RESOURCE_NOT_IN_AVAILABLE_STORAGE
+pub const RESOURCE_NOT_IN_AVAILABLE_STORAGE : ErrorCode = ErrorCode::from_constant(5965); // ERROR_RESOURCE_NOT_IN_AVAILABLE_STORAGE
 
-#[doc(hidden)] pub const CLUSTER_SHARED_VOLUME_REDIRECTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5966); // ERROR_CLUSTER_SHARED_VOLUME_REDIRECTED
-#[doc(hidden)] pub const CLUSTER_SHARED_VOLUME_NOT_REDIRECTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5967); // ERROR_CLUSTER_SHARED_VOLUME_NOT_REDIRECTED
-#[doc(hidden)] pub const CLUSTER_CANNOT_RETURN_PROPERTIES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5968); // ERROR_CLUSTER_CANNOT_RETURN_PROPERTIES
-#[doc(hidden)] pub const CLUSTER_RESOURCE_CONTAINS_UNSUPPORTED_DIFF_AREA_FOR_SHARED_VOLUMES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5969); // ERROR_CLUSTER_RESOURCE_CONTAINS_UNSUPPORTED_DIFF_AREA_FOR_SHARED_VOLUMES
-#[doc(hidden)] pub const CLUSTER_RESOURCE_IS_IN_MAINTENANCE_MODE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5970); // ERROR_CLUSTER_RESOURCE_IS_IN_MAINTENANCE_MODE
-#[doc(hidden)] pub const CLUSTER_AFFINITY_CONFLICT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5971); // ERROR_CLUSTER_AFFINITY_CONFLICT
-#[doc(hidden)] pub const CLUSTER_RESOURCE_IS_REPLICA_VIRTUAL_MACHINE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5972); // ERROR_CLUSTER_RESOURCE_IS_REPLICA_VIRTUAL_MACHINE
-#[doc(hidden)] pub const CLUSTER_UPGRADE_INCOMPATIBLE_VERSIONS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5973); // ERROR_CLUSTER_UPGRADE_INCOMPATIBLE_VERSIONS
-#[doc(hidden)] pub const CLUSTER_UPGRADE_FIX_QUORUM_NOT_SUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5974); // ERROR_CLUSTER_UPGRADE_FIX_QUORUM_NOT_SUPPORTED
-#[doc(hidden)] pub const CLUSTER_UPGRADE_RESTART_REQUIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5975); // ERROR_CLUSTER_UPGRADE_RESTART_REQUIRED
-#[doc(hidden)] pub const CLUSTER_UPGRADE_IN_PROGRESS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5976); // ERROR_CLUSTER_UPGRADE_IN_PROGRESS
-#[doc(hidden)] pub const CLUSTER_UPGRADE_INCOMPLETE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5977); // ERROR_CLUSTER_UPGRADE_INCOMPLETE
-#[doc(hidden)] pub const CLUSTER_NODE_IN_GRACE_PERIOD : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5978); // ERROR_CLUSTER_NODE_IN_GRACE_PERIOD
-#[doc(hidden)] pub const CLUSTER_CSV_IO_PAUSE_TIMEOUT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5979); // ERROR_CLUSTER_CSV_IO_PAUSE_TIMEOUT
+#[doc(hidden)] pub const CLUSTER_SHARED_VOLUME_REDIRECTED : ErrorCode = ErrorCode::from_constant(5966); // ERROR_CLUSTER_SHARED_VOLUME_REDIRECTED
+#[doc(hidden)] pub const CLUSTER_SHARED_VOLUME_NOT_REDIRECTED : ErrorCode = ErrorCode::from_constant(5967); // ERROR_CLUSTER_SHARED_VOLUME_NOT_REDIRECTED
+#[doc(hidden)] pub const CLUSTER_CANNOT_RETURN_PROPERTIES : ErrorCode = ErrorCode::from_constant(5968); // ERROR_CLUSTER_CANNOT_RETURN_PROPERTIES
+#[doc(hidden)] pub const CLUSTER_RESOURCE_CONTAINS_UNSUPPORTED_DIFF_AREA_FOR_SHARED_VOLUMES : ErrorCode = ErrorCode::from_constant(5969); // ERROR_CLUSTER_RESOURCE_CONTAINS_UNSUPPORTED_DIFF_AREA_FOR_SHARED_VOLUMES
+#[doc(hidden)] pub const CLUSTER_RESOURCE_IS_IN_MAINTENANCE_MODE : ErrorCode = ErrorCode::from_constant(5970); // ERROR_CLUSTER_RESOURCE_IS_IN_MAINTENANCE_MODE
+#[doc(hidden)] pub const CLUSTER_AFFINITY_CONFLICT : ErrorCode = ErrorCode::from_constant(5971); // ERROR_CLUSTER_AFFINITY_CONFLICT
+#[doc(hidden)] pub const CLUSTER_RESOURCE_IS_REPLICA_VIRTUAL_MACHINE : ErrorCode = ErrorCode::from_constant(5972); // ERROR_CLUSTER_RESOURCE_IS_REPLICA_VIRTUAL_MACHINE
+#[doc(hidden)] pub const CLUSTER_UPGRADE_INCOMPATIBLE_VERSIONS : ErrorCode = ErrorCode::from_constant(5973); // ERROR_CLUSTER_UPGRADE_INCOMPATIBLE_VERSIONS
+#[doc(hidden)] pub const CLUSTER_UPGRADE_FIX_QUORUM_NOT_SUPPORTED : ErrorCode = ErrorCode::from_constant(5974); // ERROR_CLUSTER_UPGRADE_FIX_QUORUM_NOT_SUPPORTED
+#[doc(hidden)] pub const CLUSTER_UPGRADE_RESTART_REQUIRED : ErrorCode = ErrorCode::from_constant(5975); // ERROR_CLUSTER_UPGRADE_RESTART_REQUIRED
+#[doc(hidden)] pub const CLUSTER_UPGRADE_IN_PROGRESS : ErrorCode = ErrorCode::from_constant(5976); // ERROR_CLUSTER_UPGRADE_IN_PROGRESS
+#[doc(hidden)] pub const CLUSTER_UPGRADE_INCOMPLETE : ErrorCode = ErrorCode::from_constant(5977); // ERROR_CLUSTER_UPGRADE_INCOMPLETE
+#[doc(hidden)] pub const CLUSTER_NODE_IN_GRACE_PERIOD : ErrorCode = ErrorCode::from_constant(5978); // ERROR_CLUSTER_NODE_IN_GRACE_PERIOD
+#[doc(hidden)] pub const CLUSTER_CSV_IO_PAUSE_TIMEOUT : ErrorCode = ErrorCode::from_constant(5979); // ERROR_CLUSTER_CSV_IO_PAUSE_TIMEOUT
 
 /// The operation failed because the requested node is not currently part of active cluster membership.
-pub const NODE_NOT_ACTIVE_CLUSTER_MEMBER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5980); // ERROR_NODE_NOT_ACTIVE_CLUSTER_MEMBER
+pub const NODE_NOT_ACTIVE_CLUSTER_MEMBER : ErrorCode = ErrorCode::from_constant(5980); // ERROR_NODE_NOT_ACTIVE_CLUSTER_MEMBER
 
-#[doc(hidden)] pub const CLUSTER_RESOURCE_NOT_MONITORED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5981); // ERROR_CLUSTER_RESOURCE_NOT_MONITORED
-#[doc(hidden)] pub const CLUSTER_RESOURCE_DOES_NOT_SUPPORT_UNMONITORED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5982); // ERROR_CLUSTER_RESOURCE_DOES_NOT_SUPPORT_UNMONITORED
-#[doc(hidden)] pub const CLUSTER_RESOURCE_IS_REPLICATED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5983); // ERROR_CLUSTER_RESOURCE_IS_REPLICATED
-#[doc(hidden)] pub const CLUSTER_NODE_ISOLATED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5984); // ERROR_CLUSTER_NODE_ISOLATED
-#[doc(hidden)] pub const CLUSTER_NODE_QUARANTINED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5985); // ERROR_CLUSTER_NODE_QUARANTINED
-#[doc(hidden)] pub const CLUSTER_DATABASE_UPDATE_CONDITION_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5986); // ERROR_CLUSTER_DATABASE_UPDATE_CONDITION_FAILED
-#[doc(hidden)] pub const CLUSTER_SPACE_DEGRADED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5987); // ERROR_CLUSTER_SPACE_DEGRADED
-#[doc(hidden)] pub const CLUSTER_TOKEN_DELEGATION_NOT_SUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5988); // ERROR_CLUSTER_TOKEN_DELEGATION_NOT_SUPPORTED
-#[doc(hidden)] pub const CLUSTER_CSV_INVALID_HANDLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5989); // ERROR_CLUSTER_CSV_INVALID_HANDLE
-#[doc(hidden)] pub const CLUSTER_CSV_SUPPORTED_ONLY_ON_COORDINATOR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5990); // ERROR_CLUSTER_CSV_SUPPORTED_ONLY_ON_COORDINATOR
+#[doc(hidden)] pub const CLUSTER_RESOURCE_NOT_MONITORED : ErrorCode = ErrorCode::from_constant(5981); // ERROR_CLUSTER_RESOURCE_NOT_MONITORED
+#[doc(hidden)] pub const CLUSTER_RESOURCE_DOES_NOT_SUPPORT_UNMONITORED : ErrorCode = ErrorCode::from_constant(5982); // ERROR_CLUSTER_RESOURCE_DOES_NOT_SUPPORT_UNMONITORED
+#[doc(hidden)] pub const CLUSTER_RESOURCE_IS_REPLICATED : ErrorCode = ErrorCode::from_constant(5983); // ERROR_CLUSTER_RESOURCE_IS_REPLICATED
+#[doc(hidden)] pub const CLUSTER_NODE_ISOLATED : ErrorCode = ErrorCode::from_constant(5984); // ERROR_CLUSTER_NODE_ISOLATED
+#[doc(hidden)] pub const CLUSTER_NODE_QUARANTINED : ErrorCode = ErrorCode::from_constant(5985); // ERROR_CLUSTER_NODE_QUARANTINED
+#[doc(hidden)] pub const CLUSTER_DATABASE_UPDATE_CONDITION_FAILED : ErrorCode = ErrorCode::from_constant(5986); // ERROR_CLUSTER_DATABASE_UPDATE_CONDITION_FAILED
+#[doc(hidden)] pub const CLUSTER_SPACE_DEGRADED : ErrorCode = ErrorCode::from_constant(5987); // ERROR_CLUSTER_SPACE_DEGRADED
+#[doc(hidden)] pub const CLUSTER_TOKEN_DELEGATION_NOT_SUPPORTED : ErrorCode = ErrorCode::from_constant(5988); // ERROR_CLUSTER_TOKEN_DELEGATION_NOT_SUPPORTED
+#[doc(hidden)] pub const CLUSTER_CSV_INVALID_HANDLE : ErrorCode = ErrorCode::from_constant(5989); // ERROR_CLUSTER_CSV_INVALID_HANDLE
+#[doc(hidden)] pub const CLUSTER_CSV_SUPPORTED_ONLY_ON_COORDINATOR : ErrorCode = ErrorCode::from_constant(5990); // ERROR_CLUSTER_CSV_SUPPORTED_ONLY_ON_COORDINATOR
 
 /// The cluster group set is not available for any further requests.
-pub const GROUPSET_NOT_AVAILABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5991); // ERROR_GROUPSET_NOT_AVAILABLE
+pub const GROUPSET_NOT_AVAILABLE : ErrorCode = ErrorCode::from_constant(5991); // ERROR_GROUPSET_NOT_AVAILABLE
 
 /// The cluster group set could not be found.
-pub const GROUPSET_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5992); // ERROR_GROUPSET_NOT_FOUND
+pub const GROUPSET_NOT_FOUND : ErrorCode = ErrorCode::from_constant(5992); // ERROR_GROUPSET_NOT_FOUND
 
 /// The action cannot be completed at this time because the cluster group set would fall below quorum and not be able to act as a provider.
-pub const GROUPSET_CANT_PROVIDE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5993); // ERROR_GROUPSET_CANT_PROVIDE
+pub const GROUPSET_CANT_PROVIDE : ErrorCode = ErrorCode::from_constant(5993); // ERROR_GROUPSET_CANT_PROVIDE
 
-#[doc(hidden)] pub const CLUSTER_FAULT_DOMAIN_PARENT_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5994); // ERROR_CLUSTER_FAULT_DOMAIN_PARENT_NOT_FOUND
-#[doc(hidden)] pub const CLUSTER_FAULT_DOMAIN_INVALID_HIERARCHY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5995); // ERROR_CLUSTER_FAULT_DOMAIN_INVALID_HIERARCHY
-#[doc(hidden)] pub const CLUSTER_FAULT_DOMAIN_FAILED_S2D_VALIDATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5996); // ERROR_CLUSTER_FAULT_DOMAIN_FAILED_S2D_VALIDATION
-#[doc(hidden)] pub const CLUSTER_FAULT_DOMAIN_S2D_CONNECTIVITY_LOSS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5997); // ERROR_CLUSTER_FAULT_DOMAIN_S2D_CONNECTIVITY_LOSS
-#[doc(hidden)] pub const CLUSTER_INVALID_INFRASTRUCTURE_FILESERVER_NAME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5998); // ERROR_CLUSTER_INVALID_INFRASTRUCTURE_FILESERVER_NAME
+#[doc(hidden)] pub const CLUSTER_FAULT_DOMAIN_PARENT_NOT_FOUND : ErrorCode = ErrorCode::from_constant(5994); // ERROR_CLUSTER_FAULT_DOMAIN_PARENT_NOT_FOUND
+#[doc(hidden)] pub const CLUSTER_FAULT_DOMAIN_INVALID_HIERARCHY : ErrorCode = ErrorCode::from_constant(5995); // ERROR_CLUSTER_FAULT_DOMAIN_INVALID_HIERARCHY
+#[doc(hidden)] pub const CLUSTER_FAULT_DOMAIN_FAILED_S2D_VALIDATION : ErrorCode = ErrorCode::from_constant(5996); // ERROR_CLUSTER_FAULT_DOMAIN_FAILED_S2D_VALIDATION
+#[doc(hidden)] pub const CLUSTER_FAULT_DOMAIN_S2D_CONNECTIVITY_LOSS : ErrorCode = ErrorCode::from_constant(5997); // ERROR_CLUSTER_FAULT_DOMAIN_S2D_CONNECTIVITY_LOSS
+#[doc(hidden)] pub const CLUSTER_INVALID_INFRASTRUCTURE_FILESERVER_NAME : ErrorCode = ErrorCode::from_constant(5998); // ERROR_CLUSTER_INVALID_INFRASTRUCTURE_FILESERVER_NAME
 
 /// The action cannot be completed because the cluster set management cluster is unreachable.
-pub const CLUSTERSET_MANAGEMENT_CLUSTER_UNREACHABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(5999); // ERROR_CLUSTERSET_MANAGEMENT_CLUSTER_UNREACHABLE
+pub const CLUSTERSET_MANAGEMENT_CLUSTER_UNREACHABLE : ErrorCode = ErrorCode::from_constant(5999); // ERROR_CLUSTERSET_MANAGEMENT_CLUSTER_UNREACHABLE
 
 /// The specified file could not be encrypted.
-pub const ENCRYPTION_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6000); // ERROR_ENCRYPTION_FAILED
+pub const ENCRYPTION_FAILED : ErrorCode = ErrorCode::from_constant(6000); // ERROR_ENCRYPTION_FAILED
 
 /// The specified file could not be decrypted.
-pub const DECRYPTION_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6001); // ERROR_DECRYPTION_FAILED
+pub const DECRYPTION_FAILED : ErrorCode = ErrorCode::from_constant(6001); // ERROR_DECRYPTION_FAILED
 
 /// The specified file is encrypted and the user does not have the ability to decrypt it.
-pub const FILE_ENCRYPTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6002); // ERROR_FILE_ENCRYPTED
+pub const FILE_ENCRYPTED : ErrorCode = ErrorCode::from_constant(6002); // ERROR_FILE_ENCRYPTED
 
 /// There is no valid encryption recovery policy configured for this system.
-pub const NO_RECOVERY_POLICY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6003); // ERROR_NO_RECOVERY_POLICY
+pub const NO_RECOVERY_POLICY : ErrorCode = ErrorCode::from_constant(6003); // ERROR_NO_RECOVERY_POLICY
 
 /// The required encryption driver is not loaded for this system.
-pub const NO_EFS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6004); // ERROR_NO_EFS
+pub const NO_EFS : ErrorCode = ErrorCode::from_constant(6004); // ERROR_NO_EFS
 
 /// The file was encrypted with a different encryption driver than is currently loaded.
-pub const WRONG_EFS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6005); // ERROR_WRONG_EFS
+pub const WRONG_EFS : ErrorCode = ErrorCode::from_constant(6005); // ERROR_WRONG_EFS
 
 /// There are no EFS keys defined for the user.
-pub const NO_USER_KEYS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6006); // ERROR_NO_USER_KEYS
+pub const NO_USER_KEYS : ErrorCode = ErrorCode::from_constant(6006); // ERROR_NO_USER_KEYS
 
 /// The specified file is not encrypted.
-pub const FILE_NOT_ENCRYPTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6007); // ERROR_FILE_NOT_ENCRYPTED
+pub const FILE_NOT_ENCRYPTED : ErrorCode = ErrorCode::from_constant(6007); // ERROR_FILE_NOT_ENCRYPTED
 
 /// The specified file is not in the defined EFS export format.
-pub const NOT_EXPORT_FORMAT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6008); // ERROR_NOT_EXPORT_FORMAT
+pub const NOT_EXPORT_FORMAT : ErrorCode = ErrorCode::from_constant(6008); // ERROR_NOT_EXPORT_FORMAT
 
 /// The specified file is read only.
-pub const FILE_READ_ONLY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6009); // ERROR_FILE_READ_ONLY
+pub const FILE_READ_ONLY : ErrorCode = ErrorCode::from_constant(6009); // ERROR_FILE_READ_ONLY
 
 /// The directory has been disabled for encryption.
-pub const DIR_EFS_DISALLOWED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6010); // ERROR_DIR_EFS_DISALLOWED
+pub const DIR_EFS_DISALLOWED : ErrorCode = ErrorCode::from_constant(6010); // ERROR_DIR_EFS_DISALLOWED
 
 /// The server is not trusted for remote encryption operation.
-pub const EFS_SERVER_NOT_TRUSTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6011); // ERROR_EFS_SERVER_NOT_TRUSTED
+pub const EFS_SERVER_NOT_TRUSTED : ErrorCode = ErrorCode::from_constant(6011); // ERROR_EFS_SERVER_NOT_TRUSTED
 
 /// Recovery policy configured for this system contains invalid recovery certificate.
-pub const BAD_RECOVERY_POLICY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6012); // ERROR_BAD_RECOVERY_POLICY
+pub const BAD_RECOVERY_POLICY : ErrorCode = ErrorCode::from_constant(6012); // ERROR_BAD_RECOVERY_POLICY
 
 /// The encryption algorithm used on the source file needs a bigger key buffer than the one on the destination file.
-pub const EFS_ALG_BLOB_TOO_BIG : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6013); // ERROR_EFS_ALG_BLOB_TOO_BIG
+pub const EFS_ALG_BLOB_TOO_BIG : ErrorCode = ErrorCode::from_constant(6013); // ERROR_EFS_ALG_BLOB_TOO_BIG
 
 /// The disk partition does not support file encryption.
-pub const VOLUME_NOT_SUPPORT_EFS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6014); // ERROR_VOLUME_NOT_SUPPORT_EFS
+pub const VOLUME_NOT_SUPPORT_EFS : ErrorCode = ErrorCode::from_constant(6014); // ERROR_VOLUME_NOT_SUPPORT_EFS
 
 /// This machine is disabled for file encryption.
-pub const EFS_DISABLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6015); // ERROR_EFS_DISABLED
+pub const EFS_DISABLED : ErrorCode = ErrorCode::from_constant(6015); // ERROR_EFS_DISABLED
 
 /// A newer system is required to decrypt this encrypted file.
-pub const EFS_VERSION_NOT_SUPPORT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6016); // ERROR_EFS_VERSION_NOT_SUPPORT
+pub const EFS_VERSION_NOT_SUPPORT : ErrorCode = ErrorCode::from_constant(6016); // ERROR_EFS_VERSION_NOT_SUPPORT
 
 /// The remote server sent an invalid response for a file being opened with Client Side Encryption.
-pub const CS_ENCRYPTION_INVALID_SERVER_RESPONSE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6017); // ERROR_CS_ENCRYPTION_INVALID_SERVER_RESPONSE
+pub const CS_ENCRYPTION_INVALID_SERVER_RESPONSE : ErrorCode = ErrorCode::from_constant(6017); // ERROR_CS_ENCRYPTION_INVALID_SERVER_RESPONSE
 
 /// Client Side Encryption is not supported by the remote server even though it claims to support it.
-pub const CS_ENCRYPTION_UNSUPPORTED_SERVER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6018); // ERROR_CS_ENCRYPTION_UNSUPPORTED_SERVER
+pub const CS_ENCRYPTION_UNSUPPORTED_SERVER : ErrorCode = ErrorCode::from_constant(6018); // ERROR_CS_ENCRYPTION_UNSUPPORTED_SERVER
 
 /// File is encrypted and should be opened in Client Side Encryption mode.
-pub const CS_ENCRYPTION_EXISTING_ENCRYPTED_FILE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6019); // ERROR_CS_ENCRYPTION_EXISTING_ENCRYPTED_FILE
+pub const CS_ENCRYPTION_EXISTING_ENCRYPTED_FILE : ErrorCode = ErrorCode::from_constant(6019); // ERROR_CS_ENCRYPTION_EXISTING_ENCRYPTED_FILE
 
 /// A new encrypted file is being created and a $EFS needs to be provided.
-pub const CS_ENCRYPTION_NEW_ENCRYPTED_FILE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6020); // ERROR_CS_ENCRYPTION_NEW_ENCRYPTED_FILE
+pub const CS_ENCRYPTION_NEW_ENCRYPTED_FILE : ErrorCode = ErrorCode::from_constant(6020); // ERROR_CS_ENCRYPTION_NEW_ENCRYPTED_FILE
 
 /// The SMB client requested a CSE FSCTL on a non-CSE file.
-pub const CS_ENCRYPTION_FILE_NOT_CSE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6021); // ERROR_CS_ENCRYPTION_FILE_NOT_CSE
+pub const CS_ENCRYPTION_FILE_NOT_CSE : ErrorCode = ErrorCode::from_constant(6021); // ERROR_CS_ENCRYPTION_FILE_NOT_CSE
 
 /// The requested operation was blocked by policy. For more information, contact your system administrator.
-pub const ENCRYPTION_POLICY_DENIES_OPERATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6022); // ERROR_ENCRYPTION_POLICY_DENIES_OPERATION
+pub const ENCRYPTION_POLICY_DENIES_OPERATION : ErrorCode = ErrorCode::from_constant(6022); // ERROR_ENCRYPTION_POLICY_DENIES_OPERATION
 
 /// The specified file could not be encrypted with Windows Information Protection.
-pub const WIP_ENCRYPTION_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6023); // ERROR_WIP_ENCRYPTION_FAILED
+pub const WIP_ENCRYPTION_FAILED : ErrorCode = ErrorCode::from_constant(6023); // ERROR_WIP_ENCRYPTION_FAILED
 
 /// The list of servers for this workgroup is not currently available
-pub const NO_BROWSER_SERVERS_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6118); // ERROR_NO_BROWSER_SERVERS_FOUND
+pub const NO_BROWSER_SERVERS_FOUND : ErrorCode = ErrorCode::from_constant(6118); // ERROR_NO_BROWSER_SERVERS_FOUND
 
-#[doc(hidden)] pub const CLUSTER_OBJECT_IS_CLUSTER_SET_VM : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6250); // ERROR_CLUSTER_OBJECT_IS_CLUSTER_SET_VM
+#[doc(hidden)] pub const CLUSTER_OBJECT_IS_CLUSTER_SET_VM : ErrorCode = ErrorCode::from_constant(6250); // ERROR_CLUSTER_OBJECT_IS_CLUSTER_SET_VM
 
 /// Log service encountered an invalid log sector.
-pub const LOG_SECTOR_INVALID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6600); // ERROR_LOG_SECTOR_INVALID
+pub const LOG_SECTOR_INVALID : ErrorCode = ErrorCode::from_constant(6600); // ERROR_LOG_SECTOR_INVALID
 
 /// Log service encountered a log sector with invalid block parity.
-pub const LOG_SECTOR_PARITY_INVALID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6601); // ERROR_LOG_SECTOR_PARITY_INVALID
+pub const LOG_SECTOR_PARITY_INVALID : ErrorCode = ErrorCode::from_constant(6601); // ERROR_LOG_SECTOR_PARITY_INVALID
 
 /// Log service encountered a remapped log sector.
-pub const LOG_SECTOR_REMAPPED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6602); // ERROR_LOG_SECTOR_REMAPPED
+pub const LOG_SECTOR_REMAPPED : ErrorCode = ErrorCode::from_constant(6602); // ERROR_LOG_SECTOR_REMAPPED
 
 /// Log service encountered a partial or incomplete log block.
-pub const LOG_BLOCK_INCOMPLETE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6603); // ERROR_LOG_BLOCK_INCOMPLETE
+pub const LOG_BLOCK_INCOMPLETE : ErrorCode = ErrorCode::from_constant(6603); // ERROR_LOG_BLOCK_INCOMPLETE
 
 /// Log service encountered an attempt access data outside the active log range.
-pub const LOG_INVALID_RANGE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6604); // ERROR_LOG_INVALID_RANGE
+pub const LOG_INVALID_RANGE : ErrorCode = ErrorCode::from_constant(6604); // ERROR_LOG_INVALID_RANGE
 
 /// Log service user marshalling buffers are exhausted.
-pub const LOG_BLOCKS_EXHAUSTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6605); // ERROR_LOG_BLOCKS_EXHAUSTED
+pub const LOG_BLOCKS_EXHAUSTED : ErrorCode = ErrorCode::from_constant(6605); // ERROR_LOG_BLOCKS_EXHAUSTED
 
 /// Log service encountered an attempt read from a marshalling area with an invalid read context.
-pub const LOG_READ_CONTEXT_INVALID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6606); // ERROR_LOG_READ_CONTEXT_INVALID
+pub const LOG_READ_CONTEXT_INVALID : ErrorCode = ErrorCode::from_constant(6606); // ERROR_LOG_READ_CONTEXT_INVALID
 
 /// Log service encountered an invalid log restart area.
-pub const LOG_RESTART_INVALID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6607); // ERROR_LOG_RESTART_INVALID
+pub const LOG_RESTART_INVALID : ErrorCode = ErrorCode::from_constant(6607); // ERROR_LOG_RESTART_INVALID
 
 /// Log service encountered an invalid log block version.
-pub const LOG_BLOCK_VERSION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6608); // ERROR_LOG_BLOCK_VERSION
+pub const LOG_BLOCK_VERSION : ErrorCode = ErrorCode::from_constant(6608); // ERROR_LOG_BLOCK_VERSION
 
 /// Log service encountered an invalid log block.
-pub const LOG_BLOCK_INVALID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6609); // ERROR_LOG_BLOCK_INVALID
+pub const LOG_BLOCK_INVALID : ErrorCode = ErrorCode::from_constant(6609); // ERROR_LOG_BLOCK_INVALID
 
 /// Log service encountered an attempt to read the log with an invalid read mode.
-pub const LOG_READ_MODE_INVALID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6610); // ERROR_LOG_READ_MODE_INVALID
+pub const LOG_READ_MODE_INVALID : ErrorCode = ErrorCode::from_constant(6610); // ERROR_LOG_READ_MODE_INVALID
 
 /// Log service encountered a log stream with no restart area.
-pub const LOG_NO_RESTART : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6611); // ERROR_LOG_NO_RESTART
+pub const LOG_NO_RESTART : ErrorCode = ErrorCode::from_constant(6611); // ERROR_LOG_NO_RESTART
 
 /// Log service encountered a corrupted metadata file.
-pub const LOG_METADATA_CORRUPT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6612); // ERROR_LOG_METADATA_CORRUPT
+pub const LOG_METADATA_CORRUPT : ErrorCode = ErrorCode::from_constant(6612); // ERROR_LOG_METADATA_CORRUPT
 
 /// Log service encountered a metadata file that could not be created by the log file system.
-pub const LOG_METADATA_INVALID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6613); // ERROR_LOG_METADATA_INVALID
+pub const LOG_METADATA_INVALID : ErrorCode = ErrorCode::from_constant(6613); // ERROR_LOG_METADATA_INVALID
 
 /// Log service encountered a metadata file with inconsistent data.
-pub const LOG_METADATA_INCONSISTENT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6614); // ERROR_LOG_METADATA_INCONSISTENT
+pub const LOG_METADATA_INCONSISTENT : ErrorCode = ErrorCode::from_constant(6614); // ERROR_LOG_METADATA_INCONSISTENT
 
 /// Log service encountered an attempt to erroneous allocate or dispose reservation space.
-pub const LOG_RESERVATION_INVALID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6615); // ERROR_LOG_RESERVATION_INVALID
+pub const LOG_RESERVATION_INVALID : ErrorCode = ErrorCode::from_constant(6615); // ERROR_LOG_RESERVATION_INVALID
 
 /// Log service cannot delete log file or file system container.
-pub const LOG_CANT_DELETE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6616); // ERROR_LOG_CANT_DELETE
+pub const LOG_CANT_DELETE : ErrorCode = ErrorCode::from_constant(6616); // ERROR_LOG_CANT_DELETE
 
 /// Log service has reached the maximum allowable containers allocated to a log file.
-pub const LOG_CONTAINER_LIMIT_EXCEEDED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6617); // ERROR_LOG_CONTAINER_LIMIT_EXCEEDED
+pub const LOG_CONTAINER_LIMIT_EXCEEDED : ErrorCode = ErrorCode::from_constant(6617); // ERROR_LOG_CONTAINER_LIMIT_EXCEEDED
 
 /// Log service has attempted to read or write backward past the start of the log.
-pub const LOG_START_OF_LOG : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6618); // ERROR_LOG_START_OF_LOG
+pub const LOG_START_OF_LOG : ErrorCode = ErrorCode::from_constant(6618); // ERROR_LOG_START_OF_LOG
 
 /// Log policy could not be installed because a policy of the same type is already present.
-pub const LOG_POLICY_ALREADY_INSTALLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6619); // ERROR_LOG_POLICY_ALREADY_INSTALLED
+pub const LOG_POLICY_ALREADY_INSTALLED : ErrorCode = ErrorCode::from_constant(6619); // ERROR_LOG_POLICY_ALREADY_INSTALLED
 
 /// Log policy in question was not installed at the time of the request.
-pub const LOG_POLICY_NOT_INSTALLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6620); // ERROR_LOG_POLICY_NOT_INSTALLED
+pub const LOG_POLICY_NOT_INSTALLED : ErrorCode = ErrorCode::from_constant(6620); // ERROR_LOG_POLICY_NOT_INSTALLED
 
 /// The installed set of policies on the log is invalid.
-pub const LOG_POLICY_INVALID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6621); // ERROR_LOG_POLICY_INVALID
+pub const LOG_POLICY_INVALID : ErrorCode = ErrorCode::from_constant(6621); // ERROR_LOG_POLICY_INVALID
 
 /// A policy on the log in question prevented the operation from completing.
-pub const LOG_POLICY_CONFLICT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6622); // ERROR_LOG_POLICY_CONFLICT
+pub const LOG_POLICY_CONFLICT : ErrorCode = ErrorCode::from_constant(6622); // ERROR_LOG_POLICY_CONFLICT
 
 /// Log space cannot be reclaimed because the log is pinned by the archive tail.
-pub const LOG_PINNED_ARCHIVE_TAIL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6623); // ERROR_LOG_PINNED_ARCHIVE_TAIL
+pub const LOG_PINNED_ARCHIVE_TAIL : ErrorCode = ErrorCode::from_constant(6623); // ERROR_LOG_PINNED_ARCHIVE_TAIL
 
 /// Log record is not a record in the log file.
-pub const LOG_RECORD_NONEXISTENT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6624); // ERROR_LOG_RECORD_NONEXISTENT
+pub const LOG_RECORD_NONEXISTENT : ErrorCode = ErrorCode::from_constant(6624); // ERROR_LOG_RECORD_NONEXISTENT
 
 /// Number of reserved log records or the adjustment of the number of reserved log records is invalid.
-pub const LOG_RECORDS_RESERVED_INVALID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6625); // ERROR_LOG_RECORDS_RESERVED_INVALID
+pub const LOG_RECORDS_RESERVED_INVALID : ErrorCode = ErrorCode::from_constant(6625); // ERROR_LOG_RECORDS_RESERVED_INVALID
 
 /// Reserved log space or the adjustment of the log space is invalid.
-pub const LOG_SPACE_RESERVED_INVALID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6626); // ERROR_LOG_SPACE_RESERVED_INVALID
+pub const LOG_SPACE_RESERVED_INVALID : ErrorCode = ErrorCode::from_constant(6626); // ERROR_LOG_SPACE_RESERVED_INVALID
 
 /// An new or existing archive tail or base of the active log is invalid.
-pub const LOG_TAIL_INVALID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6627); // ERROR_LOG_TAIL_INVALID
+pub const LOG_TAIL_INVALID : ErrorCode = ErrorCode::from_constant(6627); // ERROR_LOG_TAIL_INVALID
 
 /// Log space is exhausted.
-pub const LOG_FULL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6628); // ERROR_LOG_FULL
+pub const LOG_FULL : ErrorCode = ErrorCode::from_constant(6628); // ERROR_LOG_FULL
 
 /// The log could not be set to the requested size.
-pub const COULD_NOT_RESIZE_LOG : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6629); // ERROR_COULD_NOT_RESIZE_LOG
+pub const COULD_NOT_RESIZE_LOG : ErrorCode = ErrorCode::from_constant(6629); // ERROR_COULD_NOT_RESIZE_LOG
 
 /// Log is multiplexed, no direct writes to the physical log is allowed.
-pub const LOG_MULTIPLEXED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6630); // ERROR_LOG_MULTIPLEXED
+pub const LOG_MULTIPLEXED : ErrorCode = ErrorCode::from_constant(6630); // ERROR_LOG_MULTIPLEXED
 
 /// The operation failed because the log is a dedicated log.
-pub const LOG_DEDICATED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6631); // ERROR_LOG_DEDICATED
+pub const LOG_DEDICATED : ErrorCode = ErrorCode::from_constant(6631); // ERROR_LOG_DEDICATED
 
 /// The operation requires an archive context.
-pub const LOG_ARCHIVE_NOT_IN_PROGRESS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6632); // ERROR_LOG_ARCHIVE_NOT_IN_PROGRESS
+pub const LOG_ARCHIVE_NOT_IN_PROGRESS : ErrorCode = ErrorCode::from_constant(6632); // ERROR_LOG_ARCHIVE_NOT_IN_PROGRESS
 
 /// Log archival is in progress.
-pub const LOG_ARCHIVE_IN_PROGRESS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6633); // ERROR_LOG_ARCHIVE_IN_PROGRESS
+pub const LOG_ARCHIVE_IN_PROGRESS : ErrorCode = ErrorCode::from_constant(6633); // ERROR_LOG_ARCHIVE_IN_PROGRESS
 
 /// The operation requires a non-ephemeral log, but the log is ephemeral.
-pub const LOG_EPHEMERAL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6634); // ERROR_LOG_EPHEMERAL
+pub const LOG_EPHEMERAL : ErrorCode = ErrorCode::from_constant(6634); // ERROR_LOG_EPHEMERAL
 
 /// The log must have at least two containers before it can be read from or written to.
-pub const LOG_NOT_ENOUGH_CONTAINERS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6635); // ERROR_LOG_NOT_ENOUGH_CONTAINERS
+pub const LOG_NOT_ENOUGH_CONTAINERS : ErrorCode = ErrorCode::from_constant(6635); // ERROR_LOG_NOT_ENOUGH_CONTAINERS
 
 /// A log client has already registered on the stream.
-pub const LOG_CLIENT_ALREADY_REGISTERED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6636); // ERROR_LOG_CLIENT_ALREADY_REGISTERED
+pub const LOG_CLIENT_ALREADY_REGISTERED : ErrorCode = ErrorCode::from_constant(6636); // ERROR_LOG_CLIENT_ALREADY_REGISTERED
 
 /// A log client has not been registered on the stream.
-pub const LOG_CLIENT_NOT_REGISTERED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6637); // ERROR_LOG_CLIENT_NOT_REGISTERED
+pub const LOG_CLIENT_NOT_REGISTERED : ErrorCode = ErrorCode::from_constant(6637); // ERROR_LOG_CLIENT_NOT_REGISTERED
 
 /// A request has already been made to handle the log full condition.
-pub const LOG_FULL_HANDLER_IN_PROGRESS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6638); // ERROR_LOG_FULL_HANDLER_IN_PROGRESS
+pub const LOG_FULL_HANDLER_IN_PROGRESS : ErrorCode = ErrorCode::from_constant(6638); // ERROR_LOG_FULL_HANDLER_IN_PROGRESS
 
 /// Log service encountered an error when attempting to read from a log container.
-pub const LOG_CONTAINER_READ_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6639); // ERROR_LOG_CONTAINER_READ_FAILED
+pub const LOG_CONTAINER_READ_FAILED : ErrorCode = ErrorCode::from_constant(6639); // ERROR_LOG_CONTAINER_READ_FAILED
 
 /// Log service encountered an error when attempting to write to a log container.
-pub const LOG_CONTAINER_WRITE_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6640); // ERROR_LOG_CONTAINER_WRITE_FAILED
+pub const LOG_CONTAINER_WRITE_FAILED : ErrorCode = ErrorCode::from_constant(6640); // ERROR_LOG_CONTAINER_WRITE_FAILED
 
 /// Log service encountered an error when attempting open a log container.
-pub const LOG_CONTAINER_OPEN_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6641); // ERROR_LOG_CONTAINER_OPEN_FAILED
+pub const LOG_CONTAINER_OPEN_FAILED : ErrorCode = ErrorCode::from_constant(6641); // ERROR_LOG_CONTAINER_OPEN_FAILED
 
 /// Log service encountered an invalid container state when attempting a requested action.
-pub const LOG_CONTAINER_STATE_INVALID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6642); // ERROR_LOG_CONTAINER_STATE_INVALID
+pub const LOG_CONTAINER_STATE_INVALID : ErrorCode = ErrorCode::from_constant(6642); // ERROR_LOG_CONTAINER_STATE_INVALID
 
 /// Log service is not in the correct state to perform a requested action.
-pub const LOG_STATE_INVALID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6643); // ERROR_LOG_STATE_INVALID
+pub const LOG_STATE_INVALID : ErrorCode = ErrorCode::from_constant(6643); // ERROR_LOG_STATE_INVALID
 
 /// Log space cannot be reclaimed because the log is pinned.
-pub const LOG_PINNED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6644); // ERROR_LOG_PINNED
+pub const LOG_PINNED : ErrorCode = ErrorCode::from_constant(6644); // ERROR_LOG_PINNED
 
 /// Log metadata flush failed.
-pub const LOG_METADATA_FLUSH_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6645); // ERROR_LOG_METADATA_FLUSH_FAILED
+pub const LOG_METADATA_FLUSH_FAILED : ErrorCode = ErrorCode::from_constant(6645); // ERROR_LOG_METADATA_FLUSH_FAILED
 
 /// Security on the log and its containers is inconsistent.
-pub const LOG_INCONSISTENT_SECURITY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6646); // ERROR_LOG_INCONSISTENT_SECURITY
+pub const LOG_INCONSISTENT_SECURITY : ErrorCode = ErrorCode::from_constant(6646); // ERROR_LOG_INCONSISTENT_SECURITY
 
 /// Records were appended to the log or reservation changes were made, but the log could not be flushed.
-pub const LOG_APPENDED_FLUSH_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6647); // ERROR_LOG_APPENDED_FLUSH_FAILED
+pub const LOG_APPENDED_FLUSH_FAILED : ErrorCode = ErrorCode::from_constant(6647); // ERROR_LOG_APPENDED_FLUSH_FAILED
 
 /// The log is pinned due to reservation consuming most of the log space. Free some reserved records to make space available.
-pub const LOG_PINNED_RESERVATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6648); // ERROR_LOG_PINNED_RESERVATION
+pub const LOG_PINNED_RESERVATION : ErrorCode = ErrorCode::from_constant(6648); // ERROR_LOG_PINNED_RESERVATION
 
 /// The transaction handle associated with this operation is not valid.
-pub const INVALID_TRANSACTION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6700); // ERROR_INVALID_TRANSACTION
+pub const INVALID_TRANSACTION : ErrorCode = ErrorCode::from_constant(6700); // ERROR_INVALID_TRANSACTION
 
 /// The requested operation was made in the context of a transaction that is no longer active.
-pub const TRANSACTION_NOT_ACTIVE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6701); // ERROR_TRANSACTION_NOT_ACTIVE
+pub const TRANSACTION_NOT_ACTIVE : ErrorCode = ErrorCode::from_constant(6701); // ERROR_TRANSACTION_NOT_ACTIVE
 
 /// The requested operation is not valid on the Transaction object in its current state.
-pub const TRANSACTION_REQUEST_NOT_VALID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6702); // ERROR_TRANSACTION_REQUEST_NOT_VALID
+pub const TRANSACTION_REQUEST_NOT_VALID : ErrorCode = ErrorCode::from_constant(6702); // ERROR_TRANSACTION_REQUEST_NOT_VALID
 
 /// The caller has called a response API, but the response is not expected because the TM did not issue the corresponding request to the caller.
-pub const TRANSACTION_NOT_REQUESTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6703); // ERROR_TRANSACTION_NOT_REQUESTED
+pub const TRANSACTION_NOT_REQUESTED : ErrorCode = ErrorCode::from_constant(6703); // ERROR_TRANSACTION_NOT_REQUESTED
 
 /// It is too late to perform the requested operation, since the Transaction has already been aborted.
-pub const TRANSACTION_ALREADY_ABORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6704); // ERROR_TRANSACTION_ALREADY_ABORTED
+pub const TRANSACTION_ALREADY_ABORTED : ErrorCode = ErrorCode::from_constant(6704); // ERROR_TRANSACTION_ALREADY_ABORTED
 
 /// It is too late to perform the requested operation, since the Transaction has already been committed.
-pub const TRANSACTION_ALREADY_COMMITTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6705); // ERROR_TRANSACTION_ALREADY_COMMITTED
+pub const TRANSACTION_ALREADY_COMMITTED : ErrorCode = ErrorCode::from_constant(6705); // ERROR_TRANSACTION_ALREADY_COMMITTED
 
 /// The Transaction Manager was unable to be successfully initialized. Transacted operations are not supported.
-pub const TM_INITIALIZATION_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6706); // ERROR_TM_INITIALIZATION_FAILED
+pub const TM_INITIALIZATION_FAILED : ErrorCode = ErrorCode::from_constant(6706); // ERROR_TM_INITIALIZATION_FAILED
 
 /// The specified ResourceManager made no changes or updates to the resource under this transaction.
-pub const RESOURCEMANAGER_READ_ONLY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6707); // ERROR_RESOURCEMANAGER_READ_ONLY
+pub const RESOURCEMANAGER_READ_ONLY : ErrorCode = ErrorCode::from_constant(6707); // ERROR_RESOURCEMANAGER_READ_ONLY
 
 /// The resource manager has attempted to prepare a transaction that it has not successfully joined.
-pub const TRANSACTION_NOT_JOINED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6708); // ERROR_TRANSACTION_NOT_JOINED
+pub const TRANSACTION_NOT_JOINED : ErrorCode = ErrorCode::from_constant(6708); // ERROR_TRANSACTION_NOT_JOINED
 
 /// The Transaction object already has a superior enlistment, and the caller attempted an operation that would have created a new superior. Only a single superior enlistment is allow.
-pub const TRANSACTION_SUPERIOR_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6709); // ERROR_TRANSACTION_SUPERIOR_EXISTS
+pub const TRANSACTION_SUPERIOR_EXISTS : ErrorCode = ErrorCode::from_constant(6709); // ERROR_TRANSACTION_SUPERIOR_EXISTS
 
 /// The RM tried to register a protocol that already exists.
-pub const CRM_PROTOCOL_ALREADY_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6710); // ERROR_CRM_PROTOCOL_ALREADY_EXISTS
+pub const CRM_PROTOCOL_ALREADY_EXISTS : ErrorCode = ErrorCode::from_constant(6710); // ERROR_CRM_PROTOCOL_ALREADY_EXISTS
 
 /// The attempt to propagate the Transaction failed.
-pub const TRANSACTION_PROPAGATION_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6711); // ERROR_TRANSACTION_PROPAGATION_FAILED
+pub const TRANSACTION_PROPAGATION_FAILED : ErrorCode = ErrorCode::from_constant(6711); // ERROR_TRANSACTION_PROPAGATION_FAILED
 
 /// The requested propagation protocol was not registered as a CRM.
-pub const CRM_PROTOCOL_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6712); // ERROR_CRM_PROTOCOL_NOT_FOUND
+pub const CRM_PROTOCOL_NOT_FOUND : ErrorCode = ErrorCode::from_constant(6712); // ERROR_CRM_PROTOCOL_NOT_FOUND
 
 /// The buffer passed in to PushTransaction or PullTransaction is not in a valid format.
-pub const TRANSACTION_INVALID_MARSHALL_BUFFER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6713); // ERROR_TRANSACTION_INVALID_MARSHALL_BUFFER
+pub const TRANSACTION_INVALID_MARSHALL_BUFFER : ErrorCode = ErrorCode::from_constant(6713); // ERROR_TRANSACTION_INVALID_MARSHALL_BUFFER
 
 /// The current transaction context associated with the thread is not a valid handle to a transaction object.
-pub const CURRENT_TRANSACTION_NOT_VALID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6714); // ERROR_CURRENT_TRANSACTION_NOT_VALID
+pub const CURRENT_TRANSACTION_NOT_VALID : ErrorCode = ErrorCode::from_constant(6714); // ERROR_CURRENT_TRANSACTION_NOT_VALID
 
 /// The specified Transaction object could not be opened, because it was not found.
-pub const TRANSACTION_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6715); // ERROR_TRANSACTION_NOT_FOUND
+pub const TRANSACTION_NOT_FOUND : ErrorCode = ErrorCode::from_constant(6715); // ERROR_TRANSACTION_NOT_FOUND
 
 /// The specified ResourceManager object could not be opened, because it was not found.
-pub const RESOURCEMANAGER_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6716); // ERROR_RESOURCEMANAGER_NOT_FOUND
+pub const RESOURCEMANAGER_NOT_FOUND : ErrorCode = ErrorCode::from_constant(6716); // ERROR_RESOURCEMANAGER_NOT_FOUND
 
 /// The specified Enlistment object could not be opened, because it was not found.
-pub const ENLISTMENT_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6717); // ERROR_ENLISTMENT_NOT_FOUND
+pub const ENLISTMENT_NOT_FOUND : ErrorCode = ErrorCode::from_constant(6717); // ERROR_ENLISTMENT_NOT_FOUND
 
 /// The specified TransactionManager object could not be opened, because it was not found.
-pub const TRANSACTIONMANAGER_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6718); // ERROR_TRANSACTIONMANAGER_NOT_FOUND
+pub const TRANSACTIONMANAGER_NOT_FOUND : ErrorCode = ErrorCode::from_constant(6718); // ERROR_TRANSACTIONMANAGER_NOT_FOUND
 
 /// The object specified could not be created or opened, because its associated TransactionManager is not online.  The TransactionManager must be brought fully Online by calling RecoverTransactionManager to recover to the end of its LogFile before objects in its Transaction or ResourceManager namespaces can be opened.  In addition, errors in writing records to its LogFile can cause a TransactionManager to go offline.
-pub const TRANSACTIONMANAGER_NOT_ONLINE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6719); // ERROR_TRANSACTIONMANAGER_NOT_ONLINE
+pub const TRANSACTIONMANAGER_NOT_ONLINE : ErrorCode = ErrorCode::from_constant(6719); // ERROR_TRANSACTIONMANAGER_NOT_ONLINE
 
 /// The specified TransactionManager was unable to create the objects contained in its logfile in the Ob namespace. Therefore, the TransactionManager was unable to recover.
-pub const TRANSACTIONMANAGER_RECOVERY_NAME_COLLISION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6720); // ERROR_TRANSACTIONMANAGER_RECOVERY_NAME_COLLISION
+pub const TRANSACTIONMANAGER_RECOVERY_NAME_COLLISION : ErrorCode = ErrorCode::from_constant(6720); // ERROR_TRANSACTIONMANAGER_RECOVERY_NAME_COLLISION
 
 /// The call to create a superior Enlistment on this Transaction object could not be completed, because the Transaction object specified for the enlistment is a subordinate branch of the Transaction. Only the root of the Transaction can be enlisted on as a superior.
-pub const TRANSACTION_NOT_ROOT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6721); // ERROR_TRANSACTION_NOT_ROOT
+pub const TRANSACTION_NOT_ROOT : ErrorCode = ErrorCode::from_constant(6721); // ERROR_TRANSACTION_NOT_ROOT
 
 /// Because the associated transaction manager or resource manager has been closed, the handle is no longer valid.
-pub const TRANSACTION_OBJECT_EXPIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6722); // ERROR_TRANSACTION_OBJECT_EXPIRED
+pub const TRANSACTION_OBJECT_EXPIRED : ErrorCode = ErrorCode::from_constant(6722); // ERROR_TRANSACTION_OBJECT_EXPIRED
 
 /// The specified operation could not be performed on this Superior enlistment, because the enlistment was not created with the corresponding completion response in the NotificationMask.
-pub const TRANSACTION_RESPONSE_NOT_ENLISTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6723); // ERROR_TRANSACTION_RESPONSE_NOT_ENLISTED
+pub const TRANSACTION_RESPONSE_NOT_ENLISTED : ErrorCode = ErrorCode::from_constant(6723); // ERROR_TRANSACTION_RESPONSE_NOT_ENLISTED
 
 /// The specified operation could not be performed, because the record that would be logged was too long. This can occur because of two conditions: either there are too many Enlistments on this Transaction, or the combined RecoveryInformation being logged on behalf of those Enlistments is too long.
-pub const TRANSACTION_RECORD_TOO_LONG : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6724); // ERROR_TRANSACTION_RECORD_TOO_LONG
+pub const TRANSACTION_RECORD_TOO_LONG : ErrorCode = ErrorCode::from_constant(6724); // ERROR_TRANSACTION_RECORD_TOO_LONG
 
 /// Implicit transaction are not supported.
-pub const IMPLICIT_TRANSACTION_NOT_SUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6725); // ERROR_IMPLICIT_TRANSACTION_NOT_SUPPORTED
+pub const IMPLICIT_TRANSACTION_NOT_SUPPORTED : ErrorCode = ErrorCode::from_constant(6725); // ERROR_IMPLICIT_TRANSACTION_NOT_SUPPORTED
 
 /// The kernel transaction manager had to abort or forget the transaction because it blocked forward progress.
-pub const TRANSACTION_INTEGRITY_VIOLATED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6726); // ERROR_TRANSACTION_INTEGRITY_VIOLATED
+pub const TRANSACTION_INTEGRITY_VIOLATED : ErrorCode = ErrorCode::from_constant(6726); // ERROR_TRANSACTION_INTEGRITY_VIOLATED
 
 /// The TransactionManager identity that was supplied did not match the one recorded in the TransactionManager's log file.
-pub const TRANSACTIONMANAGER_IDENTITY_MISMATCH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6727); // ERROR_TRANSACTIONMANAGER_IDENTITY_MISMATCH
+pub const TRANSACTIONMANAGER_IDENTITY_MISMATCH : ErrorCode = ErrorCode::from_constant(6727); // ERROR_TRANSACTIONMANAGER_IDENTITY_MISMATCH
 
 /// This snapshot operation cannot continue because a transactional resource manager cannot be frozen in its current state.  Please try again.
-pub const RM_CANNOT_BE_FROZEN_FOR_SNAPSHOT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6728); // ERROR_RM_CANNOT_BE_FROZEN_FOR_SNAPSHOT
+pub const RM_CANNOT_BE_FROZEN_FOR_SNAPSHOT : ErrorCode = ErrorCode::from_constant(6728); // ERROR_RM_CANNOT_BE_FROZEN_FOR_SNAPSHOT
 
 /// The transaction cannot be enlisted on with the specified EnlistmentMask, because the transaction has already completed the PrePrepare phase.  In order to ensure correctness, the ResourceManager must switch to a write-through mode and cease caching data within this transaction.  Enlisting for only subsequent transaction phases may still succeed.
-pub const TRANSACTION_MUST_WRITETHROUGH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6729); // ERROR_TRANSACTION_MUST_WRITETHROUGH
+pub const TRANSACTION_MUST_WRITETHROUGH : ErrorCode = ErrorCode::from_constant(6729); // ERROR_TRANSACTION_MUST_WRITETHROUGH
 
 /// The transaction does not have a superior enlistment.
-pub const TRANSACTION_NO_SUPERIOR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6730); // ERROR_TRANSACTION_NO_SUPERIOR
+pub const TRANSACTION_NO_SUPERIOR : ErrorCode = ErrorCode::from_constant(6730); // ERROR_TRANSACTION_NO_SUPERIOR
 
 /// The attempt to commit the Transaction completed, but it is possible that some portion of the transaction tree did not commit successfully due to heuristics.  Therefore it is possible that some data modified in the transaction may not have committed, resulting in transactional inconsistency.  If possible, check the consistency of the associated data.
-pub const HEURISTIC_DAMAGE_POSSIBLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6731); // ERROR_HEURISTIC_DAMAGE_POSSIBLE
+pub const HEURISTIC_DAMAGE_POSSIBLE : ErrorCode = ErrorCode::from_constant(6731); // ERROR_HEURISTIC_DAMAGE_POSSIBLE
 
 /// The function attempted to use a name that is reserved for use by another transaction.
-pub const TRANSACTIONAL_CONFLICT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6800); // ERROR_TRANSACTIONAL_CONFLICT
+pub const TRANSACTIONAL_CONFLICT : ErrorCode = ErrorCode::from_constant(6800); // ERROR_TRANSACTIONAL_CONFLICT
 
 /// Transaction support within the specified resource manager is not started or was shut down due to an error.
-pub const RM_NOT_ACTIVE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6801); // ERROR_RM_NOT_ACTIVE
+pub const RM_NOT_ACTIVE : ErrorCode = ErrorCode::from_constant(6801); // ERROR_RM_NOT_ACTIVE
 
 /// The metadata of the RM has been corrupted. The RM will not function.
-pub const RM_METADATA_CORRUPT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6802); // ERROR_RM_METADATA_CORRUPT
+pub const RM_METADATA_CORRUPT : ErrorCode = ErrorCode::from_constant(6802); // ERROR_RM_METADATA_CORRUPT
 
 /// The specified directory does not contain a resource manager.
-pub const DIRECTORY_NOT_RM : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6803); // ERROR_DIRECTORY_NOT_RM
+pub const DIRECTORY_NOT_RM : ErrorCode = ErrorCode::from_constant(6803); // ERROR_DIRECTORY_NOT_RM
 
 /// The remote server or share does not support transacted file operations.
-pub const TRANSACTIONS_UNSUPPORTED_REMOTE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6805); // ERROR_TRANSACTIONS_UNSUPPORTED_REMOTE
+pub const TRANSACTIONS_UNSUPPORTED_REMOTE : ErrorCode = ErrorCode::from_constant(6805); // ERROR_TRANSACTIONS_UNSUPPORTED_REMOTE
 
 /// The requested log size is invalid.
-pub const LOG_RESIZE_INVALID_SIZE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6806); // ERROR_LOG_RESIZE_INVALID_SIZE
+pub const LOG_RESIZE_INVALID_SIZE : ErrorCode = ErrorCode::from_constant(6806); // ERROR_LOG_RESIZE_INVALID_SIZE
 
 /// The object (file, stream, link) corresponding to the handle has been deleted by a Transaction Savepoint Rollback.
-pub const OBJECT_NO_LONGER_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6807); // ERROR_OBJECT_NO_LONGER_EXISTS
+pub const OBJECT_NO_LONGER_EXISTS : ErrorCode = ErrorCode::from_constant(6807); // ERROR_OBJECT_NO_LONGER_EXISTS
 
 /// The specified file miniversion was not found for this transacted file open.
-pub const STREAM_MINIVERSION_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6808); // ERROR_STREAM_MINIVERSION_NOT_FOUND
+pub const STREAM_MINIVERSION_NOT_FOUND : ErrorCode = ErrorCode::from_constant(6808); // ERROR_STREAM_MINIVERSION_NOT_FOUND
 
 /// The specified file miniversion was found but has been invalidated. Most likely cause is a transaction savepoint rollback.
-pub const STREAM_MINIVERSION_NOT_VALID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6809); // ERROR_STREAM_MINIVERSION_NOT_VALID
+pub const STREAM_MINIVERSION_NOT_VALID : ErrorCode = ErrorCode::from_constant(6809); // ERROR_STREAM_MINIVERSION_NOT_VALID
 
 /// A miniversion may only be opened in the context of the transaction that created it.
-pub const MINIVERSION_INACCESSIBLE_FROM_SPECIFIED_TRANSACTION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6810); // ERROR_MINIVERSION_INACCESSIBLE_FROM_SPECIFIED_TRANSACTION
+pub const MINIVERSION_INACCESSIBLE_FROM_SPECIFIED_TRANSACTION : ErrorCode = ErrorCode::from_constant(6810); // ERROR_MINIVERSION_INACCESSIBLE_FROM_SPECIFIED_TRANSACTION
 
 /// It is not possible to open a miniversion with modify access.
-pub const CANT_OPEN_MINIVERSION_WITH_MODIFY_INTENT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6811); // ERROR_CANT_OPEN_MINIVERSION_WITH_MODIFY_INTENT
+pub const CANT_OPEN_MINIVERSION_WITH_MODIFY_INTENT : ErrorCode = ErrorCode::from_constant(6811); // ERROR_CANT_OPEN_MINIVERSION_WITH_MODIFY_INTENT
 
 /// It is not possible to create any more miniversions for this stream.
-pub const CANT_CREATE_MORE_STREAM_MINIVERSIONS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6812); // ERROR_CANT_CREATE_MORE_STREAM_MINIVERSIONS
+pub const CANT_CREATE_MORE_STREAM_MINIVERSIONS : ErrorCode = ErrorCode::from_constant(6812); // ERROR_CANT_CREATE_MORE_STREAM_MINIVERSIONS
 
 /// The remote server sent mismatching version number or Fid for a file opened with transactions.
-pub const REMOTE_FILE_VERSION_MISMATCH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6814); // ERROR_REMOTE_FILE_VERSION_MISMATCH
+pub const REMOTE_FILE_VERSION_MISMATCH : ErrorCode = ErrorCode::from_constant(6814); // ERROR_REMOTE_FILE_VERSION_MISMATCH
 
 /// The handle has been invalidated by a transaction. The most likely cause is the presence of memory mapping on a file or an open handle when the transaction ended or rolled back to savepoint.
-pub const HANDLE_NO_LONGER_VALID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6815); // ERROR_HANDLE_NO_LONGER_VALID
+pub const HANDLE_NO_LONGER_VALID : ErrorCode = ErrorCode::from_constant(6815); // ERROR_HANDLE_NO_LONGER_VALID
 
 /// There is no transaction metadata on the file.
-pub const NO_TXF_METADATA : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6816); // ERROR_NO_TXF_METADATA
+pub const NO_TXF_METADATA : ErrorCode = ErrorCode::from_constant(6816); // ERROR_NO_TXF_METADATA
 
 /// The log data is corrupt.
-pub const LOG_CORRUPTION_DETECTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6817); // ERROR_LOG_CORRUPTION_DETECTED
+pub const LOG_CORRUPTION_DETECTED : ErrorCode = ErrorCode::from_constant(6817); // ERROR_LOG_CORRUPTION_DETECTED
 
 /// The file can't be recovered because there is a handle still open on it.
-pub const CANT_RECOVER_WITH_HANDLE_OPEN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6818); // ERROR_CANT_RECOVER_WITH_HANDLE_OPEN
+pub const CANT_RECOVER_WITH_HANDLE_OPEN : ErrorCode = ErrorCode::from_constant(6818); // ERROR_CANT_RECOVER_WITH_HANDLE_OPEN
 
 /// The transaction outcome is unavailable because the resource manager responsible for it has disconnected.
-pub const RM_DISCONNECTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6819); // ERROR_RM_DISCONNECTED
+pub const RM_DISCONNECTED : ErrorCode = ErrorCode::from_constant(6819); // ERROR_RM_DISCONNECTED
 
 /// The request was rejected because the enlistment in question is not a superior enlistment.
-pub const ENLISTMENT_NOT_SUPERIOR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6820); // ERROR_ENLISTMENT_NOT_SUPERIOR
+pub const ENLISTMENT_NOT_SUPERIOR : ErrorCode = ErrorCode::from_constant(6820); // ERROR_ENLISTMENT_NOT_SUPERIOR
 
 /// The transactional resource manager is already consistent. Recovery is not needed.
-pub const RECOVERY_NOT_NEEDED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6821); // ERROR_RECOVERY_NOT_NEEDED
+pub const RECOVERY_NOT_NEEDED : ErrorCode = ErrorCode::from_constant(6821); // ERROR_RECOVERY_NOT_NEEDED
 
 /// The transactional resource manager has already been started.
-pub const RM_ALREADY_STARTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6822); // ERROR_RM_ALREADY_STARTED
+pub const RM_ALREADY_STARTED : ErrorCode = ErrorCode::from_constant(6822); // ERROR_RM_ALREADY_STARTED
 
 /// The file cannot be opened transactionally, because its identity depends on the outcome of an unresolved transaction.
-pub const FILE_IDENTITY_NOT_PERSISTENT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6823); // ERROR_FILE_IDENTITY_NOT_PERSISTENT
+pub const FILE_IDENTITY_NOT_PERSISTENT : ErrorCode = ErrorCode::from_constant(6823); // ERROR_FILE_IDENTITY_NOT_PERSISTENT
 
 /// The operation cannot be performed because another transaction is depending on the fact that this property will not change.
-pub const CANT_BREAK_TRANSACTIONAL_DEPENDENCY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6824); // ERROR_CANT_BREAK_TRANSACTIONAL_DEPENDENCY
+pub const CANT_BREAK_TRANSACTIONAL_DEPENDENCY : ErrorCode = ErrorCode::from_constant(6824); // ERROR_CANT_BREAK_TRANSACTIONAL_DEPENDENCY
 
 /// The operation would involve a single file with two transactional resource managers and is therefore not allowed.
-pub const CANT_CROSS_RM_BOUNDARY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6825); // ERROR_CANT_CROSS_RM_BOUNDARY
+pub const CANT_CROSS_RM_BOUNDARY : ErrorCode = ErrorCode::from_constant(6825); // ERROR_CANT_CROSS_RM_BOUNDARY
 
 /// The $Txf directory must be empty for this operation to succeed.
-pub const TXF_DIR_NOT_EMPTY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6826); // ERROR_TXF_DIR_NOT_EMPTY
+pub const TXF_DIR_NOT_EMPTY : ErrorCode = ErrorCode::from_constant(6826); // ERROR_TXF_DIR_NOT_EMPTY
 
 /// The operation would leave a transactional resource manager in an inconsistent state and is therefore not allowed.
-pub const INDOUBT_TRANSACTIONS_EXIST : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6827); // ERROR_INDOUBT_TRANSACTIONS_EXIST
+pub const INDOUBT_TRANSACTIONS_EXIST : ErrorCode = ErrorCode::from_constant(6827); // ERROR_INDOUBT_TRANSACTIONS_EXIST
 
 /// The operation could not be completed because the transaction manager does not have a log.
-pub const TM_VOLATILE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6828); // ERROR_TM_VOLATILE
+pub const TM_VOLATILE : ErrorCode = ErrorCode::from_constant(6828); // ERROR_TM_VOLATILE
 
 /// A rollback could not be scheduled because a previously scheduled rollback has already executed or been queued for execution.
-pub const ROLLBACK_TIMER_EXPIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6829); // ERROR_ROLLBACK_TIMER_EXPIRED
+pub const ROLLBACK_TIMER_EXPIRED : ErrorCode = ErrorCode::from_constant(6829); // ERROR_ROLLBACK_TIMER_EXPIRED
 
 /// The transactional metadata attribute on the file or directory is corrupt and unreadable.
-pub const TXF_ATTRIBUTE_CORRUPT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6830); // ERROR_TXF_ATTRIBUTE_CORRUPT
+pub const TXF_ATTRIBUTE_CORRUPT : ErrorCode = ErrorCode::from_constant(6830); // ERROR_TXF_ATTRIBUTE_CORRUPT
 
 /// The encryption operation could not be completed because a transaction is active.
-pub const EFS_NOT_ALLOWED_IN_TRANSACTION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6831); // ERROR_EFS_NOT_ALLOWED_IN_TRANSACTION
+pub const EFS_NOT_ALLOWED_IN_TRANSACTION : ErrorCode = ErrorCode::from_constant(6831); // ERROR_EFS_NOT_ALLOWED_IN_TRANSACTION
 
 /// This object is not allowed to be opened in a transaction.
-pub const TRANSACTIONAL_OPEN_NOT_ALLOWED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6832); // ERROR_TRANSACTIONAL_OPEN_NOT_ALLOWED
+pub const TRANSACTIONAL_OPEN_NOT_ALLOWED : ErrorCode = ErrorCode::from_constant(6832); // ERROR_TRANSACTIONAL_OPEN_NOT_ALLOWED
 
 /// An attempt to create space in the transactional resource manager's log failed. The failure status has been recorded in the event log.
-pub const LOG_GROWTH_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6833); // ERROR_LOG_GROWTH_FAILED
+pub const LOG_GROWTH_FAILED : ErrorCode = ErrorCode::from_constant(6833); // ERROR_LOG_GROWTH_FAILED
 
 /// Memory mapping (creating a mapped section) a remote file under a transaction is not supported.
-pub const TRANSACTED_MAPPING_UNSUPPORTED_REMOTE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6834); // ERROR_TRANSACTED_MAPPING_UNSUPPORTED_REMOTE
+pub const TRANSACTED_MAPPING_UNSUPPORTED_REMOTE : ErrorCode = ErrorCode::from_constant(6834); // ERROR_TRANSACTED_MAPPING_UNSUPPORTED_REMOTE
 
 /// Transaction metadata is already present on this file and cannot be superseded.
-pub const TXF_METADATA_ALREADY_PRESENT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6835); // ERROR_TXF_METADATA_ALREADY_PRESENT
+pub const TXF_METADATA_ALREADY_PRESENT : ErrorCode = ErrorCode::from_constant(6835); // ERROR_TXF_METADATA_ALREADY_PRESENT
 
 /// A transaction scope could not be entered because the scope handler has not been initialized.
-pub const TRANSACTION_SCOPE_CALLBACKS_NOT_SET : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6836); // ERROR_TRANSACTION_SCOPE_CALLBACKS_NOT_SET
+pub const TRANSACTION_SCOPE_CALLBACKS_NOT_SET : ErrorCode = ErrorCode::from_constant(6836); // ERROR_TRANSACTION_SCOPE_CALLBACKS_NOT_SET
 
 /// Promotion was required in order to allow the resource manager to enlist, but the transaction was set to disallow it.
-pub const TRANSACTION_REQUIRED_PROMOTION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6837); // ERROR_TRANSACTION_REQUIRED_PROMOTION
+pub const TRANSACTION_REQUIRED_PROMOTION : ErrorCode = ErrorCode::from_constant(6837); // ERROR_TRANSACTION_REQUIRED_PROMOTION
 
 /// This file is open for modification in an unresolved transaction and may be opened for execute only by a transacted reader.
-pub const CANNOT_EXECUTE_FILE_IN_TRANSACTION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6838); // ERROR_CANNOT_EXECUTE_FILE_IN_TRANSACTION
+pub const CANNOT_EXECUTE_FILE_IN_TRANSACTION : ErrorCode = ErrorCode::from_constant(6838); // ERROR_CANNOT_EXECUTE_FILE_IN_TRANSACTION
 
 /// The request to thaw frozen transactions was ignored because transactions had not previously been frozen.
-pub const TRANSACTIONS_NOT_FROZEN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6839); // ERROR_TRANSACTIONS_NOT_FROZEN
+pub const TRANSACTIONS_NOT_FROZEN : ErrorCode = ErrorCode::from_constant(6839); // ERROR_TRANSACTIONS_NOT_FROZEN
 
 /// Transactions cannot be frozen because a freeze is already in progress.
-pub const TRANSACTION_FREEZE_IN_PROGRESS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6840); // ERROR_TRANSACTION_FREEZE_IN_PROGRESS
+pub const TRANSACTION_FREEZE_IN_PROGRESS : ErrorCode = ErrorCode::from_constant(6840); // ERROR_TRANSACTION_FREEZE_IN_PROGRESS
 
 /// The target volume is not a snapshot volume. This operation is only valid on a volume mounted as a snapshot.
-pub const NOT_SNAPSHOT_VOLUME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6841); // ERROR_NOT_SNAPSHOT_VOLUME
+pub const NOT_SNAPSHOT_VOLUME : ErrorCode = ErrorCode::from_constant(6841); // ERROR_NOT_SNAPSHOT_VOLUME
 
 /// The savepoint operation failed because files are open on the transaction. This is not permitted.
-pub const NO_SAVEPOINT_WITH_OPEN_FILES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6842); // ERROR_NO_SAVEPOINT_WITH_OPEN_FILES
+pub const NO_SAVEPOINT_WITH_OPEN_FILES : ErrorCode = ErrorCode::from_constant(6842); // ERROR_NO_SAVEPOINT_WITH_OPEN_FILES
 
 /// Windows has discovered corruption in a file, and that file has since been repaired. Data loss may have occurred.
-pub const DATA_LOST_REPAIR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6843); // ERROR_DATA_LOST_REPAIR
+pub const DATA_LOST_REPAIR : ErrorCode = ErrorCode::from_constant(6843); // ERROR_DATA_LOST_REPAIR
 
 /// The sparse operation could not be completed because a transaction is active on the file.
-pub const SPARSE_NOT_ALLOWED_IN_TRANSACTION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6844); // ERROR_SPARSE_NOT_ALLOWED_IN_TRANSACTION
+pub const SPARSE_NOT_ALLOWED_IN_TRANSACTION : ErrorCode = ErrorCode::from_constant(6844); // ERROR_SPARSE_NOT_ALLOWED_IN_TRANSACTION
 
 /// The call to create a TransactionManager object failed because the Tm Identity stored in the logfile does not match the Tm Identity that was passed in as an argument.
-pub const TM_IDENTITY_MISMATCH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6845); // ERROR_TM_IDENTITY_MISMATCH
+pub const TM_IDENTITY_MISMATCH : ErrorCode = ErrorCode::from_constant(6845); // ERROR_TM_IDENTITY_MISMATCH
 
 /// I/O was attempted on a section object that has been floated as a result of a transaction ending. There is no valid data.
-pub const FLOATED_SECTION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6846); // ERROR_FLOATED_SECTION
+pub const FLOATED_SECTION : ErrorCode = ErrorCode::from_constant(6846); // ERROR_FLOATED_SECTION
 
 /// The transactional resource manager cannot currently accept transacted work due to a transient condition such as low resources.
-pub const CANNOT_ACCEPT_TRANSACTED_WORK : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6847); // ERROR_CANNOT_ACCEPT_TRANSACTED_WORK
+pub const CANNOT_ACCEPT_TRANSACTED_WORK : ErrorCode = ErrorCode::from_constant(6847); // ERROR_CANNOT_ACCEPT_TRANSACTED_WORK
 
 /// The transactional resource manager had too many transactions outstanding that could not be aborted. The transactional resource manger has been shut down.
-pub const CANNOT_ABORT_TRANSACTIONS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6848); // ERROR_CANNOT_ABORT_TRANSACTIONS
+pub const CANNOT_ABORT_TRANSACTIONS : ErrorCode = ErrorCode::from_constant(6848); // ERROR_CANNOT_ABORT_TRANSACTIONS
 
 /// The operation could not be completed due to bad clusters on disk.
-pub const BAD_CLUSTERS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6849); // ERROR_BAD_CLUSTERS
+pub const BAD_CLUSTERS : ErrorCode = ErrorCode::from_constant(6849); // ERROR_BAD_CLUSTERS
 
 /// The compression operation could not be completed because a transaction is active on the file.
-pub const COMPRESSION_NOT_ALLOWED_IN_TRANSACTION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6850); // ERROR_COMPRESSION_NOT_ALLOWED_IN_TRANSACTION
+pub const COMPRESSION_NOT_ALLOWED_IN_TRANSACTION : ErrorCode = ErrorCode::from_constant(6850); // ERROR_COMPRESSION_NOT_ALLOWED_IN_TRANSACTION
 
 /// The operation could not be completed because the volume is dirty. Please run chkdsk and try again.
-pub const VOLUME_DIRTY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6851); // ERROR_VOLUME_DIRTY
+pub const VOLUME_DIRTY : ErrorCode = ErrorCode::from_constant(6851); // ERROR_VOLUME_DIRTY
 
 /// The link tracking operation could not be completed because a transaction is active.
-pub const NO_LINK_TRACKING_IN_TRANSACTION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6852); // ERROR_NO_LINK_TRACKING_IN_TRANSACTION
+pub const NO_LINK_TRACKING_IN_TRANSACTION : ErrorCode = ErrorCode::from_constant(6852); // ERROR_NO_LINK_TRACKING_IN_TRANSACTION
 
 /// This operation cannot be performed in a transaction.
-pub const OPERATION_NOT_SUPPORTED_IN_TRANSACTION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6853); // ERROR_OPERATION_NOT_SUPPORTED_IN_TRANSACTION
+pub const OPERATION_NOT_SUPPORTED_IN_TRANSACTION : ErrorCode = ErrorCode::from_constant(6853); // ERROR_OPERATION_NOT_SUPPORTED_IN_TRANSACTION
 
 /// The handle is no longer properly associated with its transaction.  It may have been opened in a transactional resource manager that was subsequently forced to restart.  Please close the handle and open a new one.
-pub const EXPIRED_HANDLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6854); // ERROR_EXPIRED_HANDLE
+pub const EXPIRED_HANDLE : ErrorCode = ErrorCode::from_constant(6854); // ERROR_EXPIRED_HANDLE
 
 /// The specified operation could not be performed because the resource manager is not enlisted in the transaction.
-pub const TRANSACTION_NOT_ENLISTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6855); // ERROR_TRANSACTION_NOT_ENLISTED
+pub const TRANSACTION_NOT_ENLISTED : ErrorCode = ErrorCode::from_constant(6855); // ERROR_TRANSACTION_NOT_ENLISTED
 
 /// The specified session name is invalid.
-pub const CTX_WINSTATION_NAME_INVALID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7001); // ERROR_CTX_WINSTATION_NAME_INVALID
+pub const CTX_WINSTATION_NAME_INVALID : ErrorCode = ErrorCode::from_constant(7001); // ERROR_CTX_WINSTATION_NAME_INVALID
 
 /// The specified protocol driver is invalid.
-pub const CTX_INVALID_PD : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7002); // ERROR_CTX_INVALID_PD
+pub const CTX_INVALID_PD : ErrorCode = ErrorCode::from_constant(7002); // ERROR_CTX_INVALID_PD
 
 /// The specified protocol driver was not found in the system path.
-pub const CTX_PD_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7003); // ERROR_CTX_PD_NOT_FOUND
+pub const CTX_PD_NOT_FOUND : ErrorCode = ErrorCode::from_constant(7003); // ERROR_CTX_PD_NOT_FOUND
 
 /// The specified terminal connection driver was not found in the system path.
-pub const CTX_WD_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7004); // ERROR_CTX_WD_NOT_FOUND
+pub const CTX_WD_NOT_FOUND : ErrorCode = ErrorCode::from_constant(7004); // ERROR_CTX_WD_NOT_FOUND
 
 /// A registry key for event logging could not be created for this session.
-pub const CTX_CANNOT_MAKE_EVENTLOG_ENTRY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7005); // ERROR_CTX_CANNOT_MAKE_EVENTLOG_ENTRY
+pub const CTX_CANNOT_MAKE_EVENTLOG_ENTRY : ErrorCode = ErrorCode::from_constant(7005); // ERROR_CTX_CANNOT_MAKE_EVENTLOG_ENTRY
 
 /// A service with the same name already exists on the system.
-pub const CTX_SERVICE_NAME_COLLISION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7006); // ERROR_CTX_SERVICE_NAME_COLLISION
+pub const CTX_SERVICE_NAME_COLLISION : ErrorCode = ErrorCode::from_constant(7006); // ERROR_CTX_SERVICE_NAME_COLLISION
 
 /// A close operation is pending on the session.
-pub const CTX_CLOSE_PENDING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7007); // ERROR_CTX_CLOSE_PENDING
+pub const CTX_CLOSE_PENDING : ErrorCode = ErrorCode::from_constant(7007); // ERROR_CTX_CLOSE_PENDING
 
 /// There are no free output buffers available.
-pub const CTX_NO_OUTBUF : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7008); // ERROR_CTX_NO_OUTBUF
+pub const CTX_NO_OUTBUF : ErrorCode = ErrorCode::from_constant(7008); // ERROR_CTX_NO_OUTBUF
 
 /// The MODEM.INF file was not found.
-pub const CTX_MODEM_INF_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7009); // ERROR_CTX_MODEM_INF_NOT_FOUND
+pub const CTX_MODEM_INF_NOT_FOUND : ErrorCode = ErrorCode::from_constant(7009); // ERROR_CTX_MODEM_INF_NOT_FOUND
 
 /// The modem name was not found in MODEM.INF.
-pub const CTX_INVALID_MODEMNAME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7010); // ERROR_CTX_INVALID_MODEMNAME
+pub const CTX_INVALID_MODEMNAME : ErrorCode = ErrorCode::from_constant(7010); // ERROR_CTX_INVALID_MODEMNAME
 
 /// The modem did not accept the command sent to it. Verify that the configured modem name matches the attached modem.
-pub const CTX_MODEM_RESPONSE_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7011); // ERROR_CTX_MODEM_RESPONSE_ERROR
+pub const CTX_MODEM_RESPONSE_ERROR : ErrorCode = ErrorCode::from_constant(7011); // ERROR_CTX_MODEM_RESPONSE_ERROR
 
 /// The modem did not respond to the command sent to it. Verify that the modem is properly cabled and powered on.
-pub const CTX_MODEM_RESPONSE_TIMEOUT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7012); // ERROR_CTX_MODEM_RESPONSE_TIMEOUT
+pub const CTX_MODEM_RESPONSE_TIMEOUT : ErrorCode = ErrorCode::from_constant(7012); // ERROR_CTX_MODEM_RESPONSE_TIMEOUT
 
 /// Carrier detect has failed or carrier has been dropped due to disconnect.
-pub const CTX_MODEM_RESPONSE_NO_CARRIER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7013); // ERROR_CTX_MODEM_RESPONSE_NO_CARRIER
+pub const CTX_MODEM_RESPONSE_NO_CARRIER : ErrorCode = ErrorCode::from_constant(7013); // ERROR_CTX_MODEM_RESPONSE_NO_CARRIER
 
 /// Dial tone not detected within the required time. Verify that the phone cable is properly attached and functional.
-pub const CTX_MODEM_RESPONSE_NO_DIALTONE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7014); // ERROR_CTX_MODEM_RESPONSE_NO_DIALTONE
+pub const CTX_MODEM_RESPONSE_NO_DIALTONE : ErrorCode = ErrorCode::from_constant(7014); // ERROR_CTX_MODEM_RESPONSE_NO_DIALTONE
 
 /// Busy signal detected at remote site on callback.
-pub const CTX_MODEM_RESPONSE_BUSY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7015); // ERROR_CTX_MODEM_RESPONSE_BUSY
+pub const CTX_MODEM_RESPONSE_BUSY : ErrorCode = ErrorCode::from_constant(7015); // ERROR_CTX_MODEM_RESPONSE_BUSY
 
 /// Voice detected at remote site on callback.
-pub const CTX_MODEM_RESPONSE_VOICE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7016); // ERROR_CTX_MODEM_RESPONSE_VOICE
+pub const CTX_MODEM_RESPONSE_VOICE : ErrorCode = ErrorCode::from_constant(7016); // ERROR_CTX_MODEM_RESPONSE_VOICE
 
 /// Transport driver error
-pub const CTX_TD_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7017); // ERROR_CTX_TD_ERROR
+pub const CTX_TD_ERROR : ErrorCode = ErrorCode::from_constant(7017); // ERROR_CTX_TD_ERROR
 
 /// The specified session cannot be found.
-pub const CTX_WINSTATION_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7022); // ERROR_CTX_WINSTATION_NOT_FOUND
+pub const CTX_WINSTATION_NOT_FOUND : ErrorCode = ErrorCode::from_constant(7022); // ERROR_CTX_WINSTATION_NOT_FOUND
 
 /// The specified session name is already in use.
-pub const CTX_WINSTATION_ALREADY_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7023); // ERROR_CTX_WINSTATION_ALREADY_EXISTS
+pub const CTX_WINSTATION_ALREADY_EXISTS : ErrorCode = ErrorCode::from_constant(7023); // ERROR_CTX_WINSTATION_ALREADY_EXISTS
 
 /// The task you are trying to do can't be completed because Remote Desktop Services is currently busy. Please try again in a few minutes. Other users should still be able to log on.
-pub const CTX_WINSTATION_BUSY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7024); // ERROR_CTX_WINSTATION_BUSY
+pub const CTX_WINSTATION_BUSY : ErrorCode = ErrorCode::from_constant(7024); // ERROR_CTX_WINSTATION_BUSY
 
 /// An attempt has been made to connect to a session whose video mode is not supported by the current client.
-pub const CTX_BAD_VIDEO_MODE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7025); // ERROR_CTX_BAD_VIDEO_MODE
+pub const CTX_BAD_VIDEO_MODE : ErrorCode = ErrorCode::from_constant(7025); // ERROR_CTX_BAD_VIDEO_MODE
 
 /// The application attempted to enable DOS graphics mode. DOS graphics mode is not supported.
-pub const CTX_GRAPHICS_INVALID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7035); // ERROR_CTX_GRAPHICS_INVALID
+pub const CTX_GRAPHICS_INVALID : ErrorCode = ErrorCode::from_constant(7035); // ERROR_CTX_GRAPHICS_INVALID
 
 /// Your interactive logon privilege has been disabled. Please contact your administrator.
-pub const CTX_LOGON_DISABLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7037); // ERROR_CTX_LOGON_DISABLED
+pub const CTX_LOGON_DISABLED : ErrorCode = ErrorCode::from_constant(7037); // ERROR_CTX_LOGON_DISABLED
 
 /// The requested operation can be performed only on the system console. This is most often the result of a driver or system DLL requiring direct console access.
-pub const CTX_NOT_CONSOLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7038); // ERROR_CTX_NOT_CONSOLE
+pub const CTX_NOT_CONSOLE : ErrorCode = ErrorCode::from_constant(7038); // ERROR_CTX_NOT_CONSOLE
 
 /// The client failed to respond to the server connect message.
-pub const CTX_CLIENT_QUERY_TIMEOUT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7040); // ERROR_CTX_CLIENT_QUERY_TIMEOUT
+pub const CTX_CLIENT_QUERY_TIMEOUT : ErrorCode = ErrorCode::from_constant(7040); // ERROR_CTX_CLIENT_QUERY_TIMEOUT
 
 /// Disconnecting the console session is not supported.
-pub const CTX_CONSOLE_DISCONNECT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7041); // ERROR_CTX_CONSOLE_DISCONNECT
+pub const CTX_CONSOLE_DISCONNECT : ErrorCode = ErrorCode::from_constant(7041); // ERROR_CTX_CONSOLE_DISCONNECT
 
 /// Reconnecting a disconnected session to the console is not supported.
-pub const CTX_CONSOLE_CONNECT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7042); // ERROR_CTX_CONSOLE_CONNECT
+pub const CTX_CONSOLE_CONNECT : ErrorCode = ErrorCode::from_constant(7042); // ERROR_CTX_CONSOLE_CONNECT
 
 /// The request to control another session remotely was denied.
-pub const CTX_SHADOW_DENIED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7044); // ERROR_CTX_SHADOW_DENIED
+pub const CTX_SHADOW_DENIED : ErrorCode = ErrorCode::from_constant(7044); // ERROR_CTX_SHADOW_DENIED
 
 /// The requested session access is denied.
-pub const CTX_WINSTATION_ACCESS_DENIED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7045); // ERROR_CTX_WINSTATION_ACCESS_DENIED
+pub const CTX_WINSTATION_ACCESS_DENIED : ErrorCode = ErrorCode::from_constant(7045); // ERROR_CTX_WINSTATION_ACCESS_DENIED
 
 /// The specified terminal connection driver is invalid.
-pub const CTX_INVALID_WD : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7049); // ERROR_CTX_INVALID_WD
+pub const CTX_INVALID_WD : ErrorCode = ErrorCode::from_constant(7049); // ERROR_CTX_INVALID_WD
 
 /// The requested session cannot be controlled remotely.
 /// This may be because the session is disconnected or does not currently have a user logged on.
-pub const CTX_SHADOW_INVALID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7050); // ERROR_CTX_SHADOW_INVALID
+pub const CTX_SHADOW_INVALID : ErrorCode = ErrorCode::from_constant(7050); // ERROR_CTX_SHADOW_INVALID
 
 /// The requested session is not configured to allow remote control.
-pub const CTX_SHADOW_DISABLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7051); // ERROR_CTX_SHADOW_DISABLED
+pub const CTX_SHADOW_DISABLED : ErrorCode = ErrorCode::from_constant(7051); // ERROR_CTX_SHADOW_DISABLED
 
 /// Your request to connect to this Terminal Server has been rejected. Your Terminal Server client license number is currently being used by another user. Please call your system administrator to obtain a unique license number.
-pub const CTX_CLIENT_LICENSE_IN_USE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7052); // ERROR_CTX_CLIENT_LICENSE_IN_USE
+pub const CTX_CLIENT_LICENSE_IN_USE : ErrorCode = ErrorCode::from_constant(7052); // ERROR_CTX_CLIENT_LICENSE_IN_USE
 
 /// Your request to connect to this Terminal Server has been rejected. Your Terminal Server client license number has not been entered for this copy of the Terminal Server client. Please contact your system administrator.
-pub const CTX_CLIENT_LICENSE_NOT_SET : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7053); // ERROR_CTX_CLIENT_LICENSE_NOT_SET
+pub const CTX_CLIENT_LICENSE_NOT_SET : ErrorCode = ErrorCode::from_constant(7053); // ERROR_CTX_CLIENT_LICENSE_NOT_SET
 
 /// The number of connections to this computer is limited and all connections are in use right now. Try connecting later or contact your system administrator.
-pub const CTX_LICENSE_NOT_AVAILABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7054); // ERROR_CTX_LICENSE_NOT_AVAILABLE
+pub const CTX_LICENSE_NOT_AVAILABLE : ErrorCode = ErrorCode::from_constant(7054); // ERROR_CTX_LICENSE_NOT_AVAILABLE
 
 /// The client you are using is not licensed to use this system. Your logon request is denied.
-pub const CTX_LICENSE_CLIENT_INVALID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7055); // ERROR_CTX_LICENSE_CLIENT_INVALID
+pub const CTX_LICENSE_CLIENT_INVALID : ErrorCode = ErrorCode::from_constant(7055); // ERROR_CTX_LICENSE_CLIENT_INVALID
 
 /// The system license has expired. Your logon request is denied.
-pub const CTX_LICENSE_EXPIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7056); // ERROR_CTX_LICENSE_EXPIRED
+pub const CTX_LICENSE_EXPIRED : ErrorCode = ErrorCode::from_constant(7056); // ERROR_CTX_LICENSE_EXPIRED
 
 /// Remote control could not be terminated because the specified session is not currently being remotely controlled.
-pub const CTX_SHADOW_NOT_RUNNING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7057); // ERROR_CTX_SHADOW_NOT_RUNNING
+pub const CTX_SHADOW_NOT_RUNNING : ErrorCode = ErrorCode::from_constant(7057); // ERROR_CTX_SHADOW_NOT_RUNNING
 
 /// The remote control of the console was terminated because the display mode was changed. Changing the display mode in a remote control session is not supported.
-pub const CTX_SHADOW_ENDED_BY_MODE_CHANGE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7058); // ERROR_CTX_SHADOW_ENDED_BY_MODE_CHANGE
+pub const CTX_SHADOW_ENDED_BY_MODE_CHANGE : ErrorCode = ErrorCode::from_constant(7058); // ERROR_CTX_SHADOW_ENDED_BY_MODE_CHANGE
 
 /// Activation has already been reset the maximum number of times for this installation. Your activation timer will not be cleared.
-pub const ACTIVATION_COUNT_EXCEEDED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7059); // ERROR_ACTIVATION_COUNT_EXCEEDED
+pub const ACTIVATION_COUNT_EXCEEDED : ErrorCode = ErrorCode::from_constant(7059); // ERROR_ACTIVATION_COUNT_EXCEEDED
 
 /// Remote logins are currently disabled.
-pub const CTX_WINSTATIONS_DISABLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7060); // ERROR_CTX_WINSTATIONS_DISABLED
+pub const CTX_WINSTATIONS_DISABLED : ErrorCode = ErrorCode::from_constant(7060); // ERROR_CTX_WINSTATIONS_DISABLED
 
 /// You do not have the proper encryption level to access this Session.
-pub const CTX_ENCRYPTION_LEVEL_REQUIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7061); // ERROR_CTX_ENCRYPTION_LEVEL_REQUIRED
+pub const CTX_ENCRYPTION_LEVEL_REQUIRED : ErrorCode = ErrorCode::from_constant(7061); // ERROR_CTX_ENCRYPTION_LEVEL_REQUIRED
 
 /// The user `%s`\\`%s` is currently logged on to this computer. Only the current user or an administrator can log on to this computer.
-pub const CTX_SESSION_IN_USE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7062); // ERROR_CTX_SESSION_IN_USE
+pub const CTX_SESSION_IN_USE : ErrorCode = ErrorCode::from_constant(7062); // ERROR_CTX_SESSION_IN_USE
 
 /// The user `%s`\\`%s` is already logged on to the console of this computer. You do not have permission to log in at this time. To resolve this issue, contact `%s`\\`%s` and have them log off.
-pub const CTX_NO_FORCE_LOGOFF : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7063); // ERROR_CTX_NO_FORCE_LOGOFF
+pub const CTX_NO_FORCE_LOGOFF : ErrorCode = ErrorCode::from_constant(7063); // ERROR_CTX_NO_FORCE_LOGOFF
 
 /// Unable to log you on because of an account restriction.
-pub const CTX_ACCOUNT_RESTRICTION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7064); // ERROR_CTX_ACCOUNT_RESTRICTION
+pub const CTX_ACCOUNT_RESTRICTION : ErrorCode = ErrorCode::from_constant(7064); // ERROR_CTX_ACCOUNT_RESTRICTION
 
 /// The RDP protocol component `%2` detected an error in the protocol stream and has disconnected the client.
-pub const RDP_PROTOCOL_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7065); // ERROR_RDP_PROTOCOL_ERROR
+pub const RDP_PROTOCOL_ERROR : ErrorCode = ErrorCode::from_constant(7065); // ERROR_RDP_PROTOCOL_ERROR
 
 /// The Client Drive Mapping Service Has Connected on Terminal Connection.
-pub const CTX_CDM_CONNECT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7066); // ERROR_CTX_CDM_CONNECT
+pub const CTX_CDM_CONNECT : ErrorCode = ErrorCode::from_constant(7066); // ERROR_CTX_CDM_CONNECT
 
 /// The Client Drive Mapping Service Has Disconnected on Terminal Connection.
-pub const CTX_CDM_DISCONNECT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7067); // ERROR_CTX_CDM_DISCONNECT
+pub const CTX_CDM_DISCONNECT : ErrorCode = ErrorCode::from_constant(7067); // ERROR_CTX_CDM_DISCONNECT
 
 /// The Terminal Server security layer detected an error in the protocol stream and has disconnected the client.
-pub const CTX_SECURITY_LAYER_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7068); // ERROR_CTX_SECURITY_LAYER_ERROR
+pub const CTX_SECURITY_LAYER_ERROR : ErrorCode = ErrorCode::from_constant(7068); // ERROR_CTX_SECURITY_LAYER_ERROR
 
 /// The target session is incompatible with the current session.
-pub const TS_INCOMPATIBLE_SESSIONS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7069); // ERROR_TS_INCOMPATIBLE_SESSIONS
+pub const TS_INCOMPATIBLE_SESSIONS : ErrorCode = ErrorCode::from_constant(7069); // ERROR_TS_INCOMPATIBLE_SESSIONS
 
 /// Windows can't connect to your session because a problem occurred in the Windows video subsystem. Try connecting again later, or contact the server administrator for assistance.
-pub const TS_VIDEO_SUBSYSTEM_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7070); // ERROR_TS_VIDEO_SUBSYSTEM_ERROR
+pub const TS_VIDEO_SUBSYSTEM_ERROR : ErrorCode = ErrorCode::from_constant(7070); // ERROR_TS_VIDEO_SUBSYSTEM_ERROR
 
-#[doc(hidden)] pub const DS_NOT_INSTALLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8200); // ERROR_DS_NOT_INSTALLED
-#[doc(hidden)] pub const DS_MEMBERSHIP_EVALUATED_LOCALLY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8201); // ERROR_DS_MEMBERSHIP_EVALUATED_LOCALLY
-#[doc(hidden)] pub const DS_NO_ATTRIBUTE_OR_VALUE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8202); // ERROR_DS_NO_ATTRIBUTE_OR_VALUE
-#[doc(hidden)] pub const DS_INVALID_ATTRIBUTE_SYNTAX : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8203); // ERROR_DS_INVALID_ATTRIBUTE_SYNTAX
-#[doc(hidden)] pub const DS_ATTRIBUTE_TYPE_UNDEFINED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8204); // ERROR_DS_ATTRIBUTE_TYPE_UNDEFINED
-#[doc(hidden)] pub const DS_ATTRIBUTE_OR_VALUE_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8205); // ERROR_DS_ATTRIBUTE_OR_VALUE_EXISTS
-#[doc(hidden)] pub const DS_BUSY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8206); // ERROR_DS_BUSY
-#[doc(hidden)] pub const DS_UNAVAILABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8207); // ERROR_DS_UNAVAILABLE
-#[doc(hidden)] pub const DS_NO_RIDS_ALLOCATED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8208); // ERROR_DS_NO_RIDS_ALLOCATED
-#[doc(hidden)] pub const DS_NO_MORE_RIDS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8209); // ERROR_DS_NO_MORE_RIDS
-#[doc(hidden)] pub const DS_INCORRECT_ROLE_OWNER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8210); // ERROR_DS_INCORRECT_ROLE_OWNER
-#[doc(hidden)] pub const DS_RIDMGR_INIT_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8211); // ERROR_DS_RIDMGR_INIT_ERROR
-#[doc(hidden)] pub const DS_OBJ_CLASS_VIOLATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8212); // ERROR_DS_OBJ_CLASS_VIOLATION
-#[doc(hidden)] pub const DS_CANT_ON_NON_LEAF : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8213); // ERROR_DS_CANT_ON_NON_LEAF
-#[doc(hidden)] pub const DS_CANT_ON_RDN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8214); // ERROR_DS_CANT_ON_RDN
-#[doc(hidden)] pub const DS_CANT_MOD_OBJ_CLASS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8215); // ERROR_DS_CANT_MOD_OBJ_CLASS
-#[doc(hidden)] pub const DS_CROSS_DOM_MOVE_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8216); // ERROR_DS_CROSS_DOM_MOVE_ERROR
-#[doc(hidden)] pub const DS_GC_NOT_AVAILABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8217); // ERROR_DS_GC_NOT_AVAILABLE
+#[doc(hidden)] pub const DS_NOT_INSTALLED : ErrorCode = ErrorCode::from_constant(8200); // ERROR_DS_NOT_INSTALLED
+#[doc(hidden)] pub const DS_MEMBERSHIP_EVALUATED_LOCALLY : ErrorCode = ErrorCode::from_constant(8201); // ERROR_DS_MEMBERSHIP_EVALUATED_LOCALLY
+#[doc(hidden)] pub const DS_NO_ATTRIBUTE_OR_VALUE : ErrorCode = ErrorCode::from_constant(8202); // ERROR_DS_NO_ATTRIBUTE_OR_VALUE
+#[doc(hidden)] pub const DS_INVALID_ATTRIBUTE_SYNTAX : ErrorCode = ErrorCode::from_constant(8203); // ERROR_DS_INVALID_ATTRIBUTE_SYNTAX
+#[doc(hidden)] pub const DS_ATTRIBUTE_TYPE_UNDEFINED : ErrorCode = ErrorCode::from_constant(8204); // ERROR_DS_ATTRIBUTE_TYPE_UNDEFINED
+#[doc(hidden)] pub const DS_ATTRIBUTE_OR_VALUE_EXISTS : ErrorCode = ErrorCode::from_constant(8205); // ERROR_DS_ATTRIBUTE_OR_VALUE_EXISTS
+#[doc(hidden)] pub const DS_BUSY : ErrorCode = ErrorCode::from_constant(8206); // ERROR_DS_BUSY
+#[doc(hidden)] pub const DS_UNAVAILABLE : ErrorCode = ErrorCode::from_constant(8207); // ERROR_DS_UNAVAILABLE
+#[doc(hidden)] pub const DS_NO_RIDS_ALLOCATED : ErrorCode = ErrorCode::from_constant(8208); // ERROR_DS_NO_RIDS_ALLOCATED
+#[doc(hidden)] pub const DS_NO_MORE_RIDS : ErrorCode = ErrorCode::from_constant(8209); // ERROR_DS_NO_MORE_RIDS
+#[doc(hidden)] pub const DS_INCORRECT_ROLE_OWNER : ErrorCode = ErrorCode::from_constant(8210); // ERROR_DS_INCORRECT_ROLE_OWNER
+#[doc(hidden)] pub const DS_RIDMGR_INIT_ERROR : ErrorCode = ErrorCode::from_constant(8211); // ERROR_DS_RIDMGR_INIT_ERROR
+#[doc(hidden)] pub const DS_OBJ_CLASS_VIOLATION : ErrorCode = ErrorCode::from_constant(8212); // ERROR_DS_OBJ_CLASS_VIOLATION
+#[doc(hidden)] pub const DS_CANT_ON_NON_LEAF : ErrorCode = ErrorCode::from_constant(8213); // ERROR_DS_CANT_ON_NON_LEAF
+#[doc(hidden)] pub const DS_CANT_ON_RDN : ErrorCode = ErrorCode::from_constant(8214); // ERROR_DS_CANT_ON_RDN
+#[doc(hidden)] pub const DS_CANT_MOD_OBJ_CLASS : ErrorCode = ErrorCode::from_constant(8215); // ERROR_DS_CANT_MOD_OBJ_CLASS
+#[doc(hidden)] pub const DS_CROSS_DOM_MOVE_ERROR : ErrorCode = ErrorCode::from_constant(8216); // ERROR_DS_CROSS_DOM_MOVE_ERROR
+#[doc(hidden)] pub const DS_GC_NOT_AVAILABLE : ErrorCode = ErrorCode::from_constant(8217); // ERROR_DS_GC_NOT_AVAILABLE
 
 /// The policy object is shared and can only be modified at the root.
-pub const SHARED_POLICY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8218); // ERROR_SHARED_POLICY
+pub const SHARED_POLICY : ErrorCode = ErrorCode::from_constant(8218); // ERROR_SHARED_POLICY
 
 /// The policy object does not exist.
-pub const POLICY_OBJECT_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8219); // ERROR_POLICY_OBJECT_NOT_FOUND
+pub const POLICY_OBJECT_NOT_FOUND : ErrorCode = ErrorCode::from_constant(8219); // ERROR_POLICY_OBJECT_NOT_FOUND
 
 /// The requested policy information is only in the directory service.
-pub const POLICY_ONLY_IN_DS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8220); // ERROR_POLICY_ONLY_IN_DS
+pub const POLICY_ONLY_IN_DS : ErrorCode = ErrorCode::from_constant(8220); // ERROR_POLICY_ONLY_IN_DS
 
 /// A domain controller promotion is currently active.
-pub const PROMOTION_ACTIVE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8221); // ERROR_PROMOTION_ACTIVE
+pub const PROMOTION_ACTIVE : ErrorCode = ErrorCode::from_constant(8221); // ERROR_PROMOTION_ACTIVE
 
 /// A domain controller promotion is not currently active
-pub const NO_PROMOTION_ACTIVE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8222); // ERROR_NO_PROMOTION_ACTIVE
+pub const NO_PROMOTION_ACTIVE : ErrorCode = ErrorCode::from_constant(8222); // ERROR_NO_PROMOTION_ACTIVE
 
-#[doc(hidden)] pub const DS_OPERATIONS_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8224); // ERROR_DS_OPERATIONS_ERROR
-#[doc(hidden)] pub const DS_PROTOCOL_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8225); // ERROR_DS_PROTOCOL_ERROR
-#[doc(hidden)] pub const DS_TIMELIMIT_EXCEEDED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8226); // ERROR_DS_TIMELIMIT_EXCEEDED
-#[doc(hidden)] pub const DS_SIZELIMIT_EXCEEDED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8227); // ERROR_DS_SIZELIMIT_EXCEEDED
-#[doc(hidden)] pub const DS_ADMIN_LIMIT_EXCEEDED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8228); // ERROR_DS_ADMIN_LIMIT_EXCEEDED
-#[doc(hidden)] pub const DS_COMPARE_FALSE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8229); // ERROR_DS_COMPARE_FALSE
-#[doc(hidden)] pub const DS_COMPARE_TRUE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8230); // ERROR_DS_COMPARE_TRUE
-#[doc(hidden)] pub const DS_AUTH_METHOD_NOT_SUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8231); // ERROR_DS_AUTH_METHOD_NOT_SUPPORTED
-#[doc(hidden)] pub const DS_STRONG_AUTH_REQUIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8232); // ERROR_DS_STRONG_AUTH_REQUIRED
-#[doc(hidden)] pub const DS_INAPPROPRIATE_AUTH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8233); // ERROR_DS_INAPPROPRIATE_AUTH
-#[doc(hidden)] pub const DS_AUTH_UNKNOWN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8234); // ERROR_DS_AUTH_UNKNOWN
-#[doc(hidden)] pub const DS_REFERRAL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8235); // ERROR_DS_REFERRAL
-#[doc(hidden)] pub const DS_UNAVAILABLE_CRIT_EXTENSION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8236); // ERROR_DS_UNAVAILABLE_CRIT_EXTENSION
-#[doc(hidden)] pub const DS_CONFIDENTIALITY_REQUIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8237); // ERROR_DS_CONFIDENTIALITY_REQUIRED
-#[doc(hidden)] pub const DS_INAPPROPRIATE_MATCHING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8238); // ERROR_DS_INAPPROPRIATE_MATCHING
-#[doc(hidden)] pub const DS_CONSTRAINT_VIOLATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8239); // ERROR_DS_CONSTRAINT_VIOLATION
-#[doc(hidden)] pub const DS_NO_SUCH_OBJECT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8240); // ERROR_DS_NO_SUCH_OBJECT
-#[doc(hidden)] pub const DS_ALIAS_PROBLEM : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8241); // ERROR_DS_ALIAS_PROBLEM
-#[doc(hidden)] pub const DS_INVALID_DN_SYNTAX : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8242); // ERROR_DS_INVALID_DN_SYNTAX
-#[doc(hidden)] pub const DS_IS_LEAF : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8243); // ERROR_DS_IS_LEAF
-#[doc(hidden)] pub const DS_ALIAS_DEREF_PROBLEM : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8244); // ERROR_DS_ALIAS_DEREF_PROBLEM
-#[doc(hidden)] pub const DS_UNWILLING_TO_PERFORM : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8245); // ERROR_DS_UNWILLING_TO_PERFORM
-#[doc(hidden)] pub const DS_LOOP_DETECT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8246); // ERROR_DS_LOOP_DETECT
-#[doc(hidden)] pub const DS_NAMING_VIOLATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8247); // ERROR_DS_NAMING_VIOLATION
-#[doc(hidden)] pub const DS_OBJECT_RESULTS_TOO_LARGE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8248); // ERROR_DS_OBJECT_RESULTS_TOO_LARGE
-#[doc(hidden)] pub const DS_AFFECTS_MULTIPLE_DSAS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8249); // ERROR_DS_AFFECTS_MULTIPLE_DSAS
-#[doc(hidden)] pub const DS_SERVER_DOWN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8250); // ERROR_DS_SERVER_DOWN
-#[doc(hidden)] pub const DS_LOCAL_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8251); // ERROR_DS_LOCAL_ERROR
-#[doc(hidden)] pub const DS_ENCODING_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8252); // ERROR_DS_ENCODING_ERROR
-#[doc(hidden)] pub const DS_DECODING_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8253); // ERROR_DS_DECODING_ERROR
-#[doc(hidden)] pub const DS_FILTER_UNKNOWN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8254); // ERROR_DS_FILTER_UNKNOWN
-#[doc(hidden)] pub const DS_PARAM_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8255); // ERROR_DS_PARAM_ERROR
-#[doc(hidden)] pub const DS_NOT_SUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8256); // ERROR_DS_NOT_SUPPORTED
-#[doc(hidden)] pub const DS_NO_RESULTS_RETURNED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8257); // ERROR_DS_NO_RESULTS_RETURNED
-#[doc(hidden)] pub const DS_CONTROL_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8258); // ERROR_DS_CONTROL_NOT_FOUND
-#[doc(hidden)] pub const DS_CLIENT_LOOP : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8259); // ERROR_DS_CLIENT_LOOP
-#[doc(hidden)] pub const DS_REFERRAL_LIMIT_EXCEEDED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8260); // ERROR_DS_REFERRAL_LIMIT_EXCEEDED
-#[doc(hidden)] pub const DS_SORT_CONTROL_MISSING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8261); // ERROR_DS_SORT_CONTROL_MISSING
-#[doc(hidden)] pub const DS_OFFSET_RANGE_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8262); // ERROR_DS_OFFSET_RANGE_ERROR
-#[doc(hidden)] pub const DS_RIDMGR_DISABLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8263); // ERROR_DS_RIDMGR_DISABLED
-#[doc(hidden)] pub const DS_ROOT_MUST_BE_NC : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8301); // ERROR_DS_ROOT_MUST_BE_NC
-#[doc(hidden)] pub const DS_ADD_REPLICA_INHIBITED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8302); // ERROR_DS_ADD_REPLICA_INHIBITED
-#[doc(hidden)] pub const DS_ATT_NOT_DEF_IN_SCHEMA : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8303); // ERROR_DS_ATT_NOT_DEF_IN_SCHEMA
-#[doc(hidden)] pub const DS_MAX_OBJ_SIZE_EXCEEDED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8304); // ERROR_DS_MAX_OBJ_SIZE_EXCEEDED
-#[doc(hidden)] pub const DS_OBJ_STRING_NAME_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8305); // ERROR_DS_OBJ_STRING_NAME_EXISTS
-#[doc(hidden)] pub const DS_NO_RDN_DEFINED_IN_SCHEMA : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8306); // ERROR_DS_NO_RDN_DEFINED_IN_SCHEMA
-#[doc(hidden)] pub const DS_RDN_DOESNT_MATCH_SCHEMA : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8307); // ERROR_DS_RDN_DOESNT_MATCH_SCHEMA
-#[doc(hidden)] pub const DS_NO_REQUESTED_ATTS_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8308); // ERROR_DS_NO_REQUESTED_ATTS_FOUND
-#[doc(hidden)] pub const DS_USER_BUFFER_TO_SMALL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8309); // ERROR_DS_USER_BUFFER_TO_SMALL
-#[doc(hidden)] pub const DS_ATT_IS_NOT_ON_OBJ : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8310); // ERROR_DS_ATT_IS_NOT_ON_OBJ
-#[doc(hidden)] pub const DS_ILLEGAL_MOD_OPERATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8311); // ERROR_DS_ILLEGAL_MOD_OPERATION
-#[doc(hidden)] pub const DS_OBJ_TOO_LARGE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8312); // ERROR_DS_OBJ_TOO_LARGE
-#[doc(hidden)] pub const DS_BAD_INSTANCE_TYPE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8313); // ERROR_DS_BAD_INSTANCE_TYPE
-#[doc(hidden)] pub const DS_MASTERDSA_REQUIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8314); // ERROR_DS_MASTERDSA_REQUIRED
-#[doc(hidden)] pub const DS_OBJECT_CLASS_REQUIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8315); // ERROR_DS_OBJECT_CLASS_REQUIRED
-#[doc(hidden)] pub const DS_MISSING_REQUIRED_ATT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8316); // ERROR_DS_MISSING_REQUIRED_ATT
-#[doc(hidden)] pub const DS_ATT_NOT_DEF_FOR_CLASS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8317); // ERROR_DS_ATT_NOT_DEF_FOR_CLASS
-#[doc(hidden)] pub const DS_ATT_ALREADY_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8318); // ERROR_DS_ATT_ALREADY_EXISTS
-#[doc(hidden)] pub const DS_CANT_ADD_ATT_VALUES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8320); // ERROR_DS_CANT_ADD_ATT_VALUES
-#[doc(hidden)] pub const DS_SINGLE_VALUE_CONSTRAINT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8321); // ERROR_DS_SINGLE_VALUE_CONSTRAINT
-#[doc(hidden)] pub const DS_RANGE_CONSTRAINT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8322); // ERROR_DS_RANGE_CONSTRAINT
-#[doc(hidden)] pub const DS_ATT_VAL_ALREADY_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8323); // ERROR_DS_ATT_VAL_ALREADY_EXISTS
-#[doc(hidden)] pub const DS_CANT_REM_MISSING_ATT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8324); // ERROR_DS_CANT_REM_MISSING_ATT
-#[doc(hidden)] pub const DS_CANT_REM_MISSING_ATT_VAL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8325); // ERROR_DS_CANT_REM_MISSING_ATT_VAL
-#[doc(hidden)] pub const DS_ROOT_CANT_BE_SUBREF : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8326); // ERROR_DS_ROOT_CANT_BE_SUBREF
-#[doc(hidden)] pub const DS_NO_CHAINING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8327); // ERROR_DS_NO_CHAINING
-#[doc(hidden)] pub const DS_NO_CHAINED_EVAL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8328); // ERROR_DS_NO_CHAINED_EVAL
-#[doc(hidden)] pub const DS_NO_PARENT_OBJECT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8329); // ERROR_DS_NO_PARENT_OBJECT
-#[doc(hidden)] pub const DS_PARENT_IS_AN_ALIAS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8330); // ERROR_DS_PARENT_IS_AN_ALIAS
-#[doc(hidden)] pub const DS_CANT_MIX_MASTER_AND_REPS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8331); // ERROR_DS_CANT_MIX_MASTER_AND_REPS
-#[doc(hidden)] pub const DS_CHILDREN_EXIST : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8332); // ERROR_DS_CHILDREN_EXIST
-#[doc(hidden)] pub const DS_OBJ_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8333); // ERROR_DS_OBJ_NOT_FOUND
-#[doc(hidden)] pub const DS_ALIASED_OBJ_MISSING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8334); // ERROR_DS_ALIASED_OBJ_MISSING
-#[doc(hidden)] pub const DS_BAD_NAME_SYNTAX : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8335); // ERROR_DS_BAD_NAME_SYNTAX
-#[doc(hidden)] pub const DS_ALIAS_POINTS_TO_ALIAS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8336); // ERROR_DS_ALIAS_POINTS_TO_ALIAS
-#[doc(hidden)] pub const DS_CANT_DEREF_ALIAS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8337); // ERROR_DS_CANT_DEREF_ALIAS
-#[doc(hidden)] pub const DS_OUT_OF_SCOPE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8338); // ERROR_DS_OUT_OF_SCOPE
-#[doc(hidden)] pub const DS_OBJECT_BEING_REMOVED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8339); // ERROR_DS_OBJECT_BEING_REMOVED
-#[doc(hidden)] pub const DS_CANT_DELETE_DSA_OBJ : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8340); // ERROR_DS_CANT_DELETE_DSA_OBJ
-#[doc(hidden)] pub const DS_GENERIC_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8341); // ERROR_DS_GENERIC_ERROR
-#[doc(hidden)] pub const DS_DSA_MUST_BE_INT_MASTER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8342); // ERROR_DS_DSA_MUST_BE_INT_MASTER
-#[doc(hidden)] pub const DS_CLASS_NOT_DSA : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8343); // ERROR_DS_CLASS_NOT_DSA
-#[doc(hidden)] pub const DS_INSUFF_ACCESS_RIGHTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8344); // ERROR_DS_INSUFF_ACCESS_RIGHTS
-#[doc(hidden)] pub const DS_ILLEGAL_SUPERIOR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8345); // ERROR_DS_ILLEGAL_SUPERIOR
-#[doc(hidden)] pub const DS_ATTRIBUTE_OWNED_BY_SAM : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8346); // ERROR_DS_ATTRIBUTE_OWNED_BY_SAM
-#[doc(hidden)] pub const DS_NAME_TOO_MANY_PARTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8347); // ERROR_DS_NAME_TOO_MANY_PARTS
-#[doc(hidden)] pub const DS_NAME_TOO_LONG : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8348); // ERROR_DS_NAME_TOO_LONG
-#[doc(hidden)] pub const DS_NAME_VALUE_TOO_LONG : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8349); // ERROR_DS_NAME_VALUE_TOO_LONG
-#[doc(hidden)] pub const DS_NAME_UNPARSEABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8350); // ERROR_DS_NAME_UNPARSEABLE
-#[doc(hidden)] pub const DS_NAME_TYPE_UNKNOWN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8351); // ERROR_DS_NAME_TYPE_UNKNOWN
-#[doc(hidden)] pub const DS_NOT_AN_OBJECT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8352); // ERROR_DS_NOT_AN_OBJECT
-#[doc(hidden)] pub const DS_SEC_DESC_TOO_SHORT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8353); // ERROR_DS_SEC_DESC_TOO_SHORT
-#[doc(hidden)] pub const DS_SEC_DESC_INVALID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8354); // ERROR_DS_SEC_DESC_INVALID
-#[doc(hidden)] pub const DS_NO_DELETED_NAME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8355); // ERROR_DS_NO_DELETED_NAME
-#[doc(hidden)] pub const DS_SUBREF_MUST_HAVE_PARENT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8356); // ERROR_DS_SUBREF_MUST_HAVE_PARENT
-#[doc(hidden)] pub const DS_NCNAME_MUST_BE_NC : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8357); // ERROR_DS_NCNAME_MUST_BE_NC
-#[doc(hidden)] pub const DS_CANT_ADD_SYSTEM_ONLY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8358); // ERROR_DS_CANT_ADD_SYSTEM_ONLY
-#[doc(hidden)] pub const DS_CLASS_MUST_BE_CONCRETE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8359); // ERROR_DS_CLASS_MUST_BE_CONCRETE
-#[doc(hidden)] pub const DS_INVALID_DMD : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8360); // ERROR_DS_INVALID_DMD
-#[doc(hidden)] pub const DS_OBJ_GUID_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8361); // ERROR_DS_OBJ_GUID_EXISTS
-#[doc(hidden)] pub const DS_NOT_ON_BACKLINK : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8362); // ERROR_DS_NOT_ON_BACKLINK
-#[doc(hidden)] pub const DS_NO_CROSSREF_FOR_NC : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8363); // ERROR_DS_NO_CROSSREF_FOR_NC
-#[doc(hidden)] pub const DS_SHUTTING_DOWN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8364); // ERROR_DS_SHUTTING_DOWN
-#[doc(hidden)] pub const DS_UNKNOWN_OPERATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8365); // ERROR_DS_UNKNOWN_OPERATION
-#[doc(hidden)] pub const DS_INVALID_ROLE_OWNER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8366); // ERROR_DS_INVALID_ROLE_OWNER
-#[doc(hidden)] pub const DS_COULDNT_CONTACT_FSMO : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8367); // ERROR_DS_COULDNT_CONTACT_FSMO
-#[doc(hidden)] pub const DS_CROSS_NC_DN_RENAME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8368); // ERROR_DS_CROSS_NC_DN_RENAME
-#[doc(hidden)] pub const DS_CANT_MOD_SYSTEM_ONLY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8369); // ERROR_DS_CANT_MOD_SYSTEM_ONLY
-#[doc(hidden)] pub const DS_REPLICATOR_ONLY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8370); // ERROR_DS_REPLICATOR_ONLY
-#[doc(hidden)] pub const DS_OBJ_CLASS_NOT_DEFINED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8371); // ERROR_DS_OBJ_CLASS_NOT_DEFINED
-#[doc(hidden)] pub const DS_OBJ_CLASS_NOT_SUBCLASS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8372); // ERROR_DS_OBJ_CLASS_NOT_SUBCLASS
-#[doc(hidden)] pub const DS_NAME_REFERENCE_INVALID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8373); // ERROR_DS_NAME_REFERENCE_INVALID
-#[doc(hidden)] pub const DS_CROSS_REF_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8374); // ERROR_DS_CROSS_REF_EXISTS
-#[doc(hidden)] pub const DS_CANT_DEL_MASTER_CROSSREF : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8375); // ERROR_DS_CANT_DEL_MASTER_CROSSREF
-#[doc(hidden)] pub const DS_SUBTREE_NOTIFY_NOT_NC_HEAD : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8376); // ERROR_DS_SUBTREE_NOTIFY_NOT_NC_HEAD
-#[doc(hidden)] pub const DS_NOTIFY_FILTER_TOO_COMPLEX : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8377); // ERROR_DS_NOTIFY_FILTER_TOO_COMPLEX
-#[doc(hidden)] pub const DS_DUP_RDN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8378); // ERROR_DS_DUP_RDN
-#[doc(hidden)] pub const DS_DUP_OID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8379); // ERROR_DS_DUP_OID
-#[doc(hidden)] pub const DS_DUP_MAPI_ID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8380); // ERROR_DS_DUP_MAPI_ID
-#[doc(hidden)] pub const DS_DUP_SCHEMA_ID_GUID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8381); // ERROR_DS_DUP_SCHEMA_ID_GUID
-#[doc(hidden)] pub const DS_DUP_LDAP_DISPLAY_NAME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8382); // ERROR_DS_DUP_LDAP_DISPLAY_NAME
-#[doc(hidden)] pub const DS_SEMANTIC_ATT_TEST : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8383); // ERROR_DS_SEMANTIC_ATT_TEST
-#[doc(hidden)] pub const DS_SYNTAX_MISMATCH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8384); // ERROR_DS_SYNTAX_MISMATCH
-#[doc(hidden)] pub const DS_EXISTS_IN_MUST_HAVE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8385); // ERROR_DS_EXISTS_IN_MUST_HAVE
-#[doc(hidden)] pub const DS_EXISTS_IN_MAY_HAVE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8386); // ERROR_DS_EXISTS_IN_MAY_HAVE
-#[doc(hidden)] pub const DS_NONEXISTENT_MAY_HAVE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8387); // ERROR_DS_NONEXISTENT_MAY_HAVE
-#[doc(hidden)] pub const DS_NONEXISTENT_MUST_HAVE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8388); // ERROR_DS_NONEXISTENT_MUST_HAVE
-#[doc(hidden)] pub const DS_AUX_CLS_TEST_FAIL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8389); // ERROR_DS_AUX_CLS_TEST_FAIL
-#[doc(hidden)] pub const DS_NONEXISTENT_POSS_SUP : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8390); // ERROR_DS_NONEXISTENT_POSS_SUP
-#[doc(hidden)] pub const DS_SUB_CLS_TEST_FAIL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8391); // ERROR_DS_SUB_CLS_TEST_FAIL
-#[doc(hidden)] pub const DS_BAD_RDN_ATT_ID_SYNTAX : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8392); // ERROR_DS_BAD_RDN_ATT_ID_SYNTAX
-#[doc(hidden)] pub const DS_EXISTS_IN_AUX_CLS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8393); // ERROR_DS_EXISTS_IN_AUX_CLS
-#[doc(hidden)] pub const DS_EXISTS_IN_SUB_CLS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8394); // ERROR_DS_EXISTS_IN_SUB_CLS
-#[doc(hidden)] pub const DS_EXISTS_IN_POSS_SUP : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8395); // ERROR_DS_EXISTS_IN_POSS_SUP
-#[doc(hidden)] pub const DS_RECALCSCHEMA_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8396); // ERROR_DS_RECALCSCHEMA_FAILED
-#[doc(hidden)] pub const DS_TREE_DELETE_NOT_FINISHED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8397); // ERROR_DS_TREE_DELETE_NOT_FINISHED
-#[doc(hidden)] pub const DS_CANT_DELETE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8398); // ERROR_DS_CANT_DELETE
-#[doc(hidden)] pub const DS_ATT_SCHEMA_REQ_ID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8399); // ERROR_DS_ATT_SCHEMA_REQ_ID
-#[doc(hidden)] pub const DS_BAD_ATT_SCHEMA_SYNTAX : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8400); // ERROR_DS_BAD_ATT_SCHEMA_SYNTAX
-#[doc(hidden)] pub const DS_CANT_CACHE_ATT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8401); // ERROR_DS_CANT_CACHE_ATT
-#[doc(hidden)] pub const DS_CANT_CACHE_CLASS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8402); // ERROR_DS_CANT_CACHE_CLASS
-#[doc(hidden)] pub const DS_CANT_REMOVE_ATT_CACHE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8403); // ERROR_DS_CANT_REMOVE_ATT_CACHE
-#[doc(hidden)] pub const DS_CANT_REMOVE_CLASS_CACHE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8404); // ERROR_DS_CANT_REMOVE_CLASS_CACHE
-#[doc(hidden)] pub const DS_CANT_RETRIEVE_DN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8405); // ERROR_DS_CANT_RETRIEVE_DN
-#[doc(hidden)] pub const DS_MISSING_SUPREF : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8406); // ERROR_DS_MISSING_SUPREF
-#[doc(hidden)] pub const DS_CANT_RETRIEVE_INSTANCE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8407); // ERROR_DS_CANT_RETRIEVE_INSTANCE
-#[doc(hidden)] pub const DS_CODE_INCONSISTENCY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8408); // ERROR_DS_CODE_INCONSISTENCY
-#[doc(hidden)] pub const DS_DATABASE_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8409); // ERROR_DS_DATABASE_ERROR
-#[doc(hidden)] pub const DS_GOVERNSID_MISSING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8410); // ERROR_DS_GOVERNSID_MISSING
-#[doc(hidden)] pub const DS_MISSING_EXPECTED_ATT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8411); // ERROR_DS_MISSING_EXPECTED_ATT
-#[doc(hidden)] pub const DS_NCNAME_MISSING_CR_REF : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8412); // ERROR_DS_NCNAME_MISSING_CR_REF
-#[doc(hidden)] pub const DS_SECURITY_CHECKING_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8413); // ERROR_DS_SECURITY_CHECKING_ERROR
-#[doc(hidden)] pub const DS_SCHEMA_NOT_LOADED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8414); // ERROR_DS_SCHEMA_NOT_LOADED
-#[doc(hidden)] pub const DS_SCHEMA_ALLOC_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8415); // ERROR_DS_SCHEMA_ALLOC_FAILED
-#[doc(hidden)] pub const DS_ATT_SCHEMA_REQ_SYNTAX : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8416); // ERROR_DS_ATT_SCHEMA_REQ_SYNTAX
-#[doc(hidden)] pub const DS_GCVERIFY_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8417); // ERROR_DS_GCVERIFY_ERROR
-#[doc(hidden)] pub const DS_DRA_SCHEMA_MISMATCH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8418); // ERROR_DS_DRA_SCHEMA_MISMATCH
-#[doc(hidden)] pub const DS_CANT_FIND_DSA_OBJ : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8419); // ERROR_DS_CANT_FIND_DSA_OBJ
-#[doc(hidden)] pub const DS_CANT_FIND_EXPECTED_NC : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8420); // ERROR_DS_CANT_FIND_EXPECTED_NC
-#[doc(hidden)] pub const DS_CANT_FIND_NC_IN_CACHE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8421); // ERROR_DS_CANT_FIND_NC_IN_CACHE
-#[doc(hidden)] pub const DS_CANT_RETRIEVE_CHILD : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8422); // ERROR_DS_CANT_RETRIEVE_CHILD
-#[doc(hidden)] pub const DS_SECURITY_ILLEGAL_MODIFY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8423); // ERROR_DS_SECURITY_ILLEGAL_MODIFY
-#[doc(hidden)] pub const DS_CANT_REPLACE_HIDDEN_REC : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8424); // ERROR_DS_CANT_REPLACE_HIDDEN_REC
-#[doc(hidden)] pub const DS_BAD_HIERARCHY_FILE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8425); // ERROR_DS_BAD_HIERARCHY_FILE
-#[doc(hidden)] pub const DS_BUILD_HIERARCHY_TABLE_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8426); // ERROR_DS_BUILD_HIERARCHY_TABLE_FAILED
-#[doc(hidden)] pub const DS_CONFIG_PARAM_MISSING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8427); // ERROR_DS_CONFIG_PARAM_MISSING
-#[doc(hidden)] pub const DS_COUNTING_AB_INDICES_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8428); // ERROR_DS_COUNTING_AB_INDICES_FAILED
-#[doc(hidden)] pub const DS_HIERARCHY_TABLE_MALLOC_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8429); // ERROR_DS_HIERARCHY_TABLE_MALLOC_FAILED
-#[doc(hidden)] pub const DS_INTERNAL_FAILURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8430); // ERROR_DS_INTERNAL_FAILURE
-#[doc(hidden)] pub const DS_UNKNOWN_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8431); // ERROR_DS_UNKNOWN_ERROR
-#[doc(hidden)] pub const DS_ROOT_REQUIRES_CLASS_TOP : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8432); // ERROR_DS_ROOT_REQUIRES_CLASS_TOP
-#[doc(hidden)] pub const DS_REFUSING_FSMO_ROLES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8433); // ERROR_DS_REFUSING_FSMO_ROLES
-#[doc(hidden)] pub const DS_MISSING_FSMO_SETTINGS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8434); // ERROR_DS_MISSING_FSMO_SETTINGS
-#[doc(hidden)] pub const DS_UNABLE_TO_SURRENDER_ROLES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8435); // ERROR_DS_UNABLE_TO_SURRENDER_ROLES
-#[doc(hidden)] pub const DS_DRA_GENERIC : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8436); // ERROR_DS_DRA_GENERIC
-#[doc(hidden)] pub const DS_DRA_INVALID_PARAMETER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8437); // ERROR_DS_DRA_INVALID_PARAMETER
-#[doc(hidden)] pub const DS_DRA_BUSY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8438); // ERROR_DS_DRA_BUSY
-#[doc(hidden)] pub const DS_DRA_BAD_DN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8439); // ERROR_DS_DRA_BAD_DN
-#[doc(hidden)] pub const DS_DRA_BAD_NC : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8440); // ERROR_DS_DRA_BAD_NC
-#[doc(hidden)] pub const DS_DRA_DN_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8441); // ERROR_DS_DRA_DN_EXISTS
-#[doc(hidden)] pub const DS_DRA_INTERNAL_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8442); // ERROR_DS_DRA_INTERNAL_ERROR
-#[doc(hidden)] pub const DS_DRA_INCONSISTENT_DIT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8443); // ERROR_DS_DRA_INCONSISTENT_DIT
-#[doc(hidden)] pub const DS_DRA_CONNECTION_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8444); // ERROR_DS_DRA_CONNECTION_FAILED
-#[doc(hidden)] pub const DS_DRA_BAD_INSTANCE_TYPE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8445); // ERROR_DS_DRA_BAD_INSTANCE_TYPE
-#[doc(hidden)] pub const DS_DRA_OUT_OF_MEM : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8446); // ERROR_DS_DRA_OUT_OF_MEM
-#[doc(hidden)] pub const DS_DRA_MAIL_PROBLEM : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8447); // ERROR_DS_DRA_MAIL_PROBLEM
-#[doc(hidden)] pub const DS_DRA_REF_ALREADY_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8448); // ERROR_DS_DRA_REF_ALREADY_EXISTS
-#[doc(hidden)] pub const DS_DRA_REF_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8449); // ERROR_DS_DRA_REF_NOT_FOUND
-#[doc(hidden)] pub const DS_DRA_OBJ_IS_REP_SOURCE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8450); // ERROR_DS_DRA_OBJ_IS_REP_SOURCE
-#[doc(hidden)] pub const DS_DRA_DB_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8451); // ERROR_DS_DRA_DB_ERROR
-#[doc(hidden)] pub const DS_DRA_NO_REPLICA : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8452); // ERROR_DS_DRA_NO_REPLICA
-#[doc(hidden)] pub const DS_DRA_ACCESS_DENIED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8453); // ERROR_DS_DRA_ACCESS_DENIED
-#[doc(hidden)] pub const DS_DRA_NOT_SUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8454); // ERROR_DS_DRA_NOT_SUPPORTED
-#[doc(hidden)] pub const DS_DRA_RPC_CANCELLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8455); // ERROR_DS_DRA_RPC_CANCELLED
-#[doc(hidden)] pub const DS_DRA_SOURCE_DISABLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8456); // ERROR_DS_DRA_SOURCE_DISABLED
-#[doc(hidden)] pub const DS_DRA_SINK_DISABLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8457); // ERROR_DS_DRA_SINK_DISABLED
-#[doc(hidden)] pub const DS_DRA_NAME_COLLISION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8458); // ERROR_DS_DRA_NAME_COLLISION
-#[doc(hidden)] pub const DS_DRA_SOURCE_REINSTALLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8459); // ERROR_DS_DRA_SOURCE_REINSTALLED
-#[doc(hidden)] pub const DS_DRA_MISSING_PARENT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8460); // ERROR_DS_DRA_MISSING_PARENT
-#[doc(hidden)] pub const DS_DRA_PREEMPTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8461); // ERROR_DS_DRA_PREEMPTED
-#[doc(hidden)] pub const DS_DRA_ABANDON_SYNC : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8462); // ERROR_DS_DRA_ABANDON_SYNC
-#[doc(hidden)] pub const DS_DRA_SHUTDOWN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8463); // ERROR_DS_DRA_SHUTDOWN
-#[doc(hidden)] pub const DS_DRA_INCOMPATIBLE_PARTIAL_SET : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8464); // ERROR_DS_DRA_INCOMPATIBLE_PARTIAL_SET
-#[doc(hidden)] pub const DS_DRA_SOURCE_IS_PARTIAL_REPLICA : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8465); // ERROR_DS_DRA_SOURCE_IS_PARTIAL_REPLICA
-#[doc(hidden)] pub const DS_DRA_EXTN_CONNECTION_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8466); // ERROR_DS_DRA_EXTN_CONNECTION_FAILED
-#[doc(hidden)] pub const DS_INSTALL_SCHEMA_MISMATCH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8467); // ERROR_DS_INSTALL_SCHEMA_MISMATCH
-#[doc(hidden)] pub const DS_DUP_LINK_ID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8468); // ERROR_DS_DUP_LINK_ID
-#[doc(hidden)] pub const DS_NAME_ERROR_RESOLVING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8469); // ERROR_DS_NAME_ERROR_RESOLVING
-#[doc(hidden)] pub const DS_NAME_ERROR_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8470); // ERROR_DS_NAME_ERROR_NOT_FOUND
-#[doc(hidden)] pub const DS_NAME_ERROR_NOT_UNIQUE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8471); // ERROR_DS_NAME_ERROR_NOT_UNIQUE
-#[doc(hidden)] pub const DS_NAME_ERROR_NO_MAPPING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8472); // ERROR_DS_NAME_ERROR_NO_MAPPING
-#[doc(hidden)] pub const DS_NAME_ERROR_DOMAIN_ONLY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8473); // ERROR_DS_NAME_ERROR_DOMAIN_ONLY
-#[doc(hidden)] pub const DS_NAME_ERROR_NO_SYNTACTICAL_MAPPING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8474); // ERROR_DS_NAME_ERROR_NO_SYNTACTICAL_MAPPING
-#[doc(hidden)] pub const DS_CONSTRUCTED_ATT_MOD : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8475); // ERROR_DS_CONSTRUCTED_ATT_MOD
-#[doc(hidden)] pub const DS_WRONG_OM_OBJ_CLASS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8476); // ERROR_DS_WRONG_OM_OBJ_CLASS
-#[doc(hidden)] pub const DS_DRA_REPL_PENDING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8477); // ERROR_DS_DRA_REPL_PENDING
-#[doc(hidden)] pub const DS_DS_REQUIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8478); // ERROR_DS_DS_REQUIRED
-#[doc(hidden)] pub const DS_INVALID_LDAP_DISPLAY_NAME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8479); // ERROR_DS_INVALID_LDAP_DISPLAY_NAME
-#[doc(hidden)] pub const DS_NON_BASE_SEARCH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8480); // ERROR_DS_NON_BASE_SEARCH
-#[doc(hidden)] pub const DS_CANT_RETRIEVE_ATTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8481); // ERROR_DS_CANT_RETRIEVE_ATTS
-#[doc(hidden)] pub const DS_BACKLINK_WITHOUT_LINK : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8482); // ERROR_DS_BACKLINK_WITHOUT_LINK
-#[doc(hidden)] pub const DS_EPOCH_MISMATCH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8483); // ERROR_DS_EPOCH_MISMATCH
-#[doc(hidden)] pub const DS_SRC_NAME_MISMATCH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8484); // ERROR_DS_SRC_NAME_MISMATCH
-#[doc(hidden)] pub const DS_SRC_AND_DST_NC_IDENTICAL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8485); // ERROR_DS_SRC_AND_DST_NC_IDENTICAL
-#[doc(hidden)] pub const DS_DST_NC_MISMATCH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8486); // ERROR_DS_DST_NC_MISMATCH
-#[doc(hidden)] pub const DS_NOT_AUTHORITIVE_FOR_DST_NC : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8487); // ERROR_DS_NOT_AUTHORITIVE_FOR_DST_NC
-#[doc(hidden)] pub const DS_SRC_GUID_MISMATCH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8488); // ERROR_DS_SRC_GUID_MISMATCH
-#[doc(hidden)] pub const DS_CANT_MOVE_DELETED_OBJECT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8489); // ERROR_DS_CANT_MOVE_DELETED_OBJECT
-#[doc(hidden)] pub const DS_PDC_OPERATION_IN_PROGRESS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8490); // ERROR_DS_PDC_OPERATION_IN_PROGRESS
-#[doc(hidden)] pub const DS_CROSS_DOMAIN_CLEANUP_REQD : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8491); // ERROR_DS_CROSS_DOMAIN_CLEANUP_REQD
-#[doc(hidden)] pub const DS_ILLEGAL_XDOM_MOVE_OPERATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8492); // ERROR_DS_ILLEGAL_XDOM_MOVE_OPERATION
-#[doc(hidden)] pub const DS_CANT_WITH_ACCT_GROUP_MEMBERSHPS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8493); // ERROR_DS_CANT_WITH_ACCT_GROUP_MEMBERSHPS
-#[doc(hidden)] pub const DS_NC_MUST_HAVE_NC_PARENT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8494); // ERROR_DS_NC_MUST_HAVE_NC_PARENT
-#[doc(hidden)] pub const DS_CR_IMPOSSIBLE_TO_VALIDATE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8495); // ERROR_DS_CR_IMPOSSIBLE_TO_VALIDATE
-#[doc(hidden)] pub const DS_DST_DOMAIN_NOT_NATIVE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8496); // ERROR_DS_DST_DOMAIN_NOT_NATIVE
-#[doc(hidden)] pub const DS_MISSING_INFRASTRUCTURE_CONTAINER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8497); // ERROR_DS_MISSING_INFRASTRUCTURE_CONTAINER
-#[doc(hidden)] pub const DS_CANT_MOVE_ACCOUNT_GROUP : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8498); // ERROR_DS_CANT_MOVE_ACCOUNT_GROUP
-#[doc(hidden)] pub const DS_CANT_MOVE_RESOURCE_GROUP : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8499); // ERROR_DS_CANT_MOVE_RESOURCE_GROUP
-#[doc(hidden)] pub const DS_INVALID_SEARCH_FLAG : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8500); // ERROR_DS_INVALID_SEARCH_FLAG
-#[doc(hidden)] pub const DS_NO_TREE_DELETE_ABOVE_NC : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8501); // ERROR_DS_NO_TREE_DELETE_ABOVE_NC
-#[doc(hidden)] pub const DS_COULDNT_LOCK_TREE_FOR_DELETE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8502); // ERROR_DS_COULDNT_LOCK_TREE_FOR_DELETE
-#[doc(hidden)] pub const DS_COULDNT_IDENTIFY_OBJECTS_FOR_TREE_DELETE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8503); // ERROR_DS_COULDNT_IDENTIFY_OBJECTS_FOR_TREE_DELETE
-#[doc(hidden)] pub const DS_SAM_INIT_FAILURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8504); // ERROR_DS_SAM_INIT_FAILURE
-#[doc(hidden)] pub const DS_SENSITIVE_GROUP_VIOLATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8505); // ERROR_DS_SENSITIVE_GROUP_VIOLATION
-#[doc(hidden)] pub const DS_CANT_MOD_PRIMARYGROUPID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8506); // ERROR_DS_CANT_MOD_PRIMARYGROUPID
-#[doc(hidden)] pub const DS_ILLEGAL_BASE_SCHEMA_MOD : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8507); // ERROR_DS_ILLEGAL_BASE_SCHEMA_MOD
-#[doc(hidden)] pub const DS_NONSAFE_SCHEMA_CHANGE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8508); // ERROR_DS_NONSAFE_SCHEMA_CHANGE
-#[doc(hidden)] pub const DS_SCHEMA_UPDATE_DISALLOWED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8509); // ERROR_DS_SCHEMA_UPDATE_DISALLOWED
-#[doc(hidden)] pub const DS_CANT_CREATE_UNDER_SCHEMA : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8510); // ERROR_DS_CANT_CREATE_UNDER_SCHEMA
-#[doc(hidden)] pub const DS_INSTALL_NO_SRC_SCH_VERSION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8511); // ERROR_DS_INSTALL_NO_SRC_SCH_VERSION
-#[doc(hidden)] pub const DS_INSTALL_NO_SCH_VERSION_IN_INIFILE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8512); // ERROR_DS_INSTALL_NO_SCH_VERSION_IN_INIFILE
-#[doc(hidden)] pub const DS_INVALID_GROUP_TYPE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8513); // ERROR_DS_INVALID_GROUP_TYPE
-#[doc(hidden)] pub const DS_NO_NEST_GLOBALGROUP_IN_MIXEDDOMAIN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8514); // ERROR_DS_NO_NEST_GLOBALGROUP_IN_MIXEDDOMAIN
-#[doc(hidden)] pub const DS_NO_NEST_LOCALGROUP_IN_MIXEDDOMAIN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8515); // ERROR_DS_NO_NEST_LOCALGROUP_IN_MIXEDDOMAIN
-#[doc(hidden)] pub const DS_GLOBAL_CANT_HAVE_LOCAL_MEMBER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8516); // ERROR_DS_GLOBAL_CANT_HAVE_LOCAL_MEMBER
-#[doc(hidden)] pub const DS_GLOBAL_CANT_HAVE_UNIVERSAL_MEMBER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8517); // ERROR_DS_GLOBAL_CANT_HAVE_UNIVERSAL_MEMBER
-#[doc(hidden)] pub const DS_UNIVERSAL_CANT_HAVE_LOCAL_MEMBER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8518); // ERROR_DS_UNIVERSAL_CANT_HAVE_LOCAL_MEMBER
-#[doc(hidden)] pub const DS_GLOBAL_CANT_HAVE_CROSSDOMAIN_MEMBER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8519); // ERROR_DS_GLOBAL_CANT_HAVE_CROSSDOMAIN_MEMBER
-#[doc(hidden)] pub const DS_LOCAL_CANT_HAVE_CROSSDOMAIN_LOCAL_MEMBER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8520); // ERROR_DS_LOCAL_CANT_HAVE_CROSSDOMAIN_LOCAL_MEMBER
-#[doc(hidden)] pub const DS_HAVE_PRIMARY_MEMBERS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8521); // ERROR_DS_HAVE_PRIMARY_MEMBERS
-#[doc(hidden)] pub const DS_STRING_SD_CONVERSION_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8522); // ERROR_DS_STRING_SD_CONVERSION_FAILED
-#[doc(hidden)] pub const DS_NAMING_MASTER_GC : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8523); // ERROR_DS_NAMING_MASTER_GC
-#[doc(hidden)] pub const DS_DNS_LOOKUP_FAILURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8524); // ERROR_DS_DNS_LOOKUP_FAILURE
-#[doc(hidden)] pub const DS_COULDNT_UPDATE_SPNS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8525); // ERROR_DS_COULDNT_UPDATE_SPNS
-#[doc(hidden)] pub const DS_CANT_RETRIEVE_SD : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8526); // ERROR_DS_CANT_RETRIEVE_SD
-#[doc(hidden)] pub const DS_KEY_NOT_UNIQUE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8527); // ERROR_DS_KEY_NOT_UNIQUE
-#[doc(hidden)] pub const DS_WRONG_LINKED_ATT_SYNTAX : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8528); // ERROR_DS_WRONG_LINKED_ATT_SYNTAX
-#[doc(hidden)] pub const DS_SAM_NEED_BOOTKEY_PASSWORD : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8529); // ERROR_DS_SAM_NEED_BOOTKEY_PASSWORD
-#[doc(hidden)] pub const DS_SAM_NEED_BOOTKEY_FLOPPY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8530); // ERROR_DS_SAM_NEED_BOOTKEY_FLOPPY
-#[doc(hidden)] pub const DS_CANT_START : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8531); // ERROR_DS_CANT_START
-#[doc(hidden)] pub const DS_INIT_FAILURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8532); // ERROR_DS_INIT_FAILURE
-#[doc(hidden)] pub const DS_NO_PKT_PRIVACY_ON_CONNECTION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8533); // ERROR_DS_NO_PKT_PRIVACY_ON_CONNECTION
-#[doc(hidden)] pub const DS_SOURCE_DOMAIN_IN_FOREST : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8534); // ERROR_DS_SOURCE_DOMAIN_IN_FOREST
-#[doc(hidden)] pub const DS_DESTINATION_DOMAIN_NOT_IN_FOREST : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8535); // ERROR_DS_DESTINATION_DOMAIN_NOT_IN_FOREST
-#[doc(hidden)] pub const DS_DESTINATION_AUDITING_NOT_ENABLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8536); // ERROR_DS_DESTINATION_AUDITING_NOT_ENABLED
-#[doc(hidden)] pub const DS_CANT_FIND_DC_FOR_SRC_DOMAIN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8537); // ERROR_DS_CANT_FIND_DC_FOR_SRC_DOMAIN
-#[doc(hidden)] pub const DS_SRC_OBJ_NOT_GROUP_OR_USER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8538); // ERROR_DS_SRC_OBJ_NOT_GROUP_OR_USER
-#[doc(hidden)] pub const DS_SRC_SID_EXISTS_IN_FOREST : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8539); // ERROR_DS_SRC_SID_EXISTS_IN_FOREST
-#[doc(hidden)] pub const DS_SRC_AND_DST_OBJECT_CLASS_MISMATCH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8540); // ERROR_DS_SRC_AND_DST_OBJECT_CLASS_MISMATCH
+#[doc(hidden)] pub const DS_OPERATIONS_ERROR : ErrorCode = ErrorCode::from_constant(8224); // ERROR_DS_OPERATIONS_ERROR
+#[doc(hidden)] pub const DS_PROTOCOL_ERROR : ErrorCode = ErrorCode::from_constant(8225); // ERROR_DS_PROTOCOL_ERROR
+#[doc(hidden)] pub const DS_TIMELIMIT_EXCEEDED : ErrorCode = ErrorCode::from_constant(8226); // ERROR_DS_TIMELIMIT_EXCEEDED
+#[doc(hidden)] pub const DS_SIZELIMIT_EXCEEDED : ErrorCode = ErrorCode::from_constant(8227); // ERROR_DS_SIZELIMIT_EXCEEDED
+#[doc(hidden)] pub const DS_ADMIN_LIMIT_EXCEEDED : ErrorCode = ErrorCode::from_constant(8228); // ERROR_DS_ADMIN_LIMIT_EXCEEDED
+#[doc(hidden)] pub const DS_COMPARE_FALSE : ErrorCode = ErrorCode::from_constant(8229); // ERROR_DS_COMPARE_FALSE
+#[doc(hidden)] pub const DS_COMPARE_TRUE : ErrorCode = ErrorCode::from_constant(8230); // ERROR_DS_COMPARE_TRUE
+#[doc(hidden)] pub const DS_AUTH_METHOD_NOT_SUPPORTED : ErrorCode = ErrorCode::from_constant(8231); // ERROR_DS_AUTH_METHOD_NOT_SUPPORTED
+#[doc(hidden)] pub const DS_STRONG_AUTH_REQUIRED : ErrorCode = ErrorCode::from_constant(8232); // ERROR_DS_STRONG_AUTH_REQUIRED
+#[doc(hidden)] pub const DS_INAPPROPRIATE_AUTH : ErrorCode = ErrorCode::from_constant(8233); // ERROR_DS_INAPPROPRIATE_AUTH
+#[doc(hidden)] pub const DS_AUTH_UNKNOWN : ErrorCode = ErrorCode::from_constant(8234); // ERROR_DS_AUTH_UNKNOWN
+#[doc(hidden)] pub const DS_REFERRAL : ErrorCode = ErrorCode::from_constant(8235); // ERROR_DS_REFERRAL
+#[doc(hidden)] pub const DS_UNAVAILABLE_CRIT_EXTENSION : ErrorCode = ErrorCode::from_constant(8236); // ERROR_DS_UNAVAILABLE_CRIT_EXTENSION
+#[doc(hidden)] pub const DS_CONFIDENTIALITY_REQUIRED : ErrorCode = ErrorCode::from_constant(8237); // ERROR_DS_CONFIDENTIALITY_REQUIRED
+#[doc(hidden)] pub const DS_INAPPROPRIATE_MATCHING : ErrorCode = ErrorCode::from_constant(8238); // ERROR_DS_INAPPROPRIATE_MATCHING
+#[doc(hidden)] pub const DS_CONSTRAINT_VIOLATION : ErrorCode = ErrorCode::from_constant(8239); // ERROR_DS_CONSTRAINT_VIOLATION
+#[doc(hidden)] pub const DS_NO_SUCH_OBJECT : ErrorCode = ErrorCode::from_constant(8240); // ERROR_DS_NO_SUCH_OBJECT
+#[doc(hidden)] pub const DS_ALIAS_PROBLEM : ErrorCode = ErrorCode::from_constant(8241); // ERROR_DS_ALIAS_PROBLEM
+#[doc(hidden)] pub const DS_INVALID_DN_SYNTAX : ErrorCode = ErrorCode::from_constant(8242); // ERROR_DS_INVALID_DN_SYNTAX
+#[doc(hidden)] pub const DS_IS_LEAF : ErrorCode = ErrorCode::from_constant(8243); // ERROR_DS_IS_LEAF
+#[doc(hidden)] pub const DS_ALIAS_DEREF_PROBLEM : ErrorCode = ErrorCode::from_constant(8244); // ERROR_DS_ALIAS_DEREF_PROBLEM
+#[doc(hidden)] pub const DS_UNWILLING_TO_PERFORM : ErrorCode = ErrorCode::from_constant(8245); // ERROR_DS_UNWILLING_TO_PERFORM
+#[doc(hidden)] pub const DS_LOOP_DETECT : ErrorCode = ErrorCode::from_constant(8246); // ERROR_DS_LOOP_DETECT
+#[doc(hidden)] pub const DS_NAMING_VIOLATION : ErrorCode = ErrorCode::from_constant(8247); // ERROR_DS_NAMING_VIOLATION
+#[doc(hidden)] pub const DS_OBJECT_RESULTS_TOO_LARGE : ErrorCode = ErrorCode::from_constant(8248); // ERROR_DS_OBJECT_RESULTS_TOO_LARGE
+#[doc(hidden)] pub const DS_AFFECTS_MULTIPLE_DSAS : ErrorCode = ErrorCode::from_constant(8249); // ERROR_DS_AFFECTS_MULTIPLE_DSAS
+#[doc(hidden)] pub const DS_SERVER_DOWN : ErrorCode = ErrorCode::from_constant(8250); // ERROR_DS_SERVER_DOWN
+#[doc(hidden)] pub const DS_LOCAL_ERROR : ErrorCode = ErrorCode::from_constant(8251); // ERROR_DS_LOCAL_ERROR
+#[doc(hidden)] pub const DS_ENCODING_ERROR : ErrorCode = ErrorCode::from_constant(8252); // ERROR_DS_ENCODING_ERROR
+#[doc(hidden)] pub const DS_DECODING_ERROR : ErrorCode = ErrorCode::from_constant(8253); // ERROR_DS_DECODING_ERROR
+#[doc(hidden)] pub const DS_FILTER_UNKNOWN : ErrorCode = ErrorCode::from_constant(8254); // ERROR_DS_FILTER_UNKNOWN
+#[doc(hidden)] pub const DS_PARAM_ERROR : ErrorCode = ErrorCode::from_constant(8255); // ERROR_DS_PARAM_ERROR
+#[doc(hidden)] pub const DS_NOT_SUPPORTED : ErrorCode = ErrorCode::from_constant(8256); // ERROR_DS_NOT_SUPPORTED
+#[doc(hidden)] pub const DS_NO_RESULTS_RETURNED : ErrorCode = ErrorCode::from_constant(8257); // ERROR_DS_NO_RESULTS_RETURNED
+#[doc(hidden)] pub const DS_CONTROL_NOT_FOUND : ErrorCode = ErrorCode::from_constant(8258); // ERROR_DS_CONTROL_NOT_FOUND
+#[doc(hidden)] pub const DS_CLIENT_LOOP : ErrorCode = ErrorCode::from_constant(8259); // ERROR_DS_CLIENT_LOOP
+#[doc(hidden)] pub const DS_REFERRAL_LIMIT_EXCEEDED : ErrorCode = ErrorCode::from_constant(8260); // ERROR_DS_REFERRAL_LIMIT_EXCEEDED
+#[doc(hidden)] pub const DS_SORT_CONTROL_MISSING : ErrorCode = ErrorCode::from_constant(8261); // ERROR_DS_SORT_CONTROL_MISSING
+#[doc(hidden)] pub const DS_OFFSET_RANGE_ERROR : ErrorCode = ErrorCode::from_constant(8262); // ERROR_DS_OFFSET_RANGE_ERROR
+#[doc(hidden)] pub const DS_RIDMGR_DISABLED : ErrorCode = ErrorCode::from_constant(8263); // ERROR_DS_RIDMGR_DISABLED
+#[doc(hidden)] pub const DS_ROOT_MUST_BE_NC : ErrorCode = ErrorCode::from_constant(8301); // ERROR_DS_ROOT_MUST_BE_NC
+#[doc(hidden)] pub const DS_ADD_REPLICA_INHIBITED : ErrorCode = ErrorCode::from_constant(8302); // ERROR_DS_ADD_REPLICA_INHIBITED
+#[doc(hidden)] pub const DS_ATT_NOT_DEF_IN_SCHEMA : ErrorCode = ErrorCode::from_constant(8303); // ERROR_DS_ATT_NOT_DEF_IN_SCHEMA
+#[doc(hidden)] pub const DS_MAX_OBJ_SIZE_EXCEEDED : ErrorCode = ErrorCode::from_constant(8304); // ERROR_DS_MAX_OBJ_SIZE_EXCEEDED
+#[doc(hidden)] pub const DS_OBJ_STRING_NAME_EXISTS : ErrorCode = ErrorCode::from_constant(8305); // ERROR_DS_OBJ_STRING_NAME_EXISTS
+#[doc(hidden)] pub const DS_NO_RDN_DEFINED_IN_SCHEMA : ErrorCode = ErrorCode::from_constant(8306); // ERROR_DS_NO_RDN_DEFINED_IN_SCHEMA
+#[doc(hidden)] pub const DS_RDN_DOESNT_MATCH_SCHEMA : ErrorCode = ErrorCode::from_constant(8307); // ERROR_DS_RDN_DOESNT_MATCH_SCHEMA
+#[doc(hidden)] pub const DS_NO_REQUESTED_ATTS_FOUND : ErrorCode = ErrorCode::from_constant(8308); // ERROR_DS_NO_REQUESTED_ATTS_FOUND
+#[doc(hidden)] pub const DS_USER_BUFFER_TO_SMALL : ErrorCode = ErrorCode::from_constant(8309); // ERROR_DS_USER_BUFFER_TO_SMALL
+#[doc(hidden)] pub const DS_ATT_IS_NOT_ON_OBJ : ErrorCode = ErrorCode::from_constant(8310); // ERROR_DS_ATT_IS_NOT_ON_OBJ
+#[doc(hidden)] pub const DS_ILLEGAL_MOD_OPERATION : ErrorCode = ErrorCode::from_constant(8311); // ERROR_DS_ILLEGAL_MOD_OPERATION
+#[doc(hidden)] pub const DS_OBJ_TOO_LARGE : ErrorCode = ErrorCode::from_constant(8312); // ERROR_DS_OBJ_TOO_LARGE
+#[doc(hidden)] pub const DS_BAD_INSTANCE_TYPE : ErrorCode = ErrorCode::from_constant(8313); // ERROR_DS_BAD_INSTANCE_TYPE
+#[doc(hidden)] pub const DS_MASTERDSA_REQUIRED : ErrorCode = ErrorCode::from_constant(8314); // ERROR_DS_MASTERDSA_REQUIRED
+#[doc(hidden)] pub const DS_OBJECT_CLASS_REQUIRED : ErrorCode = ErrorCode::from_constant(8315); // ERROR_DS_OBJECT_CLASS_REQUIRED
+#[doc(hidden)] pub const DS_MISSING_REQUIRED_ATT : ErrorCode = ErrorCode::from_constant(8316); // ERROR_DS_MISSING_REQUIRED_ATT
+#[doc(hidden)] pub const DS_ATT_NOT_DEF_FOR_CLASS : ErrorCode = ErrorCode::from_constant(8317); // ERROR_DS_ATT_NOT_DEF_FOR_CLASS
+#[doc(hidden)] pub const DS_ATT_ALREADY_EXISTS : ErrorCode = ErrorCode::from_constant(8318); // ERROR_DS_ATT_ALREADY_EXISTS
+#[doc(hidden)] pub const DS_CANT_ADD_ATT_VALUES : ErrorCode = ErrorCode::from_constant(8320); // ERROR_DS_CANT_ADD_ATT_VALUES
+#[doc(hidden)] pub const DS_SINGLE_VALUE_CONSTRAINT : ErrorCode = ErrorCode::from_constant(8321); // ERROR_DS_SINGLE_VALUE_CONSTRAINT
+#[doc(hidden)] pub const DS_RANGE_CONSTRAINT : ErrorCode = ErrorCode::from_constant(8322); // ERROR_DS_RANGE_CONSTRAINT
+#[doc(hidden)] pub const DS_ATT_VAL_ALREADY_EXISTS : ErrorCode = ErrorCode::from_constant(8323); // ERROR_DS_ATT_VAL_ALREADY_EXISTS
+#[doc(hidden)] pub const DS_CANT_REM_MISSING_ATT : ErrorCode = ErrorCode::from_constant(8324); // ERROR_DS_CANT_REM_MISSING_ATT
+#[doc(hidden)] pub const DS_CANT_REM_MISSING_ATT_VAL : ErrorCode = ErrorCode::from_constant(8325); // ERROR_DS_CANT_REM_MISSING_ATT_VAL
+#[doc(hidden)] pub const DS_ROOT_CANT_BE_SUBREF : ErrorCode = ErrorCode::from_constant(8326); // ERROR_DS_ROOT_CANT_BE_SUBREF
+#[doc(hidden)] pub const DS_NO_CHAINING : ErrorCode = ErrorCode::from_constant(8327); // ERROR_DS_NO_CHAINING
+#[doc(hidden)] pub const DS_NO_CHAINED_EVAL : ErrorCode = ErrorCode::from_constant(8328); // ERROR_DS_NO_CHAINED_EVAL
+#[doc(hidden)] pub const DS_NO_PARENT_OBJECT : ErrorCode = ErrorCode::from_constant(8329); // ERROR_DS_NO_PARENT_OBJECT
+#[doc(hidden)] pub const DS_PARENT_IS_AN_ALIAS : ErrorCode = ErrorCode::from_constant(8330); // ERROR_DS_PARENT_IS_AN_ALIAS
+#[doc(hidden)] pub const DS_CANT_MIX_MASTER_AND_REPS : ErrorCode = ErrorCode::from_constant(8331); // ERROR_DS_CANT_MIX_MASTER_AND_REPS
+#[doc(hidden)] pub const DS_CHILDREN_EXIST : ErrorCode = ErrorCode::from_constant(8332); // ERROR_DS_CHILDREN_EXIST
+#[doc(hidden)] pub const DS_OBJ_NOT_FOUND : ErrorCode = ErrorCode::from_constant(8333); // ERROR_DS_OBJ_NOT_FOUND
+#[doc(hidden)] pub const DS_ALIASED_OBJ_MISSING : ErrorCode = ErrorCode::from_constant(8334); // ERROR_DS_ALIASED_OBJ_MISSING
+#[doc(hidden)] pub const DS_BAD_NAME_SYNTAX : ErrorCode = ErrorCode::from_constant(8335); // ERROR_DS_BAD_NAME_SYNTAX
+#[doc(hidden)] pub const DS_ALIAS_POINTS_TO_ALIAS : ErrorCode = ErrorCode::from_constant(8336); // ERROR_DS_ALIAS_POINTS_TO_ALIAS
+#[doc(hidden)] pub const DS_CANT_DEREF_ALIAS : ErrorCode = ErrorCode::from_constant(8337); // ERROR_DS_CANT_DEREF_ALIAS
+#[doc(hidden)] pub const DS_OUT_OF_SCOPE : ErrorCode = ErrorCode::from_constant(8338); // ERROR_DS_OUT_OF_SCOPE
+#[doc(hidden)] pub const DS_OBJECT_BEING_REMOVED : ErrorCode = ErrorCode::from_constant(8339); // ERROR_DS_OBJECT_BEING_REMOVED
+#[doc(hidden)] pub const DS_CANT_DELETE_DSA_OBJ : ErrorCode = ErrorCode::from_constant(8340); // ERROR_DS_CANT_DELETE_DSA_OBJ
+#[doc(hidden)] pub const DS_GENERIC_ERROR : ErrorCode = ErrorCode::from_constant(8341); // ERROR_DS_GENERIC_ERROR
+#[doc(hidden)] pub const DS_DSA_MUST_BE_INT_MASTER : ErrorCode = ErrorCode::from_constant(8342); // ERROR_DS_DSA_MUST_BE_INT_MASTER
+#[doc(hidden)] pub const DS_CLASS_NOT_DSA : ErrorCode = ErrorCode::from_constant(8343); // ERROR_DS_CLASS_NOT_DSA
+#[doc(hidden)] pub const DS_INSUFF_ACCESS_RIGHTS : ErrorCode = ErrorCode::from_constant(8344); // ERROR_DS_INSUFF_ACCESS_RIGHTS
+#[doc(hidden)] pub const DS_ILLEGAL_SUPERIOR : ErrorCode = ErrorCode::from_constant(8345); // ERROR_DS_ILLEGAL_SUPERIOR
+#[doc(hidden)] pub const DS_ATTRIBUTE_OWNED_BY_SAM : ErrorCode = ErrorCode::from_constant(8346); // ERROR_DS_ATTRIBUTE_OWNED_BY_SAM
+#[doc(hidden)] pub const DS_NAME_TOO_MANY_PARTS : ErrorCode = ErrorCode::from_constant(8347); // ERROR_DS_NAME_TOO_MANY_PARTS
+#[doc(hidden)] pub const DS_NAME_TOO_LONG : ErrorCode = ErrorCode::from_constant(8348); // ERROR_DS_NAME_TOO_LONG
+#[doc(hidden)] pub const DS_NAME_VALUE_TOO_LONG : ErrorCode = ErrorCode::from_constant(8349); // ERROR_DS_NAME_VALUE_TOO_LONG
+#[doc(hidden)] pub const DS_NAME_UNPARSEABLE : ErrorCode = ErrorCode::from_constant(8350); // ERROR_DS_NAME_UNPARSEABLE
+#[doc(hidden)] pub const DS_NAME_TYPE_UNKNOWN : ErrorCode = ErrorCode::from_constant(8351); // ERROR_DS_NAME_TYPE_UNKNOWN
+#[doc(hidden)] pub const DS_NOT_AN_OBJECT : ErrorCode = ErrorCode::from_constant(8352); // ERROR_DS_NOT_AN_OBJECT
+#[doc(hidden)] pub const DS_SEC_DESC_TOO_SHORT : ErrorCode = ErrorCode::from_constant(8353); // ERROR_DS_SEC_DESC_TOO_SHORT
+#[doc(hidden)] pub const DS_SEC_DESC_INVALID : ErrorCode = ErrorCode::from_constant(8354); // ERROR_DS_SEC_DESC_INVALID
+#[doc(hidden)] pub const DS_NO_DELETED_NAME : ErrorCode = ErrorCode::from_constant(8355); // ERROR_DS_NO_DELETED_NAME
+#[doc(hidden)] pub const DS_SUBREF_MUST_HAVE_PARENT : ErrorCode = ErrorCode::from_constant(8356); // ERROR_DS_SUBREF_MUST_HAVE_PARENT
+#[doc(hidden)] pub const DS_NCNAME_MUST_BE_NC : ErrorCode = ErrorCode::from_constant(8357); // ERROR_DS_NCNAME_MUST_BE_NC
+#[doc(hidden)] pub const DS_CANT_ADD_SYSTEM_ONLY : ErrorCode = ErrorCode::from_constant(8358); // ERROR_DS_CANT_ADD_SYSTEM_ONLY
+#[doc(hidden)] pub const DS_CLASS_MUST_BE_CONCRETE : ErrorCode = ErrorCode::from_constant(8359); // ERROR_DS_CLASS_MUST_BE_CONCRETE
+#[doc(hidden)] pub const DS_INVALID_DMD : ErrorCode = ErrorCode::from_constant(8360); // ERROR_DS_INVALID_DMD
+#[doc(hidden)] pub const DS_OBJ_GUID_EXISTS : ErrorCode = ErrorCode::from_constant(8361); // ERROR_DS_OBJ_GUID_EXISTS
+#[doc(hidden)] pub const DS_NOT_ON_BACKLINK : ErrorCode = ErrorCode::from_constant(8362); // ERROR_DS_NOT_ON_BACKLINK
+#[doc(hidden)] pub const DS_NO_CROSSREF_FOR_NC : ErrorCode = ErrorCode::from_constant(8363); // ERROR_DS_NO_CROSSREF_FOR_NC
+#[doc(hidden)] pub const DS_SHUTTING_DOWN : ErrorCode = ErrorCode::from_constant(8364); // ERROR_DS_SHUTTING_DOWN
+#[doc(hidden)] pub const DS_UNKNOWN_OPERATION : ErrorCode = ErrorCode::from_constant(8365); // ERROR_DS_UNKNOWN_OPERATION
+#[doc(hidden)] pub const DS_INVALID_ROLE_OWNER : ErrorCode = ErrorCode::from_constant(8366); // ERROR_DS_INVALID_ROLE_OWNER
+#[doc(hidden)] pub const DS_COULDNT_CONTACT_FSMO : ErrorCode = ErrorCode::from_constant(8367); // ERROR_DS_COULDNT_CONTACT_FSMO
+#[doc(hidden)] pub const DS_CROSS_NC_DN_RENAME : ErrorCode = ErrorCode::from_constant(8368); // ERROR_DS_CROSS_NC_DN_RENAME
+#[doc(hidden)] pub const DS_CANT_MOD_SYSTEM_ONLY : ErrorCode = ErrorCode::from_constant(8369); // ERROR_DS_CANT_MOD_SYSTEM_ONLY
+#[doc(hidden)] pub const DS_REPLICATOR_ONLY : ErrorCode = ErrorCode::from_constant(8370); // ERROR_DS_REPLICATOR_ONLY
+#[doc(hidden)] pub const DS_OBJ_CLASS_NOT_DEFINED : ErrorCode = ErrorCode::from_constant(8371); // ERROR_DS_OBJ_CLASS_NOT_DEFINED
+#[doc(hidden)] pub const DS_OBJ_CLASS_NOT_SUBCLASS : ErrorCode = ErrorCode::from_constant(8372); // ERROR_DS_OBJ_CLASS_NOT_SUBCLASS
+#[doc(hidden)] pub const DS_NAME_REFERENCE_INVALID : ErrorCode = ErrorCode::from_constant(8373); // ERROR_DS_NAME_REFERENCE_INVALID
+#[doc(hidden)] pub const DS_CROSS_REF_EXISTS : ErrorCode = ErrorCode::from_constant(8374); // ERROR_DS_CROSS_REF_EXISTS
+#[doc(hidden)] pub const DS_CANT_DEL_MASTER_CROSSREF : ErrorCode = ErrorCode::from_constant(8375); // ERROR_DS_CANT_DEL_MASTER_CROSSREF
+#[doc(hidden)] pub const DS_SUBTREE_NOTIFY_NOT_NC_HEAD : ErrorCode = ErrorCode::from_constant(8376); // ERROR_DS_SUBTREE_NOTIFY_NOT_NC_HEAD
+#[doc(hidden)] pub const DS_NOTIFY_FILTER_TOO_COMPLEX : ErrorCode = ErrorCode::from_constant(8377); // ERROR_DS_NOTIFY_FILTER_TOO_COMPLEX
+#[doc(hidden)] pub const DS_DUP_RDN : ErrorCode = ErrorCode::from_constant(8378); // ERROR_DS_DUP_RDN
+#[doc(hidden)] pub const DS_DUP_OID : ErrorCode = ErrorCode::from_constant(8379); // ERROR_DS_DUP_OID
+#[doc(hidden)] pub const DS_DUP_MAPI_ID : ErrorCode = ErrorCode::from_constant(8380); // ERROR_DS_DUP_MAPI_ID
+#[doc(hidden)] pub const DS_DUP_SCHEMA_ID_GUID : ErrorCode = ErrorCode::from_constant(8381); // ERROR_DS_DUP_SCHEMA_ID_GUID
+#[doc(hidden)] pub const DS_DUP_LDAP_DISPLAY_NAME : ErrorCode = ErrorCode::from_constant(8382); // ERROR_DS_DUP_LDAP_DISPLAY_NAME
+#[doc(hidden)] pub const DS_SEMANTIC_ATT_TEST : ErrorCode = ErrorCode::from_constant(8383); // ERROR_DS_SEMANTIC_ATT_TEST
+#[doc(hidden)] pub const DS_SYNTAX_MISMATCH : ErrorCode = ErrorCode::from_constant(8384); // ERROR_DS_SYNTAX_MISMATCH
+#[doc(hidden)] pub const DS_EXISTS_IN_MUST_HAVE : ErrorCode = ErrorCode::from_constant(8385); // ERROR_DS_EXISTS_IN_MUST_HAVE
+#[doc(hidden)] pub const DS_EXISTS_IN_MAY_HAVE : ErrorCode = ErrorCode::from_constant(8386); // ERROR_DS_EXISTS_IN_MAY_HAVE
+#[doc(hidden)] pub const DS_NONEXISTENT_MAY_HAVE : ErrorCode = ErrorCode::from_constant(8387); // ERROR_DS_NONEXISTENT_MAY_HAVE
+#[doc(hidden)] pub const DS_NONEXISTENT_MUST_HAVE : ErrorCode = ErrorCode::from_constant(8388); // ERROR_DS_NONEXISTENT_MUST_HAVE
+#[doc(hidden)] pub const DS_AUX_CLS_TEST_FAIL : ErrorCode = ErrorCode::from_constant(8389); // ERROR_DS_AUX_CLS_TEST_FAIL
+#[doc(hidden)] pub const DS_NONEXISTENT_POSS_SUP : ErrorCode = ErrorCode::from_constant(8390); // ERROR_DS_NONEXISTENT_POSS_SUP
+#[doc(hidden)] pub const DS_SUB_CLS_TEST_FAIL : ErrorCode = ErrorCode::from_constant(8391); // ERROR_DS_SUB_CLS_TEST_FAIL
+#[doc(hidden)] pub const DS_BAD_RDN_ATT_ID_SYNTAX : ErrorCode = ErrorCode::from_constant(8392); // ERROR_DS_BAD_RDN_ATT_ID_SYNTAX
+#[doc(hidden)] pub const DS_EXISTS_IN_AUX_CLS : ErrorCode = ErrorCode::from_constant(8393); // ERROR_DS_EXISTS_IN_AUX_CLS
+#[doc(hidden)] pub const DS_EXISTS_IN_SUB_CLS : ErrorCode = ErrorCode::from_constant(8394); // ERROR_DS_EXISTS_IN_SUB_CLS
+#[doc(hidden)] pub const DS_EXISTS_IN_POSS_SUP : ErrorCode = ErrorCode::from_constant(8395); // ERROR_DS_EXISTS_IN_POSS_SUP
+#[doc(hidden)] pub const DS_RECALCSCHEMA_FAILED : ErrorCode = ErrorCode::from_constant(8396); // ERROR_DS_RECALCSCHEMA_FAILED
+#[doc(hidden)] pub const DS_TREE_DELETE_NOT_FINISHED : ErrorCode = ErrorCode::from_constant(8397); // ERROR_DS_TREE_DELETE_NOT_FINISHED
+#[doc(hidden)] pub const DS_CANT_DELETE : ErrorCode = ErrorCode::from_constant(8398); // ERROR_DS_CANT_DELETE
+#[doc(hidden)] pub const DS_ATT_SCHEMA_REQ_ID : ErrorCode = ErrorCode::from_constant(8399); // ERROR_DS_ATT_SCHEMA_REQ_ID
+#[doc(hidden)] pub const DS_BAD_ATT_SCHEMA_SYNTAX : ErrorCode = ErrorCode::from_constant(8400); // ERROR_DS_BAD_ATT_SCHEMA_SYNTAX
+#[doc(hidden)] pub const DS_CANT_CACHE_ATT : ErrorCode = ErrorCode::from_constant(8401); // ERROR_DS_CANT_CACHE_ATT
+#[doc(hidden)] pub const DS_CANT_CACHE_CLASS : ErrorCode = ErrorCode::from_constant(8402); // ERROR_DS_CANT_CACHE_CLASS
+#[doc(hidden)] pub const DS_CANT_REMOVE_ATT_CACHE : ErrorCode = ErrorCode::from_constant(8403); // ERROR_DS_CANT_REMOVE_ATT_CACHE
+#[doc(hidden)] pub const DS_CANT_REMOVE_CLASS_CACHE : ErrorCode = ErrorCode::from_constant(8404); // ERROR_DS_CANT_REMOVE_CLASS_CACHE
+#[doc(hidden)] pub const DS_CANT_RETRIEVE_DN : ErrorCode = ErrorCode::from_constant(8405); // ERROR_DS_CANT_RETRIEVE_DN
+#[doc(hidden)] pub const DS_MISSING_SUPREF : ErrorCode = ErrorCode::from_constant(8406); // ERROR_DS_MISSING_SUPREF
+#[doc(hidden)] pub const DS_CANT_RETRIEVE_INSTANCE : ErrorCode = ErrorCode::from_constant(8407); // ERROR_DS_CANT_RETRIEVE_INSTANCE
+#[doc(hidden)] pub const DS_CODE_INCONSISTENCY : ErrorCode = ErrorCode::from_constant(8408); // ERROR_DS_CODE_INCONSISTENCY
+#[doc(hidden)] pub const DS_DATABASE_ERROR : ErrorCode = ErrorCode::from_constant(8409); // ERROR_DS_DATABASE_ERROR
+#[doc(hidden)] pub const DS_GOVERNSID_MISSING : ErrorCode = ErrorCode::from_constant(8410); // ERROR_DS_GOVERNSID_MISSING
+#[doc(hidden)] pub const DS_MISSING_EXPECTED_ATT : ErrorCode = ErrorCode::from_constant(8411); // ERROR_DS_MISSING_EXPECTED_ATT
+#[doc(hidden)] pub const DS_NCNAME_MISSING_CR_REF : ErrorCode = ErrorCode::from_constant(8412); // ERROR_DS_NCNAME_MISSING_CR_REF
+#[doc(hidden)] pub const DS_SECURITY_CHECKING_ERROR : ErrorCode = ErrorCode::from_constant(8413); // ERROR_DS_SECURITY_CHECKING_ERROR
+#[doc(hidden)] pub const DS_SCHEMA_NOT_LOADED : ErrorCode = ErrorCode::from_constant(8414); // ERROR_DS_SCHEMA_NOT_LOADED
+#[doc(hidden)] pub const DS_SCHEMA_ALLOC_FAILED : ErrorCode = ErrorCode::from_constant(8415); // ERROR_DS_SCHEMA_ALLOC_FAILED
+#[doc(hidden)] pub const DS_ATT_SCHEMA_REQ_SYNTAX : ErrorCode = ErrorCode::from_constant(8416); // ERROR_DS_ATT_SCHEMA_REQ_SYNTAX
+#[doc(hidden)] pub const DS_GCVERIFY_ERROR : ErrorCode = ErrorCode::from_constant(8417); // ERROR_DS_GCVERIFY_ERROR
+#[doc(hidden)] pub const DS_DRA_SCHEMA_MISMATCH : ErrorCode = ErrorCode::from_constant(8418); // ERROR_DS_DRA_SCHEMA_MISMATCH
+#[doc(hidden)] pub const DS_CANT_FIND_DSA_OBJ : ErrorCode = ErrorCode::from_constant(8419); // ERROR_DS_CANT_FIND_DSA_OBJ
+#[doc(hidden)] pub const DS_CANT_FIND_EXPECTED_NC : ErrorCode = ErrorCode::from_constant(8420); // ERROR_DS_CANT_FIND_EXPECTED_NC
+#[doc(hidden)] pub const DS_CANT_FIND_NC_IN_CACHE : ErrorCode = ErrorCode::from_constant(8421); // ERROR_DS_CANT_FIND_NC_IN_CACHE
+#[doc(hidden)] pub const DS_CANT_RETRIEVE_CHILD : ErrorCode = ErrorCode::from_constant(8422); // ERROR_DS_CANT_RETRIEVE_CHILD
+#[doc(hidden)] pub const DS_SECURITY_ILLEGAL_MODIFY : ErrorCode = ErrorCode::from_constant(8423); // ERROR_DS_SECURITY_ILLEGAL_MODIFY
+#[doc(hidden)] pub const DS_CANT_REPLACE_HIDDEN_REC : ErrorCode = ErrorCode::from_constant(8424); // ERROR_DS_CANT_REPLACE_HIDDEN_REC
+#[doc(hidden)] pub const DS_BAD_HIERARCHY_FILE : ErrorCode = ErrorCode::from_constant(8425); // ERROR_DS_BAD_HIERARCHY_FILE
+#[doc(hidden)] pub const DS_BUILD_HIERARCHY_TABLE_FAILED : ErrorCode = ErrorCode::from_constant(8426); // ERROR_DS_BUILD_HIERARCHY_TABLE_FAILED
+#[doc(hidden)] pub const DS_CONFIG_PARAM_MISSING : ErrorCode = ErrorCode::from_constant(8427); // ERROR_DS_CONFIG_PARAM_MISSING
+#[doc(hidden)] pub const DS_COUNTING_AB_INDICES_FAILED : ErrorCode = ErrorCode::from_constant(8428); // ERROR_DS_COUNTING_AB_INDICES_FAILED
+#[doc(hidden)] pub const DS_HIERARCHY_TABLE_MALLOC_FAILED : ErrorCode = ErrorCode::from_constant(8429); // ERROR_DS_HIERARCHY_TABLE_MALLOC_FAILED
+#[doc(hidden)] pub const DS_INTERNAL_FAILURE : ErrorCode = ErrorCode::from_constant(8430); // ERROR_DS_INTERNAL_FAILURE
+#[doc(hidden)] pub const DS_UNKNOWN_ERROR : ErrorCode = ErrorCode::from_constant(8431); // ERROR_DS_UNKNOWN_ERROR
+#[doc(hidden)] pub const DS_ROOT_REQUIRES_CLASS_TOP : ErrorCode = ErrorCode::from_constant(8432); // ERROR_DS_ROOT_REQUIRES_CLASS_TOP
+#[doc(hidden)] pub const DS_REFUSING_FSMO_ROLES : ErrorCode = ErrorCode::from_constant(8433); // ERROR_DS_REFUSING_FSMO_ROLES
+#[doc(hidden)] pub const DS_MISSING_FSMO_SETTINGS : ErrorCode = ErrorCode::from_constant(8434); // ERROR_DS_MISSING_FSMO_SETTINGS
+#[doc(hidden)] pub const DS_UNABLE_TO_SURRENDER_ROLES : ErrorCode = ErrorCode::from_constant(8435); // ERROR_DS_UNABLE_TO_SURRENDER_ROLES
+#[doc(hidden)] pub const DS_DRA_GENERIC : ErrorCode = ErrorCode::from_constant(8436); // ERROR_DS_DRA_GENERIC
+#[doc(hidden)] pub const DS_DRA_INVALID_PARAMETER : ErrorCode = ErrorCode::from_constant(8437); // ERROR_DS_DRA_INVALID_PARAMETER
+#[doc(hidden)] pub const DS_DRA_BUSY : ErrorCode = ErrorCode::from_constant(8438); // ERROR_DS_DRA_BUSY
+#[doc(hidden)] pub const DS_DRA_BAD_DN : ErrorCode = ErrorCode::from_constant(8439); // ERROR_DS_DRA_BAD_DN
+#[doc(hidden)] pub const DS_DRA_BAD_NC : ErrorCode = ErrorCode::from_constant(8440); // ERROR_DS_DRA_BAD_NC
+#[doc(hidden)] pub const DS_DRA_DN_EXISTS : ErrorCode = ErrorCode::from_constant(8441); // ERROR_DS_DRA_DN_EXISTS
+#[doc(hidden)] pub const DS_DRA_INTERNAL_ERROR : ErrorCode = ErrorCode::from_constant(8442); // ERROR_DS_DRA_INTERNAL_ERROR
+#[doc(hidden)] pub const DS_DRA_INCONSISTENT_DIT : ErrorCode = ErrorCode::from_constant(8443); // ERROR_DS_DRA_INCONSISTENT_DIT
+#[doc(hidden)] pub const DS_DRA_CONNECTION_FAILED : ErrorCode = ErrorCode::from_constant(8444); // ERROR_DS_DRA_CONNECTION_FAILED
+#[doc(hidden)] pub const DS_DRA_BAD_INSTANCE_TYPE : ErrorCode = ErrorCode::from_constant(8445); // ERROR_DS_DRA_BAD_INSTANCE_TYPE
+#[doc(hidden)] pub const DS_DRA_OUT_OF_MEM : ErrorCode = ErrorCode::from_constant(8446); // ERROR_DS_DRA_OUT_OF_MEM
+#[doc(hidden)] pub const DS_DRA_MAIL_PROBLEM : ErrorCode = ErrorCode::from_constant(8447); // ERROR_DS_DRA_MAIL_PROBLEM
+#[doc(hidden)] pub const DS_DRA_REF_ALREADY_EXISTS : ErrorCode = ErrorCode::from_constant(8448); // ERROR_DS_DRA_REF_ALREADY_EXISTS
+#[doc(hidden)] pub const DS_DRA_REF_NOT_FOUND : ErrorCode = ErrorCode::from_constant(8449); // ERROR_DS_DRA_REF_NOT_FOUND
+#[doc(hidden)] pub const DS_DRA_OBJ_IS_REP_SOURCE : ErrorCode = ErrorCode::from_constant(8450); // ERROR_DS_DRA_OBJ_IS_REP_SOURCE
+#[doc(hidden)] pub const DS_DRA_DB_ERROR : ErrorCode = ErrorCode::from_constant(8451); // ERROR_DS_DRA_DB_ERROR
+#[doc(hidden)] pub const DS_DRA_NO_REPLICA : ErrorCode = ErrorCode::from_constant(8452); // ERROR_DS_DRA_NO_REPLICA
+#[doc(hidden)] pub const DS_DRA_ACCESS_DENIED : ErrorCode = ErrorCode::from_constant(8453); // ERROR_DS_DRA_ACCESS_DENIED
+#[doc(hidden)] pub const DS_DRA_NOT_SUPPORTED : ErrorCode = ErrorCode::from_constant(8454); // ERROR_DS_DRA_NOT_SUPPORTED
+#[doc(hidden)] pub const DS_DRA_RPC_CANCELLED : ErrorCode = ErrorCode::from_constant(8455); // ERROR_DS_DRA_RPC_CANCELLED
+#[doc(hidden)] pub const DS_DRA_SOURCE_DISABLED : ErrorCode = ErrorCode::from_constant(8456); // ERROR_DS_DRA_SOURCE_DISABLED
+#[doc(hidden)] pub const DS_DRA_SINK_DISABLED : ErrorCode = ErrorCode::from_constant(8457); // ERROR_DS_DRA_SINK_DISABLED
+#[doc(hidden)] pub const DS_DRA_NAME_COLLISION : ErrorCode = ErrorCode::from_constant(8458); // ERROR_DS_DRA_NAME_COLLISION
+#[doc(hidden)] pub const DS_DRA_SOURCE_REINSTALLED : ErrorCode = ErrorCode::from_constant(8459); // ERROR_DS_DRA_SOURCE_REINSTALLED
+#[doc(hidden)] pub const DS_DRA_MISSING_PARENT : ErrorCode = ErrorCode::from_constant(8460); // ERROR_DS_DRA_MISSING_PARENT
+#[doc(hidden)] pub const DS_DRA_PREEMPTED : ErrorCode = ErrorCode::from_constant(8461); // ERROR_DS_DRA_PREEMPTED
+#[doc(hidden)] pub const DS_DRA_ABANDON_SYNC : ErrorCode = ErrorCode::from_constant(8462); // ERROR_DS_DRA_ABANDON_SYNC
+#[doc(hidden)] pub const DS_DRA_SHUTDOWN : ErrorCode = ErrorCode::from_constant(8463); // ERROR_DS_DRA_SHUTDOWN
+#[doc(hidden)] pub const DS_DRA_INCOMPATIBLE_PARTIAL_SET : ErrorCode = ErrorCode::from_constant(8464); // ERROR_DS_DRA_INCOMPATIBLE_PARTIAL_SET
+#[doc(hidden)] pub const DS_DRA_SOURCE_IS_PARTIAL_REPLICA : ErrorCode = ErrorCode::from_constant(8465); // ERROR_DS_DRA_SOURCE_IS_PARTIAL_REPLICA
+#[doc(hidden)] pub const DS_DRA_EXTN_CONNECTION_FAILED : ErrorCode = ErrorCode::from_constant(8466); // ERROR_DS_DRA_EXTN_CONNECTION_FAILED
+#[doc(hidden)] pub const DS_INSTALL_SCHEMA_MISMATCH : ErrorCode = ErrorCode::from_constant(8467); // ERROR_DS_INSTALL_SCHEMA_MISMATCH
+#[doc(hidden)] pub const DS_DUP_LINK_ID : ErrorCode = ErrorCode::from_constant(8468); // ERROR_DS_DUP_LINK_ID
+#[doc(hidden)] pub const DS_NAME_ERROR_RESOLVING : ErrorCode = ErrorCode::from_constant(8469); // ERROR_DS_NAME_ERROR_RESOLVING
+#[doc(hidden)] pub const DS_NAME_ERROR_NOT_FOUND : ErrorCode = ErrorCode::from_constant(8470); // ERROR_DS_NAME_ERROR_NOT_FOUND
+#[doc(hidden)] pub const DS_NAME_ERROR_NOT_UNIQUE : ErrorCode = ErrorCode::from_constant(8471); // ERROR_DS_NAME_ERROR_NOT_UNIQUE
+#[doc(hidden)] pub const DS_NAME_ERROR_NO_MAPPING : ErrorCode = ErrorCode::from_constant(8472); // ERROR_DS_NAME_ERROR_NO_MAPPING
+#[doc(hidden)] pub const DS_NAME_ERROR_DOMAIN_ONLY : ErrorCode = ErrorCode::from_constant(8473); // ERROR_DS_NAME_ERROR_DOMAIN_ONLY
+#[doc(hidden)] pub const DS_NAME_ERROR_NO_SYNTACTICAL_MAPPING : ErrorCode = ErrorCode::from_constant(8474); // ERROR_DS_NAME_ERROR_NO_SYNTACTICAL_MAPPING
+#[doc(hidden)] pub const DS_CONSTRUCTED_ATT_MOD : ErrorCode = ErrorCode::from_constant(8475); // ERROR_DS_CONSTRUCTED_ATT_MOD
+#[doc(hidden)] pub const DS_WRONG_OM_OBJ_CLASS : ErrorCode = ErrorCode::from_constant(8476); // ERROR_DS_WRONG_OM_OBJ_CLASS
+#[doc(hidden)] pub const DS_DRA_REPL_PENDING : ErrorCode = ErrorCode::from_constant(8477); // ERROR_DS_DRA_REPL_PENDING
+#[doc(hidden)] pub const DS_DS_REQUIRED : ErrorCode = ErrorCode::from_constant(8478); // ERROR_DS_DS_REQUIRED
+#[doc(hidden)] pub const DS_INVALID_LDAP_DISPLAY_NAME : ErrorCode = ErrorCode::from_constant(8479); // ERROR_DS_INVALID_LDAP_DISPLAY_NAME
+#[doc(hidden)] pub const DS_NON_BASE_SEARCH : ErrorCode = ErrorCode::from_constant(8480); // ERROR_DS_NON_BASE_SEARCH
+#[doc(hidden)] pub const DS_CANT_RETRIEVE_ATTS : ErrorCode = ErrorCode::from_constant(8481); // ERROR_DS_CANT_RETRIEVE_ATTS
+#[doc(hidden)] pub const DS_BACKLINK_WITHOUT_LINK : ErrorCode = ErrorCode::from_constant(8482); // ERROR_DS_BACKLINK_WITHOUT_LINK
+#[doc(hidden)] pub const DS_EPOCH_MISMATCH : ErrorCode = ErrorCode::from_constant(8483); // ERROR_DS_EPOCH_MISMATCH
+#[doc(hidden)] pub const DS_SRC_NAME_MISMATCH : ErrorCode = ErrorCode::from_constant(8484); // ERROR_DS_SRC_NAME_MISMATCH
+#[doc(hidden)] pub const DS_SRC_AND_DST_NC_IDENTICAL : ErrorCode = ErrorCode::from_constant(8485); // ERROR_DS_SRC_AND_DST_NC_IDENTICAL
+#[doc(hidden)] pub const DS_DST_NC_MISMATCH : ErrorCode = ErrorCode::from_constant(8486); // ERROR_DS_DST_NC_MISMATCH
+#[doc(hidden)] pub const DS_NOT_AUTHORITIVE_FOR_DST_NC : ErrorCode = ErrorCode::from_constant(8487); // ERROR_DS_NOT_AUTHORITIVE_FOR_DST_NC
+#[doc(hidden)] pub const DS_SRC_GUID_MISMATCH : ErrorCode = ErrorCode::from_constant(8488); // ERROR_DS_SRC_GUID_MISMATCH
+#[doc(hidden)] pub const DS_CANT_MOVE_DELETED_OBJECT : ErrorCode = ErrorCode::from_constant(8489); // ERROR_DS_CANT_MOVE_DELETED_OBJECT
+#[doc(hidden)] pub const DS_PDC_OPERATION_IN_PROGRESS : ErrorCode = ErrorCode::from_constant(8490); // ERROR_DS_PDC_OPERATION_IN_PROGRESS
+#[doc(hidden)] pub const DS_CROSS_DOMAIN_CLEANUP_REQD : ErrorCode = ErrorCode::from_constant(8491); // ERROR_DS_CROSS_DOMAIN_CLEANUP_REQD
+#[doc(hidden)] pub const DS_ILLEGAL_XDOM_MOVE_OPERATION : ErrorCode = ErrorCode::from_constant(8492); // ERROR_DS_ILLEGAL_XDOM_MOVE_OPERATION
+#[doc(hidden)] pub const DS_CANT_WITH_ACCT_GROUP_MEMBERSHPS : ErrorCode = ErrorCode::from_constant(8493); // ERROR_DS_CANT_WITH_ACCT_GROUP_MEMBERSHPS
+#[doc(hidden)] pub const DS_NC_MUST_HAVE_NC_PARENT : ErrorCode = ErrorCode::from_constant(8494); // ERROR_DS_NC_MUST_HAVE_NC_PARENT
+#[doc(hidden)] pub const DS_CR_IMPOSSIBLE_TO_VALIDATE : ErrorCode = ErrorCode::from_constant(8495); // ERROR_DS_CR_IMPOSSIBLE_TO_VALIDATE
+#[doc(hidden)] pub const DS_DST_DOMAIN_NOT_NATIVE : ErrorCode = ErrorCode::from_constant(8496); // ERROR_DS_DST_DOMAIN_NOT_NATIVE
+#[doc(hidden)] pub const DS_MISSING_INFRASTRUCTURE_CONTAINER : ErrorCode = ErrorCode::from_constant(8497); // ERROR_DS_MISSING_INFRASTRUCTURE_CONTAINER
+#[doc(hidden)] pub const DS_CANT_MOVE_ACCOUNT_GROUP : ErrorCode = ErrorCode::from_constant(8498); // ERROR_DS_CANT_MOVE_ACCOUNT_GROUP
+#[doc(hidden)] pub const DS_CANT_MOVE_RESOURCE_GROUP : ErrorCode = ErrorCode::from_constant(8499); // ERROR_DS_CANT_MOVE_RESOURCE_GROUP
+#[doc(hidden)] pub const DS_INVALID_SEARCH_FLAG : ErrorCode = ErrorCode::from_constant(8500); // ERROR_DS_INVALID_SEARCH_FLAG
+#[doc(hidden)] pub const DS_NO_TREE_DELETE_ABOVE_NC : ErrorCode = ErrorCode::from_constant(8501); // ERROR_DS_NO_TREE_DELETE_ABOVE_NC
+#[doc(hidden)] pub const DS_COULDNT_LOCK_TREE_FOR_DELETE : ErrorCode = ErrorCode::from_constant(8502); // ERROR_DS_COULDNT_LOCK_TREE_FOR_DELETE
+#[doc(hidden)] pub const DS_COULDNT_IDENTIFY_OBJECTS_FOR_TREE_DELETE : ErrorCode = ErrorCode::from_constant(8503); // ERROR_DS_COULDNT_IDENTIFY_OBJECTS_FOR_TREE_DELETE
+#[doc(hidden)] pub const DS_SAM_INIT_FAILURE : ErrorCode = ErrorCode::from_constant(8504); // ERROR_DS_SAM_INIT_FAILURE
+#[doc(hidden)] pub const DS_SENSITIVE_GROUP_VIOLATION : ErrorCode = ErrorCode::from_constant(8505); // ERROR_DS_SENSITIVE_GROUP_VIOLATION
+#[doc(hidden)] pub const DS_CANT_MOD_PRIMARYGROUPID : ErrorCode = ErrorCode::from_constant(8506); // ERROR_DS_CANT_MOD_PRIMARYGROUPID
+#[doc(hidden)] pub const DS_ILLEGAL_BASE_SCHEMA_MOD : ErrorCode = ErrorCode::from_constant(8507); // ERROR_DS_ILLEGAL_BASE_SCHEMA_MOD
+#[doc(hidden)] pub const DS_NONSAFE_SCHEMA_CHANGE : ErrorCode = ErrorCode::from_constant(8508); // ERROR_DS_NONSAFE_SCHEMA_CHANGE
+#[doc(hidden)] pub const DS_SCHEMA_UPDATE_DISALLOWED : ErrorCode = ErrorCode::from_constant(8509); // ERROR_DS_SCHEMA_UPDATE_DISALLOWED
+#[doc(hidden)] pub const DS_CANT_CREATE_UNDER_SCHEMA : ErrorCode = ErrorCode::from_constant(8510); // ERROR_DS_CANT_CREATE_UNDER_SCHEMA
+#[doc(hidden)] pub const DS_INSTALL_NO_SRC_SCH_VERSION : ErrorCode = ErrorCode::from_constant(8511); // ERROR_DS_INSTALL_NO_SRC_SCH_VERSION
+#[doc(hidden)] pub const DS_INSTALL_NO_SCH_VERSION_IN_INIFILE : ErrorCode = ErrorCode::from_constant(8512); // ERROR_DS_INSTALL_NO_SCH_VERSION_IN_INIFILE
+#[doc(hidden)] pub const DS_INVALID_GROUP_TYPE : ErrorCode = ErrorCode::from_constant(8513); // ERROR_DS_INVALID_GROUP_TYPE
+#[doc(hidden)] pub const DS_NO_NEST_GLOBALGROUP_IN_MIXEDDOMAIN : ErrorCode = ErrorCode::from_constant(8514); // ERROR_DS_NO_NEST_GLOBALGROUP_IN_MIXEDDOMAIN
+#[doc(hidden)] pub const DS_NO_NEST_LOCALGROUP_IN_MIXEDDOMAIN : ErrorCode = ErrorCode::from_constant(8515); // ERROR_DS_NO_NEST_LOCALGROUP_IN_MIXEDDOMAIN
+#[doc(hidden)] pub const DS_GLOBAL_CANT_HAVE_LOCAL_MEMBER : ErrorCode = ErrorCode::from_constant(8516); // ERROR_DS_GLOBAL_CANT_HAVE_LOCAL_MEMBER
+#[doc(hidden)] pub const DS_GLOBAL_CANT_HAVE_UNIVERSAL_MEMBER : ErrorCode = ErrorCode::from_constant(8517); // ERROR_DS_GLOBAL_CANT_HAVE_UNIVERSAL_MEMBER
+#[doc(hidden)] pub const DS_UNIVERSAL_CANT_HAVE_LOCAL_MEMBER : ErrorCode = ErrorCode::from_constant(8518); // ERROR_DS_UNIVERSAL_CANT_HAVE_LOCAL_MEMBER
+#[doc(hidden)] pub const DS_GLOBAL_CANT_HAVE_CROSSDOMAIN_MEMBER : ErrorCode = ErrorCode::from_constant(8519); // ERROR_DS_GLOBAL_CANT_HAVE_CROSSDOMAIN_MEMBER
+#[doc(hidden)] pub const DS_LOCAL_CANT_HAVE_CROSSDOMAIN_LOCAL_MEMBER : ErrorCode = ErrorCode::from_constant(8520); // ERROR_DS_LOCAL_CANT_HAVE_CROSSDOMAIN_LOCAL_MEMBER
+#[doc(hidden)] pub const DS_HAVE_PRIMARY_MEMBERS : ErrorCode = ErrorCode::from_constant(8521); // ERROR_DS_HAVE_PRIMARY_MEMBERS
+#[doc(hidden)] pub const DS_STRING_SD_CONVERSION_FAILED : ErrorCode = ErrorCode::from_constant(8522); // ERROR_DS_STRING_SD_CONVERSION_FAILED
+#[doc(hidden)] pub const DS_NAMING_MASTER_GC : ErrorCode = ErrorCode::from_constant(8523); // ERROR_DS_NAMING_MASTER_GC
+#[doc(hidden)] pub const DS_DNS_LOOKUP_FAILURE : ErrorCode = ErrorCode::from_constant(8524); // ERROR_DS_DNS_LOOKUP_FAILURE
+#[doc(hidden)] pub const DS_COULDNT_UPDATE_SPNS : ErrorCode = ErrorCode::from_constant(8525); // ERROR_DS_COULDNT_UPDATE_SPNS
+#[doc(hidden)] pub const DS_CANT_RETRIEVE_SD : ErrorCode = ErrorCode::from_constant(8526); // ERROR_DS_CANT_RETRIEVE_SD
+#[doc(hidden)] pub const DS_KEY_NOT_UNIQUE : ErrorCode = ErrorCode::from_constant(8527); // ERROR_DS_KEY_NOT_UNIQUE
+#[doc(hidden)] pub const DS_WRONG_LINKED_ATT_SYNTAX : ErrorCode = ErrorCode::from_constant(8528); // ERROR_DS_WRONG_LINKED_ATT_SYNTAX
+#[doc(hidden)] pub const DS_SAM_NEED_BOOTKEY_PASSWORD : ErrorCode = ErrorCode::from_constant(8529); // ERROR_DS_SAM_NEED_BOOTKEY_PASSWORD
+#[doc(hidden)] pub const DS_SAM_NEED_BOOTKEY_FLOPPY : ErrorCode = ErrorCode::from_constant(8530); // ERROR_DS_SAM_NEED_BOOTKEY_FLOPPY
+#[doc(hidden)] pub const DS_CANT_START : ErrorCode = ErrorCode::from_constant(8531); // ERROR_DS_CANT_START
+#[doc(hidden)] pub const DS_INIT_FAILURE : ErrorCode = ErrorCode::from_constant(8532); // ERROR_DS_INIT_FAILURE
+#[doc(hidden)] pub const DS_NO_PKT_PRIVACY_ON_CONNECTION : ErrorCode = ErrorCode::from_constant(8533); // ERROR_DS_NO_PKT_PRIVACY_ON_CONNECTION
+#[doc(hidden)] pub const DS_SOURCE_DOMAIN_IN_FOREST : ErrorCode = ErrorCode::from_constant(8534); // ERROR_DS_SOURCE_DOMAIN_IN_FOREST
+#[doc(hidden)] pub const DS_DESTINATION_DOMAIN_NOT_IN_FOREST : ErrorCode = ErrorCode::from_constant(8535); // ERROR_DS_DESTINATION_DOMAIN_NOT_IN_FOREST
+#[doc(hidden)] pub const DS_DESTINATION_AUDITING_NOT_ENABLED : ErrorCode = ErrorCode::from_constant(8536); // ERROR_DS_DESTINATION_AUDITING_NOT_ENABLED
+#[doc(hidden)] pub const DS_CANT_FIND_DC_FOR_SRC_DOMAIN : ErrorCode = ErrorCode::from_constant(8537); // ERROR_DS_CANT_FIND_DC_FOR_SRC_DOMAIN
+#[doc(hidden)] pub const DS_SRC_OBJ_NOT_GROUP_OR_USER : ErrorCode = ErrorCode::from_constant(8538); // ERROR_DS_SRC_OBJ_NOT_GROUP_OR_USER
+#[doc(hidden)] pub const DS_SRC_SID_EXISTS_IN_FOREST : ErrorCode = ErrorCode::from_constant(8539); // ERROR_DS_SRC_SID_EXISTS_IN_FOREST
+#[doc(hidden)] pub const DS_SRC_AND_DST_OBJECT_CLASS_MISMATCH : ErrorCode = ErrorCode::from_constant(8540); // ERROR_DS_SRC_AND_DST_OBJECT_CLASS_MISMATCH
 
 /// Security Accounts Manager initialization failed because of the following error: `%1`.
 /// Error Status: `0x%2`. Click OK to shut down the system and reboot into Safe Mode. Check the event log for detailed information.
-pub const SAM_INIT_FAILURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8541); // ERROR_SAM_INIT_FAILURE
+pub const SAM_INIT_FAILURE : ErrorCode = ErrorCode::from_constant(8541); // ERROR_SAM_INIT_FAILURE
 
-#[doc(hidden)] pub const DS_DRA_SCHEMA_INFO_SHIP : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8542); // ERROR_DS_DRA_SCHEMA_INFO_SHIP
-#[doc(hidden)] pub const DS_DRA_SCHEMA_CONFLICT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8543); // ERROR_DS_DRA_SCHEMA_CONFLICT
-#[doc(hidden)] pub const DS_DRA_EARLIER_SCHEMA_CONFLICT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8544); // ERROR_DS_DRA_EARLIER_SCHEMA_CONFLICT
-#[doc(hidden)] pub const DS_DRA_OBJ_NC_MISMATCH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8545); // ERROR_DS_DRA_OBJ_NC_MISMATCH
-#[doc(hidden)] pub const DS_NC_STILL_HAS_DSAS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8546); // ERROR_DS_NC_STILL_HAS_DSAS
-#[doc(hidden)] pub const DS_GC_REQUIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8547); // ERROR_DS_GC_REQUIRED
-#[doc(hidden)] pub const DS_LOCAL_MEMBER_OF_LOCAL_ONLY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8548); // ERROR_DS_LOCAL_MEMBER_OF_LOCAL_ONLY
-#[doc(hidden)] pub const DS_NO_FPO_IN_UNIVERSAL_GROUPS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8549); // ERROR_DS_NO_FPO_IN_UNIVERSAL_GROUPS
-#[doc(hidden)] pub const DS_CANT_ADD_TO_GC : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8550); // ERROR_DS_CANT_ADD_TO_GC
-#[doc(hidden)] pub const DS_NO_CHECKPOINT_WITH_PDC : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8551); // ERROR_DS_NO_CHECKPOINT_WITH_PDC
-#[doc(hidden)] pub const DS_SOURCE_AUDITING_NOT_ENABLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8552); // ERROR_DS_SOURCE_AUDITING_NOT_ENABLED
-#[doc(hidden)] pub const DS_CANT_CREATE_IN_NONDOMAIN_NC : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8553); // ERROR_DS_CANT_CREATE_IN_NONDOMAIN_NC
-#[doc(hidden)] pub const DS_INVALID_NAME_FOR_SPN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8554); // ERROR_DS_INVALID_NAME_FOR_SPN
-#[doc(hidden)] pub const DS_FILTER_USES_CONTRUCTED_ATTRS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8555); // ERROR_DS_FILTER_USES_CONTRUCTED_ATTRS
-#[doc(hidden)] pub const DS_UNICODEPWD_NOT_IN_QUOTES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8556); // ERROR_DS_UNICODEPWD_NOT_IN_QUOTES
-#[doc(hidden)] pub const DS_MACHINE_ACCOUNT_QUOTA_EXCEEDED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8557); // ERROR_DS_MACHINE_ACCOUNT_QUOTA_EXCEEDED
-#[doc(hidden)] pub const DS_MUST_BE_RUN_ON_DST_DC : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8558); // ERROR_DS_MUST_BE_RUN_ON_DST_DC
-#[doc(hidden)] pub const DS_SRC_DC_MUST_BE_SP4_OR_GREATER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8559); // ERROR_DS_SRC_DC_MUST_BE_SP4_OR_GREATER
-#[doc(hidden)] pub const DS_CANT_TREE_DELETE_CRITICAL_OBJ : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8560); // ERROR_DS_CANT_TREE_DELETE_CRITICAL_OBJ
-#[doc(hidden)] pub const DS_INIT_FAILURE_CONSOLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8561); // ERROR_DS_INIT_FAILURE_CONSOLE
-#[doc(hidden)] pub const DS_SAM_INIT_FAILURE_CONSOLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8562); // ERROR_DS_SAM_INIT_FAILURE_CONSOLE
-#[doc(hidden)] pub const DS_FOREST_VERSION_TOO_HIGH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8563); // ERROR_DS_FOREST_VERSION_TOO_HIGH
-#[doc(hidden)] pub const DS_DOMAIN_VERSION_TOO_HIGH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8564); // ERROR_DS_DOMAIN_VERSION_TOO_HIGH
-#[doc(hidden)] pub const DS_FOREST_VERSION_TOO_LOW : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8565); // ERROR_DS_FOREST_VERSION_TOO_LOW
-#[doc(hidden)] pub const DS_DOMAIN_VERSION_TOO_LOW : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8566); // ERROR_DS_DOMAIN_VERSION_TOO_LOW
-#[doc(hidden)] pub const DS_INCOMPATIBLE_VERSION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8567); // ERROR_DS_INCOMPATIBLE_VERSION
-#[doc(hidden)] pub const DS_LOW_DSA_VERSION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8568); // ERROR_DS_LOW_DSA_VERSION
-#[doc(hidden)] pub const DS_NO_BEHAVIOR_VERSION_IN_MIXEDDOMAIN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8569); // ERROR_DS_NO_BEHAVIOR_VERSION_IN_MIXEDDOMAIN
-#[doc(hidden)] pub const DS_NOT_SUPPORTED_SORT_ORDER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8570); // ERROR_DS_NOT_SUPPORTED_SORT_ORDER
-#[doc(hidden)] pub const DS_NAME_NOT_UNIQUE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8571); // ERROR_DS_NAME_NOT_UNIQUE
-#[doc(hidden)] pub const DS_MACHINE_ACCOUNT_CREATED_PRENT4 : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8572); // ERROR_DS_MACHINE_ACCOUNT_CREATED_PRENT4
-#[doc(hidden)] pub const DS_OUT_OF_VERSION_STORE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8573); // ERROR_DS_OUT_OF_VERSION_STORE
-#[doc(hidden)] pub const DS_INCOMPATIBLE_CONTROLS_USED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8574); // ERROR_DS_INCOMPATIBLE_CONTROLS_USED
-#[doc(hidden)] pub const DS_NO_REF_DOMAIN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8575); // ERROR_DS_NO_REF_DOMAIN
-#[doc(hidden)] pub const DS_RESERVED_LINK_ID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8576); // ERROR_DS_RESERVED_LINK_ID
-#[doc(hidden)] pub const DS_LINK_ID_NOT_AVAILABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8577); // ERROR_DS_LINK_ID_NOT_AVAILABLE
-#[doc(hidden)] pub const DS_AG_CANT_HAVE_UNIVERSAL_MEMBER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8578); // ERROR_DS_AG_CANT_HAVE_UNIVERSAL_MEMBER
-#[doc(hidden)] pub const DS_MODIFYDN_DISALLOWED_BY_INSTANCE_TYPE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8579); // ERROR_DS_MODIFYDN_DISALLOWED_BY_INSTANCE_TYPE
-#[doc(hidden)] pub const DS_NO_OBJECT_MOVE_IN_SCHEMA_NC : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8580); // ERROR_DS_NO_OBJECT_MOVE_IN_SCHEMA_NC
-#[doc(hidden)] pub const DS_MODIFYDN_DISALLOWED_BY_FLAG : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8581); // ERROR_DS_MODIFYDN_DISALLOWED_BY_FLAG
-#[doc(hidden)] pub const DS_MODIFYDN_WRONG_GRANDPARENT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8582); // ERROR_DS_MODIFYDN_WRONG_GRANDPARENT
-#[doc(hidden)] pub const DS_NAME_ERROR_TRUST_REFERRAL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8583); // ERROR_DS_NAME_ERROR_TRUST_REFERRAL
+#[doc(hidden)] pub const DS_DRA_SCHEMA_INFO_SHIP : ErrorCode = ErrorCode::from_constant(8542); // ERROR_DS_DRA_SCHEMA_INFO_SHIP
+#[doc(hidden)] pub const DS_DRA_SCHEMA_CONFLICT : ErrorCode = ErrorCode::from_constant(8543); // ERROR_DS_DRA_SCHEMA_CONFLICT
+#[doc(hidden)] pub const DS_DRA_EARLIER_SCHEMA_CONFLICT : ErrorCode = ErrorCode::from_constant(8544); // ERROR_DS_DRA_EARLIER_SCHEMA_CONFLICT
+#[doc(hidden)] pub const DS_DRA_OBJ_NC_MISMATCH : ErrorCode = ErrorCode::from_constant(8545); // ERROR_DS_DRA_OBJ_NC_MISMATCH
+#[doc(hidden)] pub const DS_NC_STILL_HAS_DSAS : ErrorCode = ErrorCode::from_constant(8546); // ERROR_DS_NC_STILL_HAS_DSAS
+#[doc(hidden)] pub const DS_GC_REQUIRED : ErrorCode = ErrorCode::from_constant(8547); // ERROR_DS_GC_REQUIRED
+#[doc(hidden)] pub const DS_LOCAL_MEMBER_OF_LOCAL_ONLY : ErrorCode = ErrorCode::from_constant(8548); // ERROR_DS_LOCAL_MEMBER_OF_LOCAL_ONLY
+#[doc(hidden)] pub const DS_NO_FPO_IN_UNIVERSAL_GROUPS : ErrorCode = ErrorCode::from_constant(8549); // ERROR_DS_NO_FPO_IN_UNIVERSAL_GROUPS
+#[doc(hidden)] pub const DS_CANT_ADD_TO_GC : ErrorCode = ErrorCode::from_constant(8550); // ERROR_DS_CANT_ADD_TO_GC
+#[doc(hidden)] pub const DS_NO_CHECKPOINT_WITH_PDC : ErrorCode = ErrorCode::from_constant(8551); // ERROR_DS_NO_CHECKPOINT_WITH_PDC
+#[doc(hidden)] pub const DS_SOURCE_AUDITING_NOT_ENABLED : ErrorCode = ErrorCode::from_constant(8552); // ERROR_DS_SOURCE_AUDITING_NOT_ENABLED
+#[doc(hidden)] pub const DS_CANT_CREATE_IN_NONDOMAIN_NC : ErrorCode = ErrorCode::from_constant(8553); // ERROR_DS_CANT_CREATE_IN_NONDOMAIN_NC
+#[doc(hidden)] pub const DS_INVALID_NAME_FOR_SPN : ErrorCode = ErrorCode::from_constant(8554); // ERROR_DS_INVALID_NAME_FOR_SPN
+#[doc(hidden)] pub const DS_FILTER_USES_CONTRUCTED_ATTRS : ErrorCode = ErrorCode::from_constant(8555); // ERROR_DS_FILTER_USES_CONTRUCTED_ATTRS
+#[doc(hidden)] pub const DS_UNICODEPWD_NOT_IN_QUOTES : ErrorCode = ErrorCode::from_constant(8556); // ERROR_DS_UNICODEPWD_NOT_IN_QUOTES
+#[doc(hidden)] pub const DS_MACHINE_ACCOUNT_QUOTA_EXCEEDED : ErrorCode = ErrorCode::from_constant(8557); // ERROR_DS_MACHINE_ACCOUNT_QUOTA_EXCEEDED
+#[doc(hidden)] pub const DS_MUST_BE_RUN_ON_DST_DC : ErrorCode = ErrorCode::from_constant(8558); // ERROR_DS_MUST_BE_RUN_ON_DST_DC
+#[doc(hidden)] pub const DS_SRC_DC_MUST_BE_SP4_OR_GREATER : ErrorCode = ErrorCode::from_constant(8559); // ERROR_DS_SRC_DC_MUST_BE_SP4_OR_GREATER
+#[doc(hidden)] pub const DS_CANT_TREE_DELETE_CRITICAL_OBJ : ErrorCode = ErrorCode::from_constant(8560); // ERROR_DS_CANT_TREE_DELETE_CRITICAL_OBJ
+#[doc(hidden)] pub const DS_INIT_FAILURE_CONSOLE : ErrorCode = ErrorCode::from_constant(8561); // ERROR_DS_INIT_FAILURE_CONSOLE
+#[doc(hidden)] pub const DS_SAM_INIT_FAILURE_CONSOLE : ErrorCode = ErrorCode::from_constant(8562); // ERROR_DS_SAM_INIT_FAILURE_CONSOLE
+#[doc(hidden)] pub const DS_FOREST_VERSION_TOO_HIGH : ErrorCode = ErrorCode::from_constant(8563); // ERROR_DS_FOREST_VERSION_TOO_HIGH
+#[doc(hidden)] pub const DS_DOMAIN_VERSION_TOO_HIGH : ErrorCode = ErrorCode::from_constant(8564); // ERROR_DS_DOMAIN_VERSION_TOO_HIGH
+#[doc(hidden)] pub const DS_FOREST_VERSION_TOO_LOW : ErrorCode = ErrorCode::from_constant(8565); // ERROR_DS_FOREST_VERSION_TOO_LOW
+#[doc(hidden)] pub const DS_DOMAIN_VERSION_TOO_LOW : ErrorCode = ErrorCode::from_constant(8566); // ERROR_DS_DOMAIN_VERSION_TOO_LOW
+#[doc(hidden)] pub const DS_INCOMPATIBLE_VERSION : ErrorCode = ErrorCode::from_constant(8567); // ERROR_DS_INCOMPATIBLE_VERSION
+#[doc(hidden)] pub const DS_LOW_DSA_VERSION : ErrorCode = ErrorCode::from_constant(8568); // ERROR_DS_LOW_DSA_VERSION
+#[doc(hidden)] pub const DS_NO_BEHAVIOR_VERSION_IN_MIXEDDOMAIN : ErrorCode = ErrorCode::from_constant(8569); // ERROR_DS_NO_BEHAVIOR_VERSION_IN_MIXEDDOMAIN
+#[doc(hidden)] pub const DS_NOT_SUPPORTED_SORT_ORDER : ErrorCode = ErrorCode::from_constant(8570); // ERROR_DS_NOT_SUPPORTED_SORT_ORDER
+#[doc(hidden)] pub const DS_NAME_NOT_UNIQUE : ErrorCode = ErrorCode::from_constant(8571); // ERROR_DS_NAME_NOT_UNIQUE
+#[doc(hidden)] pub const DS_MACHINE_ACCOUNT_CREATED_PRENT4 : ErrorCode = ErrorCode::from_constant(8572); // ERROR_DS_MACHINE_ACCOUNT_CREATED_PRENT4
+#[doc(hidden)] pub const DS_OUT_OF_VERSION_STORE : ErrorCode = ErrorCode::from_constant(8573); // ERROR_DS_OUT_OF_VERSION_STORE
+#[doc(hidden)] pub const DS_INCOMPATIBLE_CONTROLS_USED : ErrorCode = ErrorCode::from_constant(8574); // ERROR_DS_INCOMPATIBLE_CONTROLS_USED
+#[doc(hidden)] pub const DS_NO_REF_DOMAIN : ErrorCode = ErrorCode::from_constant(8575); // ERROR_DS_NO_REF_DOMAIN
+#[doc(hidden)] pub const DS_RESERVED_LINK_ID : ErrorCode = ErrorCode::from_constant(8576); // ERROR_DS_RESERVED_LINK_ID
+#[doc(hidden)] pub const DS_LINK_ID_NOT_AVAILABLE : ErrorCode = ErrorCode::from_constant(8577); // ERROR_DS_LINK_ID_NOT_AVAILABLE
+#[doc(hidden)] pub const DS_AG_CANT_HAVE_UNIVERSAL_MEMBER : ErrorCode = ErrorCode::from_constant(8578); // ERROR_DS_AG_CANT_HAVE_UNIVERSAL_MEMBER
+#[doc(hidden)] pub const DS_MODIFYDN_DISALLOWED_BY_INSTANCE_TYPE : ErrorCode = ErrorCode::from_constant(8579); // ERROR_DS_MODIFYDN_DISALLOWED_BY_INSTANCE_TYPE
+#[doc(hidden)] pub const DS_NO_OBJECT_MOVE_IN_SCHEMA_NC : ErrorCode = ErrorCode::from_constant(8580); // ERROR_DS_NO_OBJECT_MOVE_IN_SCHEMA_NC
+#[doc(hidden)] pub const DS_MODIFYDN_DISALLOWED_BY_FLAG : ErrorCode = ErrorCode::from_constant(8581); // ERROR_DS_MODIFYDN_DISALLOWED_BY_FLAG
+#[doc(hidden)] pub const DS_MODIFYDN_WRONG_GRANDPARENT : ErrorCode = ErrorCode::from_constant(8582); // ERROR_DS_MODIFYDN_WRONG_GRANDPARENT
+#[doc(hidden)] pub const DS_NAME_ERROR_TRUST_REFERRAL : ErrorCode = ErrorCode::from_constant(8583); // ERROR_DS_NAME_ERROR_TRUST_REFERRAL
 
 /// The requested action is not supported on standard server.
-pub const NOT_SUPPORTED_ON_STANDARD_SERVER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8584); // ERROR_NOT_SUPPORTED_ON_STANDARD_SERVER
+pub const NOT_SUPPORTED_ON_STANDARD_SERVER : ErrorCode = ErrorCode::from_constant(8584); // ERROR_NOT_SUPPORTED_ON_STANDARD_SERVER
 
-#[doc(hidden)] pub const DS_CANT_ACCESS_REMOTE_PART_OF_AD : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8585); // ERROR_DS_CANT_ACCESS_REMOTE_PART_OF_AD
-#[doc(hidden)] pub const DS_CR_IMPOSSIBLE_TO_VALIDATE_V2 : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8586); // ERROR_DS_CR_IMPOSSIBLE_TO_VALIDATE_V2
-#[doc(hidden)] pub const DS_THREAD_LIMIT_EXCEEDED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8587); // ERROR_DS_THREAD_LIMIT_EXCEEDED
-#[doc(hidden)] pub const DS_NOT_CLOSEST : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8588); // ERROR_DS_NOT_CLOSEST
-#[doc(hidden)] pub const DS_CANT_DERIVE_SPN_WITHOUT_SERVER_REF : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8589); // ERROR_DS_CANT_DERIVE_SPN_WITHOUT_SERVER_REF
-#[doc(hidden)] pub const DS_SINGLE_USER_MODE_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8590); // ERROR_DS_SINGLE_USER_MODE_FAILED
-#[doc(hidden)] pub const DS_NTDSCRIPT_SYNTAX_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8591); // ERROR_DS_NTDSCRIPT_SYNTAX_ERROR
-#[doc(hidden)] pub const DS_NTDSCRIPT_PROCESS_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8592); // ERROR_DS_NTDSCRIPT_PROCESS_ERROR
-#[doc(hidden)] pub const DS_DIFFERENT_REPL_EPOCHS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8593); // ERROR_DS_DIFFERENT_REPL_EPOCHS
-#[doc(hidden)] pub const DS_DRS_EXTENSIONS_CHANGED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8594); // ERROR_DS_DRS_EXTENSIONS_CHANGED
-#[doc(hidden)] pub const DS_REPLICA_SET_CHANGE_NOT_ALLOWED_ON_DISABLED_CR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8595); // ERROR_DS_REPLICA_SET_CHANGE_NOT_ALLOWED_ON_DISABLED_CR
-#[doc(hidden)] pub const DS_NO_MSDS_INTID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8596); // ERROR_DS_NO_MSDS_INTID
-#[doc(hidden)] pub const DS_DUP_MSDS_INTID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8597); // ERROR_DS_DUP_MSDS_INTID
-#[doc(hidden)] pub const DS_EXISTS_IN_RDNATTID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8598); // ERROR_DS_EXISTS_IN_RDNATTID
-#[doc(hidden)] pub const DS_AUTHORIZATION_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8599); // ERROR_DS_AUTHORIZATION_FAILED
-#[doc(hidden)] pub const DS_INVALID_SCRIPT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8600); // ERROR_DS_INVALID_SCRIPT
-#[doc(hidden)] pub const DS_REMOTE_CROSSREF_OP_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8601); // ERROR_DS_REMOTE_CROSSREF_OP_FAILED
-#[doc(hidden)] pub const DS_CROSS_REF_BUSY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8602); // ERROR_DS_CROSS_REF_BUSY
-#[doc(hidden)] pub const DS_CANT_DERIVE_SPN_FOR_DELETED_DOMAIN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8603); // ERROR_DS_CANT_DERIVE_SPN_FOR_DELETED_DOMAIN
-#[doc(hidden)] pub const DS_CANT_DEMOTE_WITH_WRITEABLE_NC : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8604); // ERROR_DS_CANT_DEMOTE_WITH_WRITEABLE_NC
-#[doc(hidden)] pub const DS_DUPLICATE_ID_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8605); // ERROR_DS_DUPLICATE_ID_FOUND
-#[doc(hidden)] pub const DS_INSUFFICIENT_ATTR_TO_CREATE_OBJECT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8606); // ERROR_DS_INSUFFICIENT_ATTR_TO_CREATE_OBJECT
-#[doc(hidden)] pub const DS_GROUP_CONVERSION_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8607); // ERROR_DS_GROUP_CONVERSION_ERROR
-#[doc(hidden)] pub const DS_CANT_MOVE_APP_BASIC_GROUP : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8608); // ERROR_DS_CANT_MOVE_APP_BASIC_GROUP
-#[doc(hidden)] pub const DS_CANT_MOVE_APP_QUERY_GROUP : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8609); // ERROR_DS_CANT_MOVE_APP_QUERY_GROUP
-#[doc(hidden)] pub const DS_ROLE_NOT_VERIFIED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8610); // ERROR_DS_ROLE_NOT_VERIFIED
-#[doc(hidden)] pub const DS_WKO_CONTAINER_CANNOT_BE_SPECIAL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8611); // ERROR_DS_WKO_CONTAINER_CANNOT_BE_SPECIAL
-#[doc(hidden)] pub const DS_DOMAIN_RENAME_IN_PROGRESS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8612); // ERROR_DS_DOMAIN_RENAME_IN_PROGRESS
-#[doc(hidden)] pub const DS_EXISTING_AD_CHILD_NC : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8613); // ERROR_DS_EXISTING_AD_CHILD_NC
-#[doc(hidden)] pub const DS_REPL_LIFETIME_EXCEEDED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8614); // ERROR_DS_REPL_LIFETIME_EXCEEDED
-#[doc(hidden)] pub const DS_DISALLOWED_IN_SYSTEM_CONTAINER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8615); // ERROR_DS_DISALLOWED_IN_SYSTEM_CONTAINER
-#[doc(hidden)] pub const DS_LDAP_SEND_QUEUE_FULL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8616); // ERROR_DS_LDAP_SEND_QUEUE_FULL
-#[doc(hidden)] pub const DS_DRA_OUT_SCHEDULE_WINDOW : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8617); // ERROR_DS_DRA_OUT_SCHEDULE_WINDOW
-#[doc(hidden)] pub const DS_POLICY_NOT_KNOWN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8618); // ERROR_DS_POLICY_NOT_KNOWN
+#[doc(hidden)] pub const DS_CANT_ACCESS_REMOTE_PART_OF_AD : ErrorCode = ErrorCode::from_constant(8585); // ERROR_DS_CANT_ACCESS_REMOTE_PART_OF_AD
+#[doc(hidden)] pub const DS_CR_IMPOSSIBLE_TO_VALIDATE_V2 : ErrorCode = ErrorCode::from_constant(8586); // ERROR_DS_CR_IMPOSSIBLE_TO_VALIDATE_V2
+#[doc(hidden)] pub const DS_THREAD_LIMIT_EXCEEDED : ErrorCode = ErrorCode::from_constant(8587); // ERROR_DS_THREAD_LIMIT_EXCEEDED
+#[doc(hidden)] pub const DS_NOT_CLOSEST : ErrorCode = ErrorCode::from_constant(8588); // ERROR_DS_NOT_CLOSEST
+#[doc(hidden)] pub const DS_CANT_DERIVE_SPN_WITHOUT_SERVER_REF : ErrorCode = ErrorCode::from_constant(8589); // ERROR_DS_CANT_DERIVE_SPN_WITHOUT_SERVER_REF
+#[doc(hidden)] pub const DS_SINGLE_USER_MODE_FAILED : ErrorCode = ErrorCode::from_constant(8590); // ERROR_DS_SINGLE_USER_MODE_FAILED
+#[doc(hidden)] pub const DS_NTDSCRIPT_SYNTAX_ERROR : ErrorCode = ErrorCode::from_constant(8591); // ERROR_DS_NTDSCRIPT_SYNTAX_ERROR
+#[doc(hidden)] pub const DS_NTDSCRIPT_PROCESS_ERROR : ErrorCode = ErrorCode::from_constant(8592); // ERROR_DS_NTDSCRIPT_PROCESS_ERROR
+#[doc(hidden)] pub const DS_DIFFERENT_REPL_EPOCHS : ErrorCode = ErrorCode::from_constant(8593); // ERROR_DS_DIFFERENT_REPL_EPOCHS
+#[doc(hidden)] pub const DS_DRS_EXTENSIONS_CHANGED : ErrorCode = ErrorCode::from_constant(8594); // ERROR_DS_DRS_EXTENSIONS_CHANGED
+#[doc(hidden)] pub const DS_REPLICA_SET_CHANGE_NOT_ALLOWED_ON_DISABLED_CR : ErrorCode = ErrorCode::from_constant(8595); // ERROR_DS_REPLICA_SET_CHANGE_NOT_ALLOWED_ON_DISABLED_CR
+#[doc(hidden)] pub const DS_NO_MSDS_INTID : ErrorCode = ErrorCode::from_constant(8596); // ERROR_DS_NO_MSDS_INTID
+#[doc(hidden)] pub const DS_DUP_MSDS_INTID : ErrorCode = ErrorCode::from_constant(8597); // ERROR_DS_DUP_MSDS_INTID
+#[doc(hidden)] pub const DS_EXISTS_IN_RDNATTID : ErrorCode = ErrorCode::from_constant(8598); // ERROR_DS_EXISTS_IN_RDNATTID
+#[doc(hidden)] pub const DS_AUTHORIZATION_FAILED : ErrorCode = ErrorCode::from_constant(8599); // ERROR_DS_AUTHORIZATION_FAILED
+#[doc(hidden)] pub const DS_INVALID_SCRIPT : ErrorCode = ErrorCode::from_constant(8600); // ERROR_DS_INVALID_SCRIPT
+#[doc(hidden)] pub const DS_REMOTE_CROSSREF_OP_FAILED : ErrorCode = ErrorCode::from_constant(8601); // ERROR_DS_REMOTE_CROSSREF_OP_FAILED
+#[doc(hidden)] pub const DS_CROSS_REF_BUSY : ErrorCode = ErrorCode::from_constant(8602); // ERROR_DS_CROSS_REF_BUSY
+#[doc(hidden)] pub const DS_CANT_DERIVE_SPN_FOR_DELETED_DOMAIN : ErrorCode = ErrorCode::from_constant(8603); // ERROR_DS_CANT_DERIVE_SPN_FOR_DELETED_DOMAIN
+#[doc(hidden)] pub const DS_CANT_DEMOTE_WITH_WRITEABLE_NC : ErrorCode = ErrorCode::from_constant(8604); // ERROR_DS_CANT_DEMOTE_WITH_WRITEABLE_NC
+#[doc(hidden)] pub const DS_DUPLICATE_ID_FOUND : ErrorCode = ErrorCode::from_constant(8605); // ERROR_DS_DUPLICATE_ID_FOUND
+#[doc(hidden)] pub const DS_INSUFFICIENT_ATTR_TO_CREATE_OBJECT : ErrorCode = ErrorCode::from_constant(8606); // ERROR_DS_INSUFFICIENT_ATTR_TO_CREATE_OBJECT
+#[doc(hidden)] pub const DS_GROUP_CONVERSION_ERROR : ErrorCode = ErrorCode::from_constant(8607); // ERROR_DS_GROUP_CONVERSION_ERROR
+#[doc(hidden)] pub const DS_CANT_MOVE_APP_BASIC_GROUP : ErrorCode = ErrorCode::from_constant(8608); // ERROR_DS_CANT_MOVE_APP_BASIC_GROUP
+#[doc(hidden)] pub const DS_CANT_MOVE_APP_QUERY_GROUP : ErrorCode = ErrorCode::from_constant(8609); // ERROR_DS_CANT_MOVE_APP_QUERY_GROUP
+#[doc(hidden)] pub const DS_ROLE_NOT_VERIFIED : ErrorCode = ErrorCode::from_constant(8610); // ERROR_DS_ROLE_NOT_VERIFIED
+#[doc(hidden)] pub const DS_WKO_CONTAINER_CANNOT_BE_SPECIAL : ErrorCode = ErrorCode::from_constant(8611); // ERROR_DS_WKO_CONTAINER_CANNOT_BE_SPECIAL
+#[doc(hidden)] pub const DS_DOMAIN_RENAME_IN_PROGRESS : ErrorCode = ErrorCode::from_constant(8612); // ERROR_DS_DOMAIN_RENAME_IN_PROGRESS
+#[doc(hidden)] pub const DS_EXISTING_AD_CHILD_NC : ErrorCode = ErrorCode::from_constant(8613); // ERROR_DS_EXISTING_AD_CHILD_NC
+#[doc(hidden)] pub const DS_REPL_LIFETIME_EXCEEDED : ErrorCode = ErrorCode::from_constant(8614); // ERROR_DS_REPL_LIFETIME_EXCEEDED
+#[doc(hidden)] pub const DS_DISALLOWED_IN_SYSTEM_CONTAINER : ErrorCode = ErrorCode::from_constant(8615); // ERROR_DS_DISALLOWED_IN_SYSTEM_CONTAINER
+#[doc(hidden)] pub const DS_LDAP_SEND_QUEUE_FULL : ErrorCode = ErrorCode::from_constant(8616); // ERROR_DS_LDAP_SEND_QUEUE_FULL
+#[doc(hidden)] pub const DS_DRA_OUT_SCHEDULE_WINDOW : ErrorCode = ErrorCode::from_constant(8617); // ERROR_DS_DRA_OUT_SCHEDULE_WINDOW
+#[doc(hidden)] pub const DS_POLICY_NOT_KNOWN : ErrorCode = ErrorCode::from_constant(8618); // ERROR_DS_POLICY_NOT_KNOWN
 
 /// The site settings object for the specified site does not exist.
-pub const NO_SITE_SETTINGS_OBJECT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8619); // ERROR_NO_SITE_SETTINGS_OBJECT
+pub const NO_SITE_SETTINGS_OBJECT : ErrorCode = ErrorCode::from_constant(8619); // ERROR_NO_SITE_SETTINGS_OBJECT
 
 /// The local account store does not contain secret material for the specified account.
-pub const NO_SECRETS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8620); // ERROR_NO_SECRETS
+pub const NO_SECRETS : ErrorCode = ErrorCode::from_constant(8620); // ERROR_NO_SECRETS
 
 /// Could not find a writable domain controller in the domain.
-pub const NO_WRITABLE_DC_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8621); // ERROR_NO_WRITABLE_DC_FOUND
+pub const NO_WRITABLE_DC_FOUND : ErrorCode = ErrorCode::from_constant(8621); // ERROR_NO_WRITABLE_DC_FOUND
 
-#[doc(hidden)] pub const DS_NO_SERVER_OBJECT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8622); // ERROR_DS_NO_SERVER_OBJECT
-#[doc(hidden)] pub const DS_NO_NTDSA_OBJECT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8623); // ERROR_DS_NO_NTDSA_OBJECT
-#[doc(hidden)] pub const DS_NON_ASQ_SEARCH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8624); // ERROR_DS_NON_ASQ_SEARCH
-#[doc(hidden)] pub const DS_AUDIT_FAILURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8625); // ERROR_DS_AUDIT_FAILURE
-#[doc(hidden)] pub const DS_INVALID_SEARCH_FLAG_SUBTREE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8626); // ERROR_DS_INVALID_SEARCH_FLAG_SUBTREE
-#[doc(hidden)] pub const DS_INVALID_SEARCH_FLAG_TUPLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8627); // ERROR_DS_INVALID_SEARCH_FLAG_TUPLE
-#[doc(hidden)] pub const DS_HIERARCHY_TABLE_TOO_DEEP : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8628); // ERROR_DS_HIERARCHY_TABLE_TOO_DEEP
-#[doc(hidden)] pub const DS_DRA_CORRUPT_UTD_VECTOR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8629); // ERROR_DS_DRA_CORRUPT_UTD_VECTOR
-#[doc(hidden)] pub const DS_DRA_SECRETS_DENIED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8630); // ERROR_DS_DRA_SECRETS_DENIED
-#[doc(hidden)] pub const DS_RESERVED_MAPI_ID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8631); // ERROR_DS_RESERVED_MAPI_ID
-#[doc(hidden)] pub const DS_MAPI_ID_NOT_AVAILABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8632); // ERROR_DS_MAPI_ID_NOT_AVAILABLE
-#[doc(hidden)] pub const DS_DRA_MISSING_KRBTGT_SECRET : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8633); // ERROR_DS_DRA_MISSING_KRBTGT_SECRET
-#[doc(hidden)] pub const DS_DOMAIN_NAME_EXISTS_IN_FOREST : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8634); // ERROR_DS_DOMAIN_NAME_EXISTS_IN_FOREST
-#[doc(hidden)] pub const DS_FLAT_NAME_EXISTS_IN_FOREST : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8635); // ERROR_DS_FLAT_NAME_EXISTS_IN_FOREST
+#[doc(hidden)] pub const DS_NO_SERVER_OBJECT : ErrorCode = ErrorCode::from_constant(8622); // ERROR_DS_NO_SERVER_OBJECT
+#[doc(hidden)] pub const DS_NO_NTDSA_OBJECT : ErrorCode = ErrorCode::from_constant(8623); // ERROR_DS_NO_NTDSA_OBJECT
+#[doc(hidden)] pub const DS_NON_ASQ_SEARCH : ErrorCode = ErrorCode::from_constant(8624); // ERROR_DS_NON_ASQ_SEARCH
+#[doc(hidden)] pub const DS_AUDIT_FAILURE : ErrorCode = ErrorCode::from_constant(8625); // ERROR_DS_AUDIT_FAILURE
+#[doc(hidden)] pub const DS_INVALID_SEARCH_FLAG_SUBTREE : ErrorCode = ErrorCode::from_constant(8626); // ERROR_DS_INVALID_SEARCH_FLAG_SUBTREE
+#[doc(hidden)] pub const DS_INVALID_SEARCH_FLAG_TUPLE : ErrorCode = ErrorCode::from_constant(8627); // ERROR_DS_INVALID_SEARCH_FLAG_TUPLE
+#[doc(hidden)] pub const DS_HIERARCHY_TABLE_TOO_DEEP : ErrorCode = ErrorCode::from_constant(8628); // ERROR_DS_HIERARCHY_TABLE_TOO_DEEP
+#[doc(hidden)] pub const DS_DRA_CORRUPT_UTD_VECTOR : ErrorCode = ErrorCode::from_constant(8629); // ERROR_DS_DRA_CORRUPT_UTD_VECTOR
+#[doc(hidden)] pub const DS_DRA_SECRETS_DENIED : ErrorCode = ErrorCode::from_constant(8630); // ERROR_DS_DRA_SECRETS_DENIED
+#[doc(hidden)] pub const DS_RESERVED_MAPI_ID : ErrorCode = ErrorCode::from_constant(8631); // ERROR_DS_RESERVED_MAPI_ID
+#[doc(hidden)] pub const DS_MAPI_ID_NOT_AVAILABLE : ErrorCode = ErrorCode::from_constant(8632); // ERROR_DS_MAPI_ID_NOT_AVAILABLE
+#[doc(hidden)] pub const DS_DRA_MISSING_KRBTGT_SECRET : ErrorCode = ErrorCode::from_constant(8633); // ERROR_DS_DRA_MISSING_KRBTGT_SECRET
+#[doc(hidden)] pub const DS_DOMAIN_NAME_EXISTS_IN_FOREST : ErrorCode = ErrorCode::from_constant(8634); // ERROR_DS_DOMAIN_NAME_EXISTS_IN_FOREST
+#[doc(hidden)] pub const DS_FLAT_NAME_EXISTS_IN_FOREST : ErrorCode = ErrorCode::from_constant(8635); // ERROR_DS_FLAT_NAME_EXISTS_IN_FOREST
 
 /// The User Principal Name (UPN) is invalid.
-pub const INVALID_USER_PRINCIPAL_NAME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8636); // ERROR_INVALID_USER_PRINCIPAL_NAME
+pub const INVALID_USER_PRINCIPAL_NAME : ErrorCode = ErrorCode::from_constant(8636); // ERROR_INVALID_USER_PRINCIPAL_NAME
 
-#[doc(hidden)] pub const DS_OID_MAPPED_GROUP_CANT_HAVE_MEMBERS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8637); // ERROR_DS_OID_MAPPED_GROUP_CANT_HAVE_MEMBERS
-#[doc(hidden)] pub const DS_OID_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8638); // ERROR_DS_OID_NOT_FOUND
-#[doc(hidden)] pub const DS_DRA_RECYCLED_TARGET : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8639); // ERROR_DS_DRA_RECYCLED_TARGET
-#[doc(hidden)] pub const DS_DISALLOWED_NC_REDIRECT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8640); // ERROR_DS_DISALLOWED_NC_REDIRECT
-#[doc(hidden)] pub const DS_HIGH_ADLDS_FFL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8641); // ERROR_DS_HIGH_ADLDS_FFL
-#[doc(hidden)] pub const DS_HIGH_DSA_VERSION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8642); // ERROR_DS_HIGH_DSA_VERSION
-#[doc(hidden)] pub const DS_LOW_ADLDS_FFL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8643); // ERROR_DS_LOW_ADLDS_FFL
+#[doc(hidden)] pub const DS_OID_MAPPED_GROUP_CANT_HAVE_MEMBERS : ErrorCode = ErrorCode::from_constant(8637); // ERROR_DS_OID_MAPPED_GROUP_CANT_HAVE_MEMBERS
+#[doc(hidden)] pub const DS_OID_NOT_FOUND : ErrorCode = ErrorCode::from_constant(8638); // ERROR_DS_OID_NOT_FOUND
+#[doc(hidden)] pub const DS_DRA_RECYCLED_TARGET : ErrorCode = ErrorCode::from_constant(8639); // ERROR_DS_DRA_RECYCLED_TARGET
+#[doc(hidden)] pub const DS_DISALLOWED_NC_REDIRECT : ErrorCode = ErrorCode::from_constant(8640); // ERROR_DS_DISALLOWED_NC_REDIRECT
+#[doc(hidden)] pub const DS_HIGH_ADLDS_FFL : ErrorCode = ErrorCode::from_constant(8641); // ERROR_DS_HIGH_ADLDS_FFL
+#[doc(hidden)] pub const DS_HIGH_DSA_VERSION : ErrorCode = ErrorCode::from_constant(8642); // ERROR_DS_HIGH_DSA_VERSION
+#[doc(hidden)] pub const DS_LOW_ADLDS_FFL : ErrorCode = ErrorCode::from_constant(8643); // ERROR_DS_LOW_ADLDS_FFL
 
 /// The domain join cannot be completed because the SID of the domain you attempted to join was identical to the SID of this machine. This is a symptom of an improperly cloned operating system install.  You should run sysprep on this machine in order to generate a new machine SID. Please see <http://go.microsoft.com/fwlink/?LinkId=168895> for more information.
-pub const DOMAIN_SID_SAME_AS_LOCAL_WORKSTATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8644); // ERROR_DOMAIN_SID_SAME_AS_LOCAL_WORKSTATION
+pub const DOMAIN_SID_SAME_AS_LOCAL_WORKSTATION : ErrorCode = ErrorCode::from_constant(8644); // ERROR_DOMAIN_SID_SAME_AS_LOCAL_WORKSTATION
 
-#[doc(hidden)] pub const DS_UNDELETE_SAM_VALIDATION_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8645); // ERROR_DS_UNDELETE_SAM_VALIDATION_FAILED
+#[doc(hidden)] pub const DS_UNDELETE_SAM_VALIDATION_FAILED : ErrorCode = ErrorCode::from_constant(8645); // ERROR_DS_UNDELETE_SAM_VALIDATION_FAILED
 
 /// The system is not authoritative for the specified account and therefore cannot complete the operation. Please retry the operation using the provider associated with this account. If this is an online provider please use the provider's online site.
-pub const INCORRECT_ACCOUNT_TYPE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8646); // ERROR_INCORRECT_ACCOUNT_TYPE
+pub const INCORRECT_ACCOUNT_TYPE : ErrorCode = ErrorCode::from_constant(8646); // ERROR_INCORRECT_ACCOUNT_TYPE
 
-#[doc(hidden)] pub const DS_SPN_VALUE_NOT_UNIQUE_IN_FOREST : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8647); // ERROR_DS_SPN_VALUE_NOT_UNIQUE_IN_FOREST
-#[doc(hidden)] pub const DS_UPN_VALUE_NOT_UNIQUE_IN_FOREST : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8648); // ERROR_DS_UPN_VALUE_NOT_UNIQUE_IN_FOREST
-#[doc(hidden)] pub const DS_MISSING_FOREST_TRUST : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8649); // ERROR_DS_MISSING_FOREST_TRUST
-#[doc(hidden)] pub const DS_VALUE_KEY_NOT_UNIQUE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8650); // ERROR_DS_VALUE_KEY_NOT_UNIQUE
-#[doc(hidden)] pub const IPSEC_QM_POLICY_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13000); // ERROR_IPSEC_QM_POLICY_EXISTS
-#[doc(hidden)] pub const IPSEC_QM_POLICY_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13001); // ERROR_IPSEC_QM_POLICY_NOT_FOUND
-#[doc(hidden)] pub const IPSEC_QM_POLICY_IN_USE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13002); // ERROR_IPSEC_QM_POLICY_IN_USE
-#[doc(hidden)] pub const IPSEC_MM_POLICY_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13003); // ERROR_IPSEC_MM_POLICY_EXISTS
-#[doc(hidden)] pub const IPSEC_MM_POLICY_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13004); // ERROR_IPSEC_MM_POLICY_NOT_FOUND
-#[doc(hidden)] pub const IPSEC_MM_POLICY_IN_USE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13005); // ERROR_IPSEC_MM_POLICY_IN_USE
-#[doc(hidden)] pub const IPSEC_MM_FILTER_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13006); // ERROR_IPSEC_MM_FILTER_EXISTS
-#[doc(hidden)] pub const IPSEC_MM_FILTER_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13007); // ERROR_IPSEC_MM_FILTER_NOT_FOUND
-#[doc(hidden)] pub const IPSEC_TRANSPORT_FILTER_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13008); // ERROR_IPSEC_TRANSPORT_FILTER_EXISTS
-#[doc(hidden)] pub const IPSEC_TRANSPORT_FILTER_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13009); // ERROR_IPSEC_TRANSPORT_FILTER_NOT_FOUND
-#[doc(hidden)] pub const IPSEC_MM_AUTH_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13010); // ERROR_IPSEC_MM_AUTH_EXISTS
-#[doc(hidden)] pub const IPSEC_MM_AUTH_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13011); // ERROR_IPSEC_MM_AUTH_NOT_FOUND
-#[doc(hidden)] pub const IPSEC_MM_AUTH_IN_USE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13012); // ERROR_IPSEC_MM_AUTH_IN_USE
-#[doc(hidden)] pub const IPSEC_DEFAULT_MM_POLICY_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13013); // ERROR_IPSEC_DEFAULT_MM_POLICY_NOT_FOUND
-#[doc(hidden)] pub const IPSEC_DEFAULT_MM_AUTH_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13014); // ERROR_IPSEC_DEFAULT_MM_AUTH_NOT_FOUND
-#[doc(hidden)] pub const IPSEC_DEFAULT_QM_POLICY_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13015); // ERROR_IPSEC_DEFAULT_QM_POLICY_NOT_FOUND
-#[doc(hidden)] pub const IPSEC_TUNNEL_FILTER_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13016); // ERROR_IPSEC_TUNNEL_FILTER_EXISTS
-#[doc(hidden)] pub const IPSEC_TUNNEL_FILTER_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13017); // ERROR_IPSEC_TUNNEL_FILTER_NOT_FOUND
-#[doc(hidden)] pub const IPSEC_MM_FILTER_PENDING_DELETION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13018); // ERROR_IPSEC_MM_FILTER_PENDING_DELETION
-#[doc(hidden)] pub const IPSEC_TRANSPORT_FILTER_PENDING_DELETION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13019); // ERROR_IPSEC_TRANSPORT_FILTER_PENDING_DELETION
-#[doc(hidden)] pub const IPSEC_TUNNEL_FILTER_PENDING_DELETION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13020); // ERROR_IPSEC_TUNNEL_FILTER_PENDING_DELETION
-#[doc(hidden)] pub const IPSEC_MM_POLICY_PENDING_DELETION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13021); // ERROR_IPSEC_MM_POLICY_PENDING_DELETION
-#[doc(hidden)] pub const IPSEC_MM_AUTH_PENDING_DELETION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13022); // ERROR_IPSEC_MM_AUTH_PENDING_DELETION
-#[doc(hidden)] pub const IPSEC_QM_POLICY_PENDING_DELETION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13023); // ERROR_IPSEC_QM_POLICY_PENDING_DELETION
-#[doc(hidden)] pub const IPSEC_IKE_NEG_STATUS_BEGIN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13800); // ERROR_IPSEC_IKE_NEG_STATUS_BEGIN
-#[doc(hidden)] pub const IPSEC_IKE_AUTH_FAIL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13801); // ERROR_IPSEC_IKE_AUTH_FAIL
-#[doc(hidden)] pub const IPSEC_IKE_ATTRIB_FAIL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13802); // ERROR_IPSEC_IKE_ATTRIB_FAIL
-#[doc(hidden)] pub const IPSEC_IKE_NEGOTIATION_PENDING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13803); // ERROR_IPSEC_IKE_NEGOTIATION_PENDING
-#[doc(hidden)] pub const IPSEC_IKE_GENERAL_PROCESSING_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13804); // ERROR_IPSEC_IKE_GENERAL_PROCESSING_ERROR
-#[doc(hidden)] pub const IPSEC_IKE_TIMED_OUT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13805); // ERROR_IPSEC_IKE_TIMED_OUT
-#[doc(hidden)] pub const IPSEC_IKE_NO_CERT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13806); // ERROR_IPSEC_IKE_NO_CERT
-#[doc(hidden)] pub const IPSEC_IKE_SA_DELETED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13807); // ERROR_IPSEC_IKE_SA_DELETED
-#[doc(hidden)] pub const IPSEC_IKE_SA_REAPED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13808); // ERROR_IPSEC_IKE_SA_REAPED
-#[doc(hidden)] pub const IPSEC_IKE_MM_ACQUIRE_DROP : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13809); // ERROR_IPSEC_IKE_MM_ACQUIRE_DROP
-#[doc(hidden)] pub const IPSEC_IKE_QM_ACQUIRE_DROP : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13810); // ERROR_IPSEC_IKE_QM_ACQUIRE_DROP
-#[doc(hidden)] pub const IPSEC_IKE_QUEUE_DROP_MM : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13811); // ERROR_IPSEC_IKE_QUEUE_DROP_MM
-#[doc(hidden)] pub const IPSEC_IKE_QUEUE_DROP_NO_MM : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13812); // ERROR_IPSEC_IKE_QUEUE_DROP_NO_MM
-#[doc(hidden)] pub const IPSEC_IKE_DROP_NO_RESPONSE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13813); // ERROR_IPSEC_IKE_DROP_NO_RESPONSE
-#[doc(hidden)] pub const IPSEC_IKE_MM_DELAY_DROP : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13814); // ERROR_IPSEC_IKE_MM_DELAY_DROP
-#[doc(hidden)] pub const IPSEC_IKE_QM_DELAY_DROP : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13815); // ERROR_IPSEC_IKE_QM_DELAY_DROP
-#[doc(hidden)] pub const IPSEC_IKE_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13816); // ERROR_IPSEC_IKE_ERROR
-#[doc(hidden)] pub const IPSEC_IKE_CRL_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13817); // ERROR_IPSEC_IKE_CRL_FAILED
-#[doc(hidden)] pub const IPSEC_IKE_INVALID_KEY_USAGE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13818); // ERROR_IPSEC_IKE_INVALID_KEY_USAGE
-#[doc(hidden)] pub const IPSEC_IKE_INVALID_CERT_TYPE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13819); // ERROR_IPSEC_IKE_INVALID_CERT_TYPE
-#[doc(hidden)] pub const IPSEC_IKE_NO_PRIVATE_KEY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13820); // ERROR_IPSEC_IKE_NO_PRIVATE_KEY
-#[doc(hidden)] pub const IPSEC_IKE_SIMULTANEOUS_REKEY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13821); // ERROR_IPSEC_IKE_SIMULTANEOUS_REKEY
-#[doc(hidden)] pub const IPSEC_IKE_DH_FAIL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13822); // ERROR_IPSEC_IKE_DH_FAIL
-#[doc(hidden)] pub const IPSEC_IKE_CRITICAL_PAYLOAD_NOT_RECOGNIZED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13823); // ERROR_IPSEC_IKE_CRITICAL_PAYLOAD_NOT_RECOGNIZED
-#[doc(hidden)] pub const IPSEC_IKE_INVALID_HEADER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13824); // ERROR_IPSEC_IKE_INVALID_HEADER
-#[doc(hidden)] pub const IPSEC_IKE_NO_POLICY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13825); // ERROR_IPSEC_IKE_NO_POLICY
-#[doc(hidden)] pub const IPSEC_IKE_INVALID_SIGNATURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13826); // ERROR_IPSEC_IKE_INVALID_SIGNATURE
-#[doc(hidden)] pub const IPSEC_IKE_KERBEROS_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13827); // ERROR_IPSEC_IKE_KERBEROS_ERROR
-#[doc(hidden)] pub const IPSEC_IKE_NO_PUBLIC_KEY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13828); // ERROR_IPSEC_IKE_NO_PUBLIC_KEY
-#[doc(hidden)] pub const IPSEC_IKE_PROCESS_ERR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13829); // ERROR_IPSEC_IKE_PROCESS_ERR
-#[doc(hidden)] pub const IPSEC_IKE_PROCESS_ERR_SA : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13830); // ERROR_IPSEC_IKE_PROCESS_ERR_SA
-#[doc(hidden)] pub const IPSEC_IKE_PROCESS_ERR_PROP : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13831); // ERROR_IPSEC_IKE_PROCESS_ERR_PROP
-#[doc(hidden)] pub const IPSEC_IKE_PROCESS_ERR_TRANS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13832); // ERROR_IPSEC_IKE_PROCESS_ERR_TRANS
-#[doc(hidden)] pub const IPSEC_IKE_PROCESS_ERR_KE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13833); // ERROR_IPSEC_IKE_PROCESS_ERR_KE
-#[doc(hidden)] pub const IPSEC_IKE_PROCESS_ERR_ID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13834); // ERROR_IPSEC_IKE_PROCESS_ERR_ID
-#[doc(hidden)] pub const IPSEC_IKE_PROCESS_ERR_CERT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13835); // ERROR_IPSEC_IKE_PROCESS_ERR_CERT
-#[doc(hidden)] pub const IPSEC_IKE_PROCESS_ERR_CERT_REQ : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13836); // ERROR_IPSEC_IKE_PROCESS_ERR_CERT_REQ
-#[doc(hidden)] pub const IPSEC_IKE_PROCESS_ERR_HASH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13837); // ERROR_IPSEC_IKE_PROCESS_ERR_HASH
-#[doc(hidden)] pub const IPSEC_IKE_PROCESS_ERR_SIG : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13838); // ERROR_IPSEC_IKE_PROCESS_ERR_SIG
-#[doc(hidden)] pub const IPSEC_IKE_PROCESS_ERR_NONCE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13839); // ERROR_IPSEC_IKE_PROCESS_ERR_NONCE
-#[doc(hidden)] pub const IPSEC_IKE_PROCESS_ERR_NOTIFY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13840); // ERROR_IPSEC_IKE_PROCESS_ERR_NOTIFY
-#[doc(hidden)] pub const IPSEC_IKE_PROCESS_ERR_DELETE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13841); // ERROR_IPSEC_IKE_PROCESS_ERR_DELETE
-#[doc(hidden)] pub const IPSEC_IKE_PROCESS_ERR_VENDOR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13842); // ERROR_IPSEC_IKE_PROCESS_ERR_VENDOR
-#[doc(hidden)] pub const IPSEC_IKE_INVALID_PAYLOAD : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13843); // ERROR_IPSEC_IKE_INVALID_PAYLOAD
-#[doc(hidden)] pub const IPSEC_IKE_LOAD_SOFT_SA : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13844); // ERROR_IPSEC_IKE_LOAD_SOFT_SA
-#[doc(hidden)] pub const IPSEC_IKE_SOFT_SA_TORN_DOWN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13845); // ERROR_IPSEC_IKE_SOFT_SA_TORN_DOWN
-#[doc(hidden)] pub const IPSEC_IKE_INVALID_COOKIE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13846); // ERROR_IPSEC_IKE_INVALID_COOKIE
-#[doc(hidden)] pub const IPSEC_IKE_NO_PEER_CERT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13847); // ERROR_IPSEC_IKE_NO_PEER_CERT
-#[doc(hidden)] pub const IPSEC_IKE_PEER_CRL_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13848); // ERROR_IPSEC_IKE_PEER_CRL_FAILED
-#[doc(hidden)] pub const IPSEC_IKE_POLICY_CHANGE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13849); // ERROR_IPSEC_IKE_POLICY_CHANGE
-#[doc(hidden)] pub const IPSEC_IKE_NO_MM_POLICY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13850); // ERROR_IPSEC_IKE_NO_MM_POLICY
-#[doc(hidden)] pub const IPSEC_IKE_NOTCBPRIV : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13851); // ERROR_IPSEC_IKE_NOTCBPRIV
-#[doc(hidden)] pub const IPSEC_IKE_SECLOADFAIL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13852); // ERROR_IPSEC_IKE_SECLOADFAIL
-#[doc(hidden)] pub const IPSEC_IKE_FAILSSPINIT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13853); // ERROR_IPSEC_IKE_FAILSSPINIT
-#[doc(hidden)] pub const IPSEC_IKE_FAILQUERYSSP : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13854); // ERROR_IPSEC_IKE_FAILQUERYSSP
-#[doc(hidden)] pub const IPSEC_IKE_SRVACQFAIL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13855); // ERROR_IPSEC_IKE_SRVACQFAIL
-#[doc(hidden)] pub const IPSEC_IKE_SRVQUERYCRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13856); // ERROR_IPSEC_IKE_SRVQUERYCRED
-#[doc(hidden)] pub const IPSEC_IKE_GETSPIFAIL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13857); // ERROR_IPSEC_IKE_GETSPIFAIL
-#[doc(hidden)] pub const IPSEC_IKE_INVALID_FILTER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13858); // ERROR_IPSEC_IKE_INVALID_FILTER
-#[doc(hidden)] pub const IPSEC_IKE_OUT_OF_MEMORY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13859); // ERROR_IPSEC_IKE_OUT_OF_MEMORY
-#[doc(hidden)] pub const IPSEC_IKE_ADD_UPDATE_KEY_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13860); // ERROR_IPSEC_IKE_ADD_UPDATE_KEY_FAILED
-#[doc(hidden)] pub const IPSEC_IKE_INVALID_POLICY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13861); // ERROR_IPSEC_IKE_INVALID_POLICY
-#[doc(hidden)] pub const IPSEC_IKE_UNKNOWN_DOI : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13862); // ERROR_IPSEC_IKE_UNKNOWN_DOI
-#[doc(hidden)] pub const IPSEC_IKE_INVALID_SITUATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13863); // ERROR_IPSEC_IKE_INVALID_SITUATION
-#[doc(hidden)] pub const IPSEC_IKE_DH_FAILURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13864); // ERROR_IPSEC_IKE_DH_FAILURE
-#[doc(hidden)] pub const IPSEC_IKE_INVALID_GROUP : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13865); // ERROR_IPSEC_IKE_INVALID_GROUP
-#[doc(hidden)] pub const IPSEC_IKE_ENCRYPT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13866); // ERROR_IPSEC_IKE_ENCRYPT
-#[doc(hidden)] pub const IPSEC_IKE_DECRYPT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13867); // ERROR_IPSEC_IKE_DECRYPT
-#[doc(hidden)] pub const IPSEC_IKE_POLICY_MATCH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13868); // ERROR_IPSEC_IKE_POLICY_MATCH
-#[doc(hidden)] pub const IPSEC_IKE_UNSUPPORTED_ID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13869); // ERROR_IPSEC_IKE_UNSUPPORTED_ID
-#[doc(hidden)] pub const IPSEC_IKE_INVALID_HASH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13870); // ERROR_IPSEC_IKE_INVALID_HASH
-#[doc(hidden)] pub const IPSEC_IKE_INVALID_HASH_ALG : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13871); // ERROR_IPSEC_IKE_INVALID_HASH_ALG
-#[doc(hidden)] pub const IPSEC_IKE_INVALID_HASH_SIZE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13872); // ERROR_IPSEC_IKE_INVALID_HASH_SIZE
-#[doc(hidden)] pub const IPSEC_IKE_INVALID_ENCRYPT_ALG : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13873); // ERROR_IPSEC_IKE_INVALID_ENCRYPT_ALG
-#[doc(hidden)] pub const IPSEC_IKE_INVALID_AUTH_ALG : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13874); // ERROR_IPSEC_IKE_INVALID_AUTH_ALG
-#[doc(hidden)] pub const IPSEC_IKE_INVALID_SIG : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13875); // ERROR_IPSEC_IKE_INVALID_SIG
-#[doc(hidden)] pub const IPSEC_IKE_LOAD_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13876); // ERROR_IPSEC_IKE_LOAD_FAILED
-#[doc(hidden)] pub const IPSEC_IKE_RPC_DELETE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13877); // ERROR_IPSEC_IKE_RPC_DELETE
-#[doc(hidden)] pub const IPSEC_IKE_BENIGN_REINIT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13878); // ERROR_IPSEC_IKE_BENIGN_REINIT
-#[doc(hidden)] pub const IPSEC_IKE_INVALID_RESPONDER_LIFETIME_NOTIFY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13879); // ERROR_IPSEC_IKE_INVALID_RESPONDER_LIFETIME_NOTIFY
-#[doc(hidden)] pub const IPSEC_IKE_INVALID_MAJOR_VERSION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13880); // ERROR_IPSEC_IKE_INVALID_MAJOR_VERSION
-#[doc(hidden)] pub const IPSEC_IKE_INVALID_CERT_KEYLEN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13881); // ERROR_IPSEC_IKE_INVALID_CERT_KEYLEN
-#[doc(hidden)] pub const IPSEC_IKE_MM_LIMIT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13882); // ERROR_IPSEC_IKE_MM_LIMIT
-#[doc(hidden)] pub const IPSEC_IKE_NEGOTIATION_DISABLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13883); // ERROR_IPSEC_IKE_NEGOTIATION_DISABLED
-#[doc(hidden)] pub const IPSEC_IKE_QM_LIMIT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13884); // ERROR_IPSEC_IKE_QM_LIMIT
-#[doc(hidden)] pub const IPSEC_IKE_MM_EXPIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13885); // ERROR_IPSEC_IKE_MM_EXPIRED
-#[doc(hidden)] pub const IPSEC_IKE_PEER_MM_ASSUMED_INVALID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13886); // ERROR_IPSEC_IKE_PEER_MM_ASSUMED_INVALID
-#[doc(hidden)] pub const IPSEC_IKE_CERT_CHAIN_POLICY_MISMATCH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13887); // ERROR_IPSEC_IKE_CERT_CHAIN_POLICY_MISMATCH
-#[doc(hidden)] pub const IPSEC_IKE_UNEXPECTED_MESSAGE_ID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13888); // ERROR_IPSEC_IKE_UNEXPECTED_MESSAGE_ID
-#[doc(hidden)] pub const IPSEC_IKE_INVALID_AUTH_PAYLOAD : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13889); // ERROR_IPSEC_IKE_INVALID_AUTH_PAYLOAD
-#[doc(hidden)] pub const IPSEC_IKE_DOS_COOKIE_SENT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13890); // ERROR_IPSEC_IKE_DOS_COOKIE_SENT
-#[doc(hidden)] pub const IPSEC_IKE_SHUTTING_DOWN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13891); // ERROR_IPSEC_IKE_SHUTTING_DOWN
-#[doc(hidden)] pub const IPSEC_IKE_CGA_AUTH_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13892); // ERROR_IPSEC_IKE_CGA_AUTH_FAILED
-#[doc(hidden)] pub const IPSEC_IKE_PROCESS_ERR_NATOA : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13893); // ERROR_IPSEC_IKE_PROCESS_ERR_NATOA
-#[doc(hidden)] pub const IPSEC_IKE_INVALID_MM_FOR_QM : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13894); // ERROR_IPSEC_IKE_INVALID_MM_FOR_QM
-#[doc(hidden)] pub const IPSEC_IKE_QM_EXPIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13895); // ERROR_IPSEC_IKE_QM_EXPIRED
-#[doc(hidden)] pub const IPSEC_IKE_TOO_MANY_FILTERS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13896); // ERROR_IPSEC_IKE_TOO_MANY_FILTERS
-#[doc(hidden)] pub const IPSEC_IKE_KILL_DUMMY_NAP_TUNNEL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13898); // ERROR_IPSEC_IKE_KILL_DUMMY_NAP_TUNNEL
-#[doc(hidden)] pub const IPSEC_IKE_INNER_IP_ASSIGNMENT_FAILURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13899); // ERROR_IPSEC_IKE_INNER_IP_ASSIGNMENT_FAILURE
-#[doc(hidden)] pub const IPSEC_IKE_REQUIRE_CP_PAYLOAD_MISSING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13900); // ERROR_IPSEC_IKE_REQUIRE_CP_PAYLOAD_MISSING
-#[doc(hidden)] pub const IPSEC_KEY_MODULE_IMPERSONATION_NEGOTIATION_PENDING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13901); // ERROR_IPSEC_KEY_MODULE_IMPERSONATION_NEGOTIATION_PENDING
-#[doc(hidden)] pub const IPSEC_IKE_COEXISTENCE_SUPPRESS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13902); // ERROR_IPSEC_IKE_COEXISTENCE_SUPPRESS
-#[doc(hidden)] pub const IPSEC_IKE_RATELIMIT_DROP : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13903); // ERROR_IPSEC_IKE_RATELIMIT_DROP
-#[doc(hidden)] pub const IPSEC_IKE_PEER_DOESNT_SUPPORT_MOBIKE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13904); // ERROR_IPSEC_IKE_PEER_DOESNT_SUPPORT_MOBIKE
-#[doc(hidden)] pub const IPSEC_IKE_AUTHORIZATION_FAILURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13905); // ERROR_IPSEC_IKE_AUTHORIZATION_FAILURE
-#[doc(hidden)] pub const IPSEC_IKE_STRONG_CRED_AUTHORIZATION_FAILURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13906); // ERROR_IPSEC_IKE_STRONG_CRED_AUTHORIZATION_FAILURE
-#[doc(hidden)] pub const IPSEC_IKE_AUTHORIZATION_FAILURE_WITH_OPTIONAL_RETRY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13907); // ERROR_IPSEC_IKE_AUTHORIZATION_FAILURE_WITH_OPTIONAL_RETRY
-#[doc(hidden)] pub const IPSEC_IKE_STRONG_CRED_AUTHORIZATION_AND_CERTMAP_FAILURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13908); // ERROR_IPSEC_IKE_STRONG_CRED_AUTHORIZATION_AND_CERTMAP_FAILURE
-#[doc(hidden)] pub const IPSEC_BAD_SPI : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13910); // ERROR_IPSEC_BAD_SPI
-#[doc(hidden)] pub const IPSEC_SA_LIFETIME_EXPIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13911); // ERROR_IPSEC_SA_LIFETIME_EXPIRED
-#[doc(hidden)] pub const IPSEC_WRONG_SA : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13912); // ERROR_IPSEC_WRONG_SA
-#[doc(hidden)] pub const IPSEC_REPLAY_CHECK_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13913); // ERROR_IPSEC_REPLAY_CHECK_FAILED
-#[doc(hidden)] pub const IPSEC_INVALID_PACKET : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13914); // ERROR_IPSEC_INVALID_PACKET
-#[doc(hidden)] pub const IPSEC_INTEGRITY_CHECK_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13915); // ERROR_IPSEC_INTEGRITY_CHECK_FAILED
-#[doc(hidden)] pub const IPSEC_CLEAR_TEXT_DROP : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13916); // ERROR_IPSEC_CLEAR_TEXT_DROP
-#[doc(hidden)] pub const IPSEC_AUTH_FIREWALL_DROP : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13917); // ERROR_IPSEC_AUTH_FIREWALL_DROP
-#[doc(hidden)] pub const IPSEC_THROTTLE_DROP : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13918); // ERROR_IPSEC_THROTTLE_DROP
-#[doc(hidden)] pub const IPSEC_DOSP_BLOCK : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13925); // ERROR_IPSEC_DOSP_BLOCK
-#[doc(hidden)] pub const IPSEC_DOSP_RECEIVED_MULTICAST : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13926); // ERROR_IPSEC_DOSP_RECEIVED_MULTICAST
-#[doc(hidden)] pub const IPSEC_DOSP_INVALID_PACKET : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13927); // ERROR_IPSEC_DOSP_INVALID_PACKET
-#[doc(hidden)] pub const IPSEC_DOSP_STATE_LOOKUP_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13928); // ERROR_IPSEC_DOSP_STATE_LOOKUP_FAILED
-#[doc(hidden)] pub const IPSEC_DOSP_MAX_ENTRIES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13929); // ERROR_IPSEC_DOSP_MAX_ENTRIES
-#[doc(hidden)] pub const IPSEC_DOSP_KEYMOD_NOT_ALLOWED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13930); // ERROR_IPSEC_DOSP_KEYMOD_NOT_ALLOWED
-#[doc(hidden)] pub const IPSEC_DOSP_NOT_INSTALLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13931); // ERROR_IPSEC_DOSP_NOT_INSTALLED
-#[doc(hidden)] pub const IPSEC_DOSP_MAX_PER_IP_RATELIMIT_QUEUES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13932); // ERROR_IPSEC_DOSP_MAX_PER_IP_RATELIMIT_QUEUES
-#[doc(hidden)] pub const SXS_SECTION_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(14000); // ERROR_SXS_SECTION_NOT_FOUND
-#[doc(hidden)] pub const SXS_CANT_GEN_ACTCTX : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(14001); // ERROR_SXS_CANT_GEN_ACTCTX
-#[doc(hidden)] pub const SXS_INVALID_ACTCTXDATA_FORMAT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(14002); // ERROR_SXS_INVALID_ACTCTXDATA_FORMAT
-#[doc(hidden)] pub const SXS_ASSEMBLY_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(14003); // ERROR_SXS_ASSEMBLY_NOT_FOUND
-#[doc(hidden)] pub const SXS_MANIFEST_FORMAT_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(14004); // ERROR_SXS_MANIFEST_FORMAT_ERROR
-#[doc(hidden)] pub const SXS_MANIFEST_PARSE_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(14005); // ERROR_SXS_MANIFEST_PARSE_ERROR
-#[doc(hidden)] pub const SXS_ACTIVATION_CONTEXT_DISABLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(14006); // ERROR_SXS_ACTIVATION_CONTEXT_DISABLED
-#[doc(hidden)] pub const SXS_KEY_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(14007); // ERROR_SXS_KEY_NOT_FOUND
-#[doc(hidden)] pub const SXS_VERSION_CONFLICT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(14008); // ERROR_SXS_VERSION_CONFLICT
-#[doc(hidden)] pub const SXS_WRONG_SECTION_TYPE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(14009); // ERROR_SXS_WRONG_SECTION_TYPE
-#[doc(hidden)] pub const SXS_THREAD_QUERIES_DISABLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(14010); // ERROR_SXS_THREAD_QUERIES_DISABLED
-#[doc(hidden)] pub const SXS_PROCESS_DEFAULT_ALREADY_SET : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(14011); // ERROR_SXS_PROCESS_DEFAULT_ALREADY_SET
-#[doc(hidden)] pub const SXS_UNKNOWN_ENCODING_GROUP : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(14012); // ERROR_SXS_UNKNOWN_ENCODING_GROUP
-#[doc(hidden)] pub const SXS_UNKNOWN_ENCODING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(14013); // ERROR_SXS_UNKNOWN_ENCODING
-#[doc(hidden)] pub const SXS_INVALID_XML_NAMESPACE_URI : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(14014); // ERROR_SXS_INVALID_XML_NAMESPACE_URI
-#[doc(hidden)] pub const SXS_ROOT_MANIFEST_DEPENDENCY_NOT_INSTALLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(14015); // ERROR_SXS_ROOT_MANIFEST_DEPENDENCY_NOT_INSTALLED
-#[doc(hidden)] pub const SXS_LEAF_MANIFEST_DEPENDENCY_NOT_INSTALLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(14016); // ERROR_SXS_LEAF_MANIFEST_DEPENDENCY_NOT_INSTALLED
-#[doc(hidden)] pub const SXS_INVALID_ASSEMBLY_IDENTITY_ATTRIBUTE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(14017); // ERROR_SXS_INVALID_ASSEMBLY_IDENTITY_ATTRIBUTE
-#[doc(hidden)] pub const SXS_MANIFEST_MISSING_REQUIRED_DEFAULT_NAMESPACE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(14018); // ERROR_SXS_MANIFEST_MISSING_REQUIRED_DEFAULT_NAMESPACE
-#[doc(hidden)] pub const SXS_MANIFEST_INVALID_REQUIRED_DEFAULT_NAMESPACE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(14019); // ERROR_SXS_MANIFEST_INVALID_REQUIRED_DEFAULT_NAMESPACE
-#[doc(hidden)] pub const SXS_PRIVATE_MANIFEST_CROSS_PATH_WITH_REPARSE_POINT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(14020); // ERROR_SXS_PRIVATE_MANIFEST_CROSS_PATH_WITH_REPARSE_POINT
-#[doc(hidden)] pub const SXS_DUPLICATE_DLL_NAME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(14021); // ERROR_SXS_DUPLICATE_DLL_NAME
-#[doc(hidden)] pub const SXS_DUPLICATE_WINDOWCLASS_NAME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(14022); // ERROR_SXS_DUPLICATE_WINDOWCLASS_NAME
-#[doc(hidden)] pub const SXS_DUPLICATE_CLSID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(14023); // ERROR_SXS_DUPLICATE_CLSID
-#[doc(hidden)] pub const SXS_DUPLICATE_IID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(14024); // ERROR_SXS_DUPLICATE_IID
-#[doc(hidden)] pub const SXS_DUPLICATE_TLBID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(14025); // ERROR_SXS_DUPLICATE_TLBID
-#[doc(hidden)] pub const SXS_DUPLICATE_PROGID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(14026); // ERROR_SXS_DUPLICATE_PROGID
-#[doc(hidden)] pub const SXS_DUPLICATE_ASSEMBLY_NAME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(14027); // ERROR_SXS_DUPLICATE_ASSEMBLY_NAME
-#[doc(hidden)] pub const SXS_FILE_HASH_MISMATCH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(14028); // ERROR_SXS_FILE_HASH_MISMATCH
-#[doc(hidden)] pub const SXS_POLICY_PARSE_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(14029); // ERROR_SXS_POLICY_PARSE_ERROR
-#[doc(hidden)] pub const SXS_PROTECTION_RECOVERY_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(14074); // ERROR_SXS_PROTECTION_RECOVERY_FAILED
-#[doc(hidden)] pub const SXS_PROTECTION_PUBLIC_KEY_TOO_SHORT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(14075); // ERROR_SXS_PROTECTION_PUBLIC_KEY_TOO_SHORT
-#[doc(hidden)] pub const SXS_PROTECTION_CATALOG_NOT_VALID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(14076); // ERROR_SXS_PROTECTION_CATALOG_NOT_VALID
-#[doc(hidden)] pub const SXS_UNTRANSLATABLE_HRESULT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(14077); // ERROR_SXS_UNTRANSLATABLE_HRESULT
-#[doc(hidden)] pub const SXS_PROTECTION_CATALOG_FILE_MISSING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(14078); // ERROR_SXS_PROTECTION_CATALOG_FILE_MISSING
-#[doc(hidden)] pub const SXS_MISSING_ASSEMBLY_IDENTITY_ATTRIBUTE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(14079); // ERROR_SXS_MISSING_ASSEMBLY_IDENTITY_ATTRIBUTE
-#[doc(hidden)] pub const SXS_INVALID_ASSEMBLY_IDENTITY_ATTRIBUTE_NAME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(14080); // ERROR_SXS_INVALID_ASSEMBLY_IDENTITY_ATTRIBUTE_NAME
-#[doc(hidden)] pub const SXS_ASSEMBLY_MISSING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(14081); // ERROR_SXS_ASSEMBLY_MISSING
-#[doc(hidden)] pub const SXS_CORRUPT_ACTIVATION_STACK : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(14082); // ERROR_SXS_CORRUPT_ACTIVATION_STACK
-#[doc(hidden)] pub const SXS_CORRUPTION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(14083); // ERROR_SXS_CORRUPTION
-#[doc(hidden)] pub const SXS_EARLY_DEACTIVATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(14084); // ERROR_SXS_EARLY_DEACTIVATION
-#[doc(hidden)] pub const SXS_INVALID_DEACTIVATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(14085); // ERROR_SXS_INVALID_DEACTIVATION
-#[doc(hidden)] pub const SXS_MULTIPLE_DEACTIVATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(14086); // ERROR_SXS_MULTIPLE_DEACTIVATION
-#[doc(hidden)] pub const SXS_PROCESS_TERMINATION_REQUESTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(14087); // ERROR_SXS_PROCESS_TERMINATION_REQUESTED
-#[doc(hidden)] pub const SXS_RELEASE_ACTIVATION_CONTEXT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(14088); // ERROR_SXS_RELEASE_ACTIVATION_CONTEXT
-#[doc(hidden)] pub const SXS_SYSTEM_DEFAULT_ACTIVATION_CONTEXT_EMPTY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(14089); // ERROR_SXS_SYSTEM_DEFAULT_ACTIVATION_CONTEXT_EMPTY
-#[doc(hidden)] pub const SXS_INVALID_IDENTITY_ATTRIBUTE_VALUE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(14090); // ERROR_SXS_INVALID_IDENTITY_ATTRIBUTE_VALUE
-#[doc(hidden)] pub const SXS_INVALID_IDENTITY_ATTRIBUTE_NAME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(14091); // ERROR_SXS_INVALID_IDENTITY_ATTRIBUTE_NAME
-#[doc(hidden)] pub const SXS_IDENTITY_DUPLICATE_ATTRIBUTE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(14092); // ERROR_SXS_IDENTITY_DUPLICATE_ATTRIBUTE
-#[doc(hidden)] pub const SXS_IDENTITY_PARSE_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(14093); // ERROR_SXS_IDENTITY_PARSE_ERROR
+#[doc(hidden)] pub const DS_SPN_VALUE_NOT_UNIQUE_IN_FOREST : ErrorCode = ErrorCode::from_constant(8647); // ERROR_DS_SPN_VALUE_NOT_UNIQUE_IN_FOREST
+#[doc(hidden)] pub const DS_UPN_VALUE_NOT_UNIQUE_IN_FOREST : ErrorCode = ErrorCode::from_constant(8648); // ERROR_DS_UPN_VALUE_NOT_UNIQUE_IN_FOREST
+#[doc(hidden)] pub const DS_MISSING_FOREST_TRUST : ErrorCode = ErrorCode::from_constant(8649); // ERROR_DS_MISSING_FOREST_TRUST
+#[doc(hidden)] pub const DS_VALUE_KEY_NOT_UNIQUE : ErrorCode = ErrorCode::from_constant(8650); // ERROR_DS_VALUE_KEY_NOT_UNIQUE
+#[doc(hidden)] pub const IPSEC_QM_POLICY_EXISTS : ErrorCode = ErrorCode::from_constant(13000); // ERROR_IPSEC_QM_POLICY_EXISTS
+#[doc(hidden)] pub const IPSEC_QM_POLICY_NOT_FOUND : ErrorCode = ErrorCode::from_constant(13001); // ERROR_IPSEC_QM_POLICY_NOT_FOUND
+#[doc(hidden)] pub const IPSEC_QM_POLICY_IN_USE : ErrorCode = ErrorCode::from_constant(13002); // ERROR_IPSEC_QM_POLICY_IN_USE
+#[doc(hidden)] pub const IPSEC_MM_POLICY_EXISTS : ErrorCode = ErrorCode::from_constant(13003); // ERROR_IPSEC_MM_POLICY_EXISTS
+#[doc(hidden)] pub const IPSEC_MM_POLICY_NOT_FOUND : ErrorCode = ErrorCode::from_constant(13004); // ERROR_IPSEC_MM_POLICY_NOT_FOUND
+#[doc(hidden)] pub const IPSEC_MM_POLICY_IN_USE : ErrorCode = ErrorCode::from_constant(13005); // ERROR_IPSEC_MM_POLICY_IN_USE
+#[doc(hidden)] pub const IPSEC_MM_FILTER_EXISTS : ErrorCode = ErrorCode::from_constant(13006); // ERROR_IPSEC_MM_FILTER_EXISTS
+#[doc(hidden)] pub const IPSEC_MM_FILTER_NOT_FOUND : ErrorCode = ErrorCode::from_constant(13007); // ERROR_IPSEC_MM_FILTER_NOT_FOUND
+#[doc(hidden)] pub const IPSEC_TRANSPORT_FILTER_EXISTS : ErrorCode = ErrorCode::from_constant(13008); // ERROR_IPSEC_TRANSPORT_FILTER_EXISTS
+#[doc(hidden)] pub const IPSEC_TRANSPORT_FILTER_NOT_FOUND : ErrorCode = ErrorCode::from_constant(13009); // ERROR_IPSEC_TRANSPORT_FILTER_NOT_FOUND
+#[doc(hidden)] pub const IPSEC_MM_AUTH_EXISTS : ErrorCode = ErrorCode::from_constant(13010); // ERROR_IPSEC_MM_AUTH_EXISTS
+#[doc(hidden)] pub const IPSEC_MM_AUTH_NOT_FOUND : ErrorCode = ErrorCode::from_constant(13011); // ERROR_IPSEC_MM_AUTH_NOT_FOUND
+#[doc(hidden)] pub const IPSEC_MM_AUTH_IN_USE : ErrorCode = ErrorCode::from_constant(13012); // ERROR_IPSEC_MM_AUTH_IN_USE
+#[doc(hidden)] pub const IPSEC_DEFAULT_MM_POLICY_NOT_FOUND : ErrorCode = ErrorCode::from_constant(13013); // ERROR_IPSEC_DEFAULT_MM_POLICY_NOT_FOUND
+#[doc(hidden)] pub const IPSEC_DEFAULT_MM_AUTH_NOT_FOUND : ErrorCode = ErrorCode::from_constant(13014); // ERROR_IPSEC_DEFAULT_MM_AUTH_NOT_FOUND
+#[doc(hidden)] pub const IPSEC_DEFAULT_QM_POLICY_NOT_FOUND : ErrorCode = ErrorCode::from_constant(13015); // ERROR_IPSEC_DEFAULT_QM_POLICY_NOT_FOUND
+#[doc(hidden)] pub const IPSEC_TUNNEL_FILTER_EXISTS : ErrorCode = ErrorCode::from_constant(13016); // ERROR_IPSEC_TUNNEL_FILTER_EXISTS
+#[doc(hidden)] pub const IPSEC_TUNNEL_FILTER_NOT_FOUND : ErrorCode = ErrorCode::from_constant(13017); // ERROR_IPSEC_TUNNEL_FILTER_NOT_FOUND
+#[doc(hidden)] pub const IPSEC_MM_FILTER_PENDING_DELETION : ErrorCode = ErrorCode::from_constant(13018); // ERROR_IPSEC_MM_FILTER_PENDING_DELETION
+#[doc(hidden)] pub const IPSEC_TRANSPORT_FILTER_PENDING_DELETION : ErrorCode = ErrorCode::from_constant(13019); // ERROR_IPSEC_TRANSPORT_FILTER_PENDING_DELETION
+#[doc(hidden)] pub const IPSEC_TUNNEL_FILTER_PENDING_DELETION : ErrorCode = ErrorCode::from_constant(13020); // ERROR_IPSEC_TUNNEL_FILTER_PENDING_DELETION
+#[doc(hidden)] pub const IPSEC_MM_POLICY_PENDING_DELETION : ErrorCode = ErrorCode::from_constant(13021); // ERROR_IPSEC_MM_POLICY_PENDING_DELETION
+#[doc(hidden)] pub const IPSEC_MM_AUTH_PENDING_DELETION : ErrorCode = ErrorCode::from_constant(13022); // ERROR_IPSEC_MM_AUTH_PENDING_DELETION
+#[doc(hidden)] pub const IPSEC_QM_POLICY_PENDING_DELETION : ErrorCode = ErrorCode::from_constant(13023); // ERROR_IPSEC_QM_POLICY_PENDING_DELETION
+#[doc(hidden)] pub const IPSEC_IKE_NEG_STATUS_BEGIN : ErrorCode = ErrorCode::from_constant(13800); // ERROR_IPSEC_IKE_NEG_STATUS_BEGIN
+#[doc(hidden)] pub const IPSEC_IKE_AUTH_FAIL : ErrorCode = ErrorCode::from_constant(13801); // ERROR_IPSEC_IKE_AUTH_FAIL
+#[doc(hidden)] pub const IPSEC_IKE_ATTRIB_FAIL : ErrorCode = ErrorCode::from_constant(13802); // ERROR_IPSEC_IKE_ATTRIB_FAIL
+#[doc(hidden)] pub const IPSEC_IKE_NEGOTIATION_PENDING : ErrorCode = ErrorCode::from_constant(13803); // ERROR_IPSEC_IKE_NEGOTIATION_PENDING
+#[doc(hidden)] pub const IPSEC_IKE_GENERAL_PROCESSING_ERROR : ErrorCode = ErrorCode::from_constant(13804); // ERROR_IPSEC_IKE_GENERAL_PROCESSING_ERROR
+#[doc(hidden)] pub const IPSEC_IKE_TIMED_OUT : ErrorCode = ErrorCode::from_constant(13805); // ERROR_IPSEC_IKE_TIMED_OUT
+#[doc(hidden)] pub const IPSEC_IKE_NO_CERT : ErrorCode = ErrorCode::from_constant(13806); // ERROR_IPSEC_IKE_NO_CERT
+#[doc(hidden)] pub const IPSEC_IKE_SA_DELETED : ErrorCode = ErrorCode::from_constant(13807); // ERROR_IPSEC_IKE_SA_DELETED
+#[doc(hidden)] pub const IPSEC_IKE_SA_REAPED : ErrorCode = ErrorCode::from_constant(13808); // ERROR_IPSEC_IKE_SA_REAPED
+#[doc(hidden)] pub const IPSEC_IKE_MM_ACQUIRE_DROP : ErrorCode = ErrorCode::from_constant(13809); // ERROR_IPSEC_IKE_MM_ACQUIRE_DROP
+#[doc(hidden)] pub const IPSEC_IKE_QM_ACQUIRE_DROP : ErrorCode = ErrorCode::from_constant(13810); // ERROR_IPSEC_IKE_QM_ACQUIRE_DROP
+#[doc(hidden)] pub const IPSEC_IKE_QUEUE_DROP_MM : ErrorCode = ErrorCode::from_constant(13811); // ERROR_IPSEC_IKE_QUEUE_DROP_MM
+#[doc(hidden)] pub const IPSEC_IKE_QUEUE_DROP_NO_MM : ErrorCode = ErrorCode::from_constant(13812); // ERROR_IPSEC_IKE_QUEUE_DROP_NO_MM
+#[doc(hidden)] pub const IPSEC_IKE_DROP_NO_RESPONSE : ErrorCode = ErrorCode::from_constant(13813); // ERROR_IPSEC_IKE_DROP_NO_RESPONSE
+#[doc(hidden)] pub const IPSEC_IKE_MM_DELAY_DROP : ErrorCode = ErrorCode::from_constant(13814); // ERROR_IPSEC_IKE_MM_DELAY_DROP
+#[doc(hidden)] pub const IPSEC_IKE_QM_DELAY_DROP : ErrorCode = ErrorCode::from_constant(13815); // ERROR_IPSEC_IKE_QM_DELAY_DROP
+#[doc(hidden)] pub const IPSEC_IKE_ERROR : ErrorCode = ErrorCode::from_constant(13816); // ERROR_IPSEC_IKE_ERROR
+#[doc(hidden)] pub const IPSEC_IKE_CRL_FAILED : ErrorCode = ErrorCode::from_constant(13817); // ERROR_IPSEC_IKE_CRL_FAILED
+#[doc(hidden)] pub const IPSEC_IKE_INVALID_KEY_USAGE : ErrorCode = ErrorCode::from_constant(13818); // ERROR_IPSEC_IKE_INVALID_KEY_USAGE
+#[doc(hidden)] pub const IPSEC_IKE_INVALID_CERT_TYPE : ErrorCode = ErrorCode::from_constant(13819); // ERROR_IPSEC_IKE_INVALID_CERT_TYPE
+#[doc(hidden)] pub const IPSEC_IKE_NO_PRIVATE_KEY : ErrorCode = ErrorCode::from_constant(13820); // ERROR_IPSEC_IKE_NO_PRIVATE_KEY
+#[doc(hidden)] pub const IPSEC_IKE_SIMULTANEOUS_REKEY : ErrorCode = ErrorCode::from_constant(13821); // ERROR_IPSEC_IKE_SIMULTANEOUS_REKEY
+#[doc(hidden)] pub const IPSEC_IKE_DH_FAIL : ErrorCode = ErrorCode::from_constant(13822); // ERROR_IPSEC_IKE_DH_FAIL
+#[doc(hidden)] pub const IPSEC_IKE_CRITICAL_PAYLOAD_NOT_RECOGNIZED : ErrorCode = ErrorCode::from_constant(13823); // ERROR_IPSEC_IKE_CRITICAL_PAYLOAD_NOT_RECOGNIZED
+#[doc(hidden)] pub const IPSEC_IKE_INVALID_HEADER : ErrorCode = ErrorCode::from_constant(13824); // ERROR_IPSEC_IKE_INVALID_HEADER
+#[doc(hidden)] pub const IPSEC_IKE_NO_POLICY : ErrorCode = ErrorCode::from_constant(13825); // ERROR_IPSEC_IKE_NO_POLICY
+#[doc(hidden)] pub const IPSEC_IKE_INVALID_SIGNATURE : ErrorCode = ErrorCode::from_constant(13826); // ERROR_IPSEC_IKE_INVALID_SIGNATURE
+#[doc(hidden)] pub const IPSEC_IKE_KERBEROS_ERROR : ErrorCode = ErrorCode::from_constant(13827); // ERROR_IPSEC_IKE_KERBEROS_ERROR
+#[doc(hidden)] pub const IPSEC_IKE_NO_PUBLIC_KEY : ErrorCode = ErrorCode::from_constant(13828); // ERROR_IPSEC_IKE_NO_PUBLIC_KEY
+#[doc(hidden)] pub const IPSEC_IKE_PROCESS_ERR : ErrorCode = ErrorCode::from_constant(13829); // ERROR_IPSEC_IKE_PROCESS_ERR
+#[doc(hidden)] pub const IPSEC_IKE_PROCESS_ERR_SA : ErrorCode = ErrorCode::from_constant(13830); // ERROR_IPSEC_IKE_PROCESS_ERR_SA
+#[doc(hidden)] pub const IPSEC_IKE_PROCESS_ERR_PROP : ErrorCode = ErrorCode::from_constant(13831); // ERROR_IPSEC_IKE_PROCESS_ERR_PROP
+#[doc(hidden)] pub const IPSEC_IKE_PROCESS_ERR_TRANS : ErrorCode = ErrorCode::from_constant(13832); // ERROR_IPSEC_IKE_PROCESS_ERR_TRANS
+#[doc(hidden)] pub const IPSEC_IKE_PROCESS_ERR_KE : ErrorCode = ErrorCode::from_constant(13833); // ERROR_IPSEC_IKE_PROCESS_ERR_KE
+#[doc(hidden)] pub const IPSEC_IKE_PROCESS_ERR_ID : ErrorCode = ErrorCode::from_constant(13834); // ERROR_IPSEC_IKE_PROCESS_ERR_ID
+#[doc(hidden)] pub const IPSEC_IKE_PROCESS_ERR_CERT : ErrorCode = ErrorCode::from_constant(13835); // ERROR_IPSEC_IKE_PROCESS_ERR_CERT
+#[doc(hidden)] pub const IPSEC_IKE_PROCESS_ERR_CERT_REQ : ErrorCode = ErrorCode::from_constant(13836); // ERROR_IPSEC_IKE_PROCESS_ERR_CERT_REQ
+#[doc(hidden)] pub const IPSEC_IKE_PROCESS_ERR_HASH : ErrorCode = ErrorCode::from_constant(13837); // ERROR_IPSEC_IKE_PROCESS_ERR_HASH
+#[doc(hidden)] pub const IPSEC_IKE_PROCESS_ERR_SIG : ErrorCode = ErrorCode::from_constant(13838); // ERROR_IPSEC_IKE_PROCESS_ERR_SIG
+#[doc(hidden)] pub const IPSEC_IKE_PROCESS_ERR_NONCE : ErrorCode = ErrorCode::from_constant(13839); // ERROR_IPSEC_IKE_PROCESS_ERR_NONCE
+#[doc(hidden)] pub const IPSEC_IKE_PROCESS_ERR_NOTIFY : ErrorCode = ErrorCode::from_constant(13840); // ERROR_IPSEC_IKE_PROCESS_ERR_NOTIFY
+#[doc(hidden)] pub const IPSEC_IKE_PROCESS_ERR_DELETE : ErrorCode = ErrorCode::from_constant(13841); // ERROR_IPSEC_IKE_PROCESS_ERR_DELETE
+#[doc(hidden)] pub const IPSEC_IKE_PROCESS_ERR_VENDOR : ErrorCode = ErrorCode::from_constant(13842); // ERROR_IPSEC_IKE_PROCESS_ERR_VENDOR
+#[doc(hidden)] pub const IPSEC_IKE_INVALID_PAYLOAD : ErrorCode = ErrorCode::from_constant(13843); // ERROR_IPSEC_IKE_INVALID_PAYLOAD
+#[doc(hidden)] pub const IPSEC_IKE_LOAD_SOFT_SA : ErrorCode = ErrorCode::from_constant(13844); // ERROR_IPSEC_IKE_LOAD_SOFT_SA
+#[doc(hidden)] pub const IPSEC_IKE_SOFT_SA_TORN_DOWN : ErrorCode = ErrorCode::from_constant(13845); // ERROR_IPSEC_IKE_SOFT_SA_TORN_DOWN
+#[doc(hidden)] pub const IPSEC_IKE_INVALID_COOKIE : ErrorCode = ErrorCode::from_constant(13846); // ERROR_IPSEC_IKE_INVALID_COOKIE
+#[doc(hidden)] pub const IPSEC_IKE_NO_PEER_CERT : ErrorCode = ErrorCode::from_constant(13847); // ERROR_IPSEC_IKE_NO_PEER_CERT
+#[doc(hidden)] pub const IPSEC_IKE_PEER_CRL_FAILED : ErrorCode = ErrorCode::from_constant(13848); // ERROR_IPSEC_IKE_PEER_CRL_FAILED
+#[doc(hidden)] pub const IPSEC_IKE_POLICY_CHANGE : ErrorCode = ErrorCode::from_constant(13849); // ERROR_IPSEC_IKE_POLICY_CHANGE
+#[doc(hidden)] pub const IPSEC_IKE_NO_MM_POLICY : ErrorCode = ErrorCode::from_constant(13850); // ERROR_IPSEC_IKE_NO_MM_POLICY
+#[doc(hidden)] pub const IPSEC_IKE_NOTCBPRIV : ErrorCode = ErrorCode::from_constant(13851); // ERROR_IPSEC_IKE_NOTCBPRIV
+#[doc(hidden)] pub const IPSEC_IKE_SECLOADFAIL : ErrorCode = ErrorCode::from_constant(13852); // ERROR_IPSEC_IKE_SECLOADFAIL
+#[doc(hidden)] pub const IPSEC_IKE_FAILSSPINIT : ErrorCode = ErrorCode::from_constant(13853); // ERROR_IPSEC_IKE_FAILSSPINIT
+#[doc(hidden)] pub const IPSEC_IKE_FAILQUERYSSP : ErrorCode = ErrorCode::from_constant(13854); // ERROR_IPSEC_IKE_FAILQUERYSSP
+#[doc(hidden)] pub const IPSEC_IKE_SRVACQFAIL : ErrorCode = ErrorCode::from_constant(13855); // ERROR_IPSEC_IKE_SRVACQFAIL
+#[doc(hidden)] pub const IPSEC_IKE_SRVQUERYCRED : ErrorCode = ErrorCode::from_constant(13856); // ERROR_IPSEC_IKE_SRVQUERYCRED
+#[doc(hidden)] pub const IPSEC_IKE_GETSPIFAIL : ErrorCode = ErrorCode::from_constant(13857); // ERROR_IPSEC_IKE_GETSPIFAIL
+#[doc(hidden)] pub const IPSEC_IKE_INVALID_FILTER : ErrorCode = ErrorCode::from_constant(13858); // ERROR_IPSEC_IKE_INVALID_FILTER
+#[doc(hidden)] pub const IPSEC_IKE_OUT_OF_MEMORY : ErrorCode = ErrorCode::from_constant(13859); // ERROR_IPSEC_IKE_OUT_OF_MEMORY
+#[doc(hidden)] pub const IPSEC_IKE_ADD_UPDATE_KEY_FAILED : ErrorCode = ErrorCode::from_constant(13860); // ERROR_IPSEC_IKE_ADD_UPDATE_KEY_FAILED
+#[doc(hidden)] pub const IPSEC_IKE_INVALID_POLICY : ErrorCode = ErrorCode::from_constant(13861); // ERROR_IPSEC_IKE_INVALID_POLICY
+#[doc(hidden)] pub const IPSEC_IKE_UNKNOWN_DOI : ErrorCode = ErrorCode::from_constant(13862); // ERROR_IPSEC_IKE_UNKNOWN_DOI
+#[doc(hidden)] pub const IPSEC_IKE_INVALID_SITUATION : ErrorCode = ErrorCode::from_constant(13863); // ERROR_IPSEC_IKE_INVALID_SITUATION
+#[doc(hidden)] pub const IPSEC_IKE_DH_FAILURE : ErrorCode = ErrorCode::from_constant(13864); // ERROR_IPSEC_IKE_DH_FAILURE
+#[doc(hidden)] pub const IPSEC_IKE_INVALID_GROUP : ErrorCode = ErrorCode::from_constant(13865); // ERROR_IPSEC_IKE_INVALID_GROUP
+#[doc(hidden)] pub const IPSEC_IKE_ENCRYPT : ErrorCode = ErrorCode::from_constant(13866); // ERROR_IPSEC_IKE_ENCRYPT
+#[doc(hidden)] pub const IPSEC_IKE_DECRYPT : ErrorCode = ErrorCode::from_constant(13867); // ERROR_IPSEC_IKE_DECRYPT
+#[doc(hidden)] pub const IPSEC_IKE_POLICY_MATCH : ErrorCode = ErrorCode::from_constant(13868); // ERROR_IPSEC_IKE_POLICY_MATCH
+#[doc(hidden)] pub const IPSEC_IKE_UNSUPPORTED_ID : ErrorCode = ErrorCode::from_constant(13869); // ERROR_IPSEC_IKE_UNSUPPORTED_ID
+#[doc(hidden)] pub const IPSEC_IKE_INVALID_HASH : ErrorCode = ErrorCode::from_constant(13870); // ERROR_IPSEC_IKE_INVALID_HASH
+#[doc(hidden)] pub const IPSEC_IKE_INVALID_HASH_ALG : ErrorCode = ErrorCode::from_constant(13871); // ERROR_IPSEC_IKE_INVALID_HASH_ALG
+#[doc(hidden)] pub const IPSEC_IKE_INVALID_HASH_SIZE : ErrorCode = ErrorCode::from_constant(13872); // ERROR_IPSEC_IKE_INVALID_HASH_SIZE
+#[doc(hidden)] pub const IPSEC_IKE_INVALID_ENCRYPT_ALG : ErrorCode = ErrorCode::from_constant(13873); // ERROR_IPSEC_IKE_INVALID_ENCRYPT_ALG
+#[doc(hidden)] pub const IPSEC_IKE_INVALID_AUTH_ALG : ErrorCode = ErrorCode::from_constant(13874); // ERROR_IPSEC_IKE_INVALID_AUTH_ALG
+#[doc(hidden)] pub const IPSEC_IKE_INVALID_SIG : ErrorCode = ErrorCode::from_constant(13875); // ERROR_IPSEC_IKE_INVALID_SIG
+#[doc(hidden)] pub const IPSEC_IKE_LOAD_FAILED : ErrorCode = ErrorCode::from_constant(13876); // ERROR_IPSEC_IKE_LOAD_FAILED
+#[doc(hidden)] pub const IPSEC_IKE_RPC_DELETE : ErrorCode = ErrorCode::from_constant(13877); // ERROR_IPSEC_IKE_RPC_DELETE
+#[doc(hidden)] pub const IPSEC_IKE_BENIGN_REINIT : ErrorCode = ErrorCode::from_constant(13878); // ERROR_IPSEC_IKE_BENIGN_REINIT
+#[doc(hidden)] pub const IPSEC_IKE_INVALID_RESPONDER_LIFETIME_NOTIFY : ErrorCode = ErrorCode::from_constant(13879); // ERROR_IPSEC_IKE_INVALID_RESPONDER_LIFETIME_NOTIFY
+#[doc(hidden)] pub const IPSEC_IKE_INVALID_MAJOR_VERSION : ErrorCode = ErrorCode::from_constant(13880); // ERROR_IPSEC_IKE_INVALID_MAJOR_VERSION
+#[doc(hidden)] pub const IPSEC_IKE_INVALID_CERT_KEYLEN : ErrorCode = ErrorCode::from_constant(13881); // ERROR_IPSEC_IKE_INVALID_CERT_KEYLEN
+#[doc(hidden)] pub const IPSEC_IKE_MM_LIMIT : ErrorCode = ErrorCode::from_constant(13882); // ERROR_IPSEC_IKE_MM_LIMIT
+#[doc(hidden)] pub const IPSEC_IKE_NEGOTIATION_DISABLED : ErrorCode = ErrorCode::from_constant(13883); // ERROR_IPSEC_IKE_NEGOTIATION_DISABLED
+#[doc(hidden)] pub const IPSEC_IKE_QM_LIMIT : ErrorCode = ErrorCode::from_constant(13884); // ERROR_IPSEC_IKE_QM_LIMIT
+#[doc(hidden)] pub const IPSEC_IKE_MM_EXPIRED : ErrorCode = ErrorCode::from_constant(13885); // ERROR_IPSEC_IKE_MM_EXPIRED
+#[doc(hidden)] pub const IPSEC_IKE_PEER_MM_ASSUMED_INVALID : ErrorCode = ErrorCode::from_constant(13886); // ERROR_IPSEC_IKE_PEER_MM_ASSUMED_INVALID
+#[doc(hidden)] pub const IPSEC_IKE_CERT_CHAIN_POLICY_MISMATCH : ErrorCode = ErrorCode::from_constant(13887); // ERROR_IPSEC_IKE_CERT_CHAIN_POLICY_MISMATCH
+#[doc(hidden)] pub const IPSEC_IKE_UNEXPECTED_MESSAGE_ID : ErrorCode = ErrorCode::from_constant(13888); // ERROR_IPSEC_IKE_UNEXPECTED_MESSAGE_ID
+#[doc(hidden)] pub const IPSEC_IKE_INVALID_AUTH_PAYLOAD : ErrorCode = ErrorCode::from_constant(13889); // ERROR_IPSEC_IKE_INVALID_AUTH_PAYLOAD
+#[doc(hidden)] pub const IPSEC_IKE_DOS_COOKIE_SENT : ErrorCode = ErrorCode::from_constant(13890); // ERROR_IPSEC_IKE_DOS_COOKIE_SENT
+#[doc(hidden)] pub const IPSEC_IKE_SHUTTING_DOWN : ErrorCode = ErrorCode::from_constant(13891); // ERROR_IPSEC_IKE_SHUTTING_DOWN
+#[doc(hidden)] pub const IPSEC_IKE_CGA_AUTH_FAILED : ErrorCode = ErrorCode::from_constant(13892); // ERROR_IPSEC_IKE_CGA_AUTH_FAILED
+#[doc(hidden)] pub const IPSEC_IKE_PROCESS_ERR_NATOA : ErrorCode = ErrorCode::from_constant(13893); // ERROR_IPSEC_IKE_PROCESS_ERR_NATOA
+#[doc(hidden)] pub const IPSEC_IKE_INVALID_MM_FOR_QM : ErrorCode = ErrorCode::from_constant(13894); // ERROR_IPSEC_IKE_INVALID_MM_FOR_QM
+#[doc(hidden)] pub const IPSEC_IKE_QM_EXPIRED : ErrorCode = ErrorCode::from_constant(13895); // ERROR_IPSEC_IKE_QM_EXPIRED
+#[doc(hidden)] pub const IPSEC_IKE_TOO_MANY_FILTERS : ErrorCode = ErrorCode::from_constant(13896); // ERROR_IPSEC_IKE_TOO_MANY_FILTERS
+#[doc(hidden)] pub const IPSEC_IKE_KILL_DUMMY_NAP_TUNNEL : ErrorCode = ErrorCode::from_constant(13898); // ERROR_IPSEC_IKE_KILL_DUMMY_NAP_TUNNEL
+#[doc(hidden)] pub const IPSEC_IKE_INNER_IP_ASSIGNMENT_FAILURE : ErrorCode = ErrorCode::from_constant(13899); // ERROR_IPSEC_IKE_INNER_IP_ASSIGNMENT_FAILURE
+#[doc(hidden)] pub const IPSEC_IKE_REQUIRE_CP_PAYLOAD_MISSING : ErrorCode = ErrorCode::from_constant(13900); // ERROR_IPSEC_IKE_REQUIRE_CP_PAYLOAD_MISSING
+#[doc(hidden)] pub const IPSEC_KEY_MODULE_IMPERSONATION_NEGOTIATION_PENDING : ErrorCode = ErrorCode::from_constant(13901); // ERROR_IPSEC_KEY_MODULE_IMPERSONATION_NEGOTIATION_PENDING
+#[doc(hidden)] pub const IPSEC_IKE_COEXISTENCE_SUPPRESS : ErrorCode = ErrorCode::from_constant(13902); // ERROR_IPSEC_IKE_COEXISTENCE_SUPPRESS
+#[doc(hidden)] pub const IPSEC_IKE_RATELIMIT_DROP : ErrorCode = ErrorCode::from_constant(13903); // ERROR_IPSEC_IKE_RATELIMIT_DROP
+#[doc(hidden)] pub const IPSEC_IKE_PEER_DOESNT_SUPPORT_MOBIKE : ErrorCode = ErrorCode::from_constant(13904); // ERROR_IPSEC_IKE_PEER_DOESNT_SUPPORT_MOBIKE
+#[doc(hidden)] pub const IPSEC_IKE_AUTHORIZATION_FAILURE : ErrorCode = ErrorCode::from_constant(13905); // ERROR_IPSEC_IKE_AUTHORIZATION_FAILURE
+#[doc(hidden)] pub const IPSEC_IKE_STRONG_CRED_AUTHORIZATION_FAILURE : ErrorCode = ErrorCode::from_constant(13906); // ERROR_IPSEC_IKE_STRONG_CRED_AUTHORIZATION_FAILURE
+#[doc(hidden)] pub const IPSEC_IKE_AUTHORIZATION_FAILURE_WITH_OPTIONAL_RETRY : ErrorCode = ErrorCode::from_constant(13907); // ERROR_IPSEC_IKE_AUTHORIZATION_FAILURE_WITH_OPTIONAL_RETRY
+#[doc(hidden)] pub const IPSEC_IKE_STRONG_CRED_AUTHORIZATION_AND_CERTMAP_FAILURE : ErrorCode = ErrorCode::from_constant(13908); // ERROR_IPSEC_IKE_STRONG_CRED_AUTHORIZATION_AND_CERTMAP_FAILURE
+#[doc(hidden)] pub const IPSEC_BAD_SPI : ErrorCode = ErrorCode::from_constant(13910); // ERROR_IPSEC_BAD_SPI
+#[doc(hidden)] pub const IPSEC_SA_LIFETIME_EXPIRED : ErrorCode = ErrorCode::from_constant(13911); // ERROR_IPSEC_SA_LIFETIME_EXPIRED
+#[doc(hidden)] pub const IPSEC_WRONG_SA : ErrorCode = ErrorCode::from_constant(13912); // ERROR_IPSEC_WRONG_SA
+#[doc(hidden)] pub const IPSEC_REPLAY_CHECK_FAILED : ErrorCode = ErrorCode::from_constant(13913); // ERROR_IPSEC_REPLAY_CHECK_FAILED
+#[doc(hidden)] pub const IPSEC_INVALID_PACKET : ErrorCode = ErrorCode::from_constant(13914); // ERROR_IPSEC_INVALID_PACKET
+#[doc(hidden)] pub const IPSEC_INTEGRITY_CHECK_FAILED : ErrorCode = ErrorCode::from_constant(13915); // ERROR_IPSEC_INTEGRITY_CHECK_FAILED
+#[doc(hidden)] pub const IPSEC_CLEAR_TEXT_DROP : ErrorCode = ErrorCode::from_constant(13916); // ERROR_IPSEC_CLEAR_TEXT_DROP
+#[doc(hidden)] pub const IPSEC_AUTH_FIREWALL_DROP : ErrorCode = ErrorCode::from_constant(13917); // ERROR_IPSEC_AUTH_FIREWALL_DROP
+#[doc(hidden)] pub const IPSEC_THROTTLE_DROP : ErrorCode = ErrorCode::from_constant(13918); // ERROR_IPSEC_THROTTLE_DROP
+#[doc(hidden)] pub const IPSEC_DOSP_BLOCK : ErrorCode = ErrorCode::from_constant(13925); // ERROR_IPSEC_DOSP_BLOCK
+#[doc(hidden)] pub const IPSEC_DOSP_RECEIVED_MULTICAST : ErrorCode = ErrorCode::from_constant(13926); // ERROR_IPSEC_DOSP_RECEIVED_MULTICAST
+#[doc(hidden)] pub const IPSEC_DOSP_INVALID_PACKET : ErrorCode = ErrorCode::from_constant(13927); // ERROR_IPSEC_DOSP_INVALID_PACKET
+#[doc(hidden)] pub const IPSEC_DOSP_STATE_LOOKUP_FAILED : ErrorCode = ErrorCode::from_constant(13928); // ERROR_IPSEC_DOSP_STATE_LOOKUP_FAILED
+#[doc(hidden)] pub const IPSEC_DOSP_MAX_ENTRIES : ErrorCode = ErrorCode::from_constant(13929); // ERROR_IPSEC_DOSP_MAX_ENTRIES
+#[doc(hidden)] pub const IPSEC_DOSP_KEYMOD_NOT_ALLOWED : ErrorCode = ErrorCode::from_constant(13930); // ERROR_IPSEC_DOSP_KEYMOD_NOT_ALLOWED
+#[doc(hidden)] pub const IPSEC_DOSP_NOT_INSTALLED : ErrorCode = ErrorCode::from_constant(13931); // ERROR_IPSEC_DOSP_NOT_INSTALLED
+#[doc(hidden)] pub const IPSEC_DOSP_MAX_PER_IP_RATELIMIT_QUEUES : ErrorCode = ErrorCode::from_constant(13932); // ERROR_IPSEC_DOSP_MAX_PER_IP_RATELIMIT_QUEUES
+#[doc(hidden)] pub const SXS_SECTION_NOT_FOUND : ErrorCode = ErrorCode::from_constant(14000); // ERROR_SXS_SECTION_NOT_FOUND
+#[doc(hidden)] pub const SXS_CANT_GEN_ACTCTX : ErrorCode = ErrorCode::from_constant(14001); // ERROR_SXS_CANT_GEN_ACTCTX
+#[doc(hidden)] pub const SXS_INVALID_ACTCTXDATA_FORMAT : ErrorCode = ErrorCode::from_constant(14002); // ERROR_SXS_INVALID_ACTCTXDATA_FORMAT
+#[doc(hidden)] pub const SXS_ASSEMBLY_NOT_FOUND : ErrorCode = ErrorCode::from_constant(14003); // ERROR_SXS_ASSEMBLY_NOT_FOUND
+#[doc(hidden)] pub const SXS_MANIFEST_FORMAT_ERROR : ErrorCode = ErrorCode::from_constant(14004); // ERROR_SXS_MANIFEST_FORMAT_ERROR
+#[doc(hidden)] pub const SXS_MANIFEST_PARSE_ERROR : ErrorCode = ErrorCode::from_constant(14005); // ERROR_SXS_MANIFEST_PARSE_ERROR
+#[doc(hidden)] pub const SXS_ACTIVATION_CONTEXT_DISABLED : ErrorCode = ErrorCode::from_constant(14006); // ERROR_SXS_ACTIVATION_CONTEXT_DISABLED
+#[doc(hidden)] pub const SXS_KEY_NOT_FOUND : ErrorCode = ErrorCode::from_constant(14007); // ERROR_SXS_KEY_NOT_FOUND
+#[doc(hidden)] pub const SXS_VERSION_CONFLICT : ErrorCode = ErrorCode::from_constant(14008); // ERROR_SXS_VERSION_CONFLICT
+#[doc(hidden)] pub const SXS_WRONG_SECTION_TYPE : ErrorCode = ErrorCode::from_constant(14009); // ERROR_SXS_WRONG_SECTION_TYPE
+#[doc(hidden)] pub const SXS_THREAD_QUERIES_DISABLED : ErrorCode = ErrorCode::from_constant(14010); // ERROR_SXS_THREAD_QUERIES_DISABLED
+#[doc(hidden)] pub const SXS_PROCESS_DEFAULT_ALREADY_SET : ErrorCode = ErrorCode::from_constant(14011); // ERROR_SXS_PROCESS_DEFAULT_ALREADY_SET
+#[doc(hidden)] pub const SXS_UNKNOWN_ENCODING_GROUP : ErrorCode = ErrorCode::from_constant(14012); // ERROR_SXS_UNKNOWN_ENCODING_GROUP
+#[doc(hidden)] pub const SXS_UNKNOWN_ENCODING : ErrorCode = ErrorCode::from_constant(14013); // ERROR_SXS_UNKNOWN_ENCODING
+#[doc(hidden)] pub const SXS_INVALID_XML_NAMESPACE_URI : ErrorCode = ErrorCode::from_constant(14014); // ERROR_SXS_INVALID_XML_NAMESPACE_URI
+#[doc(hidden)] pub const SXS_ROOT_MANIFEST_DEPENDENCY_NOT_INSTALLED : ErrorCode = ErrorCode::from_constant(14015); // ERROR_SXS_ROOT_MANIFEST_DEPENDENCY_NOT_INSTALLED
+#[doc(hidden)] pub const SXS_LEAF_MANIFEST_DEPENDENCY_NOT_INSTALLED : ErrorCode = ErrorCode::from_constant(14016); // ERROR_SXS_LEAF_MANIFEST_DEPENDENCY_NOT_INSTALLED
+#[doc(hidden)] pub const SXS_INVALID_ASSEMBLY_IDENTITY_ATTRIBUTE : ErrorCode = ErrorCode::from_constant(14017); // ERROR_SXS_INVALID_ASSEMBLY_IDENTITY_ATTRIBUTE
+#[doc(hidden)] pub const SXS_MANIFEST_MISSING_REQUIRED_DEFAULT_NAMESPACE : ErrorCode = ErrorCode::from_constant(14018); // ERROR_SXS_MANIFEST_MISSING_REQUIRED_DEFAULT_NAMESPACE
+#[doc(hidden)] pub const SXS_MANIFEST_INVALID_REQUIRED_DEFAULT_NAMESPACE : ErrorCode = ErrorCode::from_constant(14019); // ERROR_SXS_MANIFEST_INVALID_REQUIRED_DEFAULT_NAMESPACE
+#[doc(hidden)] pub const SXS_PRIVATE_MANIFEST_CROSS_PATH_WITH_REPARSE_POINT : ErrorCode = ErrorCode::from_constant(14020); // ERROR_SXS_PRIVATE_MANIFEST_CROSS_PATH_WITH_REPARSE_POINT
+#[doc(hidden)] pub const SXS_DUPLICATE_DLL_NAME : ErrorCode = ErrorCode::from_constant(14021); // ERROR_SXS_DUPLICATE_DLL_NAME
+#[doc(hidden)] pub const SXS_DUPLICATE_WINDOWCLASS_NAME : ErrorCode = ErrorCode::from_constant(14022); // ERROR_SXS_DUPLICATE_WINDOWCLASS_NAME
+#[doc(hidden)] pub const SXS_DUPLICATE_CLSID : ErrorCode = ErrorCode::from_constant(14023); // ERROR_SXS_DUPLICATE_CLSID
+#[doc(hidden)] pub const SXS_DUPLICATE_IID : ErrorCode = ErrorCode::from_constant(14024); // ERROR_SXS_DUPLICATE_IID
+#[doc(hidden)] pub const SXS_DUPLICATE_TLBID : ErrorCode = ErrorCode::from_constant(14025); // ERROR_SXS_DUPLICATE_TLBID
+#[doc(hidden)] pub const SXS_DUPLICATE_PROGID : ErrorCode = ErrorCode::from_constant(14026); // ERROR_SXS_DUPLICATE_PROGID
+#[doc(hidden)] pub const SXS_DUPLICATE_ASSEMBLY_NAME : ErrorCode = ErrorCode::from_constant(14027); // ERROR_SXS_DUPLICATE_ASSEMBLY_NAME
+#[doc(hidden)] pub const SXS_FILE_HASH_MISMATCH : ErrorCode = ErrorCode::from_constant(14028); // ERROR_SXS_FILE_HASH_MISMATCH
+#[doc(hidden)] pub const SXS_POLICY_PARSE_ERROR : ErrorCode = ErrorCode::from_constant(14029); // ERROR_SXS_POLICY_PARSE_ERROR
+#[doc(hidden)] pub const SXS_PROTECTION_RECOVERY_FAILED : ErrorCode = ErrorCode::from_constant(14074); // ERROR_SXS_PROTECTION_RECOVERY_FAILED
+#[doc(hidden)] pub const SXS_PROTECTION_PUBLIC_KEY_TOO_SHORT : ErrorCode = ErrorCode::from_constant(14075); // ERROR_SXS_PROTECTION_PUBLIC_KEY_TOO_SHORT
+#[doc(hidden)] pub const SXS_PROTECTION_CATALOG_NOT_VALID : ErrorCode = ErrorCode::from_constant(14076); // ERROR_SXS_PROTECTION_CATALOG_NOT_VALID
+#[doc(hidden)] pub const SXS_UNTRANSLATABLE_HRESULT : ErrorCode = ErrorCode::from_constant(14077); // ERROR_SXS_UNTRANSLATABLE_HRESULT
+#[doc(hidden)] pub const SXS_PROTECTION_CATALOG_FILE_MISSING : ErrorCode = ErrorCode::from_constant(14078); // ERROR_SXS_PROTECTION_CATALOG_FILE_MISSING
+#[doc(hidden)] pub const SXS_MISSING_ASSEMBLY_IDENTITY_ATTRIBUTE : ErrorCode = ErrorCode::from_constant(14079); // ERROR_SXS_MISSING_ASSEMBLY_IDENTITY_ATTRIBUTE
+#[doc(hidden)] pub const SXS_INVALID_ASSEMBLY_IDENTITY_ATTRIBUTE_NAME : ErrorCode = ErrorCode::from_constant(14080); // ERROR_SXS_INVALID_ASSEMBLY_IDENTITY_ATTRIBUTE_NAME
+#[doc(hidden)] pub const SXS_ASSEMBLY_MISSING : ErrorCode = ErrorCode::from_constant(14081); // ERROR_SXS_ASSEMBLY_MISSING
+#[doc(hidden)] pub const SXS_CORRUPT_ACTIVATION_STACK : ErrorCode = ErrorCode::from_constant(14082); // ERROR_SXS_CORRUPT_ACTIVATION_STACK
+#[doc(hidden)] pub const SXS_CORRUPTION : ErrorCode = ErrorCode::from_constant(14083); // ERROR_SXS_CORRUPTION
+#[doc(hidden)] pub const SXS_EARLY_DEACTIVATION : ErrorCode = ErrorCode::from_constant(14084); // ERROR_SXS_EARLY_DEACTIVATION
+#[doc(hidden)] pub const SXS_INVALID_DEACTIVATION : ErrorCode = ErrorCode::from_constant(14085); // ERROR_SXS_INVALID_DEACTIVATION
+#[doc(hidden)] pub const SXS_MULTIPLE_DEACTIVATION : ErrorCode = ErrorCode::from_constant(14086); // ERROR_SXS_MULTIPLE_DEACTIVATION
+#[doc(hidden)] pub const SXS_PROCESS_TERMINATION_REQUESTED : ErrorCode = ErrorCode::from_constant(14087); // ERROR_SXS_PROCESS_TERMINATION_REQUESTED
+#[doc(hidden)] pub const SXS_RELEASE_ACTIVATION_CONTEXT : ErrorCode = ErrorCode::from_constant(14088); // ERROR_SXS_RELEASE_ACTIVATION_CONTEXT
+#[doc(hidden)] pub const SXS_SYSTEM_DEFAULT_ACTIVATION_CONTEXT_EMPTY : ErrorCode = ErrorCode::from_constant(14089); // ERROR_SXS_SYSTEM_DEFAULT_ACTIVATION_CONTEXT_EMPTY
+#[doc(hidden)] pub const SXS_INVALID_IDENTITY_ATTRIBUTE_VALUE : ErrorCode = ErrorCode::from_constant(14090); // ERROR_SXS_INVALID_IDENTITY_ATTRIBUTE_VALUE
+#[doc(hidden)] pub const SXS_INVALID_IDENTITY_ATTRIBUTE_NAME : ErrorCode = ErrorCode::from_constant(14091); // ERROR_SXS_INVALID_IDENTITY_ATTRIBUTE_NAME
+#[doc(hidden)] pub const SXS_IDENTITY_DUPLICATE_ATTRIBUTE : ErrorCode = ErrorCode::from_constant(14092); // ERROR_SXS_IDENTITY_DUPLICATE_ATTRIBUTE
+#[doc(hidden)] pub const SXS_IDENTITY_PARSE_ERROR : ErrorCode = ErrorCode::from_constant(14093); // ERROR_SXS_IDENTITY_PARSE_ERROR
 
 /// A string containing localized substitutable content was malformed. Either a dollar sign ($) was followed by something other than a left parenthesis or another dollar sign or an substitution's right parenthesis was not found.
-pub const MALFORMED_SUBSTITUTION_STRING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(14094); // ERROR_MALFORMED_SUBSTITUTION_STRING
+pub const MALFORMED_SUBSTITUTION_STRING : ErrorCode = ErrorCode::from_constant(14094); // ERROR_MALFORMED_SUBSTITUTION_STRING
 
-#[doc(hidden)] pub const SXS_INCORRECT_PUBLIC_KEY_TOKEN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(14095); // ERROR_SXS_INCORRECT_PUBLIC_KEY_TOKEN
+#[doc(hidden)] pub const SXS_INCORRECT_PUBLIC_KEY_TOKEN : ErrorCode = ErrorCode::from_constant(14095); // ERROR_SXS_INCORRECT_PUBLIC_KEY_TOKEN
 
 /// A substitution string had no mapping.
-pub const UNMAPPED_SUBSTITUTION_STRING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(14096); // ERROR_UNMAPPED_SUBSTITUTION_STRING
+pub const UNMAPPED_SUBSTITUTION_STRING : ErrorCode = ErrorCode::from_constant(14096); // ERROR_UNMAPPED_SUBSTITUTION_STRING
 
-#[doc(hidden)] pub const SXS_ASSEMBLY_NOT_LOCKED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(14097); // ERROR_SXS_ASSEMBLY_NOT_LOCKED
-#[doc(hidden)] pub const SXS_COMPONENT_STORE_CORRUPT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(14098); // ERROR_SXS_COMPONENT_STORE_CORRUPT
+#[doc(hidden)] pub const SXS_ASSEMBLY_NOT_LOCKED : ErrorCode = ErrorCode::from_constant(14097); // ERROR_SXS_ASSEMBLY_NOT_LOCKED
+#[doc(hidden)] pub const SXS_COMPONENT_STORE_CORRUPT : ErrorCode = ErrorCode::from_constant(14098); // ERROR_SXS_COMPONENT_STORE_CORRUPT
 
 /// An advanced installer failed during setup or servicing.
-pub const ADVANCED_INSTALLER_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(14099); // ERROR_ADVANCED_INSTALLER_FAILED
+pub const ADVANCED_INSTALLER_FAILED : ErrorCode = ErrorCode::from_constant(14099); // ERROR_ADVANCED_INSTALLER_FAILED
 
 /// The character encoding in the XML declaration did not match the encoding used in the document.
-pub const XML_ENCODING_MISMATCH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(14100); // ERROR_XML_ENCODING_MISMATCH
+pub const XML_ENCODING_MISMATCH : ErrorCode = ErrorCode::from_constant(14100); // ERROR_XML_ENCODING_MISMATCH
 
-#[doc(hidden)] pub const SXS_MANIFEST_IDENTITY_SAME_BUT_CONTENTS_DIFFERENT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(14101); // ERROR_SXS_MANIFEST_IDENTITY_SAME_BUT_CONTENTS_DIFFERENT
-#[doc(hidden)] pub const SXS_IDENTITIES_DIFFERENT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(14102); // ERROR_SXS_IDENTITIES_DIFFERENT
-#[doc(hidden)] pub const SXS_ASSEMBLY_IS_NOT_A_DEPLOYMENT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(14103); // ERROR_SXS_ASSEMBLY_IS_NOT_A_DEPLOYMENT
-#[doc(hidden)] pub const SXS_FILE_NOT_PART_OF_ASSEMBLY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(14104); // ERROR_SXS_FILE_NOT_PART_OF_ASSEMBLY
-#[doc(hidden)] pub const SXS_MANIFEST_TOO_BIG : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(14105); // ERROR_SXS_MANIFEST_TOO_BIG
-#[doc(hidden)] pub const SXS_SETTING_NOT_REGISTERED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(14106); // ERROR_SXS_SETTING_NOT_REGISTERED
-#[doc(hidden)] pub const SXS_TRANSACTION_CLOSURE_INCOMPLETE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(14107); // ERROR_SXS_TRANSACTION_CLOSURE_INCOMPLETE
+#[doc(hidden)] pub const SXS_MANIFEST_IDENTITY_SAME_BUT_CONTENTS_DIFFERENT : ErrorCode = ErrorCode::from_constant(14101); // ERROR_SXS_MANIFEST_IDENTITY_SAME_BUT_CONTENTS_DIFFERENT
+#[doc(hidden)] pub const SXS_IDENTITIES_DIFFERENT : ErrorCode = ErrorCode::from_constant(14102); // ERROR_SXS_IDENTITIES_DIFFERENT
+#[doc(hidden)] pub const SXS_ASSEMBLY_IS_NOT_A_DEPLOYMENT : ErrorCode = ErrorCode::from_constant(14103); // ERROR_SXS_ASSEMBLY_IS_NOT_A_DEPLOYMENT
+#[doc(hidden)] pub const SXS_FILE_NOT_PART_OF_ASSEMBLY : ErrorCode = ErrorCode::from_constant(14104); // ERROR_SXS_FILE_NOT_PART_OF_ASSEMBLY
+#[doc(hidden)] pub const SXS_MANIFEST_TOO_BIG : ErrorCode = ErrorCode::from_constant(14105); // ERROR_SXS_MANIFEST_TOO_BIG
+#[doc(hidden)] pub const SXS_SETTING_NOT_REGISTERED : ErrorCode = ErrorCode::from_constant(14106); // ERROR_SXS_SETTING_NOT_REGISTERED
+#[doc(hidden)] pub const SXS_TRANSACTION_CLOSURE_INCOMPLETE : ErrorCode = ErrorCode::from_constant(14107); // ERROR_SXS_TRANSACTION_CLOSURE_INCOMPLETE
 
 /// The SMI primitive installer failed during setup or servicing.
-pub const SMI_PRIMITIVE_INSTALLER_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(14108); // ERROR_SMI_PRIMITIVE_INSTALLER_FAILED
+pub const SMI_PRIMITIVE_INSTALLER_FAILED : ErrorCode = ErrorCode::from_constant(14108); // ERROR_SMI_PRIMITIVE_INSTALLER_FAILED
 
 /// A generic command executable returned a result that indicates failure.
-pub const GENERIC_COMMAND_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(14109); // ERROR_GENERIC_COMMAND_FAILED
+pub const GENERIC_COMMAND_FAILED : ErrorCode = ErrorCode::from_constant(14109); // ERROR_GENERIC_COMMAND_FAILED
 
-#[doc(hidden)] pub const SXS_FILE_HASH_MISSING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(14110); // ERROR_SXS_FILE_HASH_MISSING
-#[doc(hidden)] pub const SXS_DUPLICATE_ACTIVATABLE_CLASS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(14111); // ERROR_SXS_DUPLICATE_ACTIVATABLE_CLASS
-#[doc(hidden)] pub const EVT_INVALID_CHANNEL_PATH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15000); // ERROR_EVT_INVALID_CHANNEL_PATH
-#[doc(hidden)] pub const EVT_INVALID_QUERY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15001); // ERROR_EVT_INVALID_QUERY
-#[doc(hidden)] pub const EVT_PUBLISHER_METADATA_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15002); // ERROR_EVT_PUBLISHER_METADATA_NOT_FOUND
-#[doc(hidden)] pub const EVT_EVENT_TEMPLATE_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15003); // ERROR_EVT_EVENT_TEMPLATE_NOT_FOUND
-#[doc(hidden)] pub const EVT_INVALID_PUBLISHER_NAME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15004); // ERROR_EVT_INVALID_PUBLISHER_NAME
-#[doc(hidden)] pub const EVT_INVALID_EVENT_DATA : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15005); // ERROR_EVT_INVALID_EVENT_DATA
-#[doc(hidden)] pub const EVT_CHANNEL_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15007); // ERROR_EVT_CHANNEL_NOT_FOUND
-#[doc(hidden)] pub const EVT_MALFORMED_XML_TEXT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15008); // ERROR_EVT_MALFORMED_XML_TEXT
-#[doc(hidden)] pub const EVT_SUBSCRIPTION_TO_DIRECT_CHANNEL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15009); // ERROR_EVT_SUBSCRIPTION_TO_DIRECT_CHANNEL
-#[doc(hidden)] pub const EVT_CONFIGURATION_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15010); // ERROR_EVT_CONFIGURATION_ERROR
-#[doc(hidden)] pub const EVT_QUERY_RESULT_STALE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15011); // ERROR_EVT_QUERY_RESULT_STALE
-#[doc(hidden)] pub const EVT_QUERY_RESULT_INVALID_POSITION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15012); // ERROR_EVT_QUERY_RESULT_INVALID_POSITION
-#[doc(hidden)] pub const EVT_NON_VALIDATING_MSXML : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15013); // ERROR_EVT_NON_VALIDATING_MSXML
-#[doc(hidden)] pub const EVT_FILTER_ALREADYSCOPED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15014); // ERROR_EVT_FILTER_ALREADYSCOPED
-#[doc(hidden)] pub const EVT_FILTER_NOTELTSET : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15015); // ERROR_EVT_FILTER_NOTELTSET
-#[doc(hidden)] pub const EVT_FILTER_INVARG : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15016); // ERROR_EVT_FILTER_INVARG
-#[doc(hidden)] pub const EVT_FILTER_INVTEST : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15017); // ERROR_EVT_FILTER_INVTEST
-#[doc(hidden)] pub const EVT_FILTER_INVTYPE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15018); // ERROR_EVT_FILTER_INVTYPE
-#[doc(hidden)] pub const EVT_FILTER_PARSEERR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15019); // ERROR_EVT_FILTER_PARSEERR
-#[doc(hidden)] pub const EVT_FILTER_UNSUPPORTEDOP : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15020); // ERROR_EVT_FILTER_UNSUPPORTEDOP
-#[doc(hidden)] pub const EVT_FILTER_UNEXPECTEDTOKEN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15021); // ERROR_EVT_FILTER_UNEXPECTEDTOKEN
-#[doc(hidden)] pub const EVT_INVALID_OPERATION_OVER_ENABLED_DIRECT_CHANNEL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15022); // ERROR_EVT_INVALID_OPERATION_OVER_ENABLED_DIRECT_CHANNEL
-#[doc(hidden)] pub const EVT_INVALID_CHANNEL_PROPERTY_VALUE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15023); // ERROR_EVT_INVALID_CHANNEL_PROPERTY_VALUE
-#[doc(hidden)] pub const EVT_INVALID_PUBLISHER_PROPERTY_VALUE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15024); // ERROR_EVT_INVALID_PUBLISHER_PROPERTY_VALUE
-#[doc(hidden)] pub const EVT_CHANNEL_CANNOT_ACTIVATE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15025); // ERROR_EVT_CHANNEL_CANNOT_ACTIVATE
-#[doc(hidden)] pub const EVT_FILTER_TOO_COMPLEX : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15026); // ERROR_EVT_FILTER_TOO_COMPLEX
-#[doc(hidden)] pub const EVT_MESSAGE_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15027); // ERROR_EVT_MESSAGE_NOT_FOUND
-#[doc(hidden)] pub const EVT_MESSAGE_ID_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15028); // ERROR_EVT_MESSAGE_ID_NOT_FOUND
-#[doc(hidden)] pub const EVT_UNRESOLVED_VALUE_INSERT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15029); // ERROR_EVT_UNRESOLVED_VALUE_INSERT
-#[doc(hidden)] pub const EVT_UNRESOLVED_PARAMETER_INSERT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15030); // ERROR_EVT_UNRESOLVED_PARAMETER_INSERT
-#[doc(hidden)] pub const EVT_MAX_INSERTS_REACHED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15031); // ERROR_EVT_MAX_INSERTS_REACHED
-#[doc(hidden)] pub const EVT_EVENT_DEFINITION_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15032); // ERROR_EVT_EVENT_DEFINITION_NOT_FOUND
-#[doc(hidden)] pub const EVT_MESSAGE_LOCALE_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15033); // ERROR_EVT_MESSAGE_LOCALE_NOT_FOUND
-#[doc(hidden)] pub const EVT_VERSION_TOO_OLD : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15034); // ERROR_EVT_VERSION_TOO_OLD
-#[doc(hidden)] pub const EVT_VERSION_TOO_NEW : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15035); // ERROR_EVT_VERSION_TOO_NEW
-#[doc(hidden)] pub const EVT_CANNOT_OPEN_CHANNEL_OF_QUERY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15036); // ERROR_EVT_CANNOT_OPEN_CHANNEL_OF_QUERY
-#[doc(hidden)] pub const EVT_PUBLISHER_DISABLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15037); // ERROR_EVT_PUBLISHER_DISABLED
-#[doc(hidden)] pub const EVT_FILTER_OUT_OF_RANGE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15038); // ERROR_EVT_FILTER_OUT_OF_RANGE
+#[doc(hidden)] pub const SXS_FILE_HASH_MISSING : ErrorCode = ErrorCode::from_constant(14110); // ERROR_SXS_FILE_HASH_MISSING
+#[doc(hidden)] pub const SXS_DUPLICATE_ACTIVATABLE_CLASS : ErrorCode = ErrorCode::from_constant(14111); // ERROR_SXS_DUPLICATE_ACTIVATABLE_CLASS
+#[doc(hidden)] pub const EVT_INVALID_CHANNEL_PATH : ErrorCode = ErrorCode::from_constant(15000); // ERROR_EVT_INVALID_CHANNEL_PATH
+#[doc(hidden)] pub const EVT_INVALID_QUERY : ErrorCode = ErrorCode::from_constant(15001); // ERROR_EVT_INVALID_QUERY
+#[doc(hidden)] pub const EVT_PUBLISHER_METADATA_NOT_FOUND : ErrorCode = ErrorCode::from_constant(15002); // ERROR_EVT_PUBLISHER_METADATA_NOT_FOUND
+#[doc(hidden)] pub const EVT_EVENT_TEMPLATE_NOT_FOUND : ErrorCode = ErrorCode::from_constant(15003); // ERROR_EVT_EVENT_TEMPLATE_NOT_FOUND
+#[doc(hidden)] pub const EVT_INVALID_PUBLISHER_NAME : ErrorCode = ErrorCode::from_constant(15004); // ERROR_EVT_INVALID_PUBLISHER_NAME
+#[doc(hidden)] pub const EVT_INVALID_EVENT_DATA : ErrorCode = ErrorCode::from_constant(15005); // ERROR_EVT_INVALID_EVENT_DATA
+#[doc(hidden)] pub const EVT_CHANNEL_NOT_FOUND : ErrorCode = ErrorCode::from_constant(15007); // ERROR_EVT_CHANNEL_NOT_FOUND
+#[doc(hidden)] pub const EVT_MALFORMED_XML_TEXT : ErrorCode = ErrorCode::from_constant(15008); // ERROR_EVT_MALFORMED_XML_TEXT
+#[doc(hidden)] pub const EVT_SUBSCRIPTION_TO_DIRECT_CHANNEL : ErrorCode = ErrorCode::from_constant(15009); // ERROR_EVT_SUBSCRIPTION_TO_DIRECT_CHANNEL
+#[doc(hidden)] pub const EVT_CONFIGURATION_ERROR : ErrorCode = ErrorCode::from_constant(15010); // ERROR_EVT_CONFIGURATION_ERROR
+#[doc(hidden)] pub const EVT_QUERY_RESULT_STALE : ErrorCode = ErrorCode::from_constant(15011); // ERROR_EVT_QUERY_RESULT_STALE
+#[doc(hidden)] pub const EVT_QUERY_RESULT_INVALID_POSITION : ErrorCode = ErrorCode::from_constant(15012); // ERROR_EVT_QUERY_RESULT_INVALID_POSITION
+#[doc(hidden)] pub const EVT_NON_VALIDATING_MSXML : ErrorCode = ErrorCode::from_constant(15013); // ERROR_EVT_NON_VALIDATING_MSXML
+#[doc(hidden)] pub const EVT_FILTER_ALREADYSCOPED : ErrorCode = ErrorCode::from_constant(15014); // ERROR_EVT_FILTER_ALREADYSCOPED
+#[doc(hidden)] pub const EVT_FILTER_NOTELTSET : ErrorCode = ErrorCode::from_constant(15015); // ERROR_EVT_FILTER_NOTELTSET
+#[doc(hidden)] pub const EVT_FILTER_INVARG : ErrorCode = ErrorCode::from_constant(15016); // ERROR_EVT_FILTER_INVARG
+#[doc(hidden)] pub const EVT_FILTER_INVTEST : ErrorCode = ErrorCode::from_constant(15017); // ERROR_EVT_FILTER_INVTEST
+#[doc(hidden)] pub const EVT_FILTER_INVTYPE : ErrorCode = ErrorCode::from_constant(15018); // ERROR_EVT_FILTER_INVTYPE
+#[doc(hidden)] pub const EVT_FILTER_PARSEERR : ErrorCode = ErrorCode::from_constant(15019); // ERROR_EVT_FILTER_PARSEERR
+#[doc(hidden)] pub const EVT_FILTER_UNSUPPORTEDOP : ErrorCode = ErrorCode::from_constant(15020); // ERROR_EVT_FILTER_UNSUPPORTEDOP
+#[doc(hidden)] pub const EVT_FILTER_UNEXPECTEDTOKEN : ErrorCode = ErrorCode::from_constant(15021); // ERROR_EVT_FILTER_UNEXPECTEDTOKEN
+#[doc(hidden)] pub const EVT_INVALID_OPERATION_OVER_ENABLED_DIRECT_CHANNEL : ErrorCode = ErrorCode::from_constant(15022); // ERROR_EVT_INVALID_OPERATION_OVER_ENABLED_DIRECT_CHANNEL
+#[doc(hidden)] pub const EVT_INVALID_CHANNEL_PROPERTY_VALUE : ErrorCode = ErrorCode::from_constant(15023); // ERROR_EVT_INVALID_CHANNEL_PROPERTY_VALUE
+#[doc(hidden)] pub const EVT_INVALID_PUBLISHER_PROPERTY_VALUE : ErrorCode = ErrorCode::from_constant(15024); // ERROR_EVT_INVALID_PUBLISHER_PROPERTY_VALUE
+#[doc(hidden)] pub const EVT_CHANNEL_CANNOT_ACTIVATE : ErrorCode = ErrorCode::from_constant(15025); // ERROR_EVT_CHANNEL_CANNOT_ACTIVATE
+#[doc(hidden)] pub const EVT_FILTER_TOO_COMPLEX : ErrorCode = ErrorCode::from_constant(15026); // ERROR_EVT_FILTER_TOO_COMPLEX
+#[doc(hidden)] pub const EVT_MESSAGE_NOT_FOUND : ErrorCode = ErrorCode::from_constant(15027); // ERROR_EVT_MESSAGE_NOT_FOUND
+#[doc(hidden)] pub const EVT_MESSAGE_ID_NOT_FOUND : ErrorCode = ErrorCode::from_constant(15028); // ERROR_EVT_MESSAGE_ID_NOT_FOUND
+#[doc(hidden)] pub const EVT_UNRESOLVED_VALUE_INSERT : ErrorCode = ErrorCode::from_constant(15029); // ERROR_EVT_UNRESOLVED_VALUE_INSERT
+#[doc(hidden)] pub const EVT_UNRESOLVED_PARAMETER_INSERT : ErrorCode = ErrorCode::from_constant(15030); // ERROR_EVT_UNRESOLVED_PARAMETER_INSERT
+#[doc(hidden)] pub const EVT_MAX_INSERTS_REACHED : ErrorCode = ErrorCode::from_constant(15031); // ERROR_EVT_MAX_INSERTS_REACHED
+#[doc(hidden)] pub const EVT_EVENT_DEFINITION_NOT_FOUND : ErrorCode = ErrorCode::from_constant(15032); // ERROR_EVT_EVENT_DEFINITION_NOT_FOUND
+#[doc(hidden)] pub const EVT_MESSAGE_LOCALE_NOT_FOUND : ErrorCode = ErrorCode::from_constant(15033); // ERROR_EVT_MESSAGE_LOCALE_NOT_FOUND
+#[doc(hidden)] pub const EVT_VERSION_TOO_OLD : ErrorCode = ErrorCode::from_constant(15034); // ERROR_EVT_VERSION_TOO_OLD
+#[doc(hidden)] pub const EVT_VERSION_TOO_NEW : ErrorCode = ErrorCode::from_constant(15035); // ERROR_EVT_VERSION_TOO_NEW
+#[doc(hidden)] pub const EVT_CANNOT_OPEN_CHANNEL_OF_QUERY : ErrorCode = ErrorCode::from_constant(15036); // ERROR_EVT_CANNOT_OPEN_CHANNEL_OF_QUERY
+#[doc(hidden)] pub const EVT_PUBLISHER_DISABLED : ErrorCode = ErrorCode::from_constant(15037); // ERROR_EVT_PUBLISHER_DISABLED
+#[doc(hidden)] pub const EVT_FILTER_OUT_OF_RANGE : ErrorCode = ErrorCode::from_constant(15038); // ERROR_EVT_FILTER_OUT_OF_RANGE
 
 /// The subscription fails to activate.
-pub const EC_SUBSCRIPTION_CANNOT_ACTIVATE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15080); // ERROR_EC_SUBSCRIPTION_CANNOT_ACTIVATE
+pub const EC_SUBSCRIPTION_CANNOT_ACTIVATE : ErrorCode = ErrorCode::from_constant(15080); // ERROR_EC_SUBSCRIPTION_CANNOT_ACTIVATE
 
 /// The log of the subscription is in disabled state, and can not be used to forward events to. The log must first be enabled before the subscription can be activated.
-pub const EC_LOG_DISABLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15081); // ERROR_EC_LOG_DISABLED
+pub const EC_LOG_DISABLED : ErrorCode = ErrorCode::from_constant(15081); // ERROR_EC_LOG_DISABLED
 
 /// When forwarding events from local machine to itself, the query of the subscription can't contain target log of the subscription.
-pub const EC_CIRCULAR_FORWARDING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15082); // ERROR_EC_CIRCULAR_FORWARDING
+pub const EC_CIRCULAR_FORWARDING : ErrorCode = ErrorCode::from_constant(15082); // ERROR_EC_CIRCULAR_FORWARDING
 
 /// The credential store that is used to save credentials is full.
-pub const EC_CREDSTORE_FULL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15083); // ERROR_EC_CREDSTORE_FULL
+pub const EC_CREDSTORE_FULL : ErrorCode = ErrorCode::from_constant(15083); // ERROR_EC_CREDSTORE_FULL
 
 /// The credential used by this subscription can't be found in credential store.
-pub const EC_CRED_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15084); // ERROR_EC_CRED_NOT_FOUND
+pub const EC_CRED_NOT_FOUND : ErrorCode = ErrorCode::from_constant(15084); // ERROR_EC_CRED_NOT_FOUND
 
 /// No active channel is found for the query.
-pub const EC_NO_ACTIVE_CHANNEL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15085); // ERROR_EC_NO_ACTIVE_CHANNEL
+pub const EC_NO_ACTIVE_CHANNEL : ErrorCode = ErrorCode::from_constant(15085); // ERROR_EC_NO_ACTIVE_CHANNEL
 
-#[doc(hidden)] pub const MUI_FILE_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15100); // ERROR_MUI_FILE_NOT_FOUND
-#[doc(hidden)] pub const MUI_INVALID_FILE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15101); // ERROR_MUI_INVALID_FILE
-#[doc(hidden)] pub const MUI_INVALID_RC_CONFIG : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15102); // ERROR_MUI_INVALID_RC_CONFIG
-#[doc(hidden)] pub const MUI_INVALID_LOCALE_NAME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15103); // ERROR_MUI_INVALID_LOCALE_NAME
-#[doc(hidden)] pub const MUI_INVALID_ULTIMATEFALLBACK_NAME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15104); // ERROR_MUI_INVALID_ULTIMATEFALLBACK_NAME
-#[doc(hidden)] pub const MUI_FILE_NOT_LOADED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15105); // ERROR_MUI_FILE_NOT_LOADED
+#[doc(hidden)] pub const MUI_FILE_NOT_FOUND : ErrorCode = ErrorCode::from_constant(15100); // ERROR_MUI_FILE_NOT_FOUND
+#[doc(hidden)] pub const MUI_INVALID_FILE : ErrorCode = ErrorCode::from_constant(15101); // ERROR_MUI_INVALID_FILE
+#[doc(hidden)] pub const MUI_INVALID_RC_CONFIG : ErrorCode = ErrorCode::from_constant(15102); // ERROR_MUI_INVALID_RC_CONFIG
+#[doc(hidden)] pub const MUI_INVALID_LOCALE_NAME : ErrorCode = ErrorCode::from_constant(15103); // ERROR_MUI_INVALID_LOCALE_NAME
+#[doc(hidden)] pub const MUI_INVALID_ULTIMATEFALLBACK_NAME : ErrorCode = ErrorCode::from_constant(15104); // ERROR_MUI_INVALID_ULTIMATEFALLBACK_NAME
+#[doc(hidden)] pub const MUI_FILE_NOT_LOADED : ErrorCode = ErrorCode::from_constant(15105); // ERROR_MUI_FILE_NOT_LOADED
 
 /// User stopped resource enumeration.
-pub const RESOURCE_ENUM_USER_STOP : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15106); // ERROR_RESOURCE_ENUM_USER_STOP
+pub const RESOURCE_ENUM_USER_STOP : ErrorCode = ErrorCode::from_constant(15106); // ERROR_RESOURCE_ENUM_USER_STOP
 
-#[doc(hidden)] pub const MUI_INTLSETTINGS_UILANG_NOT_INSTALLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15107); // ERROR_MUI_INTLSETTINGS_UILANG_NOT_INSTALLED
-#[doc(hidden)] pub const MUI_INTLSETTINGS_INVALID_LOCALE_NAME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15108); // ERROR_MUI_INTLSETTINGS_INVALID_LOCALE_NAME
-#[doc(hidden)] pub const MRM_RUNTIME_NO_DEFAULT_OR_NEUTRAL_RESOURCE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15110); // ERROR_MRM_RUNTIME_NO_DEFAULT_OR_NEUTRAL_RESOURCE
-#[doc(hidden)] pub const MRM_INVALID_PRICONFIG : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15111); // ERROR_MRM_INVALID_PRICONFIG
-#[doc(hidden)] pub const MRM_INVALID_FILE_TYPE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15112); // ERROR_MRM_INVALID_FILE_TYPE
-#[doc(hidden)] pub const MRM_UNKNOWN_QUALIFIER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15113); // ERROR_MRM_UNKNOWN_QUALIFIER
-#[doc(hidden)] pub const MRM_INVALID_QUALIFIER_VALUE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15114); // ERROR_MRM_INVALID_QUALIFIER_VALUE
-#[doc(hidden)] pub const MRM_NO_CANDIDATE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15115); // ERROR_MRM_NO_CANDIDATE
-#[doc(hidden)] pub const MRM_NO_MATCH_OR_DEFAULT_CANDIDATE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15116); // ERROR_MRM_NO_MATCH_OR_DEFAULT_CANDIDATE
-#[doc(hidden)] pub const MRM_RESOURCE_TYPE_MISMATCH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15117); // ERROR_MRM_RESOURCE_TYPE_MISMATCH
-#[doc(hidden)] pub const MRM_DUPLICATE_MAP_NAME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15118); // ERROR_MRM_DUPLICATE_MAP_NAME
-#[doc(hidden)] pub const MRM_DUPLICATE_ENTRY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15119); // ERROR_MRM_DUPLICATE_ENTRY
-#[doc(hidden)] pub const MRM_INVALID_RESOURCE_IDENTIFIER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15120); // ERROR_MRM_INVALID_RESOURCE_IDENTIFIER
-#[doc(hidden)] pub const MRM_FILEPATH_TOO_LONG : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15121); // ERROR_MRM_FILEPATH_TOO_LONG
-#[doc(hidden)] pub const MRM_UNSUPPORTED_DIRECTORY_TYPE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15122); // ERROR_MRM_UNSUPPORTED_DIRECTORY_TYPE
-#[doc(hidden)] pub const MRM_INVALID_PRI_FILE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15126); // ERROR_MRM_INVALID_PRI_FILE
-#[doc(hidden)] pub const MRM_NAMED_RESOURCE_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15127); // ERROR_MRM_NAMED_RESOURCE_NOT_FOUND
-#[doc(hidden)] pub const MRM_MAP_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15135); // ERROR_MRM_MAP_NOT_FOUND
-#[doc(hidden)] pub const MRM_UNSUPPORTED_PROFILE_TYPE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15136); // ERROR_MRM_UNSUPPORTED_PROFILE_TYPE
-#[doc(hidden)] pub const MRM_INVALID_QUALIFIER_OPERATOR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15137); // ERROR_MRM_INVALID_QUALIFIER_OPERATOR
-#[doc(hidden)] pub const MRM_INDETERMINATE_QUALIFIER_VALUE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15138); // ERROR_MRM_INDETERMINATE_QUALIFIER_VALUE
-#[doc(hidden)] pub const MRM_AUTOMERGE_ENABLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15139); // ERROR_MRM_AUTOMERGE_ENABLED
-#[doc(hidden)] pub const MRM_TOO_MANY_RESOURCES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15140); // ERROR_MRM_TOO_MANY_RESOURCES
-#[doc(hidden)] pub const MRM_UNSUPPORTED_FILE_TYPE_FOR_MERGE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15141); // ERROR_MRM_UNSUPPORTED_FILE_TYPE_FOR_MERGE
-#[doc(hidden)] pub const MRM_UNSUPPORTED_FILE_TYPE_FOR_LOAD_UNLOAD_PRI_FILE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15142); // ERROR_MRM_UNSUPPORTED_FILE_TYPE_FOR_LOAD_UNLOAD_PRI_FILE
-#[doc(hidden)] pub const MRM_NO_CURRENT_VIEW_ON_THREAD : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15143); // ERROR_MRM_NO_CURRENT_VIEW_ON_THREAD
+#[doc(hidden)] pub const MUI_INTLSETTINGS_UILANG_NOT_INSTALLED : ErrorCode = ErrorCode::from_constant(15107); // ERROR_MUI_INTLSETTINGS_UILANG_NOT_INSTALLED
+#[doc(hidden)] pub const MUI_INTLSETTINGS_INVALID_LOCALE_NAME : ErrorCode = ErrorCode::from_constant(15108); // ERROR_MUI_INTLSETTINGS_INVALID_LOCALE_NAME
+#[doc(hidden)] pub const MRM_RUNTIME_NO_DEFAULT_OR_NEUTRAL_RESOURCE : ErrorCode = ErrorCode::from_constant(15110); // ERROR_MRM_RUNTIME_NO_DEFAULT_OR_NEUTRAL_RESOURCE
+#[doc(hidden)] pub const MRM_INVALID_PRICONFIG : ErrorCode = ErrorCode::from_constant(15111); // ERROR_MRM_INVALID_PRICONFIG
+#[doc(hidden)] pub const MRM_INVALID_FILE_TYPE : ErrorCode = ErrorCode::from_constant(15112); // ERROR_MRM_INVALID_FILE_TYPE
+#[doc(hidden)] pub const MRM_UNKNOWN_QUALIFIER : ErrorCode = ErrorCode::from_constant(15113); // ERROR_MRM_UNKNOWN_QUALIFIER
+#[doc(hidden)] pub const MRM_INVALID_QUALIFIER_VALUE : ErrorCode = ErrorCode::from_constant(15114); // ERROR_MRM_INVALID_QUALIFIER_VALUE
+#[doc(hidden)] pub const MRM_NO_CANDIDATE : ErrorCode = ErrorCode::from_constant(15115); // ERROR_MRM_NO_CANDIDATE
+#[doc(hidden)] pub const MRM_NO_MATCH_OR_DEFAULT_CANDIDATE : ErrorCode = ErrorCode::from_constant(15116); // ERROR_MRM_NO_MATCH_OR_DEFAULT_CANDIDATE
+#[doc(hidden)] pub const MRM_RESOURCE_TYPE_MISMATCH : ErrorCode = ErrorCode::from_constant(15117); // ERROR_MRM_RESOURCE_TYPE_MISMATCH
+#[doc(hidden)] pub const MRM_DUPLICATE_MAP_NAME : ErrorCode = ErrorCode::from_constant(15118); // ERROR_MRM_DUPLICATE_MAP_NAME
+#[doc(hidden)] pub const MRM_DUPLICATE_ENTRY : ErrorCode = ErrorCode::from_constant(15119); // ERROR_MRM_DUPLICATE_ENTRY
+#[doc(hidden)] pub const MRM_INVALID_RESOURCE_IDENTIFIER : ErrorCode = ErrorCode::from_constant(15120); // ERROR_MRM_INVALID_RESOURCE_IDENTIFIER
+#[doc(hidden)] pub const MRM_FILEPATH_TOO_LONG : ErrorCode = ErrorCode::from_constant(15121); // ERROR_MRM_FILEPATH_TOO_LONG
+#[doc(hidden)] pub const MRM_UNSUPPORTED_DIRECTORY_TYPE : ErrorCode = ErrorCode::from_constant(15122); // ERROR_MRM_UNSUPPORTED_DIRECTORY_TYPE
+#[doc(hidden)] pub const MRM_INVALID_PRI_FILE : ErrorCode = ErrorCode::from_constant(15126); // ERROR_MRM_INVALID_PRI_FILE
+#[doc(hidden)] pub const MRM_NAMED_RESOURCE_NOT_FOUND : ErrorCode = ErrorCode::from_constant(15127); // ERROR_MRM_NAMED_RESOURCE_NOT_FOUND
+#[doc(hidden)] pub const MRM_MAP_NOT_FOUND : ErrorCode = ErrorCode::from_constant(15135); // ERROR_MRM_MAP_NOT_FOUND
+#[doc(hidden)] pub const MRM_UNSUPPORTED_PROFILE_TYPE : ErrorCode = ErrorCode::from_constant(15136); // ERROR_MRM_UNSUPPORTED_PROFILE_TYPE
+#[doc(hidden)] pub const MRM_INVALID_QUALIFIER_OPERATOR : ErrorCode = ErrorCode::from_constant(15137); // ERROR_MRM_INVALID_QUALIFIER_OPERATOR
+#[doc(hidden)] pub const MRM_INDETERMINATE_QUALIFIER_VALUE : ErrorCode = ErrorCode::from_constant(15138); // ERROR_MRM_INDETERMINATE_QUALIFIER_VALUE
+#[doc(hidden)] pub const MRM_AUTOMERGE_ENABLED : ErrorCode = ErrorCode::from_constant(15139); // ERROR_MRM_AUTOMERGE_ENABLED
+#[doc(hidden)] pub const MRM_TOO_MANY_RESOURCES : ErrorCode = ErrorCode::from_constant(15140); // ERROR_MRM_TOO_MANY_RESOURCES
+#[doc(hidden)] pub const MRM_UNSUPPORTED_FILE_TYPE_FOR_MERGE : ErrorCode = ErrorCode::from_constant(15141); // ERROR_MRM_UNSUPPORTED_FILE_TYPE_FOR_MERGE
+#[doc(hidden)] pub const MRM_UNSUPPORTED_FILE_TYPE_FOR_LOAD_UNLOAD_PRI_FILE : ErrorCode = ErrorCode::from_constant(15142); // ERROR_MRM_UNSUPPORTED_FILE_TYPE_FOR_LOAD_UNLOAD_PRI_FILE
+#[doc(hidden)] pub const MRM_NO_CURRENT_VIEW_ON_THREAD : ErrorCode = ErrorCode::from_constant(15143); // ERROR_MRM_NO_CURRENT_VIEW_ON_THREAD
 
 /// The singleton Resource Manager with different profile is already created.
-pub const DIFFERENT_PROFILE_RESOURCE_MANAGER_EXIST : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15144); // ERROR_DIFFERENT_PROFILE_RESOURCE_MANAGER_EXIST
+pub const DIFFERENT_PROFILE_RESOURCE_MANAGER_EXIST : ErrorCode = ErrorCode::from_constant(15144); // ERROR_DIFFERENT_PROFILE_RESOURCE_MANAGER_EXIST
 
 /// The system component cannot operate given API operation
-pub const OPERATION_NOT_ALLOWED_FROM_SYSTEM_COMPONENT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15145); // ERROR_OPERATION_NOT_ALLOWED_FROM_SYSTEM_COMPONENT
+pub const OPERATION_NOT_ALLOWED_FROM_SYSTEM_COMPONENT : ErrorCode = ErrorCode::from_constant(15145); // ERROR_OPERATION_NOT_ALLOWED_FROM_SYSTEM_COMPONENT
 
-#[doc(hidden)] pub const MRM_DIRECT_REF_TO_NON_DEFAULT_RESOURCE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15146); // ERROR_MRM_DIRECT_REF_TO_NON_DEFAULT_RESOURCE
-#[doc(hidden)] pub const MRM_GENERATION_COUNT_MISMATCH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15147); // ERROR_MRM_GENERATION_COUNT_MISMATCH
-#[doc(hidden)] pub const PRI_MERGE_VERSION_MISMATCH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15148); // ERROR_PRI_MERGE_VERSION_MISMATCH
-#[doc(hidden)] pub const PRI_MERGE_MISSING_SCHEMA : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15149); // ERROR_PRI_MERGE_MISSING_SCHEMA
-#[doc(hidden)] pub const PRI_MERGE_LOAD_FILE_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15150); // ERROR_PRI_MERGE_LOAD_FILE_FAILED
-#[doc(hidden)] pub const PRI_MERGE_ADD_FILE_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15151); // ERROR_PRI_MERGE_ADD_FILE_FAILED
-#[doc(hidden)] pub const PRI_MERGE_WRITE_FILE_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15152); // ERROR_PRI_MERGE_WRITE_FILE_FAILED
-#[doc(hidden)] pub const PRI_MERGE_MULTIPLE_PACKAGE_FAMILIES_NOT_ALLOWED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15153); // ERROR_PRI_MERGE_MULTIPLE_PACKAGE_FAMILIES_NOT_ALLOWED
-#[doc(hidden)] pub const PRI_MERGE_MULTIPLE_MAIN_PACKAGES_NOT_ALLOWED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15154); // ERROR_PRI_MERGE_MULTIPLE_MAIN_PACKAGES_NOT_ALLOWED
-#[doc(hidden)] pub const PRI_MERGE_BUNDLE_PACKAGES_NOT_ALLOWED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15155); // ERROR_PRI_MERGE_BUNDLE_PACKAGES_NOT_ALLOWED
-#[doc(hidden)] pub const PRI_MERGE_MAIN_PACKAGE_REQUIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15156); // ERROR_PRI_MERGE_MAIN_PACKAGE_REQUIRED
-#[doc(hidden)] pub const PRI_MERGE_RESOURCE_PACKAGE_REQUIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15157); // ERROR_PRI_MERGE_RESOURCE_PACKAGE_REQUIRED
-#[doc(hidden)] pub const PRI_MERGE_INVALID_FILE_NAME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15158); // ERROR_PRI_MERGE_INVALID_FILE_NAME
-#[doc(hidden)] pub const MRM_PACKAGE_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15159); // ERROR_MRM_PACKAGE_NOT_FOUND
-#[doc(hidden)] pub const MRM_MISSING_DEFAULT_LANGUAGE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15160); // ERROR_MRM_MISSING_DEFAULT_LANGUAGE
+#[doc(hidden)] pub const MRM_DIRECT_REF_TO_NON_DEFAULT_RESOURCE : ErrorCode = ErrorCode::from_constant(15146); // ERROR_MRM_DIRECT_REF_TO_NON_DEFAULT_RESOURCE
+#[doc(hidden)] pub const MRM_GENERATION_COUNT_MISMATCH : ErrorCode = ErrorCode::from_constant(15147); // ERROR_MRM_GENERATION_COUNT_MISMATCH
+#[doc(hidden)] pub const PRI_MERGE_VERSION_MISMATCH : ErrorCode = ErrorCode::from_constant(15148); // ERROR_PRI_MERGE_VERSION_MISMATCH
+#[doc(hidden)] pub const PRI_MERGE_MISSING_SCHEMA : ErrorCode = ErrorCode::from_constant(15149); // ERROR_PRI_MERGE_MISSING_SCHEMA
+#[doc(hidden)] pub const PRI_MERGE_LOAD_FILE_FAILED : ErrorCode = ErrorCode::from_constant(15150); // ERROR_PRI_MERGE_LOAD_FILE_FAILED
+#[doc(hidden)] pub const PRI_MERGE_ADD_FILE_FAILED : ErrorCode = ErrorCode::from_constant(15151); // ERROR_PRI_MERGE_ADD_FILE_FAILED
+#[doc(hidden)] pub const PRI_MERGE_WRITE_FILE_FAILED : ErrorCode = ErrorCode::from_constant(15152); // ERROR_PRI_MERGE_WRITE_FILE_FAILED
+#[doc(hidden)] pub const PRI_MERGE_MULTIPLE_PACKAGE_FAMILIES_NOT_ALLOWED : ErrorCode = ErrorCode::from_constant(15153); // ERROR_PRI_MERGE_MULTIPLE_PACKAGE_FAMILIES_NOT_ALLOWED
+#[doc(hidden)] pub const PRI_MERGE_MULTIPLE_MAIN_PACKAGES_NOT_ALLOWED : ErrorCode = ErrorCode::from_constant(15154); // ERROR_PRI_MERGE_MULTIPLE_MAIN_PACKAGES_NOT_ALLOWED
+#[doc(hidden)] pub const PRI_MERGE_BUNDLE_PACKAGES_NOT_ALLOWED : ErrorCode = ErrorCode::from_constant(15155); // ERROR_PRI_MERGE_BUNDLE_PACKAGES_NOT_ALLOWED
+#[doc(hidden)] pub const PRI_MERGE_MAIN_PACKAGE_REQUIRED : ErrorCode = ErrorCode::from_constant(15156); // ERROR_PRI_MERGE_MAIN_PACKAGE_REQUIRED
+#[doc(hidden)] pub const PRI_MERGE_RESOURCE_PACKAGE_REQUIRED : ErrorCode = ErrorCode::from_constant(15157); // ERROR_PRI_MERGE_RESOURCE_PACKAGE_REQUIRED
+#[doc(hidden)] pub const PRI_MERGE_INVALID_FILE_NAME : ErrorCode = ErrorCode::from_constant(15158); // ERROR_PRI_MERGE_INVALID_FILE_NAME
+#[doc(hidden)] pub const MRM_PACKAGE_NOT_FOUND : ErrorCode = ErrorCode::from_constant(15159); // ERROR_MRM_PACKAGE_NOT_FOUND
+#[doc(hidden)] pub const MRM_MISSING_DEFAULT_LANGUAGE : ErrorCode = ErrorCode::from_constant(15160); // ERROR_MRM_MISSING_DEFAULT_LANGUAGE
 
 /// The monitor returned a DDC/CI capabilities string that did not comply with the ACCESS.bus 3.0, DDC/CI 1.1 or MCCS 2 Revision 1 specification.
-pub const MCA_INVALID_CAPABILITIES_STRING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15200); // ERROR_MCA_INVALID_CAPABILITIES_STRING
+pub const MCA_INVALID_CAPABILITIES_STRING : ErrorCode = ErrorCode::from_constant(15200); // ERROR_MCA_INVALID_CAPABILITIES_STRING
 
 /// The monitor's VCP Version (0xDF) VCP code returned an invalid version value.
-pub const MCA_INVALID_VCP_VERSION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15201); // ERROR_MCA_INVALID_VCP_VERSION
+pub const MCA_INVALID_VCP_VERSION : ErrorCode = ErrorCode::from_constant(15201); // ERROR_MCA_INVALID_VCP_VERSION
 
 /// The monitor does not comply with the MCCS specification it claims to support.
-pub const MCA_MONITOR_VIOLATES_MCCS_SPECIFICATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15202); // ERROR_MCA_MONITOR_VIOLATES_MCCS_SPECIFICATION
+pub const MCA_MONITOR_VIOLATES_MCCS_SPECIFICATION : ErrorCode = ErrorCode::from_constant(15202); // ERROR_MCA_MONITOR_VIOLATES_MCCS_SPECIFICATION
 
 /// The MCCS version in a monitor's mccs_ver capability does not match the MCCS version the monitor reports when the VCP Version (0xDF) VCP code is used.
-pub const MCA_MCCS_VERSION_MISMATCH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15203); // ERROR_MCA_MCCS_VERSION_MISMATCH
+pub const MCA_MCCS_VERSION_MISMATCH : ErrorCode = ErrorCode::from_constant(15203); // ERROR_MCA_MCCS_VERSION_MISMATCH
 
 /// The Monitor Configuration API only works with monitors that support the MCCS 1.0 specification, MCCS 2.0 specification or the MCCS 2.0 Revision 1 specification.
-pub const MCA_UNSUPPORTED_MCCS_VERSION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15204); // ERROR_MCA_UNSUPPORTED_MCCS_VERSION
+pub const MCA_UNSUPPORTED_MCCS_VERSION : ErrorCode = ErrorCode::from_constant(15204); // ERROR_MCA_UNSUPPORTED_MCCS_VERSION
 
 /// An internal Monitor Configuration API error occurred.
-pub const MCA_INTERNAL_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15205); // ERROR_MCA_INTERNAL_ERROR
+pub const MCA_INTERNAL_ERROR : ErrorCode = ErrorCode::from_constant(15205); // ERROR_MCA_INTERNAL_ERROR
 
 /// The monitor returned an invalid monitor technology type. CRT, Plasma and LCD (TFT) are examples of monitor technology types. This error implies that the monitor violated the MCCS 2.0 or MCCS 2.0 Revision 1 specification.
-pub const MCA_INVALID_TECHNOLOGY_TYPE_RETURNED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15206); // ERROR_MCA_INVALID_TECHNOLOGY_TYPE_RETURNED
+pub const MCA_INVALID_TECHNOLOGY_TYPE_RETURNED : ErrorCode = ErrorCode::from_constant(15206); // ERROR_MCA_INVALID_TECHNOLOGY_TYPE_RETURNED
 
 /// The caller of SetMonitorColorTemperature specified a color temperature that the current monitor did not support. This error implies that the monitor violated the MCCS 2.0 or MCCS 2.0 Revision 1 specification.
-pub const MCA_UNSUPPORTED_COLOR_TEMPERATURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15207); // ERROR_MCA_UNSUPPORTED_COLOR_TEMPERATURE
+pub const MCA_UNSUPPORTED_COLOR_TEMPERATURE : ErrorCode = ErrorCode::from_constant(15207); // ERROR_MCA_UNSUPPORTED_COLOR_TEMPERATURE
 
 /// The requested system device cannot be identified due to multiple indistinguishable devices potentially matching the identification criteria.
-pub const AMBIGUOUS_SYSTEM_DEVICE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15250); // ERROR_AMBIGUOUS_SYSTEM_DEVICE
+pub const AMBIGUOUS_SYSTEM_DEVICE : ErrorCode = ErrorCode::from_constant(15250); // ERROR_AMBIGUOUS_SYSTEM_DEVICE
 
 /// The requested system device cannot be found.
-pub const SYSTEM_DEVICE_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15299); // ERROR_SYSTEM_DEVICE_NOT_FOUND
+pub const SYSTEM_DEVICE_NOT_FOUND : ErrorCode = ErrorCode::from_constant(15299); // ERROR_SYSTEM_DEVICE_NOT_FOUND
 
 /// Hash generation for the specified hash version and hash type is not enabled on the server.
-pub const HASH_NOT_SUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15300); // ERROR_HASH_NOT_SUPPORTED
+pub const HASH_NOT_SUPPORTED : ErrorCode = ErrorCode::from_constant(15300); // ERROR_HASH_NOT_SUPPORTED
 
 /// The hash requested from the server is not available or no longer valid.
-pub const HASH_NOT_PRESENT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15301); // ERROR_HASH_NOT_PRESENT
+pub const HASH_NOT_PRESENT : ErrorCode = ErrorCode::from_constant(15301); // ERROR_HASH_NOT_PRESENT
 
 /// The secondary interrupt controller instance that manages the specified interrupt is not registered.
-pub const SECONDARY_IC_PROVIDER_NOT_REGISTERED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15321); // ERROR_SECONDARY_IC_PROVIDER_NOT_REGISTERED
+pub const SECONDARY_IC_PROVIDER_NOT_REGISTERED : ErrorCode = ErrorCode::from_constant(15321); // ERROR_SECONDARY_IC_PROVIDER_NOT_REGISTERED
 
 /// The information supplied by the GPIO client driver is invalid.
-pub const GPIO_CLIENT_INFORMATION_INVALID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15322); // ERROR_GPIO_CLIENT_INFORMATION_INVALID
+pub const GPIO_CLIENT_INFORMATION_INVALID : ErrorCode = ErrorCode::from_constant(15322); // ERROR_GPIO_CLIENT_INFORMATION_INVALID
 
 /// The version specified by the GPIO client driver is not supported.
-pub const GPIO_VERSION_NOT_SUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15323); // ERROR_GPIO_VERSION_NOT_SUPPORTED
+pub const GPIO_VERSION_NOT_SUPPORTED : ErrorCode = ErrorCode::from_constant(15323); // ERROR_GPIO_VERSION_NOT_SUPPORTED
 
 /// The registration packet supplied by the GPIO client driver is not valid.
-pub const GPIO_INVALID_REGISTRATION_PACKET : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15324); // ERROR_GPIO_INVALID_REGISTRATION_PACKET
+pub const GPIO_INVALID_REGISTRATION_PACKET : ErrorCode = ErrorCode::from_constant(15324); // ERROR_GPIO_INVALID_REGISTRATION_PACKET
 
 /// The requested operation is not supported for the specified handle.
-pub const GPIO_OPERATION_DENIED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15325); // ERROR_GPIO_OPERATION_DENIED
+pub const GPIO_OPERATION_DENIED : ErrorCode = ErrorCode::from_constant(15325); // ERROR_GPIO_OPERATION_DENIED
 
 /// The requested connect mode conflicts with an existing mode on one or more of the specified pins.
-pub const GPIO_INCOMPATIBLE_CONNECT_MODE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15326); // ERROR_GPIO_INCOMPATIBLE_CONNECT_MODE
+pub const GPIO_INCOMPATIBLE_CONNECT_MODE : ErrorCode = ErrorCode::from_constant(15326); // ERROR_GPIO_INCOMPATIBLE_CONNECT_MODE
 
 /// The interrupt requested to be unmasked is not masked.
-pub const GPIO_INTERRUPT_ALREADY_UNMASKED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15327); // ERROR_GPIO_INTERRUPT_ALREADY_UNMASKED
+pub const GPIO_INTERRUPT_ALREADY_UNMASKED : ErrorCode = ErrorCode::from_constant(15327); // ERROR_GPIO_INTERRUPT_ALREADY_UNMASKED
 
 /// The requested run level switch cannot be completed successfully.
-pub const CANNOT_SWITCH_RUNLEVEL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15400); // ERROR_CANNOT_SWITCH_RUNLEVEL
+pub const CANNOT_SWITCH_RUNLEVEL : ErrorCode = ErrorCode::from_constant(15400); // ERROR_CANNOT_SWITCH_RUNLEVEL
 
 /// The service has an invalid run level setting. The run level for a service
 /// must not be higher than the run level of its dependent services.
-pub const INVALID_RUNLEVEL_SETTING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15401); // ERROR_INVALID_RUNLEVEL_SETTING
+pub const INVALID_RUNLEVEL_SETTING : ErrorCode = ErrorCode::from_constant(15401); // ERROR_INVALID_RUNLEVEL_SETTING
 
 /// The requested run level switch cannot be completed successfully since
 /// one or more services will not stop or restart within the specified timeout.
-pub const RUNLEVEL_SWITCH_TIMEOUT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15402); // ERROR_RUNLEVEL_SWITCH_TIMEOUT
+pub const RUNLEVEL_SWITCH_TIMEOUT : ErrorCode = ErrorCode::from_constant(15402); // ERROR_RUNLEVEL_SWITCH_TIMEOUT
 
 /// A run level switch agent did not respond within the specified timeout.
-pub const RUNLEVEL_SWITCH_AGENT_TIMEOUT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15403); // ERROR_RUNLEVEL_SWITCH_AGENT_TIMEOUT
+pub const RUNLEVEL_SWITCH_AGENT_TIMEOUT : ErrorCode = ErrorCode::from_constant(15403); // ERROR_RUNLEVEL_SWITCH_AGENT_TIMEOUT
 
 /// A run level switch is currently in progress.
-pub const RUNLEVEL_SWITCH_IN_PROGRESS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15404); // ERROR_RUNLEVEL_SWITCH_IN_PROGRESS
+pub const RUNLEVEL_SWITCH_IN_PROGRESS : ErrorCode = ErrorCode::from_constant(15404); // ERROR_RUNLEVEL_SWITCH_IN_PROGRESS
 
 /// One or more services failed to start during the service startup phase of a run level switch.
-pub const SERVICES_FAILED_AUTOSTART : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15405); // ERROR_SERVICES_FAILED_AUTOSTART
+pub const SERVICES_FAILED_AUTOSTART : ErrorCode = ErrorCode::from_constant(15405); // ERROR_SERVICES_FAILED_AUTOSTART
 
 /// The task stop request cannot be completed immediately since
 /// task needs more time to shutdown.
-pub const COM_TASK_STOP_PENDING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15501); // ERROR_COM_TASK_STOP_PENDING
+pub const COM_TASK_STOP_PENDING : ErrorCode = ErrorCode::from_constant(15501); // ERROR_COM_TASK_STOP_PENDING
 
 /// Package could not be opened.
-pub const INSTALL_OPEN_PACKAGE_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15600); // ERROR_INSTALL_OPEN_PACKAGE_FAILED
+pub const INSTALL_OPEN_PACKAGE_FAILED : ErrorCode = ErrorCode::from_constant(15600); // ERROR_INSTALL_OPEN_PACKAGE_FAILED
 
 /// Package was not found.
-pub const INSTALL_PACKAGE_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15601); // ERROR_INSTALL_PACKAGE_NOT_FOUND
+pub const INSTALL_PACKAGE_NOT_FOUND : ErrorCode = ErrorCode::from_constant(15601); // ERROR_INSTALL_PACKAGE_NOT_FOUND
 
 /// Package data is invalid.
-pub const INSTALL_INVALID_PACKAGE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15602); // ERROR_INSTALL_INVALID_PACKAGE
+pub const INSTALL_INVALID_PACKAGE : ErrorCode = ErrorCode::from_constant(15602); // ERROR_INSTALL_INVALID_PACKAGE
 
 /// Package failed updates, dependency or conflict validation.
-pub const INSTALL_RESOLVE_DEPENDENCY_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15603); // ERROR_INSTALL_RESOLVE_DEPENDENCY_FAILED
+pub const INSTALL_RESOLVE_DEPENDENCY_FAILED : ErrorCode = ErrorCode::from_constant(15603); // ERROR_INSTALL_RESOLVE_DEPENDENCY_FAILED
 
 /// There is not enough disk space on your computer. Please free up some space and try again.
-pub const INSTALL_OUT_OF_DISK_SPACE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15604); // ERROR_INSTALL_OUT_OF_DISK_SPACE
+pub const INSTALL_OUT_OF_DISK_SPACE : ErrorCode = ErrorCode::from_constant(15604); // ERROR_INSTALL_OUT_OF_DISK_SPACE
 
 /// There was a problem downloading your product.
-pub const INSTALL_NETWORK_FAILURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15605); // ERROR_INSTALL_NETWORK_FAILURE
+pub const INSTALL_NETWORK_FAILURE : ErrorCode = ErrorCode::from_constant(15605); // ERROR_INSTALL_NETWORK_FAILURE
 
 /// Package could not be registered.
-pub const INSTALL_REGISTRATION_FAILURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15606); // ERROR_INSTALL_REGISTRATION_FAILURE
+pub const INSTALL_REGISTRATION_FAILURE : ErrorCode = ErrorCode::from_constant(15606); // ERROR_INSTALL_REGISTRATION_FAILURE
 
 /// Package could not be unregistered.
-pub const INSTALL_DEREGISTRATION_FAILURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15607); // ERROR_INSTALL_DEREGISTRATION_FAILURE
+pub const INSTALL_DEREGISTRATION_FAILURE : ErrorCode = ErrorCode::from_constant(15607); // ERROR_INSTALL_DEREGISTRATION_FAILURE
 
 /// User cancelled the install request.
-pub const INSTALL_CANCEL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15608); // ERROR_INSTALL_CANCEL
+pub const INSTALL_CANCEL : ErrorCode = ErrorCode::from_constant(15608); // ERROR_INSTALL_CANCEL
 
 /// Install failed. Please contact your software vendor.
-pub const INSTALL_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15609); // ERROR_INSTALL_FAILED
+pub const INSTALL_FAILED : ErrorCode = ErrorCode::from_constant(15609); // ERROR_INSTALL_FAILED
 
 /// Removal failed. Please contact your software vendor.
-pub const REMOVE_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15610); // ERROR_REMOVE_FAILED
+pub const REMOVE_FAILED : ErrorCode = ErrorCode::from_constant(15610); // ERROR_REMOVE_FAILED
 
 /// The provided package is already installed, and reinstallation of the package was blocked. Check the AppXDeployment-Server event log for details.
-pub const PACKAGE_ALREADY_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15611); // ERROR_PACKAGE_ALREADY_EXISTS
+pub const PACKAGE_ALREADY_EXISTS : ErrorCode = ErrorCode::from_constant(15611); // ERROR_PACKAGE_ALREADY_EXISTS
 
 /// The application cannot be started. Try reinstalling the application to fix the problem.
-pub const NEEDS_REMEDIATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15612); // ERROR_NEEDS_REMEDIATION
+pub const NEEDS_REMEDIATION : ErrorCode = ErrorCode::from_constant(15612); // ERROR_NEEDS_REMEDIATION
 
 /// A Prerequisite for an install could not be satisfied.
-pub const INSTALL_PREREQUISITE_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15613); // ERROR_INSTALL_PREREQUISITE_FAILED
+pub const INSTALL_PREREQUISITE_FAILED : ErrorCode = ErrorCode::from_constant(15613); // ERROR_INSTALL_PREREQUISITE_FAILED
 
 /// The package repository is corrupted.
-pub const PACKAGE_REPOSITORY_CORRUPTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15614); // ERROR_PACKAGE_REPOSITORY_CORRUPTED
+pub const PACKAGE_REPOSITORY_CORRUPTED : ErrorCode = ErrorCode::from_constant(15614); // ERROR_PACKAGE_REPOSITORY_CORRUPTED
 
 /// To install this application you need either a Windows developer license or a sideloading-enabled system.
-pub const INSTALL_POLICY_FAILURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15615); // ERROR_INSTALL_POLICY_FAILURE
+pub const INSTALL_POLICY_FAILURE : ErrorCode = ErrorCode::from_constant(15615); // ERROR_INSTALL_POLICY_FAILURE
 
 /// The application cannot be started because it is currently updating.
-pub const PACKAGE_UPDATING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15616); // ERROR_PACKAGE_UPDATING
+pub const PACKAGE_UPDATING : ErrorCode = ErrorCode::from_constant(15616); // ERROR_PACKAGE_UPDATING
 
 /// The package deployment operation is blocked by policy. Please contact your system administrator.
-pub const DEPLOYMENT_BLOCKED_BY_POLICY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15617); // ERROR_DEPLOYMENT_BLOCKED_BY_POLICY
+pub const DEPLOYMENT_BLOCKED_BY_POLICY : ErrorCode = ErrorCode::from_constant(15617); // ERROR_DEPLOYMENT_BLOCKED_BY_POLICY
 
 /// The package could not be installed because resources it modifies are currently in use.
-pub const PACKAGES_IN_USE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15618); // ERROR_PACKAGES_IN_USE
+pub const PACKAGES_IN_USE : ErrorCode = ErrorCode::from_constant(15618); // ERROR_PACKAGES_IN_USE
 
 /// The package could not be recovered because necessary data for recovery have been corrupted.
-pub const RECOVERY_FILE_CORRUPT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15619); // ERROR_RECOVERY_FILE_CORRUPT
+pub const RECOVERY_FILE_CORRUPT : ErrorCode = ErrorCode::from_constant(15619); // ERROR_RECOVERY_FILE_CORRUPT
 
 /// The signature is invalid. To register in developer mode, AppxSignature.p7x and AppxBlockMap.xml must be valid or should not be present.
-pub const INVALID_STAGED_SIGNATURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15620); // ERROR_INVALID_STAGED_SIGNATURE
+pub const INVALID_STAGED_SIGNATURE : ErrorCode = ErrorCode::from_constant(15620); // ERROR_INVALID_STAGED_SIGNATURE
 
 /// An error occurred while deleting the package's previously existing application data.
-pub const DELETING_EXISTING_APPLICATIONDATA_STORE_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15621); // ERROR_DELETING_EXISTING_APPLICATIONDATA_STORE_FAILED
+pub const DELETING_EXISTING_APPLICATIONDATA_STORE_FAILED : ErrorCode = ErrorCode::from_constant(15621); // ERROR_DELETING_EXISTING_APPLICATIONDATA_STORE_FAILED
 
 /// The package could not be installed because a higher version of this package is already installed.
-pub const INSTALL_PACKAGE_DOWNGRADE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15622); // ERROR_INSTALL_PACKAGE_DOWNGRADE
+pub const INSTALL_PACKAGE_DOWNGRADE : ErrorCode = ErrorCode::from_constant(15622); // ERROR_INSTALL_PACKAGE_DOWNGRADE
 
 /// An error in a system binary was detected. Try refreshing the PC to fix the problem.
-pub const SYSTEM_NEEDS_REMEDIATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15623); // ERROR_SYSTEM_NEEDS_REMEDIATION
+pub const SYSTEM_NEEDS_REMEDIATION : ErrorCode = ErrorCode::from_constant(15623); // ERROR_SYSTEM_NEEDS_REMEDIATION
 
 /// A corrupted CLR NGEN binary was detected on the system.
-pub const APPX_INTEGRITY_FAILURE_CLR_NGEN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15624); // ERROR_APPX_INTEGRITY_FAILURE_CLR_NGEN
+pub const APPX_INTEGRITY_FAILURE_CLR_NGEN : ErrorCode = ErrorCode::from_constant(15624); // ERROR_APPX_INTEGRITY_FAILURE_CLR_NGEN
 
 /// The operation could not be resumed because necessary data for recovery have been corrupted.
-pub const RESILIENCY_FILE_CORRUPT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15625); // ERROR_RESILIENCY_FILE_CORRUPT
+pub const RESILIENCY_FILE_CORRUPT : ErrorCode = ErrorCode::from_constant(15625); // ERROR_RESILIENCY_FILE_CORRUPT
 
 /// The package could not be installed because the Windows Firewall service is not running. Enable the Windows Firewall service and try again.
-pub const INSTALL_FIREWALL_SERVICE_NOT_RUNNING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15626); // ERROR_INSTALL_FIREWALL_SERVICE_NOT_RUNNING
+pub const INSTALL_FIREWALL_SERVICE_NOT_RUNNING : ErrorCode = ErrorCode::from_constant(15626); // ERROR_INSTALL_FIREWALL_SERVICE_NOT_RUNNING
 
 /// Package move failed.
-pub const PACKAGE_MOVE_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15627); // ERROR_PACKAGE_MOVE_FAILED
+pub const PACKAGE_MOVE_FAILED : ErrorCode = ErrorCode::from_constant(15627); // ERROR_PACKAGE_MOVE_FAILED
 
 /// The deployment operation failed because the volume is not empty.
-pub const INSTALL_VOLUME_NOT_EMPTY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15628); // ERROR_INSTALL_VOLUME_NOT_EMPTY
+pub const INSTALL_VOLUME_NOT_EMPTY : ErrorCode = ErrorCode::from_constant(15628); // ERROR_INSTALL_VOLUME_NOT_EMPTY
 
 /// The deployment operation failed because the volume is offline. For a package update, the volume refers to the installed volume of all package versions.
-pub const INSTALL_VOLUME_OFFLINE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15629); // ERROR_INSTALL_VOLUME_OFFLINE
+pub const INSTALL_VOLUME_OFFLINE : ErrorCode = ErrorCode::from_constant(15629); // ERROR_INSTALL_VOLUME_OFFLINE
 
 /// The deployment operation failed because the specified volume is corrupt.
-pub const INSTALL_VOLUME_CORRUPT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15630); // ERROR_INSTALL_VOLUME_CORRUPT
+pub const INSTALL_VOLUME_CORRUPT : ErrorCode = ErrorCode::from_constant(15630); // ERROR_INSTALL_VOLUME_CORRUPT
 
 /// The deployment operation failed because the specified application needs to be registered first.
-pub const NEEDS_REGISTRATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15631); // ERROR_NEEDS_REGISTRATION
+pub const NEEDS_REGISTRATION : ErrorCode = ErrorCode::from_constant(15631); // ERROR_NEEDS_REGISTRATION
 
 /// The deployment operation failed because the package targets the wrong processor architecture.
-pub const INSTALL_WRONG_PROCESSOR_ARCHITECTURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15632); // ERROR_INSTALL_WRONG_PROCESSOR_ARCHITECTURE
+pub const INSTALL_WRONG_PROCESSOR_ARCHITECTURE : ErrorCode = ErrorCode::from_constant(15632); // ERROR_INSTALL_WRONG_PROCESSOR_ARCHITECTURE
 
 /// You have reached the maximum number of developer sideloaded packages allowed on this device. Please uninstall a sideloaded package and try again.
-pub const DEV_SIDELOAD_LIMIT_EXCEEDED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15633); // ERROR_DEV_SIDELOAD_LIMIT_EXCEEDED
+pub const DEV_SIDELOAD_LIMIT_EXCEEDED : ErrorCode = ErrorCode::from_constant(15633); // ERROR_DEV_SIDELOAD_LIMIT_EXCEEDED
 
 /// A main app package is required to install this optional package.  Install the main package first and try again.
-pub const INSTALL_OPTIONAL_PACKAGE_REQUIRES_MAIN_PACKAGE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15634); // ERROR_INSTALL_OPTIONAL_PACKAGE_REQUIRES_MAIN_PACKAGE
+pub const INSTALL_OPTIONAL_PACKAGE_REQUIRES_MAIN_PACKAGE : ErrorCode = ErrorCode::from_constant(15634); // ERROR_INSTALL_OPTIONAL_PACKAGE_REQUIRES_MAIN_PACKAGE
 
 /// This app package type is not supported on this filesystem
-pub const PACKAGE_NOT_SUPPORTED_ON_FILESYSTEM : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15635); // ERROR_PACKAGE_NOT_SUPPORTED_ON_FILESYSTEM
+pub const PACKAGE_NOT_SUPPORTED_ON_FILESYSTEM : ErrorCode = ErrorCode::from_constant(15635); // ERROR_PACKAGE_NOT_SUPPORTED_ON_FILESYSTEM
 
 /// Package move operation is blocked until the application has finished streaming
-pub const PACKAGE_MOVE_BLOCKED_BY_STREAMING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15636); // ERROR_PACKAGE_MOVE_BLOCKED_BY_STREAMING
+pub const PACKAGE_MOVE_BLOCKED_BY_STREAMING : ErrorCode = ErrorCode::from_constant(15636); // ERROR_PACKAGE_MOVE_BLOCKED_BY_STREAMING
 
 /// A main or another optional app package has the same application ID as this optional package.  Change the application ID for the optional package to avoid conflicts.
-pub const INSTALL_OPTIONAL_PACKAGE_APPLICATIONID_NOT_UNIQUE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15637); // ERROR_INSTALL_OPTIONAL_PACKAGE_APPLICATIONID_NOT_UNIQUE
+pub const INSTALL_OPTIONAL_PACKAGE_APPLICATIONID_NOT_UNIQUE : ErrorCode = ErrorCode::from_constant(15637); // ERROR_INSTALL_OPTIONAL_PACKAGE_APPLICATIONID_NOT_UNIQUE
 
 /// This staging session has been held to allow another staging operation to be prioritized.
-pub const PACKAGE_STAGING_ONHOLD : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15638); // ERROR_PACKAGE_STAGING_ONHOLD
+pub const PACKAGE_STAGING_ONHOLD : ErrorCode = ErrorCode::from_constant(15638); // ERROR_PACKAGE_STAGING_ONHOLD
 
 /// A related set cannot be updated because the updated set is invalid. All packages in the related set must be updated at the same time.
-pub const INSTALL_INVALID_RELATED_SET_UPDATE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15639); // ERROR_INSTALL_INVALID_RELATED_SET_UPDATE
+pub const INSTALL_INVALID_RELATED_SET_UPDATE : ErrorCode = ErrorCode::from_constant(15639); // ERROR_INSTALL_INVALID_RELATED_SET_UPDATE
 
 /// An optional package with a FullTrust entry point requires the main package to have the runFullTrust capability.
-pub const INSTALL_OPTIONAL_PACKAGE_REQUIRES_MAIN_PACKAGE_FULLTRUST_CAPABILITY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15640); // ERROR_INSTALL_OPTIONAL_PACKAGE_REQUIRES_MAIN_PACKAGE_FULLTRUST_CAPABILITY
+pub const INSTALL_OPTIONAL_PACKAGE_REQUIRES_MAIN_PACKAGE_FULLTRUST_CAPABILITY : ErrorCode = ErrorCode::from_constant(15640); // ERROR_INSTALL_OPTIONAL_PACKAGE_REQUIRES_MAIN_PACKAGE_FULLTRUST_CAPABILITY
 
 /// An error occurred because a user was logged off.
-pub const DEPLOYMENT_BLOCKED_BY_USER_LOG_OFF : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15641); // ERROR_DEPLOYMENT_BLOCKED_BY_USER_LOG_OFF
+pub const DEPLOYMENT_BLOCKED_BY_USER_LOG_OFF : ErrorCode = ErrorCode::from_constant(15641); // ERROR_DEPLOYMENT_BLOCKED_BY_USER_LOG_OFF
 
 /// An optional package provision requires the dependency main package to also be provisioned.
-pub const PROVISION_OPTIONAL_PACKAGE_REQUIRES_MAIN_PACKAGE_PROVISIONED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15642); // ERROR_PROVISION_OPTIONAL_PACKAGE_REQUIRES_MAIN_PACKAGE_PROVISIONED
+pub const PROVISION_OPTIONAL_PACKAGE_REQUIRES_MAIN_PACKAGE_PROVISIONED : ErrorCode = ErrorCode::from_constant(15642); // ERROR_PROVISION_OPTIONAL_PACKAGE_REQUIRES_MAIN_PACKAGE_PROVISIONED
 
 /// The packages failed the SmartScreen reputation check.
-pub const PACKAGES_REPUTATION_CHECK_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15643); // ERROR_PACKAGES_REPUTATION_CHECK_FAILED
+pub const PACKAGES_REPUTATION_CHECK_FAILED : ErrorCode = ErrorCode::from_constant(15643); // ERROR_PACKAGES_REPUTATION_CHECK_FAILED
 
 /// The SmartScreen reputation check operation timed out.
-pub const PACKAGES_REPUTATION_CHECK_TIMEDOUT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15644); // ERROR_PACKAGES_REPUTATION_CHECK_TIMEDOUT
+pub const PACKAGES_REPUTATION_CHECK_TIMEDOUT : ErrorCode = ErrorCode::from_constant(15644); // ERROR_PACKAGES_REPUTATION_CHECK_TIMEDOUT
 
 /// The current deployment option is not supported.
-pub const DEPLOYMENT_OPTION_NOT_SUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15645); // ERROR_DEPLOYMENT_OPTION_NOT_SUPPORTED
+pub const DEPLOYMENT_OPTION_NOT_SUPPORTED : ErrorCode = ErrorCode::from_constant(15645); // ERROR_DEPLOYMENT_OPTION_NOT_SUPPORTED
 
 /// Activation is blocked due to the .appinstaller update settings for this app.
-pub const APPINSTALLER_ACTIVATION_BLOCKED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15646); // ERROR_APPINSTALLER_ACTIVATION_BLOCKED
+pub const APPINSTALLER_ACTIVATION_BLOCKED : ErrorCode = ErrorCode::from_constant(15646); // ERROR_APPINSTALLER_ACTIVATION_BLOCKED
 
 /// Remote drives are not supported; use \\server\share to register a remote package.
-pub const REGISTRATION_FROM_REMOTE_DRIVE_NOT_SUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15647); // ERROR_REGISTRATION_FROM_REMOTE_DRIVE_NOT_SUPPORTED
+pub const REGISTRATION_FROM_REMOTE_DRIVE_NOT_SUPPORTED : ErrorCode = ErrorCode::from_constant(15647); // ERROR_REGISTRATION_FROM_REMOTE_DRIVE_NOT_SUPPORTED
 
 /// Failed to process and write downloaded APPX package data to disk.
-pub const APPX_RAW_DATA_WRITE_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15648); // ERROR_APPX_RAW_DATA_WRITE_FAILED
+pub const APPX_RAW_DATA_WRITE_FAILED : ErrorCode = ErrorCode::from_constant(15648); // ERROR_APPX_RAW_DATA_WRITE_FAILED
 
 /// The deployment operation was blocked due to a per-package-family policy restricting deployments on a non-system volume. Per policy, this app must be installed to the system drive, but that's not set as the default. In Storage Settings, make the system drive the default location to save new content, then retry the install.
-pub const DEPLOYMENT_BLOCKED_BY_VOLUME_POLICY_PACKAGE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15649); // ERROR_DEPLOYMENT_BLOCKED_BY_VOLUME_POLICY_PACKAGE
+pub const DEPLOYMENT_BLOCKED_BY_VOLUME_POLICY_PACKAGE : ErrorCode = ErrorCode::from_constant(15649); // ERROR_DEPLOYMENT_BLOCKED_BY_VOLUME_POLICY_PACKAGE
 
 /// The deployment operation was blocked due to a machine-wide policy restricting deployments on a non-system volume. Per policy, this app must be installed to the system drive, but that's not set as the default. In Storage Settings, make the system drive the default location to save new content, then retry the install.
-pub const DEPLOYMENT_BLOCKED_BY_VOLUME_POLICY_MACHINE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15650); // ERROR_DEPLOYMENT_BLOCKED_BY_VOLUME_POLICY_MACHINE
+pub const DEPLOYMENT_BLOCKED_BY_VOLUME_POLICY_MACHINE : ErrorCode = ErrorCode::from_constant(15650); // ERROR_DEPLOYMENT_BLOCKED_BY_VOLUME_POLICY_MACHINE
 
 /// The deployment operation was blocked because Special profile deployment is not allowed. Please try logging into an account that is not a Special profile. You can try logging out and logging back into the current account, or try logging into a different account.
-pub const DEPLOYMENT_BLOCKED_BY_PROFILE_POLICY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15651); // ERROR_DEPLOYMENT_BLOCKED_BY_PROFILE_POLICY
+pub const DEPLOYMENT_BLOCKED_BY_PROFILE_POLICY : ErrorCode = ErrorCode::from_constant(15651); // ERROR_DEPLOYMENT_BLOCKED_BY_PROFILE_POLICY
 
 /// The deployment operation failed due to a conflicting package's mutable package directory. To install this package remove the existing package with the conflicting mutable package directory.
-pub const DEPLOYMENT_FAILED_CONFLICTING_MUTABLE_PACKAGE_DIRECTORY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15652); // ERROR_DEPLOYMENT_FAILED_CONFLICTING_MUTABLE_PACKAGE_DIRECTORY
+pub const DEPLOYMENT_FAILED_CONFLICTING_MUTABLE_PACKAGE_DIRECTORY : ErrorCode = ErrorCode::from_constant(15652); // ERROR_DEPLOYMENT_FAILED_CONFLICTING_MUTABLE_PACKAGE_DIRECTORY
 
 /// The package installation failed because a singleton resource was specified and another user with that package installed is logged in. Please make sure that all active users with the package installed are logged out and retry installation.
-pub const SINGLETON_RESOURCE_INSTALLED_IN_ACTIVE_USER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15653); // ERROR_SINGLETON_RESOURCE_INSTALLED_IN_ACTIVE_USER
+pub const SINGLETON_RESOURCE_INSTALLED_IN_ACTIVE_USER : ErrorCode = ErrorCode::from_constant(15653); // ERROR_SINGLETON_RESOURCE_INSTALLED_IN_ACTIVE_USER
 
 /// The package installation failed because a different version of the service is installed. Try installing a newer version of the package.
-pub const DIFFERENT_VERSION_OF_PACKAGED_SERVICE_INSTALLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15654); // ERROR_DIFFERENT_VERSION_OF_PACKAGED_SERVICE_INSTALLED
+pub const DIFFERENT_VERSION_OF_PACKAGED_SERVICE_INSTALLED : ErrorCode = ErrorCode::from_constant(15654); // ERROR_DIFFERENT_VERSION_OF_PACKAGED_SERVICE_INSTALLED
 
-#[doc(hidden)] pub const SERVICE_EXISTS_AS_NON_PACKAGED_SERVICE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15655); // ERROR_SERVICE_EXISTS_AS_NON_PACKAGED_SERVICE
+#[doc(hidden)] pub const SERVICE_EXISTS_AS_NON_PACKAGED_SERVICE : ErrorCode = ErrorCode::from_constant(15655); // ERROR_SERVICE_EXISTS_AS_NON_PACKAGED_SERVICE
 
 /// The package installation failed because administrator privileges are required. Please contact an administrator to install this package.
-pub const PACKAGED_SERVICE_REQUIRES_ADMIN_PRIVILEGES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15656); // ERROR_PACKAGED_SERVICE_REQUIRES_ADMIN_PRIVILEGES
+pub const PACKAGED_SERVICE_REQUIRES_ADMIN_PRIVILEGES : ErrorCode = ErrorCode::from_constant(15656); // ERROR_PACKAGED_SERVICE_REQUIRES_ADMIN_PRIVILEGES
 
 /// The package deployment failed because the operation would have redirected to default account, when the caller said not to do so.
-pub const REDIRECTION_TO_DEFAULT_ACCOUNT_NOT_ALLOWED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15657); // ERROR_REDIRECTION_TO_DEFAULT_ACCOUNT_NOT_ALLOWED
+pub const REDIRECTION_TO_DEFAULT_ACCOUNT_NOT_ALLOWED : ErrorCode = ErrorCode::from_constant(15657); // ERROR_REDIRECTION_TO_DEFAULT_ACCOUNT_NOT_ALLOWED
 
 /// The package deployment failed because the package requires a capability to natively target this host.
-pub const PACKAGE_LACKS_CAPABILITY_TO_DEPLOY_ON_HOST : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15658); // ERROR_PACKAGE_LACKS_CAPABILITY_TO_DEPLOY_ON_HOST
+pub const PACKAGE_LACKS_CAPABILITY_TO_DEPLOY_ON_HOST : ErrorCode = ErrorCode::from_constant(15658); // ERROR_PACKAGE_LACKS_CAPABILITY_TO_DEPLOY_ON_HOST
 
 /// The package deployment failed because its content is not valid for an unsigned package.
-pub const UNSIGNED_PACKAGE_INVALID_CONTENT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15659); // ERROR_UNSIGNED_PACKAGE_INVALID_CONTENT
+pub const UNSIGNED_PACKAGE_INVALID_CONTENT : ErrorCode = ErrorCode::from_constant(15659); // ERROR_UNSIGNED_PACKAGE_INVALID_CONTENT
 
 /// The package deployment failed because its publisher is not in the unsigned namespace.
-pub const UNSIGNED_PACKAGE_INVALID_PUBLISHER_NAMESPACE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15660); // ERROR_UNSIGNED_PACKAGE_INVALID_PUBLISHER_NAMESPACE
+pub const UNSIGNED_PACKAGE_INVALID_PUBLISHER_NAMESPACE : ErrorCode = ErrorCode::from_constant(15660); // ERROR_UNSIGNED_PACKAGE_INVALID_PUBLISHER_NAMESPACE
 
 /// The package deployment failed because its publisher is not in the signed namespace.
-pub const SIGNED_PACKAGE_INVALID_PUBLISHER_NAMESPACE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15661); // ERROR_SIGNED_PACKAGE_INVALID_PUBLISHER_NAMESPACE
+pub const SIGNED_PACKAGE_INVALID_PUBLISHER_NAMESPACE : ErrorCode = ErrorCode::from_constant(15661); // ERROR_SIGNED_PACKAGE_INVALID_PUBLISHER_NAMESPACE
 
 /// The package deployment failed because its publisher is not in the signed namespace.
-pub const PACKAGE_EXTERNAL_LOCATION_NOT_ALLOWED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15662); // ERROR_PACKAGE_EXTERNAL_LOCATION_NOT_ALLOWED
+pub const PACKAGE_EXTERNAL_LOCATION_NOT_ALLOWED : ErrorCode = ErrorCode::from_constant(15662); // ERROR_PACKAGE_EXTERNAL_LOCATION_NOT_ALLOWED
 
 /// A host runtime dependency resolving to a package with full trust content requires the main package to have the runFullTrust capability.
-pub const INSTALL_FULLTRUST_HOSTRUNTIME_REQUIRES_MAIN_PACKAGE_FULLTRUST_CAPABILITY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15663); // ERROR_INSTALL_FULLTRUST_HOSTRUNTIME_REQUIRES_MAIN_PACKAGE_FULLTRUST_CAPABILITY
+pub const INSTALL_FULLTRUST_HOSTRUNTIME_REQUIRES_MAIN_PACKAGE_FULLTRUST_CAPABILITY : ErrorCode = ErrorCode::from_constant(15663); // ERROR_INSTALL_FULLTRUST_HOSTRUNTIME_REQUIRES_MAIN_PACKAGE_FULLTRUST_CAPABILITY
 
 /// Loading the state store failed.
-pub const STATE_LOAD_STORE_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15800); // ERROR_STATE_LOAD_STORE_FAILED
+pub const STATE_LOAD_STORE_FAILED : ErrorCode = ErrorCode::from_constant(15800); // ERROR_STATE_LOAD_STORE_FAILED
 
 /// Retrieving the state version for the application failed.
-pub const STATE_GET_VERSION_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15801); // ERROR_STATE_GET_VERSION_FAILED
+pub const STATE_GET_VERSION_FAILED : ErrorCode = ErrorCode::from_constant(15801); // ERROR_STATE_GET_VERSION_FAILED
 
 /// Setting the state version for the application failed.
-pub const STATE_SET_VERSION_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15802); // ERROR_STATE_SET_VERSION_FAILED
+pub const STATE_SET_VERSION_FAILED : ErrorCode = ErrorCode::from_constant(15802); // ERROR_STATE_SET_VERSION_FAILED
 
 /// Resetting the structured state of the application failed.
-pub const STATE_STRUCTURED_RESET_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15803); // ERROR_STATE_STRUCTURED_RESET_FAILED
+pub const STATE_STRUCTURED_RESET_FAILED : ErrorCode = ErrorCode::from_constant(15803); // ERROR_STATE_STRUCTURED_RESET_FAILED
 
 /// State Manager failed to open the container.
-pub const STATE_OPEN_CONTAINER_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15804); // ERROR_STATE_OPEN_CONTAINER_FAILED
+pub const STATE_OPEN_CONTAINER_FAILED : ErrorCode = ErrorCode::from_constant(15804); // ERROR_STATE_OPEN_CONTAINER_FAILED
 
 /// State Manager failed to create the container.
-pub const STATE_CREATE_CONTAINER_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15805); // ERROR_STATE_CREATE_CONTAINER_FAILED
+pub const STATE_CREATE_CONTAINER_FAILED : ErrorCode = ErrorCode::from_constant(15805); // ERROR_STATE_CREATE_CONTAINER_FAILED
 
 /// State Manager failed to delete the container.
-pub const STATE_DELETE_CONTAINER_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15806); // ERROR_STATE_DELETE_CONTAINER_FAILED
+pub const STATE_DELETE_CONTAINER_FAILED : ErrorCode = ErrorCode::from_constant(15806); // ERROR_STATE_DELETE_CONTAINER_FAILED
 
 /// State Manager failed to read the setting.
-pub const STATE_READ_SETTING_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15807); // ERROR_STATE_READ_SETTING_FAILED
+pub const STATE_READ_SETTING_FAILED : ErrorCode = ErrorCode::from_constant(15807); // ERROR_STATE_READ_SETTING_FAILED
 
 /// State Manager failed to write the setting.
-pub const STATE_WRITE_SETTING_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15808); // ERROR_STATE_WRITE_SETTING_FAILED
+pub const STATE_WRITE_SETTING_FAILED : ErrorCode = ErrorCode::from_constant(15808); // ERROR_STATE_WRITE_SETTING_FAILED
 
 /// State Manager failed to delete the setting.
-pub const STATE_DELETE_SETTING_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15809); // ERROR_STATE_DELETE_SETTING_FAILED
+pub const STATE_DELETE_SETTING_FAILED : ErrorCode = ErrorCode::from_constant(15809); // ERROR_STATE_DELETE_SETTING_FAILED
 
 /// State Manager failed to query the setting.
-pub const STATE_QUERY_SETTING_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15810); // ERROR_STATE_QUERY_SETTING_FAILED
+pub const STATE_QUERY_SETTING_FAILED : ErrorCode = ErrorCode::from_constant(15810); // ERROR_STATE_QUERY_SETTING_FAILED
 
 /// State Manager failed to read the composite setting.
-pub const STATE_READ_COMPOSITE_SETTING_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15811); // ERROR_STATE_READ_COMPOSITE_SETTING_FAILED
+pub const STATE_READ_COMPOSITE_SETTING_FAILED : ErrorCode = ErrorCode::from_constant(15811); // ERROR_STATE_READ_COMPOSITE_SETTING_FAILED
 
 /// State Manager failed to write the composite setting.
-pub const STATE_WRITE_COMPOSITE_SETTING_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15812); // ERROR_STATE_WRITE_COMPOSITE_SETTING_FAILED
+pub const STATE_WRITE_COMPOSITE_SETTING_FAILED : ErrorCode = ErrorCode::from_constant(15812); // ERROR_STATE_WRITE_COMPOSITE_SETTING_FAILED
 
 /// State Manager failed to enumerate the containers.
-pub const STATE_ENUMERATE_CONTAINER_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15813); // ERROR_STATE_ENUMERATE_CONTAINER_FAILED
+pub const STATE_ENUMERATE_CONTAINER_FAILED : ErrorCode = ErrorCode::from_constant(15813); // ERROR_STATE_ENUMERATE_CONTAINER_FAILED
 
 /// State Manager failed to enumerate the settings.
-pub const STATE_ENUMERATE_SETTINGS_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15814); // ERROR_STATE_ENUMERATE_SETTINGS_FAILED
+pub const STATE_ENUMERATE_SETTINGS_FAILED : ErrorCode = ErrorCode::from_constant(15814); // ERROR_STATE_ENUMERATE_SETTINGS_FAILED
 
 /// The size of the state manager composite setting value has exceeded the limit.
-pub const STATE_COMPOSITE_SETTING_VALUE_SIZE_LIMIT_EXCEEDED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15815); // ERROR_STATE_COMPOSITE_SETTING_VALUE_SIZE_LIMIT_EXCEEDED
+pub const STATE_COMPOSITE_SETTING_VALUE_SIZE_LIMIT_EXCEEDED : ErrorCode = ErrorCode::from_constant(15815); // ERROR_STATE_COMPOSITE_SETTING_VALUE_SIZE_LIMIT_EXCEEDED
 
 /// The size of the state manager setting value has exceeded the limit.
-pub const STATE_SETTING_VALUE_SIZE_LIMIT_EXCEEDED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15816); // ERROR_STATE_SETTING_VALUE_SIZE_LIMIT_EXCEEDED
+pub const STATE_SETTING_VALUE_SIZE_LIMIT_EXCEEDED : ErrorCode = ErrorCode::from_constant(15816); // ERROR_STATE_SETTING_VALUE_SIZE_LIMIT_EXCEEDED
 
 /// The length of the state manager setting name has exceeded the limit.
-pub const STATE_SETTING_NAME_SIZE_LIMIT_EXCEEDED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15817); // ERROR_STATE_SETTING_NAME_SIZE_LIMIT_EXCEEDED
+pub const STATE_SETTING_NAME_SIZE_LIMIT_EXCEEDED : ErrorCode = ErrorCode::from_constant(15817); // ERROR_STATE_SETTING_NAME_SIZE_LIMIT_EXCEEDED
 
 /// The length of the state manager container name has exceeded the limit.
-pub const STATE_CONTAINER_NAME_SIZE_LIMIT_EXCEEDED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15818); // ERROR_STATE_CONTAINER_NAME_SIZE_LIMIT_EXCEEDED
+pub const STATE_CONTAINER_NAME_SIZE_LIMIT_EXCEEDED : ErrorCode = ErrorCode::from_constant(15818); // ERROR_STATE_CONTAINER_NAME_SIZE_LIMIT_EXCEEDED
 
 /// This API cannot be used in the context of the caller's application type.
-pub const API_UNAVAILABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15841); // ERROR_API_UNAVAILABLE
+pub const API_UNAVAILABLE : ErrorCode = ErrorCode::from_constant(15841); // ERROR_API_UNAVAILABLE
 
 /// The specified event is currently not being audited.
 pub const AUDITING_DISABLED : HResultError = HResultError::from_constant(0xC0090001); // ERROR_AUDITING_DISABLED
@@ -7259,200 +7259,200 @@ pub const QUIC_HANDSHAKE_FAILURE : HResultError = HResultError::from_constant(0x
 /// The QUIC connection failed to negotiate a compatible protocol version.
 pub const QUIC_VER_NEG_FAILURE : HResultError = HResultError::from_constant(0x80410001); // ERROR_QUIC_VER_NEG_FAILURE
 
-#[doc(hidden)] pub const DHCP_REGISTRY_INIT_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E20); // ERROR_DHCP_REGISTRY_INIT_FAILED
-#[doc(hidden)] pub const DHCP_DATABASE_INIT_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E21); // ERROR_DHCP_DATABASE_INIT_FAILED
-#[doc(hidden)] pub const DHCP_RPC_INIT_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E22); // ERROR_DHCP_RPC_INIT_FAILED
-#[doc(hidden)] pub const DHCP_NETWORK_INIT_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E23); // ERROR_DHCP_NETWORK_INIT_FAILED
-#[doc(hidden)] pub const DHCP_SUBNET_EXITS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E24); // ERROR_DHCP_SUBNET_EXITS
-#[doc(hidden)] pub const DHCP_SUBNET_NOT_PRESENT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E25); // ERROR_DHCP_SUBNET_NOT_PRESENT
-#[doc(hidden)] pub const DHCP_PRIMARY_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E26); // ERROR_DHCP_PRIMARY_NOT_FOUND
-#[doc(hidden)] pub const DHCP_ELEMENT_CANT_REMOVE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E27); // ERROR_DHCP_ELEMENT_CANT_REMOVE
-#[doc(hidden)] pub const DHCP_OPTION_EXITS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E29); // ERROR_DHCP_OPTION_EXITS
-#[doc(hidden)] pub const DHCP_OPTION_NOT_PRESENT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E2A); // ERROR_DHCP_OPTION_NOT_PRESENT
-#[doc(hidden)] pub const DHCP_ADDRESS_NOT_AVAILABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E2B); // ERROR_DHCP_ADDRESS_NOT_AVAILABLE
-#[doc(hidden)] pub const DHCP_RANGE_FULL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E2C); // ERROR_DHCP_RANGE_FULL
-#[doc(hidden)] pub const DHCP_JET_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E2D); // ERROR_DHCP_JET_ERROR
-#[doc(hidden)] pub const DHCP_CLIENT_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E2E); // ERROR_DHCP_CLIENT_EXISTS
-#[doc(hidden)] pub const DHCP_INVALID_DHCP_MESSAGE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E2F); // ERROR_DHCP_INVALID_DHCP_MESSAGE
-#[doc(hidden)] pub const DHCP_INVALID_DHCP_CLIENT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E30); // ERROR_DHCP_INVALID_DHCP_CLIENT
-#[doc(hidden)] pub const DHCP_SERVICE_PAUSED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E31); // ERROR_DHCP_SERVICE_PAUSED
-#[doc(hidden)] pub const DHCP_NOT_RESERVED_CLIENT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E32); // ERROR_DHCP_NOT_RESERVED_CLIENT
-#[doc(hidden)] pub const DHCP_RESERVED_CLIENT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E33); // ERROR_DHCP_RESERVED_CLIENT
-#[doc(hidden)] pub const DHCP_RANGE_TOO_SMALL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E34); // ERROR_DHCP_RANGE_TOO_SMALL
-#[doc(hidden)] pub const DHCP_IPRANGE_EXITS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E35); // ERROR_DHCP_IPRANGE_EXITS
-#[doc(hidden)] pub const DHCP_RESERVEDIP_EXITS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E36); // ERROR_DHCP_RESERVEDIP_EXITS
-#[doc(hidden)] pub const DHCP_INVALID_RANGE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E37); // ERROR_DHCP_INVALID_RANGE
-#[doc(hidden)] pub const DHCP_RANGE_EXTENDED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E38); // ERROR_DHCP_RANGE_EXTENDED
-pub const EXTEND_TOO_SMALL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E39); // ERROR_EXTEND_TOO_SMALL
-#[doc(hidden)] pub const DHCP_JET_CONV_REQUIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E3B); // ERROR_DHCP_JET_CONV_REQUIRED
-#[doc(hidden)] pub const SERVER_INVALID_BOOT_FILE_TABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E3C); // ERROR_SERVER_INVALID_BOOT_FILE_TABLE
-#[doc(hidden)] pub const SERVER_UNKNOWN_BOOT_FILE_NAME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E3D); // ERROR_SERVER_UNKNOWN_BOOT_FILE_NAME
-#[doc(hidden)] pub const DHCP_SUPER_SCOPE_NAME_TOO_LONG : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E3E); // ERROR_DHCP_SUPER_SCOPE_NAME_TOO_LONG
-#[doc(hidden)] pub const DHCP_IP_ADDRESS_IN_USE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E40); // ERROR_DHCP_IP_ADDRESS_IN_USE
-#[doc(hidden)] pub const DHCP_LOG_FILE_PATH_TOO_LONG : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E41); // ERROR_DHCP_LOG_FILE_PATH_TOO_LONG
-#[doc(hidden)] pub const DHCP_UNSUPPORTED_CLIENT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E42); // ERROR_DHCP_UNSUPPORTED_CLIENT
-#[doc(hidden)] pub const DHCP_JET97_CONV_REQUIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E44); // ERROR_DHCP_JET97_CONV_REQUIRED
-#[doc(hidden)] pub const DHCP_ROGUE_INIT_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E45); // ERROR_DHCP_ROGUE_INIT_FAILED
-#[doc(hidden)] pub const DHCP_ROGUE_SAMSHUTDOWN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E46); // ERROR_DHCP_ROGUE_SAMSHUTDOWN
-#[doc(hidden)] pub const DHCP_ROGUE_NOT_AUTHORIZED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E47); // ERROR_DHCP_ROGUE_NOT_AUTHORIZED
-#[doc(hidden)] pub const DHCP_ROGUE_DS_UNREACHABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E48); // ERROR_DHCP_ROGUE_DS_UNREACHABLE
-#[doc(hidden)] pub const DHCP_ROGUE_DS_CONFLICT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E49); // ERROR_DHCP_ROGUE_DS_CONFLICT
-#[doc(hidden)] pub const DHCP_ROGUE_NOT_OUR_ENTERPRISE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E4A); // ERROR_DHCP_ROGUE_NOT_OUR_ENTERPRISE
-#[doc(hidden)] pub const DHCP_ROGUE_STANDALONE_IN_DS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E4B); // ERROR_DHCP_ROGUE_STANDALONE_IN_DS
-#[doc(hidden)] pub const DHCP_CLASS_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E4C); // ERROR_DHCP_CLASS_NOT_FOUND
-#[doc(hidden)] pub const DHCP_CLASS_ALREADY_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E4D); // ERROR_DHCP_CLASS_ALREADY_EXISTS
-#[doc(hidden)] pub const DHCP_SCOPE_NAME_TOO_LONG : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E4E); // ERROR_DHCP_SCOPE_NAME_TOO_LONG
-#[doc(hidden)] pub const DHCP_DEFAULT_SCOPE_EXITS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E4F); // ERROR_DHCP_DEFAULT_SCOPE_EXITS
-#[doc(hidden)] pub const DHCP_CANT_CHANGE_ATTRIBUTE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E50); // ERROR_DHCP_CANT_CHANGE_ATTRIBUTE
-#[doc(hidden)] pub const DHCP_IPRANGE_CONV_ILLEGAL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E51); // ERROR_DHCP_IPRANGE_CONV_ILLEGAL
-#[doc(hidden)] pub const DHCP_NETWORK_CHANGED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E52); // ERROR_DHCP_NETWORK_CHANGED
-#[doc(hidden)] pub const DHCP_CANNOT_MODIFY_BINDINGS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E53); // ERROR_DHCP_CANNOT_MODIFY_BINDINGS
-#[doc(hidden)] pub const DHCP_SUBNET_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E54); // ERROR_DHCP_SUBNET_EXISTS
-#[doc(hidden)] pub const DHCP_MSCOPE_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E55); // ERROR_DHCP_MSCOPE_EXISTS
-pub const MSCOPE_RANGE_TOO_SMALL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E56); // ERROR_MSCOPE_RANGE_TOO_SMALL
-#[doc(hidden)] pub const DHCP_EXEMPTION_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E57); // ERROR_DHCP_EXEMPTION_EXISTS
-#[doc(hidden)] pub const DHCP_EXEMPTION_NOT_PRESENT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E58); // ERROR_DHCP_EXEMPTION_NOT_PRESENT
-#[doc(hidden)] pub const DHCP_INVALID_PARAMETER_OPTION32 : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E59); // ERROR_DHCP_INVALID_PARAMETER_OPTION32
-#[doc(hidden)] pub const DDS_NO_DS_AVAILABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E66); // ERROR_DDS_NO_DS_AVAILABLE
-#[doc(hidden)] pub const DDS_NO_DHCP_ROOT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E67); // ERROR_DDS_NO_DHCP_ROOT
-#[doc(hidden)] pub const DDS_UNEXPECTED_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E68); // ERROR_DDS_UNEXPECTED_ERROR
-#[doc(hidden)] pub const DDS_TOO_MANY_ERRORS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E69); // ERROR_DDS_TOO_MANY_ERRORS
-#[doc(hidden)] pub const DDS_DHCP_SERVER_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E6A); // ERROR_DDS_DHCP_SERVER_NOT_FOUND
-#[doc(hidden)] pub const DDS_OPTION_ALREADY_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E6B); // ERROR_DDS_OPTION_ALREADY_EXISTS
-#[doc(hidden)] pub const DDS_OPTION_DOES_NOT_EXIST : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E6C); // ERROR_DDS_OPTION_DOES_NOT_EXIST
-#[doc(hidden)] pub const DDS_CLASS_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E6D); // ERROR_DDS_CLASS_EXISTS
-#[doc(hidden)] pub const DDS_CLASS_DOES_NOT_EXIST : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E6E); // ERROR_DDS_CLASS_DOES_NOT_EXIST
-#[doc(hidden)] pub const DDS_SERVER_ALREADY_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E6F); // ERROR_DDS_SERVER_ALREADY_EXISTS
-#[doc(hidden)] pub const DDS_SERVER_DOES_NOT_EXIST : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E70); // ERROR_DDS_SERVER_DOES_NOT_EXIST
-#[doc(hidden)] pub const DDS_SERVER_ADDRESS_MISMATCH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E71); // ERROR_DDS_SERVER_ADDRESS_MISMATCH
-#[doc(hidden)] pub const DDS_SUBNET_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E72); // ERROR_DDS_SUBNET_EXISTS
-#[doc(hidden)] pub const DDS_SUBNET_HAS_DIFF_SSCOPE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E73); // ERROR_DDS_SUBNET_HAS_DIFF_SSCOPE
-#[doc(hidden)] pub const DDS_SUBNET_NOT_PRESENT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E74); // ERROR_DDS_SUBNET_NOT_PRESENT
-#[doc(hidden)] pub const DDS_RESERVATION_NOT_PRESENT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E75); // ERROR_DDS_RESERVATION_NOT_PRESENT
-#[doc(hidden)] pub const DDS_RESERVATION_CONFLICT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E76); // ERROR_DDS_RESERVATION_CONFLICT
-#[doc(hidden)] pub const DDS_POSSIBLE_RANGE_CONFLICT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E77); // ERROR_DDS_POSSIBLE_RANGE_CONFLICT
-#[doc(hidden)] pub const DDS_RANGE_DOES_NOT_EXIST : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E78); // ERROR_DDS_RANGE_DOES_NOT_EXIST
-#[doc(hidden)] pub const DHCP_DELETE_BUILTIN_CLASS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E79); // ERROR_DHCP_DELETE_BUILTIN_CLASS
-#[doc(hidden)] pub const DHCP_INVALID_SUBNET_PREFIX : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E7B); // ERROR_DHCP_INVALID_SUBNET_PREFIX
-#[doc(hidden)] pub const DHCP_INVALID_DELAY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E7C); // ERROR_DHCP_INVALID_DELAY
-#[doc(hidden)] pub const DHCP_LINKLAYER_ADDRESS_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E7D); // ERROR_DHCP_LINKLAYER_ADDRESS_EXISTS
-#[doc(hidden)] pub const DHCP_LINKLAYER_ADDRESS_RESERVATION_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E7E); // ERROR_DHCP_LINKLAYER_ADDRESS_RESERVATION_EXISTS
-#[doc(hidden)] pub const DHCP_LINKLAYER_ADDRESS_DOES_NOT_EXIST : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E7F); // ERROR_DHCP_LINKLAYER_ADDRESS_DOES_NOT_EXIST
-#[doc(hidden)] pub const DHCP_HARDWARE_ADDRESS_TYPE_ALREADY_EXEMPT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E85); // ERROR_DHCP_HARDWARE_ADDRESS_TYPE_ALREADY_EXEMPT
-#[doc(hidden)] pub const DHCP_UNDEFINED_HARDWARE_ADDRESS_TYPE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E86); // ERROR_DHCP_UNDEFINED_HARDWARE_ADDRESS_TYPE
-#[doc(hidden)] pub const DHCP_OPTION_TYPE_MISMATCH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E87); // ERROR_DHCP_OPTION_TYPE_MISMATCH
-#[doc(hidden)] pub const DHCP_POLICY_BAD_PARENT_EXPR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E88); // ERROR_DHCP_POLICY_BAD_PARENT_EXPR
-#[doc(hidden)] pub const DHCP_POLICY_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E89); // ERROR_DHCP_POLICY_EXISTS
-#[doc(hidden)] pub const DHCP_POLICY_RANGE_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E8A); // ERROR_DHCP_POLICY_RANGE_EXISTS
-#[doc(hidden)] pub const DHCP_POLICY_RANGE_BAD : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E8B); // ERROR_DHCP_POLICY_RANGE_BAD
-#[doc(hidden)] pub const DHCP_RANGE_INVALID_IN_SERVER_POLICY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E8C); // ERROR_DHCP_RANGE_INVALID_IN_SERVER_POLICY
-#[doc(hidden)] pub const DHCP_INVALID_POLICY_EXPRESSION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E8D); // ERROR_DHCP_INVALID_POLICY_EXPRESSION
-#[doc(hidden)] pub const DHCP_INVALID_PROCESSING_ORDER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E8E); // ERROR_DHCP_INVALID_PROCESSING_ORDER
-#[doc(hidden)] pub const DHCP_POLICY_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E8F); // ERROR_DHCP_POLICY_NOT_FOUND
-pub const SCOPE_RANGE_POLICY_RANGE_CONFLICT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E90); // ERROR_SCOPE_RANGE_POLICY_RANGE_CONFLICT
-#[doc(hidden)] pub const DHCP_FO_SCOPE_ALREADY_IN_RELATIONSHIP : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E91); // ERROR_DHCP_FO_SCOPE_ALREADY_IN_RELATIONSHIP
-#[doc(hidden)] pub const DHCP_FO_RELATIONSHIP_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E92); // ERROR_DHCP_FO_RELATIONSHIP_EXISTS
-#[doc(hidden)] pub const DHCP_FO_RELATIONSHIP_DOES_NOT_EXIST : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E93); // ERROR_DHCP_FO_RELATIONSHIP_DOES_NOT_EXIST
-#[doc(hidden)] pub const DHCP_FO_SCOPE_NOT_IN_RELATIONSHIP : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E94); // ERROR_DHCP_FO_SCOPE_NOT_IN_RELATIONSHIP
-#[doc(hidden)] pub const DHCP_FO_RELATION_IS_SECONDARY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E95); // ERROR_DHCP_FO_RELATION_IS_SECONDARY
-#[doc(hidden)] pub const DHCP_FO_NOT_SUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E96); // ERROR_DHCP_FO_NOT_SUPPORTED
-#[doc(hidden)] pub const DHCP_FO_TIME_OUT_OF_SYNC : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E97); // ERROR_DHCP_FO_TIME_OUT_OF_SYNC
-#[doc(hidden)] pub const DHCP_FO_STATE_NOT_NORMAL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E98); // ERROR_DHCP_FO_STATE_NOT_NORMAL
-#[doc(hidden)] pub const DHCP_NO_ADMIN_PERMISSION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E99); // ERROR_DHCP_NO_ADMIN_PERMISSION
-#[doc(hidden)] pub const DHCP_SERVER_NOT_REACHABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E9A); // ERROR_DHCP_SERVER_NOT_REACHABLE
-#[doc(hidden)] pub const DHCP_SERVER_NOT_RUNNING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E9B); // ERROR_DHCP_SERVER_NOT_RUNNING
-#[doc(hidden)] pub const DHCP_SERVER_NAME_NOT_RESOLVED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E9C); // ERROR_DHCP_SERVER_NAME_NOT_RESOLVED
-#[doc(hidden)] pub const DHCP_FO_RELATIONSHIP_NAME_TOO_LONG : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E9D); // ERROR_DHCP_FO_RELATIONSHIP_NAME_TOO_LONG
-#[doc(hidden)] pub const DHCP_REACHED_END_OF_SELECTION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E9E); // ERROR_DHCP_REACHED_END_OF_SELECTION
-#[doc(hidden)] pub const DHCP_FO_ADDSCOPE_LEASES_NOT_SYNCED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E9F); // ERROR_DHCP_FO_ADDSCOPE_LEASES_NOT_SYNCED
-#[doc(hidden)] pub const DHCP_FO_MAX_RELATIONSHIPS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004EA0); // ERROR_DHCP_FO_MAX_RELATIONSHIPS
-#[doc(hidden)] pub const DHCP_FO_IPRANGE_TYPE_CONV_ILLEGAL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004EA1); // ERROR_DHCP_FO_IPRANGE_TYPE_CONV_ILLEGAL
-#[doc(hidden)] pub const DHCP_FO_MAX_ADD_SCOPES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004EA2); // ERROR_DHCP_FO_MAX_ADD_SCOPES
-#[doc(hidden)] pub const DHCP_FO_BOOT_NOT_SUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004EA3); // ERROR_DHCP_FO_BOOT_NOT_SUPPORTED
-#[doc(hidden)] pub const DHCP_FO_RANGE_PART_OF_REL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004EA4); // ERROR_DHCP_FO_RANGE_PART_OF_REL
-#[doc(hidden)] pub const DHCP_FO_SCOPE_SYNC_IN_PROGRESS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004EA5); // ERROR_DHCP_FO_SCOPE_SYNC_IN_PROGRESS
-#[doc(hidden)] pub const DHCP_FO_FEATURE_NOT_SUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004EA6); // ERROR_DHCP_FO_FEATURE_NOT_SUPPORTED
-#[doc(hidden)] pub const DHCP_POLICY_FQDN_RANGE_UNSUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004EA7); // ERROR_DHCP_POLICY_FQDN_RANGE_UNSUPPORTED
-#[doc(hidden)] pub const DHCP_POLICY_FQDN_OPTION_UNSUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004EA8); // ERROR_DHCP_POLICY_FQDN_OPTION_UNSUPPORTED
-#[doc(hidden)] pub const DHCP_POLICY_EDIT_FQDN_UNSUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004EA9); // ERROR_DHCP_POLICY_EDIT_FQDN_UNSUPPORTED
-#[doc(hidden)] pub const DHCP_NAP_NOT_SUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004EAA); // ERROR_DHCP_NAP_NOT_SUPPORTED
-pub const LAST_DHCP_SERVER_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004EAB); // ERROR_LAST_DHCP_SERVER_ERROR
-pub const ROUTER_STOPPED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(900); // ERROR_ROUTER_STOPPED
-pub const ALREADY_CONNECTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(901); // ERROR_ALREADY_CONNECTED
-pub const UNKNOWN_PROTOCOL_ID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(902); // ERROR_UNKNOWN_PROTOCOL_ID
-pub const DDM_NOT_RUNNING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(903); // ERROR_DDM_NOT_RUNNING
-pub const INTERFACE_ALREADY_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(904); // ERROR_INTERFACE_ALREADY_EXISTS
-pub const NO_SUCH_INTERFACE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(905); // ERROR_NO_SUCH_INTERFACE
-pub const INTERFACE_NOT_CONNECTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(906); // ERROR_INTERFACE_NOT_CONNECTED
-pub const PROTOCOL_STOP_PENDING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(907); // ERROR_PROTOCOL_STOP_PENDING
-pub const INTERFACE_CONNECTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(908); // ERROR_INTERFACE_CONNECTED
-pub const NO_INTERFACE_CREDENTIALS_SET : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(909); // ERROR_NO_INTERFACE_CREDENTIALS_SET
-pub const ALREADY_CONNECTING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(910); // ERROR_ALREADY_CONNECTING
-pub const UPDATE_IN_PROGRESS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(911); // ERROR_UPDATE_IN_PROGRESS
-pub const INTERFACE_CONFIGURATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(912); // ERROR_INTERFACE_CONFIGURATION
-pub const NOT_CLIENT_PORT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(913); // ERROR_NOT_CLIENT_PORT
-pub const NOT_ROUTER_PORT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(914); // ERROR_NOT_ROUTER_PORT
-pub const CLIENT_INTERFACE_ALREADY_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(915); // ERROR_CLIENT_INTERFACE_ALREADY_EXISTS
-pub const INTERFACE_DISABLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(916); // ERROR_INTERFACE_DISABLED
-pub const AUTH_PROTOCOL_REJECTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(917); // ERROR_AUTH_PROTOCOL_REJECTED
-pub const NO_AUTH_PROTOCOL_AVAILABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(918); // ERROR_NO_AUTH_PROTOCOL_AVAILABLE
-pub const PEER_REFUSED_AUTH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(919); // ERROR_PEER_REFUSED_AUTH
-pub const REMOTE_NO_DIALIN_PERMISSION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(920); // ERROR_REMOTE_NO_DIALIN_PERMISSION
-pub const REMOTE_PASSWD_EXPIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(921); // ERROR_REMOTE_PASSWD_EXPIRED
-pub const REMOTE_ACCT_DISABLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(922); // ERROR_REMOTE_ACCT_DISABLED
-pub const REMOTE_RESTRICTED_LOGON_HOURS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(923); // ERROR_REMOTE_RESTRICTED_LOGON_HOURS
-pub const REMOTE_AUTHENTICATION_FAILURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(924); // ERROR_REMOTE_AUTHENTICATION_FAILURE
-pub const INTERFACE_HAS_NO_DEVICES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(925); // ERROR_INTERFACE_HAS_NO_DEVICES
-pub const IDLE_DISCONNECTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(926); // ERROR_IDLE_DISCONNECTED
-pub const INTERFACE_UNREACHABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(927); // ERROR_INTERFACE_UNREACHABLE
-#[doc(hidden)] pub const SERVICE_IS_PAUSED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(928); // ERROR_SERVICE_IS_PAUSED
-pub const INTERFACE_DISCONNECTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(929); // ERROR_INTERFACE_DISCONNECTED
-pub const AUTH_SERVER_TIMEOUT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(930); // ERROR_AUTH_SERVER_TIMEOUT
-pub const PORT_LIMIT_REACHED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(931); // ERROR_PORT_LIMIT_REACHED
-pub const PPP_SESSION_TIMEOUT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(932); // ERROR_PPP_SESSION_TIMEOUT
-pub const MAX_LAN_INTERFACE_LIMIT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(933); // ERROR_MAX_LAN_INTERFACE_LIMIT
-pub const MAX_WAN_INTERFACE_LIMIT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(934); // ERROR_MAX_WAN_INTERFACE_LIMIT
-pub const MAX_CLIENT_INTERFACE_LIMIT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(935); // ERROR_MAX_CLIENT_INTERFACE_LIMIT
-pub const BAP_DISCONNECTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(936); // ERROR_BAP_DISCONNECTED
-pub const USER_LIMIT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(937); // ERROR_USER_LIMIT
-pub const NO_RADIUS_SERVERS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(938); // ERROR_NO_RADIUS_SERVERS
-pub const INVALID_RADIUS_RESPONSE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(939); // ERROR_INVALID_RADIUS_RESPONSE
-pub const DIALIN_HOURS_RESTRICTION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(940); // ERROR_DIALIN_HOURS_RESTRICTION
-pub const ALLOWED_PORT_TYPE_RESTRICTION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(941); // ERROR_ALLOWED_PORT_TYPE_RESTRICTION
-pub const AUTH_PROTOCOL_RESTRICTION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(942); // ERROR_AUTH_PROTOCOL_RESTRICTION
-pub const BAP_REQUIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(943); // ERROR_BAP_REQUIRED
-pub const DIALOUT_HOURS_RESTRICTION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(944); // ERROR_DIALOUT_HOURS_RESTRICTION
-pub const ROUTER_CONFIG_INCOMPATIBLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(945); // ERROR_ROUTER_CONFIG_INCOMPATIBLE
-pub const PROTOCOL_ALREADY_INSTALLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(948); // ERROR_PROTOCOL_ALREADY_INSTALLED
-pub const INVALID_SIGNATURE_LENGTH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(949); // ERROR_INVALID_SIGNATURE_LENGTH
-pub const INVALID_SIGNATURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(950); // ERROR_INVALID_SIGNATURE
-pub const NO_SIGNATURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(951); // ERROR_NO_SIGNATURE
-pub const INVALID_PACKET_LENGTH_OR_ID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(952); // ERROR_INVALID_PACKET_LENGTH_OR_ID
-pub const INVALID_ATTRIBUTE_LENGTH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(953); // ERROR_INVALID_ATTRIBUTE_LENGTH
-pub const INVALID_PACKET : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(954); // ERROR_INVALID_PACKET
-pub const AUTHENTICATOR_MISMATCH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(955); // ERROR_AUTHENTICATOR_MISMATCH
-pub const REMOTEACCESS_NOT_CONFIGURED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(956); // ERROR_REMOTEACCESS_NOT_CONFIGURED
-pub const NO_ENTRIES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15000); // ERROR_NO_ENTRIES
-pub const INVALID_SYNTAX : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15001); // ERROR_INVALID_SYNTAX
-pub const PROTOCOL_NOT_IN_TRANSPORT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15002); // ERROR_PROTOCOL_NOT_IN_TRANSPORT
-pub const NO_CHANGE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15003); // ERROR_NO_CHANGE
-pub const CMD_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15004); // ERROR_CMD_NOT_FOUND
-pub const ENTRY_PT_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15005); // ERROR_ENTRY_PT_NOT_FOUND
-pub const DLL_LOAD_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15006); // ERROR_DLL_LOAD_FAILED
-pub const INIT_DISPLAY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15007); // ERROR_INIT_DISPLAY
-pub const TAG_ALREADY_PRESENT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15008); // ERROR_TAG_ALREADY_PRESENT
-pub const INVALID_OPTION_TAG : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15009); // ERROR_INVALID_OPTION_TAG
-pub const NO_TAG : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15010); // ERROR_NO_TAG
-pub const MISSING_OPTION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15011); // ERROR_MISSING_OPTION
-pub const TRANSPORT_NOT_PRESENT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15012); // ERROR_TRANSPORT_NOT_PRESENT
-pub const SHOW_USAGE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15013); // ERROR_SHOW_USAGE
-pub const INVALID_OPTION_VALUE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15014); // ERROR_INVALID_OPTION_VALUE
-pub const OKAY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15015); // ERROR_OKAY
-pub const CONTINUE_IN_PARENT_CONTEXT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15016); // ERROR_CONTINUE_IN_PARENT_CONTEXT
-pub const SUPPRESS_OUTPUT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15017); // ERROR_SUPPRESS_OUTPUT
-pub const HELPER_ALREADY_REGISTERED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15018); // ERROR_HELPER_ALREADY_REGISTERED
-pub const CONTEXT_ALREADY_REGISTERED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15019); // ERROR_CONTEXT_ALREADY_REGISTERED
-pub const PARSING_FAILURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15020); // ERROR_PARSING_FAILURE
+#[doc(hidden)] pub const DHCP_REGISTRY_INIT_FAILED : ErrorCode = ErrorCode::from_constant(0x00004E20); // ERROR_DHCP_REGISTRY_INIT_FAILED
+#[doc(hidden)] pub const DHCP_DATABASE_INIT_FAILED : ErrorCode = ErrorCode::from_constant(0x00004E21); // ERROR_DHCP_DATABASE_INIT_FAILED
+#[doc(hidden)] pub const DHCP_RPC_INIT_FAILED : ErrorCode = ErrorCode::from_constant(0x00004E22); // ERROR_DHCP_RPC_INIT_FAILED
+#[doc(hidden)] pub const DHCP_NETWORK_INIT_FAILED : ErrorCode = ErrorCode::from_constant(0x00004E23); // ERROR_DHCP_NETWORK_INIT_FAILED
+#[doc(hidden)] pub const DHCP_SUBNET_EXITS : ErrorCode = ErrorCode::from_constant(0x00004E24); // ERROR_DHCP_SUBNET_EXITS
+#[doc(hidden)] pub const DHCP_SUBNET_NOT_PRESENT : ErrorCode = ErrorCode::from_constant(0x00004E25); // ERROR_DHCP_SUBNET_NOT_PRESENT
+#[doc(hidden)] pub const DHCP_PRIMARY_NOT_FOUND : ErrorCode = ErrorCode::from_constant(0x00004E26); // ERROR_DHCP_PRIMARY_NOT_FOUND
+#[doc(hidden)] pub const DHCP_ELEMENT_CANT_REMOVE : ErrorCode = ErrorCode::from_constant(0x00004E27); // ERROR_DHCP_ELEMENT_CANT_REMOVE
+#[doc(hidden)] pub const DHCP_OPTION_EXITS : ErrorCode = ErrorCode::from_constant(0x00004E29); // ERROR_DHCP_OPTION_EXITS
+#[doc(hidden)] pub const DHCP_OPTION_NOT_PRESENT : ErrorCode = ErrorCode::from_constant(0x00004E2A); // ERROR_DHCP_OPTION_NOT_PRESENT
+#[doc(hidden)] pub const DHCP_ADDRESS_NOT_AVAILABLE : ErrorCode = ErrorCode::from_constant(0x00004E2B); // ERROR_DHCP_ADDRESS_NOT_AVAILABLE
+#[doc(hidden)] pub const DHCP_RANGE_FULL : ErrorCode = ErrorCode::from_constant(0x00004E2C); // ERROR_DHCP_RANGE_FULL
+#[doc(hidden)] pub const DHCP_JET_ERROR : ErrorCode = ErrorCode::from_constant(0x00004E2D); // ERROR_DHCP_JET_ERROR
+#[doc(hidden)] pub const DHCP_CLIENT_EXISTS : ErrorCode = ErrorCode::from_constant(0x00004E2E); // ERROR_DHCP_CLIENT_EXISTS
+#[doc(hidden)] pub const DHCP_INVALID_DHCP_MESSAGE : ErrorCode = ErrorCode::from_constant(0x00004E2F); // ERROR_DHCP_INVALID_DHCP_MESSAGE
+#[doc(hidden)] pub const DHCP_INVALID_DHCP_CLIENT : ErrorCode = ErrorCode::from_constant(0x00004E30); // ERROR_DHCP_INVALID_DHCP_CLIENT
+#[doc(hidden)] pub const DHCP_SERVICE_PAUSED : ErrorCode = ErrorCode::from_constant(0x00004E31); // ERROR_DHCP_SERVICE_PAUSED
+#[doc(hidden)] pub const DHCP_NOT_RESERVED_CLIENT : ErrorCode = ErrorCode::from_constant(0x00004E32); // ERROR_DHCP_NOT_RESERVED_CLIENT
+#[doc(hidden)] pub const DHCP_RESERVED_CLIENT : ErrorCode = ErrorCode::from_constant(0x00004E33); // ERROR_DHCP_RESERVED_CLIENT
+#[doc(hidden)] pub const DHCP_RANGE_TOO_SMALL : ErrorCode = ErrorCode::from_constant(0x00004E34); // ERROR_DHCP_RANGE_TOO_SMALL
+#[doc(hidden)] pub const DHCP_IPRANGE_EXITS : ErrorCode = ErrorCode::from_constant(0x00004E35); // ERROR_DHCP_IPRANGE_EXITS
+#[doc(hidden)] pub const DHCP_RESERVEDIP_EXITS : ErrorCode = ErrorCode::from_constant(0x00004E36); // ERROR_DHCP_RESERVEDIP_EXITS
+#[doc(hidden)] pub const DHCP_INVALID_RANGE : ErrorCode = ErrorCode::from_constant(0x00004E37); // ERROR_DHCP_INVALID_RANGE
+#[doc(hidden)] pub const DHCP_RANGE_EXTENDED : ErrorCode = ErrorCode::from_constant(0x00004E38); // ERROR_DHCP_RANGE_EXTENDED
+pub const EXTEND_TOO_SMALL : ErrorCode = ErrorCode::from_constant(0x00004E39); // ERROR_EXTEND_TOO_SMALL
+#[doc(hidden)] pub const DHCP_JET_CONV_REQUIRED : ErrorCode = ErrorCode::from_constant(0x00004E3B); // ERROR_DHCP_JET_CONV_REQUIRED
+#[doc(hidden)] pub const SERVER_INVALID_BOOT_FILE_TABLE : ErrorCode = ErrorCode::from_constant(0x00004E3C); // ERROR_SERVER_INVALID_BOOT_FILE_TABLE
+#[doc(hidden)] pub const SERVER_UNKNOWN_BOOT_FILE_NAME : ErrorCode = ErrorCode::from_constant(0x00004E3D); // ERROR_SERVER_UNKNOWN_BOOT_FILE_NAME
+#[doc(hidden)] pub const DHCP_SUPER_SCOPE_NAME_TOO_LONG : ErrorCode = ErrorCode::from_constant(0x00004E3E); // ERROR_DHCP_SUPER_SCOPE_NAME_TOO_LONG
+#[doc(hidden)] pub const DHCP_IP_ADDRESS_IN_USE : ErrorCode = ErrorCode::from_constant(0x00004E40); // ERROR_DHCP_IP_ADDRESS_IN_USE
+#[doc(hidden)] pub const DHCP_LOG_FILE_PATH_TOO_LONG : ErrorCode = ErrorCode::from_constant(0x00004E41); // ERROR_DHCP_LOG_FILE_PATH_TOO_LONG
+#[doc(hidden)] pub const DHCP_UNSUPPORTED_CLIENT : ErrorCode = ErrorCode::from_constant(0x00004E42); // ERROR_DHCP_UNSUPPORTED_CLIENT
+#[doc(hidden)] pub const DHCP_JET97_CONV_REQUIRED : ErrorCode = ErrorCode::from_constant(0x00004E44); // ERROR_DHCP_JET97_CONV_REQUIRED
+#[doc(hidden)] pub const DHCP_ROGUE_INIT_FAILED : ErrorCode = ErrorCode::from_constant(0x00004E45); // ERROR_DHCP_ROGUE_INIT_FAILED
+#[doc(hidden)] pub const DHCP_ROGUE_SAMSHUTDOWN : ErrorCode = ErrorCode::from_constant(0x00004E46); // ERROR_DHCP_ROGUE_SAMSHUTDOWN
+#[doc(hidden)] pub const DHCP_ROGUE_NOT_AUTHORIZED : ErrorCode = ErrorCode::from_constant(0x00004E47); // ERROR_DHCP_ROGUE_NOT_AUTHORIZED
+#[doc(hidden)] pub const DHCP_ROGUE_DS_UNREACHABLE : ErrorCode = ErrorCode::from_constant(0x00004E48); // ERROR_DHCP_ROGUE_DS_UNREACHABLE
+#[doc(hidden)] pub const DHCP_ROGUE_DS_CONFLICT : ErrorCode = ErrorCode::from_constant(0x00004E49); // ERROR_DHCP_ROGUE_DS_CONFLICT
+#[doc(hidden)] pub const DHCP_ROGUE_NOT_OUR_ENTERPRISE : ErrorCode = ErrorCode::from_constant(0x00004E4A); // ERROR_DHCP_ROGUE_NOT_OUR_ENTERPRISE
+#[doc(hidden)] pub const DHCP_ROGUE_STANDALONE_IN_DS : ErrorCode = ErrorCode::from_constant(0x00004E4B); // ERROR_DHCP_ROGUE_STANDALONE_IN_DS
+#[doc(hidden)] pub const DHCP_CLASS_NOT_FOUND : ErrorCode = ErrorCode::from_constant(0x00004E4C); // ERROR_DHCP_CLASS_NOT_FOUND
+#[doc(hidden)] pub const DHCP_CLASS_ALREADY_EXISTS : ErrorCode = ErrorCode::from_constant(0x00004E4D); // ERROR_DHCP_CLASS_ALREADY_EXISTS
+#[doc(hidden)] pub const DHCP_SCOPE_NAME_TOO_LONG : ErrorCode = ErrorCode::from_constant(0x00004E4E); // ERROR_DHCP_SCOPE_NAME_TOO_LONG
+#[doc(hidden)] pub const DHCP_DEFAULT_SCOPE_EXITS : ErrorCode = ErrorCode::from_constant(0x00004E4F); // ERROR_DHCP_DEFAULT_SCOPE_EXITS
+#[doc(hidden)] pub const DHCP_CANT_CHANGE_ATTRIBUTE : ErrorCode = ErrorCode::from_constant(0x00004E50); // ERROR_DHCP_CANT_CHANGE_ATTRIBUTE
+#[doc(hidden)] pub const DHCP_IPRANGE_CONV_ILLEGAL : ErrorCode = ErrorCode::from_constant(0x00004E51); // ERROR_DHCP_IPRANGE_CONV_ILLEGAL
+#[doc(hidden)] pub const DHCP_NETWORK_CHANGED : ErrorCode = ErrorCode::from_constant(0x00004E52); // ERROR_DHCP_NETWORK_CHANGED
+#[doc(hidden)] pub const DHCP_CANNOT_MODIFY_BINDINGS : ErrorCode = ErrorCode::from_constant(0x00004E53); // ERROR_DHCP_CANNOT_MODIFY_BINDINGS
+#[doc(hidden)] pub const DHCP_SUBNET_EXISTS : ErrorCode = ErrorCode::from_constant(0x00004E54); // ERROR_DHCP_SUBNET_EXISTS
+#[doc(hidden)] pub const DHCP_MSCOPE_EXISTS : ErrorCode = ErrorCode::from_constant(0x00004E55); // ERROR_DHCP_MSCOPE_EXISTS
+pub const MSCOPE_RANGE_TOO_SMALL : ErrorCode = ErrorCode::from_constant(0x00004E56); // ERROR_MSCOPE_RANGE_TOO_SMALL
+#[doc(hidden)] pub const DHCP_EXEMPTION_EXISTS : ErrorCode = ErrorCode::from_constant(0x00004E57); // ERROR_DHCP_EXEMPTION_EXISTS
+#[doc(hidden)] pub const DHCP_EXEMPTION_NOT_PRESENT : ErrorCode = ErrorCode::from_constant(0x00004E58); // ERROR_DHCP_EXEMPTION_NOT_PRESENT
+#[doc(hidden)] pub const DHCP_INVALID_PARAMETER_OPTION32 : ErrorCode = ErrorCode::from_constant(0x00004E59); // ERROR_DHCP_INVALID_PARAMETER_OPTION32
+#[doc(hidden)] pub const DDS_NO_DS_AVAILABLE : ErrorCode = ErrorCode::from_constant(0x00004E66); // ERROR_DDS_NO_DS_AVAILABLE
+#[doc(hidden)] pub const DDS_NO_DHCP_ROOT : ErrorCode = ErrorCode::from_constant(0x00004E67); // ERROR_DDS_NO_DHCP_ROOT
+#[doc(hidden)] pub const DDS_UNEXPECTED_ERROR : ErrorCode = ErrorCode::from_constant(0x00004E68); // ERROR_DDS_UNEXPECTED_ERROR
+#[doc(hidden)] pub const DDS_TOO_MANY_ERRORS : ErrorCode = ErrorCode::from_constant(0x00004E69); // ERROR_DDS_TOO_MANY_ERRORS
+#[doc(hidden)] pub const DDS_DHCP_SERVER_NOT_FOUND : ErrorCode = ErrorCode::from_constant(0x00004E6A); // ERROR_DDS_DHCP_SERVER_NOT_FOUND
+#[doc(hidden)] pub const DDS_OPTION_ALREADY_EXISTS : ErrorCode = ErrorCode::from_constant(0x00004E6B); // ERROR_DDS_OPTION_ALREADY_EXISTS
+#[doc(hidden)] pub const DDS_OPTION_DOES_NOT_EXIST : ErrorCode = ErrorCode::from_constant(0x00004E6C); // ERROR_DDS_OPTION_DOES_NOT_EXIST
+#[doc(hidden)] pub const DDS_CLASS_EXISTS : ErrorCode = ErrorCode::from_constant(0x00004E6D); // ERROR_DDS_CLASS_EXISTS
+#[doc(hidden)] pub const DDS_CLASS_DOES_NOT_EXIST : ErrorCode = ErrorCode::from_constant(0x00004E6E); // ERROR_DDS_CLASS_DOES_NOT_EXIST
+#[doc(hidden)] pub const DDS_SERVER_ALREADY_EXISTS : ErrorCode = ErrorCode::from_constant(0x00004E6F); // ERROR_DDS_SERVER_ALREADY_EXISTS
+#[doc(hidden)] pub const DDS_SERVER_DOES_NOT_EXIST : ErrorCode = ErrorCode::from_constant(0x00004E70); // ERROR_DDS_SERVER_DOES_NOT_EXIST
+#[doc(hidden)] pub const DDS_SERVER_ADDRESS_MISMATCH : ErrorCode = ErrorCode::from_constant(0x00004E71); // ERROR_DDS_SERVER_ADDRESS_MISMATCH
+#[doc(hidden)] pub const DDS_SUBNET_EXISTS : ErrorCode = ErrorCode::from_constant(0x00004E72); // ERROR_DDS_SUBNET_EXISTS
+#[doc(hidden)] pub const DDS_SUBNET_HAS_DIFF_SSCOPE : ErrorCode = ErrorCode::from_constant(0x00004E73); // ERROR_DDS_SUBNET_HAS_DIFF_SSCOPE
+#[doc(hidden)] pub const DDS_SUBNET_NOT_PRESENT : ErrorCode = ErrorCode::from_constant(0x00004E74); // ERROR_DDS_SUBNET_NOT_PRESENT
+#[doc(hidden)] pub const DDS_RESERVATION_NOT_PRESENT : ErrorCode = ErrorCode::from_constant(0x00004E75); // ERROR_DDS_RESERVATION_NOT_PRESENT
+#[doc(hidden)] pub const DDS_RESERVATION_CONFLICT : ErrorCode = ErrorCode::from_constant(0x00004E76); // ERROR_DDS_RESERVATION_CONFLICT
+#[doc(hidden)] pub const DDS_POSSIBLE_RANGE_CONFLICT : ErrorCode = ErrorCode::from_constant(0x00004E77); // ERROR_DDS_POSSIBLE_RANGE_CONFLICT
+#[doc(hidden)] pub const DDS_RANGE_DOES_NOT_EXIST : ErrorCode = ErrorCode::from_constant(0x00004E78); // ERROR_DDS_RANGE_DOES_NOT_EXIST
+#[doc(hidden)] pub const DHCP_DELETE_BUILTIN_CLASS : ErrorCode = ErrorCode::from_constant(0x00004E79); // ERROR_DHCP_DELETE_BUILTIN_CLASS
+#[doc(hidden)] pub const DHCP_INVALID_SUBNET_PREFIX : ErrorCode = ErrorCode::from_constant(0x00004E7B); // ERROR_DHCP_INVALID_SUBNET_PREFIX
+#[doc(hidden)] pub const DHCP_INVALID_DELAY : ErrorCode = ErrorCode::from_constant(0x00004E7C); // ERROR_DHCP_INVALID_DELAY
+#[doc(hidden)] pub const DHCP_LINKLAYER_ADDRESS_EXISTS : ErrorCode = ErrorCode::from_constant(0x00004E7D); // ERROR_DHCP_LINKLAYER_ADDRESS_EXISTS
+#[doc(hidden)] pub const DHCP_LINKLAYER_ADDRESS_RESERVATION_EXISTS : ErrorCode = ErrorCode::from_constant(0x00004E7E); // ERROR_DHCP_LINKLAYER_ADDRESS_RESERVATION_EXISTS
+#[doc(hidden)] pub const DHCP_LINKLAYER_ADDRESS_DOES_NOT_EXIST : ErrorCode = ErrorCode::from_constant(0x00004E7F); // ERROR_DHCP_LINKLAYER_ADDRESS_DOES_NOT_EXIST
+#[doc(hidden)] pub const DHCP_HARDWARE_ADDRESS_TYPE_ALREADY_EXEMPT : ErrorCode = ErrorCode::from_constant(0x00004E85); // ERROR_DHCP_HARDWARE_ADDRESS_TYPE_ALREADY_EXEMPT
+#[doc(hidden)] pub const DHCP_UNDEFINED_HARDWARE_ADDRESS_TYPE : ErrorCode = ErrorCode::from_constant(0x00004E86); // ERROR_DHCP_UNDEFINED_HARDWARE_ADDRESS_TYPE
+#[doc(hidden)] pub const DHCP_OPTION_TYPE_MISMATCH : ErrorCode = ErrorCode::from_constant(0x00004E87); // ERROR_DHCP_OPTION_TYPE_MISMATCH
+#[doc(hidden)] pub const DHCP_POLICY_BAD_PARENT_EXPR : ErrorCode = ErrorCode::from_constant(0x00004E88); // ERROR_DHCP_POLICY_BAD_PARENT_EXPR
+#[doc(hidden)] pub const DHCP_POLICY_EXISTS : ErrorCode = ErrorCode::from_constant(0x00004E89); // ERROR_DHCP_POLICY_EXISTS
+#[doc(hidden)] pub const DHCP_POLICY_RANGE_EXISTS : ErrorCode = ErrorCode::from_constant(0x00004E8A); // ERROR_DHCP_POLICY_RANGE_EXISTS
+#[doc(hidden)] pub const DHCP_POLICY_RANGE_BAD : ErrorCode = ErrorCode::from_constant(0x00004E8B); // ERROR_DHCP_POLICY_RANGE_BAD
+#[doc(hidden)] pub const DHCP_RANGE_INVALID_IN_SERVER_POLICY : ErrorCode = ErrorCode::from_constant(0x00004E8C); // ERROR_DHCP_RANGE_INVALID_IN_SERVER_POLICY
+#[doc(hidden)] pub const DHCP_INVALID_POLICY_EXPRESSION : ErrorCode = ErrorCode::from_constant(0x00004E8D); // ERROR_DHCP_INVALID_POLICY_EXPRESSION
+#[doc(hidden)] pub const DHCP_INVALID_PROCESSING_ORDER : ErrorCode = ErrorCode::from_constant(0x00004E8E); // ERROR_DHCP_INVALID_PROCESSING_ORDER
+#[doc(hidden)] pub const DHCP_POLICY_NOT_FOUND : ErrorCode = ErrorCode::from_constant(0x00004E8F); // ERROR_DHCP_POLICY_NOT_FOUND
+pub const SCOPE_RANGE_POLICY_RANGE_CONFLICT : ErrorCode = ErrorCode::from_constant(0x00004E90); // ERROR_SCOPE_RANGE_POLICY_RANGE_CONFLICT
+#[doc(hidden)] pub const DHCP_FO_SCOPE_ALREADY_IN_RELATIONSHIP : ErrorCode = ErrorCode::from_constant(0x00004E91); // ERROR_DHCP_FO_SCOPE_ALREADY_IN_RELATIONSHIP
+#[doc(hidden)] pub const DHCP_FO_RELATIONSHIP_EXISTS : ErrorCode = ErrorCode::from_constant(0x00004E92); // ERROR_DHCP_FO_RELATIONSHIP_EXISTS
+#[doc(hidden)] pub const DHCP_FO_RELATIONSHIP_DOES_NOT_EXIST : ErrorCode = ErrorCode::from_constant(0x00004E93); // ERROR_DHCP_FO_RELATIONSHIP_DOES_NOT_EXIST
+#[doc(hidden)] pub const DHCP_FO_SCOPE_NOT_IN_RELATIONSHIP : ErrorCode = ErrorCode::from_constant(0x00004E94); // ERROR_DHCP_FO_SCOPE_NOT_IN_RELATIONSHIP
+#[doc(hidden)] pub const DHCP_FO_RELATION_IS_SECONDARY : ErrorCode = ErrorCode::from_constant(0x00004E95); // ERROR_DHCP_FO_RELATION_IS_SECONDARY
+#[doc(hidden)] pub const DHCP_FO_NOT_SUPPORTED : ErrorCode = ErrorCode::from_constant(0x00004E96); // ERROR_DHCP_FO_NOT_SUPPORTED
+#[doc(hidden)] pub const DHCP_FO_TIME_OUT_OF_SYNC : ErrorCode = ErrorCode::from_constant(0x00004E97); // ERROR_DHCP_FO_TIME_OUT_OF_SYNC
+#[doc(hidden)] pub const DHCP_FO_STATE_NOT_NORMAL : ErrorCode = ErrorCode::from_constant(0x00004E98); // ERROR_DHCP_FO_STATE_NOT_NORMAL
+#[doc(hidden)] pub const DHCP_NO_ADMIN_PERMISSION : ErrorCode = ErrorCode::from_constant(0x00004E99); // ERROR_DHCP_NO_ADMIN_PERMISSION
+#[doc(hidden)] pub const DHCP_SERVER_NOT_REACHABLE : ErrorCode = ErrorCode::from_constant(0x00004E9A); // ERROR_DHCP_SERVER_NOT_REACHABLE
+#[doc(hidden)] pub const DHCP_SERVER_NOT_RUNNING : ErrorCode = ErrorCode::from_constant(0x00004E9B); // ERROR_DHCP_SERVER_NOT_RUNNING
+#[doc(hidden)] pub const DHCP_SERVER_NAME_NOT_RESOLVED : ErrorCode = ErrorCode::from_constant(0x00004E9C); // ERROR_DHCP_SERVER_NAME_NOT_RESOLVED
+#[doc(hidden)] pub const DHCP_FO_RELATIONSHIP_NAME_TOO_LONG : ErrorCode = ErrorCode::from_constant(0x00004E9D); // ERROR_DHCP_FO_RELATIONSHIP_NAME_TOO_LONG
+#[doc(hidden)] pub const DHCP_REACHED_END_OF_SELECTION : ErrorCode = ErrorCode::from_constant(0x00004E9E); // ERROR_DHCP_REACHED_END_OF_SELECTION
+#[doc(hidden)] pub const DHCP_FO_ADDSCOPE_LEASES_NOT_SYNCED : ErrorCode = ErrorCode::from_constant(0x00004E9F); // ERROR_DHCP_FO_ADDSCOPE_LEASES_NOT_SYNCED
+#[doc(hidden)] pub const DHCP_FO_MAX_RELATIONSHIPS : ErrorCode = ErrorCode::from_constant(0x00004EA0); // ERROR_DHCP_FO_MAX_RELATIONSHIPS
+#[doc(hidden)] pub const DHCP_FO_IPRANGE_TYPE_CONV_ILLEGAL : ErrorCode = ErrorCode::from_constant(0x00004EA1); // ERROR_DHCP_FO_IPRANGE_TYPE_CONV_ILLEGAL
+#[doc(hidden)] pub const DHCP_FO_MAX_ADD_SCOPES : ErrorCode = ErrorCode::from_constant(0x00004EA2); // ERROR_DHCP_FO_MAX_ADD_SCOPES
+#[doc(hidden)] pub const DHCP_FO_BOOT_NOT_SUPPORTED : ErrorCode = ErrorCode::from_constant(0x00004EA3); // ERROR_DHCP_FO_BOOT_NOT_SUPPORTED
+#[doc(hidden)] pub const DHCP_FO_RANGE_PART_OF_REL : ErrorCode = ErrorCode::from_constant(0x00004EA4); // ERROR_DHCP_FO_RANGE_PART_OF_REL
+#[doc(hidden)] pub const DHCP_FO_SCOPE_SYNC_IN_PROGRESS : ErrorCode = ErrorCode::from_constant(0x00004EA5); // ERROR_DHCP_FO_SCOPE_SYNC_IN_PROGRESS
+#[doc(hidden)] pub const DHCP_FO_FEATURE_NOT_SUPPORTED : ErrorCode = ErrorCode::from_constant(0x00004EA6); // ERROR_DHCP_FO_FEATURE_NOT_SUPPORTED
+#[doc(hidden)] pub const DHCP_POLICY_FQDN_RANGE_UNSUPPORTED : ErrorCode = ErrorCode::from_constant(0x00004EA7); // ERROR_DHCP_POLICY_FQDN_RANGE_UNSUPPORTED
+#[doc(hidden)] pub const DHCP_POLICY_FQDN_OPTION_UNSUPPORTED : ErrorCode = ErrorCode::from_constant(0x00004EA8); // ERROR_DHCP_POLICY_FQDN_OPTION_UNSUPPORTED
+#[doc(hidden)] pub const DHCP_POLICY_EDIT_FQDN_UNSUPPORTED : ErrorCode = ErrorCode::from_constant(0x00004EA9); // ERROR_DHCP_POLICY_EDIT_FQDN_UNSUPPORTED
+#[doc(hidden)] pub const DHCP_NAP_NOT_SUPPORTED : ErrorCode = ErrorCode::from_constant(0x00004EAA); // ERROR_DHCP_NAP_NOT_SUPPORTED
+pub const LAST_DHCP_SERVER_ERROR : ErrorCode = ErrorCode::from_constant(0x00004EAB); // ERROR_LAST_DHCP_SERVER_ERROR
+pub const ROUTER_STOPPED : ErrorCode = ErrorCode::from_constant(900); // ERROR_ROUTER_STOPPED
+pub const ALREADY_CONNECTED : ErrorCode = ErrorCode::from_constant(901); // ERROR_ALREADY_CONNECTED
+pub const UNKNOWN_PROTOCOL_ID : ErrorCode = ErrorCode::from_constant(902); // ERROR_UNKNOWN_PROTOCOL_ID
+pub const DDM_NOT_RUNNING : ErrorCode = ErrorCode::from_constant(903); // ERROR_DDM_NOT_RUNNING
+pub const INTERFACE_ALREADY_EXISTS : ErrorCode = ErrorCode::from_constant(904); // ERROR_INTERFACE_ALREADY_EXISTS
+pub const NO_SUCH_INTERFACE : ErrorCode = ErrorCode::from_constant(905); // ERROR_NO_SUCH_INTERFACE
+pub const INTERFACE_NOT_CONNECTED : ErrorCode = ErrorCode::from_constant(906); // ERROR_INTERFACE_NOT_CONNECTED
+pub const PROTOCOL_STOP_PENDING : ErrorCode = ErrorCode::from_constant(907); // ERROR_PROTOCOL_STOP_PENDING
+pub const INTERFACE_CONNECTED : ErrorCode = ErrorCode::from_constant(908); // ERROR_INTERFACE_CONNECTED
+pub const NO_INTERFACE_CREDENTIALS_SET : ErrorCode = ErrorCode::from_constant(909); // ERROR_NO_INTERFACE_CREDENTIALS_SET
+pub const ALREADY_CONNECTING : ErrorCode = ErrorCode::from_constant(910); // ERROR_ALREADY_CONNECTING
+pub const UPDATE_IN_PROGRESS : ErrorCode = ErrorCode::from_constant(911); // ERROR_UPDATE_IN_PROGRESS
+pub const INTERFACE_CONFIGURATION : ErrorCode = ErrorCode::from_constant(912); // ERROR_INTERFACE_CONFIGURATION
+pub const NOT_CLIENT_PORT : ErrorCode = ErrorCode::from_constant(913); // ERROR_NOT_CLIENT_PORT
+pub const NOT_ROUTER_PORT : ErrorCode = ErrorCode::from_constant(914); // ERROR_NOT_ROUTER_PORT
+pub const CLIENT_INTERFACE_ALREADY_EXISTS : ErrorCode = ErrorCode::from_constant(915); // ERROR_CLIENT_INTERFACE_ALREADY_EXISTS
+pub const INTERFACE_DISABLED : ErrorCode = ErrorCode::from_constant(916); // ERROR_INTERFACE_DISABLED
+pub const AUTH_PROTOCOL_REJECTED : ErrorCode = ErrorCode::from_constant(917); // ERROR_AUTH_PROTOCOL_REJECTED
+pub const NO_AUTH_PROTOCOL_AVAILABLE : ErrorCode = ErrorCode::from_constant(918); // ERROR_NO_AUTH_PROTOCOL_AVAILABLE
+pub const PEER_REFUSED_AUTH : ErrorCode = ErrorCode::from_constant(919); // ERROR_PEER_REFUSED_AUTH
+pub const REMOTE_NO_DIALIN_PERMISSION : ErrorCode = ErrorCode::from_constant(920); // ERROR_REMOTE_NO_DIALIN_PERMISSION
+pub const REMOTE_PASSWD_EXPIRED : ErrorCode = ErrorCode::from_constant(921); // ERROR_REMOTE_PASSWD_EXPIRED
+pub const REMOTE_ACCT_DISABLED : ErrorCode = ErrorCode::from_constant(922); // ERROR_REMOTE_ACCT_DISABLED
+pub const REMOTE_RESTRICTED_LOGON_HOURS : ErrorCode = ErrorCode::from_constant(923); // ERROR_REMOTE_RESTRICTED_LOGON_HOURS
+pub const REMOTE_AUTHENTICATION_FAILURE : ErrorCode = ErrorCode::from_constant(924); // ERROR_REMOTE_AUTHENTICATION_FAILURE
+pub const INTERFACE_HAS_NO_DEVICES : ErrorCode = ErrorCode::from_constant(925); // ERROR_INTERFACE_HAS_NO_DEVICES
+pub const IDLE_DISCONNECTED : ErrorCode = ErrorCode::from_constant(926); // ERROR_IDLE_DISCONNECTED
+pub const INTERFACE_UNREACHABLE : ErrorCode = ErrorCode::from_constant(927); // ERROR_INTERFACE_UNREACHABLE
+#[doc(hidden)] pub const SERVICE_IS_PAUSED : ErrorCode = ErrorCode::from_constant(928); // ERROR_SERVICE_IS_PAUSED
+pub const INTERFACE_DISCONNECTED : ErrorCode = ErrorCode::from_constant(929); // ERROR_INTERFACE_DISCONNECTED
+pub const AUTH_SERVER_TIMEOUT : ErrorCode = ErrorCode::from_constant(930); // ERROR_AUTH_SERVER_TIMEOUT
+pub const PORT_LIMIT_REACHED : ErrorCode = ErrorCode::from_constant(931); // ERROR_PORT_LIMIT_REACHED
+pub const PPP_SESSION_TIMEOUT : ErrorCode = ErrorCode::from_constant(932); // ERROR_PPP_SESSION_TIMEOUT
+pub const MAX_LAN_INTERFACE_LIMIT : ErrorCode = ErrorCode::from_constant(933); // ERROR_MAX_LAN_INTERFACE_LIMIT
+pub const MAX_WAN_INTERFACE_LIMIT : ErrorCode = ErrorCode::from_constant(934); // ERROR_MAX_WAN_INTERFACE_LIMIT
+pub const MAX_CLIENT_INTERFACE_LIMIT : ErrorCode = ErrorCode::from_constant(935); // ERROR_MAX_CLIENT_INTERFACE_LIMIT
+pub const BAP_DISCONNECTED : ErrorCode = ErrorCode::from_constant(936); // ERROR_BAP_DISCONNECTED
+pub const USER_LIMIT : ErrorCode = ErrorCode::from_constant(937); // ERROR_USER_LIMIT
+pub const NO_RADIUS_SERVERS : ErrorCode = ErrorCode::from_constant(938); // ERROR_NO_RADIUS_SERVERS
+pub const INVALID_RADIUS_RESPONSE : ErrorCode = ErrorCode::from_constant(939); // ERROR_INVALID_RADIUS_RESPONSE
+pub const DIALIN_HOURS_RESTRICTION : ErrorCode = ErrorCode::from_constant(940); // ERROR_DIALIN_HOURS_RESTRICTION
+pub const ALLOWED_PORT_TYPE_RESTRICTION : ErrorCode = ErrorCode::from_constant(941); // ERROR_ALLOWED_PORT_TYPE_RESTRICTION
+pub const AUTH_PROTOCOL_RESTRICTION : ErrorCode = ErrorCode::from_constant(942); // ERROR_AUTH_PROTOCOL_RESTRICTION
+pub const BAP_REQUIRED : ErrorCode = ErrorCode::from_constant(943); // ERROR_BAP_REQUIRED
+pub const DIALOUT_HOURS_RESTRICTION : ErrorCode = ErrorCode::from_constant(944); // ERROR_DIALOUT_HOURS_RESTRICTION
+pub const ROUTER_CONFIG_INCOMPATIBLE : ErrorCode = ErrorCode::from_constant(945); // ERROR_ROUTER_CONFIG_INCOMPATIBLE
+pub const PROTOCOL_ALREADY_INSTALLED : ErrorCode = ErrorCode::from_constant(948); // ERROR_PROTOCOL_ALREADY_INSTALLED
+pub const INVALID_SIGNATURE_LENGTH : ErrorCode = ErrorCode::from_constant(949); // ERROR_INVALID_SIGNATURE_LENGTH
+pub const INVALID_SIGNATURE : ErrorCode = ErrorCode::from_constant(950); // ERROR_INVALID_SIGNATURE
+pub const NO_SIGNATURE : ErrorCode = ErrorCode::from_constant(951); // ERROR_NO_SIGNATURE
+pub const INVALID_PACKET_LENGTH_OR_ID : ErrorCode = ErrorCode::from_constant(952); // ERROR_INVALID_PACKET_LENGTH_OR_ID
+pub const INVALID_ATTRIBUTE_LENGTH : ErrorCode = ErrorCode::from_constant(953); // ERROR_INVALID_ATTRIBUTE_LENGTH
+pub const INVALID_PACKET : ErrorCode = ErrorCode::from_constant(954); // ERROR_INVALID_PACKET
+pub const AUTHENTICATOR_MISMATCH : ErrorCode = ErrorCode::from_constant(955); // ERROR_AUTHENTICATOR_MISMATCH
+pub const REMOTEACCESS_NOT_CONFIGURED : ErrorCode = ErrorCode::from_constant(956); // ERROR_REMOTEACCESS_NOT_CONFIGURED
+pub const NO_ENTRIES : ErrorCode = ErrorCode::from_constant(15000); // ERROR_NO_ENTRIES
+pub const INVALID_SYNTAX : ErrorCode = ErrorCode::from_constant(15001); // ERROR_INVALID_SYNTAX
+pub const PROTOCOL_NOT_IN_TRANSPORT : ErrorCode = ErrorCode::from_constant(15002); // ERROR_PROTOCOL_NOT_IN_TRANSPORT
+pub const NO_CHANGE : ErrorCode = ErrorCode::from_constant(15003); // ERROR_NO_CHANGE
+pub const CMD_NOT_FOUND : ErrorCode = ErrorCode::from_constant(15004); // ERROR_CMD_NOT_FOUND
+pub const ENTRY_PT_NOT_FOUND : ErrorCode = ErrorCode::from_constant(15005); // ERROR_ENTRY_PT_NOT_FOUND
+pub const DLL_LOAD_FAILED : ErrorCode = ErrorCode::from_constant(15006); // ERROR_DLL_LOAD_FAILED
+pub const INIT_DISPLAY : ErrorCode = ErrorCode::from_constant(15007); // ERROR_INIT_DISPLAY
+pub const TAG_ALREADY_PRESENT : ErrorCode = ErrorCode::from_constant(15008); // ERROR_TAG_ALREADY_PRESENT
+pub const INVALID_OPTION_TAG : ErrorCode = ErrorCode::from_constant(15009); // ERROR_INVALID_OPTION_TAG
+pub const NO_TAG : ErrorCode = ErrorCode::from_constant(15010); // ERROR_NO_TAG
+pub const MISSING_OPTION : ErrorCode = ErrorCode::from_constant(15011); // ERROR_MISSING_OPTION
+pub const TRANSPORT_NOT_PRESENT : ErrorCode = ErrorCode::from_constant(15012); // ERROR_TRANSPORT_NOT_PRESENT
+pub const SHOW_USAGE : ErrorCode = ErrorCode::from_constant(15013); // ERROR_SHOW_USAGE
+pub const INVALID_OPTION_VALUE : ErrorCode = ErrorCode::from_constant(15014); // ERROR_INVALID_OPTION_VALUE
+pub const OKAY : ErrorCode = ErrorCode::from_constant(15015); // ERROR_OKAY
+pub const CONTINUE_IN_PARENT_CONTEXT : ErrorCode = ErrorCode::from_constant(15016); // ERROR_CONTINUE_IN_PARENT_CONTEXT
+pub const SUPPRESS_OUTPUT : ErrorCode = ErrorCode::from_constant(15017); // ERROR_SUPPRESS_OUTPUT
+pub const HELPER_ALREADY_REGISTERED : ErrorCode = ErrorCode::from_constant(15018); // ERROR_HELPER_ALREADY_REGISTERED
+pub const CONTEXT_ALREADY_REGISTERED : ErrorCode = ErrorCode::from_constant(15019); // ERROR_CONTEXT_ALREADY_REGISTERED
+pub const PARSING_FAILURE : ErrorCode = ErrorCode::from_constant(15020); // ERROR_PARSING_FAILURE
 #[doc(hidden)] pub const PATCH_ENCODE_FAILURE : HResultError = HResultError::from_constant(0xC00E3101); // ERROR_PATCH_ENCODE_FAILURE
 #[doc(hidden)] pub const PATCH_INVALID_OPTIONS : HResultError = HResultError::from_constant(0xC00E3102); // ERROR_PATCH_INVALID_OPTIONS
 #[doc(hidden)] pub const PATCH_SAME_FILE : HResultError = HResultError::from_constant(0xC00E3103); // ERROR_PATCH_SAME_FILE
@@ -7632,454 +7632,454 @@ pub const PARSING_FAILURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_consta
 #[doc(hidden)] pub const PCW_INVALID_MAJOR_VERSION : HResultError = HResultError::from_constant(0xC00E5216); // ERROR_PCW_INVALID_MAJOR_VERSION
 #[doc(hidden)] pub const PCW_INVALID_PCP_PROPERTIES : HResultError = HResultError::from_constant(0xC00E5217); // ERROR_PCW_INVALID_PCP_PROPERTIES
 #[doc(hidden)] pub const PCW_INVALID_PCP_FAMILYFILERANGES : HResultError = HResultError::from_constant(0xC00E5218); // ERROR_PCW_INVALID_PCP_FAMILYFILERANGES
-pub const INVALID_PORT_HANDLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(601); // ERROR_INVALID_PORT_HANDLE
-pub const PORT_ALREADY_OPEN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(602); // ERROR_PORT_ALREADY_OPEN
-pub const BUFFER_TOO_SMALL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(603); // ERROR_BUFFER_TOO_SMALL
-pub const WRONG_INFO_SPECIFIED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(604); // ERROR_WRONG_INFO_SPECIFIED
+pub const INVALID_PORT_HANDLE : ErrorCode = ErrorCode::from_constant(601); // ERROR_INVALID_PORT_HANDLE
+pub const PORT_ALREADY_OPEN : ErrorCode = ErrorCode::from_constant(602); // ERROR_PORT_ALREADY_OPEN
+pub const BUFFER_TOO_SMALL : ErrorCode = ErrorCode::from_constant(603); // ERROR_BUFFER_TOO_SMALL
+pub const WRONG_INFO_SPECIFIED : ErrorCode = ErrorCode::from_constant(604); // ERROR_WRONG_INFO_SPECIFIED
 
 /// The port information cannot be set.
 /// This error was obsoleted in the Windows Vista  release.
-pub const CANNOT_SET_PORT_INFO : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(605); // ERROR_CANNOT_SET_PORT_INFO
+pub const CANNOT_SET_PORT_INFO : ErrorCode = ErrorCode::from_constant(605); // ERROR_CANNOT_SET_PORT_INFO
 
-pub const PORT_NOT_CONNECTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(606); // ERROR_PORT_NOT_CONNECTED
+pub const PORT_NOT_CONNECTED : ErrorCode = ErrorCode::from_constant(606); // ERROR_PORT_NOT_CONNECTED
 
 /// An invalid event was detected.
 /// This error was obsoleted in the Windows Vista  release.
-pub const EVENT_INVALID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(607); // ERROR_EVENT_INVALID
+pub const EVENT_INVALID : ErrorCode = ErrorCode::from_constant(607); // ERROR_EVENT_INVALID
 
-pub const DEVICE_DOES_NOT_EXIST : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(608); // ERROR_DEVICE_DOES_NOT_EXIST
-pub const DEVICETYPE_DOES_NOT_EXIST : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(609); // ERROR_DEVICETYPE_DOES_NOT_EXIST
-pub const BUFFER_INVALID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(610); // ERROR_BUFFER_INVALID
+pub const DEVICE_DOES_NOT_EXIST : ErrorCode = ErrorCode::from_constant(608); // ERROR_DEVICE_DOES_NOT_EXIST
+pub const DEVICETYPE_DOES_NOT_EXIST : ErrorCode = ErrorCode::from_constant(609); // ERROR_DEVICETYPE_DOES_NOT_EXIST
+pub const BUFFER_INVALID : ErrorCode = ErrorCode::from_constant(610); // ERROR_BUFFER_INVALID
 
 /// A route was specified that is not available.
 /// This error was obsoleted in the Windows Vista  release.
-pub const ROUTE_NOT_AVAILABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(611); // ERROR_ROUTE_NOT_AVAILABLE
+pub const ROUTE_NOT_AVAILABLE : ErrorCode = ErrorCode::from_constant(611); // ERROR_ROUTE_NOT_AVAILABLE
 
-pub const ROUTE_NOT_ALLOCATED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(612); // ERROR_ROUTE_NOT_ALLOCATED
+pub const ROUTE_NOT_ALLOCATED : ErrorCode = ErrorCode::from_constant(612); // ERROR_ROUTE_NOT_ALLOCATED
 
 /// An invalid compression was specified.
 /// This error was obsoleted in the Windows Vista  release.
-pub const INVALID_COMPRESSION_SPECIFIED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(613); // ERROR_INVALID_COMPRESSION_SPECIFIED
+pub const INVALID_COMPRESSION_SPECIFIED : ErrorCode = ErrorCode::from_constant(613); // ERROR_INVALID_COMPRESSION_SPECIFIED
 
 /// There were insufficient buffers available.
 /// This error was obsoleted in the Windows Vista  release.
-pub const OUT_OF_BUFFERS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(614); // ERROR_OUT_OF_BUFFERS
+pub const OUT_OF_BUFFERS : ErrorCode = ErrorCode::from_constant(614); // ERROR_OUT_OF_BUFFERS
 
-pub const PORT_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(615); // ERROR_PORT_NOT_FOUND
-pub const ASYNC_REQUEST_PENDING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(616); // ERROR_ASYNC_REQUEST_PENDING
-pub const ALREADY_DISCONNECTING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(617); // ERROR_ALREADY_DISCONNECTING
-pub const PORT_NOT_OPEN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(618); // ERROR_PORT_NOT_OPEN
-pub const PORT_DISCONNECTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(619); // ERROR_PORT_DISCONNECTED
+pub const PORT_NOT_FOUND : ErrorCode = ErrorCode::from_constant(615); // ERROR_PORT_NOT_FOUND
+pub const ASYNC_REQUEST_PENDING : ErrorCode = ErrorCode::from_constant(616); // ERROR_ASYNC_REQUEST_PENDING
+pub const ALREADY_DISCONNECTING : ErrorCode = ErrorCode::from_constant(617); // ERROR_ALREADY_DISCONNECTING
+pub const PORT_NOT_OPEN : ErrorCode = ErrorCode::from_constant(618); // ERROR_PORT_NOT_OPEN
+pub const PORT_DISCONNECTED : ErrorCode = ErrorCode::from_constant(619); // ERROR_PORT_DISCONNECTED
 
 /// No endpoints could be determined.
 /// This error was obsoleted in the Windows Vista  release.
-pub const NO_ENDPOINTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(620); // ERROR_NO_ENDPOINTS
+pub const NO_ENDPOINTS : ErrorCode = ErrorCode::from_constant(620); // ERROR_NO_ENDPOINTS
 
-pub const CANNOT_OPEN_PHONEBOOK : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(621); // ERROR_CANNOT_OPEN_PHONEBOOK
-pub const CANNOT_LOAD_PHONEBOOK : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(622); // ERROR_CANNOT_LOAD_PHONEBOOK
-pub const CANNOT_FIND_PHONEBOOK_ENTRY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(623); // ERROR_CANNOT_FIND_PHONEBOOK_ENTRY
-pub const CANNOT_WRITE_PHONEBOOK : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(624); // ERROR_CANNOT_WRITE_PHONEBOOK
-pub const CORRUPT_PHONEBOOK : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(625); // ERROR_CORRUPT_PHONEBOOK
+pub const CANNOT_OPEN_PHONEBOOK : ErrorCode = ErrorCode::from_constant(621); // ERROR_CANNOT_OPEN_PHONEBOOK
+pub const CANNOT_LOAD_PHONEBOOK : ErrorCode = ErrorCode::from_constant(622); // ERROR_CANNOT_LOAD_PHONEBOOK
+pub const CANNOT_FIND_PHONEBOOK_ENTRY : ErrorCode = ErrorCode::from_constant(623); // ERROR_CANNOT_FIND_PHONEBOOK_ENTRY
+pub const CANNOT_WRITE_PHONEBOOK : ErrorCode = ErrorCode::from_constant(624); // ERROR_CANNOT_WRITE_PHONEBOOK
+pub const CORRUPT_PHONEBOOK : ErrorCode = ErrorCode::from_constant(625); // ERROR_CORRUPT_PHONEBOOK
 
 /// A string could not be loaded.
 /// This error was obsoleted in the Windows Vista  release.
-pub const CANNOT_LOAD_STRING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(626); // ERROR_CANNOT_LOAD_STRING
+pub const CANNOT_LOAD_STRING : ErrorCode = ErrorCode::from_constant(626); // ERROR_CANNOT_LOAD_STRING
 
-pub const KEY_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(627); // ERROR_KEY_NOT_FOUND
-pub const DISCONNECTION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(628); // ERROR_DISCONNECTION
-pub const REMOTE_DISCONNECTION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(629); // ERROR_REMOTE_DISCONNECTION
-pub const HARDWARE_FAILURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(630); // ERROR_HARDWARE_FAILURE
-pub const USER_DISCONNECTION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(631); // ERROR_USER_DISCONNECTION
-pub const INVALID_SIZE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(632); // ERROR_INVALID_SIZE
-pub const PORT_NOT_AVAILABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(633); // ERROR_PORT_NOT_AVAILABLE
+pub const KEY_NOT_FOUND : ErrorCode = ErrorCode::from_constant(627); // ERROR_KEY_NOT_FOUND
+pub const DISCONNECTION : ErrorCode = ErrorCode::from_constant(628); // ERROR_DISCONNECTION
+pub const REMOTE_DISCONNECTION : ErrorCode = ErrorCode::from_constant(629); // ERROR_REMOTE_DISCONNECTION
+pub const HARDWARE_FAILURE : ErrorCode = ErrorCode::from_constant(630); // ERROR_HARDWARE_FAILURE
+pub const USER_DISCONNECTION : ErrorCode = ErrorCode::from_constant(631); // ERROR_USER_DISCONNECTION
+pub const INVALID_SIZE : ErrorCode = ErrorCode::from_constant(632); // ERROR_INVALID_SIZE
+pub const PORT_NOT_AVAILABLE : ErrorCode = ErrorCode::from_constant(633); // ERROR_PORT_NOT_AVAILABLE
 
 /// Your computer could not be registered on the remote network.
 /// This error was obsoleted in the Windows Vista  release.
-pub const CANNOT_PROJECT_CLIENT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(634); // ERROR_CANNOT_PROJECT_CLIENT
+pub const CANNOT_PROJECT_CLIENT : ErrorCode = ErrorCode::from_constant(634); // ERROR_CANNOT_PROJECT_CLIENT
 
-pub const UNKNOWN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(635); // ERROR_UNKNOWN
-pub const WRONG_DEVICE_ATTACHED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(636); // ERROR_WRONG_DEVICE_ATTACHED
+pub const UNKNOWN : ErrorCode = ErrorCode::from_constant(635); // ERROR_UNKNOWN
+pub const WRONG_DEVICE_ATTACHED : ErrorCode = ErrorCode::from_constant(636); // ERROR_WRONG_DEVICE_ATTACHED
 
 /// A string was detected that could not be converted.
 /// This error was obsoleted in the Windows Vista  release.
-pub const BAD_STRING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(637); // ERROR_BAD_STRING
+pub const BAD_STRING : ErrorCode = ErrorCode::from_constant(637); // ERROR_BAD_STRING
 
-pub const REQUEST_TIMEOUT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(638); // ERROR_REQUEST_TIMEOUT
+pub const REQUEST_TIMEOUT : ErrorCode = ErrorCode::from_constant(638); // ERROR_REQUEST_TIMEOUT
 
 /// No asynchronous net is available.
 /// This error was obsoleted in the Windows Vista  release.
-pub const CANNOT_GET_LANA : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(639); // ERROR_CANNOT_GET_LANA
+pub const CANNOT_GET_LANA : ErrorCode = ErrorCode::from_constant(639); // ERROR_CANNOT_GET_LANA
 
 /// An error has occurred involving NetBIOS.
 /// This error was obsoleted in the Windows Vista  release.
-pub const NETBIOS_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(640); // ERROR_NETBIOS_ERROR
+pub const NETBIOS_ERROR : ErrorCode = ErrorCode::from_constant(640); // ERROR_NETBIOS_ERROR
 
-#[doc(hidden)] pub const SERVER_OUT_OF_RESOURCES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(641); // ERROR_SERVER_OUT_OF_RESOURCES
+#[doc(hidden)] pub const SERVER_OUT_OF_RESOURCES : ErrorCode = ErrorCode::from_constant(641); // ERROR_SERVER_OUT_OF_RESOURCES
 
 /// One of your computer's NetBIOS names is already registered on the remote network.
 /// This error was obsoleted in the Windows Vista  release.
-pub const NAME_EXISTS_ON_NET : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(642); // ERROR_NAME_EXISTS_ON_NET
+pub const NAME_EXISTS_ON_NET : ErrorCode = ErrorCode::from_constant(642); // ERROR_NAME_EXISTS_ON_NET
 
-#[doc(hidden)] pub const SERVER_GENERAL_NET_FAILURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(643); // ERROR_SERVER_GENERAL_NET_FAILURE
-pub const AUTH_INTERNAL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(645); // ERROR_AUTH_INTERNAL
-pub const RESTRICTED_LOGON_HOURS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(646); // ERROR_RESTRICTED_LOGON_HOURS
-pub const ACCT_DISABLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(647); // ERROR_ACCT_DISABLED
-pub const PASSWD_EXPIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(648); // ERROR_PASSWD_EXPIRED
-pub const NO_DIALIN_PERMISSION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(649); // ERROR_NO_DIALIN_PERMISSION
-#[doc(hidden)] pub const SERVER_NOT_RESPONDING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(650); // ERROR_SERVER_NOT_RESPONDING
-pub const FROM_DEVICE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(651); // ERROR_FROM_DEVICE
-pub const UNRECOGNIZED_RESPONSE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(652); // ERROR_UNRECOGNIZED_RESPONSE
-pub const MACRO_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(653); // ERROR_MACRO_NOT_FOUND
-pub const MACRO_NOT_DEFINED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(654); // ERROR_MACRO_NOT_DEFINED
-pub const MESSAGE_MACRO_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(655); // ERROR_MESSAGE_MACRO_NOT_FOUND
-pub const DEFAULTOFF_MACRO_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(656); // ERROR_DEFAULTOFF_MACRO_NOT_FOUND
-pub const FILE_COULD_NOT_BE_OPENED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(657); // ERROR_FILE_COULD_NOT_BE_OPENED
-pub const DEVICENAME_TOO_LONG : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(658); // ERROR_DEVICENAME_TOO_LONG
-pub const DEVICENAME_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(659); // ERROR_DEVICENAME_NOT_FOUND
-pub const NO_RESPONSES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(660); // ERROR_NO_RESPONSES
-pub const NO_COMMAND_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(661); // ERROR_NO_COMMAND_FOUND
-pub const WRONG_KEY_SPECIFIED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(662); // ERROR_WRONG_KEY_SPECIFIED
-pub const UNKNOWN_DEVICE_TYPE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(663); // ERROR_UNKNOWN_DEVICE_TYPE
-pub const ALLOCATING_MEMORY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(664); // ERROR_ALLOCATING_MEMORY
-pub const PORT_NOT_CONFIGURED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(665); // ERROR_PORT_NOT_CONFIGURED
-pub const DEVICE_NOT_READY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(666); // ERROR_DEVICE_NOT_READY
-pub const READING_INI_FILE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(667); // ERROR_READING_INI_FILE
-pub const NO_CONNECTION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(668); // ERROR_NO_CONNECTION
-pub const BAD_USAGE_IN_INI_FILE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(669); // ERROR_BAD_USAGE_IN_INI_FILE
-pub const READING_SECTIONNAME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(670); // ERROR_READING_SECTIONNAME
-pub const READING_DEVICETYPE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(671); // ERROR_READING_DEVICETYPE
-pub const READING_DEVICENAME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(672); // ERROR_READING_DEVICENAME
-pub const READING_USAGE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(673); // ERROR_READING_USAGE
+#[doc(hidden)] pub const SERVER_GENERAL_NET_FAILURE : ErrorCode = ErrorCode::from_constant(643); // ERROR_SERVER_GENERAL_NET_FAILURE
+pub const AUTH_INTERNAL : ErrorCode = ErrorCode::from_constant(645); // ERROR_AUTH_INTERNAL
+pub const RESTRICTED_LOGON_HOURS : ErrorCode = ErrorCode::from_constant(646); // ERROR_RESTRICTED_LOGON_HOURS
+pub const ACCT_DISABLED : ErrorCode = ErrorCode::from_constant(647); // ERROR_ACCT_DISABLED
+pub const PASSWD_EXPIRED : ErrorCode = ErrorCode::from_constant(648); // ERROR_PASSWD_EXPIRED
+pub const NO_DIALIN_PERMISSION : ErrorCode = ErrorCode::from_constant(649); // ERROR_NO_DIALIN_PERMISSION
+#[doc(hidden)] pub const SERVER_NOT_RESPONDING : ErrorCode = ErrorCode::from_constant(650); // ERROR_SERVER_NOT_RESPONDING
+pub const FROM_DEVICE : ErrorCode = ErrorCode::from_constant(651); // ERROR_FROM_DEVICE
+pub const UNRECOGNIZED_RESPONSE : ErrorCode = ErrorCode::from_constant(652); // ERROR_UNRECOGNIZED_RESPONSE
+pub const MACRO_NOT_FOUND : ErrorCode = ErrorCode::from_constant(653); // ERROR_MACRO_NOT_FOUND
+pub const MACRO_NOT_DEFINED : ErrorCode = ErrorCode::from_constant(654); // ERROR_MACRO_NOT_DEFINED
+pub const MESSAGE_MACRO_NOT_FOUND : ErrorCode = ErrorCode::from_constant(655); // ERROR_MESSAGE_MACRO_NOT_FOUND
+pub const DEFAULTOFF_MACRO_NOT_FOUND : ErrorCode = ErrorCode::from_constant(656); // ERROR_DEFAULTOFF_MACRO_NOT_FOUND
+pub const FILE_COULD_NOT_BE_OPENED : ErrorCode = ErrorCode::from_constant(657); // ERROR_FILE_COULD_NOT_BE_OPENED
+pub const DEVICENAME_TOO_LONG : ErrorCode = ErrorCode::from_constant(658); // ERROR_DEVICENAME_TOO_LONG
+pub const DEVICENAME_NOT_FOUND : ErrorCode = ErrorCode::from_constant(659); // ERROR_DEVICENAME_NOT_FOUND
+pub const NO_RESPONSES : ErrorCode = ErrorCode::from_constant(660); // ERROR_NO_RESPONSES
+pub const NO_COMMAND_FOUND : ErrorCode = ErrorCode::from_constant(661); // ERROR_NO_COMMAND_FOUND
+pub const WRONG_KEY_SPECIFIED : ErrorCode = ErrorCode::from_constant(662); // ERROR_WRONG_KEY_SPECIFIED
+pub const UNKNOWN_DEVICE_TYPE : ErrorCode = ErrorCode::from_constant(663); // ERROR_UNKNOWN_DEVICE_TYPE
+pub const ALLOCATING_MEMORY : ErrorCode = ErrorCode::from_constant(664); // ERROR_ALLOCATING_MEMORY
+pub const PORT_NOT_CONFIGURED : ErrorCode = ErrorCode::from_constant(665); // ERROR_PORT_NOT_CONFIGURED
+pub const DEVICE_NOT_READY : ErrorCode = ErrorCode::from_constant(666); // ERROR_DEVICE_NOT_READY
+pub const READING_INI_FILE : ErrorCode = ErrorCode::from_constant(667); // ERROR_READING_INI_FILE
+pub const NO_CONNECTION : ErrorCode = ErrorCode::from_constant(668); // ERROR_NO_CONNECTION
+pub const BAD_USAGE_IN_INI_FILE : ErrorCode = ErrorCode::from_constant(669); // ERROR_BAD_USAGE_IN_INI_FILE
+pub const READING_SECTIONNAME : ErrorCode = ErrorCode::from_constant(670); // ERROR_READING_SECTIONNAME
+pub const READING_DEVICETYPE : ErrorCode = ErrorCode::from_constant(671); // ERROR_READING_DEVICETYPE
+pub const READING_DEVICENAME : ErrorCode = ErrorCode::from_constant(672); // ERROR_READING_DEVICENAME
+pub const READING_USAGE : ErrorCode = ErrorCode::from_constant(673); // ERROR_READING_USAGE
 
 /// The system was unable to read the maximum connection BPS rate from the media.INI file.
 /// This error was obsoleted in the Windows Vista  release.
-pub const READING_MAXCONNECTBPS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(674); // ERROR_READING_MAXCONNECTBPS
+pub const READING_MAXCONNECTBPS : ErrorCode = ErrorCode::from_constant(674); // ERROR_READING_MAXCONNECTBPS
 
 /// The system was unable to read the maximum carrier connection speed from the media.INI file.
 /// This error was obsoleted in the Windows Vista  release.
-pub const READING_MAXCARRIERBPS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(675); // ERROR_READING_MAXCARRIERBPS
+pub const READING_MAXCARRIERBPS : ErrorCode = ErrorCode::from_constant(675); // ERROR_READING_MAXCARRIERBPS
 
-pub const LINE_BUSY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(676); // ERROR_LINE_BUSY
-pub const VOICE_ANSWER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(677); // ERROR_VOICE_ANSWER
-pub const NO_ANSWER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(678); // ERROR_NO_ANSWER
-pub const NO_CARRIER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(679); // ERROR_NO_CARRIER
-pub const NO_DIALTONE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(680); // ERROR_NO_DIALTONE
+pub const LINE_BUSY : ErrorCode = ErrorCode::from_constant(676); // ERROR_LINE_BUSY
+pub const VOICE_ANSWER : ErrorCode = ErrorCode::from_constant(677); // ERROR_VOICE_ANSWER
+pub const NO_ANSWER : ErrorCode = ErrorCode::from_constant(678); // ERROR_NO_ANSWER
+pub const NO_CARRIER : ErrorCode = ErrorCode::from_constant(679); // ERROR_NO_CARRIER
+pub const NO_DIALTONE : ErrorCode = ErrorCode::from_constant(680); // ERROR_NO_DIALTONE
 
 /// The modem (or other connecting device) reported a general error.
 /// This error was obsoleted in the Windows Vista  release.
-pub const IN_COMMAND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(681); // ERROR_IN_COMMAND
+pub const IN_COMMAND : ErrorCode = ErrorCode::from_constant(681); // ERROR_IN_COMMAND
 
 /// There was an error in writing the section name.
 /// This error was obsoleted in the Windows Vista  release.
-pub const WRITING_SECTIONNAME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(682); // ERROR_WRITING_SECTIONNAME
+pub const WRITING_SECTIONNAME : ErrorCode = ErrorCode::from_constant(682); // ERROR_WRITING_SECTIONNAME
 
 /// There was an error in writing the device type.
 /// This error was obsoleted in the Windows Vista  release.
-pub const WRITING_DEVICETYPE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(683); // ERROR_WRITING_DEVICETYPE
+pub const WRITING_DEVICETYPE : ErrorCode = ErrorCode::from_constant(683); // ERROR_WRITING_DEVICETYPE
 
 /// There was an error in writing the device name.
 /// This error was obsoleted in the Windows Vista  release.
-pub const WRITING_DEVICENAME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(684); // ERROR_WRITING_DEVICENAME
+pub const WRITING_DEVICENAME : ErrorCode = ErrorCode::from_constant(684); // ERROR_WRITING_DEVICENAME
 
 /// There was an error in writing the maximum connection speed.
 /// This error was obsoleted in the Windows Vista  release.
-pub const WRITING_MAXCONNECTBPS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(685); // ERROR_WRITING_MAXCONNECTBPS
+pub const WRITING_MAXCONNECTBPS : ErrorCode = ErrorCode::from_constant(685); // ERROR_WRITING_MAXCONNECTBPS
 
 /// There was an error in writing the maximum carrier speed.
 /// This error was obsoleted in the Windows Vista  release.
-pub const WRITING_MAXCARRIERBPS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(686); // ERROR_WRITING_MAXCARRIERBPS
+pub const WRITING_MAXCARRIERBPS : ErrorCode = ErrorCode::from_constant(686); // ERROR_WRITING_MAXCARRIERBPS
 
 /// There was an error in writing the usage.
 /// This error was obsoleted in the Windows Vista  release.
-pub const WRITING_USAGE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(687); // ERROR_WRITING_USAGE
+pub const WRITING_USAGE : ErrorCode = ErrorCode::from_constant(687); // ERROR_WRITING_USAGE
 
 /// There was an error in writing the default-off.
 /// This error was obsoleted in the Windows Vista  release.
-pub const WRITING_DEFAULTOFF : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(688); // ERROR_WRITING_DEFAULTOFF
+pub const WRITING_DEFAULTOFF : ErrorCode = ErrorCode::from_constant(688); // ERROR_WRITING_DEFAULTOFF
 
 /// There was an error in reading the default-off.
 /// This error was obsoleted in the Windows Vista  release.
-pub const READING_DEFAULTOFF : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(689); // ERROR_READING_DEFAULTOFF
+pub const READING_DEFAULTOFF : ErrorCode = ErrorCode::from_constant(689); // ERROR_READING_DEFAULTOFF
 
 /// ERROR_EMPTY_INI_FILE
 /// This error was obsoleted in the Windows Vista  release.
-pub const EMPTY_INI_FILE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(690); // ERROR_EMPTY_INI_FILE
+pub const EMPTY_INI_FILE : ErrorCode = ErrorCode::from_constant(690); // ERROR_EMPTY_INI_FILE
 
-pub const AUTHENTICATION_FAILURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(691); // ERROR_AUTHENTICATION_FAILURE
-pub const PORT_OR_DEVICE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(692); // ERROR_PORT_OR_DEVICE
-pub const NOT_BINARY_MACRO : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(693); // ERROR_NOT_BINARY_MACRO
-pub const DCB_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(694); // ERROR_DCB_NOT_FOUND
-pub const STATE_MACHINES_NOT_STARTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(695); // ERROR_STATE_MACHINES_NOT_STARTED
-pub const STATE_MACHINES_ALREADY_STARTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(696); // ERROR_STATE_MACHINES_ALREADY_STARTED
-pub const PARTIAL_RESPONSE_LOOPING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(697); // ERROR_PARTIAL_RESPONSE_LOOPING
-pub const UNKNOWN_RESPONSE_KEY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(698); // ERROR_UNKNOWN_RESPONSE_KEY
-pub const RECV_BUF_FULL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(699); // ERROR_RECV_BUF_FULL
-pub const CMD_TOO_LONG : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(700); // ERROR_CMD_TOO_LONG
-pub const UNSUPPORTED_BPS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(701); // ERROR_UNSUPPORTED_BPS
-pub const UNEXPECTED_RESPONSE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(702); // ERROR_UNEXPECTED_RESPONSE
-pub const INTERACTIVE_MODE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(703); // ERROR_INTERACTIVE_MODE
-pub const BAD_CALLBACK_NUMBER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(704); // ERROR_BAD_CALLBACK_NUMBER
-pub const INVALID_AUTH_STATE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(705); // ERROR_INVALID_AUTH_STATE
+pub const AUTHENTICATION_FAILURE : ErrorCode = ErrorCode::from_constant(691); // ERROR_AUTHENTICATION_FAILURE
+pub const PORT_OR_DEVICE : ErrorCode = ErrorCode::from_constant(692); // ERROR_PORT_OR_DEVICE
+pub const NOT_BINARY_MACRO : ErrorCode = ErrorCode::from_constant(693); // ERROR_NOT_BINARY_MACRO
+pub const DCB_NOT_FOUND : ErrorCode = ErrorCode::from_constant(694); // ERROR_DCB_NOT_FOUND
+pub const STATE_MACHINES_NOT_STARTED : ErrorCode = ErrorCode::from_constant(695); // ERROR_STATE_MACHINES_NOT_STARTED
+pub const STATE_MACHINES_ALREADY_STARTED : ErrorCode = ErrorCode::from_constant(696); // ERROR_STATE_MACHINES_ALREADY_STARTED
+pub const PARTIAL_RESPONSE_LOOPING : ErrorCode = ErrorCode::from_constant(697); // ERROR_PARTIAL_RESPONSE_LOOPING
+pub const UNKNOWN_RESPONSE_KEY : ErrorCode = ErrorCode::from_constant(698); // ERROR_UNKNOWN_RESPONSE_KEY
+pub const RECV_BUF_FULL : ErrorCode = ErrorCode::from_constant(699); // ERROR_RECV_BUF_FULL
+pub const CMD_TOO_LONG : ErrorCode = ErrorCode::from_constant(700); // ERROR_CMD_TOO_LONG
+pub const UNSUPPORTED_BPS : ErrorCode = ErrorCode::from_constant(701); // ERROR_UNSUPPORTED_BPS
+pub const UNEXPECTED_RESPONSE : ErrorCode = ErrorCode::from_constant(702); // ERROR_UNEXPECTED_RESPONSE
+pub const INTERACTIVE_MODE : ErrorCode = ErrorCode::from_constant(703); // ERROR_INTERACTIVE_MODE
+pub const BAD_CALLBACK_NUMBER : ErrorCode = ErrorCode::from_constant(704); // ERROR_BAD_CALLBACK_NUMBER
+pub const INVALID_AUTH_STATE : ErrorCode = ErrorCode::from_constant(705); // ERROR_INVALID_AUTH_STATE
 
 /// ERROR_WRITING_INITBPS
 /// This error was obsoleted in the Windows Vista  release.
-pub const WRITING_INITBPS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(706); // ERROR_WRITING_INITBPS
+pub const WRITING_INITBPS : ErrorCode = ErrorCode::from_constant(706); // ERROR_WRITING_INITBPS
 
-pub const X25_DIAGNOSTIC : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(707); // ERROR_X25_DIAGNOSTIC
-pub const ACCT_EXPIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(708); // ERROR_ACCT_EXPIRED
-pub const CHANGING_PASSWORD : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(709); // ERROR_CHANGING_PASSWORD
-pub const OVERRUN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(710); // ERROR_OVERRUN
-pub const RASMAN_CANNOT_INITIALIZE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(711); // ERROR_RASMAN_CANNOT_INITIALIZE
+pub const X25_DIAGNOSTIC : ErrorCode = ErrorCode::from_constant(707); // ERROR_X25_DIAGNOSTIC
+pub const ACCT_EXPIRED : ErrorCode = ErrorCode::from_constant(708); // ERROR_ACCT_EXPIRED
+pub const CHANGING_PASSWORD : ErrorCode = ErrorCode::from_constant(709); // ERROR_CHANGING_PASSWORD
+pub const OVERRUN : ErrorCode = ErrorCode::from_constant(710); // ERROR_OVERRUN
+pub const RASMAN_CANNOT_INITIALIZE : ErrorCode = ErrorCode::from_constant(711); // ERROR_RASMAN_CANNOT_INITIALIZE
 
 /// The two-way port is initializing.  Wait a few seconds and redial.
 /// This error was obsoleted in the Windows Vista  release.
-pub const BIPLEX_PORT_NOT_AVAILABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(712); // ERROR_BIPLEX_PORT_NOT_AVAILABLE
+pub const BIPLEX_PORT_NOT_AVAILABLE : ErrorCode = ErrorCode::from_constant(712); // ERROR_BIPLEX_PORT_NOT_AVAILABLE
 
-pub const NO_ACTIVE_ISDN_LINES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(713); // ERROR_NO_ACTIVE_ISDN_LINES
+pub const NO_ACTIVE_ISDN_LINES : ErrorCode = ErrorCode::from_constant(713); // ERROR_NO_ACTIVE_ISDN_LINES
 
 /// No ISDN channels are available to make the call.
 /// This error was obsoleted in the Windows Vista  release.
-pub const NO_ISDN_CHANNELS_AVAILABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(714); // ERROR_NO_ISDN_CHANNELS_AVAILABLE
+pub const NO_ISDN_CHANNELS_AVAILABLE : ErrorCode = ErrorCode::from_constant(714); // ERROR_NO_ISDN_CHANNELS_AVAILABLE
 
 /// Too many errors occurred because of poor phone line quality.
 /// This error was obsoleted in the Windows Vista  release.
-pub const TOO_MANY_LINE_ERRORS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(715); // ERROR_TOO_MANY_LINE_ERRORS
+pub const TOO_MANY_LINE_ERRORS : ErrorCode = ErrorCode::from_constant(715); // ERROR_TOO_MANY_LINE_ERRORS
 
-pub const IP_CONFIGURATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(716); // ERROR_IP_CONFIGURATION
-pub const NO_IP_ADDRESSES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(717); // ERROR_NO_IP_ADDRESSES
-pub const PPP_TIMEOUT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(718); // ERROR_PPP_TIMEOUT
+pub const IP_CONFIGURATION : ErrorCode = ErrorCode::from_constant(716); // ERROR_IP_CONFIGURATION
+pub const NO_IP_ADDRESSES : ErrorCode = ErrorCode::from_constant(717); // ERROR_NO_IP_ADDRESSES
+pub const PPP_TIMEOUT : ErrorCode = ErrorCode::from_constant(718); // ERROR_PPP_TIMEOUT
 
 /// The connection was terminated by the remote computer.
 /// This error was obsoleted in the Windows Vista  release.
-pub const PPP_REMOTE_TERMINATED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(719); // ERROR_PPP_REMOTE_TERMINATED
+pub const PPP_REMOTE_TERMINATED : ErrorCode = ErrorCode::from_constant(719); // ERROR_PPP_REMOTE_TERMINATED
 
-pub const PPP_NO_PROTOCOLS_CONFIGURED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(720); // ERROR_PPP_NO_PROTOCOLS_CONFIGURED
-pub const PPP_NO_RESPONSE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(721); // ERROR_PPP_NO_RESPONSE
-pub const PPP_INVALID_PACKET : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(722); // ERROR_PPP_INVALID_PACKET
-pub const PHONE_NUMBER_TOO_LONG : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(723); // ERROR_PHONE_NUMBER_TOO_LONG
+pub const PPP_NO_PROTOCOLS_CONFIGURED : ErrorCode = ErrorCode::from_constant(720); // ERROR_PPP_NO_PROTOCOLS_CONFIGURED
+pub const PPP_NO_RESPONSE : ErrorCode = ErrorCode::from_constant(721); // ERROR_PPP_NO_RESPONSE
+pub const PPP_INVALID_PACKET : ErrorCode = ErrorCode::from_constant(722); // ERROR_PPP_INVALID_PACKET
+pub const PHONE_NUMBER_TOO_LONG : ErrorCode = ErrorCode::from_constant(723); // ERROR_PHONE_NUMBER_TOO_LONG
 
 /// The IPX protocol cannot dial out on the modem (or other connecting device) because this computer is not configured for dialing out (it is an IPX router).
 /// This error was obsoleted in the Windows Vista  release.
-pub const IPXCP_NO_DIALOUT_CONFIGURED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(724); // ERROR_IPXCP_NO_DIALOUT_CONFIGURED
+pub const IPXCP_NO_DIALOUT_CONFIGURED : ErrorCode = ErrorCode::from_constant(724); // ERROR_IPXCP_NO_DIALOUT_CONFIGURED
 
 /// The IPX protocol cannot dial in on the modem (or other connecting device) because this computer is not configured for dialing in (the IPX router is not installed).
 /// This error was obsoleted in the Windows Vista  release.
-pub const IPXCP_NO_DIALIN_CONFIGURED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(725); // ERROR_IPXCP_NO_DIALIN_CONFIGURED
+pub const IPXCP_NO_DIALIN_CONFIGURED : ErrorCode = ErrorCode::from_constant(725); // ERROR_IPXCP_NO_DIALIN_CONFIGURED
 
-pub const IPXCP_DIALOUT_ALREADY_ACTIVE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(726); // ERROR_IPXCP_DIALOUT_ALREADY_ACTIVE
+pub const IPXCP_DIALOUT_ALREADY_ACTIVE : ErrorCode = ErrorCode::from_constant(726); // ERROR_IPXCP_DIALOUT_ALREADY_ACTIVE
 
 /// Cannot access TCPCFG.DLL.
 /// This error was obsoleted in the Windows Vista  release.
-pub const ACCESSING_TCPCFGDLL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(727); // ERROR_ACCESSING_TCPCFGDLL
+pub const ACCESSING_TCPCFGDLL : ErrorCode = ErrorCode::from_constant(727); // ERROR_ACCESSING_TCPCFGDLL
 
-pub const NO_IP_RAS_ADAPTER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(728); // ERROR_NO_IP_RAS_ADAPTER
-pub const SLIP_REQUIRES_IP : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(729); // ERROR_SLIP_REQUIRES_IP
+pub const NO_IP_RAS_ADAPTER : ErrorCode = ErrorCode::from_constant(728); // ERROR_NO_IP_RAS_ADAPTER
+pub const SLIP_REQUIRES_IP : ErrorCode = ErrorCode::from_constant(729); // ERROR_SLIP_REQUIRES_IP
 
 /// Computer registration is not complete.
 /// This error was obsoleted in the Windows Vista  release.
-pub const PROJECTION_NOT_COMPLETE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(730); // ERROR_PROJECTION_NOT_COMPLETE
+pub const PROJECTION_NOT_COMPLETE : ErrorCode = ErrorCode::from_constant(730); // ERROR_PROJECTION_NOT_COMPLETE
 
-pub const PROTOCOL_NOT_CONFIGURED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(731); // ERROR_PROTOCOL_NOT_CONFIGURED
-pub const PPP_NOT_CONVERGING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(732); // ERROR_PPP_NOT_CONVERGING
-pub const PPP_CP_REJECTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(733); // ERROR_PPP_CP_REJECTED
-pub const PPP_LCP_TERMINATED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(734); // ERROR_PPP_LCP_TERMINATED
-pub const PPP_REQUIRED_ADDRESS_REJECTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(735); // ERROR_PPP_REQUIRED_ADDRESS_REJECTED
-pub const PPP_NCP_TERMINATED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(736); // ERROR_PPP_NCP_TERMINATED
-pub const PPP_LOOPBACK_DETECTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(737); // ERROR_PPP_LOOPBACK_DETECTED
-pub const PPP_NO_ADDRESS_ASSIGNED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(738); // ERROR_PPP_NO_ADDRESS_ASSIGNED
-pub const CANNOT_USE_LOGON_CREDENTIALS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(739); // ERROR_CANNOT_USE_LOGON_CREDENTIALS
-pub const TAPI_CONFIGURATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(740); // ERROR_TAPI_CONFIGURATION
-pub const NO_LOCAL_ENCRYPTION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(741); // ERROR_NO_LOCAL_ENCRYPTION
-pub const NO_REMOTE_ENCRYPTION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(742); // ERROR_NO_REMOTE_ENCRYPTION
+pub const PROTOCOL_NOT_CONFIGURED : ErrorCode = ErrorCode::from_constant(731); // ERROR_PROTOCOL_NOT_CONFIGURED
+pub const PPP_NOT_CONVERGING : ErrorCode = ErrorCode::from_constant(732); // ERROR_PPP_NOT_CONVERGING
+pub const PPP_CP_REJECTED : ErrorCode = ErrorCode::from_constant(733); // ERROR_PPP_CP_REJECTED
+pub const PPP_LCP_TERMINATED : ErrorCode = ErrorCode::from_constant(734); // ERROR_PPP_LCP_TERMINATED
+pub const PPP_REQUIRED_ADDRESS_REJECTED : ErrorCode = ErrorCode::from_constant(735); // ERROR_PPP_REQUIRED_ADDRESS_REJECTED
+pub const PPP_NCP_TERMINATED : ErrorCode = ErrorCode::from_constant(736); // ERROR_PPP_NCP_TERMINATED
+pub const PPP_LOOPBACK_DETECTED : ErrorCode = ErrorCode::from_constant(737); // ERROR_PPP_LOOPBACK_DETECTED
+pub const PPP_NO_ADDRESS_ASSIGNED : ErrorCode = ErrorCode::from_constant(738); // ERROR_PPP_NO_ADDRESS_ASSIGNED
+pub const CANNOT_USE_LOGON_CREDENTIALS : ErrorCode = ErrorCode::from_constant(739); // ERROR_CANNOT_USE_LOGON_CREDENTIALS
+pub const TAPI_CONFIGURATION : ErrorCode = ErrorCode::from_constant(740); // ERROR_TAPI_CONFIGURATION
+pub const NO_LOCAL_ENCRYPTION : ErrorCode = ErrorCode::from_constant(741); // ERROR_NO_LOCAL_ENCRYPTION
+pub const NO_REMOTE_ENCRYPTION : ErrorCode = ErrorCode::from_constant(742); // ERROR_NO_REMOTE_ENCRYPTION
 
 /// The remote computer requires data encryption.
 /// This error was obsoleted in the Windows Vista  release.
-pub const REMOTE_REQUIRES_ENCRYPTION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(743); // ERROR_REMOTE_REQUIRES_ENCRYPTION
+pub const REMOTE_REQUIRES_ENCRYPTION : ErrorCode = ErrorCode::from_constant(743); // ERROR_REMOTE_REQUIRES_ENCRYPTION
 
 /// The system cannot use the IPX network number assigned by the remote computer.  Additional information is provided in the event log.
 /// This error was obsoleted in the Windows Vista  release.
-pub const IPXCP_NET_NUMBER_CONFLICT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(744); // ERROR_IPXCP_NET_NUMBER_CONFLICT
+pub const IPXCP_NET_NUMBER_CONFLICT : ErrorCode = ErrorCode::from_constant(744); // ERROR_IPXCP_NET_NUMBER_CONFLICT
 
 /// ERROR_INVALID_SMM
 /// This error was obsoleted in the Windows Vista  release.
-pub const INVALID_SMM : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(745); // ERROR_INVALID_SMM
+pub const INVALID_SMM : ErrorCode = ErrorCode::from_constant(745); // ERROR_INVALID_SMM
 
 /// ERROR_SMM_UNINITIALIZED
 /// This error was obsoleted in the Windows Vista  release.
-pub const SMM_UNINITIALIZED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(746); // ERROR_SMM_UNINITIALIZED
+pub const SMM_UNINITIALIZED : ErrorCode = ErrorCode::from_constant(746); // ERROR_SMM_UNINITIALIZED
 
 /// ERROR_NO_MAC_FOR_PORT
 /// This error was obsoleted in the Windows Vista  release.
-pub const NO_MAC_FOR_PORT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(747); // ERROR_NO_MAC_FOR_PORT
+pub const NO_MAC_FOR_PORT : ErrorCode = ErrorCode::from_constant(747); // ERROR_NO_MAC_FOR_PORT
 
 /// ERROR_SMM_TIMEOUT
 /// This error was obsoleted in the Windows Vista  release.
-pub const SMM_TIMEOUT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(748); // ERROR_SMM_TIMEOUT
+pub const SMM_TIMEOUT : ErrorCode = ErrorCode::from_constant(748); // ERROR_SMM_TIMEOUT
 
-pub const BAD_PHONE_NUMBER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(749); // ERROR_BAD_PHONE_NUMBER
+pub const BAD_PHONE_NUMBER : ErrorCode = ErrorCode::from_constant(749); // ERROR_BAD_PHONE_NUMBER
 
 /// ERROR_WRONG_MODULE
 /// This error was obsoleted in the Windows Vista  release.
-pub const WRONG_MODULE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(750); // ERROR_WRONG_MODULE
+pub const WRONG_MODULE : ErrorCode = ErrorCode::from_constant(750); // ERROR_WRONG_MODULE
 
 /// The callback number contains an invalid character.  Only the following 18 characters are allowed:  0 to 9, T, P, W, (, ), -, @, and space.
 /// This error was obsoleted in the Windows Vista  release.
-pub const INVALID_CALLBACK_NUMBER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(751); // ERROR_INVALID_CALLBACK_NUMBER
+pub const INVALID_CALLBACK_NUMBER : ErrorCode = ErrorCode::from_constant(751); // ERROR_INVALID_CALLBACK_NUMBER
 
-pub const SCRIPT_SYNTAX : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(752); // ERROR_SCRIPT_SYNTAX
-pub const HANGUP_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(753); // ERROR_HANGUP_FAILED
-pub const BUNDLE_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(754); // ERROR_BUNDLE_NOT_FOUND
-pub const CANNOT_DO_CUSTOMDIAL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(755); // ERROR_CANNOT_DO_CUSTOMDIAL
-pub const DIAL_ALREADY_IN_PROGRESS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(756); // ERROR_DIAL_ALREADY_IN_PROGRESS
-pub const RASAUTO_CANNOT_INITIALIZE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(757); // ERROR_RASAUTO_CANNOT_INITIALIZE
+pub const SCRIPT_SYNTAX : ErrorCode = ErrorCode::from_constant(752); // ERROR_SCRIPT_SYNTAX
+pub const HANGUP_FAILED : ErrorCode = ErrorCode::from_constant(753); // ERROR_HANGUP_FAILED
+pub const BUNDLE_NOT_FOUND : ErrorCode = ErrorCode::from_constant(754); // ERROR_BUNDLE_NOT_FOUND
+pub const CANNOT_DO_CUSTOMDIAL : ErrorCode = ErrorCode::from_constant(755); // ERROR_CANNOT_DO_CUSTOMDIAL
+pub const DIAL_ALREADY_IN_PROGRESS : ErrorCode = ErrorCode::from_constant(756); // ERROR_DIAL_ALREADY_IN_PROGRESS
+pub const RASAUTO_CANNOT_INITIALIZE : ErrorCode = ErrorCode::from_constant(757); // ERROR_RASAUTO_CANNOT_INITIALIZE
 
 /// Internet Connection Sharing is already enabled on the connection.
 /// This error was obsoleted in the Windows Vista  release.
-pub const CONNECTION_ALREADY_SHARED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(758); // ERROR_CONNECTION_ALREADY_SHARED
+pub const CONNECTION_ALREADY_SHARED : ErrorCode = ErrorCode::from_constant(758); // ERROR_CONNECTION_ALREADY_SHARED
 
 /// An error occurred while the existing Internet Connection Sharing settings were being changed.
 /// This error was obsoleted in the Windows Vista  release.
-pub const SHARING_CHANGE_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(759); // ERROR_SHARING_CHANGE_FAILED
+pub const SHARING_CHANGE_FAILED : ErrorCode = ErrorCode::from_constant(759); // ERROR_SHARING_CHANGE_FAILED
 
 /// An error occurred while routing capabilities were being enabled.
 /// This error was obsoleted in the Windows Vista  release.
-pub const SHARING_ROUTER_INSTALL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(760); // ERROR_SHARING_ROUTER_INSTALL
+pub const SHARING_ROUTER_INSTALL : ErrorCode = ErrorCode::from_constant(760); // ERROR_SHARING_ROUTER_INSTALL
 
 /// An error occurred while Internet Connection Sharing was being enabled for the connection.
 /// This error was obsoleted in the Windows Vista  release.
-pub const SHARE_CONNECTION_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(761); // ERROR_SHARE_CONNECTION_FAILED
+pub const SHARE_CONNECTION_FAILED : ErrorCode = ErrorCode::from_constant(761); // ERROR_SHARE_CONNECTION_FAILED
 
 /// An error occurred while the local network was being configured for sharing.
 /// This error was obsoleted in the Windows Vista  release.
-pub const SHARING_PRIVATE_INSTALL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(762); // ERROR_SHARING_PRIVATE_INSTALL
+pub const SHARING_PRIVATE_INSTALL : ErrorCode = ErrorCode::from_constant(762); // ERROR_SHARING_PRIVATE_INSTALL
 
 /// Internet Connection Sharing cannot be enabled.  There is more than one LAN connection other than the connection to be shared.
 /// This error was obsoleted in the Windows Vista  release.
-pub const CANNOT_SHARE_CONNECTION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(763); // ERROR_CANNOT_SHARE_CONNECTION
+pub const CANNOT_SHARE_CONNECTION : ErrorCode = ErrorCode::from_constant(763); // ERROR_CANNOT_SHARE_CONNECTION
 
-pub const NO_SMART_CARD_READER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(764); // ERROR_NO_SMART_CARD_READER
-pub const SHARING_ADDRESS_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(765); // ERROR_SHARING_ADDRESS_EXISTS
-pub const NO_CERTIFICATE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(766); // ERROR_NO_CERTIFICATE
-pub const SHARING_MULTIPLE_ADDRESSES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(767); // ERROR_SHARING_MULTIPLE_ADDRESSES
-pub const FAILED_TO_ENCRYPT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(768); // ERROR_FAILED_TO_ENCRYPT
-pub const BAD_ADDRESS_SPECIFIED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(769); // ERROR_BAD_ADDRESS_SPECIFIED
-pub const CONNECTION_REJECT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(770); // ERROR_CONNECTION_REJECT
-pub const CONGESTION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(771); // ERROR_CONGESTION
-pub const INCOMPATIBLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(772); // ERROR_INCOMPATIBLE
-pub const NUMBERCHANGED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(773); // ERROR_NUMBERCHANGED
-pub const TEMPFAILURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(774); // ERROR_TEMPFAILURE
-pub const BLOCKED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(775); // ERROR_BLOCKED
-pub const DONOTDISTURB : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(776); // ERROR_DONOTDISTURB
-pub const OUTOFORDER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(777); // ERROR_OUTOFORDER
-pub const UNABLE_TO_AUTHENTICATE_SERVER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(778); // ERROR_UNABLE_TO_AUTHENTICATE_SERVER
+pub const NO_SMART_CARD_READER : ErrorCode = ErrorCode::from_constant(764); // ERROR_NO_SMART_CARD_READER
+pub const SHARING_ADDRESS_EXISTS : ErrorCode = ErrorCode::from_constant(765); // ERROR_SHARING_ADDRESS_EXISTS
+pub const NO_CERTIFICATE : ErrorCode = ErrorCode::from_constant(766); // ERROR_NO_CERTIFICATE
+pub const SHARING_MULTIPLE_ADDRESSES : ErrorCode = ErrorCode::from_constant(767); // ERROR_SHARING_MULTIPLE_ADDRESSES
+pub const FAILED_TO_ENCRYPT : ErrorCode = ErrorCode::from_constant(768); // ERROR_FAILED_TO_ENCRYPT
+pub const BAD_ADDRESS_SPECIFIED : ErrorCode = ErrorCode::from_constant(769); // ERROR_BAD_ADDRESS_SPECIFIED
+pub const CONNECTION_REJECT : ErrorCode = ErrorCode::from_constant(770); // ERROR_CONNECTION_REJECT
+pub const CONGESTION : ErrorCode = ErrorCode::from_constant(771); // ERROR_CONGESTION
+pub const INCOMPATIBLE : ErrorCode = ErrorCode::from_constant(772); // ERROR_INCOMPATIBLE
+pub const NUMBERCHANGED : ErrorCode = ErrorCode::from_constant(773); // ERROR_NUMBERCHANGED
+pub const TEMPFAILURE : ErrorCode = ErrorCode::from_constant(774); // ERROR_TEMPFAILURE
+pub const BLOCKED : ErrorCode = ErrorCode::from_constant(775); // ERROR_BLOCKED
+pub const DONOTDISTURB : ErrorCode = ErrorCode::from_constant(776); // ERROR_DONOTDISTURB
+pub const OUTOFORDER : ErrorCode = ErrorCode::from_constant(777); // ERROR_OUTOFORDER
+pub const UNABLE_TO_AUTHENTICATE_SERVER : ErrorCode = ErrorCode::from_constant(778); // ERROR_UNABLE_TO_AUTHENTICATE_SERVER
 
 /// To dial out using this connection you must use a smart card.
 /// This error was obsoleted in the Windows Vista  release.
-pub const SMART_CARD_REQUIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(779); // ERROR_SMART_CARD_REQUIRED
+pub const SMART_CARD_REQUIRED : ErrorCode = ErrorCode::from_constant(779); // ERROR_SMART_CARD_REQUIRED
 
-pub const INVALID_FUNCTION_FOR_ENTRY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(780); // ERROR_INVALID_FUNCTION_FOR_ENTRY
+pub const INVALID_FUNCTION_FOR_ENTRY : ErrorCode = ErrorCode::from_constant(780); // ERROR_INVALID_FUNCTION_FOR_ENTRY
 
 /// The connection requires a certificate, and no valid certificate was found.  For further assistance, click More Info or search Help and Support Center for this error number.
 /// This error was obsoleted in the Windows Vista  release.
-pub const CERT_FOR_ENCRYPTION_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(781); // ERROR_CERT_FOR_ENCRYPTION_NOT_FOUND
+pub const CERT_FOR_ENCRYPTION_NOT_FOUND : ErrorCode = ErrorCode::from_constant(781); // ERROR_CERT_FOR_ENCRYPTION_NOT_FOUND
 
-pub const SHARING_RRAS_CONFLICT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(782); // ERROR_SHARING_RRAS_CONFLICT
-pub const SHARING_NO_PRIVATE_LAN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(783); // ERROR_SHARING_NO_PRIVATE_LAN
-pub const NO_DIFF_USER_AT_LOGON : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(784); // ERROR_NO_DIFF_USER_AT_LOGON
-pub const NO_REG_CERT_AT_LOGON : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(785); // ERROR_NO_REG_CERT_AT_LOGON
-pub const OAKLEY_NO_CERT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(786); // ERROR_OAKLEY_NO_CERT
-pub const OAKLEY_AUTH_FAIL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(787); // ERROR_OAKLEY_AUTH_FAIL
-pub const OAKLEY_ATTRIB_FAIL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(788); // ERROR_OAKLEY_ATTRIB_FAIL
-pub const OAKLEY_GENERAL_PROCESSING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(789); // ERROR_OAKLEY_GENERAL_PROCESSING
-pub const OAKLEY_NO_PEER_CERT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(790); // ERROR_OAKLEY_NO_PEER_CERT
-pub const OAKLEY_NO_POLICY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(791); // ERROR_OAKLEY_NO_POLICY
-pub const OAKLEY_TIMED_OUT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(792); // ERROR_OAKLEY_TIMED_OUT
-pub const OAKLEY_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(793); // ERROR_OAKLEY_ERROR
-pub const UNKNOWN_FRAMED_PROTOCOL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(794); // ERROR_UNKNOWN_FRAMED_PROTOCOL
-pub const WRONG_TUNNEL_TYPE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(795); // ERROR_WRONG_TUNNEL_TYPE
-pub const UNKNOWN_SERVICE_TYPE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(796); // ERROR_UNKNOWN_SERVICE_TYPE
-pub const CONNECTING_DEVICE_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(797); // ERROR_CONNECTING_DEVICE_NOT_FOUND
-pub const NO_EAPTLS_CERTIFICATE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(798); // ERROR_NO_EAPTLS_CERTIFICATE
-pub const SHARING_HOST_ADDRESS_CONFLICT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(799); // ERROR_SHARING_HOST_ADDRESS_CONFLICT
-pub const AUTOMATIC_VPN_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(800); // ERROR_AUTOMATIC_VPN_FAILED
-pub const VALIDATING_SERVER_CERT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(801); // ERROR_VALIDATING_SERVER_CERT
-pub const READING_SCARD : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(802); // ERROR_READING_SCARD
-pub const INVALID_PEAP_COOKIE_CONFIG : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(803); // ERROR_INVALID_PEAP_COOKIE_CONFIG
-pub const INVALID_PEAP_COOKIE_USER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(804); // ERROR_INVALID_PEAP_COOKIE_USER
-pub const INVALID_MSCHAPV2_CONFIG : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(805); // ERROR_INVALID_MSCHAPV2_CONFIG
+pub const SHARING_RRAS_CONFLICT : ErrorCode = ErrorCode::from_constant(782); // ERROR_SHARING_RRAS_CONFLICT
+pub const SHARING_NO_PRIVATE_LAN : ErrorCode = ErrorCode::from_constant(783); // ERROR_SHARING_NO_PRIVATE_LAN
+pub const NO_DIFF_USER_AT_LOGON : ErrorCode = ErrorCode::from_constant(784); // ERROR_NO_DIFF_USER_AT_LOGON
+pub const NO_REG_CERT_AT_LOGON : ErrorCode = ErrorCode::from_constant(785); // ERROR_NO_REG_CERT_AT_LOGON
+pub const OAKLEY_NO_CERT : ErrorCode = ErrorCode::from_constant(786); // ERROR_OAKLEY_NO_CERT
+pub const OAKLEY_AUTH_FAIL : ErrorCode = ErrorCode::from_constant(787); // ERROR_OAKLEY_AUTH_FAIL
+pub const OAKLEY_ATTRIB_FAIL : ErrorCode = ErrorCode::from_constant(788); // ERROR_OAKLEY_ATTRIB_FAIL
+pub const OAKLEY_GENERAL_PROCESSING : ErrorCode = ErrorCode::from_constant(789); // ERROR_OAKLEY_GENERAL_PROCESSING
+pub const OAKLEY_NO_PEER_CERT : ErrorCode = ErrorCode::from_constant(790); // ERROR_OAKLEY_NO_PEER_CERT
+pub const OAKLEY_NO_POLICY : ErrorCode = ErrorCode::from_constant(791); // ERROR_OAKLEY_NO_POLICY
+pub const OAKLEY_TIMED_OUT : ErrorCode = ErrorCode::from_constant(792); // ERROR_OAKLEY_TIMED_OUT
+pub const OAKLEY_ERROR : ErrorCode = ErrorCode::from_constant(793); // ERROR_OAKLEY_ERROR
+pub const UNKNOWN_FRAMED_PROTOCOL : ErrorCode = ErrorCode::from_constant(794); // ERROR_UNKNOWN_FRAMED_PROTOCOL
+pub const WRONG_TUNNEL_TYPE : ErrorCode = ErrorCode::from_constant(795); // ERROR_WRONG_TUNNEL_TYPE
+pub const UNKNOWN_SERVICE_TYPE : ErrorCode = ErrorCode::from_constant(796); // ERROR_UNKNOWN_SERVICE_TYPE
+pub const CONNECTING_DEVICE_NOT_FOUND : ErrorCode = ErrorCode::from_constant(797); // ERROR_CONNECTING_DEVICE_NOT_FOUND
+pub const NO_EAPTLS_CERTIFICATE : ErrorCode = ErrorCode::from_constant(798); // ERROR_NO_EAPTLS_CERTIFICATE
+pub const SHARING_HOST_ADDRESS_CONFLICT : ErrorCode = ErrorCode::from_constant(799); // ERROR_SHARING_HOST_ADDRESS_CONFLICT
+pub const AUTOMATIC_VPN_FAILED : ErrorCode = ErrorCode::from_constant(800); // ERROR_AUTOMATIC_VPN_FAILED
+pub const VALIDATING_SERVER_CERT : ErrorCode = ErrorCode::from_constant(801); // ERROR_VALIDATING_SERVER_CERT
+pub const READING_SCARD : ErrorCode = ErrorCode::from_constant(802); // ERROR_READING_SCARD
+pub const INVALID_PEAP_COOKIE_CONFIG : ErrorCode = ErrorCode::from_constant(803); // ERROR_INVALID_PEAP_COOKIE_CONFIG
+pub const INVALID_PEAP_COOKIE_USER : ErrorCode = ErrorCode::from_constant(804); // ERROR_INVALID_PEAP_COOKIE_USER
+pub const INVALID_MSCHAPV2_CONFIG : ErrorCode = ErrorCode::from_constant(805); // ERROR_INVALID_MSCHAPV2_CONFIG
 
 /// New Errors for Windows Vista
-pub const VPN_GRE_BLOCKED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(806); // ERROR_VPN_GRE_BLOCKED
+pub const VPN_GRE_BLOCKED : ErrorCode = ErrorCode::from_constant(806); // ERROR_VPN_GRE_BLOCKED
 
-pub const VPN_DISCONNECT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(807); // ERROR_VPN_DISCONNECT
-pub const VPN_REFUSED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(808); // ERROR_VPN_REFUSED
-pub const VPN_TIMEOUT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(809); // ERROR_VPN_TIMEOUT
-pub const VPN_BAD_CERT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(810); // ERROR_VPN_BAD_CERT
-pub const VPN_BAD_PSK : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(811); // ERROR_VPN_BAD_PSK
-#[doc(hidden)] pub const SERVER_POLICY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(812); // ERROR_SERVER_POLICY
-pub const BROADBAND_ACTIVE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(813); // ERROR_BROADBAND_ACTIVE
-pub const BROADBAND_NO_NIC : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(814); // ERROR_BROADBAND_NO_NIC
-pub const BROADBAND_TIMEOUT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(815); // ERROR_BROADBAND_TIMEOUT
-pub const FEATURE_DEPRECATED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(816); // ERROR_FEATURE_DEPRECATED
-pub const CANNOT_DELETE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(817); // ERROR_CANNOT_DELETE
-pub const RASQEC_RESOURCE_CREATION_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(818); // ERROR_RASQEC_RESOURCE_CREATION_FAILED
-pub const RASQEC_NAPAGENT_NOT_ENABLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(819); // ERROR_RASQEC_NAPAGENT_NOT_ENABLED
-pub const RASQEC_NAPAGENT_NOT_CONNECTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(820); // ERROR_RASQEC_NAPAGENT_NOT_CONNECTED
-pub const RASQEC_CONN_DOESNOTEXIST : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(821); // ERROR_RASQEC_CONN_DOESNOTEXIST
-pub const RASQEC_TIMEOUT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(822); // ERROR_RASQEC_TIMEOUT
-pub const PEAP_CRYPTOBINDING_INVALID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(823); // ERROR_PEAP_CRYPTOBINDING_INVALID
-pub const PEAP_CRYPTOBINDING_NOTRECEIVED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(824); // ERROR_PEAP_CRYPTOBINDING_NOTRECEIVED
-pub const INVALID_VPNSTRATEGY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(825); // ERROR_INVALID_VPNSTRATEGY
-pub const EAPTLS_CACHE_CREDENTIALS_INVALID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(826); // ERROR_EAPTLS_CACHE_CREDENTIALS_INVALID
-#[doc(hidden)] pub const IPSEC_SERVICE_STOPPED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(827); // ERROR_IPSEC_SERVICE_STOPPED
-pub const IDLE_TIMEOUT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(828); // ERROR_IDLE_TIMEOUT
-pub const LINK_FAILURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(829); // ERROR_LINK_FAILURE
-pub const USER_LOGOFF : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(830); // ERROR_USER_LOGOFF
-pub const FAST_USER_SWITCH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(831); // ERROR_FAST_USER_SWITCH
-pub const HIBERNATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(832); // ERROR_HIBERNATION
-pub const SYSTEM_SUSPENDED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(833); // ERROR_SYSTEM_SUSPENDED
-pub const RASMAN_SERVICE_STOPPED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(834); // ERROR_RASMAN_SERVICE_STOPPED
-pub const INVALID_SERVER_CERT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(835); // ERROR_INVALID_SERVER_CERT
-pub const NOT_NAP_CAPABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(836); // ERROR_NOT_NAP_CAPABLE
-pub const INVALID_TUNNELID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(837); // ERROR_INVALID_TUNNELID
-pub const UPDATECONNECTION_REQUEST_IN_PROCESS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(838); // ERROR_UPDATECONNECTION_REQUEST_IN_PROCESS
-pub const PROTOCOL_ENGINE_DISABLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(839); // ERROR_PROTOCOL_ENGINE_DISABLED
-pub const INTERNAL_ADDRESS_FAILURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(840); // ERROR_INTERNAL_ADDRESS_FAILURE
-pub const FAILED_CP_REQUIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(841); // ERROR_FAILED_CP_REQUIRED
-pub const TS_UNACCEPTABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(842); // ERROR_TS_UNACCEPTABLE
-pub const MOBIKE_DISABLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(843); // ERROR_MOBIKE_DISABLED
-pub const CANNOT_INITIATE_MOBIKE_UPDATE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(844); // ERROR_CANNOT_INITIATE_MOBIKE_UPDATE
-pub const PEAP_SERVER_REJECTED_CLIENT_TLV : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(845); // ERROR_PEAP_SERVER_REJECTED_CLIENT_TLV
-pub const INVALID_PREFERENCES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(846); // ERROR_INVALID_PREFERENCES
-pub const EAPTLS_SCARD_CACHE_CREDENTIALS_INVALID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(847); // ERROR_EAPTLS_SCARD_CACHE_CREDENTIALS_INVALID
-pub const SSTP_COOKIE_SET_FAILURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(848); // ERROR_SSTP_COOKIE_SET_FAILURE
-pub const INVALID_PEAP_COOKIE_ATTRIBUTES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(849); // ERROR_INVALID_PEAP_COOKIE_ATTRIBUTES
-pub const EAP_METHOD_NOT_INSTALLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(850); // ERROR_EAP_METHOD_NOT_INSTALLED
-pub const EAP_METHOD_DOES_NOT_SUPPORT_SSO : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(851); // ERROR_EAP_METHOD_DOES_NOT_SUPPORT_SSO
-pub const EAP_METHOD_OPERATION_NOT_SUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(852); // ERROR_EAP_METHOD_OPERATION_NOT_SUPPORTED
-pub const EAP_USER_CERT_INVALID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(853); // ERROR_EAP_USER_CERT_INVALID
-pub const EAP_USER_CERT_EXPIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(854); // ERROR_EAP_USER_CERT_EXPIRED
-pub const EAP_USER_CERT_REVOKED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(855); // ERROR_EAP_USER_CERT_REVOKED
-pub const EAP_USER_CERT_OTHER_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(856); // ERROR_EAP_USER_CERT_OTHER_ERROR
-pub const EAP_SERVER_CERT_INVALID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(857); // ERROR_EAP_SERVER_CERT_INVALID
-pub const EAP_SERVER_CERT_EXPIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(858); // ERROR_EAP_SERVER_CERT_EXPIRED
-pub const EAP_SERVER_CERT_REVOKED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(859); // ERROR_EAP_SERVER_CERT_REVOKED
-pub const EAP_SERVER_CERT_OTHER_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(860); // ERROR_EAP_SERVER_CERT_OTHER_ERROR
-pub const EAP_USER_ROOT_CERT_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(861); // ERROR_EAP_USER_ROOT_CERT_NOT_FOUND
-pub const EAP_USER_ROOT_CERT_INVALID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(862); // ERROR_EAP_USER_ROOT_CERT_INVALID
-pub const EAP_USER_ROOT_CERT_EXPIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(863); // ERROR_EAP_USER_ROOT_CERT_EXPIRED
-pub const EAP_SERVER_ROOT_CERT_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(864); // ERROR_EAP_SERVER_ROOT_CERT_NOT_FOUND
-pub const EAP_SERVER_ROOT_CERT_INVALID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(865); // ERROR_EAP_SERVER_ROOT_CERT_INVALID
-pub const EAP_SERVER_ROOT_CERT_NAME_REQUIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(866); // ERROR_EAP_SERVER_ROOT_CERT_NAME_REQUIRED
-pub const PEAP_IDENTITY_MISMATCH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(867); // ERROR_PEAP_IDENTITY_MISMATCH
-pub const DNSNAME_NOT_RESOLVABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(868); // ERROR_DNSNAME_NOT_RESOLVABLE
-pub const EAPTLS_PASSWD_INVALID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(869); // ERROR_EAPTLS_PASSWD_INVALID
-pub const IKEV2_PSK_INTERFACE_ALREADY_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(870); // ERROR_IKEV2_PSK_INTERFACE_ALREADY_EXISTS
-pub const INVALID_DESTINATION_IP : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(871); // ERROR_INVALID_DESTINATION_IP
-pub const INVALID_INTERFACE_CONFIG : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(872); // ERROR_INVALID_INTERFACE_CONFIG
-pub const VPN_PLUGIN_GENERIC : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(873); // ERROR_VPN_PLUGIN_GENERIC
-pub const SSO_CERT_MISSING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(874); // ERROR_SSO_CERT_MISSING
-pub const DEVICE_COMPLIANCE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(875); // ERROR_DEVICE_COMPLIANCE
+pub const VPN_DISCONNECT : ErrorCode = ErrorCode::from_constant(807); // ERROR_VPN_DISCONNECT
+pub const VPN_REFUSED : ErrorCode = ErrorCode::from_constant(808); // ERROR_VPN_REFUSED
+pub const VPN_TIMEOUT : ErrorCode = ErrorCode::from_constant(809); // ERROR_VPN_TIMEOUT
+pub const VPN_BAD_CERT : ErrorCode = ErrorCode::from_constant(810); // ERROR_VPN_BAD_CERT
+pub const VPN_BAD_PSK : ErrorCode = ErrorCode::from_constant(811); // ERROR_VPN_BAD_PSK
+#[doc(hidden)] pub const SERVER_POLICY : ErrorCode = ErrorCode::from_constant(812); // ERROR_SERVER_POLICY
+pub const BROADBAND_ACTIVE : ErrorCode = ErrorCode::from_constant(813); // ERROR_BROADBAND_ACTIVE
+pub const BROADBAND_NO_NIC : ErrorCode = ErrorCode::from_constant(814); // ERROR_BROADBAND_NO_NIC
+pub const BROADBAND_TIMEOUT : ErrorCode = ErrorCode::from_constant(815); // ERROR_BROADBAND_TIMEOUT
+pub const FEATURE_DEPRECATED : ErrorCode = ErrorCode::from_constant(816); // ERROR_FEATURE_DEPRECATED
+pub const CANNOT_DELETE : ErrorCode = ErrorCode::from_constant(817); // ERROR_CANNOT_DELETE
+pub const RASQEC_RESOURCE_CREATION_FAILED : ErrorCode = ErrorCode::from_constant(818); // ERROR_RASQEC_RESOURCE_CREATION_FAILED
+pub const RASQEC_NAPAGENT_NOT_ENABLED : ErrorCode = ErrorCode::from_constant(819); // ERROR_RASQEC_NAPAGENT_NOT_ENABLED
+pub const RASQEC_NAPAGENT_NOT_CONNECTED : ErrorCode = ErrorCode::from_constant(820); // ERROR_RASQEC_NAPAGENT_NOT_CONNECTED
+pub const RASQEC_CONN_DOESNOTEXIST : ErrorCode = ErrorCode::from_constant(821); // ERROR_RASQEC_CONN_DOESNOTEXIST
+pub const RASQEC_TIMEOUT : ErrorCode = ErrorCode::from_constant(822); // ERROR_RASQEC_TIMEOUT
+pub const PEAP_CRYPTOBINDING_INVALID : ErrorCode = ErrorCode::from_constant(823); // ERROR_PEAP_CRYPTOBINDING_INVALID
+pub const PEAP_CRYPTOBINDING_NOTRECEIVED : ErrorCode = ErrorCode::from_constant(824); // ERROR_PEAP_CRYPTOBINDING_NOTRECEIVED
+pub const INVALID_VPNSTRATEGY : ErrorCode = ErrorCode::from_constant(825); // ERROR_INVALID_VPNSTRATEGY
+pub const EAPTLS_CACHE_CREDENTIALS_INVALID : ErrorCode = ErrorCode::from_constant(826); // ERROR_EAPTLS_CACHE_CREDENTIALS_INVALID
+#[doc(hidden)] pub const IPSEC_SERVICE_STOPPED : ErrorCode = ErrorCode::from_constant(827); // ERROR_IPSEC_SERVICE_STOPPED
+pub const IDLE_TIMEOUT : ErrorCode = ErrorCode::from_constant(828); // ERROR_IDLE_TIMEOUT
+pub const LINK_FAILURE : ErrorCode = ErrorCode::from_constant(829); // ERROR_LINK_FAILURE
+pub const USER_LOGOFF : ErrorCode = ErrorCode::from_constant(830); // ERROR_USER_LOGOFF
+pub const FAST_USER_SWITCH : ErrorCode = ErrorCode::from_constant(831); // ERROR_FAST_USER_SWITCH
+pub const HIBERNATION : ErrorCode = ErrorCode::from_constant(832); // ERROR_HIBERNATION
+pub const SYSTEM_SUSPENDED : ErrorCode = ErrorCode::from_constant(833); // ERROR_SYSTEM_SUSPENDED
+pub const RASMAN_SERVICE_STOPPED : ErrorCode = ErrorCode::from_constant(834); // ERROR_RASMAN_SERVICE_STOPPED
+pub const INVALID_SERVER_CERT : ErrorCode = ErrorCode::from_constant(835); // ERROR_INVALID_SERVER_CERT
+pub const NOT_NAP_CAPABLE : ErrorCode = ErrorCode::from_constant(836); // ERROR_NOT_NAP_CAPABLE
+pub const INVALID_TUNNELID : ErrorCode = ErrorCode::from_constant(837); // ERROR_INVALID_TUNNELID
+pub const UPDATECONNECTION_REQUEST_IN_PROCESS : ErrorCode = ErrorCode::from_constant(838); // ERROR_UPDATECONNECTION_REQUEST_IN_PROCESS
+pub const PROTOCOL_ENGINE_DISABLED : ErrorCode = ErrorCode::from_constant(839); // ERROR_PROTOCOL_ENGINE_DISABLED
+pub const INTERNAL_ADDRESS_FAILURE : ErrorCode = ErrorCode::from_constant(840); // ERROR_INTERNAL_ADDRESS_FAILURE
+pub const FAILED_CP_REQUIRED : ErrorCode = ErrorCode::from_constant(841); // ERROR_FAILED_CP_REQUIRED
+pub const TS_UNACCEPTABLE : ErrorCode = ErrorCode::from_constant(842); // ERROR_TS_UNACCEPTABLE
+pub const MOBIKE_DISABLED : ErrorCode = ErrorCode::from_constant(843); // ERROR_MOBIKE_DISABLED
+pub const CANNOT_INITIATE_MOBIKE_UPDATE : ErrorCode = ErrorCode::from_constant(844); // ERROR_CANNOT_INITIATE_MOBIKE_UPDATE
+pub const PEAP_SERVER_REJECTED_CLIENT_TLV : ErrorCode = ErrorCode::from_constant(845); // ERROR_PEAP_SERVER_REJECTED_CLIENT_TLV
+pub const INVALID_PREFERENCES : ErrorCode = ErrorCode::from_constant(846); // ERROR_INVALID_PREFERENCES
+pub const EAPTLS_SCARD_CACHE_CREDENTIALS_INVALID : ErrorCode = ErrorCode::from_constant(847); // ERROR_EAPTLS_SCARD_CACHE_CREDENTIALS_INVALID
+pub const SSTP_COOKIE_SET_FAILURE : ErrorCode = ErrorCode::from_constant(848); // ERROR_SSTP_COOKIE_SET_FAILURE
+pub const INVALID_PEAP_COOKIE_ATTRIBUTES : ErrorCode = ErrorCode::from_constant(849); // ERROR_INVALID_PEAP_COOKIE_ATTRIBUTES
+pub const EAP_METHOD_NOT_INSTALLED : ErrorCode = ErrorCode::from_constant(850); // ERROR_EAP_METHOD_NOT_INSTALLED
+pub const EAP_METHOD_DOES_NOT_SUPPORT_SSO : ErrorCode = ErrorCode::from_constant(851); // ERROR_EAP_METHOD_DOES_NOT_SUPPORT_SSO
+pub const EAP_METHOD_OPERATION_NOT_SUPPORTED : ErrorCode = ErrorCode::from_constant(852); // ERROR_EAP_METHOD_OPERATION_NOT_SUPPORTED
+pub const EAP_USER_CERT_INVALID : ErrorCode = ErrorCode::from_constant(853); // ERROR_EAP_USER_CERT_INVALID
+pub const EAP_USER_CERT_EXPIRED : ErrorCode = ErrorCode::from_constant(854); // ERROR_EAP_USER_CERT_EXPIRED
+pub const EAP_USER_CERT_REVOKED : ErrorCode = ErrorCode::from_constant(855); // ERROR_EAP_USER_CERT_REVOKED
+pub const EAP_USER_CERT_OTHER_ERROR : ErrorCode = ErrorCode::from_constant(856); // ERROR_EAP_USER_CERT_OTHER_ERROR
+pub const EAP_SERVER_CERT_INVALID : ErrorCode = ErrorCode::from_constant(857); // ERROR_EAP_SERVER_CERT_INVALID
+pub const EAP_SERVER_CERT_EXPIRED : ErrorCode = ErrorCode::from_constant(858); // ERROR_EAP_SERVER_CERT_EXPIRED
+pub const EAP_SERVER_CERT_REVOKED : ErrorCode = ErrorCode::from_constant(859); // ERROR_EAP_SERVER_CERT_REVOKED
+pub const EAP_SERVER_CERT_OTHER_ERROR : ErrorCode = ErrorCode::from_constant(860); // ERROR_EAP_SERVER_CERT_OTHER_ERROR
+pub const EAP_USER_ROOT_CERT_NOT_FOUND : ErrorCode = ErrorCode::from_constant(861); // ERROR_EAP_USER_ROOT_CERT_NOT_FOUND
+pub const EAP_USER_ROOT_CERT_INVALID : ErrorCode = ErrorCode::from_constant(862); // ERROR_EAP_USER_ROOT_CERT_INVALID
+pub const EAP_USER_ROOT_CERT_EXPIRED : ErrorCode = ErrorCode::from_constant(863); // ERROR_EAP_USER_ROOT_CERT_EXPIRED
+pub const EAP_SERVER_ROOT_CERT_NOT_FOUND : ErrorCode = ErrorCode::from_constant(864); // ERROR_EAP_SERVER_ROOT_CERT_NOT_FOUND
+pub const EAP_SERVER_ROOT_CERT_INVALID : ErrorCode = ErrorCode::from_constant(865); // ERROR_EAP_SERVER_ROOT_CERT_INVALID
+pub const EAP_SERVER_ROOT_CERT_NAME_REQUIRED : ErrorCode = ErrorCode::from_constant(866); // ERROR_EAP_SERVER_ROOT_CERT_NAME_REQUIRED
+pub const PEAP_IDENTITY_MISMATCH : ErrorCode = ErrorCode::from_constant(867); // ERROR_PEAP_IDENTITY_MISMATCH
+pub const DNSNAME_NOT_RESOLVABLE : ErrorCode = ErrorCode::from_constant(868); // ERROR_DNSNAME_NOT_RESOLVABLE
+pub const EAPTLS_PASSWD_INVALID : ErrorCode = ErrorCode::from_constant(869); // ERROR_EAPTLS_PASSWD_INVALID
+pub const IKEV2_PSK_INTERFACE_ALREADY_EXISTS : ErrorCode = ErrorCode::from_constant(870); // ERROR_IKEV2_PSK_INTERFACE_ALREADY_EXISTS
+pub const INVALID_DESTINATION_IP : ErrorCode = ErrorCode::from_constant(871); // ERROR_INVALID_DESTINATION_IP
+pub const INVALID_INTERFACE_CONFIG : ErrorCode = ErrorCode::from_constant(872); // ERROR_INVALID_INTERFACE_CONFIG
+pub const VPN_PLUGIN_GENERIC : ErrorCode = ErrorCode::from_constant(873); // ERROR_VPN_PLUGIN_GENERIC
+pub const SSO_CERT_MISSING : ErrorCode = ErrorCode::from_constant(874); // ERROR_SSO_CERT_MISSING
+pub const DEVICE_COMPLIANCE : ErrorCode = ErrorCode::from_constant(875); // ERROR_DEVICE_COMPLIANCE
 
 /// Setupapi-specific error codes
 /// Inf parse outcomes
@@ -8476,255 +8476,255 @@ pub const UNRECOVERABLE_STACK_OVERFLOW : HResultError = HResultError::from_const
 pub const NOT_INSTALLED : HResultError = HResultError::from_constant(0xE0001000); // ERROR_NOT_INSTALLED
 
 /// Incompatible TC version number
-pub const INCOMPATIBLE_TCI_VERSION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7501); // ERROR_INCOMPATIBLE_TCI_VERSION
+pub const INCOMPATIBLE_TCI_VERSION : ErrorCode = ErrorCode::from_constant(7501); // ERROR_INCOMPATIBLE_TCI_VERSION
 
 /// Unspecified or bad intserv service type
-pub const INVALID_SERVICE_TYPE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7502); // ERROR_INVALID_SERVICE_TYPE
+pub const INVALID_SERVICE_TYPE : ErrorCode = ErrorCode::from_constant(7502); // ERROR_INVALID_SERVICE_TYPE
 
 /// Unspecified or bad TokenRate
-pub const INVALID_TOKEN_RATE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7503); // ERROR_INVALID_TOKEN_RATE
+pub const INVALID_TOKEN_RATE : ErrorCode = ErrorCode::from_constant(7503); // ERROR_INVALID_TOKEN_RATE
 
 /// Bad PeakBandwidth
-pub const INVALID_PEAK_RATE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7504); // ERROR_INVALID_PEAK_RATE
+pub const INVALID_PEAK_RATE : ErrorCode = ErrorCode::from_constant(7504); // ERROR_INVALID_PEAK_RATE
 
 /// Invalid ShapeDiscardMode
-pub const INVALID_SD_MODE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7505); // ERROR_INVALID_SD_MODE
+pub const INVALID_SD_MODE : ErrorCode = ErrorCode::from_constant(7505); // ERROR_INVALID_SD_MODE
 
 /// Invalid priority value
-pub const INVALID_QOS_PRIORITY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7506); // ERROR_INVALID_QOS_PRIORITY
+pub const INVALID_QOS_PRIORITY : ErrorCode = ErrorCode::from_constant(7506); // ERROR_INVALID_QOS_PRIORITY
 
 /// Invalid traffic class value
-pub const INVALID_TRAFFIC_CLASS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7507); // ERROR_INVALID_TRAFFIC_CLASS
+pub const INVALID_TRAFFIC_CLASS : ErrorCode = ErrorCode::from_constant(7507); // ERROR_INVALID_TRAFFIC_CLASS
 
 /// Invalid address type
-pub const INVALID_ADDRESS_TYPE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7508); // ERROR_INVALID_ADDRESS_TYPE
+pub const INVALID_ADDRESS_TYPE : ErrorCode = ErrorCode::from_constant(7508); // ERROR_INVALID_ADDRESS_TYPE
 
 /// Attempt to install identical filter on same flow
-pub const DUPLICATE_FILTER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7509); // ERROR_DUPLICATE_FILTER
+pub const DUPLICATE_FILTER : ErrorCode = ErrorCode::from_constant(7509); // ERROR_DUPLICATE_FILTER
 
 /// Attempt to install conflicting filter
-pub const FILTER_CONFLICT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7510); // ERROR_FILTER_CONFLICT
+pub const FILTER_CONFLICT : ErrorCode = ErrorCode::from_constant(7510); // ERROR_FILTER_CONFLICT
 
 /// This address type is not supported
-pub const ADDRESS_TYPE_NOT_SUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7511); // ERROR_ADDRESS_TYPE_NOT_SUPPORTED
+pub const ADDRESS_TYPE_NOT_SUPPORTED : ErrorCode = ErrorCode::from_constant(7511); // ERROR_ADDRESS_TYPE_NOT_SUPPORTED
 
 /// This object can not be deleted since its suporting opened objects
-pub const TC_SUPPORTED_OBJECTS_EXIST : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7512); // ERROR_TC_SUPPORTED_OBJECTS_EXIST
+pub const TC_SUPPORTED_OBJECTS_EXIST : ErrorCode = ErrorCode::from_constant(7512); // ERROR_TC_SUPPORTED_OBJECTS_EXIST
 
 /// Incompatable QoS parameters
-pub const INCOMPATABLE_QOS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7513); // ERROR_INCOMPATABLE_QOS
+pub const INCOMPATABLE_QOS : ErrorCode = ErrorCode::from_constant(7513); // ERROR_INCOMPATABLE_QOS
 
 /// Traffic Control is not supported in the system
-pub const TC_NOT_SUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7514); // ERROR_TC_NOT_SUPPORTED
+pub const TC_NOT_SUPPORTED : ErrorCode = ErrorCode::from_constant(7514); // ERROR_TC_NOT_SUPPORTED
 
 /// TcObjectsLength is inconsistent with CfInfoSize
-pub const TC_OBJECT_LENGTH_INVALID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7515); // ERROR_TC_OBJECT_LENGTH_INVALID
+pub const TC_OBJECT_LENGTH_INVALID : ErrorCode = ErrorCode::from_constant(7515); // ERROR_TC_OBJECT_LENGTH_INVALID
 
 /// Adding an Intserv flow in Diffserv mode or vice versa
-pub const INVALID_FLOW_MODE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7516); // ERROR_INVALID_FLOW_MODE
+pub const INVALID_FLOW_MODE : ErrorCode = ErrorCode::from_constant(7516); // ERROR_INVALID_FLOW_MODE
 
 /// Invalid Diffserv flow
-pub const INVALID_DIFFSERV_FLOW : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7517); // ERROR_INVALID_DIFFSERV_FLOW
+pub const INVALID_DIFFSERV_FLOW : ErrorCode = ErrorCode::from_constant(7517); // ERROR_INVALID_DIFFSERV_FLOW
 
-#[doc(hidden)] pub const DS_MAPPING_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7518); // ERROR_DS_MAPPING_EXISTS
+#[doc(hidden)] pub const DS_MAPPING_EXISTS : ErrorCode = ErrorCode::from_constant(7518); // ERROR_DS_MAPPING_EXISTS
 
 /// Invalid Shape Rate specified
-pub const INVALID_SHAPE_RATE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7519); // ERROR_INVALID_SHAPE_RATE
+pub const INVALID_SHAPE_RATE : ErrorCode = ErrorCode::from_constant(7519); // ERROR_INVALID_SHAPE_RATE
 
 /// Invalid DCLASS
-pub const INVALID_DS_CLASS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7520); // ERROR_INVALID_DS_CLASS
+pub const INVALID_DS_CLASS : ErrorCode = ErrorCode::from_constant(7520); // ERROR_INVALID_DS_CLASS
 
 /// Too many GPC clients
-pub const TOO_MANY_CLIENTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7521); // ERROR_TOO_MANY_CLIENTS
+pub const TOO_MANY_CLIENTS : ErrorCode = ErrorCode::from_constant(7521); // ERROR_TOO_MANY_CLIENTS
 
-#[doc(hidden)] pub const WINHTTP_OUT_OF_HANDLES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12001); // ERROR_WINHTTP_OUT_OF_HANDLES
-#[doc(hidden)] pub const WINHTTP_TIMEOUT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12002); // ERROR_WINHTTP_TIMEOUT
-#[doc(hidden)] pub const WINHTTP_INTERNAL_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12004); // ERROR_WINHTTP_INTERNAL_ERROR
-#[doc(hidden)] pub const WINHTTP_INVALID_URL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12005); // ERROR_WINHTTP_INVALID_URL
-#[doc(hidden)] pub const WINHTTP_UNRECOGNIZED_SCHEME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12006); // ERROR_WINHTTP_UNRECOGNIZED_SCHEME
-#[doc(hidden)] pub const WINHTTP_NAME_NOT_RESOLVED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12007); // ERROR_WINHTTP_NAME_NOT_RESOLVED
-#[doc(hidden)] pub const WINHTTP_INVALID_OPTION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12009); // ERROR_WINHTTP_INVALID_OPTION
-#[doc(hidden)] pub const WINHTTP_OPTION_NOT_SETTABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12011); // ERROR_WINHTTP_OPTION_NOT_SETTABLE
-#[doc(hidden)] pub const WINHTTP_SHUTDOWN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12012); // ERROR_WINHTTP_SHUTDOWN
-#[doc(hidden)] pub const WINHTTP_LOGIN_FAILURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12015); // ERROR_WINHTTP_LOGIN_FAILURE
-#[doc(hidden)] pub const WINHTTP_OPERATION_CANCELLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12017); // ERROR_WINHTTP_OPERATION_CANCELLED
-#[doc(hidden)] pub const WINHTTP_INCORRECT_HANDLE_TYPE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12018); // ERROR_WINHTTP_INCORRECT_HANDLE_TYPE
-#[doc(hidden)] pub const WINHTTP_INCORRECT_HANDLE_STATE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12019); // ERROR_WINHTTP_INCORRECT_HANDLE_STATE
-#[doc(hidden)] pub const WINHTTP_CANNOT_CONNECT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12029); // ERROR_WINHTTP_CANNOT_CONNECT
-#[doc(hidden)] pub const WINHTTP_CONNECTION_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12030); // ERROR_WINHTTP_CONNECTION_ERROR
-#[doc(hidden)] pub const WINHTTP_RESEND_REQUEST : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12032); // ERROR_WINHTTP_RESEND_REQUEST
-#[doc(hidden)] pub const WINHTTP_CLIENT_AUTH_CERT_NEEDED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12044); // ERROR_WINHTTP_CLIENT_AUTH_CERT_NEEDED
-#[doc(hidden)] pub const WINHTTP_CANNOT_CALL_BEFORE_OPEN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12100); // ERROR_WINHTTP_CANNOT_CALL_BEFORE_OPEN
-#[doc(hidden)] pub const WINHTTP_CANNOT_CALL_BEFORE_SEND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12101); // ERROR_WINHTTP_CANNOT_CALL_BEFORE_SEND
-#[doc(hidden)] pub const WINHTTP_CANNOT_CALL_AFTER_SEND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12102); // ERROR_WINHTTP_CANNOT_CALL_AFTER_SEND
-#[doc(hidden)] pub const WINHTTP_CANNOT_CALL_AFTER_OPEN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12103); // ERROR_WINHTTP_CANNOT_CALL_AFTER_OPEN
-#[doc(hidden)] pub const WINHTTP_HEADER_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12150); // ERROR_WINHTTP_HEADER_NOT_FOUND
-#[doc(hidden)] pub const WINHTTP_INVALID_SERVER_RESPONSE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12152); // ERROR_WINHTTP_INVALID_SERVER_RESPONSE
-#[doc(hidden)] pub const WINHTTP_INVALID_HEADER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12153); // ERROR_WINHTTP_INVALID_HEADER
-#[doc(hidden)] pub const WINHTTP_INVALID_QUERY_REQUEST : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12154); // ERROR_WINHTTP_INVALID_QUERY_REQUEST
-#[doc(hidden)] pub const WINHTTP_HEADER_ALREADY_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12155); // ERROR_WINHTTP_HEADER_ALREADY_EXISTS
-#[doc(hidden)] pub const WINHTTP_REDIRECT_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12156); // ERROR_WINHTTP_REDIRECT_FAILED
-#[doc(hidden)] pub const WINHTTP_AUTO_PROXY_SERVICE_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12178); // ERROR_WINHTTP_AUTO_PROXY_SERVICE_ERROR
-#[doc(hidden)] pub const WINHTTP_BAD_AUTO_PROXY_SCRIPT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12166); // ERROR_WINHTTP_BAD_AUTO_PROXY_SCRIPT
-#[doc(hidden)] pub const WINHTTP_UNABLE_TO_DOWNLOAD_SCRIPT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12167); // ERROR_WINHTTP_UNABLE_TO_DOWNLOAD_SCRIPT
-#[doc(hidden)] pub const WINHTTP_UNHANDLED_SCRIPT_TYPE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12176); // ERROR_WINHTTP_UNHANDLED_SCRIPT_TYPE
-#[doc(hidden)] pub const WINHTTP_SCRIPT_EXECUTION_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12177); // ERROR_WINHTTP_SCRIPT_EXECUTION_ERROR
-#[doc(hidden)] pub const WINHTTP_NOT_INITIALIZED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12172); // ERROR_WINHTTP_NOT_INITIALIZED
-#[doc(hidden)] pub const WINHTTP_SECURE_FAILURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12175); // ERROR_WINHTTP_SECURE_FAILURE
-#[doc(hidden)] pub const WINHTTP_SECURE_CERT_DATE_INVALID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12037); // ERROR_WINHTTP_SECURE_CERT_DATE_INVALID
-#[doc(hidden)] pub const WINHTTP_SECURE_CERT_CN_INVALID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12038); // ERROR_WINHTTP_SECURE_CERT_CN_INVALID
-#[doc(hidden)] pub const WINHTTP_SECURE_INVALID_CA : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12045); // ERROR_WINHTTP_SECURE_INVALID_CA
-#[doc(hidden)] pub const WINHTTP_SECURE_CERT_REV_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12057); // ERROR_WINHTTP_SECURE_CERT_REV_FAILED
-#[doc(hidden)] pub const WINHTTP_SECURE_CHANNEL_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12157); // ERROR_WINHTTP_SECURE_CHANNEL_ERROR
-#[doc(hidden)] pub const WINHTTP_SECURE_INVALID_CERT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12169); // ERROR_WINHTTP_SECURE_INVALID_CERT
-#[doc(hidden)] pub const WINHTTP_SECURE_CERT_REVOKED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12170); // ERROR_WINHTTP_SECURE_CERT_REVOKED
-#[doc(hidden)] pub const WINHTTP_SECURE_CERT_WRONG_USAGE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12179); // ERROR_WINHTTP_SECURE_CERT_WRONG_USAGE
-#[doc(hidden)] pub const WINHTTP_AUTODETECTION_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12180); // ERROR_WINHTTP_AUTODETECTION_FAILED
-#[doc(hidden)] pub const WINHTTP_HEADER_COUNT_EXCEEDED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12181); // ERROR_WINHTTP_HEADER_COUNT_EXCEEDED
-#[doc(hidden)] pub const WINHTTP_HEADER_SIZE_OVERFLOW : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12182); // ERROR_WINHTTP_HEADER_SIZE_OVERFLOW
-#[doc(hidden)] pub const WINHTTP_CHUNKED_ENCODING_HEADER_SIZE_OVERFLOW : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12183); // ERROR_WINHTTP_CHUNKED_ENCODING_HEADER_SIZE_OVERFLOW
-#[doc(hidden)] pub const WINHTTP_RESPONSE_DRAIN_OVERFLOW : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12184); // ERROR_WINHTTP_RESPONSE_DRAIN_OVERFLOW
-#[doc(hidden)] pub const WINHTTP_CLIENT_CERT_NO_PRIVATE_KEY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12185); // ERROR_WINHTTP_CLIENT_CERT_NO_PRIVATE_KEY
-#[doc(hidden)] pub const WINHTTP_CLIENT_CERT_NO_ACCESS_PRIVATE_KEY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12186); // ERROR_WINHTTP_CLIENT_CERT_NO_ACCESS_PRIVATE_KEY
-#[doc(hidden)] pub const WINHTTP_CLIENT_AUTH_CERT_NEEDED_PROXY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12187); // ERROR_WINHTTP_CLIENT_AUTH_CERT_NEEDED_PROXY
-#[doc(hidden)] pub const WINHTTP_SECURE_FAILURE_PROXY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12188); // ERROR_WINHTTP_SECURE_FAILURE_PROXY
-#[doc(hidden)] pub const WINHTTP_RESERVED_189 : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12189); // ERROR_WINHTTP_RESERVED_189
-#[doc(hidden)] pub const WINHTTP_HTTP_PROTOCOL_MISMATCH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12190); // ERROR_WINHTTP_HTTP_PROTOCOL_MISMATCH
-#[doc(hidden)] pub const INTERNET_OUT_OF_HANDLES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12001); // ERROR_INTERNET_OUT_OF_HANDLES
-#[doc(hidden)] pub const INTERNET_TIMEOUT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12002); // ERROR_INTERNET_TIMEOUT
-#[doc(hidden)] pub const INTERNET_EXTENDED_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12003); // ERROR_INTERNET_EXTENDED_ERROR
-#[doc(hidden)] pub const INTERNET_INTERNAL_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12004); // ERROR_INTERNET_INTERNAL_ERROR
-#[doc(hidden)] pub const INTERNET_INVALID_URL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12005); // ERROR_INTERNET_INVALID_URL
-#[doc(hidden)] pub const INTERNET_UNRECOGNIZED_SCHEME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12006); // ERROR_INTERNET_UNRECOGNIZED_SCHEME
-#[doc(hidden)] pub const INTERNET_NAME_NOT_RESOLVED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12007); // ERROR_INTERNET_NAME_NOT_RESOLVED
-#[doc(hidden)] pub const INTERNET_PROTOCOL_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12008); // ERROR_INTERNET_PROTOCOL_NOT_FOUND
-#[doc(hidden)] pub const INTERNET_INVALID_OPTION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12009); // ERROR_INTERNET_INVALID_OPTION
-#[doc(hidden)] pub const INTERNET_BAD_OPTION_LENGTH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12010); // ERROR_INTERNET_BAD_OPTION_LENGTH
-#[doc(hidden)] pub const INTERNET_OPTION_NOT_SETTABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12011); // ERROR_INTERNET_OPTION_NOT_SETTABLE
-#[doc(hidden)] pub const INTERNET_SHUTDOWN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12012); // ERROR_INTERNET_SHUTDOWN
-#[doc(hidden)] pub const INTERNET_INCORRECT_USER_NAME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12013); // ERROR_INTERNET_INCORRECT_USER_NAME
-#[doc(hidden)] pub const INTERNET_INCORRECT_PASSWORD : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12014); // ERROR_INTERNET_INCORRECT_PASSWORD
-#[doc(hidden)] pub const INTERNET_LOGIN_FAILURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12015); // ERROR_INTERNET_LOGIN_FAILURE
-#[doc(hidden)] pub const INTERNET_INVALID_OPERATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12016); // ERROR_INTERNET_INVALID_OPERATION
-#[doc(hidden)] pub const INTERNET_OPERATION_CANCELLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12017); // ERROR_INTERNET_OPERATION_CANCELLED
-#[doc(hidden)] pub const INTERNET_INCORRECT_HANDLE_TYPE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12018); // ERROR_INTERNET_INCORRECT_HANDLE_TYPE
-#[doc(hidden)] pub const INTERNET_INCORRECT_HANDLE_STATE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12019); // ERROR_INTERNET_INCORRECT_HANDLE_STATE
-#[doc(hidden)] pub const INTERNET_NOT_PROXY_REQUEST : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12020); // ERROR_INTERNET_NOT_PROXY_REQUEST
-#[doc(hidden)] pub const INTERNET_REGISTRY_VALUE_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12021); // ERROR_INTERNET_REGISTRY_VALUE_NOT_FOUND
-#[doc(hidden)] pub const INTERNET_BAD_REGISTRY_PARAMETER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12022); // ERROR_INTERNET_BAD_REGISTRY_PARAMETER
-#[doc(hidden)] pub const INTERNET_NO_DIRECT_ACCESS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12023); // ERROR_INTERNET_NO_DIRECT_ACCESS
-#[doc(hidden)] pub const INTERNET_NO_CONTEXT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12024); // ERROR_INTERNET_NO_CONTEXT
-#[doc(hidden)] pub const INTERNET_NO_CALLBACK : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12025); // ERROR_INTERNET_NO_CALLBACK
-#[doc(hidden)] pub const INTERNET_REQUEST_PENDING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12026); // ERROR_INTERNET_REQUEST_PENDING
-#[doc(hidden)] pub const INTERNET_INCORRECT_FORMAT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12027); // ERROR_INTERNET_INCORRECT_FORMAT
-#[doc(hidden)] pub const INTERNET_ITEM_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12028); // ERROR_INTERNET_ITEM_NOT_FOUND
-#[doc(hidden)] pub const INTERNET_CANNOT_CONNECT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12029); // ERROR_INTERNET_CANNOT_CONNECT
-#[doc(hidden)] pub const INTERNET_CONNECTION_ABORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12030); // ERROR_INTERNET_CONNECTION_ABORTED
-#[doc(hidden)] pub const INTERNET_CONNECTION_RESET : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12031); // ERROR_INTERNET_CONNECTION_RESET
-#[doc(hidden)] pub const INTERNET_FORCE_RETRY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12032); // ERROR_INTERNET_FORCE_RETRY
-#[doc(hidden)] pub const INTERNET_INVALID_PROXY_REQUEST : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12033); // ERROR_INTERNET_INVALID_PROXY_REQUEST
-#[doc(hidden)] pub const INTERNET_NEED_UI : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12034); // ERROR_INTERNET_NEED_UI
-#[doc(hidden)] pub const INTERNET_HANDLE_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12036); // ERROR_INTERNET_HANDLE_EXISTS
-#[doc(hidden)] pub const INTERNET_SEC_CERT_DATE_INVALID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12037); // ERROR_INTERNET_SEC_CERT_DATE_INVALID
-#[doc(hidden)] pub const INTERNET_SEC_CERT_CN_INVALID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12038); // ERROR_INTERNET_SEC_CERT_CN_INVALID
-#[doc(hidden)] pub const INTERNET_HTTP_TO_HTTPS_ON_REDIR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12039); // ERROR_INTERNET_HTTP_TO_HTTPS_ON_REDIR
-#[doc(hidden)] pub const INTERNET_HTTPS_TO_HTTP_ON_REDIR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12040); // ERROR_INTERNET_HTTPS_TO_HTTP_ON_REDIR
-#[doc(hidden)] pub const INTERNET_MIXED_SECURITY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12041); // ERROR_INTERNET_MIXED_SECURITY
-#[doc(hidden)] pub const INTERNET_CHG_POST_IS_NON_SECURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12042); // ERROR_INTERNET_CHG_POST_IS_NON_SECURE
-#[doc(hidden)] pub const INTERNET_POST_IS_NON_SECURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12043); // ERROR_INTERNET_POST_IS_NON_SECURE
-#[doc(hidden)] pub const INTERNET_CLIENT_AUTH_CERT_NEEDED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12044); // ERROR_INTERNET_CLIENT_AUTH_CERT_NEEDED
-#[doc(hidden)] pub const INTERNET_INVALID_CA : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12045); // ERROR_INTERNET_INVALID_CA
-#[doc(hidden)] pub const INTERNET_CLIENT_AUTH_NOT_SETUP : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12046); // ERROR_INTERNET_CLIENT_AUTH_NOT_SETUP
-#[doc(hidden)] pub const INTERNET_ASYNC_THREAD_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12047); // ERROR_INTERNET_ASYNC_THREAD_FAILED
-#[doc(hidden)] pub const INTERNET_REDIRECT_SCHEME_CHANGE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12048); // ERROR_INTERNET_REDIRECT_SCHEME_CHANGE
-#[doc(hidden)] pub const INTERNET_DIALOG_PENDING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12049); // ERROR_INTERNET_DIALOG_PENDING
-#[doc(hidden)] pub const INTERNET_RETRY_DIALOG : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12050); // ERROR_INTERNET_RETRY_DIALOG
-#[doc(hidden)] pub const INTERNET_HTTPS_HTTP_SUBMIT_REDIR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12052); // ERROR_INTERNET_HTTPS_HTTP_SUBMIT_REDIR
-#[doc(hidden)] pub const INTERNET_INSERT_CDROM : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12053); // ERROR_INTERNET_INSERT_CDROM
-#[doc(hidden)] pub const INTERNET_FORTEZZA_LOGIN_NEEDED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12054); // ERROR_INTERNET_FORTEZZA_LOGIN_NEEDED
-#[doc(hidden)] pub const INTERNET_SEC_CERT_ERRORS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12055); // ERROR_INTERNET_SEC_CERT_ERRORS
-#[doc(hidden)] pub const INTERNET_SEC_CERT_NO_REV : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12056); // ERROR_INTERNET_SEC_CERT_NO_REV
-#[doc(hidden)] pub const INTERNET_SEC_CERT_REV_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12057); // ERROR_INTERNET_SEC_CERT_REV_FAILED
-#[doc(hidden)] pub const HTTP_HSTS_REDIRECT_REQUIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12060); // ERROR_HTTP_HSTS_REDIRECT_REQUIRED
-#[doc(hidden)] pub const INTERNET_SEC_CERT_WEAK_SIGNATURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12062); // ERROR_INTERNET_SEC_CERT_WEAK_SIGNATURE
-#[doc(hidden)] pub const FTP_TRANSFER_IN_PROGRESS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12110); // ERROR_FTP_TRANSFER_IN_PROGRESS
-#[doc(hidden)] pub const FTP_DROPPED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12111); // ERROR_FTP_DROPPED
-#[doc(hidden)] pub const FTP_NO_PASSIVE_MODE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12112); // ERROR_FTP_NO_PASSIVE_MODE
-#[doc(hidden)] pub const GOPHER_PROTOCOL_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12130); // ERROR_GOPHER_PROTOCOL_ERROR
-#[doc(hidden)] pub const GOPHER_NOT_FILE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12131); // ERROR_GOPHER_NOT_FILE
-#[doc(hidden)] pub const GOPHER_DATA_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12132); // ERROR_GOPHER_DATA_ERROR
-#[doc(hidden)] pub const GOPHER_END_OF_DATA : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12133); // ERROR_GOPHER_END_OF_DATA
-#[doc(hidden)] pub const GOPHER_INVALID_LOCATOR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12134); // ERROR_GOPHER_INVALID_LOCATOR
-#[doc(hidden)] pub const GOPHER_INCORRECT_LOCATOR_TYPE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12135); // ERROR_GOPHER_INCORRECT_LOCATOR_TYPE
-#[doc(hidden)] pub const GOPHER_NOT_GOPHER_PLUS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12136); // ERROR_GOPHER_NOT_GOPHER_PLUS
-#[doc(hidden)] pub const GOPHER_ATTRIBUTE_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12137); // ERROR_GOPHER_ATTRIBUTE_NOT_FOUND
-#[doc(hidden)] pub const GOPHER_UNKNOWN_LOCATOR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12138); // ERROR_GOPHER_UNKNOWN_LOCATOR
-#[doc(hidden)] pub const HTTP_HEADER_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12150); // ERROR_HTTP_HEADER_NOT_FOUND
-#[doc(hidden)] pub const HTTP_DOWNLEVEL_SERVER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12151); // ERROR_HTTP_DOWNLEVEL_SERVER
-#[doc(hidden)] pub const HTTP_INVALID_SERVER_RESPONSE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12152); // ERROR_HTTP_INVALID_SERVER_RESPONSE
-#[doc(hidden)] pub const HTTP_INVALID_HEADER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12153); // ERROR_HTTP_INVALID_HEADER
-#[doc(hidden)] pub const HTTP_INVALID_QUERY_REQUEST : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12154); // ERROR_HTTP_INVALID_QUERY_REQUEST
-#[doc(hidden)] pub const HTTP_HEADER_ALREADY_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12155); // ERROR_HTTP_HEADER_ALREADY_EXISTS
-#[doc(hidden)] pub const HTTP_REDIRECT_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12156); // ERROR_HTTP_REDIRECT_FAILED
-#[doc(hidden)] pub const HTTP_NOT_REDIRECTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12160); // ERROR_HTTP_NOT_REDIRECTED
-#[doc(hidden)] pub const HTTP_COOKIE_NEEDS_CONFIRMATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12161); // ERROR_HTTP_COOKIE_NEEDS_CONFIRMATION
-#[doc(hidden)] pub const HTTP_COOKIE_DECLINED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12162); // ERROR_HTTP_COOKIE_DECLINED
-#[doc(hidden)] pub const HTTP_REDIRECT_NEEDS_CONFIRMATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12168); // ERROR_HTTP_REDIRECT_NEEDS_CONFIRMATION
-#[doc(hidden)] pub const INTERNET_SECURITY_CHANNEL_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12157); // ERROR_INTERNET_SECURITY_CHANNEL_ERROR
-#[doc(hidden)] pub const INTERNET_UNABLE_TO_CACHE_FILE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12158); // ERROR_INTERNET_UNABLE_TO_CACHE_FILE
-#[doc(hidden)] pub const INTERNET_TCPIP_NOT_INSTALLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12159); // ERROR_INTERNET_TCPIP_NOT_INSTALLED
-#[doc(hidden)] pub const INTERNET_DISCONNECTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12163); // ERROR_INTERNET_DISCONNECTED
-#[doc(hidden)] pub const INTERNET_SERVER_UNREACHABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12164); // ERROR_INTERNET_SERVER_UNREACHABLE
-#[doc(hidden)] pub const INTERNET_PROXY_SERVER_UNREACHABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12165); // ERROR_INTERNET_PROXY_SERVER_UNREACHABLE
-#[doc(hidden)] pub const INTERNET_BAD_AUTO_PROXY_SCRIPT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12166); // ERROR_INTERNET_BAD_AUTO_PROXY_SCRIPT
-#[doc(hidden)] pub const INTERNET_UNABLE_TO_DOWNLOAD_SCRIPT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12167); // ERROR_INTERNET_UNABLE_TO_DOWNLOAD_SCRIPT
-#[doc(hidden)] pub const INTERNET_SEC_INVALID_CERT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12169); // ERROR_INTERNET_SEC_INVALID_CERT
-#[doc(hidden)] pub const INTERNET_SEC_CERT_REVOKED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12170); // ERROR_INTERNET_SEC_CERT_REVOKED
-#[doc(hidden)] pub const INTERNET_FAILED_DUETOSECURITYCHECK : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12171); // ERROR_INTERNET_FAILED_DUETOSECURITYCHECK
-#[doc(hidden)] pub const INTERNET_NOT_INITIALIZED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12172); // ERROR_INTERNET_NOT_INITIALIZED
-#[doc(hidden)] pub const INTERNET_NEED_MSN_SSPI_PKG : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12173); // ERROR_INTERNET_NEED_MSN_SSPI_PKG
-#[doc(hidden)] pub const INTERNET_LOGIN_FAILURE_DISPLAY_ENTITY_BODY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12174); // ERROR_INTERNET_LOGIN_FAILURE_DISPLAY_ENTITY_BODY
-#[doc(hidden)] pub const INTERNET_DECODING_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12175); // ERROR_INTERNET_DECODING_FAILED
-#[doc(hidden)] pub const INTERNET_CLIENT_AUTH_CERT_NEEDED_PROXY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12187); // ERROR_INTERNET_CLIENT_AUTH_CERT_NEEDED_PROXY
-#[doc(hidden)] pub const INTERNET_SECURE_FAILURE_PROXY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12188); // ERROR_INTERNET_SECURE_FAILURE_PROXY
-#[doc(hidden)] pub const INTERNET_HTTP_PROTOCOL_MISMATCH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12190); // ERROR_INTERNET_HTTP_PROTOCOL_MISMATCH
-#[doc(hidden)] pub const INTERNET_NO_NEW_CONTAINERS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12051); // ERROR_INTERNET_NO_NEW_CONTAINERS
-#[doc(hidden)] pub const INTERNET_SOURCE_PORT_IN_USE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12058); // ERROR_INTERNET_SOURCE_PORT_IN_USE
-#[doc(hidden)] pub const INTERNET_INSECURE_FALLBACK_REQUIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12059); // ERROR_INTERNET_INSECURE_FALLBACK_REQUIRED
-#[doc(hidden)] pub const INTERNET_PROXY_ALERT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12061); // ERROR_INTERNET_PROXY_ALERT
-#[doc(hidden)] pub const INTERNET_NO_CM_CONNECTION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12080); // ERROR_INTERNET_NO_CM_CONNECTION
-#[doc(hidden)] pub const HTTP_PUSH_STATUS_CODE_NOT_SUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12147); // ERROR_HTTP_PUSH_STATUS_CODE_NOT_SUPPORTED
-#[doc(hidden)] pub const HTTP_PUSH_RETRY_NOT_SUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12148); // ERROR_HTTP_PUSH_RETRY_NOT_SUPPORTED
-#[doc(hidden)] pub const HTTP_PUSH_ENABLE_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12149); // ERROR_HTTP_PUSH_ENABLE_FAILED
-#[doc(hidden)] pub const INTERNET_DISALLOW_INPRIVATE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12189); // ERROR_INTERNET_DISALLOW_INPRIVATE
-#[doc(hidden)] pub const INTERNET_OFFLINE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12163); // ERROR_INTERNET_OFFLINE
-#[doc(hidden)] pub const INTERNET_INTERNAL_SOCKET_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12901); // ERROR_INTERNET_INTERNAL_SOCKET_ERROR
-#[doc(hidden)] pub const INTERNET_CONNECTION_AVAILABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12902); // ERROR_INTERNET_CONNECTION_AVAILABLE
-#[doc(hidden)] pub const INTERNET_NO_KNOWN_SERVERS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12903); // ERROR_INTERNET_NO_KNOWN_SERVERS
-#[doc(hidden)] pub const INTERNET_PING_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12904); // ERROR_INTERNET_PING_FAILED
-#[doc(hidden)] pub const INTERNET_NO_PING_SUPPORT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12905); // ERROR_INTERNET_NO_PING_SUPPORT
-#[doc(hidden)] pub const INTERNET_CACHE_SUCCESS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12906); // ERROR_INTERNET_CACHE_SUCCESS
-#[doc(hidden)] pub const HTTP_COOKIE_NEEDS_CONFIRMATION_EX : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12907); // ERROR_HTTP_COOKIE_NEEDS_CONFIRMATION_EX
-#[doc(hidden)] pub const BIDI_STATUS_OK : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0); // ERROR_BIDI_STATUS_OK
-#[doc(hidden)] pub const BIDI_NOT_SUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(50); // ERROR_BIDI_NOT_SUPPORTED
-#[doc(hidden)] pub const BIDI_STATUS_WARNING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13001); // ERROR_BIDI_STATUS_WARNING
-#[doc(hidden)] pub const BIDI_SCHEMA_READ_ONLY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13002); // ERROR_BIDI_SCHEMA_READ_ONLY
-#[doc(hidden)] pub const BIDI_SERVER_OFFLINE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13003); // ERROR_BIDI_SERVER_OFFLINE
-#[doc(hidden)] pub const BIDI_DEVICE_OFFLINE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13004); // ERROR_BIDI_DEVICE_OFFLINE
-#[doc(hidden)] pub const BIDI_SCHEMA_NOT_SUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13005); // ERROR_BIDI_SCHEMA_NOT_SUPPORTED
-#[doc(hidden)] pub const BIDI_SET_DIFFERENT_TYPE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13006); // ERROR_BIDI_SET_DIFFERENT_TYPE
-#[doc(hidden)] pub const BIDI_SET_MULTIPLE_SCHEMAPATH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13007); // ERROR_BIDI_SET_MULTIPLE_SCHEMAPATH
-#[doc(hidden)] pub const BIDI_SET_INVALID_SCHEMAPATH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13008); // ERROR_BIDI_SET_INVALID_SCHEMAPATH
-#[doc(hidden)] pub const BIDI_SET_UNKNOWN_FAILURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13009); // ERROR_BIDI_SET_UNKNOWN_FAILURE
-#[doc(hidden)] pub const BIDI_SCHEMA_WRITE_ONLY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13010); // ERROR_BIDI_SCHEMA_WRITE_ONLY
-#[doc(hidden)] pub const BIDI_GET_REQUIRES_ARGUMENT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13011); // ERROR_BIDI_GET_REQUIRES_ARGUMENT
-#[doc(hidden)] pub const BIDI_GET_ARGUMENT_NOT_SUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13012); // ERROR_BIDI_GET_ARGUMENT_NOT_SUPPORTED
-#[doc(hidden)] pub const BIDI_GET_MISSING_ARGUMENT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13013); // ERROR_BIDI_GET_MISSING_ARGUMENT
-#[doc(hidden)] pub const BIDI_DEVICE_CONFIG_UNCHANGED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13014); // ERROR_BIDI_DEVICE_CONFIG_UNCHANGED
-#[doc(hidden)] pub const BIDI_NO_LOCALIZED_RESOURCES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13015); // ERROR_BIDI_NO_LOCALIZED_RESOURCES
-#[doc(hidden)] pub const BIDI_NO_BIDI_SCHEMA_EXTENSIONS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13016); // ERROR_BIDI_NO_BIDI_SCHEMA_EXTENSIONS
-#[doc(hidden)] pub const BIDI_UNSUPPORTED_CLIENT_LANGUAGE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13017); // ERROR_BIDI_UNSUPPORTED_CLIENT_LANGUAGE
-#[doc(hidden)] pub const BIDI_UNSUPPORTED_RESOURCE_FORMAT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13018); // ERROR_BIDI_UNSUPPORTED_RESOURCE_FORMAT
+#[doc(hidden)] pub const WINHTTP_OUT_OF_HANDLES : ErrorCode = ErrorCode::from_constant(12001); // ERROR_WINHTTP_OUT_OF_HANDLES
+#[doc(hidden)] pub const WINHTTP_TIMEOUT : ErrorCode = ErrorCode::from_constant(12002); // ERROR_WINHTTP_TIMEOUT
+#[doc(hidden)] pub const WINHTTP_INTERNAL_ERROR : ErrorCode = ErrorCode::from_constant(12004); // ERROR_WINHTTP_INTERNAL_ERROR
+#[doc(hidden)] pub const WINHTTP_INVALID_URL : ErrorCode = ErrorCode::from_constant(12005); // ERROR_WINHTTP_INVALID_URL
+#[doc(hidden)] pub const WINHTTP_UNRECOGNIZED_SCHEME : ErrorCode = ErrorCode::from_constant(12006); // ERROR_WINHTTP_UNRECOGNIZED_SCHEME
+#[doc(hidden)] pub const WINHTTP_NAME_NOT_RESOLVED : ErrorCode = ErrorCode::from_constant(12007); // ERROR_WINHTTP_NAME_NOT_RESOLVED
+#[doc(hidden)] pub const WINHTTP_INVALID_OPTION : ErrorCode = ErrorCode::from_constant(12009); // ERROR_WINHTTP_INVALID_OPTION
+#[doc(hidden)] pub const WINHTTP_OPTION_NOT_SETTABLE : ErrorCode = ErrorCode::from_constant(12011); // ERROR_WINHTTP_OPTION_NOT_SETTABLE
+#[doc(hidden)] pub const WINHTTP_SHUTDOWN : ErrorCode = ErrorCode::from_constant(12012); // ERROR_WINHTTP_SHUTDOWN
+#[doc(hidden)] pub const WINHTTP_LOGIN_FAILURE : ErrorCode = ErrorCode::from_constant(12015); // ERROR_WINHTTP_LOGIN_FAILURE
+#[doc(hidden)] pub const WINHTTP_OPERATION_CANCELLED : ErrorCode = ErrorCode::from_constant(12017); // ERROR_WINHTTP_OPERATION_CANCELLED
+#[doc(hidden)] pub const WINHTTP_INCORRECT_HANDLE_TYPE : ErrorCode = ErrorCode::from_constant(12018); // ERROR_WINHTTP_INCORRECT_HANDLE_TYPE
+#[doc(hidden)] pub const WINHTTP_INCORRECT_HANDLE_STATE : ErrorCode = ErrorCode::from_constant(12019); // ERROR_WINHTTP_INCORRECT_HANDLE_STATE
+#[doc(hidden)] pub const WINHTTP_CANNOT_CONNECT : ErrorCode = ErrorCode::from_constant(12029); // ERROR_WINHTTP_CANNOT_CONNECT
+#[doc(hidden)] pub const WINHTTP_CONNECTION_ERROR : ErrorCode = ErrorCode::from_constant(12030); // ERROR_WINHTTP_CONNECTION_ERROR
+#[doc(hidden)] pub const WINHTTP_RESEND_REQUEST : ErrorCode = ErrorCode::from_constant(12032); // ERROR_WINHTTP_RESEND_REQUEST
+#[doc(hidden)] pub const WINHTTP_CLIENT_AUTH_CERT_NEEDED : ErrorCode = ErrorCode::from_constant(12044); // ERROR_WINHTTP_CLIENT_AUTH_CERT_NEEDED
+#[doc(hidden)] pub const WINHTTP_CANNOT_CALL_BEFORE_OPEN : ErrorCode = ErrorCode::from_constant(12100); // ERROR_WINHTTP_CANNOT_CALL_BEFORE_OPEN
+#[doc(hidden)] pub const WINHTTP_CANNOT_CALL_BEFORE_SEND : ErrorCode = ErrorCode::from_constant(12101); // ERROR_WINHTTP_CANNOT_CALL_BEFORE_SEND
+#[doc(hidden)] pub const WINHTTP_CANNOT_CALL_AFTER_SEND : ErrorCode = ErrorCode::from_constant(12102); // ERROR_WINHTTP_CANNOT_CALL_AFTER_SEND
+#[doc(hidden)] pub const WINHTTP_CANNOT_CALL_AFTER_OPEN : ErrorCode = ErrorCode::from_constant(12103); // ERROR_WINHTTP_CANNOT_CALL_AFTER_OPEN
+#[doc(hidden)] pub const WINHTTP_HEADER_NOT_FOUND : ErrorCode = ErrorCode::from_constant(12150); // ERROR_WINHTTP_HEADER_NOT_FOUND
+#[doc(hidden)] pub const WINHTTP_INVALID_SERVER_RESPONSE : ErrorCode = ErrorCode::from_constant(12152); // ERROR_WINHTTP_INVALID_SERVER_RESPONSE
+#[doc(hidden)] pub const WINHTTP_INVALID_HEADER : ErrorCode = ErrorCode::from_constant(12153); // ERROR_WINHTTP_INVALID_HEADER
+#[doc(hidden)] pub const WINHTTP_INVALID_QUERY_REQUEST : ErrorCode = ErrorCode::from_constant(12154); // ERROR_WINHTTP_INVALID_QUERY_REQUEST
+#[doc(hidden)] pub const WINHTTP_HEADER_ALREADY_EXISTS : ErrorCode = ErrorCode::from_constant(12155); // ERROR_WINHTTP_HEADER_ALREADY_EXISTS
+#[doc(hidden)] pub const WINHTTP_REDIRECT_FAILED : ErrorCode = ErrorCode::from_constant(12156); // ERROR_WINHTTP_REDIRECT_FAILED
+#[doc(hidden)] pub const WINHTTP_AUTO_PROXY_SERVICE_ERROR : ErrorCode = ErrorCode::from_constant(12178); // ERROR_WINHTTP_AUTO_PROXY_SERVICE_ERROR
+#[doc(hidden)] pub const WINHTTP_BAD_AUTO_PROXY_SCRIPT : ErrorCode = ErrorCode::from_constant(12166); // ERROR_WINHTTP_BAD_AUTO_PROXY_SCRIPT
+#[doc(hidden)] pub const WINHTTP_UNABLE_TO_DOWNLOAD_SCRIPT : ErrorCode = ErrorCode::from_constant(12167); // ERROR_WINHTTP_UNABLE_TO_DOWNLOAD_SCRIPT
+#[doc(hidden)] pub const WINHTTP_UNHANDLED_SCRIPT_TYPE : ErrorCode = ErrorCode::from_constant(12176); // ERROR_WINHTTP_UNHANDLED_SCRIPT_TYPE
+#[doc(hidden)] pub const WINHTTP_SCRIPT_EXECUTION_ERROR : ErrorCode = ErrorCode::from_constant(12177); // ERROR_WINHTTP_SCRIPT_EXECUTION_ERROR
+#[doc(hidden)] pub const WINHTTP_NOT_INITIALIZED : ErrorCode = ErrorCode::from_constant(12172); // ERROR_WINHTTP_NOT_INITIALIZED
+#[doc(hidden)] pub const WINHTTP_SECURE_FAILURE : ErrorCode = ErrorCode::from_constant(12175); // ERROR_WINHTTP_SECURE_FAILURE
+#[doc(hidden)] pub const WINHTTP_SECURE_CERT_DATE_INVALID : ErrorCode = ErrorCode::from_constant(12037); // ERROR_WINHTTP_SECURE_CERT_DATE_INVALID
+#[doc(hidden)] pub const WINHTTP_SECURE_CERT_CN_INVALID : ErrorCode = ErrorCode::from_constant(12038); // ERROR_WINHTTP_SECURE_CERT_CN_INVALID
+#[doc(hidden)] pub const WINHTTP_SECURE_INVALID_CA : ErrorCode = ErrorCode::from_constant(12045); // ERROR_WINHTTP_SECURE_INVALID_CA
+#[doc(hidden)] pub const WINHTTP_SECURE_CERT_REV_FAILED : ErrorCode = ErrorCode::from_constant(12057); // ERROR_WINHTTP_SECURE_CERT_REV_FAILED
+#[doc(hidden)] pub const WINHTTP_SECURE_CHANNEL_ERROR : ErrorCode = ErrorCode::from_constant(12157); // ERROR_WINHTTP_SECURE_CHANNEL_ERROR
+#[doc(hidden)] pub const WINHTTP_SECURE_INVALID_CERT : ErrorCode = ErrorCode::from_constant(12169); // ERROR_WINHTTP_SECURE_INVALID_CERT
+#[doc(hidden)] pub const WINHTTP_SECURE_CERT_REVOKED : ErrorCode = ErrorCode::from_constant(12170); // ERROR_WINHTTP_SECURE_CERT_REVOKED
+#[doc(hidden)] pub const WINHTTP_SECURE_CERT_WRONG_USAGE : ErrorCode = ErrorCode::from_constant(12179); // ERROR_WINHTTP_SECURE_CERT_WRONG_USAGE
+#[doc(hidden)] pub const WINHTTP_AUTODETECTION_FAILED : ErrorCode = ErrorCode::from_constant(12180); // ERROR_WINHTTP_AUTODETECTION_FAILED
+#[doc(hidden)] pub const WINHTTP_HEADER_COUNT_EXCEEDED : ErrorCode = ErrorCode::from_constant(12181); // ERROR_WINHTTP_HEADER_COUNT_EXCEEDED
+#[doc(hidden)] pub const WINHTTP_HEADER_SIZE_OVERFLOW : ErrorCode = ErrorCode::from_constant(12182); // ERROR_WINHTTP_HEADER_SIZE_OVERFLOW
+#[doc(hidden)] pub const WINHTTP_CHUNKED_ENCODING_HEADER_SIZE_OVERFLOW : ErrorCode = ErrorCode::from_constant(12183); // ERROR_WINHTTP_CHUNKED_ENCODING_HEADER_SIZE_OVERFLOW
+#[doc(hidden)] pub const WINHTTP_RESPONSE_DRAIN_OVERFLOW : ErrorCode = ErrorCode::from_constant(12184); // ERROR_WINHTTP_RESPONSE_DRAIN_OVERFLOW
+#[doc(hidden)] pub const WINHTTP_CLIENT_CERT_NO_PRIVATE_KEY : ErrorCode = ErrorCode::from_constant(12185); // ERROR_WINHTTP_CLIENT_CERT_NO_PRIVATE_KEY
+#[doc(hidden)] pub const WINHTTP_CLIENT_CERT_NO_ACCESS_PRIVATE_KEY : ErrorCode = ErrorCode::from_constant(12186); // ERROR_WINHTTP_CLIENT_CERT_NO_ACCESS_PRIVATE_KEY
+#[doc(hidden)] pub const WINHTTP_CLIENT_AUTH_CERT_NEEDED_PROXY : ErrorCode = ErrorCode::from_constant(12187); // ERROR_WINHTTP_CLIENT_AUTH_CERT_NEEDED_PROXY
+#[doc(hidden)] pub const WINHTTP_SECURE_FAILURE_PROXY : ErrorCode = ErrorCode::from_constant(12188); // ERROR_WINHTTP_SECURE_FAILURE_PROXY
+#[doc(hidden)] pub const WINHTTP_RESERVED_189 : ErrorCode = ErrorCode::from_constant(12189); // ERROR_WINHTTP_RESERVED_189
+#[doc(hidden)] pub const WINHTTP_HTTP_PROTOCOL_MISMATCH : ErrorCode = ErrorCode::from_constant(12190); // ERROR_WINHTTP_HTTP_PROTOCOL_MISMATCH
+#[doc(hidden)] pub const INTERNET_OUT_OF_HANDLES : ErrorCode = ErrorCode::from_constant(12001); // ERROR_INTERNET_OUT_OF_HANDLES
+#[doc(hidden)] pub const INTERNET_TIMEOUT : ErrorCode = ErrorCode::from_constant(12002); // ERROR_INTERNET_TIMEOUT
+#[doc(hidden)] pub const INTERNET_EXTENDED_ERROR : ErrorCode = ErrorCode::from_constant(12003); // ERROR_INTERNET_EXTENDED_ERROR
+#[doc(hidden)] pub const INTERNET_INTERNAL_ERROR : ErrorCode = ErrorCode::from_constant(12004); // ERROR_INTERNET_INTERNAL_ERROR
+#[doc(hidden)] pub const INTERNET_INVALID_URL : ErrorCode = ErrorCode::from_constant(12005); // ERROR_INTERNET_INVALID_URL
+#[doc(hidden)] pub const INTERNET_UNRECOGNIZED_SCHEME : ErrorCode = ErrorCode::from_constant(12006); // ERROR_INTERNET_UNRECOGNIZED_SCHEME
+#[doc(hidden)] pub const INTERNET_NAME_NOT_RESOLVED : ErrorCode = ErrorCode::from_constant(12007); // ERROR_INTERNET_NAME_NOT_RESOLVED
+#[doc(hidden)] pub const INTERNET_PROTOCOL_NOT_FOUND : ErrorCode = ErrorCode::from_constant(12008); // ERROR_INTERNET_PROTOCOL_NOT_FOUND
+#[doc(hidden)] pub const INTERNET_INVALID_OPTION : ErrorCode = ErrorCode::from_constant(12009); // ERROR_INTERNET_INVALID_OPTION
+#[doc(hidden)] pub const INTERNET_BAD_OPTION_LENGTH : ErrorCode = ErrorCode::from_constant(12010); // ERROR_INTERNET_BAD_OPTION_LENGTH
+#[doc(hidden)] pub const INTERNET_OPTION_NOT_SETTABLE : ErrorCode = ErrorCode::from_constant(12011); // ERROR_INTERNET_OPTION_NOT_SETTABLE
+#[doc(hidden)] pub const INTERNET_SHUTDOWN : ErrorCode = ErrorCode::from_constant(12012); // ERROR_INTERNET_SHUTDOWN
+#[doc(hidden)] pub const INTERNET_INCORRECT_USER_NAME : ErrorCode = ErrorCode::from_constant(12013); // ERROR_INTERNET_INCORRECT_USER_NAME
+#[doc(hidden)] pub const INTERNET_INCORRECT_PASSWORD : ErrorCode = ErrorCode::from_constant(12014); // ERROR_INTERNET_INCORRECT_PASSWORD
+#[doc(hidden)] pub const INTERNET_LOGIN_FAILURE : ErrorCode = ErrorCode::from_constant(12015); // ERROR_INTERNET_LOGIN_FAILURE
+#[doc(hidden)] pub const INTERNET_INVALID_OPERATION : ErrorCode = ErrorCode::from_constant(12016); // ERROR_INTERNET_INVALID_OPERATION
+#[doc(hidden)] pub const INTERNET_OPERATION_CANCELLED : ErrorCode = ErrorCode::from_constant(12017); // ERROR_INTERNET_OPERATION_CANCELLED
+#[doc(hidden)] pub const INTERNET_INCORRECT_HANDLE_TYPE : ErrorCode = ErrorCode::from_constant(12018); // ERROR_INTERNET_INCORRECT_HANDLE_TYPE
+#[doc(hidden)] pub const INTERNET_INCORRECT_HANDLE_STATE : ErrorCode = ErrorCode::from_constant(12019); // ERROR_INTERNET_INCORRECT_HANDLE_STATE
+#[doc(hidden)] pub const INTERNET_NOT_PROXY_REQUEST : ErrorCode = ErrorCode::from_constant(12020); // ERROR_INTERNET_NOT_PROXY_REQUEST
+#[doc(hidden)] pub const INTERNET_REGISTRY_VALUE_NOT_FOUND : ErrorCode = ErrorCode::from_constant(12021); // ERROR_INTERNET_REGISTRY_VALUE_NOT_FOUND
+#[doc(hidden)] pub const INTERNET_BAD_REGISTRY_PARAMETER : ErrorCode = ErrorCode::from_constant(12022); // ERROR_INTERNET_BAD_REGISTRY_PARAMETER
+#[doc(hidden)] pub const INTERNET_NO_DIRECT_ACCESS : ErrorCode = ErrorCode::from_constant(12023); // ERROR_INTERNET_NO_DIRECT_ACCESS
+#[doc(hidden)] pub const INTERNET_NO_CONTEXT : ErrorCode = ErrorCode::from_constant(12024); // ERROR_INTERNET_NO_CONTEXT
+#[doc(hidden)] pub const INTERNET_NO_CALLBACK : ErrorCode = ErrorCode::from_constant(12025); // ERROR_INTERNET_NO_CALLBACK
+#[doc(hidden)] pub const INTERNET_REQUEST_PENDING : ErrorCode = ErrorCode::from_constant(12026); // ERROR_INTERNET_REQUEST_PENDING
+#[doc(hidden)] pub const INTERNET_INCORRECT_FORMAT : ErrorCode = ErrorCode::from_constant(12027); // ERROR_INTERNET_INCORRECT_FORMAT
+#[doc(hidden)] pub const INTERNET_ITEM_NOT_FOUND : ErrorCode = ErrorCode::from_constant(12028); // ERROR_INTERNET_ITEM_NOT_FOUND
+#[doc(hidden)] pub const INTERNET_CANNOT_CONNECT : ErrorCode = ErrorCode::from_constant(12029); // ERROR_INTERNET_CANNOT_CONNECT
+#[doc(hidden)] pub const INTERNET_CONNECTION_ABORTED : ErrorCode = ErrorCode::from_constant(12030); // ERROR_INTERNET_CONNECTION_ABORTED
+#[doc(hidden)] pub const INTERNET_CONNECTION_RESET : ErrorCode = ErrorCode::from_constant(12031); // ERROR_INTERNET_CONNECTION_RESET
+#[doc(hidden)] pub const INTERNET_FORCE_RETRY : ErrorCode = ErrorCode::from_constant(12032); // ERROR_INTERNET_FORCE_RETRY
+#[doc(hidden)] pub const INTERNET_INVALID_PROXY_REQUEST : ErrorCode = ErrorCode::from_constant(12033); // ERROR_INTERNET_INVALID_PROXY_REQUEST
+#[doc(hidden)] pub const INTERNET_NEED_UI : ErrorCode = ErrorCode::from_constant(12034); // ERROR_INTERNET_NEED_UI
+#[doc(hidden)] pub const INTERNET_HANDLE_EXISTS : ErrorCode = ErrorCode::from_constant(12036); // ERROR_INTERNET_HANDLE_EXISTS
+#[doc(hidden)] pub const INTERNET_SEC_CERT_DATE_INVALID : ErrorCode = ErrorCode::from_constant(12037); // ERROR_INTERNET_SEC_CERT_DATE_INVALID
+#[doc(hidden)] pub const INTERNET_SEC_CERT_CN_INVALID : ErrorCode = ErrorCode::from_constant(12038); // ERROR_INTERNET_SEC_CERT_CN_INVALID
+#[doc(hidden)] pub const INTERNET_HTTP_TO_HTTPS_ON_REDIR : ErrorCode = ErrorCode::from_constant(12039); // ERROR_INTERNET_HTTP_TO_HTTPS_ON_REDIR
+#[doc(hidden)] pub const INTERNET_HTTPS_TO_HTTP_ON_REDIR : ErrorCode = ErrorCode::from_constant(12040); // ERROR_INTERNET_HTTPS_TO_HTTP_ON_REDIR
+#[doc(hidden)] pub const INTERNET_MIXED_SECURITY : ErrorCode = ErrorCode::from_constant(12041); // ERROR_INTERNET_MIXED_SECURITY
+#[doc(hidden)] pub const INTERNET_CHG_POST_IS_NON_SECURE : ErrorCode = ErrorCode::from_constant(12042); // ERROR_INTERNET_CHG_POST_IS_NON_SECURE
+#[doc(hidden)] pub const INTERNET_POST_IS_NON_SECURE : ErrorCode = ErrorCode::from_constant(12043); // ERROR_INTERNET_POST_IS_NON_SECURE
+#[doc(hidden)] pub const INTERNET_CLIENT_AUTH_CERT_NEEDED : ErrorCode = ErrorCode::from_constant(12044); // ERROR_INTERNET_CLIENT_AUTH_CERT_NEEDED
+#[doc(hidden)] pub const INTERNET_INVALID_CA : ErrorCode = ErrorCode::from_constant(12045); // ERROR_INTERNET_INVALID_CA
+#[doc(hidden)] pub const INTERNET_CLIENT_AUTH_NOT_SETUP : ErrorCode = ErrorCode::from_constant(12046); // ERROR_INTERNET_CLIENT_AUTH_NOT_SETUP
+#[doc(hidden)] pub const INTERNET_ASYNC_THREAD_FAILED : ErrorCode = ErrorCode::from_constant(12047); // ERROR_INTERNET_ASYNC_THREAD_FAILED
+#[doc(hidden)] pub const INTERNET_REDIRECT_SCHEME_CHANGE : ErrorCode = ErrorCode::from_constant(12048); // ERROR_INTERNET_REDIRECT_SCHEME_CHANGE
+#[doc(hidden)] pub const INTERNET_DIALOG_PENDING : ErrorCode = ErrorCode::from_constant(12049); // ERROR_INTERNET_DIALOG_PENDING
+#[doc(hidden)] pub const INTERNET_RETRY_DIALOG : ErrorCode = ErrorCode::from_constant(12050); // ERROR_INTERNET_RETRY_DIALOG
+#[doc(hidden)] pub const INTERNET_HTTPS_HTTP_SUBMIT_REDIR : ErrorCode = ErrorCode::from_constant(12052); // ERROR_INTERNET_HTTPS_HTTP_SUBMIT_REDIR
+#[doc(hidden)] pub const INTERNET_INSERT_CDROM : ErrorCode = ErrorCode::from_constant(12053); // ERROR_INTERNET_INSERT_CDROM
+#[doc(hidden)] pub const INTERNET_FORTEZZA_LOGIN_NEEDED : ErrorCode = ErrorCode::from_constant(12054); // ERROR_INTERNET_FORTEZZA_LOGIN_NEEDED
+#[doc(hidden)] pub const INTERNET_SEC_CERT_ERRORS : ErrorCode = ErrorCode::from_constant(12055); // ERROR_INTERNET_SEC_CERT_ERRORS
+#[doc(hidden)] pub const INTERNET_SEC_CERT_NO_REV : ErrorCode = ErrorCode::from_constant(12056); // ERROR_INTERNET_SEC_CERT_NO_REV
+#[doc(hidden)] pub const INTERNET_SEC_CERT_REV_FAILED : ErrorCode = ErrorCode::from_constant(12057); // ERROR_INTERNET_SEC_CERT_REV_FAILED
+#[doc(hidden)] pub const HTTP_HSTS_REDIRECT_REQUIRED : ErrorCode = ErrorCode::from_constant(12060); // ERROR_HTTP_HSTS_REDIRECT_REQUIRED
+#[doc(hidden)] pub const INTERNET_SEC_CERT_WEAK_SIGNATURE : ErrorCode = ErrorCode::from_constant(12062); // ERROR_INTERNET_SEC_CERT_WEAK_SIGNATURE
+#[doc(hidden)] pub const FTP_TRANSFER_IN_PROGRESS : ErrorCode = ErrorCode::from_constant(12110); // ERROR_FTP_TRANSFER_IN_PROGRESS
+#[doc(hidden)] pub const FTP_DROPPED : ErrorCode = ErrorCode::from_constant(12111); // ERROR_FTP_DROPPED
+#[doc(hidden)] pub const FTP_NO_PASSIVE_MODE : ErrorCode = ErrorCode::from_constant(12112); // ERROR_FTP_NO_PASSIVE_MODE
+#[doc(hidden)] pub const GOPHER_PROTOCOL_ERROR : ErrorCode = ErrorCode::from_constant(12130); // ERROR_GOPHER_PROTOCOL_ERROR
+#[doc(hidden)] pub const GOPHER_NOT_FILE : ErrorCode = ErrorCode::from_constant(12131); // ERROR_GOPHER_NOT_FILE
+#[doc(hidden)] pub const GOPHER_DATA_ERROR : ErrorCode = ErrorCode::from_constant(12132); // ERROR_GOPHER_DATA_ERROR
+#[doc(hidden)] pub const GOPHER_END_OF_DATA : ErrorCode = ErrorCode::from_constant(12133); // ERROR_GOPHER_END_OF_DATA
+#[doc(hidden)] pub const GOPHER_INVALID_LOCATOR : ErrorCode = ErrorCode::from_constant(12134); // ERROR_GOPHER_INVALID_LOCATOR
+#[doc(hidden)] pub const GOPHER_INCORRECT_LOCATOR_TYPE : ErrorCode = ErrorCode::from_constant(12135); // ERROR_GOPHER_INCORRECT_LOCATOR_TYPE
+#[doc(hidden)] pub const GOPHER_NOT_GOPHER_PLUS : ErrorCode = ErrorCode::from_constant(12136); // ERROR_GOPHER_NOT_GOPHER_PLUS
+#[doc(hidden)] pub const GOPHER_ATTRIBUTE_NOT_FOUND : ErrorCode = ErrorCode::from_constant(12137); // ERROR_GOPHER_ATTRIBUTE_NOT_FOUND
+#[doc(hidden)] pub const GOPHER_UNKNOWN_LOCATOR : ErrorCode = ErrorCode::from_constant(12138); // ERROR_GOPHER_UNKNOWN_LOCATOR
+#[doc(hidden)] pub const HTTP_HEADER_NOT_FOUND : ErrorCode = ErrorCode::from_constant(12150); // ERROR_HTTP_HEADER_NOT_FOUND
+#[doc(hidden)] pub const HTTP_DOWNLEVEL_SERVER : ErrorCode = ErrorCode::from_constant(12151); // ERROR_HTTP_DOWNLEVEL_SERVER
+#[doc(hidden)] pub const HTTP_INVALID_SERVER_RESPONSE : ErrorCode = ErrorCode::from_constant(12152); // ERROR_HTTP_INVALID_SERVER_RESPONSE
+#[doc(hidden)] pub const HTTP_INVALID_HEADER : ErrorCode = ErrorCode::from_constant(12153); // ERROR_HTTP_INVALID_HEADER
+#[doc(hidden)] pub const HTTP_INVALID_QUERY_REQUEST : ErrorCode = ErrorCode::from_constant(12154); // ERROR_HTTP_INVALID_QUERY_REQUEST
+#[doc(hidden)] pub const HTTP_HEADER_ALREADY_EXISTS : ErrorCode = ErrorCode::from_constant(12155); // ERROR_HTTP_HEADER_ALREADY_EXISTS
+#[doc(hidden)] pub const HTTP_REDIRECT_FAILED : ErrorCode = ErrorCode::from_constant(12156); // ERROR_HTTP_REDIRECT_FAILED
+#[doc(hidden)] pub const HTTP_NOT_REDIRECTED : ErrorCode = ErrorCode::from_constant(12160); // ERROR_HTTP_NOT_REDIRECTED
+#[doc(hidden)] pub const HTTP_COOKIE_NEEDS_CONFIRMATION : ErrorCode = ErrorCode::from_constant(12161); // ERROR_HTTP_COOKIE_NEEDS_CONFIRMATION
+#[doc(hidden)] pub const HTTP_COOKIE_DECLINED : ErrorCode = ErrorCode::from_constant(12162); // ERROR_HTTP_COOKIE_DECLINED
+#[doc(hidden)] pub const HTTP_REDIRECT_NEEDS_CONFIRMATION : ErrorCode = ErrorCode::from_constant(12168); // ERROR_HTTP_REDIRECT_NEEDS_CONFIRMATION
+#[doc(hidden)] pub const INTERNET_SECURITY_CHANNEL_ERROR : ErrorCode = ErrorCode::from_constant(12157); // ERROR_INTERNET_SECURITY_CHANNEL_ERROR
+#[doc(hidden)] pub const INTERNET_UNABLE_TO_CACHE_FILE : ErrorCode = ErrorCode::from_constant(12158); // ERROR_INTERNET_UNABLE_TO_CACHE_FILE
+#[doc(hidden)] pub const INTERNET_TCPIP_NOT_INSTALLED : ErrorCode = ErrorCode::from_constant(12159); // ERROR_INTERNET_TCPIP_NOT_INSTALLED
+#[doc(hidden)] pub const INTERNET_DISCONNECTED : ErrorCode = ErrorCode::from_constant(12163); // ERROR_INTERNET_DISCONNECTED
+#[doc(hidden)] pub const INTERNET_SERVER_UNREACHABLE : ErrorCode = ErrorCode::from_constant(12164); // ERROR_INTERNET_SERVER_UNREACHABLE
+#[doc(hidden)] pub const INTERNET_PROXY_SERVER_UNREACHABLE : ErrorCode = ErrorCode::from_constant(12165); // ERROR_INTERNET_PROXY_SERVER_UNREACHABLE
+#[doc(hidden)] pub const INTERNET_BAD_AUTO_PROXY_SCRIPT : ErrorCode = ErrorCode::from_constant(12166); // ERROR_INTERNET_BAD_AUTO_PROXY_SCRIPT
+#[doc(hidden)] pub const INTERNET_UNABLE_TO_DOWNLOAD_SCRIPT : ErrorCode = ErrorCode::from_constant(12167); // ERROR_INTERNET_UNABLE_TO_DOWNLOAD_SCRIPT
+#[doc(hidden)] pub const INTERNET_SEC_INVALID_CERT : ErrorCode = ErrorCode::from_constant(12169); // ERROR_INTERNET_SEC_INVALID_CERT
+#[doc(hidden)] pub const INTERNET_SEC_CERT_REVOKED : ErrorCode = ErrorCode::from_constant(12170); // ERROR_INTERNET_SEC_CERT_REVOKED
+#[doc(hidden)] pub const INTERNET_FAILED_DUETOSECURITYCHECK : ErrorCode = ErrorCode::from_constant(12171); // ERROR_INTERNET_FAILED_DUETOSECURITYCHECK
+#[doc(hidden)] pub const INTERNET_NOT_INITIALIZED : ErrorCode = ErrorCode::from_constant(12172); // ERROR_INTERNET_NOT_INITIALIZED
+#[doc(hidden)] pub const INTERNET_NEED_MSN_SSPI_PKG : ErrorCode = ErrorCode::from_constant(12173); // ERROR_INTERNET_NEED_MSN_SSPI_PKG
+#[doc(hidden)] pub const INTERNET_LOGIN_FAILURE_DISPLAY_ENTITY_BODY : ErrorCode = ErrorCode::from_constant(12174); // ERROR_INTERNET_LOGIN_FAILURE_DISPLAY_ENTITY_BODY
+#[doc(hidden)] pub const INTERNET_DECODING_FAILED : ErrorCode = ErrorCode::from_constant(12175); // ERROR_INTERNET_DECODING_FAILED
+#[doc(hidden)] pub const INTERNET_CLIENT_AUTH_CERT_NEEDED_PROXY : ErrorCode = ErrorCode::from_constant(12187); // ERROR_INTERNET_CLIENT_AUTH_CERT_NEEDED_PROXY
+#[doc(hidden)] pub const INTERNET_SECURE_FAILURE_PROXY : ErrorCode = ErrorCode::from_constant(12188); // ERROR_INTERNET_SECURE_FAILURE_PROXY
+#[doc(hidden)] pub const INTERNET_HTTP_PROTOCOL_MISMATCH : ErrorCode = ErrorCode::from_constant(12190); // ERROR_INTERNET_HTTP_PROTOCOL_MISMATCH
+#[doc(hidden)] pub const INTERNET_NO_NEW_CONTAINERS : ErrorCode = ErrorCode::from_constant(12051); // ERROR_INTERNET_NO_NEW_CONTAINERS
+#[doc(hidden)] pub const INTERNET_SOURCE_PORT_IN_USE : ErrorCode = ErrorCode::from_constant(12058); // ERROR_INTERNET_SOURCE_PORT_IN_USE
+#[doc(hidden)] pub const INTERNET_INSECURE_FALLBACK_REQUIRED : ErrorCode = ErrorCode::from_constant(12059); // ERROR_INTERNET_INSECURE_FALLBACK_REQUIRED
+#[doc(hidden)] pub const INTERNET_PROXY_ALERT : ErrorCode = ErrorCode::from_constant(12061); // ERROR_INTERNET_PROXY_ALERT
+#[doc(hidden)] pub const INTERNET_NO_CM_CONNECTION : ErrorCode = ErrorCode::from_constant(12080); // ERROR_INTERNET_NO_CM_CONNECTION
+#[doc(hidden)] pub const HTTP_PUSH_STATUS_CODE_NOT_SUPPORTED : ErrorCode = ErrorCode::from_constant(12147); // ERROR_HTTP_PUSH_STATUS_CODE_NOT_SUPPORTED
+#[doc(hidden)] pub const HTTP_PUSH_RETRY_NOT_SUPPORTED : ErrorCode = ErrorCode::from_constant(12148); // ERROR_HTTP_PUSH_RETRY_NOT_SUPPORTED
+#[doc(hidden)] pub const HTTP_PUSH_ENABLE_FAILED : ErrorCode = ErrorCode::from_constant(12149); // ERROR_HTTP_PUSH_ENABLE_FAILED
+#[doc(hidden)] pub const INTERNET_DISALLOW_INPRIVATE : ErrorCode = ErrorCode::from_constant(12189); // ERROR_INTERNET_DISALLOW_INPRIVATE
+#[doc(hidden)] pub const INTERNET_OFFLINE : ErrorCode = ErrorCode::from_constant(12163); // ERROR_INTERNET_OFFLINE
+#[doc(hidden)] pub const INTERNET_INTERNAL_SOCKET_ERROR : ErrorCode = ErrorCode::from_constant(12901); // ERROR_INTERNET_INTERNAL_SOCKET_ERROR
+#[doc(hidden)] pub const INTERNET_CONNECTION_AVAILABLE : ErrorCode = ErrorCode::from_constant(12902); // ERROR_INTERNET_CONNECTION_AVAILABLE
+#[doc(hidden)] pub const INTERNET_NO_KNOWN_SERVERS : ErrorCode = ErrorCode::from_constant(12903); // ERROR_INTERNET_NO_KNOWN_SERVERS
+#[doc(hidden)] pub const INTERNET_PING_FAILED : ErrorCode = ErrorCode::from_constant(12904); // ERROR_INTERNET_PING_FAILED
+#[doc(hidden)] pub const INTERNET_NO_PING_SUPPORT : ErrorCode = ErrorCode::from_constant(12905); // ERROR_INTERNET_NO_PING_SUPPORT
+#[doc(hidden)] pub const INTERNET_CACHE_SUCCESS : ErrorCode = ErrorCode::from_constant(12906); // ERROR_INTERNET_CACHE_SUCCESS
+#[doc(hidden)] pub const HTTP_COOKIE_NEEDS_CONFIRMATION_EX : ErrorCode = ErrorCode::from_constant(12907); // ERROR_HTTP_COOKIE_NEEDS_CONFIRMATION_EX
+#[doc(hidden)] pub const BIDI_STATUS_OK : ErrorCode = ErrorCode::from_constant(0); // ERROR_BIDI_STATUS_OK
+#[doc(hidden)] pub const BIDI_NOT_SUPPORTED : ErrorCode = ErrorCode::from_constant(50); // ERROR_BIDI_NOT_SUPPORTED
+#[doc(hidden)] pub const BIDI_STATUS_WARNING : ErrorCode = ErrorCode::from_constant(13001); // ERROR_BIDI_STATUS_WARNING
+#[doc(hidden)] pub const BIDI_SCHEMA_READ_ONLY : ErrorCode = ErrorCode::from_constant(13002); // ERROR_BIDI_SCHEMA_READ_ONLY
+#[doc(hidden)] pub const BIDI_SERVER_OFFLINE : ErrorCode = ErrorCode::from_constant(13003); // ERROR_BIDI_SERVER_OFFLINE
+#[doc(hidden)] pub const BIDI_DEVICE_OFFLINE : ErrorCode = ErrorCode::from_constant(13004); // ERROR_BIDI_DEVICE_OFFLINE
+#[doc(hidden)] pub const BIDI_SCHEMA_NOT_SUPPORTED : ErrorCode = ErrorCode::from_constant(13005); // ERROR_BIDI_SCHEMA_NOT_SUPPORTED
+#[doc(hidden)] pub const BIDI_SET_DIFFERENT_TYPE : ErrorCode = ErrorCode::from_constant(13006); // ERROR_BIDI_SET_DIFFERENT_TYPE
+#[doc(hidden)] pub const BIDI_SET_MULTIPLE_SCHEMAPATH : ErrorCode = ErrorCode::from_constant(13007); // ERROR_BIDI_SET_MULTIPLE_SCHEMAPATH
+#[doc(hidden)] pub const BIDI_SET_INVALID_SCHEMAPATH : ErrorCode = ErrorCode::from_constant(13008); // ERROR_BIDI_SET_INVALID_SCHEMAPATH
+#[doc(hidden)] pub const BIDI_SET_UNKNOWN_FAILURE : ErrorCode = ErrorCode::from_constant(13009); // ERROR_BIDI_SET_UNKNOWN_FAILURE
+#[doc(hidden)] pub const BIDI_SCHEMA_WRITE_ONLY : ErrorCode = ErrorCode::from_constant(13010); // ERROR_BIDI_SCHEMA_WRITE_ONLY
+#[doc(hidden)] pub const BIDI_GET_REQUIRES_ARGUMENT : ErrorCode = ErrorCode::from_constant(13011); // ERROR_BIDI_GET_REQUIRES_ARGUMENT
+#[doc(hidden)] pub const BIDI_GET_ARGUMENT_NOT_SUPPORTED : ErrorCode = ErrorCode::from_constant(13012); // ERROR_BIDI_GET_ARGUMENT_NOT_SUPPORTED
+#[doc(hidden)] pub const BIDI_GET_MISSING_ARGUMENT : ErrorCode = ErrorCode::from_constant(13013); // ERROR_BIDI_GET_MISSING_ARGUMENT
+#[doc(hidden)] pub const BIDI_DEVICE_CONFIG_UNCHANGED : ErrorCode = ErrorCode::from_constant(13014); // ERROR_BIDI_DEVICE_CONFIG_UNCHANGED
+#[doc(hidden)] pub const BIDI_NO_LOCALIZED_RESOURCES : ErrorCode = ErrorCode::from_constant(13015); // ERROR_BIDI_NO_LOCALIZED_RESOURCES
+#[doc(hidden)] pub const BIDI_NO_BIDI_SCHEMA_EXTENSIONS : ErrorCode = ErrorCode::from_constant(13016); // ERROR_BIDI_NO_BIDI_SCHEMA_EXTENSIONS
+#[doc(hidden)] pub const BIDI_UNSUPPORTED_CLIENT_LANGUAGE : ErrorCode = ErrorCode::from_constant(13017); // ERROR_BIDI_UNSUPPORTED_CLIENT_LANGUAGE
+#[doc(hidden)] pub const BIDI_UNSUPPORTED_RESOURCE_FORMAT : ErrorCode = ErrorCode::from_constant(13018); // ERROR_BIDI_UNSUPPORTED_RESOURCE_FORMAT
 #[doc(hidden)] pub const WSMAN_RESOURCE_NOT_FOUND : HResultError = HResultError::from_constant(0x80338000); // ERROR_WSMAN_RESOURCE_NOT_FOUND
 #[doc(hidden)] pub const WSMAN_INVALID_ACTIONURI : HResultError = HResultError::from_constant(0x80338001); // ERROR_WSMAN_INVALID_ACTIONURI
 #[doc(hidden)] pub const WSMAN_INVALID_URI : HResultError = HResultError::from_constant(0x80338002); // ERROR_WSMAN_INVALID_URI

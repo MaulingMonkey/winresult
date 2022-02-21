@@ -4,7 +4,7 @@ use super::*;
 
 
 /// The Task Scheduler service must be configured to run in the System account to function properly. Individual tasks may be configured to run in other accounts.
-pub const E_SERVICE_NOT_LOCALSYSTEM : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(6200); // SCHED_E_SERVICE_NOT_LOCALSYSTEM
+pub const E_SERVICE_NOT_LOCALSYSTEM : ErrorCode = ErrorCode::from_constant(6200); // SCHED_E_SERVICE_NOT_LOCALSYSTEM
 
 /// The task is ready to run at its next scheduled time.
 pub const S_TASK_READY : HResultSuccess = HResultSuccess::from_constant(0x00041300); // SCHED_S_TASK_READY

@@ -2,23 +2,23 @@
 
 use super::*;
 
-pub const STATUS_OK : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0); // ERROR_BIDI_STATUS_OK
-pub const NOT_SUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(50); // ERROR_BIDI_NOT_SUPPORTED
-pub const STATUS_WARNING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13001); // ERROR_BIDI_STATUS_WARNING
-pub const SCHEMA_READ_ONLY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13002); // ERROR_BIDI_SCHEMA_READ_ONLY
-pub const SERVER_OFFLINE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13003); // ERROR_BIDI_SERVER_OFFLINE
-pub const DEVICE_OFFLINE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13004); // ERROR_BIDI_DEVICE_OFFLINE
-pub const SCHEMA_NOT_SUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13005); // ERROR_BIDI_SCHEMA_NOT_SUPPORTED
-pub const SET_DIFFERENT_TYPE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13006); // ERROR_BIDI_SET_DIFFERENT_TYPE
-pub const SET_MULTIPLE_SCHEMAPATH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13007); // ERROR_BIDI_SET_MULTIPLE_SCHEMAPATH
-pub const SET_INVALID_SCHEMAPATH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13008); // ERROR_BIDI_SET_INVALID_SCHEMAPATH
-pub const SET_UNKNOWN_FAILURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13009); // ERROR_BIDI_SET_UNKNOWN_FAILURE
-pub const SCHEMA_WRITE_ONLY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13010); // ERROR_BIDI_SCHEMA_WRITE_ONLY
-pub const GET_REQUIRES_ARGUMENT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13011); // ERROR_BIDI_GET_REQUIRES_ARGUMENT
-pub const GET_ARGUMENT_NOT_SUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13012); // ERROR_BIDI_GET_ARGUMENT_NOT_SUPPORTED
-pub const GET_MISSING_ARGUMENT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13013); // ERROR_BIDI_GET_MISSING_ARGUMENT
-pub const DEVICE_CONFIG_UNCHANGED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13014); // ERROR_BIDI_DEVICE_CONFIG_UNCHANGED
-pub const NO_LOCALIZED_RESOURCES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13015); // ERROR_BIDI_NO_LOCALIZED_RESOURCES
-pub const NO_BIDI_SCHEMA_EXTENSIONS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13016); // ERROR_BIDI_NO_BIDI_SCHEMA_EXTENSIONS
-pub const UNSUPPORTED_CLIENT_LANGUAGE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13017); // ERROR_BIDI_UNSUPPORTED_CLIENT_LANGUAGE
-pub const UNSUPPORTED_RESOURCE_FORMAT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(13018); // ERROR_BIDI_UNSUPPORTED_RESOURCE_FORMAT
+pub const STATUS_OK : ErrorCode = ErrorCode::from_constant(0); // ERROR_BIDI_STATUS_OK
+pub const NOT_SUPPORTED : ErrorCode = ErrorCode::from_constant(50); // ERROR_BIDI_NOT_SUPPORTED
+pub const STATUS_WARNING : ErrorCode = ErrorCode::from_constant(13001); // ERROR_BIDI_STATUS_WARNING
+pub const SCHEMA_READ_ONLY : ErrorCode = ErrorCode::from_constant(13002); // ERROR_BIDI_SCHEMA_READ_ONLY
+pub const SERVER_OFFLINE : ErrorCode = ErrorCode::from_constant(13003); // ERROR_BIDI_SERVER_OFFLINE
+pub const DEVICE_OFFLINE : ErrorCode = ErrorCode::from_constant(13004); // ERROR_BIDI_DEVICE_OFFLINE
+pub const SCHEMA_NOT_SUPPORTED : ErrorCode = ErrorCode::from_constant(13005); // ERROR_BIDI_SCHEMA_NOT_SUPPORTED
+pub const SET_DIFFERENT_TYPE : ErrorCode = ErrorCode::from_constant(13006); // ERROR_BIDI_SET_DIFFERENT_TYPE
+pub const SET_MULTIPLE_SCHEMAPATH : ErrorCode = ErrorCode::from_constant(13007); // ERROR_BIDI_SET_MULTIPLE_SCHEMAPATH
+pub const SET_INVALID_SCHEMAPATH : ErrorCode = ErrorCode::from_constant(13008); // ERROR_BIDI_SET_INVALID_SCHEMAPATH
+pub const SET_UNKNOWN_FAILURE : ErrorCode = ErrorCode::from_constant(13009); // ERROR_BIDI_SET_UNKNOWN_FAILURE
+pub const SCHEMA_WRITE_ONLY : ErrorCode = ErrorCode::from_constant(13010); // ERROR_BIDI_SCHEMA_WRITE_ONLY
+pub const GET_REQUIRES_ARGUMENT : ErrorCode = ErrorCode::from_constant(13011); // ERROR_BIDI_GET_REQUIRES_ARGUMENT
+pub const GET_ARGUMENT_NOT_SUPPORTED : ErrorCode = ErrorCode::from_constant(13012); // ERROR_BIDI_GET_ARGUMENT_NOT_SUPPORTED
+pub const GET_MISSING_ARGUMENT : ErrorCode = ErrorCode::from_constant(13013); // ERROR_BIDI_GET_MISSING_ARGUMENT
+pub const DEVICE_CONFIG_UNCHANGED : ErrorCode = ErrorCode::from_constant(13014); // ERROR_BIDI_DEVICE_CONFIG_UNCHANGED
+pub const NO_LOCALIZED_RESOURCES : ErrorCode = ErrorCode::from_constant(13015); // ERROR_BIDI_NO_LOCALIZED_RESOURCES
+pub const NO_BIDI_SCHEMA_EXTENSIONS : ErrorCode = ErrorCode::from_constant(13016); // ERROR_BIDI_NO_BIDI_SCHEMA_EXTENSIONS
+pub const UNSUPPORTED_CLIENT_LANGUAGE : ErrorCode = ErrorCode::from_constant(13017); // ERROR_BIDI_UNSUPPORTED_CLIENT_LANGUAGE
+pub const UNSUPPORTED_RESOURCE_FORMAT : ErrorCode = ErrorCode::from_constant(13018); // ERROR_BIDI_UNSUPPORTED_RESOURCE_FORMAT

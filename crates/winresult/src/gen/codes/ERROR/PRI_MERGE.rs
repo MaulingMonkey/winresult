@@ -4,34 +4,34 @@ use super::*;
 
 
 /// The PRI files to be merged have incompatible versions.
-pub const VERSION_MISMATCH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15148); // ERROR_PRI_MERGE_VERSION_MISMATCH
+pub const VERSION_MISMATCH : ErrorCode = ErrorCode::from_constant(15148); // ERROR_PRI_MERGE_VERSION_MISMATCH
 
 /// The primary PRI files to be merged does not contain a schema.
-pub const MISSING_SCHEMA : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15149); // ERROR_PRI_MERGE_MISSING_SCHEMA
+pub const MISSING_SCHEMA : ErrorCode = ErrorCode::from_constant(15149); // ERROR_PRI_MERGE_MISSING_SCHEMA
 
 /// Unable to load one of the PRI files to be merged.
-pub const LOAD_FILE_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15150); // ERROR_PRI_MERGE_LOAD_FILE_FAILED
+pub const LOAD_FILE_FAILED : ErrorCode = ErrorCode::from_constant(15150); // ERROR_PRI_MERGE_LOAD_FILE_FAILED
 
 /// Unable to add one of the PRI files to the merged file.
-pub const ADD_FILE_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15151); // ERROR_PRI_MERGE_ADD_FILE_FAILED
+pub const ADD_FILE_FAILED : ErrorCode = ErrorCode::from_constant(15151); // ERROR_PRI_MERGE_ADD_FILE_FAILED
 
 /// Unable to create the merged PRI file.
-pub const WRITE_FILE_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15152); // ERROR_PRI_MERGE_WRITE_FILE_FAILED
+pub const WRITE_FILE_FAILED : ErrorCode = ErrorCode::from_constant(15152); // ERROR_PRI_MERGE_WRITE_FILE_FAILED
 
 /// Packages for a PRI file merge must all be from the same package family.
-pub const MULTIPLE_PACKAGE_FAMILIES_NOT_ALLOWED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15153); // ERROR_PRI_MERGE_MULTIPLE_PACKAGE_FAMILIES_NOT_ALLOWED
+pub const MULTIPLE_PACKAGE_FAMILIES_NOT_ALLOWED : ErrorCode = ErrorCode::from_constant(15153); // ERROR_PRI_MERGE_MULTIPLE_PACKAGE_FAMILIES_NOT_ALLOWED
 
 /// Packages for a PRI file merge must not include multiple main packages.
-pub const MULTIPLE_MAIN_PACKAGES_NOT_ALLOWED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15154); // ERROR_PRI_MERGE_MULTIPLE_MAIN_PACKAGES_NOT_ALLOWED
+pub const MULTIPLE_MAIN_PACKAGES_NOT_ALLOWED : ErrorCode = ErrorCode::from_constant(15154); // ERROR_PRI_MERGE_MULTIPLE_MAIN_PACKAGES_NOT_ALLOWED
 
 /// Packages for a PRI file merge must not include bundle packages.
-pub const BUNDLE_PACKAGES_NOT_ALLOWED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15155); // ERROR_PRI_MERGE_BUNDLE_PACKAGES_NOT_ALLOWED
+pub const BUNDLE_PACKAGES_NOT_ALLOWED : ErrorCode = ErrorCode::from_constant(15155); // ERROR_PRI_MERGE_BUNDLE_PACKAGES_NOT_ALLOWED
 
 /// Packages for a PRI file merge must include one main package.
-pub const MAIN_PACKAGE_REQUIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15156); // ERROR_PRI_MERGE_MAIN_PACKAGE_REQUIRED
+pub const MAIN_PACKAGE_REQUIRED : ErrorCode = ErrorCode::from_constant(15156); // ERROR_PRI_MERGE_MAIN_PACKAGE_REQUIRED
 
 /// Packages for a PRI file merge must include at least one resource package.
-pub const RESOURCE_PACKAGE_REQUIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15157); // ERROR_PRI_MERGE_RESOURCE_PACKAGE_REQUIRED
+pub const RESOURCE_PACKAGE_REQUIRED : ErrorCode = ErrorCode::from_constant(15157); // ERROR_PRI_MERGE_RESOURCE_PACKAGE_REQUIRED
 
 /// Invalid name supplied for a canonical merged PRI file.
-pub const INVALID_FILE_NAME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15158); // ERROR_PRI_MERGE_INVALID_FILE_NAME
+pub const INVALID_FILE_NAME : ErrorCode = ErrorCode::from_constant(15158); // ERROR_PRI_MERGE_INVALID_FILE_NAME

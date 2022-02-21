@@ -4,25 +4,25 @@ use super::*;
 
 
 /// The process has no package identity.
-pub const ERROR_NO_PACKAGE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15700); // APPMODEL_ERROR_NO_PACKAGE
+pub const ERROR_NO_PACKAGE : ErrorCode = ErrorCode::from_constant(15700); // APPMODEL_ERROR_NO_PACKAGE
 
 /// The package runtime information is corrupted.
-pub const ERROR_PACKAGE_RUNTIME_CORRUPT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15701); // APPMODEL_ERROR_PACKAGE_RUNTIME_CORRUPT
+pub const ERROR_PACKAGE_RUNTIME_CORRUPT : ErrorCode = ErrorCode::from_constant(15701); // APPMODEL_ERROR_PACKAGE_RUNTIME_CORRUPT
 
 /// The package identity is corrupted.
-pub const ERROR_PACKAGE_IDENTITY_CORRUPT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15702); // APPMODEL_ERROR_PACKAGE_IDENTITY_CORRUPT
+pub const ERROR_PACKAGE_IDENTITY_CORRUPT : ErrorCode = ErrorCode::from_constant(15702); // APPMODEL_ERROR_PACKAGE_IDENTITY_CORRUPT
 
 /// The process has no application identity.
-pub const ERROR_NO_APPLICATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15703); // APPMODEL_ERROR_NO_APPLICATION
+pub const ERROR_NO_APPLICATION : ErrorCode = ErrorCode::from_constant(15703); // APPMODEL_ERROR_NO_APPLICATION
 
 /// One or more AppModel Runtime group policy values could not be read. Please contact your system administrator with the contents of your AppModel Runtime event log.
-pub const ERROR_DYNAMIC_PROPERTY_READ_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15704); // APPMODEL_ERROR_DYNAMIC_PROPERTY_READ_FAILED
+pub const ERROR_DYNAMIC_PROPERTY_READ_FAILED : ErrorCode = ErrorCode::from_constant(15704); // APPMODEL_ERROR_DYNAMIC_PROPERTY_READ_FAILED
 
 /// One or more AppModel Runtime group policy values are invalid. Please contact your system administrator with the contents of your AppModel Runtime event log.
-pub const ERROR_DYNAMIC_PROPERTY_INVALID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15705); // APPMODEL_ERROR_DYNAMIC_PROPERTY_INVALID
+pub const ERROR_DYNAMIC_PROPERTY_INVALID : ErrorCode = ErrorCode::from_constant(15705); // APPMODEL_ERROR_DYNAMIC_PROPERTY_INVALID
 
 /// The package is currently not available.
-pub const ERROR_PACKAGE_NOT_AVAILABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15706); // APPMODEL_ERROR_PACKAGE_NOT_AVAILABLE
+pub const ERROR_PACKAGE_NOT_AVAILABLE : ErrorCode = ErrorCode::from_constant(15706); // APPMODEL_ERROR_PACKAGE_NOT_AVAILABLE
 
 /// The package does not have a mutable directory.
-pub const ERROR_NO_MUTABLE_DIRECTORY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15707); // APPMODEL_ERROR_NO_MUTABLE_DIRECTORY
+pub const ERROR_NO_MUTABLE_DIRECTORY : ErrorCode = ErrorCode::from_constant(15707); // APPMODEL_ERROR_NO_MUTABLE_DIRECTORY

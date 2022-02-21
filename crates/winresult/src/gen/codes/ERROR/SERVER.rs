@@ -4,33 +4,33 @@ use super::*;
 
 
 /// The server process is running under a SID different than that required by client.
-pub const SID_MISMATCH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(628); // ERROR_SERVER_SID_MISMATCH
+pub const SID_MISMATCH : ErrorCode = ErrorCode::from_constant(628); // ERROR_SERVER_SID_MISMATCH
 
 /// The server machine is shutting down.
-pub const SHUTDOWN_IN_PROGRESS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1255); // ERROR_SERVER_SHUTDOWN_IN_PROGRESS
+pub const SHUTDOWN_IN_PROGRESS : ErrorCode = ErrorCode::from_constant(1255); // ERROR_SERVER_SHUTDOWN_IN_PROGRESS
 
 /// The server is currently disabled.
-pub const DISABLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1341); // ERROR_SERVER_DISABLED
+pub const DISABLED : ErrorCode = ErrorCode::from_constant(1341); // ERROR_SERVER_DISABLED
 
 /// The server is currently enabled.
-pub const NOT_DISABLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1342); // ERROR_SERVER_NOT_DISABLED
+pub const NOT_DISABLED : ErrorCode = ErrorCode::from_constant(1342); // ERROR_SERVER_NOT_DISABLED
 
 /// The server is in use and cannot be unloaded.
-pub const HAS_OPEN_HANDLES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1811); // ERROR_SERVER_HAS_OPEN_HANDLES
+pub const HAS_OPEN_HANDLES : ErrorCode = ErrorCode::from_constant(1811); // ERROR_SERVER_HAS_OPEN_HANDLES
 
-pub const INVALID_BOOT_FILE_TABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E3C); // ERROR_SERVER_INVALID_BOOT_FILE_TABLE
-pub const UNKNOWN_BOOT_FILE_NAME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0x00004E3D); // ERROR_SERVER_UNKNOWN_BOOT_FILE_NAME
+pub const INVALID_BOOT_FILE_TABLE : ErrorCode = ErrorCode::from_constant(0x00004E3C); // ERROR_SERVER_INVALID_BOOT_FILE_TABLE
+pub const UNKNOWN_BOOT_FILE_NAME : ErrorCode = ErrorCode::from_constant(0x00004E3D); // ERROR_SERVER_UNKNOWN_BOOT_FILE_NAME
 
 /// The server cannot allocate NetBIOS resources needed to support the client.
 /// This error was obsoleted in the Windows Vista  release.
-pub const OUT_OF_RESOURCES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(641); // ERROR_SERVER_OUT_OF_RESOURCES
+pub const OUT_OF_RESOURCES : ErrorCode = ErrorCode::from_constant(641); // ERROR_SERVER_OUT_OF_RESOURCES
 
 /// A network adapter at the server failed.
 /// This error was obsoleted in the Windows Vista  release.
-pub const GENERAL_NET_FAILURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(643); // ERROR_SERVER_GENERAL_NET_FAILURE
+pub const GENERAL_NET_FAILURE : ErrorCode = ErrorCode::from_constant(643); // ERROR_SERVER_GENERAL_NET_FAILURE
 
 /// The remote access server is not responding.
 /// This error was obsoleted in the Windows Vista  release.
-pub const NOT_RESPONDING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(650); // ERROR_SERVER_NOT_RESPONDING
+pub const NOT_RESPONDING : ErrorCode = ErrorCode::from_constant(650); // ERROR_SERVER_NOT_RESPONDING
 
-pub const POLICY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(812); // ERROR_SERVER_POLICY
+pub const POLICY : ErrorCode = ErrorCode::from_constant(812); // ERROR_SERVER_POLICY

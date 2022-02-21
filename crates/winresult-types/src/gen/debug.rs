@@ -221,7 +221,7 @@ impl Debug for NtStatusFacilityMicrosoft {
     }
 }
 
-impl Debug for ErrorCodeMicrosoft {
+impl Debug for ErrorCode {
     fn fmt(&self, fmt: &mut Formatter) -> fmt::Result {
         let s = match self.0 {
             15700 => "APPMODEL::ERROR_NO_PACKAGE",

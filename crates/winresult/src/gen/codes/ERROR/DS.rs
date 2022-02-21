@@ -4,1207 +4,1207 @@ use super::*;
 
 
 /// This version of Windows is not compatible with the behavior version of directory forest, domain or domain controller.
-pub const VERSION_CHECK_FAILURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(643); // ERROR_DS_VERSION_CHECK_FAILURE
+pub const VERSION_CHECK_FAILURE : ErrorCode = ErrorCode::from_constant(643); // ERROR_DS_VERSION_CHECK_FAILURE
 
 /// An error occurred while installing the directory service. For more information, see the event log.
-pub const NOT_INSTALLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8200); // ERROR_DS_NOT_INSTALLED
+pub const NOT_INSTALLED : ErrorCode = ErrorCode::from_constant(8200); // ERROR_DS_NOT_INSTALLED
 
 /// The directory service evaluated group memberships locally.
-pub const MEMBERSHIP_EVALUATED_LOCALLY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8201); // ERROR_DS_MEMBERSHIP_EVALUATED_LOCALLY
+pub const MEMBERSHIP_EVALUATED_LOCALLY : ErrorCode = ErrorCode::from_constant(8201); // ERROR_DS_MEMBERSHIP_EVALUATED_LOCALLY
 
 /// The specified directory service attribute or value does not exist.
-pub const NO_ATTRIBUTE_OR_VALUE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8202); // ERROR_DS_NO_ATTRIBUTE_OR_VALUE
+pub const NO_ATTRIBUTE_OR_VALUE : ErrorCode = ErrorCode::from_constant(8202); // ERROR_DS_NO_ATTRIBUTE_OR_VALUE
 
 /// The attribute syntax specified to the directory service is invalid.
-pub const INVALID_ATTRIBUTE_SYNTAX : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8203); // ERROR_DS_INVALID_ATTRIBUTE_SYNTAX
+pub const INVALID_ATTRIBUTE_SYNTAX : ErrorCode = ErrorCode::from_constant(8203); // ERROR_DS_INVALID_ATTRIBUTE_SYNTAX
 
 /// The attribute type specified to the directory service is not defined.
-pub const ATTRIBUTE_TYPE_UNDEFINED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8204); // ERROR_DS_ATTRIBUTE_TYPE_UNDEFINED
+pub const ATTRIBUTE_TYPE_UNDEFINED : ErrorCode = ErrorCode::from_constant(8204); // ERROR_DS_ATTRIBUTE_TYPE_UNDEFINED
 
 /// The specified directory service attribute or value already exists.
-pub const ATTRIBUTE_OR_VALUE_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8205); // ERROR_DS_ATTRIBUTE_OR_VALUE_EXISTS
+pub const ATTRIBUTE_OR_VALUE_EXISTS : ErrorCode = ErrorCode::from_constant(8205); // ERROR_DS_ATTRIBUTE_OR_VALUE_EXISTS
 
 /// The directory service is busy.
-pub const BUSY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8206); // ERROR_DS_BUSY
+pub const BUSY : ErrorCode = ErrorCode::from_constant(8206); // ERROR_DS_BUSY
 
 /// The directory service is unavailable.
-pub const UNAVAILABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8207); // ERROR_DS_UNAVAILABLE
+pub const UNAVAILABLE : ErrorCode = ErrorCode::from_constant(8207); // ERROR_DS_UNAVAILABLE
 
 /// The directory service was unable to allocate a relative identifier.
-pub const NO_RIDS_ALLOCATED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8208); // ERROR_DS_NO_RIDS_ALLOCATED
+pub const NO_RIDS_ALLOCATED : ErrorCode = ErrorCode::from_constant(8208); // ERROR_DS_NO_RIDS_ALLOCATED
 
 /// The directory service has exhausted the pool of relative identifiers.
-pub const NO_MORE_RIDS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8209); // ERROR_DS_NO_MORE_RIDS
+pub const NO_MORE_RIDS : ErrorCode = ErrorCode::from_constant(8209); // ERROR_DS_NO_MORE_RIDS
 
 /// The requested operation could not be performed because the directory service is not the master for that type of operation.
-pub const INCORRECT_ROLE_OWNER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8210); // ERROR_DS_INCORRECT_ROLE_OWNER
+pub const INCORRECT_ROLE_OWNER : ErrorCode = ErrorCode::from_constant(8210); // ERROR_DS_INCORRECT_ROLE_OWNER
 
 /// The directory service was unable to initialize the subsystem that allocates relative identifiers.
-pub const RIDMGR_INIT_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8211); // ERROR_DS_RIDMGR_INIT_ERROR
+pub const RIDMGR_INIT_ERROR : ErrorCode = ErrorCode::from_constant(8211); // ERROR_DS_RIDMGR_INIT_ERROR
 
 /// The requested operation did not satisfy one or more constraints associated with the class of the object.
-pub const OBJ_CLASS_VIOLATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8212); // ERROR_DS_OBJ_CLASS_VIOLATION
+pub const OBJ_CLASS_VIOLATION : ErrorCode = ErrorCode::from_constant(8212); // ERROR_DS_OBJ_CLASS_VIOLATION
 
 /// The directory service can perform the requested operation only on a leaf object.
-pub const CANT_ON_NON_LEAF : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8213); // ERROR_DS_CANT_ON_NON_LEAF
+pub const CANT_ON_NON_LEAF : ErrorCode = ErrorCode::from_constant(8213); // ERROR_DS_CANT_ON_NON_LEAF
 
 /// The directory service cannot perform the requested operation on the RDN attribute of an object.
-pub const CANT_ON_RDN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8214); // ERROR_DS_CANT_ON_RDN
+pub const CANT_ON_RDN : ErrorCode = ErrorCode::from_constant(8214); // ERROR_DS_CANT_ON_RDN
 
 /// The directory service detected an attempt to modify the object class of an object.
-pub const CANT_MOD_OBJ_CLASS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8215); // ERROR_DS_CANT_MOD_OBJ_CLASS
+pub const CANT_MOD_OBJ_CLASS : ErrorCode = ErrorCode::from_constant(8215); // ERROR_DS_CANT_MOD_OBJ_CLASS
 
 /// The requested cross-domain move operation could not be performed.
-pub const CROSS_DOM_MOVE_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8216); // ERROR_DS_CROSS_DOM_MOVE_ERROR
+pub const CROSS_DOM_MOVE_ERROR : ErrorCode = ErrorCode::from_constant(8216); // ERROR_DS_CROSS_DOM_MOVE_ERROR
 
 /// Unable to contact the global catalog server.
-pub const GC_NOT_AVAILABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8217); // ERROR_DS_GC_NOT_AVAILABLE
+pub const GC_NOT_AVAILABLE : ErrorCode = ErrorCode::from_constant(8217); // ERROR_DS_GC_NOT_AVAILABLE
 
 /// An operations error occurred.
-pub const OPERATIONS_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8224); // ERROR_DS_OPERATIONS_ERROR
+pub const OPERATIONS_ERROR : ErrorCode = ErrorCode::from_constant(8224); // ERROR_DS_OPERATIONS_ERROR
 
 /// A protocol error occurred.
-pub const PROTOCOL_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8225); // ERROR_DS_PROTOCOL_ERROR
+pub const PROTOCOL_ERROR : ErrorCode = ErrorCode::from_constant(8225); // ERROR_DS_PROTOCOL_ERROR
 
 /// The time limit for this request was exceeded.
-pub const TIMELIMIT_EXCEEDED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8226); // ERROR_DS_TIMELIMIT_EXCEEDED
+pub const TIMELIMIT_EXCEEDED : ErrorCode = ErrorCode::from_constant(8226); // ERROR_DS_TIMELIMIT_EXCEEDED
 
 /// The size limit for this request was exceeded.
-pub const SIZELIMIT_EXCEEDED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8227); // ERROR_DS_SIZELIMIT_EXCEEDED
+pub const SIZELIMIT_EXCEEDED : ErrorCode = ErrorCode::from_constant(8227); // ERROR_DS_SIZELIMIT_EXCEEDED
 
 /// The administrative limit for this request was exceeded.
-pub const ADMIN_LIMIT_EXCEEDED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8228); // ERROR_DS_ADMIN_LIMIT_EXCEEDED
+pub const ADMIN_LIMIT_EXCEEDED : ErrorCode = ErrorCode::from_constant(8228); // ERROR_DS_ADMIN_LIMIT_EXCEEDED
 
 /// The compare response was false.
-pub const COMPARE_FALSE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8229); // ERROR_DS_COMPARE_FALSE
+pub const COMPARE_FALSE : ErrorCode = ErrorCode::from_constant(8229); // ERROR_DS_COMPARE_FALSE
 
 /// The compare response was true.
-pub const COMPARE_TRUE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8230); // ERROR_DS_COMPARE_TRUE
+pub const COMPARE_TRUE : ErrorCode = ErrorCode::from_constant(8230); // ERROR_DS_COMPARE_TRUE
 
 /// The requested authentication method is not supported by the server.
-pub const AUTH_METHOD_NOT_SUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8231); // ERROR_DS_AUTH_METHOD_NOT_SUPPORTED
+pub const AUTH_METHOD_NOT_SUPPORTED : ErrorCode = ErrorCode::from_constant(8231); // ERROR_DS_AUTH_METHOD_NOT_SUPPORTED
 
 /// A more secure authentication method is required for this server.
-pub const STRONG_AUTH_REQUIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8232); // ERROR_DS_STRONG_AUTH_REQUIRED
+pub const STRONG_AUTH_REQUIRED : ErrorCode = ErrorCode::from_constant(8232); // ERROR_DS_STRONG_AUTH_REQUIRED
 
 /// Inappropriate authentication.
-pub const INAPPROPRIATE_AUTH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8233); // ERROR_DS_INAPPROPRIATE_AUTH
+pub const INAPPROPRIATE_AUTH : ErrorCode = ErrorCode::from_constant(8233); // ERROR_DS_INAPPROPRIATE_AUTH
 
 /// The authentication mechanism is unknown.
-pub const AUTH_UNKNOWN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8234); // ERROR_DS_AUTH_UNKNOWN
+pub const AUTH_UNKNOWN : ErrorCode = ErrorCode::from_constant(8234); // ERROR_DS_AUTH_UNKNOWN
 
 /// A referral was returned from the server.
-pub const REFERRAL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8235); // ERROR_DS_REFERRAL
+pub const REFERRAL : ErrorCode = ErrorCode::from_constant(8235); // ERROR_DS_REFERRAL
 
 /// The server does not support the requested critical extension.
-pub const UNAVAILABLE_CRIT_EXTENSION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8236); // ERROR_DS_UNAVAILABLE_CRIT_EXTENSION
+pub const UNAVAILABLE_CRIT_EXTENSION : ErrorCode = ErrorCode::from_constant(8236); // ERROR_DS_UNAVAILABLE_CRIT_EXTENSION
 
 /// This request requires a secure connection.
-pub const CONFIDENTIALITY_REQUIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8237); // ERROR_DS_CONFIDENTIALITY_REQUIRED
+pub const CONFIDENTIALITY_REQUIRED : ErrorCode = ErrorCode::from_constant(8237); // ERROR_DS_CONFIDENTIALITY_REQUIRED
 
 /// Inappropriate matching.
-pub const INAPPROPRIATE_MATCHING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8238); // ERROR_DS_INAPPROPRIATE_MATCHING
+pub const INAPPROPRIATE_MATCHING : ErrorCode = ErrorCode::from_constant(8238); // ERROR_DS_INAPPROPRIATE_MATCHING
 
 /// A constraint violation occurred.
-pub const CONSTRAINT_VIOLATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8239); // ERROR_DS_CONSTRAINT_VIOLATION
+pub const CONSTRAINT_VIOLATION : ErrorCode = ErrorCode::from_constant(8239); // ERROR_DS_CONSTRAINT_VIOLATION
 
 /// There is no such object on the server.
-pub const NO_SUCH_OBJECT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8240); // ERROR_DS_NO_SUCH_OBJECT
+pub const NO_SUCH_OBJECT : ErrorCode = ErrorCode::from_constant(8240); // ERROR_DS_NO_SUCH_OBJECT
 
 /// There is an alias problem.
-pub const ALIAS_PROBLEM : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8241); // ERROR_DS_ALIAS_PROBLEM
+pub const ALIAS_PROBLEM : ErrorCode = ErrorCode::from_constant(8241); // ERROR_DS_ALIAS_PROBLEM
 
 /// An invalid dn syntax has been specified.
-pub const INVALID_DN_SYNTAX : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8242); // ERROR_DS_INVALID_DN_SYNTAX
+pub const INVALID_DN_SYNTAX : ErrorCode = ErrorCode::from_constant(8242); // ERROR_DS_INVALID_DN_SYNTAX
 
 /// The object is a leaf object.
-pub const IS_LEAF : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8243); // ERROR_DS_IS_LEAF
+pub const IS_LEAF : ErrorCode = ErrorCode::from_constant(8243); // ERROR_DS_IS_LEAF
 
 /// There is an alias dereferencing problem.
-pub const ALIAS_DEREF_PROBLEM : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8244); // ERROR_DS_ALIAS_DEREF_PROBLEM
+pub const ALIAS_DEREF_PROBLEM : ErrorCode = ErrorCode::from_constant(8244); // ERROR_DS_ALIAS_DEREF_PROBLEM
 
 /// The server is unwilling to process the request.
-pub const UNWILLING_TO_PERFORM : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8245); // ERROR_DS_UNWILLING_TO_PERFORM
+pub const UNWILLING_TO_PERFORM : ErrorCode = ErrorCode::from_constant(8245); // ERROR_DS_UNWILLING_TO_PERFORM
 
 /// A loop has been detected.
-pub const LOOP_DETECT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8246); // ERROR_DS_LOOP_DETECT
+pub const LOOP_DETECT : ErrorCode = ErrorCode::from_constant(8246); // ERROR_DS_LOOP_DETECT
 
 /// There is a naming violation.
-pub const NAMING_VIOLATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8247); // ERROR_DS_NAMING_VIOLATION
+pub const NAMING_VIOLATION : ErrorCode = ErrorCode::from_constant(8247); // ERROR_DS_NAMING_VIOLATION
 
 /// The result set is too large.
-pub const OBJECT_RESULTS_TOO_LARGE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8248); // ERROR_DS_OBJECT_RESULTS_TOO_LARGE
+pub const OBJECT_RESULTS_TOO_LARGE : ErrorCode = ErrorCode::from_constant(8248); // ERROR_DS_OBJECT_RESULTS_TOO_LARGE
 
 /// The operation affects multiple DSAs
-pub const AFFECTS_MULTIPLE_DSAS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8249); // ERROR_DS_AFFECTS_MULTIPLE_DSAS
+pub const AFFECTS_MULTIPLE_DSAS : ErrorCode = ErrorCode::from_constant(8249); // ERROR_DS_AFFECTS_MULTIPLE_DSAS
 
 /// The server is not operational.
-pub const SERVER_DOWN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8250); // ERROR_DS_SERVER_DOWN
+pub const SERVER_DOWN : ErrorCode = ErrorCode::from_constant(8250); // ERROR_DS_SERVER_DOWN
 
 /// A local error has occurred.
-pub const LOCAL_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8251); // ERROR_DS_LOCAL_ERROR
+pub const LOCAL_ERROR : ErrorCode = ErrorCode::from_constant(8251); // ERROR_DS_LOCAL_ERROR
 
 /// An encoding error has occurred.
-pub const ENCODING_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8252); // ERROR_DS_ENCODING_ERROR
+pub const ENCODING_ERROR : ErrorCode = ErrorCode::from_constant(8252); // ERROR_DS_ENCODING_ERROR
 
 /// A decoding error has occurred.
-pub const DECODING_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8253); // ERROR_DS_DECODING_ERROR
+pub const DECODING_ERROR : ErrorCode = ErrorCode::from_constant(8253); // ERROR_DS_DECODING_ERROR
 
 /// The search filter cannot be recognized.
-pub const FILTER_UNKNOWN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8254); // ERROR_DS_FILTER_UNKNOWN
+pub const FILTER_UNKNOWN : ErrorCode = ErrorCode::from_constant(8254); // ERROR_DS_FILTER_UNKNOWN
 
 /// One or more parameters are illegal.
-pub const PARAM_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8255); // ERROR_DS_PARAM_ERROR
+pub const PARAM_ERROR : ErrorCode = ErrorCode::from_constant(8255); // ERROR_DS_PARAM_ERROR
 
 /// The specified method is not supported.
-pub const NOT_SUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8256); // ERROR_DS_NOT_SUPPORTED
+pub const NOT_SUPPORTED : ErrorCode = ErrorCode::from_constant(8256); // ERROR_DS_NOT_SUPPORTED
 
 /// No results were returned.
-pub const NO_RESULTS_RETURNED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8257); // ERROR_DS_NO_RESULTS_RETURNED
+pub const NO_RESULTS_RETURNED : ErrorCode = ErrorCode::from_constant(8257); // ERROR_DS_NO_RESULTS_RETURNED
 
 /// The specified control is not supported by the server.
-pub const CONTROL_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8258); // ERROR_DS_CONTROL_NOT_FOUND
+pub const CONTROL_NOT_FOUND : ErrorCode = ErrorCode::from_constant(8258); // ERROR_DS_CONTROL_NOT_FOUND
 
 /// A referral loop was detected by the client.
-pub const CLIENT_LOOP : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8259); // ERROR_DS_CLIENT_LOOP
+pub const CLIENT_LOOP : ErrorCode = ErrorCode::from_constant(8259); // ERROR_DS_CLIENT_LOOP
 
 /// The preset referral limit was exceeded.
-pub const REFERRAL_LIMIT_EXCEEDED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8260); // ERROR_DS_REFERRAL_LIMIT_EXCEEDED
+pub const REFERRAL_LIMIT_EXCEEDED : ErrorCode = ErrorCode::from_constant(8260); // ERROR_DS_REFERRAL_LIMIT_EXCEEDED
 
 /// The search requires a SORT control.
-pub const SORT_CONTROL_MISSING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8261); // ERROR_DS_SORT_CONTROL_MISSING
+pub const SORT_CONTROL_MISSING : ErrorCode = ErrorCode::from_constant(8261); // ERROR_DS_SORT_CONTROL_MISSING
 
 /// The search results exceed the offset range specified.
-pub const OFFSET_RANGE_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8262); // ERROR_DS_OFFSET_RANGE_ERROR
+pub const OFFSET_RANGE_ERROR : ErrorCode = ErrorCode::from_constant(8262); // ERROR_DS_OFFSET_RANGE_ERROR
 
 /// The directory service detected the subsystem that allocates relative identifiers is disabled. This can occur as a protective mechanism when the system determines a significant portion of relative identifiers (RIDs) have been exhausted. Please see <http://go.microsoft.com/fwlink/?LinkId=228610> for recommended diagnostic steps and the procedure to re-enable account creation.
-pub const RIDMGR_DISABLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8263); // ERROR_DS_RIDMGR_DISABLED
+pub const RIDMGR_DISABLED : ErrorCode = ErrorCode::from_constant(8263); // ERROR_DS_RIDMGR_DISABLED
 
 /// The root object must be the head of a naming context. The root object cannot have an instantiated parent.
-pub const ROOT_MUST_BE_NC : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8301); // ERROR_DS_ROOT_MUST_BE_NC
+pub const ROOT_MUST_BE_NC : ErrorCode = ErrorCode::from_constant(8301); // ERROR_DS_ROOT_MUST_BE_NC
 
 /// The add replica operation cannot be performed. The naming context must be writeable in order to create the replica.
-pub const ADD_REPLICA_INHIBITED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8302); // ERROR_DS_ADD_REPLICA_INHIBITED
+pub const ADD_REPLICA_INHIBITED : ErrorCode = ErrorCode::from_constant(8302); // ERROR_DS_ADD_REPLICA_INHIBITED
 
 /// A reference to an attribute that is not defined in the schema occurred.
-pub const ATT_NOT_DEF_IN_SCHEMA : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8303); // ERROR_DS_ATT_NOT_DEF_IN_SCHEMA
+pub const ATT_NOT_DEF_IN_SCHEMA : ErrorCode = ErrorCode::from_constant(8303); // ERROR_DS_ATT_NOT_DEF_IN_SCHEMA
 
 /// The maximum size of an object has been exceeded.
-pub const MAX_OBJ_SIZE_EXCEEDED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8304); // ERROR_DS_MAX_OBJ_SIZE_EXCEEDED
+pub const MAX_OBJ_SIZE_EXCEEDED : ErrorCode = ErrorCode::from_constant(8304); // ERROR_DS_MAX_OBJ_SIZE_EXCEEDED
 
 /// An attempt was made to add an object to the directory with a name that is already in use.
-pub const OBJ_STRING_NAME_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8305); // ERROR_DS_OBJ_STRING_NAME_EXISTS
+pub const OBJ_STRING_NAME_EXISTS : ErrorCode = ErrorCode::from_constant(8305); // ERROR_DS_OBJ_STRING_NAME_EXISTS
 
 /// An attempt was made to add an object of a class that does not have an RDN defined in the schema.
-pub const NO_RDN_DEFINED_IN_SCHEMA : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8306); // ERROR_DS_NO_RDN_DEFINED_IN_SCHEMA
+pub const NO_RDN_DEFINED_IN_SCHEMA : ErrorCode = ErrorCode::from_constant(8306); // ERROR_DS_NO_RDN_DEFINED_IN_SCHEMA
 
 /// An attempt was made to add an object using an RDN that is not the RDN defined in the schema.
-pub const RDN_DOESNT_MATCH_SCHEMA : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8307); // ERROR_DS_RDN_DOESNT_MATCH_SCHEMA
+pub const RDN_DOESNT_MATCH_SCHEMA : ErrorCode = ErrorCode::from_constant(8307); // ERROR_DS_RDN_DOESNT_MATCH_SCHEMA
 
 /// None of the requested attributes were found on the objects.
-pub const NO_REQUESTED_ATTS_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8308); // ERROR_DS_NO_REQUESTED_ATTS_FOUND
+pub const NO_REQUESTED_ATTS_FOUND : ErrorCode = ErrorCode::from_constant(8308); // ERROR_DS_NO_REQUESTED_ATTS_FOUND
 
 /// The user buffer is too small.
-pub const USER_BUFFER_TO_SMALL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8309); // ERROR_DS_USER_BUFFER_TO_SMALL
+pub const USER_BUFFER_TO_SMALL : ErrorCode = ErrorCode::from_constant(8309); // ERROR_DS_USER_BUFFER_TO_SMALL
 
 /// The attribute specified in the operation is not present on the object.
-pub const ATT_IS_NOT_ON_OBJ : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8310); // ERROR_DS_ATT_IS_NOT_ON_OBJ
+pub const ATT_IS_NOT_ON_OBJ : ErrorCode = ErrorCode::from_constant(8310); // ERROR_DS_ATT_IS_NOT_ON_OBJ
 
 /// Illegal modify operation. Some aspect of the modification is not permitted.
-pub const ILLEGAL_MOD_OPERATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8311); // ERROR_DS_ILLEGAL_MOD_OPERATION
+pub const ILLEGAL_MOD_OPERATION : ErrorCode = ErrorCode::from_constant(8311); // ERROR_DS_ILLEGAL_MOD_OPERATION
 
 /// The specified object is too large.
-pub const OBJ_TOO_LARGE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8312); // ERROR_DS_OBJ_TOO_LARGE
+pub const OBJ_TOO_LARGE : ErrorCode = ErrorCode::from_constant(8312); // ERROR_DS_OBJ_TOO_LARGE
 
 /// The specified instance type is not valid.
-pub const BAD_INSTANCE_TYPE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8313); // ERROR_DS_BAD_INSTANCE_TYPE
+pub const BAD_INSTANCE_TYPE : ErrorCode = ErrorCode::from_constant(8313); // ERROR_DS_BAD_INSTANCE_TYPE
 
 /// The operation must be performed at a master DSA.
-pub const MASTERDSA_REQUIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8314); // ERROR_DS_MASTERDSA_REQUIRED
+pub const MASTERDSA_REQUIRED : ErrorCode = ErrorCode::from_constant(8314); // ERROR_DS_MASTERDSA_REQUIRED
 
 /// The object class attribute must be specified.
-pub const OBJECT_CLASS_REQUIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8315); // ERROR_DS_OBJECT_CLASS_REQUIRED
+pub const OBJECT_CLASS_REQUIRED : ErrorCode = ErrorCode::from_constant(8315); // ERROR_DS_OBJECT_CLASS_REQUIRED
 
 /// A required attribute is missing.
-pub const MISSING_REQUIRED_ATT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8316); // ERROR_DS_MISSING_REQUIRED_ATT
+pub const MISSING_REQUIRED_ATT : ErrorCode = ErrorCode::from_constant(8316); // ERROR_DS_MISSING_REQUIRED_ATT
 
 /// An attempt was made to modify an object to include an attribute that is not legal for its class.
-pub const ATT_NOT_DEF_FOR_CLASS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8317); // ERROR_DS_ATT_NOT_DEF_FOR_CLASS
+pub const ATT_NOT_DEF_FOR_CLASS : ErrorCode = ErrorCode::from_constant(8317); // ERROR_DS_ATT_NOT_DEF_FOR_CLASS
 
 /// The specified attribute is already present on the object.
-pub const ATT_ALREADY_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8318); // ERROR_DS_ATT_ALREADY_EXISTS
+pub const ATT_ALREADY_EXISTS : ErrorCode = ErrorCode::from_constant(8318); // ERROR_DS_ATT_ALREADY_EXISTS
 
 /// The specified attribute is not present, or has no values.
-pub const CANT_ADD_ATT_VALUES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8320); // ERROR_DS_CANT_ADD_ATT_VALUES
+pub const CANT_ADD_ATT_VALUES : ErrorCode = ErrorCode::from_constant(8320); // ERROR_DS_CANT_ADD_ATT_VALUES
 
 /// Multiple values were specified for an attribute that can have only one value.
-pub const SINGLE_VALUE_CONSTRAINT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8321); // ERROR_DS_SINGLE_VALUE_CONSTRAINT
+pub const SINGLE_VALUE_CONSTRAINT : ErrorCode = ErrorCode::from_constant(8321); // ERROR_DS_SINGLE_VALUE_CONSTRAINT
 
 /// A value for the attribute was not in the acceptable range of values.
-pub const RANGE_CONSTRAINT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8322); // ERROR_DS_RANGE_CONSTRAINT
+pub const RANGE_CONSTRAINT : ErrorCode = ErrorCode::from_constant(8322); // ERROR_DS_RANGE_CONSTRAINT
 
 /// The specified value already exists.
-pub const ATT_VAL_ALREADY_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8323); // ERROR_DS_ATT_VAL_ALREADY_EXISTS
+pub const ATT_VAL_ALREADY_EXISTS : ErrorCode = ErrorCode::from_constant(8323); // ERROR_DS_ATT_VAL_ALREADY_EXISTS
 
 /// The attribute cannot be removed because it is not present on the object.
-pub const CANT_REM_MISSING_ATT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8324); // ERROR_DS_CANT_REM_MISSING_ATT
+pub const CANT_REM_MISSING_ATT : ErrorCode = ErrorCode::from_constant(8324); // ERROR_DS_CANT_REM_MISSING_ATT
 
 /// The attribute value cannot be removed because it is not present on the object.
-pub const CANT_REM_MISSING_ATT_VAL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8325); // ERROR_DS_CANT_REM_MISSING_ATT_VAL
+pub const CANT_REM_MISSING_ATT_VAL : ErrorCode = ErrorCode::from_constant(8325); // ERROR_DS_CANT_REM_MISSING_ATT_VAL
 
 /// The specified root object cannot be a subref.
-pub const ROOT_CANT_BE_SUBREF : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8326); // ERROR_DS_ROOT_CANT_BE_SUBREF
+pub const ROOT_CANT_BE_SUBREF : ErrorCode = ErrorCode::from_constant(8326); // ERROR_DS_ROOT_CANT_BE_SUBREF
 
 /// Chaining is not permitted.
-pub const NO_CHAINING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8327); // ERROR_DS_NO_CHAINING
+pub const NO_CHAINING : ErrorCode = ErrorCode::from_constant(8327); // ERROR_DS_NO_CHAINING
 
 /// Chained evaluation is not permitted.
-pub const NO_CHAINED_EVAL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8328); // ERROR_DS_NO_CHAINED_EVAL
+pub const NO_CHAINED_EVAL : ErrorCode = ErrorCode::from_constant(8328); // ERROR_DS_NO_CHAINED_EVAL
 
 /// The operation could not be performed because the object's parent is either uninstantiated or deleted.
-pub const NO_PARENT_OBJECT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8329); // ERROR_DS_NO_PARENT_OBJECT
+pub const NO_PARENT_OBJECT : ErrorCode = ErrorCode::from_constant(8329); // ERROR_DS_NO_PARENT_OBJECT
 
 /// Having a parent that is an alias is not permitted. Aliases are leaf objects.
-pub const PARENT_IS_AN_ALIAS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8330); // ERROR_DS_PARENT_IS_AN_ALIAS
+pub const PARENT_IS_AN_ALIAS : ErrorCode = ErrorCode::from_constant(8330); // ERROR_DS_PARENT_IS_AN_ALIAS
 
 /// The object and parent must be of the same type, either both masters or both replicas.
-pub const CANT_MIX_MASTER_AND_REPS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8331); // ERROR_DS_CANT_MIX_MASTER_AND_REPS
+pub const CANT_MIX_MASTER_AND_REPS : ErrorCode = ErrorCode::from_constant(8331); // ERROR_DS_CANT_MIX_MASTER_AND_REPS
 
 /// The operation cannot be performed because child objects exist. This operation can only be performed on a leaf object.
-pub const CHILDREN_EXIST : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8332); // ERROR_DS_CHILDREN_EXIST
+pub const CHILDREN_EXIST : ErrorCode = ErrorCode::from_constant(8332); // ERROR_DS_CHILDREN_EXIST
 
 /// Directory object not found.
-pub const OBJ_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8333); // ERROR_DS_OBJ_NOT_FOUND
+pub const OBJ_NOT_FOUND : ErrorCode = ErrorCode::from_constant(8333); // ERROR_DS_OBJ_NOT_FOUND
 
 /// The aliased object is missing.
-pub const ALIASED_OBJ_MISSING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8334); // ERROR_DS_ALIASED_OBJ_MISSING
+pub const ALIASED_OBJ_MISSING : ErrorCode = ErrorCode::from_constant(8334); // ERROR_DS_ALIASED_OBJ_MISSING
 
 /// The object name has bad syntax.
-pub const BAD_NAME_SYNTAX : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8335); // ERROR_DS_BAD_NAME_SYNTAX
+pub const BAD_NAME_SYNTAX : ErrorCode = ErrorCode::from_constant(8335); // ERROR_DS_BAD_NAME_SYNTAX
 
 /// It is not permitted for an alias to refer to another alias.
-pub const ALIAS_POINTS_TO_ALIAS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8336); // ERROR_DS_ALIAS_POINTS_TO_ALIAS
+pub const ALIAS_POINTS_TO_ALIAS : ErrorCode = ErrorCode::from_constant(8336); // ERROR_DS_ALIAS_POINTS_TO_ALIAS
 
 /// The alias cannot be dereferenced.
-pub const CANT_DEREF_ALIAS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8337); // ERROR_DS_CANT_DEREF_ALIAS
+pub const CANT_DEREF_ALIAS : ErrorCode = ErrorCode::from_constant(8337); // ERROR_DS_CANT_DEREF_ALIAS
 
 /// The operation is out of scope.
-pub const OUT_OF_SCOPE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8338); // ERROR_DS_OUT_OF_SCOPE
+pub const OUT_OF_SCOPE : ErrorCode = ErrorCode::from_constant(8338); // ERROR_DS_OUT_OF_SCOPE
 
 /// The operation cannot continue because the object is in the process of being removed.
-pub const OBJECT_BEING_REMOVED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8339); // ERROR_DS_OBJECT_BEING_REMOVED
+pub const OBJECT_BEING_REMOVED : ErrorCode = ErrorCode::from_constant(8339); // ERROR_DS_OBJECT_BEING_REMOVED
 
 /// The DSA object cannot be deleted.
-pub const CANT_DELETE_DSA_OBJ : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8340); // ERROR_DS_CANT_DELETE_DSA_OBJ
+pub const CANT_DELETE_DSA_OBJ : ErrorCode = ErrorCode::from_constant(8340); // ERROR_DS_CANT_DELETE_DSA_OBJ
 
 /// A directory service error has occurred.
-pub const GENERIC_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8341); // ERROR_DS_GENERIC_ERROR
+pub const GENERIC_ERROR : ErrorCode = ErrorCode::from_constant(8341); // ERROR_DS_GENERIC_ERROR
 
 /// The operation can only be performed on an internal master DSA object.
-pub const DSA_MUST_BE_INT_MASTER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8342); // ERROR_DS_DSA_MUST_BE_INT_MASTER
+pub const DSA_MUST_BE_INT_MASTER : ErrorCode = ErrorCode::from_constant(8342); // ERROR_DS_DSA_MUST_BE_INT_MASTER
 
 /// The object must be of class DSA.
-pub const CLASS_NOT_DSA : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8343); // ERROR_DS_CLASS_NOT_DSA
+pub const CLASS_NOT_DSA : ErrorCode = ErrorCode::from_constant(8343); // ERROR_DS_CLASS_NOT_DSA
 
 /// Insufficient access rights to perform the operation.
-pub const INSUFF_ACCESS_RIGHTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8344); // ERROR_DS_INSUFF_ACCESS_RIGHTS
+pub const INSUFF_ACCESS_RIGHTS : ErrorCode = ErrorCode::from_constant(8344); // ERROR_DS_INSUFF_ACCESS_RIGHTS
 
 /// The object cannot be added because the parent is not on the list of possible superiors.
-pub const ILLEGAL_SUPERIOR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8345); // ERROR_DS_ILLEGAL_SUPERIOR
+pub const ILLEGAL_SUPERIOR : ErrorCode = ErrorCode::from_constant(8345); // ERROR_DS_ILLEGAL_SUPERIOR
 
 /// Access to the attribute is not permitted because the attribute is owned by the Security Accounts Manager (SAM).
-pub const ATTRIBUTE_OWNED_BY_SAM : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8346); // ERROR_DS_ATTRIBUTE_OWNED_BY_SAM
+pub const ATTRIBUTE_OWNED_BY_SAM : ErrorCode = ErrorCode::from_constant(8346); // ERROR_DS_ATTRIBUTE_OWNED_BY_SAM
 
 /// The name has too many parts.
-pub const NAME_TOO_MANY_PARTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8347); // ERROR_DS_NAME_TOO_MANY_PARTS
+pub const NAME_TOO_MANY_PARTS : ErrorCode = ErrorCode::from_constant(8347); // ERROR_DS_NAME_TOO_MANY_PARTS
 
 /// The name is too long.
-pub const NAME_TOO_LONG : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8348); // ERROR_DS_NAME_TOO_LONG
+pub const NAME_TOO_LONG : ErrorCode = ErrorCode::from_constant(8348); // ERROR_DS_NAME_TOO_LONG
 
 /// The name value is too long.
-pub const NAME_VALUE_TOO_LONG : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8349); // ERROR_DS_NAME_VALUE_TOO_LONG
+pub const NAME_VALUE_TOO_LONG : ErrorCode = ErrorCode::from_constant(8349); // ERROR_DS_NAME_VALUE_TOO_LONG
 
 /// The directory service encountered an error parsing a name.
-pub const NAME_UNPARSEABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8350); // ERROR_DS_NAME_UNPARSEABLE
+pub const NAME_UNPARSEABLE : ErrorCode = ErrorCode::from_constant(8350); // ERROR_DS_NAME_UNPARSEABLE
 
 /// The directory service cannot get the attribute type for a name.
-pub const NAME_TYPE_UNKNOWN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8351); // ERROR_DS_NAME_TYPE_UNKNOWN
+pub const NAME_TYPE_UNKNOWN : ErrorCode = ErrorCode::from_constant(8351); // ERROR_DS_NAME_TYPE_UNKNOWN
 
 /// The name does not identify an object; the name identifies a phantom.
-pub const NOT_AN_OBJECT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8352); // ERROR_DS_NOT_AN_OBJECT
+pub const NOT_AN_OBJECT : ErrorCode = ErrorCode::from_constant(8352); // ERROR_DS_NOT_AN_OBJECT
 
 /// The security descriptor is too short.
-pub const SEC_DESC_TOO_SHORT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8353); // ERROR_DS_SEC_DESC_TOO_SHORT
+pub const SEC_DESC_TOO_SHORT : ErrorCode = ErrorCode::from_constant(8353); // ERROR_DS_SEC_DESC_TOO_SHORT
 
 /// The security descriptor is invalid.
-pub const SEC_DESC_INVALID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8354); // ERROR_DS_SEC_DESC_INVALID
+pub const SEC_DESC_INVALID : ErrorCode = ErrorCode::from_constant(8354); // ERROR_DS_SEC_DESC_INVALID
 
 /// Failed to create name for deleted object.
-pub const NO_DELETED_NAME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8355); // ERROR_DS_NO_DELETED_NAME
+pub const NO_DELETED_NAME : ErrorCode = ErrorCode::from_constant(8355); // ERROR_DS_NO_DELETED_NAME
 
 /// The parent of a new subref must exist.
-pub const SUBREF_MUST_HAVE_PARENT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8356); // ERROR_DS_SUBREF_MUST_HAVE_PARENT
+pub const SUBREF_MUST_HAVE_PARENT : ErrorCode = ErrorCode::from_constant(8356); // ERROR_DS_SUBREF_MUST_HAVE_PARENT
 
 /// The object must be a naming context.
-pub const NCNAME_MUST_BE_NC : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8357); // ERROR_DS_NCNAME_MUST_BE_NC
+pub const NCNAME_MUST_BE_NC : ErrorCode = ErrorCode::from_constant(8357); // ERROR_DS_NCNAME_MUST_BE_NC
 
 /// It is not permitted to add an attribute which is owned by the system.
-pub const CANT_ADD_SYSTEM_ONLY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8358); // ERROR_DS_CANT_ADD_SYSTEM_ONLY
+pub const CANT_ADD_SYSTEM_ONLY : ErrorCode = ErrorCode::from_constant(8358); // ERROR_DS_CANT_ADD_SYSTEM_ONLY
 
 /// The class of the object must be structural; you cannot instantiate an abstract class.
-pub const CLASS_MUST_BE_CONCRETE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8359); // ERROR_DS_CLASS_MUST_BE_CONCRETE
+pub const CLASS_MUST_BE_CONCRETE : ErrorCode = ErrorCode::from_constant(8359); // ERROR_DS_CLASS_MUST_BE_CONCRETE
 
 /// The schema object could not be found.
-pub const INVALID_DMD : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8360); // ERROR_DS_INVALID_DMD
+pub const INVALID_DMD : ErrorCode = ErrorCode::from_constant(8360); // ERROR_DS_INVALID_DMD
 
 /// A local object with this GUID (dead or alive) already exists.
-pub const OBJ_GUID_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8361); // ERROR_DS_OBJ_GUID_EXISTS
+pub const OBJ_GUID_EXISTS : ErrorCode = ErrorCode::from_constant(8361); // ERROR_DS_OBJ_GUID_EXISTS
 
 /// The operation cannot be performed on a back link.
-pub const NOT_ON_BACKLINK : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8362); // ERROR_DS_NOT_ON_BACKLINK
+pub const NOT_ON_BACKLINK : ErrorCode = ErrorCode::from_constant(8362); // ERROR_DS_NOT_ON_BACKLINK
 
 /// The cross reference for the specified naming context could not be found.
-pub const NO_CROSSREF_FOR_NC : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8363); // ERROR_DS_NO_CROSSREF_FOR_NC
+pub const NO_CROSSREF_FOR_NC : ErrorCode = ErrorCode::from_constant(8363); // ERROR_DS_NO_CROSSREF_FOR_NC
 
 /// The operation could not be performed because the directory service is shutting down.
-pub const SHUTTING_DOWN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8364); // ERROR_DS_SHUTTING_DOWN
+pub const SHUTTING_DOWN : ErrorCode = ErrorCode::from_constant(8364); // ERROR_DS_SHUTTING_DOWN
 
 /// The directory service request is invalid.
-pub const UNKNOWN_OPERATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8365); // ERROR_DS_UNKNOWN_OPERATION
+pub const UNKNOWN_OPERATION : ErrorCode = ErrorCode::from_constant(8365); // ERROR_DS_UNKNOWN_OPERATION
 
 /// The role owner attribute could not be read.
-pub const INVALID_ROLE_OWNER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8366); // ERROR_DS_INVALID_ROLE_OWNER
+pub const INVALID_ROLE_OWNER : ErrorCode = ErrorCode::from_constant(8366); // ERROR_DS_INVALID_ROLE_OWNER
 
 /// The requested FSMO operation failed. The current FSMO holder could not be contacted.
-pub const COULDNT_CONTACT_FSMO : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8367); // ERROR_DS_COULDNT_CONTACT_FSMO
+pub const COULDNT_CONTACT_FSMO : ErrorCode = ErrorCode::from_constant(8367); // ERROR_DS_COULDNT_CONTACT_FSMO
 
 /// Modification of a DN across a naming context is not permitted.
-pub const CROSS_NC_DN_RENAME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8368); // ERROR_DS_CROSS_NC_DN_RENAME
+pub const CROSS_NC_DN_RENAME : ErrorCode = ErrorCode::from_constant(8368); // ERROR_DS_CROSS_NC_DN_RENAME
 
 /// The attribute cannot be modified because it is owned by the system.
-pub const CANT_MOD_SYSTEM_ONLY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8369); // ERROR_DS_CANT_MOD_SYSTEM_ONLY
+pub const CANT_MOD_SYSTEM_ONLY : ErrorCode = ErrorCode::from_constant(8369); // ERROR_DS_CANT_MOD_SYSTEM_ONLY
 
 /// Only the replicator can perform this function.
-pub const REPLICATOR_ONLY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8370); // ERROR_DS_REPLICATOR_ONLY
+pub const REPLICATOR_ONLY : ErrorCode = ErrorCode::from_constant(8370); // ERROR_DS_REPLICATOR_ONLY
 
 /// The specified class is not defined.
-pub const OBJ_CLASS_NOT_DEFINED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8371); // ERROR_DS_OBJ_CLASS_NOT_DEFINED
+pub const OBJ_CLASS_NOT_DEFINED : ErrorCode = ErrorCode::from_constant(8371); // ERROR_DS_OBJ_CLASS_NOT_DEFINED
 
 /// The specified class is not a subclass.
-pub const OBJ_CLASS_NOT_SUBCLASS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8372); // ERROR_DS_OBJ_CLASS_NOT_SUBCLASS
+pub const OBJ_CLASS_NOT_SUBCLASS : ErrorCode = ErrorCode::from_constant(8372); // ERROR_DS_OBJ_CLASS_NOT_SUBCLASS
 
 /// The name reference is invalid.
-pub const NAME_REFERENCE_INVALID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8373); // ERROR_DS_NAME_REFERENCE_INVALID
+pub const NAME_REFERENCE_INVALID : ErrorCode = ErrorCode::from_constant(8373); // ERROR_DS_NAME_REFERENCE_INVALID
 
 /// A cross reference already exists.
-pub const CROSS_REF_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8374); // ERROR_DS_CROSS_REF_EXISTS
+pub const CROSS_REF_EXISTS : ErrorCode = ErrorCode::from_constant(8374); // ERROR_DS_CROSS_REF_EXISTS
 
 /// It is not permitted to delete a master cross reference.
-pub const CANT_DEL_MASTER_CROSSREF : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8375); // ERROR_DS_CANT_DEL_MASTER_CROSSREF
+pub const CANT_DEL_MASTER_CROSSREF : ErrorCode = ErrorCode::from_constant(8375); // ERROR_DS_CANT_DEL_MASTER_CROSSREF
 
 /// Subtree notifications are only supported on NC heads.
-pub const SUBTREE_NOTIFY_NOT_NC_HEAD : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8376); // ERROR_DS_SUBTREE_NOTIFY_NOT_NC_HEAD
+pub const SUBTREE_NOTIFY_NOT_NC_HEAD : ErrorCode = ErrorCode::from_constant(8376); // ERROR_DS_SUBTREE_NOTIFY_NOT_NC_HEAD
 
 /// Notification filter is too complex.
-pub const NOTIFY_FILTER_TOO_COMPLEX : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8377); // ERROR_DS_NOTIFY_FILTER_TOO_COMPLEX
+pub const NOTIFY_FILTER_TOO_COMPLEX : ErrorCode = ErrorCode::from_constant(8377); // ERROR_DS_NOTIFY_FILTER_TOO_COMPLEX
 
 /// Schema update failed: duplicate RDN.
-pub const DUP_RDN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8378); // ERROR_DS_DUP_RDN
+pub const DUP_RDN : ErrorCode = ErrorCode::from_constant(8378); // ERROR_DS_DUP_RDN
 
 /// Schema update failed: duplicate OID.
-pub const DUP_OID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8379); // ERROR_DS_DUP_OID
+pub const DUP_OID : ErrorCode = ErrorCode::from_constant(8379); // ERROR_DS_DUP_OID
 
 /// Schema update failed: duplicate MAPI identifier.
-pub const DUP_MAPI_ID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8380); // ERROR_DS_DUP_MAPI_ID
+pub const DUP_MAPI_ID : ErrorCode = ErrorCode::from_constant(8380); // ERROR_DS_DUP_MAPI_ID
 
 /// Schema update failed: duplicate schema-id GUID.
-pub const DUP_SCHEMA_ID_GUID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8381); // ERROR_DS_DUP_SCHEMA_ID_GUID
+pub const DUP_SCHEMA_ID_GUID : ErrorCode = ErrorCode::from_constant(8381); // ERROR_DS_DUP_SCHEMA_ID_GUID
 
 /// Schema update failed: duplicate LDAP display name.
-pub const DUP_LDAP_DISPLAY_NAME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8382); // ERROR_DS_DUP_LDAP_DISPLAY_NAME
+pub const DUP_LDAP_DISPLAY_NAME : ErrorCode = ErrorCode::from_constant(8382); // ERROR_DS_DUP_LDAP_DISPLAY_NAME
 
 /// Schema update failed: range-lower less than range upper.
-pub const SEMANTIC_ATT_TEST : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8383); // ERROR_DS_SEMANTIC_ATT_TEST
+pub const SEMANTIC_ATT_TEST : ErrorCode = ErrorCode::from_constant(8383); // ERROR_DS_SEMANTIC_ATT_TEST
 
 /// Schema update failed: syntax mismatch.
-pub const SYNTAX_MISMATCH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8384); // ERROR_DS_SYNTAX_MISMATCH
+pub const SYNTAX_MISMATCH : ErrorCode = ErrorCode::from_constant(8384); // ERROR_DS_SYNTAX_MISMATCH
 
 /// Schema deletion failed: attribute is used in must-contain.
-pub const EXISTS_IN_MUST_HAVE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8385); // ERROR_DS_EXISTS_IN_MUST_HAVE
+pub const EXISTS_IN_MUST_HAVE : ErrorCode = ErrorCode::from_constant(8385); // ERROR_DS_EXISTS_IN_MUST_HAVE
 
 /// Schema deletion failed: attribute is used in may-contain.
-pub const EXISTS_IN_MAY_HAVE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8386); // ERROR_DS_EXISTS_IN_MAY_HAVE
+pub const EXISTS_IN_MAY_HAVE : ErrorCode = ErrorCode::from_constant(8386); // ERROR_DS_EXISTS_IN_MAY_HAVE
 
 /// Schema update failed: attribute in may-contain does not exist.
-pub const NONEXISTENT_MAY_HAVE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8387); // ERROR_DS_NONEXISTENT_MAY_HAVE
+pub const NONEXISTENT_MAY_HAVE : ErrorCode = ErrorCode::from_constant(8387); // ERROR_DS_NONEXISTENT_MAY_HAVE
 
 /// Schema update failed: attribute in must-contain does not exist.
-pub const NONEXISTENT_MUST_HAVE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8388); // ERROR_DS_NONEXISTENT_MUST_HAVE
+pub const NONEXISTENT_MUST_HAVE : ErrorCode = ErrorCode::from_constant(8388); // ERROR_DS_NONEXISTENT_MUST_HAVE
 
 /// Schema update failed: class in aux-class list does not exist or is not an auxiliary class.
-pub const AUX_CLS_TEST_FAIL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8389); // ERROR_DS_AUX_CLS_TEST_FAIL
+pub const AUX_CLS_TEST_FAIL : ErrorCode = ErrorCode::from_constant(8389); // ERROR_DS_AUX_CLS_TEST_FAIL
 
 /// Schema update failed: class in poss-superiors does not exist.
-pub const NONEXISTENT_POSS_SUP : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8390); // ERROR_DS_NONEXISTENT_POSS_SUP
+pub const NONEXISTENT_POSS_SUP : ErrorCode = ErrorCode::from_constant(8390); // ERROR_DS_NONEXISTENT_POSS_SUP
 
 /// Schema update failed: class in subclassof list does not exist or does not satisfy hierarchy rules.
-pub const SUB_CLS_TEST_FAIL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8391); // ERROR_DS_SUB_CLS_TEST_FAIL
+pub const SUB_CLS_TEST_FAIL : ErrorCode = ErrorCode::from_constant(8391); // ERROR_DS_SUB_CLS_TEST_FAIL
 
 /// Schema update failed: Rdn-Att-Id has wrong syntax.
-pub const BAD_RDN_ATT_ID_SYNTAX : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8392); // ERROR_DS_BAD_RDN_ATT_ID_SYNTAX
+pub const BAD_RDN_ATT_ID_SYNTAX : ErrorCode = ErrorCode::from_constant(8392); // ERROR_DS_BAD_RDN_ATT_ID_SYNTAX
 
 /// Schema deletion failed: class is used as auxiliary class.
-pub const EXISTS_IN_AUX_CLS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8393); // ERROR_DS_EXISTS_IN_AUX_CLS
+pub const EXISTS_IN_AUX_CLS : ErrorCode = ErrorCode::from_constant(8393); // ERROR_DS_EXISTS_IN_AUX_CLS
 
 /// Schema deletion failed: class is used as sub class.
-pub const EXISTS_IN_SUB_CLS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8394); // ERROR_DS_EXISTS_IN_SUB_CLS
+pub const EXISTS_IN_SUB_CLS : ErrorCode = ErrorCode::from_constant(8394); // ERROR_DS_EXISTS_IN_SUB_CLS
 
 /// Schema deletion failed: class is used as poss superior.
-pub const EXISTS_IN_POSS_SUP : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8395); // ERROR_DS_EXISTS_IN_POSS_SUP
+pub const EXISTS_IN_POSS_SUP : ErrorCode = ErrorCode::from_constant(8395); // ERROR_DS_EXISTS_IN_POSS_SUP
 
 /// Schema update failed in recalculating validation cache.
-pub const RECALCSCHEMA_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8396); // ERROR_DS_RECALCSCHEMA_FAILED
+pub const RECALCSCHEMA_FAILED : ErrorCode = ErrorCode::from_constant(8396); // ERROR_DS_RECALCSCHEMA_FAILED
 
 /// The tree deletion is not finished. The request must be made again to continue deleting the tree.
-pub const TREE_DELETE_NOT_FINISHED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8397); // ERROR_DS_TREE_DELETE_NOT_FINISHED
+pub const TREE_DELETE_NOT_FINISHED : ErrorCode = ErrorCode::from_constant(8397); // ERROR_DS_TREE_DELETE_NOT_FINISHED
 
 /// The requested delete operation could not be performed.
-pub const CANT_DELETE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8398); // ERROR_DS_CANT_DELETE
+pub const CANT_DELETE : ErrorCode = ErrorCode::from_constant(8398); // ERROR_DS_CANT_DELETE
 
 /// Cannot read the governs class identifier for the schema record.
-pub const ATT_SCHEMA_REQ_ID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8399); // ERROR_DS_ATT_SCHEMA_REQ_ID
+pub const ATT_SCHEMA_REQ_ID : ErrorCode = ErrorCode::from_constant(8399); // ERROR_DS_ATT_SCHEMA_REQ_ID
 
 /// The attribute schema has bad syntax.
-pub const BAD_ATT_SCHEMA_SYNTAX : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8400); // ERROR_DS_BAD_ATT_SCHEMA_SYNTAX
+pub const BAD_ATT_SCHEMA_SYNTAX : ErrorCode = ErrorCode::from_constant(8400); // ERROR_DS_BAD_ATT_SCHEMA_SYNTAX
 
 /// The attribute could not be cached.
-pub const CANT_CACHE_ATT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8401); // ERROR_DS_CANT_CACHE_ATT
+pub const CANT_CACHE_ATT : ErrorCode = ErrorCode::from_constant(8401); // ERROR_DS_CANT_CACHE_ATT
 
 /// The class could not be cached.
-pub const CANT_CACHE_CLASS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8402); // ERROR_DS_CANT_CACHE_CLASS
+pub const CANT_CACHE_CLASS : ErrorCode = ErrorCode::from_constant(8402); // ERROR_DS_CANT_CACHE_CLASS
 
 /// The attribute could not be removed from the cache.
-pub const CANT_REMOVE_ATT_CACHE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8403); // ERROR_DS_CANT_REMOVE_ATT_CACHE
+pub const CANT_REMOVE_ATT_CACHE : ErrorCode = ErrorCode::from_constant(8403); // ERROR_DS_CANT_REMOVE_ATT_CACHE
 
 /// The class could not be removed from the cache.
-pub const CANT_REMOVE_CLASS_CACHE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8404); // ERROR_DS_CANT_REMOVE_CLASS_CACHE
+pub const CANT_REMOVE_CLASS_CACHE : ErrorCode = ErrorCode::from_constant(8404); // ERROR_DS_CANT_REMOVE_CLASS_CACHE
 
 /// The distinguished name attribute could not be read.
-pub const CANT_RETRIEVE_DN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8405); // ERROR_DS_CANT_RETRIEVE_DN
+pub const CANT_RETRIEVE_DN : ErrorCode = ErrorCode::from_constant(8405); // ERROR_DS_CANT_RETRIEVE_DN
 
 /// No superior reference has been configured for the directory service. The directory service is therefore unable to issue referrals to objects outside this forest.
-pub const MISSING_SUPREF : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8406); // ERROR_DS_MISSING_SUPREF
+pub const MISSING_SUPREF : ErrorCode = ErrorCode::from_constant(8406); // ERROR_DS_MISSING_SUPREF
 
 /// The instance type attribute could not be retrieved.
-pub const CANT_RETRIEVE_INSTANCE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8407); // ERROR_DS_CANT_RETRIEVE_INSTANCE
+pub const CANT_RETRIEVE_INSTANCE : ErrorCode = ErrorCode::from_constant(8407); // ERROR_DS_CANT_RETRIEVE_INSTANCE
 
 /// An internal error has occurred.
-pub const CODE_INCONSISTENCY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8408); // ERROR_DS_CODE_INCONSISTENCY
+pub const CODE_INCONSISTENCY : ErrorCode = ErrorCode::from_constant(8408); // ERROR_DS_CODE_INCONSISTENCY
 
 /// A database error has occurred.
-pub const DATABASE_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8409); // ERROR_DS_DATABASE_ERROR
+pub const DATABASE_ERROR : ErrorCode = ErrorCode::from_constant(8409); // ERROR_DS_DATABASE_ERROR
 
 /// The attribute GOVERNSID is missing.
-pub const GOVERNSID_MISSING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8410); // ERROR_DS_GOVERNSID_MISSING
+pub const GOVERNSID_MISSING : ErrorCode = ErrorCode::from_constant(8410); // ERROR_DS_GOVERNSID_MISSING
 
 /// An expected attribute is missing.
-pub const MISSING_EXPECTED_ATT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8411); // ERROR_DS_MISSING_EXPECTED_ATT
+pub const MISSING_EXPECTED_ATT : ErrorCode = ErrorCode::from_constant(8411); // ERROR_DS_MISSING_EXPECTED_ATT
 
 /// The specified naming context is missing a cross reference.
-pub const NCNAME_MISSING_CR_REF : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8412); // ERROR_DS_NCNAME_MISSING_CR_REF
+pub const NCNAME_MISSING_CR_REF : ErrorCode = ErrorCode::from_constant(8412); // ERROR_DS_NCNAME_MISSING_CR_REF
 
 /// A security checking error has occurred.
-pub const SECURITY_CHECKING_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8413); // ERROR_DS_SECURITY_CHECKING_ERROR
+pub const SECURITY_CHECKING_ERROR : ErrorCode = ErrorCode::from_constant(8413); // ERROR_DS_SECURITY_CHECKING_ERROR
 
 /// The schema is not loaded.
-pub const SCHEMA_NOT_LOADED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8414); // ERROR_DS_SCHEMA_NOT_LOADED
+pub const SCHEMA_NOT_LOADED : ErrorCode = ErrorCode::from_constant(8414); // ERROR_DS_SCHEMA_NOT_LOADED
 
 /// Schema allocation failed. Please check if the machine is running low on memory.
-pub const SCHEMA_ALLOC_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8415); // ERROR_DS_SCHEMA_ALLOC_FAILED
+pub const SCHEMA_ALLOC_FAILED : ErrorCode = ErrorCode::from_constant(8415); // ERROR_DS_SCHEMA_ALLOC_FAILED
 
 /// Failed to obtain the required syntax for the attribute schema.
-pub const ATT_SCHEMA_REQ_SYNTAX : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8416); // ERROR_DS_ATT_SCHEMA_REQ_SYNTAX
+pub const ATT_SCHEMA_REQ_SYNTAX : ErrorCode = ErrorCode::from_constant(8416); // ERROR_DS_ATT_SCHEMA_REQ_SYNTAX
 
 /// The global catalog verification failed. The global catalog is not available or does not support the operation. Some part of the directory is currently not available.
-pub const GCVERIFY_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8417); // ERROR_DS_GCVERIFY_ERROR
+pub const GCVERIFY_ERROR : ErrorCode = ErrorCode::from_constant(8417); // ERROR_DS_GCVERIFY_ERROR
 
 /// The replication operation failed because of a schema mismatch between the servers involved.
-pub const DRA_SCHEMA_MISMATCH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8418); // ERROR_DS_DRA_SCHEMA_MISMATCH
+pub const DRA_SCHEMA_MISMATCH : ErrorCode = ErrorCode::from_constant(8418); // ERROR_DS_DRA_SCHEMA_MISMATCH
 
 /// The DSA object could not be found.
-pub const CANT_FIND_DSA_OBJ : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8419); // ERROR_DS_CANT_FIND_DSA_OBJ
+pub const CANT_FIND_DSA_OBJ : ErrorCode = ErrorCode::from_constant(8419); // ERROR_DS_CANT_FIND_DSA_OBJ
 
 /// The naming context could not be found.
-pub const CANT_FIND_EXPECTED_NC : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8420); // ERROR_DS_CANT_FIND_EXPECTED_NC
+pub const CANT_FIND_EXPECTED_NC : ErrorCode = ErrorCode::from_constant(8420); // ERROR_DS_CANT_FIND_EXPECTED_NC
 
 /// The naming context could not be found in the cache.
-pub const CANT_FIND_NC_IN_CACHE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8421); // ERROR_DS_CANT_FIND_NC_IN_CACHE
+pub const CANT_FIND_NC_IN_CACHE : ErrorCode = ErrorCode::from_constant(8421); // ERROR_DS_CANT_FIND_NC_IN_CACHE
 
 /// The child object could not be retrieved.
-pub const CANT_RETRIEVE_CHILD : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8422); // ERROR_DS_CANT_RETRIEVE_CHILD
+pub const CANT_RETRIEVE_CHILD : ErrorCode = ErrorCode::from_constant(8422); // ERROR_DS_CANT_RETRIEVE_CHILD
 
 /// The modification was not permitted for security reasons.
-pub const SECURITY_ILLEGAL_MODIFY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8423); // ERROR_DS_SECURITY_ILLEGAL_MODIFY
+pub const SECURITY_ILLEGAL_MODIFY : ErrorCode = ErrorCode::from_constant(8423); // ERROR_DS_SECURITY_ILLEGAL_MODIFY
 
 /// The operation cannot replace the hidden record.
-pub const CANT_REPLACE_HIDDEN_REC : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8424); // ERROR_DS_CANT_REPLACE_HIDDEN_REC
+pub const CANT_REPLACE_HIDDEN_REC : ErrorCode = ErrorCode::from_constant(8424); // ERROR_DS_CANT_REPLACE_HIDDEN_REC
 
 /// The hierarchy file is invalid.
-pub const BAD_HIERARCHY_FILE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8425); // ERROR_DS_BAD_HIERARCHY_FILE
+pub const BAD_HIERARCHY_FILE : ErrorCode = ErrorCode::from_constant(8425); // ERROR_DS_BAD_HIERARCHY_FILE
 
 /// The attempt to build the hierarchy table failed.
-pub const BUILD_HIERARCHY_TABLE_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8426); // ERROR_DS_BUILD_HIERARCHY_TABLE_FAILED
+pub const BUILD_HIERARCHY_TABLE_FAILED : ErrorCode = ErrorCode::from_constant(8426); // ERROR_DS_BUILD_HIERARCHY_TABLE_FAILED
 
 /// The directory configuration parameter is missing from the registry.
-pub const CONFIG_PARAM_MISSING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8427); // ERROR_DS_CONFIG_PARAM_MISSING
+pub const CONFIG_PARAM_MISSING : ErrorCode = ErrorCode::from_constant(8427); // ERROR_DS_CONFIG_PARAM_MISSING
 
 /// The attempt to count the address book indices failed.
-pub const COUNTING_AB_INDICES_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8428); // ERROR_DS_COUNTING_AB_INDICES_FAILED
+pub const COUNTING_AB_INDICES_FAILED : ErrorCode = ErrorCode::from_constant(8428); // ERROR_DS_COUNTING_AB_INDICES_FAILED
 
 /// The allocation of the hierarchy table failed.
-pub const HIERARCHY_TABLE_MALLOC_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8429); // ERROR_DS_HIERARCHY_TABLE_MALLOC_FAILED
+pub const HIERARCHY_TABLE_MALLOC_FAILED : ErrorCode = ErrorCode::from_constant(8429); // ERROR_DS_HIERARCHY_TABLE_MALLOC_FAILED
 
 /// The directory service encountered an internal failure.
-pub const INTERNAL_FAILURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8430); // ERROR_DS_INTERNAL_FAILURE
+pub const INTERNAL_FAILURE : ErrorCode = ErrorCode::from_constant(8430); // ERROR_DS_INTERNAL_FAILURE
 
 /// The directory service encountered an unknown failure.
-pub const UNKNOWN_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8431); // ERROR_DS_UNKNOWN_ERROR
+pub const UNKNOWN_ERROR : ErrorCode = ErrorCode::from_constant(8431); // ERROR_DS_UNKNOWN_ERROR
 
 /// A root object requires a class of 'top'.
-pub const ROOT_REQUIRES_CLASS_TOP : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8432); // ERROR_DS_ROOT_REQUIRES_CLASS_TOP
+pub const ROOT_REQUIRES_CLASS_TOP : ErrorCode = ErrorCode::from_constant(8432); // ERROR_DS_ROOT_REQUIRES_CLASS_TOP
 
 /// This directory server is shutting down, and cannot take ownership of new floating single-master operation roles.
-pub const REFUSING_FSMO_ROLES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8433); // ERROR_DS_REFUSING_FSMO_ROLES
+pub const REFUSING_FSMO_ROLES : ErrorCode = ErrorCode::from_constant(8433); // ERROR_DS_REFUSING_FSMO_ROLES
 
 /// The directory service is missing mandatory configuration information, and is unable to determine the ownership of floating single-master operation roles.
-pub const MISSING_FSMO_SETTINGS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8434); // ERROR_DS_MISSING_FSMO_SETTINGS
+pub const MISSING_FSMO_SETTINGS : ErrorCode = ErrorCode::from_constant(8434); // ERROR_DS_MISSING_FSMO_SETTINGS
 
 /// The directory service was unable to transfer ownership of one or more floating single-master operation roles to other servers.
-pub const UNABLE_TO_SURRENDER_ROLES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8435); // ERROR_DS_UNABLE_TO_SURRENDER_ROLES
+pub const UNABLE_TO_SURRENDER_ROLES : ErrorCode = ErrorCode::from_constant(8435); // ERROR_DS_UNABLE_TO_SURRENDER_ROLES
 
 /// The replication operation failed.
-pub const DRA_GENERIC : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8436); // ERROR_DS_DRA_GENERIC
+pub const DRA_GENERIC : ErrorCode = ErrorCode::from_constant(8436); // ERROR_DS_DRA_GENERIC
 
 /// An invalid parameter was specified for this replication operation.
-pub const DRA_INVALID_PARAMETER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8437); // ERROR_DS_DRA_INVALID_PARAMETER
+pub const DRA_INVALID_PARAMETER : ErrorCode = ErrorCode::from_constant(8437); // ERROR_DS_DRA_INVALID_PARAMETER
 
 /// The directory service is too busy to complete the replication operation at this time.
-pub const DRA_BUSY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8438); // ERROR_DS_DRA_BUSY
+pub const DRA_BUSY : ErrorCode = ErrorCode::from_constant(8438); // ERROR_DS_DRA_BUSY
 
 /// The distinguished name specified for this replication operation is invalid.
-pub const DRA_BAD_DN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8439); // ERROR_DS_DRA_BAD_DN
+pub const DRA_BAD_DN : ErrorCode = ErrorCode::from_constant(8439); // ERROR_DS_DRA_BAD_DN
 
 /// The naming context specified for this replication operation is invalid.
-pub const DRA_BAD_NC : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8440); // ERROR_DS_DRA_BAD_NC
+pub const DRA_BAD_NC : ErrorCode = ErrorCode::from_constant(8440); // ERROR_DS_DRA_BAD_NC
 
 /// The distinguished name specified for this replication operation already exists.
-pub const DRA_DN_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8441); // ERROR_DS_DRA_DN_EXISTS
+pub const DRA_DN_EXISTS : ErrorCode = ErrorCode::from_constant(8441); // ERROR_DS_DRA_DN_EXISTS
 
 /// The replication system encountered an internal error.
-pub const DRA_INTERNAL_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8442); // ERROR_DS_DRA_INTERNAL_ERROR
+pub const DRA_INTERNAL_ERROR : ErrorCode = ErrorCode::from_constant(8442); // ERROR_DS_DRA_INTERNAL_ERROR
 
 /// The replication operation encountered a database inconsistency.
-pub const DRA_INCONSISTENT_DIT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8443); // ERROR_DS_DRA_INCONSISTENT_DIT
+pub const DRA_INCONSISTENT_DIT : ErrorCode = ErrorCode::from_constant(8443); // ERROR_DS_DRA_INCONSISTENT_DIT
 
 /// The server specified for this replication operation could not be contacted.
-pub const DRA_CONNECTION_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8444); // ERROR_DS_DRA_CONNECTION_FAILED
+pub const DRA_CONNECTION_FAILED : ErrorCode = ErrorCode::from_constant(8444); // ERROR_DS_DRA_CONNECTION_FAILED
 
 /// The replication operation encountered an object with an invalid instance type.
-pub const DRA_BAD_INSTANCE_TYPE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8445); // ERROR_DS_DRA_BAD_INSTANCE_TYPE
+pub const DRA_BAD_INSTANCE_TYPE : ErrorCode = ErrorCode::from_constant(8445); // ERROR_DS_DRA_BAD_INSTANCE_TYPE
 
 /// The replication operation failed to allocate memory.
-pub const DRA_OUT_OF_MEM : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8446); // ERROR_DS_DRA_OUT_OF_MEM
+pub const DRA_OUT_OF_MEM : ErrorCode = ErrorCode::from_constant(8446); // ERROR_DS_DRA_OUT_OF_MEM
 
 /// The replication operation encountered an error with the mail system.
-pub const DRA_MAIL_PROBLEM : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8447); // ERROR_DS_DRA_MAIL_PROBLEM
+pub const DRA_MAIL_PROBLEM : ErrorCode = ErrorCode::from_constant(8447); // ERROR_DS_DRA_MAIL_PROBLEM
 
 /// The replication reference information for the target server already exists.
-pub const DRA_REF_ALREADY_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8448); // ERROR_DS_DRA_REF_ALREADY_EXISTS
+pub const DRA_REF_ALREADY_EXISTS : ErrorCode = ErrorCode::from_constant(8448); // ERROR_DS_DRA_REF_ALREADY_EXISTS
 
 /// The replication reference information for the target server does not exist.
-pub const DRA_REF_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8449); // ERROR_DS_DRA_REF_NOT_FOUND
+pub const DRA_REF_NOT_FOUND : ErrorCode = ErrorCode::from_constant(8449); // ERROR_DS_DRA_REF_NOT_FOUND
 
 /// The naming context cannot be removed because it is replicated to another server.
-pub const DRA_OBJ_IS_REP_SOURCE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8450); // ERROR_DS_DRA_OBJ_IS_REP_SOURCE
+pub const DRA_OBJ_IS_REP_SOURCE : ErrorCode = ErrorCode::from_constant(8450); // ERROR_DS_DRA_OBJ_IS_REP_SOURCE
 
 /// The replication operation encountered a database error.
-pub const DRA_DB_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8451); // ERROR_DS_DRA_DB_ERROR
+pub const DRA_DB_ERROR : ErrorCode = ErrorCode::from_constant(8451); // ERROR_DS_DRA_DB_ERROR
 
 /// The naming context is in the process of being removed or is not replicated from the specified server.
-pub const DRA_NO_REPLICA : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8452); // ERROR_DS_DRA_NO_REPLICA
+pub const DRA_NO_REPLICA : ErrorCode = ErrorCode::from_constant(8452); // ERROR_DS_DRA_NO_REPLICA
 
 /// Replication access was denied.
-pub const DRA_ACCESS_DENIED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8453); // ERROR_DS_DRA_ACCESS_DENIED
+pub const DRA_ACCESS_DENIED : ErrorCode = ErrorCode::from_constant(8453); // ERROR_DS_DRA_ACCESS_DENIED
 
 /// The requested operation is not supported by this version of the directory service.
-pub const DRA_NOT_SUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8454); // ERROR_DS_DRA_NOT_SUPPORTED
+pub const DRA_NOT_SUPPORTED : ErrorCode = ErrorCode::from_constant(8454); // ERROR_DS_DRA_NOT_SUPPORTED
 
 /// The replication remote procedure call was cancelled.
-pub const DRA_RPC_CANCELLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8455); // ERROR_DS_DRA_RPC_CANCELLED
+pub const DRA_RPC_CANCELLED : ErrorCode = ErrorCode::from_constant(8455); // ERROR_DS_DRA_RPC_CANCELLED
 
 /// The source server is currently rejecting replication requests.
-pub const DRA_SOURCE_DISABLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8456); // ERROR_DS_DRA_SOURCE_DISABLED
+pub const DRA_SOURCE_DISABLED : ErrorCode = ErrorCode::from_constant(8456); // ERROR_DS_DRA_SOURCE_DISABLED
 
 /// The destination server is currently rejecting replication requests.
-pub const DRA_SINK_DISABLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8457); // ERROR_DS_DRA_SINK_DISABLED
+pub const DRA_SINK_DISABLED : ErrorCode = ErrorCode::from_constant(8457); // ERROR_DS_DRA_SINK_DISABLED
 
 /// The replication operation failed due to a collision of object names.
-pub const DRA_NAME_COLLISION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8458); // ERROR_DS_DRA_NAME_COLLISION
+pub const DRA_NAME_COLLISION : ErrorCode = ErrorCode::from_constant(8458); // ERROR_DS_DRA_NAME_COLLISION
 
 /// The replication source has been reinstalled.
-pub const DRA_SOURCE_REINSTALLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8459); // ERROR_DS_DRA_SOURCE_REINSTALLED
+pub const DRA_SOURCE_REINSTALLED : ErrorCode = ErrorCode::from_constant(8459); // ERROR_DS_DRA_SOURCE_REINSTALLED
 
 /// The replication operation failed because a required parent object is missing.
-pub const DRA_MISSING_PARENT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8460); // ERROR_DS_DRA_MISSING_PARENT
+pub const DRA_MISSING_PARENT : ErrorCode = ErrorCode::from_constant(8460); // ERROR_DS_DRA_MISSING_PARENT
 
 /// The replication operation was preempted.
-pub const DRA_PREEMPTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8461); // ERROR_DS_DRA_PREEMPTED
+pub const DRA_PREEMPTED : ErrorCode = ErrorCode::from_constant(8461); // ERROR_DS_DRA_PREEMPTED
 
 /// The replication synchronization attempt was abandoned because of a lack of updates.
-pub const DRA_ABANDON_SYNC : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8462); // ERROR_DS_DRA_ABANDON_SYNC
+pub const DRA_ABANDON_SYNC : ErrorCode = ErrorCode::from_constant(8462); // ERROR_DS_DRA_ABANDON_SYNC
 
 /// The replication operation was terminated because the system is shutting down.
-pub const DRA_SHUTDOWN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8463); // ERROR_DS_DRA_SHUTDOWN
+pub const DRA_SHUTDOWN : ErrorCode = ErrorCode::from_constant(8463); // ERROR_DS_DRA_SHUTDOWN
 
 /// Synchronization attempt failed because the destination DC is currently waiting to synchronize new partial attributes from source. This condition is normal if a recent schema change modified the partial attribute set. The destination partial attribute set is not a subset of source partial attribute set.
-pub const DRA_INCOMPATIBLE_PARTIAL_SET : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8464); // ERROR_DS_DRA_INCOMPATIBLE_PARTIAL_SET
+pub const DRA_INCOMPATIBLE_PARTIAL_SET : ErrorCode = ErrorCode::from_constant(8464); // ERROR_DS_DRA_INCOMPATIBLE_PARTIAL_SET
 
 /// The replication synchronization attempt failed because a master replica attempted to sync from a partial replica.
-pub const DRA_SOURCE_IS_PARTIAL_REPLICA : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8465); // ERROR_DS_DRA_SOURCE_IS_PARTIAL_REPLICA
+pub const DRA_SOURCE_IS_PARTIAL_REPLICA : ErrorCode = ErrorCode::from_constant(8465); // ERROR_DS_DRA_SOURCE_IS_PARTIAL_REPLICA
 
 /// The server specified for this replication operation was contacted, but that server was unable to contact an additional server needed to complete the operation.
-pub const DRA_EXTN_CONNECTION_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8466); // ERROR_DS_DRA_EXTN_CONNECTION_FAILED
+pub const DRA_EXTN_CONNECTION_FAILED : ErrorCode = ErrorCode::from_constant(8466); // ERROR_DS_DRA_EXTN_CONNECTION_FAILED
 
 /// The version of the directory service schema of the source forest is not compatible with the version of directory service on this computer.
-pub const INSTALL_SCHEMA_MISMATCH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8467); // ERROR_DS_INSTALL_SCHEMA_MISMATCH
+pub const INSTALL_SCHEMA_MISMATCH : ErrorCode = ErrorCode::from_constant(8467); // ERROR_DS_INSTALL_SCHEMA_MISMATCH
 
 /// Schema update failed: An attribute with the same link identifier already exists.
-pub const DUP_LINK_ID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8468); // ERROR_DS_DUP_LINK_ID
+pub const DUP_LINK_ID : ErrorCode = ErrorCode::from_constant(8468); // ERROR_DS_DUP_LINK_ID
 
 /// Name translation: Generic processing error.
-pub const NAME_ERROR_RESOLVING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8469); // ERROR_DS_NAME_ERROR_RESOLVING
+pub const NAME_ERROR_RESOLVING : ErrorCode = ErrorCode::from_constant(8469); // ERROR_DS_NAME_ERROR_RESOLVING
 
 /// Name translation: Could not find the name or insufficient right to see name.
-pub const NAME_ERROR_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8470); // ERROR_DS_NAME_ERROR_NOT_FOUND
+pub const NAME_ERROR_NOT_FOUND : ErrorCode = ErrorCode::from_constant(8470); // ERROR_DS_NAME_ERROR_NOT_FOUND
 
 /// Name translation: Input name mapped to more than one output name.
-pub const NAME_ERROR_NOT_UNIQUE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8471); // ERROR_DS_NAME_ERROR_NOT_UNIQUE
+pub const NAME_ERROR_NOT_UNIQUE : ErrorCode = ErrorCode::from_constant(8471); // ERROR_DS_NAME_ERROR_NOT_UNIQUE
 
 /// Name translation: Input name found, but not the associated output format.
-pub const NAME_ERROR_NO_MAPPING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8472); // ERROR_DS_NAME_ERROR_NO_MAPPING
+pub const NAME_ERROR_NO_MAPPING : ErrorCode = ErrorCode::from_constant(8472); // ERROR_DS_NAME_ERROR_NO_MAPPING
 
 /// Name translation: Unable to resolve completely, only the domain was found.
-pub const NAME_ERROR_DOMAIN_ONLY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8473); // ERROR_DS_NAME_ERROR_DOMAIN_ONLY
+pub const NAME_ERROR_DOMAIN_ONLY : ErrorCode = ErrorCode::from_constant(8473); // ERROR_DS_NAME_ERROR_DOMAIN_ONLY
 
 /// Name translation: Unable to perform purely syntactical mapping at the client without going out to the wire.
-pub const NAME_ERROR_NO_SYNTACTICAL_MAPPING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8474); // ERROR_DS_NAME_ERROR_NO_SYNTACTICAL_MAPPING
+pub const NAME_ERROR_NO_SYNTACTICAL_MAPPING : ErrorCode = ErrorCode::from_constant(8474); // ERROR_DS_NAME_ERROR_NO_SYNTACTICAL_MAPPING
 
 /// Modification of a constructed attribute is not allowed.
-pub const CONSTRUCTED_ATT_MOD : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8475); // ERROR_DS_CONSTRUCTED_ATT_MOD
+pub const CONSTRUCTED_ATT_MOD : ErrorCode = ErrorCode::from_constant(8475); // ERROR_DS_CONSTRUCTED_ATT_MOD
 
 /// The OM-Object-Class specified is incorrect for an attribute with the specified syntax.
-pub const WRONG_OM_OBJ_CLASS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8476); // ERROR_DS_WRONG_OM_OBJ_CLASS
+pub const WRONG_OM_OBJ_CLASS : ErrorCode = ErrorCode::from_constant(8476); // ERROR_DS_WRONG_OM_OBJ_CLASS
 
 /// The replication request has been posted; waiting for reply.
-pub const DRA_REPL_PENDING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8477); // ERROR_DS_DRA_REPL_PENDING
+pub const DRA_REPL_PENDING : ErrorCode = ErrorCode::from_constant(8477); // ERROR_DS_DRA_REPL_PENDING
 
 /// The requested operation requires a directory service, and none was available.
-pub const DS_REQUIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8478); // ERROR_DS_DS_REQUIRED
+pub const DS_REQUIRED : ErrorCode = ErrorCode::from_constant(8478); // ERROR_DS_DS_REQUIRED
 
 /// The LDAP display name of the class or attribute contains non-ASCII characters.
-pub const INVALID_LDAP_DISPLAY_NAME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8479); // ERROR_DS_INVALID_LDAP_DISPLAY_NAME
+pub const INVALID_LDAP_DISPLAY_NAME : ErrorCode = ErrorCode::from_constant(8479); // ERROR_DS_INVALID_LDAP_DISPLAY_NAME
 
 /// The requested search operation is only supported for base searches.
-pub const NON_BASE_SEARCH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8480); // ERROR_DS_NON_BASE_SEARCH
+pub const NON_BASE_SEARCH : ErrorCode = ErrorCode::from_constant(8480); // ERROR_DS_NON_BASE_SEARCH
 
 /// The search failed to retrieve attributes from the database.
-pub const CANT_RETRIEVE_ATTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8481); // ERROR_DS_CANT_RETRIEVE_ATTS
+pub const CANT_RETRIEVE_ATTS : ErrorCode = ErrorCode::from_constant(8481); // ERROR_DS_CANT_RETRIEVE_ATTS
 
 /// The schema update operation tried to add a backward link attribute that has no corresponding forward link.
-pub const BACKLINK_WITHOUT_LINK : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8482); // ERROR_DS_BACKLINK_WITHOUT_LINK
+pub const BACKLINK_WITHOUT_LINK : ErrorCode = ErrorCode::from_constant(8482); // ERROR_DS_BACKLINK_WITHOUT_LINK
 
 /// Source and destination of a cross-domain move do not agree on the object's epoch number. Either source or destination does not have the latest version of the object.
-pub const EPOCH_MISMATCH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8483); // ERROR_DS_EPOCH_MISMATCH
+pub const EPOCH_MISMATCH : ErrorCode = ErrorCode::from_constant(8483); // ERROR_DS_EPOCH_MISMATCH
 
 /// Source and destination of a cross-domain move do not agree on the object's current name. Either source or destination does not have the latest version of the object.
-pub const SRC_NAME_MISMATCH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8484); // ERROR_DS_SRC_NAME_MISMATCH
+pub const SRC_NAME_MISMATCH : ErrorCode = ErrorCode::from_constant(8484); // ERROR_DS_SRC_NAME_MISMATCH
 
 /// Source and destination for the cross-domain move operation are identical. Caller should use local move operation instead of cross-domain move operation.
-pub const SRC_AND_DST_NC_IDENTICAL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8485); // ERROR_DS_SRC_AND_DST_NC_IDENTICAL
+pub const SRC_AND_DST_NC_IDENTICAL : ErrorCode = ErrorCode::from_constant(8485); // ERROR_DS_SRC_AND_DST_NC_IDENTICAL
 
 /// Source and destination for a cross-domain move are not in agreement on the naming contexts in the forest. Either source or destination does not have the latest version of the Partitions container.
-pub const DST_NC_MISMATCH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8486); // ERROR_DS_DST_NC_MISMATCH
+pub const DST_NC_MISMATCH : ErrorCode = ErrorCode::from_constant(8486); // ERROR_DS_DST_NC_MISMATCH
 
 /// Destination of a cross-domain move is not authoritative for the destination naming context.
-pub const NOT_AUTHORITIVE_FOR_DST_NC : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8487); // ERROR_DS_NOT_AUTHORITIVE_FOR_DST_NC
+pub const NOT_AUTHORITIVE_FOR_DST_NC : ErrorCode = ErrorCode::from_constant(8487); // ERROR_DS_NOT_AUTHORITIVE_FOR_DST_NC
 
 /// Source and destination of a cross-domain move do not agree on the identity of the source object. Either source or destination does not have the latest version of the source object.
-pub const SRC_GUID_MISMATCH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8488); // ERROR_DS_SRC_GUID_MISMATCH
+pub const SRC_GUID_MISMATCH : ErrorCode = ErrorCode::from_constant(8488); // ERROR_DS_SRC_GUID_MISMATCH
 
 /// Object being moved across-domains is already known to be deleted by the destination server. The source server does not have the latest version of the source object.
-pub const CANT_MOVE_DELETED_OBJECT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8489); // ERROR_DS_CANT_MOVE_DELETED_OBJECT
+pub const CANT_MOVE_DELETED_OBJECT : ErrorCode = ErrorCode::from_constant(8489); // ERROR_DS_CANT_MOVE_DELETED_OBJECT
 
 /// Another operation which requires exclusive access to the PDC FSMO is already in progress.
-pub const PDC_OPERATION_IN_PROGRESS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8490); // ERROR_DS_PDC_OPERATION_IN_PROGRESS
+pub const PDC_OPERATION_IN_PROGRESS : ErrorCode = ErrorCode::from_constant(8490); // ERROR_DS_PDC_OPERATION_IN_PROGRESS
 
 /// A cross-domain move operation failed such that two versions of the moved object exist - one each in the source and destination domains. The destination object needs to be removed to restore the system to a consistent state.
-pub const CROSS_DOMAIN_CLEANUP_REQD : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8491); // ERROR_DS_CROSS_DOMAIN_CLEANUP_REQD
+pub const CROSS_DOMAIN_CLEANUP_REQD : ErrorCode = ErrorCode::from_constant(8491); // ERROR_DS_CROSS_DOMAIN_CLEANUP_REQD
 
 /// This object may not be moved across domain boundaries either because cross-domain moves for this class are disallowed, or the object has some special characteristics, e.g.: trust account or restricted RID, which prevent its move.
-pub const ILLEGAL_XDOM_MOVE_OPERATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8492); // ERROR_DS_ILLEGAL_XDOM_MOVE_OPERATION
+pub const ILLEGAL_XDOM_MOVE_OPERATION : ErrorCode = ErrorCode::from_constant(8492); // ERROR_DS_ILLEGAL_XDOM_MOVE_OPERATION
 
 /// Can't move objects with memberships across domain boundaries as once moved, this would violate the membership conditions of the account group. Remove the object from any account group memberships and retry.
-pub const CANT_WITH_ACCT_GROUP_MEMBERSHPS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8493); // ERROR_DS_CANT_WITH_ACCT_GROUP_MEMBERSHPS
+pub const CANT_WITH_ACCT_GROUP_MEMBERSHPS : ErrorCode = ErrorCode::from_constant(8493); // ERROR_DS_CANT_WITH_ACCT_GROUP_MEMBERSHPS
 
 /// A naming context head must be the immediate child of another naming context head, not of an interior node.
-pub const NC_MUST_HAVE_NC_PARENT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8494); // ERROR_DS_NC_MUST_HAVE_NC_PARENT
+pub const NC_MUST_HAVE_NC_PARENT : ErrorCode = ErrorCode::from_constant(8494); // ERROR_DS_NC_MUST_HAVE_NC_PARENT
 
 /// The directory cannot validate the proposed naming context name because it does not hold a replica of the naming context above the proposed naming context. Please ensure that the domain naming master role is held by a server that is configured as a global catalog server, and that the server is up to date with its replication partners. (Applies only to Windows 2000 Domain Naming masters)
-pub const CR_IMPOSSIBLE_TO_VALIDATE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8495); // ERROR_DS_CR_IMPOSSIBLE_TO_VALIDATE
+pub const CR_IMPOSSIBLE_TO_VALIDATE : ErrorCode = ErrorCode::from_constant(8495); // ERROR_DS_CR_IMPOSSIBLE_TO_VALIDATE
 
 /// Destination domain must be in native mode.
-pub const DST_DOMAIN_NOT_NATIVE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8496); // ERROR_DS_DST_DOMAIN_NOT_NATIVE
+pub const DST_DOMAIN_NOT_NATIVE : ErrorCode = ErrorCode::from_constant(8496); // ERROR_DS_DST_DOMAIN_NOT_NATIVE
 
 /// The operation cannot be performed because the server does not have an infrastructure container in the domain of interest.
-pub const MISSING_INFRASTRUCTURE_CONTAINER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8497); // ERROR_DS_MISSING_INFRASTRUCTURE_CONTAINER
+pub const MISSING_INFRASTRUCTURE_CONTAINER : ErrorCode = ErrorCode::from_constant(8497); // ERROR_DS_MISSING_INFRASTRUCTURE_CONTAINER
 
 /// Cross-domain move of non-empty account groups is not allowed.
-pub const CANT_MOVE_ACCOUNT_GROUP : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8498); // ERROR_DS_CANT_MOVE_ACCOUNT_GROUP
+pub const CANT_MOVE_ACCOUNT_GROUP : ErrorCode = ErrorCode::from_constant(8498); // ERROR_DS_CANT_MOVE_ACCOUNT_GROUP
 
 /// Cross-domain move of non-empty resource groups is not allowed.
-pub const CANT_MOVE_RESOURCE_GROUP : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8499); // ERROR_DS_CANT_MOVE_RESOURCE_GROUP
+pub const CANT_MOVE_RESOURCE_GROUP : ErrorCode = ErrorCode::from_constant(8499); // ERROR_DS_CANT_MOVE_RESOURCE_GROUP
 
 /// The search flags for the attribute are invalid. The ANR bit is valid only on attributes of Unicode or Teletex strings.
-pub const INVALID_SEARCH_FLAG : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8500); // ERROR_DS_INVALID_SEARCH_FLAG
+pub const INVALID_SEARCH_FLAG : ErrorCode = ErrorCode::from_constant(8500); // ERROR_DS_INVALID_SEARCH_FLAG
 
 /// Tree deletions starting at an object which has an NC head as a descendant are not allowed.
-pub const NO_TREE_DELETE_ABOVE_NC : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8501); // ERROR_DS_NO_TREE_DELETE_ABOVE_NC
+pub const NO_TREE_DELETE_ABOVE_NC : ErrorCode = ErrorCode::from_constant(8501); // ERROR_DS_NO_TREE_DELETE_ABOVE_NC
 
 /// The directory service failed to lock a tree in preparation for a tree deletion because the tree was in use.
-pub const COULDNT_LOCK_TREE_FOR_DELETE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8502); // ERROR_DS_COULDNT_LOCK_TREE_FOR_DELETE
+pub const COULDNT_LOCK_TREE_FOR_DELETE : ErrorCode = ErrorCode::from_constant(8502); // ERROR_DS_COULDNT_LOCK_TREE_FOR_DELETE
 
 /// The directory service failed to identify the list of objects to delete while attempting a tree deletion.
-pub const COULDNT_IDENTIFY_OBJECTS_FOR_TREE_DELETE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8503); // ERROR_DS_COULDNT_IDENTIFY_OBJECTS_FOR_TREE_DELETE
+pub const COULDNT_IDENTIFY_OBJECTS_FOR_TREE_DELETE : ErrorCode = ErrorCode::from_constant(8503); // ERROR_DS_COULDNT_IDENTIFY_OBJECTS_FOR_TREE_DELETE
 
 /// Security Accounts Manager initialization failed because of the following error: `%1`.
 /// Error Status: `0x%2`. Please shutdown this system and reboot into Directory Services Restore Mode, check the event log for more detailed information.
-pub const SAM_INIT_FAILURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8504); // ERROR_DS_SAM_INIT_FAILURE
+pub const SAM_INIT_FAILURE : ErrorCode = ErrorCode::from_constant(8504); // ERROR_DS_SAM_INIT_FAILURE
 
 /// Only an administrator can modify the membership list of an administrative group.
-pub const SENSITIVE_GROUP_VIOLATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8505); // ERROR_DS_SENSITIVE_GROUP_VIOLATION
+pub const SENSITIVE_GROUP_VIOLATION : ErrorCode = ErrorCode::from_constant(8505); // ERROR_DS_SENSITIVE_GROUP_VIOLATION
 
 /// Cannot change the primary group ID of a domain controller account.
-pub const CANT_MOD_PRIMARYGROUPID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8506); // ERROR_DS_CANT_MOD_PRIMARYGROUPID
+pub const CANT_MOD_PRIMARYGROUPID : ErrorCode = ErrorCode::from_constant(8506); // ERROR_DS_CANT_MOD_PRIMARYGROUPID
 
 /// An attempt is made to modify the base schema.
-pub const ILLEGAL_BASE_SCHEMA_MOD : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8507); // ERROR_DS_ILLEGAL_BASE_SCHEMA_MOD
+pub const ILLEGAL_BASE_SCHEMA_MOD : ErrorCode = ErrorCode::from_constant(8507); // ERROR_DS_ILLEGAL_BASE_SCHEMA_MOD
 
 /// Adding a new mandatory attribute to an existing class, deleting a mandatory attribute from an existing class, or adding an optional attribute to the special class Top that is not a backlink attribute (directly or through inheritance, for example, by adding or deleting an auxiliary class) is not allowed.
-pub const NONSAFE_SCHEMA_CHANGE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8508); // ERROR_DS_NONSAFE_SCHEMA_CHANGE
+pub const NONSAFE_SCHEMA_CHANGE : ErrorCode = ErrorCode::from_constant(8508); // ERROR_DS_NONSAFE_SCHEMA_CHANGE
 
 /// Schema update is not allowed on this DC because the DC is not the schema FSMO Role Owner.
-pub const SCHEMA_UPDATE_DISALLOWED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8509); // ERROR_DS_SCHEMA_UPDATE_DISALLOWED
+pub const SCHEMA_UPDATE_DISALLOWED : ErrorCode = ErrorCode::from_constant(8509); // ERROR_DS_SCHEMA_UPDATE_DISALLOWED
 
 /// An object of this class cannot be created under the schema container. You can only create attribute-schema and class-schema objects under the schema container.
-pub const CANT_CREATE_UNDER_SCHEMA : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8510); // ERROR_DS_CANT_CREATE_UNDER_SCHEMA
+pub const CANT_CREATE_UNDER_SCHEMA : ErrorCode = ErrorCode::from_constant(8510); // ERROR_DS_CANT_CREATE_UNDER_SCHEMA
 
 /// The replica/child install failed to get the objectVersion attribute on the schema container on the source DC. Either the attribute is missing on the schema container or the credentials supplied do not have permission to read it.
-pub const INSTALL_NO_SRC_SCH_VERSION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8511); // ERROR_DS_INSTALL_NO_SRC_SCH_VERSION
+pub const INSTALL_NO_SRC_SCH_VERSION : ErrorCode = ErrorCode::from_constant(8511); // ERROR_DS_INSTALL_NO_SRC_SCH_VERSION
 
 /// The replica/child install failed to read the objectVersion attribute in the SCHEMA section of the file schema.ini in the system32 directory.
-pub const INSTALL_NO_SCH_VERSION_IN_INIFILE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8512); // ERROR_DS_INSTALL_NO_SCH_VERSION_IN_INIFILE
+pub const INSTALL_NO_SCH_VERSION_IN_INIFILE : ErrorCode = ErrorCode::from_constant(8512); // ERROR_DS_INSTALL_NO_SCH_VERSION_IN_INIFILE
 
 /// The specified group type is invalid.
-pub const INVALID_GROUP_TYPE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8513); // ERROR_DS_INVALID_GROUP_TYPE
+pub const INVALID_GROUP_TYPE : ErrorCode = ErrorCode::from_constant(8513); // ERROR_DS_INVALID_GROUP_TYPE
 
 /// You cannot nest global groups in a mixed domain if the group is security-enabled.
-pub const NO_NEST_GLOBALGROUP_IN_MIXEDDOMAIN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8514); // ERROR_DS_NO_NEST_GLOBALGROUP_IN_MIXEDDOMAIN
+pub const NO_NEST_GLOBALGROUP_IN_MIXEDDOMAIN : ErrorCode = ErrorCode::from_constant(8514); // ERROR_DS_NO_NEST_GLOBALGROUP_IN_MIXEDDOMAIN
 
 /// You cannot nest local groups in a mixed domain if the group is security-enabled.
-pub const NO_NEST_LOCALGROUP_IN_MIXEDDOMAIN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8515); // ERROR_DS_NO_NEST_LOCALGROUP_IN_MIXEDDOMAIN
+pub const NO_NEST_LOCALGROUP_IN_MIXEDDOMAIN : ErrorCode = ErrorCode::from_constant(8515); // ERROR_DS_NO_NEST_LOCALGROUP_IN_MIXEDDOMAIN
 
 /// A global group cannot have a local group as a member.
-pub const GLOBAL_CANT_HAVE_LOCAL_MEMBER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8516); // ERROR_DS_GLOBAL_CANT_HAVE_LOCAL_MEMBER
+pub const GLOBAL_CANT_HAVE_LOCAL_MEMBER : ErrorCode = ErrorCode::from_constant(8516); // ERROR_DS_GLOBAL_CANT_HAVE_LOCAL_MEMBER
 
 /// A global group cannot have a universal group as a member.
-pub const GLOBAL_CANT_HAVE_UNIVERSAL_MEMBER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8517); // ERROR_DS_GLOBAL_CANT_HAVE_UNIVERSAL_MEMBER
+pub const GLOBAL_CANT_HAVE_UNIVERSAL_MEMBER : ErrorCode = ErrorCode::from_constant(8517); // ERROR_DS_GLOBAL_CANT_HAVE_UNIVERSAL_MEMBER
 
 /// A universal group cannot have a local group as a member.
-pub const UNIVERSAL_CANT_HAVE_LOCAL_MEMBER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8518); // ERROR_DS_UNIVERSAL_CANT_HAVE_LOCAL_MEMBER
+pub const UNIVERSAL_CANT_HAVE_LOCAL_MEMBER : ErrorCode = ErrorCode::from_constant(8518); // ERROR_DS_UNIVERSAL_CANT_HAVE_LOCAL_MEMBER
 
 /// A global group cannot have a cross-domain member.
-pub const GLOBAL_CANT_HAVE_CROSSDOMAIN_MEMBER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8519); // ERROR_DS_GLOBAL_CANT_HAVE_CROSSDOMAIN_MEMBER
+pub const GLOBAL_CANT_HAVE_CROSSDOMAIN_MEMBER : ErrorCode = ErrorCode::from_constant(8519); // ERROR_DS_GLOBAL_CANT_HAVE_CROSSDOMAIN_MEMBER
 
 /// A local group cannot have another cross domain local group as a member.
-pub const LOCAL_CANT_HAVE_CROSSDOMAIN_LOCAL_MEMBER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8520); // ERROR_DS_LOCAL_CANT_HAVE_CROSSDOMAIN_LOCAL_MEMBER
+pub const LOCAL_CANT_HAVE_CROSSDOMAIN_LOCAL_MEMBER : ErrorCode = ErrorCode::from_constant(8520); // ERROR_DS_LOCAL_CANT_HAVE_CROSSDOMAIN_LOCAL_MEMBER
 
 /// A group with primary members cannot change to a security-disabled group.
-pub const HAVE_PRIMARY_MEMBERS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8521); // ERROR_DS_HAVE_PRIMARY_MEMBERS
+pub const HAVE_PRIMARY_MEMBERS : ErrorCode = ErrorCode::from_constant(8521); // ERROR_DS_HAVE_PRIMARY_MEMBERS
 
 /// The schema cache load failed to convert the string default SD on a class-schema object.
-pub const STRING_SD_CONVERSION_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8522); // ERROR_DS_STRING_SD_CONVERSION_FAILED
+pub const STRING_SD_CONVERSION_FAILED : ErrorCode = ErrorCode::from_constant(8522); // ERROR_DS_STRING_SD_CONVERSION_FAILED
 
 /// Only DSAs configured to be Global Catalog servers should be allowed to hold the Domain Naming Master FSMO role. (Applies only to Windows 2000 servers)
-pub const NAMING_MASTER_GC : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8523); // ERROR_DS_NAMING_MASTER_GC
+pub const NAMING_MASTER_GC : ErrorCode = ErrorCode::from_constant(8523); // ERROR_DS_NAMING_MASTER_GC
 
 /// The DSA operation is unable to proceed because of a DNS lookup failure.
-pub const DNS_LOOKUP_FAILURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8524); // ERROR_DS_DNS_LOOKUP_FAILURE
+pub const DNS_LOOKUP_FAILURE : ErrorCode = ErrorCode::from_constant(8524); // ERROR_DS_DNS_LOOKUP_FAILURE
 
 /// While processing a change to the DNS Host Name for an object, the Service Principal Name values could not be kept in sync.
-pub const COULDNT_UPDATE_SPNS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8525); // ERROR_DS_COULDNT_UPDATE_SPNS
+pub const COULDNT_UPDATE_SPNS : ErrorCode = ErrorCode::from_constant(8525); // ERROR_DS_COULDNT_UPDATE_SPNS
 
 /// The Security Descriptor attribute could not be read.
-pub const CANT_RETRIEVE_SD : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8526); // ERROR_DS_CANT_RETRIEVE_SD
+pub const CANT_RETRIEVE_SD : ErrorCode = ErrorCode::from_constant(8526); // ERROR_DS_CANT_RETRIEVE_SD
 
 /// The object requested was not found, but an object with that key was found.
-pub const KEY_NOT_UNIQUE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8527); // ERROR_DS_KEY_NOT_UNIQUE
+pub const KEY_NOT_UNIQUE : ErrorCode = ErrorCode::from_constant(8527); // ERROR_DS_KEY_NOT_UNIQUE
 
 /// The syntax of the linked attribute being added is incorrect. Forward links can only have syntax 2.5.5.1, 2.5.5.7, and 2.5.5.14, and backlinks can only have syntax 2.5.5.1
-pub const WRONG_LINKED_ATT_SYNTAX : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8528); // ERROR_DS_WRONG_LINKED_ATT_SYNTAX
+pub const WRONG_LINKED_ATT_SYNTAX : ErrorCode = ErrorCode::from_constant(8528); // ERROR_DS_WRONG_LINKED_ATT_SYNTAX
 
 /// Security Account Manager needs to get the boot password.
-pub const SAM_NEED_BOOTKEY_PASSWORD : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8529); // ERROR_DS_SAM_NEED_BOOTKEY_PASSWORD
+pub const SAM_NEED_BOOTKEY_PASSWORD : ErrorCode = ErrorCode::from_constant(8529); // ERROR_DS_SAM_NEED_BOOTKEY_PASSWORD
 
 /// Security Account Manager needs to get the boot key from floppy disk.
-pub const SAM_NEED_BOOTKEY_FLOPPY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8530); // ERROR_DS_SAM_NEED_BOOTKEY_FLOPPY
+pub const SAM_NEED_BOOTKEY_FLOPPY : ErrorCode = ErrorCode::from_constant(8530); // ERROR_DS_SAM_NEED_BOOTKEY_FLOPPY
 
 /// Directory Service cannot start.
-pub const CANT_START : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8531); // ERROR_DS_CANT_START
+pub const CANT_START : ErrorCode = ErrorCode::from_constant(8531); // ERROR_DS_CANT_START
 
 /// Directory Services could not start.
-pub const INIT_FAILURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8532); // ERROR_DS_INIT_FAILURE
+pub const INIT_FAILURE : ErrorCode = ErrorCode::from_constant(8532); // ERROR_DS_INIT_FAILURE
 
 /// The connection between client and server requires packet privacy or better.
-pub const NO_PKT_PRIVACY_ON_CONNECTION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8533); // ERROR_DS_NO_PKT_PRIVACY_ON_CONNECTION
+pub const NO_PKT_PRIVACY_ON_CONNECTION : ErrorCode = ErrorCode::from_constant(8533); // ERROR_DS_NO_PKT_PRIVACY_ON_CONNECTION
 
 /// The source domain may not be in the same forest as destination.
-pub const SOURCE_DOMAIN_IN_FOREST : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8534); // ERROR_DS_SOURCE_DOMAIN_IN_FOREST
+pub const SOURCE_DOMAIN_IN_FOREST : ErrorCode = ErrorCode::from_constant(8534); // ERROR_DS_SOURCE_DOMAIN_IN_FOREST
 
 /// The destination domain must be in the forest.
-pub const DESTINATION_DOMAIN_NOT_IN_FOREST : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8535); // ERROR_DS_DESTINATION_DOMAIN_NOT_IN_FOREST
+pub const DESTINATION_DOMAIN_NOT_IN_FOREST : ErrorCode = ErrorCode::from_constant(8535); // ERROR_DS_DESTINATION_DOMAIN_NOT_IN_FOREST
 
 /// The operation requires that destination domain auditing be enabled.
-pub const DESTINATION_AUDITING_NOT_ENABLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8536); // ERROR_DS_DESTINATION_AUDITING_NOT_ENABLED
+pub const DESTINATION_AUDITING_NOT_ENABLED : ErrorCode = ErrorCode::from_constant(8536); // ERROR_DS_DESTINATION_AUDITING_NOT_ENABLED
 
 /// The operation couldn't locate a DC for the source domain.
-pub const CANT_FIND_DC_FOR_SRC_DOMAIN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8537); // ERROR_DS_CANT_FIND_DC_FOR_SRC_DOMAIN
+pub const CANT_FIND_DC_FOR_SRC_DOMAIN : ErrorCode = ErrorCode::from_constant(8537); // ERROR_DS_CANT_FIND_DC_FOR_SRC_DOMAIN
 
 /// The source object must be a group or user.
-pub const SRC_OBJ_NOT_GROUP_OR_USER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8538); // ERROR_DS_SRC_OBJ_NOT_GROUP_OR_USER
+pub const SRC_OBJ_NOT_GROUP_OR_USER : ErrorCode = ErrorCode::from_constant(8538); // ERROR_DS_SRC_OBJ_NOT_GROUP_OR_USER
 
 /// The source object's SID already exists in destination forest.
-pub const SRC_SID_EXISTS_IN_FOREST : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8539); // ERROR_DS_SRC_SID_EXISTS_IN_FOREST
+pub const SRC_SID_EXISTS_IN_FOREST : ErrorCode = ErrorCode::from_constant(8539); // ERROR_DS_SRC_SID_EXISTS_IN_FOREST
 
 /// The source and destination object must be of the same type.
-pub const SRC_AND_DST_OBJECT_CLASS_MISMATCH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8540); // ERROR_DS_SRC_AND_DST_OBJECT_CLASS_MISMATCH
+pub const SRC_AND_DST_OBJECT_CLASS_MISMATCH : ErrorCode = ErrorCode::from_constant(8540); // ERROR_DS_SRC_AND_DST_OBJECT_CLASS_MISMATCH
 
 /// Schema information could not be included in the replication request.
-pub const DRA_SCHEMA_INFO_SHIP : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8542); // ERROR_DS_DRA_SCHEMA_INFO_SHIP
+pub const DRA_SCHEMA_INFO_SHIP : ErrorCode = ErrorCode::from_constant(8542); // ERROR_DS_DRA_SCHEMA_INFO_SHIP
 
 /// The replication operation could not be completed due to a schema incompatibility.
-pub const DRA_SCHEMA_CONFLICT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8543); // ERROR_DS_DRA_SCHEMA_CONFLICT
+pub const DRA_SCHEMA_CONFLICT : ErrorCode = ErrorCode::from_constant(8543); // ERROR_DS_DRA_SCHEMA_CONFLICT
 
 /// The replication operation could not be completed due to a previous schema incompatibility.
-pub const DRA_EARLIER_SCHEMA_CONFLICT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8544); // ERROR_DS_DRA_EARLIER_SCHEMA_CONFLICT
+pub const DRA_EARLIER_SCHEMA_CONFLICT : ErrorCode = ErrorCode::from_constant(8544); // ERROR_DS_DRA_EARLIER_SCHEMA_CONFLICT
 
 /// The replication update could not be applied because either the source or the destination has not yet received information regarding a recent cross-domain move operation.
-pub const DRA_OBJ_NC_MISMATCH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8545); // ERROR_DS_DRA_OBJ_NC_MISMATCH
+pub const DRA_OBJ_NC_MISMATCH : ErrorCode = ErrorCode::from_constant(8545); // ERROR_DS_DRA_OBJ_NC_MISMATCH
 
 /// The requested domain could not be deleted because there exist domain controllers that still host this domain.
-pub const NC_STILL_HAS_DSAS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8546); // ERROR_DS_NC_STILL_HAS_DSAS
+pub const NC_STILL_HAS_DSAS : ErrorCode = ErrorCode::from_constant(8546); // ERROR_DS_NC_STILL_HAS_DSAS
 
 /// The requested operation can be performed only on a global catalog server.
-pub const GC_REQUIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8547); // ERROR_DS_GC_REQUIRED
+pub const GC_REQUIRED : ErrorCode = ErrorCode::from_constant(8547); // ERROR_DS_GC_REQUIRED
 
 /// A local group can only be a member of other local groups in the same domain.
-pub const LOCAL_MEMBER_OF_LOCAL_ONLY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8548); // ERROR_DS_LOCAL_MEMBER_OF_LOCAL_ONLY
+pub const LOCAL_MEMBER_OF_LOCAL_ONLY : ErrorCode = ErrorCode::from_constant(8548); // ERROR_DS_LOCAL_MEMBER_OF_LOCAL_ONLY
 
 /// Foreign security principals cannot be members of universal groups.
-pub const NO_FPO_IN_UNIVERSAL_GROUPS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8549); // ERROR_DS_NO_FPO_IN_UNIVERSAL_GROUPS
+pub const NO_FPO_IN_UNIVERSAL_GROUPS : ErrorCode = ErrorCode::from_constant(8549); // ERROR_DS_NO_FPO_IN_UNIVERSAL_GROUPS
 
 /// The attribute is not allowed to be replicated to the GC because of security reasons.
-pub const CANT_ADD_TO_GC : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8550); // ERROR_DS_CANT_ADD_TO_GC
+pub const CANT_ADD_TO_GC : ErrorCode = ErrorCode::from_constant(8550); // ERROR_DS_CANT_ADD_TO_GC
 
 /// The checkpoint with the PDC could not be taken because there too many modifications being processed currently.
-pub const NO_CHECKPOINT_WITH_PDC : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8551); // ERROR_DS_NO_CHECKPOINT_WITH_PDC
+pub const NO_CHECKPOINT_WITH_PDC : ErrorCode = ErrorCode::from_constant(8551); // ERROR_DS_NO_CHECKPOINT_WITH_PDC
 
 /// The operation requires that source domain auditing be enabled.
-pub const SOURCE_AUDITING_NOT_ENABLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8552); // ERROR_DS_SOURCE_AUDITING_NOT_ENABLED
+pub const SOURCE_AUDITING_NOT_ENABLED : ErrorCode = ErrorCode::from_constant(8552); // ERROR_DS_SOURCE_AUDITING_NOT_ENABLED
 
 /// Security principal objects can only be created inside domain naming contexts.
-pub const CANT_CREATE_IN_NONDOMAIN_NC : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8553); // ERROR_DS_CANT_CREATE_IN_NONDOMAIN_NC
+pub const CANT_CREATE_IN_NONDOMAIN_NC : ErrorCode = ErrorCode::from_constant(8553); // ERROR_DS_CANT_CREATE_IN_NONDOMAIN_NC
 
 /// A Service Principal Name (SPN) could not be constructed because the provided hostname is not in the necessary format.
-pub const INVALID_NAME_FOR_SPN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8554); // ERROR_DS_INVALID_NAME_FOR_SPN
+pub const INVALID_NAME_FOR_SPN : ErrorCode = ErrorCode::from_constant(8554); // ERROR_DS_INVALID_NAME_FOR_SPN
 
 /// A Filter was passed that uses constructed attributes.
-pub const FILTER_USES_CONTRUCTED_ATTRS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8555); // ERROR_DS_FILTER_USES_CONTRUCTED_ATTRS
+pub const FILTER_USES_CONTRUCTED_ATTRS : ErrorCode = ErrorCode::from_constant(8555); // ERROR_DS_FILTER_USES_CONTRUCTED_ATTRS
 
 /// The unicodePwd attribute value must be enclosed in double quotes.
-pub const UNICODEPWD_NOT_IN_QUOTES : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8556); // ERROR_DS_UNICODEPWD_NOT_IN_QUOTES
+pub const UNICODEPWD_NOT_IN_QUOTES : ErrorCode = ErrorCode::from_constant(8556); // ERROR_DS_UNICODEPWD_NOT_IN_QUOTES
 
 /// Your computer could not be joined to the domain. You have exceeded the maximum number of computer accounts you are allowed to create in this domain. Contact your system administrator to have this limit reset or increased.
-pub const MACHINE_ACCOUNT_QUOTA_EXCEEDED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8557); // ERROR_DS_MACHINE_ACCOUNT_QUOTA_EXCEEDED
+pub const MACHINE_ACCOUNT_QUOTA_EXCEEDED : ErrorCode = ErrorCode::from_constant(8557); // ERROR_DS_MACHINE_ACCOUNT_QUOTA_EXCEEDED
 
 /// For security reasons, the operation must be run on the destination DC.
-pub const MUST_BE_RUN_ON_DST_DC : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8558); // ERROR_DS_MUST_BE_RUN_ON_DST_DC
+pub const MUST_BE_RUN_ON_DST_DC : ErrorCode = ErrorCode::from_constant(8558); // ERROR_DS_MUST_BE_RUN_ON_DST_DC
 
 /// For security reasons, the source DC must be NT4SP4 or greater.
-pub const SRC_DC_MUST_BE_SP4_OR_GREATER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8559); // ERROR_DS_SRC_DC_MUST_BE_SP4_OR_GREATER
+pub const SRC_DC_MUST_BE_SP4_OR_GREATER : ErrorCode = ErrorCode::from_constant(8559); // ERROR_DS_SRC_DC_MUST_BE_SP4_OR_GREATER
 
 /// Critical Directory Service System objects cannot be deleted during tree delete operations. The tree delete may have been partially performed.
-pub const CANT_TREE_DELETE_CRITICAL_OBJ : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8560); // ERROR_DS_CANT_TREE_DELETE_CRITICAL_OBJ
+pub const CANT_TREE_DELETE_CRITICAL_OBJ : ErrorCode = ErrorCode::from_constant(8560); // ERROR_DS_CANT_TREE_DELETE_CRITICAL_OBJ
 
 /// Directory Services could not start because of the following error: `%1`.
 /// Error Status: `0x%2`. Please click OK to shutdown the system. You can use the recovery console to diagnose the system further.
-pub const INIT_FAILURE_CONSOLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8561); // ERROR_DS_INIT_FAILURE_CONSOLE
+pub const INIT_FAILURE_CONSOLE : ErrorCode = ErrorCode::from_constant(8561); // ERROR_DS_INIT_FAILURE_CONSOLE
 
 /// Security Accounts Manager initialization failed because of the following error: `%1`.
 /// Error Status: `0x%2`. Please click OK to shutdown the system. You can use the recovery console to diagnose the system further.
-pub const SAM_INIT_FAILURE_CONSOLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8562); // ERROR_DS_SAM_INIT_FAILURE_CONSOLE
+pub const SAM_INIT_FAILURE_CONSOLE : ErrorCode = ErrorCode::from_constant(8562); // ERROR_DS_SAM_INIT_FAILURE_CONSOLE
 
 /// The version of the operating system is incompatible with the current AD DS forest functional level or AD LDS Configuration Set functional level. You must upgrade to a new version of the operating system before this server can become an AD DS Domain Controller or add an AD LDS Instance in this AD DS Forest or AD LDS Configuration Set.
-pub const FOREST_VERSION_TOO_HIGH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8563); // ERROR_DS_FOREST_VERSION_TOO_HIGH
+pub const FOREST_VERSION_TOO_HIGH : ErrorCode = ErrorCode::from_constant(8563); // ERROR_DS_FOREST_VERSION_TOO_HIGH
 
 /// The version of the operating system installed is incompatible with the current domain functional level. You must upgrade to a new version of the operating system before this server can become a domain controller in this domain.
-pub const DOMAIN_VERSION_TOO_HIGH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8564); // ERROR_DS_DOMAIN_VERSION_TOO_HIGH
+pub const DOMAIN_VERSION_TOO_HIGH : ErrorCode = ErrorCode::from_constant(8564); // ERROR_DS_DOMAIN_VERSION_TOO_HIGH
 
 /// The version of the operating system installed on this server no longer supports the current AD DS Forest functional level or AD LDS Configuration Set functional level. You must raise the AD DS Forest functional level or AD LDS Configuration Set functional level before this server can become an AD DS Domain Controller or an AD LDS Instance in this Forest or Configuration Set.
-pub const FOREST_VERSION_TOO_LOW : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8565); // ERROR_DS_FOREST_VERSION_TOO_LOW
+pub const FOREST_VERSION_TOO_LOW : ErrorCode = ErrorCode::from_constant(8565); // ERROR_DS_FOREST_VERSION_TOO_LOW
 
 /// The version of the operating system installed on this server no longer supports the current domain functional level. You must raise the domain functional level before this server can become a domain controller in this domain.
-pub const DOMAIN_VERSION_TOO_LOW : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8566); // ERROR_DS_DOMAIN_VERSION_TOO_LOW
+pub const DOMAIN_VERSION_TOO_LOW : ErrorCode = ErrorCode::from_constant(8566); // ERROR_DS_DOMAIN_VERSION_TOO_LOW
 
 /// The version of the operating system installed on this server is incompatible with the functional level of the domain or forest.
-pub const INCOMPATIBLE_VERSION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8567); // ERROR_DS_INCOMPATIBLE_VERSION
+pub const INCOMPATIBLE_VERSION : ErrorCode = ErrorCode::from_constant(8567); // ERROR_DS_INCOMPATIBLE_VERSION
 
 /// The functional level of the domain (or forest) cannot be raised to the requested value, because there exist one or more domain controllers in the domain (or forest) that are at a lower incompatible functional level.
-pub const LOW_DSA_VERSION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8568); // ERROR_DS_LOW_DSA_VERSION
+pub const LOW_DSA_VERSION : ErrorCode = ErrorCode::from_constant(8568); // ERROR_DS_LOW_DSA_VERSION
 
 /// The forest functional level cannot be raised to the requested value since one or more domains are still in mixed domain mode. All domains in the forest must be in native mode, for you to raise the forest functional level.
-pub const NO_BEHAVIOR_VERSION_IN_MIXEDDOMAIN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8569); // ERROR_DS_NO_BEHAVIOR_VERSION_IN_MIXEDDOMAIN
+pub const NO_BEHAVIOR_VERSION_IN_MIXEDDOMAIN : ErrorCode = ErrorCode::from_constant(8569); // ERROR_DS_NO_BEHAVIOR_VERSION_IN_MIXEDDOMAIN
 
 /// The sort order requested is not supported.
-pub const NOT_SUPPORTED_SORT_ORDER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8570); // ERROR_DS_NOT_SUPPORTED_SORT_ORDER
+pub const NOT_SUPPORTED_SORT_ORDER : ErrorCode = ErrorCode::from_constant(8570); // ERROR_DS_NOT_SUPPORTED_SORT_ORDER
 
 /// The requested name already exists as a unique identifier.
-pub const NAME_NOT_UNIQUE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8571); // ERROR_DS_NAME_NOT_UNIQUE
+pub const NAME_NOT_UNIQUE : ErrorCode = ErrorCode::from_constant(8571); // ERROR_DS_NAME_NOT_UNIQUE
 
 /// The machine account was created pre-NT4. The account needs to be recreated.
-pub const MACHINE_ACCOUNT_CREATED_PRENT4 : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8572); // ERROR_DS_MACHINE_ACCOUNT_CREATED_PRENT4
+pub const MACHINE_ACCOUNT_CREATED_PRENT4 : ErrorCode = ErrorCode::from_constant(8572); // ERROR_DS_MACHINE_ACCOUNT_CREATED_PRENT4
 
 /// The database is out of version store.
-pub const OUT_OF_VERSION_STORE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8573); // ERROR_DS_OUT_OF_VERSION_STORE
+pub const OUT_OF_VERSION_STORE : ErrorCode = ErrorCode::from_constant(8573); // ERROR_DS_OUT_OF_VERSION_STORE
 
 /// Unable to continue operation because multiple conflicting controls were used.
-pub const INCOMPATIBLE_CONTROLS_USED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8574); // ERROR_DS_INCOMPATIBLE_CONTROLS_USED
+pub const INCOMPATIBLE_CONTROLS_USED : ErrorCode = ErrorCode::from_constant(8574); // ERROR_DS_INCOMPATIBLE_CONTROLS_USED
 
 /// Unable to find a valid security descriptor reference domain for this partition.
-pub const NO_REF_DOMAIN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8575); // ERROR_DS_NO_REF_DOMAIN
+pub const NO_REF_DOMAIN : ErrorCode = ErrorCode::from_constant(8575); // ERROR_DS_NO_REF_DOMAIN
 
 /// Schema update failed: The link identifier is reserved.
-pub const RESERVED_LINK_ID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8576); // ERROR_DS_RESERVED_LINK_ID
+pub const RESERVED_LINK_ID : ErrorCode = ErrorCode::from_constant(8576); // ERROR_DS_RESERVED_LINK_ID
 
 /// Schema update failed: There are no link identifiers available.
-pub const LINK_ID_NOT_AVAILABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8577); // ERROR_DS_LINK_ID_NOT_AVAILABLE
+pub const LINK_ID_NOT_AVAILABLE : ErrorCode = ErrorCode::from_constant(8577); // ERROR_DS_LINK_ID_NOT_AVAILABLE
 
 /// An account group cannot have a universal group as a member.
-pub const AG_CANT_HAVE_UNIVERSAL_MEMBER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8578); // ERROR_DS_AG_CANT_HAVE_UNIVERSAL_MEMBER
+pub const AG_CANT_HAVE_UNIVERSAL_MEMBER : ErrorCode = ErrorCode::from_constant(8578); // ERROR_DS_AG_CANT_HAVE_UNIVERSAL_MEMBER
 
 /// Rename or move operations on naming context heads or read-only objects are not allowed.
-pub const MODIFYDN_DISALLOWED_BY_INSTANCE_TYPE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8579); // ERROR_DS_MODIFYDN_DISALLOWED_BY_INSTANCE_TYPE
+pub const MODIFYDN_DISALLOWED_BY_INSTANCE_TYPE : ErrorCode = ErrorCode::from_constant(8579); // ERROR_DS_MODIFYDN_DISALLOWED_BY_INSTANCE_TYPE
 
 /// Move operations on objects in the schema naming context are not allowed.
-pub const NO_OBJECT_MOVE_IN_SCHEMA_NC : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8580); // ERROR_DS_NO_OBJECT_MOVE_IN_SCHEMA_NC
+pub const NO_OBJECT_MOVE_IN_SCHEMA_NC : ErrorCode = ErrorCode::from_constant(8580); // ERROR_DS_NO_OBJECT_MOVE_IN_SCHEMA_NC
 
 /// A system flag has been set on the object and does not allow the object to be moved or renamed.
-pub const MODIFYDN_DISALLOWED_BY_FLAG : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8581); // ERROR_DS_MODIFYDN_DISALLOWED_BY_FLAG
+pub const MODIFYDN_DISALLOWED_BY_FLAG : ErrorCode = ErrorCode::from_constant(8581); // ERROR_DS_MODIFYDN_DISALLOWED_BY_FLAG
 
 /// This object is not allowed to change its grandparent container. Moves are not forbidden on this object, but are restricted to sibling containers.
-pub const MODIFYDN_WRONG_GRANDPARENT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8582); // ERROR_DS_MODIFYDN_WRONG_GRANDPARENT
+pub const MODIFYDN_WRONG_GRANDPARENT : ErrorCode = ErrorCode::from_constant(8582); // ERROR_DS_MODIFYDN_WRONG_GRANDPARENT
 
 /// Unable to resolve completely, a referral to another forest is generated.
-pub const NAME_ERROR_TRUST_REFERRAL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8583); // ERROR_DS_NAME_ERROR_TRUST_REFERRAL
+pub const NAME_ERROR_TRUST_REFERRAL : ErrorCode = ErrorCode::from_constant(8583); // ERROR_DS_NAME_ERROR_TRUST_REFERRAL
 
 /// Could not access a partition of the directory service located on a remote server. Make sure at least one server is running for the partition in question.
-pub const CANT_ACCESS_REMOTE_PART_OF_AD : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8585); // ERROR_DS_CANT_ACCESS_REMOTE_PART_OF_AD
+pub const CANT_ACCESS_REMOTE_PART_OF_AD : ErrorCode = ErrorCode::from_constant(8585); // ERROR_DS_CANT_ACCESS_REMOTE_PART_OF_AD
 
 /// The directory cannot validate the proposed naming context (or partition) name because it does not hold a replica nor can it contact a replica of the naming context above the proposed naming context. Please ensure that the parent naming context is properly registered in DNS, and at least one replica of this naming context is reachable by the Domain Naming master.
-pub const CR_IMPOSSIBLE_TO_VALIDATE_V2 : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8586); // ERROR_DS_CR_IMPOSSIBLE_TO_VALIDATE_V2
+pub const CR_IMPOSSIBLE_TO_VALIDATE_V2 : ErrorCode = ErrorCode::from_constant(8586); // ERROR_DS_CR_IMPOSSIBLE_TO_VALIDATE_V2
 
 /// The thread limit for this request was exceeded.
-pub const THREAD_LIMIT_EXCEEDED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8587); // ERROR_DS_THREAD_LIMIT_EXCEEDED
+pub const THREAD_LIMIT_EXCEEDED : ErrorCode = ErrorCode::from_constant(8587); // ERROR_DS_THREAD_LIMIT_EXCEEDED
 
 /// The Global catalog server is not in the closest site.
-pub const NOT_CLOSEST : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8588); // ERROR_DS_NOT_CLOSEST
+pub const NOT_CLOSEST : ErrorCode = ErrorCode::from_constant(8588); // ERROR_DS_NOT_CLOSEST
 
 /// The DS cannot derive a service principal name (SPN) with which to mutually authenticate the target server because the corresponding server object in the local DS database has no serverReference attribute.
-pub const CANT_DERIVE_SPN_WITHOUT_SERVER_REF : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8589); // ERROR_DS_CANT_DERIVE_SPN_WITHOUT_SERVER_REF
+pub const CANT_DERIVE_SPN_WITHOUT_SERVER_REF : ErrorCode = ErrorCode::from_constant(8589); // ERROR_DS_CANT_DERIVE_SPN_WITHOUT_SERVER_REF
 
 /// The Directory Service failed to enter single user mode.
-pub const SINGLE_USER_MODE_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8590); // ERROR_DS_SINGLE_USER_MODE_FAILED
+pub const SINGLE_USER_MODE_FAILED : ErrorCode = ErrorCode::from_constant(8590); // ERROR_DS_SINGLE_USER_MODE_FAILED
 
 /// The Directory Service cannot parse the script because of a syntax error.
-pub const NTDSCRIPT_SYNTAX_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8591); // ERROR_DS_NTDSCRIPT_SYNTAX_ERROR
+pub const NTDSCRIPT_SYNTAX_ERROR : ErrorCode = ErrorCode::from_constant(8591); // ERROR_DS_NTDSCRIPT_SYNTAX_ERROR
 
 /// The Directory Service cannot process the script because of an error.
-pub const NTDSCRIPT_PROCESS_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8592); // ERROR_DS_NTDSCRIPT_PROCESS_ERROR
+pub const NTDSCRIPT_PROCESS_ERROR : ErrorCode = ErrorCode::from_constant(8592); // ERROR_DS_NTDSCRIPT_PROCESS_ERROR
 
 /// The directory service cannot perform the requested operation because the servers involved are of different replication epochs (which is usually related to a domain rename that is in progress).
-pub const DIFFERENT_REPL_EPOCHS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8593); // ERROR_DS_DIFFERENT_REPL_EPOCHS
+pub const DIFFERENT_REPL_EPOCHS : ErrorCode = ErrorCode::from_constant(8593); // ERROR_DS_DIFFERENT_REPL_EPOCHS
 
 /// The directory service binding must be renegotiated due to a change in the server extensions information.
-pub const DRS_EXTENSIONS_CHANGED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8594); // ERROR_DS_DRS_EXTENSIONS_CHANGED
+pub const DRS_EXTENSIONS_CHANGED : ErrorCode = ErrorCode::from_constant(8594); // ERROR_DS_DRS_EXTENSIONS_CHANGED
 
 /// Operation not allowed on a disabled cross ref.
-pub const REPLICA_SET_CHANGE_NOT_ALLOWED_ON_DISABLED_CR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8595); // ERROR_DS_REPLICA_SET_CHANGE_NOT_ALLOWED_ON_DISABLED_CR
+pub const REPLICA_SET_CHANGE_NOT_ALLOWED_ON_DISABLED_CR : ErrorCode = ErrorCode::from_constant(8595); // ERROR_DS_REPLICA_SET_CHANGE_NOT_ALLOWED_ON_DISABLED_CR
 
 /// Schema update failed: No values for msDS-IntId are available.
-pub const NO_MSDS_INTID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8596); // ERROR_DS_NO_MSDS_INTID
+pub const NO_MSDS_INTID : ErrorCode = ErrorCode::from_constant(8596); // ERROR_DS_NO_MSDS_INTID
 
 /// Schema update failed: Duplicate msDS-INtId. Retry the operation.
-pub const DUP_MSDS_INTID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8597); // ERROR_DS_DUP_MSDS_INTID
+pub const DUP_MSDS_INTID : ErrorCode = ErrorCode::from_constant(8597); // ERROR_DS_DUP_MSDS_INTID
 
 /// Schema deletion failed: attribute is used in rDNAttID.
-pub const EXISTS_IN_RDNATTID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8598); // ERROR_DS_EXISTS_IN_RDNATTID
+pub const EXISTS_IN_RDNATTID : ErrorCode = ErrorCode::from_constant(8598); // ERROR_DS_EXISTS_IN_RDNATTID
 
 /// The directory service failed to authorize the request.
-pub const AUTHORIZATION_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8599); // ERROR_DS_AUTHORIZATION_FAILED
+pub const AUTHORIZATION_FAILED : ErrorCode = ErrorCode::from_constant(8599); // ERROR_DS_AUTHORIZATION_FAILED
 
 /// The Directory Service cannot process the script because it is invalid.
-pub const INVALID_SCRIPT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8600); // ERROR_DS_INVALID_SCRIPT
+pub const INVALID_SCRIPT : ErrorCode = ErrorCode::from_constant(8600); // ERROR_DS_INVALID_SCRIPT
 
 /// The remote create cross reference operation failed on the Domain Naming Master FSMO. The operation's error is in the extended data.
-pub const REMOTE_CROSSREF_OP_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8601); // ERROR_DS_REMOTE_CROSSREF_OP_FAILED
+pub const REMOTE_CROSSREF_OP_FAILED : ErrorCode = ErrorCode::from_constant(8601); // ERROR_DS_REMOTE_CROSSREF_OP_FAILED
 
 /// A cross reference is in use locally with the same name.
-pub const CROSS_REF_BUSY : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8602); // ERROR_DS_CROSS_REF_BUSY
+pub const CROSS_REF_BUSY : ErrorCode = ErrorCode::from_constant(8602); // ERROR_DS_CROSS_REF_BUSY
 
 /// The DS cannot derive a service principal name (SPN) with which to mutually authenticate the target server because the server's domain has been deleted from the forest.
-pub const CANT_DERIVE_SPN_FOR_DELETED_DOMAIN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8603); // ERROR_DS_CANT_DERIVE_SPN_FOR_DELETED_DOMAIN
+pub const CANT_DERIVE_SPN_FOR_DELETED_DOMAIN : ErrorCode = ErrorCode::from_constant(8603); // ERROR_DS_CANT_DERIVE_SPN_FOR_DELETED_DOMAIN
 
 /// Writeable NCs prevent this DC from demoting.
-pub const CANT_DEMOTE_WITH_WRITEABLE_NC : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8604); // ERROR_DS_CANT_DEMOTE_WITH_WRITEABLE_NC
+pub const CANT_DEMOTE_WITH_WRITEABLE_NC : ErrorCode = ErrorCode::from_constant(8604); // ERROR_DS_CANT_DEMOTE_WITH_WRITEABLE_NC
 
 /// The requested object has a non-unique identifier and cannot be retrieved.
-pub const DUPLICATE_ID_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8605); // ERROR_DS_DUPLICATE_ID_FOUND
+pub const DUPLICATE_ID_FOUND : ErrorCode = ErrorCode::from_constant(8605); // ERROR_DS_DUPLICATE_ID_FOUND
 
 /// Insufficient attributes were given to create an object. This object may not exist because it may have been deleted and already garbage collected.
-pub const INSUFFICIENT_ATTR_TO_CREATE_OBJECT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8606); // ERROR_DS_INSUFFICIENT_ATTR_TO_CREATE_OBJECT
+pub const INSUFFICIENT_ATTR_TO_CREATE_OBJECT : ErrorCode = ErrorCode::from_constant(8606); // ERROR_DS_INSUFFICIENT_ATTR_TO_CREATE_OBJECT
 
 /// The group cannot be converted due to attribute restrictions on the requested group type.
-pub const GROUP_CONVERSION_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8607); // ERROR_DS_GROUP_CONVERSION_ERROR
+pub const GROUP_CONVERSION_ERROR : ErrorCode = ErrorCode::from_constant(8607); // ERROR_DS_GROUP_CONVERSION_ERROR
 
 /// Cross-domain move of non-empty basic application groups is not allowed.
-pub const CANT_MOVE_APP_BASIC_GROUP : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8608); // ERROR_DS_CANT_MOVE_APP_BASIC_GROUP
+pub const CANT_MOVE_APP_BASIC_GROUP : ErrorCode = ErrorCode::from_constant(8608); // ERROR_DS_CANT_MOVE_APP_BASIC_GROUP
 
 /// Cross-domain move of non-empty query based application groups is not allowed.
-pub const CANT_MOVE_APP_QUERY_GROUP : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8609); // ERROR_DS_CANT_MOVE_APP_QUERY_GROUP
+pub const CANT_MOVE_APP_QUERY_GROUP : ErrorCode = ErrorCode::from_constant(8609); // ERROR_DS_CANT_MOVE_APP_QUERY_GROUP
 
 /// The FSMO role ownership could not be verified because its directory partition has not replicated successfully with at least one replication partner.
-pub const ROLE_NOT_VERIFIED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8610); // ERROR_DS_ROLE_NOT_VERIFIED
+pub const ROLE_NOT_VERIFIED : ErrorCode = ErrorCode::from_constant(8610); // ERROR_DS_ROLE_NOT_VERIFIED
 
 /// The target container for a redirection of a well known object container cannot already be a special container.
-pub const WKO_CONTAINER_CANNOT_BE_SPECIAL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8611); // ERROR_DS_WKO_CONTAINER_CANNOT_BE_SPECIAL
+pub const WKO_CONTAINER_CANNOT_BE_SPECIAL : ErrorCode = ErrorCode::from_constant(8611); // ERROR_DS_WKO_CONTAINER_CANNOT_BE_SPECIAL
 
 /// The Directory Service cannot perform the requested operation because a domain rename operation is in progress.
-pub const DOMAIN_RENAME_IN_PROGRESS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8612); // ERROR_DS_DOMAIN_RENAME_IN_PROGRESS
+pub const DOMAIN_RENAME_IN_PROGRESS : ErrorCode = ErrorCode::from_constant(8612); // ERROR_DS_DOMAIN_RENAME_IN_PROGRESS
 
 /// The directory service detected a child partition below the requested partition name. The partition hierarchy must be created in a top down method.
-pub const EXISTING_AD_CHILD_NC : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8613); // ERROR_DS_EXISTING_AD_CHILD_NC
+pub const EXISTING_AD_CHILD_NC : ErrorCode = ErrorCode::from_constant(8613); // ERROR_DS_EXISTING_AD_CHILD_NC
 
 /// The directory service cannot replicate with this server because the time since the last replication with this server has exceeded the tombstone lifetime.
-pub const REPL_LIFETIME_EXCEEDED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8614); // ERROR_DS_REPL_LIFETIME_EXCEEDED
+pub const REPL_LIFETIME_EXCEEDED : ErrorCode = ErrorCode::from_constant(8614); // ERROR_DS_REPL_LIFETIME_EXCEEDED
 
 /// The requested operation is not allowed on an object under the system container.
-pub const DISALLOWED_IN_SYSTEM_CONTAINER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8615); // ERROR_DS_DISALLOWED_IN_SYSTEM_CONTAINER
+pub const DISALLOWED_IN_SYSTEM_CONTAINER : ErrorCode = ErrorCode::from_constant(8615); // ERROR_DS_DISALLOWED_IN_SYSTEM_CONTAINER
 
 /// The LDAP servers network send queue has filled up because the client is not processing the results of its requests fast enough. No more requests will be processed until the client catches up. If the client does not catch up then it will be disconnected.
-pub const LDAP_SEND_QUEUE_FULL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8616); // ERROR_DS_LDAP_SEND_QUEUE_FULL
+pub const LDAP_SEND_QUEUE_FULL : ErrorCode = ErrorCode::from_constant(8616); // ERROR_DS_LDAP_SEND_QUEUE_FULL
 
 /// The scheduled replication did not take place because the system was too busy to execute the request within the schedule window. The replication queue is overloaded. Consider reducing the number of partners or decreasing the scheduled replication frequency.
-pub const DRA_OUT_SCHEDULE_WINDOW : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8617); // ERROR_DS_DRA_OUT_SCHEDULE_WINDOW
+pub const DRA_OUT_SCHEDULE_WINDOW : ErrorCode = ErrorCode::from_constant(8617); // ERROR_DS_DRA_OUT_SCHEDULE_WINDOW
 
 /// At this time, it cannot be determined if the branch replication policy is available on the hub domain controller. Please retry at a later time to account for replication latencies.
-pub const POLICY_NOT_KNOWN : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8618); // ERROR_DS_POLICY_NOT_KNOWN
+pub const POLICY_NOT_KNOWN : ErrorCode = ErrorCode::from_constant(8618); // ERROR_DS_POLICY_NOT_KNOWN
 
 /// The server object for the domain controller does not exist.
-pub const NO_SERVER_OBJECT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8622); // ERROR_DS_NO_SERVER_OBJECT
+pub const NO_SERVER_OBJECT : ErrorCode = ErrorCode::from_constant(8622); // ERROR_DS_NO_SERVER_OBJECT
 
 /// The NTDS Settings object for the domain controller does not exist.
-pub const NO_NTDSA_OBJECT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8623); // ERROR_DS_NO_NTDSA_OBJECT
+pub const NO_NTDSA_OBJECT : ErrorCode = ErrorCode::from_constant(8623); // ERROR_DS_NO_NTDSA_OBJECT
 
 /// The requested search operation is not supported for ASQ searches.
-pub const NON_ASQ_SEARCH : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8624); // ERROR_DS_NON_ASQ_SEARCH
+pub const NON_ASQ_SEARCH : ErrorCode = ErrorCode::from_constant(8624); // ERROR_DS_NON_ASQ_SEARCH
 
 /// A required audit event could not be generated for the operation.
-pub const AUDIT_FAILURE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8625); // ERROR_DS_AUDIT_FAILURE
+pub const AUDIT_FAILURE : ErrorCode = ErrorCode::from_constant(8625); // ERROR_DS_AUDIT_FAILURE
 
 /// The search flags for the attribute are invalid. The subtree index bit is valid only on single valued attributes.
-pub const INVALID_SEARCH_FLAG_SUBTREE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8626); // ERROR_DS_INVALID_SEARCH_FLAG_SUBTREE
+pub const INVALID_SEARCH_FLAG_SUBTREE : ErrorCode = ErrorCode::from_constant(8626); // ERROR_DS_INVALID_SEARCH_FLAG_SUBTREE
 
 /// The search flags for the attribute are invalid. The tuple index bit is valid only on attributes of Unicode strings.
-pub const INVALID_SEARCH_FLAG_TUPLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8627); // ERROR_DS_INVALID_SEARCH_FLAG_TUPLE
+pub const INVALID_SEARCH_FLAG_TUPLE : ErrorCode = ErrorCode::from_constant(8627); // ERROR_DS_INVALID_SEARCH_FLAG_TUPLE
 
 /// The address books are nested too deeply. Failed to build the hierarchy table.
-pub const HIERARCHY_TABLE_TOO_DEEP : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8628); // ERROR_DS_HIERARCHY_TABLE_TOO_DEEP
+pub const HIERARCHY_TABLE_TOO_DEEP : ErrorCode = ErrorCode::from_constant(8628); // ERROR_DS_HIERARCHY_TABLE_TOO_DEEP
 
 /// The specified up-to-date-ness vector is corrupt.
-pub const DRA_CORRUPT_UTD_VECTOR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8629); // ERROR_DS_DRA_CORRUPT_UTD_VECTOR
+pub const DRA_CORRUPT_UTD_VECTOR : ErrorCode = ErrorCode::from_constant(8629); // ERROR_DS_DRA_CORRUPT_UTD_VECTOR
 
 /// The request to replicate secrets is denied.
-pub const DRA_SECRETS_DENIED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8630); // ERROR_DS_DRA_SECRETS_DENIED
+pub const DRA_SECRETS_DENIED : ErrorCode = ErrorCode::from_constant(8630); // ERROR_DS_DRA_SECRETS_DENIED
 
 /// Schema update failed: The MAPI identifier is reserved.
-pub const RESERVED_MAPI_ID : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8631); // ERROR_DS_RESERVED_MAPI_ID
+pub const RESERVED_MAPI_ID : ErrorCode = ErrorCode::from_constant(8631); // ERROR_DS_RESERVED_MAPI_ID
 
 /// Schema update failed: There are no MAPI identifiers available.
-pub const MAPI_ID_NOT_AVAILABLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8632); // ERROR_DS_MAPI_ID_NOT_AVAILABLE
+pub const MAPI_ID_NOT_AVAILABLE : ErrorCode = ErrorCode::from_constant(8632); // ERROR_DS_MAPI_ID_NOT_AVAILABLE
 
 /// The replication operation failed because the required attributes of the local krbtgt object are missing.
-pub const DRA_MISSING_KRBTGT_SECRET : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8633); // ERROR_DS_DRA_MISSING_KRBTGT_SECRET
+pub const DRA_MISSING_KRBTGT_SECRET : ErrorCode = ErrorCode::from_constant(8633); // ERROR_DS_DRA_MISSING_KRBTGT_SECRET
 
 /// The domain name of the trusted domain already exists in the forest.
-pub const DOMAIN_NAME_EXISTS_IN_FOREST : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8634); // ERROR_DS_DOMAIN_NAME_EXISTS_IN_FOREST
+pub const DOMAIN_NAME_EXISTS_IN_FOREST : ErrorCode = ErrorCode::from_constant(8634); // ERROR_DS_DOMAIN_NAME_EXISTS_IN_FOREST
 
 /// The flat name of the trusted domain already exists in the forest.
-pub const FLAT_NAME_EXISTS_IN_FOREST : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8635); // ERROR_DS_FLAT_NAME_EXISTS_IN_FOREST
+pub const FLAT_NAME_EXISTS_IN_FOREST : ErrorCode = ErrorCode::from_constant(8635); // ERROR_DS_FLAT_NAME_EXISTS_IN_FOREST
 
 /// OID mapped groups cannot have members.
-pub const OID_MAPPED_GROUP_CANT_HAVE_MEMBERS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8637); // ERROR_DS_OID_MAPPED_GROUP_CANT_HAVE_MEMBERS
+pub const OID_MAPPED_GROUP_CANT_HAVE_MEMBERS : ErrorCode = ErrorCode::from_constant(8637); // ERROR_DS_OID_MAPPED_GROUP_CANT_HAVE_MEMBERS
 
 /// The specified OID cannot be found.
-pub const OID_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8638); // ERROR_DS_OID_NOT_FOUND
+pub const OID_NOT_FOUND : ErrorCode = ErrorCode::from_constant(8638); // ERROR_DS_OID_NOT_FOUND
 
 /// The replication operation failed because the target object referred by a link value is recycled.
-pub const DRA_RECYCLED_TARGET : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8639); // ERROR_DS_DRA_RECYCLED_TARGET
+pub const DRA_RECYCLED_TARGET : ErrorCode = ErrorCode::from_constant(8639); // ERROR_DS_DRA_RECYCLED_TARGET
 
 /// The redirect operation failed because the target object is in a NC different from the domain NC of the current domain controller.
-pub const DISALLOWED_NC_REDIRECT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8640); // ERROR_DS_DISALLOWED_NC_REDIRECT
+pub const DISALLOWED_NC_REDIRECT : ErrorCode = ErrorCode::from_constant(8640); // ERROR_DS_DISALLOWED_NC_REDIRECT
 
 /// The functional level of the AD LDS configuration set cannot be lowered to the requested value.
-pub const HIGH_ADLDS_FFL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8641); // ERROR_DS_HIGH_ADLDS_FFL
+pub const HIGH_ADLDS_FFL : ErrorCode = ErrorCode::from_constant(8641); // ERROR_DS_HIGH_ADLDS_FFL
 
 /// The functional level of the domain (or forest) cannot be lowered to the requested value.
-pub const HIGH_DSA_VERSION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8642); // ERROR_DS_HIGH_DSA_VERSION
+pub const HIGH_DSA_VERSION : ErrorCode = ErrorCode::from_constant(8642); // ERROR_DS_HIGH_DSA_VERSION
 
 /// The functional level of the AD LDS configuration set cannot be raised to the requested value, because there exist one or more ADLDS instances that are at a lower incompatible functional level.
-pub const LOW_ADLDS_FFL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8643); // ERROR_DS_LOW_ADLDS_FFL
+pub const LOW_ADLDS_FFL : ErrorCode = ErrorCode::from_constant(8643); // ERROR_DS_LOW_ADLDS_FFL
 
 /// The undelete operation failed because the Sam Account Name or Additional Sam Account Name of the object being undeleted conflicts with an existing live object.
-pub const UNDELETE_SAM_VALIDATION_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8645); // ERROR_DS_UNDELETE_SAM_VALIDATION_FAILED
+pub const UNDELETE_SAM_VALIDATION_FAILED : ErrorCode = ErrorCode::from_constant(8645); // ERROR_DS_UNDELETE_SAM_VALIDATION_FAILED
 
 /// The operation failed because SPN value provided for addition/modification is not unique forest-wide.
-pub const SPN_VALUE_NOT_UNIQUE_IN_FOREST : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8647); // ERROR_DS_SPN_VALUE_NOT_UNIQUE_IN_FOREST
+pub const SPN_VALUE_NOT_UNIQUE_IN_FOREST : ErrorCode = ErrorCode::from_constant(8647); // ERROR_DS_SPN_VALUE_NOT_UNIQUE_IN_FOREST
 
 /// The operation failed because UPN value provided for addition/modification is not unique forest-wide.
-pub const UPN_VALUE_NOT_UNIQUE_IN_FOREST : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8648); // ERROR_DS_UPN_VALUE_NOT_UNIQUE_IN_FOREST
+pub const UPN_VALUE_NOT_UNIQUE_IN_FOREST : ErrorCode = ErrorCode::from_constant(8648); // ERROR_DS_UPN_VALUE_NOT_UNIQUE_IN_FOREST
 
 /// The operation failed because the addition/modification referenced an inbound forest-wide trust that is not present.
-pub const MISSING_FOREST_TRUST : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8649); // ERROR_DS_MISSING_FOREST_TRUST
+pub const MISSING_FOREST_TRUST : ErrorCode = ErrorCode::from_constant(8649); // ERROR_DS_MISSING_FOREST_TRUST
 
 /// The link value specified was not found, but a link value with that key was found.
-pub const VALUE_KEY_NOT_UNIQUE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(8650); // ERROR_DS_VALUE_KEY_NOT_UNIQUE
+pub const VALUE_KEY_NOT_UNIQUE : ErrorCode = ErrorCode::from_constant(8650); // ERROR_DS_VALUE_KEY_NOT_UNIQUE
 
 /// DS codepoint already exists
-pub const MAPPING_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(7518); // ERROR_DS_MAPPING_EXISTS
+pub const MAPPING_EXISTS : ErrorCode = ErrorCode::from_constant(7518); // ERROR_DS_MAPPING_EXISTS

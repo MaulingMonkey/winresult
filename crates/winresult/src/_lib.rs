@@ -3,8 +3,8 @@
 //! ### Types
 //!
 //! |        min |        max | type                                        | notes |
-//! | ----------:| ----------:| ------------------------------------------- | -------- |
-//! |          0 |     0xFFFF | [`ErrorCodeMicrosoft`]
+//! | ----------:| ----------:| ------------------------------------------- | ----- |
+//! |          0 |     0xFFFF | [`ErrorCode`]
 //! |          0 | 0x7FFFFFFF | [`HResultSuccess`]
 //! | 0x80000000 | 0xFFFFFFFF | [`HResultError`]
 //! |          0 | 0xFFFFFFFF | [`HResult`]                                 | [`HResultSuccess`] \| [`HResultError`]
@@ -16,18 +16,18 @@
 //!
 //! ### Buggy Bitwise Comparisons to Forbid
 //!
-//! | left                      | right                 | why |
-//! | ------------------------- | --------------------- | --- |
-//! | [`ErrorCodeMicrosoft`]    | [`HResultError`]      | never `true`, non-overlapping ranges, need to add or remove facility
-//! | [`ErrorCodeMicrosoft`]    | [`HResultSuccess`]    | `ERROR_INVALID_FUNCTION == S_FALSE`, need to add or remove facility
-//! | [`ErrorCodeMicrosoft`]    | [`HResult`]           | `ERROR_INVALID_FUNCTION == S_FALSE`, need to add or remove facility
-//! | [`ErrorCodeMicrosoft`]    | [`WaitCode`]          | `ERROR_INVALID_FUNCTION == WAIT_OBJECT_0+1`
-//! | Success\*                 | Error\*               | never `true` except by accident
+//! | left          | right                 | why |
+//! | ------------- | --------------------- | --- |
+//! | [`ErrorCode`] | [`HResultError`]      | never `true`, non-overlapping ranges, need to add or remove facility
+//! | [`ErrorCode`] | [`HResultSuccess`]    | `ERROR_INVALID_FUNCTION == S_FALSE`, need to add or remove facility
+//! | [`ErrorCode`] | [`HResult`]           | `ERROR_INVALID_FUNCTION == S_FALSE`, need to add or remove facility
+//! | [`ErrorCode`] | [`WaitCode`]          | `ERROR_INVALID_FUNCTION == WAIT_OBJECT_0+1`
+//! | \*Success     | \*Error\*             | never `true` except by accident
 //!
 //! ### Conversions
 //!
 //! *   [HResultSuccess] → [HResult]
-//! *   ([HResultFacilityMicrosoft], [ErrorCodeMicrosoft]) → [HResultError] → [HResult]
+//! *   ([HResultFacilityMicrosoft], [ErrorCode]) → [HResultError] → [HResult]
 
 #![no_std]
 
@@ -36,7 +36,7 @@
 extern crate winresult_types as types;
 
 pub use types::{
-    ErrorCodeMicrosoft,
+    ErrorCode,
     HResult,
     HResultFacilityMicrosoft,
     HResultSuccess,
@@ -94,7 +94,7 @@ mod gen {
     pub mod codes {
         #![allow(non_snake_case)]
         #![allow(non_upper_case_globals)]
-        use types::{ErrorCodeMicrosoft, HResultSuccess, HResultError};
+        use types::{ErrorCode, HResultSuccess, HResultError};
 
 
 
@@ -220,7 +220,7 @@ mod gen {
         /// **E**ntry **P**oin**t** for Remote Procedure Calls
         #[allow(dead_code)] mod EPT {}
 
-        /// **Error Codes**.  Mostly a mixture of [HResultError]s and [ErrorCodeMicrosoft]s.
+        /// **Error Codes**.  Mostly a mixture of [HResultError]s and [ErrorCode]s.
         /// submodules:
         /// [CLOUD_FILE](Self::CLOUD_FILE),
         /// [CLUSTER](Self::CLUSTER),
@@ -244,7 +244,7 @@ mod gen {
         /// Note that `ERROR::SUBCATEGORY::CODE` is also generally exported as `ERROR::SUBCATEGORY_CODE`, although the latter is hidden from the docs to reduce clutter.
         /// <br><br>
         pub mod ERROR {
-            use types::{ErrorCodeMicrosoft, HResultSuccess, HResultError};
+            use types::{ErrorCode, HResultSuccess, HResultError};
 
             // TODO: SUCCESS = 0 ?
 
@@ -326,7 +326,7 @@ mod gen {
 
             /// [Side-by-side assembly](https://en.wikipedia.org/wiki/Side-by-side_assembly)
             pub mod SXS {
-                use types::ErrorCodeMicrosoft;
+                use types::ErrorCode;
 
                 #[path = "../SXS.rs"] mod _SELF;
                 pub use _SELF::*;

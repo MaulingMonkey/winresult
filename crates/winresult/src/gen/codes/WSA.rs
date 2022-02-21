@@ -4,7 +4,7 @@ use super::*;
 
 
 /// No more results can be returned by WSALookupServiceNext.
-pub const E_NO_MORE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(10110); // WSA_E_NO_MORE
+pub const E_NO_MORE : ErrorCode = ErrorCode::from_constant(10110); // WSA_E_NO_MORE
 
 /// A call to WSALookupServiceEnd was made while this call was still processing. The call has been canceled.
-pub const E_CANCELLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(10111); // WSA_E_CANCELLED
+pub const E_CANCELLED : ErrorCode = ErrorCode::from_constant(10111); // WSA_E_CANCELLED

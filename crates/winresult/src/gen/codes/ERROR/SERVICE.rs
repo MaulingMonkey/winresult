@@ -4,69 +4,69 @@ use super::*;
 
 
 /// `%hs`
-pub const NOTIFICATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(716); // ERROR_SERVICE_NOTIFICATION
+pub const NOTIFICATION : ErrorCode = ErrorCode::from_constant(716); // ERROR_SERVICE_NOTIFICATION
 
 /// The service did not respond to the start or control request in a timely fashion.
-pub const REQUEST_TIMEOUT : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1053); // ERROR_SERVICE_REQUEST_TIMEOUT
+pub const REQUEST_TIMEOUT : ErrorCode = ErrorCode::from_constant(1053); // ERROR_SERVICE_REQUEST_TIMEOUT
 
 /// A thread could not be created for the service.
-pub const NO_THREAD : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1054); // ERROR_SERVICE_NO_THREAD
+pub const NO_THREAD : ErrorCode = ErrorCode::from_constant(1054); // ERROR_SERVICE_NO_THREAD
 
 /// The service database is locked.
-pub const DATABASE_LOCKED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1055); // ERROR_SERVICE_DATABASE_LOCKED
+pub const DATABASE_LOCKED : ErrorCode = ErrorCode::from_constant(1055); // ERROR_SERVICE_DATABASE_LOCKED
 
 /// An instance of the service is already running.
-pub const ALREADY_RUNNING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1056); // ERROR_SERVICE_ALREADY_RUNNING
+pub const ALREADY_RUNNING : ErrorCode = ErrorCode::from_constant(1056); // ERROR_SERVICE_ALREADY_RUNNING
 
 /// The service cannot be started, either because it is disabled or because it has no enabled devices associated with it.
-pub const DISABLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1058); // ERROR_SERVICE_DISABLED
+pub const DISABLED : ErrorCode = ErrorCode::from_constant(1058); // ERROR_SERVICE_DISABLED
 
 /// The specified service does not exist as an installed service.
-pub const DOES_NOT_EXIST : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1060); // ERROR_SERVICE_DOES_NOT_EXIST
+pub const DOES_NOT_EXIST : ErrorCode = ErrorCode::from_constant(1060); // ERROR_SERVICE_DOES_NOT_EXIST
 
 /// The service cannot accept control messages at this time.
-pub const CANNOT_ACCEPT_CTRL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1061); // ERROR_SERVICE_CANNOT_ACCEPT_CTRL
+pub const CANNOT_ACCEPT_CTRL : ErrorCode = ErrorCode::from_constant(1061); // ERROR_SERVICE_CANNOT_ACCEPT_CTRL
 
 /// The service has not been started.
-pub const NOT_ACTIVE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1062); // ERROR_SERVICE_NOT_ACTIVE
+pub const NOT_ACTIVE : ErrorCode = ErrorCode::from_constant(1062); // ERROR_SERVICE_NOT_ACTIVE
 
 /// The service has returned a service-specific error code.
-pub const SPECIFIC_ERROR : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1066); // ERROR_SERVICE_SPECIFIC_ERROR
+pub const SPECIFIC_ERROR : ErrorCode = ErrorCode::from_constant(1066); // ERROR_SERVICE_SPECIFIC_ERROR
 
 /// The dependency service or group failed to start.
-pub const DEPENDENCY_FAIL : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1068); // ERROR_SERVICE_DEPENDENCY_FAIL
+pub const DEPENDENCY_FAIL : ErrorCode = ErrorCode::from_constant(1068); // ERROR_SERVICE_DEPENDENCY_FAIL
 
 /// The service did not start due to a logon failure.
-pub const LOGON_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1069); // ERROR_SERVICE_LOGON_FAILED
+pub const LOGON_FAILED : ErrorCode = ErrorCode::from_constant(1069); // ERROR_SERVICE_LOGON_FAILED
 
 /// After starting, the service hung in a start-pending state.
-pub const START_HANG : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1070); // ERROR_SERVICE_START_HANG
+pub const START_HANG : ErrorCode = ErrorCode::from_constant(1070); // ERROR_SERVICE_START_HANG
 
 /// The specified service has been marked for deletion.
-pub const MARKED_FOR_DELETE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1072); // ERROR_SERVICE_MARKED_FOR_DELETE
+pub const MARKED_FOR_DELETE : ErrorCode = ErrorCode::from_constant(1072); // ERROR_SERVICE_MARKED_FOR_DELETE
 
 /// The specified service already exists.
-pub const EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1073); // ERROR_SERVICE_EXISTS
+pub const EXISTS : ErrorCode = ErrorCode::from_constant(1073); // ERROR_SERVICE_EXISTS
 
 /// The dependency service does not exist or has been marked for deletion.
-pub const DEPENDENCY_DELETED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1075); // ERROR_SERVICE_DEPENDENCY_DELETED
+pub const DEPENDENCY_DELETED : ErrorCode = ErrorCode::from_constant(1075); // ERROR_SERVICE_DEPENDENCY_DELETED
 
 /// No attempts to start the service have been made since the last boot.
-pub const NEVER_STARTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1077); // ERROR_SERVICE_NEVER_STARTED
+pub const NEVER_STARTED : ErrorCode = ErrorCode::from_constant(1077); // ERROR_SERVICE_NEVER_STARTED
 
 /// The executable program that this service is configured to run in does not implement the service.
-pub const NOT_IN_EXE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1083); // ERROR_SERVICE_NOT_IN_EXE
+pub const NOT_IN_EXE : ErrorCode = ErrorCode::from_constant(1083); // ERROR_SERVICE_NOT_IN_EXE
 
 /// The specified service does not exist.
-pub const NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1243); // ERROR_SERVICE_NOT_FOUND
+pub const NOT_FOUND : ErrorCode = ErrorCode::from_constant(1243); // ERROR_SERVICE_NOT_FOUND
 
 /// The service notification client is lagging too far behind the current state of services in the machine.
-pub const NOTIFY_CLIENT_LAGGING : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1294); // ERROR_SERVICE_NOTIFY_CLIENT_LAGGING
+pub const NOTIFY_CLIENT_LAGGING : ErrorCode = ErrorCode::from_constant(1294); // ERROR_SERVICE_NOTIFY_CLIENT_LAGGING
 
 /// The package installation failed because a version of the service exists outside of APPX packaging. Please contact your software vendor.
-pub const EXISTS_AS_NON_PACKAGED_SERVICE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15655); // ERROR_SERVICE_EXISTS_AS_NON_PACKAGED_SERVICE
+pub const EXISTS_AS_NON_PACKAGED_SERVICE : ErrorCode = ErrorCode::from_constant(15655); // ERROR_SERVICE_EXISTS_AS_NON_PACKAGED_SERVICE
 
-pub const IS_PAUSED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(928); // ERROR_SERVICE_IS_PAUSED
+pub const IS_PAUSED : ErrorCode = ErrorCode::from_constant(928); // ERROR_SERVICE_IS_PAUSED
 
 /// The WinRM service cannot process the request. The Channel Binding Token Hardening Level (CbtHardeningLevel) value is invalid.
 /// The valid values are "None", "Relaxed" and "Strict". Change the CbtHardeningLevel value and try again.

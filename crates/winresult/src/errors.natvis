@@ -222,8 +222,7 @@
         <DisplayString>FACILITY_??? ({__0})</DisplayString>
     </Type>
 
-    <Type Name="winresult_types::code::ErrorCodeMicrosoft">
-        <DisplayString Condition="__0 == 0">ERROR::SUCCESS (invalid: value 0, ErrorCodeMicrosoft s should never be successful</DisplayString>
+    <Type Name="winresult_types::code::ErrorCode">
         <DisplayString Condition="__0 == 15700">APPMODEL::ERROR_NO_PACKAGE</DisplayString>
         <DisplayString Condition="__0 == 15701">APPMODEL::ERROR_PACKAGE_RUNTIME_CORRUPT</DisplayString>
         <DisplayString Condition="__0 == 15702">APPMODEL::ERROR_PACKAGE_IDENTITY_CORRUPT</DisplayString>
@@ -3284,7 +3283,7 @@
         <DisplayString Condition="__0 == 15864">STORE::ERROR_LICENSE_REVOKED</DisplayString>
         <DisplayString Condition="__0 == 10110">WSA::E_NO_MORE</DisplayString>
         <DisplayString Condition="__0 == 10111">WSA::E_CANCELLED</DisplayString>
-        <DisplayString>{__0} (ErrorCodeMicrosoft)</DisplayString>
+        <DisplayString>{__0} (ErrorCode)</DisplayString>
     </Type>
 
     <Type Name="winresult_types::hresult::HResultError">

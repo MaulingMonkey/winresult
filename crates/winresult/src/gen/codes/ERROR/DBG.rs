@@ -4,40 +4,40 @@ use super::*;
 
 
 /// Debugger did not handle the exception.
-pub const EXCEPTION_NOT_HANDLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(688); // ERROR_DBG_EXCEPTION_NOT_HANDLED
+pub const EXCEPTION_NOT_HANDLED : ErrorCode = ErrorCode::from_constant(688); // ERROR_DBG_EXCEPTION_NOT_HANDLED
 
 /// Debugger will reply later.
-pub const REPLY_LATER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(689); // ERROR_DBG_REPLY_LATER
+pub const REPLY_LATER : ErrorCode = ErrorCode::from_constant(689); // ERROR_DBG_REPLY_LATER
 
 /// Debugger cannot provide handle.
-pub const UNABLE_TO_PROVIDE_HANDLE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(690); // ERROR_DBG_UNABLE_TO_PROVIDE_HANDLE
+pub const UNABLE_TO_PROVIDE_HANDLE : ErrorCode = ErrorCode::from_constant(690); // ERROR_DBG_UNABLE_TO_PROVIDE_HANDLE
 
 /// Debugger terminated thread.
-pub const TERMINATE_THREAD : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(691); // ERROR_DBG_TERMINATE_THREAD
+pub const TERMINATE_THREAD : ErrorCode = ErrorCode::from_constant(691); // ERROR_DBG_TERMINATE_THREAD
 
 /// Debugger terminated process.
-pub const TERMINATE_PROCESS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(692); // ERROR_DBG_TERMINATE_PROCESS
+pub const TERMINATE_PROCESS : ErrorCode = ErrorCode::from_constant(692); // ERROR_DBG_TERMINATE_PROCESS
 
 /// Debugger got control C.
-pub const CONTROL_C : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(693); // ERROR_DBG_CONTROL_C
+pub const CONTROL_C : ErrorCode = ErrorCode::from_constant(693); // ERROR_DBG_CONTROL_C
 
 /// Debugger printed exception on control C.
-pub const PRINTEXCEPTION_C : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(694); // ERROR_DBG_PRINTEXCEPTION_C
+pub const PRINTEXCEPTION_C : ErrorCode = ErrorCode::from_constant(694); // ERROR_DBG_PRINTEXCEPTION_C
 
 /// Debugger received RIP exception.
-pub const RIPEXCEPTION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(695); // ERROR_DBG_RIPEXCEPTION
+pub const RIPEXCEPTION : ErrorCode = ErrorCode::from_constant(695); // ERROR_DBG_RIPEXCEPTION
 
 /// Debugger received control break.
-pub const CONTROL_BREAK : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(696); // ERROR_DBG_CONTROL_BREAK
+pub const CONTROL_BREAK : ErrorCode = ErrorCode::from_constant(696); // ERROR_DBG_CONTROL_BREAK
 
 /// Debugger command communication exception.
-pub const COMMAND_EXCEPTION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(697); // ERROR_DBG_COMMAND_EXCEPTION
+pub const COMMAND_EXCEPTION : ErrorCode = ErrorCode::from_constant(697); // ERROR_DBG_COMMAND_EXCEPTION
 
 /// Debugger handled exception
-pub const EXCEPTION_HANDLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(766); // ERROR_DBG_EXCEPTION_HANDLED
+pub const EXCEPTION_HANDLED : ErrorCode = ErrorCode::from_constant(766); // ERROR_DBG_EXCEPTION_HANDLED
 
 /// Debugger continued
-pub const CONTINUE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(767); // ERROR_DBG_CONTINUE
+pub const CONTINUE : ErrorCode = ErrorCode::from_constant(767); // ERROR_DBG_CONTINUE
 
 /// Could not create new process from ARM architecture device.
 pub const CREATE_PROCESS_FAILURE_LOCKDOWN : HResultError = HResultError::from_constant(0x80B00001); // ERROR_DBG_CREATE_PROCESS_FAILURE_LOCKDOWN

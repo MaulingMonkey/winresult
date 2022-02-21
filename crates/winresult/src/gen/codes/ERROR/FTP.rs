@@ -2,6 +2,6 @@
 
 use super::*;
 
-pub const TRANSFER_IN_PROGRESS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12110); // ERROR_FTP_TRANSFER_IN_PROGRESS
-pub const DROPPED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12111); // ERROR_FTP_DROPPED
-pub const NO_PASSIVE_MODE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12112); // ERROR_FTP_NO_PASSIVE_MODE
+pub const TRANSFER_IN_PROGRESS : ErrorCode = ErrorCode::from_constant(12110); // ERROR_FTP_TRANSFER_IN_PROGRESS
+pub const DROPPED : ErrorCode = ErrorCode::from_constant(12111); // ERROR_FTP_DROPPED
+pub const NO_PASSIVE_MODE : ErrorCode = ErrorCode::from_constant(12112); // ERROR_FTP_NO_PASSIVE_MODE

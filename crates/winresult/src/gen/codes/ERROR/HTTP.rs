@@ -2,19 +2,19 @@
 
 use super::*;
 
-pub const HSTS_REDIRECT_REQUIRED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12060); // ERROR_HTTP_HSTS_REDIRECT_REQUIRED
-pub const HEADER_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12150); // ERROR_HTTP_HEADER_NOT_FOUND
-pub const DOWNLEVEL_SERVER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12151); // ERROR_HTTP_DOWNLEVEL_SERVER
-pub const INVALID_SERVER_RESPONSE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12152); // ERROR_HTTP_INVALID_SERVER_RESPONSE
-pub const INVALID_HEADER : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12153); // ERROR_HTTP_INVALID_HEADER
-pub const INVALID_QUERY_REQUEST : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12154); // ERROR_HTTP_INVALID_QUERY_REQUEST
-pub const HEADER_ALREADY_EXISTS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12155); // ERROR_HTTP_HEADER_ALREADY_EXISTS
-pub const REDIRECT_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12156); // ERROR_HTTP_REDIRECT_FAILED
-pub const NOT_REDIRECTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12160); // ERROR_HTTP_NOT_REDIRECTED
-pub const COOKIE_NEEDS_CONFIRMATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12161); // ERROR_HTTP_COOKIE_NEEDS_CONFIRMATION
-pub const COOKIE_DECLINED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12162); // ERROR_HTTP_COOKIE_DECLINED
-pub const REDIRECT_NEEDS_CONFIRMATION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12168); // ERROR_HTTP_REDIRECT_NEEDS_CONFIRMATION
-pub const PUSH_STATUS_CODE_NOT_SUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12147); // ERROR_HTTP_PUSH_STATUS_CODE_NOT_SUPPORTED
-pub const PUSH_RETRY_NOT_SUPPORTED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12148); // ERROR_HTTP_PUSH_RETRY_NOT_SUPPORTED
-pub const PUSH_ENABLE_FAILED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12149); // ERROR_HTTP_PUSH_ENABLE_FAILED
-pub const COOKIE_NEEDS_CONFIRMATION_EX : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(12907); // ERROR_HTTP_COOKIE_NEEDS_CONFIRMATION_EX
+pub const HSTS_REDIRECT_REQUIRED : ErrorCode = ErrorCode::from_constant(12060); // ERROR_HTTP_HSTS_REDIRECT_REQUIRED
+pub const HEADER_NOT_FOUND : ErrorCode = ErrorCode::from_constant(12150); // ERROR_HTTP_HEADER_NOT_FOUND
+pub const DOWNLEVEL_SERVER : ErrorCode = ErrorCode::from_constant(12151); // ERROR_HTTP_DOWNLEVEL_SERVER
+pub const INVALID_SERVER_RESPONSE : ErrorCode = ErrorCode::from_constant(12152); // ERROR_HTTP_INVALID_SERVER_RESPONSE
+pub const INVALID_HEADER : ErrorCode = ErrorCode::from_constant(12153); // ERROR_HTTP_INVALID_HEADER
+pub const INVALID_QUERY_REQUEST : ErrorCode = ErrorCode::from_constant(12154); // ERROR_HTTP_INVALID_QUERY_REQUEST
+pub const HEADER_ALREADY_EXISTS : ErrorCode = ErrorCode::from_constant(12155); // ERROR_HTTP_HEADER_ALREADY_EXISTS
+pub const REDIRECT_FAILED : ErrorCode = ErrorCode::from_constant(12156); // ERROR_HTTP_REDIRECT_FAILED
+pub const NOT_REDIRECTED : ErrorCode = ErrorCode::from_constant(12160); // ERROR_HTTP_NOT_REDIRECTED
+pub const COOKIE_NEEDS_CONFIRMATION : ErrorCode = ErrorCode::from_constant(12161); // ERROR_HTTP_COOKIE_NEEDS_CONFIRMATION
+pub const COOKIE_DECLINED : ErrorCode = ErrorCode::from_constant(12162); // ERROR_HTTP_COOKIE_DECLINED
+pub const REDIRECT_NEEDS_CONFIRMATION : ErrorCode = ErrorCode::from_constant(12168); // ERROR_HTTP_REDIRECT_NEEDS_CONFIRMATION
+pub const PUSH_STATUS_CODE_NOT_SUPPORTED : ErrorCode = ErrorCode::from_constant(12147); // ERROR_HTTP_PUSH_STATUS_CODE_NOT_SUPPORTED
+pub const PUSH_RETRY_NOT_SUPPORTED : ErrorCode = ErrorCode::from_constant(12148); // ERROR_HTTP_PUSH_RETRY_NOT_SUPPORTED
+pub const PUSH_ENABLE_FAILED : ErrorCode = ErrorCode::from_constant(12149); // ERROR_HTTP_PUSH_ENABLE_FAILED
+pub const COOKIE_NEEDS_CONFIRMATION_EX : ErrorCode = ErrorCode::from_constant(12907); // ERROR_HTTP_COOKIE_NEEDS_CONFIRMATION_EX

@@ -4,25 +4,25 @@ use super::*;
 
 
 /// The resource loader failed to find MUI file.
-pub const FILE_NOT_FOUND : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15100); // ERROR_MUI_FILE_NOT_FOUND
+pub const FILE_NOT_FOUND : ErrorCode = ErrorCode::from_constant(15100); // ERROR_MUI_FILE_NOT_FOUND
 
 /// The resource loader failed to load MUI file because the file fail to pass validation.
-pub const INVALID_FILE : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15101); // ERROR_MUI_INVALID_FILE
+pub const INVALID_FILE : ErrorCode = ErrorCode::from_constant(15101); // ERROR_MUI_INVALID_FILE
 
 /// The RC Manifest is corrupted with garbage data or unsupported version or missing required item.
-pub const INVALID_RC_CONFIG : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15102); // ERROR_MUI_INVALID_RC_CONFIG
+pub const INVALID_RC_CONFIG : ErrorCode = ErrorCode::from_constant(15102); // ERROR_MUI_INVALID_RC_CONFIG
 
 /// The RC Manifest has invalid culture name.
-pub const INVALID_LOCALE_NAME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15103); // ERROR_MUI_INVALID_LOCALE_NAME
+pub const INVALID_LOCALE_NAME : ErrorCode = ErrorCode::from_constant(15103); // ERROR_MUI_INVALID_LOCALE_NAME
 
 /// The RC Manifest has invalid ultimatefallback name.
-pub const INVALID_ULTIMATEFALLBACK_NAME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15104); // ERROR_MUI_INVALID_ULTIMATEFALLBACK_NAME
+pub const INVALID_ULTIMATEFALLBACK_NAME : ErrorCode = ErrorCode::from_constant(15104); // ERROR_MUI_INVALID_ULTIMATEFALLBACK_NAME
 
 /// The resource loader cache doesn't have loaded MUI entry.
-pub const FILE_NOT_LOADED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15105); // ERROR_MUI_FILE_NOT_LOADED
+pub const FILE_NOT_LOADED : ErrorCode = ErrorCode::from_constant(15105); // ERROR_MUI_FILE_NOT_LOADED
 
 /// UI language installation failed.
-pub const INTLSETTINGS_UILANG_NOT_INSTALLED : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15107); // ERROR_MUI_INTLSETTINGS_UILANG_NOT_INSTALLED
+pub const INTLSETTINGS_UILANG_NOT_INSTALLED : ErrorCode = ErrorCode::from_constant(15107); // ERROR_MUI_INTLSETTINGS_UILANG_NOT_INSTALLED
 
 /// Locale installation failed.
-pub const INTLSETTINGS_INVALID_LOCALE_NAME : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(15108); // ERROR_MUI_INTLSETTINGS_INVALID_LOCALE_NAME
+pub const INTLSETTINGS_INVALID_LOCALE_NAME : ErrorCode = ErrorCode::from_constant(15108); // ERROR_MUI_INTLSETTINGS_INVALID_LOCALE_NAME

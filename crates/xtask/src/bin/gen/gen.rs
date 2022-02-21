@@ -3,7 +3,7 @@ use crate::scan;
 
 
 pub fn codes(codes: &scan::Codes) {
-    let types = "ErrorCodeMicrosoft HResultError HResultSuccess HResult NtStatus ErrorHResultOrCode";
+    let types = "ErrorCode HResultError HResultSuccess HResult NtStatus ErrorHResultOrCode";
 
     let _ = std::fs::create_dir_all("crates/winresult/src/gen/codes/ERROR");
 
@@ -104,7 +104,7 @@ pub fn codes(codes: &scan::Codes) {
             match ty {
                 "HResult"               => writeln!(rs, r#"            v => return write!(fmt, "HResult({{v:#X}})")"#)?,
                 "NtStatus"              => writeln!(rs, r#"            v => return write!(fmt, "NtStatus({{v:#X}})")"#)?,
-                "ErrorCodeMicrosoft"    => writeln!(rs, r#"            v => return write!(fmt, "ERROR::??? ({{v}})")"#)?,
+                "ErrorCode"             => writeln!(rs, r#"            v => return write!(fmt, "ERROR::??? ({{v}})")"#)?,
                 "ErrorHResultOrCode"    => writeln!(rs, r#"            v => return write!(fmt, "ERROR::??? ({{v}})")"#)?,
                 _                       => writeln!(rs, r#"            v => return write!(fmt, "ERROR::??? ({{v}})")"#)?,
             }
@@ -168,7 +168,7 @@ pub fn codes(codes: &scan::Codes) {
         for ty in types.split(' ') {
             writeln!(nv)?;
             match ty {
-                "ErrorCodeMicrosoft"    => writeln!(nv, r#"    <Type Name="winresult_types::code::{ty}">"#)?,
+                "ErrorCode"             => writeln!(nv, r#"    <Type Name="winresult_types::code::{ty}">"#)?,
                 "HResult"               => writeln!(nv, r#"    <Type Name="winresult_types::hresult::{ty}">"#)?,
                 "HResultSuccess"        => writeln!(nv, r#"    <Type Name="winresult_types::hresult::{ty}">"#)?,
                 "HResultError"          => writeln!(nv, r#"    <Type Name="winresult_types::hresult::{ty}">"#)?,
@@ -182,7 +182,6 @@ pub fn codes(codes: &scan::Codes) {
                 "HResultSuccess"        => {},
                 "HResultError"          => {},
                 "NtStatus"              => writeln!(nv, r#"        <DisplayString Condition="__0 == 0">STATUS::SUCCESS</DisplayString>"#)?,
-                "ErrorCodeMicrosoft"    => writeln!(nv, r#"        <DisplayString Condition="__0 == 0">ERROR::SUCCESS (invalid: value 0, ErrorCodeMicrosoft s should never be successful</DisplayString>"#)?,
                 _                       => {},
             }
 
@@ -287,7 +286,7 @@ pub fn codes(codes: &scan::Codes) {
                     writeln!(nv, r#"            <Item Name="Code"        >((__0 &amp; 0x0000FFFF) >> 0)</Item>"#)?;
                     writeln!(nv, r#"        </Expand>"#)?;
                 },
-                "ErrorCodeMicrosoft" => {
+                "ErrorCode" => {
                     writeln!(nv, r#"        <DisplayString>{{__0}} ({ty})</DisplayString>"#)?;
                 },
                 _ => {

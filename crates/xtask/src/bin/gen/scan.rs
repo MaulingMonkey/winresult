@@ -106,7 +106,7 @@ impl Code<'_> {
             ("HResultSuccess",      "HResult",              ) => true,
             ("HResultError",        "HResult",              ) => true,
             ("HResultError",        "ErrorHResultOrCode",   ) => true,
-            ("ErrorCodeMicrosoft",  "ErrorHResultOrCode",   ) => true,
+            ("ErrorCode",           "ErrorHResultOrCode",   ) => true,
             (x,                     y,                      ) => x == y,
         }
     }
@@ -229,15 +229,15 @@ pub(crate) fn winerror_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) 
                 ("_NDIS_ERROR_TYPEDEF_(",                           "L)",   "HResult",              false,           0, "",             ),
                 ("_HRESULT_TYPEDEF_(",                              "L)",   "HResult",              false,           0, "",             ),
                 ("(HRESULT)",                                       "L",    "HResult",              false,           0, "",             ),
-                ("RASBASE+",                                        "",     "ErrorCodeMicrosoft",   true,          600, "RasError.h",   ),
-                ("RASBASE + ",                                      "",     "ErrorCodeMicrosoft",   true,          600, "RasError.h",   ),
-                ("ROUTEBASE+",                                      "",     "ErrorCodeMicrosoft",   false,         900, "MprError.h",   ),
-                ("TCBASE+",                                         "",     "ErrorCodeMicrosoft",   true,         7500, "TCError.h",    ),
-                ("WINHTTP_ERROR_BASE + ",                           "",     "ErrorCodeMicrosoft",   false,       12000, "winhttp.h",    ),
-                ("INTERNET_ERROR_BASE + ",                          "",     "ErrorCodeMicrosoft",   true,        12000, "",             ), // conflicts: with itself -_-
-                ("ERROR_BIDI_ERROR_BASE + ",                        "",     "ErrorCodeMicrosoft",   true,        13000, "winspool.h",   ), // conflicts: with ipsec
-                ("INTERNET_INTERNAL_ERROR_BASE + ",                 "",     "ErrorCodeMicrosoft",   true,  900 + 12000, "Winineti.h"    ),
-                ("NETSH_ERROR_BASE + ",                             "",     "ErrorCodeMicrosoft",   true,        15000, "NetSh.h",      ), // conflicts: ERROR_EVT_INVALID_CHANNEL_PATH 15000 (winerror.h)
+                ("RASBASE+",                                        "",     "ErrorCode",            true,          600, "RasError.h",   ),
+                ("RASBASE + ",                                      "",     "ErrorCode",            true,          600, "RasError.h",   ),
+                ("ROUTEBASE+",                                      "",     "ErrorCode",            false,         900, "MprError.h",   ),
+                ("TCBASE+",                                         "",     "ErrorCode",            true,         7500, "TCError.h",    ),
+                ("WINHTTP_ERROR_BASE + ",                           "",     "ErrorCode",            false,       12000, "winhttp.h",    ),
+                ("INTERNET_ERROR_BASE + ",                          "",     "ErrorCode",            true,        12000, "",             ), // conflicts: with itself -_-
+                ("ERROR_BIDI_ERROR_BASE + ",                        "",     "ErrorCode",            true,        13000, "winspool.h",   ), // conflicts: with ipsec
+                ("INTERNET_INTERNAL_ERROR_BASE + ",                 "",     "ErrorCode",            true,  900 + 12000, "Winineti.h"    ),
+                ("NETSH_ERROR_BASE + ",                             "",     "ErrorCode",            true,        15000, "NetSh.h",      ), // conflicts: ERROR_EVT_INVALID_CHANNEL_PATH 15000 (winerror.h)
                 ("ERROR_PCW_BASE + ",                               "",     "HResultError",         false,  0xC00E5101, "PatchWiz.h",   ),
                 ("APPLICATION_ERROR_MASK|ERROR_SEVERITY_ERROR|",    "",     "HResultError",         false,  0xE0000000, "",             ),
             ].iter().copied() {
@@ -260,7 +260,7 @@ pub(crate) fn winerror_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) 
                 continue // XXX
             } else if let Some(_value16) = value.try_parse_u16() {
                 rs_value = value.into();
-                "ErrorCodeMicrosoft"
+                "ErrorCode"
             } else if let Some(_value32) = value.try_parse_u32() {
                 rs_value = value.into();
                 "HResult"
