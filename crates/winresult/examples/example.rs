@@ -14,5 +14,9 @@ fn main() {
     let _nts = dbg!(NTSTATUS::from_constant(0xC0010000));
     let _sf  = dbg!(S::FALSE);
     let _wa  = dbg!(WAIT::OBJECT(42).unwrap());
+
+    let _u1 = dbg!(ErrorHResultOrCode::from(_err));
+    let _u2 = dbg!(ErrorHResultOrCode::from(_d3d));
+
     let _i = 42;
 }

@@ -41,6 +41,7 @@ pub use core::{
     NtStatusSeverity,
     WaitCode,
     WAIT,
+    ErrorHResultOrCode,
 };
 
 pub use gen::codes::{*, STATUS};

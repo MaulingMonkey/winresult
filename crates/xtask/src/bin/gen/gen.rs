@@ -3,7 +3,7 @@ use crate::scan;
 
 
 pub fn codes(codes: &scan::Codes) {
-    let types = "ErrorCodeMicrosoft SuccessCodeMicrosoft ErrorHResult SuccessHResult HRESULT NTSTATUS";
+    let types = "ErrorCodeMicrosoft SuccessCodeMicrosoft ErrorHResult SuccessHResult HRESULT NTSTATUS ErrorHResultOrCode";
 
     let _ = std::fs::create_dir_all("crates/winresult/src/gen/codes/ERROR");
 
@@ -91,6 +91,7 @@ pub fn codes(codes: &scan::Codes) {
             match ty {
                 "NTSTATUS"              => writeln!(rs, r#"            0 => "STATUS::SUCCESS","#)?,
                 "ErrorCodeMicrosoft"    => writeln!(rs, r#"            0 => "ERROR::SUCCESS","#)?,
+                "ErrorHResultOrCode"    => writeln!(rs, r#"            0 => "ERROR::SUCCESS","#)?,
                 _                       => {},
             }
             for (_rs_mod, codes) in codes.mods.iter() {
@@ -107,6 +108,7 @@ pub fn codes(codes: &scan::Codes) {
                 "NTSTATUS"              => writeln!(rs, r#"            v => return write!(fmt, "NTSTATUS({{v:#X}})")"#)?,
                 "ErrorCodeMicrosoft"    => writeln!(rs, r#"            v => return write!(fmt, "ERROR::??? ({{v}})")"#)?,
                 "SuccessCodeMicrosoft"  => writeln!(rs, r#"            v => return write!(fmt, "S::??? ({{v}})")"#)?,
+                "ErrorHResultOrCode"    => writeln!(rs, r#"            v => return write!(fmt, "ERROR::??? ({{v}})")"#)?,
                 _                       => writeln!(rs, r#"            v => return write!(fmt, "ERROR::??? ({{v}})")"#)?,
             }
             writeln!(rs, r#"        }};"#)?;
@@ -175,6 +177,7 @@ pub fn codes(codes: &scan::Codes) {
                 "SuccessHResult"        => writeln!(nv, r#"    <Type Name="winresult_core::hresult::{ty}">"#)?,
                 "ErrorHResult"          => writeln!(nv, r#"    <Type Name="winresult_core::hresult::{ty}">"#)?,
                 "NTSTATUS"              => writeln!(nv, r#"    <Type Name="winresult_core::ntstatus::{ty}">"#)?,
+                "ErrorHResultOrCode"    => writeln!(nv, r#"    <Type Name="winresult_core::unions::{ty}">"#)?,
                 //_                       => writeln!(nv, r#"    <Type Name="winresult_core::{ty}">"#)?,
                 _                       => panic!("expected ty: {ty:?}"),
             }
@@ -199,18 +202,24 @@ pub fn codes(codes: &scan::Codes) {
                 }
             }
 
+            if ty == "ErrorHResultOrCode" {
+                writeln!(nv, r#"        <DisplayString Condition="__0 &lt; 0x80000000">{{__0}} ({ty})</DisplayString>"#)?;
+            }
+
             match ty {
                 // https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/0642cb2f-2075-4469-918c-4441e69c548a
-                "HRESULT" | "SuccessHResult" | "ErrorHResult" => {
+                "HRESULT" | "SuccessHResult" | "ErrorHResult" | "ErrorHResultOrCode" => {
+                    let cond_hr = if ty == "ErrorHResultOrCode" { "(__0 &gt;= 0x80000000)" } else { "true" };
+
                     writeln!(nv, r#"        <DisplayString>{{(::HRESULT)__0,hr}} ({ty})</DisplayString>"#)?;
                     writeln!(nv, r#"        <Expand>"#)?;
-                    writeln!(nv, r#"            <Item Name="S (failure)" >((__0 &amp; 0x80000000) != 0)</Item>"#)?;
-                    writeln!(nv, r#"            <Item Name="R (reserved)">((__0 &amp; 0x40000000) != 0)</Item>"#)?;
-                    writeln!(nv, r#"            <Item Name="C (customer)">((__0 &amp; 0x20000000) != 0)</Item>"#)?;
-                    writeln!(nv, r#"            <Item Name="N (NTSTATUS)">((__0 &amp; 0x10000000) != 0)</Item>"#)?;
+                    writeln!(nv, r#"            <Item Name="S (failure)"  Condition="{cond_hr}">((__0 &amp; 0x80000000) != 0)</Item>"#)?;
+                    writeln!(nv, r#"            <Item Name="R (reserved)" Condition="{cond_hr}">((__0 &amp; 0x40000000) != 0)</Item>"#)?;
+                    writeln!(nv, r#"            <Item Name="C (customer)" Condition="{cond_hr}">((__0 &amp; 0x20000000) != 0)</Item>"#)?;
+                    writeln!(nv, r#"            <Item Name="N (NTSTATUS)" Condition="{cond_hr}">((__0 &amp; 0x10000000) != 0)</Item>"#)?;
                     writeln!(nv)?;
                     writeln!(nv, r#"            <!-- HRESULT -->"#)?;
-                    writeln!(nv, r#"            <Synthetic Name="Facility" Condition="(__0 &amp; 0x30000000) == 0x00000000">"#)?;
+                    writeln!(nv, r#"            <Synthetic Name="Facility" Condition="{cond_hr} &amp;&amp; ((__0 &amp; 0x30000000) == 0x00000000)">"#)?;
                     {
                         macro_rules! microsoft_hresult_facilities {($(
                             #define $prefix:ident $f:ident $value:literal
@@ -226,7 +235,7 @@ pub fn codes(codes: &scan::Codes) {
                     writeln!(nv, r#"            </Synthetic>"#)?;
                     writeln!(nv)?;
                     writeln!(nv, r#"            <!-- NTSTATUS -->"#)?;
-                    writeln!(nv, r#"            <Synthetic Name="Facility" Condition="(__0 &amp; 0x30000000) == 0x10000000">"#)?;
+                    writeln!(nv, r#"            <Synthetic Name="Facility" Condition="{cond_hr} &amp;&amp; ((__0 &amp; 0x30000000) == 0x10000000)">"#)?;
                     {
                         macro_rules! microsoft_ntstatus_facilities {($(
                             #define $prefix:ident $f:ident $value:literal
@@ -241,9 +250,10 @@ pub fn codes(codes: &scan::Codes) {
                     writeln!(nv, r#"            </Synthetic>"#)?;
                     writeln!(nv)?;
                     writeln!(nv, r#"            <!-- Customer -->"#)?;
-                    writeln!(nv, r#"            <Item      Name="Facility" Condition="(__0 &amp; 0x20000000) == 0x20000000">((__0 &amp; 0x0FFF0000) >>16)</Item>"#)?;
+                    writeln!(nv, r#"            <Item Name="Facility" Condition="{cond_hr} &amp;&amp; ((__0 &amp; 0x20000000) == 0x20000000)">((__0 &amp; 0x0FFF0000) >>16)</Item>"#)?;
                     writeln!(nv)?;
-                    writeln!(nv, r#"            <Item Name="Code"        >((__0 &amp; 0x0000FFFF) >> 0)</Item>"#)?;
+                    writeln!(nv, r#"            <Item Name="Code">((__0 &amp; 0x0000FFFF) >> 0)</Item>"#)?;
+                    writeln!(nv, r#"            <Item Name="Value" Condition="{cond_hr}">__0,X</Item>"#)?;
                     writeln!(nv, r#"        </Expand>"#)?;
                 },
                 // https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/87fba13e-bf06-450e-83b1-9241dc81e781

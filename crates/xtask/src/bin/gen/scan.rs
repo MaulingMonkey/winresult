@@ -102,10 +102,12 @@ pub struct Code<'s> {
 
 impl Code<'_> {
     pub(crate) fn matches_ty(&self, ty: &str) -> bool {
-        match (self.rs_ty, ty) {
-            ("SuccessHResult",  "HRESULT")  => true,
-            ("ErrorHResult",    "HRESULT")  => true,
-            (x, y)                          => x == y,
+        match (self.rs_ty,          ty,                     ) {
+            ("SuccessHResult",      "HRESULT",              ) => true,
+            ("ErrorHResult",        "HRESULT",              ) => true,
+            ("ErrorHResult",        "ErrorHResultOrCode",   ) => true,
+            ("ErrorCodeMicrosoft",  "ErrorHResultOrCode",   ) => true,
+            (x,                     y,                      ) => x == y,
         }
     }
 }
