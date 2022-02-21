@@ -51,6 +51,8 @@ impl Debug for WaitCode {
     }
 }
 
+/// \[[docs.microsoft.com](https://docs.microsoft.com/en-us/windows/win32/api/synchapi/nf-synchapi-waitformultipleobjectsex#return-value)\]
+/// WAIT_\* values returned by various WaitFor\* and other win32 functions.
 #[allow(non_snake_case)]
 pub mod WAIT {
     use super::*;
