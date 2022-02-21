@@ -65,3 +65,21 @@ pub const E_INSUFFICIENT_CONSENT : HResultError = HResultError::from_constant(0x
 
 /// Report aborted due to performance criteria.
 pub const E_TOO_HEAVY : HResultError = HResultError::from_constant(0x801B8007); // WER_E_TOO_HEAVY
+
+/// Custom error HRESULTS
+pub const E_INSUFFICIENT_BUFFER : HResultError = HResultError::from_constant(0x8007007A); // WER_E_INSUFFICIENT_BUFFER
+
+/// Custom error HRESULTS
+pub const E_NOT_FOUND : HResultError = HResultError::from_constant(0x80070490); // WER_E_NOT_FOUND
+
+/// Custom error HRESULTS
+pub const E_LENGTH_EXCEEDED : HResultError = HResultError::from_constant(0x80070503); // WER_E_LENGTH_EXCEEDED
+
+/// Custom error HRESULTS
+pub const E_INVALID_STATE : HResultError = HResultError::from_constant(0x8007139F); // WER_E_INVALID_STATE
+
+/// Custom error HRESULTS
+pub const E_MISSING_DUMP : HResultError = HResultError::from_constant(0x8007023D); // WER_E_MISSING_DUMP
+
+/// Custom error HRESULTS
+pub const E_CABBING_FAILURE : HResultError = HResultError::from_constant(0x8007001F); // WER_E_CABBING_FAILURE

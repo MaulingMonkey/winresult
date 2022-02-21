@@ -176,6 +176,7 @@ pub(crate) fn winerror_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) 
                 continue
             }
 
+            let value = value.strip_prefix_suffix("(", ")").unwrap_or(value);
 
             let (value, mut redundant) = match value {
                 "NO_ERROR"                  => { docs.clear(); continue },
@@ -186,11 +187,14 @@ pub(crate) fn winerror_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) 
                 "DNS_ERROR_RCODE_BADTIME"   => ("9018", true),
                 "ERROR_INTERNET_DISCONNECTED"=>("12163",true),
 
-                "HRESULT_FROM_WIN32(ERROR_NOT_FOUND)"               => ("0x80070490", false),
-                "HRESULT_FROM_WIN32(ERROR_INVALID_STATE)"           => ("0x8007139F", false),
-                "HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)"     => ("0x8007007A", false),
-                "HRESULT_FROM_WIN32(ERROR_TIME_SENSITIVE_THREAD)"   => ("0x800701A6", false),
-                "HRESULT_FROM_WIN32(ERROR_NO_TASK_QUEUE)"           => ("0x800701AB", false),
+                "HRESULT_FROM_WIN32(ERROR_GEN_FAILURE)"             => ("0x8007001F", error.starts_with("WER_E_")),
+                "HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)"     => ("0x8007007A", error.starts_with("WER_E_")),
+                "HRESULT_FROM_WIN32(ERROR_TIME_SENSITIVE_THREAD)"   => ("0x800701A6", error.starts_with("WER_E_")),
+                "HRESULT_FROM_WIN32(ERROR_NO_TASK_QUEUE)"           => ("0x800701AB", error.starts_with("WER_E_")),
+                "HRESULT_FROM_WIN32(ERROR_MISSING_SYSTEMFILE)"      => ("0x8007023D", error.starts_with("WER_E_")),
+                "HRESULT_FROM_WIN32(ERROR_NOT_FOUND)"               => ("0x80070490", error.starts_with("WER_E_")),
+                "HRESULT_FROM_WIN32(ERROR_PARAMETER_QUOTA_EXCEEDED)"=> ("0x80070503", error.starts_with("WER_E_")),
+                "HRESULT_FROM_WIN32(ERROR_INVALID_STATE)"           => ("0x8007139F", error.starts_with("WER_E_")),
 
                 "CACHE_E_NOCACHE_UPDATED"   => (value,  true),
                 "CAT_E_CATIDNOEXIST"        => (value,  true),
@@ -224,18 +228,18 @@ pub(crate) fn winerror_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) 
             for (pre,                                               post,   ty,                     p_redundant,  base, pattern_header, ) in [
                 ("_NDIS_ERROR_TYPEDEF_(",                           "L)",   "HResult",              false,           0, "",             ),
                 ("_HRESULT_TYPEDEF_(",                              "L)",   "HResult",              false,           0, "",             ),
-                ("((HRESULT)",                                      "L)",   "HResult",              false,           0, "",             ),
-                ("(RASBASE+",                                       ")",    "ErrorCodeMicrosoft",   true,          600, "RasError.h",   ),
-                ("(RASBASE + ",                                     ")",    "ErrorCodeMicrosoft",   true,          600, "RasError.h",   ),
-                ("(ROUTEBASE+",                                     ")",    "ErrorCodeMicrosoft",   false,         900, "MprError.h",   ),
-                ("(TCBASE+",                                        ")",    "ErrorCodeMicrosoft",   true,         7500, "TCError.h",    ),
-                ("(WINHTTP_ERROR_BASE + ",                          ")",    "ErrorCodeMicrosoft",   false,       12000, "winhttp.h",    ),
-                ("(INTERNET_ERROR_BASE + ",                         ")",    "ErrorCodeMicrosoft",   true,        12000, "",             ), // conflicts: with itself -_-
-                ("(ERROR_BIDI_ERROR_BASE + ",                       ")",    "ErrorCodeMicrosoft",   true,        13000, "winspool.h",   ), // conflicts: with ipsec
-                ("(INTERNET_INTERNAL_ERROR_BASE + ",                ")",    "ErrorCodeMicrosoft",   true,  900 + 12000, "Winineti.h"    ),
-                ("(NETSH_ERROR_BASE + ",                            ")",    "ErrorCodeMicrosoft",   true,        15000, "NetSh.h",      ), // conflicts: ERROR_EVT_INVALID_CHANNEL_PATH 15000 (winerror.h)
-                ("(ERROR_PCW_BASE + ",                              ")",    "HResultError",         false,  0xC00E5101, "PatchWiz.h",   ),
-                ("(APPLICATION_ERROR_MASK|ERROR_SEVERITY_ERROR|",   ")",    "HResultError",         false,  0xE0000000, "",             ),
+                ("(HRESULT)",                                       "L",    "HResult",              false,           0, "",             ),
+                ("RASBASE+",                                        "",     "ErrorCodeMicrosoft",   true,          600, "RasError.h",   ),
+                ("RASBASE + ",                                      "",     "ErrorCodeMicrosoft",   true,          600, "RasError.h",   ),
+                ("ROUTEBASE+",                                      "",     "ErrorCodeMicrosoft",   false,         900, "MprError.h",   ),
+                ("TCBASE+",                                         "",     "ErrorCodeMicrosoft",   true,         7500, "TCError.h",    ),
+                ("WINHTTP_ERROR_BASE + ",                           "",     "ErrorCodeMicrosoft",   false,       12000, "winhttp.h",    ),
+                ("INTERNET_ERROR_BASE + ",                          "",     "ErrorCodeMicrosoft",   true,        12000, "",             ), // conflicts: with itself -_-
+                ("ERROR_BIDI_ERROR_BASE + ",                        "",     "ErrorCodeMicrosoft",   true,        13000, "winspool.h",   ), // conflicts: with ipsec
+                ("INTERNET_INTERNAL_ERROR_BASE + ",                 "",     "ErrorCodeMicrosoft",   true,  900 + 12000, "Winineti.h"    ),
+                ("NETSH_ERROR_BASE + ",                             "",     "ErrorCodeMicrosoft",   true,        15000, "NetSh.h",      ), // conflicts: ERROR_EVT_INVALID_CHANNEL_PATH 15000 (winerror.h)
+                ("ERROR_PCW_BASE + ",                               "",     "HResultError",         false,  0xC00E5101, "PatchWiz.h",   ),
+                ("APPLICATION_ERROR_MASK|ERROR_SEVERITY_ERROR|",    "",     "HResultError",         false,  0xE0000000, "",             ),
             ].iter().copied() {
                 if !pattern_header.is_empty() && !header.path.ends_with(pattern_header) { continue }
                 if let Some(value) = value.strip_prefix_suffix(pre, post).and_then(|v| v.try_parse_u32()) {

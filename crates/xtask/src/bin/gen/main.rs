@@ -74,6 +74,7 @@ fn main() {
         r"um\RasError.h":       scan::winerror_h,
         r"um\SetupAPI.h":       scan::winerror_h,
         r"um\TCError.h":        scan::winerror_h,
+        r"um\WerApi.h":         scan::winerror_h,
         r"um\winhttp.h":        scan::winerror_h,
         r"um\WinInet.h":        scan::winerror_h,
         r"um\Winineti.h":       scan::winerror_h,
