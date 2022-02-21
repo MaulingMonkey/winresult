@@ -1,15 +1,19 @@
 #![doc = include_str!("../doc/intro.md")]
 //!
-//! ### Error/Success Code Types
+//! ### Types
 //!
-//! |        min |        max | type                    | union of |
-//! | ----------:| ----------:| ----------------------- | -------- |
+//! |        min |        max | type                                        | notes |
+//! | ----------:| ----------:| ------------------------------------------- | -------- |
 //! |          0 |     0xFFFF | [`SuccessCodeMicrosoft`]
 //! |          0 |     0xFFFF | [`ErrorCodeMicrosoft`]
 //! |          0 | 0x7FFFFFFF | [`HResultSuccess`]
 //! | 0x80000000 | 0xFFFFFFFF | [`HResultError`]
-//! |          0 | 0xFFFFFFFF | [`HResult`]             | [`HResultSuccess`] \| [`HResultError`]
-//! |          0 | 0xFFFFFFFF | [`NtStatus`]            | ~~`SuccessNtStatus` \| `ErrorNtStatus`~~
+//! |          0 | 0xFFFFFFFF | [`HResult`]                                 | [`HResultSuccess`] \| [`HResultError`]
+//! |          0 |      0xFFF | &nbsp; &nbsp; [`HResultFacilityMicrosoft`]  |
+//! |          0 | 0xFFFFFFFF | [`NtStatus`]                                | ~~`SuccessNtStatus` \| `ErrorNtStatus`~~
+//! |          0 |      0xFFF | &nbsp; &nbsp; [`NtStatusFacilityMicrosoft`] |
+//! |          0 |          4 | &nbsp; &nbsp; [`NtStatusSeverity`]          |
+//! |          0 | 0xFFFFFFFF | [`WaitCode`]                                | mostly <= 0x102
 //!
 //! ### Buggy Bitwise Comparisons to Forbid
 //!
