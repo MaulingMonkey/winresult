@@ -2,9 +2,9 @@
 | --------------------- | ------------------:| ---------------:| ---------------------:| -------------------------:|
 | SuccessCodeMicrosoft  | code           ✔️ | code          ✔️|                     ❌|                         ❌|
 | ErrorCodeMicrosoft    | code (nonzero) ⚠️ | code          ✔️|                     ❌|                         ❌|
-| WaitCode              | several holes  ⚠️ | mostly not    ⚠️|                     ❌| just 0xFFFFFFFF         ⚠️|
-| ErrorOrHresult        | code (nonzero) ⚠️ | code          ✔️|                     ❌| Hresult                 ✔️|
-| SuccessHresult        | Hresult        ✔️ |               ✔️|             Hresult ✔️|                         ❌|
-| ErrorHresult          |                ❌ |               ❌|                     ❌| Hresult                 ✔️|
-| Hresult               | Hresult        ✔️ |               ✔️|             Hresult ✔️| Hresult                 ✔️|
+| HResult               | HResult        ✔️ |               ✔️|             HResult ✔️| HResult                 ✔️|
+| HResultSuccess        | HResult        ✔️ |               ✔️|             HResult ✔️|                         ❌|
+| HResultError          |                ❌ |               ❌|                     ❌| HResult                 ✔️|
 | NtStatus              |                ✔️ |               ✔️|                     ✔️|                         ✔️|
+| WaitCode              | several holes  ⚠️ | mostly not    ⚠️|                     ❌| just 0xFFFFFFFF         ⚠️|
+| ErrorHResultOrCode    | code (nonzero) ⚠️ | code          ✔️|                     ❌| HResult                 ✔️|
