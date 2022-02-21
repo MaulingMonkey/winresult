@@ -14,6 +14,16 @@
 //! |          0 |          4 | &nbsp; &nbsp; [`NtStatusSeverity`]          |
 //! |          0 | 0xFFFFFFFF | [`WaitCode`]                                | mostly <= 0x102
 //!
+//! ### Modules of Note
+//!
+//! | mod                   | types         |
+//! | --------------------- | ------------- |
+//! | [ERROR]               | [ErrorCode], [HResultError], and [HResultSuccess]\(!\)
+//! | [FACILITY]            | [HResultFacilityMicrosoft], [NtStatusFacilityMicrosoft]
+//! | [STATUS]              | [NtStatus]
+//! | [STATUS::SEVERITY]    | [NtStatusSeverity]
+//! | [WAIT]                | [WaitCode]
+//!
 //! ### Buggy Bitwise Comparisons to Forbid
 //!
 //! | left          | right                 | why |
