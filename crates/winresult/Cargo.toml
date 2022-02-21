@@ -22,5 +22,5 @@ default-target                          = "x86_64-pc-windows-msvc"
 path                                    = "src/_lib.rs"
 
 [dependencies]
-winresult-core.path                     = "../winresult-core"
-winresult-core.version                  = "0.0.0-git-core"
+winresult-types.path                    = "../winresult-types"
+winresult-types.version                 = "0.0.0-git-types"

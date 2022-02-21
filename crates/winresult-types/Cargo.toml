@@ -2,9 +2,9 @@
 # https://crates.io/category_slugs
 
 [package]
-name                                    = "winresult-core"
-description                             = "windows result codes"
-version                                 = "0.0.0-git-core"
+name                                    = "winresult-types"
+description                             = "windows result types"
+version                                 = "0.0.0-git-types"
 authors                                 = ["MaulingMonkey <git@maulingmonkey.com>"]
 edition                                 = "2021"
 repository                              = "https://github.com/MaulingMonkey/winresult"
@@ -16,7 +16,7 @@ all-features                            = true
 default-target                          = "x86_64-pc-windows-msvc"
 
 [lib]
-path                                    = "src/_core.rs"
+path                                    = "src/_types.rs"
 
 [dependencies]
 bytemuck.version                        = "1"

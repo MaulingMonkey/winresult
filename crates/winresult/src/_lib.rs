@@ -27,9 +27,9 @@
 //! *   ([FacilityHrMicrosoft], [ErrorCodeMicrosoft]) → [ErrorHResult] → [HRESULT]
 
 
-extern crate winresult_core as core;
+extern crate winresult_types as types;
 
-pub use core::{
+pub use types::{
     FacilityHrMicrosoft,
     FacilityNtStatusMicrosoft,
     SuccessCodeMicrosoft,
@@ -89,14 +89,14 @@ mod gen {
     pub mod codes {
         #![allow(non_snake_case)]
         #![allow(non_upper_case_globals)]
-        use core::{ErrorCodeMicrosoft, SuccessHResult, ErrorHResult};
+        use types::{ErrorCodeMicrosoft, SuccessHResult, ErrorHResult};
 
 
 
-        /// [NTSTATUS](core::NTSTATUS) Errors and Codes (for use in e.g. Kernel / Driver)
+        /// [NTSTATUS](types::NTSTATUS) Errors and Codes (for use in e.g. Kernel / Driver)
         pub mod STATUS {
-            use core::NTSTATUS;
-            pub use core::STATUS::*;
+            use types::NTSTATUS;
+            pub use types::STATUS::*;
 
             // TODO: SUCCESS = 0 ?
 
@@ -239,7 +239,7 @@ mod gen {
         /// Note that `ERROR::SUBCATEGORY::CODE` is also generally exported as `ERROR::SUBCATEGORY_CODE`, although the latter is hidden from the docs to reduce clutter.
         /// <br><br>
         pub mod ERROR {
-            use core::{ErrorCodeMicrosoft, SuccessCodeMicrosoft, SuccessHResult, ErrorHResult};
+            use types::{ErrorCodeMicrosoft, SuccessCodeMicrosoft, SuccessHResult, ErrorHResult};
 
             // TODO: SUCCESS = 0 ?
 
@@ -321,7 +321,7 @@ mod gen {
 
             /// [Side-by-side assembly](https://en.wikipedia.org/wiki/Side-by-side_assembly)
             pub mod SXS {
-                use core::ErrorCodeMicrosoft;
+                use types::ErrorCodeMicrosoft;
 
                 #[path = "../SXS.rs"] mod _SELF;
                 pub use _SELF::*;
