@@ -84,4 +84,5 @@ fn main() {
 
     gen::codes(&codes);
     gen::readme();
+    gen::licenses();
 }

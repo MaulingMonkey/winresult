@@ -347,3 +347,14 @@ pub fn readme() {
         }).unwrap();
     }
 }
+
+pub fn licenses() {
+    use std::io::Write;
+    for file in "LICENSE-APACHE LICENSE-MIT LICENSE.md".split(' ') {
+        let text = std::fs::read(file).expect(file);
+        for crate_ in "winresult winresult-types".split(' ') {
+            let target = format!(r"crates\{crate_}\{file}");
+            mmrbi::fs::write_if_modified_with(&target, |f| f.write_all(&text)).unwrap();
+        }
+    }
+}
