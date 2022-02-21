@@ -2,6 +2,11 @@
 
 use super::*;
 
+pub const NOT_SET : HResultError = HResultError::from_constant(0x80070490); // E_NOT_SET
+pub const NOT_VALID_STATE : HResultError = HResultError::from_constant(0x8007139F); // E_NOT_VALID_STATE
+pub const NOT_SUFFICIENT_BUFFER : HResultError = HResultError::from_constant(0x8007007A); // E_NOT_SUFFICIENT_BUFFER
+pub const TIME_SENSITIVE_THREAD : HResultError = HResultError::from_constant(0x800701A6); // E_TIME_SENSITIVE_THREAD
+pub const NO_TASK_QUEUE : HResultError = HResultError::from_constant(0x800701AB); // E_NO_TASK_QUEUE
 
 /// Catastrophic failure
 pub const UNEXPECTED : HResultError = HResultError::from_constant(0x8000FFFF); // E_UNEXPECTED

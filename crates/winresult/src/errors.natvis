@@ -7459,6 +7459,11 @@
         <DisplayString Condition="__0 == 0x887A0034">DXGI::ERROR_CACHE_FULL</DisplayString>
         <DisplayString Condition="__0 == 0x887A0035">DXGI::ERROR_CACHE_HASH_COLLISION</DisplayString>
         <DisplayString Condition="__0 == 0x887A0036">DXGI::ERROR_ALREADY_EXISTS</DisplayString>
+        <DisplayString Condition="__0 == 0x80070490">E::NOT_SET</DisplayString>
+        <DisplayString Condition="__0 == 0x8007139F">E::NOT_VALID_STATE</DisplayString>
+        <DisplayString Condition="__0 == 0x8007007A">E::NOT_SUFFICIENT_BUFFER</DisplayString>
+        <DisplayString Condition="__0 == 0x800701A6">E::TIME_SENSITIVE_THREAD</DisplayString>
+        <DisplayString Condition="__0 == 0x800701AB">E::NO_TASK_QUEUE</DisplayString>
         <DisplayString Condition="__0 == 0x8000FFFF">E::UNEXPECTED</DisplayString>
         <DisplayString Condition="__0 == 0x80004001">E::NOTIMPL</DisplayString>
         <DisplayString Condition="__0 == 0x8007000E">E::OUTOFMEMORY</DisplayString>
@@ -14553,6 +14558,11 @@
     <HResult Name="DXGI_ERROR_CACHE_FULL"><HRValue>0x887A0034</HRValue></HResult>
     <HResult Name="DXGI_ERROR_CACHE_HASH_COLLISION"><HRValue>0x887A0035</HRValue></HResult>
     <HResult Name="DXGI_ERROR_ALREADY_EXISTS"><HRValue>0x887A0036</HRValue></HResult>
+    <HResult Name="E_NOT_SET"><HRValue>0x80070490</HRValue></HResult>
+    <HResult Name="E_NOT_VALID_STATE"><HRValue>0x8007139F</HRValue></HResult>
+    <HResult Name="E_NOT_SUFFICIENT_BUFFER"><HRValue>0x8007007A</HRValue></HResult>
+    <HResult Name="E_TIME_SENSITIVE_THREAD"><HRValue>0x800701A6</HRValue></HResult>
+    <HResult Name="E_NO_TASK_QUEUE"><HRValue>0x800701AB</HRValue></HResult>
     <HResult Name="E_UNEXPECTED"><HRValue>0x8000FFFF</HRValue></HResult>
     <HResult Name="E_NOTIMPL"><HRValue>0x80004001</HRValue></HResult>
     <HResult Name="E_OUTOFMEMORY"><HRValue>0x8007000E</HRValue></HResult>

@@ -186,6 +186,12 @@ pub(crate) fn winerror_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) 
                 "DNS_ERROR_RCODE_BADTIME"   => ("9018", true),
                 "ERROR_INTERNET_DISCONNECTED"=>("12163",true),
 
+                "HRESULT_FROM_WIN32(ERROR_NOT_FOUND)"               => ("0x80070490", false),
+                "HRESULT_FROM_WIN32(ERROR_INVALID_STATE)"           => ("0x8007139F", false),
+                "HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)"     => ("0x8007007A", false),
+                "HRESULT_FROM_WIN32(ERROR_TIME_SENSITIVE_THREAD)"   => ("0x800701A6", false),
+                "HRESULT_FROM_WIN32(ERROR_NO_TASK_QUEUE)"           => ("0x800701AB", false),
+
                 "CACHE_E_NOCACHE_UPDATED"   => (value,  true),
                 "CAT_E_CATIDNOEXIST"        => (value,  true),
                 "CAT_E_NODESCRIPTION"       => (value,  true),
@@ -246,8 +252,6 @@ pub(crate) fn winerror_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) 
 
             let ty = if !rs_ty.is_empty() {
                 rs_ty
-            } else if value.starts_with("HRESULT_FROM_WIN32(ERROR_") {
-                continue // XXX
             } else if value.starts_with("SEC_E_") {
                 continue // XXX
             } else if let Some(_value16) = value.try_parse_u16() {
