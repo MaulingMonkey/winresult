@@ -38,6 +38,8 @@ pub use core::{
     HRESULT,
     NTSTATUS,
     NtStatusSeverity,
+    WaitCode,
+    WAIT,
 };
 
 pub use gen::codes::{*, STATUS};
