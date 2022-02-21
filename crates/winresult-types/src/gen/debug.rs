@@ -224,7 +224,6 @@ impl Debug for NtStatusFacilityMicrosoft {
 impl Debug for ErrorCodeMicrosoft {
     fn fmt(&self, fmt: &mut Formatter) -> fmt::Result {
         let s = match self.0 {
-            0 => "ERROR::SUCCESS",
             15700 => "APPMODEL::ERROR_NO_PACKAGE",
             15701 => "APPMODEL::ERROR_PACKAGE_RUNTIME_CORRUPT",
             15702 => "APPMODEL::ERROR_PACKAGE_IDENTITY_CORRUPT",
@@ -407,6 +406,7 @@ impl Debug for ErrorCodeMicrosoft {
             9994 => "DNS::ERROR_POLICY_INVALID_CRITERIA_FQDN",
             9995 => "DNS::ERROR_POLICY_INVALID_CRITERIA_QUERY_TYPE",
             9996 => "DNS::ERROR_POLICY_INVALID_CRITERIA_TIME_OF_DAY",
+            0 => "ERROR::SUCCESS",
             1 => "ERROR::INVALID_FUNCTION",
             2 => "ERROR::FILE_NOT_FOUND",
             3 => "ERROR::PATH_NOT_FOUND",
@@ -3285,16 +3285,6 @@ impl Debug for ErrorCodeMicrosoft {
             10110 => "WSA::E_NO_MORE",
             10111 => "WSA::E_CANCELLED",
             v => return write!(fmt, "ERROR::??? ({v})")
-        };
-        write!(fmt, "{}", s)
-    }
-}
-
-impl Debug for SuccessCodeMicrosoft {
-    fn fmt(&self, fmt: &mut Formatter) -> fmt::Result {
-        let s = match self.0 {
-            0 => "ERROR::SUCCESS",
-            v => return write!(fmt, "S::??? ({v})")
         };
         write!(fmt, "{}", s)
     }
@@ -14105,7 +14095,6 @@ impl Debug for NtStatus {
 impl Debug for ErrorHResultOrCode {
     fn fmt(&self, fmt: &mut Formatter) -> fmt::Result {
         let s = match self.0 {
-            0 => "ERROR::SUCCESS",
             15700 => "APPMODEL::ERROR_NO_PACKAGE",
             15701 => "APPMODEL::ERROR_PACKAGE_RUNTIME_CORRUPT",
             15702 => "APPMODEL::ERROR_PACKAGE_IDENTITY_CORRUPT",
@@ -15057,6 +15046,7 @@ impl Debug for ErrorHResultOrCode {
             0x8055000B => "EAS::E_CONNECTED_ADMINS_NEED_TO_CHANGE_PASSWORD",
             0x8055000C => "EAS::E_PASSWORD_POLICY_NOT_ENFORCEABLE_FOR_CURRENT_CONNECTED_USER",
             0x8055000D => "EAS::E_CURRENT_CONNECTED_USER_NEED_TO_CHANGE_PASSWORD",
+            0 => "ERROR::SUCCESS",
             1 => "ERROR::INVALID_FUNCTION",
             2 => "ERROR::FILE_NOT_FOUND",
             3 => "ERROR::PATH_NOT_FOUND",

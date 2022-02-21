@@ -133,7 +133,6 @@ pub(crate) fn winerror_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) 
             let prefix  = define_error.name("prefix").unwrap().as_str();
             let err     = define_error.name("err"   ).unwrap().as_str();
             let value   = define_error.name("value" ).unwrap().as_str();
-            let success = prefix == "S" || prefix.ends_with("_S");
 
             // DO NOT EXPOSE THIS MESS AS IS.  See [doc/ept-and-rpc-codes-are-evil.md](https://github.com/MaulingMonkey/winresult/blob/5094a8a5568392ef855babd8bc62458f29153e46/crates/winresult/doc/ept-and-rpc-codes-are-evil.md) for details.
             if error.starts_with("EPT_") { docs.clear(); continue }
@@ -253,7 +252,7 @@ pub(crate) fn winerror_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) 
                 continue // XXX
             } else if let Some(_value16) = value.try_parse_u16() {
                 rs_value = value.into();
-                if success { "SuccessCodeMicrosoft" } else { "ErrorCodeMicrosoft" }
+                "ErrorCodeMicrosoft"
             } else if let Some(_value32) = value.try_parse_u32() {
                 rs_value = value.into();
                 "HResult"
@@ -279,7 +278,6 @@ pub(crate) fn winerror_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) 
 
             let ty = match error {
                 "S_OK" | "S_FALSE" => "HResultSuccess",
-                "ERROR_SUCCESS"    => "SuccessCodeMicrosoft",
                 _ => ty,
             };
 

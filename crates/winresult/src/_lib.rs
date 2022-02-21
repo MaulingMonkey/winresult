@@ -4,7 +4,6 @@
 //!
 //! |        min |        max | type                                        | notes |
 //! | ----------:| ----------:| ------------------------------------------- | -------- |
-//! |          0 |     0xFFFF | [`SuccessCodeMicrosoft`]
 //! |          0 |     0xFFFF | [`ErrorCodeMicrosoft`]
 //! |          0 | 0x7FFFFFFF | [`HResultSuccess`]
 //! | 0x80000000 | 0xFFFFFFFF | [`HResultError`]
@@ -27,7 +26,7 @@
 //!
 //! ### Conversions
 //!
-//! *   ([HResultFacilityMicrosoft], [SuccessCodeMicrosoft]) → [HResultSuccess] → [HResult]
+//! *   [HResultSuccess] → [HResult]
 //! *   ([HResultFacilityMicrosoft], [ErrorCodeMicrosoft]) → [HResultError] → [HResult]
 
 #![no_std]
@@ -37,7 +36,6 @@
 extern crate winresult_types as types;
 
 pub use types::{
-    SuccessCodeMicrosoft,
     ErrorCodeMicrosoft,
     HResult,
     HResultFacilityMicrosoft,
@@ -246,7 +244,7 @@ mod gen {
         /// Note that `ERROR::SUBCATEGORY::CODE` is also generally exported as `ERROR::SUBCATEGORY_CODE`, although the latter is hidden from the docs to reduce clutter.
         /// <br><br>
         pub mod ERROR {
-            use types::{ErrorCodeMicrosoft, SuccessCodeMicrosoft, HResultSuccess, HResultError};
+            use types::{ErrorCodeMicrosoft, HResultSuccess, HResultError};
 
             // TODO: SUCCESS = 0 ?
 

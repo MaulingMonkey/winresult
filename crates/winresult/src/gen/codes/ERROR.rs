@@ -4,7 +4,7 @@ use super::*;
 
 
 /// The operation completed successfully.
-pub const SUCCESS : SuccessCodeMicrosoft = SuccessCodeMicrosoft::from_constant(0); // ERROR_SUCCESS
+pub const SUCCESS : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(0); // ERROR_SUCCESS
 
 /// Incorrect function.
 pub const INVALID_FUNCTION : ErrorCodeMicrosoft = ErrorCodeMicrosoft::from_constant(1); // ERROR_INVALID_FUNCTION

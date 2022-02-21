@@ -406,6 +406,7 @@
         <DisplayString Condition="__0 == 9994">DNS::ERROR_POLICY_INVALID_CRITERIA_FQDN</DisplayString>
         <DisplayString Condition="__0 == 9995">DNS::ERROR_POLICY_INVALID_CRITERIA_QUERY_TYPE</DisplayString>
         <DisplayString Condition="__0 == 9996">DNS::ERROR_POLICY_INVALID_CRITERIA_TIME_OF_DAY</DisplayString>
+        <DisplayString Condition="__0 == 0">ERROR::SUCCESS</DisplayString>
         <DisplayString Condition="__0 == 1">ERROR::INVALID_FUNCTION</DisplayString>
         <DisplayString Condition="__0 == 2">ERROR::FILE_NOT_FOUND</DisplayString>
         <DisplayString Condition="__0 == 3">ERROR::PATH_NOT_FOUND</DisplayString>
@@ -3284,11 +3285,6 @@
         <DisplayString Condition="__0 == 10110">WSA::E_NO_MORE</DisplayString>
         <DisplayString Condition="__0 == 10111">WSA::E_CANCELLED</DisplayString>
         <DisplayString>{__0} (ErrorCodeMicrosoft)</DisplayString>
-    </Type>
-
-    <Type Name="winresult_types::code::SuccessCodeMicrosoft">
-        <DisplayString Condition="__0 == 0">ERROR::SUCCESS</DisplayString>
-        <DisplayString>{__0} (SuccessCodeMicrosoft)</DisplayString>
     </Type>
 
     <Type Name="winresult_types::hresult::HResultError">
@@ -7595,6 +7591,7 @@
         <DisplayString Condition="__0 == 0x8055000B">EAS::E_CONNECTED_ADMINS_NEED_TO_CHANGE_PASSWORD</DisplayString>
         <DisplayString Condition="__0 == 0x8055000C">EAS::E_PASSWORD_POLICY_NOT_ENFORCEABLE_FOR_CURRENT_CONNECTED_USER</DisplayString>
         <DisplayString Condition="__0 == 0x8055000D">EAS::E_CURRENT_CONNECTED_USER_NEED_TO_CHANGE_PASSWORD</DisplayString>
+        <DisplayString Condition="__0 == 0">ERROR::SUCCESS</DisplayString>
         <DisplayString Condition="__0 == 1">ERROR::INVALID_FUNCTION</DisplayString>
         <DisplayString Condition="__0 == 2">ERROR::FILE_NOT_FOUND</DisplayString>
         <DisplayString Condition="__0 == 3">ERROR::PATH_NOT_FOUND</DisplayString>

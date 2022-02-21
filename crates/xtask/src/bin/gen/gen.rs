@@ -3,7 +3,7 @@ use crate::scan;
 
 
 pub fn codes(codes: &scan::Codes) {
-    let types = "ErrorCodeMicrosoft SuccessCodeMicrosoft HResultError HResultSuccess HResult NtStatus ErrorHResultOrCode";
+    let types = "ErrorCodeMicrosoft HResultError HResultSuccess HResult NtStatus ErrorHResultOrCode";
 
     let _ = std::fs::create_dir_all("crates/winresult/src/gen/codes/ERROR");
 
@@ -90,8 +90,6 @@ pub fn codes(codes: &scan::Codes) {
             writeln!(rs, r#"        let s = match self.0 {{"#)?;
             match ty {
                 "NtStatus"              => writeln!(rs, r#"            0 => "STATUS::SUCCESS","#)?,
-                "ErrorCodeMicrosoft"    => writeln!(rs, r#"            0 => "ERROR::SUCCESS","#)?,
-                "ErrorHResultOrCode"    => writeln!(rs, r#"            0 => "ERROR::SUCCESS","#)?,
                 _                       => {},
             }
             for (_rs_mod, codes) in codes.mods.iter() {
@@ -107,7 +105,6 @@ pub fn codes(codes: &scan::Codes) {
                 "HResult"               => writeln!(rs, r#"            v => return write!(fmt, "HResult({{v:#X}})")"#)?,
                 "NtStatus"              => writeln!(rs, r#"            v => return write!(fmt, "NtStatus({{v:#X}})")"#)?,
                 "ErrorCodeMicrosoft"    => writeln!(rs, r#"            v => return write!(fmt, "ERROR::??? ({{v}})")"#)?,
-                "SuccessCodeMicrosoft"  => writeln!(rs, r#"            v => return write!(fmt, "S::??? ({{v}})")"#)?,
                 "ErrorHResultOrCode"    => writeln!(rs, r#"            v => return write!(fmt, "ERROR::??? ({{v}})")"#)?,
                 _                       => writeln!(rs, r#"            v => return write!(fmt, "ERROR::??? ({{v}})")"#)?,
             }
@@ -171,7 +168,6 @@ pub fn codes(codes: &scan::Codes) {
         for ty in types.split(' ') {
             writeln!(nv)?;
             match ty {
-                "SuccessCodeMicrosoft"  => writeln!(nv, r#"    <Type Name="winresult_types::code::{ty}">"#)?,
                 "ErrorCodeMicrosoft"    => writeln!(nv, r#"    <Type Name="winresult_types::code::{ty}">"#)?,
                 "HResult"               => writeln!(nv, r#"    <Type Name="winresult_types::hresult::{ty}">"#)?,
                 "HResultSuccess"        => writeln!(nv, r#"    <Type Name="winresult_types::hresult::{ty}">"#)?,
@@ -292,9 +288,6 @@ pub fn codes(codes: &scan::Codes) {
                     writeln!(nv, r#"        </Expand>"#)?;
                 },
                 "ErrorCodeMicrosoft" => {
-                    writeln!(nv, r#"        <DisplayString>{{__0}} ({ty})</DisplayString>"#)?;
-                },
-                "SuccessCodeMicrosoft" => {
                     writeln!(nv, r#"        <DisplayString>{{__0}} ({ty})</DisplayString>"#)?;
                 },
                 _ => {

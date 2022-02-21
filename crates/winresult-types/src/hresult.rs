@@ -45,7 +45,6 @@ impl HResultSuccess {
 
 impl From<HResultSuccess> for u32 { fn from(hr: HResultSuccess) -> Self { hr.0 } }
 impl From<u32> for HResultSuccess { fn from(hr: u32) -> Self { Self(hr) } }
-impl From<(HResultFacilityMicrosoft, SuccessCodeMicrosoft)> for HResultSuccess { fn from((fac, code): (HResultFacilityMicrosoft, SuccessCodeMicrosoft)) -> Self { Self((fac.to_u32()<<16) | code.to_u32()) } }
 
 
 
@@ -105,4 +104,3 @@ impl From<u32>              for HResult { fn from(hr: u32           ) -> Self { 
 impl From<HResultSuccess>   for HResult { fn from(hr: HResultSuccess) -> Self { Self(hr.0) } }
 impl From<HResultError>     for HResult { fn from(hr: HResultError  ) -> Self { Self(hr.0) } }
 impl From<(HResultFacilityMicrosoft, ErrorCodeMicrosoft  )> for HResult { fn from((fac, code): (HResultFacilityMicrosoft, ErrorCodeMicrosoft  )) -> Self { Self(0x8000_0000 | (fac.to_u32()<<16) | code.to_u32()) } }
-impl From<(HResultFacilityMicrosoft, SuccessCodeMicrosoft)> for HResult { fn from((fac, code): (HResultFacilityMicrosoft, SuccessCodeMicrosoft)) -> Self { Self(              (fac.to_u32()<<16) | code.to_u32()) } }

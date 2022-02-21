@@ -7,13 +7,12 @@ use crate::*;
 #[derive(Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash)] #[repr(transparent)] pub struct ErrorHResultOrCode(pub(crate) u32);
 
 impl ErrorHResultOrCode {
-    //         0 ..=         0: <invalid/reserved>
-    //         1 ..=      FFFF: ErrorCodeMicrosoft
+    //         0 ..=      FFFF: ErrorCodeMicrosoft
     //    1_0000 ..= 7FFF_FFFF: <invalid/reserved>
     // 8000_0000 ..= FFFF_FFFF: HResultError
 
     pub const fn to_u32(self)       -> u32                          { self.0 }
-    pub const fn to_code(self)      -> Option<ErrorCodeMicrosoft>   { if (0 < self.0) && (self.0 <= 0xFFFF) { Some(ErrorCodeMicrosoft(self.0 as _)) } else { None } }
+    pub const fn to_code(self)      -> Option<ErrorCodeMicrosoft>   { if self.0 <= 0xFFFF                   { Some(ErrorCodeMicrosoft(self.0 as _)) } else { None } }
     pub const fn to_hresult(self)   -> Option<HResultError>         { if 0x8000_0000 <= self.0              { Some(HResultError(self.0))            } else { None } }
 }
 
