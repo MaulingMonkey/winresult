@@ -11,7 +11,7 @@ fn main() {
     let _er9 = dbg!(HResult::from_constant(0x90010000));
     let _era = dbg!(HResult::from_constant(0xA0010000));
     let _erb = dbg!(HResult::from_constant(0xB0010000));
-    let _nts = dbg!(NTSTATUS::from_constant(0xC0010000));
+    let _nts = dbg!(NtStatus::from_constant(0xC0010000));
     let _sf  = dbg!(S::FALSE);
     let _wa  = dbg!(WAIT::OBJECT(42).unwrap());
 

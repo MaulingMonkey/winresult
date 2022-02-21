@@ -3,7 +3,7 @@ use crate::scan;
 
 
 pub fn codes(codes: &scan::Codes) {
-    let types = "ErrorCodeMicrosoft SuccessCodeMicrosoft ErrorHResult SuccessHResult HResult NTSTATUS ErrorHResultOrCode";
+    let types = "ErrorCodeMicrosoft SuccessCodeMicrosoft ErrorHResult SuccessHResult HResult NtStatus ErrorHResultOrCode";
 
     let _ = std::fs::create_dir_all("crates/winresult/src/gen/codes/ERROR");
 
@@ -89,7 +89,7 @@ pub fn codes(codes: &scan::Codes) {
             writeln!(rs, r#"    fn fmt(&self, fmt: &mut Formatter) -> fmt::Result {{"#)?;
             writeln!(rs, r#"        let s = match self.0 {{"#)?;
             match ty {
-                "NTSTATUS"              => writeln!(rs, r#"            0 => "STATUS::SUCCESS","#)?,
+                "NtStatus"              => writeln!(rs, r#"            0 => "STATUS::SUCCESS","#)?,
                 "ErrorCodeMicrosoft"    => writeln!(rs, r#"            0 => "ERROR::SUCCESS","#)?,
                 "ErrorHResultOrCode"    => writeln!(rs, r#"            0 => "ERROR::SUCCESS","#)?,
                 _                       => {},
@@ -105,7 +105,7 @@ pub fn codes(codes: &scan::Codes) {
             }
             match ty {
                 "HResult"               => writeln!(rs, r#"            v => return write!(fmt, "HResult({{v:#X}})")"#)?,
-                "NTSTATUS"              => writeln!(rs, r#"            v => return write!(fmt, "NTSTATUS({{v:#X}})")"#)?,
+                "NtStatus"              => writeln!(rs, r#"            v => return write!(fmt, "NtStatus({{v:#X}})")"#)?,
                 "ErrorCodeMicrosoft"    => writeln!(rs, r#"            v => return write!(fmt, "ERROR::??? ({{v}})")"#)?,
                 "SuccessCodeMicrosoft"  => writeln!(rs, r#"            v => return write!(fmt, "S::??? ({{v}})")"#)?,
                 "ErrorHResultOrCode"    => writeln!(rs, r#"            v => return write!(fmt, "ERROR::??? ({{v}})")"#)?,
@@ -176,7 +176,7 @@ pub fn codes(codes: &scan::Codes) {
                 "HResult"               => writeln!(nv, r#"    <Type Name="winresult_types::hresult::{ty}">"#)?,
                 "SuccessHResult"        => writeln!(nv, r#"    <Type Name="winresult_types::hresult::{ty}">"#)?,
                 "ErrorHResult"          => writeln!(nv, r#"    <Type Name="winresult_types::hresult::{ty}">"#)?,
-                "NTSTATUS"              => writeln!(nv, r#"    <Type Name="winresult_types::ntstatus::{ty}">"#)?,
+                "NtStatus"              => writeln!(nv, r#"    <Type Name="winresult_types::ntstatus::{ty}">"#)?,
                 "ErrorHResultOrCode"    => writeln!(nv, r#"    <Type Name="winresult_types::unions::{ty}">"#)?,
                 //_                       => writeln!(nv, r#"    <Type Name="winresult_types::{ty}">"#)?,
                 _                       => panic!("expected ty: {ty:?}"),
@@ -185,7 +185,7 @@ pub fn codes(codes: &scan::Codes) {
                 "HResult"               => {},
                 "SuccessHResult"        => {},
                 "ErrorHResult"          => {},
-                "NTSTATUS"              => writeln!(nv, r#"        <DisplayString Condition="__0 == 0">STATUS::SUCCESS</DisplayString>"#)?,
+                "NtStatus"              => writeln!(nv, r#"        <DisplayString Condition="__0 == 0">STATUS::SUCCESS</DisplayString>"#)?,
                 "ErrorCodeMicrosoft"    => writeln!(nv, r#"        <DisplayString Condition="__0 == 0">ERROR::SUCCESS (invalid: value 0, ErrorCodeMicrosoft s should never be successful</DisplayString>"#)?,
                 _                       => {},
             }
@@ -257,7 +257,7 @@ pub fn codes(codes: &scan::Codes) {
                     writeln!(nv, r#"        </Expand>"#)?;
                 },
                 // https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/87fba13e-bf06-450e-83b1-9241dc81e781
-                "NTSTATUS" => {
+                "NtStatus" => {
                     writeln!(nv, r#"        <DisplayString>{{__0,X}} ({ty})</DisplayString>"#)?;
                     writeln!(nv, r#"        <Expand>"#)?;
                     //writeln!(nv, r#"            <Item Name="Sev"         >((__0 &amp; 0xC0000000) >>30)</Item>"#)?;

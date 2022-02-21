@@ -9,7 +9,7 @@
 //! |          0 | 0x7FFFFFFF | [`SuccessHResult`]
 //! | 0x80000000 | 0xFFFFFFFF | [`ErrorHResult`]
 //! |          0 | 0xFFFFFFFF | [`HResult`]             | [`SuccessHResult`] \| [`ErrorHResult`]
-//! |          0 | 0xFFFFFFFF | [`NTSTATUS`]            | ~~`SuccessNtStatus` \| `ErrorNtStatus`~~
+//! |          0 | 0xFFFFFFFF | [`NtStatus`]            | ~~`SuccessNtStatus` \| `ErrorNtStatus`~~
 //!
 //! ### Buggy Bitwise Comparisons to Forbid
 //!
@@ -40,7 +40,7 @@ pub use types::{
     SuccessHResult,
     ErrorHResult,
     HResult,
-    NTSTATUS,
+    NtStatus,
     NtStatusSeverity,
     WaitCode,
     WAIT,
@@ -51,7 +51,7 @@ pub use gen::codes::{*, STATUS};
 
 
 
-/// **FACILITY_\* Values** for [HResult]s and [NTSTATUS]es.<br>
+/// **FACILITY_\* Values** for [HResult]s and [NtStatus]es.<br>
 /// pub mod [FACILITY::HRESULT::*](Self::HRESULT),
 /// [FACILITY::NTSTATUS::*](Self::NTSTATUS);
 /// <br><br>
@@ -96,9 +96,9 @@ mod gen {
 
 
 
-        /// [NTSTATUS](types::NTSTATUS) Errors and Codes (for use in e.g. Kernel / Driver)
+        /// [NtStatus](types::NtStatus) errors, warnings, and other codes (for use in e.g. Kernel / Drivers)
         pub mod STATUS {
-            use types::NTSTATUS;
+            use types::NtStatus;
             pub use types::STATUS::*;
 
             // TODO: SUCCESS = 0 ?

@@ -3978,7 +3978,7 @@
         </Expand>
     </Type>
 
-    <Type Name="winresult_types::ntstatus::NTSTATUS">
+    <Type Name="winresult_types::ntstatus::NtStatus">
         <DisplayString Condition="__0 == 0">STATUS::SUCCESS</DisplayString>
         <DisplayString Condition="__0 == 0x00000001">STATUS::WAIT_1</DisplayString>
         <DisplayString Condition="__0 == 0x00000002">STATUS::WAIT_2</DisplayString>
@@ -6565,7 +6565,7 @@
         <DisplayString Condition="__0 == 0xC0EC0007">STATUS::APPEXEC_UNKNOWN_USER</DisplayString>
         <DisplayString Condition="__0 == 0xC0240000">STATUS::QUIC_HANDSHAKE_FAILURE</DisplayString>
         <DisplayString Condition="__0 == 0xC0240001">STATUS::QUIC_VER_NEG_FAILURE</DisplayString>
-        <DisplayString>{__0,X} (NTSTATUS)</DisplayString>
+        <DisplayString>{__0,X} (NtStatus)</DisplayString>
         <Expand>
             <Synthetic Name="Sev">
                 <DisplayString Condition="(__0 >> 30) == 0">STATUS::SEVERITY::SUCCESS</DisplayString>

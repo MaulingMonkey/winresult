@@ -497,7 +497,7 @@ pub(crate) fn ntstatus_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) 
                 cpp:        error,
                 rs_mod:     prefix,
                 rs_id:      err.into(),
-                rs_ty:      "NTSTATUS".into(),
+                rs_ty:      "NtStatus".into(),
                 rs_value:   value.into(),
                 docs,
                 redundant:  (value == "0x00000000") || error == "STATUS_ABANDONED_WAIT_0",

@@ -11507,7 +11507,7 @@ impl Debug for HResult {
     }
 }
 
-impl Debug for NTSTATUS {
+impl Debug for NtStatus {
     fn fmt(&self, fmt: &mut Formatter) -> fmt::Result {
         let s = match self.0 {
             0 => "STATUS::SUCCESS",
@@ -14096,7 +14096,7 @@ impl Debug for NTSTATUS {
             0xC0EC0007 => "STATUS::APPEXEC_UNKNOWN_USER",
             0xC0240000 => "STATUS::QUIC_HANDSHAKE_FAILURE",
             0xC0240001 => "STATUS::QUIC_VER_NEG_FAILURE",
-            v => return write!(fmt, "NTSTATUS({v:#X})")
+            v => return write!(fmt, "NtStatus({v:#X})")
         };
         write!(fmt, "{}", s)
     }

@@ -4,9 +4,9 @@ use bytemuck::*;
 
 /// \[[docs.microsoft.com](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/87fba13e-bf06-450e-83b1-9241dc81e781)\]
 /// NTSTATUS
-#[derive(Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash, Default, Pod, Zeroable)] #[repr(transparent)] pub struct NTSTATUS(pub(crate) u32);
+#[derive(Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash, Default, Pod, Zeroable)] #[repr(transparent)] pub struct NtStatus(pub(crate) u32);
 
-impl NTSTATUS {
+impl NtStatus {
     #[doc(hidden)] pub const fn from_constant(value: u32) -> Self { Self(value) }
 
     pub const fn sev                (self) -> NtStatusSeverity { NtStatusSeverity((self.0 >> 30) as _) }
@@ -24,13 +24,13 @@ impl NTSTATUS {
     pub const fn to_u32             (self) -> u32  { self.0 }
 }
 
-impl From<NTSTATUS> for u32 { fn from(hr: NTSTATUS) -> Self { hr.0 } }
-impl From<u32> for NTSTATUS { fn from(hr: u32) -> Self { Self(hr) } }
+impl From<NtStatus> for u32 { fn from(hr: NtStatus) -> Self { hr.0 } }
+impl From<u32> for NtStatus { fn from(hr: u32) -> Self { Self(hr) } }
 
 
 
 /// \[[docs.microsoft.com](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/87fba13e-bf06-450e-83b1-9241dc81e781)\]
-/// NTSTATUS::Sev
+/// NtStatus::Sev
 #[derive(Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash)] pub struct NtStatusSeverity(pub(crate) u8);
 
 impl NtStatusSeverity {
@@ -62,7 +62,7 @@ impl From<FacilityNtStatusMicrosoft> for u32 { fn from(f: FacilityNtStatusMicros
 
 
 /// \[[docs.microsoft.com](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/87fba13e-bf06-450e-83b1-9241dc81e781)\]
-/// NTSTATUS::Sev
+/// NtStatus::Sev
 #[allow(non_snake_case)]
 pub mod STATUS {
     /// [SUCCESS](Self::SUCCESS)
