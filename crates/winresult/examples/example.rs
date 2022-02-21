@@ -13,7 +13,12 @@ fn main() {
     let _erb = dbg!(HResult::from_constant(0xB0010000));
     let _nts = dbg!(NtStatus::from_constant(0xC0010000));
     let _sf  = dbg!(S::FALSE);
-    let _wa  = dbg!(WAIT::OBJECT(42).unwrap());
+
+    let _wao = dbg!(WAIT::OBJECT(42).unwrap());
+    let _waa = dbg!(WAIT::ABANDONED(42).unwrap());
+    let _wio = dbg!(WAIT::IO_COMPLETION);
+    let _wit = dbg!(WAIT::TIMEOUT);
+    let _wxx = dbg!(WAIT::FAILED);
 
     let _u1 = dbg!(ErrorHResultOrCode::from(_err));
     let _u2 = dbg!(ErrorHResultOrCode::from(_d3d));

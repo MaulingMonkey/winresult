@@ -45,7 +45,6 @@ pub use types::{
     NtStatusFacilityMicrosoft,
     NtStatusSeverity,
     WaitCode,
-    WAIT,
     ErrorHResultOrCode,
 };
 
@@ -86,6 +85,53 @@ pub mod FACILITY {
 
     #[doc(inline)] pub use HRESULT::*;
     #[doc(inline)] pub use NTSTATUS::*;
+}
+
+/// \[[docs.microsoft.com](https://docs.microsoft.com/en-us/windows/win32/api/synchapi/nf-synchapi-waitformultipleobjectsex#return-value)\]
+/// WAIT_\* values returned by various WaitFor\* and other win32 functions.
+#[allow(non_snake_case)]
+pub mod WAIT {
+    use super::*;
+
+    pub const OBJECT_0      : WaitCode = WaitCode::from_constant(0); // STATUS_WAIT_0
+
+    // DO NOT INCLUDE: CHILD, GRANDCHILD (these are for _cwait, not WaitFor*, and ignored to boot according to process.h!
+
+    pub const ABANDONED_0   : WaitCode = WaitCode::from_constant(0x80); // STATUS_ABANDONED_WAIT_0
+
+    /// The wait was ended by one or more user-mode [asynchronous procedure calls](https://docs.microsoft.com/en-us/windows/desktop/Sync/asynchronous-procedure-calls) (APC) queued to the thread.
+    pub const IO_COMPLETION : WaitCode = WaitCode::from_constant(0xC0); // STATUS_USER_APC
+
+    /// The time-out interval elapsed.
+    pub const TIMEOUT       : WaitCode = WaitCode::from_constant(258); // = 0x102 = STATUS_TIMEOUT
+
+    // PENDING = 0x103 = 259 (STATUS_*, but no WAIT_*?)
+
+    /// The function has failed. To get extended error information, generally call [GetLastError](https://docs.microsoft.com/en-us/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
+    pub const FAILED        : WaitCode = WaitCode::from_constant(0xFFFFFFFF);
+
+    /// WAIT_OBJECT_0 + n
+    ///
+    /// ### Returns
+    /// *   [None]                  if `n >= 64` (MAXIMUM_WAIT_OBJECTS)
+    /// *   [Some]\([WaitCode]\)    otherwise
+    pub const fn OBJECT(n: u32) -> Option<WaitCode> {
+        if n >= MAXIMUM_WAIT_OBJECTS { return None }
+        Some(WaitCode::from_constant(WAIT::OBJECT_0.to_u32() + n))
+    }
+
+    /// WAIT_ABANDONED_0 + n
+    ///
+    /// ### Returns
+    /// *   [None]                  if `n >= 64` (MAXIMUM_WAIT_OBJECTS)
+    /// *   [Some]\([WaitCode]\)    otherwise
+    pub const fn ABANDONED(n: u32) -> Option<WaitCode> {
+        if n >= MAXIMUM_WAIT_OBJECTS { return None }
+        Some(WaitCode::from_constant(WAIT::ABANDONED_0.to_u32() + n))
+    }
+
+    /// Maximum number of wait objects
+    const MAXIMUM_WAIT_OBJECTS : u32 = 64;
 }
 
 
