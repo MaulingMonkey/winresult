@@ -1,5 +1,5 @@
 use bytemuck::*;
-use std::fmt::{self, Debug, Formatter};
+use core::fmt::{self, Debug, Formatter};
 
 
 

@@ -1,5 +1,5 @@
 use crate::*;
-use std::fmt::{self, Debug, Formatter};
+use core::fmt::{self, Debug, Formatter};
 
 impl Debug for NtStatusSeverity {
     fn fmt(&self, fmt: &mut Formatter) -> fmt::Result {

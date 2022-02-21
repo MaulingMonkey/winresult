@@ -26,6 +26,9 @@
 //! *   ([FacilityHrMicrosoft], [SuccessCodeMicrosoft]) → [SuccessHResult] → [HRESULT]
 //! *   ([FacilityHrMicrosoft], [ErrorCodeMicrosoft]) → [ErrorHResult] → [HRESULT]
 
+#![no_std]
+
+
 
 extern crate winresult_types as types;
 
