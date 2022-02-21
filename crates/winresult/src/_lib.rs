@@ -401,8 +401,6 @@ mod gen {
 
             /// [Side-by-side assembly](https://en.wikipedia.org/wiki/Side-by-side_assembly)
             pub mod SXS {
-                use types::ErrorCode;
-
                 pub use super::_SXS::*;
 
                 /// Manifest parsing errors
