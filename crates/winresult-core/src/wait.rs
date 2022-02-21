@@ -42,19 +42,12 @@ impl WaitCode {
 
 impl Debug for WaitCode {
     fn fmt(&self, fmt: &mut Formatter) -> fmt::Result {
-        if let Some(n) = self.to_object_u32() {
-            write!(fmt, "WAIT::OBJECT_{n}")
-        } else if let Some(n) = self.to_abandoned_u32() {
-            write!(fmt, "WAIT::ABANDONED_{n}")
-        } else if *self == WAIT::IO_COMPLETION {
-            write!(fmt, "WAIT::IO_COMPLETION")
-        } else if *self == WAIT::TIMEOUT {
-            write!(fmt, "WAIT::TIMEOUT")
-        } else if *self == WAIT::FAILED {
-            write!(fmt, "WAIT::FAILED")
-        } else {
-            write!(fmt, "WaitCode(0x{:08X})", self.0)
-        }
+        if      let Some(n) = self.to_object_u32()      { write!(fmt, "WAIT::OBJECT_{n}") }
+        else if let Some(n) = self.to_abandoned_u32()   { write!(fmt, "WAIT::ABANDONED_{n}") }
+        else if *self == WAIT::IO_COMPLETION            { write!(fmt, "WAIT::IO_COMPLETION") }
+        else if *self == WAIT::TIMEOUT                  { write!(fmt, "WAIT::TIMEOUT") }
+        else if *self == WAIT::FAILED                   { write!(fmt, "WAIT::FAILED") }
+        else                                            { write!(fmt, "WaitCode(0x{:08X})", self.0) }
     }
 }
 
