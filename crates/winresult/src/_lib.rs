@@ -18,6 +18,7 @@
 //! | [`ErrorCodeMicrosoft`]    | [`ErrorHResult`]      | never `true`, non-overlapping ranges, need to add or remove facility
 //! | [`ErrorCodeMicrosoft`]    | [`SuccessHResult`]    | `ERROR_INVALID_FUNCTION == S_FALSE`, need to add or remove facility
 //! | [`ErrorCodeMicrosoft`]    | [`HRESULT`]           | `ERROR_INVALID_FUNCTION == S_FALSE`, need to add or remove facility
+//! | [`ErrorCodeMicrosoft`]    | [`WaitCode`]          | `ERROR_INVALID_FUNCTION == WAIT_OBJECT_0+1`
 //! | Success\*                 | Error\*               | never `true` except by accident
 //!
 //! ### Conversions
