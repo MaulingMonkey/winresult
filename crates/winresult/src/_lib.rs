@@ -151,14 +151,15 @@ mod gen {
     pub mod codes {
         #![allow(non_snake_case)]
         #![allow(non_upper_case_globals)]
-        use types::{ErrorCode, HResultSuccess, HResultError};
+        use types::{ErrorCode, HResultSuccess, HResultError, NtStatus, NtStatusSeverity};
 
 
 
+        #[path = "STATUS.rs"] mod _STATUS;
         /// \[[docs.microsoft.com](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/87fba13e-bf06-450e-83b1-9241dc81e781)\]
         /// [NtStatus](types::NtStatus) errors, warnings, and other codes (for use in e.g. Kernel / Drivers)
         pub mod STATUS {
-            use types::NtStatus;
+            use super::*;
 
             /// \[[docs.microsoft.com](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/87fba13e-bf06-450e-83b1-9241dc81e781)\]
             /// [NtStatus::sev]\(\):
@@ -167,7 +168,8 @@ mod gen {
             /// [WARNING](Self::WARNING)
             /// [ERROR](Self::ERROR)
             pub mod SEVERITY {
-                use types::NtStatusSeverity;
+                use super::*;
+
                 pub const SUCCESS       : NtStatusSeverity = NtStatusSeverity::from_constant(0);
                 pub const INFORMATIONAL : NtStatusSeverity = NtStatusSeverity::from_constant(1);
                 pub const WARNING       : NtStatusSeverity = NtStatusSeverity::from_constant(2);
@@ -176,8 +178,7 @@ mod gen {
 
             // TODO: SUCCESS = 0 ?
 
-            #[path = "../STATUS.rs"] mod _SELF;
-            pub use _SELF::*;
+            pub use super::_STATUS::*;
         }
 
         /// **Success codes**
@@ -291,6 +292,7 @@ mod gen {
         /// **E**ntry **P**oin**t** for Remote Procedure Calls
         #[allow(dead_code)] mod EPT {}
 
+        #[path = "ERROR.rs"] mod _ERROR;
         /// **Error Codes**.  Mostly a mixture of [HResultError]s and [ErrorCode]s.
         /// submodules:
         /// [CLOUD_FILE](Self::CLOUD_FILE),
@@ -319,8 +321,7 @@ mod gen {
 
             // TODO: SUCCESS = 0 ?
 
-            #[path = "../ERROR.rs"] mod _SELF;
-            pub use _SELF::*;
+            pub use super::_ERROR::*;
 
             /// WinSpool / Printer related
             pub mod BIDI;
@@ -395,15 +396,19 @@ mod gen {
             /// [Shared Virtual Hard Disk](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn281956(v=ws.11))s (w/ \*.vhdx)
             pub mod SVHDX;
 
+            #[path = "SXS.rs"] mod _SXS;
+            #[path = "../ERROR_SXS_XML.rs"] mod _SXS_XML;
+
             /// [Side-by-side assembly](https://en.wikipedia.org/wiki/Side-by-side_assembly)
             pub mod SXS {
                 use types::ErrorCode;
 
-                #[path = "../SXS.rs"] mod _SELF;
-                pub use _SELF::*;
+                pub use super::_SXS::*;
 
                 /// Manifest parsing errors
-                #[path = "../../ERROR_SXS_XML.rs"] pub mod XML;
+                pub mod XML {
+                    pub use super::super::_SXS_XML::*;
+                }
             }
 
             /// Virtual Hard Disk (\*.vhd)
