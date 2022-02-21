@@ -8,7 +8,7 @@
 //! |          0 |     0xFFFF | [`ErrorCodeMicrosoft`]
 //! |          0 | 0x7FFFFFFF | [`SuccessHResult`]
 //! | 0x80000000 | 0xFFFFFFFF | [`ErrorHResult`]
-//! |          0 | 0xFFFFFFFF | [`HRESULT`]             | [`SuccessHResult`] \| [`ErrorHResult`]
+//! |          0 | 0xFFFFFFFF | [`HResult`]             | [`SuccessHResult`] \| [`ErrorHResult`]
 //! |          0 | 0xFFFFFFFF | [`NTSTATUS`]            | ~~`SuccessNtStatus` \| `ErrorNtStatus`~~
 //!
 //! ### Buggy Bitwise Comparisons to Forbid
@@ -17,14 +17,14 @@
 //! | ------------------------- | --------------------- | --- |
 //! | [`ErrorCodeMicrosoft`]    | [`ErrorHResult`]      | never `true`, non-overlapping ranges, need to add or remove facility
 //! | [`ErrorCodeMicrosoft`]    | [`SuccessHResult`]    | `ERROR_INVALID_FUNCTION == S_FALSE`, need to add or remove facility
-//! | [`ErrorCodeMicrosoft`]    | [`HRESULT`]           | `ERROR_INVALID_FUNCTION == S_FALSE`, need to add or remove facility
+//! | [`ErrorCodeMicrosoft`]    | [`HResult`]           | `ERROR_INVALID_FUNCTION == S_FALSE`, need to add or remove facility
 //! | [`ErrorCodeMicrosoft`]    | [`WaitCode`]          | `ERROR_INVALID_FUNCTION == WAIT_OBJECT_0+1`
 //! | Success\*                 | Error\*               | never `true` except by accident
 //!
 //! ### Conversions
 //!
-//! *   ([FacilityHrMicrosoft], [SuccessCodeMicrosoft]) → [SuccessHResult] → [HRESULT]
-//! *   ([FacilityHrMicrosoft], [ErrorCodeMicrosoft]) → [ErrorHResult] → [HRESULT]
+//! *   ([FacilityHrMicrosoft], [SuccessCodeMicrosoft]) → [SuccessHResult] → [HResult]
+//! *   ([FacilityHrMicrosoft], [ErrorCodeMicrosoft]) → [ErrorHResult] → [HResult]
 
 #![no_std]
 
@@ -39,7 +39,7 @@ pub use types::{
     ErrorCodeMicrosoft,
     SuccessHResult,
     ErrorHResult,
-    HRESULT,
+    HResult,
     NTSTATUS,
     NtStatusSeverity,
     WaitCode,
@@ -51,7 +51,7 @@ pub use gen::codes::{*, STATUS};
 
 
 
-/// **FACILITY_\* Values** for [HRESULT]s and [NTSTATUS]es.<br>
+/// **FACILITY_\* Values** for [HResult]s and [NTSTATUS]es.<br>
 /// pub mod [FACILITY::HRESULT::*](Self::HRESULT),
 /// [FACILITY::NTSTATUS::*](Self::NTSTATUS);
 /// <br><br>

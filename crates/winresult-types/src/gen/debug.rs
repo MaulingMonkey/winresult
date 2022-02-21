@@ -7408,7 +7408,7 @@ impl Debug for SuccessHResult {
     }
 }
 
-impl Debug for HRESULT {
+impl Debug for HResult {
     fn fmt(&self, fmt: &mut Formatter) -> fmt::Result {
         let s = match self.0 {
             0x80080200 => "APPX::E_PACKAGING_INTERNAL",
@@ -11501,7 +11501,7 @@ impl Debug for HRESULT {
             0x80095003 => "XENROLL::E_RESPONSE_UNEXPECTED_KA_HASH",
             0x80095004 => "XENROLL::E_RESPONSE_KA_HASH_MISMATCH",
             0x80095005 => "XENROLL::E_KEYSPEC_SMIME_MISMATCH",
-            v => return write!(fmt, "HRESULT({v:#X})")
+            v => return write!(fmt, "HResult({v:#X})")
         };
         write!(fmt, "{}", s)
     }

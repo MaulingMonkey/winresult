@@ -3749,8 +3749,8 @@
         </Expand>
     </Type>
 
-    <Type Name="winresult_types::hresult::HRESULT">
-        <DisplayString>{(::HRESULT)__0,hr} (HRESULT)</DisplayString>
+    <Type Name="winresult_types::hresult::HResult">
+        <DisplayString>{(::HRESULT)__0,hr} (HResult)</DisplayString>
         <Expand>
             <Item Name="S (failure)"  Condition="true">((__0 &amp; 0x80000000) != 0)</Item>
             <Item Name="R (reserved)" Condition="true">((__0 &amp; 0x40000000) != 0)</Item>

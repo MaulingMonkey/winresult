@@ -77,9 +77,9 @@ impl From<(FacilityHrMicrosoft, ErrorCodeMicrosoft)> for ErrorHResult { fn from(
 
 /// \[[docs.microsoft.com](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/0642cb2f-2075-4469-918c-4441e69c548a)\]
 /// HRESULT
-#[derive(Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash, Default, Pod, Zeroable)] #[repr(transparent)] pub struct HRESULT(pub(crate) u32);
+#[derive(Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash, Default, Pod, Zeroable)] #[repr(transparent)] pub struct HResult(pub(crate) u32);
 
-impl HRESULT {
+impl HResult {
     #[doc(hidden)] pub const fn from_constant(value: u32) -> Self { Self(value) }
 
     pub const fn is_error   (self) -> bool { self.0 & 0x80000000 != 0 }
@@ -100,9 +100,9 @@ impl HRESULT {
     }
 }
 
-impl From<HRESULT>          for u32     { fn from(hr: HRESULT       ) -> Self { hr.0 } }
-impl From<u32>              for HRESULT { fn from(hr: u32           ) -> Self { Self(hr) } }
-impl From<SuccessHResult>   for HRESULT { fn from(hr: SuccessHResult) -> Self { Self(hr.0) } }
-impl From<ErrorHResult>     for HRESULT { fn from(hr: ErrorHResult  ) -> Self { Self(hr.0) } }
-impl From<(FacilityHrMicrosoft, ErrorCodeMicrosoft  )> for HRESULT { fn from((fac, code): (FacilityHrMicrosoft, ErrorCodeMicrosoft  )) -> Self { Self(0x8000_0000 | (fac.to_u32()<<16) | code.to_u32()) } }
-impl From<(FacilityHrMicrosoft, SuccessCodeMicrosoft)> for HRESULT { fn from((fac, code): (FacilityHrMicrosoft, SuccessCodeMicrosoft)) -> Self { Self(              (fac.to_u32()<<16) | code.to_u32()) } }
+impl From<HResult>          for u32     { fn from(hr: HResult       ) -> Self { hr.0 } }
+impl From<u32>              for HResult { fn from(hr: u32           ) -> Self { Self(hr) } }
+impl From<SuccessHResult>   for HResult { fn from(hr: SuccessHResult) -> Self { Self(hr.0) } }
+impl From<ErrorHResult>     for HResult { fn from(hr: ErrorHResult  ) -> Self { Self(hr.0) } }
+impl From<(FacilityHrMicrosoft, ErrorCodeMicrosoft  )> for HResult { fn from((fac, code): (FacilityHrMicrosoft, ErrorCodeMicrosoft  )) -> Self { Self(0x8000_0000 | (fac.to_u32()<<16) | code.to_u32()) } }
+impl From<(FacilityHrMicrosoft, SuccessCodeMicrosoft)> for HResult { fn from((fac, code): (FacilityHrMicrosoft, SuccessCodeMicrosoft)) -> Self { Self(              (fac.to_u32()<<16) | code.to_u32()) } }

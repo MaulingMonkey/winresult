@@ -103,8 +103,8 @@ pub struct Code<'s> {
 impl Code<'_> {
     pub(crate) fn matches_ty(&self, ty: &str) -> bool {
         match (self.rs_ty,          ty,                     ) {
-            ("SuccessHResult",      "HRESULT",              ) => true,
-            ("ErrorHResult",        "HRESULT",              ) => true,
+            ("SuccessHResult",      "HResult",              ) => true,
+            ("ErrorHResult",        "HResult",              ) => true,
             ("ErrorHResult",        "ErrorHResultOrCode",   ) => true,
             ("ErrorCodeMicrosoft",  "ErrorHResultOrCode",   ) => true,
             (x,                     y,                      ) => x == y,
@@ -217,9 +217,9 @@ pub(crate) fn winerror_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) 
             let mut rs_ty       : &'static str = "";
 
             for (pre,                                               post,   ty,                     p_redundant,  base, pattern_header, ) in [
-                ("_NDIS_ERROR_TYPEDEF_(",                           "L)",   "HRESULT",              false,           0, "",             ),
-                ("_HRESULT_TYPEDEF_(",                              "L)",   "HRESULT",              false,           0, "",             ),
-                ("((HRESULT)",                                      "L)",   "HRESULT",              false,           0, "",             ),
+                ("_NDIS_ERROR_TYPEDEF_(",                           "L)",   "HResult",              false,           0, "",             ),
+                ("_HRESULT_TYPEDEF_(",                              "L)",   "HResult",              false,           0, "",             ),
+                ("((HRESULT)",                                      "L)",   "HResult",              false,           0, "",             ),
                 ("(RASBASE+",                                       ")",    "ErrorCodeMicrosoft",   true,          600, "RasError.h",   ),
                 ("(RASBASE + ",                                     ")",    "ErrorCodeMicrosoft",   true,          600, "RasError.h",   ),
                 ("(ROUTEBASE+",                                     ")",    "ErrorCodeMicrosoft",   false,         900, "MprError.h",   ),
@@ -237,7 +237,7 @@ pub(crate) fn winerror_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) 
                     let value = value + base;
                     rs_ty = ty;
                     rs_value = match ty {
-                        "HRESULT" | "ErrorHResult"  => format!("0x{:08X}", value),
+                        "HResult" | "ErrorHResult"  => format!("0x{:08X}", value),
                         _                           => format!("{}", value),
                     }.into();
                     redundant |= p_redundant;
@@ -256,13 +256,13 @@ pub(crate) fn winerror_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) 
                 if success { "SuccessCodeMicrosoft" } else { "ErrorCodeMicrosoft" }
             } else if let Some(_value32) = value.try_parse_u32() {
                 rs_value = value.into();
-                "HRESULT"
+                "HResult"
             } else {
                 mmrbi::error!(at: &header.path, line: line.no(), "unexpected value for `{}`: `{}`", error, value);
                 continue
             };
 
-            let ty = if ty == "HRESULT" {
+            let ty = if ty == "HResult" {
                 if let Some(value) = rs_value.try_parse_u32() {
                     if value >= 0x8000_0000 {
                         "ErrorHResult"

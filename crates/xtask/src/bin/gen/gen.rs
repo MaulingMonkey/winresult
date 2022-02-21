@@ -3,7 +3,7 @@ use crate::scan;
 
 
 pub fn codes(codes: &scan::Codes) {
-    let types = "ErrorCodeMicrosoft SuccessCodeMicrosoft ErrorHResult SuccessHResult HRESULT NTSTATUS ErrorHResultOrCode";
+    let types = "ErrorCodeMicrosoft SuccessCodeMicrosoft ErrorHResult SuccessHResult HResult NTSTATUS ErrorHResultOrCode";
 
     let _ = std::fs::create_dir_all("crates/winresult/src/gen/codes/ERROR");
 
@@ -104,7 +104,7 @@ pub fn codes(codes: &scan::Codes) {
                 }
             }
             match ty {
-                "HRESULT"               => writeln!(rs, r#"            v => return write!(fmt, "HRESULT({{v:#X}})")"#)?,
+                "HResult"               => writeln!(rs, r#"            v => return write!(fmt, "HResult({{v:#X}})")"#)?,
                 "NTSTATUS"              => writeln!(rs, r#"            v => return write!(fmt, "NTSTATUS({{v:#X}})")"#)?,
                 "ErrorCodeMicrosoft"    => writeln!(rs, r#"            v => return write!(fmt, "ERROR::??? ({{v}})")"#)?,
                 "SuccessCodeMicrosoft"  => writeln!(rs, r#"            v => return write!(fmt, "S::??? ({{v}})")"#)?,
@@ -173,7 +173,7 @@ pub fn codes(codes: &scan::Codes) {
             match ty {
                 "SuccessCodeMicrosoft"  => writeln!(nv, r#"    <Type Name="winresult_types::code::{ty}">"#)?,
                 "ErrorCodeMicrosoft"    => writeln!(nv, r#"    <Type Name="winresult_types::code::{ty}">"#)?,
-                "HRESULT"               => writeln!(nv, r#"    <Type Name="winresult_types::hresult::{ty}">"#)?,
+                "HResult"               => writeln!(nv, r#"    <Type Name="winresult_types::hresult::{ty}">"#)?,
                 "SuccessHResult"        => writeln!(nv, r#"    <Type Name="winresult_types::hresult::{ty}">"#)?,
                 "ErrorHResult"          => writeln!(nv, r#"    <Type Name="winresult_types::hresult::{ty}">"#)?,
                 "NTSTATUS"              => writeln!(nv, r#"    <Type Name="winresult_types::ntstatus::{ty}">"#)?,
@@ -182,7 +182,7 @@ pub fn codes(codes: &scan::Codes) {
                 _                       => panic!("expected ty: {ty:?}"),
             }
             match ty {
-                "HRESULT"               => {},
+                "HResult"               => {},
                 "SuccessHResult"        => {},
                 "ErrorHResult"          => {},
                 "NTSTATUS"              => writeln!(nv, r#"        <DisplayString Condition="__0 == 0">STATUS::SUCCESS</DisplayString>"#)?,
@@ -190,7 +190,7 @@ pub fn codes(codes: &scan::Codes) {
                 _                       => {},
             }
 
-            if !"HRESULT SuccessHResult ErrorHResult".split(' ').any(|t| t == ty) { // don't emit DisplayString codes for HRESULTs, instead leverage <HResult>...</HResult>s with (::HRESULT) casts
+            if !"HResult SuccessHResult ErrorHResult".split(' ').any(|t| t == ty) { // don't emit DisplayString codes for HRESULTs, instead leverage <HResult>...</HResult>s with (::HRESULT) casts
                 for (_rs_mod, codes) in codes.mods.iter() {
                     for code in codes.iter() {
                         if code.redundant { continue }
@@ -208,7 +208,7 @@ pub fn codes(codes: &scan::Codes) {
 
             match ty {
                 // https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/0642cb2f-2075-4469-918c-4441e69c548a
-                "HRESULT" | "SuccessHResult" | "ErrorHResult" | "ErrorHResultOrCode" => {
+                "HResult" | "SuccessHResult" | "ErrorHResult" | "ErrorHResultOrCode" => {
                     let cond_hr = if ty == "ErrorHResultOrCode" { "(__0 &gt;= 0x80000000)" } else { "true" };
 
                     writeln!(nv, r#"        <DisplayString>{{(::HRESULT)__0,hr}} ({ty})</DisplayString>"#)?;
@@ -309,7 +309,7 @@ pub fn codes(codes: &scan::Codes) {
         for (_rs_mod, codes) in codes.mods.iter() {
             for code in codes.iter() {
                 if code.redundant { continue }
-                if !code.matches_ty("HRESULT") { continue }
+                if !code.matches_ty("HResult") { continue }
                 #[allow(unused_variables)] let scan::Code { cpp, rs_mod, rs_id, rs_ty, rs_value, docs, redundant, hide } = &code;
                 if *hide { continue }
                 writeln!(nv, r#"    <HResult Name="{cpp}"><HRValue>{rs_value}</HRValue></HResult>"#)?;
