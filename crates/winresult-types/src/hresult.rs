@@ -57,6 +57,9 @@ impl From<u32> for HResultSuccess { fn from(hr: u32) -> Self { Self(hr) } }
 //  Zeroable    (0 is success)
 
 impl HResultError {
+    /// HRESULT_FROM_WIN32, but for errors specifically
+    pub const fn from_win32(value: ErrorCodeMicrosoft) -> Self { Self(0x80070000 | (value.0 as u32)) }
+
     #[doc(hidden)] pub const fn from_constant(value: u32) -> Self { assert!(value & 0x8000_0000 != 0, "HResultError::from_constant: HRESULT is a success (high bit not set)"); Self(value) }
 
     //  const fn is_reserved(self) -> bool { self.0 & 0x40000000 != 0 }
