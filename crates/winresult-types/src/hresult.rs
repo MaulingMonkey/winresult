@@ -44,6 +44,7 @@ impl HResultSuccess {
 }
 
 impl From<HResultSuccess> for u32 { fn from(hr: HResultSuccess) -> Self { hr.0 } }
+impl From<HResultSuccess> for i32 { fn from(hr: HResultSuccess) -> Self { hr.0 as _ } } // for winapi interop
 impl From<u32> for HResultSuccess { fn from(hr: u32) -> Self { Self(hr) } }
 
 
@@ -72,6 +73,7 @@ impl HResultError {
 }
 
 impl From<HResultError> for u32 { fn from(hr: HResultError) -> Self { hr.0 } }
+impl From<HResultError> for i32 { fn from(hr: HResultError) -> Self { hr.0 as _ } } // for winapi interop
 impl From<u32> for HResultError { fn from(hr: u32) -> Self { Self(hr) } }
 impl From<(HResultFacilityMicrosoft, ErrorCode)> for HResultError { fn from((fac, code): (HResultFacilityMicrosoft, ErrorCode)) -> Self { Self(0x8000_0000 | (fac.to_u32()<<16) | code.to_u32()) } }
 
@@ -103,6 +105,7 @@ impl HResult {
 }
 
 impl From<HResult>          for u32     { fn from(hr: HResult       ) -> Self { hr.0 } }
+impl From<HResult>          for i32     { fn from(hr: HResult       ) -> Self { hr.0 as _ } } // for winapi interop
 impl From<u32>              for HResult { fn from(hr: u32           ) -> Self { Self(hr) } }
 impl From<HResultSuccess>   for HResult { fn from(hr: HResultSuccess) -> Self { Self(hr.0) } }
 impl From<HResultError>     for HResult { fn from(hr: HResultError  ) -> Self { Self(hr.0) } }
