@@ -87,6 +87,10 @@ impl<'s> Codes<'s> {
         self.cpp_processed.insert(code.cpp);
         self.mods.entry(code.rs_mod).or_default().push(code);
     }
+
+    fn push_processed_cpp(&mut self, cpp: &'s str) -> bool {
+        self.cpp_processed.insert(cpp)
+    }
 }
 
 pub struct Code<'s> {
@@ -210,7 +214,7 @@ pub(crate) fn winerror_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) 
                 _                           => false,
             };
 
-            if !codes.cpp_processed.insert(error) {
+            if !codes.push_processed_cpp(error) {
                 match error {
                     // normal: these COM-related defines get redefined on _MAC (OS X), just ignore the second def
                     "E_NOTIMPL" | "E_OUTOFMEMORY" | "E_INVALIDARG" | "E_NOINTERFACE" | "E_POINTER" | "E_HANDLE" | "E_ABORT" | "E_FAIL" | "E_ACCESSDENIED" => {},
