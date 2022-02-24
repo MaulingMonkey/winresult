@@ -110,3 +110,9 @@ impl From<u32>              for HResult { fn from(hr: u32           ) -> Self { 
 impl From<HResultSuccess>   for HResult { fn from(hr: HResultSuccess) -> Self { Self(hr.0) } }
 impl From<HResultError>     for HResult { fn from(hr: HResultError  ) -> Self { Self(hr.0) } }
 impl From<(HResultFacilityMicrosoft, ErrorCode)> for HResult { fn from((fac, code): (HResultFacilityMicrosoft, ErrorCode)) -> Self { Self(0x8000_0000 | (fac.to_u32()<<16) | code.to_u32()) } }
+
+impl PartialEq<HResult> for HResultSuccess  { fn eq(&self, other: &HResult          ) -> bool { self.to_u32() == other.to_u32() } }
+impl PartialEq<HResult> for HResultError    { fn eq(&self, other: &HResult          ) -> bool { self.to_u32() == other.to_u32() } }
+impl PartialEq<HResultSuccess> for HResult  { fn eq(&self, other: &HResultSuccess   ) -> bool { self.to_u32() == other.to_u32() } }
+impl PartialEq<HResultError  > for HResult  { fn eq(&self, other: &HResultError     ) -> bool { self.to_u32() == other.to_u32() } }
+// TODO: vs u32? i32?
