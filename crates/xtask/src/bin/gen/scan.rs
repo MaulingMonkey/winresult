@@ -402,7 +402,7 @@ pub(crate) fn winerror_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) 
 
 pub(crate) fn d3d<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) {
     let mut lines = header.lines();
-    let re_d3d_hr   = Regex::new(r##"^\s*#\s*define\s+(?P<error>(?P<prefix>S|D3D|D3DERR|D3DOK)_(?P<err>[a-zA-Z0-9_]+))\s+(?P<value>S_OK|MAKE_D3D.+?|MAKE_DD.+?)$"##).expect("re_d3d_hr");
+    let re_d3d_hr   = Regex::new(r##"^\s*#\s*define\s+(?P<error>(?P<prefix>S|D3D|D3DERR|D3DOK|D3DXFERR)_(?P<err>[a-zA-Z0-9_]+))\s+(?P<value>.+?)$"##).expect("re_d3d_hr");
     let re_d3dx_hr  = Regex::new(r##"^\s*(?P<error>(?P<prefix>D3DXERR)_(?P<err>[a-zA-Z0-9_]+))\s*=\s*(?P<value>.+?)\s*[,]?\s*$"##).expect("re_d3dx_hr");
     while let Some(line) = lines.next() {
         if let Some(def) = re_d3d_hr.captures(line.text).or_else(|| re_d3dx_hr.captures(line.text)) {
@@ -411,7 +411,13 @@ pub(crate) fn d3d<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) {
             let err     = def.name("err"   ).unwrap().as_str();
             let value   = def.name("value" ).unwrap().as_str();
 
-            let (ty, value) = if value == "S_OK" {
+            match error {
+                "D3D_SDK_VERSION"       => continue,
+                "D3D_MAXRENDERSTATES"   => continue,
+                _                       => {},
+            }
+
+            let (ty, value) = if value == "S_OK" || value == "DD_OK" {
                 continue // Ok
             } else if let Some(value) = value.strip_prefix_suffix("MAKE_D3DSTATUS(", ")") {
                 match value.parse::<u16>() {
@@ -438,6 +444,14 @@ pub(crate) fn d3d<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) {
                     },
                 }
             } else if let Some(value) = value.strip_prefix_suffix("MAKE_DDHRESULT(", ")") {
+                match value.parse::<u16>() {
+                    Ok(value)   => ("HResultError", format!("{}", u32::from(value)+0x88760000)),
+                    Err(_) => {
+                        mmrbi::error!(at: &header.path, line: line.no(), "unexpected value for {}", error);
+                        continue
+                    },
+                }
+            } else if let Some(value) = value.strip_prefix_suffix("MAKE_HRESULT( 1, _FACD3DXF, ", " )") {
                 match value.parse::<u16>() {
                     Ok(value)   => ("HResultError", format!("{}", u32::from(value)+0x88760000)),
                     Err(_) => {

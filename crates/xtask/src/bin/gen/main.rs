@@ -94,7 +94,7 @@ fn main() {
         //r"D2Derr.h":            scan::d3d,
         //r"d3d9.h":              scan::d3d, // already covered by the windows sdk
         r"d3dx9.h":             scan::d3d,
-        //r"d3dx9xof.h":          scan::d3d,
+        r"d3dx9xof.h":          scan::d3d,
         //r"D3DX10.h":            scan::d3d,
         //r"D3DX10core.h":        scan::d3d,
         //r"D3DX11.h":            scan::d3d,
