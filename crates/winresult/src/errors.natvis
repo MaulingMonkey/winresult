@@ -7189,6 +7189,15 @@
         <DisplayString Condition="__0 == 2289436725">D3DERR::INBEGINSTATEBLOCK</DisplayString>
         <DisplayString Condition="__0 == 2289436726">D3DERR::NOTINBEGINSTATEBLOCK</DisplayString>
         <DisplayString Condition="__0 == 2289437624">D3DERR::COMMAND_UNPARSED</DisplayString>
+        <DisplayString Condition="__0 == 2289437524">D3DXERR::CANNOTMODIFYINDEXBUFFER</DisplayString>
+        <DisplayString Condition="__0 == 2289437525">D3DXERR::INVALIDMESH</DisplayString>
+        <DisplayString Condition="__0 == 2289437526">D3DXERR::CANNOTATTRSORT</DisplayString>
+        <DisplayString Condition="__0 == 2289437527">D3DXERR::SKINNINGNOTSUPPORTED</DisplayString>
+        <DisplayString Condition="__0 == 2289437528">D3DXERR::TOOMANYINFLUENCES</DisplayString>
+        <DisplayString Condition="__0 == 2289437529">D3DXERR::INVALIDDATA</DisplayString>
+        <DisplayString Condition="__0 == 2289437530">D3DXERR::LOADEDMESHASNODATA</DisplayString>
+        <DisplayString Condition="__0 == 2289437531">D3DXERR::DUPLICATENAMEDFRAGMENT</DisplayString>
+        <DisplayString Condition="__0 == 2289437532">D3DXERR::CANNOTREMOVELASTITEM</DisplayString>
         <DisplayString Condition="__0 == 0x88980800">DCOMPOSITION::ERROR_WINDOW_ALREADY_COMPOSED</DisplayString>
         <DisplayString Condition="__0 == 0x88980801">DCOMPOSITION::ERROR_SURFACE_BEING_RENDERED</DisplayString>
         <DisplayString Condition="__0 == 0x88980802">DCOMPOSITION::ERROR_SURFACE_NOT_BEING_RENDERED</DisplayString>
@@ -14456,6 +14465,15 @@
     <HResult Name="D3DERR_NOTINBEGINSTATEBLOCK"><HRValue>2289436726</HRValue></HResult>
     <HResult Name="D3DERR_COMMAND_UNPARSED"><HRValue>2289437624</HRValue></HResult>
     <HResult Name="D3DOK_NOAUTOGEN"><HRValue>141953135</HRValue></HResult>
+    <HResult Name="D3DXERR_CANNOTMODIFYINDEXBUFFER"><HRValue>2289437524</HRValue></HResult>
+    <HResult Name="D3DXERR_INVALIDMESH"><HRValue>2289437525</HRValue></HResult>
+    <HResult Name="D3DXERR_CANNOTATTRSORT"><HRValue>2289437526</HRValue></HResult>
+    <HResult Name="D3DXERR_SKINNINGNOTSUPPORTED"><HRValue>2289437527</HRValue></HResult>
+    <HResult Name="D3DXERR_TOOMANYINFLUENCES"><HRValue>2289437528</HRValue></HResult>
+    <HResult Name="D3DXERR_INVALIDDATA"><HRValue>2289437529</HRValue></HResult>
+    <HResult Name="D3DXERR_LOADEDMESHASNODATA"><HRValue>2289437530</HRValue></HResult>
+    <HResult Name="D3DXERR_DUPLICATENAMEDFRAGMENT"><HRValue>2289437531</HRValue></HResult>
+    <HResult Name="D3DXERR_CANNOTREMOVELASTITEM"><HRValue>2289437532</HRValue></HResult>
     <HResult Name="DATA_S_SAMEFORMATETC"><HRValue>0x00040130</HRValue></HResult>
     <HResult Name="DCOMPOSITION_ERROR_WINDOW_ALREADY_COMPOSED"><HRValue>0x88980800</HRValue></HResult>
     <HResult Name="DCOMPOSITION_ERROR_SURFACE_BEING_RENDERED"><HRValue>0x88980801</HRValue></HResult>

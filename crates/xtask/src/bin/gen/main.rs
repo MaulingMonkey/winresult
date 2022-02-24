@@ -13,8 +13,8 @@ struct Header {
 }
 
 impl Header {
-    pub fn read(sdk: &sdk::WindowsKit, path_h: &str) -> Self {
-        let path = sdk.include.join(path_h);
+    pub fn read(sdk_include: &Path, path_h: &str) -> Self {
+        let path = sdk_include.join(path_h);
         let code = std::fs::read_to_string(&path).expect(path_h);
         let bytes = code.as_bytes();
         let eols = bytes.into_iter().enumerate().filter(|l| *l.1 == b'\n').map(|l| l.0).chain([bytes.len()]).collect();
@@ -51,7 +51,7 @@ fn main() {
     let mut codes   = scan::Codes::default();
 
     macro_rules! headers { ( $( $path:literal : $scan_fn:path ),* $(,)? ) => {$(
-        let header = Header::read(&sdk, $path);
+        let header = Header::read(&sdk.include, $path);
         $scan_fn(&header, &mut codes);
     )*}}
 
@@ -81,6 +81,31 @@ fn main() {
         //r"um\winioctl.h":     scan::winerror_h, // will need to be handled manually, too many bespoke error types
         r"um\winspool.h":       scan::winerror_h,
         r"um\wsmerror.h":       scan::winerror_h,
+    }
+
+    let d3d_sdk = Path::new(r"C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include");
+
+    macro_rules! headers { ( $( $path:literal : $scan_fn:path ),* $(,)? ) => {$(
+        let header = Header::read(d3d_sdk, $path);
+        $scan_fn(&header, &mut codes);
+    )*}}
+
+    headers! {
+        //r"D2Derr.h":            scan::d3d,
+        //r"d3d9.h":              scan::d3d, // already covered by the windows sdk
+        r"d3dx9.h":             scan::d3d,
+        //r"d3dx9xof.h":          scan::d3d,
+        //r"D3DX10.h":            scan::d3d,
+        //r"D3DX10core.h":        scan::d3d,
+        //r"D3DX11.h":            scan::d3d,
+        //r"D3DX11core.h":        scan::d3d,
+        //r"dinput.h":            scan::d3d,
+        //r"dinputd.h":           scan::d3d,
+        //r"dsetup.h":            scan::d3d,
+        //r"dsound.h":            scan::d3d,
+        //r"DWrite.h":            scan::d3d,
+        //r"DxErr.h":             scan::d3d, // tracing macros only?
+        //r"dxfile.h":            scan::d3d,
     }
 
     gen::codes(&codes);

@@ -402,9 +402,10 @@ pub(crate) fn winerror_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) 
 
 pub(crate) fn d3d<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) {
     let mut lines = header.lines();
-    let re_d3d_hr = Regex::new(r##"^\s*#\s*define\s+(?P<error>(?P<prefix>S|D3D(ERR|OK)?)_(?P<err>[a-zA-Z0-9_]+))\s+(?P<value>S_OK|MAKE_D3D.+?|MAKE_DD.+?)$"##).expect("re_d3d_hr");
+    let re_d3d_hr   = Regex::new(r##"^\s*#\s*define\s+(?P<error>(?P<prefix>S|D3D|D3DERR|D3DOK)_(?P<err>[a-zA-Z0-9_]+))\s+(?P<value>S_OK|MAKE_D3D.+?|MAKE_DD.+?)$"##).expect("re_d3d_hr");
+    let re_d3dx_hr  = Regex::new(r##"^\s*(?P<error>(?P<prefix>D3DXERR)_(?P<err>[a-zA-Z0-9_]+))\s*=\s*(?P<value>.+?)\s*[,]?\s*$"##).expect("re_d3dx_hr");
     while let Some(line) = lines.next() {
-        if let Some(def) = re_d3d_hr.captures(line.text) {
+        if let Some(def) = re_d3d_hr.captures(line.text).or_else(|| re_d3dx_hr.captures(line.text)) {
             let error   = def.name("error" ).unwrap().as_str();
             let prefix  = def.name("prefix").unwrap().as_str();
             let err     = def.name("err"   ).unwrap().as_str();
