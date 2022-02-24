@@ -245,6 +245,12 @@ mod gen {
         /// [Direct3D](https://docs.microsoft.com/en-us/windows/win32/direct3d) Errors
         pub mod D3DERR;
 
+        /// [D3DX](https://en.wikipedia.org/wiki/D3DX) Errors
+        pub mod D3DXERR;
+
+        /// [D3DX](https://en.wikipedia.org/wiki/D3DX) `.X` file type errors
+        pub mod D3DXFERR;
+
         /// [Direct3D](https://docs.microsoft.com/en-us/windows/win32/direct3d)
         pub mod D3DOK;
 
