@@ -1,3 +1,4 @@
+mod crlf;
 mod gen;
 mod scan;
 
