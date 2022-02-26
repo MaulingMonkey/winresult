@@ -12,3 +12,21 @@ impl ErrorCode {
 impl From<u16> for ErrorCode { fn from(c: u16) -> Self { Self(c) } }
 impl From<ErrorCode> for u16 { fn from(c: ErrorCode) -> Self { c.0 } }
 impl From<ErrorCode> for u32 { fn from(c: ErrorCode) -> Self { c.0.into() } }
+
+impl<O, E: PartialEq<ErrorCode>> PartialEq<ErrorCode> for Result<O, E> {
+    fn eq(&self, other: &ErrorCode) -> bool {
+        match self.as_ref() {
+            Ok(_)   => false,
+            Err(e)  => *e == *other,
+        }
+    }
+}
+
+impl<O, E: PartialEq<ErrorCode>> PartialEq<Result<O, E>> for ErrorCode {
+    fn eq(&self, other: &Result<O, E>) -> bool {
+        match other.as_ref() {
+            Ok(_)   => false,
+            Err(e)  => *e == *self,
+        }
+    }
+}

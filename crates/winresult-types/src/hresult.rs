@@ -136,3 +136,39 @@ compare! {
     HResultError    == u32,
     HResultError    == i32,
 }
+
+impl<O, E: PartialEq<HResultError>> PartialEq<HResultError> for Result<O, E> {
+    fn eq(&self, other: &HResultError) -> bool {
+        match self.as_ref() {
+            Ok(_)   => false,
+            Err(e)  => *e == *other,
+        }
+    }
+}
+
+impl<O, E: PartialEq<HResultError>> PartialEq<Result<O, E>> for HResultError {
+    fn eq(&self, other: &Result<O, E>) -> bool {
+        match other.as_ref() {
+            Ok(_)   => false,
+            Err(e)  => *e == *self,
+        }
+    }
+}
+
+impl<O: PartialEq<HResultSuccess>, E> PartialEq<HResultSuccess> for Result<O, E> {
+    fn eq(&self, other: &HResultSuccess) -> bool {
+        match self.as_ref() {
+            Ok(o)   => *o == *other,
+            Err(_)  => false,
+        }
+    }
+}
+
+impl<O: PartialEq<HResultSuccess>, E> PartialEq<Result<O, E>> for HResultSuccess {
+    fn eq(&self, other: &Result<O, E>) -> bool {
+        match other.as_ref() {
+            Ok(o)   => *o == *self,
+            Err(_)  => false,
+        }
+    }
+}

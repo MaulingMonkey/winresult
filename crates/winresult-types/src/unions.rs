@@ -17,6 +17,41 @@ impl ErrorHResultOrCode {
 }
 
 impl From<ErrorHResultOrCode> for u32                { fn from(v: ErrorHResultOrCode) -> Self { v.0 } }
-impl From<u32               > for ErrorHResultOrCode { fn from(v: u32               ) -> Self { Self(v) } }
 impl From<ErrorCode         > for ErrorHResultOrCode { fn from(v: ErrorCode         ) -> Self { Self(v.0.into()) } }
 impl From<HResultError      > for ErrorHResultOrCode { fn from(v: HResultError      ) -> Self { Self(v.0) } }
+
+// These allow construction of values in the 1_000 ..= 7FFF_FFFF range, which is a bit sketchy
+impl From<u32               > for ErrorHResultOrCode { fn from(v: u32               ) -> Self { Self(v) } }
+impl From<i32               > for ErrorHResultOrCode { fn from(v: i32               ) -> Self { Self(v as _) } }
+
+
+
+macro_rules! compare { ($($a:ident == $z:ident),* $(,)?) => {$(
+    impl PartialEq<$a> for $z { fn eq(&self, other: &$a) -> bool { ErrorHResultOrCode::from(*self).0 == ErrorHResultOrCode::from(*other).0 } }
+    impl PartialEq<$z> for $a { fn eq(&self, other: &$z) -> bool { ErrorHResultOrCode::from(*self).0 == ErrorHResultOrCode::from(*other).0 } }
+)*}}
+
+compare! {
+    ErrorHResultOrCode  == ErrorCode,
+    ErrorHResultOrCode  == HResultError,
+    ErrorHResultOrCode  == u32,
+    ErrorHResultOrCode  == i32, // winapi HRESULT
+}
+
+impl<O, E: PartialEq<ErrorHResultOrCode>> PartialEq<ErrorHResultOrCode> for Result<O, E> {
+    fn eq(&self, other: &ErrorHResultOrCode) -> bool {
+        match self.as_ref() {
+            Ok(_)   => false,
+            Err(e)  => *e == *other,
+        }
+    }
+}
+
+impl<O, E: PartialEq<ErrorHResultOrCode>> PartialEq<Result<O, E>> for ErrorHResultOrCode {
+    fn eq(&self, other: &Result<O, E>) -> bool {
+        match other.as_ref() {
+            Ok(_)   => false,
+            Err(e)  => *e == *self,
+        }
+    }
+}
