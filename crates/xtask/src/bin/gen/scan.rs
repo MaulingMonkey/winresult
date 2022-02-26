@@ -122,7 +122,7 @@ impl Code<'_> {
     }
 }
 
-pub(crate) fn winerror_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) {
+pub(crate) fn winerror_h<'a>(header: &'a Header, codes: &mut Codes<'a>) {
     let mut lines = header.lines();
     let re_define_error = Regex::new(r##"^#\s*define\s+(?P<error>(?P<prefix>([A-Z0-9_]+?_)?(S|E|X|ERROR))_(?P<err>[a-zA-Z0-9_]+))\s+(?P<value>.+?)[L]?\s*(//.*)?$"##).expect("re_define_error");
     let re_placeholders = Regex::new(r#"(0x)?%[0-9a-zA-Z_]+"#).expect("re_placeholders");
@@ -232,7 +232,7 @@ pub(crate) fn winerror_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) 
                 continue;
             }
 
-            let mut rs_value    : Cow<'c, str> = "".into();
+            let mut rs_value    : Cow<'a, str> = "".into();
             let mut rs_ty       : &'static str = "";
 
             for (pre,                                               post,   ty,                     p_redundant,  base, pattern_header, ) in [
@@ -418,7 +418,7 @@ pub(crate) fn winerror_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) 
     }
 }
 
-pub(crate) fn d3d<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) {
+pub(crate) fn d3d<'a>(header: &'a Header, codes: &mut Codes<'a>) {
     let mut lines = header.lines();
     let re_d3d_hr   = Regex::new(r##"^\s*#\s*define\s+(?P<error>(?P<prefix>S|D3D|D3DERR|D3DOK|D3DXFERR)_(?P<err>[a-zA-Z0-9_]+))\s+(?P<value>.+?)$"##).expect("re_d3d_hr");
     let re_d3dx_hr  = Regex::new(r##"^\s*(?P<error>(?P<prefix>D3DXERR)_(?P<err>[a-zA-Z0-9_]+))\s*=\s*(?P<value>.+?)\s*[,]?\s*$"##).expect("re_d3dx_hr");
@@ -496,7 +496,7 @@ pub(crate) fn d3d<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) {
     }
 }
 
-pub(crate) fn ntstatus_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) {
+pub(crate) fn ntstatus_h<'a>(header: &'a Header, codes: &mut Codes<'a>) {
     let mut lines = header.lines();
     let re_ntstatus     = Regex::new(r##"^\s*#\s*define\s+(?P<error>(?P<prefix>STATUS)_(?P<err>[a-zA-Z0-9_]+))\s+\(\(NTSTATUS\)(?P<value>(0x)?[0-9a-fA-F]+)[L]?\)\s*(//.*)?$"##).expect("re_ntstatus");
     let re_placeholders = Regex::new(r#"(0x)?%[0-9a-zA-Z_]+"#).expect("re_placeholders");
