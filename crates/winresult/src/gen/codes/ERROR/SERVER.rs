@@ -18,8 +18,8 @@ pub const NOT_DISABLED : ErrorCode = ErrorCode::from_constant(1342); // ERROR_SE
 /// The server is in use and cannot be unloaded.
 pub const HAS_OPEN_HANDLES : ErrorCode = ErrorCode::from_constant(1811); // ERROR_SERVER_HAS_OPEN_HANDLES
 
-pub const INVALID_BOOT_FILE_TABLE : ErrorCode = ErrorCode::from_constant(0x00004E3C); // ERROR_SERVER_INVALID_BOOT_FILE_TABLE
-pub const UNKNOWN_BOOT_FILE_NAME : ErrorCode = ErrorCode::from_constant(0x00004E3D); // ERROR_SERVER_UNKNOWN_BOOT_FILE_NAME
+pub const INVALID_BOOT_FILE_TABLE : ErrorCode = ErrorCode::from_constant(20028); // ERROR_SERVER_INVALID_BOOT_FILE_TABLE
+pub const UNKNOWN_BOOT_FILE_NAME : ErrorCode = ErrorCode::from_constant(20029); // ERROR_SERVER_UNKNOWN_BOOT_FILE_NAME
 
 /// The server cannot allocate NetBIOS resources needed to support the client.
 /// This error was obsoleted in the Windows Vista  release.

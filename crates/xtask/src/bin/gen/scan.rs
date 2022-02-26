@@ -98,13 +98,19 @@ pub struct Code<'s> {
     pub rs_mod:     &'s str,
     pub rs_id:      Cow<'s, str>,
     pub rs_ty:      &'static str,
-    pub rs_value:   Cow<'s, str>,
+    pub rs_value:   u32,
     pub docs:       Vec<Cow<'s, str>>,
     pub redundant:  bool,
     pub hide:       bool,
 }
 
 impl Code<'_> {
+    pub(crate) fn rs_value_nice(&self) -> impl std::fmt::Display {
+        if self.matches_ty("HResult")       { format!("0x{:08X}",   self.rs_value) }
+        else if self.matches_ty("NtStatus") { format!("0x{:08X}",   self.rs_value) }
+        else                                { format!("{}",         self.rs_value) }
+    }
+
     pub(crate) fn matches_ty(&self, ty: &str) -> bool {
         match (self.rs_ty,          ty,                     ) {
             ("HResultSuccess",      "HResult",              ) => true,
@@ -293,6 +299,14 @@ pub(crate) fn winerror_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) 
                 _ => ty,
             };
 
+            let rs_value = match rs_value.try_parse_u32() {
+                Some(v) => v,
+                None => {
+                    mmrbi::error!(at: &header.path, line: line.no(), "unable to parse integer value for `{}`: `{}`", error, value);
+                    continue
+                }
+            };
+
             if prefix.ends_with("_S") || prefix.ends_with("_E") || prefix.ends_with("_X") {
                 // translate:   WHATEVER_E::... => WHATEVER::E_...
                 let prefix = &prefix[..prefix.len()-2];
@@ -350,7 +364,7 @@ pub(crate) fn winerror_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) 
                             rs_mod:     rs_mod.into(),
                             rs_id:      err.into(),
                             rs_ty:      ty.into(),
-                            rs_value:   rs_value.clone(),
+                            rs_value,
                             docs:       docs.iter().cloned().collect(),
                             hide:       false,
                             redundant,
@@ -367,7 +381,7 @@ pub(crate) fn winerror_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) 
                         rs_mod:     "ERROR".into(),
                         rs_id:      error.strip_prefix("ERROR_").unwrap().into(),
                         rs_ty:      ty.into(),
-                        rs_value:   rs_value,
+                        rs_value,
                         docs:       docs.iter().cloned().collect(),
                         redundant,
                         hide,
@@ -421,11 +435,11 @@ pub(crate) fn d3d<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) {
                 _                       => {},
             }
 
-            let (ty, value) = if value == "S_OK" || value == "DD_OK" {
+            let (ty, rs_value) = if value == "S_OK" || value == "DD_OK" {
                 continue // Ok
             } else if let Some(value) = value.strip_prefix_suffix("MAKE_D3DSTATUS(", ")") {
                 match value.parse::<u16>() {
-                    Ok(value)   => ("HResultSuccess", format!("{}", u32::from(value)+0x08760000)),
+                    Ok(value)   => ("HResultSuccess", u32::from(value)+0x08760000),
                     Err(_) => {
                         mmrbi::error!(at: &header.path, line: line.no(), "unexpected value for {}", error);
                         continue
@@ -433,7 +447,7 @@ pub(crate) fn d3d<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) {
                 }
             } else if let Some(value) = value.strip_prefix_suffix("MAKE_DDSTATUS(", ")") {
                 match value.parse::<u16>() {
-                    Ok(value)   => ("HResultSuccess", format!("{}", u32::from(value)+0x08760000)),
+                    Ok(value)   => ("HResultSuccess", u32::from(value)+0x08760000),
                     Err(_) => {
                         mmrbi::error!(at: &header.path, line: line.no(), "unexpected value for {}", error);
                         continue
@@ -441,7 +455,7 @@ pub(crate) fn d3d<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) {
                 }
             } else if let Some(value) = value.strip_prefix_suffix("MAKE_D3DHRESULT(", ")") {
                 match value.parse::<u16>() {
-                    Ok(value)   => ("HResultError", format!("{}", u32::from(value)+0x88760000)),
+                    Ok(value)   => ("HResultError", u32::from(value)+0x88760000),
                     Err(_) => {
                         mmrbi::error!(at: &header.path, line: line.no(), "unexpected value for {}", error);
                         continue
@@ -449,7 +463,7 @@ pub(crate) fn d3d<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) {
                 }
             } else if let Some(value) = value.strip_prefix_suffix("MAKE_DDHRESULT(", ")") {
                 match value.parse::<u16>() {
-                    Ok(value)   => ("HResultError", format!("{}", u32::from(value)+0x88760000)),
+                    Ok(value)   => ("HResultError", u32::from(value)+0x88760000),
                     Err(_) => {
                         mmrbi::error!(at: &header.path, line: line.no(), "unexpected value for {}", error);
                         continue
@@ -457,7 +471,7 @@ pub(crate) fn d3d<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) {
                 }
             } else if let Some(value) = value.strip_prefix_suffix("MAKE_HRESULT( 1, _FACD3DXF, ", " )") {
                 match value.parse::<u16>() {
-                    Ok(value)   => ("HResultError", format!("{}", u32::from(value)+0x88760000)),
+                    Ok(value)   => ("HResultError", u32::from(value)+0x88760000),
                     Err(_) => {
                         mmrbi::error!(at: &header.path, line: line.no(), "unexpected value for {}", error);
                         continue
@@ -473,7 +487,7 @@ pub(crate) fn d3d<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) {
                 rs_mod:     prefix,
                 rs_id:      err.into(),
                 rs_ty:      ty.into(),
-                rs_value:   value.into(),
+                rs_value,
                 docs:       Default::default(),
                 redundant:  false,
                 hide:       false,
@@ -518,12 +532,17 @@ pub(crate) fn ntstatus_h<'s: 'c, 'c>(header: &'s Header, codes: &mut Codes<'c>) 
                 }
             })).collect();
 
+            let rs_value = if let Some(v) = value.try_parse_u32() { v } else {
+                mmrbi::error!(at: &header.path, line: line.no(), "unexpected value for {}", error);
+                continue
+            };
+
             codes.push(Code {
                 cpp:        error,
                 rs_mod:     prefix,
                 rs_id:      err.into(),
                 rs_ty:      "NtStatus".into(),
-                rs_value:   value.into(),
+                rs_value,
                 docs,
                 redundant:  (value == "0x00000000") || error == "STATUS_ABANDONED_WAIT_0",
                 hide:       false,

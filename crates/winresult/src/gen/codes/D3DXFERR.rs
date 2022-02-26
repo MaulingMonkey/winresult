@@ -2,21 +2,21 @@
 
 use super::*;
 
-pub const BADOBJECT : HResultError = HResultError::from_constant(2289435524); // D3DXFERR_BADOBJECT
-pub const BADVALUE : HResultError = HResultError::from_constant(2289435525); // D3DXFERR_BADVALUE
-pub const BADTYPE : HResultError = HResultError::from_constant(2289435526); // D3DXFERR_BADTYPE
-pub const NOTFOUND : HResultError = HResultError::from_constant(2289435527); // D3DXFERR_NOTFOUND
-pub const NOTDONEYET : HResultError = HResultError::from_constant(2289435528); // D3DXFERR_NOTDONEYET
-pub const FILENOTFOUND : HResultError = HResultError::from_constant(2289435529); // D3DXFERR_FILENOTFOUND
-pub const RESOURCENOTFOUND : HResultError = HResultError::from_constant(2289435530); // D3DXFERR_RESOURCENOTFOUND
-pub const BADRESOURCE : HResultError = HResultError::from_constant(2289435531); // D3DXFERR_BADRESOURCE
-pub const BADFILETYPE : HResultError = HResultError::from_constant(2289435532); // D3DXFERR_BADFILETYPE
-pub const BADFILEVERSION : HResultError = HResultError::from_constant(2289435533); // D3DXFERR_BADFILEVERSION
-pub const BADFILEFLOATSIZE : HResultError = HResultError::from_constant(2289435534); // D3DXFERR_BADFILEFLOATSIZE
-pub const BADFILE : HResultError = HResultError::from_constant(2289435535); // D3DXFERR_BADFILE
-pub const PARSEERROR : HResultError = HResultError::from_constant(2289435536); // D3DXFERR_PARSEERROR
-pub const BADARRAYSIZE : HResultError = HResultError::from_constant(2289435537); // D3DXFERR_BADARRAYSIZE
-pub const BADDATAREFERENCE : HResultError = HResultError::from_constant(2289435538); // D3DXFERR_BADDATAREFERENCE
-pub const NOMOREOBJECTS : HResultError = HResultError::from_constant(2289435539); // D3DXFERR_NOMOREOBJECTS
-pub const NOMOREDATA : HResultError = HResultError::from_constant(2289435540); // D3DXFERR_NOMOREDATA
-pub const BADCACHEFILE : HResultError = HResultError::from_constant(2289435541); // D3DXFERR_BADCACHEFILE
+pub const BADOBJECT : HResultError = HResultError::from_constant(0x88760384); // D3DXFERR_BADOBJECT
+pub const BADVALUE : HResultError = HResultError::from_constant(0x88760385); // D3DXFERR_BADVALUE
+pub const BADTYPE : HResultError = HResultError::from_constant(0x88760386); // D3DXFERR_BADTYPE
+pub const NOTFOUND : HResultError = HResultError::from_constant(0x88760387); // D3DXFERR_NOTFOUND
+pub const NOTDONEYET : HResultError = HResultError::from_constant(0x88760388); // D3DXFERR_NOTDONEYET
+pub const FILENOTFOUND : HResultError = HResultError::from_constant(0x88760389); // D3DXFERR_FILENOTFOUND
+pub const RESOURCENOTFOUND : HResultError = HResultError::from_constant(0x8876038A); // D3DXFERR_RESOURCENOTFOUND
+pub const BADRESOURCE : HResultError = HResultError::from_constant(0x8876038B); // D3DXFERR_BADRESOURCE
+pub const BADFILETYPE : HResultError = HResultError::from_constant(0x8876038C); // D3DXFERR_BADFILETYPE
+pub const BADFILEVERSION : HResultError = HResultError::from_constant(0x8876038D); // D3DXFERR_BADFILEVERSION
+pub const BADFILEFLOATSIZE : HResultError = HResultError::from_constant(0x8876038E); // D3DXFERR_BADFILEFLOATSIZE
+pub const BADFILE : HResultError = HResultError::from_constant(0x8876038F); // D3DXFERR_BADFILE
+pub const PARSEERROR : HResultError = HResultError::from_constant(0x88760390); // D3DXFERR_PARSEERROR
+pub const BADARRAYSIZE : HResultError = HResultError::from_constant(0x88760391); // D3DXFERR_BADARRAYSIZE
+pub const BADDATAREFERENCE : HResultError = HResultError::from_constant(0x88760392); // D3DXFERR_BADDATAREFERENCE
+pub const NOMOREOBJECTS : HResultError = HResultError::from_constant(0x88760393); // D3DXFERR_NOMOREOBJECTS
+pub const NOMOREDATA : HResultError = HResultError::from_constant(0x88760394); // D3DXFERR_NOMOREDATA
+pub const BADCACHEFILE : HResultError = HResultError::from_constant(0x88760395); // D3DXFERR_BADCACHEFILE

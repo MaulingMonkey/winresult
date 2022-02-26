@@ -2050,10 +2050,10 @@
         <DisplayString Condition="__0 == 15817">ERROR::STATE_SETTING_NAME_SIZE_LIMIT_EXCEEDED</DisplayString>
         <DisplayString Condition="__0 == 15818">ERROR::STATE_CONTAINER_NAME_SIZE_LIMIT_EXCEEDED</DisplayString>
         <DisplayString Condition="__0 == 15841">ERROR::API_UNAVAILABLE</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E39">ERROR::EXTEND_TOO_SMALL</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E56">ERROR::MSCOPE_RANGE_TOO_SMALL</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E90">ERROR::SCOPE_RANGE_POLICY_RANGE_CONFLICT</DisplayString>
-        <DisplayString Condition="__0 == 0x00004EAB">ERROR::LAST_DHCP_SERVER_ERROR</DisplayString>
+        <DisplayString Condition="__0 == 20025">ERROR::EXTEND_TOO_SMALL</DisplayString>
+        <DisplayString Condition="__0 == 20054">ERROR::MSCOPE_RANGE_TOO_SMALL</DisplayString>
+        <DisplayString Condition="__0 == 20112">ERROR::SCOPE_RANGE_POLICY_RANGE_CONFLICT</DisplayString>
+        <DisplayString Condition="__0 == 20139">ERROR::LAST_DHCP_SERVER_ERROR</DisplayString>
         <DisplayString Condition="__0 == 900">ERROR::ROUTER_STOPPED</DisplayString>
         <DisplayString Condition="__0 == 901">ERROR::ALREADY_CONNECTED</DisplayString>
         <DisplayString Condition="__0 == 902">ERROR::UNKNOWN_PROTOCOL_ID</DisplayString>
@@ -2284,119 +2284,119 @@
         <DisplayString Condition="__0 == 697">ERROR::DBG::COMMAND_EXCEPTION</DisplayString>
         <DisplayString Condition="__0 == 766">ERROR::DBG::EXCEPTION_HANDLED</DisplayString>
         <DisplayString Condition="__0 == 767">ERROR::DBG::CONTINUE</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E66">ERROR::DDS::NO_DS_AVAILABLE</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E67">ERROR::DDS::NO_DHCP_ROOT</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E68">ERROR::DDS::UNEXPECTED_ERROR</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E69">ERROR::DDS::TOO_MANY_ERRORS</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E6A">ERROR::DDS::DHCP_SERVER_NOT_FOUND</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E6B">ERROR::DDS::OPTION_ALREADY_EXISTS</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E6C">ERROR::DDS::OPTION_DOES_NOT_EXIST</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E6D">ERROR::DDS::CLASS_EXISTS</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E6E">ERROR::DDS::CLASS_DOES_NOT_EXIST</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E6F">ERROR::DDS::SERVER_ALREADY_EXISTS</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E70">ERROR::DDS::SERVER_DOES_NOT_EXIST</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E71">ERROR::DDS::SERVER_ADDRESS_MISMATCH</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E72">ERROR::DDS::SUBNET_EXISTS</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E73">ERROR::DDS::SUBNET_HAS_DIFF_SSCOPE</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E74">ERROR::DDS::SUBNET_NOT_PRESENT</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E75">ERROR::DDS::RESERVATION_NOT_PRESENT</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E76">ERROR::DDS::RESERVATION_CONFLICT</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E77">ERROR::DDS::POSSIBLE_RANGE_CONFLICT</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E78">ERROR::DDS::RANGE_DOES_NOT_EXIST</DisplayString>
+        <DisplayString Condition="__0 == 20070">ERROR::DDS::NO_DS_AVAILABLE</DisplayString>
+        <DisplayString Condition="__0 == 20071">ERROR::DDS::NO_DHCP_ROOT</DisplayString>
+        <DisplayString Condition="__0 == 20072">ERROR::DDS::UNEXPECTED_ERROR</DisplayString>
+        <DisplayString Condition="__0 == 20073">ERROR::DDS::TOO_MANY_ERRORS</DisplayString>
+        <DisplayString Condition="__0 == 20074">ERROR::DDS::DHCP_SERVER_NOT_FOUND</DisplayString>
+        <DisplayString Condition="__0 == 20075">ERROR::DDS::OPTION_ALREADY_EXISTS</DisplayString>
+        <DisplayString Condition="__0 == 20076">ERROR::DDS::OPTION_DOES_NOT_EXIST</DisplayString>
+        <DisplayString Condition="__0 == 20077">ERROR::DDS::CLASS_EXISTS</DisplayString>
+        <DisplayString Condition="__0 == 20078">ERROR::DDS::CLASS_DOES_NOT_EXIST</DisplayString>
+        <DisplayString Condition="__0 == 20079">ERROR::DDS::SERVER_ALREADY_EXISTS</DisplayString>
+        <DisplayString Condition="__0 == 20080">ERROR::DDS::SERVER_DOES_NOT_EXIST</DisplayString>
+        <DisplayString Condition="__0 == 20081">ERROR::DDS::SERVER_ADDRESS_MISMATCH</DisplayString>
+        <DisplayString Condition="__0 == 20082">ERROR::DDS::SUBNET_EXISTS</DisplayString>
+        <DisplayString Condition="__0 == 20083">ERROR::DDS::SUBNET_HAS_DIFF_SSCOPE</DisplayString>
+        <DisplayString Condition="__0 == 20084">ERROR::DDS::SUBNET_NOT_PRESENT</DisplayString>
+        <DisplayString Condition="__0 == 20085">ERROR::DDS::RESERVATION_NOT_PRESENT</DisplayString>
+        <DisplayString Condition="__0 == 20086">ERROR::DDS::RESERVATION_CONFLICT</DisplayString>
+        <DisplayString Condition="__0 == 20087">ERROR::DDS::POSSIBLE_RANGE_CONFLICT</DisplayString>
+        <DisplayString Condition="__0 == 20088">ERROR::DDS::RANGE_DOES_NOT_EXIST</DisplayString>
         <DisplayString Condition="__0 == 4100">ERROR::DHCP::ADDRESS_CONFLICT</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E20">ERROR::DHCP::REGISTRY_INIT_FAILED</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E21">ERROR::DHCP::DATABASE_INIT_FAILED</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E22">ERROR::DHCP::RPC_INIT_FAILED</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E23">ERROR::DHCP::NETWORK_INIT_FAILED</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E24">ERROR::DHCP::SUBNET_EXITS</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E25">ERROR::DHCP::SUBNET_NOT_PRESENT</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E26">ERROR::DHCP::PRIMARY_NOT_FOUND</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E27">ERROR::DHCP::ELEMENT_CANT_REMOVE</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E29">ERROR::DHCP::OPTION_EXITS</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E2A">ERROR::DHCP::OPTION_NOT_PRESENT</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E2B">ERROR::DHCP::ADDRESS_NOT_AVAILABLE</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E2C">ERROR::DHCP::RANGE_FULL</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E2D">ERROR::DHCP::JET_ERROR</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E2E">ERROR::DHCP::CLIENT_EXISTS</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E2F">ERROR::DHCP::INVALID_DHCP_MESSAGE</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E30">ERROR::DHCP::INVALID_DHCP_CLIENT</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E31">ERROR::DHCP::SERVICE_PAUSED</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E32">ERROR::DHCP::NOT_RESERVED_CLIENT</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E33">ERROR::DHCP::RESERVED_CLIENT</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E34">ERROR::DHCP::RANGE_TOO_SMALL</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E35">ERROR::DHCP::IPRANGE_EXITS</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E36">ERROR::DHCP::RESERVEDIP_EXITS</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E37">ERROR::DHCP::INVALID_RANGE</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E38">ERROR::DHCP::RANGE_EXTENDED</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E3B">ERROR::DHCP::JET_CONV_REQUIRED</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E3E">ERROR::DHCP::SUPER_SCOPE_NAME_TOO_LONG</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E40">ERROR::DHCP::IP_ADDRESS_IN_USE</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E41">ERROR::DHCP::LOG_FILE_PATH_TOO_LONG</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E42">ERROR::DHCP::UNSUPPORTED_CLIENT</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E44">ERROR::DHCP::JET97_CONV_REQUIRED</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E45">ERROR::DHCP::ROGUE_INIT_FAILED</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E46">ERROR::DHCP::ROGUE_SAMSHUTDOWN</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E47">ERROR::DHCP::ROGUE_NOT_AUTHORIZED</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E48">ERROR::DHCP::ROGUE_DS_UNREACHABLE</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E49">ERROR::DHCP::ROGUE_DS_CONFLICT</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E4A">ERROR::DHCP::ROGUE_NOT_OUR_ENTERPRISE</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E4B">ERROR::DHCP::ROGUE_STANDALONE_IN_DS</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E4C">ERROR::DHCP::CLASS_NOT_FOUND</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E4D">ERROR::DHCP::CLASS_ALREADY_EXISTS</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E4E">ERROR::DHCP::SCOPE_NAME_TOO_LONG</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E4F">ERROR::DHCP::DEFAULT_SCOPE_EXITS</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E50">ERROR::DHCP::CANT_CHANGE_ATTRIBUTE</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E51">ERROR::DHCP::IPRANGE_CONV_ILLEGAL</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E52">ERROR::DHCP::NETWORK_CHANGED</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E53">ERROR::DHCP::CANNOT_MODIFY_BINDINGS</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E54">ERROR::DHCP::SUBNET_EXISTS</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E55">ERROR::DHCP::MSCOPE_EXISTS</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E57">ERROR::DHCP::EXEMPTION_EXISTS</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E58">ERROR::DHCP::EXEMPTION_NOT_PRESENT</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E59">ERROR::DHCP::INVALID_PARAMETER_OPTION32</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E79">ERROR::DHCP::DELETE_BUILTIN_CLASS</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E7B">ERROR::DHCP::INVALID_SUBNET_PREFIX</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E7C">ERROR::DHCP::INVALID_DELAY</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E7D">ERROR::DHCP::LINKLAYER_ADDRESS_EXISTS</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E7E">ERROR::DHCP::LINKLAYER_ADDRESS_RESERVATION_EXISTS</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E7F">ERROR::DHCP::LINKLAYER_ADDRESS_DOES_NOT_EXIST</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E85">ERROR::DHCP::HARDWARE_ADDRESS_TYPE_ALREADY_EXEMPT</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E86">ERROR::DHCP::UNDEFINED_HARDWARE_ADDRESS_TYPE</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E87">ERROR::DHCP::OPTION_TYPE_MISMATCH</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E88">ERROR::DHCP::POLICY_BAD_PARENT_EXPR</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E89">ERROR::DHCP::POLICY_EXISTS</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E8A">ERROR::DHCP::POLICY_RANGE_EXISTS</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E8B">ERROR::DHCP::POLICY_RANGE_BAD</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E8C">ERROR::DHCP::RANGE_INVALID_IN_SERVER_POLICY</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E8D">ERROR::DHCP::INVALID_POLICY_EXPRESSION</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E8E">ERROR::DHCP::INVALID_PROCESSING_ORDER</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E8F">ERROR::DHCP::POLICY_NOT_FOUND</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E91">ERROR::DHCP::FO_SCOPE_ALREADY_IN_RELATIONSHIP</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E92">ERROR::DHCP::FO_RELATIONSHIP_EXISTS</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E93">ERROR::DHCP::FO_RELATIONSHIP_DOES_NOT_EXIST</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E94">ERROR::DHCP::FO_SCOPE_NOT_IN_RELATIONSHIP</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E95">ERROR::DHCP::FO_RELATION_IS_SECONDARY</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E96">ERROR::DHCP::FO_NOT_SUPPORTED</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E97">ERROR::DHCP::FO_TIME_OUT_OF_SYNC</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E98">ERROR::DHCP::FO_STATE_NOT_NORMAL</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E99">ERROR::DHCP::NO_ADMIN_PERMISSION</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E9A">ERROR::DHCP::SERVER_NOT_REACHABLE</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E9B">ERROR::DHCP::SERVER_NOT_RUNNING</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E9C">ERROR::DHCP::SERVER_NAME_NOT_RESOLVED</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E9D">ERROR::DHCP::FO_RELATIONSHIP_NAME_TOO_LONG</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E9E">ERROR::DHCP::REACHED_END_OF_SELECTION</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E9F">ERROR::DHCP::FO_ADDSCOPE_LEASES_NOT_SYNCED</DisplayString>
-        <DisplayString Condition="__0 == 0x00004EA0">ERROR::DHCP::FO_MAX_RELATIONSHIPS</DisplayString>
-        <DisplayString Condition="__0 == 0x00004EA1">ERROR::DHCP::FO_IPRANGE_TYPE_CONV_ILLEGAL</DisplayString>
-        <DisplayString Condition="__0 == 0x00004EA2">ERROR::DHCP::FO_MAX_ADD_SCOPES</DisplayString>
-        <DisplayString Condition="__0 == 0x00004EA3">ERROR::DHCP::FO_BOOT_NOT_SUPPORTED</DisplayString>
-        <DisplayString Condition="__0 == 0x00004EA4">ERROR::DHCP::FO_RANGE_PART_OF_REL</DisplayString>
-        <DisplayString Condition="__0 == 0x00004EA5">ERROR::DHCP::FO_SCOPE_SYNC_IN_PROGRESS</DisplayString>
-        <DisplayString Condition="__0 == 0x00004EA6">ERROR::DHCP::FO_FEATURE_NOT_SUPPORTED</DisplayString>
-        <DisplayString Condition="__0 == 0x00004EA7">ERROR::DHCP::POLICY_FQDN_RANGE_UNSUPPORTED</DisplayString>
-        <DisplayString Condition="__0 == 0x00004EA8">ERROR::DHCP::POLICY_FQDN_OPTION_UNSUPPORTED</DisplayString>
-        <DisplayString Condition="__0 == 0x00004EA9">ERROR::DHCP::POLICY_EDIT_FQDN_UNSUPPORTED</DisplayString>
-        <DisplayString Condition="__0 == 0x00004EAA">ERROR::DHCP::NAP_NOT_SUPPORTED</DisplayString>
+        <DisplayString Condition="__0 == 20000">ERROR::DHCP::REGISTRY_INIT_FAILED</DisplayString>
+        <DisplayString Condition="__0 == 20001">ERROR::DHCP::DATABASE_INIT_FAILED</DisplayString>
+        <DisplayString Condition="__0 == 20002">ERROR::DHCP::RPC_INIT_FAILED</DisplayString>
+        <DisplayString Condition="__0 == 20003">ERROR::DHCP::NETWORK_INIT_FAILED</DisplayString>
+        <DisplayString Condition="__0 == 20004">ERROR::DHCP::SUBNET_EXITS</DisplayString>
+        <DisplayString Condition="__0 == 20005">ERROR::DHCP::SUBNET_NOT_PRESENT</DisplayString>
+        <DisplayString Condition="__0 == 20006">ERROR::DHCP::PRIMARY_NOT_FOUND</DisplayString>
+        <DisplayString Condition="__0 == 20007">ERROR::DHCP::ELEMENT_CANT_REMOVE</DisplayString>
+        <DisplayString Condition="__0 == 20009">ERROR::DHCP::OPTION_EXITS</DisplayString>
+        <DisplayString Condition="__0 == 20010">ERROR::DHCP::OPTION_NOT_PRESENT</DisplayString>
+        <DisplayString Condition="__0 == 20011">ERROR::DHCP::ADDRESS_NOT_AVAILABLE</DisplayString>
+        <DisplayString Condition="__0 == 20012">ERROR::DHCP::RANGE_FULL</DisplayString>
+        <DisplayString Condition="__0 == 20013">ERROR::DHCP::JET_ERROR</DisplayString>
+        <DisplayString Condition="__0 == 20014">ERROR::DHCP::CLIENT_EXISTS</DisplayString>
+        <DisplayString Condition="__0 == 20015">ERROR::DHCP::INVALID_DHCP_MESSAGE</DisplayString>
+        <DisplayString Condition="__0 == 20016">ERROR::DHCP::INVALID_DHCP_CLIENT</DisplayString>
+        <DisplayString Condition="__0 == 20017">ERROR::DHCP::SERVICE_PAUSED</DisplayString>
+        <DisplayString Condition="__0 == 20018">ERROR::DHCP::NOT_RESERVED_CLIENT</DisplayString>
+        <DisplayString Condition="__0 == 20019">ERROR::DHCP::RESERVED_CLIENT</DisplayString>
+        <DisplayString Condition="__0 == 20020">ERROR::DHCP::RANGE_TOO_SMALL</DisplayString>
+        <DisplayString Condition="__0 == 20021">ERROR::DHCP::IPRANGE_EXITS</DisplayString>
+        <DisplayString Condition="__0 == 20022">ERROR::DHCP::RESERVEDIP_EXITS</DisplayString>
+        <DisplayString Condition="__0 == 20023">ERROR::DHCP::INVALID_RANGE</DisplayString>
+        <DisplayString Condition="__0 == 20024">ERROR::DHCP::RANGE_EXTENDED</DisplayString>
+        <DisplayString Condition="__0 == 20027">ERROR::DHCP::JET_CONV_REQUIRED</DisplayString>
+        <DisplayString Condition="__0 == 20030">ERROR::DHCP::SUPER_SCOPE_NAME_TOO_LONG</DisplayString>
+        <DisplayString Condition="__0 == 20032">ERROR::DHCP::IP_ADDRESS_IN_USE</DisplayString>
+        <DisplayString Condition="__0 == 20033">ERROR::DHCP::LOG_FILE_PATH_TOO_LONG</DisplayString>
+        <DisplayString Condition="__0 == 20034">ERROR::DHCP::UNSUPPORTED_CLIENT</DisplayString>
+        <DisplayString Condition="__0 == 20036">ERROR::DHCP::JET97_CONV_REQUIRED</DisplayString>
+        <DisplayString Condition="__0 == 20037">ERROR::DHCP::ROGUE_INIT_FAILED</DisplayString>
+        <DisplayString Condition="__0 == 20038">ERROR::DHCP::ROGUE_SAMSHUTDOWN</DisplayString>
+        <DisplayString Condition="__0 == 20039">ERROR::DHCP::ROGUE_NOT_AUTHORIZED</DisplayString>
+        <DisplayString Condition="__0 == 20040">ERROR::DHCP::ROGUE_DS_UNREACHABLE</DisplayString>
+        <DisplayString Condition="__0 == 20041">ERROR::DHCP::ROGUE_DS_CONFLICT</DisplayString>
+        <DisplayString Condition="__0 == 20042">ERROR::DHCP::ROGUE_NOT_OUR_ENTERPRISE</DisplayString>
+        <DisplayString Condition="__0 == 20043">ERROR::DHCP::ROGUE_STANDALONE_IN_DS</DisplayString>
+        <DisplayString Condition="__0 == 20044">ERROR::DHCP::CLASS_NOT_FOUND</DisplayString>
+        <DisplayString Condition="__0 == 20045">ERROR::DHCP::CLASS_ALREADY_EXISTS</DisplayString>
+        <DisplayString Condition="__0 == 20046">ERROR::DHCP::SCOPE_NAME_TOO_LONG</DisplayString>
+        <DisplayString Condition="__0 == 20047">ERROR::DHCP::DEFAULT_SCOPE_EXITS</DisplayString>
+        <DisplayString Condition="__0 == 20048">ERROR::DHCP::CANT_CHANGE_ATTRIBUTE</DisplayString>
+        <DisplayString Condition="__0 == 20049">ERROR::DHCP::IPRANGE_CONV_ILLEGAL</DisplayString>
+        <DisplayString Condition="__0 == 20050">ERROR::DHCP::NETWORK_CHANGED</DisplayString>
+        <DisplayString Condition="__0 == 20051">ERROR::DHCP::CANNOT_MODIFY_BINDINGS</DisplayString>
+        <DisplayString Condition="__0 == 20052">ERROR::DHCP::SUBNET_EXISTS</DisplayString>
+        <DisplayString Condition="__0 == 20053">ERROR::DHCP::MSCOPE_EXISTS</DisplayString>
+        <DisplayString Condition="__0 == 20055">ERROR::DHCP::EXEMPTION_EXISTS</DisplayString>
+        <DisplayString Condition="__0 == 20056">ERROR::DHCP::EXEMPTION_NOT_PRESENT</DisplayString>
+        <DisplayString Condition="__0 == 20057">ERROR::DHCP::INVALID_PARAMETER_OPTION32</DisplayString>
+        <DisplayString Condition="__0 == 20089">ERROR::DHCP::DELETE_BUILTIN_CLASS</DisplayString>
+        <DisplayString Condition="__0 == 20091">ERROR::DHCP::INVALID_SUBNET_PREFIX</DisplayString>
+        <DisplayString Condition="__0 == 20092">ERROR::DHCP::INVALID_DELAY</DisplayString>
+        <DisplayString Condition="__0 == 20093">ERROR::DHCP::LINKLAYER_ADDRESS_EXISTS</DisplayString>
+        <DisplayString Condition="__0 == 20094">ERROR::DHCP::LINKLAYER_ADDRESS_RESERVATION_EXISTS</DisplayString>
+        <DisplayString Condition="__0 == 20095">ERROR::DHCP::LINKLAYER_ADDRESS_DOES_NOT_EXIST</DisplayString>
+        <DisplayString Condition="__0 == 20101">ERROR::DHCP::HARDWARE_ADDRESS_TYPE_ALREADY_EXEMPT</DisplayString>
+        <DisplayString Condition="__0 == 20102">ERROR::DHCP::UNDEFINED_HARDWARE_ADDRESS_TYPE</DisplayString>
+        <DisplayString Condition="__0 == 20103">ERROR::DHCP::OPTION_TYPE_MISMATCH</DisplayString>
+        <DisplayString Condition="__0 == 20104">ERROR::DHCP::POLICY_BAD_PARENT_EXPR</DisplayString>
+        <DisplayString Condition="__0 == 20105">ERROR::DHCP::POLICY_EXISTS</DisplayString>
+        <DisplayString Condition="__0 == 20106">ERROR::DHCP::POLICY_RANGE_EXISTS</DisplayString>
+        <DisplayString Condition="__0 == 20107">ERROR::DHCP::POLICY_RANGE_BAD</DisplayString>
+        <DisplayString Condition="__0 == 20108">ERROR::DHCP::RANGE_INVALID_IN_SERVER_POLICY</DisplayString>
+        <DisplayString Condition="__0 == 20109">ERROR::DHCP::INVALID_POLICY_EXPRESSION</DisplayString>
+        <DisplayString Condition="__0 == 20110">ERROR::DHCP::INVALID_PROCESSING_ORDER</DisplayString>
+        <DisplayString Condition="__0 == 20111">ERROR::DHCP::POLICY_NOT_FOUND</DisplayString>
+        <DisplayString Condition="__0 == 20113">ERROR::DHCP::FO_SCOPE_ALREADY_IN_RELATIONSHIP</DisplayString>
+        <DisplayString Condition="__0 == 20114">ERROR::DHCP::FO_RELATIONSHIP_EXISTS</DisplayString>
+        <DisplayString Condition="__0 == 20115">ERROR::DHCP::FO_RELATIONSHIP_DOES_NOT_EXIST</DisplayString>
+        <DisplayString Condition="__0 == 20116">ERROR::DHCP::FO_SCOPE_NOT_IN_RELATIONSHIP</DisplayString>
+        <DisplayString Condition="__0 == 20117">ERROR::DHCP::FO_RELATION_IS_SECONDARY</DisplayString>
+        <DisplayString Condition="__0 == 20118">ERROR::DHCP::FO_NOT_SUPPORTED</DisplayString>
+        <DisplayString Condition="__0 == 20119">ERROR::DHCP::FO_TIME_OUT_OF_SYNC</DisplayString>
+        <DisplayString Condition="__0 == 20120">ERROR::DHCP::FO_STATE_NOT_NORMAL</DisplayString>
+        <DisplayString Condition="__0 == 20121">ERROR::DHCP::NO_ADMIN_PERMISSION</DisplayString>
+        <DisplayString Condition="__0 == 20122">ERROR::DHCP::SERVER_NOT_REACHABLE</DisplayString>
+        <DisplayString Condition="__0 == 20123">ERROR::DHCP::SERVER_NOT_RUNNING</DisplayString>
+        <DisplayString Condition="__0 == 20124">ERROR::DHCP::SERVER_NAME_NOT_RESOLVED</DisplayString>
+        <DisplayString Condition="__0 == 20125">ERROR::DHCP::FO_RELATIONSHIP_NAME_TOO_LONG</DisplayString>
+        <DisplayString Condition="__0 == 20126">ERROR::DHCP::REACHED_END_OF_SELECTION</DisplayString>
+        <DisplayString Condition="__0 == 20127">ERROR::DHCP::FO_ADDSCOPE_LEASES_NOT_SYNCED</DisplayString>
+        <DisplayString Condition="__0 == 20128">ERROR::DHCP::FO_MAX_RELATIONSHIPS</DisplayString>
+        <DisplayString Condition="__0 == 20129">ERROR::DHCP::FO_IPRANGE_TYPE_CONV_ILLEGAL</DisplayString>
+        <DisplayString Condition="__0 == 20130">ERROR::DHCP::FO_MAX_ADD_SCOPES</DisplayString>
+        <DisplayString Condition="__0 == 20131">ERROR::DHCP::FO_BOOT_NOT_SUPPORTED</DisplayString>
+        <DisplayString Condition="__0 == 20132">ERROR::DHCP::FO_RANGE_PART_OF_REL</DisplayString>
+        <DisplayString Condition="__0 == 20133">ERROR::DHCP::FO_SCOPE_SYNC_IN_PROGRESS</DisplayString>
+        <DisplayString Condition="__0 == 20134">ERROR::DHCP::FO_FEATURE_NOT_SUPPORTED</DisplayString>
+        <DisplayString Condition="__0 == 20135">ERROR::DHCP::POLICY_FQDN_RANGE_UNSUPPORTED</DisplayString>
+        <DisplayString Condition="__0 == 20136">ERROR::DHCP::POLICY_FQDN_OPTION_UNSUPPORTED</DisplayString>
+        <DisplayString Condition="__0 == 20137">ERROR::DHCP::POLICY_EDIT_FQDN_UNSUPPORTED</DisplayString>
+        <DisplayString Condition="__0 == 20138">ERROR::DHCP::NAP_NOT_SUPPORTED</DisplayString>
         <DisplayString Condition="__0 == 643">ERROR::DS::VERSION_CHECK_FAILURE</DisplayString>
         <DisplayString Condition="__0 == 8200">ERROR::DS::NOT_INSTALLED</DisplayString>
         <DisplayString Condition="__0 == 8201">ERROR::DS::MEMBERSHIP_EVALUATED_LOCALLY</DisplayString>
@@ -3061,8 +3061,8 @@
         <DisplayString Condition="__0 == 1341">ERROR::SERVER::DISABLED</DisplayString>
         <DisplayString Condition="__0 == 1342">ERROR::SERVER::NOT_DISABLED</DisplayString>
         <DisplayString Condition="__0 == 1811">ERROR::SERVER::HAS_OPEN_HANDLES</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E3C">ERROR::SERVER::INVALID_BOOT_FILE_TABLE</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E3D">ERROR::SERVER::UNKNOWN_BOOT_FILE_NAME</DisplayString>
+        <DisplayString Condition="__0 == 20028">ERROR::SERVER::INVALID_BOOT_FILE_TABLE</DisplayString>
+        <DisplayString Condition="__0 == 20029">ERROR::SERVER::UNKNOWN_BOOT_FILE_NAME</DisplayString>
         <DisplayString Condition="__0 == 716">ERROR::SERVICE::NOTIFICATION</DisplayString>
         <DisplayString Condition="__0 == 1053">ERROR::SERVICE::REQUEST_TIMEOUT</DisplayString>
         <DisplayString Condition="__0 == 1054">ERROR::SERVICE::NO_THREAD</DisplayString>
@@ -7091,131 +7091,131 @@
         <DisplayString Condition="__0 == 0x887C0004">D3D11::ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD</DisplayString>
         <DisplayString Condition="__0 == 0x887E0001">D3D12::ERROR_ADAPTER_NOT_FOUND</DisplayString>
         <DisplayString Condition="__0 == 0x887E0002">D3D12::ERROR_DRIVER_VERSION_MISMATCH</DisplayString>
-        <DisplayString Condition="__0 == 2289436696">D3DERR::WRONGTEXTUREFORMAT</DisplayString>
-        <DisplayString Condition="__0 == 2289436697">D3DERR::UNSUPPORTEDCOLOROPERATION</DisplayString>
-        <DisplayString Condition="__0 == 2289436698">D3DERR::UNSUPPORTEDCOLORARG</DisplayString>
-        <DisplayString Condition="__0 == 2289436699">D3DERR::UNSUPPORTEDALPHAOPERATION</DisplayString>
-        <DisplayString Condition="__0 == 2289436700">D3DERR::UNSUPPORTEDALPHAARG</DisplayString>
-        <DisplayString Condition="__0 == 2289436701">D3DERR::TOOMANYOPERATIONS</DisplayString>
-        <DisplayString Condition="__0 == 2289436702">D3DERR::CONFLICTINGTEXTUREFILTER</DisplayString>
-        <DisplayString Condition="__0 == 2289436703">D3DERR::UNSUPPORTEDFACTORVALUE</DisplayString>
-        <DisplayString Condition="__0 == 2289436705">D3DERR::CONFLICTINGRENDERSTATE</DisplayString>
-        <DisplayString Condition="__0 == 2289436706">D3DERR::UNSUPPORTEDTEXTUREFILTER</DisplayString>
-        <DisplayString Condition="__0 == 2289436710">D3DERR::CONFLICTINGTEXTUREPALETTE</DisplayString>
-        <DisplayString Condition="__0 == 2289436711">D3DERR::DRIVERINTERNALERROR</DisplayString>
-        <DisplayString Condition="__0 == 2289436774">D3DERR::NOTFOUND</DisplayString>
-        <DisplayString Condition="__0 == 2289436775">D3DERR::MOREDATA</DisplayString>
-        <DisplayString Condition="__0 == 2289436776">D3DERR::DEVICELOST</DisplayString>
-        <DisplayString Condition="__0 == 2289436777">D3DERR::DEVICENOTRESET</DisplayString>
-        <DisplayString Condition="__0 == 2289436778">D3DERR::NOTAVAILABLE</DisplayString>
-        <DisplayString Condition="__0 == 2289435004">D3DERR::OUTOFVIDEOMEMORY</DisplayString>
-        <DisplayString Condition="__0 == 2289436779">D3DERR::INVALIDDEVICE</DisplayString>
-        <DisplayString Condition="__0 == 2289436780">D3DERR::INVALIDCALL</DisplayString>
-        <DisplayString Condition="__0 == 2289436781">D3DERR::DRIVERINVALIDCALL</DisplayString>
-        <DisplayString Condition="__0 == 2289435164">D3DERR::WASSTILLDRAWING</DisplayString>
-        <DisplayString Condition="__0 == 2289436784">D3DERR::DEVICEREMOVED</DisplayString>
-        <DisplayString Condition="__0 == 2289436788">D3DERR::DEVICEHUNG</DisplayString>
-        <DisplayString Condition="__0 == 2289436795">D3DERR::UNSUPPORTEDOVERLAY</DisplayString>
-        <DisplayString Condition="__0 == 2289436796">D3DERR::UNSUPPORTEDOVERLAYFORMAT</DisplayString>
-        <DisplayString Condition="__0 == 2289436797">D3DERR::CANNOTPROTECTCONTENT</DisplayString>
-        <DisplayString Condition="__0 == 2289436798">D3DERR::UNSUPPORTEDCRYPTO</DisplayString>
-        <DisplayString Condition="__0 == 2289436804">D3DERR::PRESENT_STATISTICS_DISJOINT</DisplayString>
-        <DisplayString Condition="__0 == 2289435324">D3DERR::BADMAJORVERSION</DisplayString>
-        <DisplayString Condition="__0 == 2289435325">D3DERR::BADMINORVERSION</DisplayString>
-        <DisplayString Condition="__0 == 2289435329">D3DERR::INVALID_DEVICE</DisplayString>
-        <DisplayString Condition="__0 == 2289435330">D3DERR::INITFAILED</DisplayString>
-        <DisplayString Condition="__0 == 2289435331">D3DERR::DEVICEAGGREGATED</DisplayString>
-        <DisplayString Condition="__0 == 2289435334">D3DERR::EXECUTE_CREATE_FAILED</DisplayString>
-        <DisplayString Condition="__0 == 2289435335">D3DERR::EXECUTE_DESTROY_FAILED</DisplayString>
-        <DisplayString Condition="__0 == 2289435336">D3DERR::EXECUTE_LOCK_FAILED</DisplayString>
-        <DisplayString Condition="__0 == 2289435337">D3DERR::EXECUTE_UNLOCK_FAILED</DisplayString>
-        <DisplayString Condition="__0 == 2289435338">D3DERR::EXECUTE_LOCKED</DisplayString>
-        <DisplayString Condition="__0 == 2289435339">D3DERR::EXECUTE_NOT_LOCKED</DisplayString>
-        <DisplayString Condition="__0 == 2289435340">D3DERR::EXECUTE_FAILED</DisplayString>
-        <DisplayString Condition="__0 == 2289435341">D3DERR::EXECUTE_CLIPPED_FAILED</DisplayString>
-        <DisplayString Condition="__0 == 2289435344">D3DERR::TEXTURE_NO_SUPPORT</DisplayString>
-        <DisplayString Condition="__0 == 2289435345">D3DERR::TEXTURE_CREATE_FAILED</DisplayString>
-        <DisplayString Condition="__0 == 2289435346">D3DERR::TEXTURE_DESTROY_FAILED</DisplayString>
-        <DisplayString Condition="__0 == 2289435347">D3DERR::TEXTURE_LOCK_FAILED</DisplayString>
-        <DisplayString Condition="__0 == 2289435348">D3DERR::TEXTURE_UNLOCK_FAILED</DisplayString>
-        <DisplayString Condition="__0 == 2289435349">D3DERR::TEXTURE_LOAD_FAILED</DisplayString>
-        <DisplayString Condition="__0 == 2289435350">D3DERR::TEXTURE_SWAP_FAILED</DisplayString>
-        <DisplayString Condition="__0 == 2289435351">D3DERR::TEXTURE_LOCKED</DisplayString>
-        <DisplayString Condition="__0 == 2289435352">D3DERR::TEXTURE_NOT_LOCKED</DisplayString>
-        <DisplayString Condition="__0 == 2289435353">D3DERR::TEXTURE_GETSURF_FAILED</DisplayString>
-        <DisplayString Condition="__0 == 2289435354">D3DERR::MATRIX_CREATE_FAILED</DisplayString>
-        <DisplayString Condition="__0 == 2289435355">D3DERR::MATRIX_DESTROY_FAILED</DisplayString>
-        <DisplayString Condition="__0 == 2289435356">D3DERR::MATRIX_SETDATA_FAILED</DisplayString>
-        <DisplayString Condition="__0 == 2289435357">D3DERR::MATRIX_GETDATA_FAILED</DisplayString>
-        <DisplayString Condition="__0 == 2289435358">D3DERR::SETVIEWPORTDATA_FAILED</DisplayString>
-        <DisplayString Condition="__0 == 2289435359">D3DERR::INVALIDCURRENTVIEWPORT</DisplayString>
-        <DisplayString Condition="__0 == 2289435360">D3DERR::INVALIDPRIMITIVETYPE</DisplayString>
-        <DisplayString Condition="__0 == 2289435361">D3DERR::INVALIDVERTEXTYPE</DisplayString>
-        <DisplayString Condition="__0 == 2289435362">D3DERR::TEXTURE_BADSIZE</DisplayString>
-        <DisplayString Condition="__0 == 2289435363">D3DERR::INVALIDRAMPTEXTURE</DisplayString>
-        <DisplayString Condition="__0 == 2289435364">D3DERR::MATERIAL_CREATE_FAILED</DisplayString>
-        <DisplayString Condition="__0 == 2289435365">D3DERR::MATERIAL_DESTROY_FAILED</DisplayString>
-        <DisplayString Condition="__0 == 2289435366">D3DERR::MATERIAL_SETDATA_FAILED</DisplayString>
-        <DisplayString Condition="__0 == 2289435367">D3DERR::MATERIAL_GETDATA_FAILED</DisplayString>
-        <DisplayString Condition="__0 == 2289435368">D3DERR::INVALIDPALETTE</DisplayString>
-        <DisplayString Condition="__0 == 2289435369">D3DERR::ZBUFF_NEEDS_SYSTEMMEMORY</DisplayString>
-        <DisplayString Condition="__0 == 2289435370">D3DERR::ZBUFF_NEEDS_VIDEOMEMORY</DisplayString>
-        <DisplayString Condition="__0 == 2289435371">D3DERR::SURFACENOTINVIDMEM</DisplayString>
-        <DisplayString Condition="__0 == 2289435374">D3DERR::LIGHT_SET_FAILED</DisplayString>
-        <DisplayString Condition="__0 == 2289435375">D3DERR::LIGHTHASVIEWPORT</DisplayString>
-        <DisplayString Condition="__0 == 2289435376">D3DERR::LIGHTNOTINTHISVIEWPORT</DisplayString>
-        <DisplayString Condition="__0 == 2289435384">D3DERR::SCENE_IN_SCENE</DisplayString>
-        <DisplayString Condition="__0 == 2289435385">D3DERR::SCENE_NOT_IN_SCENE</DisplayString>
-        <DisplayString Condition="__0 == 2289435386">D3DERR::SCENE_BEGIN_FAILED</DisplayString>
-        <DisplayString Condition="__0 == 2289435387">D3DERR::SCENE_END_FAILED</DisplayString>
-        <DisplayString Condition="__0 == 2289435394">D3DERR::INBEGIN</DisplayString>
-        <DisplayString Condition="__0 == 2289435395">D3DERR::NOTINBEGIN</DisplayString>
-        <DisplayString Condition="__0 == 2289435396">D3DERR::NOVIEWPORTS</DisplayString>
-        <DisplayString Condition="__0 == 2289435397">D3DERR::VIEWPORTDATANOTSET</DisplayString>
-        <DisplayString Condition="__0 == 2289435398">D3DERR::VIEWPORTHASNODEVICE</DisplayString>
-        <DisplayString Condition="__0 == 2289435399">D3DERR::NOCURRENTVIEWPORT</DisplayString>
-        <DisplayString Condition="__0 == 2289436672">D3DERR::INVALIDVERTEXFORMAT</DisplayString>
-        <DisplayString Condition="__0 == 2289436674">D3DERR::COLORKEYATTACHED</DisplayString>
-        <DisplayString Condition="__0 == 2289436684">D3DERR::VERTEXBUFFEROPTIMIZED</DisplayString>
-        <DisplayString Condition="__0 == 2289436685">D3DERR::VBUF_CREATE_FAILED</DisplayString>
-        <DisplayString Condition="__0 == 2289436686">D3DERR::VERTEXBUFFERLOCKED</DisplayString>
-        <DisplayString Condition="__0 == 2289436687">D3DERR::VERTEXBUFFERUNLOCKFAILED</DisplayString>
-        <DisplayString Condition="__0 == 2289436694">D3DERR::ZBUFFER_NOTPRESENT</DisplayString>
-        <DisplayString Condition="__0 == 2289436695">D3DERR::STENCILBUFFER_NOTPRESENT</DisplayString>
-        <DisplayString Condition="__0 == 2289436707">D3DERR::TOOMANYPRIMITIVES</DisplayString>
-        <DisplayString Condition="__0 == 2289436708">D3DERR::INVALIDMATRIX</DisplayString>
-        <DisplayString Condition="__0 == 2289436709">D3DERR::TOOMANYVERTICES</DisplayString>
-        <DisplayString Condition="__0 == 2289436724">D3DERR::INVALIDSTATEBLOCK</DisplayString>
-        <DisplayString Condition="__0 == 2289436725">D3DERR::INBEGINSTATEBLOCK</DisplayString>
-        <DisplayString Condition="__0 == 2289436726">D3DERR::NOTINBEGINSTATEBLOCK</DisplayString>
-        <DisplayString Condition="__0 == 2289437624">D3DERR::COMMAND_UNPARSED</DisplayString>
-        <DisplayString Condition="__0 == 2289437524">D3DXERR::CANNOTMODIFYINDEXBUFFER</DisplayString>
-        <DisplayString Condition="__0 == 2289437525">D3DXERR::INVALIDMESH</DisplayString>
-        <DisplayString Condition="__0 == 2289437526">D3DXERR::CANNOTATTRSORT</DisplayString>
-        <DisplayString Condition="__0 == 2289437527">D3DXERR::SKINNINGNOTSUPPORTED</DisplayString>
-        <DisplayString Condition="__0 == 2289437528">D3DXERR::TOOMANYINFLUENCES</DisplayString>
-        <DisplayString Condition="__0 == 2289437529">D3DXERR::INVALIDDATA</DisplayString>
-        <DisplayString Condition="__0 == 2289437530">D3DXERR::LOADEDMESHASNODATA</DisplayString>
-        <DisplayString Condition="__0 == 2289437531">D3DXERR::DUPLICATENAMEDFRAGMENT</DisplayString>
-        <DisplayString Condition="__0 == 2289437532">D3DXERR::CANNOTREMOVELASTITEM</DisplayString>
-        <DisplayString Condition="__0 == 2289435524">D3DXFERR::BADOBJECT</DisplayString>
-        <DisplayString Condition="__0 == 2289435525">D3DXFERR::BADVALUE</DisplayString>
-        <DisplayString Condition="__0 == 2289435526">D3DXFERR::BADTYPE</DisplayString>
-        <DisplayString Condition="__0 == 2289435527">D3DXFERR::NOTFOUND</DisplayString>
-        <DisplayString Condition="__0 == 2289435528">D3DXFERR::NOTDONEYET</DisplayString>
-        <DisplayString Condition="__0 == 2289435529">D3DXFERR::FILENOTFOUND</DisplayString>
-        <DisplayString Condition="__0 == 2289435530">D3DXFERR::RESOURCENOTFOUND</DisplayString>
-        <DisplayString Condition="__0 == 2289435531">D3DXFERR::BADRESOURCE</DisplayString>
-        <DisplayString Condition="__0 == 2289435532">D3DXFERR::BADFILETYPE</DisplayString>
-        <DisplayString Condition="__0 == 2289435533">D3DXFERR::BADFILEVERSION</DisplayString>
-        <DisplayString Condition="__0 == 2289435534">D3DXFERR::BADFILEFLOATSIZE</DisplayString>
-        <DisplayString Condition="__0 == 2289435535">D3DXFERR::BADFILE</DisplayString>
-        <DisplayString Condition="__0 == 2289435536">D3DXFERR::PARSEERROR</DisplayString>
-        <DisplayString Condition="__0 == 2289435537">D3DXFERR::BADARRAYSIZE</DisplayString>
-        <DisplayString Condition="__0 == 2289435538">D3DXFERR::BADDATAREFERENCE</DisplayString>
-        <DisplayString Condition="__0 == 2289435539">D3DXFERR::NOMOREOBJECTS</DisplayString>
-        <DisplayString Condition="__0 == 2289435540">D3DXFERR::NOMOREDATA</DisplayString>
-        <DisplayString Condition="__0 == 2289435541">D3DXFERR::BADCACHEFILE</DisplayString>
+        <DisplayString Condition="__0 == 0x88760818">D3DERR::WRONGTEXTUREFORMAT</DisplayString>
+        <DisplayString Condition="__0 == 0x88760819">D3DERR::UNSUPPORTEDCOLOROPERATION</DisplayString>
+        <DisplayString Condition="__0 == 0x8876081A">D3DERR::UNSUPPORTEDCOLORARG</DisplayString>
+        <DisplayString Condition="__0 == 0x8876081B">D3DERR::UNSUPPORTEDALPHAOPERATION</DisplayString>
+        <DisplayString Condition="__0 == 0x8876081C">D3DERR::UNSUPPORTEDALPHAARG</DisplayString>
+        <DisplayString Condition="__0 == 0x8876081D">D3DERR::TOOMANYOPERATIONS</DisplayString>
+        <DisplayString Condition="__0 == 0x8876081E">D3DERR::CONFLICTINGTEXTUREFILTER</DisplayString>
+        <DisplayString Condition="__0 == 0x8876081F">D3DERR::UNSUPPORTEDFACTORVALUE</DisplayString>
+        <DisplayString Condition="__0 == 0x88760821">D3DERR::CONFLICTINGRENDERSTATE</DisplayString>
+        <DisplayString Condition="__0 == 0x88760822">D3DERR::UNSUPPORTEDTEXTUREFILTER</DisplayString>
+        <DisplayString Condition="__0 == 0x88760826">D3DERR::CONFLICTINGTEXTUREPALETTE</DisplayString>
+        <DisplayString Condition="__0 == 0x88760827">D3DERR::DRIVERINTERNALERROR</DisplayString>
+        <DisplayString Condition="__0 == 0x88760866">D3DERR::NOTFOUND</DisplayString>
+        <DisplayString Condition="__0 == 0x88760867">D3DERR::MOREDATA</DisplayString>
+        <DisplayString Condition="__0 == 0x88760868">D3DERR::DEVICELOST</DisplayString>
+        <DisplayString Condition="__0 == 0x88760869">D3DERR::DEVICENOTRESET</DisplayString>
+        <DisplayString Condition="__0 == 0x8876086A">D3DERR::NOTAVAILABLE</DisplayString>
+        <DisplayString Condition="__0 == 0x8876017C">D3DERR::OUTOFVIDEOMEMORY</DisplayString>
+        <DisplayString Condition="__0 == 0x8876086B">D3DERR::INVALIDDEVICE</DisplayString>
+        <DisplayString Condition="__0 == 0x8876086C">D3DERR::INVALIDCALL</DisplayString>
+        <DisplayString Condition="__0 == 0x8876086D">D3DERR::DRIVERINVALIDCALL</DisplayString>
+        <DisplayString Condition="__0 == 0x8876021C">D3DERR::WASSTILLDRAWING</DisplayString>
+        <DisplayString Condition="__0 == 0x88760870">D3DERR::DEVICEREMOVED</DisplayString>
+        <DisplayString Condition="__0 == 0x88760874">D3DERR::DEVICEHUNG</DisplayString>
+        <DisplayString Condition="__0 == 0x8876087B">D3DERR::UNSUPPORTEDOVERLAY</DisplayString>
+        <DisplayString Condition="__0 == 0x8876087C">D3DERR::UNSUPPORTEDOVERLAYFORMAT</DisplayString>
+        <DisplayString Condition="__0 == 0x8876087D">D3DERR::CANNOTPROTECTCONTENT</DisplayString>
+        <DisplayString Condition="__0 == 0x8876087E">D3DERR::UNSUPPORTEDCRYPTO</DisplayString>
+        <DisplayString Condition="__0 == 0x88760884">D3DERR::PRESENT_STATISTICS_DISJOINT</DisplayString>
+        <DisplayString Condition="__0 == 0x887602BC">D3DERR::BADMAJORVERSION</DisplayString>
+        <DisplayString Condition="__0 == 0x887602BD">D3DERR::BADMINORVERSION</DisplayString>
+        <DisplayString Condition="__0 == 0x887602C1">D3DERR::INVALID_DEVICE</DisplayString>
+        <DisplayString Condition="__0 == 0x887602C2">D3DERR::INITFAILED</DisplayString>
+        <DisplayString Condition="__0 == 0x887602C3">D3DERR::DEVICEAGGREGATED</DisplayString>
+        <DisplayString Condition="__0 == 0x887602C6">D3DERR::EXECUTE_CREATE_FAILED</DisplayString>
+        <DisplayString Condition="__0 == 0x887602C7">D3DERR::EXECUTE_DESTROY_FAILED</DisplayString>
+        <DisplayString Condition="__0 == 0x887602C8">D3DERR::EXECUTE_LOCK_FAILED</DisplayString>
+        <DisplayString Condition="__0 == 0x887602C9">D3DERR::EXECUTE_UNLOCK_FAILED</DisplayString>
+        <DisplayString Condition="__0 == 0x887602CA">D3DERR::EXECUTE_LOCKED</DisplayString>
+        <DisplayString Condition="__0 == 0x887602CB">D3DERR::EXECUTE_NOT_LOCKED</DisplayString>
+        <DisplayString Condition="__0 == 0x887602CC">D3DERR::EXECUTE_FAILED</DisplayString>
+        <DisplayString Condition="__0 == 0x887602CD">D3DERR::EXECUTE_CLIPPED_FAILED</DisplayString>
+        <DisplayString Condition="__0 == 0x887602D0">D3DERR::TEXTURE_NO_SUPPORT</DisplayString>
+        <DisplayString Condition="__0 == 0x887602D1">D3DERR::TEXTURE_CREATE_FAILED</DisplayString>
+        <DisplayString Condition="__0 == 0x887602D2">D3DERR::TEXTURE_DESTROY_FAILED</DisplayString>
+        <DisplayString Condition="__0 == 0x887602D3">D3DERR::TEXTURE_LOCK_FAILED</DisplayString>
+        <DisplayString Condition="__0 == 0x887602D4">D3DERR::TEXTURE_UNLOCK_FAILED</DisplayString>
+        <DisplayString Condition="__0 == 0x887602D5">D3DERR::TEXTURE_LOAD_FAILED</DisplayString>
+        <DisplayString Condition="__0 == 0x887602D6">D3DERR::TEXTURE_SWAP_FAILED</DisplayString>
+        <DisplayString Condition="__0 == 0x887602D7">D3DERR::TEXTURE_LOCKED</DisplayString>
+        <DisplayString Condition="__0 == 0x887602D8">D3DERR::TEXTURE_NOT_LOCKED</DisplayString>
+        <DisplayString Condition="__0 == 0x887602D9">D3DERR::TEXTURE_GETSURF_FAILED</DisplayString>
+        <DisplayString Condition="__0 == 0x887602DA">D3DERR::MATRIX_CREATE_FAILED</DisplayString>
+        <DisplayString Condition="__0 == 0x887602DB">D3DERR::MATRIX_DESTROY_FAILED</DisplayString>
+        <DisplayString Condition="__0 == 0x887602DC">D3DERR::MATRIX_SETDATA_FAILED</DisplayString>
+        <DisplayString Condition="__0 == 0x887602DD">D3DERR::MATRIX_GETDATA_FAILED</DisplayString>
+        <DisplayString Condition="__0 == 0x887602DE">D3DERR::SETVIEWPORTDATA_FAILED</DisplayString>
+        <DisplayString Condition="__0 == 0x887602DF">D3DERR::INVALIDCURRENTVIEWPORT</DisplayString>
+        <DisplayString Condition="__0 == 0x887602E0">D3DERR::INVALIDPRIMITIVETYPE</DisplayString>
+        <DisplayString Condition="__0 == 0x887602E1">D3DERR::INVALIDVERTEXTYPE</DisplayString>
+        <DisplayString Condition="__0 == 0x887602E2">D3DERR::TEXTURE_BADSIZE</DisplayString>
+        <DisplayString Condition="__0 == 0x887602E3">D3DERR::INVALIDRAMPTEXTURE</DisplayString>
+        <DisplayString Condition="__0 == 0x887602E4">D3DERR::MATERIAL_CREATE_FAILED</DisplayString>
+        <DisplayString Condition="__0 == 0x887602E5">D3DERR::MATERIAL_DESTROY_FAILED</DisplayString>
+        <DisplayString Condition="__0 == 0x887602E6">D3DERR::MATERIAL_SETDATA_FAILED</DisplayString>
+        <DisplayString Condition="__0 == 0x887602E7">D3DERR::MATERIAL_GETDATA_FAILED</DisplayString>
+        <DisplayString Condition="__0 == 0x887602E8">D3DERR::INVALIDPALETTE</DisplayString>
+        <DisplayString Condition="__0 == 0x887602E9">D3DERR::ZBUFF_NEEDS_SYSTEMMEMORY</DisplayString>
+        <DisplayString Condition="__0 == 0x887602EA">D3DERR::ZBUFF_NEEDS_VIDEOMEMORY</DisplayString>
+        <DisplayString Condition="__0 == 0x887602EB">D3DERR::SURFACENOTINVIDMEM</DisplayString>
+        <DisplayString Condition="__0 == 0x887602EE">D3DERR::LIGHT_SET_FAILED</DisplayString>
+        <DisplayString Condition="__0 == 0x887602EF">D3DERR::LIGHTHASVIEWPORT</DisplayString>
+        <DisplayString Condition="__0 == 0x887602F0">D3DERR::LIGHTNOTINTHISVIEWPORT</DisplayString>
+        <DisplayString Condition="__0 == 0x887602F8">D3DERR::SCENE_IN_SCENE</DisplayString>
+        <DisplayString Condition="__0 == 0x887602F9">D3DERR::SCENE_NOT_IN_SCENE</DisplayString>
+        <DisplayString Condition="__0 == 0x887602FA">D3DERR::SCENE_BEGIN_FAILED</DisplayString>
+        <DisplayString Condition="__0 == 0x887602FB">D3DERR::SCENE_END_FAILED</DisplayString>
+        <DisplayString Condition="__0 == 0x88760302">D3DERR::INBEGIN</DisplayString>
+        <DisplayString Condition="__0 == 0x88760303">D3DERR::NOTINBEGIN</DisplayString>
+        <DisplayString Condition="__0 == 0x88760304">D3DERR::NOVIEWPORTS</DisplayString>
+        <DisplayString Condition="__0 == 0x88760305">D3DERR::VIEWPORTDATANOTSET</DisplayString>
+        <DisplayString Condition="__0 == 0x88760306">D3DERR::VIEWPORTHASNODEVICE</DisplayString>
+        <DisplayString Condition="__0 == 0x88760307">D3DERR::NOCURRENTVIEWPORT</DisplayString>
+        <DisplayString Condition="__0 == 0x88760800">D3DERR::INVALIDVERTEXFORMAT</DisplayString>
+        <DisplayString Condition="__0 == 0x88760802">D3DERR::COLORKEYATTACHED</DisplayString>
+        <DisplayString Condition="__0 == 0x8876080C">D3DERR::VERTEXBUFFEROPTIMIZED</DisplayString>
+        <DisplayString Condition="__0 == 0x8876080D">D3DERR::VBUF_CREATE_FAILED</DisplayString>
+        <DisplayString Condition="__0 == 0x8876080E">D3DERR::VERTEXBUFFERLOCKED</DisplayString>
+        <DisplayString Condition="__0 == 0x8876080F">D3DERR::VERTEXBUFFERUNLOCKFAILED</DisplayString>
+        <DisplayString Condition="__0 == 0x88760816">D3DERR::ZBUFFER_NOTPRESENT</DisplayString>
+        <DisplayString Condition="__0 == 0x88760817">D3DERR::STENCILBUFFER_NOTPRESENT</DisplayString>
+        <DisplayString Condition="__0 == 0x88760823">D3DERR::TOOMANYPRIMITIVES</DisplayString>
+        <DisplayString Condition="__0 == 0x88760824">D3DERR::INVALIDMATRIX</DisplayString>
+        <DisplayString Condition="__0 == 0x88760825">D3DERR::TOOMANYVERTICES</DisplayString>
+        <DisplayString Condition="__0 == 0x88760834">D3DERR::INVALIDSTATEBLOCK</DisplayString>
+        <DisplayString Condition="__0 == 0x88760835">D3DERR::INBEGINSTATEBLOCK</DisplayString>
+        <DisplayString Condition="__0 == 0x88760836">D3DERR::NOTINBEGINSTATEBLOCK</DisplayString>
+        <DisplayString Condition="__0 == 0x88760BB8">D3DERR::COMMAND_UNPARSED</DisplayString>
+        <DisplayString Condition="__0 == 0x88760B54">D3DXERR::CANNOTMODIFYINDEXBUFFER</DisplayString>
+        <DisplayString Condition="__0 == 0x88760B55">D3DXERR::INVALIDMESH</DisplayString>
+        <DisplayString Condition="__0 == 0x88760B56">D3DXERR::CANNOTATTRSORT</DisplayString>
+        <DisplayString Condition="__0 == 0x88760B57">D3DXERR::SKINNINGNOTSUPPORTED</DisplayString>
+        <DisplayString Condition="__0 == 0x88760B58">D3DXERR::TOOMANYINFLUENCES</DisplayString>
+        <DisplayString Condition="__0 == 0x88760B59">D3DXERR::INVALIDDATA</DisplayString>
+        <DisplayString Condition="__0 == 0x88760B5A">D3DXERR::LOADEDMESHASNODATA</DisplayString>
+        <DisplayString Condition="__0 == 0x88760B5B">D3DXERR::DUPLICATENAMEDFRAGMENT</DisplayString>
+        <DisplayString Condition="__0 == 0x88760B5C">D3DXERR::CANNOTREMOVELASTITEM</DisplayString>
+        <DisplayString Condition="__0 == 0x88760384">D3DXFERR::BADOBJECT</DisplayString>
+        <DisplayString Condition="__0 == 0x88760385">D3DXFERR::BADVALUE</DisplayString>
+        <DisplayString Condition="__0 == 0x88760386">D3DXFERR::BADTYPE</DisplayString>
+        <DisplayString Condition="__0 == 0x88760387">D3DXFERR::NOTFOUND</DisplayString>
+        <DisplayString Condition="__0 == 0x88760388">D3DXFERR::NOTDONEYET</DisplayString>
+        <DisplayString Condition="__0 == 0x88760389">D3DXFERR::FILENOTFOUND</DisplayString>
+        <DisplayString Condition="__0 == 0x8876038A">D3DXFERR::RESOURCENOTFOUND</DisplayString>
+        <DisplayString Condition="__0 == 0x8876038B">D3DXFERR::BADRESOURCE</DisplayString>
+        <DisplayString Condition="__0 == 0x8876038C">D3DXFERR::BADFILETYPE</DisplayString>
+        <DisplayString Condition="__0 == 0x8876038D">D3DXFERR::BADFILEVERSION</DisplayString>
+        <DisplayString Condition="__0 == 0x8876038E">D3DXFERR::BADFILEFLOATSIZE</DisplayString>
+        <DisplayString Condition="__0 == 0x8876038F">D3DXFERR::BADFILE</DisplayString>
+        <DisplayString Condition="__0 == 0x88760390">D3DXFERR::PARSEERROR</DisplayString>
+        <DisplayString Condition="__0 == 0x88760391">D3DXFERR::BADARRAYSIZE</DisplayString>
+        <DisplayString Condition="__0 == 0x88760392">D3DXFERR::BADDATAREFERENCE</DisplayString>
+        <DisplayString Condition="__0 == 0x88760393">D3DXFERR::NOMOREOBJECTS</DisplayString>
+        <DisplayString Condition="__0 == 0x88760394">D3DXFERR::NOMOREDATA</DisplayString>
+        <DisplayString Condition="__0 == 0x88760395">D3DXFERR::BADCACHEFILE</DisplayString>
         <DisplayString Condition="__0 == 0x88980800">DCOMPOSITION::ERROR_WINDOW_ALREADY_COMPOSED</DisplayString>
         <DisplayString Condition="__0 == 0x88980801">DCOMPOSITION::ERROR_SURFACE_BEING_RENDERED</DisplayString>
         <DisplayString Condition="__0 == 0x88980802">DCOMPOSITION::ERROR_SURFACE_NOT_BEING_RENDERED</DisplayString>
@@ -9551,10 +9551,10 @@
         <DisplayString Condition="__0 == 0xC05D0001">ERROR::SMB_BAD_CLUSTER_DIALECT</DisplayString>
         <DisplayString Condition="__0 == 0x80410000">ERROR::QUIC_HANDSHAKE_FAILURE</DisplayString>
         <DisplayString Condition="__0 == 0x80410001">ERROR::QUIC_VER_NEG_FAILURE</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E39">ERROR::EXTEND_TOO_SMALL</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E56">ERROR::MSCOPE_RANGE_TOO_SMALL</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E90">ERROR::SCOPE_RANGE_POLICY_RANGE_CONFLICT</DisplayString>
-        <DisplayString Condition="__0 == 0x00004EAB">ERROR::LAST_DHCP_SERVER_ERROR</DisplayString>
+        <DisplayString Condition="__0 == 20025">ERROR::EXTEND_TOO_SMALL</DisplayString>
+        <DisplayString Condition="__0 == 20054">ERROR::MSCOPE_RANGE_TOO_SMALL</DisplayString>
+        <DisplayString Condition="__0 == 20112">ERROR::SCOPE_RANGE_POLICY_RANGE_CONFLICT</DisplayString>
+        <DisplayString Condition="__0 == 20139">ERROR::LAST_DHCP_SERVER_ERROR</DisplayString>
         <DisplayString Condition="__0 == 900">ERROR::ROUTER_STOPPED</DisplayString>
         <DisplayString Condition="__0 == 901">ERROR::ALREADY_CONNECTED</DisplayString>
         <DisplayString Condition="__0 == 902">ERROR::UNKNOWN_PROTOCOL_ID</DisplayString>
@@ -9877,119 +9877,119 @@
         <DisplayString Condition="__0 == 0x80B00002">ERROR::DBG::ATTACH_PROCESS_FAILURE_LOCKDOWN</DisplayString>
         <DisplayString Condition="__0 == 0x80B00003">ERROR::DBG::CONNECT_SERVER_FAILURE_LOCKDOWN</DisplayString>
         <DisplayString Condition="__0 == 0x80B00004">ERROR::DBG::START_SERVER_FAILURE_LOCKDOWN</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E66">ERROR::DDS::NO_DS_AVAILABLE</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E67">ERROR::DDS::NO_DHCP_ROOT</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E68">ERROR::DDS::UNEXPECTED_ERROR</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E69">ERROR::DDS::TOO_MANY_ERRORS</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E6A">ERROR::DDS::DHCP_SERVER_NOT_FOUND</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E6B">ERROR::DDS::OPTION_ALREADY_EXISTS</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E6C">ERROR::DDS::OPTION_DOES_NOT_EXIST</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E6D">ERROR::DDS::CLASS_EXISTS</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E6E">ERROR::DDS::CLASS_DOES_NOT_EXIST</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E6F">ERROR::DDS::SERVER_ALREADY_EXISTS</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E70">ERROR::DDS::SERVER_DOES_NOT_EXIST</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E71">ERROR::DDS::SERVER_ADDRESS_MISMATCH</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E72">ERROR::DDS::SUBNET_EXISTS</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E73">ERROR::DDS::SUBNET_HAS_DIFF_SSCOPE</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E74">ERROR::DDS::SUBNET_NOT_PRESENT</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E75">ERROR::DDS::RESERVATION_NOT_PRESENT</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E76">ERROR::DDS::RESERVATION_CONFLICT</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E77">ERROR::DDS::POSSIBLE_RANGE_CONFLICT</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E78">ERROR::DDS::RANGE_DOES_NOT_EXIST</DisplayString>
+        <DisplayString Condition="__0 == 20070">ERROR::DDS::NO_DS_AVAILABLE</DisplayString>
+        <DisplayString Condition="__0 == 20071">ERROR::DDS::NO_DHCP_ROOT</DisplayString>
+        <DisplayString Condition="__0 == 20072">ERROR::DDS::UNEXPECTED_ERROR</DisplayString>
+        <DisplayString Condition="__0 == 20073">ERROR::DDS::TOO_MANY_ERRORS</DisplayString>
+        <DisplayString Condition="__0 == 20074">ERROR::DDS::DHCP_SERVER_NOT_FOUND</DisplayString>
+        <DisplayString Condition="__0 == 20075">ERROR::DDS::OPTION_ALREADY_EXISTS</DisplayString>
+        <DisplayString Condition="__0 == 20076">ERROR::DDS::OPTION_DOES_NOT_EXIST</DisplayString>
+        <DisplayString Condition="__0 == 20077">ERROR::DDS::CLASS_EXISTS</DisplayString>
+        <DisplayString Condition="__0 == 20078">ERROR::DDS::CLASS_DOES_NOT_EXIST</DisplayString>
+        <DisplayString Condition="__0 == 20079">ERROR::DDS::SERVER_ALREADY_EXISTS</DisplayString>
+        <DisplayString Condition="__0 == 20080">ERROR::DDS::SERVER_DOES_NOT_EXIST</DisplayString>
+        <DisplayString Condition="__0 == 20081">ERROR::DDS::SERVER_ADDRESS_MISMATCH</DisplayString>
+        <DisplayString Condition="__0 == 20082">ERROR::DDS::SUBNET_EXISTS</DisplayString>
+        <DisplayString Condition="__0 == 20083">ERROR::DDS::SUBNET_HAS_DIFF_SSCOPE</DisplayString>
+        <DisplayString Condition="__0 == 20084">ERROR::DDS::SUBNET_NOT_PRESENT</DisplayString>
+        <DisplayString Condition="__0 == 20085">ERROR::DDS::RESERVATION_NOT_PRESENT</DisplayString>
+        <DisplayString Condition="__0 == 20086">ERROR::DDS::RESERVATION_CONFLICT</DisplayString>
+        <DisplayString Condition="__0 == 20087">ERROR::DDS::POSSIBLE_RANGE_CONFLICT</DisplayString>
+        <DisplayString Condition="__0 == 20088">ERROR::DDS::RANGE_DOES_NOT_EXIST</DisplayString>
         <DisplayString Condition="__0 == 4100">ERROR::DHCP::ADDRESS_CONFLICT</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E20">ERROR::DHCP::REGISTRY_INIT_FAILED</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E21">ERROR::DHCP::DATABASE_INIT_FAILED</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E22">ERROR::DHCP::RPC_INIT_FAILED</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E23">ERROR::DHCP::NETWORK_INIT_FAILED</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E24">ERROR::DHCP::SUBNET_EXITS</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E25">ERROR::DHCP::SUBNET_NOT_PRESENT</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E26">ERROR::DHCP::PRIMARY_NOT_FOUND</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E27">ERROR::DHCP::ELEMENT_CANT_REMOVE</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E29">ERROR::DHCP::OPTION_EXITS</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E2A">ERROR::DHCP::OPTION_NOT_PRESENT</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E2B">ERROR::DHCP::ADDRESS_NOT_AVAILABLE</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E2C">ERROR::DHCP::RANGE_FULL</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E2D">ERROR::DHCP::JET_ERROR</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E2E">ERROR::DHCP::CLIENT_EXISTS</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E2F">ERROR::DHCP::INVALID_DHCP_MESSAGE</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E30">ERROR::DHCP::INVALID_DHCP_CLIENT</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E31">ERROR::DHCP::SERVICE_PAUSED</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E32">ERROR::DHCP::NOT_RESERVED_CLIENT</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E33">ERROR::DHCP::RESERVED_CLIENT</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E34">ERROR::DHCP::RANGE_TOO_SMALL</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E35">ERROR::DHCP::IPRANGE_EXITS</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E36">ERROR::DHCP::RESERVEDIP_EXITS</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E37">ERROR::DHCP::INVALID_RANGE</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E38">ERROR::DHCP::RANGE_EXTENDED</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E3B">ERROR::DHCP::JET_CONV_REQUIRED</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E3E">ERROR::DHCP::SUPER_SCOPE_NAME_TOO_LONG</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E40">ERROR::DHCP::IP_ADDRESS_IN_USE</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E41">ERROR::DHCP::LOG_FILE_PATH_TOO_LONG</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E42">ERROR::DHCP::UNSUPPORTED_CLIENT</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E44">ERROR::DHCP::JET97_CONV_REQUIRED</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E45">ERROR::DHCP::ROGUE_INIT_FAILED</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E46">ERROR::DHCP::ROGUE_SAMSHUTDOWN</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E47">ERROR::DHCP::ROGUE_NOT_AUTHORIZED</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E48">ERROR::DHCP::ROGUE_DS_UNREACHABLE</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E49">ERROR::DHCP::ROGUE_DS_CONFLICT</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E4A">ERROR::DHCP::ROGUE_NOT_OUR_ENTERPRISE</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E4B">ERROR::DHCP::ROGUE_STANDALONE_IN_DS</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E4C">ERROR::DHCP::CLASS_NOT_FOUND</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E4D">ERROR::DHCP::CLASS_ALREADY_EXISTS</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E4E">ERROR::DHCP::SCOPE_NAME_TOO_LONG</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E4F">ERROR::DHCP::DEFAULT_SCOPE_EXITS</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E50">ERROR::DHCP::CANT_CHANGE_ATTRIBUTE</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E51">ERROR::DHCP::IPRANGE_CONV_ILLEGAL</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E52">ERROR::DHCP::NETWORK_CHANGED</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E53">ERROR::DHCP::CANNOT_MODIFY_BINDINGS</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E54">ERROR::DHCP::SUBNET_EXISTS</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E55">ERROR::DHCP::MSCOPE_EXISTS</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E57">ERROR::DHCP::EXEMPTION_EXISTS</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E58">ERROR::DHCP::EXEMPTION_NOT_PRESENT</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E59">ERROR::DHCP::INVALID_PARAMETER_OPTION32</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E79">ERROR::DHCP::DELETE_BUILTIN_CLASS</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E7B">ERROR::DHCP::INVALID_SUBNET_PREFIX</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E7C">ERROR::DHCP::INVALID_DELAY</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E7D">ERROR::DHCP::LINKLAYER_ADDRESS_EXISTS</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E7E">ERROR::DHCP::LINKLAYER_ADDRESS_RESERVATION_EXISTS</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E7F">ERROR::DHCP::LINKLAYER_ADDRESS_DOES_NOT_EXIST</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E85">ERROR::DHCP::HARDWARE_ADDRESS_TYPE_ALREADY_EXEMPT</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E86">ERROR::DHCP::UNDEFINED_HARDWARE_ADDRESS_TYPE</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E87">ERROR::DHCP::OPTION_TYPE_MISMATCH</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E88">ERROR::DHCP::POLICY_BAD_PARENT_EXPR</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E89">ERROR::DHCP::POLICY_EXISTS</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E8A">ERROR::DHCP::POLICY_RANGE_EXISTS</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E8B">ERROR::DHCP::POLICY_RANGE_BAD</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E8C">ERROR::DHCP::RANGE_INVALID_IN_SERVER_POLICY</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E8D">ERROR::DHCP::INVALID_POLICY_EXPRESSION</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E8E">ERROR::DHCP::INVALID_PROCESSING_ORDER</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E8F">ERROR::DHCP::POLICY_NOT_FOUND</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E91">ERROR::DHCP::FO_SCOPE_ALREADY_IN_RELATIONSHIP</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E92">ERROR::DHCP::FO_RELATIONSHIP_EXISTS</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E93">ERROR::DHCP::FO_RELATIONSHIP_DOES_NOT_EXIST</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E94">ERROR::DHCP::FO_SCOPE_NOT_IN_RELATIONSHIP</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E95">ERROR::DHCP::FO_RELATION_IS_SECONDARY</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E96">ERROR::DHCP::FO_NOT_SUPPORTED</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E97">ERROR::DHCP::FO_TIME_OUT_OF_SYNC</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E98">ERROR::DHCP::FO_STATE_NOT_NORMAL</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E99">ERROR::DHCP::NO_ADMIN_PERMISSION</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E9A">ERROR::DHCP::SERVER_NOT_REACHABLE</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E9B">ERROR::DHCP::SERVER_NOT_RUNNING</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E9C">ERROR::DHCP::SERVER_NAME_NOT_RESOLVED</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E9D">ERROR::DHCP::FO_RELATIONSHIP_NAME_TOO_LONG</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E9E">ERROR::DHCP::REACHED_END_OF_SELECTION</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E9F">ERROR::DHCP::FO_ADDSCOPE_LEASES_NOT_SYNCED</DisplayString>
-        <DisplayString Condition="__0 == 0x00004EA0">ERROR::DHCP::FO_MAX_RELATIONSHIPS</DisplayString>
-        <DisplayString Condition="__0 == 0x00004EA1">ERROR::DHCP::FO_IPRANGE_TYPE_CONV_ILLEGAL</DisplayString>
-        <DisplayString Condition="__0 == 0x00004EA2">ERROR::DHCP::FO_MAX_ADD_SCOPES</DisplayString>
-        <DisplayString Condition="__0 == 0x00004EA3">ERROR::DHCP::FO_BOOT_NOT_SUPPORTED</DisplayString>
-        <DisplayString Condition="__0 == 0x00004EA4">ERROR::DHCP::FO_RANGE_PART_OF_REL</DisplayString>
-        <DisplayString Condition="__0 == 0x00004EA5">ERROR::DHCP::FO_SCOPE_SYNC_IN_PROGRESS</DisplayString>
-        <DisplayString Condition="__0 == 0x00004EA6">ERROR::DHCP::FO_FEATURE_NOT_SUPPORTED</DisplayString>
-        <DisplayString Condition="__0 == 0x00004EA7">ERROR::DHCP::POLICY_FQDN_RANGE_UNSUPPORTED</DisplayString>
-        <DisplayString Condition="__0 == 0x00004EA8">ERROR::DHCP::POLICY_FQDN_OPTION_UNSUPPORTED</DisplayString>
-        <DisplayString Condition="__0 == 0x00004EA9">ERROR::DHCP::POLICY_EDIT_FQDN_UNSUPPORTED</DisplayString>
-        <DisplayString Condition="__0 == 0x00004EAA">ERROR::DHCP::NAP_NOT_SUPPORTED</DisplayString>
+        <DisplayString Condition="__0 == 20000">ERROR::DHCP::REGISTRY_INIT_FAILED</DisplayString>
+        <DisplayString Condition="__0 == 20001">ERROR::DHCP::DATABASE_INIT_FAILED</DisplayString>
+        <DisplayString Condition="__0 == 20002">ERROR::DHCP::RPC_INIT_FAILED</DisplayString>
+        <DisplayString Condition="__0 == 20003">ERROR::DHCP::NETWORK_INIT_FAILED</DisplayString>
+        <DisplayString Condition="__0 == 20004">ERROR::DHCP::SUBNET_EXITS</DisplayString>
+        <DisplayString Condition="__0 == 20005">ERROR::DHCP::SUBNET_NOT_PRESENT</DisplayString>
+        <DisplayString Condition="__0 == 20006">ERROR::DHCP::PRIMARY_NOT_FOUND</DisplayString>
+        <DisplayString Condition="__0 == 20007">ERROR::DHCP::ELEMENT_CANT_REMOVE</DisplayString>
+        <DisplayString Condition="__0 == 20009">ERROR::DHCP::OPTION_EXITS</DisplayString>
+        <DisplayString Condition="__0 == 20010">ERROR::DHCP::OPTION_NOT_PRESENT</DisplayString>
+        <DisplayString Condition="__0 == 20011">ERROR::DHCP::ADDRESS_NOT_AVAILABLE</DisplayString>
+        <DisplayString Condition="__0 == 20012">ERROR::DHCP::RANGE_FULL</DisplayString>
+        <DisplayString Condition="__0 == 20013">ERROR::DHCP::JET_ERROR</DisplayString>
+        <DisplayString Condition="__0 == 20014">ERROR::DHCP::CLIENT_EXISTS</DisplayString>
+        <DisplayString Condition="__0 == 20015">ERROR::DHCP::INVALID_DHCP_MESSAGE</DisplayString>
+        <DisplayString Condition="__0 == 20016">ERROR::DHCP::INVALID_DHCP_CLIENT</DisplayString>
+        <DisplayString Condition="__0 == 20017">ERROR::DHCP::SERVICE_PAUSED</DisplayString>
+        <DisplayString Condition="__0 == 20018">ERROR::DHCP::NOT_RESERVED_CLIENT</DisplayString>
+        <DisplayString Condition="__0 == 20019">ERROR::DHCP::RESERVED_CLIENT</DisplayString>
+        <DisplayString Condition="__0 == 20020">ERROR::DHCP::RANGE_TOO_SMALL</DisplayString>
+        <DisplayString Condition="__0 == 20021">ERROR::DHCP::IPRANGE_EXITS</DisplayString>
+        <DisplayString Condition="__0 == 20022">ERROR::DHCP::RESERVEDIP_EXITS</DisplayString>
+        <DisplayString Condition="__0 == 20023">ERROR::DHCP::INVALID_RANGE</DisplayString>
+        <DisplayString Condition="__0 == 20024">ERROR::DHCP::RANGE_EXTENDED</DisplayString>
+        <DisplayString Condition="__0 == 20027">ERROR::DHCP::JET_CONV_REQUIRED</DisplayString>
+        <DisplayString Condition="__0 == 20030">ERROR::DHCP::SUPER_SCOPE_NAME_TOO_LONG</DisplayString>
+        <DisplayString Condition="__0 == 20032">ERROR::DHCP::IP_ADDRESS_IN_USE</DisplayString>
+        <DisplayString Condition="__0 == 20033">ERROR::DHCP::LOG_FILE_PATH_TOO_LONG</DisplayString>
+        <DisplayString Condition="__0 == 20034">ERROR::DHCP::UNSUPPORTED_CLIENT</DisplayString>
+        <DisplayString Condition="__0 == 20036">ERROR::DHCP::JET97_CONV_REQUIRED</DisplayString>
+        <DisplayString Condition="__0 == 20037">ERROR::DHCP::ROGUE_INIT_FAILED</DisplayString>
+        <DisplayString Condition="__0 == 20038">ERROR::DHCP::ROGUE_SAMSHUTDOWN</DisplayString>
+        <DisplayString Condition="__0 == 20039">ERROR::DHCP::ROGUE_NOT_AUTHORIZED</DisplayString>
+        <DisplayString Condition="__0 == 20040">ERROR::DHCP::ROGUE_DS_UNREACHABLE</DisplayString>
+        <DisplayString Condition="__0 == 20041">ERROR::DHCP::ROGUE_DS_CONFLICT</DisplayString>
+        <DisplayString Condition="__0 == 20042">ERROR::DHCP::ROGUE_NOT_OUR_ENTERPRISE</DisplayString>
+        <DisplayString Condition="__0 == 20043">ERROR::DHCP::ROGUE_STANDALONE_IN_DS</DisplayString>
+        <DisplayString Condition="__0 == 20044">ERROR::DHCP::CLASS_NOT_FOUND</DisplayString>
+        <DisplayString Condition="__0 == 20045">ERROR::DHCP::CLASS_ALREADY_EXISTS</DisplayString>
+        <DisplayString Condition="__0 == 20046">ERROR::DHCP::SCOPE_NAME_TOO_LONG</DisplayString>
+        <DisplayString Condition="__0 == 20047">ERROR::DHCP::DEFAULT_SCOPE_EXITS</DisplayString>
+        <DisplayString Condition="__0 == 20048">ERROR::DHCP::CANT_CHANGE_ATTRIBUTE</DisplayString>
+        <DisplayString Condition="__0 == 20049">ERROR::DHCP::IPRANGE_CONV_ILLEGAL</DisplayString>
+        <DisplayString Condition="__0 == 20050">ERROR::DHCP::NETWORK_CHANGED</DisplayString>
+        <DisplayString Condition="__0 == 20051">ERROR::DHCP::CANNOT_MODIFY_BINDINGS</DisplayString>
+        <DisplayString Condition="__0 == 20052">ERROR::DHCP::SUBNET_EXISTS</DisplayString>
+        <DisplayString Condition="__0 == 20053">ERROR::DHCP::MSCOPE_EXISTS</DisplayString>
+        <DisplayString Condition="__0 == 20055">ERROR::DHCP::EXEMPTION_EXISTS</DisplayString>
+        <DisplayString Condition="__0 == 20056">ERROR::DHCP::EXEMPTION_NOT_PRESENT</DisplayString>
+        <DisplayString Condition="__0 == 20057">ERROR::DHCP::INVALID_PARAMETER_OPTION32</DisplayString>
+        <DisplayString Condition="__0 == 20089">ERROR::DHCP::DELETE_BUILTIN_CLASS</DisplayString>
+        <DisplayString Condition="__0 == 20091">ERROR::DHCP::INVALID_SUBNET_PREFIX</DisplayString>
+        <DisplayString Condition="__0 == 20092">ERROR::DHCP::INVALID_DELAY</DisplayString>
+        <DisplayString Condition="__0 == 20093">ERROR::DHCP::LINKLAYER_ADDRESS_EXISTS</DisplayString>
+        <DisplayString Condition="__0 == 20094">ERROR::DHCP::LINKLAYER_ADDRESS_RESERVATION_EXISTS</DisplayString>
+        <DisplayString Condition="__0 == 20095">ERROR::DHCP::LINKLAYER_ADDRESS_DOES_NOT_EXIST</DisplayString>
+        <DisplayString Condition="__0 == 20101">ERROR::DHCP::HARDWARE_ADDRESS_TYPE_ALREADY_EXEMPT</DisplayString>
+        <DisplayString Condition="__0 == 20102">ERROR::DHCP::UNDEFINED_HARDWARE_ADDRESS_TYPE</DisplayString>
+        <DisplayString Condition="__0 == 20103">ERROR::DHCP::OPTION_TYPE_MISMATCH</DisplayString>
+        <DisplayString Condition="__0 == 20104">ERROR::DHCP::POLICY_BAD_PARENT_EXPR</DisplayString>
+        <DisplayString Condition="__0 == 20105">ERROR::DHCP::POLICY_EXISTS</DisplayString>
+        <DisplayString Condition="__0 == 20106">ERROR::DHCP::POLICY_RANGE_EXISTS</DisplayString>
+        <DisplayString Condition="__0 == 20107">ERROR::DHCP::POLICY_RANGE_BAD</DisplayString>
+        <DisplayString Condition="__0 == 20108">ERROR::DHCP::RANGE_INVALID_IN_SERVER_POLICY</DisplayString>
+        <DisplayString Condition="__0 == 20109">ERROR::DHCP::INVALID_POLICY_EXPRESSION</DisplayString>
+        <DisplayString Condition="__0 == 20110">ERROR::DHCP::INVALID_PROCESSING_ORDER</DisplayString>
+        <DisplayString Condition="__0 == 20111">ERROR::DHCP::POLICY_NOT_FOUND</DisplayString>
+        <DisplayString Condition="__0 == 20113">ERROR::DHCP::FO_SCOPE_ALREADY_IN_RELATIONSHIP</DisplayString>
+        <DisplayString Condition="__0 == 20114">ERROR::DHCP::FO_RELATIONSHIP_EXISTS</DisplayString>
+        <DisplayString Condition="__0 == 20115">ERROR::DHCP::FO_RELATIONSHIP_DOES_NOT_EXIST</DisplayString>
+        <DisplayString Condition="__0 == 20116">ERROR::DHCP::FO_SCOPE_NOT_IN_RELATIONSHIP</DisplayString>
+        <DisplayString Condition="__0 == 20117">ERROR::DHCP::FO_RELATION_IS_SECONDARY</DisplayString>
+        <DisplayString Condition="__0 == 20118">ERROR::DHCP::FO_NOT_SUPPORTED</DisplayString>
+        <DisplayString Condition="__0 == 20119">ERROR::DHCP::FO_TIME_OUT_OF_SYNC</DisplayString>
+        <DisplayString Condition="__0 == 20120">ERROR::DHCP::FO_STATE_NOT_NORMAL</DisplayString>
+        <DisplayString Condition="__0 == 20121">ERROR::DHCP::NO_ADMIN_PERMISSION</DisplayString>
+        <DisplayString Condition="__0 == 20122">ERROR::DHCP::SERVER_NOT_REACHABLE</DisplayString>
+        <DisplayString Condition="__0 == 20123">ERROR::DHCP::SERVER_NOT_RUNNING</DisplayString>
+        <DisplayString Condition="__0 == 20124">ERROR::DHCP::SERVER_NAME_NOT_RESOLVED</DisplayString>
+        <DisplayString Condition="__0 == 20125">ERROR::DHCP::FO_RELATIONSHIP_NAME_TOO_LONG</DisplayString>
+        <DisplayString Condition="__0 == 20126">ERROR::DHCP::REACHED_END_OF_SELECTION</DisplayString>
+        <DisplayString Condition="__0 == 20127">ERROR::DHCP::FO_ADDSCOPE_LEASES_NOT_SYNCED</DisplayString>
+        <DisplayString Condition="__0 == 20128">ERROR::DHCP::FO_MAX_RELATIONSHIPS</DisplayString>
+        <DisplayString Condition="__0 == 20129">ERROR::DHCP::FO_IPRANGE_TYPE_CONV_ILLEGAL</DisplayString>
+        <DisplayString Condition="__0 == 20130">ERROR::DHCP::FO_MAX_ADD_SCOPES</DisplayString>
+        <DisplayString Condition="__0 == 20131">ERROR::DHCP::FO_BOOT_NOT_SUPPORTED</DisplayString>
+        <DisplayString Condition="__0 == 20132">ERROR::DHCP::FO_RANGE_PART_OF_REL</DisplayString>
+        <DisplayString Condition="__0 == 20133">ERROR::DHCP::FO_SCOPE_SYNC_IN_PROGRESS</DisplayString>
+        <DisplayString Condition="__0 == 20134">ERROR::DHCP::FO_FEATURE_NOT_SUPPORTED</DisplayString>
+        <DisplayString Condition="__0 == 20135">ERROR::DHCP::POLICY_FQDN_RANGE_UNSUPPORTED</DisplayString>
+        <DisplayString Condition="__0 == 20136">ERROR::DHCP::POLICY_FQDN_OPTION_UNSUPPORTED</DisplayString>
+        <DisplayString Condition="__0 == 20137">ERROR::DHCP::POLICY_EDIT_FQDN_UNSUPPORTED</DisplayString>
+        <DisplayString Condition="__0 == 20138">ERROR::DHCP::NAP_NOT_SUPPORTED</DisplayString>
         <DisplayString Condition="__0 == 643">ERROR::DS::VERSION_CHECK_FAILURE</DisplayString>
         <DisplayString Condition="__0 == 8200">ERROR::DS::NOT_INSTALLED</DisplayString>
         <DisplayString Condition="__0 == 8201">ERROR::DS::MEMBERSHIP_EVALUATED_LOCALLY</DisplayString>
@@ -11102,8 +11102,8 @@
         <DisplayString Condition="__0 == 1341">ERROR::SERVER::DISABLED</DisplayString>
         <DisplayString Condition="__0 == 1342">ERROR::SERVER::NOT_DISABLED</DisplayString>
         <DisplayString Condition="__0 == 1811">ERROR::SERVER::HAS_OPEN_HANDLES</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E3C">ERROR::SERVER::INVALID_BOOT_FILE_TABLE</DisplayString>
-        <DisplayString Condition="__0 == 0x00004E3D">ERROR::SERVER::UNKNOWN_BOOT_FILE_NAME</DisplayString>
+        <DisplayString Condition="__0 == 20028">ERROR::SERVER::INVALID_BOOT_FILE_TABLE</DisplayString>
+        <DisplayString Condition="__0 == 20029">ERROR::SERVER::UNKNOWN_BOOT_FILE_NAME</DisplayString>
         <DisplayString Condition="__0 == 716">ERROR::SERVICE::NOTIFICATION</DisplayString>
         <DisplayString Condition="__0 == 1053">ERROR::SERVICE::REQUEST_TIMEOUT</DisplayString>
         <DisplayString Condition="__0 == 1054">ERROR::SERVICE::NO_THREAD</DisplayString>
@@ -14384,132 +14384,132 @@
     <HResult Name="D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD"><HRValue>0x887C0004</HRValue></HResult>
     <HResult Name="D3D12_ERROR_ADAPTER_NOT_FOUND"><HRValue>0x887E0001</HRValue></HResult>
     <HResult Name="D3D12_ERROR_DRIVER_VERSION_MISMATCH"><HRValue>0x887E0002</HRValue></HResult>
-    <HResult Name="D3DERR_WRONGTEXTUREFORMAT"><HRValue>2289436696</HRValue></HResult>
-    <HResult Name="D3DERR_UNSUPPORTEDCOLOROPERATION"><HRValue>2289436697</HRValue></HResult>
-    <HResult Name="D3DERR_UNSUPPORTEDCOLORARG"><HRValue>2289436698</HRValue></HResult>
-    <HResult Name="D3DERR_UNSUPPORTEDALPHAOPERATION"><HRValue>2289436699</HRValue></HResult>
-    <HResult Name="D3DERR_UNSUPPORTEDALPHAARG"><HRValue>2289436700</HRValue></HResult>
-    <HResult Name="D3DERR_TOOMANYOPERATIONS"><HRValue>2289436701</HRValue></HResult>
-    <HResult Name="D3DERR_CONFLICTINGTEXTUREFILTER"><HRValue>2289436702</HRValue></HResult>
-    <HResult Name="D3DERR_UNSUPPORTEDFACTORVALUE"><HRValue>2289436703</HRValue></HResult>
-    <HResult Name="D3DERR_CONFLICTINGRENDERSTATE"><HRValue>2289436705</HRValue></HResult>
-    <HResult Name="D3DERR_UNSUPPORTEDTEXTUREFILTER"><HRValue>2289436706</HRValue></HResult>
-    <HResult Name="D3DERR_CONFLICTINGTEXTUREPALETTE"><HRValue>2289436710</HRValue></HResult>
-    <HResult Name="D3DERR_DRIVERINTERNALERROR"><HRValue>2289436711</HRValue></HResult>
-    <HResult Name="D3DERR_NOTFOUND"><HRValue>2289436774</HRValue></HResult>
-    <HResult Name="D3DERR_MOREDATA"><HRValue>2289436775</HRValue></HResult>
-    <HResult Name="D3DERR_DEVICELOST"><HRValue>2289436776</HRValue></HResult>
-    <HResult Name="D3DERR_DEVICENOTRESET"><HRValue>2289436777</HRValue></HResult>
-    <HResult Name="D3DERR_NOTAVAILABLE"><HRValue>2289436778</HRValue></HResult>
-    <HResult Name="D3DERR_OUTOFVIDEOMEMORY"><HRValue>2289435004</HRValue></HResult>
-    <HResult Name="D3DERR_INVALIDDEVICE"><HRValue>2289436779</HRValue></HResult>
-    <HResult Name="D3DERR_INVALIDCALL"><HRValue>2289436780</HRValue></HResult>
-    <HResult Name="D3DERR_DRIVERINVALIDCALL"><HRValue>2289436781</HRValue></HResult>
-    <HResult Name="D3DERR_WASSTILLDRAWING"><HRValue>2289435164</HRValue></HResult>
-    <HResult Name="D3DERR_DEVICEREMOVED"><HRValue>2289436784</HRValue></HResult>
-    <HResult Name="D3DERR_DEVICEHUNG"><HRValue>2289436788</HRValue></HResult>
-    <HResult Name="D3DERR_UNSUPPORTEDOVERLAY"><HRValue>2289436795</HRValue></HResult>
-    <HResult Name="D3DERR_UNSUPPORTEDOVERLAYFORMAT"><HRValue>2289436796</HRValue></HResult>
-    <HResult Name="D3DERR_CANNOTPROTECTCONTENT"><HRValue>2289436797</HRValue></HResult>
-    <HResult Name="D3DERR_UNSUPPORTEDCRYPTO"><HRValue>2289436798</HRValue></HResult>
-    <HResult Name="D3DERR_PRESENT_STATISTICS_DISJOINT"><HRValue>2289436804</HRValue></HResult>
-    <HResult Name="D3DERR_BADMAJORVERSION"><HRValue>2289435324</HRValue></HResult>
-    <HResult Name="D3DERR_BADMINORVERSION"><HRValue>2289435325</HRValue></HResult>
-    <HResult Name="D3DERR_INVALID_DEVICE"><HRValue>2289435329</HRValue></HResult>
-    <HResult Name="D3DERR_INITFAILED"><HRValue>2289435330</HRValue></HResult>
-    <HResult Name="D3DERR_DEVICEAGGREGATED"><HRValue>2289435331</HRValue></HResult>
-    <HResult Name="D3DERR_EXECUTE_CREATE_FAILED"><HRValue>2289435334</HRValue></HResult>
-    <HResult Name="D3DERR_EXECUTE_DESTROY_FAILED"><HRValue>2289435335</HRValue></HResult>
-    <HResult Name="D3DERR_EXECUTE_LOCK_FAILED"><HRValue>2289435336</HRValue></HResult>
-    <HResult Name="D3DERR_EXECUTE_UNLOCK_FAILED"><HRValue>2289435337</HRValue></HResult>
-    <HResult Name="D3DERR_EXECUTE_LOCKED"><HRValue>2289435338</HRValue></HResult>
-    <HResult Name="D3DERR_EXECUTE_NOT_LOCKED"><HRValue>2289435339</HRValue></HResult>
-    <HResult Name="D3DERR_EXECUTE_FAILED"><HRValue>2289435340</HRValue></HResult>
-    <HResult Name="D3DERR_EXECUTE_CLIPPED_FAILED"><HRValue>2289435341</HRValue></HResult>
-    <HResult Name="D3DERR_TEXTURE_NO_SUPPORT"><HRValue>2289435344</HRValue></HResult>
-    <HResult Name="D3DERR_TEXTURE_CREATE_FAILED"><HRValue>2289435345</HRValue></HResult>
-    <HResult Name="D3DERR_TEXTURE_DESTROY_FAILED"><HRValue>2289435346</HRValue></HResult>
-    <HResult Name="D3DERR_TEXTURE_LOCK_FAILED"><HRValue>2289435347</HRValue></HResult>
-    <HResult Name="D3DERR_TEXTURE_UNLOCK_FAILED"><HRValue>2289435348</HRValue></HResult>
-    <HResult Name="D3DERR_TEXTURE_LOAD_FAILED"><HRValue>2289435349</HRValue></HResult>
-    <HResult Name="D3DERR_TEXTURE_SWAP_FAILED"><HRValue>2289435350</HRValue></HResult>
-    <HResult Name="D3DERR_TEXTURE_LOCKED"><HRValue>2289435351</HRValue></HResult>
-    <HResult Name="D3DERR_TEXTURE_NOT_LOCKED"><HRValue>2289435352</HRValue></HResult>
-    <HResult Name="D3DERR_TEXTURE_GETSURF_FAILED"><HRValue>2289435353</HRValue></HResult>
-    <HResult Name="D3DERR_MATRIX_CREATE_FAILED"><HRValue>2289435354</HRValue></HResult>
-    <HResult Name="D3DERR_MATRIX_DESTROY_FAILED"><HRValue>2289435355</HRValue></HResult>
-    <HResult Name="D3DERR_MATRIX_SETDATA_FAILED"><HRValue>2289435356</HRValue></HResult>
-    <HResult Name="D3DERR_MATRIX_GETDATA_FAILED"><HRValue>2289435357</HRValue></HResult>
-    <HResult Name="D3DERR_SETVIEWPORTDATA_FAILED"><HRValue>2289435358</HRValue></HResult>
-    <HResult Name="D3DERR_INVALIDCURRENTVIEWPORT"><HRValue>2289435359</HRValue></HResult>
-    <HResult Name="D3DERR_INVALIDPRIMITIVETYPE"><HRValue>2289435360</HRValue></HResult>
-    <HResult Name="D3DERR_INVALIDVERTEXTYPE"><HRValue>2289435361</HRValue></HResult>
-    <HResult Name="D3DERR_TEXTURE_BADSIZE"><HRValue>2289435362</HRValue></HResult>
-    <HResult Name="D3DERR_INVALIDRAMPTEXTURE"><HRValue>2289435363</HRValue></HResult>
-    <HResult Name="D3DERR_MATERIAL_CREATE_FAILED"><HRValue>2289435364</HRValue></HResult>
-    <HResult Name="D3DERR_MATERIAL_DESTROY_FAILED"><HRValue>2289435365</HRValue></HResult>
-    <HResult Name="D3DERR_MATERIAL_SETDATA_FAILED"><HRValue>2289435366</HRValue></HResult>
-    <HResult Name="D3DERR_MATERIAL_GETDATA_FAILED"><HRValue>2289435367</HRValue></HResult>
-    <HResult Name="D3DERR_INVALIDPALETTE"><HRValue>2289435368</HRValue></HResult>
-    <HResult Name="D3DERR_ZBUFF_NEEDS_SYSTEMMEMORY"><HRValue>2289435369</HRValue></HResult>
-    <HResult Name="D3DERR_ZBUFF_NEEDS_VIDEOMEMORY"><HRValue>2289435370</HRValue></HResult>
-    <HResult Name="D3DERR_SURFACENOTINVIDMEM"><HRValue>2289435371</HRValue></HResult>
-    <HResult Name="D3DERR_LIGHT_SET_FAILED"><HRValue>2289435374</HRValue></HResult>
-    <HResult Name="D3DERR_LIGHTHASVIEWPORT"><HRValue>2289435375</HRValue></HResult>
-    <HResult Name="D3DERR_LIGHTNOTINTHISVIEWPORT"><HRValue>2289435376</HRValue></HResult>
-    <HResult Name="D3DERR_SCENE_IN_SCENE"><HRValue>2289435384</HRValue></HResult>
-    <HResult Name="D3DERR_SCENE_NOT_IN_SCENE"><HRValue>2289435385</HRValue></HResult>
-    <HResult Name="D3DERR_SCENE_BEGIN_FAILED"><HRValue>2289435386</HRValue></HResult>
-    <HResult Name="D3DERR_SCENE_END_FAILED"><HRValue>2289435387</HRValue></HResult>
-    <HResult Name="D3DERR_INBEGIN"><HRValue>2289435394</HRValue></HResult>
-    <HResult Name="D3DERR_NOTINBEGIN"><HRValue>2289435395</HRValue></HResult>
-    <HResult Name="D3DERR_NOVIEWPORTS"><HRValue>2289435396</HRValue></HResult>
-    <HResult Name="D3DERR_VIEWPORTDATANOTSET"><HRValue>2289435397</HRValue></HResult>
-    <HResult Name="D3DERR_VIEWPORTHASNODEVICE"><HRValue>2289435398</HRValue></HResult>
-    <HResult Name="D3DERR_NOCURRENTVIEWPORT"><HRValue>2289435399</HRValue></HResult>
-    <HResult Name="D3DERR_INVALIDVERTEXFORMAT"><HRValue>2289436672</HRValue></HResult>
-    <HResult Name="D3DERR_COLORKEYATTACHED"><HRValue>2289436674</HRValue></HResult>
-    <HResult Name="D3DERR_VERTEXBUFFEROPTIMIZED"><HRValue>2289436684</HRValue></HResult>
-    <HResult Name="D3DERR_VBUF_CREATE_FAILED"><HRValue>2289436685</HRValue></HResult>
-    <HResult Name="D3DERR_VERTEXBUFFERLOCKED"><HRValue>2289436686</HRValue></HResult>
-    <HResult Name="D3DERR_VERTEXBUFFERUNLOCKFAILED"><HRValue>2289436687</HRValue></HResult>
-    <HResult Name="D3DERR_ZBUFFER_NOTPRESENT"><HRValue>2289436694</HRValue></HResult>
-    <HResult Name="D3DERR_STENCILBUFFER_NOTPRESENT"><HRValue>2289436695</HRValue></HResult>
-    <HResult Name="D3DERR_TOOMANYPRIMITIVES"><HRValue>2289436707</HRValue></HResult>
-    <HResult Name="D3DERR_INVALIDMATRIX"><HRValue>2289436708</HRValue></HResult>
-    <HResult Name="D3DERR_TOOMANYVERTICES"><HRValue>2289436709</HRValue></HResult>
-    <HResult Name="D3DERR_INVALIDSTATEBLOCK"><HRValue>2289436724</HRValue></HResult>
-    <HResult Name="D3DERR_INBEGINSTATEBLOCK"><HRValue>2289436725</HRValue></HResult>
-    <HResult Name="D3DERR_NOTINBEGINSTATEBLOCK"><HRValue>2289436726</HRValue></HResult>
-    <HResult Name="D3DERR_COMMAND_UNPARSED"><HRValue>2289437624</HRValue></HResult>
-    <HResult Name="D3DOK_NOAUTOGEN"><HRValue>141953135</HRValue></HResult>
-    <HResult Name="D3DXERR_CANNOTMODIFYINDEXBUFFER"><HRValue>2289437524</HRValue></HResult>
-    <HResult Name="D3DXERR_INVALIDMESH"><HRValue>2289437525</HRValue></HResult>
-    <HResult Name="D3DXERR_CANNOTATTRSORT"><HRValue>2289437526</HRValue></HResult>
-    <HResult Name="D3DXERR_SKINNINGNOTSUPPORTED"><HRValue>2289437527</HRValue></HResult>
-    <HResult Name="D3DXERR_TOOMANYINFLUENCES"><HRValue>2289437528</HRValue></HResult>
-    <HResult Name="D3DXERR_INVALIDDATA"><HRValue>2289437529</HRValue></HResult>
-    <HResult Name="D3DXERR_LOADEDMESHASNODATA"><HRValue>2289437530</HRValue></HResult>
-    <HResult Name="D3DXERR_DUPLICATENAMEDFRAGMENT"><HRValue>2289437531</HRValue></HResult>
-    <HResult Name="D3DXERR_CANNOTREMOVELASTITEM"><HRValue>2289437532</HRValue></HResult>
-    <HResult Name="D3DXFERR_BADOBJECT"><HRValue>2289435524</HRValue></HResult>
-    <HResult Name="D3DXFERR_BADVALUE"><HRValue>2289435525</HRValue></HResult>
-    <HResult Name="D3DXFERR_BADTYPE"><HRValue>2289435526</HRValue></HResult>
-    <HResult Name="D3DXFERR_NOTFOUND"><HRValue>2289435527</HRValue></HResult>
-    <HResult Name="D3DXFERR_NOTDONEYET"><HRValue>2289435528</HRValue></HResult>
-    <HResult Name="D3DXFERR_FILENOTFOUND"><HRValue>2289435529</HRValue></HResult>
-    <HResult Name="D3DXFERR_RESOURCENOTFOUND"><HRValue>2289435530</HRValue></HResult>
-    <HResult Name="D3DXFERR_BADRESOURCE"><HRValue>2289435531</HRValue></HResult>
-    <HResult Name="D3DXFERR_BADFILETYPE"><HRValue>2289435532</HRValue></HResult>
-    <HResult Name="D3DXFERR_BADFILEVERSION"><HRValue>2289435533</HRValue></HResult>
-    <HResult Name="D3DXFERR_BADFILEFLOATSIZE"><HRValue>2289435534</HRValue></HResult>
-    <HResult Name="D3DXFERR_BADFILE"><HRValue>2289435535</HRValue></HResult>
-    <HResult Name="D3DXFERR_PARSEERROR"><HRValue>2289435536</HRValue></HResult>
-    <HResult Name="D3DXFERR_BADARRAYSIZE"><HRValue>2289435537</HRValue></HResult>
-    <HResult Name="D3DXFERR_BADDATAREFERENCE"><HRValue>2289435538</HRValue></HResult>
-    <HResult Name="D3DXFERR_NOMOREOBJECTS"><HRValue>2289435539</HRValue></HResult>
-    <HResult Name="D3DXFERR_NOMOREDATA"><HRValue>2289435540</HRValue></HResult>
-    <HResult Name="D3DXFERR_BADCACHEFILE"><HRValue>2289435541</HRValue></HResult>
+    <HResult Name="D3DERR_WRONGTEXTUREFORMAT"><HRValue>0x88760818</HRValue></HResult>
+    <HResult Name="D3DERR_UNSUPPORTEDCOLOROPERATION"><HRValue>0x88760819</HRValue></HResult>
+    <HResult Name="D3DERR_UNSUPPORTEDCOLORARG"><HRValue>0x8876081A</HRValue></HResult>
+    <HResult Name="D3DERR_UNSUPPORTEDALPHAOPERATION"><HRValue>0x8876081B</HRValue></HResult>
+    <HResult Name="D3DERR_UNSUPPORTEDALPHAARG"><HRValue>0x8876081C</HRValue></HResult>
+    <HResult Name="D3DERR_TOOMANYOPERATIONS"><HRValue>0x8876081D</HRValue></HResult>
+    <HResult Name="D3DERR_CONFLICTINGTEXTUREFILTER"><HRValue>0x8876081E</HRValue></HResult>
+    <HResult Name="D3DERR_UNSUPPORTEDFACTORVALUE"><HRValue>0x8876081F</HRValue></HResult>
+    <HResult Name="D3DERR_CONFLICTINGRENDERSTATE"><HRValue>0x88760821</HRValue></HResult>
+    <HResult Name="D3DERR_UNSUPPORTEDTEXTUREFILTER"><HRValue>0x88760822</HRValue></HResult>
+    <HResult Name="D3DERR_CONFLICTINGTEXTUREPALETTE"><HRValue>0x88760826</HRValue></HResult>
+    <HResult Name="D3DERR_DRIVERINTERNALERROR"><HRValue>0x88760827</HRValue></HResult>
+    <HResult Name="D3DERR_NOTFOUND"><HRValue>0x88760866</HRValue></HResult>
+    <HResult Name="D3DERR_MOREDATA"><HRValue>0x88760867</HRValue></HResult>
+    <HResult Name="D3DERR_DEVICELOST"><HRValue>0x88760868</HRValue></HResult>
+    <HResult Name="D3DERR_DEVICENOTRESET"><HRValue>0x88760869</HRValue></HResult>
+    <HResult Name="D3DERR_NOTAVAILABLE"><HRValue>0x8876086A</HRValue></HResult>
+    <HResult Name="D3DERR_OUTOFVIDEOMEMORY"><HRValue>0x8876017C</HRValue></HResult>
+    <HResult Name="D3DERR_INVALIDDEVICE"><HRValue>0x8876086B</HRValue></HResult>
+    <HResult Name="D3DERR_INVALIDCALL"><HRValue>0x8876086C</HRValue></HResult>
+    <HResult Name="D3DERR_DRIVERINVALIDCALL"><HRValue>0x8876086D</HRValue></HResult>
+    <HResult Name="D3DERR_WASSTILLDRAWING"><HRValue>0x8876021C</HRValue></HResult>
+    <HResult Name="D3DERR_DEVICEREMOVED"><HRValue>0x88760870</HRValue></HResult>
+    <HResult Name="D3DERR_DEVICEHUNG"><HRValue>0x88760874</HRValue></HResult>
+    <HResult Name="D3DERR_UNSUPPORTEDOVERLAY"><HRValue>0x8876087B</HRValue></HResult>
+    <HResult Name="D3DERR_UNSUPPORTEDOVERLAYFORMAT"><HRValue>0x8876087C</HRValue></HResult>
+    <HResult Name="D3DERR_CANNOTPROTECTCONTENT"><HRValue>0x8876087D</HRValue></HResult>
+    <HResult Name="D3DERR_UNSUPPORTEDCRYPTO"><HRValue>0x8876087E</HRValue></HResult>
+    <HResult Name="D3DERR_PRESENT_STATISTICS_DISJOINT"><HRValue>0x88760884</HRValue></HResult>
+    <HResult Name="D3DERR_BADMAJORVERSION"><HRValue>0x887602BC</HRValue></HResult>
+    <HResult Name="D3DERR_BADMINORVERSION"><HRValue>0x887602BD</HRValue></HResult>
+    <HResult Name="D3DERR_INVALID_DEVICE"><HRValue>0x887602C1</HRValue></HResult>
+    <HResult Name="D3DERR_INITFAILED"><HRValue>0x887602C2</HRValue></HResult>
+    <HResult Name="D3DERR_DEVICEAGGREGATED"><HRValue>0x887602C3</HRValue></HResult>
+    <HResult Name="D3DERR_EXECUTE_CREATE_FAILED"><HRValue>0x887602C6</HRValue></HResult>
+    <HResult Name="D3DERR_EXECUTE_DESTROY_FAILED"><HRValue>0x887602C7</HRValue></HResult>
+    <HResult Name="D3DERR_EXECUTE_LOCK_FAILED"><HRValue>0x887602C8</HRValue></HResult>
+    <HResult Name="D3DERR_EXECUTE_UNLOCK_FAILED"><HRValue>0x887602C9</HRValue></HResult>
+    <HResult Name="D3DERR_EXECUTE_LOCKED"><HRValue>0x887602CA</HRValue></HResult>
+    <HResult Name="D3DERR_EXECUTE_NOT_LOCKED"><HRValue>0x887602CB</HRValue></HResult>
+    <HResult Name="D3DERR_EXECUTE_FAILED"><HRValue>0x887602CC</HRValue></HResult>
+    <HResult Name="D3DERR_EXECUTE_CLIPPED_FAILED"><HRValue>0x887602CD</HRValue></HResult>
+    <HResult Name="D3DERR_TEXTURE_NO_SUPPORT"><HRValue>0x887602D0</HRValue></HResult>
+    <HResult Name="D3DERR_TEXTURE_CREATE_FAILED"><HRValue>0x887602D1</HRValue></HResult>
+    <HResult Name="D3DERR_TEXTURE_DESTROY_FAILED"><HRValue>0x887602D2</HRValue></HResult>
+    <HResult Name="D3DERR_TEXTURE_LOCK_FAILED"><HRValue>0x887602D3</HRValue></HResult>
+    <HResult Name="D3DERR_TEXTURE_UNLOCK_FAILED"><HRValue>0x887602D4</HRValue></HResult>
+    <HResult Name="D3DERR_TEXTURE_LOAD_FAILED"><HRValue>0x887602D5</HRValue></HResult>
+    <HResult Name="D3DERR_TEXTURE_SWAP_FAILED"><HRValue>0x887602D6</HRValue></HResult>
+    <HResult Name="D3DERR_TEXTURE_LOCKED"><HRValue>0x887602D7</HRValue></HResult>
+    <HResult Name="D3DERR_TEXTURE_NOT_LOCKED"><HRValue>0x887602D8</HRValue></HResult>
+    <HResult Name="D3DERR_TEXTURE_GETSURF_FAILED"><HRValue>0x887602D9</HRValue></HResult>
+    <HResult Name="D3DERR_MATRIX_CREATE_FAILED"><HRValue>0x887602DA</HRValue></HResult>
+    <HResult Name="D3DERR_MATRIX_DESTROY_FAILED"><HRValue>0x887602DB</HRValue></HResult>
+    <HResult Name="D3DERR_MATRIX_SETDATA_FAILED"><HRValue>0x887602DC</HRValue></HResult>
+    <HResult Name="D3DERR_MATRIX_GETDATA_FAILED"><HRValue>0x887602DD</HRValue></HResult>
+    <HResult Name="D3DERR_SETVIEWPORTDATA_FAILED"><HRValue>0x887602DE</HRValue></HResult>
+    <HResult Name="D3DERR_INVALIDCURRENTVIEWPORT"><HRValue>0x887602DF</HRValue></HResult>
+    <HResult Name="D3DERR_INVALIDPRIMITIVETYPE"><HRValue>0x887602E0</HRValue></HResult>
+    <HResult Name="D3DERR_INVALIDVERTEXTYPE"><HRValue>0x887602E1</HRValue></HResult>
+    <HResult Name="D3DERR_TEXTURE_BADSIZE"><HRValue>0x887602E2</HRValue></HResult>
+    <HResult Name="D3DERR_INVALIDRAMPTEXTURE"><HRValue>0x887602E3</HRValue></HResult>
+    <HResult Name="D3DERR_MATERIAL_CREATE_FAILED"><HRValue>0x887602E4</HRValue></HResult>
+    <HResult Name="D3DERR_MATERIAL_DESTROY_FAILED"><HRValue>0x887602E5</HRValue></HResult>
+    <HResult Name="D3DERR_MATERIAL_SETDATA_FAILED"><HRValue>0x887602E6</HRValue></HResult>
+    <HResult Name="D3DERR_MATERIAL_GETDATA_FAILED"><HRValue>0x887602E7</HRValue></HResult>
+    <HResult Name="D3DERR_INVALIDPALETTE"><HRValue>0x887602E8</HRValue></HResult>
+    <HResult Name="D3DERR_ZBUFF_NEEDS_SYSTEMMEMORY"><HRValue>0x887602E9</HRValue></HResult>
+    <HResult Name="D3DERR_ZBUFF_NEEDS_VIDEOMEMORY"><HRValue>0x887602EA</HRValue></HResult>
+    <HResult Name="D3DERR_SURFACENOTINVIDMEM"><HRValue>0x887602EB</HRValue></HResult>
+    <HResult Name="D3DERR_LIGHT_SET_FAILED"><HRValue>0x887602EE</HRValue></HResult>
+    <HResult Name="D3DERR_LIGHTHASVIEWPORT"><HRValue>0x887602EF</HRValue></HResult>
+    <HResult Name="D3DERR_LIGHTNOTINTHISVIEWPORT"><HRValue>0x887602F0</HRValue></HResult>
+    <HResult Name="D3DERR_SCENE_IN_SCENE"><HRValue>0x887602F8</HRValue></HResult>
+    <HResult Name="D3DERR_SCENE_NOT_IN_SCENE"><HRValue>0x887602F9</HRValue></HResult>
+    <HResult Name="D3DERR_SCENE_BEGIN_FAILED"><HRValue>0x887602FA</HRValue></HResult>
+    <HResult Name="D3DERR_SCENE_END_FAILED"><HRValue>0x887602FB</HRValue></HResult>
+    <HResult Name="D3DERR_INBEGIN"><HRValue>0x88760302</HRValue></HResult>
+    <HResult Name="D3DERR_NOTINBEGIN"><HRValue>0x88760303</HRValue></HResult>
+    <HResult Name="D3DERR_NOVIEWPORTS"><HRValue>0x88760304</HRValue></HResult>
+    <HResult Name="D3DERR_VIEWPORTDATANOTSET"><HRValue>0x88760305</HRValue></HResult>
+    <HResult Name="D3DERR_VIEWPORTHASNODEVICE"><HRValue>0x88760306</HRValue></HResult>
+    <HResult Name="D3DERR_NOCURRENTVIEWPORT"><HRValue>0x88760307</HRValue></HResult>
+    <HResult Name="D3DERR_INVALIDVERTEXFORMAT"><HRValue>0x88760800</HRValue></HResult>
+    <HResult Name="D3DERR_COLORKEYATTACHED"><HRValue>0x88760802</HRValue></HResult>
+    <HResult Name="D3DERR_VERTEXBUFFEROPTIMIZED"><HRValue>0x8876080C</HRValue></HResult>
+    <HResult Name="D3DERR_VBUF_CREATE_FAILED"><HRValue>0x8876080D</HRValue></HResult>
+    <HResult Name="D3DERR_VERTEXBUFFERLOCKED"><HRValue>0x8876080E</HRValue></HResult>
+    <HResult Name="D3DERR_VERTEXBUFFERUNLOCKFAILED"><HRValue>0x8876080F</HRValue></HResult>
+    <HResult Name="D3DERR_ZBUFFER_NOTPRESENT"><HRValue>0x88760816</HRValue></HResult>
+    <HResult Name="D3DERR_STENCILBUFFER_NOTPRESENT"><HRValue>0x88760817</HRValue></HResult>
+    <HResult Name="D3DERR_TOOMANYPRIMITIVES"><HRValue>0x88760823</HRValue></HResult>
+    <HResult Name="D3DERR_INVALIDMATRIX"><HRValue>0x88760824</HRValue></HResult>
+    <HResult Name="D3DERR_TOOMANYVERTICES"><HRValue>0x88760825</HRValue></HResult>
+    <HResult Name="D3DERR_INVALIDSTATEBLOCK"><HRValue>0x88760834</HRValue></HResult>
+    <HResult Name="D3DERR_INBEGINSTATEBLOCK"><HRValue>0x88760835</HRValue></HResult>
+    <HResult Name="D3DERR_NOTINBEGINSTATEBLOCK"><HRValue>0x88760836</HRValue></HResult>
+    <HResult Name="D3DERR_COMMAND_UNPARSED"><HRValue>0x88760BB8</HRValue></HResult>
+    <HResult Name="D3DOK_NOAUTOGEN"><HRValue>0x0876086F</HRValue></HResult>
+    <HResult Name="D3DXERR_CANNOTMODIFYINDEXBUFFER"><HRValue>0x88760B54</HRValue></HResult>
+    <HResult Name="D3DXERR_INVALIDMESH"><HRValue>0x88760B55</HRValue></HResult>
+    <HResult Name="D3DXERR_CANNOTATTRSORT"><HRValue>0x88760B56</HRValue></HResult>
+    <HResult Name="D3DXERR_SKINNINGNOTSUPPORTED"><HRValue>0x88760B57</HRValue></HResult>
+    <HResult Name="D3DXERR_TOOMANYINFLUENCES"><HRValue>0x88760B58</HRValue></HResult>
+    <HResult Name="D3DXERR_INVALIDDATA"><HRValue>0x88760B59</HRValue></HResult>
+    <HResult Name="D3DXERR_LOADEDMESHASNODATA"><HRValue>0x88760B5A</HRValue></HResult>
+    <HResult Name="D3DXERR_DUPLICATENAMEDFRAGMENT"><HRValue>0x88760B5B</HRValue></HResult>
+    <HResult Name="D3DXERR_CANNOTREMOVELASTITEM"><HRValue>0x88760B5C</HRValue></HResult>
+    <HResult Name="D3DXFERR_BADOBJECT"><HRValue>0x88760384</HRValue></HResult>
+    <HResult Name="D3DXFERR_BADVALUE"><HRValue>0x88760385</HRValue></HResult>
+    <HResult Name="D3DXFERR_BADTYPE"><HRValue>0x88760386</HRValue></HResult>
+    <HResult Name="D3DXFERR_NOTFOUND"><HRValue>0x88760387</HRValue></HResult>
+    <HResult Name="D3DXFERR_NOTDONEYET"><HRValue>0x88760388</HRValue></HResult>
+    <HResult Name="D3DXFERR_FILENOTFOUND"><HRValue>0x88760389</HRValue></HResult>
+    <HResult Name="D3DXFERR_RESOURCENOTFOUND"><HRValue>0x8876038A</HRValue></HResult>
+    <HResult Name="D3DXFERR_BADRESOURCE"><HRValue>0x8876038B</HRValue></HResult>
+    <HResult Name="D3DXFERR_BADFILETYPE"><HRValue>0x8876038C</HRValue></HResult>
+    <HResult Name="D3DXFERR_BADFILEVERSION"><HRValue>0x8876038D</HRValue></HResult>
+    <HResult Name="D3DXFERR_BADFILEFLOATSIZE"><HRValue>0x8876038E</HRValue></HResult>
+    <HResult Name="D3DXFERR_BADFILE"><HRValue>0x8876038F</HRValue></HResult>
+    <HResult Name="D3DXFERR_PARSEERROR"><HRValue>0x88760390</HRValue></HResult>
+    <HResult Name="D3DXFERR_BADARRAYSIZE"><HRValue>0x88760391</HRValue></HResult>
+    <HResult Name="D3DXFERR_BADDATAREFERENCE"><HRValue>0x88760392</HRValue></HResult>
+    <HResult Name="D3DXFERR_NOMOREOBJECTS"><HRValue>0x88760393</HRValue></HResult>
+    <HResult Name="D3DXFERR_NOMOREDATA"><HRValue>0x88760394</HRValue></HResult>
+    <HResult Name="D3DXFERR_BADCACHEFILE"><HRValue>0x88760395</HRValue></HResult>
     <HResult Name="DATA_S_SAMEFORMATETC"><HRValue>0x00040130</HRValue></HResult>
     <HResult Name="DCOMPOSITION_ERROR_WINDOW_ALREADY_COMPOSED"><HRValue>0x88980800</HRValue></HResult>
     <HResult Name="DCOMPOSITION_ERROR_SURFACE_BEING_RENDERED"><HRValue>0x88980801</HRValue></HResult>
@@ -16840,10 +16840,10 @@
     <HResult Name="S_FALSE"><HRValue>0x00000001</HRValue></HResult>
     <HResult Name="S_STORE_LAUNCHED_FOR_REMEDIATION"><HRValue>0x00270258</HRValue></HResult>
     <HResult Name="S_APPLICATION_ACTIVATION_ERROR_HANDLED_BY_DIALOG"><HRValue>0x00270259</HRValue></HResult>
-    <HResult Name="S_NOT_RESIDENT"><HRValue>141953141</HRValue></HResult>
-    <HResult Name="S_RESIDENT_IN_SHARED_MEMORY"><HRValue>141953142</HRValue></HResult>
-    <HResult Name="S_PRESENT_MODE_CHANGED"><HRValue>141953143</HRValue></HResult>
-    <HResult Name="S_PRESENT_OCCLUDED"><HRValue>141953144</HRValue></HResult>
+    <HResult Name="S_NOT_RESIDENT"><HRValue>0x08760875</HRValue></HResult>
+    <HResult Name="S_RESIDENT_IN_SHARED_MEMORY"><HRValue>0x08760876</HRValue></HResult>
+    <HResult Name="S_PRESENT_MODE_CHANGED"><HRValue>0x08760877</HRValue></HResult>
+    <HResult Name="S_PRESENT_OCCLUDED"><HRValue>0x08760878</HRValue></HResult>
     <HResult Name="SCARD_E_CANCELLED"><HRValue>0x80100002</HRValue></HResult>
     <HResult Name="SCARD_E_INVALID_HANDLE"><HRValue>0x80100003</HRValue></HResult>
     <HResult Name="SCARD_E_INVALID_PARAMETER"><HRValue>0x80100004</HRValue></HResult>

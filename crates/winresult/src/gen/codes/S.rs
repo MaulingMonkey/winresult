@@ -15,7 +15,7 @@ pub const STORE_LAUNCHED_FOR_REMEDIATION : HResultSuccess = HResultSuccess::from
 /// This app failed to launch, but the error was handled with a dialog.
 pub const APPLICATION_ACTIVATION_ERROR_HANDLED_BY_DIALOG : HResultSuccess = HResultSuccess::from_constant(0x00270259); // S_APPLICATION_ACTIVATION_ERROR_HANDLED_BY_DIALOG
 
-pub const NOT_RESIDENT : HResultSuccess = HResultSuccess::from_constant(141953141); // S_NOT_RESIDENT
-pub const RESIDENT_IN_SHARED_MEMORY : HResultSuccess = HResultSuccess::from_constant(141953142); // S_RESIDENT_IN_SHARED_MEMORY
-pub const PRESENT_MODE_CHANGED : HResultSuccess = HResultSuccess::from_constant(141953143); // S_PRESENT_MODE_CHANGED
-pub const PRESENT_OCCLUDED : HResultSuccess = HResultSuccess::from_constant(141953144); // S_PRESENT_OCCLUDED
+pub const NOT_RESIDENT : HResultSuccess = HResultSuccess::from_constant(0x08760875); // S_NOT_RESIDENT
+pub const RESIDENT_IN_SHARED_MEMORY : HResultSuccess = HResultSuccess::from_constant(0x08760876); // S_RESIDENT_IN_SHARED_MEMORY
+pub const PRESENT_MODE_CHANGED : HResultSuccess = HResultSuccess::from_constant(0x08760877); // S_PRESENT_MODE_CHANGED
+pub const PRESENT_OCCLUDED : HResultSuccess = HResultSuccess::from_constant(0x08760878); // S_PRESENT_OCCLUDED

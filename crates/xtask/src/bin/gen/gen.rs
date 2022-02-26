@@ -31,6 +31,7 @@ pub fn codes(codes: &scan::Codes) {
                     for doc in docs.iter() { writeln!(rs, "/// {doc}")?; }
                     prev_doc = !docs.is_empty();
                 }
+                let rs_value = code.rs_value_nice();
                 writeln!(rs, "pub const {rs_id} : {rs_ty} = {rs_ty}::from_constant({rs_value}); // {cpp}")?;
             }
 
@@ -102,6 +103,7 @@ pub fn codes(codes: &scan::Codes) {
                     if !code.matches_ty(ty) { continue }
                     #[allow(unused_variables)] let scan::Code { cpp, rs_mod, rs_id, rs_ty, rs_value, docs, redundant, hide } = &code;
                     if *hide { continue }
+                    let rs_value = code.rs_value_nice();
                     writeln!(rs, r#"            {rs_value} => "{rs_mod}::{rs_id}","#)?;
                 }
             }
@@ -198,6 +200,7 @@ pub fn codes(codes: &scan::Codes) {
                         if !code.matches_ty(ty) { continue }
                         #[allow(unused_variables)] let scan::Code { cpp, rs_mod, rs_id, rs_ty, rs_value, docs, redundant, hide } = &code;
                         if *hide { continue }
+                        let rs_value = code.rs_value_nice();
                         writeln!(nv, r#"        <DisplayString Condition="__0 == {rs_value}">{rs_mod}::{rs_id}</DisplayString>"#)?;
                     }
                 }
@@ -310,6 +313,7 @@ pub fn codes(codes: &scan::Codes) {
                 if !code.matches_ty("HResult") { continue }
                 #[allow(unused_variables)] let scan::Code { cpp, rs_mod, rs_id, rs_ty, rs_value, docs, redundant, hide } = &code;
                 if *hide { continue }
+                let rs_value = code.rs_value_nice();
                 writeln!(nv, r#"    <HResult Name="{cpp}"><HRValue>{rs_value}</HRValue></HResult>"#)?;
                 //writeln!(nv, r#"        <HRDescription>No elements in the collection.</HRDescription>"#)?;
             }

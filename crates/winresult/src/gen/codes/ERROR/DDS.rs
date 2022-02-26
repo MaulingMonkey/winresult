@@ -2,22 +2,22 @@
 
 use super::*;
 
-pub const NO_DS_AVAILABLE : ErrorCode = ErrorCode::from_constant(0x00004E66); // ERROR_DDS_NO_DS_AVAILABLE
-pub const NO_DHCP_ROOT : ErrorCode = ErrorCode::from_constant(0x00004E67); // ERROR_DDS_NO_DHCP_ROOT
-pub const UNEXPECTED_ERROR : ErrorCode = ErrorCode::from_constant(0x00004E68); // ERROR_DDS_UNEXPECTED_ERROR
-pub const TOO_MANY_ERRORS : ErrorCode = ErrorCode::from_constant(0x00004E69); // ERROR_DDS_TOO_MANY_ERRORS
-pub const DHCP_SERVER_NOT_FOUND : ErrorCode = ErrorCode::from_constant(0x00004E6A); // ERROR_DDS_DHCP_SERVER_NOT_FOUND
-pub const OPTION_ALREADY_EXISTS : ErrorCode = ErrorCode::from_constant(0x00004E6B); // ERROR_DDS_OPTION_ALREADY_EXISTS
-pub const OPTION_DOES_NOT_EXIST : ErrorCode = ErrorCode::from_constant(0x00004E6C); // ERROR_DDS_OPTION_DOES_NOT_EXIST
-pub const CLASS_EXISTS : ErrorCode = ErrorCode::from_constant(0x00004E6D); // ERROR_DDS_CLASS_EXISTS
-pub const CLASS_DOES_NOT_EXIST : ErrorCode = ErrorCode::from_constant(0x00004E6E); // ERROR_DDS_CLASS_DOES_NOT_EXIST
-pub const SERVER_ALREADY_EXISTS : ErrorCode = ErrorCode::from_constant(0x00004E6F); // ERROR_DDS_SERVER_ALREADY_EXISTS
-pub const SERVER_DOES_NOT_EXIST : ErrorCode = ErrorCode::from_constant(0x00004E70); // ERROR_DDS_SERVER_DOES_NOT_EXIST
-pub const SERVER_ADDRESS_MISMATCH : ErrorCode = ErrorCode::from_constant(0x00004E71); // ERROR_DDS_SERVER_ADDRESS_MISMATCH
-pub const SUBNET_EXISTS : ErrorCode = ErrorCode::from_constant(0x00004E72); // ERROR_DDS_SUBNET_EXISTS
-pub const SUBNET_HAS_DIFF_SSCOPE : ErrorCode = ErrorCode::from_constant(0x00004E73); // ERROR_DDS_SUBNET_HAS_DIFF_SSCOPE
-pub const SUBNET_NOT_PRESENT : ErrorCode = ErrorCode::from_constant(0x00004E74); // ERROR_DDS_SUBNET_NOT_PRESENT
-pub const RESERVATION_NOT_PRESENT : ErrorCode = ErrorCode::from_constant(0x00004E75); // ERROR_DDS_RESERVATION_NOT_PRESENT
-pub const RESERVATION_CONFLICT : ErrorCode = ErrorCode::from_constant(0x00004E76); // ERROR_DDS_RESERVATION_CONFLICT
-pub const POSSIBLE_RANGE_CONFLICT : ErrorCode = ErrorCode::from_constant(0x00004E77); // ERROR_DDS_POSSIBLE_RANGE_CONFLICT
-pub const RANGE_DOES_NOT_EXIST : ErrorCode = ErrorCode::from_constant(0x00004E78); // ERROR_DDS_RANGE_DOES_NOT_EXIST
+pub const NO_DS_AVAILABLE : ErrorCode = ErrorCode::from_constant(20070); // ERROR_DDS_NO_DS_AVAILABLE
+pub const NO_DHCP_ROOT : ErrorCode = ErrorCode::from_constant(20071); // ERROR_DDS_NO_DHCP_ROOT
+pub const UNEXPECTED_ERROR : ErrorCode = ErrorCode::from_constant(20072); // ERROR_DDS_UNEXPECTED_ERROR
+pub const TOO_MANY_ERRORS : ErrorCode = ErrorCode::from_constant(20073); // ERROR_DDS_TOO_MANY_ERRORS
+pub const DHCP_SERVER_NOT_FOUND : ErrorCode = ErrorCode::from_constant(20074); // ERROR_DDS_DHCP_SERVER_NOT_FOUND
+pub const OPTION_ALREADY_EXISTS : ErrorCode = ErrorCode::from_constant(20075); // ERROR_DDS_OPTION_ALREADY_EXISTS
+pub const OPTION_DOES_NOT_EXIST : ErrorCode = ErrorCode::from_constant(20076); // ERROR_DDS_OPTION_DOES_NOT_EXIST
+pub const CLASS_EXISTS : ErrorCode = ErrorCode::from_constant(20077); // ERROR_DDS_CLASS_EXISTS
+pub const CLASS_DOES_NOT_EXIST : ErrorCode = ErrorCode::from_constant(20078); // ERROR_DDS_CLASS_DOES_NOT_EXIST
+pub const SERVER_ALREADY_EXISTS : ErrorCode = ErrorCode::from_constant(20079); // ERROR_DDS_SERVER_ALREADY_EXISTS
+pub const SERVER_DOES_NOT_EXIST : ErrorCode = ErrorCode::from_constant(20080); // ERROR_DDS_SERVER_DOES_NOT_EXIST
+pub const SERVER_ADDRESS_MISMATCH : ErrorCode = ErrorCode::from_constant(20081); // ERROR_DDS_SERVER_ADDRESS_MISMATCH
+pub const SUBNET_EXISTS : ErrorCode = ErrorCode::from_constant(20082); // ERROR_DDS_SUBNET_EXISTS
+pub const SUBNET_HAS_DIFF_SSCOPE : ErrorCode = ErrorCode::from_constant(20083); // ERROR_DDS_SUBNET_HAS_DIFF_SSCOPE
+pub const SUBNET_NOT_PRESENT : ErrorCode = ErrorCode::from_constant(20084); // ERROR_DDS_SUBNET_NOT_PRESENT
+pub const RESERVATION_NOT_PRESENT : ErrorCode = ErrorCode::from_constant(20085); // ERROR_DDS_RESERVATION_NOT_PRESENT
+pub const RESERVATION_CONFLICT : ErrorCode = ErrorCode::from_constant(20086); // ERROR_DDS_RESERVATION_CONFLICT
+pub const POSSIBLE_RANGE_CONFLICT : ErrorCode = ErrorCode::from_constant(20087); // ERROR_DDS_POSSIBLE_RANGE_CONFLICT
+pub const RANGE_DOES_NOT_EXIST : ErrorCode = ErrorCode::from_constant(20088); // ERROR_DDS_RANGE_DOES_NOT_EXIST

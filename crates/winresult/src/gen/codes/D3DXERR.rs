@@ -2,12 +2,12 @@
 
 use super::*;
 
-pub const CANNOTMODIFYINDEXBUFFER : HResultError = HResultError::from_constant(2289437524); // D3DXERR_CANNOTMODIFYINDEXBUFFER
-pub const INVALIDMESH : HResultError = HResultError::from_constant(2289437525); // D3DXERR_INVALIDMESH
-pub const CANNOTATTRSORT : HResultError = HResultError::from_constant(2289437526); // D3DXERR_CANNOTATTRSORT
-pub const SKINNINGNOTSUPPORTED : HResultError = HResultError::from_constant(2289437527); // D3DXERR_SKINNINGNOTSUPPORTED
-pub const TOOMANYINFLUENCES : HResultError = HResultError::from_constant(2289437528); // D3DXERR_TOOMANYINFLUENCES
-pub const INVALIDDATA : HResultError = HResultError::from_constant(2289437529); // D3DXERR_INVALIDDATA
-pub const LOADEDMESHASNODATA : HResultError = HResultError::from_constant(2289437530); // D3DXERR_LOADEDMESHASNODATA
-pub const DUPLICATENAMEDFRAGMENT : HResultError = HResultError::from_constant(2289437531); // D3DXERR_DUPLICATENAMEDFRAGMENT
-pub const CANNOTREMOVELASTITEM : HResultError = HResultError::from_constant(2289437532); // D3DXERR_CANNOTREMOVELASTITEM
+pub const CANNOTMODIFYINDEXBUFFER : HResultError = HResultError::from_constant(0x88760B54); // D3DXERR_CANNOTMODIFYINDEXBUFFER
+pub const INVALIDMESH : HResultError = HResultError::from_constant(0x88760B55); // D3DXERR_INVALIDMESH
+pub const CANNOTATTRSORT : HResultError = HResultError::from_constant(0x88760B56); // D3DXERR_CANNOTATTRSORT
+pub const SKINNINGNOTSUPPORTED : HResultError = HResultError::from_constant(0x88760B57); // D3DXERR_SKINNINGNOTSUPPORTED
+pub const TOOMANYINFLUENCES : HResultError = HResultError::from_constant(0x88760B58); // D3DXERR_TOOMANYINFLUENCES
+pub const INVALIDDATA : HResultError = HResultError::from_constant(0x88760B59); // D3DXERR_INVALIDDATA
+pub const LOADEDMESHASNODATA : HResultError = HResultError::from_constant(0x88760B5A); // D3DXERR_LOADEDMESHASNODATA
+pub const DUPLICATENAMEDFRAGMENT : HResultError = HResultError::from_constant(0x88760B5B); // D3DXERR_DUPLICATENAMEDFRAGMENT
+pub const CANNOTREMOVELASTITEM : HResultError = HResultError::from_constant(0x88760B5C); // D3DXERR_CANNOTREMOVELASTITEM
