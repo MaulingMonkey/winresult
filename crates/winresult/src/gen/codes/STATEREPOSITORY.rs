@@ -56,3 +56,9 @@ pub const E_NESTED_TRANSACTION_NOT_SUPPORTED : HResultError = HResultError::from
 
 /// The StateRepository cache is not valid.
 pub const ERROR_CACHE_CORRUPTED : HResultError = HResultError::from_constant(0x80670012); // STATEREPOSITORY_ERROR_CACHE_CORRUPTED
+
+/// The StateRepository cache is not initialized.
+pub const E_CACHE_NOT_INIITALIZED : HResultError = HResultError::from_constant(0x80670015); // STATEREPOSITORY_E_CACHE_NOT_INIITALIZED
+
+/// Package dependency criteria could not be resolved.
+pub const E_DEPENDENCY_NOT_RESOLVED : HResultError = HResultError::from_constant(0x80670016); // STATEREPOSITORY_E_DEPENDENCY_NOT_RESOLVED

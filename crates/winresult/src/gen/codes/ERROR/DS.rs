@@ -1206,5 +1206,8 @@ pub const MISSING_FOREST_TRUST : ErrorCode = ErrorCode::from_constant(8649); // 
 /// The link value specified was not found, but a link value with that key was found.
 pub const VALUE_KEY_NOT_UNIQUE : ErrorCode = ErrorCode::from_constant(8650); // ERROR_DS_VALUE_KEY_NOT_UNIQUE
 
+/// The add object operation failed because the caller was not authorized to add one or more attributes included in the request.
+pub const PER_ATTRIBUTE_AUTHZ_FAILED_DURING_ADD : ErrorCode = ErrorCode::from_constant(8652); // ERROR_DS_PER_ATTRIBUTE_AUTHZ_FAILED_DURING_ADD
+
 /// DS codepoint already exists
 pub const MAPPING_EXISTS : ErrorCode = ErrorCode::from_constant(7518); // ERROR_DS_MAPPING_EXISTS

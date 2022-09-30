@@ -95,3 +95,6 @@ pub const REQUEST_TIMEOUT : ErrorCode = ErrorCode::from_constant(426); // ERROR_
 
 /// Dehydration of the cloud file is disallowed by the cloud sync provider.
 pub const DEHYDRATION_DISALLOWED : ErrorCode = ErrorCode::from_constant(434); // ERROR_CLOUD_FILE_DEHYDRATION_DISALLOWED
+
+/// The cloud provider failed to acknowledge a message before the time-out expired.
+pub const US_MESSAGE_TIMEOUT : ErrorCode = ErrorCode::from_constant(475); // ERROR_CLOUD_FILE_US_MESSAGE_TIMEOUT

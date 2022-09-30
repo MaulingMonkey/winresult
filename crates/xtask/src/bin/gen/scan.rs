@@ -46,6 +46,8 @@ const PREFIX_TO_SKIP : &'static [&'static str] = &[
     "HTTP_QUERY_X_",
     "INTERNET_OPTION_",
     "PRINTER_ERROR_",       // TODO: unique error namespace?
+    "WINHTTP_FEATURE_",
+    "WINHTTP_OPTION_",
 ];
 
 const MIDFIX_TO_SKIP : &'static [&'static str] = &[
@@ -53,6 +55,7 @@ const MIDFIX_TO_SKIP : &'static [&'static str] = &[
 ];
 
 const POSTFIX_TO_SKIP : &'static [&'static str] = &[
+    "_ERROR_MASK",
     "_E_FIRST",
     "_E_LAST",
     "_S_FIRST",
@@ -77,18 +80,18 @@ pub struct Codes<'s> {
 }
 
 impl<'s> Codes<'s> {
-    fn push(&mut self, code: Code<'s>) {
+    pub fn push(&mut self, code: Code<'s>) {
         if !self.cpp_processed.contains(code.cpp) {
             self.push_force(code);
         }
     }
 
-    fn push_force(&mut self, code: Code<'s>) {
+    pub fn push_force(&mut self, code: Code<'s>) {
         self.cpp_processed.insert(code.cpp);
         self.mods.entry(code.rs_mod).or_default().push(code);
     }
 
-    fn push_processed_cpp(&mut self, cpp: &'s str) -> bool {
+    pub fn push_processed_cpp(&mut self, cpp: &'s str) -> bool {
         self.cpp_processed.insert(cpp)
     }
 }
@@ -102,6 +105,7 @@ pub struct Code<'s> {
     pub docs:       Vec<Cow<'s, str>>,
     pub redundant:  bool,
     pub hide:       bool,
+    pub deprecated: Option<Cow<'s, str>>,
 }
 
 impl Code<'_> {
@@ -326,6 +330,7 @@ pub(crate) fn winerror_h<'a>(header: &'a Header, codes: &mut Codes<'a>) {
                     docs:       docs.iter().cloned().collect(),
                     hide:       false,
                     redundant,
+                    deprecated: None,
                 });
             } else if prefix.starts_with("S_") || prefix.starts_with("E_") || prefix.starts_with("X_") {
                 let prefix  = &prefix[..1];
@@ -339,6 +344,7 @@ pub(crate) fn winerror_h<'a>(header: &'a Header, codes: &mut Codes<'a>) {
                     docs:       docs.iter().cloned().collect(),
                     hide:       false,
                     redundant,
+                    deprecated: None,
                 });
             } else if !prefix.starts_with("ERROR_") && prefix.ends_with("_ERROR") {
                 // translate:       D3D11_ERROR => D3D11
@@ -354,6 +360,7 @@ pub(crate) fn winerror_h<'a>(header: &'a Header, codes: &mut Codes<'a>) {
                     docs:       docs.iter().cloned().collect(),
                     hide:       false,
                     redundant,
+                    deprecated: None,
                 });
             } else {
                 let mut hide = false;
@@ -368,6 +375,7 @@ pub(crate) fn winerror_h<'a>(header: &'a Header, codes: &mut Codes<'a>) {
                             docs:       docs.iter().cloned().collect(),
                             hide:       false,
                             redundant,
+                            deprecated: None,
                         });
                         redundant   = true;
                         hide        = true; // hide ERROR::* in favor of ERROR_DS::* and other more specific prefixes
@@ -385,6 +393,7 @@ pub(crate) fn winerror_h<'a>(header: &'a Header, codes: &mut Codes<'a>) {
                         docs:       docs.iter().cloned().collect(),
                         redundant,
                         hide,
+                        deprecated: None,
                     });
                 } else {
                     codes.push_force(Code {
@@ -396,6 +405,7 @@ pub(crate) fn winerror_h<'a>(header: &'a Header, codes: &mut Codes<'a>) {
                         docs:       docs.iter().cloned().collect(),
                         redundant,
                         hide,
+                        deprecated: None,
                     });
                 }
             }
@@ -491,6 +501,7 @@ pub(crate) fn d3d<'a>(header: &'a Header, codes: &mut Codes<'a>) {
                 docs:       Default::default(),
                 redundant:  false,
                 hide:       false,
+                deprecated: None,
             });
         }
     }
@@ -522,6 +533,7 @@ pub(crate) fn ntstatus_h<'a>(header: &'a Header, codes: &mut Codes<'a>) {
                 let comment = comment.strip_prefix("//").unwrap_or(comment);
                 let comment = comment.trim();
                 if comment.is_empty() { return None }
+                if comment.starts_with(";") { return None }
                 let comment = re_placeholders   .replace_all(&comment, "`$0`");
                 let comment = re_url            .replace_all(&comment, "$1<$2>");
                 let comment = re_escape         .replace_all(&comment, "\\$0");
@@ -546,6 +558,7 @@ pub(crate) fn ntstatus_h<'a>(header: &'a Header, codes: &mut Codes<'a>) {
                 docs,
                 redundant:  (value == "0x00000000") || error == "STATUS_ABANDONED_WAIT_0",
                 hide:       false,
+                deprecated: None,
             });
         }
     }

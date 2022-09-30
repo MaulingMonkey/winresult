@@ -134,3 +134,6 @@ pub const E_ENDPOINT_NOT_ATTACHED : HResultError = HResultError::from_constant(0
 
 /// The endpoint must be local to complete the operation.
 pub const E_ENDPOINT_NOT_LOCAL : HResultError = HResultError::from_constant(0x803B0035); // HCN_E_ENDPOINT_NOT_LOCAL
+
+/// A network of this type can not be created because VFP is not available.
+pub const E_VFP_NOT_ALLOWED : HResultError = HResultError::from_constant(0x803B0037); // HCN_E_VFP_NOT_ALLOWED

@@ -1,4 +1,5 @@
 mod crlf;
+mod deprecated;
 mod gen;
 mod scan;
 
@@ -46,10 +47,12 @@ fn main() {
     let sdk = sdk::WindowsKit::find_latest().expect("sdk");
 
     let actual_sdk = sdk.sdk_version.to_string();
-    let expected_sdk ="10.0.19041.0";
+    let expected_sdk ="10.0.22621.0";
     if actual_sdk != expected_sdk { mmrbi::warning!("expected sdk {} but found sdk {}", expected_sdk, actual_sdk) }
 
     let mut codes   = scan::Codes::default();
+
+    deprecated::codes(&mut codes);
 
     macro_rules! headers { ( $( $path:literal : $scan_fn:path ),* $(,)? ) => {$(
         let header = Header::read(&sdk.include, $path);

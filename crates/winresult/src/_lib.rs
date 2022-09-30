@@ -450,6 +450,8 @@ mod gen {
         /// [Host Compute System](https://docs.microsoft.com/en-us/virtualization/api/hcs/overview)
         pub mod HCS;
 
+        pub mod HSP;
+
         /// [WinINet / WinHTTP](https://docs.microsoft.com/en-us/windows/win32/wininet/wininet-vs-winhttp)
         pub mod HTTP;
 
@@ -459,8 +461,16 @@ mod gen {
         pub mod INPLACE;
 
         pub mod INPUT;
+
+        /// [I/O Ring](https://learn.microsoft.com/en-us/windows/win32/api/ioringapi/)
+        pub mod IORING;
+
         pub mod JSCRIPT;
         pub mod MEM;
+
+        /// [**M**obile Device Management (MDM)](https://learn.microsoft.com/en-us/windows/client-management/mdm/mdm-overview) **Enroll**ment
+        pub mod MENROLL;
+
         pub mod MK;
         pub mod MSDTC;
         pub mod MSSIPOTF;
@@ -482,6 +492,8 @@ mod gen {
 
         /// [Performance Logs and Alerts](https://docs.microsoft.com/en-us/previous-versions/windows/desktop/pla/using-performance-logs-and-alerts)
         pub mod PLA;
+
+        pub mod PRESENTATION;
 
         /// COM+ registration database
         pub mod REGDB;

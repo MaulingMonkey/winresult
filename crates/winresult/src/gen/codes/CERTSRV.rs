@@ -173,3 +173,6 @@ pub const E_REQUEST_PRECERTIFICATE_MISMATCH : HResultError = HResultError::from_
 
 /// The request is locked against edits until a response is received from the client.
 pub const E_PENDING_CLIENT_RESPONSE : HResultError = HResultError::from_constant(0x80094820); // CERTSRV_E_PENDING_CLIENT_RESPONSE
+
+/// The Active Directory SID is unavailable and cannot be added to the custom security extension.
+pub const E_SEC_EXT_DIRECTORY_SID_REQUIRED : HResultError = HResultError::from_constant(0x80094821); // CERTSRV_E_SEC_EXT_DIRECTORY_SID_REQUIRED

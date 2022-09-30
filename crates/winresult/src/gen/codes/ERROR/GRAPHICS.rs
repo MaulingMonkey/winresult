@@ -69,6 +69,15 @@ pub const VAIL_FAILED_TO_SEND_CREATE_SUPERWETINK_MESSAGE : HResultError = HResul
 /// Failed to send Destroy Vail Super Wet Ink message.
 pub const VAIL_FAILED_TO_SEND_DESTROY_SUPERWETINK_MESSAGE : HResultError = HResultError::from_constant(0xC0262015); // ERROR_GRAPHICS_VAIL_FAILED_TO_SEND_DESTROY_SUPERWETINK_MESSAGE
 
+/// Failed to send Window Dpi message.
+pub const VAIL_FAILED_TO_SEND_COMPOSITION_WINDOW_DPI_MESSAGE : HResultError = HResultError::from_constant(0xC0262016); // ERROR_GRAPHICS_VAIL_FAILED_TO_SEND_COMPOSITION_WINDOW_DPI_MESSAGE
+
+/// Link configuration for the display timing is still in progress.
+pub const LINK_CONFIGURATION_IN_PROGRESS : HResultError = HResultError::from_constant(0xC0262017); // ERROR_GRAPHICS_LINK_CONFIGURATION_IN_PROGRESS
+
+/// The allocation for the MPO has been unpinned.
+pub const MPO_ALLOCATION_UNPINNED : HResultError = HResultError::from_constant(0xC0262018); // ERROR_GRAPHICS_MPO_ALLOCATION_UNPINNED
+
 /// Not enough video memory available to complete the operation.
 pub const NO_VIDEO_MEMORY : HResultError = HResultError::from_constant(0xC0262100); // ERROR_GRAPHICS_NO_VIDEO_MEMORY
 

@@ -105,3 +105,5 @@ pub const CLIENT_AUTH_CERT_NEEDED_PROXY : ErrorCode = ErrorCode::from_constant(1
 pub const SECURE_FAILURE_PROXY : ErrorCode = ErrorCode::from_constant(12188); // ERROR_WINHTTP_SECURE_FAILURE_PROXY
 pub const RESERVED_189 : ErrorCode = ErrorCode::from_constant(12189); // ERROR_WINHTTP_RESERVED_189
 pub const HTTP_PROTOCOL_MISMATCH : ErrorCode = ErrorCode::from_constant(12190); // ERROR_WINHTTP_HTTP_PROTOCOL_MISMATCH
+pub const GLOBAL_CALLBACK_FAILED : ErrorCode = ErrorCode::from_constant(12191); // ERROR_WINHTTP_GLOBAL_CALLBACK_FAILED
+pub const FEATURE_DISABLED : ErrorCode = ErrorCode::from_constant(12192); // ERROR_WINHTTP_FEATURE_DISABLED

@@ -92,3 +92,9 @@ pub const E_SERVICE_DISCONNECT : HResultError = HResultError::from_constant(0x80
 
 /// The process has already exited.
 pub const E_PROCESS_ALREADY_STOPPED : HResultError = HResultError::from_constant(0x8037011F); // HCS_E_PROCESS_ALREADY_STOPPED
+
+/// The virtual machine or container is not configured to perform the operation.
+pub const E_SYSTEM_NOT_CONFIGURED_FOR_OPERATION : HResultError = HResultError::from_constant(0x80370120); // HCS_E_SYSTEM_NOT_CONFIGURED_FOR_OPERATION
+
+/// The operation has already been cancelled.
+pub const E_OPERATION_ALREADY_CANCELLED : HResultError = HResultError::from_constant(0x80370121); // HCS_E_OPERATION_ALREADY_CANCELLED

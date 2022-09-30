@@ -1778,3 +1778,6 @@ pub const RUNASUSER_MANAGEDACCOUNT_LOGON_FAILED : HResultError = HResultError::f
 
 /// The WS-Management service cannot process the operation. An attempt to query mapped credential failed. This will happen if the security context associated with WinRM service has changed since the credential was originally mapped.
 pub const CERTMAPPING_CREDENTIAL_MANAGEMENT_FAILIED : HResultError = HResultError::from_constant(0x803381FE); // ERROR_WSMAN_CERTMAPPING_CREDENTIAL_MANAGEMENT_FAILIED
+
+/// The event source of the push subscription is in disable or inactive on the Event controller server.
+pub const EVENTING_PUSH_SUBSCRIPTION_NOACTIVATE_EVENTSOURCE : HResultError = HResultError::from_constant(0x803381FF); // ERROR_WSMAN_EVENTING_PUSH_SUBSCRIPTION_NOACTIVATE_EVENTSOURCE

@@ -641,3 +641,36 @@ pub const E_DEVICE_NOT_JOINED : HResultError = HResultError::from_constant(0x803
 
 /// BitLocker recovery key backup endpoint is busy and cannot perform requested operation. Please retry after sometime.
 pub const E_AAD_ENDPOINT_BUSY : HResultError = HResultError::from_constant(0x803100E1); // FVE_E_AAD_ENDPOINT_BUSY
+
+/// An invalid certificate has been found in the Network Boot Protector certificate store.
+pub const E_INVALID_NBP_CERT : HResultError = HResultError::from_constant(0x803100E2); // FVE_E_INVALID_NBP_CERT
+
+/// BitLocker can't enable encryption on this hardware encrypting drive volume because the drive bands couldn't be enumerated.
+pub const E_EDRIVE_BAND_ENUMERATION_FAILED : HResultError = HResultError::from_constant(0x803100E3); // FVE_E_EDRIVE_BAND_ENUMERATION_FAILED
+
+/// This removable data drive has been excluded from device encryption by BitLocker Drive Encryption policy.
+pub const E_POLICY_ON_RDV_EXCLUSION_LIST : HResultError = HResultError::from_constant(0x803100E4); // FVE_E_POLICY_ON_RDV_EXCLUSION_LIST
+
+/// Adding BitLocker predicted TPM based protector is not supported.
+pub const E_PREDICTED_TPM_PROTECTOR_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x803100E5); // FVE_E_PREDICTED_TPM_PROTECTOR_NOT_SUPPORTED
+
+/// Registeration for TPM callback is not supported.
+pub const E_SETUP_TPM_CALLBACK_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x803100E6); // FVE_E_SETUP_TPM_CALLBACK_NOT_SUPPORTED
+
+/// Creating new TPM context is not supported.
+pub const E_TPM_CONTEXT_SETUP_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x803100E7); // FVE_E_TPM_CONTEXT_SETUP_NOT_SUPPORTED
+
+/// The Secure Boot update was not applied due to a known incompatibility with the current BitLocker configuration.
+pub const E_UPDATE_INVALID_CONFIG : HResultError = HResultError::from_constant(0x803100E8); // FVE_E_UPDATE_INVALID_CONFIG
+
+/// The AAD request has failed and it has been advised to backoff to prevent throttling. Device will retry soon.
+pub const E_AAD_SERVER_FAIL_RETRY_AFTER : HResultError = HResultError::from_constant(0x803100E9); // FVE_E_AAD_SERVER_FAIL_RETRY_AFTER
+
+/// The AAD request has failed due to server issues and it has been advised to backoff to prevent throttling. Device will retry soon.
+pub const E_AAD_SERVER_FAIL_BACKOFF : HResultError = HResultError::from_constant(0x803100EA); // FVE_E_AAD_SERVER_FAIL_BACKOFF
+
+/// This operation cannot be completed because dataset is full.
+pub const E_DATASET_FULL : HResultError = HResultError::from_constant(0x803100EB); // FVE_E_DATASET_FULL
+
+/// This operation cannot be completed because BitLocker Drive Encryption metadata area is full. Consider removing unnecessary key protectors for this drive.
+pub const E_METADATA_FULL : HResultError = HResultError::from_constant(0x803100EC); // FVE_E_METADATA_FULL

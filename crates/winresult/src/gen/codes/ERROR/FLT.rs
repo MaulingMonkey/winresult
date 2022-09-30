@@ -95,3 +95,6 @@ pub const NO_WAITER_FOR_REPLY : HResultError = HResultError::from_constant(0x801
 
 /// The filesystem database resource is in use. Registration cannot complete at this time.
 pub const REGISTRATION_BUSY : HResultError = HResultError::from_constant(0x801F0023); // ERROR_FLT_REGISTRATION_BUSY
+
+/// The filter is not allowed to attach because it has not declared compability with WCOS.
+pub const WCOS_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x801F0024); // ERROR_FLT_WCOS_NOT_SUPPORTED

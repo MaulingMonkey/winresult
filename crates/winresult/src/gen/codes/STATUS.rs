@@ -2,6 +2,7 @@
 
 use super::*;
 
+#[doc(hidden)] #[deprecated = "no longer exposed by windows headers"] pub const VRF_CFG_AND_IO_ENABLED : NtStatus = NtStatus::from_constant(0xC000049F); // STATUS_VRF_CFG_AND_IO_ENABLED
 
 /// The success status codes 0 - 63 are reserved for wait completion status.
 /// FacilityCodes 0x5 - 0xF have been allocated by various drivers.
@@ -199,6 +200,9 @@ pub const WAIT_FOR_OPLOCK : NtStatus = NtStatus::from_constant(0x00000367); // S
 
 /// A reparse should be performed by the Object Manager from the global root to escape the container name space.
 pub const REPARSE_GLOBAL : NtStatus = NtStatus::from_constant(0x00000368); // STATUS_REPARSE_GLOBAL
+
+/// Page fault should be retried.
+pub const PAGE_FAULT_RETRY : NtStatus = NtStatus::from_constant(0x00000369); // STATUS_PAGE_FAULT_RETRY
 
 /// The IO was completed by a filter.
 pub const FLT_IO_COMPLETE : NtStatus = NtStatus::from_constant(0x001C0001); // STATUS_FLT_IO_COMPLETE
@@ -401,6 +405,12 @@ pub const IMAGE_AT_DIFFERENT_BASE : NtStatus = NtStatus::from_constant(0x4000003
 /// A system patch was successfully loaded but is not applicable to any currently loaded images.
 pub const PATCH_DEFERRED : NtStatus = NtStatus::from_constant(0x40000037); // STATUS_PATCH_DEFERRED
 
+/// Exception status code used by ARM64EC emulation subsystem.
+pub const EMULATION_BREAKPOINT : NtStatus = NtStatus::from_constant(0x40000038); // STATUS_EMULATION_BREAKPOINT
+
+/// Exception status code used by ARM64EC emulation subsystem.
+pub const EMULATION_SYSCALL : NtStatus = NtStatus::from_constant(0x40000039); // STATUS_EMULATION_SYSCALL
+
 /// The attempt to commit the Transaction completed, but it is possible that some portion of the transaction tree did not commit successfully due to heuristics.  Therefore it is possible that some data modified in the transaction may not have committed, resulting in transactional inconsistency.  If possible, check the consistency of the associated data.
 pub const HEURISTIC_DAMAGE_POSSIBLE : NtStatus = NtStatus::from_constant(0x40190001); // STATUS_HEURISTIC_DAMAGE_POSSIBLE
 
@@ -585,6 +595,11 @@ pub const NO_WORK_DONE : NtStatus = NtStatus::from_constant(0x80000032); // STAT
 /// A return address hijack is being attempted. This is supported by the operating system when user-mode shadow stacks are enabled.
 pub const RETURN_ADDRESS_HIJACK_ATTEMPT : NtStatus = NtStatus::from_constant(0x80000033); // STATUS_RETURN_ADDRESS_HIJACK_ATTEMPT
 
+/// ### EXCEPTION
+/// Recoverable Bugcheck Exception
+/// A bugcheck was re-raised as an exception.
+pub const RECOVERABLE_BUGCHECK : NtStatus = NtStatus::from_constant(0x80000034); // STATUS_RECOVERABLE_BUGCHECK
+
 /// The cluster node is already up.
 pub const CLUSTER_NODE_ALREADY_UP : NtStatus = NtStatus::from_constant(0x80130001); // STATUS_CLUSTER_NODE_ALREADY_UP
 
@@ -603,6 +618,9 @@ pub const CLUSTER_NODE_ALREADY_MEMBER : NtStatus = NtStatus::from_constant(0x801
 /// ### Buffer too small
 /// The buffer is too small to contain the entry. No information has been written to the buffer.
 pub const FLT_BUFFER_TOO_SMALL : NtStatus = NtStatus::from_constant(0x801C0001); // STATUS_FLT_BUFFER_TOO_SMALL
+
+/// Link configuration for the display timing is still in progress.
+pub const GRAPHICS_LINK_CONFIGURATION_IN_PROGRESS : NtStatus = NtStatus::from_constant(0x801E0000); // STATUS_GRAPHICS_LINK_CONFIGURATION_IN_PROGRESS
 
 /// Volume Metadata read or write is incomplete.
 pub const FVE_PARTIAL_METADATA : NtStatus = NtStatus::from_constant(0x80210001); // STATUS_FVE_PARTIAL_METADATA
@@ -1575,7 +1593,7 @@ pub const THREAD_NOT_IN_PROCESS : NtStatus = NtStatus::from_constant(0xC000012A)
 /// An attempt was made to establish a token for use as a primary token but the token is already in use. A token can only be the primary token of one process at a time.
 pub const TOKEN_ALREADY_IN_USE : NtStatus = NtStatus::from_constant(0xC000012B); // STATUS_TOKEN_ALREADY_IN_USE
 
-/// Page file quota was exceeded.
+/// Pagefile quota was exceeded.
 pub const PAGEFILE_QUOTA_EXCEEDED : NtStatus = NtStatus::from_constant(0xC000012C); // STATUS_PAGEFILE_QUOTA_EXCEEDED
 
 /// ### Out of Virtual Memory
@@ -2003,6 +2021,18 @@ pub const IO_UNALIGNED_WRITE : NtStatus = NtStatus::from_constant(0xC00001B1); /
 
 /// An invalid address was found on the control flow stack.
 pub const CONTROL_STACK_VIOLATION : NtStatus = NtStatus::from_constant(0xC00001B2); // STATUS_CONTROL_STACK_VIOLATION
+
+/// The Security Account Manager blocked the use of a weak Windows Hello for Business key.
+pub const WEAK_WHFBKEY_BLOCKED : NtStatus = NtStatus::from_constant(0xC00001B3); // STATUS_WEAK_WHFBKEY_BLOCKED
+
+/// Multiple mappings to shared resource(s) on a server, using more than one transport, are not allowed. Use a single transport for all mappings to a server and try again.
+pub const SERVER_TRANSPORT_CONFLICT : NtStatus = NtStatus::from_constant(0xC00001B4); // STATUS_SERVER_TRANSPORT_CONFLICT
+
+/// Multiple mappings to shared resource(s) on a server, using different certificate validation preferences, are not allowed. Use the same preference for all mappings to a server and try again.
+pub const CERTIFICATE_VALIDATION_PREFERENCE_CONFLICT : NtStatus = NtStatus::from_constant(0xC00001B5); // STATUS_CERTIFICATE_VALIDATION_PREFERENCE_CONFLICT
+
+/// The device needs to be reset.
+pub const DEVICE_RESET_REQUIRED : NtStatus = NtStatus::from_constant(0x800001B6); // STATUS_DEVICE_RESET_REQUIRED
 
 /// A remote open failed because the network open restrictions were not satisfied.
 pub const NETWORK_OPEN_RESTRICTION : NtStatus = NtStatus::from_constant(0xC0000201); // STATUS_NETWORK_OPEN_RESTRICTION
@@ -3260,13 +3290,13 @@ pub const SCRUB_DATA_DISABLED : NtStatus = NtStatus::from_constant(0xC0000478); 
 /// The storage device does not provide redundancy.
 pub const NOT_REDUNDANT_STORAGE : NtStatus = NtStatus::from_constant(0xC0000479); // STATUS_NOT_REDUNDANT_STORAGE
 
-/// An operation is not supported on a resident file.
+/// The specified operation is not supported on a resident file.
 pub const RESIDENT_FILE_NOT_SUPPORTED : NtStatus = NtStatus::from_constant(0xC000047A); // STATUS_RESIDENT_FILE_NOT_SUPPORTED
 
-/// An operation is not supported on a compressed file.
+/// The specified operation is not supported on a compressed file.
 pub const COMPRESSED_FILE_NOT_SUPPORTED : NtStatus = NtStatus::from_constant(0xC000047B); // STATUS_COMPRESSED_FILE_NOT_SUPPORTED
 
-/// An operation is not supported on a directory.
+/// The specified operation is not supported on a directory.
 pub const DIRECTORY_NOT_SUPPORTED : NtStatus = NtStatus::from_constant(0xC000047C); // STATUS_DIRECTORY_NOT_SUPPORTED
 
 /// ### IO Operation Timeout
@@ -3354,7 +3384,7 @@ pub const PACKAGE_NOT_AVAILABLE : NtStatus = NtStatus::from_constant(0xC0000497)
 /// The device is in maintenance mode.
 pub const DEVICE_IN_MAINTENANCE : NtStatus = NtStatus::from_constant(0xC0000499); // STATUS_DEVICE_IN_MAINTENANCE
 
-/// This operation is not supported on a DAX volume.
+/// The specified operation is not supported on a DAX volume.
 pub const NOT_SUPPORTED_ON_DAX : NtStatus = NtStatus::from_constant(0xC000049A); // STATUS_NOT_SUPPORTED_ON_DAX
 
 /// The free space on the volume is too fragmented to complete this operation.
@@ -3368,9 +3398,6 @@ pub const CHILD_PROCESS_BLOCKED : NtStatus = NtStatus::from_constant(0xC000049D)
 
 /// The storage device has lost data or persistence.
 pub const STORAGE_LOST_DATA_PERSISTENCE : NtStatus = NtStatus::from_constant(0xC000049E); // STATUS_STORAGE_LOST_DATA_PERSISTENCE
-
-/// Driver Verifier Volatile settings cannot be set when CFG and IO are enabled.
-pub const VRF_CFG_AND_IO_ENABLED : NtStatus = NtStatus::from_constant(0xC000049F); // STATUS_VRF_CFG_AND_IO_ENABLED
 
 /// An attempt was made to access a partition that has begun termination.
 pub const PARTITION_TERMINATING : NtStatus = NtStatus::from_constant(0xC00004A0); // STATUS_PARTITION_TERMINATING
@@ -3453,8 +3480,86 @@ pub const UNSATISFIED_DEPENDENCIES : NtStatus = NtStatus::from_constant(0xC00004
 /// The file cannot be opened because the path has a case-sensitive directory.
 pub const CASE_SENSITIVE_PATH : NtStatus = NtStatus::from_constant(0xC00004BA); // STATUS_CASE_SENSITIVE_PATH
 
+/// The currently selected address translation mode is not supported.
+pub const UNSUPPORTED_PAGING_MODE : NtStatus = NtStatus::from_constant(0xC00004BB); // STATUS_UNSUPPORTED_PAGING_MODE
+
+/// The path cannot be traversed because it contains an untrusted mount point.
+pub const UNTRUSTED_MOUNT_POINT : NtStatus = NtStatus::from_constant(0xC00004BC); // STATUS_UNTRUSTED_MOUNT_POINT
+
 /// The volume contains paging, crash dump or other system critical files.
 pub const HAS_SYSTEM_CRITICAL_FILES : NtStatus = NtStatus::from_constant(0xC00004BD); // STATUS_HAS_SYSTEM_CRITICAL_FILES
+
+/// The request cannot be completed as it requires modifying an immutable object.
+pub const OBJECT_IS_IMMUTABLE : NtStatus = NtStatus::from_constant(0xC00004BE); // STATUS_OBJECT_IS_IMMUTABLE
+
+/// The specified copy of the requested data could not be read.
+pub const FT_READ_FROM_COPY_FAILURE : NtStatus = NtStatus::from_constant(0xC00004BF); // STATUS_FT_READ_FROM_COPY_FAILURE
+
+/// This image cannot be loaded because it has already been loaded as a hot patch image.
+pub const IMAGE_LOADED_AS_PATCH_IMAGE : NtStatus = NtStatus::from_constant(0xC00004C0); // STATUS_IMAGE_LOADED_AS_PATCH_IMAGE
+
+/// The storage stack returned STATUS_ACCESS_DENEID for the current operation.
+pub const STORAGE_STACK_ACCESS_DENIED : NtStatus = NtStatus::from_constant(0xC00004C1); // STATUS_STORAGE_STACK_ACCESS_DENIED
+
+/// Insufficient Virtual Address resources to complete the operation.
+pub const INSUFFICIENT_VIRTUAL_ADDR_RESOURCES : NtStatus = NtStatus::from_constant(0xC00004C2); // STATUS_INSUFFICIENT_VIRTUAL_ADDR_RESOURCES
+
+/// The specified operation is not supported on an encrypted file.
+pub const ENCRYPTED_FILE_NOT_SUPPORTED : NtStatus = NtStatus::from_constant(0xC00004C3); // STATUS_ENCRYPTED_FILE_NOT_SUPPORTED
+
+/// The specified operation is not supported on a sparse file.
+pub const SPARSE_FILE_NOT_SUPPORTED : NtStatus = NtStatus::from_constant(0xC00004C4); // STATUS_SPARSE_FILE_NOT_SUPPORTED
+
+/// The specified operation is not supported on a pagefile.
+pub const PAGEFILE_NOT_SUPPORTED : NtStatus = NtStatus::from_constant(0xC00004C5); // STATUS_PAGEFILE_NOT_SUPPORTED
+
+/// The specified operation is not supported on a volume.
+pub const VOLUME_NOT_SUPPORTED : NtStatus = NtStatus::from_constant(0xC00004C6); // STATUS_VOLUME_NOT_SUPPORTED
+
+/// The specified operation is not supported on a BypassIO enabled file.
+pub const NOT_SUPPORTED_WITH_BYPASSIO : NtStatus = NtStatus::from_constant(0xC00004C7); // STATUS_NOT_SUPPORTED_WITH_BYPASSIO
+
+/// The specified driver does not support BypassIO operations.
+pub const NO_BYPASSIO_DRIVER_SUPPORT : NtStatus = NtStatus::from_constant(0xC00004C8); // STATUS_NO_BYPASSIO_DRIVER_SUPPORT
+
+/// The specified operation is not supported while encryption is enabled on the target object.
+pub const NOT_SUPPORTED_WITH_ENCRYPTION : NtStatus = NtStatus::from_constant(0xC00004C9); // STATUS_NOT_SUPPORTED_WITH_ENCRYPTION
+
+/// The specified operation is not supported while compression is enabled on the target object.
+pub const NOT_SUPPORTED_WITH_COMPRESSION : NtStatus = NtStatus::from_constant(0xC00004CA); // STATUS_NOT_SUPPORTED_WITH_COMPRESSION
+
+/// The specified operation is not supported while replication is enabled on the target object.
+pub const NOT_SUPPORTED_WITH_REPLICATION : NtStatus = NtStatus::from_constant(0xC00004CB); // STATUS_NOT_SUPPORTED_WITH_REPLICATION
+
+/// The specified operation is not supported while deduplication is enabled on the target object.
+pub const NOT_SUPPORTED_WITH_DEDUPLICATION : NtStatus = NtStatus::from_constant(0xC00004CC); // STATUS_NOT_SUPPORTED_WITH_DEDUPLICATION
+
+/// The specified operation is not supported while auditing is enabled on the target object.
+pub const NOT_SUPPORTED_WITH_AUDITING : NtStatus = NtStatus::from_constant(0xC00004CD); // STATUS_NOT_SUPPORTED_WITH_AUDITING
+
+/// The specified operation is not supported while monitoring is enabled on the target object.
+pub const NOT_SUPPORTED_WITH_MONITORING : NtStatus = NtStatus::from_constant(0xC00004CE); // STATUS_NOT_SUPPORTED_WITH_MONITORING
+
+/// The specified operation is not supported while snapshot is enabled on the target object.
+pub const NOT_SUPPORTED_WITH_SNAPSHOT : NtStatus = NtStatus::from_constant(0xC00004CF); // STATUS_NOT_SUPPORTED_WITH_SNAPSHOT
+
+/// The specified operation is not supported while virtualization is enabled on the target object.
+pub const NOT_SUPPORTED_WITH_VIRTUALIZATION : NtStatus = NtStatus::from_constant(0xC00004D0); // STATUS_NOT_SUPPORTED_WITH_VIRTUALIZATION
+
+/// The specified index is beyond the bounds of valid range.
+pub const INDEX_OUT_OF_BOUNDS : NtStatus = NtStatus::from_constant(0xC00004D1); // STATUS_INDEX_OUT_OF_BOUNDS
+
+/// At least one minifilter does not support bypass IO.
+pub const BYPASSIO_FLT_NOT_SUPPORTED : NtStatus = NtStatus::from_constant(0xC00004D2); // STATUS_BYPASSIO_FLT_NOT_SUPPORTED
+
+/// The volume is opened for exclusive write access, preventing files from being opened for write access.
+pub const VOLUME_WRITE_ACCESS_DENIED : NtStatus = NtStatus::from_constant(0xC00004D3); // STATUS_VOLUME_WRITE_ACCESS_DENIED
+
+/// The patch is not currently registered for the corresponding base image.
+pub const PATCH_NOT_REGISTERED : NtStatus = NtStatus::from_constant(0xC00004D4); // STATUS_PATCH_NOT_REGISTERED
+
+/// The specified operation is not supported on a file opened for cached IO.
+pub const NOT_SUPPORTED_WITH_CACHED_HANDLE : NtStatus = NtStatus::from_constant(0xC00004D5); // STATUS_NOT_SUPPORTED_WITH_CACHED_HANDLE
 
 /// The specified task name is invalid.
 pub const INVALID_TASK_NAME : NtStatus = NtStatus::from_constant(0xC0000500); // STATUS_INVALID_TASK_NAME
@@ -3525,6 +3630,12 @@ pub const INTERRUPTED : NtStatus = NtStatus::from_constant(0xC0000515); // STATU
 
 /// The target thread is not currently running.
 pub const THREAD_NOT_RUNNING : NtStatus = NtStatus::from_constant(0xC0000516); // STATUS_THREAD_NOT_RUNNING
+
+/// The negotiated session key does not meet the minimum length requirement.
+pub const SESSION_KEY_TOO_SHORT : NtStatus = NtStatus::from_constant(0xC0000517); // STATUS_SESSION_KEY_TOO_SHORT
+
+/// The file system encountered a metadata file with inconsistent data.
+pub const FS_METADATA_INCONSISTENT : NtStatus = NtStatus::from_constant(0xC0000518); // STATUS_FS_METADATA_INCONSISTENT
 
 /// ### Fail Fast Exception
 /// A fail fast exception occurred. Exception handlers will not be invoked and the process will be terminated immediately.
@@ -3771,6 +3882,75 @@ pub const NO_KEY : NtStatus = NtStatus::from_constant(0xC000090C); // STATUS_NO_
 /// Access to the specified file handle has been revoked.
 pub const FILE_HANDLE_REVOKED : NtStatus = NtStatus::from_constant(0xC0000910); // STATUS_FILE_HANDLE_REVOKED
 
+/// The specified section is supported by direct map technology but the caller specifically does not want that.
+pub const SECTION_DIRECT_MAP_ONLY : NtStatus = NtStatus::from_constant(0xC0000911); // STATUS_SECTION_DIRECT_MAP_ONLY
+
+/// A file system block has been modified after containing a weak reference.
+pub const BLOCK_WEAK_REFERENCE_INVALID : NtStatus = NtStatus::from_constant(0xC0000912); // STATUS_BLOCK_WEAK_REFERENCE_INVALID
+
+/// The source file system block has been modified after containing a weak reference.
+pub const BLOCK_SOURCE_WEAK_REFERENCE_INVALID : NtStatus = NtStatus::from_constant(0xC0000913); // STATUS_BLOCK_SOURCE_WEAK_REFERENCE_INVALID
+
+/// The target file system block has been modified after containing a weak reference.
+pub const BLOCK_TARGET_WEAK_REFERENCE_INVALID : NtStatus = NtStatus::from_constant(0xC0000914); // STATUS_BLOCK_TARGET_WEAK_REFERENCE_INVALID
+
+/// The target file system block is shared between multiple extents.
+pub const BLOCK_SHARED : NtStatus = NtStatus::from_constant(0xC0000915); // STATUS_BLOCK_SHARED
+
+/// Enabling driver verification from volatile command is currently not supported when both CFG and IO are enabled.
+pub const VRF_VOLATILE_CFG_AND_IO_ENABLED : NtStatus = NtStatus::from_constant(0xC0000C08); // STATUS_VRF_VOLATILE_CFG_AND_IO_ENABLED
+
+/// Removal of current driver verification is not supported from volatile command.
+pub const VRF_VOLATILE_NOT_STOPPABLE : NtStatus = NtStatus::from_constant(0xC0000C09); // STATUS_VRF_VOLATILE_NOT_STOPPABLE
+
+/// Enabling driver verification is not supported in safe mode.
+pub const VRF_VOLATILE_SAFE_MODE : NtStatus = NtStatus::from_constant(0xC0000C0A); // STATUS_VRF_VOLATILE_SAFE_MODE
+
+/// Enabling driver verification is not supported from volatile mode in current system.
+pub const VRF_VOLATILE_NOT_RUNNABLE_SYSTEM : NtStatus = NtStatus::from_constant(0xC0000C0B); // STATUS_VRF_VOLATILE_NOT_RUNNABLE_SYSTEM
+
+/// The specified rule class (a.k.a. flag) is not supported from volatile mode.
+pub const VRF_VOLATILE_NOT_SUPPORTED_RULECLASS : NtStatus = NtStatus::from_constant(0xC0000C0C); // STATUS_VRF_VOLATILE_NOT_SUPPORTED_RULECLASS
+
+/// The specified driver is protected and volatile verification is currently not supported.
+pub const VRF_VOLATILE_PROTECTED_DRIVER : NtStatus = NtStatus::from_constant(0xC0000C0D); // STATUS_VRF_VOLATILE_PROTECTED_DRIVER
+
+/// Enabling driver verification is not supported for a driver with  NMI callback(s) registered.
+pub const VRF_VOLATILE_NMI_REGISTERED : NtStatus = NtStatus::from_constant(0xC0000C0E); // STATUS_VRF_VOLATILE_NMI_REGISTERED
+
+/// Volatile verification settings cannot be changed when verification is enabled from boot or DIF volatile verification is enabled.
+pub const VRF_VOLATILE_SETTINGS_CONFLICT : NtStatus = NtStatus::from_constant(0xC0000C0F); // STATUS_VRF_VOLATILE_SETTINGS_CONFLICT
+
+/// The specified driver is not associated with driver object or driver extension.
+pub const DIF_IOCALLBACK_NOT_REPLACED : NtStatus = NtStatus::from_constant(0xC0000C76); // STATUS_DIF_IOCALLBACK_NOT_REPLACED
+
+/// Verifier's internal data size exceeds the limit of live dump secondary data.
+pub const DIF_LIVEDUMP_LIMIT_EXCEEDED : NtStatus = NtStatus::from_constant(0xC0000C77); // STATUS_DIF_LIVEDUMP_LIMIT_EXCEEDED
+
+/// Verification cannot start because an attempt to lock code or data section failed.
+pub const DIF_VOLATILE_SECTION_NOT_LOCKED : NtStatus = NtStatus::from_constant(0xC0000C78); // STATUS_DIF_VOLATILE_SECTION_NOT_LOCKED
+
+/// DIF volatile verification is not supported for hotpatched driver.
+pub const DIF_VOLATILE_DRIVER_HOTPATCHED : NtStatus = NtStatus::from_constant(0xC0000C79); // STATUS_DIF_VOLATILE_DRIVER_HOTPATCHED
+
+/// The passed system DIF information is invalid.
+pub const DIF_VOLATILE_INVALID_INFO : NtStatus = NtStatus::from_constant(0xC0000C7A); // STATUS_DIF_VOLATILE_INVALID_INFO
+
+/// DIF volatile only supports on loaded drivers.
+pub const DIF_VOLATILE_DRIVER_IS_NOT_RUNNING : NtStatus = NtStatus::from_constant(0xC0000C7B); // STATUS_DIF_VOLATILE_DRIVER_IS_NOT_RUNNING
+
+/// Currently no plugin is running.
+pub const DIF_VOLATILE_PLUGIN_IS_NOT_RUNNING : NtStatus = NtStatus::from_constant(0xC0000C7C); // STATUS_DIF_VOLATILE_PLUGIN_IS_NOT_RUNNING
+
+/// Currently running plugin must be removed before applying a new plugin.
+pub const DIF_VOLATILE_PLUGIN_CHANGE_NOT_ALLOWED : NtStatus = NtStatus::from_constant(0xC0000C7D); // STATUS_DIF_VOLATILE_PLUGIN_CHANGE_NOT_ALLOWED
+
+/// The plugin is not allowed to run in volatile mode.
+pub const DIF_VOLATILE_NOT_ALLOWED : NtStatus = NtStatus::from_constant(0xC0000C7E); // STATUS_DIF_VOLATILE_NOT_ALLOWED
+
+/// One or more DDI is not yet supported by DIF.
+pub const DIF_BINDING_API_NOT_FOUND : NtStatus = NtStatus::from_constant(0xC0000C7F); // STATUS_DIF_BINDING_API_NOT_FOUND
+
 /// WOW Assertion Error.
 pub const WOW_ASSERTION : NtStatus = NtStatus::from_constant(0xC0009898); // STATUS_WOW_ASSERTION
 
@@ -3851,6 +4031,9 @@ pub const DS_OID_NOT_FOUND : NtStatus = NtStatus::from_constant(0xC000A088); // 
 
 /// The system is not authoritative for the specified account and therefore cannot complete the operation. Please retry the operation using the provider associated with this account. If this is an online provider please use the provider's online site.
 pub const INCORRECT_ACCOUNT_TYPE : NtStatus = NtStatus::from_constant(0xC000A089); // STATUS_INCORRECT_ACCOUNT_TYPE
+
+/// The local account policy modification request was rejected because the policy is controlled by a regional authority.
+pub const LOCAL_POLICY_MODIFICATION_NOT_SUPPORTED : NtStatus = NtStatus::from_constant(0xC000A08A); // STATUS_LOCAL_POLICY_MODIFICATION_NOT_SUPPORTED
 
 /// Hash generation for the specified version and hash type is not enabled on server.
 pub const HASH_NOT_SUPPORTED : NtStatus = NtStatus::from_constant(0xC000A100); // STATUS_HASH_NOT_SUPPORTED
@@ -3953,6 +4136,9 @@ pub const WOF_FILE_RESOURCE_TABLE_CORRUPT : NtStatus = NtStatus::from_constant(0
 
 /// The CimFS image is corrupted.
 pub const CIMFS_IMAGE_CORRUPT : NtStatus = NtStatus::from_constant(0xC000C001); // STATUS_CIMFS_IMAGE_CORRUPT
+
+/// The system does not support this version of the CimFS image.
+pub const CIMFS_IMAGE_VERSION_NOT_SUPPORTED : NtStatus = NtStatus::from_constant(0xC000C002); // STATUS_CIMFS_IMAGE_VERSION_NOT_SUPPORTED
 
 /// The provider that supports file system virtualization is temporarily unavailable.
 pub const FILE_SYSTEM_VIRTUALIZATION_UNAVAILABLE : NtStatus = NtStatus::from_constant(0xC000CE01); // STATUS_FILE_SYSTEM_VIRTUALIZATION_UNAVAILABLE
@@ -4064,6 +4250,9 @@ pub const CLOUD_FILE_REQUEST_TIMEOUT : NtStatus = NtStatus::from_constant(0xC000
 
 /// Dehydration of the cloud file is disallowed by the cloud sync provider.
 pub const CLOUD_FILE_DEHYDRATION_DISALLOWED : NtStatus = NtStatus::from_constant(0xC000CF20); // STATUS_CLOUD_FILE_DEHYDRATION_DISALLOWED
+
+/// The cloud provider failed to acknowledge a message before the time-out expired.
+pub const CLOUD_FILE_US_MESSAGE_TIMEOUT : NtStatus = NtStatus::from_constant(0xC000CF21); // STATUS_CLOUD_FILE_US_MESSAGE_TIMEOUT
 
 /// A file snapshot operation was attempted when one is already in progress.
 pub const FILE_SNAP_IN_PROGRESS : NtStatus = NtStatus::from_constant(0xC000F500); // STATUS_FILE_SNAP_IN_PROGRESS
@@ -4435,6 +4624,9 @@ pub const FLT_NO_WAITER_FOR_REPLY : NtStatus = NtStatus::from_constant(0xC01C002
 
 /// The filesystem database resource is in use. Registration cannot complete at this time.
 pub const FLT_REGISTRATION_BUSY : NtStatus = NtStatus::from_constant(0xC01C0023); // STATUS_FLT_REGISTRATION_BUSY
+
+/// The filter is not allowed to attach because it has not declared compability with WCOS.
+pub const FLT_WCOS_NOT_SUPPORTED : NtStatus = NtStatus::from_constant(0xC01C0024); // STATUS_FLT_WCOS_NOT_SUPPORTED
 
 /// The requested section is not present in the activation context.
 pub const SXS_SECTION_NOT_FOUND : NtStatus = NtStatus::from_constant(0xC0150001); // STATUS_SXS_SECTION_NOT_FOUND
@@ -5154,6 +5346,9 @@ pub const GRAPHICS_INDIRECT_DISPLAY_ABANDON_SWAPCHAIN : NtStatus = NtStatus::fro
 /// Notifying indirect display UMDF class driver that indirect display device has been stopped.
 pub const GRAPHICS_INDIRECT_DISPLAY_DEVICE_STOPPED : NtStatus = NtStatus::from_constant(0xC01E0013); // STATUS_GRAPHICS_INDIRECT_DISPLAY_DEVICE_STOPPED
 
+/// The allocation for the MPO has been unpinned.
+pub const GRAPHICS_MPO_ALLOCATION_UNPINNED : NtStatus = NtStatus::from_constant(0xC01E0018); // STATUS_GRAPHICS_MPO_ALLOCATION_UNPINNED
+
 /// Not enough video memory available to complete the operation.
 pub const GRAPHICS_NO_VIDEO_MEMORY : NtStatus = NtStatus::from_constant(0xC01E0100); // STATUS_GRAPHICS_NO_VIDEO_MEMORY
 
@@ -5853,6 +6048,18 @@ pub const FVE_PROTECTION_CANNOT_BE_DISABLED : NtStatus = NtStatus::from_constant
 /// BitLocker Drive Encryption policy does not allow KSR operation with protected OS volume.
 pub const FVE_OSV_KSR_NOT_ALLOWED : NtStatus = NtStatus::from_constant(0xC0210040); // STATUS_FVE_OSV_KSR_NOT_ALLOWED
 
+/// BitLocker can't enable encryption on this hardware encrypting drive volume because the drive bands couldn't be enumerated.
+pub const FVE_EDRIVE_BAND_ENUMERATION_FAILED : NtStatus = NtStatus::from_constant(0xC0210041); // STATUS_FVE_EDRIVE_BAND_ENUMERATION_FAILED
+
+/// This removable data drive has been excluded from device encryption by BitLocker Drive Encryption policy.
+pub const FVE_POLICY_ON_RDV_EXCLUSION_LIST : NtStatus = NtStatus::from_constant(0xC0210042); // STATUS_FVE_POLICY_ON_RDV_EXCLUSION_LIST
+
+/// This operation cannot be completed because dataset is full.
+pub const FVE_DATASET_FULL : NtStatus = NtStatus::from_constant(0xC0210043); // STATUS_FVE_DATASET_FULL
+
+/// This operation cannot be completed because BitLocker Drive Encryption metadata area is full. Consider removing unnecessary key protectors for this drive.
+pub const FVE_METADATA_FULL : NtStatus = NtStatus::from_constant(0xC0210044); // STATUS_FVE_METADATA_FULL
+
 /// The callout does not exist.
 pub const FWP_CALLOUT_NOT_FOUND : NtStatus = NtStatus::from_constant(0xC0220001); // STATUS_FWP_CALLOUT_NOT_FOUND
 
@@ -6381,7 +6588,7 @@ pub const TPM_BAD_TYPE : NtStatus = NtStatus::from_constant(0xC0290034); // STAT
 /// TPM 1.2: When saving context identified resource type does not match actual resource.
 pub const TPM_INVALID_RESOURCE : NtStatus = NtStatus::from_constant(0xC0290035); // STATUS_TPM_INVALID_RESOURCE
 
-/// TPM 1.2: The TPM is attempting to execute a command only available when in FIPS mode.
+/// TPM 1.2: The TPM is attempting to execute a command that is not allowed when in FIPS mode.
 pub const TPM_NOTFIPS : NtStatus = NtStatus::from_constant(0xC0290036); // STATUS_TPM_NOTFIPS
 
 /// TPM 1.2: The command is attempting to use an invalid family ID.
@@ -7038,6 +7245,33 @@ pub const HV_EVENT_BUFFER_ALREADY_FREED : NtStatus = NtStatus::from_constant(0xC
 /// There is not enough contiguous memory in the partition's pool to complete the operation.
 pub const HV_INSUFFICIENT_CONTIGUOUS_MEMORY : NtStatus = NtStatus::from_constant(0xC0350075); // STATUS_HV_INSUFFICIENT_CONTIGUOUS_MEMORY
 
+/// The device is not in a device domain.
+pub const HV_DEVICE_NOT_IN_DOMAIN : NtStatus = NtStatus::from_constant(0xC0350076); // STATUS_HV_DEVICE_NOT_IN_DOMAIN
+
+/// The requested operation would result in a nested vm-exit.
+pub const HV_NESTED_VM_EXIT : NtStatus = NtStatus::from_constant(0xC0350077); // STATUS_HV_NESTED_VM_EXIT
+
+/// The operation that was requested is pending completion.
+pub const HV_CALL_PENDING : NtStatus = NtStatus::from_constant(0xC0350079); // STATUS_HV_CALL_PENDING
+
+/// The requested access to the model specific register failed.
+pub const HV_MSR_ACCESS_FAILED : NtStatus = NtStatus::from_constant(0xC0350080); // STATUS_HV_MSR_ACCESS_FAILED
+
+/// There is not enough memory in the partition's pool to complete the mirroring operation.
+pub const HV_INSUFFICIENT_MEMORY_MIRRORING : NtStatus = NtStatus::from_constant(0xC0350081); // STATUS_HV_INSUFFICIENT_MEMORY_MIRRORING
+
+/// There is not enough contiguous memory in the partition's pool to complete the mirroring operation.
+pub const HV_INSUFFICIENT_CONTIGUOUS_MEMORY_MIRRORING : NtStatus = NtStatus::from_constant(0xC0350082); // STATUS_HV_INSUFFICIENT_CONTIGUOUS_MEMORY_MIRRORING
+
+/// There is not enough contiguous memory in the root partition's pool to complete the operation.
+pub const HV_INSUFFICIENT_CONTIGUOUS_ROOT_MEMORY : NtStatus = NtStatus::from_constant(0xC0350083); // STATUS_HV_INSUFFICIENT_CONTIGUOUS_ROOT_MEMORY
+
+/// There is not enough memory in the root partition's pool to complete the mirroring operation.
+pub const HV_INSUFFICIENT_ROOT_MEMORY_MIRRORING : NtStatus = NtStatus::from_constant(0xC0350084); // STATUS_HV_INSUFFICIENT_ROOT_MEMORY_MIRRORING
+
+/// There is not enough contiguous memory in the root partition's pool to complete the mirroring operation.
+pub const HV_INSUFFICIENT_CONTIGUOUS_ROOT_MEMORY_MIRRORING : NtStatus = NtStatus::from_constant(0xC0350085); // STATUS_HV_INSUFFICIENT_CONTIGUOUS_ROOT_MEMORY_MIRRORING
+
 /// No hypervisor is present on this system.
 pub const HV_NOT_PRESENT : NtStatus = NtStatus::from_constant(0xC0351000); // STATUS_HV_NOT_PRESENT
 
@@ -7166,6 +7400,27 @@ pub const VID_SAVED_STATE_INCOMPATIBLE : NtStatus = NtStatus::from_constant(0xC0
 
 /// The specified VTL does not have the permission to access the resource.
 pub const VID_VTL_ACCESS_DENIED : NtStatus = NtStatus::from_constant(0xC037002A); // STATUS_VID_VTL_ACCESS_DENIED
+
+/// Failed to allocate backing memory due to insufficient memory resources.
+pub const VID_INSUFFICIENT_RESOURCES_RESERVE : NtStatus = NtStatus::from_constant(0xC037002B); // STATUS_VID_INSUFFICIENT_RESOURCES_RESERVE
+
+/// Failed to allocate memory for the physical buffer used to back certain internal structures.
+pub const VID_INSUFFICIENT_RESOURCES_PHYSICAL_BUFFER : NtStatus = NtStatus::from_constant(0xC037002C); // STATUS_VID_INSUFFICIENT_RESOURCES_PHYSICAL_BUFFER
+
+/// Failed to allocate memory to be deposited in the hypervisor.
+pub const VID_INSUFFICIENT_RESOURCES_HV_DEPOSIT : NtStatus = NtStatus::from_constant(0xC037002D); // STATUS_VID_INSUFFICIENT_RESOURCES_HV_DEPOSIT
+
+/// Memory type not supported for requested operation.
+pub const VID_MEMORY_TYPE_NOT_SUPPORTED : NtStatus = NtStatus::from_constant(0xC037002E); // STATUS_VID_MEMORY_TYPE_NOT_SUPPORTED
+
+/// Failed to withdraw memory.
+pub const VID_INSUFFICIENT_RESOURCES_WITHDRAW : NtStatus = NtStatus::from_constant(0xC037002F); // STATUS_VID_INSUFFICIENT_RESOURCES_WITHDRAW
+
+/// The process has already been set.
+pub const VID_PROCESS_ALREADY_SET : NtStatus = NtStatus::from_constant(0xC0370030); // STATUS_VID_PROCESS_ALREADY_SET
+
+/// The attempted DM / resize operation exceeds the supported size.
+pub const DM_OPERATION_LIMIT_EXCEEDED : NtStatus = NtStatus::from_constant(0xC0370600); // STATUS_DM_OPERATION_LIMIT_EXCEEDED
 
 /// A virtual machine is running with its memory allocated across multiple NUMA nodes. This does not indicate a problem unless the performance of your virtual machine is unusually slow. If you are experiencing performance problems, you may need to modify the NUMA configuration.
 pub const VID_REMOTE_NODE_PARENT_GPA_PAGES_USED : NtStatus = NtStatus::from_constant(0x80370001); // STATUS_VID_REMOTE_NODE_PARENT_GPA_PAGES_USED
@@ -7815,6 +8070,24 @@ pub const SYSTEM_INTEGRITY_TOO_MANY_POLICIES : NtStatus = NtStatus::from_constan
 /// The Code Integrity supplemental policy is not authorized by a Code Integrity base policy.
 pub const SYSTEM_INTEGRITY_SUPPLEMENTAL_POLICY_NOT_AUTHORIZED : NtStatus = NtStatus::from_constant(0xC0E90006); // STATUS_SYSTEM_INTEGRITY_SUPPLEMENTAL_POLICY_NOT_AUTHORIZED
 
+/// System Integrity policy has been violated.  Malicious binary reputation.
+pub const SYSTEM_INTEGRITY_REPUTATION_MALICIOUS : NtStatus = NtStatus::from_constant(0xC0E90007); // STATUS_SYSTEM_INTEGRITY_REPUTATION_MALICIOUS
+
+/// System Integrity policy has been violated.  Potentially unwanted application.
+pub const SYSTEM_INTEGRITY_REPUTATION_PUA : NtStatus = NtStatus::from_constant(0xC0E90008); // STATUS_SYSTEM_INTEGRITY_REPUTATION_PUA
+
+/// System Integrity policy has been violated.  Dangerous file extension from the web.
+pub const SYSTEM_INTEGRITY_REPUTATION_DANGEROUS_EXT : NtStatus = NtStatus::from_constant(0xC0E90009); // STATUS_SYSTEM_INTEGRITY_REPUTATION_DANGEROUS_EXT
+
+/// System Integrity policy has been violated.  Unable to contact reputation service for unknown file.
+pub const SYSTEM_INTEGRITY_REPUTATION_OFFLINE : NtStatus = NtStatus::from_constant(0xC0E9000A); // STATUS_SYSTEM_INTEGRITY_REPUTATION_OFFLINE
+
+/// System Integrity policy has been violated.  Unfriendly file.
+pub const SYSTEM_INTEGRITY_REPUTATION_UNFRIENDLY_FILE : NtStatus = NtStatus::from_constant(0xC0E9000B); // STATUS_SYSTEM_INTEGRITY_REPUTATION_UNFRIENDLY_FILE
+
+/// System Integrity policy has been violated.  Failed to obtain file reputation because an infrastructure issue occurred. Try again later.
+pub const SYSTEM_INTEGRITY_REPUTATION_UNATTAINABLE : NtStatus = NtStatus::from_constant(0xC0E9000C); // STATUS_SYSTEM_INTEGRITY_REPUTATION_UNATTAINABLE
+
 /// No applicable app licenses found.
 pub const NO_APPLICABLE_APP_LICENSES_FOUND : NtStatus = NtStatus::from_constant(0xC0EA0001); // STATUS_NO_APPLICABLE_APP_LICENSES_FOUND
 
@@ -7959,11 +8232,35 @@ pub const SPACES_ENTRY_INVALID : NtStatus = NtStatus::from_constant(0xC0E7001F);
 /// A slab needs to be marked dirty.
 pub const SPACES_MARK_DIRTY : NtStatus = NtStatus::from_constant(0xC0E70020); // STATUS_SPACES_MARK_DIRTY
 
+/// A persisted memory buffer was not found.
+pub const SPACES_PD_NOT_FOUND : NtStatus = NtStatus::from_constant(0xC0E70021); // STATUS_SPACES_PD_NOT_FOUND
+
+/// A persisted memory buffer is too small.
+pub const SPACES_PD_LENGTH_MISMATCH : NtStatus = NtStatus::from_constant(0xC0E70022); // STATUS_SPACES_PD_LENGTH_MISMATCH
+
+/// A persisted memory buffer has an unsupported version.
+pub const SPACES_PD_UNSUPPORTED_VERSION : NtStatus = NtStatus::from_constant(0xC0E70023); // STATUS_SPACES_PD_UNSUPPORTED_VERSION
+
+/// A persisted memory buffer contains invalid data.
+pub const SPACES_PD_INVALID_DATA : NtStatus = NtStatus::from_constant(0xC0E70024); // STATUS_SPACES_PD_INVALID_DATA
+
+/// The cache metadata needs to be written and flushed.
+pub const SPACES_FLUSH_METADATA : NtStatus = NtStatus::from_constant(0xC0E70025); // STATUS_SPACES_FLUSH_METADATA
+
+/// The cache is full.
+pub const SPACES_CACHE_FULL : NtStatus = NtStatus::from_constant(0xC0E70026); // STATUS_SPACES_CACHE_FULL
+
+/// Repair is in progress.
+pub const SPACES_REPAIR_IN_PROGRESS : NtStatus = NtStatus::from_constant(0xC0E70027); // STATUS_SPACES_REPAIR_IN_PROGRESS
+
 /// The bootfile is too small to support persistent snapshots.
 pub const VOLSNAP_BOOTFILE_NOT_VALID : NtStatus = NtStatus::from_constant(0xC0500003); // STATUS_VOLSNAP_BOOTFILE_NOT_VALID
 
 /// Activation of persistent snapshots on this volume took longer than was allowed.
 pub const VOLSNAP_ACTIVATION_TIMEOUT : NtStatus = NtStatus::from_constant(0xC0500004); // STATUS_VOLSNAP_ACTIVATION_TIMEOUT
+
+/// BypassIO cannot be enabled while a volume snapshot exists.
+pub const VOLSNAP_NO_BYPASSIO_WITH_SNAPSHOT : NtStatus = NtStatus::from_constant(0xC0500005); // STATUS_VOLSNAP_NO_BYPASSIO_WITH_SNAPSHOT
 
 /// The operation was preempted by a higher priority operation. It must be resumed later.
 pub const IO_PREEMPTED : NtStatus = NtStatus::from_constant(0xC0510001); // STATUS_IO_PREEMPTED
@@ -8019,6 +8316,12 @@ pub const SMB_BAD_CLUSTER_DIALECT : NtStatus = NtStatus::from_constant(0xC05D000
 /// You can't access this shared folder because your organization's security policies block unauthenticated guest access. These policies help protect your PC from unsafe or malicious devices on the network.
 pub const SMB_GUEST_LOGON_BLOCKED : NtStatus = NtStatus::from_constant(0xC05D0002); // STATUS_SMB_GUEST_LOGON_BLOCKED
 
+/// Failed to negotiate a signing hash function.
+pub const SMB_NO_SIGNING_ALGORITHM_OVERLAP : NtStatus = NtStatus::from_constant(0xC05D0003); // STATUS_SMB_NO_SIGNING_ALGORITHM_OVERLAP
+
+/// The user canceled the authentication prompt to a remote server.
+pub const NETWORK_AUTHENTICATION_PROMPT_CANCELED : NtStatus = NtStatus::from_constant(0xC05D0004); // STATUS_NETWORK_AUTHENTICATION_PROMPT_CANCELED
+
 /// The command was not recognized by the security core
 pub const SECCORE_INVALID_COMMAND : NtStatus = NtStatus::from_constant(0xC0E80000); // STATUS_SECCORE_INVALID_COMMAND
 
@@ -8052,8 +8355,65 @@ pub const APPEXEC_HOST_ID_MISMATCH : NtStatus = NtStatus::from_constant(0xC0EC00
 /// The operation was not completed because the specified user was not known to the service.
 pub const APPEXEC_UNKNOWN_USER : NtStatus = NtStatus::from_constant(0xC0EC0007); // STATUS_APPEXEC_UNKNOWN_USER
 
+/// The application is blocked by app compat policy.
+pub const APPEXEC_APP_COMPAT_BLOCK : NtStatus = NtStatus::from_constant(0xC0EC0008); // STATUS_APPEXEC_APP_COMPAT_BLOCK
+
+/// The caller specified wait timed out before the operation completed.
+pub const APPEXEC_CALLER_WAIT_TIMEOUT : NtStatus = NtStatus::from_constant(0xC0EC0009); // STATUS_APPEXEC_CALLER_WAIT_TIMEOUT
+
+/// The caller specified wait timed out before the operation completed because a host termination is in queued.
+pub const APPEXEC_CALLER_WAIT_TIMEOUT_TERMINATION : NtStatus = NtStatus::from_constant(0xC0EC000A); // STATUS_APPEXEC_CALLER_WAIT_TIMEOUT_TERMINATION
+
+/// The caller specified wait timed out before the operation completed because a licensing operation is being performed.
+pub const APPEXEC_CALLER_WAIT_TIMEOUT_LICENSING : NtStatus = NtStatus::from_constant(0xC0EC000B); // STATUS_APPEXEC_CALLER_WAIT_TIMEOUT_LICENSING
+
+/// The caller specified wait timed out before the operation completed because resources are being acquired.
+pub const APPEXEC_CALLER_WAIT_TIMEOUT_RESOURCES : NtStatus = NtStatus::from_constant(0xC0EC000C); // STATUS_APPEXEC_CALLER_WAIT_TIMEOUT_RESOURCES
+
 /// The QUIC connection handshake failed.
 pub const QUIC_HANDSHAKE_FAILURE : NtStatus = NtStatus::from_constant(0xC0240000); // STATUS_QUIC_HANDSHAKE_FAILURE
 
 /// The QUIC connection failed to negotiate a compatible protocol version.
 pub const QUIC_VER_NEG_FAILURE : NtStatus = NtStatus::from_constant(0xC0240001); // STATUS_QUIC_VER_NEG_FAILURE
+
+/// The QUIC connection was canceled by the user.
+pub const QUIC_USER_CANCELED : NtStatus = NtStatus::from_constant(0xC0240002); // STATUS_QUIC_USER_CANCELED
+
+/// The QUIC connection encountered an internal error.
+pub const QUIC_INTERNAL_ERROR : NtStatus = NtStatus::from_constant(0xC0240003); // STATUS_QUIC_INTERNAL_ERROR
+
+/// The QUIC connection encountered a protocol violation.
+pub const QUIC_PROTOCOL_VIOLATION : NtStatus = NtStatus::from_constant(0xC0240004); // STATUS_QUIC_PROTOCOL_VIOLATION
+
+/// The QUIC connection was idle.
+pub const QUIC_CONNECTION_IDLE : NtStatus = NtStatus::from_constant(0xC0240005); // STATUS_QUIC_CONNECTION_IDLE
+
+/// The QUIC connection timed out while trying to contact the peer.
+pub const QUIC_CONNECTION_TIMEOUT : NtStatus = NtStatus::from_constant(0xC0240006); // STATUS_QUIC_CONNECTION_TIMEOUT
+
+/// The QUIC connection failed to negotiate a compatible ALPN.
+pub const QUIC_ALPN_NEG_FAILURE : NtStatus = NtStatus::from_constant(0xC0240007); // STATUS_QUIC_ALPN_NEG_FAILURE
+
+/// One or more of the required flags provided is unknown by the implementation.
+pub const IORING_REQUIRED_FLAG_NOT_SUPPORTED : NtStatus = NtStatus::from_constant(0xC0460001); // STATUS_IORING_REQUIRED_FLAG_NOT_SUPPORTED
+
+/// The submission queue is full.
+pub const IORING_SUBMISSION_QUEUE_FULL : NtStatus = NtStatus::from_constant(0xC0460002); // STATUS_IORING_SUBMISSION_QUEUE_FULL
+
+/// The version specified is not known or supported.
+pub const IORING_VERSION_NOT_SUPPORTED : NtStatus = NtStatus::from_constant(0xC0460003); // STATUS_IORING_VERSION_NOT_SUPPORTED
+
+/// The submission queue size specified for the IoRing is too big.
+pub const IORING_SUBMISSION_QUEUE_TOO_BIG : NtStatus = NtStatus::from_constant(0xC0460004); // STATUS_IORING_SUBMISSION_QUEUE_TOO_BIG
+
+/// The completion queue size specified for the IoRing is too big.
+pub const IORING_COMPLETION_QUEUE_TOO_BIG : NtStatus = NtStatus::from_constant(0xC0460005); // STATUS_IORING_COMPLETION_QUEUE_TOO_BIG
+
+/// A submit operation is already in progress for this IoRing on another thread.
+pub const IORING_SUBMIT_IN_PROGRESS : NtStatus = NtStatus::from_constant(0xC0460006); // STATUS_IORING_SUBMIT_IN_PROGRESS
+
+/// The shared ring buffers of the IoRing are corrupt.
+pub const IORING_CORRUPT : NtStatus = NtStatus::from_constant(0xC0460007); // STATUS_IORING_CORRUPT
+
+/// The completion queue does not have enough free space, to post completions, for all entries being submitted.
+pub const IORING_COMPLETION_QUEUE_TOO_FULL : NtStatus = NtStatus::from_constant(0xC0460008); // STATUS_IORING_COMPLETION_QUEUE_TOO_FULL

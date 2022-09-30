@@ -2,6 +2,10 @@
 
 use super::*;
 
+#[doc(hidden)] #[deprecated = "no longer exposed by windows headers, error code reused for E_VA_NOT_MAPPED"] pub const E_PXE_NOT_PRESENT : HResultError = HResultError::from_constant(0xC0370505); // VM_SAVED_STATE_DUMP_E_PXE_NOT_PRESENT
+#[doc(hidden)] #[deprecated = "no longer exposed by windows headers, error code reused for E_INVALID_VP_STATE"] pub const E_PDPTE_NOT_PRESENT : HResultError = HResultError::from_constant(0xC0370506); // VM_SAVED_STATE_DUMP_E_PDPTE_NOT_PRESENT
+#[doc(hidden)] #[deprecated = "no longer exposed by windows headers"] pub const E_PDE_NOT_PRESENT : HResultError = HResultError::from_constant(0xC0370507); // VM_SAVED_STATE_DUMP_E_PDE_NOT_PRESENT
+#[doc(hidden)] #[deprecated = "no longer exposed by windows headers"] pub const E_PTE_NOT_PRESENT : HResultError = HResultError::from_constant(0xC0370508); // VM_SAVED_STATE_DUMP_E_PTE_NOT_PRESENT
 
 /// Partition state blob not found. Make sure the virtual machine is saved for this content to be included in the saved state file(s).
 pub const E_PARTITION_STATE_NOT_FOUND : HResultError = HResultError::from_constant(0xC0370500); // VM_SAVED_STATE_DUMP_E_PARTITION_STATE_NOT_FOUND
@@ -18,14 +22,11 @@ pub const E_NESTED_VIRTUALIZATION_NOT_SUPPORTED : HResultError = HResultError::f
 /// The Windows kernel image address could not be found in the virtual machine saved state.
 pub const E_WINDOWS_KERNEL_IMAGE_NOT_FOUND : HResultError = HResultError::from_constant(0xC0370504); // VM_SAVED_STATE_DUMP_E_WINDOWS_KERNEL_IMAGE_NOT_FOUND
 
-/// Failed to read Page Map Level 4 entry (pxe) for a virtual address.
-pub const E_PXE_NOT_PRESENT : HResultError = HResultError::from_constant(0xC0370505); // VM_SAVED_STATE_DUMP_E_PXE_NOT_PRESENT
+/// The given virtual address is not mapped to a physical address.
+pub const E_VA_NOT_MAPPED : HResultError = HResultError::from_constant(0xC0370505); // VM_SAVED_STATE_DUMP_E_VA_NOT_MAPPED
 
-/// Failed to read Page Directory Page Table entry (pdpte) for a virtual address.
-pub const E_PDPTE_NOT_PRESENT : HResultError = HResultError::from_constant(0xC0370506); // VM_SAVED_STATE_DUMP_E_PDPTE_NOT_PRESENT
+/// The virtual processor is not in the correct state for the operation.
+pub const E_INVALID_VP_STATE : HResultError = HResultError::from_constant(0xC0370506); // VM_SAVED_STATE_DUMP_E_INVALID_VP_STATE
 
-/// Failed to read Page Directory entry (pde) for a virtual address.
-pub const E_PDE_NOT_PRESENT : HResultError = HResultError::from_constant(0xC0370507); // VM_SAVED_STATE_DUMP_E_PDE_NOT_PRESENT
-
-/// Failed to read Page Table entry (pte) for a virtual address.
-pub const E_PTE_NOT_PRESENT : HResultError = HResultError::from_constant(0xC0370508); // VM_SAVED_STATE_DUMP_E_PTE_NOT_PRESENT
+/// The active virtual trust level is not enabled on the specified virtual processor.
+pub const E_VP_VTL_NOT_ENABLED : HResultError = HResultError::from_constant(0xC0370509); // VM_SAVED_STATE_DUMP_E_VP_VTL_NOT_ENABLED

@@ -2,6 +2,7 @@
 
 use super::*;
 
+#[doc(hidden)] #[deprecated = "no longer exposed by windows headers"] pub const VRF_CFG_AND_IO_ENABLED : ErrorCode = ErrorCode::from_constant(1183); // ERROR_VRF_CFG_AND_IO_ENABLED
 
 /// The operation completed successfully.
 pub const SUCCESS : ErrorCode = ErrorCode::from_constant(0); // ERROR_SUCCESS
@@ -698,13 +699,13 @@ pub const SCRUB_DATA_DISABLED : ErrorCode = ErrorCode::from_constant(332); // ER
 /// The storage device does not provide redundancy.
 pub const NOT_REDUNDANT_STORAGE : ErrorCode = ErrorCode::from_constant(333); // ERROR_NOT_REDUNDANT_STORAGE
 
-/// An operation is not supported on a resident file.
+/// The specified operation is not supported on a resident file.
 pub const RESIDENT_FILE_NOT_SUPPORTED : ErrorCode = ErrorCode::from_constant(334); // ERROR_RESIDENT_FILE_NOT_SUPPORTED
 
-/// An operation is not supported on a compressed file.
+/// The specified operation is not supported on a compressed file.
 pub const COMPRESSED_FILE_NOT_SUPPORTED : ErrorCode = ErrorCode::from_constant(335); // ERROR_COMPRESSED_FILE_NOT_SUPPORTED
 
-/// An operation is not supported on a directory.
+/// The specified operation is not supported on a directory.
 pub const DIRECTORY_NOT_SUPPORTED : ErrorCode = ErrorCode::from_constant(336); // ERROR_DIRECTORY_NOT_SUPPORTED
 
 /// The specified copy of the requested data could not be read.
@@ -775,7 +776,7 @@ pub const EDP_DPL_POLICY_CANT_BE_SATISFIED : ErrorCode = ErrorCode::from_constan
 /// The device is in maintenance mode.
 pub const DEVICE_IN_MAINTENANCE : ErrorCode = ErrorCode::from_constant(359); // ERROR_DEVICE_IN_MAINTENANCE
 
-/// This operation is not supported on a DAX volume.
+/// The specified operation is not supported on a DAX volume.
 pub const NOT_SUPPORTED_ON_DAX : ErrorCode = ErrorCode::from_constant(360); // ERROR_NOT_SUPPORTED_ON_DAX
 
 /// The volume has active DAX mappings.
@@ -984,6 +985,12 @@ pub const DLP_POLICY_WARNS_AGAINST_OPERATION : ErrorCode = ErrorCode::from_const
 /// This action is blocked. Please refer to the data loss prevention notification for further information.
 pub const DLP_POLICY_DENIES_OPERATION : ErrorCode = ErrorCode::from_constant(446); // ERROR_DLP_POLICY_DENIES_OPERATION
 
+/// Access is denied because the file contains potentially unwanted software or content the security administrator decided to block.
+pub const SECURITY_DENIES_OPERATION : ErrorCode = ErrorCode::from_constant(447); // ERROR_SECURITY_DENIES_OPERATION
+
+/// The path cannot be traversed because it contains an untrusted mount point.
+pub const UNTRUSTED_MOUNT_POINT : ErrorCode = ErrorCode::from_constant(448); // ERROR_UNTRUSTED_MOUNT_POINT
+
 /// This action is blocked. Please refer to the data loss prevention notification for further information.
 pub const DLP_POLICY_SILENTLY_FAIL : ErrorCode = ErrorCode::from_constant(449); // ERROR_DLP_POLICY_SILENTLY_FAIL
 
@@ -1023,6 +1030,20 @@ pub const CAPAUTHZ_SCCD_NO_CAPABILITY_MATCH : ErrorCode = ErrorCode::from_consta
 /// The CimFS image is corrupt.
 pub const CIMFS_IMAGE_CORRUPT : ErrorCode = ErrorCode::from_constant(470); // ERROR_CIMFS_IMAGE_CORRUPT
 
+/// The system does not support this version of the CimFS image.
+pub const CIMFS_IMAGE_VERSION_NOT_SUPPORTED : ErrorCode = ErrorCode::from_constant(471); // ERROR_CIMFS_IMAGE_VERSION_NOT_SUPPORTED
+
+/// The storage stack returned STATUS_ACCESS_DENEID for the current operation.
+pub const STORAGE_STACK_ACCESS_DENIED : ErrorCode = ErrorCode::from_constant(472); // ERROR_STORAGE_STACK_ACCESS_DENIED
+
+/// Insufficient Virtual Address resources to complete the operation.
+pub const INSUFFICIENT_VIRTUAL_ADDR_RESOURCES : ErrorCode = ErrorCode::from_constant(473); // ERROR_INSUFFICIENT_VIRTUAL_ADDR_RESOURCES
+
+/// The specified index is beyond the bounds of valid range.
+pub const INDEX_OUT_OF_BOUNDS : ErrorCode = ErrorCode::from_constant(474); // ERROR_INDEX_OUT_OF_BOUNDS
+
+#[doc(hidden)] pub const CLOUD_FILE_US_MESSAGE_TIMEOUT : ErrorCode = ErrorCode::from_constant(475); // ERROR_CLOUD_FILE_US_MESSAGE_TIMEOUT
+
 /// The operation timed out waiting for this device to complete a PnP query-remove request due to a potential hang in its device stack. The system may need to be rebooted to complete the request.
 pub const PNP_QUERY_REMOVE_DEVICE_TIMEOUT : ErrorCode = ErrorCode::from_constant(480); // ERROR_PNP_QUERY_REMOVE_DEVICE_TIMEOUT
 
@@ -1041,14 +1062,83 @@ pub const INVALID_ADDRESS : ErrorCode = ErrorCode::from_constant(487); // ERROR_
 /// The volume contains paging, crash dump or other system critical files.
 pub const HAS_SYSTEM_CRITICAL_FILES : ErrorCode = ErrorCode::from_constant(488); // ERROR_HAS_SYSTEM_CRITICAL_FILES
 
-/// Driver Verifier Volatile settings cannot be set when CFG and IO are enabled.
-pub const VRF_CFG_AND_IO_ENABLED : ErrorCode = ErrorCode::from_constant(1183); // ERROR_VRF_CFG_AND_IO_ENABLED
+/// The specified operation is not supported on an encrypted file.
+pub const ENCRYPTED_FILE_NOT_SUPPORTED : ErrorCode = ErrorCode::from_constant(489); // ERROR_ENCRYPTED_FILE_NOT_SUPPORTED
 
-/// An attempt was made to access a partition that has begun termination.
-pub const PARTITION_TERMINATING : ErrorCode = ErrorCode::from_constant(1184); // ERROR_PARTITION_TERMINATING
+/// The specified operation is not supported on a sparse file.
+pub const SPARSE_FILE_NOT_SUPPORTED : ErrorCode = ErrorCode::from_constant(490); // ERROR_SPARSE_FILE_NOT_SUPPORTED
+
+/// The specified operation is not supported on a pagefile.
+pub const PAGEFILE_NOT_SUPPORTED : ErrorCode = ErrorCode::from_constant(491); // ERROR_PAGEFILE_NOT_SUPPORTED
+
+/// The specified operation is not supported on a volume.
+pub const VOLUME_NOT_SUPPORTED : ErrorCode = ErrorCode::from_constant(492); // ERROR_VOLUME_NOT_SUPPORTED
+
+/// The specified operation is not supported on a BypassIO enabled file.
+pub const NOT_SUPPORTED_WITH_BYPASSIO : ErrorCode = ErrorCode::from_constant(493); // ERROR_NOT_SUPPORTED_WITH_BYPASSIO
+
+/// The specified driver does not support BypassIO operations.
+pub const NO_BYPASSIO_DRIVER_SUPPORT : ErrorCode = ErrorCode::from_constant(494); // ERROR_NO_BYPASSIO_DRIVER_SUPPORT
+
+/// The specified operation is not supported while encryption is enabled on the target object.
+pub const NOT_SUPPORTED_WITH_ENCRYPTION : ErrorCode = ErrorCode::from_constant(495); // ERROR_NOT_SUPPORTED_WITH_ENCRYPTION
+
+/// The specified operation is not supported while compression is enabled on the target object.
+pub const NOT_SUPPORTED_WITH_COMPRESSION : ErrorCode = ErrorCode::from_constant(496); // ERROR_NOT_SUPPORTED_WITH_COMPRESSION
+
+/// The specified operation is not supported while replication is enabled on the target object.
+pub const NOT_SUPPORTED_WITH_REPLICATION : ErrorCode = ErrorCode::from_constant(497); // ERROR_NOT_SUPPORTED_WITH_REPLICATION
+
+/// The specified operation is not supported while deduplication is enabled on the target object.
+pub const NOT_SUPPORTED_WITH_DEDUPLICATION : ErrorCode = ErrorCode::from_constant(498); // ERROR_NOT_SUPPORTED_WITH_DEDUPLICATION
+
+/// The specified operation is not supported while auditing is enabled on the target object.
+pub const NOT_SUPPORTED_WITH_AUDITING : ErrorCode = ErrorCode::from_constant(499); // ERROR_NOT_SUPPORTED_WITH_AUDITING
 
 /// User profile cannot be loaded.
 pub const USER_PROFILE_LOAD : ErrorCode = ErrorCode::from_constant(500); // ERROR_USER_PROFILE_LOAD
+
+/// The negotiated session key does not meet the minimum length requirement.
+pub const SESSION_KEY_TOO_SHORT : ErrorCode = ErrorCode::from_constant(501); // ERROR_SESSION_KEY_TOO_SHORT
+
+/// Access denied when accessing the user profile.
+pub const ACCESS_DENIED_APPDATA : ErrorCode = ErrorCode::from_constant(502); // ERROR_ACCESS_DENIED_APPDATA
+
+/// The specified operation is not supported while monitoring is enabled on the target object.
+pub const NOT_SUPPORTED_WITH_MONITORING : ErrorCode = ErrorCode::from_constant(503); // ERROR_NOT_SUPPORTED_WITH_MONITORING
+
+/// The specified operation is not supported while snapshot is enabled on the target object.
+pub const NOT_SUPPORTED_WITH_SNAPSHOT : ErrorCode = ErrorCode::from_constant(504); // ERROR_NOT_SUPPORTED_WITH_SNAPSHOT
+
+/// The specified operation is not supported while virtualization is enabled on the target object.
+pub const NOT_SUPPORTED_WITH_VIRTUALIZATION : ErrorCode = ErrorCode::from_constant(505); // ERROR_NOT_SUPPORTED_WITH_VIRTUALIZATION
+
+/// At least one minifilter does not support bypass IO.
+pub const BYPASSIO_FLT_NOT_SUPPORTED : ErrorCode = ErrorCode::from_constant(506); // ERROR_BYPASSIO_FLT_NOT_SUPPORTED
+
+/// The device needs to be reset.
+pub const DEVICE_RESET_REQUIRED : ErrorCode = ErrorCode::from_constant(507); // ERROR_DEVICE_RESET_REQUIRED
+
+/// The volume is opened for exclusive write access, preventing files from being opened for write access.
+pub const VOLUME_WRITE_ACCESS_DENIED : ErrorCode = ErrorCode::from_constant(508); // ERROR_VOLUME_WRITE_ACCESS_DENIED
+
+/// The specified operation is not supported on a file opened for cached IO.
+pub const NOT_SUPPORTED_WITH_CACHED_HANDLE : ErrorCode = ErrorCode::from_constant(509); // ERROR_NOT_SUPPORTED_WITH_CACHED_HANDLE
+
+/// The file system encountered a metadata file with inconsistent data.
+pub const FS_METADATA_INCONSISTENT : ErrorCode = ErrorCode::from_constant(510); // ERROR_FS_METADATA_INCONSISTENT
+
+/// A file system block being referenced has been modified after containing a weak reference.
+pub const BLOCK_WEAK_REFERENCE_INVALID : ErrorCode = ErrorCode::from_constant(511); // ERROR_BLOCK_WEAK_REFERENCE_INVALID
+
+/// The source file system block being referenced has been modified after containing a weak reference.
+pub const BLOCK_SOURCE_WEAK_REFERENCE_INVALID : ErrorCode = ErrorCode::from_constant(512); // ERROR_BLOCK_SOURCE_WEAK_REFERENCE_INVALID
+
+/// The target file system block being referenced has been modified after containing a weak reference.
+pub const BLOCK_TARGET_WEAK_REFERENCE_INVALID : ErrorCode = ErrorCode::from_constant(513); // ERROR_BLOCK_TARGET_WEAK_REFERENCE_INVALID
+
+/// The target file system block is shared between multiple extents.
+pub const BLOCK_SHARED : ErrorCode = ErrorCode::from_constant(514); // ERROR_BLOCK_SHARED
 
 /// Arithmetic result exceeded 32 bits.
 pub const ARITHMETIC_OVERFLOW : ErrorCode = ErrorCode::from_constant(534); // ERROR_ARITHMETIC_OVERFLOW
@@ -1150,7 +1240,7 @@ pub const TOO_MANY_THREADS : ErrorCode = ErrorCode::from_constant(565); // ERROR
 /// An attempt was made to operate on a thread within a specific process, but the thread specified is not in the process specified.
 pub const THREAD_NOT_IN_PROCESS : ErrorCode = ErrorCode::from_constant(566); // ERROR_THREAD_NOT_IN_PROCESS
 
-/// Page file quota was exceeded.
+/// Pagefile quota was exceeded.
 pub const PAGEFILE_QUOTA_EXCEEDED : ErrorCode = ErrorCode::from_constant(567); // ERROR_PAGEFILE_QUOTA_EXCEEDED
 
 /// The Netlogon service cannot start because another Netlogon service running in the domain conflicts with the specified role.
@@ -1931,6 +2021,17 @@ pub const ENCLAVE_NOT_TERMINATED : ErrorCode = ErrorCode::from_constant(814); //
 /// An attempt was made to access protected memory in violation of its secure access policy.
 pub const ENCLAVE_VIOLATION : ErrorCode = ErrorCode::from_constant(815); // ERROR_ENCLAVE_VIOLATION
 
+#[doc(hidden)] pub const SERVER_TRANSPORT_CONFLICT : ErrorCode = ErrorCode::from_constant(816); // ERROR_SERVER_TRANSPORT_CONFLICT
+
+/// Multiple mappings to shared resource(s) on a server, using different certificate validation preferences, are not allowed. Use the same preference for all mappings to a server and try again.
+pub const CERTIFICATE_VALIDATION_PREFERENCE_CONFLICT : ErrorCode = ErrorCode::from_constant(817); // ERROR_CERTIFICATE_VALIDATION_PREFERENCE_CONFLICT
+
+/// The specified copy of the requested data could not be read.
+pub const FT_READ_FROM_COPY_FAILURE : ErrorCode = ErrorCode::from_constant(818); // ERROR_FT_READ_FROM_COPY_FAILURE
+
+/// The section creation request was failed because it would have been satisfied with a direct map and the caller explicitly signified this was not wanted.
+pub const SECTION_DIRECT_MAP_ONLY : ErrorCode = ErrorCode::from_constant(819); // ERROR_SECTION_DIRECT_MAP_ONLY
+
 /// Access to the extended attribute was denied.
 pub const EA_ACCESS_DENIED : ErrorCode = ErrorCode::from_constant(994); // ERROR_EA_ACCESS_DENIED
 
@@ -2297,11 +2398,17 @@ pub const POTENTIAL_FILE_FOUND : ErrorCode = ErrorCode::from_constant(1180); // 
 /// The journal entry has been deleted from the journal.
 pub const JOURNAL_ENTRY_DELETED : ErrorCode = ErrorCode::from_constant(1181); // ERROR_JOURNAL_ENTRY_DELETED
 
+/// An attempt was made to access a partition that has begun termination.
+pub const PARTITION_TERMINATING : ErrorCode = ErrorCode::from_constant(1184); // ERROR_PARTITION_TERMINATING
+
 /// A system shutdown has already been scheduled.
 pub const SHUTDOWN_IS_SCHEDULED : ErrorCode = ErrorCode::from_constant(1190); // ERROR_SHUTDOWN_IS_SCHEDULED
 
 /// The system shutdown cannot be initiated because there are other users logged on to the computer.
 pub const SHUTDOWN_USERS_LOGGED_ON : ErrorCode = ErrorCode::from_constant(1191); // ERROR_SHUTDOWN_USERS_LOGGED_ON
+
+/// The system shutdown cannot safely proceed without enabling node maintenance mode for cluster node and waiting for the drain to complete.
+pub const SHUTDOWN_DISKS_NOT_IN_MAINTENANCE_MODE : ErrorCode = ErrorCode::from_constant(1192); // ERROR_SHUTDOWN_DISKS_NOT_IN_MAINTENANCE_MODE
 
 /// The specified device name is invalid.
 pub const BAD_DEVICE : ErrorCode = ErrorCode::from_constant(1200); // ERROR_BAD_DEVICE
@@ -3599,6 +3706,11 @@ pub const INVALID_PRINTER_DRIVER_MANIFEST : ErrorCode = ErrorCode::from_constant
 /// The specified printer cannot be shared.
 pub const PRINTER_NOT_SHAREABLE : ErrorCode = ErrorCode::from_constant(3022); // ERROR_PRINTER_NOT_SHAREABLE
 
+#[doc(hidden)] pub const SERVER_SERVICE_CALL_REQUIRES_SMB1 : ErrorCode = ErrorCode::from_constant(3023); // ERROR_SERVER_SERVICE_CALL_REQUIRES_SMB1
+
+/// The user canceled the authentication prompt to a remote server.
+pub const NETWORK_AUTHENTICATION_PROMPT_CANCELED : ErrorCode = ErrorCode::from_constant(3024); // ERROR_NETWORK_AUTHENTICATION_PROMPT_CANCELED
+
 /// The operation was paused.
 pub const REQUEST_PAUSED : ErrorCode = ErrorCode::from_constant(3050); // ERROR_REQUEST_PAUSED
 
@@ -3625,6 +3737,75 @@ pub const APPEXEC_HOST_ID_MISMATCH : ErrorCode = ErrorCode::from_constant(3066);
 
 /// The operation was not completed because the specified user was not known to the service.
 pub const APPEXEC_UNKNOWN_USER : ErrorCode = ErrorCode::from_constant(3067); // ERROR_APPEXEC_UNKNOWN_USER
+
+/// The application is blocked by app compat policy.
+pub const APPEXEC_APP_COMPAT_BLOCK : ErrorCode = ErrorCode::from_constant(3068); // ERROR_APPEXEC_APP_COMPAT_BLOCK
+
+/// The caller specified wait timed out before the operation completed.
+pub const APPEXEC_CALLER_WAIT_TIMEOUT : ErrorCode = ErrorCode::from_constant(3069); // ERROR_APPEXEC_CALLER_WAIT_TIMEOUT
+
+/// The caller specified wait timed out before the operation completed because a host termination is in queued.
+pub const APPEXEC_CALLER_WAIT_TIMEOUT_TERMINATION : ErrorCode = ErrorCode::from_constant(3070); // ERROR_APPEXEC_CALLER_WAIT_TIMEOUT_TERMINATION
+
+/// The caller specified wait timed out before the operation completed because a licensing operation is being performed.
+pub const APPEXEC_CALLER_WAIT_TIMEOUT_LICENSING : ErrorCode = ErrorCode::from_constant(3071); // ERROR_APPEXEC_CALLER_WAIT_TIMEOUT_LICENSING
+
+/// The caller specified wait timed out before the operation completed because resources are being acquired.
+pub const APPEXEC_CALLER_WAIT_TIMEOUT_RESOURCES : ErrorCode = ErrorCode::from_constant(3072); // ERROR_APPEXEC_CALLER_WAIT_TIMEOUT_RESOURCES
+
+/// Enabling driver verification from volatile command is currently not supported when both CFG and IO are enabled.
+pub const VRF_VOLATILE_CFG_AND_IO_ENABLED : ErrorCode = ErrorCode::from_constant(3080); // ERROR_VRF_VOLATILE_CFG_AND_IO_ENABLED
+
+/// Removal of current driver verification is not supported from volatile command.
+pub const VRF_VOLATILE_NOT_STOPPABLE : ErrorCode = ErrorCode::from_constant(3081); // ERROR_VRF_VOLATILE_NOT_STOPPABLE
+
+/// Enabling driver verification is not supported in safe mode.
+pub const VRF_VOLATILE_SAFE_MODE : ErrorCode = ErrorCode::from_constant(3082); // ERROR_VRF_VOLATILE_SAFE_MODE
+
+/// Enabling driver verification is not supported from volatile mode in current system.
+pub const VRF_VOLATILE_NOT_RUNNABLE_SYSTEM : ErrorCode = ErrorCode::from_constant(3083); // ERROR_VRF_VOLATILE_NOT_RUNNABLE_SYSTEM
+
+/// The specified rule class (a.k.a. flag) is not supported from volatile mode.
+pub const VRF_VOLATILE_NOT_SUPPORTED_RULECLASS : ErrorCode = ErrorCode::from_constant(3084); // ERROR_VRF_VOLATILE_NOT_SUPPORTED_RULECLASS
+
+/// The specified driver is protected and volatile verification is currently not supported.
+pub const VRF_VOLATILE_PROTECTED_DRIVER : ErrorCode = ErrorCode::from_constant(3085); // ERROR_VRF_VOLATILE_PROTECTED_DRIVER
+
+/// Enabling driver verification is not supported for a driver with  NMI callback(s) registered.
+pub const VRF_VOLATILE_NMI_REGISTERED : ErrorCode = ErrorCode::from_constant(3086); // ERROR_VRF_VOLATILE_NMI_REGISTERED
+
+/// Volatile verification settings cannot be changed when verification is enabled from boot or DIF volatile verification is enabled.
+pub const VRF_VOLATILE_SETTINGS_CONFLICT : ErrorCode = ErrorCode::from_constant(3087); // ERROR_VRF_VOLATILE_SETTINGS_CONFLICT
+
+/// The specified driver is not associated with driver object or driver extension.
+pub const DIF_IOCALLBACK_NOT_REPLACED : ErrorCode = ErrorCode::from_constant(3190); // ERROR_DIF_IOCALLBACK_NOT_REPLACED
+
+/// Verifier's internal data size exceeds the limit of live dump secondary data.
+pub const DIF_LIVEDUMP_LIMIT_EXCEEDED : ErrorCode = ErrorCode::from_constant(3191); // ERROR_DIF_LIVEDUMP_LIMIT_EXCEEDED
+
+/// Verification cannot start because an attempt to lock code or data section failed.
+pub const DIF_VOLATILE_SECTION_NOT_LOCKED : ErrorCode = ErrorCode::from_constant(3192); // ERROR_DIF_VOLATILE_SECTION_NOT_LOCKED
+
+/// DIF volatile verification is not supported for hotpatched driver.
+pub const DIF_VOLATILE_DRIVER_HOTPATCHED : ErrorCode = ErrorCode::from_constant(3193); // ERROR_DIF_VOLATILE_DRIVER_HOTPATCHED
+
+/// The passed system DIF information is invalid.
+pub const DIF_VOLATILE_INVALID_INFO : ErrorCode = ErrorCode::from_constant(3194); // ERROR_DIF_VOLATILE_INVALID_INFO
+
+/// DIF volatile verification only supports on loaded drivers.
+pub const DIF_VOLATILE_DRIVER_IS_NOT_RUNNING : ErrorCode = ErrorCode::from_constant(3195); // ERROR_DIF_VOLATILE_DRIVER_IS_NOT_RUNNING
+
+/// Currently no plugin is running.
+pub const DIF_VOLATILE_PLUGIN_IS_NOT_RUNNING : ErrorCode = ErrorCode::from_constant(3196); // ERROR_DIF_VOLATILE_PLUGIN_IS_NOT_RUNNING
+
+/// Currently running plugin must be removed before applying a new plugin.
+pub const DIF_VOLATILE_PLUGIN_CHANGE_NOT_ALLOWED : ErrorCode = ErrorCode::from_constant(3197); // ERROR_DIF_VOLATILE_PLUGIN_CHANGE_NOT_ALLOWED
+
+/// The plugin is not allowed to run in volatile mode.
+pub const DIF_VOLATILE_NOT_ALLOWED : ErrorCode = ErrorCode::from_constant(3198); // ERROR_DIF_VOLATILE_NOT_ALLOWED
+
+/// One or more DDI is not yet supported by DIF.
+pub const DIF_BINDING_API_NOT_FOUND : ErrorCode = ErrorCode::from_constant(3199); // ERROR_DIF_BINDING_API_NOT_FOUND
 
 /// Reissue the given operation as a cached IO operation
 pub const IO_REISSUE_AS_CACHED : ErrorCode = ErrorCode::from_constant(3950); // ERROR_IO_REISSUE_AS_CACHED
@@ -3891,6 +4072,9 @@ pub const WOF_WIM_RESOURCE_TABLE_CORRUPT : ErrorCode = ErrorCode::from_constant(
 /// The WOF driver encountered a corruption in the compressed file's Resource Table.
 pub const WOF_FILE_RESOURCE_TABLE_CORRUPT : ErrorCode = ErrorCode::from_constant(4448); // ERROR_WOF_FILE_RESOURCE_TABLE_CORRUPT
 
+/// The request cannot be completed as it requires modifying an immutable object.
+pub const OBJECT_IS_IMMUTABLE : ErrorCode = ErrorCode::from_constant(4449); // ERROR_OBJECT_IS_IMMUTABLE
+
 /// Single Instance Storage is not available on this volume.
 pub const VOLUME_NOT_SIS_ENABLED : ErrorCode = ErrorCode::from_constant(4500); // ERROR_VOLUME_NOT_SIS_ENABLED
 
@@ -3911,6 +4095,18 @@ pub const SYSTEM_INTEGRITY_TOO_MANY_POLICIES : ErrorCode = ErrorCode::from_const
 
 /// The Code Integrity supplemental policy is not authorized by a Code Integrity base policy.
 pub const SYSTEM_INTEGRITY_SUPPLEMENTAL_POLICY_NOT_AUTHORIZED : ErrorCode = ErrorCode::from_constant(4555); // ERROR_SYSTEM_INTEGRITY_SUPPLEMENTAL_POLICY_NOT_AUTHORIZED
+
+/// System Integrity policy has been violated.  Malicious binary reputation.
+pub const SYSTEM_INTEGRITY_REPUTATION_MALICIOUS : ErrorCode = ErrorCode::from_constant(4556); // ERROR_SYSTEM_INTEGRITY_REPUTATION_MALICIOUS
+
+/// System Integrity policy has been violated.  Potentially unwanted application.
+pub const SYSTEM_INTEGRITY_REPUTATION_PUA : ErrorCode = ErrorCode::from_constant(4557); // ERROR_SYSTEM_INTEGRITY_REPUTATION_PUA
+
+/// System Integrity policy has been violated.  Dangerous file extension from the web.
+pub const SYSTEM_INTEGRITY_REPUTATION_DANGEROUS_EXT : ErrorCode = ErrorCode::from_constant(4558); // ERROR_SYSTEM_INTEGRITY_REPUTATION_DANGEROUS_EXT
+
+/// System Integrity policy has been violated.  Unable to contact reputation service for unknown file.
+pub const SYSTEM_INTEGRITY_REPUTATION_OFFLINE : ErrorCode = ErrorCode::from_constant(4559); // ERROR_SYSTEM_INTEGRITY_REPUTATION_OFFLINE
 
 /// Virtual Secure Mode (VSM) is not initialized. The hypervisor or VSM may not be present or enabled.
 pub const VSM_NOT_INITIALIZED : ErrorCode = ErrorCode::from_constant(4560); // ERROR_VSM_NOT_INITIALIZED
@@ -3938,6 +4134,12 @@ pub const PLATFORM_MANIFEST_NOT_ACTIVE : ErrorCode = ErrorCode::from_constant(45
 
 /// The Platform Manifest file was not properly signed.
 pub const PLATFORM_MANIFEST_NOT_SIGNED : ErrorCode = ErrorCode::from_constant(4576); // ERROR_PLATFORM_MANIFEST_NOT_SIGNED
+
+/// System Integrity policy has been violated.  Unfriendly file.
+pub const SYSTEM_INTEGRITY_REPUTATION_UNFRIENDLY_FILE : ErrorCode = ErrorCode::from_constant(4580); // ERROR_SYSTEM_INTEGRITY_REPUTATION_UNFRIENDLY_FILE
+
+/// System Integrity policy has been violated.  Failed to obtain file reputation because an infrastructure issue occurred. Try again later.
+pub const SYSTEM_INTEGRITY_REPUTATION_UNATTAINABLE : ErrorCode = ErrorCode::from_constant(4581); // ERROR_SYSTEM_INTEGRITY_REPUTATION_UNATTAINABLE
 
 /// The operation cannot be completed because other resources are dependent on this resource.
 pub const DEPENDENT_RESOURCE_EXISTS : ErrorCode = ErrorCode::from_constant(5001); // ERROR_DEPENDENT_RESOURCE_EXISTS
@@ -5372,6 +5574,15 @@ pub const INCORRECT_ACCOUNT_TYPE : ErrorCode = ErrorCode::from_constant(8646); /
 #[doc(hidden)] pub const DS_UPN_VALUE_NOT_UNIQUE_IN_FOREST : ErrorCode = ErrorCode::from_constant(8648); // ERROR_DS_UPN_VALUE_NOT_UNIQUE_IN_FOREST
 #[doc(hidden)] pub const DS_MISSING_FOREST_TRUST : ErrorCode = ErrorCode::from_constant(8649); // ERROR_DS_MISSING_FOREST_TRUST
 #[doc(hidden)] pub const DS_VALUE_KEY_NOT_UNIQUE : ErrorCode = ErrorCode::from_constant(8650); // ERROR_DS_VALUE_KEY_NOT_UNIQUE
+
+/// The Security Account Manager blocked the use of a weak Windows Hello for Business key.
+pub const WEAK_WHFBKEY_BLOCKED : ErrorCode = ErrorCode::from_constant(8651); // ERROR_WEAK_WHFBKEY_BLOCKED
+
+#[doc(hidden)] pub const DS_PER_ATTRIBUTE_AUTHZ_FAILED_DURING_ADD : ErrorCode = ErrorCode::from_constant(8652); // ERROR_DS_PER_ATTRIBUTE_AUTHZ_FAILED_DURING_ADD
+
+/// The local account policy modification request was rejected because the policy is controlled by a regional authority.
+pub const LOCAL_POLICY_MODIFICATION_NOT_SUPPORTED : ErrorCode = ErrorCode::from_constant(8653); // ERROR_LOCAL_POLICY_MODIFICATION_NOT_SUPPORTED
+
 #[doc(hidden)] pub const IPSEC_QM_POLICY_EXISTS : ErrorCode = ErrorCode::from_constant(13000); // ERROR_IPSEC_QM_POLICY_EXISTS
 #[doc(hidden)] pub const IPSEC_QM_POLICY_NOT_FOUND : ErrorCode = ErrorCode::from_constant(13001); // ERROR_IPSEC_QM_POLICY_NOT_FOUND
 #[doc(hidden)] pub const IPSEC_QM_POLICY_IN_USE : ErrorCode = ErrorCode::from_constant(13002); // ERROR_IPSEC_QM_POLICY_IN_USE
@@ -5720,6 +5931,7 @@ pub const OPERATION_NOT_ALLOWED_FROM_SYSTEM_COMPONENT : ErrorCode = ErrorCode::f
 #[doc(hidden)] pub const PRI_MERGE_INVALID_FILE_NAME : ErrorCode = ErrorCode::from_constant(15158); // ERROR_PRI_MERGE_INVALID_FILE_NAME
 #[doc(hidden)] pub const MRM_PACKAGE_NOT_FOUND : ErrorCode = ErrorCode::from_constant(15159); // ERROR_MRM_PACKAGE_NOT_FOUND
 #[doc(hidden)] pub const MRM_MISSING_DEFAULT_LANGUAGE : ErrorCode = ErrorCode::from_constant(15160); // ERROR_MRM_MISSING_DEFAULT_LANGUAGE
+#[doc(hidden)] pub const MRM_SCOPE_ITEM_CONFLICT : ErrorCode = ErrorCode::from_constant(15161); // ERROR_MRM_SCOPE_ITEM_CONFLICT
 
 /// The monitor returned a DDC/CI capabilities string that did not comply with the ACCESS.bus 3.0, DDC/CI 1.1 or MCCS 2 Revision 1 specification.
 pub const MCA_INVALID_CAPABILITIES_STRING : ErrorCode = ErrorCode::from_constant(15200); // ERROR_MCA_INVALID_CAPABILITIES_STRING
@@ -5987,11 +6199,38 @@ pub const UNSIGNED_PACKAGE_INVALID_PUBLISHER_NAMESPACE : ErrorCode = ErrorCode::
 /// The package deployment failed because its publisher is not in the signed namespace.
 pub const SIGNED_PACKAGE_INVALID_PUBLISHER_NAMESPACE : ErrorCode = ErrorCode::from_constant(15661); // ERROR_SIGNED_PACKAGE_INVALID_PUBLISHER_NAMESPACE
 
-/// The package deployment failed because its publisher is not in the signed namespace.
+/// The package deployment failed because it must allow external content to be deployed with an external location.
 pub const PACKAGE_EXTERNAL_LOCATION_NOT_ALLOWED : ErrorCode = ErrorCode::from_constant(15662); // ERROR_PACKAGE_EXTERNAL_LOCATION_NOT_ALLOWED
 
 /// A host runtime dependency resolving to a package with full trust content requires the main package to have the runFullTrust capability.
 pub const INSTALL_FULLTRUST_HOSTRUNTIME_REQUIRES_MAIN_PACKAGE_FULLTRUST_CAPABILITY : ErrorCode = ErrorCode::from_constant(15663); // ERROR_INSTALL_FULLTRUST_HOSTRUNTIME_REQUIRES_MAIN_PACKAGE_FULLTRUST_CAPABILITY
+
+/// The package deployment failed because the package requires a capability for mandatory startup tasks.
+pub const PACKAGE_LACKS_CAPABILITY_FOR_MANDATORY_STARTUPTASKS : ErrorCode = ErrorCode::from_constant(15664); // ERROR_PACKAGE_LACKS_CAPABILITY_FOR_MANDATORY_STARTUPTASKS
+
+/// Package failed host runtime dependency or conflict validation.
+pub const INSTALL_RESOLVE_HOSTRUNTIME_DEPENDENCY_FAILED : ErrorCode = ErrorCode::from_constant(15665); // ERROR_INSTALL_RESOLVE_HOSTRUNTIME_DEPENDENCY_FAILED
+
+/// The package deployment failed because it uses a machine scope but doesn't have the required capability.
+pub const MACHINE_SCOPE_NOT_ALLOWED : ErrorCode = ErrorCode::from_constant(15666); // ERROR_MACHINE_SCOPE_NOT_ALLOWED
+
+/// The package deployment failed because it uses classic compatmode but doesn't have the required capability.
+pub const CLASSIC_COMPAT_MODE_NOT_ALLOWED : ErrorCode = ErrorCode::from_constant(15667); // ERROR_CLASSIC_COMPAT_MODE_NOT_ALLOWED
+
+/// AppxUpdateAgent attempted to stage a package that is not applicable.
+pub const STAGEFROMUPDATEAGENT_PACKAGE_NOT_APPLICABLE : ErrorCode = ErrorCode::from_constant(15668); // ERROR_STAGEFROMUPDATEAGENT_PACKAGE_NOT_APPLICABLE
+
+/// The application cannot be started for the target user.  Please have the user explicitly install this package.
+pub const PACKAGE_NOT_REGISTERED_FOR_USER : ErrorCode = ErrorCode::from_constant(15669); // ERROR_PACKAGE_NOT_REGISTERED_FOR_USER
+
+/// The provided package name does not match the expected package name. Check the AppXDeployment-Server event log for details.
+pub const PACKAGE_NAME_MISMATCH : ErrorCode = ErrorCode::from_constant(15670); // ERROR_PACKAGE_NAME_MISMATCH
+
+/// The provided .appinstaller URI is already being used by another package family. Check the AppXDeployment-Server event log for details.
+pub const APPINSTALLER_URI_IN_USE : ErrorCode = ErrorCode::from_constant(15671); // ERROR_APPINSTALLER_URI_IN_USE
+
+/// The package family's auto update settings are being managed at system priority and cannot be changed at default priority. Please contact your system administrator for help with the error.
+pub const APPINSTALLER_IS_MANAGED_BY_SYSTEM : ErrorCode = ErrorCode::from_constant(15672); // ERROR_APPINSTALLER_IS_MANAGED_BY_SYSTEM
 
 /// Loading the state store failed.
 pub const STATE_LOAD_STORE_FAILED : ErrorCode = ErrorCode::from_constant(15800); // ERROR_STATE_LOAD_STORE_FAILED
@@ -6096,6 +6335,7 @@ pub const CRED_REQUIRES_CONFIRMATION : HResultError = HResultError::from_constan
 #[doc(hidden)] pub const FLT_CONTEXT_ALREADY_LINKED : HResultError = HResultError::from_constant(0x801F001C); // ERROR_FLT_CONTEXT_ALREADY_LINKED
 #[doc(hidden)] pub const FLT_NO_WAITER_FOR_REPLY : HResultError = HResultError::from_constant(0x801F0020); // ERROR_FLT_NO_WAITER_FOR_REPLY
 #[doc(hidden)] pub const FLT_REGISTRATION_BUSY : HResultError = HResultError::from_constant(0x801F0023); // ERROR_FLT_REGISTRATION_BUSY
+#[doc(hidden)] pub const FLT_WCOS_NOT_SUPPORTED : HResultError = HResultError::from_constant(0x801F0024); // ERROR_FLT_WCOS_NOT_SUPPORTED
 
 /// ### Display Driver Stopped Responding
 /// The `%hs` display driver has stopped working normally. Save your work and reboot the system to restore full display functionality.
@@ -6154,6 +6394,9 @@ pub const MONITOR_INVALID_MANUFACTURE_DATE : HResultError = HResultError::from_c
 #[doc(hidden)] pub const GRAPHICS_INDIRECT_DISPLAY_DEVICE_STOPPED : HResultError = HResultError::from_constant(0xC0262013); // ERROR_GRAPHICS_INDIRECT_DISPLAY_DEVICE_STOPPED
 #[doc(hidden)] pub const GRAPHICS_VAIL_FAILED_TO_SEND_CREATE_SUPERWETINK_MESSAGE : HResultError = HResultError::from_constant(0xC0262014); // ERROR_GRAPHICS_VAIL_FAILED_TO_SEND_CREATE_SUPERWETINK_MESSAGE
 #[doc(hidden)] pub const GRAPHICS_VAIL_FAILED_TO_SEND_DESTROY_SUPERWETINK_MESSAGE : HResultError = HResultError::from_constant(0xC0262015); // ERROR_GRAPHICS_VAIL_FAILED_TO_SEND_DESTROY_SUPERWETINK_MESSAGE
+#[doc(hidden)] pub const GRAPHICS_VAIL_FAILED_TO_SEND_COMPOSITION_WINDOW_DPI_MESSAGE : HResultError = HResultError::from_constant(0xC0262016); // ERROR_GRAPHICS_VAIL_FAILED_TO_SEND_COMPOSITION_WINDOW_DPI_MESSAGE
+#[doc(hidden)] pub const GRAPHICS_LINK_CONFIGURATION_IN_PROGRESS : HResultError = HResultError::from_constant(0xC0262017); // ERROR_GRAPHICS_LINK_CONFIGURATION_IN_PROGRESS
+#[doc(hidden)] pub const GRAPHICS_MPO_ALLOCATION_UNPINNED : HResultError = HResultError::from_constant(0xC0262018); // ERROR_GRAPHICS_MPO_ALLOCATION_UNPINNED
 #[doc(hidden)] pub const GRAPHICS_NO_VIDEO_MEMORY : HResultError = HResultError::from_constant(0xC0262100); // ERROR_GRAPHICS_NO_VIDEO_MEMORY
 #[doc(hidden)] pub const GRAPHICS_CANT_LOCK_MEMORY : HResultError = HResultError::from_constant(0xC0262101); // ERROR_GRAPHICS_CANT_LOCK_MEMORY
 #[doc(hidden)] pub const GRAPHICS_ALLOCATION_BUSY : HResultError = HResultError::from_constant(0xC0262102); // ERROR_GRAPHICS_ALLOCATION_BUSY
@@ -6529,6 +6772,30 @@ pub const HV_EVENT_BUFFER_ALREADY_FREED : HResultError = HResultError::from_cons
 /// There is not enough contiguous memory in the partition's pool to complete the operation.
 pub const HV_INSUFFICIENT_CONTIGUOUS_MEMORY : HResultError = HResultError::from_constant(0xC0350075); // ERROR_HV_INSUFFICIENT_CONTIGUOUS_MEMORY
 
+/// The device is not in a device domain.
+pub const HV_DEVICE_NOT_IN_DOMAIN : HResultError = HResultError::from_constant(0xC0350076); // ERROR_HV_DEVICE_NOT_IN_DOMAIN
+
+/// The requested operation would result in a nested vm-exit.
+pub const HV_NESTED_VM_EXIT : HResultError = HResultError::from_constant(0xC0350077); // ERROR_HV_NESTED_VM_EXIT
+
+/// The requested access to the model specific register failed.
+pub const HV_MSR_ACCESS_FAILED : HResultError = HResultError::from_constant(0xC0350080); // ERROR_HV_MSR_ACCESS_FAILED
+
+/// There is not enough memory in the hypervisor pool to complete the mirroring operation.
+pub const HV_INSUFFICIENT_MEMORY_MIRRORING : HResultError = HResultError::from_constant(0xC0350081); // ERROR_HV_INSUFFICIENT_MEMORY_MIRRORING
+
+/// There is not enough contiguous memory in the hypervisor pool to complete the mirroring operation.
+pub const HV_INSUFFICIENT_CONTIGUOUS_MEMORY_MIRRORING : HResultError = HResultError::from_constant(0xC0350082); // ERROR_HV_INSUFFICIENT_CONTIGUOUS_MEMORY_MIRRORING
+
+/// There is not enough contiguous memory in the root partition's pool to complete the operation.
+pub const HV_INSUFFICIENT_CONTIGUOUS_ROOT_MEMORY : HResultError = HResultError::from_constant(0xC0350083); // ERROR_HV_INSUFFICIENT_CONTIGUOUS_ROOT_MEMORY
+
+/// There is not enough memory in the root partition's pool to complete the mirroring operation.
+pub const HV_INSUFFICIENT_ROOT_MEMORY_MIRRORING : HResultError = HResultError::from_constant(0xC0350084); // ERROR_HV_INSUFFICIENT_ROOT_MEMORY_MIRRORING
+
+/// There is not enough contiguous memory in the root partition's pool to complete the mirroring operation.
+pub const HV_INSUFFICIENT_CONTIGUOUS_ROOT_MEMORY_MIRRORING : HResultError = HResultError::from_constant(0xC0350085); // ERROR_HV_INSUFFICIENT_CONTIGUOUS_ROOT_MEMORY_MIRRORING
+
 /// No hypervisor is present on this system.
 pub const HV_NOT_PRESENT : HResultError = HResultError::from_constant(0xC0351000); // ERROR_HV_NOT_PRESENT
 
@@ -6658,6 +6925,24 @@ pub const VID_SAVED_STATE_INCOMPATIBLE : HResultError = HResultError::from_const
 /// The specified VTL does not have the permission to access the resource.
 pub const VID_VTL_ACCESS_DENIED : HResultError = HResultError::from_constant(0xC037002A); // ERROR_VID_VTL_ACCESS_DENIED
 
+/// Failed to allocate backing memory due to insufficient memory resources.
+pub const VID_INSUFFICIENT_RESOURCES_RESERVE : HResultError = HResultError::from_constant(0xC037002B); // ERROR_VID_INSUFFICIENT_RESOURCES_RESERVE
+
+/// Failed to allocate memory for the physical buffer used to back certain internal structures.
+pub const VID_INSUFFICIENT_RESOURCES_PHYSICAL_BUFFER : HResultError = HResultError::from_constant(0xC037002C); // ERROR_VID_INSUFFICIENT_RESOURCES_PHYSICAL_BUFFER
+
+/// Failed to allocate memory to be deposited in the hypervisor.
+pub const VID_INSUFFICIENT_RESOURCES_HV_DEPOSIT : HResultError = HResultError::from_constant(0xC037002D); // ERROR_VID_INSUFFICIENT_RESOURCES_HV_DEPOSIT
+
+/// Memory type not supported for requested operation.
+pub const VID_MEMORY_TYPE_NOT_SUPPORTED : HResultError = HResultError::from_constant(0xC037002E); // ERROR_VID_MEMORY_TYPE_NOT_SUPPORTED
+
+/// Failed to withdraw memory.
+pub const VID_INSUFFICIENT_RESOURCES_WITHDRAW : HResultError = HResultError::from_constant(0xC037002F); // ERROR_VID_INSUFFICIENT_RESOURCES_WITHDRAW
+
+/// The process has already been set.
+pub const VID_PROCESS_ALREADY_SET : HResultError = HResultError::from_constant(0xC0370030); // ERROR_VID_PROCESS_ALREADY_SET
+
 /// The virtual machine or container exited unexpectedly while starting.
 pub const VMCOMPUTE_TERMINATED_DURING_START : HResultError = HResultError::from_constant(0xC0370100); // ERROR_VMCOMPUTE_TERMINATED_DURING_START
 
@@ -6729,6 +7014,9 @@ pub const VSMB_SAVED_STATE_FILE_NOT_FOUND : HResultError = HResultError::from_co
 
 /// Cannot restore this virtual machine because the vSMB saved state data cannot be read. Delete the saved state data and then try to start the virtual machine.
 pub const VSMB_SAVED_STATE_CORRUPT : HResultError = HResultError::from_constant(0xC0370401); // ERROR_VSMB_SAVED_STATE_CORRUPT
+
+/// The attempted DM / resize operation exceeds the supported size.
+pub const DM_OPERATION_LIMIT_EXCEEDED : HResultError = HResultError::from_constant(0xC0370600); // ERROR_DM_OPERATION_LIMIT_EXCEEDED
 
 /// The regeneration operation was not able to copy all data from the active plexes due to bad sectors.
 pub const VOLMGR_INCOMPLETE_REGENERATION : HResultError = HResultError::from_constant(0x80380001); // ERROR_VOLMGR_INCOMPLETE_REGENERATION
@@ -7153,11 +7441,59 @@ pub const SPACES_ENTRY_INCOMPLETE : HResultError = HResultError::from_constant(0
 /// The specified log entry is not valid.
 pub const SPACES_ENTRY_INVALID : HResultError = HResultError::from_constant(0x80E70014); // ERROR_SPACES_ENTRY_INVALID
 
+/// A column's state needs to be updated.
+pub const SPACES_UPDATE_COLUMN_STATE : HResultError = HResultError::from_constant(0x80E70015); // ERROR_SPACES_UPDATE_COLUMN_STATE
+
+/// An extent needs to be allocated.
+pub const SPACES_MAP_REQUIRED : HResultError = HResultError::from_constant(0x80E70016); // ERROR_SPACES_MAP_REQUIRED
+
+/// The metadata version is unsupported.
+pub const SPACES_UNSUPPORTED_VERSION : HResultError = HResultError::from_constant(0x80E70017); // ERROR_SPACES_UNSUPPORTED_VERSION
+
+/// The metadata read was corrupt.
+pub const SPACES_CORRUPT_METADATA : HResultError = HResultError::from_constant(0x80E70018); // ERROR_SPACES_CORRUPT_METADATA
+
+/// The DRT is full.
+pub const SPACES_DRT_FULL : HResultError = HResultError::from_constant(0x80E70019); // ERROR_SPACES_DRT_FULL
+
+/// An inconsistency was found.
+pub const SPACES_INCONSISTENCY : HResultError = HResultError::from_constant(0x80E7001A); // ERROR_SPACES_INCONSISTENCY
+
+/// The log is not ready.
+pub const SPACES_LOG_NOT_READY : HResultError = HResultError::from_constant(0x80E7001B); // ERROR_SPACES_LOG_NOT_READY
+
+/// No good copy of data was available.
+pub const SPACES_NO_REDUNDANCY : HResultError = HResultError::from_constant(0x80E7001C); // ERROR_SPACES_NO_REDUNDANCY
+
+/// The drive is not ready.
+pub const SPACES_DRIVE_NOT_READY : HResultError = HResultError::from_constant(0x80E7001D); // ERROR_SPACES_DRIVE_NOT_READY
+
+/// The data on this drive is stale.
+pub const SPACES_DRIVE_SPLIT : HResultError = HResultError::from_constant(0x80E7001E); // ERROR_SPACES_DRIVE_SPLIT
+
+/// The data on this drive has been lost.
+pub const SPACES_DRIVE_LOST_DATA : HResultError = HResultError::from_constant(0x80E7001F); // ERROR_SPACES_DRIVE_LOST_DATA
+
+/// A slab needs to be marked dirty.
+pub const SPACES_MARK_DIRTY : HResultError = HResultError::from_constant(0x80E70020); // ERROR_SPACES_MARK_DIRTY
+
+/// The cache metadata needs to be written and flushed.
+pub const SPACES_FLUSH_METADATA : HResultError = HResultError::from_constant(0x80E70025); // ERROR_SPACES_FLUSH_METADATA
+
+/// The cache is full.
+pub const SPACES_CACHE_FULL : HResultError = HResultError::from_constant(0x80E70026); // ERROR_SPACES_CACHE_FULL
+
+/// Repair is in progress.
+pub const SPACES_REPAIR_IN_PROGRESS : HResultError = HResultError::from_constant(0x80E70027); // ERROR_SPACES_REPAIR_IN_PROGRESS
+
 /// The bootfile is too small to support persistent snapshots.
 pub const VOLSNAP_BOOTFILE_NOT_VALID : HResultError = HResultError::from_constant(0x80820001); // ERROR_VOLSNAP_BOOTFILE_NOT_VALID
 
 /// Activation of persistent snapshots on this volume took longer than was allowed.
 pub const VOLSNAP_ACTIVATION_TIMEOUT : HResultError = HResultError::from_constant(0x80820002); // ERROR_VOLSNAP_ACTIVATION_TIMEOUT
+
+/// BypassIO cannot be enabled while a volume snapshot exists.
+pub const VOLSNAP_NO_BYPASSIO_WITH_SNAPSHOT : HResultError = HResultError::from_constant(0x80820003); // ERROR_VOLSNAP_NO_BYPASSIO_WITH_SNAPSHOT
 
 /// The specified volume does not support storage tiers.
 pub const TIERING_NOT_SUPPORTED_ON_VOLUME : HResultError = HResultError::from_constant(0x80830001); // ERROR_TIERING_NOT_SUPPORTED_ON_VOLUME
@@ -7253,11 +7589,32 @@ pub const SMB_NO_PREAUTH_INTEGRITY_HASH_OVERLAP : HResultError = HResultError::f
 /// The current cluster functional level does not support this SMB dialect.
 pub const SMB_BAD_CLUSTER_DIALECT : HResultError = HResultError::from_constant(0xC05D0001); // ERROR_SMB_BAD_CLUSTER_DIALECT
 
+/// Failed to negotiate a signing hash function.
+pub const SMB_NO_SIGNING_ALGORITHM_OVERLAP : HResultError = HResultError::from_constant(0xC05D0002); // ERROR_SMB_NO_SIGNING_ALGORITHM_OVERLAP
+
 /// The QUIC connection handshake failed.
 pub const QUIC_HANDSHAKE_FAILURE : HResultError = HResultError::from_constant(0x80410000); // ERROR_QUIC_HANDSHAKE_FAILURE
 
 /// The QUIC connection failed to negotiate a compatible protocol version.
 pub const QUIC_VER_NEG_FAILURE : HResultError = HResultError::from_constant(0x80410001); // ERROR_QUIC_VER_NEG_FAILURE
+
+/// The QUIC connection was canceled by the user.
+pub const QUIC_USER_CANCELED : HResultError = HResultError::from_constant(0x80410002); // ERROR_QUIC_USER_CANCELED
+
+/// The QUIC connection encountered an internal error.
+pub const QUIC_INTERNAL_ERROR : HResultError = HResultError::from_constant(0x80410003); // ERROR_QUIC_INTERNAL_ERROR
+
+/// The QUIC connection encountered a protocol violation.
+pub const QUIC_PROTOCOL_VIOLATION : HResultError = HResultError::from_constant(0x80410004); // ERROR_QUIC_PROTOCOL_VIOLATION
+
+/// The QUIC connection was idle.
+pub const QUIC_CONNECTION_IDLE : HResultError = HResultError::from_constant(0x80410005); // ERROR_QUIC_CONNECTION_IDLE
+
+/// The QUIC connection timed out while trying to contact the peer.
+pub const QUIC_CONNECTION_TIMEOUT : HResultError = HResultError::from_constant(0x80410006); // ERROR_QUIC_CONNECTION_TIMEOUT
+
+/// The QUIC connection failed to negotiate a compatible ALPN.
+pub const QUIC_ALPN_NEG_FAILURE : HResultError = HResultError::from_constant(0x80410007); // ERROR_QUIC_ALPN_NEG_FAILURE
 
 #[doc(hidden)] pub const DHCP_REGISTRY_INIT_FAILED : ErrorCode = ErrorCode::from_constant(20000); // ERROR_DHCP_REGISTRY_INIT_FAILED
 #[doc(hidden)] pub const DHCP_DATABASE_INIT_FAILED : ErrorCode = ErrorCode::from_constant(20001); // ERROR_DHCP_DATABASE_INIT_FAILED
@@ -8080,6 +8437,8 @@ pub const INVALID_INTERFACE_CONFIG : ErrorCode = ErrorCode::from_constant(872); 
 pub const VPN_PLUGIN_GENERIC : ErrorCode = ErrorCode::from_constant(873); // ERROR_VPN_PLUGIN_GENERIC
 pub const SSO_CERT_MISSING : ErrorCode = ErrorCode::from_constant(874); // ERROR_SSO_CERT_MISSING
 pub const DEVICE_COMPLIANCE : ErrorCode = ErrorCode::from_constant(875); // ERROR_DEVICE_COMPLIANCE
+pub const PLUGIN_NOT_INSTALLED : ErrorCode = ErrorCode::from_constant(876); // ERROR_PLUGIN_NOT_INSTALLED
+pub const ACTION_REQUIRED : ErrorCode = ErrorCode::from_constant(877); // ERROR_ACTION_REQUIRED
 
 /// Setupapi-specific error codes
 /// Inf parse outcomes
@@ -8590,6 +8949,8 @@ pub const TOO_MANY_CLIENTS : ErrorCode = ErrorCode::from_constant(7521); // ERRO
 #[doc(hidden)] pub const WINHTTP_SECURE_FAILURE_PROXY : ErrorCode = ErrorCode::from_constant(12188); // ERROR_WINHTTP_SECURE_FAILURE_PROXY
 #[doc(hidden)] pub const WINHTTP_RESERVED_189 : ErrorCode = ErrorCode::from_constant(12189); // ERROR_WINHTTP_RESERVED_189
 #[doc(hidden)] pub const WINHTTP_HTTP_PROTOCOL_MISMATCH : ErrorCode = ErrorCode::from_constant(12190); // ERROR_WINHTTP_HTTP_PROTOCOL_MISMATCH
+#[doc(hidden)] pub const WINHTTP_GLOBAL_CALLBACK_FAILED : ErrorCode = ErrorCode::from_constant(12191); // ERROR_WINHTTP_GLOBAL_CALLBACK_FAILED
+#[doc(hidden)] pub const WINHTTP_FEATURE_DISABLED : ErrorCode = ErrorCode::from_constant(12192); // ERROR_WINHTTP_FEATURE_DISABLED
 #[doc(hidden)] pub const INTERNET_OUT_OF_HANDLES : ErrorCode = ErrorCode::from_constant(12001); // ERROR_INTERNET_OUT_OF_HANDLES
 #[doc(hidden)] pub const INTERNET_TIMEOUT : ErrorCode = ErrorCode::from_constant(12002); // ERROR_INTERNET_TIMEOUT
 #[doc(hidden)] pub const INTERNET_EXTENDED_ERROR : ErrorCode = ErrorCode::from_constant(12003); // ERROR_INTERNET_EXTENDED_ERROR
@@ -8688,6 +9049,8 @@ pub const TOO_MANY_CLIENTS : ErrorCode = ErrorCode::from_constant(7521); // ERRO
 #[doc(hidden)] pub const INTERNET_CLIENT_AUTH_CERT_NEEDED_PROXY : ErrorCode = ErrorCode::from_constant(12187); // ERROR_INTERNET_CLIENT_AUTH_CERT_NEEDED_PROXY
 #[doc(hidden)] pub const INTERNET_SECURE_FAILURE_PROXY : ErrorCode = ErrorCode::from_constant(12188); // ERROR_INTERNET_SECURE_FAILURE_PROXY
 #[doc(hidden)] pub const INTERNET_HTTP_PROTOCOL_MISMATCH : ErrorCode = ErrorCode::from_constant(12190); // ERROR_INTERNET_HTTP_PROTOCOL_MISMATCH
+#[doc(hidden)] pub const INTERNET_GLOBAL_CALLBACK_FAILED : ErrorCode = ErrorCode::from_constant(12191); // ERROR_INTERNET_GLOBAL_CALLBACK_FAILED
+#[doc(hidden)] pub const INTERNET_FEATURE_DISABLED : ErrorCode = ErrorCode::from_constant(12192); // ERROR_INTERNET_FEATURE_DISABLED
 #[doc(hidden)] pub const INTERNET_NO_NEW_CONTAINERS : ErrorCode = ErrorCode::from_constant(12051); // ERROR_INTERNET_NO_NEW_CONTAINERS
 #[doc(hidden)] pub const INTERNET_SOURCE_PORT_IN_USE : ErrorCode = ErrorCode::from_constant(12058); // ERROR_INTERNET_SOURCE_PORT_IN_USE
 #[doc(hidden)] pub const INTERNET_INSECURE_FALLBACK_REQUIRED : ErrorCode = ErrorCode::from_constant(12059); // ERROR_INTERNET_INSECURE_FALLBACK_REQUIRED
@@ -9241,3 +9604,4 @@ pub const REDIRECT_LOCATION_INVALID : HResultError = HResultError::from_constant
 #[doc(hidden)] pub const WSMAN_VIRTUALACCOUNT_NOTSUPPORTED_DOWNLEVEL : HResultError = HResultError::from_constant(0x803381FC); // ERROR_WSMAN_VIRTUALACCOUNT_NOTSUPPORTED_DOWNLEVEL
 #[doc(hidden)] pub const WSMAN_RUNASUSER_MANAGEDACCOUNT_LOGON_FAILED : HResultError = HResultError::from_constant(0x803381FD); // ERROR_WSMAN_RUNASUSER_MANAGEDACCOUNT_LOGON_FAILED
 #[doc(hidden)] pub const WSMAN_CERTMAPPING_CREDENTIAL_MANAGEMENT_FAILIED : HResultError = HResultError::from_constant(0x803381FE); // ERROR_WSMAN_CERTMAPPING_CREDENTIAL_MANAGEMENT_FAILIED
+#[doc(hidden)] pub const WSMAN_EVENTING_PUSH_SUBSCRIPTION_NOACTIVATE_EVENTSOURCE : HResultError = HResultError::from_constant(0x803381FF); // ERROR_WSMAN_EVENTING_PUSH_SUBSCRIPTION_NOACTIVATE_EVENTSOURCE

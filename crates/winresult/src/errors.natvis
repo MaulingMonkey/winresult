@@ -718,6 +718,8 @@
         <DisplayString Condition="__0 == 444">ERROR::LINUX_SUBSYSTEM_UPDATE_REQUIRED</DisplayString>
         <DisplayString Condition="__0 == 445">ERROR::DLP_POLICY_WARNS_AGAINST_OPERATION</DisplayString>
         <DisplayString Condition="__0 == 446">ERROR::DLP_POLICY_DENIES_OPERATION</DisplayString>
+        <DisplayString Condition="__0 == 447">ERROR::SECURITY_DENIES_OPERATION</DisplayString>
+        <DisplayString Condition="__0 == 448">ERROR::UNTRUSTED_MOUNT_POINT</DisplayString>
         <DisplayString Condition="__0 == 449">ERROR::DLP_POLICY_SILENTLY_FAIL</DisplayString>
         <DisplayString Condition="__0 == 450">ERROR::CAPAUTHZ_NOT_DEVUNLOCKED</DisplayString>
         <DisplayString Condition="__0 == 451">ERROR::CAPAUTHZ_CHANGE_TYPE</DisplayString>
@@ -731,15 +733,42 @@
         <DisplayString Condition="__0 == 459">ERROR::CAPAUTHZ_SCCD_DEV_MODE_REQUIRED</DisplayString>
         <DisplayString Condition="__0 == 460">ERROR::CAPAUTHZ_SCCD_NO_CAPABILITY_MATCH</DisplayString>
         <DisplayString Condition="__0 == 470">ERROR::CIMFS_IMAGE_CORRUPT</DisplayString>
+        <DisplayString Condition="__0 == 471">ERROR::CIMFS_IMAGE_VERSION_NOT_SUPPORTED</DisplayString>
+        <DisplayString Condition="__0 == 472">ERROR::STORAGE_STACK_ACCESS_DENIED</DisplayString>
+        <DisplayString Condition="__0 == 473">ERROR::INSUFFICIENT_VIRTUAL_ADDR_RESOURCES</DisplayString>
+        <DisplayString Condition="__0 == 474">ERROR::INDEX_OUT_OF_BOUNDS</DisplayString>
         <DisplayString Condition="__0 == 480">ERROR::PNP_QUERY_REMOVE_DEVICE_TIMEOUT</DisplayString>
         <DisplayString Condition="__0 == 481">ERROR::PNP_QUERY_REMOVE_RELATED_DEVICE_TIMEOUT</DisplayString>
         <DisplayString Condition="__0 == 482">ERROR::PNP_QUERY_REMOVE_UNRELATED_DEVICE_TIMEOUT</DisplayString>
         <DisplayString Condition="__0 == 483">ERROR::DEVICE_HARDWARE_ERROR</DisplayString>
         <DisplayString Condition="__0 == 487">ERROR::INVALID_ADDRESS</DisplayString>
         <DisplayString Condition="__0 == 488">ERROR::HAS_SYSTEM_CRITICAL_FILES</DisplayString>
-        <DisplayString Condition="__0 == 1183">ERROR::VRF_CFG_AND_IO_ENABLED</DisplayString>
-        <DisplayString Condition="__0 == 1184">ERROR::PARTITION_TERMINATING</DisplayString>
+        <DisplayString Condition="__0 == 489">ERROR::ENCRYPTED_FILE_NOT_SUPPORTED</DisplayString>
+        <DisplayString Condition="__0 == 490">ERROR::SPARSE_FILE_NOT_SUPPORTED</DisplayString>
+        <DisplayString Condition="__0 == 491">ERROR::PAGEFILE_NOT_SUPPORTED</DisplayString>
+        <DisplayString Condition="__0 == 492">ERROR::VOLUME_NOT_SUPPORTED</DisplayString>
+        <DisplayString Condition="__0 == 493">ERROR::NOT_SUPPORTED_WITH_BYPASSIO</DisplayString>
+        <DisplayString Condition="__0 == 494">ERROR::NO_BYPASSIO_DRIVER_SUPPORT</DisplayString>
+        <DisplayString Condition="__0 == 495">ERROR::NOT_SUPPORTED_WITH_ENCRYPTION</DisplayString>
+        <DisplayString Condition="__0 == 496">ERROR::NOT_SUPPORTED_WITH_COMPRESSION</DisplayString>
+        <DisplayString Condition="__0 == 497">ERROR::NOT_SUPPORTED_WITH_REPLICATION</DisplayString>
+        <DisplayString Condition="__0 == 498">ERROR::NOT_SUPPORTED_WITH_DEDUPLICATION</DisplayString>
+        <DisplayString Condition="__0 == 499">ERROR::NOT_SUPPORTED_WITH_AUDITING</DisplayString>
         <DisplayString Condition="__0 == 500">ERROR::USER_PROFILE_LOAD</DisplayString>
+        <DisplayString Condition="__0 == 501">ERROR::SESSION_KEY_TOO_SHORT</DisplayString>
+        <DisplayString Condition="__0 == 502">ERROR::ACCESS_DENIED_APPDATA</DisplayString>
+        <DisplayString Condition="__0 == 503">ERROR::NOT_SUPPORTED_WITH_MONITORING</DisplayString>
+        <DisplayString Condition="__0 == 504">ERROR::NOT_SUPPORTED_WITH_SNAPSHOT</DisplayString>
+        <DisplayString Condition="__0 == 505">ERROR::NOT_SUPPORTED_WITH_VIRTUALIZATION</DisplayString>
+        <DisplayString Condition="__0 == 506">ERROR::BYPASSIO_FLT_NOT_SUPPORTED</DisplayString>
+        <DisplayString Condition="__0 == 507">ERROR::DEVICE_RESET_REQUIRED</DisplayString>
+        <DisplayString Condition="__0 == 508">ERROR::VOLUME_WRITE_ACCESS_DENIED</DisplayString>
+        <DisplayString Condition="__0 == 509">ERROR::NOT_SUPPORTED_WITH_CACHED_HANDLE</DisplayString>
+        <DisplayString Condition="__0 == 510">ERROR::FS_METADATA_INCONSISTENT</DisplayString>
+        <DisplayString Condition="__0 == 511">ERROR::BLOCK_WEAK_REFERENCE_INVALID</DisplayString>
+        <DisplayString Condition="__0 == 512">ERROR::BLOCK_SOURCE_WEAK_REFERENCE_INVALID</DisplayString>
+        <DisplayString Condition="__0 == 513">ERROR::BLOCK_TARGET_WEAK_REFERENCE_INVALID</DisplayString>
+        <DisplayString Condition="__0 == 514">ERROR::BLOCK_SHARED</DisplayString>
         <DisplayString Condition="__0 == 534">ERROR::ARITHMETIC_OVERFLOW</DisplayString>
         <DisplayString Condition="__0 == 535">ERROR::PIPE_CONNECTED</DisplayString>
         <DisplayString Condition="__0 == 536">ERROR::PIPE_LISTENING</DisplayString>
@@ -996,6 +1025,9 @@
         <DisplayString Condition="__0 == 813">ERROR::CPU_SET_INVALID</DisplayString>
         <DisplayString Condition="__0 == 814">ERROR::ENCLAVE_NOT_TERMINATED</DisplayString>
         <DisplayString Condition="__0 == 815">ERROR::ENCLAVE_VIOLATION</DisplayString>
+        <DisplayString Condition="__0 == 817">ERROR::CERTIFICATE_VALIDATION_PREFERENCE_CONFLICT</DisplayString>
+        <DisplayString Condition="__0 == 818">ERROR::FT_READ_FROM_COPY_FAILURE</DisplayString>
+        <DisplayString Condition="__0 == 819">ERROR::SECTION_DIRECT_MAP_ONLY</DisplayString>
         <DisplayString Condition="__0 == 994">ERROR::EA_ACCESS_DENIED</DisplayString>
         <DisplayString Condition="__0 == 995">ERROR::OPERATION_ABORTED</DisplayString>
         <DisplayString Condition="__0 == 996">ERROR::IO_INCOMPLETE</DisplayString>
@@ -1108,8 +1140,10 @@
         <DisplayString Condition="__0 == 1179">ERROR::JOURNAL_NOT_ACTIVE</DisplayString>
         <DisplayString Condition="__0 == 1180">ERROR::POTENTIAL_FILE_FOUND</DisplayString>
         <DisplayString Condition="__0 == 1181">ERROR::JOURNAL_ENTRY_DELETED</DisplayString>
+        <DisplayString Condition="__0 == 1184">ERROR::PARTITION_TERMINATING</DisplayString>
         <DisplayString Condition="__0 == 1190">ERROR::SHUTDOWN_IS_SCHEDULED</DisplayString>
         <DisplayString Condition="__0 == 1191">ERROR::SHUTDOWN_USERS_LOGGED_ON</DisplayString>
+        <DisplayString Condition="__0 == 1192">ERROR::SHUTDOWN_DISKS_NOT_IN_MAINTENANCE_MODE</DisplayString>
         <DisplayString Condition="__0 == 1200">ERROR::BAD_DEVICE</DisplayString>
         <DisplayString Condition="__0 == 1201">ERROR::CONNECTION_UNAVAIL</DisplayString>
         <DisplayString Condition="__0 == 1202">ERROR::DEVICE_ALREADY_REMEMBERED</DisplayString>
@@ -1533,6 +1567,7 @@
         <DisplayString Condition="__0 == 3020">ERROR::PRINT_JOB_RESTART_REQUIRED</DisplayString>
         <DisplayString Condition="__0 == 3021">ERROR::INVALID_PRINTER_DRIVER_MANIFEST</DisplayString>
         <DisplayString Condition="__0 == 3022">ERROR::PRINTER_NOT_SHAREABLE</DisplayString>
+        <DisplayString Condition="__0 == 3024">ERROR::NETWORK_AUTHENTICATION_PROMPT_CANCELED</DisplayString>
         <DisplayString Condition="__0 == 3050">ERROR::REQUEST_PAUSED</DisplayString>
         <DisplayString Condition="__0 == 3060">ERROR::APPEXEC_CONDITION_NOT_SATISFIED</DisplayString>
         <DisplayString Condition="__0 == 3061">ERROR::APPEXEC_HANDLE_INVALIDATED</DisplayString>
@@ -1542,6 +1577,29 @@
         <DisplayString Condition="__0 == 3065">ERROR::APPEXEC_NO_DONOR</DisplayString>
         <DisplayString Condition="__0 == 3066">ERROR::APPEXEC_HOST_ID_MISMATCH</DisplayString>
         <DisplayString Condition="__0 == 3067">ERROR::APPEXEC_UNKNOWN_USER</DisplayString>
+        <DisplayString Condition="__0 == 3068">ERROR::APPEXEC_APP_COMPAT_BLOCK</DisplayString>
+        <DisplayString Condition="__0 == 3069">ERROR::APPEXEC_CALLER_WAIT_TIMEOUT</DisplayString>
+        <DisplayString Condition="__0 == 3070">ERROR::APPEXEC_CALLER_WAIT_TIMEOUT_TERMINATION</DisplayString>
+        <DisplayString Condition="__0 == 3071">ERROR::APPEXEC_CALLER_WAIT_TIMEOUT_LICENSING</DisplayString>
+        <DisplayString Condition="__0 == 3072">ERROR::APPEXEC_CALLER_WAIT_TIMEOUT_RESOURCES</DisplayString>
+        <DisplayString Condition="__0 == 3080">ERROR::VRF_VOLATILE_CFG_AND_IO_ENABLED</DisplayString>
+        <DisplayString Condition="__0 == 3081">ERROR::VRF_VOLATILE_NOT_STOPPABLE</DisplayString>
+        <DisplayString Condition="__0 == 3082">ERROR::VRF_VOLATILE_SAFE_MODE</DisplayString>
+        <DisplayString Condition="__0 == 3083">ERROR::VRF_VOLATILE_NOT_RUNNABLE_SYSTEM</DisplayString>
+        <DisplayString Condition="__0 == 3084">ERROR::VRF_VOLATILE_NOT_SUPPORTED_RULECLASS</DisplayString>
+        <DisplayString Condition="__0 == 3085">ERROR::VRF_VOLATILE_PROTECTED_DRIVER</DisplayString>
+        <DisplayString Condition="__0 == 3086">ERROR::VRF_VOLATILE_NMI_REGISTERED</DisplayString>
+        <DisplayString Condition="__0 == 3087">ERROR::VRF_VOLATILE_SETTINGS_CONFLICT</DisplayString>
+        <DisplayString Condition="__0 == 3190">ERROR::DIF_IOCALLBACK_NOT_REPLACED</DisplayString>
+        <DisplayString Condition="__0 == 3191">ERROR::DIF_LIVEDUMP_LIMIT_EXCEEDED</DisplayString>
+        <DisplayString Condition="__0 == 3192">ERROR::DIF_VOLATILE_SECTION_NOT_LOCKED</DisplayString>
+        <DisplayString Condition="__0 == 3193">ERROR::DIF_VOLATILE_DRIVER_HOTPATCHED</DisplayString>
+        <DisplayString Condition="__0 == 3194">ERROR::DIF_VOLATILE_INVALID_INFO</DisplayString>
+        <DisplayString Condition="__0 == 3195">ERROR::DIF_VOLATILE_DRIVER_IS_NOT_RUNNING</DisplayString>
+        <DisplayString Condition="__0 == 3196">ERROR::DIF_VOLATILE_PLUGIN_IS_NOT_RUNNING</DisplayString>
+        <DisplayString Condition="__0 == 3197">ERROR::DIF_VOLATILE_PLUGIN_CHANGE_NOT_ALLOWED</DisplayString>
+        <DisplayString Condition="__0 == 3198">ERROR::DIF_VOLATILE_NOT_ALLOWED</DisplayString>
+        <DisplayString Condition="__0 == 3199">ERROR::DIF_BINDING_API_NOT_FOUND</DisplayString>
         <DisplayString Condition="__0 == 3950">ERROR::IO_REISSUE_AS_CACHED</DisplayString>
         <DisplayString Condition="__0 == 4000">ERROR::WINS_INTERNAL</DisplayString>
         <DisplayString Condition="__0 == 4001">ERROR::CAN_NOT_DEL_LOCAL_WINS</DisplayString>
@@ -1619,6 +1677,7 @@
         <DisplayString Condition="__0 == 4446">ERROR::WOF_WIM_HEADER_CORRUPT</DisplayString>
         <DisplayString Condition="__0 == 4447">ERROR::WOF_WIM_RESOURCE_TABLE_CORRUPT</DisplayString>
         <DisplayString Condition="__0 == 4448">ERROR::WOF_FILE_RESOURCE_TABLE_CORRUPT</DisplayString>
+        <DisplayString Condition="__0 == 4449">ERROR::OBJECT_IS_IMMUTABLE</DisplayString>
         <DisplayString Condition="__0 == 4500">ERROR::VOLUME_NOT_SIS_ENABLED</DisplayString>
         <DisplayString Condition="__0 == 4550">ERROR::SYSTEM_INTEGRITY_ROLLBACK_DETECTED</DisplayString>
         <DisplayString Condition="__0 == 4551">ERROR::SYSTEM_INTEGRITY_POLICY_VIOLATION</DisplayString>
@@ -1626,6 +1685,10 @@
         <DisplayString Condition="__0 == 4553">ERROR::SYSTEM_INTEGRITY_POLICY_NOT_SIGNED</DisplayString>
         <DisplayString Condition="__0 == 4554">ERROR::SYSTEM_INTEGRITY_TOO_MANY_POLICIES</DisplayString>
         <DisplayString Condition="__0 == 4555">ERROR::SYSTEM_INTEGRITY_SUPPLEMENTAL_POLICY_NOT_AUTHORIZED</DisplayString>
+        <DisplayString Condition="__0 == 4556">ERROR::SYSTEM_INTEGRITY_REPUTATION_MALICIOUS</DisplayString>
+        <DisplayString Condition="__0 == 4557">ERROR::SYSTEM_INTEGRITY_REPUTATION_PUA</DisplayString>
+        <DisplayString Condition="__0 == 4558">ERROR::SYSTEM_INTEGRITY_REPUTATION_DANGEROUS_EXT</DisplayString>
+        <DisplayString Condition="__0 == 4559">ERROR::SYSTEM_INTEGRITY_REPUTATION_OFFLINE</DisplayString>
         <DisplayString Condition="__0 == 4560">ERROR::VSM_NOT_INITIALIZED</DisplayString>
         <DisplayString Condition="__0 == 4561">ERROR::VSM_DMA_PROTECTION_NOT_IN_USE</DisplayString>
         <DisplayString Condition="__0 == 4570">ERROR::PLATFORM_MANIFEST_NOT_AUTHORIZED</DisplayString>
@@ -1635,6 +1698,8 @@
         <DisplayString Condition="__0 == 4574">ERROR::PLATFORM_MANIFEST_BINARY_ID_NOT_FOUND</DisplayString>
         <DisplayString Condition="__0 == 4575">ERROR::PLATFORM_MANIFEST_NOT_ACTIVE</DisplayString>
         <DisplayString Condition="__0 == 4576">ERROR::PLATFORM_MANIFEST_NOT_SIGNED</DisplayString>
+        <DisplayString Condition="__0 == 4580">ERROR::SYSTEM_INTEGRITY_REPUTATION_UNFRIENDLY_FILE</DisplayString>
+        <DisplayString Condition="__0 == 4581">ERROR::SYSTEM_INTEGRITY_REPUTATION_UNATTAINABLE</DisplayString>
         <DisplayString Condition="__0 == 5001">ERROR::DEPENDENT_RESOURCE_EXISTS</DisplayString>
         <DisplayString Condition="__0 == 5002">ERROR::DEPENDENCY_NOT_FOUND</DisplayString>
         <DisplayString Condition="__0 == 5003">ERROR::DEPENDENCY_ALREADY_EXISTS</DisplayString>
@@ -1926,6 +1991,8 @@
         <DisplayString Condition="__0 == 8636">ERROR::INVALID_USER_PRINCIPAL_NAME</DisplayString>
         <DisplayString Condition="__0 == 8644">ERROR::DOMAIN_SID_SAME_AS_LOCAL_WORKSTATION</DisplayString>
         <DisplayString Condition="__0 == 8646">ERROR::INCORRECT_ACCOUNT_TYPE</DisplayString>
+        <DisplayString Condition="__0 == 8651">ERROR::WEAK_WHFBKEY_BLOCKED</DisplayString>
+        <DisplayString Condition="__0 == 8653">ERROR::LOCAL_POLICY_MODIFICATION_NOT_SUPPORTED</DisplayString>
         <DisplayString Condition="__0 == 14094">ERROR::MALFORMED_SUBSTITUTION_STRING</DisplayString>
         <DisplayString Condition="__0 == 14096">ERROR::UNMAPPED_SUBSTITUTION_STRING</DisplayString>
         <DisplayString Condition="__0 == 14099">ERROR::ADVANCED_INSTALLER_FAILED</DisplayString>
@@ -2030,6 +2097,15 @@
         <DisplayString Condition="__0 == 15661">ERROR::SIGNED_PACKAGE_INVALID_PUBLISHER_NAMESPACE</DisplayString>
         <DisplayString Condition="__0 == 15662">ERROR::PACKAGE_EXTERNAL_LOCATION_NOT_ALLOWED</DisplayString>
         <DisplayString Condition="__0 == 15663">ERROR::INSTALL_FULLTRUST_HOSTRUNTIME_REQUIRES_MAIN_PACKAGE_FULLTRUST_CAPABILITY</DisplayString>
+        <DisplayString Condition="__0 == 15664">ERROR::PACKAGE_LACKS_CAPABILITY_FOR_MANDATORY_STARTUPTASKS</DisplayString>
+        <DisplayString Condition="__0 == 15665">ERROR::INSTALL_RESOLVE_HOSTRUNTIME_DEPENDENCY_FAILED</DisplayString>
+        <DisplayString Condition="__0 == 15666">ERROR::MACHINE_SCOPE_NOT_ALLOWED</DisplayString>
+        <DisplayString Condition="__0 == 15667">ERROR::CLASSIC_COMPAT_MODE_NOT_ALLOWED</DisplayString>
+        <DisplayString Condition="__0 == 15668">ERROR::STAGEFROMUPDATEAGENT_PACKAGE_NOT_APPLICABLE</DisplayString>
+        <DisplayString Condition="__0 == 15669">ERROR::PACKAGE_NOT_REGISTERED_FOR_USER</DisplayString>
+        <DisplayString Condition="__0 == 15670">ERROR::PACKAGE_NAME_MISMATCH</DisplayString>
+        <DisplayString Condition="__0 == 15671">ERROR::APPINSTALLER_URI_IN_USE</DisplayString>
+        <DisplayString Condition="__0 == 15672">ERROR::APPINSTALLER_IS_MANAGED_BY_SYSTEM</DisplayString>
         <DisplayString Condition="__0 == 15800">ERROR::STATE_LOAD_STORE_FAILED</DisplayString>
         <DisplayString Condition="__0 == 15801">ERROR::STATE_GET_VERSION_FAILED</DisplayString>
         <DisplayString Condition="__0 == 15802">ERROR::STATE_SET_VERSION_FAILED</DisplayString>
@@ -2139,6 +2215,7 @@
         <DisplayString Condition="__0 == 404">ERROR::CLOUD_FILE::PROVIDER_TERMINATED</DisplayString>
         <DisplayString Condition="__0 == 426">ERROR::CLOUD_FILE::REQUEST_TIMEOUT</DisplayString>
         <DisplayString Condition="__0 == 434">ERROR::CLOUD_FILE::DEHYDRATION_DISALLOWED</DisplayString>
+        <DisplayString Condition="__0 == 475">ERROR::CLOUD_FILE::US_MESSAGE_TIMEOUT</DisplayString>
         <DisplayString Condition="__0 == 5022">ERROR::CLUSTER::SHUTTING_DOWN</DisplayString>
         <DisplayString Condition="__0 == 5039">ERROR::CLUSTER::INVALID_NODE</DisplayString>
         <DisplayString Condition="__0 == 5040">ERROR::CLUSTER::NODE_EXISTS</DisplayString>
@@ -2797,6 +2874,7 @@
         <DisplayString Condition="__0 == 8648">ERROR::DS::UPN_VALUE_NOT_UNIQUE_IN_FOREST</DisplayString>
         <DisplayString Condition="__0 == 8649">ERROR::DS::MISSING_FOREST_TRUST</DisplayString>
         <DisplayString Condition="__0 == 8650">ERROR::DS::VALUE_KEY_NOT_UNIQUE</DisplayString>
+        <DisplayString Condition="__0 == 8652">ERROR::DS::PER_ATTRIBUTE_AUTHZ_FAILED_DURING_ADD</DisplayString>
         <DisplayString Condition="__0 == 15000">ERROR::EVT::INVALID_CHANNEL_PATH</DisplayString>
         <DisplayString Condition="__0 == 15001">ERROR::EVT::INVALID_QUERY</DisplayString>
         <DisplayString Condition="__0 == 15002">ERROR::EVT::PUBLISHER_METADATA_NOT_FOUND</DisplayString>
@@ -3012,6 +3090,7 @@
         <DisplayString Condition="__0 == 15147">ERROR::MRM::GENERATION_COUNT_MISMATCH</DisplayString>
         <DisplayString Condition="__0 == 15159">ERROR::MRM::PACKAGE_NOT_FOUND</DisplayString>
         <DisplayString Condition="__0 == 15160">ERROR::MRM::MISSING_DEFAULT_LANGUAGE</DisplayString>
+        <DisplayString Condition="__0 == 15161">ERROR::MRM::SCOPE_ITEM_CONFLICT</DisplayString>
         <DisplayString Condition="__0 == 15100">ERROR::MUI::FILE_NOT_FOUND</DisplayString>
         <DisplayString Condition="__0 == 15101">ERROR::MUI::INVALID_FILE</DisplayString>
         <DisplayString Condition="__0 == 15102">ERROR::MUI::INVALID_RC_CONFIG</DisplayString>
@@ -3057,10 +3136,12 @@
         <DisplayString Condition="__0 == 4434">ERROR::SECUREBOOT::NOT_BASE_POLICY</DisplayString>
         <DisplayString Condition="__0 == 4435">ERROR::SECUREBOOT::NOT_SUPPLEMENTAL_POLICY</DisplayString>
         <DisplayString Condition="__0 == 628">ERROR::SERVER::SID_MISMATCH</DisplayString>
+        <DisplayString Condition="__0 == 816">ERROR::SERVER::TRANSPORT_CONFLICT</DisplayString>
         <DisplayString Condition="__0 == 1255">ERROR::SERVER::SHUTDOWN_IN_PROGRESS</DisplayString>
         <DisplayString Condition="__0 == 1341">ERROR::SERVER::DISABLED</DisplayString>
         <DisplayString Condition="__0 == 1342">ERROR::SERVER::NOT_DISABLED</DisplayString>
         <DisplayString Condition="__0 == 1811">ERROR::SERVER::HAS_OPEN_HANDLES</DisplayString>
+        <DisplayString Condition="__0 == 3023">ERROR::SERVER::SERVICE_CALL_REQUIRES_SMB1</DisplayString>
         <DisplayString Condition="__0 == 20028">ERROR::SERVER::INVALID_BOOT_FILE_TABLE</DisplayString>
         <DisplayString Condition="__0 == 20029">ERROR::SERVER::UNKNOWN_BOOT_FILE_NAME</DisplayString>
         <DisplayString Condition="__0 == 716">ERROR::SERVICE::NOTIFICATION</DisplayString>
@@ -3200,6 +3281,8 @@
         <DisplayString Condition="__0 == 12188">ERROR::WINHTTP::SECURE_FAILURE_PROXY</DisplayString>
         <DisplayString Condition="__0 == 12189">ERROR::WINHTTP::RESERVED_189</DisplayString>
         <DisplayString Condition="__0 == 12190">ERROR::WINHTTP::HTTP_PROTOCOL_MISMATCH</DisplayString>
+        <DisplayString Condition="__0 == 12191">ERROR::WINHTTP::GLOBAL_CALLBACK_FAILED</DisplayString>
+        <DisplayString Condition="__0 == 12192">ERROR::WINHTTP::FEATURE_DISABLED</DisplayString>
         <DisplayString Condition="__0 == 4200">ERROR::WMI::GUID_NOT_FOUND</DisplayString>
         <DisplayString Condition="__0 == 4201">ERROR::WMI::INSTANCE_NOT_FOUND</DisplayString>
         <DisplayString Condition="__0 == 4202">ERROR::WMI::ITEMID_NOT_FOUND</DisplayString>
@@ -4035,6 +4118,7 @@
         <DisplayString Condition="__0 == 0x00000216">STATUS::OPLOCK_HANDLE_CLOSED</DisplayString>
         <DisplayString Condition="__0 == 0x00000367">STATUS::WAIT_FOR_OPLOCK</DisplayString>
         <DisplayString Condition="__0 == 0x00000368">STATUS::REPARSE_GLOBAL</DisplayString>
+        <DisplayString Condition="__0 == 0x00000369">STATUS::PAGE_FAULT_RETRY</DisplayString>
         <DisplayString Condition="__0 == 0x001C0001">STATUS::FLT_IO_COMPLETE</DisplayString>
         <DisplayString Condition="__0 == 0x40000000">STATUS::OBJECT_NAME_EXISTS</DisplayString>
         <DisplayString Condition="__0 == 0x40000001">STATUS::THREAD_WAS_SUSPENDED</DisplayString>
@@ -4092,6 +4176,8 @@
         <DisplayString Condition="__0 == 0x40000035">STATUS::FT_READ_FROM_COPY</DisplayString>
         <DisplayString Condition="__0 == 0x40000036">STATUS::IMAGE_AT_DIFFERENT_BASE</DisplayString>
         <DisplayString Condition="__0 == 0x40000037">STATUS::PATCH_DEFERRED</DisplayString>
+        <DisplayString Condition="__0 == 0x40000038">STATUS::EMULATION_BREAKPOINT</DisplayString>
+        <DisplayString Condition="__0 == 0x40000039">STATUS::EMULATION_SYSCALL</DisplayString>
         <DisplayString Condition="__0 == 0x40190001">STATUS::HEURISTIC_DAMAGE_POSSIBLE</DisplayString>
         <DisplayString Condition="__0 == 0x80000001">STATUS::GUARD_PAGE_VIOLATION</DisplayString>
         <DisplayString Condition="__0 == 0x80000002">STATUS::DATATYPE_MISALIGNMENT</DisplayString>
@@ -4141,12 +4227,14 @@
         <DisplayString Condition="__0 == 0x80000031">STATUS::DEVICE_POWER_CYCLE_REQUIRED</DisplayString>
         <DisplayString Condition="__0 == 0x80000032">STATUS::NO_WORK_DONE</DisplayString>
         <DisplayString Condition="__0 == 0x80000033">STATUS::RETURN_ADDRESS_HIJACK_ATTEMPT</DisplayString>
+        <DisplayString Condition="__0 == 0x80000034">STATUS::RECOVERABLE_BUGCHECK</DisplayString>
         <DisplayString Condition="__0 == 0x80130001">STATUS::CLUSTER_NODE_ALREADY_UP</DisplayString>
         <DisplayString Condition="__0 == 0x80130002">STATUS::CLUSTER_NODE_ALREADY_DOWN</DisplayString>
         <DisplayString Condition="__0 == 0x80130003">STATUS::CLUSTER_NETWORK_ALREADY_ONLINE</DisplayString>
         <DisplayString Condition="__0 == 0x80130004">STATUS::CLUSTER_NETWORK_ALREADY_OFFLINE</DisplayString>
         <DisplayString Condition="__0 == 0x80130005">STATUS::CLUSTER_NODE_ALREADY_MEMBER</DisplayString>
         <DisplayString Condition="__0 == 0x801C0001">STATUS::FLT_BUFFER_TOO_SMALL</DisplayString>
+        <DisplayString Condition="__0 == 0x801E0000">STATUS::GRAPHICS_LINK_CONFIGURATION_IN_PROGRESS</DisplayString>
         <DisplayString Condition="__0 == 0x80210001">STATUS::FVE_PARTIAL_METADATA</DisplayString>
         <DisplayString Condition="__0 == 0x80210002">STATUS::FVE_TRANSIENT_STATE</DisplayString>
         <DisplayString Condition="__0 == 0x8000CF00">STATUS::CLOUD_FILE_PROPERTY_BLOB_CHECKSUM_MISMATCH</DisplayString>
@@ -4580,6 +4668,10 @@
         <DisplayString Condition="__0 == 0xC00001B0">STATUS::IO_DEVICE_INVALID_DATA</DisplayString>
         <DisplayString Condition="__0 == 0xC00001B1">STATUS::IO_UNALIGNED_WRITE</DisplayString>
         <DisplayString Condition="__0 == 0xC00001B2">STATUS::CONTROL_STACK_VIOLATION</DisplayString>
+        <DisplayString Condition="__0 == 0xC00001B3">STATUS::WEAK_WHFBKEY_BLOCKED</DisplayString>
+        <DisplayString Condition="__0 == 0xC00001B4">STATUS::SERVER_TRANSPORT_CONFLICT</DisplayString>
+        <DisplayString Condition="__0 == 0xC00001B5">STATUS::CERTIFICATE_VALIDATION_PREFERENCE_CONFLICT</DisplayString>
+        <DisplayString Condition="__0 == 0x800001B6">STATUS::DEVICE_RESET_REQUIRED</DisplayString>
         <DisplayString Condition="__0 == 0xC0000201">STATUS::NETWORK_OPEN_RESTRICTION</DisplayString>
         <DisplayString Condition="__0 == 0xC0000202">STATUS::NO_USER_SESSION_KEY</DisplayString>
         <DisplayString Condition="__0 == 0xC0000203">STATUS::USER_SESSION_DELETED</DisplayString>
@@ -5012,7 +5104,6 @@
         <DisplayString Condition="__0 == 0xC000049C">STATUS::DAX_MAPPING_EXISTS</DisplayString>
         <DisplayString Condition="__0 == 0xC000049D">STATUS::CHILD_PROCESS_BLOCKED</DisplayString>
         <DisplayString Condition="__0 == 0xC000049E">STATUS::STORAGE_LOST_DATA_PERSISTENCE</DisplayString>
-        <DisplayString Condition="__0 == 0xC000049F">STATUS::VRF_CFG_AND_IO_ENABLED</DisplayString>
         <DisplayString Condition="__0 == 0xC00004A0">STATUS::PARTITION_TERMINATING</DisplayString>
         <DisplayString Condition="__0 == 0xC00004A1">STATUS::EXTERNAL_SYSKEY_NOT_SUPPORTED</DisplayString>
         <DisplayString Condition="__0 == 0xC00004A2">STATUS::ENCLAVE_VIOLATION</DisplayString>
@@ -5040,7 +5131,33 @@
         <DisplayString Condition="__0 == 0xC00004B8">STATUS::CANT_CLEAR_ENCRYPTION_FLAG</DisplayString>
         <DisplayString Condition="__0 == 0xC00004B9">STATUS::UNSATISFIED_DEPENDENCIES</DisplayString>
         <DisplayString Condition="__0 == 0xC00004BA">STATUS::CASE_SENSITIVE_PATH</DisplayString>
+        <DisplayString Condition="__0 == 0xC00004BB">STATUS::UNSUPPORTED_PAGING_MODE</DisplayString>
+        <DisplayString Condition="__0 == 0xC00004BC">STATUS::UNTRUSTED_MOUNT_POINT</DisplayString>
         <DisplayString Condition="__0 == 0xC00004BD">STATUS::HAS_SYSTEM_CRITICAL_FILES</DisplayString>
+        <DisplayString Condition="__0 == 0xC00004BE">STATUS::OBJECT_IS_IMMUTABLE</DisplayString>
+        <DisplayString Condition="__0 == 0xC00004BF">STATUS::FT_READ_FROM_COPY_FAILURE</DisplayString>
+        <DisplayString Condition="__0 == 0xC00004C0">STATUS::IMAGE_LOADED_AS_PATCH_IMAGE</DisplayString>
+        <DisplayString Condition="__0 == 0xC00004C1">STATUS::STORAGE_STACK_ACCESS_DENIED</DisplayString>
+        <DisplayString Condition="__0 == 0xC00004C2">STATUS::INSUFFICIENT_VIRTUAL_ADDR_RESOURCES</DisplayString>
+        <DisplayString Condition="__0 == 0xC00004C3">STATUS::ENCRYPTED_FILE_NOT_SUPPORTED</DisplayString>
+        <DisplayString Condition="__0 == 0xC00004C4">STATUS::SPARSE_FILE_NOT_SUPPORTED</DisplayString>
+        <DisplayString Condition="__0 == 0xC00004C5">STATUS::PAGEFILE_NOT_SUPPORTED</DisplayString>
+        <DisplayString Condition="__0 == 0xC00004C6">STATUS::VOLUME_NOT_SUPPORTED</DisplayString>
+        <DisplayString Condition="__0 == 0xC00004C7">STATUS::NOT_SUPPORTED_WITH_BYPASSIO</DisplayString>
+        <DisplayString Condition="__0 == 0xC00004C8">STATUS::NO_BYPASSIO_DRIVER_SUPPORT</DisplayString>
+        <DisplayString Condition="__0 == 0xC00004C9">STATUS::NOT_SUPPORTED_WITH_ENCRYPTION</DisplayString>
+        <DisplayString Condition="__0 == 0xC00004CA">STATUS::NOT_SUPPORTED_WITH_COMPRESSION</DisplayString>
+        <DisplayString Condition="__0 == 0xC00004CB">STATUS::NOT_SUPPORTED_WITH_REPLICATION</DisplayString>
+        <DisplayString Condition="__0 == 0xC00004CC">STATUS::NOT_SUPPORTED_WITH_DEDUPLICATION</DisplayString>
+        <DisplayString Condition="__0 == 0xC00004CD">STATUS::NOT_SUPPORTED_WITH_AUDITING</DisplayString>
+        <DisplayString Condition="__0 == 0xC00004CE">STATUS::NOT_SUPPORTED_WITH_MONITORING</DisplayString>
+        <DisplayString Condition="__0 == 0xC00004CF">STATUS::NOT_SUPPORTED_WITH_SNAPSHOT</DisplayString>
+        <DisplayString Condition="__0 == 0xC00004D0">STATUS::NOT_SUPPORTED_WITH_VIRTUALIZATION</DisplayString>
+        <DisplayString Condition="__0 == 0xC00004D1">STATUS::INDEX_OUT_OF_BOUNDS</DisplayString>
+        <DisplayString Condition="__0 == 0xC00004D2">STATUS::BYPASSIO_FLT_NOT_SUPPORTED</DisplayString>
+        <DisplayString Condition="__0 == 0xC00004D3">STATUS::VOLUME_WRITE_ACCESS_DENIED</DisplayString>
+        <DisplayString Condition="__0 == 0xC00004D4">STATUS::PATCH_NOT_REGISTERED</DisplayString>
+        <DisplayString Condition="__0 == 0xC00004D5">STATUS::NOT_SUPPORTED_WITH_CACHED_HANDLE</DisplayString>
         <DisplayString Condition="__0 == 0xC0000500">STATUS::INVALID_TASK_NAME</DisplayString>
         <DisplayString Condition="__0 == 0xC0000501">STATUS::INVALID_TASK_INDEX</DisplayString>
         <DisplayString Condition="__0 == 0xC0000502">STATUS::THREAD_ALREADY_IN_TASK</DisplayString>
@@ -5064,6 +5181,8 @@
         <DisplayString Condition="__0 == 0xC0000514">STATUS::SMR_GARBAGE_COLLECTION_REQUIRED</DisplayString>
         <DisplayString Condition="__0 == 0xC0000515">STATUS::INTERRUPTED</DisplayString>
         <DisplayString Condition="__0 == 0xC0000516">STATUS::THREAD_NOT_RUNNING</DisplayString>
+        <DisplayString Condition="__0 == 0xC0000517">STATUS::SESSION_KEY_TOO_SHORT</DisplayString>
+        <DisplayString Condition="__0 == 0xC0000518">STATUS::FS_METADATA_INCONSISTENT</DisplayString>
         <DisplayString Condition="__0 == 0xC0000602">STATUS::FAIL_FAST_EXCEPTION</DisplayString>
         <DisplayString Condition="__0 == 0xC0000603">STATUS::IMAGE_CERT_REVOKED</DisplayString>
         <DisplayString Condition="__0 == 0xC0000604">STATUS::DYNAMIC_CODE_BLOCKED</DisplayString>
@@ -5141,6 +5260,29 @@
         <DisplayString Condition="__0 == 0xC000090B">STATUS::BAD_DATA</DisplayString>
         <DisplayString Condition="__0 == 0xC000090C">STATUS::NO_KEY</DisplayString>
         <DisplayString Condition="__0 == 0xC0000910">STATUS::FILE_HANDLE_REVOKED</DisplayString>
+        <DisplayString Condition="__0 == 0xC0000911">STATUS::SECTION_DIRECT_MAP_ONLY</DisplayString>
+        <DisplayString Condition="__0 == 0xC0000912">STATUS::BLOCK_WEAK_REFERENCE_INVALID</DisplayString>
+        <DisplayString Condition="__0 == 0xC0000913">STATUS::BLOCK_SOURCE_WEAK_REFERENCE_INVALID</DisplayString>
+        <DisplayString Condition="__0 == 0xC0000914">STATUS::BLOCK_TARGET_WEAK_REFERENCE_INVALID</DisplayString>
+        <DisplayString Condition="__0 == 0xC0000915">STATUS::BLOCK_SHARED</DisplayString>
+        <DisplayString Condition="__0 == 0xC0000C08">STATUS::VRF_VOLATILE_CFG_AND_IO_ENABLED</DisplayString>
+        <DisplayString Condition="__0 == 0xC0000C09">STATUS::VRF_VOLATILE_NOT_STOPPABLE</DisplayString>
+        <DisplayString Condition="__0 == 0xC0000C0A">STATUS::VRF_VOLATILE_SAFE_MODE</DisplayString>
+        <DisplayString Condition="__0 == 0xC0000C0B">STATUS::VRF_VOLATILE_NOT_RUNNABLE_SYSTEM</DisplayString>
+        <DisplayString Condition="__0 == 0xC0000C0C">STATUS::VRF_VOLATILE_NOT_SUPPORTED_RULECLASS</DisplayString>
+        <DisplayString Condition="__0 == 0xC0000C0D">STATUS::VRF_VOLATILE_PROTECTED_DRIVER</DisplayString>
+        <DisplayString Condition="__0 == 0xC0000C0E">STATUS::VRF_VOLATILE_NMI_REGISTERED</DisplayString>
+        <DisplayString Condition="__0 == 0xC0000C0F">STATUS::VRF_VOLATILE_SETTINGS_CONFLICT</DisplayString>
+        <DisplayString Condition="__0 == 0xC0000C76">STATUS::DIF_IOCALLBACK_NOT_REPLACED</DisplayString>
+        <DisplayString Condition="__0 == 0xC0000C77">STATUS::DIF_LIVEDUMP_LIMIT_EXCEEDED</DisplayString>
+        <DisplayString Condition="__0 == 0xC0000C78">STATUS::DIF_VOLATILE_SECTION_NOT_LOCKED</DisplayString>
+        <DisplayString Condition="__0 == 0xC0000C79">STATUS::DIF_VOLATILE_DRIVER_HOTPATCHED</DisplayString>
+        <DisplayString Condition="__0 == 0xC0000C7A">STATUS::DIF_VOLATILE_INVALID_INFO</DisplayString>
+        <DisplayString Condition="__0 == 0xC0000C7B">STATUS::DIF_VOLATILE_DRIVER_IS_NOT_RUNNING</DisplayString>
+        <DisplayString Condition="__0 == 0xC0000C7C">STATUS::DIF_VOLATILE_PLUGIN_IS_NOT_RUNNING</DisplayString>
+        <DisplayString Condition="__0 == 0xC0000C7D">STATUS::DIF_VOLATILE_PLUGIN_CHANGE_NOT_ALLOWED</DisplayString>
+        <DisplayString Condition="__0 == 0xC0000C7E">STATUS::DIF_VOLATILE_NOT_ALLOWED</DisplayString>
+        <DisplayString Condition="__0 == 0xC0000C7F">STATUS::DIF_BINDING_API_NOT_FOUND</DisplayString>
         <DisplayString Condition="__0 == 0xC0009898">STATUS::WOW_ASSERTION</DisplayString>
         <DisplayString Condition="__0 == 0xC000A000">STATUS::INVALID_SIGNATURE</DisplayString>
         <DisplayString Condition="__0 == 0xC000A001">STATUS::HMAC_NOT_SUPPORTED</DisplayString>
@@ -5166,6 +5308,7 @@
         <DisplayString Condition="__0 == 0xC000A087">STATUS::DS_OID_MAPPED_GROUP_CANT_HAVE_MEMBERS</DisplayString>
         <DisplayString Condition="__0 == 0xC000A088">STATUS::DS_OID_NOT_FOUND</DisplayString>
         <DisplayString Condition="__0 == 0xC000A089">STATUS::INCORRECT_ACCOUNT_TYPE</DisplayString>
+        <DisplayString Condition="__0 == 0xC000A08A">STATUS::LOCAL_POLICY_MODIFICATION_NOT_SUPPORTED</DisplayString>
         <DisplayString Condition="__0 == 0xC000A100">STATUS::HASH_NOT_SUPPORTED</DisplayString>
         <DisplayString Condition="__0 == 0xC000A101">STATUS::HASH_NOT_PRESENT</DisplayString>
         <DisplayString Condition="__0 == 0xC000A121">STATUS::SECONDARY_IC_PROVIDER_NOT_REGISTERED</DisplayString>
@@ -5199,6 +5342,7 @@
         <DisplayString Condition="__0 == 0xC000A2A6">STATUS::WOF_WIM_RESOURCE_TABLE_CORRUPT</DisplayString>
         <DisplayString Condition="__0 == 0xC000A2A7">STATUS::WOF_FILE_RESOURCE_TABLE_CORRUPT</DisplayString>
         <DisplayString Condition="__0 == 0xC000C001">STATUS::CIMFS_IMAGE_CORRUPT</DisplayString>
+        <DisplayString Condition="__0 == 0xC000C002">STATUS::CIMFS_IMAGE_VERSION_NOT_SUPPORTED</DisplayString>
         <DisplayString Condition="__0 == 0xC000CE01">STATUS::FILE_SYSTEM_VIRTUALIZATION_UNAVAILABLE</DisplayString>
         <DisplayString Condition="__0 == 0xC000CE02">STATUS::FILE_SYSTEM_VIRTUALIZATION_METADATA_CORRUPT</DisplayString>
         <DisplayString Condition="__0 == 0xC000CE03">STATUS::FILE_SYSTEM_VIRTUALIZATION_BUSY</DisplayString>
@@ -5236,6 +5380,7 @@
         <DisplayString Condition="__0 == 0xC000CF1E">STATUS::NOT_A_CLOUD_SYNC_ROOT</DisplayString>
         <DisplayString Condition="__0 == 0xC000CF1F">STATUS::CLOUD_FILE_REQUEST_TIMEOUT</DisplayString>
         <DisplayString Condition="__0 == 0xC000CF20">STATUS::CLOUD_FILE_DEHYDRATION_DISALLOWED</DisplayString>
+        <DisplayString Condition="__0 == 0xC000CF21">STATUS::CLOUD_FILE_US_MESSAGE_TIMEOUT</DisplayString>
         <DisplayString Condition="__0 == 0xC000F500">STATUS::FILE_SNAP_IN_PROGRESS</DisplayString>
         <DisplayString Condition="__0 == 0xC000F501">STATUS::FILE_SNAP_USER_SECTION_NOT_SUPPORTED</DisplayString>
         <DisplayString Condition="__0 == 0xC000F502">STATUS::FILE_SNAP_MODIFY_NOT_SUPPORTED</DisplayString>
@@ -5354,6 +5499,7 @@
         <DisplayString Condition="__0 == 0xC01C001C">STATUS::FLT_CONTEXT_ALREADY_LINKED</DisplayString>
         <DisplayString Condition="__0 == 0xC01C0020">STATUS::FLT_NO_WAITER_FOR_REPLY</DisplayString>
         <DisplayString Condition="__0 == 0xC01C0023">STATUS::FLT_REGISTRATION_BUSY</DisplayString>
+        <DisplayString Condition="__0 == 0xC01C0024">STATUS::FLT_WCOS_NOT_SUPPORTED</DisplayString>
         <DisplayString Condition="__0 == 0xC0150001">STATUS::SXS_SECTION_NOT_FOUND</DisplayString>
         <DisplayString Condition="__0 == 0xC0150002">STATUS::SXS_CANT_GEN_ACTCTX</DisplayString>
         <DisplayString Condition="__0 == 0xC0150003">STATUS::SXS_INVALID_ACTCTXDATA_FORMAT</DisplayString>
@@ -5592,6 +5738,7 @@
         <DisplayString Condition="__0 == 0xC01E0011">STATUS::GRAPHICS_VAIL_STATE_CHANGED</DisplayString>
         <DisplayString Condition="__0 == 0xC01E0012">STATUS::GRAPHICS_INDIRECT_DISPLAY_ABANDON_SWAPCHAIN</DisplayString>
         <DisplayString Condition="__0 == 0xC01E0013">STATUS::GRAPHICS_INDIRECT_DISPLAY_DEVICE_STOPPED</DisplayString>
+        <DisplayString Condition="__0 == 0xC01E0018">STATUS::GRAPHICS_MPO_ALLOCATION_UNPINNED</DisplayString>
         <DisplayString Condition="__0 == 0xC01E0100">STATUS::GRAPHICS_NO_VIDEO_MEMORY</DisplayString>
         <DisplayString Condition="__0 == 0xC01E0101">STATUS::GRAPHICS_CANT_LOCK_MEMORY</DisplayString>
         <DisplayString Condition="__0 == 0xC01E0102">STATUS::GRAPHICS_ALLOCATION_BUSY</DisplayString>
@@ -5825,6 +5972,10 @@
         <DisplayString Condition="__0 == 0xC021003E">STATUS::FVE_PROTECTION_DISABLED</DisplayString>
         <DisplayString Condition="__0 == 0xC021003F">STATUS::FVE_PROTECTION_CANNOT_BE_DISABLED</DisplayString>
         <DisplayString Condition="__0 == 0xC0210040">STATUS::FVE_OSV_KSR_NOT_ALLOWED</DisplayString>
+        <DisplayString Condition="__0 == 0xC0210041">STATUS::FVE_EDRIVE_BAND_ENUMERATION_FAILED</DisplayString>
+        <DisplayString Condition="__0 == 0xC0210042">STATUS::FVE_POLICY_ON_RDV_EXCLUSION_LIST</DisplayString>
+        <DisplayString Condition="__0 == 0xC0210043">STATUS::FVE_DATASET_FULL</DisplayString>
+        <DisplayString Condition="__0 == 0xC0210044">STATUS::FVE_METADATA_FULL</DisplayString>
         <DisplayString Condition="__0 == 0xC0220001">STATUS::FWP_CALLOUT_NOT_FOUND</DisplayString>
         <DisplayString Condition="__0 == 0xC0220002">STATUS::FWP_CONDITION_NOT_FOUND</DisplayString>
         <DisplayString Condition="__0 == 0xC0220003">STATUS::FWP_FILTER_NOT_FOUND</DisplayString>
@@ -6220,6 +6371,15 @@
         <DisplayString Condition="__0 == 0xC0350073">STATUS::HV_INSUFFICIENT_ROOT_MEMORY</DisplayString>
         <DisplayString Condition="__0 == 0xC0350074">STATUS::HV_EVENT_BUFFER_ALREADY_FREED</DisplayString>
         <DisplayString Condition="__0 == 0xC0350075">STATUS::HV_INSUFFICIENT_CONTIGUOUS_MEMORY</DisplayString>
+        <DisplayString Condition="__0 == 0xC0350076">STATUS::HV_DEVICE_NOT_IN_DOMAIN</DisplayString>
+        <DisplayString Condition="__0 == 0xC0350077">STATUS::HV_NESTED_VM_EXIT</DisplayString>
+        <DisplayString Condition="__0 == 0xC0350079">STATUS::HV_CALL_PENDING</DisplayString>
+        <DisplayString Condition="__0 == 0xC0350080">STATUS::HV_MSR_ACCESS_FAILED</DisplayString>
+        <DisplayString Condition="__0 == 0xC0350081">STATUS::HV_INSUFFICIENT_MEMORY_MIRRORING</DisplayString>
+        <DisplayString Condition="__0 == 0xC0350082">STATUS::HV_INSUFFICIENT_CONTIGUOUS_MEMORY_MIRRORING</DisplayString>
+        <DisplayString Condition="__0 == 0xC0350083">STATUS::HV_INSUFFICIENT_CONTIGUOUS_ROOT_MEMORY</DisplayString>
+        <DisplayString Condition="__0 == 0xC0350084">STATUS::HV_INSUFFICIENT_ROOT_MEMORY_MIRRORING</DisplayString>
+        <DisplayString Condition="__0 == 0xC0350085">STATUS::HV_INSUFFICIENT_CONTIGUOUS_ROOT_MEMORY_MIRRORING</DisplayString>
         <DisplayString Condition="__0 == 0xC0351000">STATUS::HV_NOT_PRESENT</DisplayString>
         <DisplayString Condition="__0 == 0xC0370001">STATUS::VID_DUPLICATE_HANDLER</DisplayString>
         <DisplayString Condition="__0 == 0xC0370002">STATUS::VID_TOO_MANY_HANDLERS</DisplayString>
@@ -6263,6 +6423,13 @@
         <DisplayString Condition="__0 == 0xC0370028">STATUS::VID_SAVED_STATE_UNRECOGNIZED_ITEM</DisplayString>
         <DisplayString Condition="__0 == 0xC0370029">STATUS::VID_SAVED_STATE_INCOMPATIBLE</DisplayString>
         <DisplayString Condition="__0 == 0xC037002A">STATUS::VID_VTL_ACCESS_DENIED</DisplayString>
+        <DisplayString Condition="__0 == 0xC037002B">STATUS::VID_INSUFFICIENT_RESOURCES_RESERVE</DisplayString>
+        <DisplayString Condition="__0 == 0xC037002C">STATUS::VID_INSUFFICIENT_RESOURCES_PHYSICAL_BUFFER</DisplayString>
+        <DisplayString Condition="__0 == 0xC037002D">STATUS::VID_INSUFFICIENT_RESOURCES_HV_DEPOSIT</DisplayString>
+        <DisplayString Condition="__0 == 0xC037002E">STATUS::VID_MEMORY_TYPE_NOT_SUPPORTED</DisplayString>
+        <DisplayString Condition="__0 == 0xC037002F">STATUS::VID_INSUFFICIENT_RESOURCES_WITHDRAW</DisplayString>
+        <DisplayString Condition="__0 == 0xC0370030">STATUS::VID_PROCESS_ALREADY_SET</DisplayString>
+        <DisplayString Condition="__0 == 0xC0370600">STATUS::DM_OPERATION_LIMIT_EXCEEDED</DisplayString>
         <DisplayString Condition="__0 == 0x80370001">STATUS::VID_REMOTE_NODE_PARENT_GPA_PAGES_USED</DisplayString>
         <DisplayString Condition="__0 == 0xC0360001">STATUS::IPSEC_BAD_SPI</DisplayString>
         <DisplayString Condition="__0 == 0xC0360002">STATUS::IPSEC_SA_LIFETIME_EXPIRED</DisplayString>
@@ -6479,6 +6646,12 @@
         <DisplayString Condition="__0 == 0xC0E90004">STATUS::SYSTEM_INTEGRITY_POLICY_NOT_SIGNED</DisplayString>
         <DisplayString Condition="__0 == 0xC0E90005">STATUS::SYSTEM_INTEGRITY_TOO_MANY_POLICIES</DisplayString>
         <DisplayString Condition="__0 == 0xC0E90006">STATUS::SYSTEM_INTEGRITY_SUPPLEMENTAL_POLICY_NOT_AUTHORIZED</DisplayString>
+        <DisplayString Condition="__0 == 0xC0E90007">STATUS::SYSTEM_INTEGRITY_REPUTATION_MALICIOUS</DisplayString>
+        <DisplayString Condition="__0 == 0xC0E90008">STATUS::SYSTEM_INTEGRITY_REPUTATION_PUA</DisplayString>
+        <DisplayString Condition="__0 == 0xC0E90009">STATUS::SYSTEM_INTEGRITY_REPUTATION_DANGEROUS_EXT</DisplayString>
+        <DisplayString Condition="__0 == 0xC0E9000A">STATUS::SYSTEM_INTEGRITY_REPUTATION_OFFLINE</DisplayString>
+        <DisplayString Condition="__0 == 0xC0E9000B">STATUS::SYSTEM_INTEGRITY_REPUTATION_UNFRIENDLY_FILE</DisplayString>
+        <DisplayString Condition="__0 == 0xC0E9000C">STATUS::SYSTEM_INTEGRITY_REPUTATION_UNATTAINABLE</DisplayString>
         <DisplayString Condition="__0 == 0xC0EA0001">STATUS::NO_APPLICABLE_APP_LICENSES_FOUND</DisplayString>
         <DisplayString Condition="__0 == 0xC0EA0002">STATUS::CLIP_LICENSE_NOT_FOUND</DisplayString>
         <DisplayString Condition="__0 == 0xC0EA0003">STATUS::CLIP_DEVICE_LICENSE_MISSING</DisplayString>
@@ -6527,8 +6700,16 @@
         <DisplayString Condition="__0 == 0xC0E7001E">STATUS::SPACES_ENTRY_INCOMPLETE</DisplayString>
         <DisplayString Condition="__0 == 0xC0E7001F">STATUS::SPACES_ENTRY_INVALID</DisplayString>
         <DisplayString Condition="__0 == 0xC0E70020">STATUS::SPACES_MARK_DIRTY</DisplayString>
+        <DisplayString Condition="__0 == 0xC0E70021">STATUS::SPACES_PD_NOT_FOUND</DisplayString>
+        <DisplayString Condition="__0 == 0xC0E70022">STATUS::SPACES_PD_LENGTH_MISMATCH</DisplayString>
+        <DisplayString Condition="__0 == 0xC0E70023">STATUS::SPACES_PD_UNSUPPORTED_VERSION</DisplayString>
+        <DisplayString Condition="__0 == 0xC0E70024">STATUS::SPACES_PD_INVALID_DATA</DisplayString>
+        <DisplayString Condition="__0 == 0xC0E70025">STATUS::SPACES_FLUSH_METADATA</DisplayString>
+        <DisplayString Condition="__0 == 0xC0E70026">STATUS::SPACES_CACHE_FULL</DisplayString>
+        <DisplayString Condition="__0 == 0xC0E70027">STATUS::SPACES_REPAIR_IN_PROGRESS</DisplayString>
         <DisplayString Condition="__0 == 0xC0500003">STATUS::VOLSNAP_BOOTFILE_NOT_VALID</DisplayString>
         <DisplayString Condition="__0 == 0xC0500004">STATUS::VOLSNAP_ACTIVATION_TIMEOUT</DisplayString>
+        <DisplayString Condition="__0 == 0xC0500005">STATUS::VOLSNAP_NO_BYPASSIO_WITH_SNAPSHOT</DisplayString>
         <DisplayString Condition="__0 == 0xC0510001">STATUS::IO_PREEMPTED</DisplayString>
         <DisplayString Condition="__0 == 0xC05C0000">STATUS::SVHDX_ERROR_STORED</DisplayString>
         <DisplayString Condition="__0 == 0xC05CFF00">STATUS::SVHDX_ERROR_NOT_AVAILABLE</DisplayString>
@@ -6547,6 +6728,8 @@
         <DisplayString Condition="__0 == 0xC05D0000">STATUS::SMB_NO_PREAUTH_INTEGRITY_HASH_OVERLAP</DisplayString>
         <DisplayString Condition="__0 == 0xC05D0001">STATUS::SMB_BAD_CLUSTER_DIALECT</DisplayString>
         <DisplayString Condition="__0 == 0xC05D0002">STATUS::SMB_GUEST_LOGON_BLOCKED</DisplayString>
+        <DisplayString Condition="__0 == 0xC05D0003">STATUS::SMB_NO_SIGNING_ALGORITHM_OVERLAP</DisplayString>
+        <DisplayString Condition="__0 == 0xC05D0004">STATUS::NETWORK_AUTHENTICATION_PROMPT_CANCELED</DisplayString>
         <DisplayString Condition="__0 == 0xC0E80000">STATUS::SECCORE_INVALID_COMMAND</DisplayString>
         <DisplayString Condition="__0 == 0xC0450000">STATUS::VSM_NOT_INITIALIZED</DisplayString>
         <DisplayString Condition="__0 == 0xC0450001">STATUS::VSM_DMA_PROTECTION_NOT_IN_USE</DisplayString>
@@ -6558,8 +6741,27 @@
         <DisplayString Condition="__0 == 0xC0EC0005">STATUS::APPEXEC_NO_DONOR</DisplayString>
         <DisplayString Condition="__0 == 0xC0EC0006">STATUS::APPEXEC_HOST_ID_MISMATCH</DisplayString>
         <DisplayString Condition="__0 == 0xC0EC0007">STATUS::APPEXEC_UNKNOWN_USER</DisplayString>
+        <DisplayString Condition="__0 == 0xC0EC0008">STATUS::APPEXEC_APP_COMPAT_BLOCK</DisplayString>
+        <DisplayString Condition="__0 == 0xC0EC0009">STATUS::APPEXEC_CALLER_WAIT_TIMEOUT</DisplayString>
+        <DisplayString Condition="__0 == 0xC0EC000A">STATUS::APPEXEC_CALLER_WAIT_TIMEOUT_TERMINATION</DisplayString>
+        <DisplayString Condition="__0 == 0xC0EC000B">STATUS::APPEXEC_CALLER_WAIT_TIMEOUT_LICENSING</DisplayString>
+        <DisplayString Condition="__0 == 0xC0EC000C">STATUS::APPEXEC_CALLER_WAIT_TIMEOUT_RESOURCES</DisplayString>
         <DisplayString Condition="__0 == 0xC0240000">STATUS::QUIC_HANDSHAKE_FAILURE</DisplayString>
         <DisplayString Condition="__0 == 0xC0240001">STATUS::QUIC_VER_NEG_FAILURE</DisplayString>
+        <DisplayString Condition="__0 == 0xC0240002">STATUS::QUIC_USER_CANCELED</DisplayString>
+        <DisplayString Condition="__0 == 0xC0240003">STATUS::QUIC_INTERNAL_ERROR</DisplayString>
+        <DisplayString Condition="__0 == 0xC0240004">STATUS::QUIC_PROTOCOL_VIOLATION</DisplayString>
+        <DisplayString Condition="__0 == 0xC0240005">STATUS::QUIC_CONNECTION_IDLE</DisplayString>
+        <DisplayString Condition="__0 == 0xC0240006">STATUS::QUIC_CONNECTION_TIMEOUT</DisplayString>
+        <DisplayString Condition="__0 == 0xC0240007">STATUS::QUIC_ALPN_NEG_FAILURE</DisplayString>
+        <DisplayString Condition="__0 == 0xC0460001">STATUS::IORING_REQUIRED_FLAG_NOT_SUPPORTED</DisplayString>
+        <DisplayString Condition="__0 == 0xC0460002">STATUS::IORING_SUBMISSION_QUEUE_FULL</DisplayString>
+        <DisplayString Condition="__0 == 0xC0460003">STATUS::IORING_VERSION_NOT_SUPPORTED</DisplayString>
+        <DisplayString Condition="__0 == 0xC0460004">STATUS::IORING_SUBMISSION_QUEUE_TOO_BIG</DisplayString>
+        <DisplayString Condition="__0 == 0xC0460005">STATUS::IORING_COMPLETION_QUEUE_TOO_BIG</DisplayString>
+        <DisplayString Condition="__0 == 0xC0460006">STATUS::IORING_SUBMIT_IN_PROGRESS</DisplayString>
+        <DisplayString Condition="__0 == 0xC0460007">STATUS::IORING_CORRUPT</DisplayString>
+        <DisplayString Condition="__0 == 0xC0460008">STATUS::IORING_COMPLETION_QUEUE_TOO_FULL</DisplayString>
         <DisplayString>{__0,X} (NtStatus)</DisplayString>
         <Expand>
             <Synthetic Name="Sev">
@@ -6670,6 +6872,8 @@
         <DisplayString Condition="__0 == 0x80080214">APPX::E_FILE_COMPRESSION_MISMATCH</DisplayString>
         <DisplayString Condition="__0 == 0x80080215">APPX::E_INVALID_PAYLOAD_PACKAGE_EXTENSION</DisplayString>
         <DisplayString Condition="__0 == 0x80080216">APPX::E_INVALID_ENCRYPTION_EXCLUSION_FILE_LIST</DisplayString>
+        <DisplayString Condition="__0 == 0x80080217">APPX::E_INVALID_PACKAGE_FOLDER_ACLS</DisplayString>
+        <DisplayString Condition="__0 == 0x80080218">APPX::E_INVALID_PUBLISHER_BRIDGING</DisplayString>
         <DisplayString Condition="__0 == 0x80080300">BT::E_SPURIOUS_ACTIVATION</DisplayString>
         <DisplayString Condition="__0 == 0x80040170">CACHE::E_NOCACHE_UPDATED</DisplayString>
         <DisplayString Condition="__0 == 0x80040160">CAT::E_CATIDNOEXIST</DisplayString>
@@ -6749,6 +6953,7 @@
         <DisplayString Condition="__0 == 0x8009481E">CERTSRV::E_INVALID_REQUESTID</DisplayString>
         <DisplayString Condition="__0 == 0x8009481F">CERTSRV::E_REQUEST_PRECERTIFICATE_MISMATCH</DisplayString>
         <DisplayString Condition="__0 == 0x80094820">CERTSRV::E_PENDING_CLIENT_RESPONSE</DisplayString>
+        <DisplayString Condition="__0 == 0x80094821">CERTSRV::E_SEC_EXT_DIRECTORY_SID_REQUIRED</DisplayString>
         <DisplayString Condition="__0 == 0x80040110">CLASS::E_NOAGGREGATION</DisplayString>
         <DisplayString Condition="__0 == 0x80040111">CLASS::E_CLASSNOTAVAILABLE</DisplayString>
         <DisplayString Condition="__0 == 0x80040112">CLASS::E_NOTLICENSED</DisplayString>
@@ -7091,6 +7296,7 @@
         <DisplayString Condition="__0 == 0x887C0004">D3D11::ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD</DisplayString>
         <DisplayString Condition="__0 == 0x887E0001">D3D12::ERROR_ADAPTER_NOT_FOUND</DisplayString>
         <DisplayString Condition="__0 == 0x887E0002">D3D12::ERROR_DRIVER_VERSION_MISMATCH</DisplayString>
+        <DisplayString Condition="__0 == 0x887E0003">D3D12::ERROR_INVALID_REDIST</DisplayString>
         <DisplayString Condition="__0 == 0x88760818">D3DERR::WRONGTEXTUREFORMAT</DisplayString>
         <DisplayString Condition="__0 == 0x88760819">D3DERR::UNSUPPORTEDCOLOROPERATION</DisplayString>
         <DisplayString Condition="__0 == 0x8876081A">D3DERR::UNSUPPORTEDCOLORARG</DisplayString>
@@ -7485,6 +7691,7 @@
         <DisplayString Condition="__0 == 0x887A0034">DXGI::ERROR_CACHE_FULL</DisplayString>
         <DisplayString Condition="__0 == 0x887A0035">DXGI::ERROR_CACHE_HASH_COLLISION</DisplayString>
         <DisplayString Condition="__0 == 0x887A0036">DXGI::ERROR_ALREADY_EXISTS</DisplayString>
+        <DisplayString Condition="__0 == 0x887A0064">DXGI::ERROR_MPO_UNPINNED</DisplayString>
         <DisplayString Condition="__0 == 0x80070490">E::NOT_SET</DisplayString>
         <DisplayString Condition="__0 == 0x8007139F">E::NOT_VALID_STATE</DisplayString>
         <DisplayString Condition="__0 == 0x8007007A">E::NOT_SUFFICIENT_BUFFER</DisplayString>
@@ -7935,6 +8142,8 @@
         <DisplayString Condition="__0 == 444">ERROR::LINUX_SUBSYSTEM_UPDATE_REQUIRED</DisplayString>
         <DisplayString Condition="__0 == 445">ERROR::DLP_POLICY_WARNS_AGAINST_OPERATION</DisplayString>
         <DisplayString Condition="__0 == 446">ERROR::DLP_POLICY_DENIES_OPERATION</DisplayString>
+        <DisplayString Condition="__0 == 447">ERROR::SECURITY_DENIES_OPERATION</DisplayString>
+        <DisplayString Condition="__0 == 448">ERROR::UNTRUSTED_MOUNT_POINT</DisplayString>
         <DisplayString Condition="__0 == 449">ERROR::DLP_POLICY_SILENTLY_FAIL</DisplayString>
         <DisplayString Condition="__0 == 450">ERROR::CAPAUTHZ_NOT_DEVUNLOCKED</DisplayString>
         <DisplayString Condition="__0 == 451">ERROR::CAPAUTHZ_CHANGE_TYPE</DisplayString>
@@ -7948,15 +8157,42 @@
         <DisplayString Condition="__0 == 459">ERROR::CAPAUTHZ_SCCD_DEV_MODE_REQUIRED</DisplayString>
         <DisplayString Condition="__0 == 460">ERROR::CAPAUTHZ_SCCD_NO_CAPABILITY_MATCH</DisplayString>
         <DisplayString Condition="__0 == 470">ERROR::CIMFS_IMAGE_CORRUPT</DisplayString>
+        <DisplayString Condition="__0 == 471">ERROR::CIMFS_IMAGE_VERSION_NOT_SUPPORTED</DisplayString>
+        <DisplayString Condition="__0 == 472">ERROR::STORAGE_STACK_ACCESS_DENIED</DisplayString>
+        <DisplayString Condition="__0 == 473">ERROR::INSUFFICIENT_VIRTUAL_ADDR_RESOURCES</DisplayString>
+        <DisplayString Condition="__0 == 474">ERROR::INDEX_OUT_OF_BOUNDS</DisplayString>
         <DisplayString Condition="__0 == 480">ERROR::PNP_QUERY_REMOVE_DEVICE_TIMEOUT</DisplayString>
         <DisplayString Condition="__0 == 481">ERROR::PNP_QUERY_REMOVE_RELATED_DEVICE_TIMEOUT</DisplayString>
         <DisplayString Condition="__0 == 482">ERROR::PNP_QUERY_REMOVE_UNRELATED_DEVICE_TIMEOUT</DisplayString>
         <DisplayString Condition="__0 == 483">ERROR::DEVICE_HARDWARE_ERROR</DisplayString>
         <DisplayString Condition="__0 == 487">ERROR::INVALID_ADDRESS</DisplayString>
         <DisplayString Condition="__0 == 488">ERROR::HAS_SYSTEM_CRITICAL_FILES</DisplayString>
-        <DisplayString Condition="__0 == 1183">ERROR::VRF_CFG_AND_IO_ENABLED</DisplayString>
-        <DisplayString Condition="__0 == 1184">ERROR::PARTITION_TERMINATING</DisplayString>
+        <DisplayString Condition="__0 == 489">ERROR::ENCRYPTED_FILE_NOT_SUPPORTED</DisplayString>
+        <DisplayString Condition="__0 == 490">ERROR::SPARSE_FILE_NOT_SUPPORTED</DisplayString>
+        <DisplayString Condition="__0 == 491">ERROR::PAGEFILE_NOT_SUPPORTED</DisplayString>
+        <DisplayString Condition="__0 == 492">ERROR::VOLUME_NOT_SUPPORTED</DisplayString>
+        <DisplayString Condition="__0 == 493">ERROR::NOT_SUPPORTED_WITH_BYPASSIO</DisplayString>
+        <DisplayString Condition="__0 == 494">ERROR::NO_BYPASSIO_DRIVER_SUPPORT</DisplayString>
+        <DisplayString Condition="__0 == 495">ERROR::NOT_SUPPORTED_WITH_ENCRYPTION</DisplayString>
+        <DisplayString Condition="__0 == 496">ERROR::NOT_SUPPORTED_WITH_COMPRESSION</DisplayString>
+        <DisplayString Condition="__0 == 497">ERROR::NOT_SUPPORTED_WITH_REPLICATION</DisplayString>
+        <DisplayString Condition="__0 == 498">ERROR::NOT_SUPPORTED_WITH_DEDUPLICATION</DisplayString>
+        <DisplayString Condition="__0 == 499">ERROR::NOT_SUPPORTED_WITH_AUDITING</DisplayString>
         <DisplayString Condition="__0 == 500">ERROR::USER_PROFILE_LOAD</DisplayString>
+        <DisplayString Condition="__0 == 501">ERROR::SESSION_KEY_TOO_SHORT</DisplayString>
+        <DisplayString Condition="__0 == 502">ERROR::ACCESS_DENIED_APPDATA</DisplayString>
+        <DisplayString Condition="__0 == 503">ERROR::NOT_SUPPORTED_WITH_MONITORING</DisplayString>
+        <DisplayString Condition="__0 == 504">ERROR::NOT_SUPPORTED_WITH_SNAPSHOT</DisplayString>
+        <DisplayString Condition="__0 == 505">ERROR::NOT_SUPPORTED_WITH_VIRTUALIZATION</DisplayString>
+        <DisplayString Condition="__0 == 506">ERROR::BYPASSIO_FLT_NOT_SUPPORTED</DisplayString>
+        <DisplayString Condition="__0 == 507">ERROR::DEVICE_RESET_REQUIRED</DisplayString>
+        <DisplayString Condition="__0 == 508">ERROR::VOLUME_WRITE_ACCESS_DENIED</DisplayString>
+        <DisplayString Condition="__0 == 509">ERROR::NOT_SUPPORTED_WITH_CACHED_HANDLE</DisplayString>
+        <DisplayString Condition="__0 == 510">ERROR::FS_METADATA_INCONSISTENT</DisplayString>
+        <DisplayString Condition="__0 == 511">ERROR::BLOCK_WEAK_REFERENCE_INVALID</DisplayString>
+        <DisplayString Condition="__0 == 512">ERROR::BLOCK_SOURCE_WEAK_REFERENCE_INVALID</DisplayString>
+        <DisplayString Condition="__0 == 513">ERROR::BLOCK_TARGET_WEAK_REFERENCE_INVALID</DisplayString>
+        <DisplayString Condition="__0 == 514">ERROR::BLOCK_SHARED</DisplayString>
         <DisplayString Condition="__0 == 534">ERROR::ARITHMETIC_OVERFLOW</DisplayString>
         <DisplayString Condition="__0 == 535">ERROR::PIPE_CONNECTED</DisplayString>
         <DisplayString Condition="__0 == 536">ERROR::PIPE_LISTENING</DisplayString>
@@ -8213,6 +8449,9 @@
         <DisplayString Condition="__0 == 813">ERROR::CPU_SET_INVALID</DisplayString>
         <DisplayString Condition="__0 == 814">ERROR::ENCLAVE_NOT_TERMINATED</DisplayString>
         <DisplayString Condition="__0 == 815">ERROR::ENCLAVE_VIOLATION</DisplayString>
+        <DisplayString Condition="__0 == 817">ERROR::CERTIFICATE_VALIDATION_PREFERENCE_CONFLICT</DisplayString>
+        <DisplayString Condition="__0 == 818">ERROR::FT_READ_FROM_COPY_FAILURE</DisplayString>
+        <DisplayString Condition="__0 == 819">ERROR::SECTION_DIRECT_MAP_ONLY</DisplayString>
         <DisplayString Condition="__0 == 994">ERROR::EA_ACCESS_DENIED</DisplayString>
         <DisplayString Condition="__0 == 995">ERROR::OPERATION_ABORTED</DisplayString>
         <DisplayString Condition="__0 == 996">ERROR::IO_INCOMPLETE</DisplayString>
@@ -8325,8 +8564,10 @@
         <DisplayString Condition="__0 == 1179">ERROR::JOURNAL_NOT_ACTIVE</DisplayString>
         <DisplayString Condition="__0 == 1180">ERROR::POTENTIAL_FILE_FOUND</DisplayString>
         <DisplayString Condition="__0 == 1181">ERROR::JOURNAL_ENTRY_DELETED</DisplayString>
+        <DisplayString Condition="__0 == 1184">ERROR::PARTITION_TERMINATING</DisplayString>
         <DisplayString Condition="__0 == 1190">ERROR::SHUTDOWN_IS_SCHEDULED</DisplayString>
         <DisplayString Condition="__0 == 1191">ERROR::SHUTDOWN_USERS_LOGGED_ON</DisplayString>
+        <DisplayString Condition="__0 == 1192">ERROR::SHUTDOWN_DISKS_NOT_IN_MAINTENANCE_MODE</DisplayString>
         <DisplayString Condition="__0 == 1200">ERROR::BAD_DEVICE</DisplayString>
         <DisplayString Condition="__0 == 1201">ERROR::CONNECTION_UNAVAIL</DisplayString>
         <DisplayString Condition="__0 == 1202">ERROR::DEVICE_ALREADY_REMEMBERED</DisplayString>
@@ -8750,6 +8991,7 @@
         <DisplayString Condition="__0 == 3020">ERROR::PRINT_JOB_RESTART_REQUIRED</DisplayString>
         <DisplayString Condition="__0 == 3021">ERROR::INVALID_PRINTER_DRIVER_MANIFEST</DisplayString>
         <DisplayString Condition="__0 == 3022">ERROR::PRINTER_NOT_SHAREABLE</DisplayString>
+        <DisplayString Condition="__0 == 3024">ERROR::NETWORK_AUTHENTICATION_PROMPT_CANCELED</DisplayString>
         <DisplayString Condition="__0 == 3050">ERROR::REQUEST_PAUSED</DisplayString>
         <DisplayString Condition="__0 == 3060">ERROR::APPEXEC_CONDITION_NOT_SATISFIED</DisplayString>
         <DisplayString Condition="__0 == 3061">ERROR::APPEXEC_HANDLE_INVALIDATED</DisplayString>
@@ -8759,6 +9001,29 @@
         <DisplayString Condition="__0 == 3065">ERROR::APPEXEC_NO_DONOR</DisplayString>
         <DisplayString Condition="__0 == 3066">ERROR::APPEXEC_HOST_ID_MISMATCH</DisplayString>
         <DisplayString Condition="__0 == 3067">ERROR::APPEXEC_UNKNOWN_USER</DisplayString>
+        <DisplayString Condition="__0 == 3068">ERROR::APPEXEC_APP_COMPAT_BLOCK</DisplayString>
+        <DisplayString Condition="__0 == 3069">ERROR::APPEXEC_CALLER_WAIT_TIMEOUT</DisplayString>
+        <DisplayString Condition="__0 == 3070">ERROR::APPEXEC_CALLER_WAIT_TIMEOUT_TERMINATION</DisplayString>
+        <DisplayString Condition="__0 == 3071">ERROR::APPEXEC_CALLER_WAIT_TIMEOUT_LICENSING</DisplayString>
+        <DisplayString Condition="__0 == 3072">ERROR::APPEXEC_CALLER_WAIT_TIMEOUT_RESOURCES</DisplayString>
+        <DisplayString Condition="__0 == 3080">ERROR::VRF_VOLATILE_CFG_AND_IO_ENABLED</DisplayString>
+        <DisplayString Condition="__0 == 3081">ERROR::VRF_VOLATILE_NOT_STOPPABLE</DisplayString>
+        <DisplayString Condition="__0 == 3082">ERROR::VRF_VOLATILE_SAFE_MODE</DisplayString>
+        <DisplayString Condition="__0 == 3083">ERROR::VRF_VOLATILE_NOT_RUNNABLE_SYSTEM</DisplayString>
+        <DisplayString Condition="__0 == 3084">ERROR::VRF_VOLATILE_NOT_SUPPORTED_RULECLASS</DisplayString>
+        <DisplayString Condition="__0 == 3085">ERROR::VRF_VOLATILE_PROTECTED_DRIVER</DisplayString>
+        <DisplayString Condition="__0 == 3086">ERROR::VRF_VOLATILE_NMI_REGISTERED</DisplayString>
+        <DisplayString Condition="__0 == 3087">ERROR::VRF_VOLATILE_SETTINGS_CONFLICT</DisplayString>
+        <DisplayString Condition="__0 == 3190">ERROR::DIF_IOCALLBACK_NOT_REPLACED</DisplayString>
+        <DisplayString Condition="__0 == 3191">ERROR::DIF_LIVEDUMP_LIMIT_EXCEEDED</DisplayString>
+        <DisplayString Condition="__0 == 3192">ERROR::DIF_VOLATILE_SECTION_NOT_LOCKED</DisplayString>
+        <DisplayString Condition="__0 == 3193">ERROR::DIF_VOLATILE_DRIVER_HOTPATCHED</DisplayString>
+        <DisplayString Condition="__0 == 3194">ERROR::DIF_VOLATILE_INVALID_INFO</DisplayString>
+        <DisplayString Condition="__0 == 3195">ERROR::DIF_VOLATILE_DRIVER_IS_NOT_RUNNING</DisplayString>
+        <DisplayString Condition="__0 == 3196">ERROR::DIF_VOLATILE_PLUGIN_IS_NOT_RUNNING</DisplayString>
+        <DisplayString Condition="__0 == 3197">ERROR::DIF_VOLATILE_PLUGIN_CHANGE_NOT_ALLOWED</DisplayString>
+        <DisplayString Condition="__0 == 3198">ERROR::DIF_VOLATILE_NOT_ALLOWED</DisplayString>
+        <DisplayString Condition="__0 == 3199">ERROR::DIF_BINDING_API_NOT_FOUND</DisplayString>
         <DisplayString Condition="__0 == 3950">ERROR::IO_REISSUE_AS_CACHED</DisplayString>
         <DisplayString Condition="__0 == 4000">ERROR::WINS_INTERNAL</DisplayString>
         <DisplayString Condition="__0 == 4001">ERROR::CAN_NOT_DEL_LOCAL_WINS</DisplayString>
@@ -8836,6 +9101,7 @@
         <DisplayString Condition="__0 == 4446">ERROR::WOF_WIM_HEADER_CORRUPT</DisplayString>
         <DisplayString Condition="__0 == 4447">ERROR::WOF_WIM_RESOURCE_TABLE_CORRUPT</DisplayString>
         <DisplayString Condition="__0 == 4448">ERROR::WOF_FILE_RESOURCE_TABLE_CORRUPT</DisplayString>
+        <DisplayString Condition="__0 == 4449">ERROR::OBJECT_IS_IMMUTABLE</DisplayString>
         <DisplayString Condition="__0 == 4500">ERROR::VOLUME_NOT_SIS_ENABLED</DisplayString>
         <DisplayString Condition="__0 == 4550">ERROR::SYSTEM_INTEGRITY_ROLLBACK_DETECTED</DisplayString>
         <DisplayString Condition="__0 == 4551">ERROR::SYSTEM_INTEGRITY_POLICY_VIOLATION</DisplayString>
@@ -8843,6 +9109,10 @@
         <DisplayString Condition="__0 == 4553">ERROR::SYSTEM_INTEGRITY_POLICY_NOT_SIGNED</DisplayString>
         <DisplayString Condition="__0 == 4554">ERROR::SYSTEM_INTEGRITY_TOO_MANY_POLICIES</DisplayString>
         <DisplayString Condition="__0 == 4555">ERROR::SYSTEM_INTEGRITY_SUPPLEMENTAL_POLICY_NOT_AUTHORIZED</DisplayString>
+        <DisplayString Condition="__0 == 4556">ERROR::SYSTEM_INTEGRITY_REPUTATION_MALICIOUS</DisplayString>
+        <DisplayString Condition="__0 == 4557">ERROR::SYSTEM_INTEGRITY_REPUTATION_PUA</DisplayString>
+        <DisplayString Condition="__0 == 4558">ERROR::SYSTEM_INTEGRITY_REPUTATION_DANGEROUS_EXT</DisplayString>
+        <DisplayString Condition="__0 == 4559">ERROR::SYSTEM_INTEGRITY_REPUTATION_OFFLINE</DisplayString>
         <DisplayString Condition="__0 == 4560">ERROR::VSM_NOT_INITIALIZED</DisplayString>
         <DisplayString Condition="__0 == 4561">ERROR::VSM_DMA_PROTECTION_NOT_IN_USE</DisplayString>
         <DisplayString Condition="__0 == 4570">ERROR::PLATFORM_MANIFEST_NOT_AUTHORIZED</DisplayString>
@@ -8852,6 +9122,8 @@
         <DisplayString Condition="__0 == 4574">ERROR::PLATFORM_MANIFEST_BINARY_ID_NOT_FOUND</DisplayString>
         <DisplayString Condition="__0 == 4575">ERROR::PLATFORM_MANIFEST_NOT_ACTIVE</DisplayString>
         <DisplayString Condition="__0 == 4576">ERROR::PLATFORM_MANIFEST_NOT_SIGNED</DisplayString>
+        <DisplayString Condition="__0 == 4580">ERROR::SYSTEM_INTEGRITY_REPUTATION_UNFRIENDLY_FILE</DisplayString>
+        <DisplayString Condition="__0 == 4581">ERROR::SYSTEM_INTEGRITY_REPUTATION_UNATTAINABLE</DisplayString>
         <DisplayString Condition="__0 == 5001">ERROR::DEPENDENT_RESOURCE_EXISTS</DisplayString>
         <DisplayString Condition="__0 == 5002">ERROR::DEPENDENCY_NOT_FOUND</DisplayString>
         <DisplayString Condition="__0 == 5003">ERROR::DEPENDENCY_ALREADY_EXISTS</DisplayString>
@@ -9143,6 +9415,8 @@
         <DisplayString Condition="__0 == 8636">ERROR::INVALID_USER_PRINCIPAL_NAME</DisplayString>
         <DisplayString Condition="__0 == 8644">ERROR::DOMAIN_SID_SAME_AS_LOCAL_WORKSTATION</DisplayString>
         <DisplayString Condition="__0 == 8646">ERROR::INCORRECT_ACCOUNT_TYPE</DisplayString>
+        <DisplayString Condition="__0 == 8651">ERROR::WEAK_WHFBKEY_BLOCKED</DisplayString>
+        <DisplayString Condition="__0 == 8653">ERROR::LOCAL_POLICY_MODIFICATION_NOT_SUPPORTED</DisplayString>
         <DisplayString Condition="__0 == 14094">ERROR::MALFORMED_SUBSTITUTION_STRING</DisplayString>
         <DisplayString Condition="__0 == 14096">ERROR::UNMAPPED_SUBSTITUTION_STRING</DisplayString>
         <DisplayString Condition="__0 == 14099">ERROR::ADVANCED_INSTALLER_FAILED</DisplayString>
@@ -9247,6 +9521,15 @@
         <DisplayString Condition="__0 == 15661">ERROR::SIGNED_PACKAGE_INVALID_PUBLISHER_NAMESPACE</DisplayString>
         <DisplayString Condition="__0 == 15662">ERROR::PACKAGE_EXTERNAL_LOCATION_NOT_ALLOWED</DisplayString>
         <DisplayString Condition="__0 == 15663">ERROR::INSTALL_FULLTRUST_HOSTRUNTIME_REQUIRES_MAIN_PACKAGE_FULLTRUST_CAPABILITY</DisplayString>
+        <DisplayString Condition="__0 == 15664">ERROR::PACKAGE_LACKS_CAPABILITY_FOR_MANDATORY_STARTUPTASKS</DisplayString>
+        <DisplayString Condition="__0 == 15665">ERROR::INSTALL_RESOLVE_HOSTRUNTIME_DEPENDENCY_FAILED</DisplayString>
+        <DisplayString Condition="__0 == 15666">ERROR::MACHINE_SCOPE_NOT_ALLOWED</DisplayString>
+        <DisplayString Condition="__0 == 15667">ERROR::CLASSIC_COMPAT_MODE_NOT_ALLOWED</DisplayString>
+        <DisplayString Condition="__0 == 15668">ERROR::STAGEFROMUPDATEAGENT_PACKAGE_NOT_APPLICABLE</DisplayString>
+        <DisplayString Condition="__0 == 15669">ERROR::PACKAGE_NOT_REGISTERED_FOR_USER</DisplayString>
+        <DisplayString Condition="__0 == 15670">ERROR::PACKAGE_NAME_MISMATCH</DisplayString>
+        <DisplayString Condition="__0 == 15671">ERROR::APPINSTALLER_URI_IN_USE</DisplayString>
+        <DisplayString Condition="__0 == 15672">ERROR::APPINSTALLER_IS_MANAGED_BY_SYSTEM</DisplayString>
         <DisplayString Condition="__0 == 15800">ERROR::STATE_LOAD_STORE_FAILED</DisplayString>
         <DisplayString Condition="__0 == 15801">ERROR::STATE_GET_VERSION_FAILED</DisplayString>
         <DisplayString Condition="__0 == 15802">ERROR::STATE_SET_VERSION_FAILED</DisplayString>
@@ -9327,6 +9610,14 @@
         <DisplayString Condition="__0 == 0xC0350073">ERROR::HV_INSUFFICIENT_ROOT_MEMORY</DisplayString>
         <DisplayString Condition="__0 == 0xC0350074">ERROR::HV_EVENT_BUFFER_ALREADY_FREED</DisplayString>
         <DisplayString Condition="__0 == 0xC0350075">ERROR::HV_INSUFFICIENT_CONTIGUOUS_MEMORY</DisplayString>
+        <DisplayString Condition="__0 == 0xC0350076">ERROR::HV_DEVICE_NOT_IN_DOMAIN</DisplayString>
+        <DisplayString Condition="__0 == 0xC0350077">ERROR::HV_NESTED_VM_EXIT</DisplayString>
+        <DisplayString Condition="__0 == 0xC0350080">ERROR::HV_MSR_ACCESS_FAILED</DisplayString>
+        <DisplayString Condition="__0 == 0xC0350081">ERROR::HV_INSUFFICIENT_MEMORY_MIRRORING</DisplayString>
+        <DisplayString Condition="__0 == 0xC0350082">ERROR::HV_INSUFFICIENT_CONTIGUOUS_MEMORY_MIRRORING</DisplayString>
+        <DisplayString Condition="__0 == 0xC0350083">ERROR::HV_INSUFFICIENT_CONTIGUOUS_ROOT_MEMORY</DisplayString>
+        <DisplayString Condition="__0 == 0xC0350084">ERROR::HV_INSUFFICIENT_ROOT_MEMORY_MIRRORING</DisplayString>
+        <DisplayString Condition="__0 == 0xC0350085">ERROR::HV_INSUFFICIENT_CONTIGUOUS_ROOT_MEMORY_MIRRORING</DisplayString>
         <DisplayString Condition="__0 == 0xC0351000">ERROR::HV_NOT_PRESENT</DisplayString>
         <DisplayString Condition="__0 == 0xC0370001">ERROR::VID_DUPLICATE_HANDLER</DisplayString>
         <DisplayString Condition="__0 == 0xC0370002">ERROR::VID_TOO_MANY_HANDLERS</DisplayString>
@@ -9370,6 +9661,12 @@
         <DisplayString Condition="__0 == 0xC0370028">ERROR::VID_SAVED_STATE_UNRECOGNIZED_ITEM</DisplayString>
         <DisplayString Condition="__0 == 0xC0370029">ERROR::VID_SAVED_STATE_INCOMPATIBLE</DisplayString>
         <DisplayString Condition="__0 == 0xC037002A">ERROR::VID_VTL_ACCESS_DENIED</DisplayString>
+        <DisplayString Condition="__0 == 0xC037002B">ERROR::VID_INSUFFICIENT_RESOURCES_RESERVE</DisplayString>
+        <DisplayString Condition="__0 == 0xC037002C">ERROR::VID_INSUFFICIENT_RESOURCES_PHYSICAL_BUFFER</DisplayString>
+        <DisplayString Condition="__0 == 0xC037002D">ERROR::VID_INSUFFICIENT_RESOURCES_HV_DEPOSIT</DisplayString>
+        <DisplayString Condition="__0 == 0xC037002E">ERROR::VID_MEMORY_TYPE_NOT_SUPPORTED</DisplayString>
+        <DisplayString Condition="__0 == 0xC037002F">ERROR::VID_INSUFFICIENT_RESOURCES_WITHDRAW</DisplayString>
+        <DisplayString Condition="__0 == 0xC0370030">ERROR::VID_PROCESS_ALREADY_SET</DisplayString>
         <DisplayString Condition="__0 == 0xC0370100">ERROR::VMCOMPUTE_TERMINATED_DURING_START</DisplayString>
         <DisplayString Condition="__0 == 0xC0370101">ERROR::VMCOMPUTE_IMAGE_MISMATCH</DisplayString>
         <DisplayString Condition="__0 == 0xC0370102">ERROR::VMCOMPUTE_HYPERV_NOT_INSTALLED</DisplayString>
@@ -9394,6 +9691,7 @@
         <DisplayString Condition="__0 == 0x80370001">ERROR::VID_REMOTE_NODE_PARENT_GPA_PAGES_USED</DisplayString>
         <DisplayString Condition="__0 == 0xC0370400">ERROR::VSMB_SAVED_STATE_FILE_NOT_FOUND</DisplayString>
         <DisplayString Condition="__0 == 0xC0370401">ERROR::VSMB_SAVED_STATE_CORRUPT</DisplayString>
+        <DisplayString Condition="__0 == 0xC0370600">ERROR::DM_OPERATION_LIMIT_EXCEEDED</DisplayString>
         <DisplayString Condition="__0 == 0x80380001">ERROR::VOLMGR_INCOMPLETE_REGENERATION</DisplayString>
         <DisplayString Condition="__0 == 0x80380002">ERROR::VOLMGR_INCOMPLETE_DISK_MIGRATION</DisplayString>
         <DisplayString Condition="__0 == 0xC0380001">ERROR::VOLMGR_DATABASE_FULL</DisplayString>
@@ -9522,8 +9820,24 @@
         <DisplayString Condition="__0 == 0x80E70012">ERROR::SPACES_DRIVE_OPERATIONAL_STATE_INVALID</DisplayString>
         <DisplayString Condition="__0 == 0x80E70013">ERROR::SPACES_ENTRY_INCOMPLETE</DisplayString>
         <DisplayString Condition="__0 == 0x80E70014">ERROR::SPACES_ENTRY_INVALID</DisplayString>
+        <DisplayString Condition="__0 == 0x80E70015">ERROR::SPACES_UPDATE_COLUMN_STATE</DisplayString>
+        <DisplayString Condition="__0 == 0x80E70016">ERROR::SPACES_MAP_REQUIRED</DisplayString>
+        <DisplayString Condition="__0 == 0x80E70017">ERROR::SPACES_UNSUPPORTED_VERSION</DisplayString>
+        <DisplayString Condition="__0 == 0x80E70018">ERROR::SPACES_CORRUPT_METADATA</DisplayString>
+        <DisplayString Condition="__0 == 0x80E70019">ERROR::SPACES_DRT_FULL</DisplayString>
+        <DisplayString Condition="__0 == 0x80E7001A">ERROR::SPACES_INCONSISTENCY</DisplayString>
+        <DisplayString Condition="__0 == 0x80E7001B">ERROR::SPACES_LOG_NOT_READY</DisplayString>
+        <DisplayString Condition="__0 == 0x80E7001C">ERROR::SPACES_NO_REDUNDANCY</DisplayString>
+        <DisplayString Condition="__0 == 0x80E7001D">ERROR::SPACES_DRIVE_NOT_READY</DisplayString>
+        <DisplayString Condition="__0 == 0x80E7001E">ERROR::SPACES_DRIVE_SPLIT</DisplayString>
+        <DisplayString Condition="__0 == 0x80E7001F">ERROR::SPACES_DRIVE_LOST_DATA</DisplayString>
+        <DisplayString Condition="__0 == 0x80E70020">ERROR::SPACES_MARK_DIRTY</DisplayString>
+        <DisplayString Condition="__0 == 0x80E70025">ERROR::SPACES_FLUSH_METADATA</DisplayString>
+        <DisplayString Condition="__0 == 0x80E70026">ERROR::SPACES_CACHE_FULL</DisplayString>
+        <DisplayString Condition="__0 == 0x80E70027">ERROR::SPACES_REPAIR_IN_PROGRESS</DisplayString>
         <DisplayString Condition="__0 == 0x80820001">ERROR::VOLSNAP_BOOTFILE_NOT_VALID</DisplayString>
         <DisplayString Condition="__0 == 0x80820002">ERROR::VOLSNAP_ACTIVATION_TIMEOUT</DisplayString>
+        <DisplayString Condition="__0 == 0x80820003">ERROR::VOLSNAP_NO_BYPASSIO_WITH_SNAPSHOT</DisplayString>
         <DisplayString Condition="__0 == 0x80830001">ERROR::TIERING_NOT_SUPPORTED_ON_VOLUME</DisplayString>
         <DisplayString Condition="__0 == 0x80830002">ERROR::TIERING_VOLUME_DISMOUNT_IN_PROGRESS</DisplayString>
         <DisplayString Condition="__0 == 0x80830003">ERROR::TIERING_STORAGE_TIER_NOT_FOUND</DisplayString>
@@ -9549,8 +9863,15 @@
         <DisplayString Condition="__0 == 0xC05CFF0C">ERROR::VHDSET_BACKING_STORAGE_NOT_FOUND</DisplayString>
         <DisplayString Condition="__0 == 0xC05D0000">ERROR::SMB_NO_PREAUTH_INTEGRITY_HASH_OVERLAP</DisplayString>
         <DisplayString Condition="__0 == 0xC05D0001">ERROR::SMB_BAD_CLUSTER_DIALECT</DisplayString>
+        <DisplayString Condition="__0 == 0xC05D0002">ERROR::SMB_NO_SIGNING_ALGORITHM_OVERLAP</DisplayString>
         <DisplayString Condition="__0 == 0x80410000">ERROR::QUIC_HANDSHAKE_FAILURE</DisplayString>
         <DisplayString Condition="__0 == 0x80410001">ERROR::QUIC_VER_NEG_FAILURE</DisplayString>
+        <DisplayString Condition="__0 == 0x80410002">ERROR::QUIC_USER_CANCELED</DisplayString>
+        <DisplayString Condition="__0 == 0x80410003">ERROR::QUIC_INTERNAL_ERROR</DisplayString>
+        <DisplayString Condition="__0 == 0x80410004">ERROR::QUIC_PROTOCOL_VIOLATION</DisplayString>
+        <DisplayString Condition="__0 == 0x80410005">ERROR::QUIC_CONNECTION_IDLE</DisplayString>
+        <DisplayString Condition="__0 == 0x80410006">ERROR::QUIC_CONNECTION_TIMEOUT</DisplayString>
+        <DisplayString Condition="__0 == 0x80410007">ERROR::QUIC_ALPN_NEG_FAILURE</DisplayString>
         <DisplayString Condition="__0 == 20025">ERROR::EXTEND_TOO_SMALL</DisplayString>
         <DisplayString Condition="__0 == 20054">ERROR::MSCOPE_RANGE_TOO_SMALL</DisplayString>
         <DisplayString Condition="__0 == 20112">ERROR::SCOPE_RANGE_POLICY_RANGE_CONFLICT</DisplayString>
@@ -9728,6 +10049,7 @@
         <DisplayString Condition="__0 == 404">ERROR::CLOUD_FILE::PROVIDER_TERMINATED</DisplayString>
         <DisplayString Condition="__0 == 426">ERROR::CLOUD_FILE::REQUEST_TIMEOUT</DisplayString>
         <DisplayString Condition="__0 == 434">ERROR::CLOUD_FILE::DEHYDRATION_DISALLOWED</DisplayString>
+        <DisplayString Condition="__0 == 475">ERROR::CLOUD_FILE::US_MESSAGE_TIMEOUT</DisplayString>
         <DisplayString Condition="__0 == 5022">ERROR::CLUSTER::SHUTTING_DOWN</DisplayString>
         <DisplayString Condition="__0 == 5039">ERROR::CLUSTER::INVALID_NODE</DisplayString>
         <DisplayString Condition="__0 == 5040">ERROR::CLUSTER::NODE_EXISTS</DisplayString>
@@ -10390,6 +10712,7 @@
         <DisplayString Condition="__0 == 8648">ERROR::DS::UPN_VALUE_NOT_UNIQUE_IN_FOREST</DisplayString>
         <DisplayString Condition="__0 == 8649">ERROR::DS::MISSING_FOREST_TRUST</DisplayString>
         <DisplayString Condition="__0 == 8650">ERROR::DS::VALUE_KEY_NOT_UNIQUE</DisplayString>
+        <DisplayString Condition="__0 == 8652">ERROR::DS::PER_ATTRIBUTE_AUTHZ_FAILED_DURING_ADD</DisplayString>
         <DisplayString Condition="__0 == 15000">ERROR::EVT::INVALID_CHANNEL_PATH</DisplayString>
         <DisplayString Condition="__0 == 15001">ERROR::EVT::INVALID_QUERY</DisplayString>
         <DisplayString Condition="__0 == 15002">ERROR::EVT::PUBLISHER_METADATA_NOT_FOUND</DisplayString>
@@ -10458,6 +10781,7 @@
         <DisplayString Condition="__0 == 0x801F001C">ERROR::FLT::CONTEXT_ALREADY_LINKED</DisplayString>
         <DisplayString Condition="__0 == 0x801F0020">ERROR::FLT::NO_WAITER_FOR_REPLY</DisplayString>
         <DisplayString Condition="__0 == 0x801F0023">ERROR::FLT::REGISTRATION_BUSY</DisplayString>
+        <DisplayString Condition="__0 == 0x801F0024">ERROR::FLT::WCOS_NOT_SUPPORTED</DisplayString>
         <DisplayString Condition="__0 == 0xC0262000">ERROR::GRAPHICS::NOT_EXCLUSIVE_MODE_OWNER</DisplayString>
         <DisplayString Condition="__0 == 0xC0262001">ERROR::GRAPHICS::INSUFFICIENT_DMA_BUFFER</DisplayString>
         <DisplayString Condition="__0 == 0xC0262002">ERROR::GRAPHICS::INVALID_DISPLAY_ADAPTER</DisplayString>
@@ -10479,6 +10803,9 @@
         <DisplayString Condition="__0 == 0xC0262013">ERROR::GRAPHICS::INDIRECT_DISPLAY_DEVICE_STOPPED</DisplayString>
         <DisplayString Condition="__0 == 0xC0262014">ERROR::GRAPHICS::VAIL_FAILED_TO_SEND_CREATE_SUPERWETINK_MESSAGE</DisplayString>
         <DisplayString Condition="__0 == 0xC0262015">ERROR::GRAPHICS::VAIL_FAILED_TO_SEND_DESTROY_SUPERWETINK_MESSAGE</DisplayString>
+        <DisplayString Condition="__0 == 0xC0262016">ERROR::GRAPHICS::VAIL_FAILED_TO_SEND_COMPOSITION_WINDOW_DPI_MESSAGE</DisplayString>
+        <DisplayString Condition="__0 == 0xC0262017">ERROR::GRAPHICS::LINK_CONFIGURATION_IN_PROGRESS</DisplayString>
+        <DisplayString Condition="__0 == 0xC0262018">ERROR::GRAPHICS::MPO_ALLOCATION_UNPINNED</DisplayString>
         <DisplayString Condition="__0 == 0xC0262100">ERROR::GRAPHICS::NO_VIDEO_MEMORY</DisplayString>
         <DisplayString Condition="__0 == 0xC0262101">ERROR::GRAPHICS::CANT_LOCK_MEMORY</DisplayString>
         <DisplayString Condition="__0 == 0xC0262102">ERROR::GRAPHICS::ALLOCATION_BUSY</DisplayString>
@@ -10826,6 +11153,7 @@
         <DisplayString Condition="__0 == 15147">ERROR::MRM::GENERATION_COUNT_MISMATCH</DisplayString>
         <DisplayString Condition="__0 == 15159">ERROR::MRM::PACKAGE_NOT_FOUND</DisplayString>
         <DisplayString Condition="__0 == 15160">ERROR::MRM::MISSING_DEFAULT_LANGUAGE</DisplayString>
+        <DisplayString Condition="__0 == 15161">ERROR::MRM::SCOPE_ITEM_CONFLICT</DisplayString>
         <DisplayString Condition="__0 == 15100">ERROR::MUI::FILE_NOT_FOUND</DisplayString>
         <DisplayString Condition="__0 == 15101">ERROR::MUI::INVALID_FILE</DisplayString>
         <DisplayString Condition="__0 == 15102">ERROR::MUI::INVALID_RC_CONFIG</DisplayString>
@@ -11098,10 +11426,12 @@
         <DisplayString Condition="__0 == 4434">ERROR::SECUREBOOT::NOT_BASE_POLICY</DisplayString>
         <DisplayString Condition="__0 == 4435">ERROR::SECUREBOOT::NOT_SUPPLEMENTAL_POLICY</DisplayString>
         <DisplayString Condition="__0 == 628">ERROR::SERVER::SID_MISMATCH</DisplayString>
+        <DisplayString Condition="__0 == 816">ERROR::SERVER::TRANSPORT_CONFLICT</DisplayString>
         <DisplayString Condition="__0 == 1255">ERROR::SERVER::SHUTDOWN_IN_PROGRESS</DisplayString>
         <DisplayString Condition="__0 == 1341">ERROR::SERVER::DISABLED</DisplayString>
         <DisplayString Condition="__0 == 1342">ERROR::SERVER::NOT_DISABLED</DisplayString>
         <DisplayString Condition="__0 == 1811">ERROR::SERVER::HAS_OPEN_HANDLES</DisplayString>
+        <DisplayString Condition="__0 == 3023">ERROR::SERVER::SERVICE_CALL_REQUIRES_SMB1</DisplayString>
         <DisplayString Condition="__0 == 20028">ERROR::SERVER::INVALID_BOOT_FILE_TABLE</DisplayString>
         <DisplayString Condition="__0 == 20029">ERROR::SERVER::UNKNOWN_BOOT_FILE_NAME</DisplayString>
         <DisplayString Condition="__0 == 716">ERROR::SERVICE::NOTIFICATION</DisplayString>
@@ -11287,6 +11617,8 @@
         <DisplayString Condition="__0 == 12188">ERROR::WINHTTP::SECURE_FAILURE_PROXY</DisplayString>
         <DisplayString Condition="__0 == 12189">ERROR::WINHTTP::RESERVED_189</DisplayString>
         <DisplayString Condition="__0 == 12190">ERROR::WINHTTP::HTTP_PROTOCOL_MISMATCH</DisplayString>
+        <DisplayString Condition="__0 == 12191">ERROR::WINHTTP::GLOBAL_CALLBACK_FAILED</DisplayString>
+        <DisplayString Condition="__0 == 12192">ERROR::WINHTTP::FEATURE_DISABLED</DisplayString>
         <DisplayString Condition="__0 == 0x80338120">ERROR::WINRS::CLIENT_INVALID_FLAG</DisplayString>
         <DisplayString Condition="__0 == 0x80338121">ERROR::WINRS::CLIENT_NULL_PARAM</DisplayString>
         <DisplayString Condition="__0 == 0x80338127">ERROR::WINRS::RECEIVE_IN_PROGRESS</DisplayString>
@@ -11810,6 +12142,7 @@
         <DisplayString Condition="__0 == 0x803381FC">ERROR::WSMAN::VIRTUALACCOUNT_NOTSUPPORTED_DOWNLEVEL</DisplayString>
         <DisplayString Condition="__0 == 0x803381FD">ERROR::WSMAN::RUNASUSER_MANAGEDACCOUNT_LOGON_FAILED</DisplayString>
         <DisplayString Condition="__0 == 0x803381FE">ERROR::WSMAN::CERTMAPPING_CREDENTIAL_MANAGEMENT_FAILIED</DisplayString>
+        <DisplayString Condition="__0 == 0x803381FF">ERROR::WSMAN::EVENTING_PUSH_SUBSCRIPTION_NOACTIVATE_EVENTSOURCE</DisplayString>
         <DisplayString Condition="__0 == 14030">ERROR_SXS_XML::E_MISSINGQUOTE</DisplayString>
         <DisplayString Condition="__0 == 14031">ERROR_SXS_XML::E_COMMENTSYNTAX</DisplayString>
         <DisplayString Condition="__0 == 14032">ERROR_SXS_XML::E_BADSTARTNAMECHAR</DisplayString>
@@ -12084,6 +12417,17 @@
         <DisplayString Condition="__0 == 0x803100DF">FVE::E_KEY_ROTATION_NOT_ENABLED</DisplayString>
         <DisplayString Condition="__0 == 0x803100E0">FVE::E_DEVICE_NOT_JOINED</DisplayString>
         <DisplayString Condition="__0 == 0x803100E1">FVE::E_AAD_ENDPOINT_BUSY</DisplayString>
+        <DisplayString Condition="__0 == 0x803100E2">FVE::E_INVALID_NBP_CERT</DisplayString>
+        <DisplayString Condition="__0 == 0x803100E3">FVE::E_EDRIVE_BAND_ENUMERATION_FAILED</DisplayString>
+        <DisplayString Condition="__0 == 0x803100E4">FVE::E_POLICY_ON_RDV_EXCLUSION_LIST</DisplayString>
+        <DisplayString Condition="__0 == 0x803100E5">FVE::E_PREDICTED_TPM_PROTECTOR_NOT_SUPPORTED</DisplayString>
+        <DisplayString Condition="__0 == 0x803100E6">FVE::E_SETUP_TPM_CALLBACK_NOT_SUPPORTED</DisplayString>
+        <DisplayString Condition="__0 == 0x803100E7">FVE::E_TPM_CONTEXT_SETUP_NOT_SUPPORTED</DisplayString>
+        <DisplayString Condition="__0 == 0x803100E8">FVE::E_UPDATE_INVALID_CONFIG</DisplayString>
+        <DisplayString Condition="__0 == 0x803100E9">FVE::E_AAD_SERVER_FAIL_RETRY_AFTER</DisplayString>
+        <DisplayString Condition="__0 == 0x803100EA">FVE::E_AAD_SERVER_FAIL_BACKOFF</DisplayString>
+        <DisplayString Condition="__0 == 0x803100EB">FVE::E_DATASET_FULL</DisplayString>
+        <DisplayString Condition="__0 == 0x803100EC">FVE::E_METADATA_FULL</DisplayString>
         <DisplayString Condition="__0 == 0x80320001">FWP::E_CALLOUT_NOT_FOUND</DisplayString>
         <DisplayString Condition="__0 == 0x80320002">FWP::E_CONDITION_NOT_FOUND</DisplayString>
         <DisplayString Condition="__0 == 0x80320003">FWP::E_FILTER_NOT_FOUND</DisplayString>
@@ -12205,6 +12549,7 @@
         <DisplayString Condition="__0 == 0x803B0033">HCN::E_INVALID_IP_SUBNET</DisplayString>
         <DisplayString Condition="__0 == 0x803B0034">HCN::E_ENDPOINT_NOT_ATTACHED</DisplayString>
         <DisplayString Condition="__0 == 0x803B0035">HCN::E_ENDPOINT_NOT_LOCAL</DisplayString>
+        <DisplayString Condition="__0 == 0x803B0037">HCN::E_VFP_NOT_ALLOWED</DisplayString>
         <DisplayString Condition="__0 == 0x80370100">HCS::E_TERMINATED_DURING_START</DisplayString>
         <DisplayString Condition="__0 == 0x80370101">HCS::E_IMAGE_MISMATCH</DisplayString>
         <DisplayString Condition="__0 == 0x80370102">HCS::E_HYPERV_NOT_INSTALLED</DisplayString>
@@ -12235,6 +12580,9 @@
         <DisplayString Condition="__0 == 0x8037011D">HCS::E_PROCESS_INFO_NOT_AVAILABLE</DisplayString>
         <DisplayString Condition="__0 == 0x8037011E">HCS::E_SERVICE_DISCONNECT</DisplayString>
         <DisplayString Condition="__0 == 0x8037011F">HCS::E_PROCESS_ALREADY_STOPPED</DisplayString>
+        <DisplayString Condition="__0 == 0x80370120">HCS::E_SYSTEM_NOT_CONFIGURED_FOR_OPERATION</DisplayString>
+        <DisplayString Condition="__0 == 0x80370121">HCS::E_OPERATION_ALREADY_CANCELLED</DisplayString>
+        <DisplayString Condition="__0 == 0x81280FFF">HSP::E_INTERNAL_ERROR</DisplayString>
         <DisplayString Condition="__0 == 0x80190001">HTTP::E_STATUS_UNEXPECTED</DisplayString>
         <DisplayString Condition="__0 == 0x80190003">HTTP::E_STATUS_UNEXPECTED_REDIRECTION</DisplayString>
         <DisplayString Condition="__0 == 0x80190004">HTTP::E_STATUS_UNEXPECTED_CLIENT_ERROR</DisplayString>
@@ -12299,10 +12647,58 @@
         <DisplayString Condition="__0 == 0x80400006">INPUT::E_DEVICE_INFO</DisplayString>
         <DisplayString Condition="__0 == 0x80400007">INPUT::E_TRANSFORM</DisplayString>
         <DisplayString Condition="__0 == 0x80400008">INPUT::E_DEVICE_PROPERTY</DisplayString>
+        <DisplayString Condition="__0 == 0x80460001">IORING::E_REQUIRED_FLAG_NOT_SUPPORTED</DisplayString>
+        <DisplayString Condition="__0 == 0x80460002">IORING::E_SUBMISSION_QUEUE_FULL</DisplayString>
+        <DisplayString Condition="__0 == 0x80460003">IORING::E_VERSION_NOT_SUPPORTED</DisplayString>
+        <DisplayString Condition="__0 == 0x80460004">IORING::E_SUBMISSION_QUEUE_TOO_BIG</DisplayString>
+        <DisplayString Condition="__0 == 0x80460005">IORING::E_COMPLETION_QUEUE_TOO_BIG</DisplayString>
+        <DisplayString Condition="__0 == 0x80460006">IORING::E_SUBMIT_IN_PROGRESS</DisplayString>
+        <DisplayString Condition="__0 == 0x80460007">IORING::E_CORRUPT</DisplayString>
+        <DisplayString Condition="__0 == 0x80460008">IORING::E_COMPLETION_QUEUE_TOO_FULL</DisplayString>
         <DisplayString Condition="__0 == 0x89020001">JSCRIPT::E_CANTEXECUTE</DisplayString>
         <DisplayString Condition="__0 == 0x80080009">MEM::E_INVALID_ROOT</DisplayString>
         <DisplayString Condition="__0 == 0x80080010">MEM::E_INVALID_LINK</DisplayString>
         <DisplayString Condition="__0 == 0x80080011">MEM::E_INVALID_SIZE</DisplayString>
+        <DisplayString Condition="__0 == 0x80180001">MENROLL::E_DEVICE_MESSAGE_FORMAT_ERROR</DisplayString>
+        <DisplayString Condition="__0 == 0x80180002">MENROLL::E_DEVICE_AUTHENTICATION_ERROR</DisplayString>
+        <DisplayString Condition="__0 == 0x80180003">MENROLL::E_DEVICE_AUTHORIZATION_ERROR</DisplayString>
+        <DisplayString Condition="__0 == 0x80180004">MENROLL::E_DEVICE_CERTIFICATEREQUEST_ERROR</DisplayString>
+        <DisplayString Condition="__0 == 0x80180005">MENROLL::E_DEVICE_CONFIGMGRSERVER_ERROR</DisplayString>
+        <DisplayString Condition="__0 == 0x80180006">MENROLL::E_DEVICE_INTERNALSERVICE_ERROR</DisplayString>
+        <DisplayString Condition="__0 == 0x80180007">MENROLL::E_DEVICE_INVALIDSECURITY_ERROR</DisplayString>
+        <DisplayString Condition="__0 == 0x80180008">MENROLL::E_DEVICE_UNKNOWN_ERROR</DisplayString>
+        <DisplayString Condition="__0 == 0x80180009">MENROLL::E_ENROLLMENT_IN_PROGRESS</DisplayString>
+        <DisplayString Condition="__0 == 0x8018000A">MENROLL::E_DEVICE_ALREADY_ENROLLED</DisplayString>
+        <DisplayString Condition="__0 == 0x8018000D">MENROLL::E_DISCOVERY_SEC_CERT_DATE_INVALID</DisplayString>
+        <DisplayString Condition="__0 == 0x8018000E">MENROLL::E_PASSWORD_NEEDED</DisplayString>
+        <DisplayString Condition="__0 == 0x8018000F">MENROLL::E_WAB_ERROR</DisplayString>
+        <DisplayString Condition="__0 == 0x80180010">MENROLL::E_CONNECTIVITY</DisplayString>
+        <DisplayString Condition="__0 == 0x80180012">MENROLL::E_INVALIDSSLCERT</DisplayString>
+        <DisplayString Condition="__0 == 0x80180013">MENROLL::E_DEVICECAPREACHED</DisplayString>
+        <DisplayString Condition="__0 == 0x80180014">MENROLL::E_DEVICENOTSUPPORTED</DisplayString>
+        <DisplayString Condition="__0 == 0x80180015">MENROLL::E_NOT_SUPPORTED</DisplayString>
+        <DisplayString Condition="__0 == 0x80180016">MENROLL::E_NOTELIGIBLETORENEW</DisplayString>
+        <DisplayString Condition="__0 == 0x80180017">MENROLL::E_INMAINTENANCE</DisplayString>
+        <DisplayString Condition="__0 == 0x80180018">MENROLL::E_USER_LICENSE</DisplayString>
+        <DisplayString Condition="__0 == 0x80180019">MENROLL::E_ENROLLMENTDATAINVALID</DisplayString>
+        <DisplayString Condition="__0 == 0x8018001A">MENROLL::E_INSECUREREDIRECT</DisplayString>
+        <DisplayString Condition="__0 == 0x8018001B">MENROLL::E_PLATFORM_WRONG_STATE</DisplayString>
+        <DisplayString Condition="__0 == 0x8018001C">MENROLL::E_PLATFORM_LICENSE_ERROR</DisplayString>
+        <DisplayString Condition="__0 == 0x8018001D">MENROLL::E_PLATFORM_UNKNOWN_ERROR</DisplayString>
+        <DisplayString Condition="__0 == 0x8018001E">MENROLL::E_PROV_CSP_CERTSTORE</DisplayString>
+        <DisplayString Condition="__0 == 0x8018001F">MENROLL::E_PROV_CSP_W7</DisplayString>
+        <DisplayString Condition="__0 == 0x80180020">MENROLL::E_PROV_CSP_DMCLIENT</DisplayString>
+        <DisplayString Condition="__0 == 0x80180021">MENROLL::E_PROV_CSP_PFW</DisplayString>
+        <DisplayString Condition="__0 == 0x80180022">MENROLL::E_PROV_CSP_MISC</DisplayString>
+        <DisplayString Condition="__0 == 0x80180023">MENROLL::E_PROV_UNKNOWN</DisplayString>
+        <DisplayString Condition="__0 == 0x80180024">MENROLL::E_PROV_SSLCERTNOTFOUND</DisplayString>
+        <DisplayString Condition="__0 == 0x80180025">MENROLL::E_PROV_CSP_APPMGMT</DisplayString>
+        <DisplayString Condition="__0 == 0x80180026">MENROLL::E_DEVICE_MANAGEMENT_BLOCKED</DisplayString>
+        <DisplayString Condition="__0 == 0x80180027">MENROLL::E_CERTPOLICY_PRIVATEKEYCREATION_FAILED</DisplayString>
+        <DisplayString Condition="__0 == 0x80180028">MENROLL::E_CERTAUTH_FAILED_TO_FIND_CERT</DisplayString>
+        <DisplayString Condition="__0 == 0x80180029">MENROLL::E_EMPTY_MESSAGE</DisplayString>
+        <DisplayString Condition="__0 == 0x80180030">MENROLL::E_USER_CANCELLED</DisplayString>
+        <DisplayString Condition="__0 == 0x80180031">MENROLL::E_MDM_NOT_CONFIGURED</DisplayString>
         <DisplayString Condition="__0 == 0x800401E0">MK::E_CONNECTMANUALLY</DisplayString>
         <DisplayString Condition="__0 == 0x800401E1">MK::E_EXCEEDEDDEADLINE</DisplayString>
         <DisplayString Condition="__0 == 0x800401E2">MK::E_NEEDGENERIC</DisplayString>
@@ -12519,6 +12915,7 @@
         <DisplayString Condition="__0 == 0x80300111">PLA::E_TASKSCHED_CHANNEL_NOT_ENABLED</DisplayString>
         <DisplayString Condition="__0 == 0x80300112">PLA::E_RULES_MANAGER_FAILED</DisplayString>
         <DisplayString Condition="__0 == 0x80300113">PLA::E_CABAPI_FAILURE</DisplayString>
+        <DisplayString Condition="__0 == 0x88810001">PRESENTATION::ERROR_LOST</DisplayString>
         <DisplayString Condition="__0 == 0x80040150">REGDB::E_READREGDB</DisplayString>
         <DisplayString Condition="__0 == 0x80040151">REGDB::E_WRITEREGDB</DisplayString>
         <DisplayString Condition="__0 == 0x80040152">REGDB::E_KEYMISSING</DisplayString>
@@ -12898,6 +13295,8 @@
         <DisplayString Condition="__0 == 0x80670010">STATEREPOSITORY::E_SERVICE_STOP_IN_PROGRESS</DisplayString>
         <DisplayString Condition="__0 == 0x80670011">STATEREPOSITORY::E_NESTED_TRANSACTION_NOT_SUPPORTED</DisplayString>
         <DisplayString Condition="__0 == 0x80670012">STATEREPOSITORY::ERROR_CACHE_CORRUPTED</DisplayString>
+        <DisplayString Condition="__0 == 0x80670015">STATEREPOSITORY::E_CACHE_NOT_INIITALIZED</DisplayString>
+        <DisplayString Condition="__0 == 0x80670016">STATEREPOSITORY::E_DEPENDENCY_NOT_RESOLVED</DisplayString>
         <DisplayString Condition="__0 == 0x80030001">STG::E_INVALIDFUNCTION</DisplayString>
         <DisplayString Condition="__0 == 0x80030002">STG::E_FILENOTFOUND</DisplayString>
         <DisplayString Condition="__0 == 0x80030003">STG::E_PATHNOTFOUND</DisplayString>
@@ -13165,6 +13564,7 @@
         <DisplayString Condition="__0 == 0x80290600">TPM::E_PROVISIONING_INCOMPLETE</DisplayString>
         <DisplayString Condition="__0 == 0x80290601">TPM::E_INVALID_OWNER_AUTH</DisplayString>
         <DisplayString Condition="__0 == 0x80290602">TPM::E_TOO_MUCH_DATA</DisplayString>
+        <DisplayString Condition="__0 == 0x80290603">TPM::E_TPM_GENERATED_EPS</DisplayString>
         <DisplayString Condition="__0 == 0x80290100">TPMAPI::E_INVALID_STATE</DisplayString>
         <DisplayString Condition="__0 == 0x80290101">TPMAPI::E_NOT_ENOUGH_DATA</DisplayString>
         <DisplayString Condition="__0 == 0x80290102">TPMAPI::E_TOO_MUCH_DATA</DisplayString>
@@ -13446,16 +13846,16 @@
         <DisplayString Condition="__0 == 0x87C5105A">UTC::E_ESCALATION_CANCELLED_AT_SHUTDOWN</DisplayString>
         <DisplayString Condition="__0 == 0x87C5105B">UTC::E_GETFILEINFOACTION_FILE_NOT_APPROVED</DisplayString>
         <DisplayString Condition="__0 == 0x87C5105C">UTC::E_SETREGKEYACTION_TYPE_NOT_APPROVED</DisplayString>
+        <DisplayString Condition="__0 == 0x87C5105D">UTC::E_TRACE_THROTTLED</DisplayString>
         <DisplayString Condition="__0 == 0x80040140">VIEW::E_DRAW</DisplayString>
         <DisplayString Condition="__0 == 0xC0370500">VM_SAVED_STATE_DUMP::E_PARTITION_STATE_NOT_FOUND</DisplayString>
         <DisplayString Condition="__0 == 0xC0370501">VM_SAVED_STATE_DUMP::E_GUEST_MEMORY_NOT_FOUND</DisplayString>
         <DisplayString Condition="__0 == 0xC0370502">VM_SAVED_STATE_DUMP::E_NO_VP_FOUND_IN_PARTITION_STATE</DisplayString>
         <DisplayString Condition="__0 == 0xC0370503">VM_SAVED_STATE_DUMP::E_NESTED_VIRTUALIZATION_NOT_SUPPORTED</DisplayString>
         <DisplayString Condition="__0 == 0xC0370504">VM_SAVED_STATE_DUMP::E_WINDOWS_KERNEL_IMAGE_NOT_FOUND</DisplayString>
-        <DisplayString Condition="__0 == 0xC0370505">VM_SAVED_STATE_DUMP::E_PXE_NOT_PRESENT</DisplayString>
-        <DisplayString Condition="__0 == 0xC0370506">VM_SAVED_STATE_DUMP::E_PDPTE_NOT_PRESENT</DisplayString>
-        <DisplayString Condition="__0 == 0xC0370507">VM_SAVED_STATE_DUMP::E_PDE_NOT_PRESENT</DisplayString>
-        <DisplayString Condition="__0 == 0xC0370508">VM_SAVED_STATE_DUMP::E_PTE_NOT_PRESENT</DisplayString>
+        <DisplayString Condition="__0 == 0xC0370505">VM_SAVED_STATE_DUMP::E_VA_NOT_MAPPED</DisplayString>
+        <DisplayString Condition="__0 == 0xC0370506">VM_SAVED_STATE_DUMP::E_INVALID_VP_STATE</DisplayString>
+        <DisplayString Condition="__0 == 0xC0370509">VM_SAVED_STATE_DUMP::E_VP_VTL_NOT_ENABLED</DisplayString>
         <DisplayString Condition="__0 == 0x83750001">WEB::E_UNSUPPORTED_FORMAT</DisplayString>
         <DisplayString Condition="__0 == 0x83750002">WEB::E_INVALID_XML</DisplayString>
         <DisplayString Condition="__0 == 0x83750003">WEB::E_MISSING_REQUIRED_ELEMENT</DisplayString>
@@ -13957,6 +14357,8 @@
     <HResult Name="APPX_E_FILE_COMPRESSION_MISMATCH"><HRValue>0x80080214</HRValue></HResult>
     <HResult Name="APPX_E_INVALID_PAYLOAD_PACKAGE_EXTENSION"><HRValue>0x80080215</HRValue></HResult>
     <HResult Name="APPX_E_INVALID_ENCRYPTION_EXCLUSION_FILE_LIST"><HRValue>0x80080216</HRValue></HResult>
+    <HResult Name="APPX_E_INVALID_PACKAGE_FOLDER_ACLS"><HRValue>0x80080217</HRValue></HResult>
+    <HResult Name="APPX_E_INVALID_PUBLISHER_BRIDGING"><HRValue>0x80080218</HRValue></HResult>
     <HResult Name="BT_E_SPURIOUS_ACTIVATION"><HRValue>0x80080300</HRValue></HResult>
     <HResult Name="CACHE_E_NOCACHE_UPDATED"><HRValue>0x80040170</HRValue></HResult>
     <HResult Name="CACHE_S_FORMATETC_NOTSUPPORTED"><HRValue>0x00040170</HRValue></HResult>
@@ -14039,6 +14441,7 @@
     <HResult Name="CERTSRV_E_INVALID_REQUESTID"><HRValue>0x8009481E</HRValue></HResult>
     <HResult Name="CERTSRV_E_REQUEST_PRECERTIFICATE_MISMATCH"><HRValue>0x8009481F</HRValue></HResult>
     <HResult Name="CERTSRV_E_PENDING_CLIENT_RESPONSE"><HRValue>0x80094820</HRValue></HResult>
+    <HResult Name="CERTSRV_E_SEC_EXT_DIRECTORY_SID_REQUIRED"><HRValue>0x80094821</HRValue></HResult>
     <HResult Name="CLASS_E_NOAGGREGATION"><HRValue>0x80040110</HRValue></HResult>
     <HResult Name="CLASS_E_CLASSNOTAVAILABLE"><HRValue>0x80040111</HRValue></HResult>
     <HResult Name="CLASS_E_NOTLICENSED"><HRValue>0x80040112</HRValue></HResult>
@@ -14384,6 +14787,7 @@
     <HResult Name="D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD"><HRValue>0x887C0004</HRValue></HResult>
     <HResult Name="D3D12_ERROR_ADAPTER_NOT_FOUND"><HRValue>0x887E0001</HRValue></HResult>
     <HResult Name="D3D12_ERROR_DRIVER_VERSION_MISMATCH"><HRValue>0x887E0002</HRValue></HResult>
+    <HResult Name="D3D12_ERROR_INVALID_REDIST"><HRValue>0x887E0003</HRValue></HResult>
     <HResult Name="D3DERR_WRONGTEXTUREFORMAT"><HRValue>0x88760818</HRValue></HResult>
     <HResult Name="D3DERR_UNSUPPORTEDCOLOROPERATION"><HRValue>0x88760819</HRValue></HResult>
     <HResult Name="D3DERR_UNSUPPORTEDCOLORARG"><HRValue>0x8876081A</HRValue></HResult>
@@ -14611,6 +15015,7 @@
     <HResult Name="DXGI_ERROR_CACHE_FULL"><HRValue>0x887A0034</HRValue></HResult>
     <HResult Name="DXGI_ERROR_CACHE_HASH_COLLISION"><HRValue>0x887A0035</HRValue></HResult>
     <HResult Name="DXGI_ERROR_ALREADY_EXISTS"><HRValue>0x887A0036</HRValue></HResult>
+    <HResult Name="DXGI_ERROR_MPO_UNPINNED"><HRValue>0x887A0064</HRValue></HResult>
     <HResult Name="E_NOT_SET"><HRValue>0x80070490</HRValue></HResult>
     <HResult Name="E_NOT_VALID_STATE"><HRValue>0x8007139F</HRValue></HResult>
     <HResult Name="E_NOT_SUFFICIENT_BUFFER"><HRValue>0x8007007A</HRValue></HResult>
@@ -14811,6 +15216,14 @@
     <HResult Name="ERROR_HV_INSUFFICIENT_ROOT_MEMORY"><HRValue>0xC0350073</HRValue></HResult>
     <HResult Name="ERROR_HV_EVENT_BUFFER_ALREADY_FREED"><HRValue>0xC0350074</HRValue></HResult>
     <HResult Name="ERROR_HV_INSUFFICIENT_CONTIGUOUS_MEMORY"><HRValue>0xC0350075</HRValue></HResult>
+    <HResult Name="ERROR_HV_DEVICE_NOT_IN_DOMAIN"><HRValue>0xC0350076</HRValue></HResult>
+    <HResult Name="ERROR_HV_NESTED_VM_EXIT"><HRValue>0xC0350077</HRValue></HResult>
+    <HResult Name="ERROR_HV_MSR_ACCESS_FAILED"><HRValue>0xC0350080</HRValue></HResult>
+    <HResult Name="ERROR_HV_INSUFFICIENT_MEMORY_MIRRORING"><HRValue>0xC0350081</HRValue></HResult>
+    <HResult Name="ERROR_HV_INSUFFICIENT_CONTIGUOUS_MEMORY_MIRRORING"><HRValue>0xC0350082</HRValue></HResult>
+    <HResult Name="ERROR_HV_INSUFFICIENT_CONTIGUOUS_ROOT_MEMORY"><HRValue>0xC0350083</HRValue></HResult>
+    <HResult Name="ERROR_HV_INSUFFICIENT_ROOT_MEMORY_MIRRORING"><HRValue>0xC0350084</HRValue></HResult>
+    <HResult Name="ERROR_HV_INSUFFICIENT_CONTIGUOUS_ROOT_MEMORY_MIRRORING"><HRValue>0xC0350085</HRValue></HResult>
     <HResult Name="ERROR_HV_NOT_PRESENT"><HRValue>0xC0351000</HRValue></HResult>
     <HResult Name="ERROR_VID_DUPLICATE_HANDLER"><HRValue>0xC0370001</HRValue></HResult>
     <HResult Name="ERROR_VID_TOO_MANY_HANDLERS"><HRValue>0xC0370002</HRValue></HResult>
@@ -14854,6 +15267,12 @@
     <HResult Name="ERROR_VID_SAVED_STATE_UNRECOGNIZED_ITEM"><HRValue>0xC0370028</HRValue></HResult>
     <HResult Name="ERROR_VID_SAVED_STATE_INCOMPATIBLE"><HRValue>0xC0370029</HRValue></HResult>
     <HResult Name="ERROR_VID_VTL_ACCESS_DENIED"><HRValue>0xC037002A</HRValue></HResult>
+    <HResult Name="ERROR_VID_INSUFFICIENT_RESOURCES_RESERVE"><HRValue>0xC037002B</HRValue></HResult>
+    <HResult Name="ERROR_VID_INSUFFICIENT_RESOURCES_PHYSICAL_BUFFER"><HRValue>0xC037002C</HRValue></HResult>
+    <HResult Name="ERROR_VID_INSUFFICIENT_RESOURCES_HV_DEPOSIT"><HRValue>0xC037002D</HRValue></HResult>
+    <HResult Name="ERROR_VID_MEMORY_TYPE_NOT_SUPPORTED"><HRValue>0xC037002E</HRValue></HResult>
+    <HResult Name="ERROR_VID_INSUFFICIENT_RESOURCES_WITHDRAW"><HRValue>0xC037002F</HRValue></HResult>
+    <HResult Name="ERROR_VID_PROCESS_ALREADY_SET"><HRValue>0xC0370030</HRValue></HResult>
     <HResult Name="ERROR_VMCOMPUTE_TERMINATED_DURING_START"><HRValue>0xC0370100</HRValue></HResult>
     <HResult Name="ERROR_VMCOMPUTE_IMAGE_MISMATCH"><HRValue>0xC0370101</HRValue></HResult>
     <HResult Name="ERROR_VMCOMPUTE_HYPERV_NOT_INSTALLED"><HRValue>0xC0370102</HRValue></HResult>
@@ -14878,6 +15297,7 @@
     <HResult Name="ERROR_VID_REMOTE_NODE_PARENT_GPA_PAGES_USED"><HRValue>0x80370001</HRValue></HResult>
     <HResult Name="ERROR_VSMB_SAVED_STATE_FILE_NOT_FOUND"><HRValue>0xC0370400</HRValue></HResult>
     <HResult Name="ERROR_VSMB_SAVED_STATE_CORRUPT"><HRValue>0xC0370401</HRValue></HResult>
+    <HResult Name="ERROR_DM_OPERATION_LIMIT_EXCEEDED"><HRValue>0xC0370600</HRValue></HResult>
     <HResult Name="ERROR_VOLMGR_INCOMPLETE_REGENERATION"><HRValue>0x80380001</HRValue></HResult>
     <HResult Name="ERROR_VOLMGR_INCOMPLETE_DISK_MIGRATION"><HRValue>0x80380002</HRValue></HResult>
     <HResult Name="ERROR_VOLMGR_DATABASE_FULL"><HRValue>0xC0380001</HRValue></HResult>
@@ -15007,8 +15427,24 @@
     <HResult Name="ERROR_SPACES_DRIVE_OPERATIONAL_STATE_INVALID"><HRValue>0x80E70012</HRValue></HResult>
     <HResult Name="ERROR_SPACES_ENTRY_INCOMPLETE"><HRValue>0x80E70013</HRValue></HResult>
     <HResult Name="ERROR_SPACES_ENTRY_INVALID"><HRValue>0x80E70014</HRValue></HResult>
+    <HResult Name="ERROR_SPACES_UPDATE_COLUMN_STATE"><HRValue>0x80E70015</HRValue></HResult>
+    <HResult Name="ERROR_SPACES_MAP_REQUIRED"><HRValue>0x80E70016</HRValue></HResult>
+    <HResult Name="ERROR_SPACES_UNSUPPORTED_VERSION"><HRValue>0x80E70017</HRValue></HResult>
+    <HResult Name="ERROR_SPACES_CORRUPT_METADATA"><HRValue>0x80E70018</HRValue></HResult>
+    <HResult Name="ERROR_SPACES_DRT_FULL"><HRValue>0x80E70019</HRValue></HResult>
+    <HResult Name="ERROR_SPACES_INCONSISTENCY"><HRValue>0x80E7001A</HRValue></HResult>
+    <HResult Name="ERROR_SPACES_LOG_NOT_READY"><HRValue>0x80E7001B</HRValue></HResult>
+    <HResult Name="ERROR_SPACES_NO_REDUNDANCY"><HRValue>0x80E7001C</HRValue></HResult>
+    <HResult Name="ERROR_SPACES_DRIVE_NOT_READY"><HRValue>0x80E7001D</HRValue></HResult>
+    <HResult Name="ERROR_SPACES_DRIVE_SPLIT"><HRValue>0x80E7001E</HRValue></HResult>
+    <HResult Name="ERROR_SPACES_DRIVE_LOST_DATA"><HRValue>0x80E7001F</HRValue></HResult>
+    <HResult Name="ERROR_SPACES_MARK_DIRTY"><HRValue>0x80E70020</HRValue></HResult>
+    <HResult Name="ERROR_SPACES_FLUSH_METADATA"><HRValue>0x80E70025</HRValue></HResult>
+    <HResult Name="ERROR_SPACES_CACHE_FULL"><HRValue>0x80E70026</HRValue></HResult>
+    <HResult Name="ERROR_SPACES_REPAIR_IN_PROGRESS"><HRValue>0x80E70027</HRValue></HResult>
     <HResult Name="ERROR_VOLSNAP_BOOTFILE_NOT_VALID"><HRValue>0x80820001</HRValue></HResult>
     <HResult Name="ERROR_VOLSNAP_ACTIVATION_TIMEOUT"><HRValue>0x80820002</HRValue></HResult>
+    <HResult Name="ERROR_VOLSNAP_NO_BYPASSIO_WITH_SNAPSHOT"><HRValue>0x80820003</HRValue></HResult>
     <HResult Name="ERROR_TIERING_NOT_SUPPORTED_ON_VOLUME"><HRValue>0x80830001</HRValue></HResult>
     <HResult Name="ERROR_TIERING_VOLUME_DISMOUNT_IN_PROGRESS"><HRValue>0x80830002</HRValue></HResult>
     <HResult Name="ERROR_TIERING_STORAGE_TIER_NOT_FOUND"><HRValue>0x80830003</HRValue></HResult>
@@ -15034,8 +15470,15 @@
     <HResult Name="ERROR_VHDSET_BACKING_STORAGE_NOT_FOUND"><HRValue>0xC05CFF0C</HRValue></HResult>
     <HResult Name="ERROR_SMB_NO_PREAUTH_INTEGRITY_HASH_OVERLAP"><HRValue>0xC05D0000</HRValue></HResult>
     <HResult Name="ERROR_SMB_BAD_CLUSTER_DIALECT"><HRValue>0xC05D0001</HRValue></HResult>
+    <HResult Name="ERROR_SMB_NO_SIGNING_ALGORITHM_OVERLAP"><HRValue>0xC05D0002</HRValue></HResult>
     <HResult Name="ERROR_QUIC_HANDSHAKE_FAILURE"><HRValue>0x80410000</HRValue></HResult>
     <HResult Name="ERROR_QUIC_VER_NEG_FAILURE"><HRValue>0x80410001</HRValue></HResult>
+    <HResult Name="ERROR_QUIC_USER_CANCELED"><HRValue>0x80410002</HRValue></HResult>
+    <HResult Name="ERROR_QUIC_INTERNAL_ERROR"><HRValue>0x80410003</HRValue></HResult>
+    <HResult Name="ERROR_QUIC_PROTOCOL_VIOLATION"><HRValue>0x80410004</HRValue></HResult>
+    <HResult Name="ERROR_QUIC_CONNECTION_IDLE"><HRValue>0x80410005</HRValue></HResult>
+    <HResult Name="ERROR_QUIC_CONNECTION_TIMEOUT"><HRValue>0x80410006</HRValue></HResult>
+    <HResult Name="ERROR_QUIC_ALPN_NEG_FAILURE"><HRValue>0x80410007</HRValue></HResult>
     <HResult Name="ERROR_EXPECTED_SECTION_NAME"><HRValue>0xE0000000</HRValue></HResult>
     <HResult Name="ERROR_BAD_SECTION_NAME_LINE"><HRValue>0xE0000001</HRValue></HResult>
     <HResult Name="ERROR_SECTION_NAME_TOO_LONG"><HRValue>0xE0000002</HRValue></HResult>
@@ -15159,6 +15602,7 @@
     <HResult Name="ERROR_FLT_CONTEXT_ALREADY_LINKED"><HRValue>0x801F001C</HRValue></HResult>
     <HResult Name="ERROR_FLT_NO_WAITER_FOR_REPLY"><HRValue>0x801F0020</HRValue></HResult>
     <HResult Name="ERROR_FLT_REGISTRATION_BUSY"><HRValue>0x801F0023</HRValue></HResult>
+    <HResult Name="ERROR_FLT_WCOS_NOT_SUPPORTED"><HRValue>0x801F0024</HRValue></HResult>
     <HResult Name="ERROR_GRAPHICS_NOT_EXCLUSIVE_MODE_OWNER"><HRValue>0xC0262000</HRValue></HResult>
     <HResult Name="ERROR_GRAPHICS_INSUFFICIENT_DMA_BUFFER"><HRValue>0xC0262001</HRValue></HResult>
     <HResult Name="ERROR_GRAPHICS_INVALID_DISPLAY_ADAPTER"><HRValue>0xC0262002</HRValue></HResult>
@@ -15181,6 +15625,9 @@
     <HResult Name="ERROR_GRAPHICS_INDIRECT_DISPLAY_DEVICE_STOPPED"><HRValue>0xC0262013</HRValue></HResult>
     <HResult Name="ERROR_GRAPHICS_VAIL_FAILED_TO_SEND_CREATE_SUPERWETINK_MESSAGE"><HRValue>0xC0262014</HRValue></HResult>
     <HResult Name="ERROR_GRAPHICS_VAIL_FAILED_TO_SEND_DESTROY_SUPERWETINK_MESSAGE"><HRValue>0xC0262015</HRValue></HResult>
+    <HResult Name="ERROR_GRAPHICS_VAIL_FAILED_TO_SEND_COMPOSITION_WINDOW_DPI_MESSAGE"><HRValue>0xC0262016</HRValue></HResult>
+    <HResult Name="ERROR_GRAPHICS_LINK_CONFIGURATION_IN_PROGRESS"><HRValue>0xC0262017</HRValue></HResult>
+    <HResult Name="ERROR_GRAPHICS_MPO_ALLOCATION_UNPINNED"><HRValue>0xC0262018</HRValue></HResult>
     <HResult Name="ERROR_GRAPHICS_NO_VIDEO_MEMORY"><HRValue>0xC0262100</HRValue></HResult>
     <HResult Name="ERROR_GRAPHICS_CANT_LOCK_MEMORY"><HRValue>0xC0262101</HRValue></HResult>
     <HResult Name="ERROR_GRAPHICS_ALLOCATION_BUSY"><HRValue>0xC0262102</HRValue></HResult>
@@ -16144,6 +16591,7 @@
     <HResult Name="ERROR_WSMAN_VIRTUALACCOUNT_NOTSUPPORTED_DOWNLEVEL"><HRValue>0x803381FC</HRValue></HResult>
     <HResult Name="ERROR_WSMAN_RUNASUSER_MANAGEDACCOUNT_LOGON_FAILED"><HRValue>0x803381FD</HRValue></HResult>
     <HResult Name="ERROR_WSMAN_CERTMAPPING_CREDENTIAL_MANAGEMENT_FAILIED"><HRValue>0x803381FE</HRValue></HResult>
+    <HResult Name="ERROR_WSMAN_EVENTING_PUSH_SUBSCRIPTION_NOACTIVATE_EVENTSOURCE"><HRValue>0x803381FF</HRValue></HResult>
     <HResult Name="EVENT_S_SOME_SUBSCRIBERS_FAILED"><HRValue>0x00040200</HRValue></HResult>
     <HResult Name="EVENT_E_ALL_SUBSCRIBERS_FAILED"><HRValue>0x80040201</HRValue></HResult>
     <HResult Name="EVENT_S_NOSUBSCRIBERS"><HRValue>0x00040202</HRValue></HResult>
@@ -16376,6 +16824,17 @@
     <HResult Name="FVE_E_KEY_ROTATION_NOT_ENABLED"><HRValue>0x803100DF</HRValue></HResult>
     <HResult Name="FVE_E_DEVICE_NOT_JOINED"><HRValue>0x803100E0</HRValue></HResult>
     <HResult Name="FVE_E_AAD_ENDPOINT_BUSY"><HRValue>0x803100E1</HRValue></HResult>
+    <HResult Name="FVE_E_INVALID_NBP_CERT"><HRValue>0x803100E2</HRValue></HResult>
+    <HResult Name="FVE_E_EDRIVE_BAND_ENUMERATION_FAILED"><HRValue>0x803100E3</HRValue></HResult>
+    <HResult Name="FVE_E_POLICY_ON_RDV_EXCLUSION_LIST"><HRValue>0x803100E4</HRValue></HResult>
+    <HResult Name="FVE_E_PREDICTED_TPM_PROTECTOR_NOT_SUPPORTED"><HRValue>0x803100E5</HRValue></HResult>
+    <HResult Name="FVE_E_SETUP_TPM_CALLBACK_NOT_SUPPORTED"><HRValue>0x803100E6</HRValue></HResult>
+    <HResult Name="FVE_E_TPM_CONTEXT_SETUP_NOT_SUPPORTED"><HRValue>0x803100E7</HRValue></HResult>
+    <HResult Name="FVE_E_UPDATE_INVALID_CONFIG"><HRValue>0x803100E8</HRValue></HResult>
+    <HResult Name="FVE_E_AAD_SERVER_FAIL_RETRY_AFTER"><HRValue>0x803100E9</HRValue></HResult>
+    <HResult Name="FVE_E_AAD_SERVER_FAIL_BACKOFF"><HRValue>0x803100EA</HRValue></HResult>
+    <HResult Name="FVE_E_DATASET_FULL"><HRValue>0x803100EB</HRValue></HResult>
+    <HResult Name="FVE_E_METADATA_FULL"><HRValue>0x803100EC</HRValue></HResult>
     <HResult Name="FWP_E_CALLOUT_NOT_FOUND"><HRValue>0x80320001</HRValue></HResult>
     <HResult Name="FWP_E_CONDITION_NOT_FOUND"><HRValue>0x80320002</HRValue></HResult>
     <HResult Name="FWP_E_FILTER_NOT_FOUND"><HRValue>0x80320003</HRValue></HResult>
@@ -16497,6 +16956,7 @@
     <HResult Name="HCN_E_INVALID_IP_SUBNET"><HRValue>0x803B0033</HRValue></HResult>
     <HResult Name="HCN_E_ENDPOINT_NOT_ATTACHED"><HRValue>0x803B0034</HRValue></HResult>
     <HResult Name="HCN_E_ENDPOINT_NOT_LOCAL"><HRValue>0x803B0035</HRValue></HResult>
+    <HResult Name="HCN_E_VFP_NOT_ALLOWED"><HRValue>0x803B0037</HRValue></HResult>
     <HResult Name="HCS_E_TERMINATED_DURING_START"><HRValue>0x80370100</HRValue></HResult>
     <HResult Name="HCS_E_IMAGE_MISMATCH"><HRValue>0x80370101</HRValue></HResult>
     <HResult Name="HCS_E_HYPERV_NOT_INSTALLED"><HRValue>0x80370102</HRValue></HResult>
@@ -16527,6 +16987,9 @@
     <HResult Name="HCS_E_PROCESS_INFO_NOT_AVAILABLE"><HRValue>0x8037011D</HRValue></HResult>
     <HResult Name="HCS_E_SERVICE_DISCONNECT"><HRValue>0x8037011E</HRValue></HResult>
     <HResult Name="HCS_E_PROCESS_ALREADY_STOPPED"><HRValue>0x8037011F</HRValue></HResult>
+    <HResult Name="HCS_E_SYSTEM_NOT_CONFIGURED_FOR_OPERATION"><HRValue>0x80370120</HRValue></HResult>
+    <HResult Name="HCS_E_OPERATION_ALREADY_CANCELLED"><HRValue>0x80370121</HRValue></HResult>
+    <HResult Name="HSP_E_INTERNAL_ERROR"><HRValue>0x81280FFF</HRValue></HResult>
     <HResult Name="HTTP_E_STATUS_UNEXPECTED"><HRValue>0x80190001</HRValue></HResult>
     <HResult Name="HTTP_E_STATUS_UNEXPECTED_REDIRECTION"><HRValue>0x80190003</HRValue></HResult>
     <HResult Name="HTTP_E_STATUS_UNEXPECTED_CLIENT_ERROR"><HRValue>0x80190004</HRValue></HResult>
@@ -16592,10 +17055,59 @@
     <HResult Name="INPUT_E_DEVICE_INFO"><HRValue>0x80400006</HRValue></HResult>
     <HResult Name="INPUT_E_TRANSFORM"><HRValue>0x80400007</HRValue></HResult>
     <HResult Name="INPUT_E_DEVICE_PROPERTY"><HRValue>0x80400008</HRValue></HResult>
+    <HResult Name="IORING_E_REQUIRED_FLAG_NOT_SUPPORTED"><HRValue>0x80460001</HRValue></HResult>
+    <HResult Name="IORING_E_SUBMISSION_QUEUE_FULL"><HRValue>0x80460002</HRValue></HResult>
+    <HResult Name="IORING_E_VERSION_NOT_SUPPORTED"><HRValue>0x80460003</HRValue></HResult>
+    <HResult Name="IORING_E_SUBMISSION_QUEUE_TOO_BIG"><HRValue>0x80460004</HRValue></HResult>
+    <HResult Name="IORING_E_COMPLETION_QUEUE_TOO_BIG"><HRValue>0x80460005</HRValue></HResult>
+    <HResult Name="IORING_E_SUBMIT_IN_PROGRESS"><HRValue>0x80460006</HRValue></HResult>
+    <HResult Name="IORING_E_CORRUPT"><HRValue>0x80460007</HRValue></HResult>
+    <HResult Name="IORING_E_COMPLETION_QUEUE_TOO_FULL"><HRValue>0x80460008</HRValue></HResult>
     <HResult Name="JSCRIPT_E_CANTEXECUTE"><HRValue>0x89020001</HRValue></HResult>
     <HResult Name="MEM_E_INVALID_ROOT"><HRValue>0x80080009</HRValue></HResult>
     <HResult Name="MEM_E_INVALID_LINK"><HRValue>0x80080010</HRValue></HResult>
     <HResult Name="MEM_E_INVALID_SIZE"><HRValue>0x80080011</HRValue></HResult>
+    <HResult Name="MENROLL_E_DEVICE_MESSAGE_FORMAT_ERROR"><HRValue>0x80180001</HRValue></HResult>
+    <HResult Name="MENROLL_E_DEVICE_AUTHENTICATION_ERROR"><HRValue>0x80180002</HRValue></HResult>
+    <HResult Name="MENROLL_E_DEVICE_AUTHORIZATION_ERROR"><HRValue>0x80180003</HRValue></HResult>
+    <HResult Name="MENROLL_E_DEVICE_CERTIFICATEREQUEST_ERROR"><HRValue>0x80180004</HRValue></HResult>
+    <HResult Name="MENROLL_E_DEVICE_CONFIGMGRSERVER_ERROR"><HRValue>0x80180005</HRValue></HResult>
+    <HResult Name="MENROLL_E_DEVICE_INTERNALSERVICE_ERROR"><HRValue>0x80180006</HRValue></HResult>
+    <HResult Name="MENROLL_E_DEVICE_INVALIDSECURITY_ERROR"><HRValue>0x80180007</HRValue></HResult>
+    <HResult Name="MENROLL_E_DEVICE_UNKNOWN_ERROR"><HRValue>0x80180008</HRValue></HResult>
+    <HResult Name="MENROLL_E_ENROLLMENT_IN_PROGRESS"><HRValue>0x80180009</HRValue></HResult>
+    <HResult Name="MENROLL_E_DEVICE_ALREADY_ENROLLED"><HRValue>0x8018000A</HRValue></HResult>
+    <HResult Name="MENROLL_E_DISCOVERY_SEC_CERT_DATE_INVALID"><HRValue>0x8018000D</HRValue></HResult>
+    <HResult Name="MENROLL_E_PASSWORD_NEEDED"><HRValue>0x8018000E</HRValue></HResult>
+    <HResult Name="MENROLL_E_WAB_ERROR"><HRValue>0x8018000F</HRValue></HResult>
+    <HResult Name="MENROLL_E_CONNECTIVITY"><HRValue>0x80180010</HRValue></HResult>
+    <HResult Name="MENROLL_S_ENROLLMENT_SUSPENDED"><HRValue>0x00180011</HRValue></HResult>
+    <HResult Name="MENROLL_E_INVALIDSSLCERT"><HRValue>0x80180012</HRValue></HResult>
+    <HResult Name="MENROLL_E_DEVICECAPREACHED"><HRValue>0x80180013</HRValue></HResult>
+    <HResult Name="MENROLL_E_DEVICENOTSUPPORTED"><HRValue>0x80180014</HRValue></HResult>
+    <HResult Name="MENROLL_E_NOT_SUPPORTED"><HRValue>0x80180015</HRValue></HResult>
+    <HResult Name="MENROLL_E_NOTELIGIBLETORENEW"><HRValue>0x80180016</HRValue></HResult>
+    <HResult Name="MENROLL_E_INMAINTENANCE"><HRValue>0x80180017</HRValue></HResult>
+    <HResult Name="MENROLL_E_USER_LICENSE"><HRValue>0x80180018</HRValue></HResult>
+    <HResult Name="MENROLL_E_ENROLLMENTDATAINVALID"><HRValue>0x80180019</HRValue></HResult>
+    <HResult Name="MENROLL_E_INSECUREREDIRECT"><HRValue>0x8018001A</HRValue></HResult>
+    <HResult Name="MENROLL_E_PLATFORM_WRONG_STATE"><HRValue>0x8018001B</HRValue></HResult>
+    <HResult Name="MENROLL_E_PLATFORM_LICENSE_ERROR"><HRValue>0x8018001C</HRValue></HResult>
+    <HResult Name="MENROLL_E_PLATFORM_UNKNOWN_ERROR"><HRValue>0x8018001D</HRValue></HResult>
+    <HResult Name="MENROLL_E_PROV_CSP_CERTSTORE"><HRValue>0x8018001E</HRValue></HResult>
+    <HResult Name="MENROLL_E_PROV_CSP_W7"><HRValue>0x8018001F</HRValue></HResult>
+    <HResult Name="MENROLL_E_PROV_CSP_DMCLIENT"><HRValue>0x80180020</HRValue></HResult>
+    <HResult Name="MENROLL_E_PROV_CSP_PFW"><HRValue>0x80180021</HRValue></HResult>
+    <HResult Name="MENROLL_E_PROV_CSP_MISC"><HRValue>0x80180022</HRValue></HResult>
+    <HResult Name="MENROLL_E_PROV_UNKNOWN"><HRValue>0x80180023</HRValue></HResult>
+    <HResult Name="MENROLL_E_PROV_SSLCERTNOTFOUND"><HRValue>0x80180024</HRValue></HResult>
+    <HResult Name="MENROLL_E_PROV_CSP_APPMGMT"><HRValue>0x80180025</HRValue></HResult>
+    <HResult Name="MENROLL_E_DEVICE_MANAGEMENT_BLOCKED"><HRValue>0x80180026</HRValue></HResult>
+    <HResult Name="MENROLL_E_CERTPOLICY_PRIVATEKEYCREATION_FAILED"><HRValue>0x80180027</HRValue></HResult>
+    <HResult Name="MENROLL_E_CERTAUTH_FAILED_TO_FIND_CERT"><HRValue>0x80180028</HRValue></HResult>
+    <HResult Name="MENROLL_E_EMPTY_MESSAGE"><HRValue>0x80180029</HRValue></HResult>
+    <HResult Name="MENROLL_E_USER_CANCELLED"><HRValue>0x80180030</HRValue></HResult>
+    <HResult Name="MENROLL_E_MDM_NOT_CONFIGURED"><HRValue>0x80180031</HRValue></HResult>
     <HResult Name="MK_E_CONNECTMANUALLY"><HRValue>0x800401E0</HRValue></HResult>
     <HResult Name="MK_E_EXCEEDEDDEADLINE"><HRValue>0x800401E1</HRValue></HResult>
     <HResult Name="MK_E_NEEDGENERIC"><HRValue>0x800401E2</HRValue></HResult>
@@ -16814,6 +17326,7 @@
     <HResult Name="PLA_E_TASKSCHED_CHANNEL_NOT_ENABLED"><HRValue>0x80300111</HRValue></HResult>
     <HResult Name="PLA_E_RULES_MANAGER_FAILED"><HRValue>0x80300112</HRValue></HResult>
     <HResult Name="PLA_E_CABAPI_FAILURE"><HRValue>0x80300113</HRValue></HResult>
+    <HResult Name="PRESENTATION_ERROR_LOST"><HRValue>0x88810001</HRValue></HResult>
     <HResult Name="REGDB_E_READREGDB"><HRValue>0x80040150</HRValue></HResult>
     <HResult Name="REGDB_E_WRITEREGDB"><HRValue>0x80040151</HRValue></HResult>
     <HResult Name="REGDB_E_KEYMISSING"><HRValue>0x80040152</HRValue></HResult>
@@ -17213,6 +17726,8 @@
     <HResult Name="STATEREPOSITORY_E_SERVICE_STOP_IN_PROGRESS"><HRValue>0x80670010</HRValue></HResult>
     <HResult Name="STATEREPOSTORY_E_NESTED_TRANSACTION_NOT_SUPPORTED"><HRValue>0x80670011</HRValue></HResult>
     <HResult Name="STATEREPOSITORY_ERROR_CACHE_CORRUPTED"><HRValue>0x80670012</HRValue></HResult>
+    <HResult Name="STATEREPOSITORY_E_CACHE_NOT_INIITALIZED"><HRValue>0x80670015</HRValue></HResult>
+    <HResult Name="STATEREPOSITORY_E_DEPENDENCY_NOT_RESOLVED"><HRValue>0x80670016</HRValue></HResult>
     <HResult Name="STG_E_INVALIDFUNCTION"><HRValue>0x80030001</HRValue></HResult>
     <HResult Name="STG_E_FILENOTFOUND"><HRValue>0x80030002</HRValue></HResult>
     <HResult Name="STG_E_PATHNOTFOUND"><HRValue>0x80030003</HRValue></HResult>
@@ -17491,6 +18006,7 @@
     <HResult Name="TPM_E_PROVISIONING_INCOMPLETE"><HRValue>0x80290600</HRValue></HResult>
     <HResult Name="TPM_E_INVALID_OWNER_AUTH"><HRValue>0x80290601</HRValue></HResult>
     <HResult Name="TPM_E_TOO_MUCH_DATA"><HRValue>0x80290602</HRValue></HResult>
+    <HResult Name="TPM_E_TPM_GENERATED_EPS"><HRValue>0x80290603</HRValue></HResult>
     <HResult Name="TPMAPI_E_INVALID_STATE"><HRValue>0x80290100</HRValue></HResult>
     <HResult Name="TPMAPI_E_NOT_ENOUGH_DATA"><HRValue>0x80290101</HRValue></HResult>
     <HResult Name="TPMAPI_E_TOO_MUCH_DATA"><HRValue>0x80290102</HRValue></HResult>
@@ -17772,6 +18288,7 @@
     <HResult Name="UTC_E_ESCALATION_CANCELLED_AT_SHUTDOWN"><HRValue>0x87C5105A</HRValue></HResult>
     <HResult Name="UTC_E_GETFILEINFOACTION_FILE_NOT_APPROVED"><HRValue>0x87C5105B</HRValue></HResult>
     <HResult Name="UTC_E_SETREGKEYACTION_TYPE_NOT_APPROVED"><HRValue>0x87C5105C</HRValue></HResult>
+    <HResult Name="UTC_E_TRACE_THROTTLED"><HRValue>0x87C5105D</HRValue></HResult>
     <HResult Name="VIEW_E_DRAW"><HRValue>0x80040140</HRValue></HResult>
     <HResult Name="VIEW_S_ALREADY_FROZEN"><HRValue>0x00040140</HRValue></HResult>
     <HResult Name="VM_SAVED_STATE_DUMP_E_PARTITION_STATE_NOT_FOUND"><HRValue>0xC0370500</HRValue></HResult>
@@ -17779,10 +18296,9 @@
     <HResult Name="VM_SAVED_STATE_DUMP_E_NO_VP_FOUND_IN_PARTITION_STATE"><HRValue>0xC0370502</HRValue></HResult>
     <HResult Name="VM_SAVED_STATE_DUMP_E_NESTED_VIRTUALIZATION_NOT_SUPPORTED"><HRValue>0xC0370503</HRValue></HResult>
     <HResult Name="VM_SAVED_STATE_DUMP_E_WINDOWS_KERNEL_IMAGE_NOT_FOUND"><HRValue>0xC0370504</HRValue></HResult>
-    <HResult Name="VM_SAVED_STATE_DUMP_E_PXE_NOT_PRESENT"><HRValue>0xC0370505</HRValue></HResult>
-    <HResult Name="VM_SAVED_STATE_DUMP_E_PDPTE_NOT_PRESENT"><HRValue>0xC0370506</HRValue></HResult>
-    <HResult Name="VM_SAVED_STATE_DUMP_E_PDE_NOT_PRESENT"><HRValue>0xC0370507</HRValue></HResult>
-    <HResult Name="VM_SAVED_STATE_DUMP_E_PTE_NOT_PRESENT"><HRValue>0xC0370508</HRValue></HResult>
+    <HResult Name="VM_SAVED_STATE_DUMP_E_VA_NOT_MAPPED"><HRValue>0xC0370505</HRValue></HResult>
+    <HResult Name="VM_SAVED_STATE_DUMP_E_INVALID_VP_STATE"><HRValue>0xC0370506</HRValue></HResult>
+    <HResult Name="VM_SAVED_STATE_DUMP_E_VP_VTL_NOT_ENABLED"><HRValue>0xC0370509</HRValue></HResult>
     <HResult Name="WEB_E_UNSUPPORTED_FORMAT"><HRValue>0x83750001</HRValue></HResult>
     <HResult Name="WEB_E_INVALID_XML"><HRValue>0x83750002</HRValue></HResult>
     <HResult Name="WEB_E_MISSING_REQUIRED_ELEMENT"><HRValue>0x83750003</HRValue></HResult>

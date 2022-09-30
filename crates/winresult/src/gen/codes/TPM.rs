@@ -162,7 +162,7 @@ pub const E_BAD_TYPE : HResultError = HResultError::from_constant(0x80280034); /
 /// TPM 1.2: When saving context identified resource type does not match actual resource.
 pub const E_INVALID_RESOURCE : HResultError = HResultError::from_constant(0x80280035); // TPM_E_INVALID_RESOURCE
 
-/// TPM 1.2: The TPM is attempting to execute a command only available when in FIPS mode.
+/// TPM 1.2: The TPM is attempting to execute a command that is not allowed when in FIPS mode.
 pub const E_NOTFIPS : HResultError = HResultError::from_constant(0x80280036); // TPM_E_NOTFIPS
 
 /// TPM 1.2: The command is attempting to use an invalid family ID.
@@ -461,3 +461,6 @@ pub const E_INVALID_OWNER_AUTH : HResultError = HResultError::from_constant(0x80
 
 /// TPM command returned too much data.
 pub const E_TOO_MUCH_DATA : HResultError = HResultError::from_constant(0x80290602); // TPM_E_TOO_MUCH_DATA
+
+/// Unable to fetch EK Certificate if TPM-generated EPS (after a TPM2_ChangeEPS).
+pub const E_TPM_GENERATED_EPS : HResultError = HResultError::from_constant(0x80290603); // TPM_E_TPM_GENERATED_EPS

@@ -71,3 +71,9 @@ pub const E_INVALID_PAYLOAD_PACKAGE_EXTENSION : HResultError = HResultError::fro
 
 /// The encryptionExclusionFileList file is invalid.
 pub const E_INVALID_ENCRYPTION_EXCLUSION_FILE_LIST : HResultError = HResultError::from_constant(0x80080216); // APPX_E_INVALID_ENCRYPTION_EXCLUSION_FILE_LIST
+
+/// The package folder ACLs are invalid.
+pub const E_INVALID_PACKAGE_FOLDER_ACLS : HResultError = HResultError::from_constant(0x80080217); // APPX_E_INVALID_PACKAGE_FOLDER_ACLS
+
+/// The publisher bridging artifact is invalid.
+pub const E_INVALID_PUBLISHER_BRIDGING : HResultError = HResultError::from_constant(0x80080218); // APPX_E_INVALID_PUBLISHER_BRIDGING

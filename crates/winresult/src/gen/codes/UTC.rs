@@ -257,3 +257,6 @@ pub const E_GETFILEINFOACTION_FILE_NOT_APPROVED : HResultError = HResultError::f
 
 /// The registry value type for SetRegKey action must be REG_SZ, REG_MULTI_SZ, REG_EXPAND_SZ, REG_BINARY, REG_DWORD, or REG_QWORD.
 pub const E_SETREGKEYACTION_TYPE_NOT_APPROVED : HResultError = HResultError::from_constant(0x87C5105C); // UTC_E_SETREGKEYACTION_TYPE_NOT_APPROVED
+
+/// An operation which requires a running un-throttled trace failed due to the trace being throttled.
+pub const E_TRACE_THROTTLED : HResultError = HResultError::from_constant(0x87C5105D); // UTC_E_TRACE_THROTTLED

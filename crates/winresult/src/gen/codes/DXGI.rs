@@ -106,3 +106,6 @@ pub const ERROR_CACHE_HASH_COLLISION : HResultError = HResultError::from_constan
 
 /// The desired element already exists.
 pub const ERROR_ALREADY_EXISTS : HResultError = HResultError::from_constant(0x887A0036); // DXGI_ERROR_ALREADY_EXISTS
+
+/// The allocation of the MPO plane has been unpinned
+pub const ERROR_MPO_UNPINNED : HResultError = HResultError::from_constant(0x887A0064); // DXGI_ERROR_MPO_UNPINNED

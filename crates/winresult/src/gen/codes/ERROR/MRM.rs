@@ -86,3 +86,6 @@ pub const PACKAGE_NOT_FOUND : ErrorCode = ErrorCode::from_constant(15159); // ER
 
 /// No default value for language was specified.
 pub const MISSING_DEFAULT_LANGUAGE : ErrorCode = ErrorCode::from_constant(15160); // ERROR_MRM_MISSING_DEFAULT_LANGUAGE
+
+/// An entity was defined as both resource and scope, which is not allowed.
+pub const SCOPE_ITEM_CONFLICT : ErrorCode = ErrorCode::from_constant(15161); // ERROR_MRM_SCOPE_ITEM_CONFLICT
