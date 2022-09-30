@@ -85,6 +85,7 @@ fn main() {
     }
 
     let d3d_sdk = Path::new(r"C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include");
+    if !d3d_sdk.exists() { mmrbi::fatal!("DirectX SDK is not installed or cannot be found.\n  Install from https://www.microsoft.com/en-us/download/details.aspx?id=6812\n  {}\\", d3d_sdk.display()) }
 
     macro_rules! headers { ( $( $path:literal : $scan_fn:path ),* $(,)? ) => {$(
         let header = Header::read(d3d_sdk, $path);
