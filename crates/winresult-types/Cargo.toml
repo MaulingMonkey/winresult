@@ -4,7 +4,7 @@
 [package]
 name                                    = "winresult-types"
 description                             = "windows result types"
-version                                 = "0.1.0"
+version                                 = "0.1.2"
 authors                                 = ["MaulingMonkey <git@maulingmonkey.com>"]
 edition                                 = "2021"
 repository                              = "https://github.com/MaulingMonkey/winresult"
