@@ -243,6 +243,7 @@ pub(crate) fn winerror_h<'a>(header: &'a Header, codes: &mut Codes<'a>) {
                 ("_NDIS_ERROR_TYPEDEF_(",                           "L)",   "HResult",              false,           0, "",             ),
                 ("_HRESULT_TYPEDEF_(",                              "L)",   "HResult",              false,           0, "",             ),
                 ("(HRESULT)",                                       "L",    "HResult",              false,           0, "",             ),
+                ("(HRESULT)",                                       "",     "HResult",              false,           0, "",             ),
                 ("RASBASE+",                                        "",     "ErrorCode",            true,          600, "RasError.h",   ),
                 ("RASBASE + ",                                      "",     "ErrorCode",            true,          600, "RasError.h",   ),
                 ("ROUTEBASE+",                                      "",     "ErrorCode",            false,         900, "MprError.h",   ),

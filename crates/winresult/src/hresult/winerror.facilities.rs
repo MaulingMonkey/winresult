@@ -1,4 +1,5 @@
 microsoft_hresult_facilities! {
+    // C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h
     #define FACILITY_ NULL                    0
     #define FACILITY_ RPC                     1
     #define FACILITY_ DISPATCH                2
@@ -145,4 +146,6 @@ microsoft_hresult_facilities! {
     #define FACILITY_ XBOX                    2339
     #define FACILITY_ GAME                    2340
     #define FACILITY_ PIX                     2748
+
+    #define FACILITY_ XAUDIO2                   0x896   // C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\xaudio2.h
 }

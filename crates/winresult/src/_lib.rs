@@ -584,6 +584,9 @@ mod gen {
         /// [Cross-platform Audio Creation Tool (XACT)](https://en.wikipedia.org/wiki/Cross-platform_Audio_Creation_Tool)
         pub mod XACT;
 
+        /// [XAudio 2](https://docs.microsoft.com/en-us/windows/win32/xaudio2/xaudio2-introduction)
+        pub mod XAUDIO2;
+
         /// Pre-Vista [Certificate Enrollment Control](https://docs.microsoft.com/en-us/windows/win32/seccertenroll/mapping-xenroll-dll-to-certenroll-dll)
         pub mod XENROLL;
     }

@@ -160,6 +160,7 @@
         <DisplayString Condition="__0 == 2339">FACILITY_XBOX (HResultFacilityMicrosoft)</DisplayString>
         <DisplayString Condition="__0 == 2340">FACILITY_GAME (HResultFacilityMicrosoft)</DisplayString>
         <DisplayString Condition="__0 == 2748">FACILITY_PIX (HResultFacilityMicrosoft)</DisplayString>
+        <DisplayString Condition="__0 == 2198">FACILITY_XAUDIO2 (HResultFacilityMicrosoft)</DisplayString>
         <DisplayString>FACILITY_??? ({__0})</DisplayString>
     </Type>
 
@@ -3527,6 +3528,7 @@
                 <DisplayString Condition="((__0 >> 16) &amp; 0xFFF) == 2339">FACILITY_XBOX</DisplayString>
                 <DisplayString Condition="((__0 >> 16) &amp; 0xFFF) == 2340">FACILITY_GAME</DisplayString>
                 <DisplayString Condition="((__0 >> 16) &amp; 0xFFF) == 2748">FACILITY_PIX</DisplayString>
+                <DisplayString Condition="((__0 >> 16) &amp; 0xFFF) == 2198">FACILITY_XAUDIO2</DisplayString>
                 <DisplayString>{(__0 >> 16) &amp; 0xFFF}</DisplayString>
             </Synthetic>
 
@@ -3756,6 +3758,7 @@
                 <DisplayString Condition="((__0 >> 16) &amp; 0xFFF) == 2339">FACILITY_XBOX</DisplayString>
                 <DisplayString Condition="((__0 >> 16) &amp; 0xFFF) == 2340">FACILITY_GAME</DisplayString>
                 <DisplayString Condition="((__0 >> 16) &amp; 0xFFF) == 2748">FACILITY_PIX</DisplayString>
+                <DisplayString Condition="((__0 >> 16) &amp; 0xFFF) == 2198">FACILITY_XAUDIO2</DisplayString>
                 <DisplayString>{(__0 >> 16) &amp; 0xFFF}</DisplayString>
             </Synthetic>
 
@@ -3985,6 +3988,7 @@
                 <DisplayString Condition="((__0 >> 16) &amp; 0xFFF) == 2339">FACILITY_XBOX</DisplayString>
                 <DisplayString Condition="((__0 >> 16) &amp; 0xFFF) == 2340">FACILITY_GAME</DisplayString>
                 <DisplayString Condition="((__0 >> 16) &amp; 0xFFF) == 2748">FACILITY_PIX</DisplayString>
+                <DisplayString Condition="((__0 >> 16) &amp; 0xFFF) == 2198">FACILITY_XAUDIO2</DisplayString>
                 <DisplayString>{(__0 >> 16) &amp; 0xFFF}</DisplayString>
             </Synthetic>
 
@@ -14098,6 +14102,10 @@
         <DisplayString Condition="__0 == 0x8004D083">XACT::E_TRANSACTIONCLOSED</DisplayString>
         <DisplayString Condition="__0 == 0x8004D084">XACT::E_INVALIDLSN</DisplayString>
         <DisplayString Condition="__0 == 0x8004D085">XACT::E_REPLAYREQUEST</DisplayString>
+        <DisplayString Condition="__0 == 0x88960001">XAUDIO2::E_INVALID_CALL</DisplayString>
+        <DisplayString Condition="__0 == 0x88960002">XAUDIO2::E_XMA_DECODER_ERROR</DisplayString>
+        <DisplayString Condition="__0 == 0x88960003">XAUDIO2::E_XAPO_CREATION_FAILED</DisplayString>
+        <DisplayString Condition="__0 == 0x88960004">XAUDIO2::E_DEVICE_INVALIDATED</DisplayString>
         <DisplayString Condition="__0 == 0x80095000">XENROLL::E_KEY_NOT_EXPORTABLE</DisplayString>
         <DisplayString Condition="__0 == 0x80095001">XENROLL::E_CANNOT_ADD_ROOT_CERT</DisplayString>
         <DisplayString Condition="__0 == 0x80095002">XENROLL::E_RESPONSE_KA_HASH_NOT_FOUND</DisplayString>
@@ -14262,6 +14270,7 @@
                 <DisplayString Condition="((__0 >> 16) &amp; 0xFFF) == 2339">FACILITY_XBOX</DisplayString>
                 <DisplayString Condition="((__0 >> 16) &amp; 0xFFF) == 2340">FACILITY_GAME</DisplayString>
                 <DisplayString Condition="((__0 >> 16) &amp; 0xFFF) == 2748">FACILITY_PIX</DisplayString>
+                <DisplayString Condition="((__0 >> 16) &amp; 0xFFF) == 2198">FACILITY_XAUDIO2</DisplayString>
                 <DisplayString>{(__0 >> 16) &amp; 0xFFF}</DisplayString>
             </Synthetic>
 
@@ -18566,6 +18575,10 @@
     <HResult Name="XACT_S_SINGLEPHASE"><HRValue>0x0004D009</HRValue></HResult>
     <HResult Name="XACT_S_LOCALLY_OK"><HRValue>0x0004D00A</HRValue></HResult>
     <HResult Name="XACT_S_LASTRESOURCEMANAGER"><HRValue>0x0004D010</HRValue></HResult>
+    <HResult Name="XAUDIO2_E_INVALID_CALL"><HRValue>0x88960001</HRValue></HResult>
+    <HResult Name="XAUDIO2_E_XMA_DECODER_ERROR"><HRValue>0x88960002</HRValue></HResult>
+    <HResult Name="XAUDIO2_E_XAPO_CREATION_FAILED"><HRValue>0x88960003</HRValue></HResult>
+    <HResult Name="XAUDIO2_E_DEVICE_INVALIDATED"><HRValue>0x88960004</HRValue></HResult>
     <HResult Name="XENROLL_E_KEY_NOT_EXPORTABLE"><HRValue>0x80095000</HRValue></HResult>
     <HResult Name="XENROLL_E_CANNOT_ADD_ROOT_CERT"><HRValue>0x80095001</HRValue></HResult>
     <HResult Name="XENROLL_E_RESPONSE_KA_HASH_NOT_FOUND"><HRValue>0x80095002</HRValue></HResult>
