@@ -1,4 +1,5 @@
 use crate::*;
+use core::convert::Infallible;
 
 
 
@@ -19,6 +20,7 @@ impl ErrorHResultOrCode {
 impl From<ErrorHResultOrCode> for u32                { fn from(v: ErrorHResultOrCode) -> Self { v.0 } }
 impl From<ErrorCode         > for ErrorHResultOrCode { fn from(v: ErrorCode         ) -> Self { Self(v.0.into()) } }
 impl From<HResultError      > for ErrorHResultOrCode { fn from(v: HResultError      ) -> Self { Self(v.0) } }
+impl From<Infallible        > for ErrorHResultOrCode { fn from(i: Infallible        ) -> Self { match i {} } }
 
 // These allow construction of values in the 1_000 ..= 7FFF_FFFF range, which is a bit sketchy
 impl From<u32               > for ErrorHResultOrCode { fn from(v: u32               ) -> Self { Self(v) } }

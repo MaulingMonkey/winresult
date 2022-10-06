@@ -1,4 +1,5 @@
 use crate::*;
+use core::convert::Infallible;
 use bytemuck::*;
 
 
@@ -45,6 +46,7 @@ impl HResultSuccess {
 
 impl From<HResultSuccess> for u32 { fn from(hr: HResultSuccess) -> Self { hr.0 } }
 impl From<HResultSuccess> for i32 { fn from(hr: HResultSuccess) -> Self { hr.0 as _ } } // for winapi interop
+impl From<Infallible> for HResultSuccess { fn from(i: Infallible) -> Self { match i {} } }
 
 #[allow(useless_deprecated)]
 #[deprecated = "allows the construction of 'successful' hresults from error values"]
@@ -78,6 +80,7 @@ impl HResultError {
 impl From<HResultError> for u32 { fn from(hr: HResultError) -> Self { hr.0 } }
 impl From<HResultError> for i32 { fn from(hr: HResultError) -> Self { hr.0 as _ } } // for winapi interop
 impl From<(HResultFacilityMicrosoft, ErrorCode)> for HResultError { fn from((fac, code): (HResultFacilityMicrosoft, ErrorCode)) -> Self { Self(0x8000_0000 | (fac.to_u32()<<16) | code.to_u32()) } }
+impl From<Infallible> for HResultError { fn from(i: Infallible) -> Self { match i {} } }
 
 #[allow(useless_deprecated)]
 #[deprecated = "allows the construction of 'error' hresults from success values"]
@@ -117,6 +120,7 @@ impl From<u32>              for HResult { fn from(hr: u32           ) -> Self { 
 impl From<i32>              for HResult { fn from(hr: i32           ) -> Self { Self(hr as _) } } // for winapi interop
 impl From<HResultSuccess>   for HResult { fn from(hr: HResultSuccess) -> Self { Self(hr.0) } }
 impl From<HResultError>     for HResult { fn from(hr: HResultError  ) -> Self { Self(hr.0) } }
+impl From<Infallible>       for HResult { fn from(i: Infallible     ) -> Self { match i {} } }
 impl From<(HResultFacilityMicrosoft, ErrorCode)> for HResult { fn from((fac, code): (HResultFacilityMicrosoft, ErrorCode)) -> Self { Self(0x8000_0000 | (fac.to_u32()<<16) | code.to_u32()) } }
 
 

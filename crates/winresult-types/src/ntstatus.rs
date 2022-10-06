@@ -1,4 +1,5 @@
 use bytemuck::*;
+use core::convert::Infallible;
 
 
 
@@ -26,6 +27,7 @@ impl NtStatus {
 
 impl From<NtStatus> for u32 { fn from(hr: NtStatus) -> Self { hr.0 } }
 impl From<u32> for NtStatus { fn from(hr: u32) -> Self { Self(hr) } }
+impl From<Infallible> for NtStatus { fn from(i: Infallible) -> Self { match i {} } }
 
 
 
