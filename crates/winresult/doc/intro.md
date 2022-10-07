@@ -27,6 +27,6 @@ Debug-friendly types for windows result codes.
 *   `ERROR_*` is a mixture of [`HRESULT`]s and non-[`HRESULT`]s.  Can you keep them straight?  No.  No you cannot.  Stop lying.
 
 [`Debug`]:          https://doc.rust-lang.org/std/fmt/trait.Debug.html
-[`GetLastError`]:   https://docs.microsoft.com/en-us/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror
-[`HRESULT`]:        https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/0642cb2f-2075-4469-918c-4441e69c548a
+[`GetLastError`]:   https://learn.microsoft.com/en-us/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror
+[`HRESULT`]:        https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/0642cb2f-2075-4469-918c-4441e69c548a
 [`natvis-pdbs`]:    https://crates.io/crates/natvis-pdbs

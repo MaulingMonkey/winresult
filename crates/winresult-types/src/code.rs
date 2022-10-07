@@ -2,7 +2,7 @@ use core::convert::Infallible;
 
 
 
-/// \[[docs.microsoft.com](https://docs.microsoft.com/en-us/windows/win32/debug/system-error-codes)\]
+/// \[[microsoft.com](https://learn.microsoft.com/en-us/windows/win32/debug/system-error-codes)\]
 /// ERROR_\* values that aren't HRESULTs (but might be implicitly convertable)
 #[derive(Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash)] pub struct ErrorCode(pub(crate) u16);
 

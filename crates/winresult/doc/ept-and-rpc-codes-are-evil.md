@@ -10,9 +10,9 @@ First, winerror.h.  We have:
 Who the hell puts `_S_` in their error code names?  And, yes, they're clearly error codes:
 
 >   "Specifying a non-nil UUID causes the function to fail with the status code EPT_S_CANT_PERFORM_OP."<br>
->   <https://docs.microsoft.com/en-us/windows/win32/api/rpcdce/nf-rpcdce-rpcmgmtepunregister><br>
->   <https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-rpce/764cb26c-cc00-4e76-8ca2-c5b840524e3f><br>
->   <https://docs.microsoft.com/en-us/windows/win32/rpc/rpc-return-values><br>
+>   <https://learn.microsoft.com/en-us/windows/win32/api/rpcdce/nf-rpcdce-rpcmgmtepunregister><br>
+>   <https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-rpce/764cb26c-cc00-4e76-8ca2-c5b840524e3f><br>
+>   <https://learn.microsoft.com/en-us/windows/win32/rpc/rpc-return-values><br>
 
 Okay, okay.  That's all fine and dandy.  I can just manually fix these up in my code scanner.
 An edge case.  No problem.  But uh... just for sanity's sake... let's look a little closer.

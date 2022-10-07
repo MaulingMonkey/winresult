@@ -98,7 +98,7 @@ pub mod FACILITY {
     #[doc(inline)] pub use NTSTATUS::*;
 }
 
-/// \[[docs.microsoft.com](https://docs.microsoft.com/en-us/windows/win32/api/synchapi/nf-synchapi-waitformultipleobjectsex#return-value)\]
+/// \[[microsoft.com](https://learn.microsoft.com/en-us/windows/win32/api/synchapi/nf-synchapi-waitformultipleobjectsex#return-value)\]
 /// WAIT_\* values returned by various WaitFor\* and other win32 functions.
 #[allow(non_snake_case)]
 pub mod WAIT {
@@ -110,7 +110,7 @@ pub mod WAIT {
 
     pub const ABANDONED_0   : WaitCode = WaitCode::from_constant(0x80); // STATUS_ABANDONED_WAIT_0
 
-    /// The wait was ended by one or more user-mode [asynchronous procedure calls](https://docs.microsoft.com/en-us/windows/desktop/Sync/asynchronous-procedure-calls) (APC) queued to the thread.
+    /// The wait was ended by one or more user-mode [asynchronous procedure calls](https://learn.microsoft.com/en-us/windows/desktop/Sync/asynchronous-procedure-calls) (APC) queued to the thread.
     pub const IO_COMPLETION : WaitCode = WaitCode::from_constant(0xC0); // STATUS_USER_APC
 
     /// The time-out interval elapsed.
@@ -118,7 +118,7 @@ pub mod WAIT {
 
     // PENDING = 0x103 = 259 (STATUS_*, but no WAIT_*?)
 
-    /// The function has failed. To get extended error information, generally call [GetLastError](https://docs.microsoft.com/en-us/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
+    /// The function has failed. To get extended error information, generally call [GetLastError](https://learn.microsoft.com/en-us/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
     pub const FAILED        : WaitCode = WaitCode::from_constant(0xFFFFFFFF);
 
     /// WAIT_OBJECT_0 + n
@@ -156,12 +156,12 @@ mod gen {
 
 
         #[path = "STATUS.rs"] mod _STATUS;
-        /// \[[docs.microsoft.com](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/87fba13e-bf06-450e-83b1-9241dc81e781)\]
+        /// \[[microsoft.com](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/87fba13e-bf06-450e-83b1-9241dc81e781)\]
         /// [NtStatus](types::NtStatus) errors, warnings, and other codes (for use in e.g. Kernel / Drivers)
         pub mod STATUS {
             use super::*;
 
-            /// \[[docs.microsoft.com](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/87fba13e-bf06-450e-83b1-9241dc81e781)\]
+            /// \[[microsoft.com](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/87fba13e-bf06-450e-83b1-9241dc81e781)\]
             /// [NtStatus::sev]\(\):
             /// [SUCCESS](Self::SUCCESS)
             /// [INFORMATIONAL](Self::INFORMATIONAL)
@@ -200,7 +200,7 @@ mod gen {
         /// Remote Desktop Protocol Bitmap Cache?
         pub mod CACHE;
 
-        /// [COM Categories](https://docs.microsoft.com/en-us/windows/win32/api/comcat/)
+        /// [COM Categories](https://learn.microsoft.com/en-us/windows/win32/api/comcat/)
         pub mod CAT;
 
         /// Certificates (for e.g. HTTPS etc.)
@@ -218,31 +218,31 @@ mod gen {
         /// COM
         pub mod CO;
 
-        /// [COM Admin / Catalog](https://docs.microsoft.com/en-us/windows/win32/api/comadmin/)
+        /// [COM Admin / Catalog](https://learn.microsoft.com/en-us/windows/win32/api/comadmin/)
         pub mod COMADMIN;
 
-        /// [COM+ Queued Components Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-wpo/55d601ed-c63b-485b-8648-53866b3e8e21)
+        /// [COM+ Queued Components Protocol](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-wpo/55d601ed-c63b-485b-8648-53866b3e8e21)
         pub mod COMQC;
 
-        /// [DCOM Context](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dcom/94a587a3-826a-4bac-969b-ae0bbfc9a663)?
+        /// [DCOM Context](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-dcom/94a587a3-826a-4bac-969b-ae0bbfc9a663)?
         pub mod CONTEXT;
         pub mod CONVERT10;
         pub mod CRYPT;
         pub mod CS;
 
-        /// [Direct3D](https://docs.microsoft.com/en-us/windows/win32/direct3d)
+        /// [Direct3D](https://learn.microsoft.com/en-us/windows/win32/direct3d)
         pub mod D3D { use super::*; pub const OK : HResultSuccess = HResultSuccess::from_constant(0); }
 
-        /// [Direct3D](https://docs.microsoft.com/en-us/windows/win32/direct3d) 10+
+        /// [Direct3D](https://learn.microsoft.com/en-us/windows/win32/direct3d) 10+
         pub mod D3D10;
 
-        /// [Direct3D 11](https://docs.microsoft.com/en-us/windows/win32/direct3d11/atoc-dx-graphics-direct3d-11)+
+        /// [Direct3D 11](https://learn.microsoft.com/en-us/windows/win32/direct3d11/atoc-dx-graphics-direct3d-11)+
         pub mod D3D11;
 
-        /// [Direct3D 12](https://docs.microsoft.com/en-us/windows/win32/direct3d12/direct3d-12-graphics)+
+        /// [Direct3D 12](https://learn.microsoft.com/en-us/windows/win32/direct3d12/direct3d-12-graphics)+
         pub mod D3D12;
 
-        /// [Direct3D](https://docs.microsoft.com/en-us/windows/win32/direct3d) Errors
+        /// [Direct3D](https://learn.microsoft.com/en-us/windows/win32/direct3d) Errors
         pub mod D3DERR;
 
         /// [D3DX](https://en.wikipedia.org/wiki/D3DX) Errors
@@ -251,25 +251,25 @@ mod gen {
         /// [D3DX](https://en.wikipedia.org/wiki/D3DX) `.X` file type errors
         pub mod D3DXFERR;
 
-        /// [Direct3D](https://docs.microsoft.com/en-us/windows/win32/direct3d)
+        /// [Direct3D](https://learn.microsoft.com/en-us/windows/win32/direct3d)
         pub mod D3DOK;
 
         /// OLE / Clipboard Stuff?
         pub mod DATA;
 
-        /// [DirectComposition](https://docs.microsoft.com/en-us/windows/win32/directcomp/directcomposition-portal)
+        /// [DirectComposition](https://learn.microsoft.com/en-us/windows/win32/directcomp/directcomposition-portal)
         pub mod DCOMPOSITION;
 
         /// Digital Signature
         pub mod DIGSIG;
 
-        /// [IDispatch](https://docs.microsoft.com/en-us/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke)
+        /// [IDispatch](https://learn.microsoft.com/en-us/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke)
         pub mod DISP;
 
         /// Domain Name Services
         pub mod DNS;
 
-        /// [Drag and Drop](https://docs.microsoft.com/en-us/windows/win32/com/drag-and-drop)
+        /// [Drag and Drop](https://learn.microsoft.com/en-us/windows/win32/com/drag-and-drop)
         pub mod DRAGDROP;
 
         /// OLE / Data Values / Clipboard Stuff?
@@ -278,13 +278,13 @@ mod gen {
         /// Display Window Manager (desktop rendering composition)
         pub mod DWM;
 
-        /// [DirectWrite](https://docs.microsoft.com/en-us/windows/win32/directwrite/direct-write-portal)
+        /// [DirectWrite](https://learn.microsoft.com/en-us/windows/win32/directwrite/direct-write-portal)
         pub mod DWRITE;
 
         /// DirectX
         pub mod DXCORE;
 
-        /// [DXGI](https://docs.microsoft.com/en-us/windows/win32/direct3ddxgi/dx-graphics-dxgi)
+        /// [DXGI](https://learn.microsoft.com/en-us/windows/win32/direct3ddxgi/dx-graphics-dxgi)
         pub mod DXGI;
 
         /// **Errors Codes**.  Typically [HResultError]s.
@@ -332,13 +332,13 @@ mod gen {
             /// WinSpool / Printer related
             pub mod BIDI;
 
-            /// [OneDrive](https://en.wikipedia.org/wiki/OneDrive) / [Cloud Filter API](https://docs.microsoft.com/en-us/windows/win32/api/_cloudapi/)
+            /// [OneDrive](https://en.wikipedia.org/wiki/OneDrive) / [Cloud Filter API](https://learn.microsoft.com/en-us/windows/win32/api/_cloudapi/)
             pub mod CLOUD_FILE;
 
-            /// [Windows Clustering](https://docs.microsoft.com/en-us/windows/win32/api/_mscs/)
+            /// [Windows Clustering](https://learn.microsoft.com/en-us/windows/win32/api/_mscs/)
             pub mod CLUSTER;
 
-            /// [Debugging](https://docs.microsoft.com/en-us/windows/win32/debug/debugging-functions)
+            /// [Debugging](https://learn.microsoft.com/en-us/windows/win32/debug/debugging-functions)
             pub mod DBG;
 
             /// DHCP-related?
@@ -350,7 +350,7 @@ mod gen {
             /// [Domain Services](https://en.wikipedia.org/wiki/Active_Directory#Domain_Services)
             pub mod DS;
 
-            /// [Windows Event Log](https://docs.microsoft.com/en-us/windows/win32/wes/windows-event-log-error-constants)
+            /// [Windows Event Log](https://learn.microsoft.com/en-us/windows/win32/wes/windows-event-log-error-constants)
             pub mod EVT;
 
             /// I/O Filter
@@ -374,7 +374,7 @@ mod gen {
             /// [IPSec](https://en.wikipedia.org/wiki/IPsec)
             pub mod IPSEC;
 
-            /// [Package Resource Indexing](https://docs.microsoft.com/en-us/windows/win32/menurc/pri-indexing-reference)
+            /// [Package Resource Indexing](https://learn.microsoft.com/en-us/windows/win32/menurc/pri-indexing-reference)
             pub mod MRM;
 
             /// [Multilingual User Interface](https://en.wikipedia.org/wiki/Multilingual_User_Interface)
@@ -388,18 +388,18 @@ mod gen {
             /// PatchWiz
             pub mod PCW;
 
-            /// [Package Resource Indexing](https://docs.microsoft.com/en-us/windows/win32/menurc/pri-indexing-reference)
+            /// [Package Resource Indexing](https://learn.microsoft.com/en-us/windows/win32/menurc/pri-indexing-reference)
             pub mod PRI_MERGE;
 
-            /// [Secure Boot](https://docs.microsoft.com/en-us/windows-hardware/design/device-experiences/oem-secure-boot)
+            /// [Secure Boot](https://learn.microsoft.com/en-us/windows-hardware/design/device-experiences/oem-secure-boot)
             pub mod SECUREBOOT;
 
             pub mod SERVER;
 
-            /// [Service Application](https://docs.microsoft.com/en-us/windows/win32/services/services)
+            /// [Service Application](https://learn.microsoft.com/en-us/windows/win32/services/services)
             pub mod SERVICE;
 
-            /// [Shared Virtual Hard Disk](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn281956(v=ws.11))s (w/ \*.vhdx)
+            /// [Shared Virtual Hard Disk](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn281956(v=ws.11))s (w/ \*.vhdx)
             pub mod SVHDX;
 
             #[path = "SXS.rs"] mod _SXS;
@@ -423,14 +423,14 @@ mod gen {
             /// WinRS / WinRM shell/client for WS-Management Service?
             pub mod WINRS;
 
-            /// [Windows Management Instrumentation](https://docs.microsoft.com/en-us/windows/win32/wmisdk/wmi-start-page)
+            /// [Windows Management Instrumentation](https://learn.microsoft.com/en-us/windows/win32/wmisdk/wmi-start-page)
             pub mod WMI;
 
             /// WS-Management Service
             pub mod WSMAN;
         }
 
-        /// [COM Events](https://docs.microsoft.com/en-us/windows/win32/api/eventsys/)
+        /// [COM Events](https://learn.microsoft.com/en-us/windows/win32/api/eventsys/)
         pub mod EVENT;
 
         pub mod FA;
@@ -439,23 +439,23 @@ mod gen {
         pub mod FVE;
 
         /// Windows Filtering Platform
-        pub mod FWP; // https://docs.microsoft.com/en-us/windows/win32/fwp/wfp-error-codes
+        pub mod FWP; // https://learn.microsoft.com/en-us/windows/win32/fwp/wfp-error-codes
 
-        /// [Host Computer Network](https://docs.microsoft.com/en-us/windows-server/networking/technologies/hcn/hcn-top)
+        /// [Host Computer Network](https://learn.microsoft.com/en-us/windows-server/networking/technologies/hcn/hcn-top)
         pub mod GCN;
 
-        /// [Host Computer Network](https://docs.microsoft.com/en-us/windows-server/networking/technologies/hcn/hcn-top)
+        /// [Host Computer Network](https://learn.microsoft.com/en-us/windows-server/networking/technologies/hcn/hcn-top)
         pub mod HCN;
 
-        /// [Host Compute System](https://docs.microsoft.com/en-us/virtualization/api/hcs/overview)
+        /// [Host Compute System](https://learn.microsoft.com/en-us/virtualization/api/hcs/overview)
         pub mod HCS;
 
         pub mod HSP;
 
-        /// [WinINet / WinHTTP](https://docs.microsoft.com/en-us/windows/win32/wininet/wininet-vs-winhttp)
+        /// [WinINet / WinHTTP](https://learn.microsoft.com/en-us/windows/win32/wininet/wininet-vs-winhttp)
         pub mod HTTP;
 
-        /// [WinINet](https://docs.microsoft.com/en-us/windows/win32/wininet/about-wininet)
+        /// [WinINet](https://learn.microsoft.com/en-us/windows/win32/wininet/about-wininet)
         pub mod INET;
 
         pub mod INPLACE;
@@ -485,12 +485,12 @@ mod gen {
         pub mod ONL;
         pub mod PEER;
 
-        /// [Peer Distribution](https://docs.microsoft.com/en-us/windows/win32/p2psdk/peer-distribution)
+        /// [Peer Distribution](https://learn.microsoft.com/en-us/windows/win32/p2psdk/peer-distribution)
         pub mod PEERDIST;
 
         pub mod PERSIST;
 
-        /// [Performance Logs and Alerts](https://docs.microsoft.com/en-us/previous-versions/windows/desktop/pla/using-performance-logs-and-alerts)
+        /// [Performance Logs and Alerts](https://learn.microsoft.com/en-us/previous-versions/windows/desktop/pla/using-performance-logs-and-alerts)
         pub mod PLA;
 
         pub mod PRESENTATION;
@@ -506,7 +506,7 @@ mod gen {
         /// Remote Procedure Call
         #[allow(dead_code)] mod RPC {}
 
-        /// [Smart Card](https://docs.microsoft.com/en-us/windows/security/identity-protection/smart-cards/smart-card-windows-smart-card-technical-reference)
+        /// [Smart Card](https://learn.microsoft.com/en-us/windows/security/identity-protection/smart-cards/smart-card-windows-smart-card-technical-reference)
         pub mod SCARD;
 
         /// Task Scheduler
@@ -521,7 +521,7 @@ mod gen {
 
         pub mod STATEREPOSITORY;
 
-        /// [Structured Storage](https://docs.microsoft.com/en-us/windows/win32/stg/functions)?
+        /// [Structured Storage](https://learn.microsoft.com/en-us/windows/win32/stg/functions)?
         pub mod STG;
 
         /// [Microsoft Store](https://en.wikipedia.org/wiki/Microsoft_Store)?
@@ -533,7 +533,7 @@ mod gen {
         /// Tablet PC
         pub mod TPC;
 
-        /// [Trusted Platform Module 2.0](https://docs.microsoft.com/en-us/windows-hardware/design/device-experiences/oem-tpm)
+        /// [Trusted Platform Module 2.0](https://learn.microsoft.com/en-us/windows-hardware/design/device-experiences/oem-tpm)
         pub mod TPM_20;
 
         /// Trusted Platform Module (1.2)
@@ -557,7 +557,7 @@ mod gen {
 
         pub mod VM_SAVED_STATE_DUMP;
 
-        /// [WinINet / WinHTTP](https://docs.microsoft.com/en-us/windows/win32/wininet/wininet-vs-winhttp)
+        /// [WinINet / WinHTTP](https://learn.microsoft.com/en-us/windows/win32/wininet/wininet-vs-winhttp)
         pub mod WEB;
 
         /// Wired Equivalent Privacy
@@ -569,13 +569,13 @@ mod gen {
         /// Windows Hypervisor Platform
         pub mod WHV;
 
-        /// [WinINet](https://docs.microsoft.com/en-us/windows/win32/wininet/about-wininet)
+        /// [WinINet](https://learn.microsoft.com/en-us/windows/win32/wininet/about-wininet)
         pub mod WININET;
 
         /// Windows Push Notifications?
         pub mod WPN;
 
-        /// [Windows Web Services](https://docs.microsoft.com/en-us/windows/win32/wsw/portal)
+        /// [Windows Web Services](https://learn.microsoft.com/en-us/windows/win32/wsw/portal)
         pub mod WS;
 
         /// WinSock
@@ -584,10 +584,10 @@ mod gen {
         /// [Cross-platform Audio Creation Tool (XACT)](https://en.wikipedia.org/wiki/Cross-platform_Audio_Creation_Tool)
         pub mod XACT;
 
-        /// [XAudio 2](https://docs.microsoft.com/en-us/windows/win32/xaudio2/xaudio2-introduction)
+        /// [XAudio 2](https://learn.microsoft.com/en-us/windows/win32/xaudio2/xaudio2-introduction)
         pub mod XAUDIO2;
 
-        /// Pre-Vista [Certificate Enrollment Control](https://docs.microsoft.com/en-us/windows/win32/seccertenroll/mapping-xenroll-dll-to-certenroll-dll)
+        /// Pre-Vista [Certificate Enrollment Control](https://learn.microsoft.com/en-us/windows/win32/seccertenroll/mapping-xenroll-dll-to-certenroll-dll)
         pub mod XENROLL;
     }
 }

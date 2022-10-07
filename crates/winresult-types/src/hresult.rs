@@ -4,14 +4,14 @@ use bytemuck::*;
 
 
 
-/// \[[docs.microsoft.com](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/0642cb2f-2075-4469-918c-4441e69c548a)\]
+/// \[[microsoft.com](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/0642cb2f-2075-4469-918c-4441e69c548a)\]
 /// FACILITY_\* values corresponding to Microsoft (non-customer) `HRSEULT`s.
 ///
 /// Note that NTSTATUS facilities, despite also being prefixed with FACILITY_\*, are incompatible (overlapping values interpreted differently!)
 #[derive(Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash)] pub struct HResultFacilityMicrosoft(pub(crate) u16);
 
 impl HResultFacilityMicrosoft {
-    // Microsofts specs list facilities as only having 11 bits: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/0642cb2f-2075-4469-918c-4441e69c548a
+    // Microsofts specs list facilities as only having 11 bits: https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/0642cb2f-2075-4469-918c-4441e69c548a
     // However, DirectDraw and Direct3D9 uses 0x876, which sets a 12th bit.
     // Additionally, Direct3D 10, Direct3D 11, etc. also get up into the 12 bits area.
     // This goes into the reserved `X` bit.  Since Microsoft is using what Microsoft reserved, that's fine.
@@ -26,7 +26,7 @@ impl From<HResultFacilityMicrosoft> for u32 { fn from(f: HResultFacilityMicrosof
 
 
 
-/// \[[docs.microsoft.com](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/0642cb2f-2075-4469-918c-4441e69c548a)\]
+/// \[[microsoft.com](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/0642cb2f-2075-4469-918c-4441e69c548a)\]
 /// Success HRESULT
 #[derive(Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash, Default, Zeroable)] #[repr(transparent)] pub struct HResultSuccess(pub(crate) u32);
 // DO NOT IMPLEMENT:
@@ -54,7 +54,7 @@ impl From<u32> for HResultSuccess { fn from(hr: u32) -> Self { Self(hr) } }
 
 
 
-/// \[[docs.microsoft.com](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/0642cb2f-2075-4469-918c-4441e69c548a)\]
+/// \[[microsoft.com](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/0642cb2f-2075-4469-918c-4441e69c548a)\]
 /// Error HRESULT
 #[derive(Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash)] #[repr(transparent)] pub struct HResultError(pub(crate) u32);
 // DO NOT IMPLEMENT:
@@ -89,7 +89,7 @@ impl From<u32> for HResultError { fn from(hr: u32) -> Self { Self(hr) } }
 
 
 
-/// \[[docs.microsoft.com](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/0642cb2f-2075-4469-918c-4441e69c548a)\]
+/// \[[microsoft.com](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/0642cb2f-2075-4469-918c-4441e69c548a)\]
 /// HRESULT
 #[derive(Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash, Default, Pod, Zeroable)] #[repr(transparent)] pub struct HResult(pub(crate) u32);
 

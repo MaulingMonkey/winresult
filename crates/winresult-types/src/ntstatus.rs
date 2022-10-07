@@ -3,7 +3,7 @@ use core::convert::Infallible;
 
 
 
-/// \[[docs.microsoft.com](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/87fba13e-bf06-450e-83b1-9241dc81e781)\]
+/// \[[microsoft.com](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/87fba13e-bf06-450e-83b1-9241dc81e781)\]
 /// NTSTATUS
 #[derive(Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash, Default, Pod, Zeroable)] #[repr(transparent)] pub struct NtStatus(pub(crate) u32);
 
@@ -31,7 +31,7 @@ impl From<Infallible> for NtStatus { fn from(i: Infallible) -> Self { match i {}
 
 
 
-/// \[[docs.microsoft.com](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/87fba13e-bf06-450e-83b1-9241dc81e781)\]
+/// \[[microsoft.com](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/87fba13e-bf06-450e-83b1-9241dc81e781)\]
 /// NtStatus::Sev
 #[derive(Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash)] pub struct NtStatusSeverity(pub(crate) u8);
 
@@ -45,7 +45,7 @@ impl NtStatusSeverity {
 
 
 
-/// \[[docs.microsoft.com](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/87fba13e-bf06-450e-83b1-9241dc81e781)\]
+/// \[[microsoft.com](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/87fba13e-bf06-450e-83b1-9241dc81e781)\]
 /// FACILITY_\* values corresponding to Microsoft (non-customer) `NTSTATUS`es.
 ///
 /// Note that HRESULT facilities, despite also being prefixed with FACILITY_\*, are incompatible (overlapping values interpreted differently!)

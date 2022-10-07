@@ -214,7 +214,7 @@ pub fn codes(codes: &scan::Codes) {
             }
 
             match ty {
-                // https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/0642cb2f-2075-4469-918c-4441e69c548a
+                // https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/0642cb2f-2075-4469-918c-4441e69c548a
                 "HResult" | "HResultSuccess" | "HResultError" | "ErrorHResultOrCode" => {
                     let cond_hr = if ty == "ErrorHResultOrCode" { "(__0 &gt;= 0x80000000)" } else { "true" };
 
@@ -263,7 +263,7 @@ pub fn codes(codes: &scan::Codes) {
                     writeln!(nv, r#"            <Item Name="Value" Condition="{cond_hr}">__0,X</Item>"#)?;
                     writeln!(nv, r#"        </Expand>"#)?;
                 },
-                // https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/87fba13e-bf06-450e-83b1-9241dc81e781
+                // https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/87fba13e-bf06-450e-83b1-9241dc81e781
                 "NtStatus" => {
                     writeln!(nv, r#"        <DisplayString>{{__0,X}} ({ty})</DisplayString>"#)?;
                     writeln!(nv, r#"        <Expand>"#)?;
