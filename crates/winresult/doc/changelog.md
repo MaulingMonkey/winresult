@@ -2,6 +2,10 @@
 
 Version numbers are for the main crate, `winresult`.
 
+## 0.1.3
+*   New error codes:    `XAUDIO2::E_*`
+*   Improved interop:   `impl From<Infallible> for ...`
+
 ## 0.1.2
 *   New error codes
     *   `D3DXERR::*`
