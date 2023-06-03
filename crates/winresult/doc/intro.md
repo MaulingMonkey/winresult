@@ -21,6 +21,7 @@ Debug-friendly types for windows result codes.
     | --------------------------------------------- | ------------- | ----- |
     | `ERROR_FILE_NOT_FOUND`                        | `0x00000002`  | Not an [`HRESULT`] (would be "successful") |
     | `HRESULT_FROM_WIN32(ERROR_FILE_NOT_FOUND)`    | `0x80070002`  | [hresult.info](https://www.hresult.info/Search?q=ERROR_FILE_NOT_FOUND) "incorrectly" labels `ERROR_*` as this |
+    | `NTSTATUS_FROM_WIN32(ERROR_FILE_NOT_FOUND)`   | `0xC0070002`  | IDK how frequently [`NtStatus`]es get shoved into [`GetLastError`], but I've seen weirder
     | `D3D10_ERROR_FILE_NOT_FOUND`                  | `0x88790002`  | Different facility, same code |
     | `D3D11_ERROR_FILE_NOT_FOUND`                  | `0x887C0002`  | Different facility, same code |
 
